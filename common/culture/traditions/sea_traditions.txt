@@ -192,11 +192,24 @@ tradition_warrior_caste = {
 	layers = {
 		0 = martial
 		1 = indian
-		4 = temple.dds
+		4 = kris.dds
 	}
 
+	is_shown = {
+		OR = {
+			this = culture:khmer
+			any_parent_culture_or_above = {
+				this = culture:khmer
+			}
+		}
+	}
 	can_pick = {
-
+		OR = {
+			this = culture:khmer
+			any_parent_culture_or_above = {
+				this = culture:khmer
+			}
+		}
 	}
 
 	parameters = {
@@ -341,8 +354,8 @@ tradition_confucian_philosophy = {
 
 	layers = {
 		0 = learning
-		1 = indian
-		4 = asian_pavilion.dds
+		1 = western
+		4 = confucius.dds
 	}
 
 	is_shown = {
@@ -1033,7 +1046,7 @@ tradition_horses_like_clouds = {
 	layers = {
 		0 = martial
 		1 = western
-		4 = rider.dds
+		4 = samurai.dds
 	}
 
 	is_shown = {
