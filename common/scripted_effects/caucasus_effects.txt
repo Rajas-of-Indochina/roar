@@ -1,0 +1,60 @@
+﻿baghuashi_exiled_effect = {
+	title:k_abkhazia = {
+		holder = {
+			get_title = title:c_argveti
+		}
+	}
+}
+baghuashi_in_kidekari_effect = {
+	title:k_iberia = {
+		holder = {
+			get_title = title:c_samtskhe
+			get_title = title:c_artaani
+		}
+	}
+	character:sea_baghuashi_1 = {
+		get_title = title:d_kidekari
+		get_title = title:c_trialeti
+		get_title = title:c_javakheti	
+	}
+	character:160032 = {
+		set_employer = character:70460
+	}
+	character:160033 = {
+		set_employer = character:70475
+	}
+}
+
+grigor_hamam_effect = {
+	character:159982 = {
+		get_title = title:c_gardman
+		get_title = title:c_parnes
+	}
+	character:sea_arranshahik_002 = {
+		get_title = title:c_khachen
+		get_title = title:c_vaykunik
+	}
+	character:sea_arranshahik_003 = {
+		get_title = title:c_hereti
+		get_title = title:c_khornabuji
+		get_title = title:c_kambysene
+		get_title = title:c_shaki
+	}
+	character:sea_arranshahik_004 = {
+		get_title = title:c_harchlank
+	}
+}
+
+restore_ani_cathedral_effect = {
+	trigger_event = caucasianroa.032
+}
+
+caucasus_build_tower_effect = {
+	add_prestige = medium_prestige_gain
+	add_piety = minor_piety_gain
+	capital_county = {
+		add_county_modifier = {
+			modifier = caucasus_vainakh_tower_modifier
+		}
+	}
+}
