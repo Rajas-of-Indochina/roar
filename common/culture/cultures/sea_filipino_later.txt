@@ -1,5 +1,6 @@
 ﻿
 tagalog = {
+	#color = { 0.4 0.3 0.7 } - vanilla
 	color = tagalog
 
 	created = 1000.1.1
@@ -14,9 +15,9 @@ tagalog = {
 	name_list = name_list_tagalog
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { tagalog_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { tagalog_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_jungle_warfare
@@ -24,9 +25,22 @@ tagalog = {
 		tradition_religion_blending
 		tradition_sacred_hunts
 		tradition_warriors_by_merit
+
+		#tradition_loyal_soldiers - vanilla
+	}
+	
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
 	}
 
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3
@@ -35,6 +49,7 @@ tagalog = {
 }
 
 bisaya = {
+	#color = { 0.9 0.1 0.3 } - vanilla
 	color = bisaya
 
 	created = 1000.1.1
@@ -46,22 +61,41 @@ bisaya = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_bisaya
+	name_list = name_list_bisayan
+	#name_list = name_list_bisaya
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { visayan_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { visayan_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_jungle_warfare
 		tradition_practiced_pirates
 		tradition_poetry
-		tradition_seafaring
 		tradition_migratory
+
+		#tradition_mystical_ancestors - vanilla
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3
@@ -84,9 +118,9 @@ pampangan = {
 	name_list = name_list_pampangan
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_jungle_warfare
@@ -96,7 +130,18 @@ pampangan = {
 		tradition_agrarian
 	}
 
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3
@@ -104,7 +149,9 @@ pampangan = {
 	}
 }
 
-ilokano = {
+iloko = {
+	# replaces RoA's ilokano
+	#color = { 0.8 0.4 0.0 } - vanilla
 	color = ilokano
 
 	created = 1000.1.1
@@ -116,21 +163,38 @@ ilokano = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_idaya
+	name_list = name_list_iloko
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_maritime_mercantilism
 		tradition_storytellers
 		tradition_artisans
 		tradition_stalwart_defenders
+		tradition_hill_dwellers
 	}
 
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+	}
+	
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3
@@ -153,9 +217,9 @@ ifugao = {
 	name_list = name_list_idaya
 
 	coa_gfx = { ifugao_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_storytellers
@@ -165,7 +229,18 @@ ifugao = {
 		tradition_fp1_trials_by_combat
 	}
 
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3
@@ -188,9 +263,9 @@ ibanag = {
 	name_list = name_list_idaya
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_agrarian
@@ -198,7 +273,18 @@ ibanag = {
 		tradition_martial_admiration
 	}
 
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3
@@ -221,9 +307,9 @@ sambal = {
 	name_list = name_list_filipino
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
 
 	traditions = {
 		tradition_jungle_warfare
@@ -233,7 +319,18 @@ sambal = {
 		tradition_mystical_ancestors
 	}
 
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
+		#10 = asian_austronesian
+		#
 		10 = asian_southeast_asian_1
 		10 = asian_southeast_asian_2
 		10 = asian_southeast_asian_3

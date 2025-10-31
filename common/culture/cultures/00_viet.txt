@@ -15,11 +15,11 @@
 
 	traditions = {
 		tradition_people_of_the_red_river
-		tradition_poetry
-		tradition_concubines
+		tradition_religious_patronage 	# cybrxkhan: represents Ly/Tran patronage of Buddhism and their close ties with the Buddhist establishment
 		tradition_stalwart_defenders
 		tradition_mystical_ancestors
 
+		#tradition_concubines - a bit of a wasted tradition space
 		#tradition_astute_diplomats - vanilla
 	}
 
@@ -32,6 +32,7 @@
 	dlc_tradition = {
 		trait = tradition_sinophilic
 		requires_dlc_flag = all_under_heaven
+		fallback = tradition_poetry
 	}
 
 	name_list = name_list_vietnamese

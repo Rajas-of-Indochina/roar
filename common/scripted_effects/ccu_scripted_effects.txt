@@ -310,6 +310,7 @@ ccu_initialize_language_group_effect = {
 	else_if = { limit = { has_cultural_parameter = language_group_palauan } set_variable = { name = language_group value = flag:language_group_palauan } }
 	else_if = { limit = { has_cultural_parameter = language_group_philippine } set_variable = { name = language_group value = flag:language_group_philippine } }
 	else_if = { limit = { has_cultural_parameter = language_group_south_halmaheran } set_variable = { name = language_group value = flag:language_group_south_halmaheran } }
+	else_if = { limit = { has_cultural_parameter = language_group_south_sulawesi } set_variable = { name = language_group value = flag:language_group_south_sulawesi } }
 	else_if = { limit = { has_cultural_parameter = language_group_timor } set_variable = { name = language_group value = flag:language_group_timor } }
 	else_if = { limit = { has_cultural_parameter = language_group_west_barito } set_variable = { name = language_group value = flag:language_group_west_barito } }
 	#else = { set_variable = { name = language_group value =flag:none } }
