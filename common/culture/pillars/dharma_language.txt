@@ -1,0 +1,662 @@
+﻿# Indo-Arayan Languages:
+
+language_roma = {
+	# language of Romani people
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_roma
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_roma }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = romani
+}
+
+language_sanskrit = {
+	# Sanskrit - language of classical Hindu philosophy and historical texts of Buddhism and Jainism
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sanskrit
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sanskrit }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kashmiri
+}
+
+language_pali = {
+	# Pali - liturgical language of Theravada Buddhism
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_pali
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_pali }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kashmiri
+}
+
+language_hindi = {
+	# Hindi - standarised Hindustani language
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_hindi
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_hindi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = hindustani
+}
+
+language_braj = {
+	# Braj - language group of Brajji people
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_braj
+		}
+	}
+	parameters = {
+		language_group_central_indo_aryan = yes
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_braj }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_central_indo_aryan }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kashmiri
+}
+
+language_awadhi = {
+	# Awadhi - language group of Awadhi people
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_awadhi
+		}
+	}
+	parameters = {
+		language_group_central_indo_aryan = yes
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_awadhi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_central_indo_aryan }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = awadhi
+}
+
+language_bhil = {
+	# Bhil language group
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_bhil
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_bhil }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = bhil
+}
+
+language_sambalpuri = {
+	# Sambalpuri
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sambalpuri
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sambalpuri }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kashmiri
+}
+
+language_nepali = {
+	# Nepali
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_nepali
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_nepali }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = nepali
+}
+
+language_kamarupi = {
+	# Kamarupi
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_pali
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_kamarupi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kamarupi
+}
+
+language_rajbongshi = {
+	# Rajbongshi
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_rajbongshi
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_rajbongshi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kashmiri
+}
+
+language_konkani = {
+	# Konkani
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_konkani
+		}
+	}
+	parameters = {
+		language_branch_indo_aryan = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_konkani }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_aryan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = konkani
+}
+
+language_nagpuri = {
+	# Nagpuri
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_nagpuri
+		}
+	}
+	parameters = {
+		language_branch_indo_iranian = yes
+		language_family_indo_european = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_nagpuri }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_indo_iranian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_indo_european }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = nagpuri
+}
+
+
+# Dravidian Languages
+
+language_gondi = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_gondi
+		}
+	}
+	parameters = {
+		language_branch_gondi_kui = yes
+		language_family_dravidian = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_gondi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_gondi_kui }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_dravidian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = gond
+}
+
+language_kui_kuvi = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_kui_kuvi
+		}
+	}
+	parameters = {
+		language_branch_gondi_kui = yes
+		language_family_dravidian = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_kui_kuvi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_gondi_kui }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_dravidian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = khond
+}
+
+language_kurukh = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_kurukh
+		}
+	}
+	parameters = {
+		language_branch_north_dravidian = yes
+		language_family_dravidian = yes
+		language_union_indian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_kurukh }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_north_dravidian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_dravidian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_indian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kurukh
+}
+
+# Tibetan Languages
+language_tani = {
+	# Tani
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_tani
+		}
+	}
+	parameters = {
+		language_group_tani = yes
+		language_branch_tibeto_burman = yes
+		language_family_sino_tibetan = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_tani }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_tani }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_tibeto_burman }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_sino_tibetan }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = bodpa
+}
+
+# Burmese Languages
+language_newar = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_newar
+		}
+	}
+	parameters = {
+		language_branch_tibeto_burman = yes
+		language_family_sino_tibetan = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_newar }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_tibeto_burman }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_sino_tibetan }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = nepali
+}
+
+
+# Munda Languages
+
+# Palaungic Languages
+
+# Khasic Languages

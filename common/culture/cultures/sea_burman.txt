@@ -23,7 +23,7 @@
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
-	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx southeast_asian_clothing_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_18
@@ -47,9 +47,10 @@ pyu = {
 
 	traditions = {
 		tradition_religion_blending
-		tradition_city_keepers
 		tradition_pacifism
 		tradition_vegetarianism
+
+		#tradition_agrarian
 	}
 
 	dlc_tradition = {
@@ -57,11 +58,17 @@ pyu = {
 		requires_dlc_flag = all_under_heaven
 	}
 
+	dlc_tradition = {
+		trait = tradition_tgp_fortified_strongholds
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_city_keepers
+	}
+
 	name_list = name_list_pyu
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
-	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx southeast_asian_clothing_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_18
@@ -106,7 +113,7 @@ rakhine = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
-	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx southeast_asian_clothing_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_18
