@@ -1,54 +1,11 @@
-﻿
-jurchen = {
-	color = jurchen
-
-	ethos = ethos_bellicose
-	heritage = heritage_tungusic
-	language = language_tungusic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_herd
-
-	traditions = {
-		tradition_warrior_culture
-		tradition_agrarian
-		tradition_horse_breeder
-		tradition_soot_faced_councils
-	}
-
-## Gets unique version via soot faced councils
-#	dlc_tradition = {
-#		trait = tradition_mpo_iron_cavalry
-#		requires_dlc_flag = khans_of_the_steppe
-#	}
-
-	#dlc_tradition = {
-	#	trait = tradition_malleable_invaders
-	#	requires_dlc_flag = hybridize_culture
-	#}
-
-	name_list = name_list_jurchen
-
-	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { mongol_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-
-	ethnicities = {
-		2 = asian_mongol_1
-		2 = asian_mongol_2
-		2 = asian_mongol_3
-		2 = asian_mongol_4
-	}
-}
-
-udege = {
+﻿udege = {
 	color = udege
 
 	ethos = ethos_spiritual
 	heritage = heritage_tungusic
 	language = language_tungusic
 	martial_custom = martial_custom_male_only
-	head_determination = head_determination_herd
+	head_determination = head_determination_domain
 
 	traditions = {
 		tradition_forest_fighters
@@ -56,14 +13,17 @@ udege = {
 		tradition_mendicant_mystics
 	}
 
-	name_list = name_list_jurchen
+	name_list = name_list_mohe
 
 	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
 	building_gfx = { steppe_building_gfx }
 	clothing_gfx = { mongol_clothing_gfx }
 	unit_gfx = { mongol_unit_gfx }
 
+	house_coa_frame = house_frame_14
+
 	ethnicities = {
+		4 = asian_manchu_korean
 		2 = asian_mongol_1
 		2 = asian_mongol_2
 		2 = asian_mongol_3
@@ -71,44 +31,8 @@ udege = {
 	}
 }
 
-balhae = {
-	color = balhae
-
-	created = 712.1.1
-	parents = { goguryeo jurchen }
-
-	ethos = ethos_bellicose
-	heritage = heritage_tungusic
-	language = language_korean
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_herd
-
-	traditions = {
-		tradition_ruling_caste
-		tradition_hunters
-		tradition_religion_blending
-		tradition_warrior_culture
-	}
-
-	dlc_tradition = {
-		trait = tradition_culture_blending
-		requires_dlc_flag = hybridize_culture
-	}
-
-	name_list = name_list_fuyo
-
-	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
-	building_gfx = { korean_building_gfx }
-	clothing_gfx = { han_clothing_gfx chinese_clothing_gfx }
-	unit_gfx = { mongol_unit_gfx }
-
-	ethnicities = {
-		10 = asian
-		5 = east_asian_han_1
-	}
-}
-
-evenk = {  #鄂温克
+evenk = {
+	# 鄂温克
 	color = evenk
 
 	ethos = ethos_communal
@@ -135,6 +59,8 @@ evenk = {  #鄂温克
 	building_gfx = { steppe_building_gfx }
 	clothing_gfx = { mongol_clothing_gfx }
 	unit_gfx = { mongol_unit_gfx }
+
+	house_coa_frame = house_frame_14
 
 	ethnicities = {
 		2 = asian_mongol_1
@@ -165,12 +91,14 @@ nanai = {
 		requires_dlc_flag = khans_of_the_steppe
 	}
 
-	name_list = name_list_jurchen
+	name_list = name_list_mohe
 
 	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
 	building_gfx = { steppe_building_gfx }
 	clothing_gfx = { mongol_clothing_gfx }
 	unit_gfx = { mongol_unit_gfx }
+
+	house_coa_frame = house_frame_14
 
 	ethnicities = {
 		2 = asian_mongol_1
@@ -179,4 +107,3 @@ nanai = {
 		2 = asian_mongol_4
 	}
 }
-
