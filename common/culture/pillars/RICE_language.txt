@@ -194,41 +194,6 @@ language_burusho = {
 	color = { 0.39 0.19 0.09 }
 }
 
-language_nivkh = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_nivkh
-		}
-	}
-	parameters = {
-		language_branch_nivkh = yes
-		language_family_amuric = yes
-		language_union_steppe_siberian = yes
-	}
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_nivkh }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_nivkh }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_amuric }
-			multiply = same_language_family_choice_factor
-		}
-		if = {
-			limit = { has_cultural_parameter = language_union_steppe_siberian }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = { 0.51 0.59 0.61 }
-}
-
 language_yeniseian = {
 	type = language
 	is_shown = {

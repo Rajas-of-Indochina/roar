@@ -106,6 +106,34 @@ language_aramaic = {
 	color = assyrian
 }
 
+#language_asli - replaced by language_aslian
+
+language_austronesian = {
+	# absolute garbage, only here for sake of vanilla
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_austronesian
+		}
+	}
+	parameters = {
+		language_family_austronesian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_austronesian }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+	
+	color = javan
+}
+
 language_baltic = {
 	type = language
 	is_shown = {
@@ -375,6 +403,8 @@ language_chinese = {
 
 	color = han
 }
+
+#language_korean - moved to sea_language
 
 language_cushitic = {
 	type = language
@@ -2405,41 +2435,6 @@ language_tocharian = {
 	color = tocharian
 }
 
-language_tungusic = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_tungusic
-		}
-	}
-	parameters = {
-		language_branch_tungusic = yes
-		language_family_tungusic = yes
-		language_union_steppe_siberian = yes
-	}
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_tungusic }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_tungusic }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_tungusic }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_steppe_siberian }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = jurchen
-}
-
 language_sardinian = {
 	type = language
 	is_shown = {
@@ -2595,6 +2590,78 @@ language_ayneha = {
 	color = songhai
 }
 
+#language_khitan - moved to sea_language
+
+language_tungusic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_tungusic
+		}
+	}
+	parameters = {
+		language_branch_tungusic = yes
+		language_family_tungusic = yes
+		language_union_steppe_siberian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_tungusic }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_tungusic }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_tungusic }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_steppe_siberian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = jurchen
+}
+
+language_nivkh = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_nivkh
+		}
+	}
+	parameters = {
+		language_branch_nivkh = yes
+		language_family_amuric = yes
+		language_union_steppe_siberian = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_nivkh }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_nivkh }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_amuric }
+			multiply = same_language_family_choice_factor
+		}
+		if = {
+			limit = { has_cultural_parameter = language_union_steppe_siberian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = nivkh
+}
+
 language_albanian = {
 	type = language
 	is_shown = {
@@ -2720,4 +2787,71 @@ language_ancient_greek = { #This represents Koine Greek or Attic Greek I guess.
 	}
 
 	color = trojan
+}
+
+#language_tai - moved to sea_language
+#language_hmongic - replaced by language_hmong in sea_language
+
+language_japonic = {
+	# replaces language_yamato for sake of compatch with AUH
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_japonic
+		}
+	}
+	parameters = {
+		language_branch_japanese = yes
+		language_family_japonic = yes
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_japonic }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_japanese }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_japonic }
+			multiply = same_language_family_choice_factor
+		}
+	}
+	color = japanese
+}
+
+#language_ainu - moved to sea_language
+
+#language_vietnamese - moved to sea_language
+
+#language_chamic - moved to sea_language
+
+language_mon_khmer = {
+	# Old Mon and Old Khmer are considered to have likely been mutually intelligible
+	# in RoA we have them as separate
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_mon_khmer
+		}
+	}
+	parameters = {
+		language_family_austroasiatic = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_mon_khmer }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austroasiatic }
+			multiply = same_language_family_choice_factor
+		}
+	}
+	
+	color = mon_khmer 
 }

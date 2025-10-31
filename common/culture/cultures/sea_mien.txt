@@ -1,0 +1,41 @@
+﻿yao = {
+	#color = { 100 140 120 } - vanilla
+	color = yao
+
+	ethos = ethos_communal
+	heritage = heritage_mien
+	language = language_mien
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	name_order_convention = dynasty_always_first
+
+	traditions = {
+		tradition_hill_dwellers  # for centuries inhabited hilly and mountianous regions
+		tradition_agrarian  # Yao people cultivated rice for centuries through plowing
+		tradition_medicinal_plants
+		tradition_mystical_ancestors
+	}
+
+	dlc_tradition = {
+		trait = tradition_artisans
+		requires_dlc_flag = royal_court
+	}
+
+	name_list = name_list_hmong
+
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { chinese_clothing_gfx }
+	unit_gfx = { chinese_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		2 = east_asian_han_1
+		2 = east_asian_han_2
+		2 = east_asian_han_3
+		2 = east_asian_han_4
+	}
+}
