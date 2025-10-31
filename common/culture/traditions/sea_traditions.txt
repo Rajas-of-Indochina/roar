@@ -1232,9 +1232,13 @@ tradition_people_of_the_red_river = {
 	}
 
 	is_shown = {
-		has_cultural_pillar = heritage_vietic
-		NOT = { has_cultural_tradition = tradition_agrarian }
+		has_cultural_pillar = heritage_viet
+		NOR = {
+			has_cultural_tradition = tradition_agrarian
+			culture_tradition:tradition_intensive_farming = { is_in_list = traits }
+		}
 	}
+
 	can_pick = {
 		custom_tooltip = {
 			text = culture_in_farmlands_or_floodplains_terrain_desc
@@ -1252,18 +1256,25 @@ tradition_people_of_the_red_river = {
 	parameters = {
 		content_trait_more_common = yes
 		hard_working_traits_more_valued = yes
+		#
+		#rice_cultivators_next_level_paddy_fields = yes
 	}
+
 	character_modifier = {
 		men_at_arms_recruitment_cost = 0.25
 		floodplains_travel_danger = floodplains_medium_danger_reduction
 	}
+
 	county_modifier = {
 		farmlands_development_growth_factor = 0.3
 		farmlands_construction_gold_cost = -0.1
 		floodplains_development_growth_factor = 0.3
 		floodplains_construction_gold_cost = -0.1
+		terraced_hills_development_growth_factor = 0.3
+		terraced_hills_construction_gold_cost = -0.1
 		farmlands_levy_size = 0.1
 		floodplains_levy_size = 0.1
+		terraced_hills_levy_size = 0.1
 	}
 
 	cost = {
@@ -1291,6 +1302,7 @@ tradition_people_of_the_red_river = {
 								OR = {
 									terrain = farmlands
 									terrain = floodplains
+									terrain = terraced_hills
 								}
 							}
 						}
