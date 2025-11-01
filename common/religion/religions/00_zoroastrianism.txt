@@ -1,30 +1,40 @@
 ﻿zoroastrianism_religion = {
 	family = rf_eastern
+	doctrine = heresy_hostility_doctrine	# Needs to be before eastern_hostility_doctrine in order to override the same religion hostility
+	doctrine = eastern_hostility_doctrine
 	graphical_faith = "zoroastrian_gfx"
 
+	piety_icon_group = "zoroastrian"
+
+	#Special Doctrines
 	doctrine = special_doctrine_not_allowed_to_hof
+
+	#Main group
 	doctrine = doctrine_monotheist
-	doctrine = heresy_hostility_doctrine # Needs to be before eastern_hostility_doctrine in order to override the same religion hostility
-	doctrine = eastern_hostility_doctrine
 	doctrine = doctrine_gender_male_dominated
+	doctrine = doctrine_pluralism_righteous
 	doctrine = doctrine_no_head
+	doctrine = doctrine_clerical_succession_temporal_fixed_appointment
+
+	#Marriage
 	doctrine = doctrine_concubines
 	doctrine = doctrine_divorce_approval
 	doctrine = doctrine_bastardry_none
-	doctrine = doctrine_homosexuality_crime
+	doctrine = doctrine_consanguinity_cousins
+
+	#Crimes
+	doctrine = doctrine_homosexuality_shunned
 	doctrine = doctrine_adultery_men_shunned
 	doctrine = doctrine_adultery_women_shunned
 	doctrine = doctrine_kinslaying_close_kin_crime
-	doctrine = doctrine_witchcraft_shunned
 	doctrine = doctrine_deviancy_shunned
-	doctrine = doctrine_consanguinity_cousins
-	doctrine = doctrine_pluralism_righteous
+	doctrine = doctrine_witchcraft_shunned
+	
+	#Clerical
 	doctrine = doctrine_theocracy_temporal
 	doctrine = doctrine_clerical_function_taxation
-	doctrine = doctrine_clerical_gender_male_only 
+	doctrine = doctrine_clerical_gender_male_only
 	doctrine = doctrine_clerical_marriage_allowed
-	doctrine = doctrine_clerical_succession_temporal_fixed_appointment
-	piety_icon_group = "zoroastrian"
 
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
