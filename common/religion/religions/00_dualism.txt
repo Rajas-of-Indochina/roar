@@ -1,28 +1,38 @@
 ﻿dualism_religion = {
 	family = rf_abrahamic
 
-	doctrine = doctrine_monogamy
-	doctrine = abrahamic_hostility_doctrine
-	doctrine = doctrine_gender_male_dominated
+	piety_icon_group = "zoroastrian"
+
+	#Main Group
+	doctrine = doctrine_monotheist
+	doctrine = doctrine_polytheist
 	doctrine = doctrine_spiritual_head
+	doctrine = doctrine_gender_male_dominated
+	doctrine = doctrine_pluralism_pluralistic
+	doctrine = doctrine_theocracy_temporal
+
+	#Marriage
 	doctrine = doctrine_monogamy
 	doctrine = doctrine_divorce_allowed
 	doctrine = doctrine_bastardry_none
+	doctrine = doctrine_consanguinity_cousins
+
+	#Crimes
 	doctrine = doctrine_homosexuality_shunned
 	doctrine = doctrine_adultery_men_shunned
 	doctrine = doctrine_adultery_women_shunned
 	doctrine = doctrine_kinslaying_any_dynasty_member_crime
-	doctrine = doctrine_witchcraft_accepted
 	doctrine = doctrine_deviancy_shunned
-	doctrine = doctrine_consanguinity_cousins
-	doctrine = doctrine_pluralism_pluralistic
-	doctrine = doctrine_theocracy_temporal
+	doctrine = doctrine_witchcraft_accepted
+
+	#Clerical Functions
 	doctrine = doctrine_clerical_function_taxation
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_spiritual_appointment
 
 	#Special Doctrine for Gnostic mechanics
+	doctrine = abrahamic_hostility_doctrine
 	doctrine = special_doctrine_is_gnostic_faith
 
 	#Allow pilgrimages
@@ -45,7 +55,7 @@
 	}
 
 	custom_faith_icons = {
-		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_pentagram_inverted custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_black_sheep custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s
+		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_pentagram_inverted custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_black_sheep custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s custom_faith_magatama custom_faith_soto custom_faith_benzhuism
 	}
 
 	holy_order_names = {
@@ -234,12 +244,12 @@
 			holy_site = samarkand
 			holy_site = udabhanda
 
-			doctrine = tenet_mendicant_preachers # Manicheans preached very far East
+			doctrine = tenet_mendicant_preachers	# Manicheans preached very far East
 			doctrine = tenet_adaptive
-			doctrine = tenet_monasticism # To represent the Monastic traditions of Manicheism
+			doctrine = tenet_monasticism	# To represent the Monastic traditions of Manicheism
 
-			doctrine = doctrine_clerical_marriage_disallowed # The Elect weren't supposed to have sex
-			doctrine = doctrine_witchcraft_crime # Mani was really against sorcery and magic
+			doctrine = doctrine_clerical_marriage_disallowed	# The Elect weren't supposed to have sex
+			doctrine = doctrine_witchcraft_crime	# Mani was really against sorcery and magic
 
 			localization = { # Manichean/Priscillianism Gods
 				#HighGodName
@@ -346,133 +356,6 @@
 			}
 		}
 
-		chinese_manichean = {
-			color = { 208 169 33 }
-			religious_head = d_manichean
-			icon = chinese_manichean
-
-			holy_site = qiyun_shan # Replaced Ahvaz since it's far away and Chinese Manicheans might not have known about it, Fanjingshan is a major mountain to Maitreya, Maitreyist Buddhism is closely associated with Chinese Manicheism
-			holy_site = yijinai # As most of China is not on the map, this works to represent the large Chinese following of the faith
-			holy_site = quanzhou # center of Fujian Manicheism
-			holy_site = samarkand
-			holy_site = mount_putuo # Replaced udabhanda since it's far away
-
-			# urmegtu
-			# Syncretic doctrine
-			doctrine = tenet_eastern_syncretism
-
-			doctrine = tenet_false_conversion_sanction
-			doctrine = tenet_communal_possessions # tenet_adaptive
-			doctrine = tenet_monasticism # To represent the Monastic traditions of Manicheism
-
-			doctrine = doctrine_witchcraft_crime # Mani was really against sorcery and magic
-
-			localization = { # Manichean/Priscillianism Gods
-				#HighGodName
-				HighGodName = chinese_manichean_high_god_name
-				HighGodName2 = chinese_manichean_high_god_name_2
-				HighGodNamePossessive = chinese_manichean_high_god_name_possessive
-				HighGodNameSheHe = CHARACTER_SHEHE_HE
-				HighGodHerselfHimself = CHARACTER_HIMSELF
-				HighGodHerHis = CHARACTER_HERHIS_HIS
-				HighGodNameAlternate = chinese_manichean_high_god_name
-				HighGodNameAlternatePossessive = chinese_manichean_high_god_name_possessive
-
-				#Creator
-				CreatorName = chinese_manichean_creator_god_name
-				CreatorNamePossessive = chinese_manichean_creator_god_name_possessive
-				CreatorSheHe = CHARACTER_SHEHE_SHE
-				CreatorHerHis = CHARACTER_HERHIS_HER
-				CreatorHerHim = CHARACTER_HERHIM_HER
-
-				#HealthGod
-				HealthGodName = chinese_manichean_health_god_name
-				HealthGodNamePossessive = chinese_manichean_health_god_name_possessive
-				HealthGodSheHe = CHARACTER_SHEHE_IT
-				HealthGodHerHis = CHARACTER_HERHIS_ITS
-				HealthGodHerHim = CHARACTER_HERHIM_IT
-				
-				#FertilityGod
-				FertilityGodName = chinese_manichean_fertility_god_name
-				FertilityGodNamePossessive = chinese_manichean_fertility_god_name_possessive
-				FertilityGodSheHe = CHARACTER_SHEHE_SHE
-				FertilityGodHerHis = CHARACTER_HERHIS_HER
-				FertilityGodHerHim = CHARACTER_HERHIM_HER
-
-				#WealthGod
-				WealthGodName = chinese_manichean_wealth_god_name
-				WealthGodNamePossessive = chinese_manichean_wealth_god_name_possessive
-				WealthGodSheHe = CHARACTER_SHEHE_HE
-				WealthGodHerHis = CHARACTER_HERHIS_HIS
-				WealthGodHerHim = CHARACTER_HERHIM_HIM
-
-				#HouseholdGod
-				HouseholdGodName = chinese_manichean_household_god_name
-				HouseholdGodNamePossessive = chinese_manichean_household_god_name_possessive
-				HouseholdGodSheHe = CHARACTER_SHEHE_HE
-				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
-				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
-
-				#KnowledgeGod
-				KnowledgeGodName = chinese_manichean_knowledge_god_name
-				KnowledgeGodNamePossessive = chinese_manichean_knowledge_god_name_possessive
-				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
-				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
-				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
-
-				#WarGod
-				WarGodName = chinese_manichean_war_god_name
-				WarGodNamePossessive = chinese_manichean_war_god_name_possessive
-				WarGodSheHe = CHARACTER_SHEHE_HE
-				WarGodHerHis = CHARACTER_HERHIS_HIS
-				WarGodHerHim = CHARACTER_HERHIM_HIM
-
-				#NightGod
-				NightGodName = chinese_manichean_night_god_name
-				NightGodNamePossessive = chinese_manichean_night_god_name_possessive
-				NightGodSheHe = CHARACTER_SHEHE_HE
-				NightGodHerHis = CHARACTER_HERHIS_HIS
-				NightGodHerHim = CHARACTER_HERHIM_HIM
-
-				#WaterGod
-				WaterGodName = chinese_manichean_water_god_name
-				WaterGodNamePossessive = chinese_manichean_water_god_name_possessive
-				WaterGodSheHe = CHARACTER_SHEHE_HE
-				WaterGodHerHis = CHARACTER_HERHIS_HIS
-				WaterGodHerHim = CHARACTER_HERHIM_HIM
-
-				#Yamags, not High Priests
-				ReligiousHeadName = manichean_religious_head_title
-				ReligiousHeadTitleName = manichean_religious_head_title_name
-
-				GoodGodNames = {
-					chinese_manichean_good_god_father_of_greatness
-					chinese_manichean_good_god_mother_of_life
-					chinese_manichean_good_god_first_man
-					chinese_manichean_good_god_jesus
-				}
-				DevilName = chinese_manichean_devil_name
-				DevilNamePossessive = chinese_manichean_devil_name_possessive
-				DevilSheHe = CHARACTER_SHEHE_HE
-				DevilHerHis = CHARACTER_HERHIS_HIS
-				DevilHerselfHimself = CHARACTER_HIMSELF
-				EvilGodNames = {
-					chinese_manichean_devil_name
-					dualism_devil_name
-					dualism_evil_god_archons
-					dualism_evil_god_matter
-					dualism_evil_god_ignorance
-				}
-				WitchGodName = chinese_manichean_devil_name
-				WitchGodNamePossessive = chinese_manichean_devil_name_possessive
-				WitchGodHerHis = CHARACTER_HERHIS_HIS
-				WitchGodSheHe = CHARACTER_SHEHE_HE
-				WitchGodHerHim = CHARACTER_HERHIM_HIM
-				WitchGodMistressMaster = master
-				WitchGodMotherFather = father
-			}
-		}
-
 		mandeaism = {
 			color = { 0.5 0.75 0.3 }
 			icon = dualism
@@ -485,8 +368,8 @@
 
 			doctrine = tenet_pacifism
 			doctrine = tenet_esotericism
-			doctrine = tenet_communal_identity # Temp to replace syncretism, also Christian syncretism doesn't really fit them
-			#doctrine = tenet_christian_syncretism # Very high emphasis on John the Baptist, were also able to convince Christian invaders that they were some distant form of Christianity
+			doctrine = tenet_communal_identity  	# Temp to replace syncretism, also Christian syncretism doesn't really fit them
+			#doctrine = tenet_christian_syncretism  	# Very high emphasis on John the Baptist, were also able to convince Christian invaders that they were some distant form of Christianity
 
 			doctrine = doctrine_pluralism_fundamentalist
 
@@ -602,10 +485,7 @@
 
 			doctrine = tenet_islamic_syncretism # Referred to in the Quran as people of the book, in Hadith they were regarded entirely as Muslims
 			doctrine = tenet_esotericism
-			doctrine = tenet_literalism
-			doctrine = tenet_adaptive # Placeholder
-
-			
+			doctrine = tenet_literalism	
 
 			localization = { # Gods mostly shared with Dualism/mandeaism
 				#HighGodName
@@ -638,8 +518,8 @@
 					dualism_evil_god_matter
 					dualism_evil_god_ignorance
 				}
-				WitchGodName = chinese_manichean_devil_name
-				WitchGodNamePossessive = chinese_manichean_devil_name_possessive
+				WitchGodName = manicheanism_devil_name
+				WitchGodNamePossessive = manicheanism_devil_name_possessive
 				WitchGodHerHis = CHARACTER_HERHIS_HIS
 				WitchGodSheHe = CHARACTER_SHEHE_HE
 				WitchGodHerHim = CHARACTER_HERHIM_HIM
@@ -1012,6 +892,7 @@
 			doctrine = tenet_esotericism
 			doctrine = tenet_hedonistic
 
+			doctrine = doctrine_polytheist
 			doctrine = doctrine_gender_equal
 			doctrine = doctrine_adultery_men_accepted
 			doctrine = doctrine_adultery_women_accepted
@@ -1030,5 +911,45 @@
 				ReligiousText3 = cainite_religious_text_3
 			}
 		}
+
+		mingism = {
+			color = { 236 213 129 }
+			religious_head = d_manichean
+			icon = mingism
+
+			holy_site = luoyang
+			holy_site = chang_an
+			holy_site = turpan
+			holy_site = samarkand
+			holy_site = quanzhou
+
+			doctrine = doctrine_polytheist
+			doctrine = tenet_eastern_syncretism
+			doctrine = tenet_adaptive
+			doctrine = tenet_esotericism
+
+			localization = {
+				HighGodName = mingism_high_god_name
+				HighGodName2 = mingism_high_god_name_2
+				HighGodNamePossessive = mingism_high_god_name_possessive
+				HighGodNameSheHe = CHARACTER_SHEHE_IT
+				HighGodHerselfHimself = CHARACTER_ITSELF
+				HighGodHerHis = CHARACTER_HERHIS_ITS
+				HighGodNameAlternate = mingism_high_god_name
+				HighGodNameAlternatePossessive = mingism_high_god_name_possessive
+
+				GoodGodNames = { mingism_high_god_name }
+				DevilName = mingism_devil_name
+				DevilNamePossessive = mingism_devil_name_possessive
+				DevilSheHe = CHARACTER_SHEHE_HE
+				DevilHerHis = CHARACTER_HERHIS_HIS
+				DevilHerselfHimself = CHARACTER_HIMSELF
+				EvilGodNames = { mingism_devil_name }
+			}
+		}
+
+		#chinese_manichean = {
+			# for now crossed out until we get feedback from Khan how to adjust Mingism (aka this faith but from AUH)
+		#}
 	}
 }
