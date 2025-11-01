@@ -1577,6 +1577,28 @@ lamlam = { # Mount Lamlam
 	}
 }
 
+# Nasrani versions of Christian Holy sites
+	# At start deactivated but turn on depending on "Unite the Nasrani" decisions
+rome_nasrani = {
+	county = c_roma
+	barony = b_vaticano
+
+	character_modifier = {
+		name = holy_site_rome_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+
+constantinople_nasrani = {
+	county = c_byzantion
+
+	character_modifier = {
+		name = holy_site_constantinople_effect_name
+		cultural_head_fascination_mult = 0.15
+	}
+}
+
 ### Adivasi (India's Tribal Groups) Holy Sites ###
 thel_kopi_ghat = {
 	county = c_rajrappa
