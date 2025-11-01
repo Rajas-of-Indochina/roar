@@ -45,3 +45,43 @@ doctrine_theocracy = {
 		}
 	}
 }
+
+# Overwriting funeral doctrines here in case we add more - for now removed until we actually decide to do so
+
+# Leaving this here since I believe we will need to adjust it soon
+doctrine_theism = {
+	group = "main_group"
+	doctrine_monotheist = {
+		piety_cost = {
+			value = faith_doctrine_cost_high
+			if = {
+				limit = { 
+					OR = {
+						has_doctrine = abrahamic_hostility_doctrine
+						has_doctrine = doctrine_monotheist 
+					}
+				}
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			hostility_others = 3
+		}
+	}
+	doctrine_polytheist = {
+		piety_cost = {
+			value = faith_doctrine_cost_high
+			if = {
+				limit = { has_doctrine = abrahamic_hostility_doctrine }
+				multiply = faith_changed_doctrine_cost_mult_three_step
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_polytheist }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			hostility_others = 2
+		}
+	}
+}
