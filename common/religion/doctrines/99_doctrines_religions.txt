@@ -1,0 +1,76 @@
+﻿hostility_group = {
+	group = "not_creatable"
+	abrahamic_hostility_doctrine = {
+		parameters = {
+			hostility_same_religion = 2
+			hostility_same_family = 3
+			hostility_others = 3
+		}
+	}
+	pagan_hostility_doctrine = {
+		visible = no
+		parameters = {
+			hostility_same_religion = 1
+			hostility_same_family = 2
+			hostility_others = 3
+		}
+	}
+	eastern_hostility_doctrine = {
+		parameters = {
+			hostility_same_religion = 1
+			hostility_same_family = 1
+			hostility_others = 2
+		}
+	}
+	sinitic_hostility_doctrine = {
+		parameters = {
+			hostility_same_religion = 1
+			hostility_same_family = 1
+			hostility_others = 2
+		}
+	}
+}
+
+# Overwriting funeral doctrines here in case we add more - for now removed until we actually decide to do so
+
+unreformed_faith = {
+	group = "not_creatable"
+	is_available_on_create = {
+		always = no # Goes away on reformation
+	}
+	unreformed_faith_doctrine = {
+		visible = no
+		parameters = {
+			# unreformed = yes also serves as the basis for the unreformed_syncretic tenet.
+			unreformed = yes
+			hostility_override_tenet_unreformed_syncretism = 1
+			unreformed_syncretic_recipient_opinion_active = yes
+			opinion_of_unreformed_syncretic_actor_opinion_active = 30
+			conquest_cb_enabled = yes
+			faith_can_raid = yes
+		}
+
+		character_modifier = {
+			monthly_prestige_gain_mult = 0.2
+			#clan_government_vassal_opinion = -20
+			#feudal_government_vassal_opinion = -20
+			#republic_government_vassal_opinion = -20
+		}
+	}
+	west_african_unreformed_faith_doctrine = {
+		visible = no
+		parameters = {
+			# unreformed = yes also serves as the basis for the unreformed_syncretic tenet.
+			unreformed = yes
+			hostility_override_tenet_unreformed_syncretism = 1
+			unreformed_syncretic_recipient_opinion_active = yes
+			opinion_of_unreformed_syncretic_actor_opinion_active = 30
+			conquest_cb_enabled = yes
+			faith_can_raid = yes
+		}
+
+		character_modifier = {
+			monthly_prestige_gain_mult = 0.2
+		}
+	}
+}

@@ -1,47 +1,4 @@
-﻿
-unreformed_faith = {
-	group = "not_creatable"
-	is_available_on_create = {
-		always = no # Goes away on reformation
-	}
-	unreformed_faith_doctrine = {
-		visible = no
-		parameters = {
-			# unreformed = yes also serves as the basis for the unreformed_syncretic tenet.
-			unreformed = yes
-			hostility_override_tenet_unreformed_syncretism = 1
-			unreformed_syncretic_recipient_opinion_active = yes
-			opinion_of_unreformed_syncretic_actor_opinion_active = 30
-			conquest_cb_enabled = yes
-			faith_can_raid = yes
-		}
-
-		character_modifier = {
-			monthly_prestige_gain_mult = 0.2
-			#clan_government_vassal_opinion = -20
-			#feudal_government_vassal_opinion = -20
-			#republic_government_vassal_opinion = -20
-		}
-	}
-	west_african_unreformed_faith_doctrine = {
-		visible = no
-		parameters = {
-			# unreformed = yes also serves as the basis for the unreformed_syncretic tenet.
-			unreformed = yes
-			hostility_override_tenet_unreformed_syncretism = 1
-			unreformed_syncretic_recipient_opinion_active = yes
-			opinion_of_unreformed_syncretic_actor_opinion_active = 30
-			conquest_cb_enabled = yes
-			faith_can_raid = yes
-		}
-
-		character_modifier = {
-			monthly_prestige_gain_mult = 0.1
-		}
-	}
-}
-
-# Three Teachings
+﻿# Three Teachings
 doctrine_three_teachings = {
 	group = "special"
 	is_available_on_create = {
@@ -69,6 +26,7 @@ doctrine_mz_syncretism = {
 			else_if = {
 				limit = {
 					OR = {
+						has_doctrine = tenet_sinitic_syncretism
 						has_doctrine = tenet_eastern_syncretism
 						has_doctrine = tenet_unreformed_syncretism
 						has_doctrine = tenet_christian_syncretism
@@ -78,6 +36,64 @@ doctrine_mz_syncretism = {
 				}
 				value = faith_tenet_cost_high
 			}
+		}
+	}
+
+	tenet_sinitic_syncretism = {
+		piety_cost = {
+			if = {
+				limit = {
+					OR = {
+						religion_tag = buddhism_religion
+						has_doctrine = pagan_hostility_doctrine
+					}
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					religion_tag = islam_religion
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_sinitic_syncretism }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+
+		is_shown = {
+			OR = {
+				has_doctrine = abrahamic_hostility_doctrine
+				has_doctrine = pagan_hostility_doctrine
+				has_doctrine = eastern_hostility_doctrine
+			}
+		}
+
+		can_pick = {
+			custom_description = {
+				text = incompatible_tenet_gnosticism_trigger
+				NOT = {
+					doctrine:tenet_gnosticism = { is_in_list = selected_doctrines }
+				}
+			}
+		}
+
+		parameters = {
+			hostility_override_sinitic_hostility_doctrine = 1
+			#For loc:
+			is_eastern_faith_bilateral_loc_override = 1
+			eastern_syncretic_actor_opinion_active = yes
+			opinion_of_eastern_syncretic_recipient_opinion_active = 30 #Sync this to syncretic_mutual_opinion_bonus_value
+		}
+		traits = {
+			virtues = { honest }
+			sins = { wrathful }
 		}
 	}
 
@@ -105,7 +121,7 @@ doctrine_mz_syncretism = {
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_eastern_syncretism }
-				multiply = 0
+				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
 
@@ -155,7 +171,7 @@ doctrine_mz_syncretism = {
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_unreformed_syncretism }
-				multiply = 0
+				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
 
@@ -176,7 +192,6 @@ doctrine_mz_syncretism = {
 	}
 
 	tenet_christian_syncretism = {
-
 		piety_cost = {
 			if = {
 				limit = {
@@ -194,7 +209,7 @@ doctrine_mz_syncretism = {
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_christian_syncretism }
-				multiply = 0
+				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
 
@@ -219,7 +234,6 @@ doctrine_mz_syncretism = {
 	}
 
 	tenet_islamic_syncretism = {
-
 		piety_cost = {
 			if = {
 				limit = {
@@ -237,7 +251,7 @@ doctrine_mz_syncretism = {
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_islamic_syncretism }
-				multiply = 0
+				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
 
@@ -260,7 +274,6 @@ doctrine_mz_syncretism = {
 	}
 
 	tenet_jewish_syncretism = {
-
 		piety_cost = {
 			if = {
 				limit = {
@@ -279,7 +292,7 @@ doctrine_mz_syncretism = {
 			# Multiplier for keeping same tenet
 			if = {
 				limit = { has_doctrine = tenet_jewish_syncretism }
-				multiply = 0
+				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
 
@@ -315,81 +328,104 @@ doctrine_special_succession = {
 	}
 }
 
-# Overwriting funeral doctrines here in case we add more
-doctrine_funeral = {
-	group = "clergy"
-	doctrine_funeral_stoic = { # Abrahamic funerals, stand around and try not to cry too much before the body is humbly buried
-		piety_cost = {
-			value = faith_doctrine_cost_mid
-			if = {
-				limit = { has_doctrine = doctrine_funeral_stoic }
-				multiply = faith_unchanged_doctrine_cost_mult
-			}
-		}
-		parameters = {
-			burial_funeral = yes
-			stoic_funeral = yes
-		}
+# Caucasus special doctrines
+doctrine_north_caucasian = {
+	group = "main_group"
+	is_available_on_create = {
+		religion_tag = northcaucasian_religion
 	}
-	doctrine_funeral_bewailment = { # West African funerals, strongly encouraged to show emotion before the body is humbly buried
-		piety_cost = {
-			value = faith_doctrine_cost_mid
-			if = {
-				limit = { has_doctrine = doctrine_funeral_bewailment }
-				multiply = faith_unchanged_doctrine_cost_mult
-			}
-		}
-		parameters = {
-			burial_funeral = yes
-			bewailment_funeral = yes
-		}
-	}
-	doctrine_funeral_cremation = { # Catch-all cremations, burn or otherwise dissolve the body
-		piety_cost = {
-			value = faith_doctrine_cost_mid
-			if = {
-				limit = { has_doctrine = doctrine_funeral_cremation }
-				multiply = faith_unchanged_doctrine_cost_mult
-			}
-		}
-		parameters = {
-			cremation_funeral = yes
-		}
-	}
-	doctrine_funeral_sky_burial = { # Have the body fed to scavenging animals and birds
-		piety_cost = {
-			value = faith_doctrine_cost_mid
-			if = {
-				limit = { has_doctrine = doctrine_funeral_sky_burial }
-				multiply = faith_unchanged_doctrine_cost_mult
-			}
-		}
-		parameters = {
-			sky_burials_active = yes
-			can_build_towers_of_silence_active = yes
-		}
 
-		character_modifier = {
-			negate_health_penalty_add = 0.25
-		}
-	}
-	doctrine_funeral_mummification = { # Fanatically preserve the body, very expensive
+	northwest_caucasian_doctrine = {
 		piety_cost = {
-			value = faith_doctrine_cost_high
+			value = faith_doctrine_cost_low
 			if = {
-				limit = { has_doctrine = doctrine_funeral_mummification }
-				multiply = faith_unchanged_doctrine_cost_mult
+				limit = { has_doctrine = northwest_caucasian_doctrine }
+				multiply = 0
 			}
 		}
 		parameters = {
-			mummification_funeral = yes
+			hostility_override_northwest_caucasian_doctrine = 0
 		}
-
-		can_pick = {
-			custom_description = {
-				text = incompatible_tenet_aniconism_trigger
-				NOT = { doctrine:tenet_aniconism = { is_in_list = selected_doctrines } }
+	}
+	northeast_caucasian_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = northeast_caucasian_doctrine }
+				multiply = 0
 			}
+		}
+		parameters = {
+			hostility_override_northeast_caucasian_doctrine = 0
+		}
+	}
+	kartvelist_caucasian_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = kartvelist_caucasian_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_kartvelist_caucasian_doctrine = 0
+		}
+	}
+	alan_caucasian_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = alan_caucasian_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_northwest_caucasian_doctrine = 1
+			hostility_override_northeast_caucasian_doctrine = 1
+		}
+	}
+}
+
+# Orthodox Christianity Doctrine
+doctrine_roa_orthodox = {
+	group = "special"
+	is_available_on_create = {
+		has_doctrine = orthodox_doctrine_roa
+	}
+
+	orthodox_roa_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = orthodox_roa_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_orthodox_roa_doctrine = 0
+			same_hof_hostility_override = 0
+		}
+	}
+}
+
+# Khorasani Legacy
+doctrine_khorasani_legacy = {
+	group = "special"
+
+	is_available_on_create = {
+		has_doctrine = khorasani_legacy_doctrine
+	}
+
+	khorasani_legacy_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = khorasani_legacy_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_khorasani_legacy_doctrine = 1
 		}
 	}
 }
