@@ -1,0 +1,130 @@
+﻿
+doctrine_theocracy = {
+	group = "clergy"
+	doctrine_theocracy_temporal = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = doctrine_theocracy_temporal }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+
+		can_pick = {
+			custom_description = {
+				text = incompatible_doctrine_theocracy_temporal_trigger
+				NOT = { doctrine:doctrine_temporal_head = { is_in_list = selected_doctrines } }
+			}
+		}
+
+		parameters = {
+			theocracy_temple_lease = yes
+		}
+	}
+	doctrine_theocracy_lay_clergy = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+			else_if = {
+				limit = { has_doctrine = doctrine_theocracy_temporal }
+				multiply = faith_changed_doctrine_cost_mult_two_step
+			}
+		}
+
+		parameters = {
+			theocracy_temple_ownership = yes
+			lay_clergy = yes
+			allowed_holding_type_church_holding = yes
+		}
+	}
+}
+
+doctrine_muhammad_succession = {
+	group = "main_group"
+	is_available_on_create = {
+		religion_tag = islam_religion
+	}
+
+	muhammad_succession_sunni_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = muhammad_succession_sunni_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_muhammad_succession_sunni_doctrine = 0
+			hostility_override_muhammad_succession_muminun_doctrine = 1
+		}
+	}
+	
+	muhammad_succession_shia_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = muhammad_succession_shia_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_muhammad_succession_shia_doctrine = 1
+			hostility_override_muhammad_succession_muminun_doctrine = 1
+			same_hof_hostility_override = 0
+		}
+	}
+	
+	muhammad_succession_muhakkima_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = muhammad_succession_muhakkima_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = {
+			hostility_override_muhammad_succession_muhakkima_doctrine = 1
+			hostility_override_muhammad_succession_muminun_doctrine = 1
+			same_hof_hostility_override = 0
+		}
+	}
+
+	muhammad_succession_zandaqa_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = muhammad_succession_zandaqa_doctrine }
+				multiply = 0
+			}
+		}
+		character_modifier = {
+			advantage_against_coreligionists = 5
+		}
+		parameters = {
+			same_hof_hostility_override = 0
+		}
+	}
+
+	muhammad_succession_muminun_doctrine = {
+		piety_cost = {
+			value = faith_doctrine_cost_low
+			if = {
+				limit = { has_doctrine = muhammad_succession_muminun_doctrine }
+				multiply = 0
+			}
+		}
+		parameters = { 
+			hostility_override_muhammad_succession_sunni_doctrine = 1
+			hostility_override_muhammad_succession_shia_doctrine = 1	
+			hostility_override_muhammad_succession_muhakkima_doctrine = 1
+			same_hof_hostility_override = 0
+		}
+	}
+}

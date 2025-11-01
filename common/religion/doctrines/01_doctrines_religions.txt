@@ -1,0 +1,130 @@
+﻿hostility_group = {
+	group = "not_creatable"
+	abrahamic_hostility_doctrine = {
+		parameters = {
+			hostility_same_religion = 2
+			hostility_same_family = 3
+			hostility_others = 3
+		}
+	}
+	pagan_hostility_doctrine = {
+		visible = no
+		parameters = {
+			hostility_same_religion = 1
+			hostility_same_family = 2
+			hostility_others = 3
+		}
+	}
+	eastern_hostility_doctrine = {
+		parameters = {
+			hostility_same_religion = 1
+			hostility_same_family = 1
+			hostility_others = 2
+		}
+	}
+}
+
+doctrine_north_caucasian = {
+	group = "main_group"
+	is_available_on_create = {
+		religion_tag = northcaucasian_religion
+	}
+
+northwest_caucasian_doctrine = {
+    piety_cost = {
+        value = faith_doctrine_cost_low
+        if = {
+            limit = { has_doctrine = northwest_caucasian_doctrine }
+            multiply = 0
+        }
+    }
+    parameters = {
+        hostility_override_northwest_caucasian_doctrine = 0
+    }
+}
+
+kartvelist_caucasian_doctrine = {
+    piety_cost = {
+        value = faith_doctrine_cost_low
+        if = {
+            limit = { has_doctrine = kartvelist_caucasian_doctrine }
+            multiply = 0
+        }
+    }
+    parameters = {
+        hostility_override_kartvelist_caucasian_doctrine = 0
+    }
+}
+
+northeast_caucasian_doctrine = {
+    piety_cost = {
+        value = faith_doctrine_cost_low
+        if = {
+            limit = { has_doctrine = northeast_caucasian_doctrine }
+            multiply = 0
+        }
+    }
+    parameters = {
+        hostility_override_northeast_caucasian_doctrine = 0
+    }
+}
+
+alan_caucasian_doctrine = {
+    piety_cost = {
+        value = faith_doctrine_cost_low
+        if = {
+            limit = { has_doctrine = alan_caucasian_doctrine }
+            multiply = 0
+        }
+    }
+    parameters = {
+        hostility_override_northwest_caucasian_doctrine = 1
+        hostility_override_northeast_caucasian_doctrine = 1
+    }
+}
+
+}
+
+doctrine_roa_orthodox = {
+	group = "special"
+	is_available_on_create = {
+		has_doctrine = orthodox_doctrine_roa
+	}
+
+    orthodox_roa_doctrine = {
+        piety_cost = {
+            value = faith_doctrine_cost_low
+            if = {
+                limit = { has_doctrine = orthodox_roa_doctrine }
+                multiply = 0
+            }
+        }
+        parameters = {
+            hostility_override_orthodox_roa_doctrine = 0
+			same_hof_hostility_override = 0
+        }
+    }
+
+}
+
+doctrine_khorasani_legacy = {
+	group = "special"
+
+	is_available_on_create = {
+		has_doctrine = khorasani_legacy_doctrine
+	}
+
+    khorasani_legacy_doctrine = {
+        piety_cost = {
+            value = faith_doctrine_cost_low
+            if = {
+                limit = { has_doctrine = khorasani_legacy_doctrine }
+                multiply = 0
+            }
+        }
+        parameters = {
+            hostility_override_khorasani_legacy_doctrine = 1
+        }
+    }
+
+}
