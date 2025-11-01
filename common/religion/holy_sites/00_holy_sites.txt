@@ -652,7 +652,6 @@ toledo = {
 		name = holy_site_toledo_effect_name
 		learning = 1
 	}
-
 }
 
 memphis = {
@@ -670,9 +669,13 @@ memphis = {
 # Eastern	#
 #############
 
-#Buddhist
+#############
+# Buddhist	#
+#############
 
-bodh_gaya = { # Where Buddha reached enlightenment
+bodh_gaya = {
+	# Where Buddha reached enlightenment
+	# Also site of Deo Sun Temple dedicated to Surya
 	county = c_gaya
 
 	character_modifier = {
@@ -691,7 +694,8 @@ kusinagara = { # Where Buddha was born - Actually Lumbini but that was not known
 	}
 }
 
-sarnath = { # Where Buddha first taught his diciples. Also the #1 most holy site in Hinduism (Varanasi)
+sarnath = {
+	# Where Buddha first taught his diciples ; also the #1 most holy site in Hinduism (Varanasi)
 	county = c_varanasi
 
 	character_modifier = {
@@ -748,7 +752,8 @@ pagan = { # Shwedagon Pagoda - A sacred stupa built around year 500
 	}
 }
 
-ava = { # Mahamuni Buddhist Temple near present-day Mandalay
+ava = {
+	# Mahamuni Buddhist Temple near present-day Mandalay
 	#county = c_ava - in vanilla
 	county = c_maingmaw
 	barony = b_ava
@@ -760,7 +765,8 @@ ava = { # Mahamuni Buddhist Temple near present-day Mandalay
 	}
 }
 
-sittaung = { # Kyaiktiyo Pagoda - Golden Balancing Rock on a mountain
+sittaung = {
+	# Kyaiktiyo Pagoda - Golden Balancing Rock on a mountain
 	county = c_sittaung
 
 	character_modifier = {
@@ -770,7 +776,8 @@ sittaung = { # Kyaiktiyo Pagoda - Golden Balancing Rock on a mountain
 	}
 }
 
-atamasthana = { # Atamasthana, or the Eight sacred places, are locations visited by Buddha in Anuradhapura
+atamasthana = {
+	# Atamasthana, or the Eight sacred places, are locations visited by Buddha in Anuradhapura
 	county = c_phiti
 
 	character_modifier = {
@@ -779,7 +786,8 @@ atamasthana = { # Atamasthana, or the Eight sacred places, are locations visited
 	}
 }
 
-amaravati = { # Amaravati - An important place for the early spread and development of Mahayana
+amaravati = {
+	# Amaravati - An important place for the early spread and development of Mahayana
 	county = c_nallamala
 
 	character_modifier = {
@@ -788,9 +796,12 @@ amaravati = { # Amaravati - An important place for the early spread and developm
 	}
 }
 
-#Hindu
+#############
+# Hindu #
+#############
 
-varanasi = { # Sarnath, where Buddha first taught his diciples. Also a holy site in Buddhism (Sarnath)
+varanasi = {
+	# One of the 7 holy cities (Sapta Puri), believed to be founded by Shiva ; also a holy site in Buddhism (Sarnath)
 	county = c_varanasi
 
 	character_modifier = {
@@ -801,6 +812,7 @@ varanasi = { # Sarnath, where Buddha first taught his diciples. Also a holy site
 }
 
 ayodhya = {
+	# One of the 7 holy cities (Sapta Puri), believed to be the birthplace of Rama and the capital of the Ikshvaku kings
 	county = c_ayodhya
 
 	character_modifier = {
@@ -811,6 +823,7 @@ ayodhya = {
 }
 
 mathura = {
+	# One of the 7 holy cities (Sapta Puri), believed to be birthplace of Krishna
 	county = c_mathura
 
 	character_modifier = {
@@ -821,6 +834,7 @@ mathura = {
 }
 
 haridwar = {
+	# One of the 7 holy cities (Sapta Puri), believed to be one of four sites where drops of amrita, the elixir of immortality, spilled over
 	county = c_sthanisvara
 
 	character_modifier = {
@@ -830,6 +844,7 @@ haridwar = {
 }
 
 kanchipuram = {
+	# One of the 7 holy cities (Sapta Puri), known as The City of Thousand Temples, believed to be one of the 7 Tirtha sites
 	county = c_kanchipuram
 
 	character_modifier = {
@@ -839,6 +854,7 @@ kanchipuram = {
 }
 
 ujjayini = {
+	# One of the 7 holy cities (Sapta Puri), believed to be the place where Shiva triumphed over the demon king Tripurasura
 	county = c_ujjayini
 
 	character_modifier = {
@@ -849,6 +865,7 @@ ujjayini = {
 }
 
 dwarka = {
+	# One of the 7 holy cities (Sapta Puri), believed to be the place that Krishna made into his capital ; also one of the 4 Char Dham pilgrimage sites
 	county = c_dvaraka
 
 	character_modifier = {
@@ -859,7 +876,9 @@ dwarka = {
 }
 
 puri = {
+	# One of the 4 Char Dham pilgrimage sites, believed to be holy land of Jagannatha (Krishna), Subhadra and Balabhadra
 	county = c_puri
+	barony = b_puri
 
 	character_modifier = {
 		name = holy_site_puri_effect_name
@@ -869,6 +888,7 @@ puri = {
 }
 
 badrinath = {
+	# One of the 4 Char Dham pilgrimage sites,
 	county = c_garwhal
 	barony = b_uttarkashi
 
@@ -880,6 +900,8 @@ badrinath = {
 }
 
 shringeri = {
+	# Site thar Adi Shankaracharya is said to have selected as the place to stay and teach his disciples
+	# Also a site of a temple dedicated to the Hindu goddess Sharadamba
 	county = c_banavasi
 	barony = b_shringeri
 
@@ -890,6 +912,7 @@ shringeri = {
 }
 
 konarak = {
+	# Site of the Sun Temple dedicated to Surya
 	county = c_kataka
 	barony = b_konarak
 
@@ -901,7 +924,9 @@ konarak = {
 }
 
 # Southeast Asia
-angkor = { #Shaivism
+
+angkor = {
+	# Site of a Hindu-Buddhist temple complex that was originally dedicated to Vishnu
 	county = c_angkor
 
 	character_modifier = {
@@ -911,7 +936,8 @@ angkor = { #Shaivism
 	}
 }
 
-bantey_srei = { #Vaishnavism
+bantey_srei = {
+	# Temple dedicated to Shiva and Parvati ; later also got some Vishnu 
 	county = c_angkor
 
 	character_modifier = {
@@ -921,7 +947,8 @@ bantey_srei = { #Vaishnavism
 	}
 }
 
-borobudur = { #Mahayana
+borobudur = {
+	# Mahayana
 	county = c_JAV_mataram
 	barony = b_JAV_Borobodur
 
@@ -932,7 +959,8 @@ borobudur = { #Mahayana
 	}
 }
 
-muara_takus = { #Vajrayana
+muara_takus = {
+	# Vajrayana
 	county = c_SUM_muara_takus
 	barony = b_SUM_Muara_Takus
 
@@ -943,7 +971,8 @@ muara_takus = { #Vajrayana
 	}
 }
 
-prambanan = { #Shaivism & Krishnaism
+prambanan = {
+	# temple dedicated to Trimūrti (expression of Brahma, Vishnu & Shiva)
 	county = c_JAV_mataram
 	barony = b_JAV_Mataram
 
@@ -953,7 +982,8 @@ prambanan = { #Shaivism & Krishnaism
 	}
 }
 
-kalasan = { #Vajrayana & Mahayana
+kalasan = {
+	#Vajrayana & Mahayana
 	county = c_JAV_mataram
 	barony = b_JAV_Mataram
 
@@ -964,7 +994,8 @@ kalasan = { #Vajrayana & Mahayana
 	}
 }
 
-preah_vihear = { #Shaivism
+preah_vihear = {
+	# temple dedicated to aspects of Shiva: Sikharesvara and Bhadresvara
 	county = c_prea_vihear
 	barony = b_prea_vihear
 
@@ -975,7 +1006,8 @@ preah_vihear = { #Shaivism
 	}
 }
 
-my_son = { #Shaivism
+my_son = {
+	# complex of temples dedicated to Shiva, venerated there as Bhadreshvara
 	county = c_indrapura
 	barony = b_my_son
 
@@ -986,7 +1018,8 @@ my_son = { #Shaivism
 	}
 }
 
-bayon = { #Mahayana
+bayon = {
+	#Mahayana
 	county = c_angkor
 
 	character_modifier = {
@@ -996,7 +1029,8 @@ bayon = { #Mahayana
 	}
 }
 
-bumiayu = { #Shaivism
+bumiayu = {
+	# Shaivism temple, which eventually shifted into Buddhist site
 	county = c_SUM_palembang
 	barony = b_SUM_Musi
 
@@ -1007,7 +1041,8 @@ bumiayu = { #Shaivism
 	}
 }
 
-khao_khlang_nai = { #Vaishnavism
+khao_khlang_nai = {
+	# Vaishnavism temple turned Buddhist sanctuary
 	county = c_lop_buri
 	barony = b_sri_thep
 
@@ -1018,7 +1053,8 @@ khao_khlang_nai = { #Vaishnavism
 	}
 }
 
-bupaya = { #Theravada
+bupaya = {
+	#Theravada
 	county = c_pagan
 	barony = b_pagan
 
@@ -1028,7 +1064,9 @@ bupaya = { #Theravada
 	}
 }
 
-#Jain
+#############
+# Jain #
+#############
 
 palitana = {
 	county = c_somnath
@@ -1747,6 +1785,7 @@ kabul = {
 }
 
 multan = {
+	# Sun Temple dedicated to Surya ; razed to ground sometimes in between 10th and 11th century AD
 	county = c_multan
 
 	character_modifier = {
@@ -2565,7 +2604,8 @@ wutai = { # Mount Wutai
 # Mount Tai covered elsewhere
 # Mount Wutai covered elsewhere
 
-emei = { # Mount Emei
+emei = {
+	# Mount Emei
 	county = c_jiazhou
 
 	character_modifier = {
@@ -2593,6 +2633,7 @@ jiuhua = {
 }
 
 putuo = {
+	# One of the four sacred mountains in Chinese Buddhism
 	county = c_yuezhou_1
 
 	character_modifier = {
@@ -2705,7 +2746,9 @@ xuhen = {
 	}
 }
 
-# Buddhist
+#####################
+# Buddhist pt.2		#
+#####################
 
 chang_an = {
 	county = c_jingzhao
