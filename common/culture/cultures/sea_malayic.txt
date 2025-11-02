@@ -1,4 +1,39 @@
-﻿batak = {
+﻿## In alphabetical order ##
+
+bali = {
+	color = bali
+
+	ethos = ethos_egalitarian
+	heritage = heritage_malayic
+	language = language_bali
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_religion_blending
+		tradition_collective_lands
+		tradition_festivities
+		tradition_storytellers
+		tradition_religious_patronage
+	}
+
+	name_list = name_list_bali
+
+	coa_gfx = { java_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		10 = asian_austronesian
+	}
+}
+
+batak = {
 	color = batak
 
 	ethos = ethos_communal
@@ -16,21 +51,12 @@
 	name_list = name_list_batak
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -52,25 +78,16 @@ gayo = {
 	name_list = name_list_malay
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_30
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -92,21 +109,40 @@ lampung = {
 	name_list = name_list_malay
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
+	}
+}
+
+madura = {
+	color = madura
+
+	ethos = ethos_stoic
+	heritage = heritage_malayic
+	language = language_java 	# WHO the F#@K wrote Malayic here, my Madurese ancestor will rip you and your bloody organs apart
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_zealous_people
+		tradition_fp1_trials_by_combat
+		tradition_hard_working
+		tradition_sorcerous_metallurgy		# This is so funny they should have this
+	}
+
+	name_list = name_list_bali
+
+	coa_gfx = { java_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	ethnicities = {
+		10 = asian_austronesian
 	}
 }
 
@@ -130,21 +166,12 @@ mentawai = {
 	name_list = name_list_nias
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -168,21 +195,12 @@ nias = {
 	name_list = name_list_nias
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -204,181 +222,12 @@ rejang = {
 	name_list = name_list_malay
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
-	}
-}
-
-banjar = {
-	# Malay + Dayak in the 14th century or so
-	color = banjar
-
-	ethos = ethos_communal
-	heritage = heritage_malayic
-	language = language_malay
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religion_blending
-		tradition_culture_blending
-	}
-
-	#name_list = name_list_malayic - old RoA
-	name_list = name_list_malay
-
-	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
-
-	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
-	}
-}
-
-# java - replaced by AUH's javanese
-
-sunda = {
-	color = sunda
-
-	ethos = ethos_egalitarian
-	heritage = heritage_malayic
-	language = language_sunda
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_storytellers
-		tradition_culinary_art
-		tradition_agrarian
-		tradition_family_entrepreneurship
-		tradition_artisans
-	}
-
-	name_list = name_list_sunda
-
-	coa_gfx = { java_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
-
-	house_coa_frame = house_frame_30
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
-	}
-}
-
-bali = {
-	color = bali
-
-	ethos = ethos_egalitarian
-	heritage = heritage_malayic
-	language = language_bali
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religion_blending
-		tradition_collective_lands
-		tradition_festivities
-		tradition_storytellers
-		tradition_religious_patronage
-	}
-
-	name_list = name_list_bali
-
-	coa_gfx = { java_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
-
-	house_coa_frame = house_frame_30
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.9 0.9 }
-
-	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
-	}
-}
-
-madura = {
-	color = madura
-
-	ethos = ethos_stoic
-	heritage = heritage_malayic
-	language = language_java 	# WHO the F#@K wrote Malayic here, my Madurese ancestor will rip you and your bloody organs apart
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_zealous_people
-		tradition_fp1_trials_by_combat
-		tradition_hard_working
-		tradition_sorcerous_metallurgy		# This is so funny they should have this
-	}
-
-	name_list = name_list_bali
-
-	coa_gfx = { java_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
-
-	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -399,21 +248,12 @@ samawa = {
 	name_list = name_list_bima
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -437,21 +277,12 @@ sama = {
 	name_list = name_list_malay
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
 
@@ -477,20 +308,58 @@ seletar = {
 	name_list = name_list_malay
 
 	coa_gfx = { malay_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx austro_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	ethnicities = {
-		#10 = asian_malay
-		#
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
-		5  = asian_southeast_asian_1
-		5  = asian_southeast_asian_2
-		5  = asian_southeast_asian_3
-		5  = asian_southeast_asian_4
+		10 = asian_malay
 	}
 }
+
+sunda = {
+	color = sunda
+
+	ethos = ethos_egalitarian
+	heritage = heritage_malayic
+	language = language_sunda
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_storytellers
+		tradition_culinary_art
+		tradition_agrarian
+		tradition_family_entrepreneurship
+		tradition_artisans
+	}
+
+	name_list = name_list_sunda
+
+	coa_gfx = { java_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_30
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.9 0.9 }
+
+	ethnicities = {
+		10 = asian_austronesian
+	}
+}
+
+#culture = {
+	#ethnicities = {
+		# pre AUH setup
+		#15 = asian_austronesian_1
+		#15 = asian_austronesian_2
+		#15 = asian_austronesian_3
+		#15 = asian_austronesian_4
+		#5  = asian_southeast_asian_1
+		#5  = asian_southeast_asian_2
+		#5  = asian_southeast_asian_3
+		#5  = asian_southeast_asian_4
+	#}
+#}

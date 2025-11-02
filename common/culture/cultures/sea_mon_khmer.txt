@@ -1,6 +1,7 @@
 ﻿## In Alphabetical Order ##
 
 bnam = {
+	# ask BossDanger who these guys are
 	color = bnam
 
 	ethos = ethos_bureaucratic
@@ -36,6 +37,7 @@ bnam = {
 }
 
 chong = {
+	# AKA: Pear, Samre, Samray, Suoy or Sa'och
 	color = chong
 
 	ethos = ethos_communal
@@ -45,7 +47,9 @@ chong = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_medicinal_plants
+		tradition_medicinal_plants  	# Chong people are quite familiar with the plantlife of their region
+		tradition_storytellers  	# much of their past was preserved through oral tradition
+		tradition_hunters  	# hunting used to be important part of Chong lifestyle before contact with Khmer people
 	}
 
 	dlc_tradition = {
@@ -57,9 +61,9 @@ chong = {
 	name_list = name_list_khmer
 
 	coa_gfx = { burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { southeast_asian_clothing_gfx khmer_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -75,6 +79,7 @@ chong = {
 }
 
 sambor = {
+	# Represents ancestors of Khmer people
 	color = sambor
 
 	ethos = ethos_courtly
@@ -87,6 +92,12 @@ sambor = {
 		tradition_religious_patronage
 		tradition_hereditary_hierarchy
 		tradition_religion_blending
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_khmer
