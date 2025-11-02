@@ -77,13 +77,12 @@ karen = {
 		tradition_xenophilic
 
 		#tradition_jungle_warriors - vanilla
-		#tradition_religion_blending - vanilla
 	}
 
 	name_list = name_list_karen
 
 	coa_gfx = { burman_group_coa_gfx }
-	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
 	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
 
@@ -98,7 +97,7 @@ karen = {
 }
 
 kachin = {
-	#color = { 0.15 0.3 0.5 } - vanilla
+	# represents various Tibeto-Burmic people inhabiting Kachin Hills
 	color = kachin
 
 	ethos = ethos_egalitarian
@@ -110,11 +109,8 @@ kachin = {
 	traditions = {
 		tradition_sacred_groves 	# to represent Numshang groves
 		tradition_collective_lands
-		tradition_equal_inheritance
+		tradition_storytellers
 		tradition_wedding_ceremonies
-
-		#tradition_storytellers - vanilla
-		#tradition_disloyal_subjects - removed for now
 	}
 
 	dlc_tradition = {
@@ -125,7 +121,7 @@ kachin = {
 	name_list = name_list_kachin
 
 	coa_gfx = { burman_group_coa_gfx }
-	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
 	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
 

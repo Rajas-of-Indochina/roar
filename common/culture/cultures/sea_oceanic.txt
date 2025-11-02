@@ -9,26 +9,32 @@ chamorro = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_female_only_inheritance # matrilineal
-		tradition_seafaring
 		tradition_ruling_caste
 		tradition_mystical_ancestors
 		tradition_sacred_groves
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -41,25 +47,31 @@ chuuk = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_hard_working
 		tradition_wedding_ceremonies
 		tradition_fishermen
-		tradition_seafaring
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -72,24 +84,30 @@ kosrae = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_zealous_people
-		tradition_seafaring
 		tradition_fishermen
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -102,13 +120,6 @@ malaita = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_staunch_traditionalists
 		tradition_isolationist
@@ -116,11 +127,19 @@ malaita = {
 		tradition_music_theory
 	}
 
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -133,23 +152,30 @@ manus = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_fishermen
 		tradition_tribe_unity
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -164,22 +190,29 @@ motu = {
 
 	name_list = name_list_oceanic
 
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_maritime_mercantilism
 		tradition_music_theory
 		tradition_staunch_traditionalists
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -192,24 +225,30 @@ ngero = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_maritime_mercantilism
 		tradition_culture_blending
-		tradition_seafaring
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -222,24 +261,31 @@ palauan = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_female_only_inheritance
 		tradition_tribe_unity
 		tradition_fishermen
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -252,25 +298,30 @@ pohnpei = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
-		# Collective Lands until the Saudeleur dynasty post-1100, then Quarrelsome
-		tradition_collective_lands
-		tradition_seafaring
+		tradition_collective_lands  	# Collective Lands until the Saudeleur dynasty post-1100, then Quarrelsome
 		tradition_fishermen
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -283,24 +334,30 @@ suau = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_artisans
-		tradition_seafaring
 		tradition_fishermen
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -314,26 +371,32 @@ uneapa = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_female_only_inheritance
-		tradition_seafaring
 		tradition_fishermen
 		tradition_migratory
 		tradition_culture_blending
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
 
@@ -346,23 +409,29 @@ yap = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_oceanic
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { austro_building_gfx indian_building_gfx }
-	clothing_gfx = { austronesian_clothing_gfx }
-	unit_gfx = { austronesian_unit_gfx }
-
 	traditions = {
 		tradition_storytellers
-		tradition_seafaring
 		tradition_fishermen
 	}
 
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_oceanic
+
+	coa_gfx = { austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx indian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
 	ethnicities = {
-		15 = asian_austronesian_1
-		15 = asian_austronesian_2
-		15 = asian_austronesian_3
-		15 = asian_austronesian_4
+		10 = asian_austronesian
 	}
 }
