@@ -1,0 +1,339 @@
+﻿
+tagalog = {
+	#color = { 0.4 0.3 0.7 } - vanilla
+	color = tagalog
+
+	created = 1000.1.1
+	parents = { tawo sinauna }
+
+	ethos = ethos_egalitarian
+	heritage = heritage_filipino
+	language = language_filipino
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_tagalog
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { tagalog_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_jungle_warfare
+		tradition_maritime_mercantilism
+		tradition_religion_blending
+		tradition_sacred_hunts
+		tradition_warriors_by_merit
+
+		#tradition_loyal_soldiers - vanilla
+	}
+	
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}
+
+bisaya = {
+	#color = { 0.9 0.1 0.3 } - vanilla
+	color = bisaya
+
+	created = 1000.1.1
+	parents = { tawo }
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_filipino
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_bisayan
+	#name_list = name_list_bisaya
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { visayan_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_jungle_warfare
+		tradition_practiced_pirates
+		tradition_poetry
+		tradition_migratory
+
+		#tradition_mystical_ancestors - vanilla
+	}
+
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}
+
+pampangan = {
+	color = pampangan
+
+	created = 1000.1.1
+	parents = { sinauna idaya }
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_central_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_pampangan
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_jungle_warfare
+		tradition_legalistic
+		tradition_culinary_art
+		tradition_stand_and_fight
+		tradition_agrarian
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}
+
+iloko = {
+	# replaces RoA's ilokano
+	#color = { 0.8 0.4 0.0 } - vanilla
+	color = ilokano
+
+	created = 1000.1.1
+	parents = { idaya }
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_northern_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_iloko
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_maritime_mercantilism
+		tradition_storytellers
+		tradition_artisans
+		tradition_stalwart_defenders
+		tradition_hill_dwellers
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+	}
+	
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}
+
+ifugao = {
+	color = ifugao
+
+	created = 1000.1.1
+	parents = { idaya }
+
+	ethos = ethos_stoic
+	heritage = heritage_filipino
+	language = language_northern_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_idaya
+
+	coa_gfx = { ifugao_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_storytellers
+		tradition_mystical_ancestors
+		tradition_legalistic
+		tradition_mountain_homes
+		tradition_fp1_trials_by_combat
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}
+
+ibanag = {
+	color = ibanag
+
+	created = 1000.1.1
+	parents = { idaya }
+
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_northern_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_idaya
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_agrarian
+		tradition_isolationist
+		tradition_martial_admiration
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}
+
+sambal = {
+	color = sambal
+
+	created = 1000.1.1
+	parents = { sinauna }
+
+	ethos = ethos_spiritual
+	heritage = heritage_filipino
+	language = language_central_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	name_list = name_list_filipino
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  austro_building_gfx }
+	clothing_gfx = { austronesian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx austronesian_unit_gfx }
+
+	traditions = {
+		tradition_jungle_warfare
+		tradition_stalwart_defenders
+		tradition_warrior_culture
+		tradition_staunch_traditionalists
+		tradition_mystical_ancestors
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		#10 = asian_austronesian
+		#
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+	}
+}

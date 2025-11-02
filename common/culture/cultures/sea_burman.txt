@@ -1,0 +1,131 @@
+﻿naga = {
+	color = naga
+
+	ethos = ethos_communal
+	heritage = heritage_burman
+	language = language_burmese
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_storytellers
+		tradition_collective_lands
+		tradition_festivities
+		tradition_isolationist
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_burmese
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_18
+
+	ethnicities = {
+		2 = southeast_asian_burmese_1
+		2 = southeast_asian_burmese_2
+		2 = southeast_asian_burmese_3
+		2 = southeast_asian_burmese_4
+	}
+}
+
+pyu = {
+	color = pyu
+
+	ethos = ethos_spiritual
+	heritage = heritage_burman
+	language = language_pyu
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_religion_blending
+		tradition_pacifism
+		tradition_vegetarianism
+
+		#tradition_agrarian
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_hydraulic_builders
+		requires_dlc_flag = all_under_heaven
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_fortified_strongholds
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_city_keepers
+	}
+
+	name_list = name_list_pyu
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_18
+
+	ethnicities = {
+		2 = southeast_asian_burmese_1
+		2 = southeast_asian_burmese_2
+		2 = southeast_asian_burmese_3
+		2 = southeast_asian_burmese_4
+	}
+}
+
+rakhine = {
+	color = rakhine
+
+	created = 902.1.1
+	parents = { bengali burmese }
+
+	ethos = ethos_spiritual
+	heritage = heritage_burman
+	language = language_burmese
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_fervent_temple_builders
+		tradition_festivities
+		tradition_religion_blending
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_hydraulic_builders
+		requires_dlc_flag = all_under_heaven
+	}
+	dlc_tradition = {
+		trait = tradition_tgp_fortified_strongholds
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_castle_keepers
+	}
+
+	name_list = name_list_burmese
+
+	coa_gfx = { burman_group_coa_gfx }
+	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_18
+
+	ethnicities = {
+		2 = indian_bengali_1
+		2 = indian_bengali_2
+		2 = indian_bengali_3
+		2 = indian_bengali_4
+		2 = southeast_asian_burmese_1
+		2 = southeast_asian_burmese_2
+		2 = southeast_asian_burmese_3
+		2 = southeast_asian_burmese_4
+	}
+}

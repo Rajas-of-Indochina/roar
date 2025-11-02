@@ -1,0 +1,44 @@
+﻿# new Hmongic cultures
+#hmong - added by AUH
+
+sheren = {
+	# exonym: She ; autonym Ho-Ne 
+	color = she
+
+	ethos = ethos_communal
+	heritage = heritage_hmongic
+	language = language_ho_ne
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+	name_order_convention = dynasty_always_first
+
+	traditions = {
+		tradition_hill_dwellers 	# for centuries inhabited hilly and mountianous regions
+		tradition_poetry 	# ??
+		tradition_sacred_hunts  	# apparently hunts had important spiritual aspect for She people
+		# songs have great importance to She people but there is no tradition to properly represent that
+		# due to poor hillside soil, She people often practiced slash-&-burn agriculture
+	}
+
+	name_list = name_list_hmong
+
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { chinese_clothing_gfx }
+	unit_gfx = { chinese_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		2 = east_asian_han_1
+		2 = east_asian_han_2
+		2 = east_asian_han_3
+		2 = east_asian_han_4
+		1 = asian_southeast_asian_1
+		1 = asian_southeast_asian_2
+		1 = asian_southeast_asian_3
+		1 = asian_southeast_asian_4
+	}
+}

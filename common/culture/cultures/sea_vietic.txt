@@ -1,0 +1,89 @@
+﻿old_viet = {
+	color = kinh
+
+	name_order_convention = dynasty_always_first
+	ethos = ethos_stoic
+	heritage = heritage_viet
+	language = language_vietnamese
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_agrarian
+		tradition_poetry
+		tradition_concubines
+		tradition_adaptive_skirmishing
+	}
+
+	name_list = name_list_vietnamese
+
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { chinese_unit_gfx }
+
+	house_coa_frame = house_frame_28
+
+	ethnicities = {
+		50 = asian_southern_han_1
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+		10 = asian_southeast_asian_5
+		10 = asian_southeast_asian_6
+		10 = asian_southeast_asian_7
+	}
+}
+
+# kinh - replaced by AUH's viet
+
+muong = {
+	color = muong
+
+	parents = { old_viet }
+	created = 600.1.1
+	history_loc_override = sea_muong_history_loc
+
+	name_order_convention = dynasty_always_first
+	ethos = ethos_communal
+	heritage = heritage_viet
+	language = language_vietnamese
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_collective_lands
+		tradition_medicinal_plants
+		tradition_adaptive_skirmishing		# This should be a unique thing
+	}
+
+	#dlc_tradition = {		potentially add ?
+	#	trait = tradition_sinophilic
+	#	requires_dlc_flag = all_under_heaven
+	#}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_vietnamese
+
+	coa_gfx = { chinese_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { viet_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { chinese_unit_gfx }
+
+	house_coa_frame = house_frame_28
+
+	ethnicities = {
+		10 = asian_southeast_asian_1
+		10 = asian_southeast_asian_2
+		10 = asian_southeast_asian_3
+		10 = asian_southeast_asian_4
+		10 = asian_southeast_asian_5
+		10 = asian_southeast_asian_6
+		10 = asian_southeast_asian_7
+	}
+}

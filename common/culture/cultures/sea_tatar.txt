@@ -1,0 +1,624 @@
+﻿## In alphabetical order ##
+
+barqut = {
+	color = barqut
+
+	ethos = ethos_communal
+	heritage = heritage_mongolic
+	language = language_buryat
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_zealous_people
+		tradition_sacred_mountains
+		tradition_mystical_ancestors
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_devoted_horsemanship
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_buryat
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		4 = asian_turkic_1
+		4 = asian_turkic_2
+		4 = asian_turkic_3
+		4 = asian_turkic_4
+	}
+}
+
+daur = {
+	color = daur
+
+	#created = 1000.1.1
+	created = 1100.1.1
+
+	parents = { tajiuud }
+
+	ethos = ethos_spiritual
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_tribe_unity
+		tradition_sacred_hunts
+		tradition_pastoralists
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_mongol
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+ekhirit = {
+	color = ekhirit
+
+	ethos = ethos_spiritual
+	heritage = heritage_mongolic
+	language = language_buryat
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_forest_folk
+		tradition_zealous_people
+		tradition_winter_warriors # Winter Warriors is replaced by Siberian Survivalists with RICE
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_devoted_horsemanship
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_buryat
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		4 = asian_turkic_1
+		4 = asian_turkic_2
+		4 = asian_turkic_3
+		4 = asian_turkic_4
+	}
+}
+
+kerait = {
+	# Kereyid
+	color = kerait
+
+	created = 1005.1.1
+	parents = { mongol uyghur }
+
+	ethos = ethos_egalitarian
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		#tradition_steppe_tolerance
+		tradition_horse_breeder
+		tradition_hunters
+		tradition_warrior_culture
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_kerait
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+khitan = {
+	color = khitan
+
+	ethos = ethos_bellicose
+	heritage = heritage_mongolic
+	language = language_khitan
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_pastoralists
+		tradition_sacred_hunts
+		tradition_ruling_caste
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_iron_cavalry
+		requires_dlc_flag = khans_of_the_steppe
+		requires_dlc_flag = hybridize_culture
+	}
+
+	#dlc_tradition = {
+	#	trait = tradition_malleable_invaders
+	#	requires_dlc_flag = hybridize_culture
+	#}
+
+	name_list = name_list_khitan
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+khori = {
+	color = khori
+
+	ethos = ethos_bellicose
+	heritage = heritage_mongolic
+	language = language_buryat
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_forest_folk
+		tradition_hunters
+		tradition_winter_warriors # Winter Warriors is replaced by Siberian Survivalists with RICE
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_devoted_horsemanship
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_buryat
+
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+merkit = {
+	color = merkit
+
+	ethos = ethos_spiritual
+	heritage = heritage_mongolic
+	language = language_buryat
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_forest_fighters
+		tradition_quarrelsome
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_devoted_horsemanship
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_buryat
+
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		4 = asian_turkic_1
+		4 = asian_turkic_2
+		4 = asian_turkic_3
+		4 = asian_turkic_4
+	}
+}
+
+mongol = {
+	color = mongol
+
+	ethos = ethos_egalitarian
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		#tradition_steppe_tolerance
+		tradition_hunters
+		tradition_only_the_strong
+		tradition_hit_and_run
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	#dlc_tradition = {
+	#	trait = tradition_malleable_invaders
+	#	requires_dlc_flag = hybridize_culture
+	#}
+
+	name_list = name_list_mongol
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+onggirad = {
+	color = onggirad
+
+	ethos = ethos_egalitarian
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_pastoralists
+	}
+
+	dlc_tradition = {
+		trait = tradition_fp2_ritualised_friendship
+		requires_dlc_flag = the_fate_of_iberia
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_uriankhai
+
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+qay = {
+	color = qay
+
+	ethos = ethos_bellicose
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_horse_breeder
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_uriankhai
+
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+qitai = {
+	color = qitai
+
+	created = 1134.1.1
+	parents = { khitan }
+
+	ethos = ethos_bellicose
+	heritage = heritage_mongolic
+	language = language_khitan
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_horse_breeder
+		tradition_ruling_caste
+		tradition_family_entrepreneurship
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_iron_cavalry
+		requires_dlc_flag = khans_of_the_steppe
+		requires_dlc_flag = hybridize_culture
+	}
+
+	name_list = name_list_khitan
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+sibe = {
+	color = sibe
+
+	ethos = ethos_spiritual
+	heritage = heritage_mongolic
+	language = language_khitan
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		#tradition_steppe_tolerance
+		tradition_hunters
+	}
+
+	dlc_tradition = {
+		trait = tradition_culture_blending
+		requires_dlc_flag = hybridize_culture
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_khitan
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+tajiuud  = {
+	color = tajiuud
+
+	ethos = ethos_communal
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_hunters
+		tradition_tribe_unity
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_uriankhai
+
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}
+
+tula = {  # Tula (Olets too)
+	color = tula
+
+	ethos = ethos_stoic
+	heritage = heritage_mongolic
+	language = language_buryat
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		#tradition_steppe_tolerance
+		tradition_sacred_hunts
+	}
+
+	dlc_tradition = {
+		trait = tradition_fp2_ritualised_friendship
+		requires_dlc_flag = the_fate_of_iberia
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_devoted_horsemanship
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_buryat
+
+	coa_gfx = { mongol_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		4 = asian_turkic_1
+		4 = asian_turkic_2
+		4 = asian_turkic_3
+		4 = asian_turkic_4
+	}
+}
+
+uriankhai = {
+	color = uriankhai
+
+	ethos = ethos_spiritual
+	heritage = heritage_mongolic
+	language = language_mongolic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_herd
+
+	traditions = {
+		#tradition_horse_lords
+		tradition_forest_folk
+		tradition_hunters
+		tradition_winter_warriors # Winter Warriors is replaced by Siberian Survivalists with RICE
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_northern_tribes
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	name_list = name_list_uriankhai
+
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+	house_coa_frame = house_frame_14
+
+	ethnicities = {
+		2 = asian_mongol_1
+		2 = asian_mongol_2
+		2 = asian_mongol_3
+		2 = asian_mongol_4
+	}
+}

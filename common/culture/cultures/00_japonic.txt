@@ -1,0 +1,105 @@
+﻿japanese = {
+	color = japanese
+
+	name_order_convention = japanese
+	ethos = ethos_courtly
+	heritage = heritage_japonic
+	language = language_japonic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		#tradition_mystical_ancestors
+		#tradition_family_entrepreneurship
+		#tradition_hereditary_hierarchy
+		#tradition_collective_lands
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_imperial_peace
+		requires_dlc_flag = all_under_heaven
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_ephemeral_grace
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_poetry
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_mountain_island
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_mountaineers
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_inward_perfection
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_isolationist
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_japanese_houses
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_noble_adoption
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_warrior_monks
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_warrior_monks
+	}
+
+	name_list = name_list_yamato
+
+	coa_gfx = { japanese_coa_gfx }
+	building_gfx = { japanese_building_gfx }
+	clothing_gfx = { japanese_clothing_gfx }
+	unit_gfx = { japanese_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		10 = asian_japanese
+
+		#2 = shogunate_japanese_1
+		#2 = shogunate_japanese_2
+		#2 = shogunate_japanese_3
+		#2 = shogunate_japanese_4
+	}
+}
+
+ryukyuan = {
+	color = { 232 293 203 }
+	#color = ryukyuan - vanilla
+
+	name_order_convention = japanese
+	ethos = ethos_spiritual
+	heritage = heritage_ryukyu
+	language = language_ryukyu
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_seafaring
+		tradition_maritime_mercantilism
+		tradition_fishermen
+		tradition_equal_inheritance
+		tradition_music_theory
+		
+		#tradition_ce1_ritual_washing - vanilla
+	}
+
+	name_list = name_list_ryukyuan
+
+	coa_gfx = { ryukyu_group_coa_gfx japanese_coa_gfx }
+	building_gfx = { japanese_building_gfx }
+	clothing_gfx = { ryukyu_clothing_gfx japanese_clothing_gfx }
+	unit_gfx = { japanese_unit_gfx }
+	house_coa_frame = house_japan
+
+	ethnicities = {
+		2 = shogunate_ryukyu_1
+		2 = shogunate_ryukyu_2
+		2 = shogunate_ryukyu_3
+	}
+}
