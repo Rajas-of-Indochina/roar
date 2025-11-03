@@ -1,0 +1,144 @@
+# Holy sites moved from 10_sea_holy_sites
+
+### Burmese holy sites ###
+popa = {
+	# Mount Popa
+	county = c_pagan
+	barony = b_popa
+
+	character_modifier = {
+		name = holy_site_popa_effect_name
+		defender_advantage = 5
+		monthly_piety_gain_per_knight_mult = 0.01
+	}
+}
+### ### ### ###
+
+
+### Yunnan holy sites ###
+lugu_lake = {
+	# sacred lake for Mosuo people ; called the "mother lake"
+	county = c_xiangcheng
+	barony = b_loutou 
+
+	character_modifier = {
+		name = holy_site_lugu_lake_effect_name
+
+		fertility = 0.10
+		monthly_lifestyle_xp_gain_mult = 0.15
+	}
+}
+
+zizipuwu = {
+	# Yi people consider Zizipuwu/Zhaotong to be their homeland
+	county = c_sie		# placeholder Yi county
+
+	character_modifier = {
+		name = holy_site_zizipuwu_effect_name
+		monthly_prestige_gain_per_happy_powerful_vassal_mult = 0.03
+	}
+}
+### ### ### ###
+
+
+### Cham / Vietnamese Dharmic holy sites ###
+ha_long = {
+	# an important city, long inhabited by various people
+	county = c_long_hung
+	barony = b_tan_hung
+
+	character_modifier = {
+		name = holy_site_ha_long_effect_name
+		development_growth_factor = 0.05
+		diplomacy_per_piety_level = 1
+	}
+}
+
+po_nagar = {
+	# temple dedicated to Yan Po Nagar, the goddess of Cham, identified with the Hindu goddesses Bhagavati and Harit
+	county = c_kauthara
+    barony = b_nhan
+
+	character_modifier = {
+		name = holy_site_po_nagar_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+### ### ### ###
+
+
+### Nasrani holy sites ###
+kollam = {
+	county = c_venadu
+	barony = b_kollam
+
+	character_modifier = {
+		name = holy_site_kollam_effect_name
+		monthly_piety_gain_mult = 0.05
+		different_faith_opinion = 5
+	}
+}
+
+st_thomas_church = {
+	county = c_kerala
+	barony = b_mahoyadapuram
+
+	character_modifier = {
+		name = holy_site_st_thomas_church_effect_name
+		learning_per_piety_level = 1
+	}
+}
+
+## Nasrani versions of Christian Holy sites ##
+rome_nasrani = {
+	# At start deactivated but turn on depending on "Unite the Nasrani" decisions
+	county = c_roma
+	barony = b_vaticano
+
+	character_modifier = {
+		name = holy_site_rome_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+constantinople_nasrani = {
+	# At start deactivated but turn on depending on "Unite the Nasrani" decisions
+	county = c_byzantion
+
+	character_modifier = {
+		name = holy_site_constantinople_effect_name
+		cultural_head_fascination_mult = 0.15
+	}
+}
+### ### ### ###
+
+
+### Adivasi (India's Tribal Groups) Holy Sites ###
+thel_kopi_ghat = {
+	county = c_rajrappa
+	
+	character_modifier = {
+		name = holy_site_thel_kopi_ghat_effect_name
+		county_opinion_add = 5
+		health = 0.1
+	}
+}
+kachargadh_caves = {
+	county = c_vairagara
+
+	character_modifier = {
+		name = holy_site_kachargadh_caves_effect_name
+		different_faith_opinion = 10
+		monthly_lifestyle_xp_gain_mult = 0.15
+	}
+}
+jangubai_cave_temple = {
+	county = c_mahur
+	barony = b_mahur
+
+	character_modifier = {
+		name = holy_site_jangubai_cave_temple_effect_name
+		dynasty_house_opinion = 5
+	}
+}
+### ### ### ###
