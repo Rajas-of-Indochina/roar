@@ -14,22 +14,22 @@ kaharingan_religion = {
 	doctrine = doctrine_theocracy_temporal
 
 	#Marriage
-	doctrine = doctrine_concubines
+	doctrine = doctrine_polygamy
 	doctrine = doctrine_divorce_allowed
 	doctrine = doctrine_bastardry_legitimization
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
-	doctrine = doctrine_homosexuality_crime
+	doctrine = doctrine_homosexuality_accepted
 	doctrine = doctrine_adultery_men_crime
 	doctrine = doctrine_adultery_women_crime
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_crime
-	doctrine = doctrine_witchcraft_crime
+	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
 	doctrine = doctrine_clerical_function_recruitment
-	doctrine = doctrine_clerical_gender_either
+	doctrine = doctrine_clerical_gender_either		#doctrine_clerical_gender_female_only
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
 
@@ -38,6 +38,7 @@ kaharingan_religion = {
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_cremation
+	#doctrine = doctrine_funeral_bewailment
 
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
@@ -62,8 +63,8 @@ kaharingan_religion = {
 		HighGodNameAlternatePossessive = kaharingan_high_god_name_alternate_possessive
 
 		# Creator
-		CreatorName = kaharingan_creator_god_name
-		CreatorNamePossessive = kaharingan_creator_god_name_possessive
+		CreatorName = sea_kaharingan_creator_god_name
+		CreatorNamePossessive = sea_kaharingan_creator_god_name_possessive
 		CreatorSheHe = CHARACTER_SHEHE_HE
 		CreatorHerHis = CHARACTER_HERHIS_HIS
 		CreatorHerHim = CHARACTER_HERHIM_HIM
@@ -90,11 +91,11 @@ kaharingan_religion = {
 		WealthGodHerHim = CHARACTER_HERHIM_HIM
 
 		# HouseholdGod
-		HouseholdGodName = kaharingan_household_god_name
-		HouseholdGodNamePossessive = kaharingan_household_god_name_possessive
-		HouseholdGodSheHe = CHARACTER_SHEHE_SHE
-		HouseholdGodHerHis = CHARACTER_HERHIS_HER
-		HouseholdGodHerHim = CHARACTER_HERHIM_HER
+		HouseholdGodName = sea_kaharingan_household_god_name
+		HouseholdGodNamePossessive = sea_kaharingan_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_THEY
+		HouseholdGodHerHis = CHARACTER_HERHIS_THEIR
+		HouseholdGodHerHim = CHARACTER_HERHIM_THEM
 
 		# FateGod
 		FateGodName = kaharingan_fate_god_name
@@ -104,8 +105,8 @@ kaharingan_religion = {
 		FateGodHerHim = CHARACTER_HERHIM_HIM
 
 		# KnowledgeGod
-		KnowledgeGodName = kaharingan_knowledge_god_name
-		KnowledgeGodNamePossessive = kaharingan_knowledge_god_name_possessive
+		KnowledgeGodName = sea_kaharingan_knowledge_god_name
+		KnowledgeGodNamePossessive = sea_kaharingan_knowledge_god_name_possessive
 		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
 		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
 		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
@@ -125,8 +126,8 @@ kaharingan_religion = {
 		TricksterGodHerHim = CHARACTER_HERHIM_HER
 
 		# NightGod
-		NightGodName = kaharingan_night_god_name
-		NightGodNamePossessive = kaharingan_night_god_name_possessive
+		NightGodName = sea_kaharingan_night_god_name
+		NightGodNamePossessive = sea_kaharingan_night_god_name_possessive
 		NightGodSheHe = CHARACTER_SHEHE_IT
 		NightGodHerHis = CHARACTER_HERHIS_ITS
 		NightGodHerHim = CHARACTER_HERHIM_IT
@@ -142,13 +143,29 @@ kaharingan_religion = {
 		PantheonTerm2 = religion_the_spirits_2
 		PantheonTerm3 = religion_the_spirits_3
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { kaharingan_high_god_name kaharingan_high_god_name_alternate kaharingan_creator_god_name kaharingan_health_god_name kaharingan_fertility_god_name kaharingan_wealth_god_name kaharingan_household_god_name kaharingan_fate_god_name kaharingan_knowledge_god_name kaharingan_war_god_name kaharingan_water_god_name}
-		DevilName = paganism_devil_name
-		DevilNamePossessive = paganism_devil_name_possessive
+		GoodGodNames = {
+			kaharingan_high_god_name
+			kaharingan_high_god_name_alternate
+			sea_kaharingan_creator_god_name
+			kaharingan_health_god_name
+			kaharingan_fertility_god_name
+			kaharingan_wealth_god_name
+			sea_kaharingan_household_god_name
+			kaharingan_fate_god_name
+			sea_kaharingan_knowledge_god_name
+			kaharingan_war_god_name
+			kaharingan_water_god_name
+			sea_kaharingan_death_name
+		}
+		DevilName = sea_kaharingan_devil_name
+		DevilNamePossessive = sea_kaharingan_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
 		DevilHerHis = CHARACTER_HERHIS_ITS
-		DevilHerselfHimself = paganism_devil_herselfhimself
-		EvilGodNames = { kaharingan_trickster_god_name }
+		DevilHerselfHimself = sea_kaharingan_devil_herselfhimself
+		EvilGodNames = {
+			sea_kaharingan_devil_name
+			kaharingan_trickster_god_name
+		}
 		HouseOfWorship = kaharingan_house_of_worship
 		HouseOfWorship2 = kaharingan_house_of_worship_2
 		HouseOfWorship3 = kaharingan_house_of_worship_3
@@ -162,12 +179,12 @@ kaharingan_religion = {
 		ReligiousHeadName = paganism_religious_head_title
 		ReligiousHeadTitleName = paganism_religious_head_title_name
 
-		DevoteeMale = paganism_devotee
-		DevoteeMalePlural = paganism_devoteeplural
-		DevoteeFemale = paganism_devotee
-		DevoteeFemalePlural = paganism_devoteeplural
-		DevoteeNeuter = paganism_devotee
-		DevoteeNeuterPlural = paganism_devoteeplural
+		DevoteeMale = kaharingan_devotee_male
+		DevoteeMalePlural = kkaharingan_devotee_male_plural
+		DevoteeFemale = kaharingan_devotee_female
+		DevoteeFemalePlural = kaharingan_devotee_female_plural
+		DevoteeNeuter = kaharingan_devotee_neuter
+		DevoteeNeuterPlural = kaharingan_devotee_neuter_plural
 		PriestMale = paganism_priest
 		PriestMalePlural = paganism_priest_plural
 		PriestFemale = paganism_priest
@@ -175,12 +192,12 @@ kaharingan_religion = {
 		PriestNeuter = paganism_priest
 		PriestNeuterPlural = paganism_priest_plural
 		AltPriestTermPlural = paganism_priest_alternate_plural
-		BishopMale = paganism_priest
-		BishopMalePlural = paganism_priest_plural
-		BishopFemale = paganism_priest
-		BishopFemalePlural = paganism_priest_plural
-		BishopNeuter = paganism_priest
-		BishopNeuterPlural = paganism_priest_plural
+		BishopMale = kaharingan_bishop_male
+		BishopMalePlural = kaharingan_bishop_male_plural
+		BishopFemale = kaharingan_bishop_female
+		BishopFemalePlural = kaharingan_bishop_female_plural
+		BishopNeuter = kaharingan_bishop_neuter
+		BishopNeuterPlural = kaharingan_bishop_neuter_plural
 
 		DivineRealm = kaharingan_positive_afterlife
 		DivineRealm2 = kaharingan_positive_afterlife_2
@@ -191,11 +208,11 @@ kaharingan_religion = {
 		NegativeAfterLife = kaharingan_negative_afterlife
 		NegativeAfterLife2 = kaharingan_negative_afterlife_2
 		NegativeAfterLife3 = kaharingan_negative_afterlife_3
-		DeathDeityName = kaharingan_night_god_name
-		DeathDeityNamePossessive = kaharingan_night_god_name_possessive
-		DeathDeitySheHe = CHARACTER_SHEHE_IT
-		DeathDeityHerHis = CHARACTER_HERHIS_ITS
-		DeathDeityHerHim = CHARACTER_HERHIM_IT
+		DeathDeityName = sea_kaharingan_death_name
+		DeathDeityNamePossessive = sea_kaharingan_death_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
 		WitchGodName = kaharingan_trickster_god_name
 		WitchGodNamePossessive = kaharingan_trickster_god_name_possessive
 		WitchGodSheHe = CHARACTER_SHEHE_SHE
@@ -204,12 +221,13 @@ kaharingan_religion = {
 		WitchGodMistressMaster = witch_spirit
 		WitchGodMotherFather = witch_source
 
-		GHWName = ghw_great_holy_war
-		GHWNamePlural = ghw_great_holy_wars
+		GHWName = ghw_purification
+		GHWNamePlural = ghw_purifications
 	}
 
 	faiths = {
 		kaharingan = {
+			#color = { 128 79 156 } - old RoA colour
 			color = { 86 239 245 }
 			icon = kaharingan
 			reformed_icon = reformed_kaharingan
@@ -220,15 +238,214 @@ kaharingan_religion = {
 			holy_site = sukadana
 			holy_site = kutai
 
+			# RoA holy sites - need to be re-applied
+			#holy_site = kinabalu
+			#holy_site = katingan
+			#holy_site = lawangan
+			#holy_site = ngaju
+			#holy_site = ot_danum
+
 			doctrine = unreformed_faith_doctrine
 
-			doctrine = tenet_unrelenting_faith
-			doctrine = tenet_communal_identity
-			
+			doctrine = tenet_spirit_guides
+			doctrine = tenet_sanctity_of_nature
+
+			#doctrine = tenet_unrelenting_faith - vanilla, crossed out
+			#doctrine = tenet_communal_identity - vanilla, crossed out
+
 			doctrine_selection_pair = {
 				requires_dlc_flag = all_under_heaven
 				doctrine = tenet_cranial_trophies
-				fallback_doctrine = tenet_human_sacrifice
+				fallback_doctrine = tenet_headhunting
+			}
+		}
+
+		momolianism = {
+			color = { 47 26 107 }
+			icon = momolianism
+			reformed_icon = momolianism_reformed
+
+			holy_site = iban
+			holy_site = kudat
+			holy_site = taiao
+			holy_site = sukadana
+			holy_site = kutai
+
+			# RoA holy sites - need to be re-applied
+			#holy_site = kinabalu
+			#holy_site = nunuk_ragang
+			#holy_site = kapuas
+			#holy_site = bombalai
+			#holy_site = mantaling
+
+			doctrine = unreformed_faith_doctrine
+
+			doctrine = tenet_spirit_guides
+			doctrine = tenet_sanctity_of_nature
+
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_headhunting
+			}
+
+			localization = {
+				#HighGod
+				HighGodName = momolianism_high_god_name
+				HighGodName2 = momolianism_high_god_name
+				HighGodNamePossessive = momolianism_high_god_name_possessive
+				HighGodNameSheHe = CHARACTER_SHEHE_HE
+				HighGodHerselfHimself = CHARACTER_HIMSELF
+				HighGodHerHis = CHARACTER_HERHIS_HIS
+				HighGodNameAlternate = momolianism_high_god_name_alternate
+				HighGodNameAlternatePossessive = momolianism_high_god_name_alternate_possessive
+
+				#Creator
+				CreatorName = momolianism_creator_god_name
+				CreatorNamePossessive = momolianism_creator_god_name_possessive
+				CreatorSheHe = CHARACTER_SHEHE_HE
+				CreatorHerHis = CHARACTER_HERHIS_HIS
+				CreatorHerHim = CHARACTER_HERHIM_HIM
+
+				#HealthGod
+				HealthGodName = momolianism_health_god_name
+				HealthGodNamePossessive = momolianism_health_god_name_possessive
+				HealthGodSheHe = CHARACTER_SHEHE_HE
+				HealthGodHerHis = CHARACTER_HERHIS_HIS
+				HealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#FertilityGod
+				FertilityGodName = momolianism_fertility_god_name
+				FertilityGodNamePossessive = momolianism_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = momolianism_wealth_god_name
+				WealthGodNamePossessive = momolianism_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = momolianism_household_god_name
+				HouseholdGodNamePossessive = momolianism_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#FateGod
+				FateGodName = momolianism_fate_god_name
+				FateGodNamePossessive = momolianism_fate_god_name_possessive
+				FateGodSheHe = CHARACTER_SHEHE_IT
+				FateGodHerHis = CHARACTER_HERHIS_ITS
+				FateGodHerHim = CHARACTER_HERHIM_IT
+
+				#KnowledgeGod
+				KnowledgeGodName = momolianism_knowledge_god_name
+				KnowledgeGodNamePossessive = momolianism_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WarGod
+				WarGodName = momolianism_war_god_name
+				WarGodNamePossessive = momolianism_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#TricksterGod
+				TricksterGodName = momolianism_trickster_god_name
+				TricksterGodNamePossessive = momolianism_trickster_god_name_possessive
+				TricksterGodSheHe = CHARACTER_SHEHE_HE
+				TricksterGodHerHis = CHARACTER_HERHIS_HIS
+				TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+				#NightGod
+				NightGodName = momolianism_night_god_name
+				NightGodNamePossessive = momolianism_night_god_name_possessive
+				NightGodSheHe = CHARACTER_SHEHE_SHE
+				NightGodHerHis = CHARACTER_HERHIS_HER
+				NightGodHerHim = CHARACTER_HERHIM_HER
+
+				#WaterGod
+				WaterGodName = momolianism_water_god_name
+				WaterGodNamePossessive = momolianism_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+				PantheonTerm = religion_the_gods
+				PantheonTerm2 = religion_the_gods
+				PantheonTerm3 = religion_the_gods
+				PantheonTermHasHave = pantheon_term_have
+				GoodGodNames = {
+					momolianism_high_god_name
+					momolianism_high_god_name_alternate
+				}
+				DevilName = momolianism_devil_name
+				DevilNamePossessive = momolianism_devil_name_possessive
+				DevilSheHe = CHARACTER_SHEHE_HE
+				DevilHerHis = CHARACTER_HERHIS_HIS
+				DevilHerselfHimself = momolianism_devil_herselfhimself
+				EvilGodNames = {
+					momolianism_devil_name
+				}
+				HouseOfWorship = momolianism_house_of_worship
+				HouseOfWorship2 = momolianism_house_of_worship
+				HouseOfWorship3 = momolianism_house_of_worship
+				HouseOfWorshipPlural = momolianism_house_of_worship_plural
+				ReligiousSymbol = momolianism_religious_symbol
+				ReligiousSymbol2 = momolianism_religious_symbol
+				ReligiousSymbol3 = momolianism_religious_symbol
+				ReligiousText = momolianism_religious_text
+				ReligiousText2 = momolianism_religious_text
+				ReligiousText3 = momolianism_religious_text
+				DevoteeMale = momolianism_devotee
+				DevoteeMalePlural = momolianism_devotee_plural
+				DevoteeFemale = momolianism_devotee
+				DevoteeFemalePlural = momolianism_devotee_plural
+				DevoteeNeuter = momolianism_devotee
+				DevoteeNeuterPlural = momolianism_devotee_plural
+				PriestMale = momolianism_priest
+				PriestMalePlural = momolianism_priest_plural
+				PriestFemale = momolianism_priest
+				PriestFemalePlural = momolianism_priest_plural
+				PriestNeuter = momolianism_priest
+				PriestNeuterPlural = momolianism_priest_plural
+				AltPriestTermPlural = momolianism_priest_term_plural
+				BishopMale = momolianism_bishop
+				BishopMalePlural = momolianism_bishop_plural
+				BishopFemale = momolianism_bishop
+				BishopFemalePlural = momolianism_bishop_plural
+				BishopNeuter = momolianism_bishop
+				BishopNeuterPlural = momolianism_bishop_plural
+				DivineRealm = momolianism_divine_realm
+				DivineRealm2 = momolianism_divine_realm
+				DivineRealm3 = momolianism_divine_realm
+				PositiveAfterLife = momolianism_positive_afterlife
+				PositiveAfterLife2 = momolianism_positive_afterlife
+				PositiveAfterLife3 = momolianism_positive_afterlife
+				NegativeAfterLife = momolianism_negative_afterlife
+				NegativeAfterLife2 = momolianism_negative_afterlife
+				NegativeAfterLife3 = momolianism_negative_afterlife
+				DeathDeityName = momolianism_death_name
+				DeathDeityNamePossessive = momolianism_death_name_possessive
+				DeathDeitySheHe = CHARACTER_SHEHE_HE
+				DeathDeityHerHis = CHARACTER_HERHIS_HIS
+				DeathDeityHerHim = CHARACTER_HERHIM_HIM
+				WitchGodName = momolianism_witch_god_name
+				WitchGodNamePossessive = momolianism_witch_god_name_possessive
+				WitchGodHerHis = CHARACTER_HERHIS_HER
+				WitchGodSheHe = CHARACTER_SHEHE_SHE
+				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodMistressMaster = mistress
+				WitchGodMotherFather = mother
+
+				GHWName = ghw_purification
+				GHWNamePlural = ghw_purifications
 			}
 		}
 	}
