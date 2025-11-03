@@ -79,16 +79,6 @@ kollam = {
 	}
 }
 
-st_thomas_church = {
-	county = c_kerala
-	barony = b_mahoyadapuram
-
-	character_modifier = {
-		name = holy_site_st_thomas_church_effect_name
-		learning_per_piety_level = 1
-	}
-}
-
 ## Nasrani versions of Christian Holy sites ##
 rome_nasrani = {
 	# At start deactivated but turn on depending on "Unite the Nasrani" decisions
@@ -139,6 +129,33 @@ jangubai_cave_temple = {
 	character_modifier = {
 		name = holy_site_jangubai_cave_temple_effect_name
 		dynasty_house_opinion = 5
+	}
+}
+### ### ### ###
+
+
+### RICE Holy Sites ###
+kataragama = {
+	county = c_rohana
+	barony = b_katargama
+
+	character_modifier = {
+		name = holy_site_kataragama_effect_name
+		different_faith_opinion = 5
+		enemy_hostile_scheme_success_chance_add = -5
+	}
+}
+
+kinnaur = {
+	# Kinnaur Valley
+	county = c_kamru
+
+	character_modifier = {
+		name = holy_site_kinnaur_effect_name
+		hills_provisions_use_mult = -0.1
+		mountains_provisions_use_mult = -0.1
+		hills_attrition_mult = -0.1
+		mountains_attrition_mult = -0.1
 	}
 }
 ### ### ### ###
