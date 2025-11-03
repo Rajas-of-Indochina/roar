@@ -1,7 +1,8 @@
 ﻿mundhum_religion = {
-	family = rf_eastern
+	family = rf_pagan
+	doctrine = pagan_hostility_doctrine
+
 	graphical_faith = dharmic_gfx
-	doctrine = eastern_hostility_doctrine
 
 	pagan_roots = yes
 
@@ -233,17 +234,21 @@
 			icon = kiratism
 			reformed_icon = kiratism_reformed
 
-			holy_site = darjeeling
+			holy_site = kathmandu
 			holy_site = ilam
+			holy_site = darjeeling
 			holy_site = paro
 			holy_site = khotang
-			holy_site = kathmandu
+
+			#holy_site = garwhal - vanilla
+			#holy_site = jumla - vanilla
 
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_reincarnation
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_ancestor_worship
+			doctrine = tenet_eastern_syncretism
 		}
 
 		yumaism = {
@@ -251,11 +256,14 @@
 			icon = yumaism
 			reformed_icon = yumaism_reformed
 
-			holy_site = darjeeling
+			holy_site = kathmandu
 			holy_site = ilam
+			holy_site = darjeeling
 			holy_site = paro
 			holy_site = khotang
-			holy_site = kathmandu
+
+			#holy_site = garwhal - vanilla
+			#holy_site = jumla - vanilla
 
 			doctrine = unreformed_faith_doctrine
 
@@ -264,6 +272,7 @@
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_sacred_childbirth
 			doctrine = tenet_ancestor_worship
+			doctrine = tenet_eastern_syncretism
 
 			localization = {
 				HighGodName = yumaism_high_god_name

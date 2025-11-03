@@ -1,4 +1,456 @@
-# Holy sites moved from 10_sea_holy_sites
+### Holy sites moved from 10_sea_holy_sites ###
+
+#######################
+# Hinduism Holy Sites #
+#######################
+
+## General Hindu Holy Sites
+katas_raj = {
+	# Considered second most sacred Hinduism site in the Punjab region ; temple pond is said to be made of Vishnu's tears
+	county = c_bhera
+	barony = b_katasraj
+
+	character_modifier = {
+		name = holy_site_katas_raj_effect_name
+		monthly_piety_gain_per_knight_mult = 0.01
+	}
+}
+rameswaram = {
+	# One of the 4 Char Dham pilgrimage sites ; also place where Rama and Hanuman built a bridge to reach Lanka
+	county = c_madurai
+	barony = b_rameshvaram
+
+	character_modifier = {
+		name = holy_site_rameswaram_effect_name
+		different_culture_opinion = 5
+	}
+}
+sharada_peeth = {
+	# Prominent temple-university dedicated to Shakti
+	county = c_sharda
+	barony = b_sharda
+
+	character_modifier = {
+		name = holy_site_sharada_peeth_effect_name
+		learning_per_piety_level = 1
+	}
+}
+
+## Vaishavnite Hindu Holy Sites
+guruvayur = {
+	# Temple dedicated to Guruvayurappan (form of Vishnu) ; regarded as "Holy Abode of Vishnu on Earth"
+	county = c_kerala
+
+	character_modifier = {
+		name = holy_site_guruvayur_effect_name
+		stewardship_per_piety_level = 1
+	}
+}
+srirangam = {
+	# Temple dedicated to Ranganatha (form of Vishnu) ; one of the eight Swayambhu Kshetras of Vishnu
+	county = c_tagadur
+	barony = b_srirangam
+
+	character_modifier = {
+		name = holy_site_srirangam_effect_name
+		same_faith_opinion = 5
+	}
+}
+tirupati = {
+	# Temple dedicated to Venkateswara (form of Vishnu) ; one of the eight Swayambhu Kshetras of Vishnu
+	county = c_nellore
+	barony = b_potapi
+
+	character_modifier = {
+		name = holy_site_tirupati_effect_name
+		different_culture_opinion = 10
+	}
+}
+#pandharpur = {
+	# does not really work as holy site as it was built after year 1100 AD
+	#county = c_karahataka
+	#barony = b_pundarika
+#}
+jyotisar = {
+	# Site of where Krishna delivered the sermon of Bhagavad Gita
+	county = c_sthanisvara
+	barony = b_sthanisvara
+
+	character_modifier = {
+		name = holy_site_jyotisar_effect_name
+		learning_per_piety_level = 1
+	}
+}
+
+## Shaivite Hindu Holy Sites
+jageshwar = {
+	# Complex of temples dedicated to multiple gods ; one of the Dhams in the Shaivism tradition 
+	county = c_kumaon
+	barony = b_almora
+
+	character_modifier = {
+		name = holy_site_jageshwar_effect_name
+		domain_tax_same_faith_mult = 0.05
+	}
+}
+chidambaram = {
+	# Temple dedicated to Nataraja (form of Shiva) ; one of the five dance halls of Shiva
+	county = c_cholamandalam
+	barony = b_tanjavur
+
+	character_modifier = {
+		name = holy_site_chidambaram_effect_name
+		same_culture_opinion = 5
+	}
+}
+madurai = {
+	# Temple of Meenakshi (Parvati) ; one of the five dance halls of Shiva
+	county = c_madurai
+	barony = b_madurai
+
+	character_modifier = {
+		name = holy_site_madurai_effect_name
+		build_gold_cost = -0.05
+	}
+}
+thirukutralam = {
+	# One of the five dance halls of Shiva
+	county = c_kongu
+	barony = b_tenkasi
+
+	character_modifier = {
+		name = holy_site_thirukutralam_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+srisailam = {
+	# Temple dedicated to the deities Shiva and Parvati ; one of the twelve Jyotirlingas of Shiva
+	county = c_cumbum
+	barony = b_sriparvata
+
+	character_modifier = {
+		name = holy_site_srisailam_effect_name
+		close_relative_opinion = 5
+	}
+}
+bhimashankar = {
+	# Temple dedicated to Shiva ; key pilgrimage centre and one of the twelve Jyotirlingas of Shiva
+	county = c_kondana
+	barony = b_jirnanagara
+
+	character_modifier = {
+		name = holy_site_bhimashankar_effect_name
+		same_faith_opinion = 5
+	}
+}
+trimbakeshwar = {
+	# Temple dedicated to Shiva ; one of the twelve Jyotirlingas of Shiva
+	county = c_trikuta
+	barony = b_seunapura
+
+	character_modifier = {
+		name = holy_site_trimbakeshwar_effect_name
+		dynasty_house_opinion = 5
+	}
+}
+somnath = {
+	# One of the most sacred pilgrimage sites - the Tirtha Kshetra ; the first among the twelve Jyotirlingas of Shiva
+	county = c_somnath
+	barony = b_somnath
+
+	character_modifier = {
+		name = holy_site_somnath_effect_name
+		build_gold_cost = -0.05
+	}
+}
+omkareshwar = {
+	# Hindu temple dedicated to Shiva ; has two Jyotirlingas of Shiva
+	county = c_sarangpur
+	barony = b_ashta
+
+	character_modifier = {
+		name = holy_site_omkareshwar_effect_name
+		prowess_per_piety_level = 1
+	}
+}
+grishneshwar = {
+	# Hindu temple dedicated to Shiva ; one of the twelve Jyotirlingas of Shiva
+	county = c_devagiri
+	barony = b_elapura
+
+	character_modifier = {
+		name = holy_site_grishneshwar_effect_name
+		different_faith_opinion = 5
+	}
+}
+baidyanath = {
+	# Hindu temple dedicated to Shiva ; one of the twelve Jyotirlingas of Shiva
+	county = c_damin_i_koh
+	barony = b_deogarh2
+
+	character_modifier = {
+		name = holy_site_baidyanath_effect_name
+		health = 0.05
+	}
+}
+kedarnath = {
+	# Hindu temple dedicated to Shiva ; one of the twelve Jyotirlingas of Shiva
+	county = c_garwhal
+	barony = b_devalgarh
+
+	character_modifier = {
+		name = holy_site_kedarnath_effect_name
+		direct_vassal_opinion = 5
+	}
+}
+
+## Shakti Hindu Holy Sites
+biraja = {
+	# Temple dedicated to Viraja/Biraja (form of Durga)
+	county = c_viraja
+	barony = b_viraja
+
+	character_modifier = {
+		name = holy_site_biraja_effect_name
+		clergy_opinion = 5
+	}
+}
+#chamundeshwari = {
+	# built in 12 century ; does not fit a holy site
+	#county = c_srirangapatna
+	#barony = b_srirangapatna
+#}
+jogulamba = {
+	# Temple dedicated to Jogulamba (form of Shakti) ; one of the Maha Shakta pithas
+	county = c_idatarainadu
+	barony = b_alampur
+
+	character_modifier = {
+		name = holy_site_jogulamba_effect_name
+		county_opinion_add = 5
+	}
+}
+kamakhya = {
+	# Temple dedicated to Kamakhya ; one of the oldest and most revered centres of Tantric practices
+	# Might be an ancient sacrificial site for Khasi and Garo, named after Khasi goddess, Ka Meikha
+	county = c_kamarupanagara
+	barony = b_pragyotisapura
+
+	character_modifier = {
+		name = holy_site_kamakhya_effect_name
+		religious_vassal_opinion = 5
+	}
+}
+
+## Smarta Hindu Holy Sites
+mahalakshmi = {
+	# Temple of Mahalakshmi, consort of Vishnu, locally worshipped as Ambabai
+	county = c_kolhapur
+	barony = b_kolhapur
+
+	character_modifier = {
+		name = holy_site_mahalakshmi_effect_name
+		fertility = 0.05
+	}
+}
+
+## Surya Hindu Holy Sites
+deo = {
+	# Site of Deo Sun Temple dedicated to Surya
+	county = c_gaya
+
+	character_modifier = {
+		name = holy_site_deo_effect_name
+		stress_loss_mult = 0.2
+	}
+}
+suryanarayana = {
+	# One of the two most important Sun Temples dedicated to Surya
+	county = c_kalinganagar
+	barony = b_srikakulam
+
+	character_modifier = {
+		name = holy_site_suryanarayana_effect_name
+		same_culture_opinion = 5
+	}
+}
+
+## Ganesha Hindu Holy Sites
+ballaleshwar = {
+	# One of the eight Ashtavinayaka Temples, dedicated to Ganesha
+	county = c_surparaka
+	barony = b_ambaranatha
+
+	character_modifier = {
+		name = holy_site_ballaleshwar_effect_name
+		direct_vassal_opinion = 5
+	}
+}
+mayureshwar = {
+	# One of the eight Ashtavinayaka Temples, dedicated to Ganesha
+	county = c_kondana
+	barony = b_kondana
+
+	character_modifier = {
+		name = holy_site_mayureshwar_effect_name
+		same_culture_opinion = 5
+	}
+}
+
+## Kaumaram/Murugan Holy Sites
+dhandayuthapani = {
+	# One of the Six Abodes of Murugan, believed to be where Murugan have been worshipped by the goddess Lakshmi
+	county = c_kongu
+	barony = b_kovai
+
+	character_modifier = {
+		name = holy_site_dhandayuthapani_effect_name
+		dynasty_house_opinion = 5
+	}
+}
+pazhamudircholai = {
+	# One of the Six Abodes of Murugan, spot of a holy stream
+	county = c_uraiyur
+	barony = b_dindigul
+
+	character_modifier = {
+		name = holy_site_pazhamudircholai_effect_name
+		direct_vassal_opinion = 5
+	}
+}
+#swamimalai = {
+	# One of the Six Abodes of Murugan, believed to be spot where Murugan explained the essence of the Pranava mantra "Om" to his father Shiva
+#}
+tiruchendur = {
+	# One of the Six Abodes of Murugan, believed to be spot of Murugan victory over the devil Surapadman
+	county = c_madurai
+	barony = b_korkai
+
+	character_modifier = {
+		name = holy_site_tiruchendur_effect_name
+		clergy_opinion = 10
+	}
+}
+#thiruparankundram = {
+	# One of the Six Abodes of Murugan, believed to be where Murugan have married Indra's daughter, Devasena
+#}
+#tiruttani = {
+	# One of the Six Abodes of Murugan, believed to be where Murugan have reclaimed his inner peace
+#}
+
+#######################
+
+
+### ### Kirat Mundhum Holy Sites ### ###
+darjeeling = {
+	# Important settlment for Kirati people
+	county = c_daramdin
+	barony = b_darjeeling
+
+	character_modifier = {
+		name = holy_site_darjeeling_effect_name
+		dynasty_house_opinion = 5
+	}
+}
+
+khotang = {
+	# Represents Halesi-Maratika/Mahadev Temple Caves, a venerated pilgrimage site for Hindus, Buddhists and Kirat
+	county = c_khotang
+
+	character_modifier = {
+		name = holy_site_khotang_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+paro = {
+	# Paro Valley and surrounding areas are home to many sacred sites
+	county = c_paro
+
+	character_modifier = {
+		name = holy_site_paro_effect_name
+		learning_per_piety_level = 1
+	}
+}
+### ### ### ###
+
+
+### Sal, Khasi and Meitei people holy sites ###
+goalpara = {
+	# Goalpara is main settlement for the Garo people
+	county = c_goalpara
+
+	character_modifier = {
+		name = holy_site_goalpara_effect_name
+		diplomacy_per_piety_level = 1
+	}
+}
+
+homalin = {
+	# Important site for Kuki and Naga people
+	county = c_homalin		# location needs an update
+
+	character_modifier = {
+		name = holy_site_homalin_effect_name
+		same_faith_opinion = 5
+	}
+}
+
+manikuta = {
+	# Manikuta Hill - seems to be an important religious site for multiple religious groups
+	county = c_kamarupanagara
+	barony = b_manikuta
+
+	character_modifier = {
+		name = holy_site_manikuta_effect_name
+		dynasty_house_opinion = 5
+		same_culture_opinion = 5
+	}
+}
+
+manipur = {
+	# Mount Koubru and other sacred areas in Manipur
+	county = c_manipur
+
+	character_modifier = {
+		name = holy_site_manipur_effect_name
+		dynasty_house_opinion = 5
+		same_culture_opinion = 5
+	}
+}
+
+srihatta = {
+	#AKA: Sylhet ; should probably be swapped for something else
+	county = c_srihatta
+
+	character_modifier = {
+		name = holy_site_srihatta_effect_name
+		monthly_piety_gain_per_happy_powerful_vassal_mult = 0.02
+	}
+}
+
+tripura = {
+	# Inhabited for a long time ; important site of Tripuri people
+	county = c_karmanta
+	barony = b_tripura
+
+	character_modifier = {
+		name = holy_site_tripura_name
+		piety_level_impact_mult = 0.5
+	}
+}
+
+unakoti = {
+	# Sculptural emblem and ancient Shaivite place that hosts rock carvings, figures and images of gods and goddesses
+	county = c_harikela
+
+	character_modifier = {
+		name = holy_site_unakoti_effect_name
+		direct_vassal_opinion = 10
+	}
+}
+### ### ### ###
+
 
 ### Burmese holy sites ###
 popa = {
