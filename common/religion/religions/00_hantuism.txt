@@ -1,5 +1,6 @@
 ﻿# Ok so I've kept the loc but this is "Gaya" the Taiwanese Aboriginal faith. Mostly merging together some Atayal and Siraya customs
 
+# Hantu *does* technically exist in Aboriginal beliefs but it's hanitu, spirits, in contrast to dihanin (sky/god) and bunun (human). 
 
 hantuism_religion = {
 	family = rf_pagan
@@ -16,9 +17,9 @@ hantuism_religion = {
 	doctrine = doctrine_theocracy_temporal
 
 	#Marriage
-	doctrine = doctrine_concubines
-	doctrine = doctrine_divorce_allowed
-	doctrine = doctrine_bastardry_legitimization
+	doctrine = doctrine_monogamy
+	doctrine = doctrine_divorce_disallowed # marriahe seen as a strict monogamous bond for life
+	doctrine = doctrine_bastardry_none # not sure how to represent this, but childbirth below a certain age was seen as hurting the warrior virility of the father. 
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
@@ -31,7 +32,7 @@ hantuism_religion = {
 
 	#Clerical Functions
 	doctrine = doctrine_clerical_function_recruitment
-	doctrine = doctrine_clerical_gender_either
+	doctrine = doctrine_clerical_gender_female_only
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
 
