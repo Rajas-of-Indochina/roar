@@ -1,6 +1,6 @@
 ﻿l_english:
- # Dayak Paganism
- # Kaharingan - the most common form of Dayak animism
+ #### Dayak Folk Religions ####
+ ### Kaharingan - the most common form of Dayak animism
  kaharingan_religion:0 "Dayak"
  kaharingan_religion_adj:0 "Dayak"
  kaharingan_religion_desc:0 "The Dayak peoples believe that the world of spirits and the world of man are separate, they are at the same time also irrevocably intertwined, and balance between the two must be carefully maintained to ensure that all may continue to live in harmony."
@@ -12,51 +12,50 @@
  # Hatara/Hatalla - Ngaju and other Barito pantheons' central deity and god of sky
  # Ranying Mahatala Langit - Ngaju god of sun ; hornbill is his sacred animal
 
- kaharingan_mother_earth_father_sky:0 "Kaloë and Hatara"
-
  # Bunsu (Kree) Petara - Iban supreme being, who creates everything in this world and other worlds
  sea_kaharingan_creator_god_name:0 "Bunsu Petara"
  sea_kaharingan_creator_god_name_possessive:0 "Bunsu Petara's"
 
  # Bapa Sangumang - some sort of wealth/fortune god, can't find much info on them
+ # Sahor - seems to have role over something specific but info on them is hard to come by
 
  # Pataho - guardians of tribe
  sea_kaharingan_household_god_name:0 "Pataho"
  sea_kaharingan_household_god_name_possessive:0 "Pataho's"
 
- # bungkung is a concept of hearth/roots of people
-
- # Raja Untung - spirit of good fortune and wealth
- # Raja Sial - spirit of bad misfortune and accidents
-
- # Bawi Ayah - lesser god and protective spirit often associated with fertility, protection, healing, or ancestral guidance
-
  # Biku Bunsu Petara (female) - the high priestess of gods
  # Sengalang Burong - Iban god of war
- # Menjaya Manang Raja - Iban pantheon's first shaman (manang) and god of medicine
+ # Menjaya Manang Raja - Iban pantheon's first shaman, god of medcine and divine keeper of knowledge
+ sea_kaharingan_knowledge_god_name:0 "$kaharingan_health_god_name$"
+ sea_kaharingan_knowledge_god_name_possessive:0 "$kaharingan_health_god_name_possessive$"
  # Selampandai - Iban god of craftsmanship and creation ; also probably deity responisble for natural balance
  # Sempulang Gana and Semarugah - Iban gods of agriculture and land
  # Ini Inda - Iban goddess of justice and a doctor ; also invoked as goddess of fertility
  # Anda Mara - Iban god of wealth and fortune
 
- # Menjaya Manang Raja is Iban god of medcine and divine keeper of knowledge
- sea_kaharingan_knowledge_god_name:0 "$kaharingan_health_god_name$"
- sea_kaharingan_knowledge_god_name_possessive:0 "$kaharingan_health_god_name_possessive$"
-
  # Jata Balawang Bulau - goddess of earth and underworld, often associated with night and darkness ; watersnake is her holy animal
  sea_kaharingan_night_god_name:0 "$kaharingan_high_god_name_alternate$"
  sea_kaharingan_night_god_name_possessive:0 "$kaharingan_high_god_name_alternate_possessive$"
+
+ # bungkung is a concept of hearth/roots of people
+
+ # Bawi Ayah - lesser god and protective spirit often associated with fertility, protection, healing, or ancestral guidance
 
  # Tempon Telon - a gentle spirit guiding souls to underworld
  sea_kaharingan_death_name:0 "Tempon Telon"
  sea_kaharingan_death_name_possessive:0 "Tempon Telon's"
 
+ # Raja Untung - spirit of good fortune and wealth
+ # Raja Sial - spirit of bad misfortune and accidents
  # Raja Hantuen - essentially a force of chaos and destruction in this world
  sea_kaharingan_devil_name:0 "Raja Hantuen"
  sea_kaharingan_devil_name_possessive:0 "Raja Hantuen's"
  sea_kaharingan_devil_herselfhimself:0 "itself"
 
- # Devotee + priest names
+ # Other names
+ kaharingan_house_of_worship_3:0 "Rahan"
+ kaharingan_house_of_worship_plural:0 "Balai Basarahs"
+
  kaharingan_devotee:0 "babuhan"
  kaharingan_devotee_plural:0 "babuhans"
  kaharingan_devotee_male:0 "$kaharingan_devotee$"
@@ -75,13 +74,13 @@
  kaharingan_bishop_neuter:0 "$kaharingan_bishop$"
  kaharingan_bishop_neuter_plural:0 "$kaharingan_bishop_plural$"
 
- # Momolianism - folk religion of Kadazan-Dusun, Murut and Rungus people
- # needs a cleanup
+
+ ### Momolianism - folk religion of Kadazan-Dusun, Murut and Rungus people
  momolianism:0 "Momolianism"
  momolianism_adj:0 "Momolian"
  momolianism_adherent:0 "Momolianist"
  momolianism_adherent_plural:0 "Momolianists"
- momolianism_desc:0 "The Kazadan-Dusun peoples believe that the world around them is alive and filled with spirits and the souls of their ancestors."
+ momolianism_desc:0 "While the world of spirits and the world of men remain separate, the connection persists and only through the divine set of rules, the balance can be kept. The rules guide the worship and mode of life for the people, ."
 
  momolianism_old:0 "Old Momolian"
  momolianism_old_adj:0 "Old Momolian"
@@ -89,66 +88,108 @@
  momolianism_old_adherent_plural:0 "Old Momolians"
  momolianism_old_desc:0 "The Kazadan-Dusun peoples believe that the world around them is alive and filled with spirits and the souls of their ancestors."
 
+ # Kinoingan Minamangun - supreme deity ; creator of the world
  momolianism_high_god_name:0 "Minamangun"
  momolianism_high_god_name_possessive:0 "Minamangun's"
  momolianism_high_god_name_alternate:0 "Kinoingan"
  momolianism_high_god_name_alternate_possessive:0 "Kinoingan's"
- momolianism_devil_name:0 "corruption"
- momolianism_devil_name_possessive:0 "corruption's"
- momolianism_devil_shehe:0 "it"
- momolianism_devil_herselfhimself:0 "itself"
- momolianism_devil_herhis:0 "its"
- momolianism_evil_god_decay:0 "blight"
- momolianism_evil_god_decay_possessive:0 "blight's"
- momolianism_evil_god_drought:0 "drought"
- momolianism_witch_god_name:0 "$momolianism_high_god_name$"
- momolianism_witch_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
- momolianism_death_name:0 "Tempon Telon"
- momolianism_death_name_possessive:0 "Tempon Telon's"
- momolianism_death_herhis:0 "his"
- momolianism_mother_earth_father_sky:0 "Kaloë and Hatara"
-
  momolianism_creator_god_name:0 "$momolianism_high_god_name$"
  momolianism_creator_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
- momolianism_health_god_name:0 "Sahor"
- momolianism_health_god_name_possessive:0 "Sahor's"
- momolianism_fertility_god_name:0 "$momolianism_high_god_name$"
- momolianism_fertility_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
- momolianism_wealth_god_name:0 "Bapa Sangumang"
- momolianism_wealth_god_name_possessive:0 "Bapa Sangumang's"
- momolianism_household_god_name:0 "Pataho"
- momolianism_household_god_name_possessive:0 "Pataho's"
- momolianism_fate_god_name:0 "the bungkung"
- momolianism_fate_god_name_possessive:0 "the bungkung's"
- momolianism_knowledge_god_name:0 "Bawi Ayah"
- momolianism_knowledge_god_name_possessive:0 "Bawi Ayah's"
- momolianism_war_god_name:0 "Pataho"
- momolianism_war_god_name_possessive:0 "Pataho's"
- momolianism_trickster_god_name:0 "the antu gerasi"
- momolianism_trickster_god_name_possessive:0 "the antu gerasi's"
+
+ # Humnidun - daughter of Kinoingan Minamangun and Suminundu ; she sacrificed herself so that land can be ferile and plentiful
+ momolianism_health_god_name:0 "Humnidun"
+ momolianism_health_god_name_possessive:0 "Humnidun's"
+
+ # Suminundu - wife of Kinoingan Minamangun and co-creator of the world ; also associated with earth and fertility
+ momolianism_fertility_god_name:0 "Suminundu"
+ momolianism_fertility_god_name_possessive:0 "Suminundu's"
+
+ # Momolianism does not have particular wealth deity ; but Humnidun's sacrfice is often praised and celebrated so-
+ momolianism_wealth_god_name:0 "$momolianism_health_god_name$"
+ momolianism_wealth_god_name_possessive:0 "$momolianism_health_god_name_possessive$"
+
+ # Mogigion - literally 'Guardians of the Land'
+ momolianism_household_god_name:0 "Mogigion"
+ momolianism_household_god_name_possessive:0 "Mogigion's"
+
+ # Momolianism does not have particular fate deity
+ momolianism_fate_god_name:0 "$momolianism_high_god_name$"
+ momolianism_fate_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
+
+ # Momolianism does not have particular knowledge deity
+ momolianism_knowledge_god_name:0 "$momolianism_high_god_name$"
+ momolianism_knowledge_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
+
+ # Momolianism does not have particular war deity
+ momolianism_war_god_name:0 "$momolianism_high_god_name$"
+ momolianism_war_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
+
+ # Minorit - enforcing or testing societal and moral norms
+ # susukuon - spirits that can offer guidance and warnings or trick people
+ momolianism_trickster_god_name:0 "susukuon"
+ momolianism_trickster_god_name_possessive:0 "susukuon's"
+ 
+ # Momolianism does not have particular night deity
  momolianism_night_god_name:0 "$momolianism_high_god_name$"
  momolianism_night_god_name_possessive:0 "$momolianism_high_god_name_possessive$"
- momolianism_water_god_name:0 "Jata"
- momolianism_water_god_name_possessive:0 "Jata's"
 
- momolianism_house_of_worship:0 "balai basarah"
- momolianism_house_of_worship_plural:0 "balai basarahs"
- momolianism_religious_symbol:0 "batang garing"
- momolianism_religious_text:0 "panaturan"
- momolianism_devotee:0 "babuhan"
- momolianism_devotee_plural:0 "babuhans"
- momolianism_devotee_male:0 "babuhan"
- momolianism_devotee_male_plural:0 "babuhans"
- momolianism_devotee_female:0 "babuhan"
- momolianism_devotee_female_plural:0 "babuhans"
- momolianism_devotee_neuter:0 "babuhan"
- momolianism_devotee_neuter_plural:0 "babuhans"
+ # Momolianism does not have particular water deity
+ momolianism_water_god_name:0 "$momolianism_fertility_god_name$"
+ momolianism_water_god_name_possessive:0 "$momolianism_fertility_god_name_possessive$"
+ 
+ # Momolianism does not have particular evil deity
+
+ # Momolianism does not have particular witchcraft deity ; susukuon spirits are contacted for guidance
+ momolianism_witch_god_name:0 "$momolianism_trickster_god_name$"
+ momolianism_witch_god_name_possessive:0 "$momolianism_trickster_god_name_possessive$"
+ sea_spirits:o "spirits"
+
+ momolianism_death_name:0 "$momolianism_high_god_name$"
+ momolianism_death_name_possessive:0 "$momolianism_high_god_name_possessive$"
+
+ # Needs research
+ #momolianism_house_of_worship:0 ""
+ # Needs research
+ #momolianism_religious_symbol:0 ""
+ # Needs research
+ #momolianism_religious_text:0 ""
+ # riniba - mean 'human' ; placeholder until we can find actual term 
+ momolianism_devotee:0 "riniba"
+ momolianism_devotee_plural:0 "rinibas"
+ momolianism_devotee_male:0 "$momolianism_devotee$"
+ momolianism_devotee_male_plural:0 "$momolianism_devotee_plural$"
+ momolianism_devotee_female:0 "$momolianism_devotee$"
+ momolianism_devotee_female_plural:0 "$momolianism_devotee_plural$"
+ momolianism_devotee_neuter:0 "$momolianism_devotee$"
+ momolianism_devotee_neuter_plural:0 "$momolianism_devotee_plural$"
+ # bobolian - Dusun term for priestess ; only split with Kadazan term so that both pop up
  momolianism_priest:0 "bobolian"
  momolianism_priest_plural:0 "bobolians"
- momolianism_priest_term_plural:0 "bobolians"
- momolianism_priest_alternate_plural:1 "elders"
- momolianism_divine_realm:0 "the Heavens"
+ momolianism_priest_male:0 "$momolianism_priest$"
+ momolianism_priest_male_plural:0 "$momolianism_priest_plural$" 
+ momolianism_priest_female:0 "$momolianism_priest$"
+ momolianism_priest_female_plural:0 "$momolianism_priest_plural$"
+ momolianism_priest_neuter:0 "$momolianism_priest$"
+ momolianism_priest_neuter_plural:0 "$momolianism_priest_plural$"
+ momolianism_priest_alt_term_plural:0 "shamans"
+ # bobohizan - Kadazan term for priestess ; only split with Dusun term so that both pop up
+ momolianism_bishop:0 "bobohizan"
+ momolianism_bishop_plural:0 "bobohizans"
+ momolianism_bishop_male:0 "$momolianism_bishop$"
+ momolianism_bishop_male_plural:0 "$momolianism_bishop_plural$"
+ momolianism_bishop_female:0 "$momolianism_bishop$"
+ momolianism_bishop_female_plural:0 "$momolianism_bishop_plural$"
+ momolianism_bishop_neuter:0 "$momolianism_bishop$"
+ momolianism_bishop_neuter_plural:0 "$momolianism_bishop_plural$"
+
+ # Libabou - Quite literally the Heavens
+ momolianism_divine_realm:0 "Libabou"
+ momolianism_divine_realm_2:0 "$momolianism_divine_realm$"
+ momolianism_divine_realm_3:0 "$momolianism_divine_realm$"
+ # Nabahu - general afterlife for the souls of the departed
  momolianism_positive_afterlife:0 "Nabahu"
- momolianism_negative_afterlife:0 ""
- momolianism_bishop:0 "balian"
- momolianism_bishop_plural:0 "balians"
+ momolianism_positive_afterlife_2:0 "$momolianism_positive_afterlife$"
+ momolianism_positive_afterlife_3:0 "$momolianism_positive_afterlife$"
+ momolianism_negative_afterlife:0 "$momolianism_positive_afterlife$"
+ momolianism_negative_afterlife_2:0 "$momolianism_positive_afterlife$"
+ momolianism_negative_afterlife_3:0 "$momolianism_positive_afterlife$"
