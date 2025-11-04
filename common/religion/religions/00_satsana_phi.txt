@@ -1,4 +1,4 @@
-﻿# Burmic folk religions
+﻿# Southwestern Tai folk religion ; tai_religion before AUH
 satsana_phi_religion = {
 	family = rf_pagan
 	graphical_faith = pagan_gfx
@@ -29,8 +29,8 @@ satsana_phi_religion = {
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_recruitment
-	doctrine = doctrine_clerical_gender_either
+	doctrine = doctrine_clerical_function_recruitment	#doctrine_clerical_function_alms_and_pacification
+	doctrine = doctrine_clerical_gender_male_only
 	doctrine = doctrine_clerical_marriage_disallowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
 
@@ -57,10 +57,10 @@ satsana_phi_religion = {
 		HighGodName2 = satsana_phi_high_god_name_2
 		HighGodNamePossessive = satsana_phi_high_god_name_possessive
 		HighGodNameSheHe = CHARACTER_SHEHE_HE
-		HighGodHerselfHimself = CHARACTER_HIMSELF
-		HighGodHerHis = CHARACTER_HERHIS_HIS
-		HighGodNameAlternate = tengrism_high_god_name_alternate
-		HighGodNameAlternatePossessive = tengrism_high_god_name_alternate_possessive
+		HighGodHerselfHimself = CHARACTER_HERHIS_HIS
+		HighGodHerHis = CHARACTER_HERHIM_HIM
+		HighGodNameAlternate = satsana_phi_high_god_name_alternate
+		HighGodNameAlternatePossessive = satsana_phi_high_god_name_alternate_possessive
 
 		#Creator
 		CreatorName = satsana_phi_creator_god_name
@@ -79,16 +79,16 @@ satsana_phi_religion = {
 		#FertilityGod
 		FertilityGodName = satsana_phi_fertility_god_name
 		FertilityGodNamePossessive = satsana_phi_fertility_god_name_possessive
-		FertilityGodSheHe = CHARACTER_SHEHE_HE
-		FertilityGodHerHis = CHARACTER_HERHIS_HIS
-		FertilityGodHerHim = CHARACTER_HERHIM_HIM
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
 
 		#WealthGod
 		WealthGodName = satsana_phi_wealth_god_name
 		WealthGodNamePossessive = satsana_phi_wealth_god_name_possessive
-		WealthGodSheHe = CHARACTER_SHEHE_HE
-		WealthGodHerHis = CHARACTER_HERHIS_HIS
-		WealthGodHerHim = CHARACTER_HERHIM_HIM
+		WealthGodSheHe = CHARACTER_SHEHE_SHE
+		WealthGodHerHis = CHARACTER_HERHIS_HER
+		WealthGodHerHim = CHARACTER_HERHIM_HER
 
 		#HouseholdGod
 		HouseholdGodName = satsana_phi_household_god_name
@@ -121,9 +121,9 @@ satsana_phi_religion = {
 		#TricksterGod
 		TricksterGodName = satsana_phi_trickster_god_name
 		TricksterGodNamePossessive = satsana_phi_trickster_god_name_possessive
-		TricksterGodSheHe = CHARACTER_SHEHE_SHE
-		TricksterGodHerHis = CHARACTER_HERHIS_HER
-		TricksterGodHerHim = CHARACTER_HERHIM_HER
+		TricksterGodSheHe = CHARACTER_SHEHE_IT
+		TricksterGodHerHis = CHARACTER_HERHIS_ITS
+		TricksterGodHerHim = CHARACTER_HERHIM_IT
 
 		#NightGod
 		NightGodName = satsana_phi_night_god_name
@@ -143,17 +143,38 @@ satsana_phi_religion = {
 		PantheonTerm2 = religion_the_gods_2
 		PantheonTerm3 = religion_the_gods_3
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { satsana_phi_high_god_name satsana_phi_high_god_name_alternate satsana_phi_creator_god_name satsana_phi_health_god_name satsana_phi_fertility_god_name satsana_phi_wealth_god_name satsana_phi_household_god_name satsana_phi_fate_god_name satsana_phi_knowledge_god_name satsana_phi_war_god_name satsana_phi_night_god_name satsana_phi_water_god_name }
-		DevilName = satsana_phi_trickster_god_name
-		DevilNamePossessive = satsana_phi_trickster_god_name_possessive
-		DevilSheHe = CHARACTER_SHEHE_SHE
-		DevilHerHis = CHARACTER_HERHIS_HER
-		DevilHerselfHimself = CHARACTER_HERSELF
-		EvilGodNames = { satsana_phi_trickster_god_name }
-		HouseOfWorship = paganism_house_of_worship
-		HouseOfWorship2 = paganism_house_of_worship_2
-		HouseOfWorship3 = paganism_house_of_worship_3
-		HouseOfWorshipPlural = paganism_house_of_worship_plural
+		GoodGodNames = {
+			satsana_phi_high_god_name
+			satsana_phi_high_god_name_alternate
+			satsana_phi_creator_god_name
+			satsana_phi_health_god_name
+			satsana_phi_fertility_god_name
+			satsana_phi_wealth_god_name
+			satsana_phi_household_god_name
+			satsana_phi_fate_god_name
+			satsana_phi_knowledge_god_name
+			satsana_phi_war_god_name
+			satsana_phi_night_god_name
+			satsana_phi_water_god_name
+			satsana_phi_rice_god_name
+			satsana_phi_other_wealth_god_name
+			satsana_phi_water_ogress_name
+		}
+		DevilName = satsana_phi_devil_name
+		DevilNamePossessive = satsana_phi_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_IT
+		DevilHerHis = CHARACTER_HERHIS_ITS
+		DevilHerselfHimself = paganism_devil_herselfhimself
+		EvilGodNames = {
+			satsana_phi_devil_name
+			satsana_phi_trickster_god_name
+			satsana_phi_evil_god_decay
+			satsana_phi_evil_god_drought
+		}
+		HouseOfWorship = satsana_phi_house_of_worship
+		HouseOfWorship2 = satsana_phi_house_of_worship_2
+		HouseOfWorship3 = satsana_phi_house_of_worship_3
+		HouseOfWorshipPlural = satsana_phi_house_of_worship_plural
 		ReligiousSymbol = satsana_phi_religious_symbol
 		ReligiousSymbol2 = satsana_phi_religious_symbol_2
 		ReligiousSymbol3 = satsana_phi_religious_symbol_3
@@ -162,12 +183,12 @@ satsana_phi_religion = {
 		ReligiousText3 = satsana_phi_religious_text_3
 		ReligiousHeadName = paganism_religious_head_title
 		ReligiousHeadTitleName = paganism_religious_head_title_name
-		DevoteeMale = paganism_devotee
-		DevoteeMalePlural = paganism_devoteeplural
-		DevoteeFemale = paganism_devotee
-		DevoteeFemalePlural = paganism_devoteeplural
-		DevoteeNeuter = paganism_devotee
-		DevoteeNeuterPlural = paganism_devoteeplural
+		DevoteeMale = satsana_phi_devotee
+		DevoteeMalePlural = satsana_phi_devotee_plural
+		DevoteeFemale = satsana_phi_devotee
+		DevoteeFemalePlural = satsana_phi_devotee_plural
+		DevoteeNeuter = satsana_phi_devotee
+		DevoteeNeuterPlural = satsana_phi_devotee_plural
 		PriestMale = satsana_phi_priest_male
 		PriestMalePlural = satsana_phi_priest_male_plural
 		PriestFemale = satsana_phi_priest_female
@@ -190,27 +211,32 @@ satsana_phi_religion = {
 		NegativeAfterLife = satsana_phi_negative_afterlife
 		NegativeAfterLife2 = satsana_phi_negative_afterlife_2
 		NegativeAfterLife3 = satsana_phi_negative_afterlife_3
-		DeathDeityName = satsana_phi_night_god_name
-		DeathDeityNamePossessive = satsana_phi_night_god_name_possessive
+		DeathDeityName = satsana_phi_death_god_name
+		DeathDeityNamePossessive = satsana_phi_death_god_name_possessive
 		DeathDeitySheHe = CHARACTER_SHEHE_HE
 		DeathDeityHerHis = CHARACTER_HERHIS_HIS
 		DeathDeityHerHim = CHARACTER_HERHIM_HIM
-		WitchGodName = satsana_phi_trickster_god_name
-		WitchGodNamePossessive = satsana_phi_trickster_god_name_possessive
-		WitchGodSheHe = CHARACTER_SHEHE_SHE
-		WitchGodHerHis = CHARACTER_HERHIS_HER
-		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodName = satsana_phi_witch_god_name
+		WitchGodNamePossessive = satsana_phi_witch_god_name_possessive
+		WitchGodSheHe = CHARACTER_SHEHE_IT
+		WitchGodHerHis = CHARACTER_HERHIS_ITS
+		WitchGodHerHim = CHARACTER_HERHIM_IT
 		WitchGodMistressMaster = witch_spirit
 		WitchGodMotherFather = witch_source
 
-		GHWName = ghw_great_holy_war
-		GHWNamePlural = ghw_great_holy_wars
+		GHWName = ghw_purification
+		GHWNamePlural = ghw_purifications
 	}
 
 	faiths = {
 		satsana_phi = {
-			color = { 71 32 70 }
+			# ban_phi in RoA
+			# folk religion of Southwestern Tai
+			color = { 186 64 207 }
+
 			icon = satsana_phi
+			#icon = satsani
+			#reformed_icon = satsani_reformed
 
 			holy_site = cao_bang
 			holy_site = vien_chan
@@ -218,9 +244,18 @@ satsana_phi_religion = {
 			holy_site = hsenwi
 			holy_site = qufu
 
+			# RoA holy sites
+			#holy_site = luang_prabang
+			#holy_site = hsenwi
+			#holy_site = chiang_mai
+			#holy_site = nakhon_phanom
+			#holy_site = sibsongbanna
+
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_communal_identity
 			doctrine = tenet_ancestor_worship
+
+			doctrine = unreformed_faith_doctrine
 		}
 	}
 }
