@@ -48,6 +48,7 @@
 
 	custom_faith_icons = {
 		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_pentagram_inverted custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_black_sheep custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s custom_faith_magatama custom_faith_soto custom_faith_benzhuism
+		ainu bugaism_01 bugaism_02 bugaism_03 bugaism_04 bugaism_05
 	}
 
 	localization = {
@@ -126,9 +127,9 @@
 		#NightGod
 		NightGodName = kamuyism_night_god_name
 		NightGodNamePossessive = kamuyism_night_god_name_possessive
-		NightGodSheHe = CHARACTER_SHEHE_THEY
-		NightGodHerHis = CHARACTER_HERHIS_THEIR
-		NightGodHerHim = CHARACTER_HERHIM_THEM
+		NightGodSheHe = CHARACTER_SHEHE_HE
+		NightGodHerHis = CHARACTER_HERHIS_HIS
+		NightGodHerHim = CHARACTER_HERHIM_HIM
 
 		#WaterGod
 		WaterGodName = kamuyism_water_god_name
@@ -160,8 +161,31 @@
 		WitchGodMistressMaster = witch_spirit
 		WitchGodMotherFather = witch_source
 
-		GoodGodNames = { kamuyism_high_god_name kamuyism_high_god_name_alternate kamuyism_creator_god_name kamuyism_health_god_name kamuyism_fertility_god_name kamuyism_wealth_god_name kamuyism_household_god_name kamuyism_fate_god_name kamuyism_knowledge_god_name kamuyism_war_god_name kamuyism_night_god_name kamuyism_water_god_name }
-		EvilGodNames = { kamuyism_devil_name kamuyism_trickster_god_name }
+		GoodGodNames = {
+			kamuyism_high_god_name
+			kamuyism_high_god_name_alternate
+			kamuyism_creator_god_name
+			kamuyism_health_god_name
+			kamuyism_fertility_god_name
+			kamuyism_wealth_god_name
+			kamuyism_household_god_name
+			kamuyism_fate_god_name
+			kamuyism_knowledge_god_name
+			kamuyism_war_god_name
+			kamuyism_night_god_name
+			kamuyism_trickster_god_name
+			kamuyism_water_god_name
+			kamuyism_mountain_god_name
+			kamuyism_spider_goddess_name
+		}
+		EvilGodNames = {
+			kamuyism_devil_name
+			witchgodname_kamuyism
+			kamuyism_evil_god_plague
+			kamuyism_evil_god_insanity
+			kamuyism_evil_god_decay
+			kamuyism_evil_god_toxic
+		}
 
 		PantheonTerm = kamuyism_pantheon_term
 		PantheonTerm2 = kamuyism_pantheon_term_2
@@ -181,8 +205,8 @@
 		ReligiousText2 = kamuyism_religious_text_2
 		ReligiousText3 = kamuyism_religious_text_3
 
-		ReligiousHeadName = paganism_religious_head_title
-		ReligiousHeadTitleName = paganism_religious_head_title_name
+		ReligiousHeadName = kamuyism_religious_head_title
+		ReligiousHeadTitleName = kamuyism_religious_head_title_name
 
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -191,19 +215,19 @@
 		DevoteeNeuter = paganism_devotee
 		DevoteeNeuterPlural = paganism_devoteeplural
 
-		PriestMale = paganism_priest
-		PriestMalePlural = paganism_priest_plural
-		PriestFemale = paganism_priest
-		PriestFemalePlural = paganism_priest_plural
-		PriestNeuter = paganism_priest
-		PriestNeuterPlural = paganism_priest_plural
-		AltPriestTermPlural = paganism_priest_alternate_plural
-		BishopMale = paganism_priest
-		BishopMalePlural = paganism_priest_plural
-		BishopFemale = paganism_priest
-		BishopFemalePlural = paganism_priest_plural
-		BishopNeuter = paganism_priest
-		BishopNeuterPlural = paganism_priest_plural
+		PriestMale = kamuyism_priest
+		PriestMalePlural = kamuyism_priest_plural
+		PriestFemale = kamuyism_priest
+		PriestFemalePlural = kamuyism_priest_plural
+		PriestNeuter = kamuyism_priest
+		PriestNeuterPlural = kamuyism_priest_plural
+		AltPriestTermPlural = kamuyism_priest_alternate_plural
+		BishopMale = kamuyism_priest
+		BishopMalePlural = kamuyism_priest_plural
+		BishopFemale = kamuyism_priest
+		BishopFemalePlural = kamuyism_priest_plural
+		BishopNeuter = kamuyism_priest
+		BishopNeuterPlural = kamuyism_priest_plural
 
 		DivineRealm = kamuyism_positive_afterlife
 		DivineRealm2 = kamuyism_positive_afterlife_2
@@ -211,9 +235,9 @@
 		PositiveAfterLife = kamuyism_positive_afterlife
 		PositiveAfterLife2 = kamuyism_positive_afterlife_2
 		PositiveAfterLife3 = kamuyism_positive_afterlife_3
-		NegativeAfterLife = paganism_afterlife
-		NegativeAfterLife2 = paganism_afterlife_2
-		NegativeAfterLife3 = paganism_afterlife_3
+		NegativeAfterLife = kamuyism_negative_afterlife
+		NegativeAfterLife2 = kamuyism_negative_afterlife_2
+		NegativeAfterLife3 = kamuyism_negative_afterlife_3
 
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
@@ -231,11 +255,19 @@
 			holy_site = hitakami
 			holy_site = tarayka
 
+			# RoA holy sites
+			#holy_site = kameda
+			#holy_site = akan
+			#holy_site = suwa
+			#holy_site = otchishi
+			#holy_site = tamatsukuri
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_communal_identity
-			
+			#doctrine = tenet_astrology
+
 			doctrine_selection_pair = {
 				requires_dlc_flag = all_under_heaven
 				doctrine = tenet_takamin

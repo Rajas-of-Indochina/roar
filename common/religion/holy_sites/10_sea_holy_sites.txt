@@ -1272,34 +1272,6 @@ suluk = {
 		hard_casualty_modifier = -0.1
 	}
 }
-okju = {
-	county = c_okjeo
-	barony = b_okju
-
-	character_modifier = {
-		name = holy_site_okju_effect_name
-		monthly_prestige_gain_mult = 0.1
-	}
-}
-gugak = {
-	county = c_gyerubu
-	barony = b_gugak
-
-	character_modifier = {
-		name = holy_site_gugak_effect_name
-		martial = 1
-		prowess_per_prestige_level = 1
-	}
-}
-baegam = {
-	county = c_jian_an
-	barony = b_baegam
-
-	character_modifier = {
-		name = holy_site_baegam_effect_name
-		stewardship_per_piety_level = 1
-	}
-}
 irbey = {
 	county = c_kan
 	barony = b_irbey
@@ -1333,23 +1305,6 @@ kachu = {
 		name = holy_site_kachu_effect_name
 		stress_loss_mult = 0.2
 		life_expectancy = 1
-	}
-}
-nanhanseong = {
-	county = c_jujangseong
-
-	character_modifier = {
-		name = holy_site_nanhanseong_effect_name
-		stewardship = 1
-		courtier_and_guest_opinion = 5
-	}
-}
-gyeogju = {
-	county = c_yangju
-
-	character_modifier = {
-		name = holy_site_gyeogju_effect_name
-		direct_vassal_opinion = 10
 	}
 }
 nachijin = {
@@ -1477,6 +1432,55 @@ lamlam = { # Mount Lamlam
 		fertility = 0.1
 	}
 }
+
+### Korean Muism holy sites ###0
+okju = {
+	county = c_okjeo
+	barony = b_okju
+
+	character_modifier = {
+		name = holy_site_okju_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+gugak = {
+	county = c_gyerubu
+	barony = b_gugak
+
+	character_modifier = {
+		name = holy_site_gugak_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}
+baegam = {
+	county = c_jian_an
+	barony = b_baegam
+
+	character_modifier = {
+		name = holy_site_baegam_effect_name
+		stewardship_per_piety_level = 1
+	}
+}
+nanhanseong = {
+	county = c_jujangseong
+
+	character_modifier = {
+		name = holy_site_nanhanseong_effect_name
+		stewardship = 1
+		courtier_and_guest_opinion = 5
+	}
+}
+gyeogju = {
+	county = c_yangju
+
+	character_modifier = {
+		name = holy_site_gyeogju_effect_name
+		direct_vassal_opinion = 10
+	}
+}
+### ### ### ###
+
 
 ### Cambodia holy sites ###
 tonle_sap = {
