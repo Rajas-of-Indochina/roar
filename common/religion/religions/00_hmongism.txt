@@ -10,7 +10,7 @@
 	doctrine = doctrine_no_head
 	doctrine = doctrine_gender_male_dominated
 	doctrine = doctrine_pluralism_pluralistic
-	doctrine = doctrine_theocracy_temporal
+	doctrine = doctrine_theocracy_temporal  	#doctrine_theocracy_lay_clergy
 
 	#Marriage
 	doctrine = doctrine_polygamy
@@ -24,13 +24,13 @@
 	doctrine = doctrine_adultery_women_shunned
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_crime
-	doctrine = doctrine_witchcraft_crime
+	doctrine = doctrine_witchcraft_shunned
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_function_alms_and_pacification
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
-	doctrine = doctrine_clerical_succession_temporal_appointment
+	doctrine = doctrine_clerical_succession_temporal_appointment  	#doctrine_clerical_succession_spiritual_fixed_appointment
 
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
@@ -55,9 +55,9 @@
 		HighGodName = dab_qhuas_high_god_name
 		HighGodName2 = dab_qhuas_high_god_name_2
 		HighGodNamePossessive = dab_qhuas_high_god_name_possessive
-		HighGodNameSheHe = dab_qhuas_devil_shehe
+		HighGodNameSheHe = CHARACTER_SHEHE_IT
 		HighGodHerselfHimself = dab_qhuas_devil_herselfhimself
-		HighGodHerHis = dab_qhuas_devil_herhis
+		HighGodHerHis = CHARACTER_HERHIS_ITS
 		HighGodNameAlternate = dab_qhuas_high_god_name_alternate
 		HighGodNameAlternatePossessive = dab_qhuas_high_god_name_alternate_possessive
 
@@ -142,13 +142,22 @@
 		PantheonTerm2 = religion_the_gods_2
 		PantheonTerm3 = religion_the_gods_3
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { dab_qhuas_high_god_name }
+		GoodGodNames = {
+			dab_qhuas_high_god_name
+			dab_qhuas_fertility_god_name
+			dab_qhuas_wealth_god_name
+			dab_qhuas_knowledge_god_name
+			dab_qhuas_night_god_name
+			dab_qhuas_sun_god_name
+		}
 		DevilName = dab_qhuas_devil_name
 		DevilNamePossessive = dab_qhuas_devil_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_IT
 		DevilHerHis = CHARACTER_HERHIS_ITS
 		DevilHerselfHimself = dab_qhuas_devil_herselfhimself
-		EvilGodNames = { dab_qhuas_devil_name }
+		EvilGodNames = {
+			dab_qhuas_devil_name
+		}
 		HouseOfWorship = dab_qhuas_house_of_worship
 		HouseOfWorship2 = dab_qhuas_house_of_worship_2
 		HouseOfWorship3 = dab_qhuas_house_of_worship_3
@@ -217,6 +226,13 @@
 			holy_site = anlong
 			holy_site = yangtze
 			holy_site = zunyi
+
+			# RoA Holy Sites
+			#holy_site = xizhou_qian
+			#holy_site = juzhou
+			#holy_site = muze
+			#holy_site = wumeng
+			#holy_site = zigui
 
 			doctrine = unreformed_faith_doctrine
 
