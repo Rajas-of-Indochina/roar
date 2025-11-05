@@ -129,3 +129,140 @@ rakhine = {
 		2 = southeast_asian_burmese_4
 	}
 }
+
+
+## Tibeto-Burmans who don't really fit Burman or Tibetan heritages but are here for now
+garo = {
+	# AKA: Mande or A∙chik
+	color = garo
+	ethos = ethos_communal
+	heritage = heritage_burman
+	language = language_garo
+	martial_custom = martial_custom_male_only
+
+	traditions = {
+		tradition_jungle_dwellers
+		tradition_jungle_warriors
+		tradition_medicinal_plants
+		tradition_storytellers
+		# tradition_agrarian - only helps with floodplants/farmlands
+	}
+	
+	name_list = name_list_kachari
+
+	coa_gfx = { tibetan_group_coa_gfx }
+	building_gfx = { tibetan_building_gfx indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+
+	house_coa_frame = house_frame_18
+
+	ethnicities = {
+		20 = asian_tibetan_1
+		20 = asian_tibetan_2
+		20 = asian_tibetan_3
+		20 = asian_tibetan_4
+		20 = asian_tibetan_5
+	}
+}
+
+kachari = {
+	# Kachari (North East Bodo-Kachari peoples: Boro, Mech, Dimasa, Moran, Deori, etc)
+	color = kachari
+
+	ethos = ethos_communal
+	heritage = heritage_burman
+	language = language_kachari
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_dwellers
+		tradition_jungle_warriors
+		tradition_music_theory
+		tradition_agrarian
+	}
+
+	name_list = name_list_kachari
+
+	coa_gfx = { tibetan_group_coa_gfx }
+	building_gfx = { tibetan_building_gfx indian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+
+	house_coa_frame = house_frame_18
+
+	ethnicities = {
+		20 = asian_tibetan_1
+		20 = asian_tibetan_2
+		20 = asian_tibetan_3
+		20 = asian_tibetan_4
+		20 = asian_tibetan_5
+	}
+}
+
+meitei = {
+	# Meitei / Manipuri
+	color = meitei
+	ethos = ethos_stoic
+	heritage = heritage_burman
+	language = language_meitei
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_tribe_unity
+		tradition_hill_dwellers 	# They are agraian but Agarian only affects farmland not the Hills of Manipur.
+		tradition_sacred_groves
+		# tradition_agrarian - only helps with floodplants/farmlands
+	}
+
+	name_list = name_list_manipur
+
+	coa_gfx = { tibetan_group_coa_gfx }
+	building_gfx = { tibetan_building_gfx indian_building_gfx }
+	clothing_gfx = { burmese_clothing_gfx indian_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+
+	ethnicities = {
+		20 = asian_tibetan_1
+		20 = asian_tibetan_2
+		20 = asian_tibetan_3
+		20 = asian_tibetan_4
+		20 = asian_tibetan_5
+	}
+}
+
+tripuri = {
+	# Tripuri
+	color = tripuri
+	ethos = ethos_communal
+	heritage = heritage_burman
+	language = language_kokborok
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_isolationist
+		tradition_adaptive_skirmishing
+		tradition_sacred_groves
+		tradition_jungle_dwellers
+	}
+
+	name_list = name_list_tripuri
+
+	coa_gfx = { tibetan_group_coa_gfx }
+	building_gfx = { tibetan_building_gfx indian_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx }
+	unit_gfx = { mongol_unit_gfx }
+
+	house_coa_frame = house_frame_18
+
+	ethnicities = {
+		20 = asian_tibetan_1
+		20 = asian_tibetan_2
+		20 = asian_tibetan_3
+		20 = asian_tibetan_4
+		20 = asian_tibetan_5
+	}
+}

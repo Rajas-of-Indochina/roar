@@ -1,0 +1,196 @@
+﻿
+headhunting_duel_shown_and_not_invalid_trigger = {
+	# Scope:actor must be able to fight personally.
+	scope:actor = { can_start_single_combat_trigger = yes }
+	# Scope:actor cannot challenge someone they have a ceasefire against.
+	scope:actor = {
+		NOT = { has_truce = scope:recipient }
+	}
+	# Scope:actor *definitely* cannot challenge someone they're at war with.
+	scope:actor = {
+		NOT = { is_at_war_with = scope:recipient }
+	}
+}
+
+headhunting_duel_is_valid_trigger = {
+	# Calc some stuff that might invalidate elsewhere before the bout is sorted.
+	headhunting_duel_shown_and_not_invalid_trigger = yes
+	# Must have an imprisonment reason or be rival
+	custom_tooltip = {
+		text = "headhunting_duel_is_not_valid_desc"
+		OR = {
+			scope:actor = { has_relation_rival = scope:recipient }
+			scope:actor = { has_relation_nemesis = scope:recipient }
+			scope:actor = { has_imprisonment_reason = scope:recipient }
+		}
+	}
+	# Scope:recipient must be able to fight
+	scope:recipient = {
+		trigger_if = {
+			limit = {
+				OR = {
+					can_start_single_combat_eligibility_checks_trigger = no
+					NOT = {
+						can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:recipient }
+					}
+				}
+			}
+		}
+	}
+	# Scope:recipient must not be banned from single combat.
+	scope:recipient = {
+		custom_description = {
+			text = "fp1_tbc_recipient_banned_from_combat"
+			can_start_single_combat_banned_checks_trigger = no
+		}
+	}
+	# Neither of the characters can be imprisoned.
+	scope:actor = { is_imprisoned = no }
+	scope:recipient = { is_imprisoned = no }
+}
+
+basic_can_have_headhunting_duel_trigger = {
+	faith = { has_doctrine_parameter = headhunting_active }
+}
+
+can_have_headhunting_duel_trigger = {
+	scope:actor = { basic_can_have_headhunting_duel_trigger = yes }
+	scope:recipient = { basic_can_have_headhunting_duel_trigger = yes }
+}
+
+# Override Vanilla
+can_create_spiritual_head_of_faith_title_trigger = {
+	num_realm_holy_sites_faithful_holders = {
+		COUNT = holy_sites_to_create_spiritual_head_of_faith
+		CHARACTER = ROOT
+	}
+	root = { piety_level >= medium_piety_level }
+	trigger_if = {
+		limit = { has_doctrine = special_doctrine_not_allowed_to_hof }
+		NOT = { has_doctrine = special_doctrine_not_allowed_to_hof }
+	}
+	NAND = {
+		exists = religious_head
+		has_doctrine_parameter = maintains_head_of_faith_on_creation
+	}
+}
+
+# AUH overrides
+religion_is_broadly_asian_trigger = {
+	OR = {
+		religion_is_east_asian_trigger = yes
+		broadly_dharmic_trigger = yes
+		broadly_chinese_religion_trigger = yes
+	}
+}
+
+religion_is_east_asian_trigger = {  # needs to be worked on
+	OR = {
+		faith.religion = religion:buddhism_religion
+		faith.religion = religion:confucianism_religion
+		faith.religion = religion:taoism_religion
+		faith.religion = religion:shintoism_religion
+		faith.religion = religion:chinese_religion
+	}
+}
+
+broadly_dharmic_trigger = {  # needs to be worked on
+	OR = {
+		faith.religion = religion:buddhism_religion
+		faith.religion = religion:hinduism_religion
+		faith.religion = religion:jainism_religion
+		faith.religion = religion:bon_religion
+		faith.religion = religion:dab_qhuas_religion
+		faith.religion = religion:aluk_religion
+		faith.religion = religion:dayawism_religion
+		faith.religion = religion:hantuism_religion
+		faith.religion = religion:kaharingan_religion
+		faith.religion = religion:satsana_phi_religion
+		faith.religion = religion:tolotang_religion
+		faith.religion = religion:utaki_religion
+		faith.religion = religion:bimoism_religion
+		faith.religion = religion:moism_religion
+		faith.religion = religion:muism_religion
+		faith.religion = religion:qiangic_religion
+	}
+}
+
+south_east_asian_pagan_trigger = {  # needs to be worked on
+	OR = {
+		# Vanilla
+		faith.religion = religion:aluk_religion
+		faith.religion = religion:dayawism_religion
+		faith.religion = religion:hantuism_religion
+		faith.religion = religion:kaharingan_religion
+		faith.religion = religion:tolotang_religion
+		faith.religion = religion:biliku_religion
+		# RoA
+		faith.religion = religion:oceanic_religion
+		faith.religion = religion:palau_religion
+		faith.religion = religion:papuan_religion
+	}
+}
+
+broadly_jungle_dwelling_trigger = {
+	culture = {
+		OR = {
+			# Alphabetical order
+			has_cultural_pillar = heritage_aslianic
+			has_cultural_pillar = heritage_austronesian
+			has_cultural_pillar = heritage_burman
+			has_cultural_pillar = heritage_dayak
+			has_cultural_pillar = heritage_dravidian
+			has_cultural_pillar = heritage_filipino
+			has_cultural_pillar = heritage_hmongic
+			has_cultural_pillar = heritage_indo_aryan
+			has_cultural_pillar = heritage_kam
+			has_cultural_pillar = heritage_katuic
+			has_cultural_pillar = heritage_kaurareg
+			has_cultural_pillar = heritage_kra
+			has_cultural_pillar = heritage_loloish
+			has_cultural_pillar = heritage_malayic
+			has_cultural_pillar = heritage_melanesian
+			has_cultural_pillar = heritage_micronesian
+			has_cultural_pillar = heritage_mien
+			has_cultural_pillar = heritage_moluccan
+			has_cultural_pillar = heritage_mon_khmer
+			has_cultural_pillar = heritage_munda
+			has_cultural_pillar = heritage_nicobar
+			has_cultural_pillar = heritage_palaungic
+			has_cultural_pillar = heritage_papuan
+			has_cultural_pillar = heritage_sulawesi
+			has_cultural_pillar = heritage_tai
+			has_cultural_pillar = heritage_viet
+		}
+	}
+}
+
+broadly_chinese_religion_trigger = {
+	OR = {
+		faith.religion = religion:taoism_religion
+		faith.religion = religion:confucianism_religion
+		faith.religion = religion:chinese_religion
+	}
+}
+
+broadly_mainland_east_asian_heritage_trigger = {  # needs to be worked on
+	culture = {
+		OR = {
+			has_cultural_pillar = heritage_chinese
+			has_cultural_pillar = heritage_korean
+			has_cultural_pillar = heritage_buyeo
+			has_cultural_pillar = heritage_qiangic
+			has_cultural_pillar = heritage_viet
+		}
+	}
+}
+
+broadly_japanese_island_heritage_trigger = {
+	culture = {
+		OR = {
+			has_cultural_pillar = heritage_japonic
+			has_cultural_pillar = heritage_ainuic
+			has_cultural_pillar = heritage_ryukyu
+		}
+	}
+}
