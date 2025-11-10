@@ -1,5 +1,4 @@
 ﻿cham = {
-	#color = { 112 36 228 } - vanilla
 	color = cham
 
 	ethos = ethos_egalitarian 	#ethos_courtly in vanilla
@@ -26,8 +25,8 @@
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -39,7 +38,6 @@
 }
 
 acehnese = {
-	#color = { 0.6 0.4 0.3 } - vanilla
 	color = aceh
 
 	created = 400.1.1
@@ -71,9 +69,9 @@ acehnese = {
 	#name_list = name_list_cham
 	name_list = name_list_chamic
 
-	coa_gfx = { burman_group_coa_gfx  }
+	coa_gfx = { burman_group_coa_gfx malay_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx malay_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_30
@@ -84,3 +82,6 @@ acehnese = {
 		10 = asian_malay
 	}
 }
+
+# clothing needs to be re-added first
+#clothing_gfx = { austronesian_clothing_gfx }

@@ -11,17 +11,18 @@
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_welcoming
-		tradition_winter_warriors	# Winter Warriors is replaced by Siberian Survivalists with RICE
-		tradition_fishermen
 		tradition_festivities
-		tradition_forest_folk
+		tradition_fishermen 	# traditionally sustained themselves from fishing
+		tradition_winter_warriors 	# Winter Warriors is replaced by Siberian Survivalists with RICE
+		tradition_forest_folk 	# lived in rather dense taiga region
 
-		#tradition_isolationist - vanilla
+		#tradition_welcoming - RoA ; crossed out for sake of space
+		#tradition_isolationist - vanilla: stayed their own thing, minded their business, seemes good to replicate that
 		#tradition_mystical_ancestors - vanilla
 	}
 
 	dlc_tradition = {
+		# gno clue why they did not get it in vanilla
 		trait = tradition_mpo_northern_tribes
 		requires_dlc_flag = khans_of_the_steppe
 	}
@@ -29,18 +30,16 @@
 	name_list = name_list_nivkh
 
 	coa_gfx = { nivkh_group_coa_gfx }
-	building_gfx = { norse_building_gfx steppe_building_gfx }
-	clothing_gfx = { ugro_permian_clothing_gfx northern_clothing_gfx mongol_clothing_gfx }
+	building_gfx = { steppe_building_gfx }
+	clothing_gfx = { mongol_clothing_gfx northern_clothing_gfx }
 	unit_gfx = { mongol_unit_gfx }
 
 	house_coa_frame = house_frame_04
 
 	ethnicities = {
-		10 = asian_manchu_korean
-
-		#2 = siberian_siberian_01
-		#2 = siberian_siberian_02
-		#2 = siberian_siberian_03
-		#2 = siberian_siberian_04
+		2 = siberian_siberian_01
+		2 = siberian_siberian_02
+		2 = siberian_siberian_03
+		2 = siberian_siberian_04
 	}
 }
