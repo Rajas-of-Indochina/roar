@@ -38,10 +38,8 @@ buryat = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		2 = asian_mongol_1
-		2 = asian_mongol_2
-		2 = asian_mongol_3
-		2 = asian_mongol_4
+		10 = asian_mongol
+		10 = turkic
 	}
 }
 
@@ -80,10 +78,7 @@ oirat = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		2 = asian_mongol_1
-		2 = asian_mongol_2
-		2 = asian_mongol_3
-		2 = asian_mongol_4
+		10 = asian_mongol
 	}
 }
 
@@ -100,26 +95,39 @@ oirat = {
 #}
 
 shiwei = {
-	# replaced by Sibe culture in sea_tatar
-	color = { 0.23 0.15 0.8 }
+	# replaces RoA's Sibe from sea_tatar
+	#color = { 0.23 0.15 0.8 } - vanilla
+	color = sibe
 
-	ethos = ethos_communal		# Neither as agressive nor as efficient at warmongering. Lots of tribes & contacts with neighbours
+	ethos = ethos_spiritual		# Neither as agressive nor as efficient at warmongering. Lots of tribes & contacts with neighbours
 	heritage = heritage_mongolic
 	language = language_khitan		# Likely same language as Khitans
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
 
 	traditions = {
-		tradition_isolationist
+		tradition_hunters		# hunters & pastoralists
 		tradition_pastoralists		# hunters & pastoralists
 		tradition_mountaineers 		# living around high altitude regions and mountain ranges
+
+		#tradition_isolationist - vanilla ; crossed out
 	}
 
 	dlc_tradition = {
-		trait = tradition_mpo_iron_cavalry
-		requires_dlc_flag = khans_of_the_steppe
+		trait = tradition_culture_blending
 		requires_dlc_flag = hybridize_culture
 	}
+
+	dlc_tradition = {
+		trait = tradition_mpo_wolves_of_the_deep_steppe
+		requires_dlc_flag = khans_of_the_steppe
+	}
+
+	#dlc_tradition = {
+	#	#trait = tradition_mpo_iron_cavalry
+	#	#requires_dlc_flag = khans_of_the_steppe
+	#	#requires_dlc_flag = hybridize_culture
+	#}
 
 	name_list = name_list_khitan
 
@@ -130,10 +138,7 @@ shiwei = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		2 = asian_mongol_1
-		2 = asian_mongol_2
-		2 = asian_mongol_3
-		2 = asian_mongol_4
+		10 = asian_mongol
 	}
 }
 
@@ -167,9 +172,6 @@ tuyuhun = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		2 = asian_tuyuhun_1
-		2 = asian_tuyuhun_2
-		2 = asian_tuyuhun_3
-		2 = asian_tuyuhun_4
+		10 = asian_mongol
 	}
 }
