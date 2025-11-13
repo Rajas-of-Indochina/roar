@@ -289,6 +289,7 @@ ongud = {
 	# Mongolicized Turks of the Ordos region
 	color = ongud
 	created = 1000.1.1
+	# 830.1.1 in vanilla
 	parents = { shatuo }
 
 	ethos = ethos_courtly
@@ -302,6 +303,8 @@ ongud = {
 		tradition_court_eunuchs
 		tradition_astute_diplomats
 		tradition_hunters
+
+		#tradition_stalwart_defenders - in vanilla
 	}
 
 	dlc_tradition = {
@@ -309,16 +312,11 @@ ongud = {
 		requires_dlc_flag = khans_of_the_steppe
 	}
 
-	#dlc_tradition = {
-	#	trait = tradition_malleable_invaders
-	#	requires_dlc_flag = hybridize_culture
-	#}
-
 	name_list = name_list_ongud
 
 	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
 	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { turkic_clothing_gfx mongol_clothing_gfx }
+	clothing_gfx = { mongol_clothing_gfx turkic_clothing_gfx }
 	unit_gfx = { mongol_unit_gfx }
 	house_coa_frame = house_frame_14
 
@@ -374,17 +372,18 @@ shatuo = {
 	created = 700.1.1
 	parents = { ueban han }
 
+	name_order_convention = dynasty_always_first
 	ethos = ethos_courtly
 	heritage = heritage_on_oq
 	language = language_turkic  # language_ueban
 	martial_custom = martial_custom_male_only
-	head_determination = head_determination_herd 
-	# should probably swamp out for Chinese head_determination_domain
+	head_determination = head_determination_herd  # should probably swamp out for Chinese head_determination_domain
 
 	traditions = {
 		#tradition_horse_lords
 		tradition_ruling_caste
 		tradition_court_eunuchs
+		tradition_pastoralists
 	}
 
 	dlc_tradition = {
@@ -396,11 +395,6 @@ shatuo = {
 		trait = tradition_devoted_horsemanship
 		requires_dlc_flag = khans_of_the_steppe
 	}
-
-	#dlc_tradition = {
-	#	trait = tradition_malleable_invaders
-	#	requires_dlc_flag = hybridize_culture
-	#}
 
 	name_list = name_list_shatuo
 
