@@ -101137,586 +101137,733 @@ h_china = {
 				}
 			}
 		}
+
 		k_viet = {
-			color = { 20 110 140 }
+            color = { 20 110 140 }
+            capital = c_thang_long
 
-			capital = c_thang_long
+            cultural_names = {
+                name_list_han = cn_annan
+            }
 
-			cultural_names = {
-				name_list_han = cn_annan
-			}
+            d_kinh_bac = {
+                color = { 15 92 127 }
 
-			d_kinh_bac = {
-				color = { 15 92 127 }
+                c_thang_long = {
+                    color = { 25 102 137 }
+                    b_dai_la = {
+                        color = { 25 102 137 }
+                        province = 18086
+                    }
+                    b_thach_that = {
+                        color = { 25 102 137 }
+                        province = 18068
+                    }
+                    b_long_bien = {
+                        color = { 25 102 137 }
+                        province = 18131
+                    }
+                    b_luy_lau = {
+                        color = { 25 102 137 }
+                        province = 18395
+                    }
+                    b_do_dong_giang = {
+                        color = { 25 102 137 }
+                        province = 18078
+                    }
+                    b_duong_lam = {
+                        color = { 25 102 137 }
+                        province = 18113
+                    }
+                }
+                c_bac_ha = {
+                    color = { 35 112 147 }
+                    b_hiep_hoa = {
+                        color = { 35 112 147 }
+                        province = 18136
+                    }
+                    b_dinh_ca = {
+                        color = { 35 112 147 }
+                        province = 18209
+                    }
+                    b_thai_nguyen = {
+                        color = { 35 112 147 }
+                        province = 18176
+                    }
+                    b_phuong_nhan = {
+                        color = { 35 112 147 }
+                        province = 18155
+                    }
+                }
+                c_lang_giang = {
+                    color = { 45 122 157 }
+                    b_huu_lung = {
+                        color = { 45 122 157 }
+                        province = 18182
+                    }
+                    b_tu_ha = {
+                        color = { 45 122 157 }
+                        province = 18157
+                    }
+                }
+                c_lang_son = {
+                    color = { 55 132 167 }
+                    b_vinh_binh = {
+                        color = { 55 132 167 }
+                        province = 18202
+                    }
+                    b_to_mau = {
+                        color = { 55 132 167 }
+                        province = 18186
+                    }
+                    b_mon = {
+                        color = { 55 132 167 }
+                        province = 18210
+                    }
+                }
+            }
 
-				c_thang_long = {
-					b_dai_la = {
-						province = 18086
-					}
-					b_thach_that = {
-						province = 18068
-					}
-					b_long_bien = {
-						province = 18131
-					}
-					b_luy_lau = {
-						province = 18395
-					}
-					b_do_dong_giang = {
-						province = 18078
-					}
-					b_duong_lam = {
-						province = 18113
-					}
-				}
-				c_bac_ha = {
-					b_hiep_hoa = {
-						province = 18136
-					}
-					b_dinh_ca = {
-						province = 18209
-					}
-					b_thai_nguyen = {
-						province = 18176
-					}
-					b_phuong_nhan = {
-						province = 18155
-					}
-				}
-				c_lang_giang = {
-					b_huu_lung = {
-						province = 18182
-					}
-					b_tu_ha = {
-						province = 18157
-					}
-				}
-				c_lang_son = {
-					b_vinh_binh = {
-						province = 18202
-					}
-					b_to_mau = {
-						province = 18186
-					}
-					b_mon = {
-						province = 18210
-					}
-				}
-			}
+            d_son_tay = {
+                color = { 13 74 188 }
 
-			d_son_tay = {
-				color = { 13 74 188 }
+                c_phu_hoa = {
+                    color = { 23 84 198 }
+                    b_phu_yen = {
+                        color = { 23 84 198 }
+                        province = 18127
+                    }
+                    b_oua_hinh = {
+                        color = { 23 84 198 }
+                        province = 18143
+                    }
+                    b_xuan_dai = {
+                        color = { 23 84 198 }
+                        province = 18128
+                    }
+                }
+                c_van_chan = {
+                    color = { 33 94 208 }
+                    b_muang_chien = {
+                        color = { 33 94 208 }
+                        province = 18185
+                    }
+                    b_nghia_lo = {
+                        color = { 33 94 208 }
+                        province = 18194
+                    }
+                    b_tu_le = {
+                        color = { 33 94 208 }
+                        province = 18228
+                    }
+                }
+                c_yen_bai = {
+                    color = { 43 104 218 }
+                    b_van_yen = {
+                        color = { 43 104 218 }
+                        province = 18232
+                    }
+                    b_trieu_le = {
+                        color = { 43 104 218 }
+                        province = 18279
+                    }
+                    b_luc_an = {
+                        color = { 43 104 218 }
+                        province = 18264
+                    }
+                }
+                c_tam_dai = {
+                    color = { 53 114 228 }
+                    b_tam_duong = {
+                        color = { 53 114 228 }
+                        province = 18175
+                    }
+                    b_doan_hung = {
+                        color = { 53 114 228 }
+                        province = 18206
+                    }
+                    b_son_duong = {
+                        color = { 53 114 228 }
+                        province = 18223
+                    }
+                    b_yen_lac = {
+                        color = { 53 114 228 }
+                        province = 18149
+                    }
+                }
+                c_lam_thao = {
+                    color = { 63 124 238 }
+                    b_phong_chau = {
+                        color = { 63 124 238 }
+                        province = 18166
+                    }
+                    b_thanh_ba = {
+                        color = { 63 124 238 }
+                        province = 18123
+                    }
+                    b_ha_hoa = {
+                        color = { 63 124 238 }
+                        province = 18399
+                    }
+                }
+            }
 
-				c_phu_hoa = {
-					b_phu_yen = {
-						province = 18127
-					}
-					b_oua_hinh = {
-						province = 18143
-					}
-					b_xuan_dai = {
-						province = 18128
-					}
-				}
-				c_van_chan = {
-					b_muang_chien = {
-						province = 18185
-					}
-					b_nghia_lo = {
-						province = 18194
-					}
-					b_tu_le = {
-						province = 18228
-					}
-				}
-				c_yen_bai = {
-					color = { 33 99 20 }
+            d_muong = {
+                color = { 25 130 150 }
 
-					b_van_yen = {
-						province = 18232
-					}
-					b_trieu_le = {
-						province = 18279
-					}
-					b_luc_an = {
-						province = 18264
-					}
-				}
-				c_tam_dai = {
-					color = { 153 191 145 }
+                c_ma_nam = {
+                    color = { 35 140 160 }
+                    b_chiang_ko = {
+                        color = { 35 140 160 }
+                        province = 18035
+                    }
+                    b_muong_lat = {
+                        color = { 35 140 160 }
+                        province = 17989
+                    }
+                }
+                c_yen_moc = {
+                    color = { 45 150 170 }
+                    b_muang_wat = {
+                        color = { 45 150 170 }
+                        province = 18095
+                    }
+                    b_moc = {
+                        color = { 45 150 170 }
+                        province = 18392
+                    }
+                }
+                c_da_bac = {
+                    color = { 55 160 180 }
+                    b_da_bac = {
+                        color = { 55 160 180 }
+                        province = 18090
+                    }
+                    b_mai_da = {
+                        color = { 55 160 180 }
+                        province = 18050
+                    }
+                }
+                c_hoa_binh = {
+                    color = { 65 170 190 }
+                    b_duong_xam = {
+                        color = { 65 170 190 }
+                        province = 18022
+                    }
+                    b_lac_son = {
+                        color = { 65 170 190 }
+                        province = 17999
+                    }
+                }
+                c_sam_tay = {
+                    color = { 75 180 200 }
+                    b_sam_tay = {
+                        color = { 75 180 200 }
+                        province = 17940
+                    }
+                    b_muang_quan = {
+                        color = { 75 180 200 }
+                        province = 17902
+                    }
+                }
+                c_muang_et = {
+                    color = { 85 190 210 }
+                    b_muang_et = {
+                        color = { 85 190 210 }
+                        province = 18039
+                    }
+                    b_vieng_say = {
+                        color = { 85 190 210 }
+                        province = 17990
+                    }
+                }
+            }
 
-					b_tam_duong = {
-						province = 18175
-					}
-					b_doan_hung = {
-						province = 18206
-					}
-					b_son_duong = {
-						province = 18223
-					}
-					b_yen_lac = {
-						province = 18149
-					}
-				}
-				c_lam_thao = {
-					color = { 70 94 65 }
+            d_nong = {
+                color = { 22 126 182 }
 
-					b_phong_chau = {
-						province = 18166
-					}
-					b_thanh_ba = {
-						province = 18123
-					}
-					b_ha_hoa = {
-						province = 18399
-					}
-				}
-			}
+                c_nong = {
+                    color = { 32 136 192 }
+                    b_thong_nong = {
+                        color = { 32 136 192 }
+                        province = 18315
+                    }
+                    b_kim_pha = {
+                        color = { 32 136 192 }
+                        province = 18309
+                    }
+                    b_pac_mieu = {
+                        color = { 32 136 192 }
+                        province = 18300
+                    }
+                    b_tang = {
+                        color = { 32 136 192 }
+                        province = 18292
+                    }
+                }
+                c_bac_kan = {
+                    color = { 42 146 202 }
+                    b_bac_kan = {
+                        color = { 42 146 202 }
+                        province = 18242
+                    }
+                    b_ba_be = {
+                        color = { 42 146 202 }
+                        province = 18280
+                    }
+                    b_vu_lac = {
+                        color = { 42 146 202 }
+                        province = 18269
+                    }
+                }
+                c_yen_lo = {
+                    color = { 52 156 212 }
+                    b_khoui_sap = {
+                        color = { 52 156 212 }
+                        province = 18221
+                    }
+                    b_that_nguyen = {
+                        color = { 52 156 212 }
+                        province = 18259
+                    }
+                }
+                c_cao_bang = {
+                    color = { 62 166 222 }
+                    b_dong_khe = {
+                        color = { 62 166 222 }
+                        province = 18290
+                    }
+                    b_tu_lang = {
+                        color = { 62 166 222 }
+                        province = 18307
+                    }
+                }
+                c_cingsae_si = {
+                    color = { 72 176 232 }
+                    b_cingsae_si = {
+                        color = { 72 176 232 }
+                        province = 15083
+                    }
+                    b_nazboh_yen = {
+                        color = { 72 176 232 }
+                        province = 15082
+                    }
+                    b_baisheng = {
+                        color = { 72 176 232 }
+                        province = 15081
+                    }
+                }
+            }
 
-			d_muong = {
-				color = { 17 138 119 }
+            d_lo = {
+                color = { 43 186 189 }
 
-				c_ma_nam = {
-					b_chiang_ko = {
-						province = 18035
-					}
-					b_muong_lat = {
-						province = 17989
-					}
-				}
-				c_yen_moc = {
-					b_muang_wat = {
-						province = 18095
-					}
-					b_moc = {
-						province = 18392
-					}
-				}
-				c_da_bac = {
-					b_da_bac = {
-						province = 18090
-					}
-					b_mai_da = {
-						province = 18050
-					}
-				}
-				c_hoa_binh = {
-					b_duong_xam = {
-						province = 18022
-					}
-					b_lac_son = {
-						province = 17999
-					}
-				}
-				c_sam_tay = {
-					b_sam_tay = {
-						province = 17940
-					}
-					b_muang_quan = {
-						province = 17902
-					}
-				}
-				c_muang_et = {
-					b_muang_et = {
-						province = 18039
-					}
-					b_vieng_say = {
-						province = 17990
-					}
-				}
-			}
+                c_tu_long = {
+                    color = { 53 196 199 }
+                    b_tu_long = {
+                        color = { 53 196 199 }
+                        province = 18313
+                    }
+                    b_ma_lat = {
+                        color = { 53 196 199 }
+                        province = 15078
+                    }
+                    b_ma_bach = {
+                        color = { 53 196 199 }
+                        province = 18321
+                    }
+                }
+                c_vunsanh = {
+                    color = { 63 206 209 }
+                    b_vunsanh = {
+                        color = { 63 206 209 }
+                        province = 15077
+                    }
+                    b_jia_yi = {
+                        color = { 63 206 209 }
+                        province = 15710
+                    }
+                    b_vai_mo = {
+                        color = { 63 206 209 }
+                        province = 15734
+                    }
+                    b_yensanh = {
+                        color = { 63 206 209 }
+                        province = 15664
+                    }
+                }
+                c_tuyen_quang = {
+                    color = { 73 216 219 }
+                    b_tuyen_quang = {
+                        color = { 73 216 219 }
+                        province = 18241
+                    }
+                    b_vi_long = {
+                        color = { 73 216 219 }
+                        province = 18265
+                    }
+                }
+                c_lo = {
+                    color = { 83 226 229 }
+                    b_yen_binh = {
+                        color = { 83 226 229 }
+                        province = 18289
+                    }
+                    b_do_kim = {
+                        color = { 83 226 229 }
+                        province = 18263
+                    }
+                }
+                c_con_linh = {
+                    color = { 93 236 239 }
+                    b_vi_xuyen = {
+                        color = { 93 236 239 }
+                        province = 18296
+                    }
+                    b_thien_bao = {
+                        color = { 93 236 239 }
+                        province = 18314
+                    }
+                }
+                c_bao_lac = {
+                    color = { 103 246 249 }
+                    b_meo_vac = {
+                        color = { 103 246 249 }
+                        province = 15080
+                    }
+                    b_baliping = {
+                        color = { 103 246 249 }
+                        province = 15079
+                    }
+                    b_yen_minh = {
+                        color = { 103 246 249 }
+                        province = 18318
+                    }
+                }
+            }
 
-			d_nong = {
-				color = { 22 126 182 }
+            d_lao_nhai = {
+                color = { 35 75 110 }
 
-				c_nong = {
-					color = { 159 201 168 }
+                c_van_ban = {
+                    color = { 45 85 120 }
+                    b_cam_duong = {
+                        color = { 45 85 120 }
+                        province = 18282
+                    }
+                    b_bao_ha = {
+                        color = { 45 85 120 }
+                        province = 18262
+                    }
+                }
+                c_quynh_nhai = {
+                    color = { 55 95 130 }
+                    b_muang_chan = {
+                        color = { 55 95 130 }
+                        province = 18205
+                    }
+                    b_lai = {
+                        color = { 55 95 130 }
+                        province = 18222
+                    }
+                    b_thanh_huyen = {
+                        color = { 55 95 130 }
+                        province = 18255
+                    }
+                    b_thanh_qui = {
+                        color = { 55 95 130 }
+                        province = 18217
+                    }
+                }
+                c_muang_so = {
+                    color = { 65 105 140 }
+                    b_xieng_my = {
+                        color = { 65 105 140 }
+                        province = 18306
+                    }
+                    b_chieu_tan = {
+                        color = { 65 105 140 }
+                        province = 18273
+                    }
+                }
+                c_thuy_vi = {
+                    color = { 75 115 150 }
+                    b_thuy_vi = {
+                        color = { 75 115 150 }
+                        province = 18288
+                    }
+                    b_nam_si = {
+                        color = { 75 115 150 }
+                        province = 18308
+                    }
+                }
+            }
 
-					b_thong_nong = {
-						province = 18315
-					}
-					b_kim_pha = {
-						province = 18309
-					}
-					b_pac_mieu = {
-						province = 18300
-					}
-					b_tang = {
-						province = 18292
-					}
-				}
-				c_bac_kan = {
-					color = { 131 156 136 }
+            d_cu_duc = {
+                color = { 40 95 160 }
 
-					b_bac_kan = {
-						province = 18242
-					}
-					b_ba_be = {
-						province = 18280
-					}
-					b_vu_lac = {
-						province = 18269
-					}
-				}
-				c_yen_lo = {
-					color = { 90 125 97 }
+                c_xu_nghe = {
+                    color = { 50 105 170 }
+                    b_ke_vinh = {
+                        color = { 50 105 170 }
+                        province = 17737
+                    }
+                    b_dien_chau = {
+                        color = { 50 105 170 }
+                        province = 17764
+                    }
+                }
+                c_viet_thuong = {
+                    color = { 60 115 180 }
+                    b_cam_xuyen = {
+                        color = { 60 115 180 }
+                        province = 17643
+                    }
+                    b_ngang = {
+                        color = { 60 115 180 }
+                        province = 17642
+                    }
+                }
+                c_tra_lan = {
+                    color = { 70 125 190 }
+                    b_ban_khang = {
+                        color = { 70 125 190 }
+                        province = 17831
+                    }
+                    b_ky_son = {
+                        color = { 70 125 190 }
+                        province = 17833
+                    }
+                    b_tuong_duong = {
+                        color = { 70 125 190 }
+                        province = 17806
+                    }
+                }
+                c_anh_son = {
+                    color = { 80 135 200 }
+                    b_thanh_chuong = {
+                        color = { 80 135 200 }
+                        province = 17746
+                    }
+                    b_anh_son = {
+                        color = { 80 135 200 }
+                        province = 17772
+                    }
+                    b_do_luong = {
+                        color = { 80 135 200 }
+                        province = 17786
+                    }
+                }
+                c_hoan_chau = {
+                    color = { 90 145 210 }
+                    b_ha_tinh = {
+                        color = { 90 145 210 }
+                        province = 17695
+                    }
+                    b_huong_son = {
+                        color = { 90 145 210 }
+                        province = 17673
+                    }
+                }
+            }
 
-					b_khoui_sap = {
-						province = 18221
-					}
-					b_that_nguyen = {
-						province = 18259
-					}
-				}
-				c_cao_bang = {
-					color = { 114 196 130 }
+            d_cuu_chan = {
+                color = { 15 55 100 }
 
-					b_dong_khe = {
-						province = 18290
-					}
-					b_tu_lang = {
-						province = 18307
-					}
-				}
-				c_cingsae_si = {
-					color = { 165 176 167 }
+                c_thai_binh = {
+                    color = { 25 65 110 }
+                    b_bo_hai_khau = {
+                        color = { 25 65 110 }
+                        province = 18009
+                    }
+                    b_vong_doan = {
+                        color = { 25 65 110 }
+                        province = 18382
+                    }
+                    b_pho_hien = {
+                        color = { 25 65 110 }
+                        province = 18060
+                    }
+                    b_tuc_mac = {
+                        color = { 25 65 110 }
+                        province = 18386
+                    }
+                }
+                c_truong_an = {
+                    color = { 35 75 120 }
+                    b_hoa_lu = {
+                        color = { 35 75 120 }
+                        province = 17973
+                    }
+                    b_gia_vien = {
+                        color = { 35 75 120 }
+                        province = 18381
+                    }
+                    b_kim_bang = {
+                        color = { 35 75 120 }
+                        province = 18024
+                    }
+                    b_phu_ly = {
+                        color = { 35 75 120 }
+                        province = 18048
+                    }
+                }
+                c_quy_chau = {
+                    color = { 45 85 130 }
+                    b_tinh_gia = {
+                        color = { 45 85 130 }
+                        province = 17814
+                    }
+                    b_phu_quy = {
+                        color = { 45 85 130 }
+                        province = 17823
+                    }
+                }
+                c_lam_son = {
+                    color = { 55 95 140 }
+                    b_lam_kinh = {
+                        color = { 55 95 140 }
+                        province = 17890
+                    }
+                    b_thuong_xuan = {
+                        color = { 55 95 140 }
+                        province = 17889
+                    }
+                }
+                c_ai_chau = {
+                    color = { 65 105 150 }
+                    b_thanh_hoa = {
+                        color = { 65 105 150 }
+                        province = 17871
+                    }
+                    b_tu_pho = {
+                        color = { 65 105 150 }
+                        province = 17933
+                    }
+                    b_tay_do = {
+                        color = { 65 105 150 }
+                        province = 17960
+                    }
+                }
+            }
 
-					b_cingsae_si = {
-						province = 15083
-					}
-					b_nazboh_yen = {
-						province = 15082
-					}
-					b_baisheng = {
-						province = 15081
-					}
-				}
-			}
+            d_hai_dong = {
+                color = { 30 80 150 }
 
-			d_lo = {
-				color = { 43 186 189 }
+                c_kinh_mon = {
+                    color = { 40 90 160 }
+                    b_an_lao = {
+                        color = { 40 90 160 }
+                        province = 18082
+                    }
+                    b_dong_trieu = {
+                        color = { 40 90 160 }
+                        province = 18118
+                    }
+                    b_van_don = {
+                        color = { 40 90 160 }
+                        province = 17985
+                    }
+                    b_thuy_dong = {
+                        color = { 40 90 160 }
+                        province = 18393
+                    }
+                }
+                c_nam_sac = {
+                    color = { 50 100 170 }
+                    b_van_kiep = {
+                        color = { 50 100 170 }
+                        province = 18100
+                    }
+                    b_thanh_lam = {
+                        color = { 50 100 170 }
+                        province = 18069
+                    }
+                    b_vinh_lai = {
+                        color = { 50 100 170 }
+                        province = 18390
+                    }
+                }
+                c_tan_an = {
+                    color = { 60 110 180 }
+                    b_tan_yen = {
+                        color = { 60 110 180 }
+                        province = 18150
+                    }
+                    b_an_bang = {
+                        color = { 60 110 180 }
+                        province = 18158
+                    }
+                }
+            }
 
-				c_tu_long = {
-					color = { 43 186 189 }
+            d_muang_thaeng = {
+                color = { 100 160 200 }
 
-					b_tu_long = {
-						province = 18313
-					}
-					b_ma_lat = {
-						province = 15078
-					}
-					b_ma_bach = {
-						province = 18321
-					}
-				}
-				c_vunsanh = {
-					color = { 29 112 60 }
-
-					b_vunsanh = {
-						province = 15077
-					}
-					b_jia_yi = {
-						province = 15710
-					}
-					b_vai_mo = {
-						province = 15734
-					}
-					b_yensanh = {
-						province = 15664
-					}
-				}
-				c_tuyen_quang = {
-					color = { 36 129 166 }
-
-					b_tuyen_quang = {
-						province = 18241
-					}
-					b_vi_long = {
-						province = 18265
-					}
-				}
-				c_lo = {
-					color = { 84 143 110 }
-
-					b_yen_binh = {
-						province = 18289
-					}
-					b_do_kim = {
-						province = 18263
-					}
-				}
-				c_con_linh = {
-					color = { 89 144 145 }
-
-					b_vi_xuyen = {
-						province = 18296
-					}
-					b_thien_bao = {
-						province = 18314
-					}
-				}
-				c_bao_lac = {
-					color = { 43 161 69 }
-
-					b_meo_vac = {
-						province = 15080
-					}
-					b_baliping = {
-						province = 15079
-					}
-					b_yen_minh = {
-						province = 18318
-					}
-				}
-			}
-
-			d_lao_nhai = {
-				c_van_ban = {
-					b_cam_duong = {
-						province = 18282
-					}
-					b_bao_ha = {
-						province = 18262
-					}
-				}
-				c_quynh_nhai = {
-					b_muang_chan = {
-						province = 18205
-					}
-					b_lai = {
-						province = 18222
-					}
-					b_thanh_huyen = {
-						province = 18255
-					}
-					b_thanh_qui = {
-						province = 18217
-					}
-				}
-				c_muang_so = {
-					b_xieng_my = {
-						province = 18306
-					}
-					b_chieu_tan = {
-						province = 18273
-					}
-				}
-				c_thuy_vi = {
-					color = { 58 92 39 }
-
-					b_thuy_vi = {
-						province = 18288
-					}
-					b_nam_si = {
-						province = 18308
-					}
-				}
-			}
-
-			d_cu_duc = {
-				c_xu_nghe = {
-					b_ke_vinh = {
-						province = 17737
-					}
-					b_dien_chau = {
-						province = 17764
-					}
-				}
-				c_viet_thuong = {
-					b_cam_xuyen = {
-						province = 17643
-					}
-					b_ngang = {
-						province = 17642
-					}
-				}
-				c_tra_lan = {
-					b_ban_khang = {
-						province = 17831
-					}
-					b_ky_son = {
-						province = 17833
-					}
-					b_tuong_duong = {
-						province = 17806
-					}
-				}
-				c_anh_son = {
-					b_thanh_chuong = {
-						province = 17746
-					}
-					b_anh_son = {
-						province = 17772
-					}
-					b_do_luong = {
-						province = 17786
-					}
-				}
-				c_hoan_chau = {
-					b_ha_tinh = {
-						province = 17695
-					}
-					b_huong_son = {
-						province = 17673
-					}
-				}
-			}
-
-			d_cuu_chan = {
-				c_thai_binh = {
-					b_bo_hai_khau = {
-						province = 18009
-					}
-					b_vong_doan = {
-						province = 18382
-					}
-					b_pho_hien = {
-						province = 18060
-					}
-					b_tuc_mac = {
-						province = 18386
-					}
-				}
-				c_truong_an = {
-					b_hoa_lu = {
-						province = 17973
-					}
-					b_gia_vien = {
-						province = 18381
-					}
-					b_kim_bang = {
-						province = 18024
-					}
-					b_phu_ly = {
-						province = 18048
-					}
-				}
-				c_quy_chau = {
-					b_tinh_gia = {
-						province = 17814
-					}
-					b_phu_quy = {
-						province = 17823
-					}
-				}
-				c_lam_son = {
-					b_lam_kinh = {
-						province = 17890
-					}
-					b_thuong_xuan = {
-						province = 17889
-					}
-				}
-				c_ai_chau = {
-					b_thanh_hoa = {
-						province = 17871
-					}
-					b_tu_pho = {
-						province = 17933
-					}
-					b_tay_do = {
-						province = 17960
-					}
-				}
-			}
-
-			d_hai_dong = {
-				c_kinh_mon = {
-					b_an_lao = {
-						province = 18082
-					}
-					b_dong_trieu = {
-						province = 18118
-					}
-					b_van_don = {
-						province = 17985
-					}
-					b_thuy_dong = {
-						province = 18393
-					}
-				}
-				c_nam_sac = {
-					b_van_kiep = {
-						province = 18100
-					}
-					b_thanh_lam = {
-						province = 18069
-					}
-					b_vinh_lai = {
-						province = 18390
-					}
-				}
-				c_tan_an = {
-					b_tan_yen = {
-						province = 18150
-					}
-					b_an_bang = {
-						province = 18158
-					}
-				}
-			}
-
-			d_muang_thaeng = {
-				color = { 231 126 126 }
-
-				c_muang_thaeng = {
-					color = { 219 61 61 }
-
-					b_muang_thaeng = {
-						province = 18116
-					}
-					b_muang_ma = {
-						province = 18085
-					}
-					b_muang_fang = {
-						province = 18181
-					}
-				}
-				c_tung_lang = {
-					color = { 235 147 147 }
-
-					b_tung_lang = {
-						province = 18297
-					}
-					b_phu_phang = {
-						province = 18286
-					}
-				}
-				c_na_kang = {
-					color = { 239 169 169 }
-
-					b_na_tiat = {
-						province = 18276
-					}
-					b_muang_te = {
-						province = 18293
-					}
-				}
-				c_muang_lay = {
-					color = { 223 83 83 }
-
-					b_muang_lay = {
-						province = 18261
-					}
-					b_khiem = {
-						province = 18239
-					}
-				}
-				c_son_la = {
-					color = { 227 104 104 }
-
-					b_muang_lo = {
-						province = 18139
-					}
-					b_muang_moui = {
-						province = 18154
-					}
-					b_mai_son = {
-						province = 18103
-					}
-				}
-			}
-		}
+                c_muang_thaeng = {
+                    color = { 110 170 210 }
+                    b_muang_thaeng = {
+                        color = { 110 170 210 }
+                        province = 18116
+                    }
+                    b_muang_ma = {
+                        color = { 110 170 210 }
+                        province = 18085
+                    }
+                    b_muang_fang = {
+                        color = { 110 170 210 }
+                        province = 18181
+                    }
+                }
+                c_tung_lang = {
+                    color = { 120 180 220 }
+                    b_tung_lang = {
+                        color = { 120 180 220 }
+                        province = 18297
+                    }
+                    b_phu_phang = {
+                        color = { 120 180 220 }
+                        province = 18286
+                    }
+                }
+                c_na_kang = {
+                    color = { 130 190 230 }
+                    b_na_tiat = {
+                        color = { 130 190 230 }
+                        province = 18276
+                    }
+                    b_muang_te = {
+                        color = { 130 190 230 }
+                        province = 18293
+                    }
+                }
+                c_muang_lay = {
+                    color = { 140 200 240 }
+                    b_muang_lay = {
+                        color = { 140 200 240 }
+                        province = 18261
+                    }
+                    b_khiem = {
+                        color = { 140 200 240 }
+                        province = 18239
+                    }
+                }
+                c_son_la = {
+                    color = { 150 210 250 }
+                    b_muang_lo = {
+                        color = { 150 210 250 }
+                        province = 18139
+                    }
+                    b_muang_moui = {
+                        color = { 150 210 250 }
+                        province = 18154
+                    }
+                    b_mai_son = {
+                        color = { 150 210 250 }
+                        province = 18103
+                    }
+                }
+            }
+        }
 	}
 	e_minister_chancellor = {
 		color = { 228 237 113 }
