@@ -1,0 +1,44 @@
+﻿## Overwrites ##
+culture_has_light_cavalry_maa = {
+	OR = {
+		has_cultural_parameter = unlock_maa_mulaththamun
+		has_cultural_parameter = unlock_maa_hussar #Konni
+		has_cultural_parameter = unlock_maa_tawashi #Tawashi
+		has_cultural_parameter = unlock_maa_ayrudzi
+		has_innovation = innovation_desert_tactics #Chasseur
+		has_innovation = innovation_caballeros #Caballero
+		has_innovation = innovation_hobbies #Hobelar
+		has_innovation = innovation_sahel_horsemen #Sahel Horsemen
+		#
+		has_cultural_parameter = unlock_maa_jigit_riders #Jigit Riders
+	}
+}
+
+culture_has_heavy_cavalry_maa = {
+	OR = {
+		has_cultural_parameter = unlock_maa_cataphract
+		has_cultural_parameter = unlock_maa_monaspa
+		has_cultural_parameter = unlock_maa_tarkhan
+		has_cultural_parameter = unlock_maa_conrois
+		has_cultural_parameter = unlock_maa_cataphract_archers
+		has_innovation = innovation_tiefutu
+		has_cultural_parameter = unlock_maa_black_armor_cavalry
+		has_innovation = innovation_valets #Gendarme - Later Era MAA
+		#
+		has_cultural_parameter = unlock_maa_sea_ayrudzi #Noble Ayrudzi
+	}
+}
+## ##
+
+has_culture_heritage_group = {
+	has_cultural_parameter = heritage_group_$GROUP$
+}
+
+caucasus_can_build_tower_title_scope_trigger = {
+	culture = {
+		has_cultural_tradition = tradition_highland_tower_architects
+	}
+}
+caucasus_county_has_tower_trigger = {
+	has_county_modifier = caucasus_vainakh_tower_modifier
+}

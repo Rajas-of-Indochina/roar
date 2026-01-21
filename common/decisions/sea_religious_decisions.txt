@@ -1,0 +1,444 @@
+﻿
+# For Debug
+show_gods_and_such_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	selection_tooltip = show_gods_and_such_decision_tooltip
+	decision_group_type = major
+
+	is_shown = {
+		debug_only = yes
+	}
+
+	effect = {
+		custom_tooltip = extended_faith_desc_HighGodName
+		custom_tooltip = extended_faith_desc_HighGodName2
+		custom_tooltip = extended_faith_desc_HighGodNamePossessive
+		custom_tooltip = extended_faith_desc_HighGodNameSheHe
+		custom_tooltip = extended_faith_desc_HighGodHerselfHimself
+		custom_tooltip = extended_faith_desc_HighGodHerHis
+		custom_tooltip = extended_faith_desc_HighGodNameAlternate
+		custom_tooltip = extended_faith_desc_HighGodNameAlternatePossessive
+		custom_tooltip = extended_faith_desc_CreatorName
+		custom_tooltip = extended_faith_desc_CreatorNamePossessive
+		custom_tooltip = extended_faith_desc_CreatorSheHe
+		custom_tooltip = extended_faith_desc_CreatorHerHis
+		custom_tooltip = extended_faith_desc_CreatorHerHim
+		custom_tooltip = extended_faith_desc_HealthGodName
+		custom_tooltip = extended_faith_desc_HealthGodNamePossessive
+		custom_tooltip = extended_faith_desc_HealthGodSheHe
+		custom_tooltip = extended_faith_desc_HealthGodHerHis
+		custom_tooltip = extended_faith_desc_HealthGodHerHim
+		custom_tooltip = extended_faith_desc_FertilityGodName
+		custom_tooltip = extended_faith_desc_FertilityGodNamePossessive
+		custom_tooltip = extended_faith_desc_FertilityGodSheHe
+		custom_tooltip = extended_faith_desc_FertilityGodHerHis
+		custom_tooltip = extended_faith_desc_FertilityGodHerHim
+		custom_tooltip = extended_faith_desc_WealthGodName
+		custom_tooltip = extended_faith_desc_WealthGodNamePossessive
+		custom_tooltip = extended_faith_desc_WealthGodSheHe
+		custom_tooltip = extended_faith_desc_WealthGodHerHis
+		custom_tooltip = extended_faith_desc_WealthGodHerHim
+		custom_tooltip = extended_faith_desc_HouseholdGodName
+		custom_tooltip = extended_faith_desc_HouseholdGodNamePossessive
+		custom_tooltip = extended_faith_desc_HouseholdGodSheHe
+		custom_tooltip = extended_faith_desc_HouseholdGodHerHis
+		custom_tooltip = extended_faith_desc_HouseholdGodHerHim
+		custom_tooltip = extended_faith_desc_FateGodName
+		custom_tooltip = extended_faith_desc_FateGodNamePossessive
+		custom_tooltip = extended_faith_desc_FateGodSheHe
+		custom_tooltip = extended_faith_desc_FateGodHerHis
+		custom_tooltip = extended_faith_desc_FateGodHerHim
+		custom_tooltip = extended_faith_desc_KnowledgeGodName
+		custom_tooltip = extended_faith_desc_KnowledgeGodNamePossessive
+		custom_tooltip = extended_faith_desc_KnowledgeGodSheHe
+		custom_tooltip = extended_faith_desc_KnowledgeGodHerHis
+		custom_tooltip = extended_faith_desc_KnowledgeGodHerHim
+		custom_tooltip = extended_faith_desc_WarGodName
+		custom_tooltip = extended_faith_desc_WarGodNamePossessive
+		custom_tooltip = extended_faith_desc_WarGodSheHe
+		custom_tooltip = extended_faith_desc_WarGodHerHis
+		custom_tooltip = extended_faith_desc_WarGodHerHim
+		custom_tooltip = extended_faith_desc_TricksterGodName
+		custom_tooltip = extended_faith_desc_TricksterGodNamePossessive
+		custom_tooltip = extended_faith_desc_TricksterGodSheHe
+		custom_tooltip = extended_faith_desc_TricksterGodHerHis
+		custom_tooltip = extended_faith_desc_TricksterGodHerHim
+		custom_tooltip = extended_faith_desc_NightGodName
+		custom_tooltip = extended_faith_desc_NightGodNamePossessive
+		custom_tooltip = extended_faith_desc_NightGodSheHe
+		custom_tooltip = extended_faith_desc_NightGodHerHis
+		custom_tooltip = extended_faith_desc_NightGodHerHim
+		custom_tooltip = extended_faith_desc_WaterGodName
+		custom_tooltip = extended_faith_desc_WaterGodNamePossessive
+		custom_tooltip = extended_faith_desc_WaterGodSheHe
+		custom_tooltip = extended_faith_desc_WaterGodHerHis
+		custom_tooltip = extended_faith_desc_WaterGodHerHim
+		custom_tooltip = extended_faith_desc_PantheonTerm
+		custom_tooltip = extended_faith_desc_PantheonTerm2
+		custom_tooltip = extended_faith_desc_PantheonTerm3
+		custom_tooltip = extended_faith_desc_PantheonTermHasHave
+		custom_tooltip = extended_faith_desc_GoodGodNames
+		custom_tooltip = extended_faith_desc_DevilName
+		custom_tooltip = extended_faith_desc_DevilNamePossessive
+		custom_tooltip = extended_faith_desc_DevilSheHe
+		custom_tooltip = extended_faith_desc_DevilHerHis
+		custom_tooltip = extended_faith_desc_DevilHerselfHimself
+		custom_tooltip = extended_faith_desc_EvilGodNames
+		custom_tooltip = extended_faith_desc_HouseOfWorship
+		custom_tooltip = extended_faith_desc_HouseOfWorship2
+		custom_tooltip = extended_faith_desc_HouseOfWorship3
+		custom_tooltip = extended_faith_desc_HouseOfWorshipPlural
+		custom_tooltip = extended_faith_desc_ReligiousSymbol
+		custom_tooltip = extended_faith_desc_ReligiousSymbol2
+		custom_tooltip = extended_faith_desc_ReligiousSymbol3
+		custom_tooltip = extended_faith_desc_ReligiousText
+		custom_tooltip = extended_faith_desc_ReligiousText2
+		custom_tooltip = extended_faith_desc_ReligiousText3
+		custom_tooltip = extended_faith_desc_ReligiousHeadName
+		custom_tooltip = extended_faith_desc_ReligiousHeadTitleName
+		custom_tooltip = extended_faith_desc_DevoteeMale
+		custom_tooltip = extended_faith_desc_DevoteeMalePlural
+		custom_tooltip = extended_faith_desc_DevoteeFemale
+		custom_tooltip = extended_faith_desc_DevoteeFemalePlural
+		custom_tooltip = extended_faith_desc_DevoteeNeuter
+		custom_tooltip = extended_faith_desc_DevoteeNeuterPlural
+		custom_tooltip = extended_faith_desc_PriestMale
+		custom_tooltip = extended_faith_desc_PriestMalePlural
+		custom_tooltip = extended_faith_desc_PriestFemale
+		custom_tooltip = extended_faith_desc_PriestFemalePlural
+		custom_tooltip = extended_faith_desc_PriestNeuter
+		custom_tooltip = extended_faith_desc_PriestNeuterPlural
+		custom_tooltip = extended_faith_desc_AltPriestTermPlural
+		custom_tooltip = extended_faith_desc_BishopMale
+		custom_tooltip = extended_faith_desc_BishopMalePlural
+		custom_tooltip = extended_faith_desc_BishopFemale
+		custom_tooltip = extended_faith_desc_BishopFemalePlural
+		custom_tooltip = extended_faith_desc_BishopNeuter
+		custom_tooltip = extended_faith_desc_BishopNeuterPlural
+		custom_tooltip = extended_faith_desc_DivineRealm
+		custom_tooltip = extended_faith_desc_DivineRealm2
+		custom_tooltip = extended_faith_desc_DivineRealm3
+		custom_tooltip = extended_faith_desc_PositiveAfterLife
+		custom_tooltip = extended_faith_desc_PositiveAfterLife2
+		custom_tooltip = extended_faith_desc_PositiveAfterLife3
+		custom_tooltip = extended_faith_desc_NegativeAfterLife
+		custom_tooltip = extended_faith_desc_NegativeAfterLife2
+		custom_tooltip = extended_faith_desc_NegativeAfterLife3
+		custom_tooltip = extended_faith_desc_DeathDeityName
+		custom_tooltip = extended_faith_desc_DeathDeityNamePossessive
+		custom_tooltip = extended_faith_desc_DeathDeitySheHe
+		custom_tooltip = extended_faith_desc_DeathDeityHerHis
+		custom_tooltip = extended_faith_desc_DeathDeityHerHim
+		custom_tooltip = extended_faith_desc_WitchGodName
+		custom_tooltip = extended_faith_desc_WitchGodNamePossessive
+		custom_tooltip = extended_faith_desc_WitchGodHerHis
+		custom_tooltip = extended_faith_desc_WitchGodSheHe
+		custom_tooltip = extended_faith_desc_WitchGodHerHim
+		custom_tooltip = extended_faith_desc_WitchGodMistressMaster
+		custom_tooltip = extended_faith_desc_WitchGodMotherFather
+		custom_tooltip = extended_faith_desc_GHWName
+	}
+
+	is_valid = {
+		always = no
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = -1000
+	}
+}
+
+adopt_vegetarianism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	desc = adopt_vegetarianism_decision_desc
+	selection_tooltip = adopt_vegetarianism_decision_tooltip
+
+	cooldown = { days = 365 }
+
+	is_shown = {
+		is_ruler = yes
+		OR = {
+			religion = religion:hinduism_religion
+			faith = {
+				has_doctrine_parameter = pacifist_opinion_active
+			}
+		}
+		NOT = { has_character_modifier = vegetarianism_modifier }
+	}
+
+	effect = {
+		add_character_modifier = {
+			modifier = vegetarianism_modifier
+		}
+
+		stress_impact = {
+			gluttonous = medium_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+	}
+
+	ai_check_interval = 120
+
+	ai_potential = {
+		# AI considers taking if their income exceeds their expenses * 1.4 (decision will reduce it by 20%).
+		monthly_character_income > monthly_character_expenses_plus_fourty_percent
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# If ai_zeal is 20 points higher than ai_greed, becomes 100% chance.
+		ai_value_modifier = {
+			ai_zeal = 5
+			ai_greed = -5
+		}
+	}
+}
+
+renounce_vegetarianism_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+
+	desc = renounce_vegetarianism_decision_desc
+	selection_tooltip = renounce_vegetarianism_decision_tooltip
+
+	cooldown = { days = 365 }
+
+	is_shown = {
+		is_ruler = yes
+		OR = {
+			religion = religion:hinduism_religion
+			faith = {
+				has_doctrine_parameter = pacifist_opinion_active
+			}
+		}
+		has_character_modifier = vegetarianism_modifier
+	}
+
+	effect = {
+		add_piety = medium_piety_loss
+		remove_character_modifier = vegetarianism_modifier
+
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			temperate = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+	}
+
+	ai_check_interval = 60
+
+	ai_potential = {
+		# AI will consider if we're spending more money than we're making, and their treasury is low.
+		monthly_character_expenses > monthly_character_income
+		short_term_gold < minor_gold_value
+		long_term_gold < minor_gold_value
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# If ai_rationality + ai_greed exceeds ai_zeal by 20 points or more, becomes 100% chance.
+		ai_value_modifier = {
+			ai_rationality = 5
+			ai_zeal = -5
+			ai_greed = 5
+		}
+	}
+}
+
+# adopt_minority_faith_decision = {
+# 	picture = {
+	# 	reference = "gfx/interface/illustrations/decisions/decision_three_teachings.dds"
+	# }
+#
+# 	cooldown = { days = 3650 }
+#
+# 	is_shown = {
+# 		NOT = { faith.religious_head = root }
+# 		OR = {
+# 			faith = faith:zenzong
+# 			religion = religion:taoism_religion
+# 		}
+# 	}
+#
+# 	effect = {
+# 		trigger_event = sea_religion.0001
+# 	}
+#
+# 	cost = {
+# 		piety = 100
+# 	}
+#
+# 	ai_check_interval = 1
+#
+# 	ai_potential = {
+# 		always = yes
+# 	}
+#
+# 	ai_will_do = {
+# 		base = 100
+#
+# 		# Weight up for traits.
+# 		modifier = {
+# 			add = -1000
+# 			has_trait = zealous
+# 		}
+# 	}
+# }
+
+islamic_nicknames_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/islamic_nicknames.dds"
+	}
+
+	desc = islamic_nicknames_decision_desc
+	selection_tooltip = islamic_nicknames_decision_tooltip
+
+	cooldown = { days = 365 }
+
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		religion = religion:islam_religion
+		NOT = { this = faith:alawite }
+		NOT = { this = faith:druze }
+		NOT = { this = faith:qarmatian }
+		NOT = { this = faith:masmudi }
+		NOT = { this = faith:ibadi }
+		NOT = { this = faith:muwalladi }
+		NOT = { has_variable = islamic_nicknames_decision_used }
+		NOT = { has_variable = has_regnal_name_abbasid }
+		is_head_of_faith = no
+		has_any_nickname = no
+	}
+
+	is_valid = { 
+		is_ruler = yes
+		is_landed = yes
+		is_independent_ruler = yes
+		is_adult = yes
+		religion = religion:islam_religion
+		highest_held_title_tier >= tier_kingdom
+		num_sinful_traits < 1
+	}
+
+	cost = {
+		piety = 50
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = laqab_customtooltip
+			random_list = {
+				50 = { give_nickname = ROA_nick_nusrat_al_din }	
+				50 = { give_nickname = nick_muzaffar_al_din }	
+				50 = { give_nickname = nick_shams_al_din }
+				50 = { give_nickname = nick_rukn_al_din }
+				50 = { give_nickname = nick_izz_al_din }
+				50 = { give_nickname = nick_ala_al_din }
+				50 = { give_nickname = nick_ghiyath_al_din }
+				50 = { give_nickname = ROA_nick_shuja_al_din }
+				50 = { give_nickname = ROA_nick_hussam_al_din }			
+				50 = { give_nickname = ROA_nick_falak_al_din }									
+				50 = { give_nickname = nick_alam_al_din }		
+				50 = { give_nickname = nick_asad_al_din }
+				50 = { give_nickname = nick_badr_al_din }
+				50 = { give_nickname = nick_baha_al_din }
+				50 = { give_nickname = nick_fakhr_al_din }
+				50 = { give_nickname = nick_ikhtiyar_al_din }
+				50 = { give_nickname = nick_imad_al_dawla }
+				50 = { give_nickname = nick_imad_al_din }
+				50 = { give_nickname = nick_jalal_al_din }
+				50 = { give_nickname = nick_kanz_al_dawla }
+				50 = { give_nickname = ROA_nick_imad_ad_dawlah }
+				50 = { give_nickname = nick_majd_al_din }
+				50 = { give_nickname = nick_mu_izz_al_din }
+				50 = { give_nickname = nick_muayyad_al_din }
+				50 = { give_nickname = nick_muayyid_al_din }
+				50 = { give_nickname = nick_mubaraz_al_din }
+				50 = { give_nickname = nick_muhyi_al_din }
+				50 = { give_nickname = nick_najm_al_din }
+				50 = { give_nickname = nick_nasir_al_din }
+				50 = { give_nickname = nick_nizam_al_din }
+				50 = { give_nickname = nick_nur_al_din }
+				50 = { give_nickname = nick_qutb_al_din }
+				50 = { give_nickname = nick_rashid_al_din }
+				50 = { give_nickname = nick_sayf_al_din }
+				50 = { give_nickname = nick_sayf_al_islam }
+				50 = { give_nickname = nick_sharaf_al_din }
+				50 = { give_nickname = nick_taj_al_din }
+				50 = { give_nickname = nick_yumm_al_din }
+				50 = { give_nickname = nick_zahir_al_din }
+				50 = { give_nickname = nick_zayn_al_din }
+				50 = { give_nickname = nick_adud_al_dawla }
+				50 = { give_nickname = nick_ala_al_dawla }
+				50 = { give_nickname = nick_amad_al_dawla }
+				50 = { give_nickname = nick_baha_al_dawla }
+				50 = { give_nickname = nick_hisn_al_dawla }
+				50 = { give_nickname = nick_husam_al_dawla }
+				50 = { give_nickname = nick_jalal_al_dawla }
+				50 = { give_nickname = nick_muizz_al_dawla }
+				50 = { give_nickname = nick_musharraf_al_dawla }
+				50 = { give_nickname = nick_nizam_al_dawla }
+				50 = { give_nickname = nick_qasim_al_dawla }
+				50 = { give_nickname = nick_rashid_al_dawla }
+				50 = { give_nickname = nick_sad_al_dawla }
+				50 = { give_nickname = nick_salah_al_din }
+				50 = { give_nickname = nick_samsam_al_dawla }
+				50 = { give_nickname = nick_sayf_al_dawla }
+				50 = { give_nickname = nick_shams_al_mulk }
+				50 = { give_nickname = nick_sharaf_al_dawla }
+				50 = { give_nickname = nick_shibl_al_dawla }
+				50 = { give_nickname = nick_sultan_al_dawla }
+				50 = { give_nickname = nick_taj_al_mulk }
+				50 = { give_nickname = nick_zahir_al_mulk }
+				50 = { give_nickname = nick_zayn_al_dawla }			
+			}
+		}
+		add_prestige = 50
+		set_variable = islamic_nicknames_decision_used		
+	}
+
+	ai_check_interval = 60
+
+	ai_potential = {
+		is_ruler = yes
+		is_landed = yes
+		religion = religion:islam_religion
+		highest_held_title_tier >= tier_kingdom
+		num_sinful_traits < 1
+		has_any_nickname = no
+		NOT = { this = faith:alawite }
+		NOT = { this = faith:druze }
+		NOT = { this = faith:qarmatian }
+		NOT = { this = faith:masmudi }
+		NOT = { this = faith:ibadi }
+		NOT = { this = faith:muwalladi }
+		NOT = { has_variable = islamic_nicknames_decision_used }
+		NOT = { has_variable = has_regnal_name_abbasid }
+		is_head_of_faith = no
+		is_independent_ruler = yes
+		is_adult = yes
+	}
+
+	ai_will_do = {
+		base = 30
+
+		ai_value_modifier = {
+			ai_zeal = 1
+			ai_honor = 1
+		}
+	}
+}
