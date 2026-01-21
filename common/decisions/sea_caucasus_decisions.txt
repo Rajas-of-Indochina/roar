@@ -1855,7 +1855,7 @@ reform_anarchy_to_tribalism_decision_circassian = {
 	ai_check_interval = 36
 	is_shown = {
 		is_ai = yes
-		is_independent_ruler = yes
+		is_top_liege = this
 		has_government = anarchist_government
 		culture = {
 			this = culture:circassian
@@ -2413,7 +2413,7 @@ form_georgia_decision = {
 	}
 	is_valid = {
 		# is_ai = no
-		is_independent_ruler = yes
+		is_top_liege = this
 		OR = {
 			culture = {
 				has_cultural_pillar = heritage_caucasian
@@ -2523,7 +2523,7 @@ unify_armenian_principalities_decision = {
 		}
 	}
 	is_valid = {
-		is_independent_ruler = yes
+		is_top_liege = this
 		OR = {
 			culture = {
 				this = culture:armenian
@@ -2889,7 +2889,15 @@ form_aluank_decision = {
 	}
 	decision_group_type = major
 	desc = form_aluank_decision_desc
-	ai_check_interval = 120
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 120
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
 	is_shown = {
 		capital_county = {
 			title_province = {
@@ -2902,7 +2910,7 @@ form_aluank_decision = {
 		highest_held_title_tier <= tier_duchy
 	}
 	is_valid = {
-		is_independent_ruler = yes
+		is_top_liege = this
 		capital_county = {
 			title_province = {
 				geographical_region = custom_caucasian_albania_proper
@@ -2952,7 +2960,22 @@ form_aluank_decision = {
 	}
 	cost = {
 		gold = {
-			value = massive_gold_value
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = massive_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = massive_gold_value
+			}
 		}
 		prestige = {
 			value = medium_prestige_value
@@ -3218,7 +3241,7 @@ circassian_sponsor_pirate_raid_decision = {
 			}
 		}
 		OR = {
-			is_independent_ruler = yes
+			is_top_liege = this
 			prestige_level >= 2
 		}
 	}
@@ -3246,7 +3269,7 @@ circassian_sponsor_pirate_raid_decision = {
 			}
 		}
 		OR = {
-			independent_ruler = yes
+			top_liege = this
 			prestige_level >= 2
 		}
 		NOT = {
@@ -3263,7 +3286,24 @@ circassian_sponsor_pirate_raid_decision = {
 		}
 	}
 	cost = {
-		gold = minor_gold_value
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = minor_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = minor_gold_value
+			}
+		}
 	}
 	ai_check_interval = 36
 	ai_will_do = {
@@ -3308,7 +3348,16 @@ caucasus_build_tower_decision = {
 	cost = {
 		gold = 100
 	}
-	ai_check_interval = 36
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 36
+		kingdom = 36
+		empire = 36
+		hegemony = 36
+	}
+
 	ai_potential = {
 		short_term_gold >= 100
 	}
@@ -3357,7 +3406,16 @@ restore_ani_cathedral_decision = {
 	}
 	decision_group_type = major
 	desc = restore_ani_cathedral_decision_desc
-	ai_check_interval = 120
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 30
+		kingdom = 120
+		empire = 120
+		hegemony = 120
+	}
+
 	is_shown = {
 		NOT = {
 			religion = religion:islam_religion
@@ -3405,7 +3463,24 @@ restore_ani_cathedral_decision = {
 		restore_ani_cathedral_effect
 	}
 	cost = {
-		gold = minor_gold_value
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = minor_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = minor_gold_value
+			}
+		}
 		prestige = medium_prestige_value
 	}
 	ai_potential = {
@@ -3415,7 +3490,7 @@ restore_ani_cathedral_decision = {
 	ai_will_do = {
 		base = 80
 		modifier = {
-			add = -10
+			add = -20
 			has_trait = cynical
 		}
 		modifier = {
