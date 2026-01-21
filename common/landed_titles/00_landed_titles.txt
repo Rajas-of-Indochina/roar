@@ -34575,7 +34575,17 @@ e_turan = {
 
 		capital = c_khotan
 
+		#ai_primary_priority = {
+			#if = {
+				#limit = {
+					#culture = { has_cultural_pillar = heritage_turkic }
+				#}
+				#add = @better_than_the_alternatives_score
+			#}
+		#}
+
 		d_khotan = {
+			#color = { 100 180 240 } - vanilla colour
 			color = { 180 121 200 }
 
 			capital = c_khotan
@@ -34594,30 +34604,36 @@ e_turan = {
 					color = { 195 146 211 }
 				}
 				b_akspir = {
+					# old b_lafak
 					province = 9607
 
 					color = { 195 146 211 }
 				}
 				b_melikawat = {
+					# old b_domoko
 					province = 9612
 
 					color = { 195 146 211 }
 				}
-				b_uzun-tati = {
+				b_uzun_tati = {
+					# old b_laodamogou
 					province = 9610
 
 					color = { 195 146 211 }
 				}
 			}
 			c_jiliang = {
+				# old c_karghalik
 				color = { 164 92 188 }
 
 				b_pishan = {
+					# old b_guma
 					province = 9614
 
 					color = { 164 92 188 }
 				}
 				b_canggui = {
+					# old b_yuetgan
 					province = 9613
 
 					color = { 164 92 188 }
@@ -34627,6 +34643,7 @@ e_turan = {
 				color = { 184 128 203 }
 
 				b_bujayi = {
+					# old b_bugaiwilik placement
 					province = 9609
 
 					color = { 184 128 203 }
@@ -34660,11 +34677,13 @@ e_turan = {
 				color = { 174 110 196 }
 
 				b_keriya = {
+					# old b_dondan_oilik
 					province = 9608
 
 					color = { 174 110 196 }
 				}
 				b_mohas = {
+					# old placement of b_keriya
 					province = 9606
 
 					color = { 174 110 196 }
@@ -34674,7 +34693,7 @@ e_turan = {
 
 					color = { 174 110 196 }
 				}
-				b_dadan-uiliq = {
+				b_dadan_uiliq = {
 					province = 15423
 
 					color = { 174 110 196 }
@@ -34682,29 +34701,11 @@ e_turan = {
 			}
 		}
 		d_yettishar = {
+			# d_kashgar in vanilla
 			color = { 200 121 180 }
 
 			capital = c_kashgar
 
-			c_terek_pass = {
-				color = { 196 110 174 }
-
-				b_taldyk = {
-					province = 17715
-
-					color = { 196 110 174 }
-				}
-				b_sary-tash = {
-					province = 7967
-
-					color = { 196 110 174 }
-				}
-				b_erkeshtam = {
-					province = 7966
-
-					color = { 196 110 174 }
-				}
-			}
 			c_kashgar = {
 				color = { 211 146 195 }
 
@@ -34739,7 +34740,29 @@ e_turan = {
 					color = { 211 146 195 }
 				}
 			}
+			c_terek_pass = {
+				color = { 196 110 174 }
+
+				b_taldyk = {
+					province = 17715
+
+					color = { 196 110 174 }
+				}
+				b_sary_tash = {
+					# old b_terek
+					province = 7967
+
+					color = { 196 110 174 }
+				}
+				b_erkeshtam = {
+					# old b_ulugqat
+					province = 7966
+
+					color = { 196 110 174 }
+				}
+			}
 			c_bachu = {
+				# old c_maralbeshi
 				color = { 181 74 154 }
 
 				b_maralbeshi = {
@@ -34771,7 +34794,7 @@ e_turan = {
 
 					color = { 188 92 164 }
 				}
-				b_karglik = {
+				b_karghalik = {
 					province = 9616
 
 					color = { 188 92 164 }
@@ -34803,6 +34826,7 @@ e_turan = {
 			}
 		}
 		d_shanshan = {
+			# old d_loulan
 			color = { 121 200 200 }
 
 			capital = c_lop_nur
@@ -34832,6 +34856,7 @@ e_turan = {
 				}
 			}
 			c_saca = {
+				# old c_cherchen
 				color = { 92 188 188 }
 
 				b_lancheng = {
@@ -34845,11 +34870,13 @@ e_turan = {
 					color = { 92 188 188 }
 				}
 				b_dawuzlek = {
+					# old b_saca
 					province = 9602
 
 					color = { 92 188 188 }
 				}
 				b_qarqan = {
+					# old b_cherchen
 					province = 1441
 
 					color = { 92 188 188 }
@@ -37092,6 +37119,7 @@ e_turan = {
 		}
 
 		d_agni = {
+			# old d_karashar
 			color = { 163 46 75 }
 
 			capital = c_karasahr
