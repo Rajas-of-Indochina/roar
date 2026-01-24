@@ -1444,19 +1444,30 @@ d_kashgar = {
 	846.1.1 = {
 		holder = 166694
 	}
-	891.1.1 = {
-		holder = saka0023
+	#891.1.1 = {
+		#holder = saka0023
+	#}
+	#920.1.1 = {
+		#holder = saka0024
+	#}
+	#940.1.1 = {
+		#holder = saka0025
+	#}
+	# Karluks conquer Kashgar
+	860.1.1 = {
+		liege = k_zhetysu
+		government = nomad_government
+		holder = roa_karluk005
+	}
+	# Karkhanids take over in early 900s
+	893.1.1 = {
+		holder = 188852
 	}
 	920.1.1 = {
-		holder = saka0024
+		holder = 188853
 	}
-	940.1.1 = {
-		holder = saka0025
-	}
-	#Karakhanids
-	940.6.1 = {
-		holder = 217205
-		liege = k_zhetysu
+	958.1.1 = {
+		holder = 188854
 	}
 	# Captured by Khotan
 	966.1.1 = {
@@ -1536,14 +1547,28 @@ c_kashgar = {
 		liege = d_kashgar
 		holder = 166694
 	}
-	891.1.1 = {
-		holder = saka0023
+	#891.1.1 = {
+		#holder = saka0023
+	#}
+	#920.1.1 = {
+		#holder = saka0024
+	#}
+	#940.1.1 = {
+		#holder = saka0025
+	#}
+	# Karluks conquer Kashgar
+	860.1.1 = {
+		holder = roa_karluk005
+	}
+	# Karkhanids take over in early 900s
+	893.1.1 = {
+		holder = 188852
 	}
 	920.1.1 = {
-		holder = saka0024
+		holder = 188853
 	}
-	940.1.1 = {
-		holder = saka0025
+	958.1.1 = {
+		holder = 188854
 	}
 	#Karakhanids
 	940.6.1 = {
@@ -1619,6 +1644,11 @@ c_terek_pass = {
 	846.1.1 = {
 		liege = d_kashgar
 		holder = 166694
+	}
+	# Karluks conquer Kashgar
+	860.1.1 = {
+		liege = d_yettishar
+		holder = roa_karluk005
 	}
 	# Conquered by Samanids
 	889.1.1 = {
