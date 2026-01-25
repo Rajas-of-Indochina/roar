@@ -1,0 +1,93 @@
+﻿# Override PDX decision to use minorities
+
+legendary_conversion = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_legend.dds"
+	}
+	decision_group_type = major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 120
+		empire = 120
+		hegemony = 120
+	}
+	desc = legendary_conversion_desc
+
+	is_shown = {
+		OR = {
+			AND = {
+				has_character_flag = legendary_conversion
+				has_dlc_feature = legends
+			}
+			has_character_flag = major_religious_inspiration
+		}
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = leg_conv_valid_county
+			any_sub_realm_county = {
+				faith != root.faith
+			}
+		}
+		is_landless_adventurer = no
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = legendary_conversion_minorities_tt
+			remove_character_flag = legendary_conversion
+			remove_character_flag = major_religious_inspiration
+			random_sub_realm_county = { # Give em a freebie
+				set_county_faith = root.faith
+				weight = {
+					base = 1
+					modifier = {
+						THIS = ROOT.capital_county
+						NOT = { faith = ROOT.faith }
+						add = 1000
+					}
+					modifier = {
+						THIS.duchy = ROOT.capital_county.duchy
+						NOT = { faith = ROOT.faith }
+						add = 100
+					}
+					modifier = {
+						THIS.kingdom = ROOT.capital_county.kingdom
+						NOT = { faith = ROOT.faith }
+						add = 50
+					}
+					modifier = {
+						THIS.empire = ROOT.capital_county.empire
+						NOT = { faith = ROOT.faith }
+						add = 25
+					}
+				}
+			}
+			every_sub_realm_county = {
+				save_scope_as = county
+				promote_faith_minority_effect = { FAITH = ROOT.faith }
+				random = {
+					chance = 25
+					promote_faith_minority_effect = { FAITH = ROOT.faith }
+				}
+				random = {
+					chance = 5
+					promote_faith_minority_effect = { FAITH = ROOT.faith }
+				}
+			}
+		}
+	}
+
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
