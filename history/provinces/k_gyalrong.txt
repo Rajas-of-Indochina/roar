@@ -631,128 +631,6 @@
 	}
 }
 
-# 9451 - Ngawa
-9451 = {	# 9451 - Ngawa
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = church_holding
-
-	# History
-	850.1.1 = {
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
-}
-
-# 9452 - Soxiq
-9452 = {	# 9452 - Soxiq
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = castle_holding
-
-	# History
-	850.1.1 = {
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
-}
-
-# 9453 - Zoige
-9453 = {	# 9453 - Zoige
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = castle_holding
-
-	# History
-	850.1.1 = {
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
-}
-
-# 9454 - Yunglro
-9454 = {	# 9454 - Yunglro
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = church_holding
-
-	# History
-	850.1.1 = {
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
-}
-
-# 9455 - Khyungchu
-9455 = {	# 9455 - Khyungchu
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = city_holding
-
-	# History
-	850.1.1 = {
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
-}
-
-# 9456 - Sungqu
-9456 = {	# 9456 - Sungqu
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = castle_holding
-
-	# History
-	650.1.1 = {
-		# Sungqu becomes the main point of contact between the Tibetan and Chinese Empires
-		culture = bodpa
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
-}
-
-# 9457 - Choqu
-9457 = {	# 9457 - Choqu
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = city_holding
-
-	# History
-}
-
 # 9458 - Maowun
 9458 = {	# 9458 - Maowun
 	# Misc
@@ -788,98 +666,116 @@
 	# History
 }
 
-# 9461 - Zamtang
-9461 = {	# 9461 - Zamtang
 
-	# Misc
+# k_gyalrong
+## d_gyalrong ###################################
+### c_barkam
+9463 = {	# Barkam
 	culture = qiang
 	religion = rrmeaism
 
-	holding = church_holding
+	holding = castle_holding
 
 	# History
-	850.1.1 = {
-		religion = old_bon
-	}
-	1050.1.1 = {
-		religion = bon
-	}
 }
-
-# 9462 - Rongbur
-9462 = {	# 9462 - Rongbur
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
+9462 = {	# Rongbur
 	holding = city_holding
+}
+9461 = {	# Zamtang
+	holding = church_holding
+}
+
+### c_ngawa
+9452 = {	# Soxiq
+	culture = qiang
+	religion = rrmeaism
+
+	holding = castle_holding
 
 	# History
 	850.1.1 = {
+		culture = bodpa
 		religion = old_bon
 	}
 	1050.1.1 = {
 		religion = bon
 	}
 }
-
-# 9463 - Barkam
-9463 = {	# 9463 - Barkam
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = castle_holding
-
-	# History
-}
-
-# 9464 - Quqen
-9464 = {	# 9464 - Quqen
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = castle_holding
-
-	# History
-}
-
-# 9465 - Trashingling
-9465 = {	# 9465 - Trashingling
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = none
-
-	# History
-}
-
-# 9466 - Zainlha
-9466 = {	# 9466 - Zainlha
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
-	holding = none
-
-	# History
-}
-
-# 9467 - Kharsa
-9467 = {	# 9467 - Kharsa
-
-	# Misc
-	culture = qiang
-	religion = rrmeaism
-
+9451 = {	# Ngawa
 	holding = church_holding
+}
+9455 = {	# Khyungchu
+	holding = city_holding
+}
+
+### c_sungqu
+9456 = {	# Sungqu
+	culture = qiang
+	religion = rrmeaism
+
+	holding = castle_holding
+
+	# History
+	650.1.1 = {
+		# Sungqu becomes the main point of contact between the Tibetan and Chinese Empires
+		culture = bodpa
+		religion = old_bon
+	}
+	1050.1.1 = {
+		religion = bon
+	}
+}
+9457 = {	# Choqu
+	holding = city_holding
+}
+
+### c_zoige
+9453 = {	# Zoige
+	culture = qiang
+	religion = rrmeaism
+
+	holding = castle_holding
+
+	# History
+	850.1.1 = {
+		culture = bodpa
+		religion = old_bon
+	}
+	1050.1.1 = {
+		religion = bon
+	}
+}
+9454 = {	# Yunglro
+	holding = church_holding
+}
+
+### c_quqen
+9464 = {	# Quqen
+	culture = qiang
+	religion = rrmeaism
+
+	holding = castle_holding
 
 	# History
 }
+9467 = {	# Kharsa
+	holding = church_holding
+}
+9466 = {	# Zainlha
+	holding = none
+}
+9465 = {	# Trashingling
+	holding = none
+}
+
+
+## d_chakla ###################################
+### c_chakla
+
+
+## d_golog ###################################
+### c_maqen
+
+
+## d_malho ###################################
+### c_rebgong
