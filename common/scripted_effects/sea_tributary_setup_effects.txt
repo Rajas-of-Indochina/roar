@@ -1,7 +1,6 @@
 ﻿
 ROA_setup_confederation_effect = {
 	title:c_abzakhia.holder = {
-
 		title:c_temir.holder = { add_to_list = circassia_confederates }
 		title:c_uerp.holder = { add_to_list = circassia_confederates }
 		title:c_labeshkhua.holder = { add_to_list = circassia_confederates }
@@ -133,11 +132,11 @@ ROA_setup_confederation_effect = {
 		}
 	}
 
-#    title:k_caspian_steppe.holder = {
-#        every_vassal = {
-#            limit = { primary_title.tier >= tier_county }
+#	title:k_caspian_steppe.holder = {
+#		every_vassal = {
+#			limit = { primary_title.tier >= tier_county }
 #
-#            add_to_list = cuman_confederates
+#			add_to_list = cuman_confederates
 #
 #			create_title_and_vassal_change = {
 #				type = independency
@@ -148,9 +147,9 @@ ROA_setup_confederation_effect = {
 #				change = scope:change
 #			}
 #			resolve_title_and_vassal_change = scope:change
-#        }
+#		}
 #
-#	    destroy_title = title:k_caspian_steppe
+#		destroy_title = title:k_caspian_steppe
 #
 #		add_character_flag = {
 #			flag = forming_confederation
@@ -160,48 +159,48 @@ ROA_setup_confederation_effect = {
 #			name = CUMANIA_FEDERATION_NAME
 #		}
 #
-#	    every_in_list = {
-#	        list = cuman_confederates
+#		every_in_list = {
+#			list = cuman_confederates
 #
-#	        scope:new_confederation = {
-#	            add_confederation_member = prev
-#	        }
-#	    }
-#	    remove_character_flag = forming_confederation
-#    }
+#			scope:new_confederation = {
+#				add_confederation_member = prev
+#			}
+#		}
+#		remove_character_flag = forming_confederation
+#	}
 }
 
 ROA_setup_tributaries_effect = {
 	if = {
 		if = {
-            limit = {
-                game_start_date >= 867.1.1
-                game_start_date <= 867.12.31
-            }
-        	ROA_867_tributary_setup_effect = yes
-    	}
+			limit = {
+				game_start_date >= 867.1.1
+				game_start_date <= 867.12.31
+			}
+			ROA_867_tributary_setup_effect = yes
+		}
 		else_if = {
-            limit = {
-                game_start_date >= 936.1.1
-                game_start_date <= 936.12.31
-            }
-        	ROA_936_tributary_setup_effect = yes
-    	}
-    	else_if = {
-            limit = {
-                game_start_date >= 1066.1.1
-                game_start_date <= 1066.12.31
-            }
-        	ROA_1066_tributary_setup_effect = yes
-    	}
-    	else_if = {
-            limit = {
-                game_start_date >= 1178.1.1
-                game_start_date <= 1178.12.31
-            }
-        	ROA_1178_tributary_setup_effect = yes
-    	}
-    }
+			limit = {
+				game_start_date >= 936.1.1
+				game_start_date <= 936.12.31
+			}
+			ROA_936_tributary_setup_effect = yes
+		}
+		else_if = {
+			limit = {
+				game_start_date >= 1066.1.1
+				game_start_date <= 1066.12.31
+			}
+			ROA_1066_tributary_setup_effect = yes
+		}
+		else_if = {
+			limit = {
+				game_start_date >= 1178.1.1
+				game_start_date <= 1178.12.31
+			}
+			ROA_1178_tributary_setup_effect = yes
+		}
+	}
 }
 
 ROA_nominal_tributary_effect = {
@@ -643,14 +642,6 @@ ROA_867_tributary_setup_effect = {
 		}
 	}
 
-#	# Beikthano
-#	title:c_beikthano.holder = {
-#		save_scope_as = suzerain
-#		title:c_magwe.holder = {
-#			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-#		}
-#	}
-
 	# Yinsheng
 	title:d_kainan.holder = {
 		save_scope_as = suzerain
@@ -668,7 +659,7 @@ ROA_867_tributary_setup_effect = {
 		}
 	}
 
-    # Shan
+	# Shan
 	title:d_yawnghwe.holder = {
 		save_scope_as = suzerain
 		title:c_yawnghwe.holder = {
@@ -938,7 +929,6 @@ ROA_867_tributary_setup_effect = {
 			ROA_nominal_tributary_effect = yes
 		}
 	}
-
 }
 
 ROA_936_tributary_setup_effect = {
@@ -1166,7 +1156,7 @@ ROA_936_tributary_setup_effect = {
 		}
 	}
 
-    # Liao
+	# Liao
 	title:e_liao.holder = {
 		save_scope_as = suzerain
 		title:k_jin_china.holder = {
@@ -1353,7 +1343,6 @@ ROA_936_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
-
 }
 
 ROA_1066_tributary_setup_effect = {
@@ -1523,7 +1512,7 @@ ROA_1066_tributary_setup_effect = {
 		}
 	}
 
-    # Liao
+	# Liao
 	title:e_liao.holder = {
 		save_scope_as = suzerain
 		title:e_celestia_china.holder = {
@@ -1592,7 +1581,7 @@ ROA_1066_tributary_setup_effect = {
 		}
 	}
 
-    # Chola hold over Srivijaya
+	# Chola hold over Srivijaya
 	title:k_tamilakam.holder = {
 		save_scope_as = suzerain
 		title:d_kedah.holder = {
@@ -1623,21 +1612,21 @@ ROA_1066_tributary_setup_effect = {
 		title:c_bangka.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-#		title:c_beruas.holder = {
-#			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-#		}
-#		title:d_pahang.holder = {
-#			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-#		}
-#		title:c_ujong_tanah.holder = {
-#			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-#		}
-#		title:c_batam.holder = {
-#			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-#		}
+		#title:c_beruas.holder = {
+		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_pahang.holder = {
+		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_ujong_tanah.holder = {
+		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_batam.holder = {
+		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
 	}
 
-    # Melayu
+	# Melayu
 	title:d_jambi.holder = {
 		save_scope_as = suzerain
 		title:c_indragiri.holder = {
@@ -1648,7 +1637,7 @@ ROA_1066_tributary_setup_effect = {
 		}
 	}
 
-    # Dai Viet
+	# Dai Viet
 	title:e_dai_viet.holder = {
 		save_scope_as = suzerain
 		title:d_muong.holder = {
@@ -1659,7 +1648,7 @@ ROA_1066_tributary_setup_effect = {
 		}
 	}
 
-    # Dali
+	# Dali
 	title:k_nanzhao.holder = {
 		save_scope_as = suzerain
 		title:d_muang_thaeng.holder = {
@@ -1755,7 +1744,6 @@ ROA_1066_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
-
 }
 
 ROA_1178_tributary_setup_effect = {
@@ -1917,7 +1905,7 @@ ROA_1178_tributary_setup_effect = {
 		}
 	}
 
-    # Melayu/Dharmasraya
+	# Melayu/Dharmasraya
 	title:k_melayu.holder = {
 		save_scope_as = suzerain
 		title:c_ujong_tanah.holder = {
@@ -1989,7 +1977,7 @@ ROA_1178_tributary_setup_effect = {
 		}
 	}
 
-    # Nanzhao
+	# Nanzhao
 	title:k_nanzhao.holder = {
 		save_scope_as = suzerain
 		title:d_chiang_hung.holder = {
