@@ -131,43 +131,6 @@ ROA_setup_confederation_effect = {
 			remove_character_flag = forming_confederation
 		}
 	}
-
-#	title:k_caspian_steppe.holder = {
-#		every_vassal = {
-#			limit = { primary_title.tier >= tier_county }
-#
-#			add_to_list = cuman_confederates
-#
-#			create_title_and_vassal_change = {
-#				type = independency
-#				save_scope_as = change
-#				add_claim_on_loss = no
-#			}
-#			becomes_independent = {
-#				change = scope:change
-#			}
-#			resolve_title_and_vassal_change = scope:change
-#		}
-#
-#		destroy_title = title:k_caspian_steppe
-#
-#		add_character_flag = {
-#			flag = forming_confederation
-#			years = 5
-#		}
-#		create_confederation = {
-#			name = CUMANIA_FEDERATION_NAME
-#		}
-#
-#		every_in_list = {
-#			list = cuman_confederates
-#
-#			scope:new_confederation = {
-#				add_confederation_member = prev
-#			}
-#		}
-#		remove_character_flag = forming_confederation
-#	}
 }
 
 ROA_setup_tributaries_effect = {
@@ -240,9 +203,6 @@ ROA_867_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_tumar.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_murun_tomis.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_chumkar_kia.holder = {
@@ -929,6 +889,45 @@ ROA_867_tributary_setup_effect = {
 			ROA_nominal_tributary_effect = yes
 		}
 	}
+
+	### k_balhae
+	character:balhae_dae_12 = { # King Geon_hwang of k_balhae
+		save_scope_as = suzerain
+		character:jurchen_tieli_1 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_odoli_01_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_tuowen_01_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_funie_1 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_yuexi_1 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_yulou_1 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+	
+	### d_BAL_hoewon
+	character:jurchen_tuowen_01_fic = {
+		save_scope_as = suzerain
+		character:mohe_suhemo_1 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	### k_silla
+	character:balhae_dae_12 = { # King Eung-nyeom of k_silla
+		save_scope_as = suzerain
+		character:mohe_a_1 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
 }
 
 ROA_936_tributary_setup_effect = {
@@ -1581,6 +1580,90 @@ ROA_1066_tributary_setup_effect = {
 		}
 	}
 
+	#### e_great_liao
+	character:194333 = {
+		save_scope_as = suzerain
+		character:ruzhe_8 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:nn_yelu_zongyuan = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:303303 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:303314 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:303226 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:303267 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:303289 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:303131 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:nn_yelu_tieli_LUF = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:nn_xiao_yangliu = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		#Eastern tributaries, mostly Jurchens
+		character:balhae_go_8 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_wanyan_6 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_jiagu_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_adian_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_tangkuo_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_nipanggu_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_tudan_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_yulou_8 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_yuexi_8 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_hesheli_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		#Tribs in k_amur
+		character:jurchen_boli_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_boli_11_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_boli_12_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	#### e_goryeo
+	character:194333 = {
+		save_scope_as = suzerain
+		character:jurchen_yalu_10_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
 	# Chola hold over Srivijaya
 	title:k_tamilakam.holder = {
 		save_scope_as = suzerain
@@ -2073,6 +2156,39 @@ ROA_1178_tributary_setup_effect = {
 	title:k_adurbadagan.holder = {
 		save_scope_as = suzerain
 		title:k_daylam.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	#### e_andong
+	character:jurchen_wanyan_14 = {
+		save_scope_as = suzerain
+		character:jurchen_yulou_12 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:jurchen_yuexi_11 = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		#Tribs in k_amur
+		character:mohe_molihewen_20_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_choripi_20_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_wuguihai_20_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_heishuiyang_20_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_beihean_20_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_vanda_20_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:mohe_nimen_20_fic = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
