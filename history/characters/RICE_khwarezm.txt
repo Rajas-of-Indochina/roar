@@ -1,0 +1,50 @@
+﻿
+###########################################################
+# 
+# Fictitious Khwarezm vassals
+# To represent local landowners
+# 
+###########################################################
+
+
+
+# Fictitious Zoroastrian vassal
+RICE_khwarezm_001 = {
+	name="Maxak"
+	religion="khurmazta"
+	culture="khwarezmian"
+	840.10.26={ # Unknown
+		birth=yes
+	}
+	888.1.1={ # Unknown
+		death={ death_reason = death_disappearance }
+	}
+}
+
+# Fictitious ancestor of the Mamunids
+RICE_khwarezm_002 = {
+	name="Sina"
+	dynasty=RICE_Mamunid
+	#dynasty=1102251
+	religion="ashari"
+	culture="khwarezmian"
+	842.8.25={ # Unknown
+		birth=yes
+	}
+	909.9.11={ # Unknown
+		death=yes
+	}
+}
+
+# Fictitious vassal
+RICE_khwarezm_003 = {
+	name="Wupoyan"
+	religion="maturidi"
+	culture="khwarezmian"
+	823.5.25={ # Unknown
+		birth=yes
+	}
+	888.8.25={ # Unknown
+		death=yes
+	}
+}
