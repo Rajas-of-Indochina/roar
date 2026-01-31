@@ -66455,8 +66455,16 @@ e_bengal = {
 
 			capital = c_munda
 
+			cultural_names = {
+				name_list_munda = cn_munda
+			}
+
 			c_munda = {
 				color = { 38 148 21 }
+
+				cultural_names = {
+					name_list_munda = cn_munda
+				}
 
 				b_chutia = {
 					province = 1248
@@ -82461,17 +82469,23 @@ e_permia = {
 }
 
 e_micronesia = {
+	color = { 0 154 255 }
+
+	capital = c_guahan  #placeholder
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
-	color = { 10 154 255 }
 
 	k_micronesia = {
 		color = { 10 154 255 }
 
+		capital = c_guahan  #placeholder
+
 		d_micronesia = {
 			color = { 64 140 191 }
+
+			capital = c_chuuk
 
 			c_pohnpei = {
 				color = { 45 98 134 }
@@ -82504,6 +82518,8 @@ e_micronesia = {
 		d_palau = {
 			color = { 25 148 230 }
 
+			capital = c_palau
+
 			c_palau = {
 				color = { 25 148 230 }
 
@@ -82517,6 +82533,8 @@ e_micronesia = {
 		d_yap = {
 			color = { 83 136 172 }
 
+			capital = c_yap
+
 			c_yap = {
 				color = { 83 136 172 }
 
@@ -82529,6 +82547,8 @@ e_micronesia = {
 		}
 		d_guahan = {
 			color = { 45 144 210 }
+
+			capital = c_guahan
 
 			c_guahan = {
 				color = { 57 142 198 }
