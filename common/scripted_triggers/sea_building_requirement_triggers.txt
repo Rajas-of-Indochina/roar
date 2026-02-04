@@ -1,0 +1,20 @@
+### Overwrites
+building_horse_pastures_requirement_terrain = {
+	OR = {
+		terrain = steppe
+		#geographical_region = world_steppe_east
+		culture = { has_cultural_parameter = unlock_horse_pastures_building }
+	}
+}
+
+building_quarries_requirement_terrain = {
+	OR = {
+		terrain = mountains
+		terrain = desert_mountains
+		AND = {
+			terrain = hills
+			culture = { has_cultural_parameter = can_build_quarries_in_hills }
+		}
+		culture = { has_cultural_parameter = can_build_quarries_everywhere }
+	}
+}

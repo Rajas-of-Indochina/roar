@@ -1,0 +1,75 @@
+### Overwrites
+historical_succession_access_single_heir_succession_law_trigger = {
+	trigger_if = {
+		limit = { government_allows = administrative }
+		OR = {
+			tgp_japan_single_heir_succession_override_trigger = yes
+			tgp_korea_single_heir_succession_override_trigger = yes
+			has_title = title:e_hindustan
+			has_title = title:h_china
+			AND = {
+				is_independent_ruler = yes
+				government_has_flag = government_is_steppe_admin
+			}
+		}
+	}
+	trigger_else = {
+		OR = {
+			has_title = title:k_austria
+			is_roman_emperor_trigger = yes
+			AND = {
+				has_title = title:e_france
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:flag_reformed_carolingian_empire
+				}
+			}
+			has_title = title:e_hindustan
+			has_title = title:h_china
+			AND = {
+				government_has_flag = government_is_japan_feudal
+				is_independent_ruler = yes
+			}
+			#Add any subsequent exceptions here.
+		}
+
+		### New RoA
+		# Caucasus
+		AND = {
+			OR = {
+				has_title = title:k_georgia
+				has_title = title:k_armenian_principality
+				has_title = title:k_ayrarat
+				has_title = title:k_armenia
+			}
+			OR = {
+				culture = culture:abkhaz
+				culture = { has_cultural_pillar = heritage_caucasian }
+			}
+		}
+	}
+}
+
+### ROA Stuff ###
+historical_succession_access_partition_succession_law_trigger = {
+	OR = {
+		AND = {
+			game_start_date >= 867.1.1
+			game_start_date <= 1000.1.1
+
+			has_title = title:k_bulgaria
+		}
+	}
+}
+historical_succession_access_high_partition_succession_law_trigger = {
+	AND = {
+		OR = {
+			has_title = title:k_vaspurakan
+			has_title = title:k_abkhazia
+		}
+		OR = {
+			culture = culture:abkhaz
+			culture = { has_cultural_pillar = heritage_caucasian }
+		}
+	}
+}
