@@ -1,0 +1,58 @@
+﻿## Override vanilla
+tributary_settled = {
+	is_tributary = yes
+	suzerain_line_type = line_suzerain
+	tributary_line_type = line_tributary
+	should_show_as_suzerain_realm_color = yes
+	should_show_as_suzerain_realm_name = no
+	#should_show_as_suzerain_realm_color = no
+	#should_show_as_suzerain_realm_name = yes
+
+	contracts = {
+		default_tributary_taxes
+		default_tributary_levies
+		default_tributary_prestige
+		suzerain_war_participation_guarantee
+		tributary_war_participation_obligation
+	}
+}
+
+
+## New Stuff 
+sea_mandala_vassal = {
+	contracts = {
+		sea_mandala_government_obligations
+		council_rights
+		title_revocation_rights
+		marriage_favor_rights
+	}
+}
+
+tributary_sea_mandala = {
+	# name change to not overwrite the new Vanilla version
+	is_tributary = yes
+	suzerain_line_type = line_suzerain
+	tributary_line_type = line_tributary
+	should_show_as_suzerain_realm_name = yes
+	should_show_as_suzerain_realm_color = yes
+
+	contracts = {
+		sea_mandala_government_taxes
+		sea_mandala_government_prestige
+		suzerain_war_participation_guarantee
+	}
+}
+
+anarchist_vassal = {
+	contracts = {
+		tribal_government_obligations
+	}
+}
+
+chinese_vassal = {
+	contracts = {
+		chinese_government_obligations
+		chinese_administration_type
+		chinese_centralization_level
+	}
+}

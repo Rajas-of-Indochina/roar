@@ -3650,8 +3650,50 @@
 	tenet_cranial_trophies = {
 		icon = core_tenet_cranial_trophies
 
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { religion_tag = kaharingan_religion }
+					desc = tenet_headhunting_dayak_name
+				}
+				triggered_desc = {
+					trigger = { religion_tag = filipino_religion }
+					desc = tenet_headhunting_filipino_name
+				}
+				triggered_desc = {
+					trigger = { faith = faith:nias_animism }
+					desc = tenet_headhunting_nias_name
+				}
+				desc = tenet_headhunting_name
+			}
+		}
+
+		can_pick = {
+			custom_description = {
+				text = incompatible_tenet_pacifism_trigger
+				NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_dharmic_pacifism_trigger
+				NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_human_sacrifice_trigger
+				NOR = { doctrine:tenet_human_sacrifice = { is_in_list = selected_doctrines } }
+			}
+			custom_description = {
+				text = incompatible_tenet_gruesome_festivals_trigger
+				NOT = { doctrine:tenet_gruesome_festivals = { is_in_list = selected_doctrines } }
+			}
+		}
+
 		is_shown = {
 			has_tgp_dlc_trigger = yes
+			NOR = {
+				religion_tag = christianity_religion
+				religion_tag = judaism_religion
+				religion_tag = islam_religion
+			}
 		}
 
 		piety_cost = {
@@ -3660,6 +3702,12 @@
 					always = no
 				}
 				value = faith_tenet_cost_low
+			}
+			if = {
+				limit = {
+					has_doctrine = pagan_hostility_doctrine
+				}
+				value = faith_tenet_cost_mid
 			}
 			else = {
 				value = faith_tenet_cost_massive
@@ -3672,12 +3720,24 @@
 			}
 		}
 
+		traits = {
+			virtues = {
+				lifestyle_headhunter
+			}
+		}
+
 		parameters = {
+			headhunting_active = yes
 			killing_bestows_heads = yes
 			decapitation_steals_prestige_as_piety = yes
+			human_sacrifice_active = yes
+			flower_war_cb_active = yes
 		}
 
 		character_modifier = {
+			ai_war_chance = 1
+			ai_war_cooldown = -0.5
+
 			jungle_advantage = 5
 			jungle_attrition_mult = -0.25
 			jungle_min_combat_roll = 1
