@@ -89004,10 +89004,13 @@ e_kambuja = {
 }
 
 e_iri-an = {
+	color = { 153 106 5 }
+
+	#capital =
+
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
-	color = { 153 106 5 }
 
 	k_north_iri-an = {
 		color = { 222 173 69 }
@@ -89847,9 +89850,46 @@ e_iri-an = {
 	k_panua = { # From Proto-Oceanic *panua meaning "inhabited territory"
 		color = { 111 122 47 }
 
+		capital = c_ngero
+
 		d_tanoq = { # From Proto-Oceanic *tanoq also meaning "land"
 			color = { 101 115 22 }
 
+			capital = c_ngero
+
+			c_ngero = {
+				color = { 66 71 34 }
+
+				b_kimbe = {
+					province = 17770
+
+					color = { 66 71 34 }
+				}
+				b_kandrian = {
+					province = 17589
+
+					color = { 66 71 34 }
+				}
+				b_agulupella = {
+					province = 17635
+
+					color = { 66 71 34 }
+				}
+			}
+			c_mengen = {
+				color = { 107 120 36 }
+
+				b_pomio = {
+					province = 17749
+
+					color = { 107 120 36 }
+				}
+				b_silango = {
+					province = 17644
+
+					color = { 107 120 36 }
+				}
+			}
 			c_latangai = {
 				color = { 137 158 19 }
 
@@ -89873,20 +89913,6 @@ e_iri-an = {
 					color = { 126 143 31 }
 				}
 			}
-			c_mengen = {
-				color = { 107 120 36 }
-
-				b_pomio = {
-					province = 17749
-
-					color = { 107 120 36 }
-				}
-				b_silango = {
-					province = 17644
-
-					color = { 107 120 36 }
-				}
-			}
 			c_manus = {
 				color = { 88 97 37 }
 
@@ -89896,28 +89922,11 @@ e_iri-an = {
 					color = { 88 97 37 }
 				}
 			}
-			c_ngero = {
-				color = { 66 71 34 }
-
-				b_kimbe = {
-					province = 17770
-
-					color = { 66 71 34 }
-				}
-				b_kandrian = {
-					province = 17589
-
-					color = { 66 71 34 }
-				}
-				b_agulupella = {
-					province = 17635
-
-					color = { 66 71 34 }
-				}
-			}
 		}
 		d_raki = { # From Proto-Oceanic *raki meaning "southeast trade" or "southeast wind"
 			color = { 106 112 70 }
+
+			capital = c_liwang
 
 			c_liwang = { # From Proto-Oceanic *liwaŋ meaning "open space" or "middle"
 				color = { 134 140 98 }
