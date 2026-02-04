@@ -1,5 +1,4 @@
-﻿
-papuan_religion = { # Various folk religions of the various peoples inhabiting Papua
+﻿papuan_religion = { # Various folk religions of the various peoples inhabiting Papua
 	family = rf_pagan
 	doctrine = pagan_hostility_doctrine
 
@@ -231,35 +230,57 @@ papuan_religion = { # Various folk religions of the various peoples inhabiting P
 			holy_site = lake_boazi
 			holy_site = sentani
 
+			# RICE
+			#holy_site = amparita
+			#holy_site = buru-sula
+			#holy_site = papua_selatan
+			#holy_site = kepala_burung
+			#holy_site = sonba_i
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ritual_cannibalism
-			doctrine = tenet_headhunting
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_headhunting
+			}
 			doctrine = tenet_sanctity_of_nature
 		}
 
 		yaambism = { #sepik
-			color = { 120 206 144 }
-			icon = penunggu
-			reformed_icon = penunggu_reformed
+			color = { 88 25 33 }
+			icon = yaambism
+			reformed_icon = yaambism_reformed
 
 			holy_site = mount_arfak
 			holy_site = puncak_jaya
 			holy_site = kombuglu
 			holy_site = lake_boazi
 			holy_site = sentani
+
+			# RICE
+			#holy_site = amparita
+			#holy_site = buru-sula
+			#holy_site = papua_selatan
+			#holy_site = kepala_burung
+			#holy_site = sonba_i
 
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_communal_possessions
-			doctrine = tenet_headhunting
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_headhunting
+			}
 			doctrine = tenet_sanctity_of_nature
 		}
 
 		bis = { #asmat
-			color = { 33 124 103 }
-			icon = penunggu
-			reformed_icon = penunggu_reformed
+			color = { 44 18 8 }
+			icon = bis
+			reformed_icon = bis_reformed
 
 			holy_site = mount_arfak
 			holy_site = puncak_jaya
@@ -267,10 +288,21 @@ papuan_religion = { # Various folk religions of the various peoples inhabiting P
 			holy_site = lake_boazi
 			holy_site = sentani
 
+			# RICE
+			#holy_site = amparita
+			#holy_site = buru-sula
+			#holy_site = papua_selatan
+			#holy_site = kepala_burung
+			#holy_site = sonba_i
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_reincarnation
-			doctrine = tenet_headhunting
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_headhunting
+			}
 			doctrine = tenet_ritual_hospitality
 		}
 	}
