@@ -1,0 +1,70 @@
+﻿l_english:
+ sea_mandala_government:0 "Mandala"
+ sea_mandala_government_with_icon:0 "@government_type_sea_mandala! $sea_mandala_government$"
+ sea_mandala_government_adjective:0 "Mandala"
+ sea_mandala_government_realm:0 "Mandala"
+ sea_mandala_government_desc:0 "$game_concept_sea_mandala_desc$\n\n#F The Mandala System is used as a way to organize a state as a circle, or mandala, around a central metropolis. In this way the political and geographic realities can shape the level of direct control from the center. From subject states in the periphery to the more directly controlled sub cities closer to the center. #!"
+ sea_mandala_icon_concept:0 "[mandala_i|E]"
+
+ game_concept_sea_mandala:0 "Mandala"
+ game_concept_sea_mandalas:0 "Mandalas"
+ game_concept_sea_mandala_i:0 "@government_type_sea_mandala!"
+ game_concept_sea_mandala_desc:0 "A Mandala is a relatively decentralized [government_form|E] where at minimum [centralization|E], [vassals|E] grant their [liege|E] [taxes|E] but no [levies|E]. However, [allied|E] vassals may be called to war and a Mandala liege may form one [alliance|E] with a vassal without [marriage|E]. Upon [succession|E], disgruntled vassals may declare their independence, but the former liege may Subjugate these rulers at a discount."
+
+ game_concept_sea_mandala_authority:0 "Mandala Centralization"
+ game_concept_centralization:0 "Centralization"
+ game_concept_sea_mandala_authority_desc:0 "Mandala Centralization represents the degree to which a [mandala|E] [ruler|E] has concentrated power over their [vassals|E].\n\nEach level of Mandala Centralization increases the amount of [levies|E] and [tax|E] that vassals grant their [liege|E], at the cost of [opinion|E]."
+
+ sea_mandala_government_taxes: "[GetGovernment( 'sea_mandala_government' ).GetNameNoTooltip] [taxes|U]"
+ sea_mandala_tax_exempt: "[tax|E] Exempt"
+ sea_mandala_tax_exempt_short: "Exempt"
+ sea_mandala_tax_low: "Low $game_concept_taxes$"
+ sea_mandala_tax_low_short: "Low"
+ sea_mandala_tax_normal: "Normal $game_concept_taxes$"
+ sea_mandala_tax_normal_short: "Normal"
+ sea_mandala_tax_high: "High $game_concept_taxes$"
+ sea_mandala_tax_high_short: "High"
+ sea_mandala_tax_extortionate: "Extortionate $game_concept_taxes$"
+ sea_mandala_tax_extortionate_short: "Extortionate"
+
+ tributary_sea_mandala: "Mandala Tributary"
+ tributary_sea_mandala_desc: "A mandala [tributary|E] provides their [suzerain|E] with [herd|E] and [prestige|E] on a regular basis.\n\n$tributary_common_desc$"
+
+ sea_mandala_government_prestige: "[GetGovernment( 'sea_mandala_government' ).GetNameNoTooltip] [prestige|U]"
+ sea_mandala_prestige_none: "No Contribution"
+ sea_mandala_prestige_none_short: "None"
+ sea_mandala_prestige_normal: "Some $game_concept_prestige$ Contribution"
+ sea_mandala_prestige_normal_short: "Low"
+ sea_mandala_prestige_high: "High $game_concept_prestige$ Contribution"
+ sea_mandala_prestige_high_short: "High"
+
+ game_concept_stateless:0 "Stateless"
+ game_concept_stateless_desc:0 "A stateless society lacks the formal hierarchies of other forms of governance. Each "ruler" is a representative of their lands whose actions are held to account by the people. Succession within a commune is elective, with each representative having a say. If a single family can maintain power for long enough, they may be able to reform to Tribal. When a Stateless character gains a [kingdom|E] or [empire|E]-tier title, it is automatically dismantled."
+ game_concept_stateless_government:0 "Statelessness"
+
+ anarchist_government:0 "Stateless"
+ anarchist_government_adjective:0 "Stateless"
+ anarchist_government_with_icon:0 "@government_type_anarchist! Stateless"
+ anarchist_government_desc:0 "$game_concept_stateless_desc$"
+ anarchist_icon_concept:0 "[anarchist_i|E]"
+ game_concept_anarchist_i:0 "@government_type_anarchist!"
+
+ count_anarchist_male:0 "Headman"
+ count_anarchist_female:0 "Headwoman"
+ duke_anarchist_male:0 "Headman"
+ duke_anarchist_female:0 "Headwoman"
+ duchy_anarchist:0 "Commune"
+
+ stateless_kingdom_fracture_title:0 "[title.Title.GetNameNoTooltip] Shattered!"
+ stateless_kingdom_fracture_tt:0 "[title.Title.GetNameNo] shattered as a result of being held by [ROOT.Char.GetName], a [stateless|E] ruler."
+
+ unsettle_tribe_faction:0 "Nomadic Faction"
+ unsettle_tribe_faction_short_effect_desc:0 "Wants to return to a [nomadic|E] lifestyle."
+ unsettle_tribe_faction_desc:0 "Members of the $unsettle_tribe_faction$ [faction|E] seek to break free from their [liege|E] and return to a [nomadic|E] lifestyle.\n\n#S Ultimatum#!\nAll Faction Members become [independent|E] and gain the $nomad_government$ government\n[liege|E] loses their Primary title"
+
+ reduce_imperial_authority_faction:0 "Particularist Faction"
+ reduce_imperial_authority_faction_desc:0 "The Particularist [faction|E] only seeks to lower Imperial Authority, but members are otherwise loyal to the [realm|E]."
+ reduce_imperial_authority_faction_short_effect_desc:0 "Wants lower Imperial Authority"
+
+ msg_vassal_bureaucratized:0 "Vassal has adoped Imperial Bureaucracy"
+ msg_vassal_bureaucratized_desc:0 "Your vassal, [ROOT.Char.GetShortUIName], has given up [ROOT.Char.GetHerHis] primitive ways and adopted a Bureaucratic government."
