@@ -1,4 +1,10 @@
 ﻿khasi_religion = { # Folk religion of Khasi people
+
+	# Cybrxkhan addendum note: below are some articles of potential interest
+	# http://www.ijmdrr.com/admin/downloads/240620214.pdf
+	# https://www.jagiroadcollege.co.in/upload/iqacarchive/1669722031.pdf
+	# https://www.ijcrt.org/papers/IJCRT2205866.pdf
+
 	family = rf_pagan
 	graphical_faith = pagan_gfx
 	doctrine = pagan_hostility_doctrine
@@ -6,7 +12,7 @@
 	pagan_roots = yes
 
 	#Main Group
-	doctrine = doctrine_polytheist
+	doctrine = doctrine_monotheist
 	doctrine = doctrine_no_head
 	doctrine = doctrine_gender_equal
 	doctrine = doctrine_pluralism_pluralistic
@@ -31,7 +37,6 @@
 	doctrine = doctrine_clerical_gender_male_only
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
-	#doctrine = tribal_religion
 
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
@@ -42,9 +47,12 @@
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
 
+	#Austroasiatic Religion
+	doctrine = special_doctrine_is_austroasiatic_faith
+
 	traits = {
-		virtues = { temperate content honest patient }
-		sins = { lustful lazy deceitful }
+		virtues = { humble just temperate }
+		sins = { arrogant arbitrary greedy }
 	}
 
 	custom_faith_icons = {
