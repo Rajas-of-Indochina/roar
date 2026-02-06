@@ -1,10 +1,14 @@
-# 1112 - Madurai
-1112 = {	# 1112 - Madurai
-
-	# Misc
+# k_tamilakam
+## d_pandya_nadu ###################################
+### c_madurai
+1112 = {	# Madurai
+	# one of the oldest cities in India and South Asia ; site of many temples, including famed Meenakshi Temple
 	culture = tamil
 	religion = yapaniya
 
+	holding = castle_holding
+
+	# Meenakshi Temple
 	special_building_slot = madurai_temple_01
 	special_building = madurai_temple_01
 
@@ -13,21 +17,120 @@
 		religion = shaivism
 	}
 }
+1214 = {	# Tirunelveli AKA Nellai
+	# ancient city famed for its educational facilities
+	holding = city_holding
 
-# 1114 - Mahoyadapuram
-1114 = {	# 1114 - Mahoyadapuram
+	# History
+}
+7809 = {	# Rameshvaram
+	# considered to be one of the holiest places in India for Hindus and is part of the Char Dham pilgrimage
+	holding = church_holding
 
-	# Misc
-	culture = malayali
-	religion = shrautism
+	special_building_slot = ramanathaswamy_temple_01
+
+	# History
+}
+7810 = {	# Virudhukkalvetti AKA Virudhunagar
+	# according to legends, it was named after an event when one of the locals killed famed warrior, earning his trophy-banners
+	holding = city_holding
+
+	# History
+}
+7811 = {	# Sivakasi AKA Shivakaashi
+	# city is known for firecrackers ; established in the 15th century
+	holding = none
+
+	# History
+}
+7812 = {	# Korkai
+	# capital, principal center of trade and important port of the Early Pandyan Kingdom ; nowadays a village
+	holding = castle_holding
+
+	# Subramaniya Swamy Temple - placed here rather than in Madurai for sake of space
+	special_building_slot = subramaniya_swamy_temple_01
+	special_building = subramaniya_swamy_temple_01
+
+	# History
+}
+7813 = {	# Kayal AKA Kayalpatnam
+	# coastal settlement known for its centuries-old maritime trade history, Islamic heritage, and unique cultural identity
+	holding = city_holding
 
 	# History
 }
 
-# 1115 - Cholamandalam
-1115 = {	# 1115 - Cholamandalam
+### c_kongu
+1201 = {	# Karavur AKA Karur
+	# capital of Kongu Nadu ; important trade centre with many temples
+	culture = tamil
+	religion = krishnaism
 
-	# Misc
+	holding = castle_holding
+
+	# History
+	1066.1.1 = {
+		religion = shaivism
+	}
+}
+1116 = {	# Tenkasi
+	# significant spiritual and cultural site in South Tamilnadu
+	holding = church_holding
+
+	# History
+}
+7804 = {	# Kovai AKA Coimbatore
+	# old city under Chera dynasty, later conquered by Cholas 
+	holding = city_holding
+
+	# Dhandayuthapani Swamy Temple in Palani
+	special_building_slot = dhandayuthapani_temple_01
+
+	# History
+	250.1.1 = {
+		# built somewhere between 2nd and 5th century CE by Chera Dynasty
+		special_building = dhandayuthapani_temple_01
+	}
+}
+7805 = {	# Tiruppur
+	# major city, initially under Cheras, later under Cholas ; part of a prominent Roman trade route
+	holding = city_holding
+
+	# History
+}
+
+### c_uraiyur
+7807 = {	# Uraiyur AKA Tiruchirappalli
+	# ancient capital of the early Cholas ; major city in the region
+	culture = tamil
+	religion = kaumaram
+
+	holding = castle_holding
+
+	# History
+}
+7806 = {	# Dindigul
+	# ancient settlement ruled by various dynasties ; famed for its 16th century fortifications and temples
+	holding = church_holding
+
+	# Solaimalai Murugan Temple - placed here rather than in Madurai for sake of space
+	special_building_slot = arulmigu_solaimalai_temple_01
+	special_building = arulmigu_solaimalai_temple_01
+
+	# History
+}
+7808 = {	# Sivaganga
+	# city famed for its 16th century fortifications and temples
+	holding = city_holding
+
+	# History
+}
+
+
+## d_chola_nadu ###################################
+### c_cholamandalam
+1115 = {	# Thanjavur AKA Thanjai AKA Tanjore
+	# ancient city and capital of Chola Empire ; famed for its temples, especially Brihadeeswarar Temple
 	culture = tamil
 	religion = shaivism
 
@@ -41,664 +144,359 @@
 	}
 	1066.1.1 = {
 		special_building = brihadeeswarar_temple_01
-		religion = shaivism
 	}
 }
+7835 = {	# Tirukoilur
+	# city famous for its temples - Ulagalantha Perumal Temple, Veerateeswarar Temple and Kabilar Kundru
+	holding  = church_holding
 
-# 1116 - Tenkasi
-1116 = {	# 1116 - Tenkasi
+	# History
+}
+7836 = {	# Kannanur_2
+	# possibly Kannanur Balasubramania Temple in Thirumayam taluk
+	holding  = none
 
-	# Misc
-	culture = tamil
-	religion = vaishnavism
+	# History
+	890.1.1 = {
+		# built during the reign of Aditya Chola I 
+		holding = church_holding
+	}
+}
+7837 = {	# Gangaikondacolapuram
+	# city built by Rajendra I to commemorate his victory over the Pala Dynasty
+	holding  = none
+
+	# History
+	1025.1.1 = {
+		holding = castle_holding
+	}
+	# destroyed in 13th/14th century
+}
+7838 = {	# Nagapattinam
+	# important port for commerce during Chola reign
+	holding  = city_holding
 
 	# History
 }
 
-# 1117 - Qalqut
-1117 = {	# 1117 - Qalqut
+### c_tagadur
+1120 = {	# Tagadur
+	# 
+	culture = tamil
+	religion = svetambara
 
-	# Misc
+	holding = castle_holding
+
+	# History
+	1066.1.1 = {
+		# possibly rework it to be a minority
+		religion = vaishnavism
+	}
+}
+7833 = {	# Kelrayan
+	# province named after Kelrayan hills
+	holding = none
+
+	# History
+}
+7834 = {	# Srirangam
+	# famous for the Ranganathaswamy Temple, the largest temple complex in India ; considered first among the 108 Divya Desams
+	holding = church_holding
+
+	# History
+}
+
+### c_tiruvannamalai
+7830 = {	# Tiruvannamalai
+	# cultural hub and prominent pilgrimage destination ; famed for Annamalaiyar Temple and various other religious elements
+	culture = tamil
+	religion = svetambara
+
+	holding = castle_holding
+
+	# History
+	1066.1.1 = {
+		religion = shaivism
+	}
+}
+7831 = {	# Uttaramerur AKA Uthiramerur
+	# settlment noted for its temple inscriptions ; originally a Brahmin settlement
+	holding = church_holding
+
+	# History
+}
+7832 = {	# Jinji AKA Gingee AKA Senji
+	# site of an ancient fortress
+	holding = city_holding   # for balance
+
+	# History
+}
+
+
+## d_chera_nadu ###################################
+### c_kerala
+1114 = {	# Mahoyadapuram AKA Kodungallur 
+	# historically significant port city ; capital of Chera dynasty ; sacked by Chola in 11th century
+	# central site for St Thomas Church ; according to legends also site of the first Indian mosque
+	culture = malayali
+	religion = shrautism
+
+	holding  = castle_holding
+
+	# History
+}
+7801 = {	# Kunjakari
+	# probably represents Kochi/Cochin - a major port city in the region
+	holding  = city_holding
+
+	# History
+}
+7802 = {	# Kottayam
+	# named after nearby fort ; tied to Thekkumkur dynasty
+	holding = church_holding   # for balance
+
+	# History
+}
+
+### c_venadu
+7803 = {	# Kollam
+	# ancient seaport and a major city in the region ; capital of Venadu ; historically very important trade-hub
+	# also important centre of St Thomas Church ; also site of some of the oldest mosques in the region
+	culture = malayali
+	religion = kaumaram
+
+	holding = castle_holding   # only because it was the regional capital
+
+	# History
+}
+1413 = {	# Vizhinjam
+	# known for maritime trade since ancient times ; capital of Ay dynasty and important fort
+	holding = city_holding   # should be castle_holding really
+
+	# History
+}
+7814 = {	# Kottar
+	# ancient trade centre of both Pandyans and Cheras
+	holding = church_holding   # for balance
+
+	# History
+}
+
+### c_alupa
+7798 = {	# Kannanur AKA Kannur
+	# major port city and important trade centre ; site of some of the oldest mosques ;
 	culture = malayali
 	religion = vaishnavism
 
-	# History
-}
-
-# 1119 - Kanchipuram
-1119 = {	# 1119 - Kanchipuram
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-	special_building_slot = kailasanathar_temple_01
-	special_building = kailasanathar_temple_01
+	holding = castle_holding
 
 	# History
-	1066.1.1 = {
-		religion = srikula_shaktism
-	}
 }
-
-# 1120 - Tagadur
-1120 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
+1200 = {	# Udupi
+	# port city ; in the 13th century, Vaishnavite saint Madhvacharya founded the Sri Krishna Temple
+	holding = church_holding
 
 	# History
-	1066.1.1 = {
-		religion = svetambara
-	}
 }
-
-# 1199 - Penugonda
-1199 = {	# 1199 - Penugonda
-
-	# Misc
-	culture = kannada
-	religion = srikula_shaktism
+7797 = {	# Mangalur
+	# important port city ; site of one of the oldest mosques ; ruled by Alupa dynasty from 200 to 1444 AD
+	holding = city_holding
 
 	# History
 }
 
-# 1200 - Kanara
-1200 = {	# 1200 - Kanara
-
-	# Misc
-	culture = kannada
-	religion = yapaniya
-
-	# History
-}
-
-# 1201 - Kongu
-1201 = {	# 1201 - Kongu
-
-	# Misc
-	culture = tamil
-	religion = shaivism
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = shaivism
-	}
-}
-
-# 1204 - Nellore
-1204 = {	# 1204 - Nellore
-
-	# Misc
-	culture = telugu
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = shaivism
-	}
-}
-
-# 1214 - Tirunelveli
-1214 = {	# 1214 - Tirunelveli
-
-	# Misc
-	culture = tamil
+### c_eranad
+1117 = {	# Qalqut AKA Calicut AKA Kozhikode
+	# known as the City of Spices ; major trade hub
+	culture = malayali
 	religion = vaishnavism
 
+	holding = castle_holding
+
+	# History
+}
+7799 = {	# Malappuram
+	# military and administrative headquarters from ancient times ; site of an old Jain/Buddhist temple
+	holding = church_holding   # for balance
+
+	# History
+}
+7800 = {	# Palakkad AKA Palghat AKA Palakkattussery
+	# major city ruled by Palakkad Rajas under Cheras ; famous for its Palakkad Fort
+	holding = city_holding   # for balance
+
 	# History
 }
 
-# 1219 - Potapi
-1219 = {	# 1219 - Potapi
-	# Misc
+
+## d_tondai_nadu ###################################
+### c_kanchipuram
+1119 = {	# Kanchipuram AKA Kanjeevaram AKA Kancheepuram
+	# known as the City of Thousand Temples ; ancient capital of Pallava kings
+	culture = tamil
+	religion = yapaniya
+
+	holding = castle_holding
+
+	special_building_slot = kailasanathar_temple_01
+
+	# History
+	700.1.1 = {
+		special_building = kailasanathar_temple_01
+	}
+	1066.1.1 = {
+		religion = vaishnavism
+	}
+}
+7826 = {	# Takkaloma
+	# info needed
+	holding = city_holding
+
+	# History
+}
+7827 = {	# Mamallapuram
+	# trade settlment ; famous for its temples, including famed Shore Temple
+	holding = church_holding
+
+	# History
+}
+
+### c_candragiri
+7825 = {	# Candragiri
+	# historical fort built in 11th century
+	culture = kannada
+	religion = yapaniya
+
+	holding = castle_holding
+
+	# History
+}
+7820 = {	# Melpadi
+	# ancient small town that worked as a buffer state between the Chalukya and Chola
+	holding = church_holding
+
+	# History
+}
+7823 = {	# Nangali
+	# village historically known as the gateway of Hoysala dynasty
+	holding = city_holding
+
+	# History
+}
+
+### c_penugonda
+1199 = {	# Penugonda AKA Penukonda
+	# site of many Jain temples
+	culture = kannada
+	religion = yapaniya
+
+	holding = castle_holding
+
+	# History
+}
+7819 = {	# Mangalavada
+	# info needed
+	holding = city_holding
+
+	# History
+}
+7822 = {	# Nandi
+	# info needed ; might be reference to the Monolithic Bull in Lepakshi?
+	holding = church_holding
+
+	# History
+}
+
+### c_muluvagil
+7824 = {	# Muluvagil
+	# acording to a loacal legend, a Hanuman temple was built here by Arjuna
+	culture = tamil
+	religion = yapaniya
+
+	holding = castle_holding
+
+	# History
+	1066.1.1 = {
+		religion = vaishnavism
+	}
+}
+7828 = {	# Kuvalala AKA Kolar AKA Kolāra
+	# city known for its milk and gold mines ; famous for its religious establishments from ancient times
+	holding = church_holding
+
+	# History
+}
+7829 = {	# Padaividu
+	# info needed
+	holding = city_holding
+
+	# History
+}
+
+### c_nellore
+1204 = {	# Nellore AKA Nelluru
+	# major city in the region ; ruled by Pallavas and then Cholas 
 	culture = telugu
 	religion = svetambara
-	terrain = hills
+
+	holding = castle_holding
+
+	# History
+	1066.1.1 = {
+		religion = shaivism
+	}
+}
+7818 = {	# Vallurapura
+	# info needed
+	holding = city_holding
+
+	# History
+}
+7821 = {	# Kalahasti AKA Srikalahasti
+	# town famed for its Srikalahasteeswara temple
+	holding = church_holding
+
+	# History
+}
+1219 = {	# Potapi AKA Pottapi
+	# capital of the local Cholas branch
+	holding = church_holding
+
+	# nearby is temple-town of Tirumala
 	special_building_slot = venkateswara_temple_01
 	special_building = venkateswara_temple_01
 
 	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
 }
 
-# 1413 - Venadu
-1413 = {	# 1413 - Venadu
-
-	# Misc
-	culture = tamil
-	religion = vaishnavism
-
-	# History
-}
-
-# 7797 - Mangalur
-7797 = {	# 1117 - Qalqut
-
-	# Misc
-	culture = malayali
-	religion = vaishnavism
-
-	# History
-}
-
-# 7798 - Kannanur
-7798 = {	# 1117 - Qalqut
-
-	# Misc
-	culture = malayali
-	religion = vaishnavism
-
-	# History
-}
-
-# 7799 - Malappuram
-7799 = {	# 1114 - Mahoyadapuram
-
-	# Misc
-	culture = malayali
-	religion = vaishnavism
-
-	# History
-}
-
-# 7800 - Palakkad
-7800 = {	# 1114 - Mahoyadapuram
-
-	# Misc
-	culture = malayali
-	religion = vaishnavism
-
-	# History
-}
-
-# 7801 - Kunjakari
-7801 = {	# 1114 - Mahoyadapuram
-
-	# Misc
-	culture = tamil
-	religion = vaishnavism
-
-	# History
-}
-
-# 7802 - Kottayam
-7802 = {	# 1114 - Mahoyadapuram
-
-	# Misc
-	culture = malayali
-	religion = vaishnavism
-
-	# History
-}
-
-# 7803 - Kollam
-7803 = {	# 1413 - Venadu
-
-	# Misc
-	culture = malayali
-	religion = kaumaram
-
-	# History
-}
-
-# 7804 - Kovai
-7804 = {	# 1201 - Kongu
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	special_building_slot = dhandayuthapani_temple_01
-	special_building = dhandayuthapani_temple_01
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7805 - Tiruppur
-7805 = {	# 1201 - Kongu
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7806 - Dindigul
-7806 = {	# 1201 - Kongu
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-	special_building_slot = arulmigu_solaimalai_temple_01
-	special_building = arulmigu_solaimalai_temple_01
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7807 - Uraiyur
-7807 = {	# 1201 - Kongu
-
-	# Misc
-	culture = tamil
-	religion = kaumaram
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = kaumaram
-	}
-}
-
-# 7808 - Sivaganga
-7808 = {	# 1201 - Kongu
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7809 - Rameshvaram
-7809 = {	# 1112 - Madurai
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-	special_building_slot = ramanathaswamy_temple_01
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7810 - Virudhukkalvetti
-7810 = {	# 1112 - Madurai
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7811 - Sivakasi
-7811 = {	# 1112 - Madurai
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7812 - Korkai
-7812 = {	# 1112 - Madurai
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	special_building_slot = subramaniya_swamy_temple_01
-	special_building = subramaniya_swamy_temple_01
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7813 - Kayal
-7813 = {	# 1112 - Madurai
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7814 - Kottar
-7814 = {	# 1413 - Venadu
-
-	# Misc
-	culture = tamil
-	religion = vaishnavism
-
-	# History
-}
-
-# 7815 - Togarakunta
-7815 = {	# Togarakunta
-
-	# Misc
-	culture = kannada
-	religion = shaivism
-
-	# History
-}
-
-# 7816 - Anantapur
+### c_renandu
 7816 = {	# Anantapur
-
-	# Misc
+	# city rich in temples
 	culture = kannada
 	religion = shaivism
 
+	holding = castle_holding
+
 	# History
 }
+7815 = {	# Togarakunta
+	# info needed ; could only find a village
+	holding = none
 
-# 7817 - Puspagiri
+	# History
+}
 7817 = {	# Puspagiri
-
-	# Misc
-	culture = kannada
-	religion = shaivism
+	# site of a 13th century Sri Chennakesava Swamy temple
+	holding = church_holding
 
 	# History
 }
 
-# 7818 - Vallurapura
-7818 = {	# 1204 - Nellore
 
-	# Misc
-	culture = telugu
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7819 - Mangalavada
-7819 = {	# 1199 - Penugonda
-
-	# Misc
-	culture = kannada
-	religion = shaivism
-
-	# History
-}
-
-# 7820 - Melpadi
-7820 = {	# 1199 - Penugonda
-
-	# Misc
-	culture = kannada
-	religion = shaivism
-
-	# History
-}
-
-# 7821 - Kalahasti
-7821 = {	# 1204 - Nellore
-	# Misc
-	culture = telugu
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7822 - Nandi
-7822 = {	# 1199 - Penugonda
-
-	# Misc
-	culture = kannada
-	religion = shaivism
-
-	# History
-}
-
-# 7823 - Nangali
-7823 = {	# 1199 - Penugonda
-
-	# Misc
-	culture = kannada
-	religion = shaivism
-
-	# History
-}
-
-# 7824 - Muluvagil
-7824 = {	# 1119 - Kanchipuram
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7825 - Padaividu
-7825 = {	# 1199 - Penugonda
-
-	# Misc
-	culture = kannada
-	religion = shaivism
-
-	# History
-}
-
-# 7826 - Takkaloma
-7826 = {	# 1119 - Kanchipuram
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7827 - Mamallapuram
-7827 = {	# 1119 - Kanchipuram
-
-	# Misc
-	culture = tamil
-	religion = yapaniya
-
-	# History
-	1066.1.1 = {
-		religion = vaishnavism
-	}
-}
-
-# 7828 - Kuvalala
-7828 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7829 - Kudalasangama_bis
-7829 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7830 - Tiruvannamalai
-7830 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = shaivism
-	}
-}
-
-# 7831 - Uttaramerur
-7831 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7832 - Jinji
-7832 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7833 - Kelrayan
-7833 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7834 - Srirangam
-7834 = {	# 1120 - Tagadur
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-	terrain = hills
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7835 - Tirukoilur
-7835 = {	# 1115 - Cholamandalam
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7836 - Kannanur_2
-7836 = {	# 1115 - Cholamandalam
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7837 - Gangaikondacolapuram
-7837 = {	# 1115 - Cholamandalam
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-# 7838 - Nagapattinam
-7838 = {	# 1115 - Cholamandalam
-
-	# Misc
-	culture = tamil
-	religion = svetambara
-
-	# History
-	1066.1.1 = {
-		religion = krishnaism
-	}
-}
-
-
-## d_maldives
+## d_maldives ###################################
 ### c_maldives
 1360 = {	# Mahal
-
-	# Misc
+	# 
 	culture = sinhala
 	religion = theravada
 
@@ -711,11 +509,10 @@
 }
 
 
-## d_lakshadvipa
+## d_lakshadvipa ###################################
 ### c_lakshadvipa
 15464 = {	# Androth
-
-	# Misc
+	# 
 	culture = malayali
 	religion = ashari
 
