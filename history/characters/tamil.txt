@@ -47,7 +47,10 @@
 		birth = "833.1.1"
 	}
 	880.1.1 = {
-		death = "880.1.1"
+		death = {
+			# was forced from the throne after defeat in battle of Sri Purambiyam/Tiruppurambiyam
+			death_reason = death_disappearance
+		}
 	}
 }
 
@@ -644,7 +647,10 @@ additional_cholas_4 = {
 		birth = "800.1.1"
 	}
 	862.1.1 = {
-		death = "862.1.1"
+		death = {
+			# apparently fled the battlefield on back of an Elephant but ultimately died
+			death_reason = death_battle
+		}
 	}
 }
 189069 = {
