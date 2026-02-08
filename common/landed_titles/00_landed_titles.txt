@@ -89275,6 +89275,22 @@ e_iri-an = {
 
 			capital = c_asmat
 
+			#c_papua_selatan = {
+				# c_asmat and c_mappi
+			#	color = { 107 53 30 }
+			#	b_asmat = {
+			#		color = { 82 35 23 }
+			#		province = 12842
+			#	}
+			#	b_mapi = { 
+			#		color = { 125 37 30 }
+			#		province = 12843
+			#	}
+			#	b_dolok = {
+			#		color = { 104 71 34 }
+			#		province = 12845
+			#	}
+			#}
 			c_kemoro = {
 				color = { 85 80 75 }
 
@@ -92204,83 +92220,22 @@ e_nusantara = {
 	k_ujung_samudranta = {
 		color = { 252 186 3 }
 
-		d_bomberai = {
-			color = { 202 186 33 }
+		#d_papua = {
+		#	color = { 161 46 36 }
+		#	capital = c_sran
+		#}
 
-			c_kapaur = {
-				color = { 202 166 33 }
-
-				b_kapaur = {
-					province = 16097
-
-					color = { 202 166 33 }
-				}
-				b_sumuri = {
-					province = 12838
-
-					color = { 202 166 33 }
-				}
-			}
-			c_buruwai = {
-				color = { 202 146 33 }
-
-				b_buruwai = {
-					province = 15863
-
-					color = { 202 146 33 }
-				}
-				b_karas = {
-					province = 15870
-
-					color = { 202 146 33 }
-				}
-				b_kowiai = {
-					province = 12839
-
-					color = { 202 146 33 }
-				}
-			}
-			c_irarutu = {
-				color = { 202 126 33 }
-
-				b_aroba = {
-					province = 16048
-
-					color = { 202 126 33 }
-				}
-				b_kuri = {
-					province = 16118
-
-					color = { 202 126 33 }
-				}
-			}
-			c_mairasi = {
-				color = { 202 106 33 }
-
-				b_mairasi = {
-					province = 15781
-
-					color = { 202 106 33 }
-				}
-				b_semimi = {
-					province = 15782
-
-					color = { 202 106 33 }
-				}
-				b_mer = {
-					province = 15957
-
-					color = { 202 106 33 }
-				}
-			}
-		}
 		d_doberai = {
 			color = { 252 156 33 }
 
+			#c_kepala_burung = {
+			#	color = { 145 36 47 }
+			#}
 			c_soren = {
 				color = { 252 156 13 }
 
 				b_seget = {
+					# b_soren in vanilla
 					province = 12835
 
 					color = { 252 156 13 }
@@ -92295,6 +92250,7 @@ e_nusantara = {
 				color = { 252 136 13 }
 
 				b_konda_east = {
+					# b_maybrat in vanilla
 					province = 12836
 
 					color = { 252 136 13 }
@@ -92364,6 +92320,89 @@ e_nusantara = {
 					province = 16169
 
 					color = { 252 56 13 }
+				}
+			}
+		}
+		d_bomberai = {
+			color = { 202 186 33 }
+
+			#c_sran = {
+			#	color = { 201 39 32 }
+			#	b_namatota = {
+			#		color = { 164 26 21 }
+			#		province = 12840
+			#	}
+			#	b_timika = {
+			#		color = { 134 46 41 }
+			#		province = 12844
+			#	}
+			#}
+			c_kapaur = {
+				color = { 202 166 33 }
+
+				b_kapaur = {
+					province = 16097
+
+					color = { 202 166 33 }
+				}
+				b_sumuri = {
+					# b_kaimana in vanilla
+					province = 12838
+
+					color = { 202 166 33 }
+				}
+			}
+			c_buruwai = {
+				color = { 202 146 33 }
+
+				b_buruwai = {
+					province = 15863
+
+					color = { 202 146 33 }
+				}
+				b_karas = {
+					province = 15870
+
+					color = { 202 146 33 }
+				}
+				b_kowiai = {
+					# b_weri in vanilla
+					province = 12839
+
+					color = { 202 146 33 }
+				}
+			}
+			c_irarutu = {
+				color = { 202 126 33 }
+
+				b_aroba = {
+					province = 16048
+
+					color = { 202 126 33 }
+				}
+				b_kuri = {
+					province = 16118
+
+					color = { 202 126 33 }
+				}
+			}
+			c_mairasi = {
+				color = { 202 106 33 }
+
+				b_mairasi = {
+					province = 15781
+
+					color = { 202 106 33 }
+				}
+				b_semimi = {
+					province = 15782
+
+					color = { 202 106 33 }
+				}
+				b_mer = {
+					province = 15957
+
+					color = { 202 106 33 }
 				}
 			}
 		}
