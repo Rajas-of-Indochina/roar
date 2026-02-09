@@ -24,16 +24,16 @@
 
 	#Crimes
 	doctrine = doctrine_homosexuality_accepted
-	doctrine = doctrine_adultery_men_accepted
-	doctrine = doctrine_adultery_women_accepted
+	doctrine = doctrine_adultery_men_shunned
+	doctrine = doctrine_adultery_women_shunned
 	doctrine = doctrine_kinslaying_extended_family_crime
 	doctrine = doctrine_deviancy_accepted
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
 	doctrine = doctrine_clerical_function_alms_and_pacification
-	doctrine = doctrine_clerical_gender_female_only
-	doctrine = doctrine_clerical_marriage_disallowed
+	doctrine = doctrine_clerical_gender_either
+	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
 
 	#Allow pilgrimages
@@ -44,6 +44,9 @@
 
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
+
+	# Austroasiatic Religion
+	doctrine = special_doctrine_is_austroasiatic_faith
 
 	traits = {
 		virtues = { temperate content honest patient }
@@ -59,46 +62,46 @@
 		HighGodName = kuy_animism_high_god_name
 		HighGodName2 = kuy_animism_high_god_name
 		HighGodNamePossessive = kuy_animism_high_god_name_possessive
-		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodNameSheHe = CHARACTER_SHEHE_THEY
 		HighGodHerselfHimself = CHARACTER_HIMSELF
-		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodHerHis = CHARACTER_HERHIS_THEIR
 		HighGodNameAlternate = kuy_animism_high_god_name_alternate
 		HighGodNameAlternatePossessive = kuy_animism_high_god_name_alternate_possessive
 
 		#Creator
 		CreatorName = kuy_animism_creator_god_name
 		CreatorNamePossessive = kuy_animism_creator_god_name_possessive
-		CreatorSheHe = CHARACTER_SHEHE_HE
-		CreatorHerHis = CHARACTER_HERHIS_HIS
-		CreatorHerHim = CHARACTER_HERHIM_HIM
+		CreatorSheHe = CHARACTER_SHEHE_THEY
+		CreatorHerHis = CHARACTER_HERHIS_THEIR
+		CreatorHerHim = CHARACTER_HERHIS_THEM
 
 		#HealthGod
 		HealthGodName = kuy_animism_health_god_name
 		HealthGodNamePossessive = kuy_animism_health_god_name_possessive
-		HealthGodSheHe = CHARACTER_SHEHE_HE
-		HealthGodHerHis = CHARACTER_HERHIS_HIS
-		HealthGodHerHim = CHARACTER_HERHIM_HIM
+		HealthGodSheHe = CHARACTER_SHEHE_THEY
+		HealthGodHerHis = CHARACTER_HERHIS_THEIR
+		HealthGodHerHim = CHARACTER_HERHIS_THEM
 
 		#FertilityGod
 		FertilityGodName = kuy_animism_fertility_god_name
 		FertilityGodNamePossessive = kuy_animism_fertility_god_name_possessive
-		FertilityGodSheHe = CHARACTER_SHEHE_SHE
-		FertilityGodHerHis = CHARACTER_HERHIS_HER
-		FertilityGodHerHim = CHARACTER_HERHIM_HER
+		FertilityGodSheHe = CHARACTER_SHEHE_THEY
+		FertilityGodHerHis = CHARACTER_HERHIS_THEIR
+		FertilityGodHerHim = CHARACTER_HERHIS_THEM
 
 		#WealthGod
 		WealthGodName = kuy_animism_wealth_god_name
 		WealthGodNamePossessive = kuy_animism_wealth_god_name_possessive
-		WealthGodSheHe = CHARACTER_SHEHE_HE
-		WealthGodHerHis = CHARACTER_HERHIS_HIS
-		WealthGodHerHim = CHARACTER_HERHIM_HIM
+		WealthGodSheHe = CHARACTER_SHEHE_THEY
+		WealthGodHerHis = CHARACTER_HERHIS_THEIR
+		WealthGodHerHim = CHARACTER_HERHIS_THEM
 
 		#HouseholdGod
 		HouseholdGodName = kuy_animism_household_god_name
 		HouseholdGodNamePossessive = kuy_animism_household_god_name_possessive
-		HouseholdGodSheHe = CHARACTER_SHEHE_HE
-		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
-		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+		HouseholdGodSheHe = CHARACTER_SHEHE_THEY
+		HouseholdGodHerHis = CHARACTER_HERHIS_THEIR
+		HouseholdGodHerHim = CHARACTER_HERHIS_THEM
 
 		#FateGod
 		FateGodName = kuy_animism_fate_god_name
@@ -110,57 +113,60 @@
 		#KnowledgeGod
 		KnowledgeGodName = kuy_animism_knowledge_god_name
 		KnowledgeGodNamePossessive = kuy_animism_knowledge_god_name_possessive
-		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
-		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
-		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+		KnowledgeGodSheHe = CHARACTER_SHEHE_THEY
+		KnowledgeGodHerHis = CHARACTER_HERHIS_THEIR
+		KnowledgeGodHerHim = CHARACTER_HERHIS_THEM
 
 		#WarGod
 		WarGodName = kuy_animism_war_god_name
 		WarGodNamePossessive = kuy_animism_war_god_name_possessive
-		WarGodSheHe = CHARACTER_SHEHE_HE
-		WarGodHerHis = CHARACTER_HERHIS_HIS
-		WarGodHerHim = CHARACTER_HERHIM_HIM
+		WarGodSheHe = CHARACTER_SHEHE_THEY
+		WarGodHerHis = CHARACTER_HERHIS_THEIR
+		WarGodHerHim = CHARACTER_HERHIS_THEM
 
 		#TricksterGod
 		TricksterGodName = kuy_animism_trickster_god_name
 		TricksterGodNamePossessive = kuy_animism_trickster_god_name_possessive
-		TricksterGodSheHe = CHARACTER_SHEHE_HE
-		TricksterGodHerHis = CHARACTER_HERHIS_HIS
-		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+		TricksterGodSheHe = CHARACTER_SHEHE_THEY
+		TricksterGodHerHis = CHARACTER_HERHIS_THEIR
+		TricksterGodHerHim = CHARACTER_HERHIS_THEM
 
 		#NightGod
 		NightGodName = kuy_animism_night_god_name
 		NightGodNamePossessive = kuy_animism_night_god_name_possessive
-		NightGodSheHe = CHARACTER_SHEHE_SHE
-		NightGodHerHis = CHARACTER_HERHIS_HER
-		NightGodHerHim = CHARACTER_HERHIM_HER
+		NightGodSheHe = CHARACTER_SHEHE_THEY
+		NightGodHerHis = CHARACTER_HERHIS_THEIR
+		NightGodHerHim = CHARACTER_HERHIS_THEM
 
 		#WaterGod
 		WaterGodName = kuy_animism_water_god_name
 		WaterGodNamePossessive = kuy_animism_water_god_name_possessive
-		WaterGodSheHe = CHARACTER_SHEHE_HE
-		WaterGodHerHis = CHARACTER_HERHIS_HIS
-		WaterGodHerHim = CHARACTER_HERHIM_HIM
+		WaterGodSheHe = CHARACTER_SHEHE_THEY
+		WaterGodHerHis = CHARACTER_HERHIS_THEIR
+		WaterGodHerHim = CHARACTER_HERHIS_THEM
 
 		PantheonTerm = religion_the_gods
 		PantheonTerm2 = religion_the_gods
 		PantheonTerm3 = religion_the_gods
 		PantheonTermHasHave = pantheon_term_have
 		GoodGodNames = {
-			kuy_animism_high_god_name
-			kuy_animism_high_god_name_alternate
-			kuy_animism_good_god_mubyasei
-			kuy_animism_good_god_abba_chi
-			kuy_animism_good_god_abba_sei
-			kuy_animism_good_god_abba_mullah
-			kuy_animism_good_god_mutsitsu
-			kuy_animism_good_god_tugantsu
-			kuy_animism_good_god_mupitha
+			kuy_animism_good_god_ahrets
+			kuy_animism_good_god_ancestors
+
+			#kuy_animism_high_god_name
+			#kuy_animism_high_god_name_alternate
+			#kuy_animism_good_god_mubyasei
+			#kuy_animism_good_god_abba_chi
+			#kuy_animism_good_god_abba_sei
+			#kuy_animism_good_god_abba_mullah
+			#kuy_animism_good_god_mutsitsu
+			#kuy_animism_good_god_tugantsu
+			#kuy_animism_good_god_mupitha
 		}
 		DevilName = kuy_animism_devil_name
 		DevilNamePossessive = kuy_animism_devil_name_possessive
-		DevilSheHe = CHARACTER_SHEHE_HE
-		DevilHerHis = CHARACTER_HERHIS_HIS
+		DevilSheHe = CHARACTER_SHEHE_THEY
+		DevilHerHis = CHARACTER_HERHIS_THEIR
 		DevilHerselfHimself = kuy_animism_devil_herselfhimself
 		EvilGodNames = {
 			kuy_animism_devil_name
@@ -208,13 +214,13 @@
 		NegativeAfterLife3 = kuy_animism_negative_afterlife
 		DeathDeityName = kuy_animism_death_name
 		DeathDeityNamePossessive = kuy_animism_death_name_possessive
-		DeathDeitySheHe = CHARACTER_SHEHE_HE
-		DeathDeityHerHis = CHARACTER_HERHIS_HIS
-		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+		DeathDeitySheHe = CHARACTER_SHEHE_THEY
+		DeathDeityHerHis = CHARACTER_HERHIS_THEIR
+		DeathDeityHerHim = CHARACTER_HERHIS_THEM
 		WitchGodName = kuy_animism_evil_god_dul
 		WitchGodNamePossessive = kuy_animism_evil_god_dul_possessive
 		WitchGodHerHis = CHARACTER_HERHIS_HER
-		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodSheHe = CHARACTER_SHEHE_THEY
 		WitchGodHerHim = CHARACTER_HERHIM_HER
 		WitchGodMistressMaster = mistress
 		WitchGodMotherFather = mother
@@ -235,11 +241,19 @@
 			holy_site = kengtung
 			holy_site = seponh
 
+			# RICE holy sites
+			#holy_site = angkor
+			#holy_site = khao_khlang_nai
+			#holy_site = preah_vihear
+			#holy_site = my_son
+			#holy_site = sukhothai
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_ancestor_worship
+			doctrine = tenet_eastern_syncretism
 		}
 	}
 }
