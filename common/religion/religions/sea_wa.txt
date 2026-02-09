@@ -1,7 +1,7 @@
 ﻿
 wa_religion = { # Folk religions of Wa peoples
 	family = rf_pagan
-	graphical_faith = pagan_gfx
+	graphical_faith = pagan_gfx   #graphical_faith = dharmic_gfx
 	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
@@ -11,27 +11,27 @@ wa_religion = { # Folk religions of Wa peoples
 	doctrine = doctrine_no_head
 	doctrine = doctrine_gender_male_dominated
 	doctrine = doctrine_pluralism_pluralistic
-	doctrine = doctrine_theocracy_temporal
+	doctrine = doctrine_theocracy_lay_clergy
 
 	#Marriage
 	doctrine = doctrine_polygamy
-	doctrine = doctrine_divorce_allowed
-	doctrine = doctrine_bastardry_none
+	doctrine = doctrine_divorce_approval
+	doctrine = doctrine_bastardry_all
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
 	doctrine = doctrine_homosexuality_shunned
-	doctrine = doctrine_adultery_men_shunned
-	doctrine = doctrine_adultery_women_shunned
+	doctrine = doctrine_adultery_men_accepted
+	doctrine = doctrine_adultery_women_accepted
 	doctrine = doctrine_kinslaying_extended_family_crime
 	doctrine = doctrine_deviancy_shunned
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_alms_and_pacification
-	doctrine = doctrine_clerical_gender_female_only
+	doctrine = doctrine_clerical_function_recruitment
+	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_disallowed
-	doctrine = doctrine_clerical_succession_spiritual_fixed_appointment
+	doctrine = doctrine_clerical_succession_temporal_appointment   #doctrine_clerical_succession_spiritual_fixed_appointment
 
 	#Allow pilgrimages
 	doctrine = doctrine_pilgrimage_encouraged
@@ -41,6 +41,9 @@ wa_religion = { # Folk religions of Wa peoples
 
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
+
+	# Austroasiatic Religion
+	doctrine = special_doctrine_is_austroasiatic_faith
 
 	traits = {
 		virtues = { temperate content honest patient }
@@ -227,7 +230,7 @@ wa_religion = { # Folk religions of Wa peoples
 		# Moba = Priest
 
 		wa_animism = {
-			color = { 0.6 0.89 0.63 }
+			color = { 58 69 25 }
 			icon = wa_animism
 			reformed_icon = wa_animism_reformed
 
@@ -237,23 +240,20 @@ wa_religion = { # Folk religions of Wa peoples
 			holy_site = hsenwi
 			holy_site = haripunjaya
 
+			# RICE Holy Sites
+			#holy_site = sukhothai
+			#holy_site = vien_chan
+			#holy_site = jinglong # danai
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_sanctity_of_nature
-			doctrine = tenet_gruesome_festivals
-
-			doctrine = doctrine_theocracy_lay_clergy
-			doctrine = doctrine_divorce_approval
-			doctrine = doctrine_bastardry_all
-
-			doctrine = doctrine_adultery_men_accepted
-			doctrine = doctrine_adultery_women_accepted
-
-			doctrine = doctrine_clerical_function_recruitment
-			doctrine = doctrine_clerical_gender_either
-			doctrine = doctrine_clerical_marriage_allowed
-			doctrine = doctrine_clerical_succession_temporal_appointment
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_gruesome_festivals
+			}
 		}
 	}
 }

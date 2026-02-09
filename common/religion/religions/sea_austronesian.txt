@@ -4,6 +4,7 @@
 	# https://en.wikipedia.org/wiki/Indigenous_Philippine_shrines_and_sacred_grounds
 
 	family = rf_pagan
+	graphical_faith = dharmic_gfx
 	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
@@ -212,9 +213,9 @@
 				DeathDeityHerHim = CHARACTER_HERHIM_HIM
 				WitchGodName = mentawai_animism_witch_god_name
 				WitchGodNamePossessive = mentawai_animism_witch_god_name_possessive
-				WitchGodHerHis = CHARACTER_HERHIS_HER
-				WitchGodSheHe = CHARACTER_SHEHE_SHE
-				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodHerHis = CHARACTER_HERHIS_HIS
+				WitchGodSheHe = CHARACTER_SHEHE_HE
+				WitchGodHerHim = CHARACTER_HERHIM_HIM
 				WitchGodMistressMaster = mistress
 				WitchGodMotherFather = mother
 
@@ -227,6 +228,13 @@
 			holy_site = lolomatua
 			holy_site = koho_buwabuwa
 			holy_site = pagai
+
+			# RICE Holy Sites
+			#holy_site = borobudur
+			#holy_site = muara_takus
+			#holy_site = riak_nan_berbedur
+			#holy_site = ar_kol
+			#holy_site = nakkavaram
 
 			doctrine = unreformed_faith_doctrine
 
@@ -384,16 +392,16 @@
 				NegativeAfterLife = nias_animism_negative_afterlife
 				NegativeAfterLife2 = nias_animism_negative_afterlife
 				NegativeAfterLife3 = nias_animism_negative_afterlife
-				DeathDeityName = nias_animism_death_name
-				DeathDeityNamePossessive = nias_animism_death_name_possessive
+				DeathDeityName = nias_animism_death_deity_name
+				DeathDeityNamePossessive = nias_animism_death_deity_name_possessive
 				DeathDeitySheHe = CHARACTER_SHEHE_HE
 				DeathDeityHerHis = CHARACTER_HERHIS_HIS
 				DeathDeityHerHim = CHARACTER_HERHIM_HIM
-				WitchGodName = nias_animism_witch_god_name
-				WitchGodNamePossessive = nias_animism_witch_god_name_possessive
-				WitchGodHerHis = CHARACTER_HERHIS_HER
-				WitchGodSheHe = CHARACTER_SHEHE_SHE
-				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodName = nias_animism_high_god_name
+				WitchGodNamePossessive = nias_animism_high_god_name_possessive
+				WitchGodHerHis = CHARACTER_HERHIS_HIS
+				WitchGodSheHe = CHARACTER_SHEHE_HE
+				WitchGodHerHim = CHARACTER_HERHIM_HIM
 				WitchGodMistressMaster = mistress
 				WitchGodMotherFather = mother
 
@@ -407,11 +415,22 @@
 			holy_site = simalungun
 			holy_site = batuwara
 
+			# RICE Holy Sites
+			#holy_site = borobudur
+			#holy_site = muara_takus
+			#holy_site = riak_nan_berbedur
+			#holy_site = ar_kol
+			#holy_site = nakkavaram
+
 			doctrine = unreformed_faith_doctrine
 
-			doctrine = tenet_headhunting
-			doctrine = tenet_ancestor_worship
 			doctrine = tenet_megaliths
+			doctrine = tenet_ancestor_worship
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_headhunting
+			}
 
 			doctrine = doctrine_adultery_men_crime
 			doctrine = doctrine_adultery_women_crime
@@ -424,7 +443,8 @@
 		}
 
 		umboh = { # Sama people
-			color = { 128 234 265 }
+			#color = { 128 234 265 } - old RoA colour
+			color = { 69 125 180 }
 			icon = umboh
 			reformed_icon = umboh_reformed
 
@@ -572,16 +592,16 @@
 				NegativeAfterLife = umboh_negative_afterlife
 				NegativeAfterLife2 = umboh_negative_afterlife
 				NegativeAfterLife3 = umboh_negative_afterlife
-				DeathDeityName = umboh_death_name
-				DeathDeityNamePossessive = umboh_death_name_possessive
+				DeathDeityName = umboh_death_deity_name
+				DeathDeityNamePossessive = umboh_death_deity_name_possessive
 				DeathDeitySheHe = CHARACTER_SHEHE_HE
 				DeathDeityHerHis = CHARACTER_HERHIS_HIS
 				DeathDeityHerHim = CHARACTER_HERHIM_HIM
-				WitchGodName = umboh_witch_god_name
-				WitchGodNamePossessive = umboh_witch_god_name_possessive
-				WitchGodHerHis = CHARACTER_HERHIS_HER
-				WitchGodSheHe = CHARACTER_SHEHE_SHE
-				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodName = umboh_trickster_god_name
+				WitchGodNamePossessive = umboh_trickster_god_name_possessive
+				WitchGodHerHis = CHARACTER_HERHIS_HIS
+				WitchGodSheHe = CHARACTER_SHEHE_HE
+				WitchGodHerHim = CHARACTER_HERHIM_HIM
 				WitchGodMistressMaster = mistress
 				WitchGodMotherFather = mother
 
@@ -595,9 +615,16 @@
 			holy_site = maanyan
 			holy_site = gunung_eteng
 
+			# RICE Holy Sites
+			#holy_site = iban
+			#holy_site = sukadana
+			#holy_site = borobudur
+			#holy_site = muara_takus
+			#holy_site = riak_nan_berbedur
+
 			doctrine = unreformed_faith_doctrine
 
-			doctrine = tenet_adaptive
+			doctrine = tenet_astrology   # tenet_adaptive
 			doctrine = tenet_esotericism
 			doctrine = tenet_ancestor_worship
 
@@ -611,88 +638,88 @@
 
 			localization = {
 				#HighGod
-				HighGodName = batak_animism_high_god_name
-				HighGodName2 = batak_animism_high_god_name
-				HighGodNamePossessive = batak_animism_high_god_name_possessive
+				HighGodName = batak_high_god_name
+				HighGodName2 = batak_high_god_name
+				HighGodNamePossessive = batak_high_god_name_possessive
 				HighGodNameSheHe = CHARACTER_SHEHE_HE
 				HighGodHerselfHimself = CHARACTER_HIMSELF
 				HighGodHerHis = CHARACTER_HERHIS_HIS
-				HighGodNameAlternate = batak_animism_high_god_name_alternate
-				HighGodNameAlternatePossessive = batak_animism_high_god_name_alternate_possessive
+				HighGodNameAlternate = batak_high_god_name_alternate
+				HighGodNameAlternatePossessive = batak_high_god_name_alternate_possessive
 
 				#Creator
-				CreatorName = batak_animism_creator_god_name
-				CreatorNamePossessive = batak_animism_creator_god_name_possessive
+				CreatorName = batak_creator_god_name
+				CreatorNamePossessive = batak_creator_god_name_possessive
 				CreatorSheHe = CHARACTER_SHEHE_HE
 				CreatorHerHis = CHARACTER_HERHIS_HIS
 				CreatorHerHim = CHARACTER_HERHIM_HIM
 
 				#HealthGod
-				HealthGodName = batak_animism_health_god_name
-				HealthGodNamePossessive = batak_animism_health_god_name_possessive
+				HealthGodName = batak_health_god_name
+				HealthGodNamePossessive = batak_health_god_name_possessive
 				HealthGodSheHe = CHARACTER_SHEHE_HE
 				HealthGodHerHis = CHARACTER_HERHIS_HIS
 				HealthGodHerHim = CHARACTER_HERHIM_HIM
 
 				#FertilityGod
-				FertilityGodName = batak_animism_fertility_god_name
-				FertilityGodNamePossessive = batak_animism_fertility_god_name_possessive
+				FertilityGodName = batak_fertility_god_name
+				FertilityGodNamePossessive = batak_fertility_god_name_possessive
 				FertilityGodSheHe = CHARACTER_SHEHE_SHE
 				FertilityGodHerHis = CHARACTER_HERHIS_HER
 				FertilityGodHerHim = CHARACTER_HERHIM_HER
 
 				#WealthGod
-				WealthGodName = batak_animism_wealth_god_name
-				WealthGodNamePossessive = batak_animism_wealth_god_name_possessive
+				WealthGodName = batak_wealth_god_name
+				WealthGodNamePossessive = batak_wealth_god_name_possessive
 				WealthGodSheHe = CHARACTER_SHEHE_HE
 				WealthGodHerHis = CHARACTER_HERHIS_HIS
 				WealthGodHerHim = CHARACTER_HERHIM_HIM
 
 				#HouseholdGod
-				HouseholdGodName = batak_animism_household_god_name
-				HouseholdGodNamePossessive = batak_animism_household_god_name_possessive
+				HouseholdGodName = batak_household_god_name
+				HouseholdGodNamePossessive = batak_household_god_name_possessive
 				HouseholdGodSheHe = CHARACTER_SHEHE_HE
 				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
 				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
 
 				#FateGod
-				FateGodName = batak_animism_fate_god_name
-				FateGodNamePossessive = batak_animism_fate_god_name_possessive
+				FateGodName = batak_fate_god_name
+				FateGodNamePossessive = batak_fate_god_name_possessive
 				FateGodSheHe = CHARACTER_SHEHE_IT
 				FateGodHerHis = CHARACTER_HERHIS_ITS
 				FateGodHerHim = CHARACTER_HERHIM_IT
 
 				#KnowledgeGod
-				KnowledgeGodName = batak_animism_knowledge_god_name
-				KnowledgeGodNamePossessive = batak_animism_knowledge_god_name_possessive
+				KnowledgeGodName = batak_knowledge_god_name
+				KnowledgeGodNamePossessive = batak_knowledge_god_name_possessive
 				KnowledgeGodSheHe = CHARACTER_SHEHE_HE
 				KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
 				KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
 
 				#WarGod
-				WarGodName = batak_animism_war_god_name
-				WarGodNamePossessive = batak_animism_war_god_name_possessive
+				WarGodName = batak_war_god_name
+				WarGodNamePossessive = batak_war_god_name_possessive
 				WarGodSheHe = CHARACTER_SHEHE_HE
 				WarGodHerHis = CHARACTER_HERHIS_HIS
 				WarGodHerHim = CHARACTER_HERHIM_HIM
 
 				#TricksterGod
-				TricksterGodName = batak_animism_trickster_god_name
-				TricksterGodNamePossessive = batak_animism_trickster_god_name_possessive
+				TricksterGodName = batak_trickster_god_name
+				TricksterGodNamePossessive = batak_trickster_god_name_possessive
 				TricksterGodSheHe = CHARACTER_SHEHE_HE
 				TricksterGodHerHis = CHARACTER_HERHIS_HIS
 				TricksterGodHerHim = CHARACTER_HERHIM_HIM
 
 				#NightGod
-				NightGodName = batak_animism_night_god_name
-				NightGodNamePossessive = batak_animism_night_god_name_possessive
+				NightGodName = batak_night_god_name
+				NightGodNamePossessive = batak_night_god_name_possessive
 				NightGodSheHe = CHARACTER_SHEHE_SHE
 				NightGodHerHis = CHARACTER_HERHIS_HER
 				NightGodHerHim = CHARACTER_HERHIM_HER
 
 				#WaterGod
-				WaterGodName = batak_animism_water_god_name
-				WaterGodNamePossessive = batak_animism_water_god_name_possessive
+				WaterGodName = batak_water_god_name
+				WaterGodNamePossessive = batak_water_god_name_possessive
 				WaterGodSheHe = CHARACTER_SHEHE_HE
 				WaterGodHerHis = CHARACTER_HERHIS_HIS
 				WaterGodHerHim = CHARACTER_HERHIM_HIM
@@ -702,67 +729,67 @@
 				PantheonTerm3 = religion_the_gods
 				PantheonTermHasHave = pantheon_term_have
 				GoodGodNames = {
-					batak_animism_high_god_name
-					batak_animism_high_god_name_alternate
+					batak_high_god_name
+					batak_high_god_name_alternate
 				}
-				DevilName = batak_animism_devil_name
-				DevilNamePossessive = batak_animism_devil_name_possessive
+				DevilName = batak_devil_name
+				DevilNamePossessive = batak_devil_name_possessive
 				DevilSheHe = CHARACTER_SHEHE_HE
 				DevilHerHis = CHARACTER_HERHIS_HIS
-				DevilHerselfHimself = batak_animism_devil_herselfhimself
+				DevilHerselfHimself = batak_devil_herselfhimself
 				EvilGodNames = {
-					batak_animism_devil_name
+					batak_devil_name
 				}
-				HouseOfWorship = batak_animism_house_of_worship
-				HouseOfWorship2 = batak_animism_house_of_worship
-				HouseOfWorship3 = batak_animism_house_of_worship
-				HouseOfWorshipPlural = batak_animism_house_of_worship_plural
-				ReligiousSymbol = batak_animism_religious_symbol
-				ReligiousSymbol2 = batak_animism_religious_symbol
-				ReligiousSymbol3 = batak_animism_religious_symbol
-				ReligiousText = batak_animism_religious_text
-				ReligiousText2 = batak_animism_religious_text
-				ReligiousText3 = batak_animism_religious_text
-				ReligiousHeadName = batak_animism_religious_head_title
-				ReligiousHeadTitleName = batak_animism_religious_head_title_name
-				DevoteeMale = batak_animism_devotee
-				DevoteeMalePlural = batak_animism_devotee_plural
-				DevoteeFemale = batak_animism_devotee
-				DevoteeFemalePlural = batak_animism_devotee_plural
-				DevoteeNeuter = batak_animism_devotee
-				DevoteeNeuterPlural = batak_animism_devotee_plural
-				PriestMale = batak_animism_priest
-				PriestMalePlural = batak_animism_priest_plural
-				PriestFemale = batak_animism_priest
-				PriestFemalePlural = batak_animism_priest_plural
-				PriestNeuter = batak_animism_priest
-				PriestNeuterPlural = batak_animism_priest_plural
-				AltPriestTermPlural = batak_animism_priest_term_plural
-				BishopMale = batak_animism_bishop
-				BishopMalePlural = batak_animism_bishop_plural
-				BishopFemale = batak_animism_bishop
-				BishopFemalePlural = batak_animism_bishop_plural
-				BishopNeuter = batak_animism_bishop
-				BishopNeuterPlural = batak_animism_bishop_plural
-				DivineRealm = batak_animism_divine_realm
-				DivineRealm2 = batak_animism_divine_realm
-				DivineRealm3 = batak_animism_divine_realm
-				PositiveAfterLife = batak_animism_positive_afterlife
-				PositiveAfterLife2 = batak_animism_positive_afterlife
-				PositiveAfterLife3 = batak_animism_positive_afterlife
-				NegativeAfterLife = batak_animism_negative_afterlife
-				NegativeAfterLife2 = batak_animism_negative_afterlife
-				NegativeAfterLife3 = batak_animism_negative_afterlife
-				DeathDeityName = batak_animism_death_name
-				DeathDeityNamePossessive = batak_animism_death_name_possessive
+				HouseOfWorship = batak_house_of_worship
+				HouseOfWorship2 = batak_house_of_worship
+				HouseOfWorship3 = batak_house_of_worship
+				HouseOfWorshipPlural = batak_house_of_worship_plural
+				ReligiousSymbol = batak_religious_symbol
+				ReligiousSymbol2 = batak_religious_symbol
+				ReligiousSymbol3 = batak_religious_symbol
+				ReligiousText = batak_religious_text
+				ReligiousText2 = batak_religious_text
+				ReligiousText3 = batak_religious_text
+				ReligiousHeadName = batak_religious_head_title
+				ReligiousHeadTitleName = batak_religious_head_title_name
+				DevoteeMale = batak_devotee
+				DevoteeMalePlural = batak_devotee_plural
+				DevoteeFemale = batak_devotee
+				DevoteeFemalePlural = batak_devotee_plural
+				DevoteeNeuter = batak_devotee
+				DevoteeNeuterPlural = batak_devotee_plural
+				PriestMale = batak_priest
+				PriestMalePlural = batak_priest_plural
+				PriestFemale = batak_priest
+				PriestFemalePlural = batak_priest_plural
+				PriestNeuter = batak_priest
+				PriestNeuterPlural = batak_priest_plural
+				AltPriestTermPlural = batak_priest_term_plural
+				BishopMale = batak_bishop
+				BishopMalePlural = batak_bishop_plural
+				BishopFemale = batak_bishop
+				BishopFemalePlural = batak_bishop_plural
+				BishopNeuter = batak_bishop
+				BishopNeuterPlural = batak_bishop_plural
+				DivineRealm = batak_divine_realm
+				DivineRealm2 = batak_divine_realm
+				DivineRealm3 = batak_divine_realm
+				PositiveAfterLife = batak_positive_afterlife
+				PositiveAfterLife2 = batak_positive_afterlife
+				PositiveAfterLife3 = batak_positive_afterlife
+				NegativeAfterLife = batak_negative_afterlife
+				NegativeAfterLife2 = batak_negative_afterlife
+				NegativeAfterLife3 = batak_negative_afterlife
+				DeathDeityName = batak_death_deity_name
+				DeathDeityNamePossessive = batak_death_deity_name_possessive
 				DeathDeitySheHe = CHARACTER_SHEHE_HE
 				DeathDeityHerHis = CHARACTER_HERHIS_HIS
 				DeathDeityHerHim = CHARACTER_HERHIM_HIM
-				WitchGodName = batak_animism_witch_god_name
-				WitchGodNamePossessive = batak_animism_witch_god_name_possessive
-				WitchGodHerHis = CHARACTER_HERHIS_HER
-				WitchGodSheHe = CHARACTER_SHEHE_SHE
-				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodName = batak_high_god_name
+				WitchGodNamePossessive = batak_high_god_name_possessive
+				WitchGodHerHis = CHARACTER_HERHIS_HIS
+				WitchGodSheHe = CHARACTER_SHEHE_HE
+				WitchGodHerHim = CHARACTER_HERHIM_HIM
 				WitchGodMistressMaster = mistress
 				WitchGodMotherFather = mother
 
@@ -776,6 +803,13 @@
 			holy_site = batuwara
 			holy_site = tahan
 
+			# RICE Holy Sites
+			#holy_site = nakkavaram
+			#holy_site = sukadana
+			#holy_site = borobudur
+			#holy_site = muara_takus
+			#holy_site = riak_nan_berbedur
+
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_esotericism
@@ -785,8 +819,8 @@
 
 		malayic = {
 			color = { 0.3 0.2 0.2 }
-			icon = kepercayaan
-			reformed_icon = kepercayaan_reformed
+			icon = Kepuyangan
+			reformed_icon = Kepuyangan_reformed
 
 			localization = {
 				#HighGod
@@ -932,16 +966,16 @@
 				NegativeAfterLife = malayic_negative_afterlife
 				NegativeAfterLife2 = malayic_negative_afterlife
 				NegativeAfterLife3 = malayic_negative_afterlife
-				DeathDeityName = malayic_death_name
-				DeathDeityNamePossessive = malayic_death_name_possessive
+				DeathDeityName = malayic_death_deity_name
+				DeathDeityNamePossessive = malayic_death_deity_name_possessive
 				DeathDeitySheHe = CHARACTER_SHEHE_HE
 				DeathDeityHerHis = CHARACTER_HERHIS_HIS
 				DeathDeityHerHim = CHARACTER_HERHIM_HIM
-				WitchGodName = malayic_witch_god_name
-				WitchGodNamePossessive = malayic_witch_god_name_possessive
-				WitchGodHerHis = CHARACTER_HERHIS_HER
-				WitchGodSheHe = CHARACTER_SHEHE_SHE
-				WitchGodHerHim = CHARACTER_HERHIM_HER
+				WitchGodName = malayic_trickster_god_name
+				WitchGodNamePossessive = malayic_trickster_god_name_possessive
+				WitchGodHerHis = CHARACTER_HERHIS_HIS
+				WitchGodSheHe = CHARACTER_SHEHE_HE
+				WitchGodHerHim = CHARACTER_HERHIM_HIM
 				WitchGodMistressMaster = mistress
 				WitchGodMotherFather = mother
 
@@ -955,12 +989,20 @@
 			holy_site = mount_bromo
 			holy_site = kerinci
 
+			# RICE Holy Sites
+			#holy_site = iban
+			#holy_site = sukadana
+			#holy_site = borobudur
+			#holy_site = muara_takus
+			#holy_site = riak_nan_berbedur
+
 			doctrine = unreformed_faith_doctrine
 			doctrine = doctrine_concubines
 
 			doctrine = tenet_esotericism
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_communal_identity
+			doctrine = tenet_eastern_syncretism
 		}
 	}
 }

@@ -7,12 +7,16 @@
  fervor_gain_RICE_restored_idol_zun_aruna:0 "Restored the Idol of Zun on Mount Aruna"
  fervor_gain_RICE_closed_aswan_temple:0 "Demonstrated faith's superiority by formally closing temples in Aswan"
  fervor_gain_RICE_reopened_aswan_temple:0 "Formally reopened temples in Aswan so they can be utilized again"
- 
+ RICE_incompatible_doctrine_monotheism_trigger:0 "Incompatible with the [doctrine|E] $doctrine_monotheist_name$"
+ RICE_incompatible_doctrine_polytheism_trigger:0 "Incompatible with the [doctrine|E] $doctrine_polytheist_name$"
+
  # Holy Sites
  holy_site_harran_name:1 "Harran"
  holy_site_harran_effect_name:0 "From [holy_site|E] #weak ($holy_site_harran_name$)#!"
  holy_site_giza_name:1 "Giza"
  holy_site_giza_effect_name:0 "From [holy_site|E] #weak ($holy_site_giza_name$)#!"
+ #holy_site_baalbek_name:1 "Baalbek"
+ #holy_site_baalbek_effect_name:0 "From [holy_site|E] #weak ($holy_site_baalbek_name$)#!"
  holy_site_petra_name:1 "Petra"
  holy_site_petra_effect_name:0 "From [holy_site|E] #weak ($holy_site_petra_name$)#!"
  holy_site_fuerteventura_name:0 "Erbanne"
@@ -30,6 +34,8 @@
  holy_site_beipi_effect_name:0 "From [holy_site|E] #weak ($holy_site_beipi_name$)#!"
  holy_site_bida_name:0 "Bida"
  holy_site_bida_effect_name:0 "From [holy_site|E] #weak ($holy_site_bida_name$)#!"
+ #holy_site_igbo_name:0 "Aguleri"
+ #holy_site_igbo_effect_name:0 "From [holy_site|E] #weak ($holy_site_igbo_name$)#!"
  holy_site_popa_name:0 "Mount Popa"
  holy_site_popa_effect_name:0 "From [holy_site|E] #weak ($holy_site_popa_name$)#!"
  holy_site_zwegabin_name:0 "Mount Zwegabin"
@@ -55,13 +61,29 @@
  holy_site_ayn_farrah_effect_name:0 "From [holy_site|E] #weak ($holy_site_ayn_farrah_name$)#!"
  holy_site_abwab_name:0 "Shendi"
  holy_site_abwab_effect_name:0 "From [holy_site|E] #weak ($holy_site_abwab_name$)#!"
- 
+ # Southeast Asia stuff
+ #holy_site_MAL_gelanggi_name:0 "Gelanggi"
+ #holy_site_MAL_gelanggi_effect_name:0 "From [holy_site|E] #weak ($holy_site_MAL_gelanggi_name$)#!"
+ holy_site_MAL_semantan_name:0 "Semantan"
+ holy_site_MAL_semantan_effect_name:0 "From [holy_site|E] #weak ($holy_site_MAL_semantan_name$)#!"
+ holy_site_srihatta_name:0 "Srihatta"
+ holy_site_srihatta_effect_name:0 "From [holy_site|E] #weak ($holy_site_srihatta_name$)#!"
+ holy_site_goalpara_name:0 "Goalpara"
+ holy_site_goalpara_effect_name:0 "From [holy_site|E] #weak ($holy_site_goalpara_name$)#!"
+ holy_site_kamarupanagara_name:0 "Kamarupanagara"
+ holy_site_kamarupanagara_effect_name:0 "From [holy_site|E] #weak ($holy_site_kamarupanagara_name$)#!"
+ holy_site_tripura_name:0 "Tripura"
+ holy_site_tripura_effect_name:0 "From [holy_site|E] #weak ($holy_site_tripura_name$)#!"
+ holy_site_chau_phong_name:0 "Phong Chau"
+ holy_site_chau_phong_effect_name_name:0 "From [holy_site|E] #weak ($holy_site_chau_phong_effect_name$)#!"
+
  # Semitic (formerly Helleno-Semitic)
  semitic_religion:1 "Semitic"
  semitic_religion_adj:1 "Semitic"
  semitic_religion_adherent:1 "Semitic"
  semitic_religion_adherent_plural:1 "Semitics"
  semitic_religion_desc:1 "The peoples of the Middle East have a long tradition of polytheism. Some of their pantheons have blended with that of other peoples they have come into contact with over the centuries, such as the Greeks and Romans."
+ #semitic_religion_desc:1 "In the Classical Era, Graeco-Roman religion syncretized with the native polytheistic beliefs of the Semitic peoples living in the Levant and northern Mesopotamia following centuries of rule under the Diadochi and later the Roman Empire."
  harranian_pagan:0 "Harranism"
  harranian_pagan_adj:0 "Harranian"
  harranian_pagan_adherent:1 "Harranian"
@@ -546,12 +568,28 @@
  inuit_health_god_name_possessive:0 "Pinga's"
  inuit_fertility_god_name:0 "Pinga"
  inuit_fertility_god_name_possessive:0 "Pinga's"
+ #inuit_wealth_god_name:0 "Mwari"
+ #inuit_wealth_god_name_possessive:0 "Mwari's"
+ #inuit_household_god_name:0 "Mwari"
+ #inuit_household_god_name_possessive:0 "Mwari's"
  inuit_fate_god_name:0 "Nanook"
  inuit_fate_god_name_possessive:0 "Nanook's"
+ #inuit_knowledge_god_name:0 "Mwari"
+ #inuit_knowledge_god_name_possessive:0 "Mwari's"
+ #inuit_war_god_name:0 "Mwari"
+ #inuit_war_god_name_possessive:0 "Mwari's"
  inuit_trickster_god_name:0 "Amaguq"
  inuit_trickster_god_name_possessive:0 "Amaguq's"
+ #inuit_night_god_name:0 "Mwari"
+ #inuit_night_god_name_possessive:0 "Mwari's"
  inuit_water_god_name:0 "Sedna"
  inuit_water_god_name_possessive:0 "Sedna's" 
+ #inuit_house_of_worship:0 "Temple" 
+ #inuit_house_of_worship_plural:0 "Temples"
+ #inuit_witchgodname:0 "Mwari" 
+ #inuit_witchgodname_possessive:0 "Mwari's" 
+ #inuit_devil_name:0 "Mahaha"
+ #inuit_devil_name_possessive:0 "Mahaha"
 
  # Algonquian
  algonquian_religion:1 "Anishinaabeg"
@@ -683,7 +721,7 @@
 
  # Tsonga
  tsonga_pagan:0 "Shikwembuism"
- tsonga_pagan_adj:0 "Shikwembuist
+ tsonga_pagan_adj:0 "Shikwembuist"
  tsonga_pagan_adherent:1 "Shikwembuist"
  tsonga_pagan_adherent_plural:0 "Shikwembuists"
  tsonga_pagan_desc:0 "While Shikwembu is the supreme being of the Tsonga, he is not directly worshipped. Instead, religious practice focuses on venerating the spirits of the ancestors. Spirit possession is one way for the ancestors to communicate with the living; when this happens, the possessed person must learn to accommodate the spirit, rather than exorcise it."
@@ -861,7 +899,8 @@
  # GAME COCNEPTS
  game_concept_yazata:0 "Yazata"
  game_concept_yazatas:0 "Yazatas"
- game_concept_yazatas_desc:0 "The Yazatas are those who are worthy of worship or veneration in $zoroastrianism_religion$. To some, they are distinct deities; to others, they are emanations of the supreme god.\n\n$zoroastrianism_religion_adj$ [faiths|E] can have different [doctrines|E] representing the set of Yazatas that have been important to them due to reasons of history, culture, geography, and contact with nearby belief systems.\n\nExcept for those whose [faith|E] has the $rice_zoroastrian_no_yazatas_doctrine_name$ [doctrine|E], all $zoroastrianism_religion_adj$ [rulers|E] have access to a [decision|E] to $RICE_khwarezm_worship_yazata$, which gives you a temporary [character_modifier|E] with benefits based on which Yazata you choose. The available Yazatas depends on your Yazata [doctrine|E].\n\nCertain Yazata [doctrines|E] even grant you access to a [decision|E] to Establish a [zoroastrian_cult_center|E], which provide further benefits for worshipping Yazatas."
+ game_concept_yazata_desc:0 "The Yazatas are those who are worthy of worship or veneration in $zoroastrianism_religion$. To some, they are distinct deities; to others, they are emanations of the supreme god.\n\n$zoroastrianism_religion_adj$ [faiths|E] can have different [doctrines|E] representing the set of Yazatas that have been important to them due to reasons of history, culture, geography, and contact with nearby belief systems.\n\nExcept for those whose [faith|E] has the $rice_zoroastrian_no_yazatas_doctrine_name$ [doctrine|E], all $zoroastrianism_religion_adj$ [rulers|E] have access to a [decision|E] to $RICE_khwarezm_worship_yazata$, which gives you a temporary [character_modifier|E] with benefits based on which Yazata you choose. The available Yazatas depends on your Yazata [doctrine|E].\n\nCertain Yazata [doctrines|E] even grant you access to a [decision|E] to Establish a [zoroastrian_cult_center|E], which provide further benefits for worshipping Yazatas."
+ game_concept_yazatas_desc:0 "$game_concept_yazata_desc$"
  game_concept_zoroastrian_cult_centers_short:0 "Cult Centers"
  game_concept_zoroastrian_cult_center_short:0 "Cult Center"
  game_concept_zoroastrian_cult_centers:0 "Local Zoroastrian Cult Centers"
@@ -875,7 +914,7 @@
  rice_doctrine_buddhist_canon_name:0 "Buddhist Canon"
  rice_doctrine_buddhist_canon_desc:0 "It is important to recognize which teachings are authentic, and do not contradict the word of the Buddha. These will be compiled into collections, the core of which are the #italic tripitaka#! (meaning "Triple Baskets")."
  rice_mahayana_canon_doctrine_name:0 "Mahayana Canon" # Dazangjing
- rice_mahayana_canon_doctrine_desc:0 "The Great Storage of Scriptures (#italic Dazangjing#! in Chinese), also known as the Chinese or East Asian Canon, is a loose canon of Buddhist texts accepted by Mahayana sects of Buddhism in East Asia. It includes various Mahayana sutras, as well as texts from early schools of Buddhism that are not part of or were discarded from the Pali Canon, such as the canons of the Sarvastivada and Dharmaguptaka schools."
+ rice_mahayana_canon_doctrine_desc:0 "The Great Storage of Scriptures (#italic Dazangjing#! in Chinese), also known as the Chinese or East Asian Canon, is a loose canon of Buddhist texts accepted by Mahayana sects of Buddhism in East Asia. It includes various Mahayana [Glossary( 'sutras', 'BUDDHIST_SUTRAS_GLOSS' )], as well as texts from early schools of Buddhism that are not part of or were discarded from the Pali Canon, such as the canons of the Sarvastivada and Dharmaguptaka schools."
  rice_theravada_canon_doctrine_name:0 "Pali Canon" # Pali
  rice_theravada_canon_doctrine_desc:0 "The Pali Tripitaka is the canon of Buddhist texts accepted by the Theravada sects of Buddhism in Southeast Asia. Traditionally, the first Pali Canon was believed to have been written down at the Fourth Buddhist Council in Sri Lanka in 29 BCE, although the canon was still being revised and changed for several centuries afterwards, as Theravada, Mahayana, Vajrayana, and other early Buddhist schools exchanged ideas."
  rice_vajrayana_canon_doctrine_name:0 "Tantric Canon" # Kangyur and Tengyur
@@ -1007,7 +1046,7 @@
  special_doctrine_is_west_iranian_faith_name:0 "West Iranian Orthopraxy"
  is_west_iranian_faith_name:0 "$special_doctrine_is_west_iranian_faith_name$"
  special_doctrine_is_west_iranian_faith_desc:0 "Thanks to their isolation and rugged terrain, the highlands and valleys of northern Mesopotamia, Western Iran, and eastern Anatolia are home to many heterodox religions. Though they may have different religious origins, these sects share many practices, beliefs, and ideas."
- doctrine_parameter_hostility_override_special_doctrine_is_west_iranian_faith:0 "Non-Eastern [faiths|E] with the $special_doctrine_is_west_iranian_faith_name$ [doctrine|E] are considered [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V] instead of $hostility_hostile_tooltippable$ or $hostility_evil_tooltippable$"
+ doctrine_parameter_hostility_override_special_doctrine_is_west_iranian_faith:0 "[faiths|E] with the $special_doctrine_is_west_iranian_faith_name$ [doctrine|E] are considered [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V] instead of $hostility_hostile_tooltippable$ or $hostility_evil_tooltippable$"
 
  # Pagan rice_doctrine_horse_sacrifice
  special_doctrine_rice_doctrine_horse_sacrifice_name:0 "Sacred Horses"

@@ -221,8 +221,12 @@
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ancestor_worship
-			doctrine = tenet_headhunting
 			doctrine = tenet_communal_identity
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_cranial_trophies
+				fallback_doctrine = tenet_headhunting
+			}
 		}
 	}
 }
