@@ -5,15 +5,22 @@
 	culture = bali
 	religion = shaivism
 
-	holding = castle_holding
+	holding = temple_citadel_holding
+	special_building_slot = besakih_temple_01
+
+	# History
+	865.1.1 = {
+		special_building = besakih_temple_01
+	}
+	# 1040.1.1 = { - vanilla change, needs to get checked
+	#	religion = vaishnavism
+	# }
 }
 18380 = { # b_karangasem
-	holding = church_holding
-
-	special_building_slot = pura_besakih_01
+	holding = none
 }
 18379 = { # b_buleleng
-	holding = none
+	holding = city_holding
 }
 
 ### c_lombok
@@ -21,7 +28,7 @@
 	culture = bali
 	religion = shaivism
 
-	holding = castle_holding
+	holding = temple_citadel_holding
 }
 16183 = { # b_saksak
 	holding = none
@@ -37,7 +44,7 @@
 	culture = samawa
 	religion = shaivism
 
-	holding = castle_holding
+	holding = tribal_holding
 }
 16664 = { # b_sanghyang_api
 	holding = none
@@ -51,7 +58,7 @@
 	culture = samawa
 	religion = shaivism
 
-	holding = castle_holding
+	holding = tribal_holding
 }
 18378 = { # b_sowal
 	holding = none
@@ -65,7 +72,7 @@
 	culture = samawa
 	religion = shaivism
 
-	holding = castle_holding
+	holding = tribal_holding
 }
 18363 = { # b_jereweh
 	holding = none
