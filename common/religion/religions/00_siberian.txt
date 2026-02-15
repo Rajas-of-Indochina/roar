@@ -223,6 +223,7 @@
 
 	faiths = {
 		siberian_pagan = {
+			# to represent beliefs of Ob-Ugric people, such as Khanty and Mansi
 			color = { 230 230 230 }
 
 			holy_site = perm
@@ -230,6 +231,9 @@
 			holy_site = surgut
 			holy_site = ob
 			holy_site = olkhon
+
+			# Maybe make this holy site instead of Olkhon?
+			#holy_site = bardak
 
 			doctrine = unreformed_faith_doctrine
 
@@ -246,14 +250,17 @@
 			reformed_icon = siberian_reformed
 		}
 		kuptyng = {
+			# to represent beliefs of various "Samoyedic" people like Nenets, Kott and Solqumyt people
 			color = { 55 95 21 }
 
 			holy_site = uybat
 			holy_site = irbey
 			holy_site = bardak
-			# holy_site = narym
 			holy_site = kachu
 			holy_site = olkhon
+
+			# We need to add some holy sites in Nenet territories
+			#holy_site = narym
 
 			doctrine = unreformed_faith_doctrine
 
