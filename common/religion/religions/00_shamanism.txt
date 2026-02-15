@@ -208,24 +208,26 @@
 
 	faiths = {
 		shamanism = {
+			# replaces old RoA abkaism
 			color = { 23 67 56 }
 			icon = shamanism
 			reformed_icon = reformed_shamanism
 
 			doctrine = unreformed_faith_doctrine
 
-			holy_site = tarayka
-			holy_site = molihewen
-			holy_site = yam_alin
-			holy_site = chupka
-			holy_site = yizhou
+			# Vanilla holy sites
+			#holy_site = tarayka
+			#holy_site = molihewen
+			#holy_site = yam_alin
+			#holy_site = chupka
+			#holy_site = yizhou
 
 			# RoA holy sites
-			#holy_site = ashi
-			#holy_site = doldykan
-			#holy_site = iskra
-			#holy_site = charkir_mudun
-			#holy_site = tymersol
+			holy_site = ashi
+			holy_site = doldykan
+			holy_site = iskra
+			holy_site = charkir_mudun
+			holy_site = tymersol
 
 			#Generic pagan tenets
 			doctrine = tenet_ancestor_worship
@@ -238,6 +240,7 @@
 			}
 		}
 		bugaism = {
+			# form of shamanism practiced by Evenk
 			color = { 41 177 86 }
 			icon = bugaism_02
 			reformed_icon = bugaism_02_reformed
@@ -263,6 +266,7 @@
 			doctrine = doctrine_clerical_gender_either
 		}
 		yzng = {
+			# form of shamanism practiced by Nivkh
 			color = { 161 72 224 }
 			icon = nivkh
 			reformed_icon = nivkh_reformed
