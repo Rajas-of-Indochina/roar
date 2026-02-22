@@ -29536,7 +29536,7 @@ e_siberia = {
 
 					color = { 55 50 45 }
 				}
-				b_qom_tigey = {
+				b_qom-tigey = {
 					province = 1462
 
 					color = { 55 50 45 }
@@ -30158,7 +30158,7 @@ e_siberia = {
 				color = { 83 142 6 }
 
 				cultural_names = {
-					name_list_buryat = cn_eulkhe
+					name_list_buryat = cn_eulkhe  #Eülge - we should incorporate the name
 					name_list_russian = cn_lena
 				}
 
@@ -30168,7 +30168,7 @@ e_siberia = {
 					color = { 83 142 6 }
 
 					cultural_names = {
-						name_list_buryat = cn_eulkhe
+						name_list_buryat = cn_eulkhe  #Eülge - we should incorporate the name
 						name_list_russian = cn_lena
 					}
 				}
@@ -30277,13 +30277,16 @@ e_siberia = {
 	}
 }
 
- #e_sayan = {
- #	# temporarily disabled so we can properly re-map stuff
- #	color = { 150 70 24 }
- #	can_create = {
- #		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
- #	}
- #}
+#e_sayan = {
+	# temporarily disabled so we can properly re-map stuff
+	#color = { 150 70 24 }
+
+	#capital =
+
+	#can_create = {
+	#	rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	#}
+#}
 
 e_mongolia = {
 	color = { 90 90 240 }
@@ -31323,8 +31326,6 @@ e_mongolia = {
 		}
 		d_tofalar = {
 			color = { 138 138 15 }
-
-			capital = c_tofalar
 
 			c_zhanbiaoze_TEMP = {
 				color = { 184 184 20 }
