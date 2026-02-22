@@ -1,0 +1,159 @@
+﻿lambert_de_chalon = {
+	name = "Lambert"
+	dynasty = 100240
+	martial = 7
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = french
+	father = 40322
+	mother = 7996
+	930.1.2 = {
+		birth = "900.1.2"
+	}
+	979.2.22 = {
+		death = "956.1.2"
+	}
+}
+
+lothaire_the_lame = {
+	name = "Lothaire"
+	dynasty = 25061
+	religion = "catholic"
+	culture = french
+	trait = clubfooted
+	trait = devoted
+	father = 90104 #(King Charles the Bald)
+	mother = 167830 #(Irminitrude of Orléans)
+
+	848.1.2 = {
+		give_nickname = "nick_the_lame"
+		birth = "848.1.2"
+	}
+	865.1.2 = {
+		death = "865.1.2"
+	}
+}
+
+#Holy Fury/Iron Century
+261391 = {
+	name = "Melisende"
+	dynasty = 660
+	female = yes
+	religion = catholic
+	culture = french
+	father = 144952
+	mother = 168046
+	917.1.1 = {
+		birth = yes
+	}
+	963.1.1 = {
+		death = yes
+	}
+}
+261392 = {
+	name = "HervE_"
+	dynasty = 1062608
+	religion = catholic
+	culture = french
+	915.1.1 = {
+		birth = yes
+	}
+	934.1.1 = {
+		add_spouse = 261391
+	}
+	955.1.1 = {
+		death = yes
+	}
+}
+261393 = {
+	name = "HervE_"
+	dynasty = 1062608
+	religion = catholic
+	culture = french
+	father = 261392
+	mother = 261391
+	935.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+heric = {
+	name = "HE_ric"
+	religion = catholic
+	culture = french
+	890.1.1 = {
+		birth = yes
+	}
+	948.1.1 = {
+		death = yes
+	}
+}
+manasses_de_rethel = {
+	name = "ManassE_s"
+	religion = catholic
+	culture = french
+	dynasty = 20035
+	920.1.1 = {
+		birth = yes
+	}
+	989.1.1 = {
+		death = yes
+	}
+}
+bovo = {
+	name = "Bovo"
+	religion = catholic
+	culture = saxon
+	880.1.1 = {
+		birth = yes
+	}
+	947.1.1 = {
+		death = yes
+	}
+}
+
+aubry_i_de_macon = {
+	name = "Alberic" #aka Aubry
+	religion = catholic
+	culture = occitan
+	dynasty = narbonne_macon
+
+	885.1.1 = {
+		birth = yes
+	}
+	943.1.1 = {
+		death = yes
+	}
+}
+lietald_ii_de_macon = {
+	name = "LiE_tald"
+	religion = catholic
+	culture = occitan
+	dynasty = narbonne_macon
+	father = aubry_i_de_macon
+
+	900.1.1 = {
+		birth = yes
+	}
+	965.1.1 = {
+		death = yes
+	}
+}
+aubry_ii_de_macon = {
+	name = "AlbE_ric" #aka Aubry
+	religion = catholic
+	culture = french
+	dynasty = narbonne_macon
+	father = lietald_ii_de_macon
+
+	935.1.1 = {
+		birth = yes
+	}
+	982.1.1 = {
+		death = yes
+	}
+}

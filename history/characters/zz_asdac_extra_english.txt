@@ -1,0 +1,119 @@
+﻿7284 = {
+	name = "Egidia"
+	female = yes
+	dynasty = 4037
+	martial = 7
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman"
+	trait = lazy
+	trait = humble
+	trait = gluttonous
+	trait = education_diplomacy_1
+	father = 204021
+	1177.1.1 = {
+		birth = "1177.1.1"
+	}
+	1248.11.5 = {
+		death = "1248.11.5"
+	}
+}
+
+william_cantilupe = {
+	name = "William"
+	dynasty = cantilupe
+	martial = 7
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 7
+	religion = "catholic"
+	culture = "norman"
+	trait = education_stewardship_4
+	1159.1.1 = {
+		birth = yes
+	}
+	1187.1.1 = {
+		add_spouse = mazilia_de_braci
+	}
+	1198.1.1 = {
+		employer = 204514
+		give_council_position = councillor_steward
+	}
+	1239.4.7 = {
+		death = yes
+	}
+}
+mazilia_de_braci = {
+	name = "Mazilia"
+	female = yes
+	dynasty = braci
+	religion = "catholic"
+	culture = "norman"
+	1165.1.1 = { #fictional
+		birth = yes
+	}
+	1198.1.1 = {
+		employer = 204514
+	}
+	1245.1.1 = { #fictional
+		death = yes
+	}
+}
+william_ii_cantilupe = {
+	name = "William"
+	dynasty = cantilupe
+	religion = "catholic"
+	culture = "english"
+	father = william_cantilupe
+	mother = mazilia_de_braci
+	1187.1.1 = { #fictional
+		birth = yes
+	}
+	1198.1.1 = {
+		employer = 204514
+	}
+	1251.2.22 = {
+		death = yes
+	}
+}
+walter_cantilupe = {
+	name = "Walter"
+	dynasty = cantilupe
+	religion = "catholic"
+	culture = "english"
+	trait = education_learning_3
+	father = william_cantilupe
+	mother = mazilia_de_braci
+	1195.1.1 = {
+		birth = yes
+	}
+	1198.1.1 = {
+		employer = 204514
+	}
+	1251.2.22 = {
+		death = yes
+	}
+}
+isabel_cantilupe = {
+	name = "Isabel"
+	female = yes
+	dynasty = cantilupe
+	religion = "catholic"
+	culture = "english"
+	father = william_cantilupe
+	mother = mazilia_de_braci
+	1189.1.1 = {
+		birth = yes
+	}
+	1198.1.1 = {
+		employer = 204514
+	}
+	1214.1.1 = {
+		add_spouse = thurstan_de_montfort
+	}
+	1251.2.22 = {
+		death = yes
+	}
+}
