@@ -680,6 +680,27 @@ mount_bromo = {
 		fertility = 0.2
 	}
 }
+
+semar_cave = {
+	county = c_panaraban
+	barony = b_garung
+
+	character_modifier = {
+		name = holy_site_semar_cave_effect_name
+		learning_per_piety_level = 1
+		monthly_piety_gain_mult = 0.2
+	}
+}
+
+slamet = {
+	county = c_nusalarang
+
+	character_modifier = {
+		name = holy_site_slamet_effect_name
+		clergy_opinion = 5
+		monthly_prestige_gain_mult = 0.1
+	}
+}
 ### ### ### ###
 
 
