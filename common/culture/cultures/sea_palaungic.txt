@@ -19,7 +19,7 @@ bugan = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -52,7 +52,7 @@ khasi = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -91,7 +91,7 @@ khmu = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -122,7 +122,7 @@ palaung = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -135,6 +135,7 @@ palaung = {
 }
 
 wa = {
+	# Representing the Lawa, Lavo, other Wa/Lawa peoples, and catch-all for other Palaungic groups too for now
 	color = wa
 
 	ethos = ethos_communal
@@ -144,17 +145,23 @@ wa = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_isolationist
-		tradition_storytellers
-		tradition_staunch_traditionalists
-		tradition_disloyal_subjects
+		tradition_hereditary_hierarchy 		# Cybr: Highly stratified, importance on superiority of ruling lineages.
+		tradition_mystical_ancestors 		# Cybr: Ruling lineages have elaborate genealogies.
+		tradition_welcoming 		# Cybr: Their alliances and mixing with Mon and later Tai peoples played an important role in the region's history. They also played a role as political middlemen between the urban lowlanders (Mon/Tai) and upland hill tribes.
+		tradition_metal_craftsmanship 		# Cybr: Known for craft skills, especially as ironsmiths
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_palaungic
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26

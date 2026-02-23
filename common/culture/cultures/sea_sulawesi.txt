@@ -27,7 +27,7 @@ bugis = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -35,7 +35,8 @@ bugis = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -51,14 +52,21 @@ bungku = {
 	traditions = {
 		tradition_religion_blending
 		tradition_hill_dwellers
-		tradition_jungle_warfare
+		tradition_jungle_warriors
+		tradition_practiced_pirates
 	}
 
-	name_list = name_list_sulawesi
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_maritime_mercantilism
+	}
+
+	name_list = name_list_bugis
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -66,7 +74,8 @@ bungku = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -87,11 +96,11 @@ gorontalo = {
 		tradition_jungle_warfare
 	}
 
-	name_list = name_list_filipino
+	name_list = name_list_bisayan
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -99,7 +108,8 @@ gorontalo = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -122,7 +132,7 @@ kaili = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -130,7 +140,8 @@ kaili = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -155,7 +166,7 @@ makassar = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -163,7 +174,8 @@ makassar = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -186,7 +198,7 @@ mandar = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -194,7 +206,8 @@ mandar = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -219,7 +232,7 @@ minahasa = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -227,7 +240,8 @@ minahasa = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -250,7 +264,7 @@ munan = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -258,7 +272,8 @@ munan = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -281,7 +296,7 @@ pamona = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -289,7 +304,8 @@ pamona = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -312,7 +328,7 @@ salua = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -320,7 +336,52 @@ salua = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
+tolaki = {
+	# Speakers of the Tolaki language - used to be the dominant group in Southeast Sulawesi
+	color = { 16 48 69 }
+
+	ethos = ethos_stoic 
+	heritage = heritage_austronesian
+	language = language_tomini
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_charitable 	# Cybr: Tolaki principle of Samaturu, solidarity and helping each other
+		tradition_equitable 	# Cybr: Tolaki tradition of assemblies, customary law, and deliberation to resolve conflicts
+	}
+
+	# Cybr: Rice cultivators
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_maritime_mercantilism
+	}
+
+	name_list = name_list_bugis
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -343,7 +404,7 @@ tomini = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -351,7 +412,8 @@ tomini = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -380,7 +442,7 @@ toraja = {
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx austronesian_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -388,8 +450,8 @@ toraja = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		2 = asian_malay
-		10 = asian_austronesian
+		20 = asian_malay
+		80 = asian_austronesian
 	}
 }
 
@@ -406,3 +468,4 @@ toraja = {
 		#5  = asian_southeast_asian_4
 	#}
 #}
+#clothing_gfx = { austronesian_clothing_gfx }

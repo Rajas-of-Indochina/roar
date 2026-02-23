@@ -9,18 +9,29 @@ kuy = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_lords_of_the_elephant
-		tradition_collective_lands
-		tradition_sacred_groves
-		tradition_equal_inheritance
+		tradition_metal_craftsmanship 	# Cybr: In later centuries, the Kuy were famous ironworkers, which may have went as far back as the Angkorian period.
+		tradition_jungle_dwellers 		# Cybr: They lived in the upland jungles in the Cambodia/Thailand/Laos border region.
+		tradition_warrior_culture 		# Cybr: In later Cambodian sources, Kuay militia were renowned as fierce warriors.
+		tradition_lords_of_the_elephant # Cybr: Wikipedia mentions them being known as skilled elephant trainers, but I couldn't find any scholarly sources corroborating this.
+
+		# old RoA traditions
+		#tradition_collective_lands
+		#tradition_sacred_groves
+		#tradition_equal_inheritance
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_khmer
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -52,8 +63,8 @@ katang = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -84,8 +95,8 @@ bruso = {
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -108,16 +119,16 @@ mnong = {
 	traditions = {
 		tradition_storytellers
 		tradition_sacred_groves
-		tradition_lords_of_the_elephant
 		tradition_collective_lands
+		tradition_lords_of_the_elephant
 	}
 
 	name_list = name_list_khmer
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -140,16 +151,16 @@ stieng = {
 	traditions = {
 		tradition_storytellers
 		tradition_sacred_groves
-		tradition_lords_of_the_elephant
 		tradition_collective_lands
+		tradition_lords_of_the_elephant
 	}
 
 	name_list = name_list_khmer
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -172,16 +183,22 @@ bahnar = {
 	traditions = {
 		tradition_storytellers
 		tradition_sacred_groves
-		tradition_lords_of_the_elephant
 		tradition_collective_lands
+		tradition_lords_of_the_elephant
+	}
+
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_khmer
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx austronesian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -199,3 +216,4 @@ bahnar = {
 		#5 = asian_southeast_asian_3
 		#5 = asian_southeast_asian_4
 	#}
+#clothing_gfx = { austronesian_clothing_gfx }
