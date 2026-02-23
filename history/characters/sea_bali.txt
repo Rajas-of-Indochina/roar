@@ -1,0 +1,423 @@
+﻿################################################
+# START OF WARMADEWA DYNASTY
+# aka Varmadeva ; kings of Bali
+# They may not have been all related to each other
+# {
+
+bali_warmadewa_01 = {
+	# first recorded king of Bali
+	name = "Kesari"   # Sri Kesari Warmadewa Singhadwala (Besakih)
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"  #mahayana in vanilla?
+
+	# History
+	851.1.1 = {	#unknown
+		birth = yes
+	}
+	# 882-914 -> king of Bali
+	914.1.1 = {	#estimated
+		death = yes
+	}
+}
+
+bali_warmadewa_02 = {
+	name = "Ugrasena"   # Sang Ratu Ugrasena
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"
+	father = bali_warmadewa_01  #familial connection done for sake of dynasty tree
+
+	# History
+	884.1.1 = {	#unknown
+		birth = yes
+	}
+	# 914-942 -> king of Bali
+	942.1.1 = {	#estimated
+		death = yes
+	}
+}
+
+bali_warmadewa_03 = {
+	name = "Tabanendra"   # Sri Tabanendra Warmadewa
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"
+	father = bali_warmadewa_02  #familial connection done for sake of dynasty tree
+
+	# History
+	919.1.1 = {	#unknown
+		birth = yes
+	}
+	# 942-961 -> king of Bali
+	961.1.1 = {	#possible
+		death = yes
+	}
+}
+
+bali_warmadewa_04 = {
+	name = "Indrajayasingha"   # Sri Indrajayasingha/Candrabhayasingha Warmadewa
+	#AKA: Candrabhayasingha
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"
+	father = bali_warmadewa_03  #familial connection done for sake of dynasty tree
+
+	# History
+	924.1.1 = {	#unknown
+		birth = yes
+	}
+	# 961-975 -> king of Bali
+	975.1.1 = {	#unknown
+		death = yes
+	}
+}
+
+bali_warmadewa_05 = {
+	name = "Janasadhu"   # Sri Janasadhu Warmadewa
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"
+	father = bali_warmadewa_04  #familial connection done for sake of dynasty tree
+
+	# History
+	946.1.1 = {	#unknown
+		birth = yes
+	}
+	# 975-983 -> King of Bali
+	983.1.1 = {	#possible
+		death = yes
+	}
+}
+
+#Sri wijaya Mahadewi, queen of Bali from 983 to 989 - in javanese file
+
+bali_warmadewa_06 = {
+	name = "Udayana"   # Sri Udayana Warmadewa
+	#AKA: Dharma Udayana
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"
+	father = bali_warmadewa_05  #familial connection done for sake of dynasty tree
+	mother = javanese_ishana_19  #familial connection done for sake of dynasty tree
+
+	# History
+	960.1.1 = {	#unknown
+		birth = yes
+	}
+	# 989-1011 -> King of Bali
+	990.1.1 = {
+		add_spouse = javanese_ishana_05
+	}
+	1011.1.1 = {	#possible
+		death = yes
+	}
+}
+
+bali_warmadewa_07 = {
+	# Queen of Bali with uknown relation to Warmadewa or Ishana dynasties
+	name = "Ajnadewi"   # Sri Ajnadewi
+	female = yes
+	#dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "shaivism"
+
+	# History
+	975.1.1 = {	#unknown
+		birth = yes
+	}
+	# 1016-1022 -> Queen of Bali
+	1038.1.1 = {	#unknown
+		death = yes
+	}
+}
+
+#Airlangga, set in Ishana dynasty, bro of Marakata Pangkaja & Anak Wungsu
+
+bali_warmadewa_08 = {
+	name = "Marakata_Pangkaja"
+	#AKA: Dharmawangsa Wardhana Marakatapangkaja
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "vaishnavism"
+	father = bali_warmadewa_06	#Udayana
+	mother = javanese_ishana_05	#Mahendradatta Ishana
+	trait = education_stewardship_3
+
+	# History
+	993.1.1 = { #unknown, after Airlangga
+		birth = yes
+	}
+	1025.1.1 = {	#likely
+		death = yes
+	}
+}
+
+bali_warmadewa_09 = {
+	name = "Anak_Wungsu"
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "vaishnavism"
+	father = bali_warmadewa_06	#Udayana
+	mother = javanese_ishana_05	#Mahendradatta Ishana
+	trait = compassionate
+	trait = generous
+
+	# History
+	1000.1.1 = {	#unknown
+		birth = yes
+	}
+	1025.1.1 = {
+		add_spouse = bali_warmadewa_09a
+	}
+	1077.1.1 = {	#likely
+		death = yes
+	}
+}
+
+bali_warmadewa_09a = {	#wife of Anak Wungsu
+	name = "Batari_Mandul"
+	female = yes
+	culture = "bali"
+	religion = "vaishnavism"
+	trait = infertile
+
+	# History
+	1005.1.1 = {	#unknown
+		birth = yes
+	}
+	1069.1.1 = {	#unknown
+		death = yes
+	}
+}
+
+bali_warmadewa_10 = {
+	name = "Walaprabhu"   # Sri Maharaja Walaprabhu
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "vaishnavism"
+	trait = generous
+	father = bali_warmadewa_08  #familial connection done for sake of dynasty tree
+
+	# History
+	1043.1.1 = {	#unknown
+		birth = yes
+	}
+	1088.1.1 = {	#unknown
+		death = yes
+	}
+}
+
+bali_warmadewa_11 = {
+	name = "Laksmidhara"
+	#AKA: Sri Maharaja Sakalendujirana Laksmidhara Wijayottungadewi
+	female = yes
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "vaishnavism"
+	father = bali_warmadewa_10  #familial connection done for sake of dynasty tree
+
+	# History
+	1056.1.1 = {	#unknown
+		birth = yes
+	}
+	1115.1.1 = {	#unknown
+		death = yes
+	}
+}
+
+bali_warmadewa_12 = {
+	name = "Suradhipa"   # Sri Suradhipa
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "vaishnavism"
+
+	# History
+	1071.1.1 = {	#unknown
+		birth = yes
+	}
+	# 1115-1119 -> King of Bali
+	1119.1.1 = {	#possibly
+		death = yes
+	}
+}
+
+######## Jaya "dynasty", may be offshoot or different name of Warmadewa dyn, or might just be completely the same
+bali_warmadewa_13 = {
+	name = "Jayasakti"   # Sri Jayasakti
+	dynasty = bali_warmadewa
+	culture = "bali"
+	religion = "vaishnavism"
+	father = bali_warmadewa_12  #familial connection done for sake of dynasty tree
+
+	# History
+	1094.1.1 = {	#unknown
+		birth = yes
+	}
+	# 1133-1150 -> King of Bali
+	1133.1.1 = {
+		dynasty_house = house_warmadewa_jaya
+	}
+	1150.1.1 = {	#tentative
+		death = yes
+	}
+}
+
+bali_warmadewa_14 = {
+	name = "Ragajaya"   # Sri Maharaja Sri Ragajaya
+	dynasty_house = house_warmadewa_jaya
+	culture = "bali"
+	religion = "vaishnavism"
+	father = bali_warmadewa_13  #familial connection done for sake of dynasty tree
+
+	# History
+	1126.1.1 = {	#unknown
+		birth = yes
+	}
+	# 1150-1178 -> King of Bali
+	1178.1.1 = {	#tentative
+		death = yes
+	}
+}
+
+bali_warmadewa_15 = {
+	name = "Jayapangus"   # Sri Maharaja Jayapangus 
+	dynasty_house = house_warmadewa_jaya
+	culture = "bali"
+	religion = "vaishnavism"
+	trait = education_learning_3
+	trait = just
+	father = bali_warmadewa_14  #familial connection done for sake of dynasty tree
+
+	# History
+	1128.1.1 = {	#unknown
+		birth = yes
+	}
+	1150.1.1 = {
+		add_spouse = sea_bali_jayapangus_spouse
+		effect = {
+			learn_language = language_min_chinese
+		}
+	}
+	# 1178-1181 -> King of Bali
+	1181.1.1 = {	#possible
+		death = yes
+	}
+}
+
+bali_warmadewa_16 = {
+	name = "Arjayadengjayaketana"
+	#AKA: Sri Maharaja Sri Arjaryya Dengjayaketana
+	female = yes
+	dynasty_house = house_warmadewa_jaya
+	culture = "bali"
+	religion = "vaishnavism"
+	father = bali_warmadewa_15	#possibly
+	mother = sea_bali_jayapangus_spouse	#possibly
+
+	# History
+	1151.1.1 = {	#unknown
+		birth = yes
+	}
+	# 1181-1200 -> Queen of Bali
+	1200.1.1 = {	#possibly
+		death = yes
+	}
+}
+
+# }
+# END OF WARMADEWA DYNASTY
+################################################
+
+
+### New RoA Bali characters ###
+bali_warmadewa_17 = {
+	# son and co-king with his mother Arjayadengjayaketana
+	name = "Ekajayalancana"
+	#AKA: Śri Maharaja Ekajayalancana, son of Arjaryya Dengjayaketana
+	dynasty_house = house_warmadewa_jaya
+	culture = "bali"
+	faith = "shaivism"
+	mother = bali_warmadewa_16
+
+	1181.1.1 = {	#unknown
+		birth = yes
+	}
+	# reigned alongside his mother
+	1200.1.1 = {	#possibly
+		death = yes
+	}
+}
+
+sea_bali_jayapangus_spouse = {
+	name = "Kang_Cing_Wie"
+	female = yes
+	culture = min
+	faith = zhengyi
+
+	1130.1.1 = { # Fictional date
+		birth = yes
+	}
+	1181.1.1 = { # Fictional date
+		death = yes
+	}
+}
+
+sea_bali_01 = {
+	# legendary ruler of Bali
+	name = "Ki_Kayu_Selem"
+	religion = "shaivism"
+	culture = "bali"
+	dynasty = "dynn_kayuselem"
+
+	797.1.1 = { # Fictional date
+		birth = yes
+	}
+	897.1.1 = { # Fictional date
+		death = yes
+	}
+}
+
+sea_bali_lombok_01 = {
+	# placeholder(?)
+	name = "Wiranagara"
+	culture = "bali"
+	faith = "shaivism"
+
+	841.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+#bali015 = {
+#	# fictional character - crossed out for now
+#	name = "Khatwangga"
+#	dynasty = "dynn_warmadewa"
+#	culture = "bali"
+#	faith = "shaivism"
+#	1070.1.1 = { # Fictional date
+#		birth = yes
+#	}
+#	# Fictional reign dates 1101-1115
+#	1115.1.1 = { # Fictional date
+#		death = yes
+#	}
+#}
+#bali_warmadewa_12a = {
+#	# fictional character - crossed out for now
+#	name = "Suryawikrama"
+#	dynasty = bali_warmadewa
+#	#culture = "bali"
+#	faith = "shaivism"
+#	father = bali_warmadewa_12
+#	1119.1.1 = { # Fictional date
+#		birth = yes
+#	}
+#	# Fictional reign dates 1119-1133
+#	1133.1.1 = { # Fictional date
+#		death = yes
+#	}
+#}

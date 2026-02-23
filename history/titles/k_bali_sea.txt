@@ -1,0 +1,408 @@
+k_bali_sea = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	# Warmadewa
+	882.1.1 = {
+		holder = bali_warmadewa_01	#Sri Kesari WARMADEWA
+		liege = k_bali_sea
+	}
+	914.1.1 = {
+		holder = bali_warmadewa_02	#Ugrasena WARMADEWA
+	}
+	945.1.1 = {
+		holder = bali_warmadewa_03	#Tabanendra WARMADEWA
+	}
+	960.1.1 = {	#co-regent
+		holder = bali_warmadewa_04	#Indrajayasingha (co-regent) WARMADEWA
+	}
+	975.1.1 = {
+		holder = bali_warmadewa_05	#Janasadhu WARMADEWA
+	}
+	983.1.1 = {
+		holder = javanese_ishana_19	#queen Sri Wijaya Mahadewi not Warmadewa, maybe from Srivijaya
+	}
+	989.1.1 = {
+		holder = bali_warmadewa_06	#Dharma Udayana WARMADEWA (husband of previous)
+	}
+	1011.1.1 = {
+		holder = javanese_ishana_05	#queen Gunapriya Dharmapatni aka Mahendradatta ISHANA
+	}
+	1016.1.1 = {
+		holder = bali_warmadewa_07	#Sri Ajnadewi WARMADEWA?
+	}
+	1022.1.1 = {
+		holder = bali_warmadewa_08	#Marakata pangkaja WARMADEWA
+		# should be made tributary/vassal of Airlangga ISHANA
+	}
+	1049.1.1 = {
+		holder = bali_warmadewa_09	#Anak Wungsu WARMADEWA (young bro of Airlangga)
+	}
+	1078.1.1 = {
+		holder = bali_warmadewa_10	#Sri Maharaja Walaprabhu
+	}
+	1088.1.1 = {
+		holder = bali_warmadewa_11	#Sri Maharaja Sakalendukirana Laksmidhara wijayottunggadewi
+	}
+	1115.1.1 = {
+		holder = bali_warmadewa_12	#Sri Suradhipa
+	}
+	# 1119 - unconfirmed ruler
+	# Jaya dynasty
+	1133.1.1 = {
+		holder = bali_warmadewa_13	#Jayasakti
+	}
+	1150.1.1 = {
+		holder = bali_warmadewa_14	#Ragajaya
+	}
+	1178.1.1 = {
+		holder = bali_warmadewa_15	#Jayapangus
+	}
+	1181.1.1 = {
+		holder = bali_warmadewa_16	#Arjayadengjayaketana
+	}
+}
+
+# d_bali_sea
+c_bali_sea = {
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 13 }
+
+	848.1.1 = {
+		government = mandala_government
+		holder = sea_bali_01
+	}
+	#
+	882.1.1 = {
+		holder = bali_warmadewa_01	#Sri Kesari WARMADEWA
+		liege = k_bali_sea
+	}
+	914.1.1 = {
+		holder = bali_warmadewa_02	#Ugrasena WARMADEWA
+	}
+	945.1.1 = {
+		holder = bali_warmadewa_03	#Tabanendra WARMADEWA
+	}
+	960.1.1 = {	#co-regent
+		holder = bali_warmadewa_04	#Indrajayasingha (co-regent) WARMADEWA
+	}
+	975.1.1 = {
+		holder = bali_warmadewa_05	#Janasadhu WARMADEWA
+	}
+	983.1.1 = {
+		holder = javanese_ishana_19	#queen Sri Wijaya Mahadewi not Warmadewa, maybe from Srivijaya
+	}
+	989.1.1 = {
+		holder = bali_warmadewa_06	#Dharma Udayana WARMADEWA (husband of previous)
+	}
+	1011.1.1 = {
+		holder = javanese_ishana_05	#queen Gunapriya Dharmapatni aka Mahendradatta ISHANA
+	}
+	1016.1.1 = {
+		holder = bali_warmadewa_07	#Sri Ajnadewi WARMADEWA?
+	}
+	1022.1.1 = {
+		holder = bali_warmadewa_08	#Marakata pangkaja WARMADEWA
+		# should be made tributary/vassal of Airlangga ISHANA
+	}
+	1049.1.1 = {
+		holder = bali_warmadewa_09	#Anak Wungsu WARMADEWA (young bro of Airlangga)
+	}
+	1078.1.1 = {
+		holder = bali_warmadewa_10	#Sri Maharaja Walaprabhu
+	}
+	1088.1.1 = {
+		holder = bali_warmadewa_11	#Sri Maharaja Sakalendukirana Laksmidhara wijayottunggadewi
+	}
+	1115.1.1 = {
+		holder = bali_warmadewa_12	#Sri Suradhipa
+	}
+	# 1119 - unconfirmed ruler
+	# Jaya dynasty
+	1133.1.1 = {
+		holder = bali_warmadewa_13	#Jayasakti
+	}
+	1150.1.1 = {
+		holder = bali_warmadewa_14	#Ragajaya
+	}
+	1178.1.1 = {
+		holder = bali_warmadewa_15	#Jayapangus
+	}
+	1181.1.1 = {
+		holder = bali_warmadewa_16	#Arjayadengjayaketana
+	}
+}
+
+c_lombok = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	860.1.1 = {
+		holder = sea_bali_lombok_01
+	}
+    #
+	882.1.1 = {
+		holder = bali_warmadewa_01	#Sri Kesari WARMADEWA
+		liege = k_bali_sea
+	}
+	914.1.1 = {
+		holder = bali_warmadewa_02	#Ugrasena WARMADEWA
+	}
+	945.1.1 = {
+		holder = bali_warmadewa_03	#Tabanendra WARMADEWA
+	}
+	960.1.1 = {	#co-regent
+		holder = bali_warmadewa_04	#Indrajayasingha (co-regent) WARMADEWA
+	}
+	975.1.1 = {
+		holder = bali_warmadewa_05	#Janasadhu WARMADEWA
+	}
+	983.1.1 = {
+		holder = javanese_ishana_19	#queen Sri Wijaya Mahadewi not Warmadewa, maybe from Srivijaya
+	}
+	989.1.1 = {
+		holder = bali_warmadewa_06	#Dharma Udayana WARMADEWA (husband of previous)
+	}
+	1011.1.1 = {
+		holder = javanese_ishana_05	#queen Gunapriya Dharmapatni aka Mahendradatta ISHANA
+	}
+	1016.1.1 = {
+		holder = bali_warmadewa_07	#Sri Ajnadewi WARMADEWA?
+	}
+	1022.1.1 = {
+		holder = bali_warmadewa_08	#Marakata pangkaja WARMADEWA
+		# should be made tributary/vassal of Airlangga ISHANA
+	}
+	1049.1.1 = {
+		holder = bali_warmadewa_09	#Anak Wungsu WARMADEWA (young bro of Airlangga)
+	}
+	1078.1.1 = {
+		holder = bali_warmadewa_10	#Sri Maharaja Walaprabhu
+	}
+	1088.1.1 = {
+		holder = bali_warmadewa_11	#Sri Maharaja Sakalendukirana Laksmidhara wijayottunggadewi
+	}
+	1115.1.1 = {
+		holder = bali_warmadewa_12	#Sri Suradhipa
+	}
+	# 1119 - unconfirmed ruler
+	# Jaya dynasty
+	1133.1.1 = {
+		holder = bali_warmadewa_13	#Jayasakti
+	}
+	1150.1.1 = {
+		holder = bali_warmadewa_14	#Ragajaya
+	}
+	1178.1.1 = {
+		holder = bali_warmadewa_15	#Jayapangus
+	}
+	1181.1.1 = {
+		holder = bali_warmadewa_16	#Arjayadengjayaketana
+	}
+}
+
+
+d_bima = {
+	860.1.1 = {
+		holder = bima001
+	}
+	890.1.1 = {
+		holder = bima002
+	}
+	920.1.1 = {
+		holder = bima003
+	}
+	950.1.1 = {
+		holder = bima004
+	}
+	980.1.1 = {
+		holder = bima005
+	}
+	1010.1.1 = {
+		holder = bima006
+	}
+	1040.1.1 = {
+		holder = bima007
+	}
+	1070.1.1 = {
+		holder = bima008
+	}
+	1100.1.1 = {
+		holder = bima009
+	}
+	1130.1.1 = {
+		holder = bima010
+	}
+	1160.1.1 = {
+		holder = bima011
+	}
+	1190.1.1 = {
+		holder = bima012
+	}
+	1220.1.1 = {
+		holder = bima013
+	}
+	1250.1.1 = {
+		holder = bima014
+	}
+	1280.1.1 = {
+		holder = bima015
+	}
+	1310.1.1 = {
+		holder = bima016
+	}
+	1340.1.1 = {
+		holder = bima017
+	}
+	1370.1.1 = {
+		holder = bima018
+	}
+}
+
+c_bima = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	860.1.1 = {
+		holder = bima001
+	}
+	890.1.1 = {
+		holder = bima002
+	}
+	920.1.1 = {
+		holder = bima003
+	}
+	950.1.1 = {
+		holder = bima004
+	}
+	980.1.1 = {
+		holder = bima005
+	}
+	1010.1.1 = {
+		holder = bima006
+	}
+	1040.1.1 = {
+		holder = bima007
+	}
+	1070.1.1 = {
+		holder = bima008
+	}
+	1100.1.1 = {
+		holder = bima009
+	}
+	1130.1.1 = {
+		holder = bima010
+	}
+	1160.1.1 = {
+		holder = bima011
+	}
+	1190.1.1 = {
+		holder = bima012
+	}
+	1220.1.1 = {
+		holder = bima013
+	}
+	1250.1.1 = {
+		holder = bima014
+	}
+	1280.1.1 = {
+		holder = bima015
+	}
+	1310.1.1 = {
+		holder = bima016
+	}
+	1340.1.1 = {
+		holder = bima017
+	}
+	1370.1.1 = {
+		holder = bima018
+	}
+}
+
+c_dompo = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	860.1.1 = {
+		holder = bima001
+	}
+	890.1.1 = {
+		holder = bima002
+	}
+	920.1.1 = {
+		holder = bima003
+	}
+	950.1.1 = {
+		holder = bima004
+	}
+	980.1.1 = {
+		holder = bima005
+	}
+	1010.1.1 = {
+		holder = bima006
+	}
+	1040.1.1 = {
+		holder = bima007
+	}
+	1070.1.1 = {
+		holder = bima008
+	}
+	1100.1.1 = {
+		holder = bima009
+	}
+	1130.1.1 = {
+		holder = bima010
+	}
+	1160.1.1 = {
+		holder = bima011
+	}
+	1190.1.1 = {
+		holder = bima012
+	}
+	1220.1.1 = {
+		holder = bima013
+	}
+	1250.1.1 = {
+		holder = bima014
+	}
+	1280.1.1 = {
+		holder = bima015
+	}
+	1310.1.1 = {
+		holder = bima016
+	}
+	1340.1.1 = {
+		holder = bima017
+	}
+	1370.1.1 = {
+		holder = bima018
+	}
+}
+
+c_samawa = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	848.1.1 = {
+		holder = sea_samawa_01
+	}
+    #
+    930.1.1 = {
+        holder = samawa_01_fic
+        liege = k_bali_sea
+    }
+    #
+	1060.1.1 = {
+		holder = samawa_02_fic
+	}
+    #
+	1170.1.1 = {
+		holder = samawa_03_fic
+	}
+}

@@ -1,25 +1,27 @@
 ﻿# k_bali_sea
 ## d_bali_sea ###################################
 ### c_bali_sea
-18368 = { # b_gianyar
+18368 = {	# Gianyar
 	# name based on Gianyar Regency
 	culture = bali
 	religion = shaivism
 
 	holding = temple_citadel_holding
+
 	special_building_slot = besakih_temple_01	# technically in Karangasem but moved here due to province borders
 	special_building = besakih_temple_01	# built in antiquity
 
 	# History
-	# 1040.1.1 = { - vanilla change, needs to get checked
-	#	religion = vaishnavism
-	# }
+	1040.1.1 = {
+		# vanilla change - should be checked if it is accurate
+		religion = vaishnavism
+	}
 }
-18380 = { # b_karangasem
+18380 = {	# Karangasem
 	# name based on Karangasem Regency
 	holding = none
 }
-18379 = { # b_buleleng
+18379 = {	# Buleleng
 	# name based on Buleleng Regency
 	holding = city_holding
 }
