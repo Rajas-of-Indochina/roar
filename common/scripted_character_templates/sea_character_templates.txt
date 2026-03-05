@@ -1,0 +1,1812 @@
+accolade_idealist_character = {
+	age = { 16 35 }
+	random_traits = yes
+	
+	random_traits_list = {
+		count = 1
+		compassionate = {}
+		forgiving = {}
+		trusting = {}
+		generous = {}
+	}
+	random_traits_list = {
+		count = 1
+		lustful = {}
+		arbitrary = {}
+		impatient = {}
+		arrogant = {}
+		stubborn = {}
+		diligent = {}
+		temperate = {}
+		zealous = {}
+		brave = {}
+		honest = {}
+		just = {}
+		patient = {}
+		ambitious = {}
+		gregarious = {}
+		compassionate = {}
+		forgiving = {}
+		trusting = {}
+		generous = {}
+	}
+	random_traits_list = {
+		education_diplomacy_1 = { weight = { base = 35 } }
+		education_diplomacy_2 = { weight = { base = 35 } }
+		education_diplomacy_3 = { weight = { base = 20 } }
+		education_diplomacy_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		lifestyle_hunter = {}
+		gallant = {}
+		diplomat = {}
+		loyal = {}
+		improvident = {}
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		tourney_participant = { }
+	}
+	prowess = { min_guest_template_skill 16 }
+	gender_female_chance = root_soldier_female_chance
+	after_creation = {
+		random = {
+			chance = 5
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 20
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 20
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 10
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = lifestyle_hunter
+			TRACK = hunter
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+
+accolade_charmer_character = {
+	age = { 16 35 }
+	random_traits = yes
+	
+	random_traits_list = {
+		count = 1
+		lustful = {}
+	}
+	random_traits_list = {
+		count = 1
+		lustful = {}
+		wrathful = {}
+		arbitrary = {}
+		impatient = {}
+		arrogant = {}
+		stubborn = {}
+		diligent = {}
+		zealous = {}
+		brave = {}
+		honest = {}
+		patient = {}
+		ambitious = {}
+		gregarious = {}
+		deceitful = {}
+		compassionate = {}
+		forgiving = {}
+		trusting = {}
+		generous = {}
+		sadistic = {}
+		vengeful = {}
+		callous = {}
+		greedy = {}
+	}
+	random_traits_list = {
+		education_intrigue_1 = { weight = { base = 35 } }
+		education_intrigue_2 = { weight = { base = 35 } }
+		education_intrigue_3 = { weight = { base = 20 } }
+		education_intrigue_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		gallant = {}
+		seducer = {}
+		fecund = {}
+		rakish = {}
+		lovers_pox = {}
+		deviant = {}
+		lifestyle_reveler = { }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		tourney_participant = { }
+	}
+	prowess = { min_guest_template_skill 16 }
+	gender_female_chance = root_soldier_female_chance
+	after_creation = {
+		random = {
+			chance = 5
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 20
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 20
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 10
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+
+accolade_valiant_character = {
+	age = { 16 35 }
+	random_traits = yes
+	
+	random_traits_list = {
+		count = 1
+		brave = {}
+	}
+	random_traits_list = {
+		count = 1
+		sadistic = {}
+		callous = {}
+		vengeful = {}
+		lustful = {}
+		wrathful = {}
+		arbitrary = {}
+		impatient = {}
+		arrogant = {}
+		stubborn = {}
+		diligent = {}
+		temperate = {}
+		zealous = {}
+		brave = {}
+		honest = {}
+		just = {}
+		ambitious = {}
+		gregarious = {}
+		greedy = {}
+		compassionate = {}
+		generous = {}
+		forgiving = {}
+		trusting = {}
+	}
+	random_traits_list = {
+		education_martial_1 = { weight = { base = 35 } }
+		education_martial_2 = { weight = { base = 35 } }
+		education_martial_3 = { weight = { base = 20 } }
+		education_martial_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		lifestyle_blademaster = {}
+		lifestyle_traveler = {}
+		strong = {}
+		lifestyle_hunter = {}
+		reckless = {}
+		gallant = {}
+		loyal = {}
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		tourney_participant = { }
+	}
+	prowess = { min_guest_template_skill 16 }
+	gender_female_chance = root_soldier_female_chance
+	after_creation = {
+		if = {
+			limit = {
+				current_date < 1400
+				root = {
+					has_title = title:e_byzantium
+				}
+				culture = {
+					OR = {
+						has_cultural_parameter = unlock_maa_huscarls
+						has_cultural_parameter = unlock_maa_varangian_veterans
+					}
+				}
+			}
+			add_trait = varangian
+		}
+		#berserker
+		if = {
+			limit = {
+				faith.religion = faith:norse_pagan.religion
+			}
+			random = {
+				chance = 20
+				add_trait = berserker
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_blademaster
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = lifestyle_hunter
+			TRACK = hunter
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+
+accolade_scoundrel_character = {
+	age = { 16 35 }
+	random_traits = yes
+	
+	random_traits_list = {
+		count = 1
+		ambitious = {}
+		gregarious = {}
+		greedy = {}
+		deceitful = {}
+	}
+	random_traits_list = {
+		count = 1
+		lustful = {}
+        wrathful = {}
+        arbitrary = {}
+        impatient = {}
+        arrogant = {}
+        stubborn = {}
+        brave = {}
+        patient = {}
+        ambitious = {}
+        gregarious = {}
+        deceitful = {}
+        trusting = {}
+        sadistic = {}
+        vengeful = {}
+        callous = {}
+        compassionate = {}
+        forgiving = {}
+        greedy = {}
+	}
+	random_traits_list = {
+		education_diplomacy_1 = { weight = { base = 35 } }
+		education_diplomacy_2 = { weight = { base = 35 } }
+		education_diplomacy_3 = { weight = { base = 20 } }
+		education_diplomacy_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		lifestyle_traveler = {}
+		disloyal = {}
+		shrewd = {}
+		schemer = {}
+		drunkard = {}
+		hashishiyah = {}
+		rakish = {}
+		profligate = {}
+		wild_oat = {}
+		lifestyle_reveler = { }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		tourney_participant = { }
+	}
+	prowess = { min_guest_template_skill 16 }
+	gender_female_chance = root_soldier_female_chance
+	after_creation = {
+		if = {
+			limit = {
+				current_date < 1400
+				root = {
+					has_title = title:e_byzantium
+				}
+				culture = {
+					OR = {
+						has_cultural_parameter = unlock_maa_huscarls
+						has_cultural_parameter = unlock_maa_varangian_veterans
+					}
+				}
+			}
+			add_trait = varangian
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+
+accolade_politicker_character = {
+	age = { 18 36 }
+	random_traits = yes
+
+	random_traits_list = {
+		count = 1
+		forgiving = {}
+		generous = {}
+		gregarious = {}
+		honest = {}
+		trusting = {}
+		compassionate = {}
+		calm = {}
+		ambitious = {}
+	}
+
+	random_traits_list = {
+		count = 2
+		lustful = {}
+		chaste = {}
+		gluttonous = {}
+		temperate = {}
+		generous = {}
+		diligent = {}
+		calm = {}
+		patient = {}
+		impatient = {}
+		arrogant = {}
+		humble = {}
+		honest = {}
+		brave = {}
+		gregarious = {}
+		ambitious = {}
+		content = {}
+		arbitrary = {}
+		just = {}
+		cynical = {}
+		zealous = {}
+		trusting = {}
+		compassionate = {}
+		sadistic = {}
+		stubborn = {}
+		fickle = {}
+		forgiving = {}
+	}
+
+	random_traits_list = {
+		education_diplomacy_3 = { weight = { base = 50 } }
+		education_diplomacy_4 = { weight = { base = 25 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		lifestyle_traveler = {}
+		diplomat = {}
+		lifestyle_poet = {}
+		august = {}
+		loyal = {}
+		lifestyle_reveler = { }
+		tourney_participant = { }
+	}
+	prowess = { min_guest_template_skill 16 }
+	diplomacy = { min_guest_template_skill 16 }
+	gender_female_chance = root_soldier_female_chance
+	after_creation = {
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 15
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 15
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 10
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+
+accolade_master_of_revels_character = {
+	age = { 18 36 }
+	random_traits = yes
+
+	random_traits_list = {
+		count = 1
+		wrathful = {}
+        arbitrary = {}
+        impatient = {}
+        arrogant = {}
+        lustful = {}
+        compassionate = {}
+        forgiving = {}
+        trusting = {}
+        generous = {}
+        sadistic = {}
+        callous = {}
+        vengeful = {}
+        stubborn = {}
+        diligent = {}
+        brave = {}
+        honest = {}
+        just = {}
+        patient = {}
+        gregarious = {}
+        deceitful = {}
+        greedy = {}
+	}
+
+	random_traits_list = {
+		education_diplomacy_1 = { weight = { base = 35 } }
+		education_diplomacy_2 = { weight = { base = 35 } }
+		education_diplomacy_3 = { weight = { base = 20 } }
+		education_diplomacy_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		tourney_participant = {}
+		lifestyle_traveler = {}
+		gluttonous = {}
+		gregarious = {}
+		hashishiyah = {}
+		drunkard = {}
+		generous = {}
+		trusting = {}
+		content = {}
+		lazy = {}
+		august = {}
+	}
+	prowess = { min_guest_template_skill 16 }
+	gender_female_chance = root_soldier_female_chance
+	after_creation = {
+		add_trait = lifestyle_reveler
+		random = {
+			chance = 75
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+		add_trait_xp = {
+			trait = lifestyle_reveler
+			value = 25
+		}
+		random = {
+			chance = 10
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 30
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 30
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 15
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_trait = tourney_participant
+			}
+			add_trait_xp = {
+				trait = tourney_participant
+				track = wit
+				value = 20
+			}
+			random = {
+				chance = 50
+				add_trait_xp = {
+					trait = tourney_participant
+					track = wit
+					value = 30
+				}
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+	}
+}
+
+pool_repopulate_prowess = {
+	age = { 20 40 }
+	random_traits = yes
+	gender_female_chance = root_soldier_female_chance
+	culture = root.culture
+	faith = root.faith
+	prowess = {
+		min_guest_template_skill max_guest_template_skill
+	}
+	random_traits_list = {
+		education_martial_1 = { weight = { base = 35 } }
+		education_martial_2 = { weight = { base = 35 } }
+		education_martial_3 = { weight = { base = 20 } }
+		education_martial_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		lifestyle_blademaster = {}
+		gallant = {}
+		brave = {}
+		gluttonous = {}
+		strong = {}
+		athletic = {}
+		lifestyle_hunter = {}
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_blademaster
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = lifestyle_hunter
+			TRACK = hunter
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+		# ToTo Hastiluder
+		if = {
+			limit = { has_dlc_feature = tours_and_tournaments }
+			random = {
+				chance = 33
+				add_trait = tourney_participant
+				add_random_tourney_participant_level_effect = yes
+			}
+		}
+	}
+}
+
+pool_repopulate_diplomacy = {
+	age = { 20 40 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance #because chancellor gender is doctrine dependent
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	diplomacy = {
+		min_guest_template_skill max_guest_template_skill
+	}
+	random_traits_list = {
+		education_diplomacy_1 = { weight = { base = 35 } }
+		education_diplomacy_2 = { weight = { base = 35 } }
+		education_diplomacy_3 = { weight = { base = 20 } }
+		education_diplomacy_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		diplomat = {}
+		family_first = {}
+		august = {}
+		lifestyle_reveler = {}
+		generous = {}
+		arrogant = {}
+		honest = {}
+		gregarious = {}
+		trusting = {}
+		compassionate = {}
+		fickle = {}
+		forgiving = {}
+		lifestyle_poet = {}
+		tourney_participant = {}
+		lifestyle_traveler = {}
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 15
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 15
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 10
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		if = {
+			limit = { has_trait = lifestyle_reveler }
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = {
+					integer_range = {
+						min = small_lifestyle_random_xp_low
+						max = small_lifestyle_random_xp_high
+					}
+				}
+			}
+		}
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = tourney_participant
+			TRACK = wit
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+	}
+}
+
+pool_repopulate_martial = {
+	age = { 30 45 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance #because marshal gender is doctrine dependent
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	martial = {
+		min_guest_template_skill max_guest_template_skill
+	}
+	random_traits_list = {
+		education_martial_1 = { weight = { base = 35 } }
+		education_martial_2 = { weight = { base = 35 } }
+		education_martial_3 = { weight = { base = 20 } }
+		education_martial_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		strategist = {}
+		overseer = {}
+		wrathful = {}
+		zealous = {}
+		impatient = {}
+		lifestyle_hunter = {}
+		tourney_participant = {}
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+			random_list = {
+				65 = {}
+				15 = {
+					add_trait = varangian
+				}
+				15 = {
+					add_trait = berserker
+				}
+				5 = {
+					add_trait = lifestyle_poet
+				}
+			}
+		}
+		
+		# Cultural Traditions
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = poet_trait_more_common
+				}
+				NOT = {
+					has_trait = lifestyle_poet
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = lifestyle_poet
+			}
+		}
+		if = {
+			limit = {
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+				NOT = {
+					has_trait = lifestyle_poet
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = lifestyle_poet
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = winter_soldier_trait_more_common
+				}
+				NOT = {
+					has_trait = winter_soldier
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = winter_soldier
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = forest_fighter_trait_more_common
+				}
+				NOT = {
+					has_trait = forest_fighter
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = forest_fighter
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = rough_terrain_expert_trait_more_common
+				}
+				NOT = {
+					has_trait = rough_terrain_expert
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = rough_terrain_expert
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = desert_warrior_trait_more_common
+				}
+				NOT = {
+					has_trait = desert_warrior
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = desert_warrior
+			}
+		}
+		if = {
+			limit = {
+				culture = {
+					has_cultural_parameter = jungle_stalker_trait_more_common
+				}
+				NOT = {
+					has_trait = jungle_stalker
+				}
+			}
+			random = {
+				chance = 10
+				add_trait = jungle_stalker
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = lifestyle_hunter
+			TRACK = hunter
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+		add_random_tiered_trait_track_xp_effect = {
+			TRAIT = tourney_participant
+			TRACK = wit
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+	}
+}
+
+pool_repopulate_stewardship = {
+	age = { 20 40 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance #because steward gender is doctrine dependent
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	stewardship = {
+		min_guest_template_skill max_guest_template_skill
+	}
+	random_traits_list = {
+		education_stewardship_1 = { weight = { base = 35 } }
+		education_stewardship_2 = { weight = { base = 35 } }
+		education_stewardship_3 = { weight = { base = 20 } }
+		education_stewardship_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		architect = {}
+		administrator = {}
+		avaricious = {}
+		temperate = {}
+		greedy = {}
+		just = {}
+		stubborn = {}
+		ambitious = {}
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+	}
+}
+
+pool_repopulate_intrigue = {
+	age = { 25 40 }
+	random_traits = yes
+	gender_female_chance = 50 #No gender blocks for spymaster
+	culture = root.culture
+	faith = root.faith
+	intrigue = {
+		min_guest_template_skill max_guest_template_skill
+	}
+	random_traits_list = {
+		education_intrigue_1 = { weight = { base = 35 } }
+		education_intrigue_2 = { weight = { base = 35 } }
+		education_intrigue_3 = { weight = { base = 20 } }
+		education_intrigue_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		schemer = {}
+		seducer = {}
+		torturer = {}
+		deceitful = {}
+		lustful = {}
+		calm = {}
+		arbitrary = {}
+		paranoid = {}
+		callous = {}
+		sadistic = {}
+		vengeful = {}
+		craven = {}
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+	}
+}
+
+pool_repopulate_learning = {
+	age = { 25 60 }
+	gender_female_chance = 50 #No gender blocks for physicians
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	learning = {
+		min_guest_template_skill max_guest_template_skill
+	}
+	random_traits_list = {
+		education_learning_1 = { weight = { base = 35 } }
+		education_learning_2 = { weight = { base = 35 } }
+		education_learning_3 = { weight = { base = 20 } }
+		education_learning_4 = { weight = { base = 10 } }
+	}
+	random_traits_list = {
+		count = { 0 1 }
+		scholar = {}
+		theologian = {}
+		whole_of_body = {}
+		lifestyle_physician = {}
+		lifestyle_mystic = {}
+		lifestyle_herbalist = {}
+		chaste = {}
+		diligent = {}
+		patient = {}
+		humble = {}
+		shy = {}
+		content = {}
+		cynical = {}
+		lazy = {}
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		if = {
+			limit = {
+				faith = {
+					has_doctrine = tenet_monasticism
+				}
+			}
+			random_list = {
+				75 = {}
+				25 = {
+					add_trait = devoted
+				}
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_physician
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_mystic
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+	}
+}
+
+mediocre_spouse = {
+	gender_female_chance = root.marriage_gender_adjusted_female_chance
+	age = { 16 26 }
+	random_traits = yes
+	culture = root.culture
+	faith = root.faith
+	random_traits_list = {
+		education_diplomacy_1 = { weight = { base = 35 } }
+		education_diplomacy_2 = { weight = { base = 35 } }
+		education_martial_1 = {
+			weight = {
+				base = 35
+				modifier = { # Less common with martial education if character can't be combatant because of gender
+					factor = 0.3
+					trigger_if = {
+						limit = { root = { is_female = yes } }
+						dummy_male = { NOT = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root } } }
+					}
+					trigger_else = {
+						dummy_female = { NOT = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root } } }
+					}
+				}
+			}
+		}
+		education_martial_2 = {
+			weight = {
+				base = 35
+				modifier = { # Less common with martial education if character can't be combatant because of gender
+					factor = 0.3
+					trigger_if = {
+						limit = { root = { is_female = yes } }
+						dummy_male = { NOT = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root } } }
+					}
+					trigger_else = {
+						dummy_female = { NOT = { can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root } } }
+					}
+				}
+			}
+		}
+		education_stewardship_1 = { weight = { base = 35 } }
+		education_stewardship_2 = { weight = { base = 35 } }
+		education_intrigue_1 = { weight = { base = 35 } }
+		education_intrigue_2 = { weight = { base = 35 } }
+		education_learning_1 = { weight = { base = 35 } }
+		education_learning_2 = { weight = { base = 35 } }
+	}
+	dynasty = none
+	after_creation = {
+		random_list = {
+			200 = {
+				# Character is of average weight, nothing happens	
+			}
+			25 = {
+				change_current_weight = -25
+			}
+			25 = {
+				change_current_weight = -75
+			}
+			25 = {
+				change_current_weight = 25
+			}
+			25 = {
+				change_current_weight = 75
+			}
+			5 = {
+				change_current_weight = 100
+			}
+			5 = {
+				change_current_weight = 200
+			}
+		}
+		random = {
+			chance = 1
+			
+			add_trait = lifestyle_poet
+			
+			modifier = {
+				add = 10
+				culture = { has_cultural_parameter = poet_trait_more_common }
+			}
+			modifier = {
+				add = 30
+				culture = { has_cultural_parameter = poet_trait_more_common_for_lesbians }
+				is_male = no
+				OR = {
+					has_sexuality = homosexual
+					has_sexuality = bisexual
+				}
+			}
+			modifier = {
+				add = 5
+				OR = {
+					culture = { has_cultural_pillar = heritage_north_germanic }
+					religion = religion:germanic_religion
+				}
+			}
+		}
+		set_interesting_traits_and_modifiers_effect = yes
+	}
+}

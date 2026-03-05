@@ -10,6 +10,13 @@ yearly_culture_pulse = {
 
 }
 
+yearly_playable_pulse = {
+	on_actions = {
+		delay = { days = { 30 330 } }
+		spawn_lesbian_culture
+	}
+}
+
 # Happens once every three years for the culture. Arbitrary day, but the same day every year for that culture. Same day as yearly_culture_pulse
 # Root is the culture
 three_yearly_culture_pulse = {
@@ -682,4 +689,81 @@ on_county_auto_granted_to_local_culture = {
 # scope:recipient = the herder
 on_county_auto_granted_to_herder = {
 
+}
+
+spawn_lesbian_culture = {
+	trigger = {
+		trigger_if = {
+			limit = { is_landed = yes }
+			capital_county = title:c_lesbos
+		}
+		trigger_else_if = {
+			limit = { has_domicile = yes }
+			domicile.domicile_location.county = title:c_lesbos
+		}
+		trigger_else = {
+			always = no
+		}
+		is_female = yes
+		OR = {
+			has_sexuality = bisexual
+			has_sexuality = homosexual
+		}
+		culture = {
+			OR = {
+				this = culture:greek
+				any_parent_culture_or_above = { this = culture:greek }
+			}
+		}
+		NOT = { has_global_variable = lesbianism_spawned }
+		NOT = { has_game_rule = accepted_same_sex_relations } #No point in this if it's already normal to be gay
+	}
+	effect = {
+		random = {
+			chance = 50
+			modifier = {
+				add = 1
+				has_trait = lustful
+			}
+			modifier = {
+				add = 1
+				has_trait = gregarious
+			}
+			modifier = {
+				add = 1
+				has_trait = eccentric
+			}
+			modifier = {
+				add = 2
+				has_trait = seducer
+			}
+			modifier = {
+				add = {
+					value = learning
+					multiply = 0.05
+				}
+			}
+			modifier = {
+				add = 5
+				any_relation = {
+					type = lover
+					is_female = yes
+				}
+			}
+			modifier = {
+				add = 10
+				any_spouse = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				add = 20
+				any_relation = {
+					type = soulmate
+					is_female = yes
+				}
+			}
+			trigger_event = easter_egg.0001
+		}
+	}
 }
