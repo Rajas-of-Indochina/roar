@@ -1,0 +1,230 @@
+sea_extra_pagan_1 = {
+	name = "Shwe_Einthi" # Sithu's mother
+	dynasty = 2000000 #Pagan
+	religion = ari
+	culture = burmese
+	father = burman003
+	mother = sea_pagan_wife_2
+	female = yes
+
+	1070.1.1 = { birth = yes }
+	1102.1.1 = { death = yes }
+}
+sea_extra_pagan_2 = {
+	# Kyansittha's unknown son and famous unlanded prince
+	name = "Yazakumara"
+	dynasty = 2000000 #Pagan
+	religion = theravada
+	culture = rakhine
+	father = burman003
+	mother = sea_pagan_wife_3
+
+	1078.1.1 = {
+		birth = yes
+		trait = bastard
+	}
+	1133.1.1 = {
+		death = yes
+	}
+}
+sea_extra_pagan_3 = {
+	# Hitlominlo chief queen and a great granddaughter of Sithu I 
+	name = "Eindawthe"
+	dynasty = 2000000 #Pagan
+	female = yes
+	religion = theravada
+	culture = burmese
+	father = sea_extra_pagan_4
+
+	1178.1.1 = {
+		birth = yes
+	}
+	1198.5.11 = {
+		# died in childbirth of Kyawswa
+		death = {
+			death_reason = death_childbirth
+		}
+	}
+}
+sea_extra_pagan_4 = {
+	# father of Eindawthe, grandson of Sithu I
+	name = "Theinkhathu"
+	dynasty = 2000000 #Pagan
+	religion = theravada
+	culture = burmese
+	#father = sea_extra_pagan_5
+
+	1142.1.1 = { birth = yes }
+	1201.1.1 = { death = yes }
+}
+
+
+### various wives of Pagan kings
+sea_pagan_wife_1 = {
+	# Saw Lu Chief Queen
+	name = "Usaukpan"
+	female = yes
+	religion = ari
+	culture = burmese
+
+	1051.1.1 = {
+		birth = yes
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+sea_pagan_wife_2 = {
+	# Chief queen consort of Kyansittha
+	name = "Apeyadana"
+	female = yes
+	religion = theravada
+	culture = burmese
+
+	1041.1.1 = {
+		birth = yes
+	}
+	1103.1.1 = {
+		death = yes
+	}
+}
+sea_pagan_wife_3 = {
+	# woman Kyansittha was with in exile ; later chief queen
+	name = "Thanbula"
+	female = yes
+	religion = theravada
+	culture = rakhine
+
+	1058.1.1 = {
+		birth = yes
+	}
+	1112.1.1 = {
+		death = yes
+	}
+}
+
+
+## Need to get sorted out
+pagan105 = {
+	name = "Kyaswa" # Kyaswa
+	dynasty = 2000000 #Pagan
+	religion = theravada
+	culture = burmese
+	learning = 15
+	trait = zealous
+	trait = theologian
+	trait = architect
+	father = pagan_9
+	mother = sea_extra_pagan_3
+
+	1198.5.4 = { birth = yes }
+	# reigned from 1235
+	1210.1.1 = { add_spouse = pagan117 }
+	1213.1.1 = { add_spouse = pagan118 }
+	1251.1.1 = { death = yes }
+}
+pagan106 = {
+	name = "Sithu" # Uzana
+	dynasty = 2000000 #Pagan
+	religion = theravada
+	culture = burmese
+	father = pagan105
+	mother = pagan118
+
+	1213.1.1 = { birth = yes }
+	# reigned from 1251
+	1256.1.1 = { death = yes }
+}
+pagan107 = {
+	name = "Sithu" # Narathihapate
+	dynasty = 2000000 #Pagan
+	religion = theravada
+	culture = burmese
+	father = pagan106
+
+	1238.1.1 = { birth = yes }
+	# reigned from 1256
+	1287.1.1 = { death = yes }
+}
+
+pagan116 = {
+	# Disinherited regent for Sithu III Uzana and Kyaswa's brother
+	name = "Naratheinga"
+	#AKA: Naratheinga Uzana
+	dynasty = 2000000 #Pagan
+	religion = theravada
+	culture = burmese
+	learning = 1
+	father = pagan_9
+	trait = disinherited
+
+	1196.1.1 = { birth = yes }
+	# reigned from 1235
+	1235.1.1 = { death = yes }
+}
+
+# Kyaswa wives
+pagan117 = {
+	name = "Yaza_Dewi" #Kyaswa chief queen
+	female = yes
+	religion = theravada
+	culture = burmese
+	trait = infertile
+
+	1201.1.1 = {
+		birth = yes
+	}
+	1251.1.1 = {
+		death = yes
+	}
+}
+pagan118 = {
+	name = "Saw_Min_Waing" #Kyaswa concubine and mother of Sithu
+	female = yes
+	religion = theravada
+	culture = tai
+
+	1193.1.1 = {
+		birth = yes
+	}
+	1273.1.1 = {
+		death = yes
+	}
+}
+
+pagan200 = {
+	name = "Anaukpetlun"
+	religion = theravada
+	culture = burmese
+
+	1140.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+pagan201 = {
+	name = "Pauk_Taw"
+	religion = theravada
+	culture = burmese
+
+	1143.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+pagan202 = {
+	name = "Nanda_Yawda"
+	religion = theravada
+	culture = burmese
+
+	1158.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
