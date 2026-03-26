@@ -82215,13 +82215,19 @@ e_kalimantan = {
 }
 
 e_suvarnabhumi = {
+	# e_burma in old RoA
 	color = { 227 108 3 }
+
+	#capital =
+
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
 
 	k_pagan = {
 		color = { 166 40 224 }
+
+		capital = c_pagan
 
 		definite_form = yes
 
@@ -82239,6 +82245,8 @@ e_suvarnabhumi = {
 
 		d_pagan = {
 			color = { 136 20 194 }
+
+			capital = c_pagan
 
 			c_pagan = {
 				color = { 116 10 174 }
@@ -97067,6 +97075,7 @@ h_china = {
 	}
 
 	e_liangyi = {
+		# has elements of old RoA e_nanzhao
 		color = { 60 150 190 }
 
 		capital = c_chengdu
@@ -98504,8 +98513,12 @@ h_china = {
 		k_dali = {
 			color = { 240 240 220 }
 
+			capital = c_dali
+
 			d_dali = {
 				color = { 220 230 200 }
+
+				capital = c_dali
 
 				c_dali = { # c_yon_zon_mi
 					color = { 240 245 225 }
