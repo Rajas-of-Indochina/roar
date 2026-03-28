@@ -473,6 +473,9 @@ javanese_sanjaya_07 = {
 	827.1.1 = {	#unknown
 		birth = yes
 	}
+	855.1.1 = {
+		add_spouse = sea_landhayan_02
+	}
 	885.2.17 = {
 		death = yes
 	}
@@ -484,6 +487,9 @@ javanese_sanjaya_07a = {
 	dynasty_house = house_sailendra_sanjaya
 	religion = shaivism
 	culture = javanese
+	trait = education_intrigue_3
+	trait = deceitful
+	trait = ambitious
 	father = javanese_sanjaya_06
 	mother = javanese_sailendra_08
 
@@ -551,6 +557,9 @@ javanese_sanjaya_11 = {
 	dynasty_house = house_sailendra_sanjaya
 	religion = shaivism
 	culture = javanese
+	trait = education_diplomacy_3
+	trait = fickle
+	trait = patient
 
 	844.1.1 = {	#unknown
 		birth = yes
@@ -810,7 +819,7 @@ javanese_ishana_04 = {
 }
 
 javanese_ishana_04a = {
-	#daughter of Dharmawangsa, wife of Airlangga
+	# daughter of Dharmawangsa, wife of Airlangga
 	name = "Dharmaprasadottungadewi"
 	female = yes
 	dynasty = javanese_ishana
@@ -918,7 +927,7 @@ javanese_ishana_09 = {
 }
 
 javanese_ishana_09a = {
-	name = "Mapanji_Garasakan"	#Alanjung Ahyes
+	name = "Alanjung_Ahyes"	#Alanjung Ahyes
 	dynasty = javanese_ishana
 	religion = shaivism
 	culture = javanese
@@ -1101,8 +1110,14 @@ javanese_ishana_16 = {
 	dynasty = javanese_ishana
 	religion = shaivism
 	culture = javanese
+
 	1138.1.1 = {	#unknown
 		birth = yes
+	}
+	1178.1.1 = {
+		effect = {
+			set_realm_capital = title:c_kadiri
+		}
 	}
 	1182.1.1 = {	#unsure
 		death = yes

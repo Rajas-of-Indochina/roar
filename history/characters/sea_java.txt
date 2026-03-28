@@ -1,334 +1,27 @@
-﻿### Fictional placeholders
-sea_javanese_wirabhumi_placeholder_01 = {
-	# fictional placeholder
-	name = "Pipul"
-	religion = "shaivism"
-	culture = "javanese"
+﻿### missing Sanjaya
+sea_sanjaya_1 = { # Dyah Tulodong's son
+	name = "Ketuwijaya"
+	dynasty_house = house_sailendra_sanjaya
+	religion = shaivism
+	culture = javanese
+	father = javanese_sanjaya_14
+	mother = javanese_sanjaya_13a
 
-	828.1.1 = {
+	907.1.1 = { # Fictional date
 		birth = yes
 	}
-	897.1.1 = {
-		death = yes
-	}
-}
-sea_javanese_wirabhumi_placeholder_02 = {
-	# fictional placeholder
-	name = "Kebha"
-	religion = "shaivism"
-	culture = "javanese"
-
-	903.1.1 = {
-		birth = yes
-	}
-	969.1.1 = {
-		death = yes
-	}
-}
-sea_javanese_wirabhumi_placeholder_03 = {
-	# fictional placeholder
-	name = "Sodai"
-	religion = "shaivism"
-	culture = "javanese"
-
-	1026.1.1 = {
-		birth = yes
-	}
-	1090.1.1 = {
-		death = yes
-	}
-}
-sea_javanese_wirabhumi_placeholder_04 = {
-	# fictional placeholder
-	name = "Bhadra"
-	religion = "shaivism"
-	culture = "javanese"
-
-	1156.1.1 = {
-		birth = yes
-	}
-	1212.1.1 = {
+	927.3.7 = {	#possible
 		death = yes
 	}
 }
 
-
-### File should be split up really between different cultures
-# Fictional Kalingga/Watukura vassal
-java100 = {
-	name = "Panangkaran"
-	religion = "shaivism"
-	culture = "javanese"
-
-	909.1.1 = {
-		birth = yes
-	}
-	960.1.1 = {
-		death = yes
-	}
-}
-
-# Fictional Mataram vassal
-java110 = {
-	name = "Uttunggawijaya"
-	religion = "shaivism"
-	culture = "javanese"
-
-	894.1.1 = {
-		birth = yes
-	}
-	960.1.1 = {
-		death = yes
-	}
-}
-
-
-### FOR CLEANUP ###
-# The Sanjaya Dynasty
-
-sanjaya001 = { # The Founder of Sanjaya Dynasty
-	name = "Sanjaya" # Rakai Mataram Sang Ratu Sanjaya
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-
-	# Reigned 716-746
-	685.1.1 = { # Fictional date
-		birth = yes
-	}
-	746.1.1 = {
-		death = yes
-	}
-}
-
-sanjaya002 = { # Sanjaya's other son, became King of Galuh for a short time during his father's reign
-	name = "Barmawijaya" # Rakai Panaraban Tamperan Barmawijaya
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya001
-
-	# Reigned 732 - 739 after killing Premanadikusuma of Galuh
-	715.1.1 = { # Fictional date
-		birth = yes
-	}
-	739.1.1 = { # Killed by Manarah of Galuh at 739
-		death = yes
-	}
-}
-
-sanjaya003 = { # fictional character just to fill the family tree from Barmawijaya to Palar
-	name = "Niskala"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya002
-
-	# I made up everything lol
-	735.1.1 = { # Fictional date
-		birth = yes
-	}
-	795.1.1 = {
-		death = yes
-	}
-}
-
-sanjaya004 = { # fictional character just to fill the family tree
-	name = "Dhanu"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya003
-
-	# I made up everything lol
-	762.1.1 = { # Fictional date
-		birth = yes
-	}
-	817.1.1 = {
-		death = yes
-	}
-}
-
-sanjaya005 = { # historical character, a vassal during the rule of Sailendra
-	name = "Palar" # Rakai Patapan Mpu Palar
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya004
-
-	# Reign 824 - 832, just an estimation
-	782.1.1 = { # Fictional date
-		birth = yes
-	}
-	832.1.1 = {
-		death = yes
-	}
-}
-
-sanjaya006 = { # Married Pramodawardhani and takeover Java from Sailendra
-	name = "Jatiningrat" # Sri Maharaja Rakai Pikatan / Rakai Mamrati Jatiningrat 'Mpu Manuku'
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya005
-
-	# Reign 832 - 855
-	800.1.1 = { # Fictional date
-		birth = yes
-	}
-	825.1.1 = {
-		add_spouse = sailendra016
-	}
-	855.1.1 = { #
-		death = yes
-	}
-}
-
-sanjaya007 = { # Current Javanese ruler for 867 start
-	name = "Lokapala" # Sri Maharaja Rakai Kayuwangi Dyah Lokapala
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya006
-	mother = sailendra016
-
-	trait = education_martial_4 # He's supposed to be his father's best general
-	trait = brave # despite his he dare to fight for his father
-	trait = strong
-	trait = education_martial_prowess_4
-
-	# Reign 847 - 885
-	831.1.1 = { # Fictional date
-		birth = yes
-	}
-	855.1.1 = {
-		add_spouse = sanjaya017
-	}
-	885.1.1 = { #
-		death = yes
-	}
-}
-
-sanjaya008 = { # Another spouse or perhaps concubine of Rakai Pikatan
-	name = "Tamer" # Rakai Wwatan Mpu Tamer
-	religion = "shaivism"
+sea_fictious_sanjaya = {
+	# Fictional Sanjayan princess married to Rajah Jambavanta of Butuan - in order to portray the relationship between Java and Butuan
+	name = "Sukhami"
 	female = yes
-	culture = "javanese"
-
-	# Reign ???
-	817.1.1 = { # Fictional date
-		birth = yes
-	}
-	877.1.1 = { # Fictional Date
-		death = yes
-	}
-}
-
-sanjaya009 = { # After Lokapala's death there was a succession crisis between his brothers
-	name = "Teguh" # Sri Maharaja Rakai Watuhumalang
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya006
-	mother = sanjaya008
-
-	trait = education_diplomacy_4
-	trait = fickle
-	trait = patient
-
-	# Reign 885 - 899
-	828.1.1 = { # Fictional date
-		birth = yes
-	}
-	885.1.1 = { #
-		death = yes
-	}
-}
-
-sanjaya010 = { # After Lokapala's death there was a succession crisis between his brothers, a false king
-	name = "Saladu" # 'Rakai Gurunwangi' fictional name
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya006
-
-	trait = education_intrigue_3
-	trait = deceitful
-	trait = ambitious
-
-	# Reign ??
-	829.1.1 = { # Fictional date
-		birth = yes
-	}
-	885.1.1 = { #
-		death = yes
-	}
-}
-
-sanjaya011 = {
-	name = "Dewendra" # Rakai Limus Dyah Dewendra
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya006
-
-	trait = education_martial_3
-	trait = arbitrary
-	trait = ambitious
-
-	# Reign ??
-	830.1.1 = { # Fictional date
-		birth = yes
-	}
-	899.1.1 = { # killed by Dyah Balitung
-		death = yes
-	}
-}
-
-sanjaya012 = { # Future king of Java
-	name = "Daksa" # Rakryan Mahamantri i Hino Mpu Daksa / Sri Maharaja Daksottama Bahubajra Pratipaksaksaya Uttunggawijaya
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya009
-
-	# Reign 911 - 919, the throne was usurped by Dyah Balitung for a long time
-	855.1.1 = { # Fictional date
-		birth = yes
-	}
-	919.1.1 = { #
-		death = yes
-	}
-}
-
-sanjaya013 = { # Javanese princess, Rakai Watuhumalang's daughter, suppose to marry Dyah Balitung,
-	name = "Dhaneswari" # She got no name, so i just made it up
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya009
-
-	# no reign
-	850.1.1 = { # Fictional date
-		birth = yes
-	}
-	866.1.1 = {
-		add_spouse = sanjaya015
-	}
-	910.1.1 = { #
-		death = yes
-	}
-}
-
-sanjaya014 = {
-	name = "Sukhami" # Fictional Sanjayan princess married to Rajah Jambavanta of Butuan - in order to portray the relationship between Java and Butuan
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya006
-	mother = sailendra016
+	dynasty_house = house_sailendra_sanjaya
+	religion = shaivism
+	culture = javanese
 
 	837.1.1 = { # Fictional date
 		birth = yes
@@ -341,11 +34,29 @@ sanjaya014 = {
 	}
 }
 
-sanjaya016 = { # Manak's fictional father
+
+### Lokapala's Wife and her family
+sea_landhayan_01 = { # Lokapala's wife
+	name = "Manak"
+	female = yes
+	dynasty = sea_landhayan
+	religion = shaivism
+	culture = javanese
+	father = sea_landhayan_02
+
+	837.1.1 = { # Fictional date
+		birth = yes
+	}
+	880.12.10 = {
+		death = yes
+	}
+}
+
+sea_landhayan_02 = { # Manak's fictional father
 	name = "Taas"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_landhayan"
+	dynasty = sea_landhayan
+	religion = shaivism
+	culture = javanese
 
 	800.1.1 = { # Fictional date
 		birth = yes
@@ -355,31 +66,12 @@ sanjaya016 = { # Manak's fictional father
 	}
 }
 
-sanjaya017 = { # Lokapala's wife
-	name = "Manak"
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_landhayan"
-	father = sanjaya016
-
-	837.1.1 = { # Fictional date
-		birth = yes
-	}
-	855.1.1 = {
-		add_spouse = sanjaya007
-	}
-	880.12.10 = {
-		death = yes
-	}
-}
-
-sanjaya018 = { # Manak's brother
+sea_landhayan_03 = { # Manak's brother
 	name = "Landhayan"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_landhayan"
-	father = sanjaya016
+	dynasty = sea_landhayan
+	religion = shaivism
+	culture = javanese
+	father = sea_landhayan_02
 
 	840.1.1 = { # Fictional date
 		birth = yes
@@ -389,442 +81,235 @@ sanjaya018 = { # Manak's brother
 	}
 }
 
-sanjaya019 = { # Sanjaya's young son
-	name = "Aku"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya007
-	mother = sanjaya017
 
-	856.1.1 = { # Fictional date
-		birth = yes
-	}
-	896.12.10 = {
-		death = yes
-	}
-}
-
-sanjaya020 = { # Sanjaya's young son
-	name = "Tagwas"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya007
-	mother = sanjaya017
-
-	860.1.1 = { # Fictional date
-		birth = yes
-	}
-	896.12.10 = {
-		death = yes
-	}
-}
-
-sanjaya021 = { # Sanjaya's young son
-	name = "Bhumijaya"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya007
-	mother = sanjaya017
-
-	863.1.1 = { # Fictional date
-		birth = yes
-	}
-	896.12.10 = {
-		death = yes
-	}
-}
-sanjaya022 = { # Rakai Layang - Mpu Daksa's Daughter
-	name = "Dakshayani" # Fictional Name
+### Legendary characters - make for fun inclusion
+sea_dewi_kilisuci = {
+	# character from legend of Mount Kelud ; she was daughter of Jenggolo Manik, renowned for her purity and beauty
+	# does not seem to have relation to Isayana unlike our earlier setup suggested ; might be from Kalimatan actually and not Jawa
+	name = "Dewi_Kilisuci"
 	female = yes
-	religion = "shaivism"
+	faith = "shaivism"
 	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya012
 
-	# rule 919 - 924
-	878.1.1 = { # Fictional date
+	trait = devoted
+	trait = beauty_good_3
+	trait = chaste
+	trait = content
+	trait = humble
+	trait = education_learning_3
+
+	1036.1.1 = {
 		birth = yes
 	}
-	919.1.1 = {
-		add_spouse = sanjaya023
+	1090.1.1 = {
+		death = {
+			death_reason = death_disappearance
+		}
 	}
-	924.1.1 = {
+}
+
+
+### Fictional placeholders
+sea_javanese_wirabhumi_placeholder_01 = {
+	# fictional placeholder
+	name = "Pipul"
+	religion = shaivism
+	culture = javanese
+
+	828.1.1 = {
+		birth = yes
+	}
+	897.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_wirabhumi_placeholder_02 = {
+	# fictional placeholder
+	name = "Kebha"
+	religion = shaivism
+	culture = javanese
+
+	903.1.1 = {
+		birth = yes
+	}
+	969.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_wirabhumi_placeholder_03 = {
+	# fictional placeholder
+	name = "Sodai"
+	religion = shaivism
+	culture = javanese
+
+	1026.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_wirabhumi_placeholder_04 = {
+	# fictional placeholder
+	name = "Bhadra"
+	religion = shaivism
+	culture = javanese
+
+	1156.1.1 = {
+		birth = yes
+	}
+	1212.1.1 = {
 		death = yes
 	}
 }
 
-sanjaya023 = { # Rakai Layang - Dyah Tulodong
-	name = "Tulodong"
-	religion = "shaivism"
-	culture = "javanese"
-
-	# rule 919 - 924
-	870.1.1 = { # Fictional date
-		birth = yes
-	}
-	919.1.1 = {
-		add_spouse = sanjaya022
-	}
-	924.1.1 = {
-		death = yes
-	}
-}
-
-sanjaya024 = { # Dyah Tulodong's son
-	name = "Ketuwijaya"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_sanjaya"
-	father = sanjaya023
-	mother = sanjaya022
-
-	905.1.1 = { # Fictional date
-		birth = yes
-	}
-	924.1.1 = {
-		death = yes
-	}
-}
-
-sanjaya025 = { # Rakai Sumba 'Dyah Wawa' - Usurper King
+sea_javanese_warak_placeholder_01 = {
+	# fictional placeholder
 	name = "Wawa"
-	religion = "shaivism"
+	religion = "javanist"
 	culture = "javanese"
-	dynasty = "dynn_landhayan"
-	father = sanjaya018
 
-	# rule 924 - 929
-	870.1.1 = { # Fictional date
+	826.1.1 = {
 		birth = yes
 	}
-	929.1.1 = {
+	900.1.1 = {
 		death = yes
 	}
 }
+sea_javanese_warak_placeholder_02 = {
+	# fictional placeholder
+	name = "Guna"
+	religion = "javanist"
+	culture = "javanese"
+
+	894.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_warak_placeholder_03 = {
+	# fictional placeholder
+	name = "Lewih"
+	religion = shaivism
+	culture = javanese
+
+	1032.1.1 = {
+		birth = yes
+	}
+	1098.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_warak_placeholder_04 = {
+	# fictional placeholder
+	name = "Mudita"
+	religion = shaivism
+	culture = javanese
+
+	1138.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+sea_javanese_jagaraga_placeholder_01 = {
+	# fictional placeholder
+	name = "Aji"
+	religion = shaivism
+	culture = javanese
+
+	833.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_jagaraga_placeholder_02 = {
+	# fictional placeholder
+	name = "Kutur"
+	religion = shaivism
+	culture = javanese
+
+	900.1.1 = {
+		birth = yes
+	}
+	966.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_jagaraga_placeholder_03 = {
+	# fictional placeholder
+	name = "Cakra"
+	religion = shaivism
+	culture = javanese
+
+	1030.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+sea_javanese_jagaraga_placeholder_04 = {
+	# fictional placeholder
+	name = "Panda"
+	religion = shaivism
+	culture = javanese
+
+	1150.1.1 = {
+		birth = yes
+	}
+	1212.1.1 = {
+		death = yes
+	}
+}
+
+
+### File should be split up really between different cultures
+# Fictional Kalingga/Watukura vassal
+java100 = {
+	name = "Panangkaran"
+	religion = shaivism
+	culture = javanese
+
+	909.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes
+	}
+}
+
+### FOR CLEANUP ###
 
 # Isyana Dynasty
 
-isyana001 = {
-	name = "Sindok"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-
-	# rule 929 - 947
-	880.1.1 = { # Fictional date
-		birth = yes
-	}
-	906.1.1 = {
-		add_spouse = isyana002
-	}
-	929.1.1 = {
-		capital = c_medang
-	}
-	947.1.1 = {
-		death = yes
-	}
-}
-
-isyana002 = {
-	name = "Prameswari"
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_landhayan"
-	father = sanjaya025
-
-	# unknown date, probably rule 947 - 963
-	890.1.1 = { # Fictional date
-		birth = yes
-	}
-	979.1.1 = {
-		death = yes
-	}
-}
-
-isyana003 = {
-	name = "Isyana"
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	father = isyana001
-	mother = isyana002
-
-	# fictional date, 947 - 980
-	907.1.1 = { # Fictional date
-		birth = yes
-	}
-	924.1.1 = {
-		add_spouse = isyana004
-	}
-	980.1.1 = {
-		death = yes
-	}
-}
-
-isyana004 = {
-	name = "Lokapala"
-	religion = "shaivism"
-	culture = "javanese"
-
-	# rule with Isyana
-	900.1.1 = { # Fictional date
-		birth = yes
-	}
-	980.1.1 = {
-		death = yes
-	}
-}
-
-isyana005 = {
-	name = "Makutawangsawardhana"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	father = isyana004
-	mother = isyana003
-
-	# fictional date, 980 - 991
-	925.1.1 = { # Fictional date
-		birth = yes
-	}
-	991.1.1 = {
-		death = yes
-	}
-}
-
-isyana006 = {
-	name = "Dharmawangsa_Teguh"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	father = isyana005
-
-	# Rule 991 - 1007
-	943.1.1 = { # Fictional date
-		birth = yes
-	}
-	1007.1.1 = {
-		death = yes
-	}
-}
-
-isyana007 = {  # Queen consort of Bali
-	name = "Mahendradatta"
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	father = isyana005
-
-	961.1.1 = { # Fictional date
-		birth = yes
-	}
-	989.1.1 = {
-		add_spouse = bali007
-	}
-	1011.1.1 = {
-		death = yes
-	}
-}
-
-isyana008 = {  # Queen consort of Sunda
-	name = "Dharmawati" # fictional name
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	father = isyana005
-
-	962.1.1 = { # Fictional date
-		birth = yes
-	}
-	1021.1.1 = {
-		death = yes
-	}
-}
-
-isyana009 = {
-	name = "Airlangga"
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	mother = isyana007
-	father = bali007
-
-	# Rule 1009 - 1042
-	990.1.1 = { # Fictional date
-		birth = yes
-	}
-	1006.1.1 = {
-		add_spouse = isyana010
-	}
-	1042.1.1 = {
-		death = yes
-	}
-}
-
-isyana010 = { # Dharmawangsa Teguh's Daugher, Airlangga's spouse
-	name = "Galuh_Sekar"
-	female = yes
-	religion = "shaivism"
-	culture = "javanese"
-	dynasty = "dynn_isyana"
-	father = isyana006
-
-	# Rule 1009 - 1049
-	990.1.1 = { # Fictional date
-		birth = yes
-	}
-	1006.1.1 = {
-		add_spouse = isyana009
-	}
-	1049.1.1 = {
-		death = yes
-	}
-}
-
-isyana011 = {
-	name = "Samarawijaya"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana009
-	mother = isyana010
-
-	# King of Panjalu, ruled from 1042-1104
-	1019.1.1 = {
-		birth = "1019.1.1"
-	}
-	1104.1.1 = {
-		death = "1104.1.1"
-	}
-}
-
-isyana012 = {
-	name = "Jayawarsa"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana011
-
-	# King of Panjalu, ruled from 1104 - 1115
-	1046.1.1 = {
-		birth = "1046.1.1"
-	}
-	1117.1.1 = {
-		death = "1117.1.1"
-	}
-}
-
-isyana013 = {
-	name = "Bameswara"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana012
-
-	# King of Panjalu, ruled from 1115 - 1135
-	1066.1.1 = {
-		birth = "1066.1.1"
-	}
-	1130.1.1 = {
-		death = "1130.1.1"
-	}
-}
-
-isyana014 = {
-	name = "Jayabaya"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana013
-
-	# King of Panjalu, ruled from 1135 - 1159
-	1086.1.1 = {
-		birth = "1086.1.1"
-	}
-	1157.1.1 = {
-		death = "1157.1.1"
-	}
-}
-
-isyana015 = {
-	name = "Sarweswara"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana014
-
-	# King of Panjalu, ruled from 1159 - 1170
-	1106.1.1 = {
-		birth = "1106.1.1"
-	}
-	1161.1.1 = {
-		death = "1161.1.1"
-	}
-}
-
-isyana016 = {
-	name = "Aryyeswara"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana015
-
-	# King of Panjalu, ruled from 1170 - 1180
-	1126.1.1 = {
-		birth = "1126.1.1"
-	}
-	1171.1.1 = {
-		death = "1171.1.1"
-	}
-}
-
-isyana017 = {
-	name = "Gandra"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana016
-
-	# King of Panjalu, ruled from 1180 - 1190
-	1142.1.1 = {
-		birth = "1142.1.1"
-	}
-	1178.1.1 = {
-		effect = {
-			set_realm_capital = title:c_kadiri
-		}
-	}
-	1181.1.1 = {
-		death = "1181.1.1"
-	}
-}
+# here is start of characters not in vanilla I think
 
 isyana018 = {
 	name = "Kameswara"
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
-	father = isyana017
+	father = javanese_ishana_16
 
 	# King of Panjalu, ruled from 1190-1200
 	1158.1.1 = {
 		birth = "1158.1.1"
 	}
-	1190.1.1 = {
-		death = "1190.1.1"
+	1200.1.1 = {
+		death = "1200.1.1"
 	}
 }
 
 isyana019 = {
 	name = "Kertajaya"
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
 	father = isyana018
@@ -840,7 +325,7 @@ isyana019 = {
 
 isyana020 = {
 	name = "Jayasabha"
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
 	father = isyana019
@@ -857,7 +342,7 @@ isyana020 = {
 
 isyana021 = {
 	name = "Sastrajaya"
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
 	father = isyana020
@@ -874,7 +359,7 @@ isyana021 = {
 
 isyana022 = { # Jayakatwang, the Rebel
 	name = "Jayakatwang"
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
 	father = "isyana021"
@@ -889,64 +374,13 @@ isyana022 = { # Jayakatwang, the Rebel
 	}
 }
 
-isyana023 = { # First King of Janggala
-	name = "Mapanji_Garasakan"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana009
-	mother = isyana010
-
-	# King of Janggala, ruled from 1042-1052
-	1025.1.1 = {
-		birth = yes
-	}
-	1052.1.1 = {
-		death = yes
-	}
-}
-
-isyana024 = {
-	name = "Alanjung_Ahyes"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana023
-
-	# King of Janggala, ruled from 1052 - 1059
-	1042.1.1 = {
-		birth = yes
-	}
-	1059.1.1 = {
-		death = yes
-	}
-}
-
-isyana025 = {
-	name = "Samrotsaha"
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana009
-	mother = isyana010
-
-	# King of Janggala, ruled in 1059
-	1025.1.1 = {
-		birth = yes
-	}
-	1095.1.1 = {
-		death = yes
-	}
-}
-
 isyana026 = {
-	name = "Jayamerta" # Last(?) king of independent Janggala and father of Ken Arok
-	dynasty = "dynn_isyana"
+	# Last(?) king of independent Janggala and father of Ken Arok, ruled in 1161
+	name = "Jayamerta"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
-	father = isyana025
 
-	# King of Janggala, ruled in 1161
 	1142.1.1 = {
 		birth = yes
 	}
@@ -959,7 +393,7 @@ isyana027 = {
 	# Princess of Janggala
 	name = "Kirana"
 	female = yes
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
 	father = isyana026
@@ -977,36 +411,10 @@ isyana027 = {
 	}
 }
 
-isyana028 = { # Supposed to be the heir of Java
-	name = "Dewi_Kilisuci"
-	female = yes
-	dynasty = "dynn_isyana"
-	faith = "shaivism"
-	culture = "javanese"
-	father = isyana009
-	mother = isyana010
-
-	trait = devoted
-	trait = beauty_good_3
-	trait = chaste
-	trait = content
-	trait = humble
-
-	trait = education_learning_4
-
-
-	1023.1.1 = {
-		birth = yes
-	}
-	1095.1.1 = {
-		death = yes
-	}
-}
-
 isyana029 = {
 	# Sri Jayawarsa Digjaya Sasastraprabhu
 	name = "Jayawarsa"
-	dynasty = "dynn_isyana"
+	dynasty = javanese_ishana
 	faith = "shaivism"
 	culture = "javanese"
 
