@@ -534,7 +534,7 @@ e_omnod_dalai_khanate = {
 
 	definite_form = yes
 
-	capital = c_aninditapura
+	capital = c_angkor
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
@@ -86023,10 +86023,10 @@ e_suvarnabhumi = {
 					color = { 155 120 10 }
 				}
 			}
-			c_phra_rot = {
+			c_mueang_phra_rot = {
 				color = { 140 105 5 }
 
-				b_phra_rot = {
+				b_mueang_phra_rot = {
 					province = 16627
 
 					color = { 140 105 5 }
@@ -86043,20 +86043,22 @@ e_suvarnabhumi = {
 
 e_kambuja = {
 	color = { 41 69 238 }
-	capital = c_aninditapura
+	capital = c_angkor
 
-	k_funan = {
+	k_funan = { #Kingdom of Angkor
 		color = { 0 50 150 }
-		capital = c_aninditapura
+		capital = c_angkor
 
-		d_aninditapura = {
+		d_angkor = {
+			# d_aninditapura in old RoA
 			color = { 0 39 160 }
 
-			c_aninditapura = {
-				# c_angkor
+			c_angkor = {
+				# c_aninditapura in old RoA
 				color = { 0 39 213 }
 
 				b_hariharalaya = {
+					# b_angkor in vanilla
 					province = 16789
 
 					color = { 0 40 158 }
@@ -86090,7 +86092,8 @@ e_kambuja = {
 			c_lingapura = {
 				color = { 0 49 170 }
 
-				b_lingapura = {
+				b_lingapura = { #Lingapura & Shrestrapura
+					# 10817 in vanilla
 					province = 16882
 
 					color = { 0 49 170 }
@@ -86140,10 +86143,11 @@ e_kambuja = {
 					color = { 0 59 180 }
 				}
 			}
-			c_preah_vihear = {
+			c_prea_vihear = {
 				color = { 0 69 190 }
 
 				b_choam_ksant = {
+					# b_choam_ksant in vanilla ; 10936
 					province = 16957
 
 					color = { 0 69 190 }
@@ -86153,7 +86157,7 @@ e_kambuja = {
 
 					color = { 0 69 190 }
 				}
-				b_preah_vihear = {
+				b_prea_vihear = {
 					province = 16979
 
 					color = { 0 69 190 }
@@ -86164,7 +86168,10 @@ e_kambuja = {
 		d_isanapura = {
 			color = { 0 85 130 }
 
+			capital = c_sambor_prei_kuk
+
 			c_sambor_prei_kuk = {
+				# also absorbed vanilla c_koh_ker
 				color = { 0 95 145 }
 
 				b_sambor_prei_kuk = {
@@ -86173,6 +86180,7 @@ e_kambuja = {
 					color = { 0 95 145 }
 				}
 				b_preah_khan = {
+					# 10803 in vanilla
 					province = 16695
 
 					color = { 0 95 145 }
@@ -86193,10 +86201,11 @@ e_kambuja = {
 					color = { 0 95 145 }
 				}
 			}
-			c_prey_nokor = {
+			c_amarendrapura = { #Amarendrapura
+				# part of vanilla c_sambhupura
 				color = { 0 105 160 }
 
-				b_prey_nokor = {
+				b_amarendrapura = {
 					province = 16171
 
 					color = { 0 105 160 }
@@ -86241,10 +86250,12 @@ e_kambuja = {
 		d_vyadhapura = {
 			color = { 0 55 107 }
 
-			c_angkor_borei = {
+			capital = c_angkor_borey #placeholder
+
+			c_angkor_borey = {
 				color = { 0 49 80 }
 
-				b_angkor_borei = {
+				b_angkor_borey = {
 					province = 15829
 
 					color = { 0 49 80 }
@@ -86261,6 +86272,7 @@ e_kambuja = {
 				}
 			}
 			c_prey_rodum = {
+				# part of c_kracheh_nokor in vanilla
 				color = { 0 59 90 }
 
 				b_prey_rodum = {
@@ -86275,6 +86287,7 @@ e_kambuja = {
 				}
 			}
 			c_chum_kiri = {
+				# part of c_angkor_borey in vanilla
 				color = { 0 69 100 }
 
 				b_chum_kiri = {
@@ -86298,7 +86311,8 @@ e_kambuja = {
 					color = { 0 69 100 }
 				}
 			}
-			c_tbong_khmum = {
+			c_kracheh_nokor = {
+				# c_tbong_khmum in old RoA
 				color = { 0 79 110 }
 
 				b_tbong_khmum = {
@@ -86317,10 +86331,11 @@ e_kambuja = {
 					color = { 0 79 110 }
 				}
 			}
-			c_kiri_vong = {
+			c_vyadhapura = {
+				# c_kiri_vong in old RoA
 				color = { 0 89 120 }
 
-				b_kiri_vong = {
+				b_vyadhapura = {
 					province = 15856
 
 					color = { 0 89 120 }
@@ -86351,7 +86366,10 @@ e_kambuja = {
 		d_battambang = {
 			color = { 35 60 140 }
 
+			capital = c_neang #placeholder
+
 			c_bakan = {
+				# part of c_pursat in vanilla
 				color = { 45 70 155 }
 
 				b_bakan = {
@@ -86371,6 +86389,7 @@ e_kambuja = {
 				}
 			}
 			c_pailin = {
+				# part of c_pursat in vanilla
 				color = { 55 80 170 }
 
 				b_pailin = {
@@ -86390,6 +86409,7 @@ e_kambuja = {
 				}
 			}
 			c_neang = {
+				# part of c_pursat in vanilla
 				color = { 65 90 185 }
 
 				b_neang = {
@@ -86414,6 +86434,7 @@ e_kambuja = {
 				}
 			}
 			c_chhmar = {
+				# part of c_pursat in vanilla
 				color = { 75 100 200 }
 
 				b_chhmar = {
@@ -86437,7 +86458,10 @@ e_kambuja = {
 		d_dviradapura = {
 			color = { 0 37 138 }
 
+			capital = c_dviradapura
+
 			c_dviradapura = {
+				# part of c_angkor_borey in vanilla
 				color = { 0 47 148 }
 
 				b_dviradapura = {
@@ -86481,6 +86505,7 @@ e_kambuja = {
 				}
 			}
 			c_aoral = {
+				# part of c_angkor_borey in vanilla
 				color = { 0 67 168 }
 
 				b_phnom_aoral = {
@@ -86501,10 +86526,13 @@ e_kambuja = {
 			}
 		}
 
-		d_can_tho = {
+		d_can_tho = { #Kottinagara
 			color = { 0 90 110 }
 
-			c_can_tho = {
+			capital = c_ca_mau
+
+			c_ca_mau = { #Kottinagara
+				# c_can_tho in old RoA
 				color = { 10 100 125 }
 
 				b_kottinagara = {
@@ -86533,7 +86561,8 @@ e_kambuja = {
 					color = { 10 100 125 }
 				}
 			}
-			c_sap = {
+			c_binh_dai = {
+				# c_sap in old RoA
 				color = { 20 110 140 }
 
 				b_trah_pung = {
@@ -86553,6 +86582,7 @@ e_kambuja = {
 				}
 			}
 			c_sadek = {
+				# part of c_vyadhapura in vanilla
 				color = { 30 120 155 }
 
 				b_sadek = {
@@ -86572,6 +86602,7 @@ e_kambuja = {
 				}
 			}
 			c_prey_rusey = {
+				# part of c_ca_mau in vanilla
 				color = { 40 130 170 }
 
 				b_soc_trang = {
@@ -86595,7 +86626,10 @@ e_kambuja = {
 		d_ban_lung = {
 			color = { 0 60 130 }
 
+			capital = c_mondul_kiri
+
 			c_mondul_kiri = {
+				# part of c_ratanakiri in vanilla
 				color = { 10 70 145 }
 
 				b_mondul_kiri = {
@@ -86615,6 +86649,7 @@ e_kambuja = {
 				}
 			}
 			c_senmonorom = {
+				# part of c_ratanakiri in vanilla
 				color = { 20 80 155 }
 
 				b_senmonorom = {
@@ -86629,6 +86664,7 @@ e_kambuja = {
 				}
 			}
 			c_ta_veang = {
+				# part of c_ratanakiri in vanilla
 				color = { 30 90 165 }
 
 				b_ta_veang = {
@@ -86652,7 +86688,10 @@ e_kambuja = {
 		d_koh_kong = {
 			color = { 15 45 100 }
 
+			capital = c_koh_kong
+
 			c_koh_kong = {
+				# part of c_botum_sakor in vanilla
 				color = { 25 55 115 }
 
 				b_koh_kong = {
@@ -86667,6 +86706,7 @@ e_kambuja = {
 				}
 			}
 			c_khemara_phoumin = {
+				# part of c_botum_sakor in vanilla
 				color = { 35 65 125 }
 
 				b_khemara_phoumin = {
@@ -86686,6 +86726,7 @@ e_kambuja = {
 				}
 			}
 			c_ream = {
+				# part of c_botum_sakor in vanilla
 				color = { 45 75 135 }
 
 				b_ream = {
@@ -86704,10 +86745,15 @@ e_kambuja = {
 		d_sambhupura = {
 			color = { 0 56 151 }
 
+			capital = c_sambhupura
+
 			c_sambhupura = {
+				# absorbed part of vanilla c_stung_treng
+				# also absorbed vanilla c_koh_ker
 				color = { 0 37 179 }
 
 				b_sambhupura = {
+					# 10804 in vanilla
 					province = 16564
 
 					color = { 0 37 179 }
@@ -86717,7 +86763,7 @@ e_kambuja = {
 
 					color = { 0 37 179 }
 				}
-				b_kracheh = {
+				b_kracheh_nokor = {
 					province = 16459
 
 					color = { 0 37 179 }
@@ -86734,6 +86780,7 @@ e_kambuja = {
 				}
 			}
 			c_phnom_preah_theat = {
+				# part of vanilla c_stung_treng
 				color = { 0 39 125 }
 
 				b_phnom_preah_theat = {
@@ -86753,6 +86800,7 @@ e_kambuja = {
 				}
 			}
 			c_thala_borivat = {
+				# part of c_koh_ker in vanilla
 				color = { 0 74 98 }
 
 				b_thala_borivat = {
@@ -86936,6 +86984,7 @@ e_kambuja = {
 				}
 			}
 			c_ayun_pa = {
+				# part of c_pleiku in vanilla
 				color = { 152 48 199 }
 
 				b_drang_lai = {
@@ -87005,7 +87054,7 @@ e_kambuja = {
 
 					color = { 72 38 132 }
 				}
-				b_amarendrapura = {
+				b_prey_nokor = {
 					province = 15148
 
 					color = { 72 38 132 }
@@ -87074,68 +87123,6 @@ e_kambuja = {
 					color = { 148 63 149 }
 				}
 			}
-			c_baigaur = {
-				color = { 158 73 159 }
-
-				b_baigaur = {
-					province = 15752
-
-					color = { 158 73 159 }
-				}
-				b_balau = {
-					province = 15942
-
-					color = { 158 73 159 }
-				}
-				b_uu_kan = {
-					province = 15633
-
-					color = { 158 73 159 }
-				}
-				b_cay_gao = {
-					province = 15830
-
-					color = { 158 73 159 }
-				}
-			}
-			c_kraong = {
-				color = { 168 83 169 }
-
-				b_kraong = {
-					province = 15617
-
-					color = { 168 83 169 }
-				}
-				b_ba_ria = {
-					province = 15634
-
-					color = { 168 83 169 }
-				}
-				b_ham_tan = {
-					province = 15754
-
-					color = { 168 83 169 }
-				}
-			}
-			c_cho_ro = {
-				color = { 178 93 179 }
-
-				b_da_gui = {
-					province = 15989
-
-					color = { 178 93 179 }
-				}
-				b_to = {
-					province = 16052
-
-					color = { 178 93 179 }
-				}
-				b_krung = {
-					province = 15894
-
-					color = { 178 93 179 }
-				}
-			}
 			c_kauthara = {
 				color = { 112 64 174 }
 
@@ -87165,25 +87152,6 @@ e_kambuja = {
 					color = { 112 64 174 }
 				}
 			}
-			c_lach = {
-				color = { 122 74 184 }
-
-				b_k_ho = {
-					province = 16129
-
-					color = { 122 74 184 }
-				}
-				b_sre = {
-					province = 16192
-
-					color = { 122 74 184 }
-				}
-				b_da_don = {
-					province = 16202
-
-					color = { 122 74 184 }
-				}
-			}
 			c_pajai = {
 				color = { 132 84 194 }
 
@@ -87205,10 +87173,62 @@ e_kambuja = {
 			}
 		}
 
+		d_baigaur = {
+			color = { 150 70 150 }
+
+			capital = c_baigaur
+
+			c_baigaur = {
+				color = { 158 73 159 }
+
+				b_baigaur = {
+					province = 15752
+
+					color = { 158 73 159 }
+				}
+				b_balau = {
+					province = 15942
+
+					color = { 158 73 159 }
+				}
+				b_uu_kan = {
+					province = 15633
+
+					color = { 158 73 159 }
+				}
+				b_cay_gao = {
+					province = 15830
+
+					color = { 158 73 159 }
+				}
+			}
+			c_kraong = {
+				# aprt of c_baigaur in vanilla
+				color = { 168 83 169 }
+
+				b_kraong = {
+					province = 15617
+
+					color = { 168 83 169 }
+				}
+				b_ba_ria = {
+					province = 15634
+
+					color = { 168 83 169 }
+				}
+				b_ham_tan = {
+					province = 15754
+
+					color = { 168 83 169 }
+				}
+			}
+		}
+
 		d_dagar = {
 			color = { 78 53 181 }
 
 			c_dagar = {
+				# part of c_pleiku in vanilla
 				color = { 88 63 191 }
 
 				b_yang_prong = {
@@ -87242,6 +87262,7 @@ e_kambuja = {
 				}
 			}
 			c_jarai = {
+				# part of c_pleiku in vanilla
 				color = { 108 83 211 }
 
 				b_ia_krai = {
@@ -87270,6 +87291,7 @@ e_kambuja = {
 				}
 			}
 			c_blao = {
+				# part of c_binh_long in vanilla
 				color = { 128 103 231 }
 
 				b_ngan = {
@@ -87286,6 +87308,46 @@ e_kambuja = {
 					province = 16160
 
 					color = { 128 103 231 }
+				}
+			}
+			c_lach = {
+				# part of c_binh_long in vanilla
+				color = { 122 74 184 }
+
+				b_k_ho = {
+					province = 16129
+
+					color = { 122 74 184 }
+				}
+				b_sre = {
+					province = 16192
+
+					color = { 122 74 184 }
+				}
+				b_da_don = {
+					province = 16202
+
+					color = { 122 74 184 }
+				}
+			}
+			c_cho_ro = {
+				# part of c_binh_long in vanilla
+				color = { 178 93 179 }
+
+				b_da_gui = {
+					province = 15989
+
+					color = { 178 93 179 }
+				}
+				b_to = {
+					province = 16052
+
+					color = { 178 93 179 }
+				}
+				b_krung = {
+					province = 15894
+
+					color = { 178 93 179 }
 				}
 			}
 		}
@@ -87936,6 +87998,7 @@ e_kambuja = {
 				}
 			}
 			c_khon_buri = {
+				# c_dong_si_mahosot in vanilla
 				color = { 176 92 28 }
 
 				b_khon_buri = {
@@ -87981,6 +88044,7 @@ e_kambuja = {
 			capital = c_lamduan
 
 			c_lamduan = {
+				# c_dong_si_mahosot in vanilla
 				color = { 177 92 27 }
 
 				b_lamduan = {
@@ -87989,6 +88053,7 @@ e_kambuja = {
 					color = { 177 92 27 }
 				}
 				b_si_sa_ket = {
+					# 10942 in vanilla
 					province = 17205
 
 					color = { 177 92 27 }
@@ -88005,6 +88070,7 @@ e_kambuja = {
 				}
 			}
 			c_kuupatai = {
+				# c_dong_si_mahosot in vanilla
 				color = { 225 129 55 }
 
 				b_kuupatai = {
@@ -88024,6 +88090,7 @@ e_kambuja = {
 				}
 			}
 			c_buriram = {
+				# c_dong_si_mahosot in vanilla
 				color = { 200 103 30 }
 
 				b_buriram = {
