@@ -76299,10 +76299,13 @@ e_srivijaya = {
 			}
 		}
 
-		d_SUM_aru = {
+		d_SUM_Aru = {
 			color = { 30 110 75 }
 
-			c_SUM_aru = {
+			capital = c_SUM_Aru
+
+			c_SUM_Aru = {
+				# in vanilla part of c_SUM_panai
 				color = { 40 120 85 }
 
 				b_SUM_Aru = {
@@ -76605,9 +76608,10 @@ e_srivijaya = {
 		}
 	}
 
-
-	k_south_sumatra = {
+	k_palembang = {
 		color = { 93 101 7 }
+
+		capital = c_palembang
 
 		d_lampung = {
 			color = { 135 125 35 }
@@ -76683,6 +76687,8 @@ e_srivijaya = {
 
 		d_SUM_palembang = {
 			color = { 85 95 15 }
+
+			capital = c_palembang
 
 			c_palembang = {
 				color = { 95 105 25 }
@@ -76965,6 +76971,7 @@ e_srivijaya = {
 	}
 
 	k_melayu = {
+		# k_malayadvipa in vanilla
 		color = { 33 120 98 }
 
 		d_SUM_jambi = {
@@ -77846,11 +77853,22 @@ e_srivijaya = {
 			}
 		}
 
-		d_17677 = {
+		d_takola = {
 			color = { 38 95 100 }
 
+			capital = c_THAI_takua_pa
+
 			c_THAI_takua_pa = {
+				# c_takola in old RoA
 				color = { 55 125 130 }
+
+				cultural_names = {
+					name_list_tai = cn_takua_pa
+					name_list_siamese = cn_takua_pa
+					name_list_shan = cn_takua_pa
+					name_list_sinhala = cn_takun
+					name_list_bedouin = cn_kakola
+				}
 
 				b_THAI_tako_klang = {
 					province = 11428
@@ -77864,6 +77882,14 @@ e_srivijaya = {
 				}
 				b_THAI_Takola = {
 					province = 11430
+
+					cultural_names = {
+						name_list_tai = cn_takua_pa
+						name_list_siamese = cn_takua_pa
+						name_list_shan = cn_takua_pa
+						name_list_sinhala = cn_takun
+						name_list_bedouin = cn_kakola
+					}
 
 					color = { 55 125 130 }
 				}
