@@ -75422,10 +75422,10 @@ e_java = {
 		d_kalingga = {
 			color = { 100 20 25 }
 
-			capital = c_kayuwangi
+			capital = c_JAV_kalingga
 
-			c_kayuwangi = {
-				# c_JAV_kalingga in vanilla
+			c_JAV_kalingga = { # Kayuwangi
+				# c_kayuwangi in old RoA
 				color = { 110 30 35 }
 
 				b_kayuwangi = {
@@ -75449,8 +75449,8 @@ e_java = {
 					color = { 110 30 35 }
 				}
 			}
-			c_panaraban = {
-				# c_JAV_kalingga in vanilla
+			c_JAV_panaraban = {
+				# part of c_JAV_kalingga in vanilla
 				color = { 90 10 15 }
 
 				b_JAV_Panaraban = {
@@ -75500,20 +75500,6 @@ e_java = {
 					color = { 120 25 50 }
 				}
 			}
-			c_wwatan = {
-				color = { 100 5 30 }
-
-				b_JAV_Wwatan = {
-					province = 17012
-
-					color = { 100 5 30 }
-				}
-				b_surawana = {
-					province = 17040
-
-					color = { 100 5 30 }
-				}
-			}
 			c_tumapel = {
 				color = { 130 35 60 }
 
@@ -75526,6 +75512,20 @@ e_java = {
 					province = 16542
 
 					color = { 130 35 60 }
+				}
+			}
+			c_wwatan = {
+				color = { 100 5 30 }
+
+				b_JAV_Wwatan = {
+					province = 17012
+
+					color = { 100 5 30 }
+				}
+				b_surawana = {
+					province = 17040
+
+					color = { 100 5 30 }
 				}
 			}
 			c_wanagiri = {
