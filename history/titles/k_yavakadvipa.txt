@@ -379,6 +379,7 @@ c_jagaraga = {
 d_janggala = {
 	# Kahuripan era
 	1019.1.1 = {
+		government = mandala_government
 		holder = javanese_ishana_06	#Airlangga
 		liege = k_jawa
 	}
@@ -784,6 +785,7 @@ c_JAV_panaraban = {
 d_panjalu = {
 	# Kahuripan era
 	1019.1.1 = {
+		government = mandala_government
 		holder = javanese_ishana_06	#Airlangga
 		liege = k_jawa
 	}
@@ -805,7 +807,7 @@ d_panjalu = {
 	}
 	# Unification of Kediri & Janggala
 	1135.6.1 = {
-		liege = 0
+		holder = 0
 	}
 }
 
@@ -943,10 +945,11 @@ c_wwatan = {
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
 
-	#under Mataram (Sanjaya dyn)
+	#as Mataram (Sanjaya dyn)
 	716.1.1 = {
 		government = mandala_government
 		holder = javanese_sanjaya_01	#Sanjaya
+		liege = d_JAV_mataram
 	}
 	746.1.1 = {
 		holder = javanese_sanjaya_02	#Dyah Pancapana
@@ -1016,29 +1019,20 @@ c_wwatan = {
 		liege = 0
 	}
 	
-	#as Janggala
+	#as Kediri
 	1042.1.1 = {
-		holder = javanese_ishana_09	#Mapanji Garasakan
+		holder = javanese_ishana_08	#Sri Samarawijaya
 	}
-	1052.1.1 = {
-		holder = javanese_ishana_09a	#Alanjung Ahyes
+	1051.1.1 = {
+		holder = javanese_ishana_11	#Sri Jitendrakara
 	}
-	1059.1.1 = {
-		holder = javanese_ishana_10	#Samarotsaha
-	}	#Unknown how long he reigned
-	1072.1.1 = {
-		holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
+	1112.1.1 = {
+		holder = javanese_ishana_12	#Sri Bameswara
 	}
-	1104.1.1 = {
-		holder = javanese_ishana_21_fic	#fictional
-	}
-	1120.1.1 = {
-		holder = javanese_ishana_22_fic	#fictional
-	}
-	
-	#Janggala conquered by/reunited with Kediri
-	1135.6.1 = {
+	1135.1.1 = {
 		holder = javanese_ishana_13	#Sri Warmmeswara
+	}
+	1135.6.1 = {
 		liege = d_JAV_mataram
 	}
 	1159.1.1 = {
