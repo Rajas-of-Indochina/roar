@@ -90918,38 +90918,25 @@ e_nusantara = {
 	k_south_sulawesi = {
 		color = { 192 212 78 }
 
+		capital = c_SuMa_luwu
+
 		cultural_names = {
 			name_list_makassar = cn_makassar
 			name_list_bugis = cn_bugis
 			name_list_mandar = cn_mandar
 		}
 
-		d_luwu = {
+		d_SuMa_luwu = {
+			# d_luwu in old RoA
 			color = { 140 160 40 }
 
-			c_burau = {
-				color = { 90 120 20 }
+			capital = c_SuMa_luwu
 
-				b_burau = {
-					province = 16210
-
-					color = { 90 120 20 }
-				}
-				b_sadan = {
-					province = 16233
-
-					color = { 90 120 20 }
-				}
-				b_malili = {
-					province = 11178
-
-					color = { 90 120 20 }
-				}
-			}
-			c_palopo = {
+			c_SuMa_luwu = {
+				# c_palopo in old RoA
 				color = { 130 90 30 }
 
-				b_palopo = {
+				b_SUL_Palopo = {
 					province = 11177
 
 					color = { 130 90 30 }
@@ -90959,11 +90946,31 @@ e_nusantara = {
 
 					color = { 130 90 30 }
 				}
+				b_sadan = {
+					province = 16233
+
+					color = { 130 90 30 }
+				}
 			}
-			c_sidenreng = {
+			c_burau = {
+				color = { 90 120 20 }
+
+				b_burau = {
+					province = 16210
+
+					color = { 90 120 20 }
+				}
+				b_SUL_Malili = {
+					province = 11178
+
+					color = { 90 120 20 }
+				}
+			}
+			c_SuMa_ajatappareng = {
+				# c_sidenreng in old RoA
 				color = { 160 140 60 }
 
-				b_sidenreng = {
+				b_SUL_Tosora = {
 					province = 15759
 
 					color = { 160 140 60 }
@@ -90979,7 +90986,10 @@ e_nusantara = {
 		d_mamuju = {
 			color = { 170 190 100 }
 
-			c_mamuju = {
+			capital = c_SuMa_sampaga
+
+			c_SuMa_sampaga = {
+				# c_mamuju in old RoA
 				color = { 110 150 100 }
 
 				b_mamuju = {
@@ -90989,6 +90999,11 @@ e_nusantara = {
 				}
 				b_majene = {
 					province = 15993
+
+					color = { 110 150 100 }
+				}
+				b_kalukku = {
+					province = 11203
 
 					color = { 110 150 100 }
 				}
@@ -91020,11 +91035,6 @@ e_nusantara = {
 
 					color = { 180 160 60 }
 				}
-				b_kalukku = {
-					province = 11203
-
-					color = { 180 160 60 }
-				}
 				b_seko = {
 					province = 16305
 
@@ -91033,13 +91043,17 @@ e_nusantara = {
 			}
 		}
 
-		d_makassar = {
+		d_gowa = {
+			# d_makassar i nold RoA
 			color = { 200 170 60 }
 
-			c_makassar = {
+			capital = c_SuMa_siang
+
+			c_SuMa_siang = {
+				# c_makassar in old RoA
 				color = { 160 120 40 }
 
-				b_makassar = {
+				b_SUL_Makassar = {
 					province = 17855
 
 					color = { 160 120 40 }
@@ -91077,7 +91091,7 @@ e_nusantara = {
 			c_watampone = {
 				color = { 220 180 110 }
 
-				b_watampone = {
+				b_SUL_Boni = {	#Watampone
 					province = 11172
 
 					color = { 220 180 110 }
@@ -91095,32 +91109,17 @@ e_nusantara = {
 			}
 		}
 
-		d_bungku = {
+		d_SuMa_konawe = {
+			# d_bungku in old RoA
 			color = { 161 152 58 }
 
-			c_bungku = {
-				color = { 179 171 86 }
+			capital = c_SuMa_konawe
 
-				b_bungku = {
-					province = 11180
-
-					color = { 179 171 86 }
-				}
-				b_beteleme = {
-					province = 16252
-
-					color = { 179 171 86 }
-				}
-				b_marsaoleh = {
-					province = 11182
-
-					color = { 179 171 86 }
-				}
-			}
-			c_kendari = {
+			c_SuMa_konawe = {
+				# c_kendari in old RoA
 				color = { 224 212 81 }
 
-				b_kendari = {
+				b_SUL_Kendari = {
 					province = 15765
 
 					color = { 224 212 81 }
@@ -91136,6 +91135,26 @@ e_nusantara = {
 					color = { 224 212 81 }
 				}
 			}
+			c_SuMa_tamboeko = {
+				# c_bungku in old RoA
+				color = { 179 171 86 }
+
+				b_SUL_Tamboa = { #Bungku
+					province = 11180
+
+					color = { 179 171 86 }
+				}
+				b_beteleme = {
+					province = 16252
+
+					color = { 179 171 86 }
+				}
+				b_marsaoleh = {
+					province = 11182
+
+					color = { 179 171 86 }
+				}
+			}
 			c_tinanggea = {
 				color = { 112 105 21 }
 
@@ -91149,13 +91168,14 @@ e_nusantara = {
 
 					color = { 112 105 21 }
 				}
-				b_wowoni = {
+				b_SUL_Wowoni = {
 					province = 15676
 
 					color = { 112 105 21 }
 				}
 			}
-			c_bombana = {
+			c_SuMa_moronene = {
+				# c_bombana in old RoA
 				color = { 117 111 46 }
 
 				b_bombana = {
@@ -91168,7 +91188,7 @@ e_nusantara = {
 
 					color = { 117 111 46 }
 				}
-				b_kabaena = {
+				b_SUL_Kabaena = {
 					province = 11192
 
 					color = { 117 111 46 }
@@ -91198,20 +91218,23 @@ e_nusantara = {
 		d_butungmuna = {
 			color = { 210 200 90 }
 
-			c_buton = {
+			capital = c_SuMa_butun
+
+			c_SuMa_butun = {
+				# c_buton in old RoA
 				color = { 170 150 70 }
 
-				b_baubau = {
+				b_SUL_Bhauu = {  #Buton
 					province = 11190
 
 					color = { 170 150 70 }
 				}
-				b_bangkudu = {
+				b_SUL_Goram = {
 					province = 11189
 
 					color = { 170 150 70 }
 				}
-				b_muna = {
+				b_SUL_Muna = {
 					province = 11191
 
 					color = { 170 150 70 }
@@ -91220,7 +91243,7 @@ e_nusantara = {
 			c_wakatobi = {
 				color = { 200 180 120 }
 
-				b_wakatobi = {
+				b_SUL_Tukangbesi = {
 					province = 11188
 
 					color = { 200 180 120 }
