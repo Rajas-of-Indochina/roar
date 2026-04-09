@@ -11,11 +11,15 @@ bugis = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_maritime_mercantilism
 		tradition_staunch_traditionalists
 		tradition_family_entrepreneurship
 		tradition_poetry
-		tradition_jungle_warfare
+
+		# Vanilla traditions
+		#tradition_warrior_culture
+		#tradition_philosopher_culture
 	}
 
 	#dlc_tradition = {
@@ -89,11 +93,11 @@ gorontalo = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_religion_blending
+		tradition_jungle_warfare
 		tradition_jungle_dwellers
+		tradition_religion_blending
 		tradition_music_theory
 		tradition_modest
-		tradition_jungle_warfare
 	}
 
 	name_list = name_list_bisayan
@@ -123,9 +127,9 @@ kaili = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_religion_blending
 		tradition_hill_dwellers
-		tradition_jungle_warfare
 	}
 
 	name_list = name_list_sulawesi
@@ -155,11 +159,16 @@ makassar = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_maritime_mercantilism
 		tradition_fishermen
-		tradition_seafaring
 		tradition_polygamous
-		tradition_jungle_warfare
+	}
+
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
 	}
 
 	name_list = name_list_makassar
@@ -189,9 +198,14 @@ mandar = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_maritime_mercantilism
-		tradition_seafaring
 		tradition_jungle_warfare
+		tradition_maritime_mercantilism
+	}
+
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
 	}
 
 	name_list = name_list_mandar
@@ -221,11 +235,11 @@ minahasa = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_culinary_art
 		tradition_culture_blending
 		tradition_warrior_culture
 		tradition_quarrelsome
-		tradition_jungle_warfare
 	}
 
 	name_list = name_list_filipino
@@ -255,9 +269,9 @@ munan = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_tribe_unity
 		tradition_jungle_dwellers
-		tradition_jungle_warfare
 	}
 
 	name_list = name_list_sulawesi
@@ -287,9 +301,9 @@ pamona = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_religion_blending
 		tradition_hill_dwellers
-		tradition_jungle_warfare
 	}
 
 	name_list = name_list_sulawesi
@@ -319,9 +333,14 @@ salua = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_religion_blending
-		tradition_seafaring
 		tradition_jungle_warfare
+		tradition_religion_blending
+	}
+
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
 	}
 
 	name_list = name_list_sulawesi
@@ -395,9 +414,9 @@ tomini = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_jungle_warfare
 		tradition_family_entrepreneurship
 		tradition_staunch_traditionalists
-		tradition_jungle_warfare
 	}
 
 	name_list = name_list_sulawesi
@@ -417,7 +436,6 @@ tomini = {
 	}
 }
 
-## vanilla
 toraja = {
 	color = { 162 238 242 }
 
