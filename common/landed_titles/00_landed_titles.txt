@@ -75820,14 +75820,14 @@ e_java = {
 
 		capital = c_IDO_bali
 
-		d_bali_sea = {
-			# d_IDO_bali in vanilla
+		d_IDO_bali = {
+			# d_bali_sea in old RoA
 			color = { 140 40 190 }
 
 			capital = c_IDO_bali
 
 			c_IDO_bali = {
-				# c_bali_sea in RoA
+				# c_bali_sea in old RoA
 				color = { 155 55 205 }
 
 				b_gianyar = {
@@ -75842,8 +75842,7 @@ e_java = {
 
 					color = { 165 65 215 }
 				}
-				b_buleleng = {
-					# b_IDO_Buleleng
+				b_IDO_Buleleng = {
 					province = 18379
 
 					color = { 145 45 195 }
@@ -75864,9 +75863,9 @@ e_java = {
 			#		color = { 64 146 144 }
 			#	}
 			#}
-			c_lombok = {
-				# c_IDO_lombok_and_sumbawa in vanilla
-				color = { 125 25 175 }
+			c_IDO_lombok_and_sumbawa = {
+				# c_lombok in old RoA
+				color = { 125 25 175 }   #color = { 45 165 195 } - vanilla
 
 				b_saksak = {
 					province = 16183
@@ -75882,16 +75881,12 @@ e_java = {
 				#	province = 11367
 				#	color = { 50 141 168 }
 				#}
-				b_lombokmirah = {
-					# b_IDO_Lombok
+				b_IDO_Lombok = {
 					province = 18365
 
 					color = { 115 15 165 }
 				}
 			}
-			#c_IDO_lombok_and_sumbawa = {
-			#	color = { 45 165 195 }
-			#}
 		}
 
 		d_bima = {
@@ -75903,8 +75898,7 @@ e_java = {
 				# c_IDO_lombok_and_sumbawa in vanilla
 				color = { 105 25 150 }
 
-				b_bima = {
-					# b_IDO_Bima
+				b_IDO_Bima = {
 					province = 16295
 
 					color = { 105 25 150 }
@@ -75918,7 +75912,7 @@ e_java = {
 
 					color = { 115 35 160 }
 				}
-				b_bolo_sea = {
+				b_IDO_Bolo = {
 					province = 16214
 
 					color = { 95 15 140 }
@@ -75957,8 +75951,7 @@ e_java = {
 
 					color = { 125 45 170 }
 				}
-				b_taliwang = {
-					#b_IDO_Taliwang
+				b_IDO_Taliwang = {
 					province = 16184
 
 					color = { 105 25 150 }
