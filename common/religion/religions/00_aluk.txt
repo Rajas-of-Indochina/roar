@@ -1,4 +1,6 @@
-﻿aluk_religion = { # Aluk To Dolo, Native Toraja/Mandar? faith
+﻿aluk_religion = { # Aluk To Dolo, Native Toraja / Mandarese faith
+	# https://en.wikipedia.org/wiki/Torajan_people#
+	# NOOY-PALM, HETTY. The Sa’dan-Toraja: A Study of Their Social Life and Religion. I: Organization, Symbol and Beliefs. Vol. 87. Brill, 1979. http://www.jstor.org/stable/10.1163/j.ctvbqs8kz.
 	family = rf_pagan
 	graphical_faith = pagan_gfx
 
@@ -43,7 +45,7 @@
 	doctrine = doctrine_no_anointment
 
 	traits = {
-		virtues = { calm brave diligent }
+		virtues = { calm brave diligent transgender }
 		sins = { wrathful craven lazy }
 	}
 
@@ -59,8 +61,8 @@
 		HighGodNameSheHe = CHARACTER_SHEHE_HE
 		HighGodHerselfHimself = CHARACTER_HIMSELF
 		HighGodHerHis = CHARACTER_HERHIS_HIS
-		HighGodNameAlternate = aluk_high_god_name
-		HighGodNameAlternatePossessive = aluk_high_god_name_possessive
+		HighGodNameAlternate = aluk_high_god_name_alternate
+		HighGodNameAlternatePossessive = aluk_high_god_name_alternate_possessive
 
 		#Creator
 		CreatorName = aluk_creator_god_name
@@ -143,13 +145,27 @@
 		PantheonTerm2 = religion_the_gods_2
 		PantheonTerm3 = religion_the_gods_3
 		PantheonTermHasHave = pantheon_term_have
-		GoodGodNames = { aluk_high_god_name aluk_creator_god_name aluk_health_god_name aluk_fertility_god_name aluk_wealth_god_name aluk_household_god_name aluk_fate_god_name aluk_knowledge_god_name aluk_war_god_name aluk_night_god_name aluk_water_god_name }
+		GoodGodNames = {
+			aluk_high_god_name
+			aluk_creator_god_name
+			aluk_health_god_name
+			aluk_fertility_god_name
+			aluk_wealth_god_name
+			aluk_household_god_name
+			aluk_fate_god_name
+			aluk_knowledge_god_name
+			aluk_war_god_name
+			aluk_night_god_name
+			aluk_water_god_name
+		}
 		DevilName = aluk_trickster_god_name
 		DevilNamePossessive = aluk_trickster_god_name_possessive
 		DevilSheHe = CHARACTER_SHEHE_SHE
 		DevilHerHis = CHARACTER_HERHIS_HER
 		DevilHerselfHimself = CHARACTER_HERSELF
-		EvilGodNames = { aluk_trickster_god_name }
+		EvilGodNames = {
+			aluk_trickster_god_name
+		}
 		HouseOfWorship = aluk_house_of_worship
 		HouseOfWorship2 = aluk_house_of_worship_2
 		HouseOfWorship3 = aluk_house_of_worship_3
@@ -190,8 +206,8 @@
 		NegativeAfterLife = aluk_negative_afterlife
 		NegativeAfterLife2 = aluk_negative_afterlife_2
 		NegativeAfterLife3 = aluk_negative_afterlife_3
-		DeathDeityName = aluk_night_god_name
-		DeathDeityNamePossessive = aluk_night_god_name_possessive
+		DeathDeityName = aluk_fate_god_name
+		DeathDeityNamePossessive = aluk_fate_god_name_possessive
 		DeathDeitySheHe = CHARACTER_SHEHE_HE
 		DeathDeityHerHis = CHARACTER_HERHIS_HIS
 		DeathDeityHerHim = CHARACTER_HERHIM_HIM
@@ -207,207 +223,24 @@
 	}
 
 	faiths = {
-		aluk = { # Aluk To Dolo, Native Toraja/Mandar? faith
+		aluk = { # Aluk To Dolo, Native Toraja/Mandar beleif system
+			# replaces alukta from old RoA
 			color = { 105 72 175 }
 			icon = aluk
 			reformed_icon = reformed_aluk
 
-			holy_site = wenang
+			holy_site = toraja
+			holy_site = mandar
 			holy_site = siang
-			holy_site = lore_lindu
-			holy_site = tondano
 			holy_site = latimojong
-
-			# Old Vanilla
-			#holy_site = sonba_i
-			#holy_site = kepala_burung
-			#holy_site = buru-sula
+			holy_site = lore_lindu
 
 			doctrine = unreformed_faith_doctrine
 
-			doctrine = tenet_sanctity_of_nature
-			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_ancestor_worship
-		}
-
-		alukta = { # Aluk To Dolo, Native Toraja/Mandar? faith
-			# needs to be merged with vanilla aluk
-			color = { 128 79 156 }
-			icon = alukta
-			reformed_icon = alukta_reformed
-
-			holy_site = lore_lindu
-			holy_site = tondano
-			holy_site = belogili
-			holy_site = tambora
-			holy_site = latimojong
-
-			doctrine = unreformed_faith_doctrine
-
-			doctrine = tenet_ritual_hospitality
-			doctrine = tenet_spirit_guides
+			doctrine = tenet_ritual_celebrations
 			doctrine = tenet_sanctity_of_nature
-
-			localization = {
-				#HighGod
-				HighGodName = alukta_high_god_name
-				HighGodName2 = alukta_high_god_name
-				HighGodNamePossessive = alukta_high_god_name_possessive
-				HighGodNameSheHe = alukta_high_god_shehe
-				HighGodHerselfHimself = alukta_high_god_herselfhimself
-				HighGodHerHis = alukta_high_god_herhis
-				HighGodNameAlternate = alukta_high_god_name_alternate
-				HighGodNameAlternatePossessive = alukta_high_god_name_alternate_possessive
-
-				#Creator
-				CreatorName = alukta_creator_god_name
-				CreatorNamePossessive = alukta_creator_god_name_possessive
-				CreatorSheHe = alukta_creator_god_shehe
-				CreatorHerHis = alukta_creator_god_herhis
-				CreatorHerHim = alukta_creator_god_herhim
-
-				#HealthGod
-				HealthGodName = alukta_health_god_name
-				HealthGodNamePossessive = alukta_health_god_name_possessive
-				HealthGodSheHe = alukta_health_god_shehe
-				HealthGodHerHis = alukta_health_god_herhis
-				HealthGodHerHim = alukta_health_god_herhim
-
-				#FertilityGod
-				FertilityGodName = alukta_fertility_god_name
-				FertilityGodNamePossessive = alukta_fertility_god_name_possessive
-				FertilityGodSheHe = alukta_fertility_god_shehe
-				FertilityGodHerHis = alukta_fertility_god_herhis
-				FertilityGodHerHim = alukta_fertility_god_herhim
-
-				#WealthGod
-				WealthGodName = alukta_wealth_god_name
-				WealthGodNamePossessive = alukta_wealth_god_name_possessive
-				WealthGodSheHe = alukta_wealth_god_shehe
-				WealthGodHerHis = alukta_wealth_god_herhis
-				WealthGodHerHim = alukta_wealth_god_herhim
-
-				#HouseholdGod
-				HouseholdGodName = alukta_household_god_name
-				HouseholdGodNamePossessive = alukta_household_god_name_possessive
-				HouseholdGodSheHe = alukta_household_god_shehe
-				HouseholdGodHerHis = alukta_household_god_herhis
-				HouseholdGodHerHim = alukta_household_god_herhim
-
-				#FateGod
-				FateGodName = alukta_fate_god_name
-				FateGodNamePossessive = alukta_fate_god_name_possessive
-				FateGodSheHe = alukta_fate_god_shehe
-				FateGodHerHis = alukta_fate_god_herhis
-				FateGodHerHim = alukta_fate_god_herhim
-
-				#KnowledgeGod
-				KnowledgeGodName = alukta_knowledge_god_name
-				KnowledgeGodNamePossessive = alukta_knowledge_god_name_possessive
-				KnowledgeGodSheHe = alukta_knowledge_god_shehe
-				KnowledgeGodHerHis = alukta_knowledge_god_herhis
-				KnowledgeGodHerHim = alukta_knowledge_god_herhim
-
-				#WarGod
-				WarGodName = alukta_war_god_name
-				WarGodNamePossessive = alukta_war_god_name_possessive
-				WarGodSheHe = alukta_war_god_shehe
-				WarGodHerHis = alukta_war_god_herhis
-				WarGodHerHim = alukta_war_god_herhim
-
-				#TricksterGod
-				TricksterGodName = alukta_trickster_god_name
-				TricksterGodNamePossessive = alukta_trickster_god_name_possessive
-				TricksterGodSheHe = alukta_trickster_god_shehe
-				TricksterGodHerHis = alukta_trickster_god_herhis
-				TricksterGodHerHim = alukta_trickster_god_herhim
-
-				#NightGod
-				NightGodName = alukta_night_god_name
-				NightGodNamePossessive = alukta_night_god_name_possessive
-				NightGodSheHe = alukta_night_god_shehe
-				NightGodHerHis = alukta_night_god_herhis
-				NightGodHerHim = alukta_night_god_herhim
-
-				#WaterGod
-				WaterGodName = alukta_water_god_name
-				WaterGodNamePossessive = alukta_water_god_name_possessive
-				WaterGodSheHe = alukta_water_god_shehe
-				WaterGodHerHis = alukta_water_god_herhis
-				WaterGodHerHim = alukta_water_god_herhim
-
-				PantheonTerm = alukta_pantheon_term
-				PantheonTerm2 = alukta_pantheon_term_2
-				PantheonTerm3 = alukta_pantheon_term_3
-				PantheonTermHasHave = alukta_pantheon_term_hashave
-				GoodGodNames = {
-					alukta_high_god_name
-					alukta_high_god_name_alternate
-				}
-				DevilName = alukta_devil_name
-				DevilNamePossessive = alukta_devil_name_possessive
-				DevilSheHe = alukta_devil_shehe
-				DevilHerHis = alukta_devil_herhis
-				DevilHerselfHimself = alukta_devil_herselfhimself
-				EvilGodNames = {
-					alukta_devil_name
-				}
-				HouseOfWorship = alukta_house_of_worship
-				HouseOfWorship2 = alukta_house_of_worship
-				HouseOfWorship3 = alukta_house_of_worship
-				HouseOfWorshipPlural = alukta_house_of_worship_plural
-				ReligiousSymbol = alukta_religious_symbol
-				ReligiousSymbol2 = alukta_religious_symbol
-				ReligiousSymbol3 = alukta_religious_symbol
-				ReligiousText = alukta_religious_text
-				ReligiousText2 = alukta_religious_text
-				ReligiousText3 = alukta_religious_text
-				ReligiousHeadName = alukta_religious_head_title
-				ReligiousHeadTitleName = alukta_religious_head_title_name
-				DevoteeMale = alukta_devotee
-				DevoteeMalePlural = alukta_devotee_plural
-				DevoteeFemale = alukta_devotee
-				DevoteeFemalePlural = alukta_devotee_plural
-				DevoteeNeuter = alukta_devotee
-				DevoteeNeuterPlural = alukta_devotee_plural
-				PriestMale = alukta_priest
-				PriestMalePlural = alukta_priest_plural
-				PriestFemale = alukta_priest
-				PriestFemalePlural = alukta_priest_plural
-				PriestNeuter = alukta_priest
-				PriestNeuterPlural = alukta_priest_plural
-				AltPriestTermPlural = alukta_priest_term_plural
-				BishopMale = alukta_bishop
-				BishopMalePlural = alukta_bishop_plural
-				BishopFemale = alukta_bishop
-				BishopFemalePlural = alukta_bishop_plural
-				BishopNeuter = alukta_bishop
-				BishopNeuterPlural = alukta_bishop_plural
-				DivineRealm = alukta_divine_realm
-				DivineRealm2 = alukta_divine_realm
-				DivineRealm3 = alukta_divine_realm
-				PositiveAfterLife = alukta_afterlife
-				PositiveAfterLife2 = alukta_afterlife
-				PositiveAfterLife3 = alukta_afterlife
-				NegativeAfterLife = alukta_afterlife
-				NegativeAfterLife2 = alukta_afterlife
-				NegativeAfterLife3 = alukta_afterlife
-				DeathDeityName = alukta_death_name
-				DeathDeityNamePossessive = alukta_death_name_possessive
-				DeathDeitySheHe = alukta_death_shehe
-				DeathDeityHerHis = alukta_death_herhis
-				DeathDeityHerHim = alukta_death_herhim
-				WitchGodName = alukta_witch_god_name
-				WitchGodNamePossessive = alukta_witch_god_name_possessive
-				WitchGodHerHis = alukta_witch_god_herhis
-				WitchGodSheHe = alukta_witch_god_shehe
-				WitchGodHerHim = alukta_witch_god_herhim
-				WitchGodMistressMaster = alukta_witch_god_mistressmaster
-				WitchGodMotherFather = alukta_witch_god_motherfather
-
-				GHWName = ghw_purification
-				GHWNamePlural = ghw_purifications
-			}
+			#doctrine = tenet_spirit_guides - potentially add later? other tenets made more sense for this specific faith
 		}
 	}
 }

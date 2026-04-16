@@ -617,6 +617,80 @@ popa = {
 ### ### ### ###
 
 
+### Sulawesi hooly sites ###
+buyu_kondorung = {
+	# high peak situated in central Sulawesi
+	county = c_SuMa_banggai_utara
+
+	character_modifier = {
+		name = holy_site_buyu_kondorung_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+latimojong = {
+	# highest peak in Sulawesi and a sacred mountain, tied to many myths and legends
+	county = c_SuMa_luwu
+	barony = b_larompong
+
+	character_modifier = {
+		name = holy_site_latimojong_effect_name
+		levy_size = 0.1
+		clergy_opinion = 5
+	}
+}
+limboto = {
+	# Lake Limboto is an important site to Gorontalo people
+	county = c_SuMa_gorontalo
+
+	character_modifier = {
+		name = holy_site_limboto_effect_name
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+lore_lindu = {
+	# Lore Lindu is a large forested area containing over 400 granite megaliths of different shapes and sizes
+	county = c_palu
+
+	character_modifier = {
+		name = holy_site_lore_lindu_effect_name
+		monthly_lifestyle_xp_gain_mult = 0.15
+	}
+}
+mandar = {
+	# to represent Mandarese people territory
+	county = c_SuMa_sampaga
+	barony b_mamuju
+
+	character_modifier = {
+		name = holy_site_mandar_effect_name
+		stewardship_per_piety_level = 1
+	}
+}
+tondano = {
+	# refering to Lake Tondano and nearby city of the same name
+	county = c_SuMa_wenang
+	barony = b_tondano
+
+	character_modifier = {
+		name = holy_site_tondano_effect_name
+		diplomacy_per_piety_level = 1
+		fertility = 0.1
+	}
+}
+toraja = {
+	# to represent Toraja people territory and their sacred sites such as Sa'dan river
+	county = c_toraja
+	barony b_toraja
+
+	character_modifier = {
+		name = holy_site_toraja_effect_name
+		martial_per_piety_level = 1
+		defender_advantage = 5
+	}
+}
+### ### ### ###
+
+
 ### Yunnan holy sites ###
 lugu_lake = {
 	# sacred lake for Mosuo people ; called the "mother lake"
