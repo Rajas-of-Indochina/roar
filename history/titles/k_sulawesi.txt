@@ -1,0 +1,106 @@
+﻿# Any government defined as wanua_government here will be switched back to tribal_government if the TGP DLC is not active. 
+# This is done by effect in the game_start.txt on_action file.
+
+k_sulawesi = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 7 }
+}
+
+#d_SuMa_minahasa
+c_SuMa_gorontalo = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 12 }
+
+	867.1.1 = {
+		government = wanua_government
+		holder = toraja_gorontalo_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = toraja_gorontalo_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = toraja_gorontalo_20_fic	#fictional
+	}
+}
+
+c_SuMa_wenang = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
+
+	867.1.1 = {
+		government = wanua_government
+		holder = toraja_wenang_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = toraja_wenang_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = toraja_wenang_20_fic	#fictional
+	}
+}
+
+c_SuMa_banawa = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
+
+	867.1.1 = {
+		government = wanua_government
+		holder = toraja_banawa_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = toraja_banawa_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = toraja_banawa_20_fic	#fictional
+	}
+}
+
+#d_SuMa_tompotika
+c_SuMa_banggai = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 10 }
+
+	867.1.1 = {
+		government = wanua_government
+		holder = toraja_banggai_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = toraja_banggai_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = toraja_banggai_20_fic	#fictional
+	}
+}
+
+c_SuMa_mori = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 10 }
+
+	867.1.1 = {
+		government = wanua_government
+		holder = toraja_mori_01_fic	#fictional
+	}
+}
+
+c_SuMa_banggai_utara = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 9 }
+
+	867.1.1 = {
+		government = wanua_government
+		holder = toraja_banggaiutara_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = toraja_banggaiutara_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = toraja_banggaiutara_20_fic	#fictional
+	}
+}
