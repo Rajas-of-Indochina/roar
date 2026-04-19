@@ -21,13 +21,12 @@
 	doctrine = doctrine_consanguinity_cousins
 
 	#Crimes
-	 # I feel like Paradox just used more modern approach to this, which might not be accurate one
-	doctrine = doctrine_homosexuality_crime
-	doctrine = doctrine_adultery_men_crime
-	doctrine = doctrine_adultery_women_crime
+	doctrine = doctrine_homosexuality_accepted
+	doctrine = doctrine_adultery_men_crime  # major taboo
+	doctrine = doctrine_adultery_women_crime  # major taboo
 	doctrine = doctrine_kinslaying_close_kin_crime
 	doctrine = doctrine_deviancy_crime
-	doctrine = doctrine_witchcraft_crime
+	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
 	doctrine = doctrine_clerical_function_recruitment
@@ -45,7 +44,7 @@
 	doctrine = doctrine_no_anointment
 
 	traits = {
-		virtues = { just honest brave }
+		virtues = { just honest brave transgender }
 		sins = { arbitrary deceitful craven }
 	}
 
