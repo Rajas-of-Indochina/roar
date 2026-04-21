@@ -1,0 +1,78 @@
+
+doctrine_mz_syncretism = {
+	category = "main_group"
+
+	doctrine_types = {
+		doctrine_mz_no_syncretism
+		tenet_sinitic_syncretism
+		tenet_eastern_syncretism
+		tenet_unreformed_syncretism
+		tenet_christian_syncretism
+		tenet_islamic_syncretism
+		tenet_jewish_syncretism
+	}
+}
+
+doctrine_three_teachings = {
+	category = "special"
+
+	is_available_on_create = {
+		has_doctrine = special_doctrine_three_teachings
+	}
+
+	doctrine_types = {
+		special_doctrine_three_teachings
+	}
+}
+
+doctrine_special_succession = {
+	category = "special"
+
+	is_available_on_create = {
+		has_doctrine = special_doctrine_nasrani_partition_succession_law
+	}
+
+	doctrine_types = {
+		special_doctrine_nasrani_partition_succession_law
+	}
+}
+
+doctrine_north_caucasian = {
+	category = "main_group"
+
+	is_available_on_create = {
+		religion_tag = northcaucasian_religion
+	}
+
+	doctrine_types = {
+		northwest_caucasian_doctrine
+		northeast_caucasian_doctrine
+		kartvelist_caucasian_doctrine
+		alan_caucasian_doctrine
+	}
+}
+
+doctrine_roa_orthodox = {
+	category = "special"
+
+	is_available_on_create = {
+		# we should probably tweak this so it has a way to not be part of Orthodox groupings
+		has_doctrine = orthodox_roa_doctrine
+	}
+
+	doctrine_types = {
+		orthodox_roa_doctrine
+	}
+}
+
+doctrine_khorasani_legacy = {
+	category = "special"
+
+	is_available_on_create = {
+		has_doctrine = khorasani_legacy_doctrine
+	}
+
+	doctrine_types = {
+		khorasani_legacy_doctrine
+	}
+}
