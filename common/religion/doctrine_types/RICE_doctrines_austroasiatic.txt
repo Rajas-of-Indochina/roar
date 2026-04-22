@@ -1,10 +1,4 @@
 ﻿
-rice_doctrine_austroasiatic_tiger_god = {
-	group = "main_group"
-	is_available_on_create = {
-		has_doctrine = special_doctrine_is_austroasiatic_faith
-	}
-	
 	rice_austroasiatic_wise_tiger = {
 		piety_cost = {
 			value = faith_doctrine_cost_mid
@@ -185,25 +179,12 @@ rice_doctrine_austroasiatic_tiger_god = {
 		}
 	}
 
-}
-
-
-
-
-is_austroasiatic_faith = {
-	group = "special"
-	
-	is_available_on_create = {
-		has_doctrine = special_doctrine_is_austroasiatic_faith
+special_doctrine_is_austroasiatic_faith = {
+	parameters = {
+		hostility_override_special_doctrine_is_austroasiatic_faith = 1
+		rice_unlocks_tiger_spirits_content = yes
 	}
-
-	special_doctrine_is_austroasiatic_faith = {
-		parameters = {
-			hostility_override_special_doctrine_is_austroasiatic_faith = 1
-			rice_unlocks_tiger_spirits_content = yes
-		}
-		character_modifier = {
-			jungle_development_growth_factor = 0.05
-		}
+	character_modifier = {
+		jungle_development_growth_factor = 0.05
 	}
 }

@@ -327,6 +327,8 @@ tenet_jewish_syncretism = {
 
 ### Caucasus special doctrines
 northwest_caucasian_doctrine = {
+	icon = "northwest_caucasian_doctrine"
+
 	piety_cost = {
 		value = faith_doctrine_cost_low
 		if = {
@@ -334,11 +336,14 @@ northwest_caucasian_doctrine = {
 			multiply = 0
 		}
 	}
+
 	parameters = {
 		hostility_override_northwest_caucasian_doctrine = 0
 	}
 }
 northeast_caucasian_doctrine = {
+	icon = "northeast_caucasian_doctrine"
+
 	piety_cost = {
 		value = faith_doctrine_cost_low
 		if = {
@@ -346,11 +351,14 @@ northeast_caucasian_doctrine = {
 			multiply = 0
 		}
 	}
+
 	parameters = {
 		hostility_override_northeast_caucasian_doctrine = 0
 	}
 }
 kartvelist_caucasian_doctrine = {
+	icon = "kartvelist_caucasian_doctrine"
+
 	piety_cost = {
 		value = faith_doctrine_cost_low
 		if = {
@@ -358,11 +366,14 @@ kartvelist_caucasian_doctrine = {
 			multiply = 0
 		}
 	}
+
 	parameters = {
 		hostility_override_kartvelist_caucasian_doctrine = 0
 	}
 }
 alan_caucasian_doctrine = {
+	icon = "alan_caucasian_doctrine"
+
 	piety_cost = {
 		value = faith_doctrine_cost_low
 		if = {
@@ -370,6 +381,7 @@ alan_caucasian_doctrine = {
 			multiply = 0
 		}
 	}
+
 	parameters = {
 		hostility_override_northwest_caucasian_doctrine = 1
 		hostility_override_northeast_caucasian_doctrine = 1
