@@ -22,3 +22,17 @@ portrait_can_use_noble_headgear_trigger = {
 		}
 	}
 }
+
+
+### Anarchist ###
+portrait_anarchist_clothing_trigger = {
+	portrait_anarchist_trigger = {
+		CULTURE_INPUT = $CULTURE_INPUT$
+	}
+	portrait_wear_no_armor_trigger = yes
+}
+
+portrait_anarchist_trigger = {
+	has_government = anarchist_government
+	portrait_$CULTURE_INPUT$_clothing_trigger = yes
+}

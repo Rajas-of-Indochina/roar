@@ -42,6 +42,7 @@ marriage_interaction_on_accept_effect = {
 			if = {
 				limit = {
 					is_valid_for_legitimacy_change = yes
+					NOT = { has_government = anarchist_government } # Stateless loses no legitimacy
 					NOT = { has_variable = lowborn_legitimacy_cooldown }
 					OR = {
 						NOT = { exists = primary_spouse }
@@ -474,6 +475,45 @@ marriage_interaction_on_accept_effect = {
 		}
 		scope:actor = {
 			add_piety = medium_piety_gain
+		}
+	}
+}
+
+vassals_dislike_marry_lowborn_effect = {
+	$RULER$ = {
+		if = {
+			limit = {
+				is_lowborn = no
+				$SPOUSE$ = { is_lowborn = yes }
+				OR = {
+					NOT = { exists = primary_spouse }
+					primary_spouse ?= $SPOUSE$
+				}
+			}
+			every_vassal_or_below = {
+				limit = {
+					has_vassal_stance = courtly
+					NOT = { has_government = anarchist_government }
+				}
+				custom = every_courtly_vassal
+				add_opinion = {
+					modifier = married_lowborn_opinion
+					target = $RULER$
+					opinion = -50
+				}
+			}
+			every_vassal_or_below = {
+				limit = {
+					has_vassal_stance = glory_hound
+					NOT = { has_government = anarchist_government }
+				}
+				custom = every_glory_hound_vassal
+				add_opinion = {
+					modifier = married_lowborn_opinion
+					target = $RULER$
+					opinion = -30
+				}
+			}			
 		}
 	}
 }

@@ -1,0 +1,42 @@
+# A title is transferred to a new character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Might be dead
+on_title_gain = {
+	on_actions = {
+		sea_stateless_title_handler
+	}
+}
+
+# Make sure that Stateless rulers can't gain titles.
+# They already can't inherit them from dynastic govs
+# this is to make sure that if they manage to seize any then they get handed out to confederate or destroyed
+# if you see a stateless character with a title tier higher than count then something's gone hinky, amiss or perhaps even pear-shaped
+sea_stateless_title_handler = {
+	trigger = {
+		government_has_flag = government_is_stateless
+	}
+	effect = {
+		# No duchies or kingdoms! You're a stateless society, you reject that kind of authority, dingus!
+		every_held_title = {
+			limit = { tier >= tier_duchy }
+			ROOT = { destroy_title = PREV }
+		}
+		# Also no land grabbing! If you want to expand your borders you gotta reform into a state society
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				NOT = { this = ROOT.capital_county }
+			}
+			save_scope_as = title
+			create_character = {
+				location = scope:title.title_province
+				template = generic_peasant_character
+				faith = scope:title.faith
+				culture = scope:title.culture
+				save_scope_as = new_count
+			}
+			give_commune_county_effect = yes
+		}
+	}
+}

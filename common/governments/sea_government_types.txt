@@ -1,0 +1,38 @@
+anarchist_government = {
+	government_rules = {
+		rulers_should_have_dynasty = yes
+		regiments_prestige_as_gold = yes
+		inherit_from_dynastic_government = no
+		uses_culture_named_realms = yes
+		use_as_base_on_landed = yes
+		affected_by_development = no
+		always_use_patronym = yes
+	}
+
+	supply_limit_mult_for_others = -0.75
+	primary_holding = tribal_holding
+	required_county_holdings = { tribal_holding }
+
+	valid_holdings = { castle_holding }
+
+	prestige_opinion_override = { -10 0 3 5 10 20 }
+
+	vassal_contract_group = anarchist_vassal
+
+	character_modifier = {
+		county_opinion_add = 10
+
+		title_creation_cost_mult = 10000
+		army_maintenance_mult = -0.5
+
+		ai_war_chance = -0.75
+	}
+
+	flag = government_can_raid_rule
+	# Use flags instead of has_government for moddability if possible (i.e., wherever not visible to the player).
+	flag = government_is_tribal
+	flag = government_is_settled
+	flag = government_is_stateless
+	flag = government_should_be_seniority
+	color = { 30 30 30  }
+}

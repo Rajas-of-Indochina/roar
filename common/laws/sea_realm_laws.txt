@@ -1,0 +1,57 @@
+stateless_authority = {
+	default = stateless_authority_1
+	cumulative = yes
+	flag = realm_law
+
+	stateless_authority_0 = {
+		modifier = {
+			direct_vassal_opinion = 10
+		}
+
+		can_have = { realm_law_use_stateless_authority = yes }
+		can_keep = { realm_law_use_stateless_authority = yes }
+
+		can_pass = {
+			always = no
+		}
+	}
+
+	stateless_authority_1 = {
+		modifier = {
+			direct_vassal_opinion = -10
+		}
+
+		can_have = { realm_law_use_stateless_authority = yes }
+		can_keep = { realm_law_use_stateless_authority = yes }
+
+		can_pass = {
+			always = no
+		}
+	}
+
+	stateless_authority_2 = {
+		modifier = {
+			direct_vassal_opinion = -10
+		}
+
+		can_have = { realm_law_use_stateless_authority = yes }
+		can_keep = { realm_law_use_stateless_authority = yes }
+
+		can_pass = {
+			always = no
+		}
+	}
+
+	stateless_authority_3 = {
+		modifier = {
+			direct_vassal_opinion = -10
+		}
+
+		can_have = { realm_law_use_stateless_authority = yes }
+		can_keep = { realm_law_use_stateless_authority = yes }
+
+		can_pass = {
+			always = no
+		}
+	}
+}
