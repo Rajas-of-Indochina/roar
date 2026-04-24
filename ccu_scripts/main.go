@@ -21,19 +21,22 @@ func main() {
 
 	path, _ := os.Getwd()
 	modDirectory := filepath.Dir(path)
-
-	var configInfo configData
-	configInfo.modOutFolder = modDirectory
-	configInfo.pillarsFolder = filepath.Join(configInfo.modOutFolder, "common", "culture", "pillars")
-	configInfo.localizationOutFolder = filepath.Join(configInfo.modOutFolder, "localization", "english")
-	configInfo.scriptedEffectsOutFolder = filepath.Join(configInfo.modOutFolder, "common", "scripted_effects")
-	configInfo.scriptedGUIOutFolder = filepath.Join(configInfo.modOutFolder, "common", "scripted_guis")
-	writeCCUFiles(configInfo)
-	bakEliminator(modDirectory)
+	writeEffects(modDirectory)
 }
 
 func writeHeader(outFile *os.File) {
 	_, _ = outFile.WriteString("\ufeff")
+	_, _ = outFile.WriteString("#############################################\n")
+	_, _ = outFile.WriteString("# CCU Patcher\n")
+	_, _ = outFile.WriteString("# by Vertimnus\n")
+	_, _ = outFile.WriteString("# This file was compiled by a machine.\n")
+	_, _ = outFile.WriteString("# It should never be manually edited.\n")
+	_, _ = outFile.WriteString("#############################################\n\n")
+}
+
+func writeLocHeader(outFile *os.File) {
+	_, _ = outFile.WriteString("\ufeff")
+	_, _ = outFile.WriteString("l_english:\n\n")
 	_, _ = outFile.WriteString("#############################################\n")
 	_, _ = outFile.WriteString("# CCU Patcher\n")
 	_, _ = outFile.WriteString("# by Vertimnus\n")
