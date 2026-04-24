@@ -3552,7 +3552,7 @@ language_halmahera = {
 		}
 	}
 	parameters = {
-		language_branch_halmaheran = yes
+		language_branch_north_halmaheran = yes
 		language_family_west_papuan = yes
 		language_union_moluccan = yes
 	}
@@ -3564,7 +3564,7 @@ language_halmahera = {
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_branch_halmaheran }
+			limit = { has_cultural_parameter = language_branch_north_halmaheran }
 			multiply = same_language_branch_choice_factor
 		}
 		else_if = {
