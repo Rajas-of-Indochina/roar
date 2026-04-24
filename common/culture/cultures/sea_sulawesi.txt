@@ -1,87 +1,5 @@
-﻿## In alphabetical order ##
-
-bugis = {
-	color = bugis
-
-	ethos = ethos_communal
-	heritage = heritage_sulawesi
-	language = language_bugis
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_jungle_warfare
-		tradition_maritime_mercantilism
-		tradition_staunch_traditionalists
-		tradition_family_entrepreneurship
-		tradition_poetry
-
-		# Vanilla traditions
-		#tradition_warrior_culture
-		#tradition_philosopher_culture
-	}
-
-	#dlc_tradition = {
-		#trait = tradition_maritime_way_of_life
-		#requires_dlc_flag = all_under_heaven
-	#}
-
-	name_list = name_list_bugis
-
-	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		20 = asian_malay
-		80 = asian_austronesian
-	}
-}
-
-bungku = {
-	color = bungku
-
-	ethos = ethos_stoic
-	heritage = heritage_sulawesi
-	language = language_bungku
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_jungle_warfare
-		tradition_hill_dwellers
-		tradition_religion_blending
-		tradition_practiced_pirates
-	}
-
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_maritime_mercantilism
-	}
-
-	name_list = name_list_bugis
-
-	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		20 = asian_malay
-		80 = asian_austronesian
-	}
-}
-
+﻿#### In alphabetical order ####
+### North Sulawesi
 gorontalo = {
 	color = gorontalo
 
@@ -92,7 +10,7 @@ gorontalo = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
 		tradition_jungle_dwellers
 		tradition_religion_blending
 		tradition_music_theory
@@ -126,88 +44,21 @@ kaili = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
-		tradition_religion_blending
-		tradition_hill_dwellers
+		tradition_jungle_warfare 	# msl_note: we need tradition like this but tradition_highland_warriors version
+		tradition_hill_dwellers 	# msl_note: they live in pretty hilly area
+		tradition_SEA_ade 	# msl_note: like many other groups of Sulawesi, they posses various traditions and customary laws responsible for their way of life
+		tradition_fishermen 	# msl_note: coastal tribes have always relied on boons of the sea
+		tradition_maritime_mercantilism 	# msl_note: they have long history of trading with Kalimantan
 	}
+
+	# msl_note: Rice plays important part in their lives ; unsure if it is tradition worthy though so crossed out for now
+	#dlc_tradition = {
+		#trait = tradition_tgp_rice_cultivators
+		#requires_dlc_flag = all_under_heaven
+		#fallback = tradition_agrarian
+	#}
 
 	name_list = name_list_sulawesi
-
-	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		20 = asian_malay
-		80 = asian_austronesian
-	}
-}
-
-makassar = {
-	color = makassar
-
-	ethos = ethos_stoic
-	heritage = heritage_sulawesi
-	language = language_makassar
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_jungle_warfare
-		tradition_maritime_mercantilism
-		tradition_fishermen
-		tradition_polygamous
-	}
-
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
-	}
-
-	name_list = name_list_makassar
-
-	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		20 = asian_malay
-		80 = asian_austronesian
-	}
-}
-
-mandar = {
-	color = mandar
-
-	ethos = ethos_communal
-	heritage = heritage_sulawesi
-	language = language_mandar
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_jungle_warfare
-		tradition_maritime_mercantilism
-	}
-
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
-	}
-
-	name_list = name_list_mandar
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
@@ -234,7 +85,7 @@ minahasa = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
 		tradition_culinary_art
 		tradition_culture_blending
 		tradition_warrior_culture
@@ -242,38 +93,6 @@ minahasa = {
 	}
 
 	name_list = name_list_filipino
-
-	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		20 = asian_malay
-		80 = asian_austronesian
-	}
-}
-
-munan = {
-	color = munan
-
-	ethos = ethos_communal
-	heritage = heritage_sulawesi
-	language = language_munan
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_jungle_warfare
-		tradition_tribe_unity
-		tradition_jungle_dwellers
-	}
-
-	name_list = name_list_sulawesi
 
 	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
@@ -300,9 +119,11 @@ pamona = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
-		tradition_religion_blending
-		tradition_hill_dwellers
+		tradition_jungle_warfare 	# msl_note: we need tradition like this but tradition_highland_warriors version
+		tradition_religion_blending 	# msl_note: rather easily and quickly adapted to christainity
+		tradition_hill_dwellers 	# msl_note: famously living in fortified hill villages
+		tradition_highland_warriors 	# msl_note: famously living in fortified hill villages
+		tradition_music_theory 	# msl_note: long history of sing-spoken music
 	}
 
 	name_list = name_list_sulawesi
@@ -332,7 +153,7 @@ salua = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
 		tradition_religion_blending
 	}
 
@@ -348,51 +169,6 @@ salua = {
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		20 = asian_malay
-		80 = asian_austronesian
-	}
-}
-
-tolaki = {
-	# Speakers of the Tolaki language - used to be the dominant group in Southeast Sulawesi
-	color = tolaki
-
-	ethos = ethos_stoic 
-	heritage = heritage_sulawesi
-	language = language_tomini
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-	traditions = {
-		tradition_jungle_warfare
-		tradition_charitable 	# Cybr: Tolaki principle of Samaturu, solidarity and helping each other
-		tradition_equitable 	# Cybr: Tolaki tradition of assemblies, customary law, and deliberation to resolve conflicts
-	}
-
-	# Cybr: Rice cultivators
-	dlc_tradition = {
-		trait = tradition_tgp_rice_cultivators
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_agrarian
-	}
-
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_maritime_mercantilism
-	}
-
-	name_list = name_list_bugis
-
-	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -436,6 +212,261 @@ tomini = {
 	}
 }
 
+
+### South Sulawesi
+bugis = {
+	color = bugis
+
+	ethos = ethos_communal
+	heritage = heritage_sulawesi
+	language = language_bugis
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warfare 	# msl_note: replaces tradition_warrior_culture ; probably could use adjustments
+		tradition_maritime_mercantilism 	# msl_note: trade and commerce was important part of their lives ; they imported water buffalos
+		tradition_SEA_ade 	# msl_note: very family oriented with vast 'adat' rules dictating their lives
+		tradition_poetry	# msl_note: their literature is an oral composition deeply rooted in their understanding and perception of life - mostly in form of poetry
+		#tradition_philosopher_culture 	# msl_note: repalced with
+	}
+
+	# msl_note: famous seafarers
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_bugis
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
+bungku = {
+	color = bungku
+
+	ethos = ethos_stoic
+	heritage = heritage_sulawesi
+	language = language_bungku
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
+		tradition_hill_dwellers 	# msl_note: msot of the region was rather mountainous
+		tradition_metal_craftsmanship 	# msl_note: famed for their iron blacksmiths
+		tradition_practiced_pirates 	# msl_note: Bungku Kingdom was an infamous smuggling centre
+	}
+
+	# msl_note: Bungku Kingdom was famed as a major trading centre on eastern coast of Sulawesi
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_maritime_mercantilism
+	}
+
+	name_list = name_list_bugis
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
+makassar = {
+	color = makassar
+
+	ethos = ethos_stoic
+	heritage = heritage_sulawesi
+	language = language_makassar
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
+		tradition_maritime_mercantilism 	# msl_note: famous sea-traders
+		tradition_fishermen 	# msl_note: very important to them is art of 'trepanging' - collecting sea cucumbers
+		tradition_culinary_art 	# msl_note: their cuisine is quite well renowned
+	}
+
+ 	# msl_note: rice farming is also important but not enough slots
+
+ 	# msl_note: famous seafarers that were the gateway for outside merchants into Sulawesi
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_makassar
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
+mandar = {
+	color = mandar
+
+	ethos = ethos_communal
+	heritage = heritage_sulawesi
+	language = language_mandar
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warfare 	# msl_note: we need tradition like this but tradition_highland_warriors version
+		tradition_maritime_mercantilism 	# msl_note: sea trade is their trade *joke intended*
+		tradition_fishermen 	# msl_note: fishing is an important part of these people culture and history
+		tradition_hereditary_hierarchy  	# msl_note: vestiges of traditional relations play important role in mandarese societies
+	}
+
+	# msl_note: believed to be some of the best sailors in Sulawesi
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_mandar
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
+muna = {
+	## represents both Muna and Butonese
+	# might have similarities with people of Lesser Sunda - needs checking out
+	color = muna
+
+	ethos = ethos_communal
+	heritage = heritage_sulawesi
+	language = language_muna
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
+		tradition_jungle_dwellers 	# msl_note: terrain based choice
+		tradition_tribe_unity 	# needs to be checked why it was given
+		tradition_fishermen 	# msl_note: long history of sea cucumber harvesting and daring fishing travels
+		# Karia & Kasambu cermeonies would make for cool tradition ; various other life and death ceremonies
+	}
+
+	# msl_note: did some far away travels for sake of fishing
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	name_list = name_list_sulawesi
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
+tolaki = {
+	# Speakers of the Tolaki language - used to be the dominant group in Southeast Sulawesi
+	color = tolaki
+
+	ethos = ethos_stoic 
+	heritage = heritage_sulawesi
+	language = language_tomini
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+	traditions = {
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
+		tradition_charitable 	# Cybr: Tolaki principle of Samaturu, solidarity and helping each other
+		#tradition_equitable 	# Cybr: Tolaki tradition of assemblies, customary law, and deliberation to resolve conflicts
+		tradition_SEA_ade 	# msl_note: very family oriented with vast 'adat' rules dictating their lives
+	}
+
+	# Cybr: Rice cultivators
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# Cybr: sea and its boons are very important to them
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_maritime_mercantilism
+	}
+
+	name_list = name_list_bugis
+
+	coa_gfx = { sulawesi_coa_gfx austronesian_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
+
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		20 = asian_malay
+		80 = asian_austronesian
+	}
+}
+
 toraja = {
 	color = toraja
 
@@ -446,15 +477,17 @@ toraja = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
-		tradition_hill_dwellers
-		tradition_culture_blending
+		tradition_jungle_warfare 	# msl_note: we need tradition like this but tradition_highland_warriors version
+		tradition_hill_dwellers 	# msl_note: they live in  a very hilly area
+		tradition_SEA_ade 	# msl_note: very family oriented with vast 'adat' rules dictating their lives
+		tradition_artisans  	# msl_note: famed for their colourful wood carvings and tongkonan houses
+		# we also need something to represent their elaborate funeral rites
 	}
 
+	# Known as 'highland rice cultivators' as their characteristic among Southern Sulawesi people
 	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
+		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
 	}
 
 	name_list = name_list_sulawesi

@@ -13,9 +13,7 @@ tradition_maritime_mercantilism = {
 		custom_description = {
 			text = culture_on_coast_desc
 			any_culture_county = {
-				any_county_province = {
-					is_coastal = yes
-				}
+				has_coastal_province = yes
 			}
 		}
 		NOT = { has_cultural_tradition = tradition_thalassocratic }
@@ -28,6 +26,7 @@ tradition_maritime_mercantilism = {
 	}
 	character_modifier = {
 		republic_government_vassal_opinion = 10
+		coastal_sea_travel_danger = low_sea_danger_reduction
 		sea_travel_danger = low_sea_danger_reduction
 	}
 
@@ -58,9 +57,7 @@ tradition_maritime_mercantilism = {
 					NOT = {
 						any_culture_county = {
 							percent >= 0.3
-							any_county_province = {
-								is_coastal = yes
-							}
+							has_coastal_province = yes
 						}
 					}
 				}
@@ -91,9 +88,7 @@ tradition_maritime_mercantilism = {
 				scope:character = {
 					any_sub_realm_county = {
 						percent >= 0.6
-						any_county_province = {
-							is_coastal = yes
-						}
+						has_coastal_province = yes
 					}
 				}
 			}
@@ -114,9 +109,7 @@ tradition_maritime_mercantilism = {
 					scope:character = {
 						any_sub_realm_county = {
 							percent >= 0.3
-							any_county_province = {
-								is_coastal = yes
-							}
+							has_coastal_province = yes
 						}
 					}
 				}
@@ -127,9 +120,7 @@ tradition_maritime_mercantilism = {
 			limit = {
 				any_culture_county = {
 					percent >= 0.6
-					any_county_province = {
-						is_coastal = yes
-					}
+					has_coastal_province = yes
 				}
 			}
 			multiply = 2

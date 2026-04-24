@@ -1715,11 +1715,11 @@ language_motu = {
 	color = motu
 }
 
-language_munan = {
+language_muna = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_munan
+			LANGUAGE = language_muna
 		}
 	}
 	parameters = {
@@ -1732,7 +1732,7 @@ language_munan = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_munan }
+			limit = { has_cultural_pillar = language_muna }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
@@ -1753,7 +1753,7 @@ language_munan = {
 		}
 	}
 
-	color = munan
+	color = muna
 }
 
 language_murut = {

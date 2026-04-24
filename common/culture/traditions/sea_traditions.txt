@@ -557,6 +557,8 @@ tradition_thalassocratic = {
 	}
 	character_modifier = {
 		naval_movement_speed_mult = 0.10
+		coastal_sea_travel_danger = low_sea_danger_reduction
+		sea_travel_danger = low_sea_danger_reduction
 	}
 
 	cost = {
@@ -1218,6 +1220,76 @@ tradition_jungle_warfare = {
 	}
 }
 
+tradition_SEA_ade = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = noble.dds
+	}
+
+	is_shown = {
+		NOR = {
+			has_cultural_tradition = tradition_adat
+			has_cultural_tradition = tradition_shgwir_i_zhakhe
+			has_cultural_tradition = tradition_xabze
+		}
+		OR = {
+			# expand list later
+			has_cultural_pillar = heritage_sulawesi
+			has_cultural_pillar = heritage_dayak
+		}
+	}
+
+	parameters = {
+		prowess_from_martial_education = yes
+		harder_to_convert_county_culture_without_heritage = yes
+		#rivalries_more_common = yes
+		#hostile_action_vs_rival_bonuses = yes
+		close_family_better_councillors = yes
+		close_family_better_court_positions = yes
+		penalty_for_revoking_titles_from_close_family = yes
+		adat_defense = yes
+	}
+
+	character_modifier = {
+		tyranny_gain_mult = 0.5
+		stress_gain_mult = 0.05
+		close_relative_opinion = 5
+		prowess = 1
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_bellicose = { is_in_list = traits }
+						culture_pillar:ethos_stoic = { is_in_list = traits }
+						culture_pillar:ethos_communal = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_stoic_or_communal_desc
+				}
+			}
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = {
+		value = 100
+	}
+}
+
 tradition_people_of_the_red_river = {
 	category = realm
 
@@ -1842,6 +1914,7 @@ tradition_xabze = { #Representing adat traditions in Northwest Caucasus
 		NOR = {
 			has_cultural_tradition = tradition_adat
 			has_cultural_tradition = tradition_shgwir_i_zhakhe
+			has_cultural_tradition = tradition_SEA_ade
 		}
 		OR = {
 			this = culture:circassian
@@ -1873,6 +1946,7 @@ tradition_xabze = { #Representing adat traditions in Northwest Caucasus
 	character_modifier = {
 		tyranny_gain_mult = 0.5
 		stress_gain_mult = 0.05
+		close_relative_opinion = 5
 		diplomatic_range_mult = -0.15
 		prowess = 1
 	}
@@ -1888,12 +1962,13 @@ tradition_xabze = { #Representing adat traditions in Northwest Caucasus
 				limit = {
 					NOR = {
 						culture_pillar:ethos_bellicose = { is_in_list = traits }
+						culture_pillar:ethos_stoic = { is_in_list = traits }
 						culture_pillar:ethos_communal = { is_in_list = traits }
 					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_bellicose_or_communal_desc
+					desc = not_bellicose_stoic_or_communal_desc
 				}
 			}
 
@@ -1912,13 +1987,14 @@ tradition_adat = { #Representing adat traditions in Northeast Caucasus
 	layers = {
 		0 = diplo
 		1 = mena
-		4 = laurel.dds
+		4 = laurel.dds	# temporary
 	}
 
 	is_shown = {
 		NOR = {
 			has_cultural_tradition = tradition_xabze
 			has_cultural_tradition = tradition_shgwir_i_zhakhe
+			has_cultural_tradition = tradition_SEA_ade
 		}
 		NOR = {
 			this = culture:circassian
@@ -1952,6 +2028,7 @@ tradition_adat = { #Representing adat traditions in Northeast Caucasus
 	character_modifier = {
 		tyranny_gain_mult = 0.5
 		stress_gain_mult = 0.05
+		close_relative_opinion = 5
 		diplomatic_range_mult = -0.15
 		prowess = 1
 	}
@@ -1967,12 +2044,13 @@ tradition_adat = { #Representing adat traditions in Northeast Caucasus
 				limit = {
 					NOR = {
 						culture_pillar:ethos_bellicose = { is_in_list = traits }
+						culture_pillar:ethos_stoic = { is_in_list = traits }
 						culture_pillar:ethos_communal = { is_in_list = traits }
 					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_bellicose_or_communal_desc
+					desc = not_bellicose_stoic_or_communal_desc
 				}
 			}
 
@@ -1991,13 +2069,14 @@ tradition_shgwir_i_zhakhe = { # Representing adat-like traditions among Kartvels
 	layers = {
 		0 = diplo
 		1 = mena
-		4 = laurel.dds	# temporary
+		4 = noble.dds	# temporary
 	}
 
 	is_shown = {
 		NOR = {
 			has_cultural_tradition = tradition_xabze
 			has_cultural_tradition = tradition_adat
+			has_cultural_tradition = tradition_SEA_ade
 		}
 		OR = {
 			this = culture:svan
@@ -2027,6 +2106,7 @@ tradition_shgwir_i_zhakhe = { # Representing adat-like traditions among Kartvels
 	character_modifier = {
 		tyranny_gain_mult = 0.5
 		stress_gain_mult = 0.05
+		close_relative_opinion = 5
 		diplomatic_range_mult = -0.15
 		prowess = 1
 	}
@@ -2042,12 +2122,13 @@ tradition_shgwir_i_zhakhe = { # Representing adat-like traditions among Kartvels
 				limit = {
 					NOR = {
 						culture_pillar:ethos_bellicose = { is_in_list = traits }
+						culture_pillar:ethos_stoic = { is_in_list = traits }
 						culture_pillar:ethos_communal = { is_in_list = traits }
 					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_bellicose_or_communal_desc
+					desc = not_bellicose_stoic_or_communal_desc
 				}
 			}
 
