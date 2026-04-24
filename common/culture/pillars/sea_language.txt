@@ -2168,11 +2168,11 @@ language_sumba = {
 	color = sumba
 }
 
-language_taliabu = {
+language_sula_taliabu = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_taliabu
+			LANGUAGE = language_sula_taliabu
 		}
 	}
 	parameters = {
@@ -2184,7 +2184,7 @@ language_taliabu = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_taliabu }
+			limit = { has_cultural_pillar = language_sula_taliabu }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
@@ -2201,7 +2201,7 @@ language_taliabu = {
 		}
 	}
 
-	color = taliabu
+	color = sula_taliabu
 }
 
 language_sunda = {
