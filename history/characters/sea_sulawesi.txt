@@ -13,18 +13,6 @@ gorontalo001 = {
 		death = yes
 	}
 }
-gorontalo002 = {
-	name = "Kaitlog"
-	culture = gorontalo
-	religion = malesung
-
-	834.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
-}
 
 ### Kaili
 kaili001 = {
@@ -87,15 +75,132 @@ sea_saluan_luwuk_01 = {
 }
 
 ### Tomini
-tomini001 = {
+#Banawa
+tomini_banawa_01_fic = {
+	name = "Entirong"
+	dynasty = toraja_kaili
+	religion = celebic
+	culture = tomini
+
+	847.1.1 = {
+		birth = yes
+	}
+	882.1.1 = {
+		death = yes
+	}
+}
+tomini_banawa_10_fic = {
+	name = "Ngeging"
+	dynasty = toraja_kaili
+	religion = celebic
+	culture = tomini
+
+	1016.1.1 = {
+		birth = yes
+	}
+	1069.1.1 = {
+		death = yes
+	}
+}
+tomini_banawa_11_fic = {
+	name = "Tabo"
+	dynasty = toraja_kaili
+	religion = celebic
+	culture = tomini
+	father = tomini_banawa_10_fic
+
+	1052.1.1 = {
+		birth = yes
+	}
+	1105.1.1 = {
+		death = yes
+	}
+}
+tomini_banawa_20_fic = {
+	name = "Ading"
+	dynasty = toraja_kaili
+	religion = celebic
+	culture = tomini
+
+	1142.1.1 = {
+		birth = yes
+	}
+	1191.1.1 = {
+		death = yes
+	}
+}
+
+sea_tomini_01 = {
+	name = "Kaitlog"
+	religion = celebic
+	culture = tomini
+
+	838.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+sea_tomini_02 = {
 	name = "Biyunget"
 	religion = celebic
 	culture = tomini
 
-	839.1.1 = {
+	834.1.1 = {
 		birth = yes
 	}
 	900.1.1 = {
+		death = yes
+	}
+}
+
+sea_tomini_03 = {
+	name = "Gowa"
+	religion = celebic
+	culture = tomini
+
+	1027.1.1 = {
+		birth = yes
+	}
+	1088.1.1 = {
+		death = yes
+	}
+}
+sea_tomini_04 = {
+	name = "Tuni"
+	religion = celebic
+	culture = tomini
+
+	1030.1.1 = {
+		birth = yes
+	}
+	1092.1.1 = {
+		death = yes
+	}
+}
+
+sea_tomini_05 = {
+	name = "Palonga"
+	religion = celebic
+	culture = tomini
+
+	1151.1.1 = {
+		birth = yes
+	}
+	1209.1.1 = {
+		death = yes
+	}
+}
+sea_tomini_06 = {
+	name = "Butta"
+	religion = celebic
+	culture = tomini
+
+	1148.1.1 = {
+		birth = yes
+	}
+	1202.1.1 = {
 		death = yes
 	}
 }

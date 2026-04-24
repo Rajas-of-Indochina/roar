@@ -1,0 +1,176 @@
+#############################
+# Rajas Tenets 				#
+#############################
+
+tenet_headhunting = {
+	# Non-DLC RoA original Cranial Trophies
+	icon = core_tenet_cranial_trophies
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion_tag = kaharingan_religion }
+				desc = tenet_headhunting_dayak_name
+			}
+			triggered_desc = {
+				trigger = { religion_tag = filipino_religion }
+				desc = tenet_headhunting_filipino_name
+			}
+			triggered_desc = {
+				trigger = { faith = faith:nias_animism }
+				desc = tenet_headhunting_nias_name
+			}
+			desc = tenet_headhunting_name
+		}
+	}
+	piety_cost = {
+		if = {
+			limit = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+			value = faith_tenet_cost_mid
+		}
+		else = {
+			value = faith_tenet_cost_massive
+		}
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { has_doctrine = tenet_headhunting }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	is_shown = {
+		NOR = {
+			religion_tag = christianity_religion
+			religion_tag = judaism_religion
+			religion_tag = islam_religion
+		}
+	}
+
+	can_pick = {
+		custom_description = {
+			text = incompatible_tenet_pacifism_trigger
+			NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
+		}
+		custom_description = {
+			text = incompatible_tenet_dharmic_pacifism_trigger
+			NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+		}
+		custom_description = {
+			text = incompatible_tenet_human_sacrifice_trigger
+			NOR = { doctrine:tenet_human_sacrifice = { is_in_list = selected_doctrines } }
+		}
+		custom_description = {
+			text = incompatible_tenet_gruesome_festivals_trigger
+			NOT = { doctrine:tenet_gruesome_festivals = { is_in_list = selected_doctrines } }
+		}
+	}
+
+	traits = {
+		virtues = {
+			lifestyle_headhunter
+		}
+	}
+
+	parameters = {
+		headhunting_active = yes
+		human_sacrifice_active = yes
+		flower_war_cb_active = yes
+	}
+
+	character_modifier = {
+		ai_war_chance = 1
+		ai_war_cooldown = -0.5
+		jungle_advantage = 5
+		jungle_attrition_mult = -0.25
+		jungle_min_combat_roll = 1
+		monthly_piety_gain_per_dread_add = 0.01
+		prowess = 3
+	}
+}
+
+tenet_dhammavicaya = {
+	icon = core_tenet_literalism
+		piety_cost = {
+		value = faith_tenet_cost_mid
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { has_doctrine = tenet_literalism }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	is_shown = {
+		religion_tag = buddhism_religion
+	}
+
+	traits = {
+		virtues = {
+			education_learning_3
+			education_learning_4
+			scholar
+		}
+	}
+
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	}
+
+	parameters = {
+		literalist_debate_enabled = yes
+	}
+}
+
+# For Umboh - Sacred Waters
+	# Faster conversion in coastal counties
+	# +15% Development Growth
+	# +30% Levy Size in coastal
+	# +10% Holding Taxes
+	# embark speed/cost
+	# +15% fertility
+
+tenet_spirit_guides = {
+	icon = core_tenet_adorcism
+
+	piety_cost = {
+	value = faith_tenet_cost_low
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { has_doctrine = tenet_spirit_guides }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	is_shown = {
+		has_doctrine = pagan_hostility_doctrine
+	}
+
+	can_pick = {
+		custom_tooltip = {
+			text = doctrine_clerical_gender_women_can_be_priests
+			OR = {
+				doctrine:doctrine_clerical_gender_female_only = { is_in_list = selected_doctrines }
+				doctrine:doctrine_clerical_gender_either = { is_in_list = selected_doctrines }
+			}
+		}
+		custom_description = {
+			text = incompatible_tenet_adorcism_trigger
+			NOT = { doctrine:tenet_adorcism = { is_in_list = selected_doctrines } }
+		}
+	}
+
+	parameters = {
+		spirit_possession_active = yes
+	}
+
+	character_modifier = {
+		negate_health_penalty_add = 0.1
+	}
+
+	traits = {
+		virtues = { transgender = 4 }
+		virtues = { possessed = 1 }
+	}
+}
