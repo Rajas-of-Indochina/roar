@@ -229,6 +229,7 @@ sea_bungku_03 = {
 	}
 }
 
+
 ### Makassar
 makassar_01 = {
 	name = "Gowa"
@@ -291,7 +292,77 @@ makassar_05 = {
 	}
 }
 
+
 ### Mandar
+#Sampaga
+mandar_sampaga_01_fic = {
+	name = "Nisi"
+	dynasty = mandar_bambang
+	religion = aluk
+	culture = mandar
+
+	828.1.1 = {
+		birth = yes
+	}
+	889.1.1 = {
+		death = yes
+	}
+}
+mandar_sampaga_02_fic = {
+	name = "Pioh"
+	dynasty = mandar_bambang
+	religion = aluk
+	culture = mandar
+	father = mandar_sampaga_01_fic
+
+	857.1.1 = {
+		birth = yes
+	}
+	911.1.1 = {
+		death = yes
+	}
+}
+mandar_sampaga_10_fic = {
+	name = "Jimbau"
+	dynasty = mandar_bambang
+	religion = aluk
+	culture = mandar
+
+	1013.1.1 = {
+		birth = yes
+	}
+	1073.1.1 = {
+		death = yes
+	}
+}
+mandar_sampaga_11_fic = {
+	name = "Kubu"
+	dynasty = mandar_bambang
+	religion = aluk
+	culture = mandar
+	father = mandar_sampaga_10_fic
+
+	1047.1.1 = {
+		birth = yes
+	}
+	1102.1.1 = {
+		death = yes
+	}
+}
+mandar_sampaga_20_fic = {
+	name = "Ukit"
+	dynasty = mandar_bambang
+	religion = aluk
+	culture = mandar
+
+	1150.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
 sea_sikendung_01 = {
 	# Buddhist sculptures have been found in Western Sulawesi dating to around the 700s
 	# no clue what to do with this guy
@@ -320,16 +391,32 @@ sea_mandar_01 = {
 	}
 }
 
-### Toraja
-sea_toraja_01 = {
-	name = "Roro"
-	religion = aluk
-	culture = toraja
+
+### Muna
+sea_muna_01 = {
+	name = "Pasulu"
+	religion = celebic
+	culture = muna
 
 	840.1.1 = {
 		birth = yes
 	}
-	906.1.1 = {
+	904.1.1 = {
+		death = yes
+	}
+}
+
+
+### Tolaki
+sea_tolaki_01 = {
+	name = "Lattu"
+	religion = celebic
+	culture = tolaki
+
+	840.1.1 = {
+		birth = yes
+	}
+	904.1.1 = {
 		death = yes
 	}
 }
