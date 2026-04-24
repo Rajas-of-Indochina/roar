@@ -11,10 +11,10 @@ gorontalo = {
 
 	traditions = {
 		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
-		tradition_jungle_dwellers
-		tradition_religion_blending
-		tradition_music_theory
-		tradition_modest
+		tradition_jungle_dwellers 	# msl_note: terrain based tradition
+		tradition_religion_blending 	# msl_note: quite quickly adopted Islam
+		tradition_music_theory 	# msl_note: highly developed musical culture
+		tradition_SEA_ade 	# msl_note: like many other groups of Sulawesi, they posses various traditions and customary laws responsible for their way of life
 	}
 
 	name_list = name_list_bisayan
@@ -86,10 +86,10 @@ minahasa = {
 
 	traditions = {
 		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
-		tradition_culinary_art
-		tradition_culture_blending
-		tradition_warrior_culture
-		tradition_quarrelsome
+		tradition_culinary_art 	# msl_note: very spicy cuisine ; some... unusal meats too
+		tradition_culture_blending 	# msl_note: varied tribes make up this group
+		tradition_quarrelsome 	# msl_note: very disunified tribes before XIXth century ; bravery very valued
+		tradition_warrior_culture 	# msl_note: these tribes fought a lot
 	}
 
 	name_list = name_list_filipino
@@ -143,20 +143,25 @@ pamona = {
 	}
 }
 
-salua = {
-	color = salua
+saluan = {
+	color = saluan
 
 	ethos = ethos_communal
 	heritage = heritage_sulawesi
-	language = language_salua
+	language = language_saluan
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
 		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
-		tradition_religion_blending
+		tradition_wedding_ceremonies 	# msl_note: weddings of Saluan people encompas various formal and customary ceremonies
+		tradition_esteemed_hospitality 	# msl_note: welcoming ritual called 'umapos' is all about respect and protection to visiting guests
+		tradition_fishermen 	# msl_note: fishing plays crucial role in their daily lives
+		#tradition_hill_dwellers 	# msl_note: many live in mountainous areas ; crossed out for slots
+		# tooth filling, known as 'monggisin', is actually a very important ritual to Saluans
 	}
 
+ 	# msl_note: seafaring is less important than tradition_fishermen for this culture
 	dlc_tradition = {
 		trait = tradition_maritime_way_of_life
 		requires_dlc_flag = all_under_heaven
@@ -190,9 +195,10 @@ tomini = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warfare
-		tradition_family_entrepreneurship
-		tradition_staunch_traditionalists
+		tradition_jungle_warfare 	# msl_note: basic Sulawesi tradition
+		tradition_fishermen 	# msl_note: fishing plays crucial role in their daily lives
+		tradition_family_entrepreneurship 	# msl_note: family relatiosn be important
+		tradition_staunch_traditionalists 	# msl_note: some tribes quite stubbronly defend the "old ways"
 	}
 
 	name_list = name_list_sulawesi

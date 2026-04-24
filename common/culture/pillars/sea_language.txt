@@ -2055,11 +2055,11 @@ language_rejang = {
 	color = rejang
 }
 
-language_salua = {
+language_saluan = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_salua
+			LANGUAGE = language_saluan
 		}
 	}
 	parameters = {
@@ -2072,7 +2072,7 @@ language_salua = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_salua }
+			limit = { has_cultural_pillar = language_saluan }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
@@ -2093,7 +2093,7 @@ language_salua = {
 		}
 	}
 
-	color = salua
+	color = saluan
 }
 
 language_suau = {
@@ -2166,6 +2166,42 @@ language_sumba = {
 	}
 
 	color = sumba
+}
+
+language_taliabu = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_taliabu
+		}
+	}
+	parameters = {
+		language_group_central_maluku = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_taliabu }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_central_maluku }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = taliabu
 }
 
 language_sunda = {
