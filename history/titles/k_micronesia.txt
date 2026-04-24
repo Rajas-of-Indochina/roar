@@ -3,32 +3,61 @@
 
 # Saudeleur dynasty post-1100
 #d_micronesia
-#	c_pohnpei
-#	c_chuuk
-#	c_kosrae
-#d_guahan
-#	c_guahan
-#	c_saipan
-#	c_rota
-#d_yap
-#	c_yap
-
+	c_pohnpei = {
+		860.1.1 = {
+			government = wanua_government
+		}
+	}
+	c_chuuk = {
+		860.1.1 = {
+			government = wanua_government
+		}
+	}
+	c_kosrae = {
+		860.1.1 = {
+			government = wanua_government
+		}
+	}
 d_palau = {
 	860.1.1 = {
 		holder = palau001
+		government = wanua_government
 	}
 	1060.1.1 = {
 		holder = palau002
 	}
 }
-c_palau = {
-	860.1.1 = { change_development_level = 2 }
-	1060.1.1 = { change_development_level = 4 }
+	c_palau = {
+		860.1.1 = { change_development_level = 2 }
+		1060.1.1 = { change_development_level = 4 }
 
-	860.1.1 = {
-		holder = palau001
+		860.1.1 = {
+			holder = palau001
+		}
+		1060.1.1 = {
+			holder = palau002
+		}
 	}
-	1060.1.1 = {
-		holder = palau002
+#d_yap
+	c_yap = {
+		860.1.1 = {
+			government = wanua_government
+		}
 	}
-}
+#d_guahan
+	c_guahan = {
+		860.1.1 = {
+			government = wanua_government
+		}
+	}
+	c_saipan = {
+		860.1.1 = {
+			government = wanua_government
+		}
+	}
+	# c_rota = {
+	# 	860.1.1 = {
+	# 		government = wanua_government
+	# 	}
+	# }
+
