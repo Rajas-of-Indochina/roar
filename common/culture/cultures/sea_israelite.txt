@@ -1,7 +1,7 @@
 ﻿bukharim = {
 	color = { 0.5 0.2 0.7 }
 
-	ethos = ethos_egalitarian
+	ethos = ethos_communal
 	heritage = heritage_israelite
 	language = language_iranian
 	martial_custom = martial_custom_male_only
@@ -21,52 +21,56 @@
 	building_gfx = { iranian_building_gfx }
 	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx } #Radhanites travelled all over the world; trade networks spanning from Iceland to China
 	unit_gfx = { mena_unit_gfx }
-
 	house_coa_frame = house_frame_23
 	house_coa_mask_offset = { 0.0 0.03 }
 	house_coa_mask_scale = { 0.9 0.9 }
 
 	ethnicities = {
-		10 = arab
-		6 = mediterranean
-		2 = turkic_west
+		44 = arab
+		28 = mediterranean
+		28 = turkic_west
 	}
 }
 
 kaifengim = {
+	# Kaifeng Jews/Chinese Jews
 	color = { 0.5 0.2 0.7 }
 
 	parents = { radhanite han }
 	created = 998.1.1
 
-	ethos = ethos_egalitarian
+	name_order_convention = dynasty_always_first
+	ethos = ethos_communal
 	heritage = heritage_israelite
-	language = language_israelite
+	language = language_chinese
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
 		tradition_diasporic
-		tradition_confucian_philosophy
 		tradition_maritime_mercantilism
 		tradition_xenophilic
 		tradition_mobile_guards
+	}
+
+	dlc_tradition = {
+		trait = tradition_scholar_officials
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_confucian_philosophy
 	}
 
 	name_list = name_list_kaifengim
 
 	coa_gfx = { israelite_group_coa_gfx }
 	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { han_clothing_gfx chinese_clothing_gfx } #Radhanites travelled all over the world; trade networks spanning from Iceland to China
-	unit_gfx = { mena_unit_gfx }
-
-	house_coa_frame = house_frame_23
-	house_coa_mask_offset = { 0.0 0.03 }
-	house_coa_mask_scale = { 0.9 0.9 }
+	clothing_gfx = { chinese_clothing_gfx  }
+	unit_gfx = { chinese_unit_gfx }
+	house_coa_frame = house_china
 
 	ethnicities = {
-		2 = arab
-		8 = asian_han_chinese
+		20 = arab
+		10 = turkic
+		70 = asian_han_chinese
 	}
 }
 

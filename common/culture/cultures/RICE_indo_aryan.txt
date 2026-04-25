@@ -22,15 +22,15 @@ nuristani = {
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		10 = arab
-		10 = indian
-		10 = mediterranean_byzantine # mediterranean
+		25 = arab
+		25 = indian
+		25 = mediterranean_byzantine # mediterranean
+		25 = turkic_west
 	}
 }
 
@@ -54,15 +54,15 @@ burusho = { # Language isolate, but living in areas with mostly Indo-Aryan speak
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
-	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx }
+	clothing_gfx = { iranian_clothing_gfx mena_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
 	house_coa_frame = house_frame_17
 
 	ethnicities = {
-		10 = arab
-		10 = indian
-		10 = mediterranean_byzantine # mediterranean
+		25 = arab
+		25 = indian
+		25 = mediterranean_byzantine # mediterranean
+		25 = turkic_west
 	}
 }
 
@@ -81,18 +81,22 @@ vedda = { # Indigenous people of Sri Lanka
 		tradition_collective_lands
 		tradition_hunters
 		tradition_adaptive_skirmishing # Cybr: Archers
+		tradition_nudists
 	}
 
 	name_list = name_list_vedda
 
 	coa_gfx = { indo_aryan_group_coa_gfx }
 	building_gfx = { indian_building_gfx }
-	clothing_gfx = { indian_clothing_gfx }
+	clothing_gfx = { papuan_clothing_gfx indian_clothing_gfx }
 	unit_gfx = { indian_unit_gfx }
-	house_coa_frame = house_frame_17
+	house_coa_frame = house_frame_08
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		2 = indian
-		8 = south_indian
+		20 = indian
+		60 = south_indian
+		20 = papuan
 	}
 }

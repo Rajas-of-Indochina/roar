@@ -13,7 +13,6 @@
 
 	traditions = {
 		tradition_court_eunuchs
-		tradition_martial_admiration
 	}
 
 	dlc_tradition = {
@@ -37,6 +36,12 @@
 		requires_dlc_flag = all_under_heaven
 	}
 
+	dlc_tradition = {
+		trait = tradition_fortress_mastery
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_castle_keepers
+	}
+
 	name_list = name_list_korean
 
 	coa_gfx = { chinese_group_coa_gfx }
@@ -46,7 +51,7 @@
 	house_coa_frame = house_frame_09
 
 	ethnicities = {
-		10 = asian_manchu_korean
+		100 = asian_manchu_korean
 	}
 }
 
@@ -64,23 +69,29 @@ silla = {
 
 	traditions = {
 		tradition_poetry
-		tradition_martial_admiration
-		tradition_cultural_primacy
-
-		#tradition_agrarian - RoA
-		#tradition_mystical_ancestors - RoA
-		#tradition_stalwart_defenders - RoA
-		#tradition_medicinal_plants - RoA
 	}
 	
 	dlc_tradition = {
 		trait = tradition_stratified_society
 		requires_dlc_flag = all_under_heaven
+		fallback = tradition_mystical_ancestors
 	}
 	
 	dlc_tradition = {
 		trait = tradition_sinophilic
 		requires_dlc_flag = all_under_heaven
+	}
+
+	dlc_tradition = {
+		trait = tradition_cultural_primacy
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_isolationist
+	}
+	
+	dlc_tradition = {
+		trait = tradition_fortress_mastery
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_castle_keepers
 	}
 
 	name_list = name_list_korean
@@ -89,11 +100,10 @@ silla = {
 	building_gfx = { chinese_building_gfx }
 	clothing_gfx = { korean_clothing_gfx chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
-
 	house_coa_frame = house_frame_09
 
 	ethnicities = {
-		10 = asian_manchu_korean
+		100 = asian_manchu_korean
 	}
 }
 
@@ -113,11 +123,16 @@ baekje = {
 		tradition_astute_diplomats
 		tradition_maritime_mercantilism
 		tradition_religious_patronage
-		tradition_cultural_primacy
 
 		#tradition_family_entrepreneurship - RoA
 		#tradition_mystical_ancestors - RoA
 		#tradition_fishermen - RoA
+	}
+	
+	dlc_tradition = {
+		trait = tradition_cultural_primacy
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_isolationist
 	}
 	
 	dlc_tradition = {
@@ -131,11 +146,10 @@ baekje = {
 	building_gfx = { chinese_building_gfx }
 	clothing_gfx = { korean_clothing_gfx chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
-
 	house_coa_frame = house_frame_09
 
 	ethnicities = {
-		10 = asian_manchu_korean
+		100 = asian_manchu_korean
 	}
 }
 
@@ -152,9 +166,7 @@ goguryeo = {
 
 	traditions = {
 		tradition_martial_admiration
-		tradition_castle_keepers
 		tradition_warriors_by_merit
-		tradition_cultural_primacy
 
 		#tradition_hereditary_hierarchy - RoA
 		#tradition_festivities - RoA
@@ -164,8 +176,20 @@ goguryeo = {
 	}
 	
 	dlc_tradition = {
+		trait = tradition_cultural_primacy
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_isolationist
+	}
+	
+	dlc_tradition = {
 		trait = tradition_sinophilic
 		requires_dlc_flag = all_under_heaven
+	}
+	
+	dlc_tradition = {
+		trait = tradition_fortress_mastery
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_castle_keepers
 	}
 
 	name_list = name_list_korean
@@ -174,11 +198,10 @@ goguryeo = {
 	building_gfx = { chinese_building_gfx }
 	clothing_gfx = { korean_clothing_gfx chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
-
 	house_coa_frame = house_frame_09
 
 	ethnicities = {
-		10 = asian_manchu_korean
+		100 = asian_manchu_korean
 	}
 }
 
@@ -199,12 +222,17 @@ balhae = {
 		tradition_castle_keepers
 		tradition_warriors_by_merit
 		tradition_culture_blending
-		tradition_cultural_primacy
 
 		#tradition_ruling_caste - RoA
 		#tradition_hunters - RoA
 		#tradition_religion_blending - RoA
 		#tradition_warrior_culture - RoA
+	}
+	
+	dlc_tradition = {
+		trait = tradition_cultural_primacy
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_isolationist
 	}
 	
 	dlc_tradition = {
@@ -221,6 +249,6 @@ balhae = {
 	house_coa_frame = house_frame_09
 
 	ethnicities = {
-		10 = asian_manchu_korean
+		100 = asian_manchu_korean
 	}
 }

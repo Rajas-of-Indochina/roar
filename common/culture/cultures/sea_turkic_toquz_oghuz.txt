@@ -8,6 +8,7 @@ barsil = {
 	language = language_turkic  # language_tiele
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		tradition_warrior_culture
@@ -32,7 +33,7 @@ barsil = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -45,6 +46,7 @@ bayirku = {
 	language = language_turkic  # language_basmyl
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		tradition_pastoralists
@@ -64,7 +66,7 @@ bayirku = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -79,6 +81,7 @@ naiman = {
 	language = language_turkic  # language_basmyl
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		#tradition_steppe_tolerance
@@ -102,7 +105,7 @@ naiman = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -114,6 +117,7 @@ qun = {
 	language = language_turkic  # language_tiele
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		tradition_horse_breeder
@@ -135,7 +139,7 @@ qun = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -147,6 +151,7 @@ siqar = {
 	language = language_turkic  # language_tiele
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		tradition_talent_acquisition
@@ -167,7 +172,7 @@ siqar = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -179,6 +184,7 @@ tongra = {
 	language = language_turkic  # language_tiele
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		tradition_quarrelsome
@@ -204,18 +210,20 @@ tongra = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
 uigur = {
 	color = uigur
 
+	name_order_convention = dynasty_always_first
 	ethos = ethos_bureaucratic
 	heritage = heritage_toquz_oghuz
 	language = language_turkic  # language_tiele
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		#tradition_steppe_tolerance
@@ -241,7 +249,7 @@ uigur = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -251,15 +259,16 @@ uyghur = {
 	created = 870.1.1
 	parents = { uigur tocharian }
 
+	name_order_convention = dynasty_always_first
 	ethos = ethos_spiritual
 	heritage = heritage_toquz_oghuz
 	language = language_turkic  # language_tiele
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
-		#tradition_horse_lords
-		#tradition_steppe_tolerance
 		tradition_religious_patronage
+		#tradition_steppe_tolerance
 		tradition_caravaneers
 		tradition_charitable
 		tradition_xenophilic
@@ -284,7 +293,7 @@ uyghur = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -299,6 +308,7 @@ yagma = {
 	language = language_turkic  # language_ueban
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		#tradition_steppe_tolerance
@@ -324,7 +334,7 @@ yagma = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -333,11 +343,13 @@ yughur = {
 	created = 850.1.1
     parents = { shatuo uigur }
 
+	name_order_convention = dynasty_always_first
 	ethos = ethos_communal
 	heritage = heritage_toquz_oghuz
 	language = language_turkic
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		tradition_pastoralists
 		tradition_horse_breeder
@@ -364,6 +376,6 @@ yughur = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }

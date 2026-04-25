@@ -13,14 +13,19 @@ cuman = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
 	traditions = {
+		tradition_warrior_culture
 		#tradition_horse_lords
 		tradition_swords_for_hire
 		tradition_pastoralists
 		tradition_balbals
 
-		#tradition_warrior_culture
 		#tradition_eye_for_an_eye
 	}
+
+	#dlc_tradition = {
+	#	trait = tradition_malleable_invaders
+	#	requires_dlc_flag = hybridize_culture
+	#}
 
 	dlc_tradition = {
 		trait = tradition_devoted_horsemanship
@@ -36,7 +41,7 @@ cuman = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
 
@@ -57,8 +62,8 @@ kimek = {
 		tradition_balbals
 		tradition_pastoralists
 
-		#tradition_hunters
-		#tradition_stalwart_defenders
+		#tradition_hunters	#vanilla
+		#tradition_stalwart_defenders	#vanilla
 	}
 
 	dlc_tradition = {
@@ -75,7 +80,7 @@ kimek = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -89,13 +94,13 @@ kipchak = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
 	traditions = {
+		tradition_swords_for_hire
 		#tradition_horse_lords
 		tradition_pastoralists
 		tradition_horse_breeder
-		tradition_swords_for_hire
 		tradition_quarrelsome
 
-		#tradition_hunters
+		#tradition_hunters	# vanilla
 	}
 
 	dlc_tradition = {
@@ -112,7 +117,7 @@ kipchak = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -149,7 +154,7 @@ kumyk = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
 
@@ -162,9 +167,9 @@ laktan = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
 	traditions = {
-		#tradition_horse_lords
 		tradition_hunters
 		tradition_forest_folk
+		#tradition_horse_lords
 		tradition_stalwart_defenders
 	}
 
@@ -173,7 +178,7 @@ laktan = {
 		requires_dlc_flag = khans_of_the_steppe
 	}
 
-	name_list = name_list_kipchak
+	name_list = name_list_laktan
 
 	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
 	building_gfx = { steppe_building_gfx }
@@ -182,7 +187,7 @@ laktan = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -220,8 +225,8 @@ manav = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		3 = turkic_west
-		7 = mediterranean_byzantine
+		30 = turkic
+		70 = mediterranean_byzantine
 	}
 }
 
@@ -254,7 +259,7 @@ qangli = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -289,6 +294,6 @@ yemek = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }

@@ -1,10 +1,9 @@
 ﻿nivkh = {
 	# Pre-Tungusic population of Manchu
-
 	#color = { 61 109 56 } - vanilla
 	color = nivkh
 
-	ethos = ethos_communal
+	ethos = ethos_communal  	# ethos_stoic in vanilla
 	heritage = heritage_nivkh
 	language = language_nivkh
 	martial_custom = martial_custom_male_only
@@ -22,7 +21,7 @@
 	}
 
 	dlc_tradition = {
-		# gno clue why they did not get it in vanilla
+		# no clue why they did not get it in vanilla
 		trait = tradition_mpo_northern_tribes
 		requires_dlc_flag = khans_of_the_steppe
 	}
@@ -30,13 +29,12 @@
 	name_list = name_list_nivkh
 
 	coa_gfx = { nivkh_group_coa_gfx }
-	building_gfx = { steppe_building_gfx }
-	clothing_gfx = { mongol_clothing_gfx northern_clothing_gfx }
+	building_gfx = { amuric_building_gfx steppe_building_gfx }
+	clothing_gfx = { nivkh_clothing_gfx mongol_clothing_gfx }
 	unit_gfx = { mongol_unit_gfx }
-
 	house_coa_frame = house_frame_04
 
 	ethnicities = {
-		10 = asian_manchu_korean
+		100 = asian_manchu_korean
 	}
 }

@@ -10,10 +10,11 @@ bashkir = {
 	head_determination = head_determination_herd
 
 	traditions = {
-		#tradition_horse_lords
 		#tradition_sacred_mountains
-		tradition_highland_warriors
+		#tradition_horse_lords
+		tradition_forest_folk
 		tradition_hill_dwellers
+		tradition_highland_warriors
 		tradition_storytellers
 	}
 
@@ -36,7 +37,7 @@ bashkir = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -69,7 +70,7 @@ basmyl = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -102,7 +103,7 @@ bayundur = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -139,7 +140,7 @@ chigil = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -172,7 +173,7 @@ kangar = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -186,14 +187,14 @@ karluk = { # AKA Qarluq
 	head_determination = head_determination_herd
 
 	traditions = {
-		#tradition_horse_lords
 		#tradition_steppe_tolerance
+		#tradition_horse_lords
 		tradition_horse_breeder
 		tradition_ruling_caste
 		tradition_dryland_dwellers
 
-		#tradition_sacred_mountains
-		#tradition_mountain_homes
+		#tradition_sacred_mountains	# vanilla
+		#tradition_mountain_homes	# vanilla
 	}
 
 	dlc_tradition = {
@@ -210,7 +211,7 @@ karluk = { # AKA Qarluq
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -247,7 +248,7 @@ kashgari = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -281,18 +282,17 @@ ograk = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
 ongud = {
 	# Mongolicized Turks of the Ordos region
 	color = ongud
-	created = 1000.1.1
-	# 830.1.1 in vanilla
+	created = 1000.1.1  	# 830.1.1 in vanilla
 	parents = { shatuo }
 
-	ethos = ethos_courtly
+	ethos = ethos_courtly	# ethos_bellicose in vanilla
 	heritage = heritage_on_oq
 	language = language_mongolic
 	martial_custom = martial_custom_male_only
@@ -303,6 +303,7 @@ ongud = {
 		tradition_court_eunuchs
 		tradition_astute_diplomats
 		tradition_hunters
+		#tradition_steppe_tolerance
 
 		#tradition_stalwart_defenders - in vanilla
 	}
@@ -321,8 +322,8 @@ ongud = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
-		10 = asian_mongol
+		50 = turkic
+		50 = asian_mongol
 	}
 }
 
@@ -341,10 +342,10 @@ pecheneg = {
 
 	traditions = {
 		#tradition_horse_lords
-		#tradition_swords_for_hire
+		tradition_swords_for_hire
 		tradition_pastoralists
 		tradition_quarrelsome
-		#tradition_warrior_culture
+		tradition_warrior_culture	# vanilla has this one enabled but we might want to rethink that
 	}
 
 	dlc_tradition = {
@@ -361,7 +362,7 @@ pecheneg = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
 
@@ -380,7 +381,6 @@ shatuo = {
 	head_determination = head_determination_herd  # should probably swamp out for Chinese head_determination_domain
 
 	traditions = {
-		#tradition_horse_lords
 		tradition_ruling_caste
 		tradition_court_eunuchs
 		tradition_pastoralists
@@ -398,14 +398,14 @@ shatuo = {
 
 	name_list = name_list_shatuo
 
-	coa_gfx = { chinese_group_coa_gfx }
-	building_gfx = { chinese_building_gfx }
-	clothing_gfx = { han_clothing_gfx chinese_clothing_gfx }
+	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx chinese_group_coa_gfx }
+	building_gfx = { steppe_building_gfx chinese_building_gfx } 	# vanilla has them with only steppe stuff
+	clothing_gfx = { mongol_clothing_gfx han_clothing_gfx chinese_clothing_gfx } 	# vanilla has them with only steppe stuff
 	unit_gfx = { mongol_unit_gfx }
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -438,7 +438,7 @@ turgesh = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -453,8 +453,8 @@ turkish = {
 	head_determination = head_determination_herd
 
 	traditions = {
-		#tradition_horse_lords
 		tradition_warrior_culture
+		#tradition_horse_lords
 		tradition_swords_for_hire
 		tradition_ruling_caste
 	}
@@ -478,7 +478,7 @@ turkish = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
 
@@ -495,11 +495,11 @@ turkmen = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		#tradition_horse_lords
 		tradition_by_the_sword
+		#tradition_horse_lords
 		tradition_hunters
 		tradition_ruling_caste
-		tradition_mendicant_mystics  # representing sufi mystics and their islamisation of anatolia
+		tradition_mendicant_mystics 	# patlichan: represents sufi mystics and their islamic influence on Anatolia
 	}
 
 	dlc_tradition = {
@@ -521,10 +521,10 @@ turkmen = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
-		4 = mediterranean_byzantine
-		2 = arab
-		2 = mediterranean
+		60 = turkic_west
+		20 = mediterranean_byzantine
+		10 = arab
+		10 = mediterranean
 	}
 }
 
@@ -562,7 +562,7 @@ ueban = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -588,6 +588,6 @@ ueban = {
 	house_coa_frame = house_frame_14
 #
 #	ethnicities = {
-#		10 = turkic_west
+#		100 = turkic_west
 #	}
 #}

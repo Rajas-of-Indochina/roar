@@ -34,7 +34,7 @@ az = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -72,7 +72,7 @@ cik = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -111,7 +111,7 @@ dukha = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -119,19 +119,20 @@ kirghiz = {
 	# Qirgiz
 	color = kirghiz
 
-	ethos = ethos_stoic
+	ethos = ethos_stoic 	# ethos_egalitarian in vanilla
 	heritage = heritage_sayan_altaic
 	language = language_turkic  # language_khakas
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
+
 	traditions = {
 		#tradition_horse_lords
 		tradition_metal_craftsmanship
 		tradition_sacred_mountains
 		tradition_horse_breeder
 
-		#tradition_hunters
-		#tradition_quarrelsome
+		#tradition_hunters	# vanilla
+		#tradition_quarrelsome	# vanilla
 	}
 
 	dlc_tradition = {
@@ -153,7 +154,7 @@ kirghiz = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -169,7 +170,7 @@ kurykan = {
 		#tradition_horse_lords
 		tradition_horse_breeder
 		tradition_pastoralists
-		tradition_winter_warriors # Winter Warriors is replaced by Siberian Survivalists with RICE
+		tradition_winter_warriors 	# Winter Warriors is replaced by Siberian Survivalists with RICE
 	}
 
 	dlc_tradition = {
@@ -191,7 +192,7 @@ kurykan = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -229,7 +230,7 @@ sakha = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -267,7 +268,7 @@ shor = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -305,7 +306,7 @@ telengit = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }
 
@@ -319,10 +320,10 @@ todzh = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_herd
 	traditions = {
-		#tradition_horse_lords
 		tradition_forest_folk
 		tradition_highland_warriors
 		tradition_winter_warriors # Winter Warriors is replaced by Siberian Survivalists with RICE
+		#tradition_horse_lords
 	}
 
 	dlc_tradition = {
@@ -344,6 +345,6 @@ todzh = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic
+		100 = turkic
 	}
 }

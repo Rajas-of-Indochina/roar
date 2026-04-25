@@ -27,8 +27,8 @@ alanobolghar = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		6 = mediterranean
-		10 = turkic_west
+		30 = mediterranean
+		70 = turkic_west
 	}
 }
 
@@ -66,7 +66,7 @@ avar = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
 
@@ -90,6 +90,11 @@ bolghar = {
 		requires_dlc_flag = khans_of_the_steppe
 	}
 
+	#dlc_tradition = {
+	#	trait = tradition_malleable_invaders
+	#	requires_dlc_flag = hybridize_culture
+	#}
+
 	name_list = name_list_bolghar
 
 	coa_gfx = { turkic_group_coa_gfx steppe_coa_gfx }
@@ -99,8 +104,8 @@ bolghar = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
-		#10 = mediterranean_byzantine - why do they have that?
+		100 = turkic_west
+		#50 = mediterranean_byzantine - why do they have that?
 	}
 }
 
@@ -137,8 +142,8 @@ chuvash = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
-		10 = turkic
+		50 = turkic_west
+		50 = turkic
 	}
 }
 
@@ -155,15 +160,12 @@ khazar = {
 		tradition_concubines
 		#tradition_steppe_tolerance
 		tradition_stand_and_fight
+		tradition_only_the_strong	# new vanilla addition?
 		#tradition_horse_lords
 
 		#tradition_only_the_strong - vanilla
 	}
 
-	dlc_tradition = {
-		trait = tradition_devoted_horsemanship
-		requires_dlc_flag = khans_of_the_steppe
-	}
 	dlc_tradition = {
 		trait = tradition_devoted_horsemanship
 		requires_dlc_flag = khans_of_the_steppe
@@ -178,7 +180,7 @@ khazar = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
 
@@ -213,6 +215,6 @@ sabir = {
 	house_coa_frame = house_frame_14
 
 	ethnicities = {
-		10 = turkic_west
+		100 = turkic_west
 	}
 }
