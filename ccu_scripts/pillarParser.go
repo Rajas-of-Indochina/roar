@@ -20,6 +20,15 @@ func writeEffects(modDir string) {
 	languageGroups := getKeys(filepath.Join(modDir, "common", "culture", "pillars"), "language_group")
 	fmt.Println("Reading language families...")
 	languageFamilies := getKeys(filepath.Join(modDir, "common", "culture", "pillars"), "language_family")
+	// custom addons
+	fmt.Println("RAJAS: Reading Heritage Kulturbunds")
+	heritageKulturbunds := getKeys(filepath.Join(modDir, "common", "culture", "pillars"), "kulturbund")
+	fmt.Println("RAJAS: Reading Language Dialect Continuums")
+	languageDialectContinuums := getKeys(filepath.Join(modDir, "common", "culture", "pillars"), "dialect_continua")
+	fmt.Println("RAJAS: Reading Language Unions")
+	languageUnions := getKeys(filepath.Join(modDir, "common", "culture", "pillars"), "language_union")
+	// fmt.Println("RAJAS: Reading Language Creoles")
+	// languageCreoles := getKeys(filepath.Join(modDir, "common", "culture", "pillars"), "language_creole")
 
 	fmt.Println("Creating scripted effect file...")
 	outFile, err := os.Create(filepath.Join(modDir, "common", "scripted_effects", "ccu_scripted_effects.txt"))
@@ -35,6 +44,15 @@ func writeEffects(modDir string) {
 	writeEffect(languageGroups, "language_group", outFile)
 	_, err = outFile.WriteString("\n\n")
 	writeEffect(languageFamilies, "language_family", outFile)
+	//  custom addons
+	_, err = outFile.WriteString("\n\n")
+	writeEffect(heritageKulturbunds, "kulturbund", outFile)
+	_, err = outFile.WriteString("\n\n")
+	writeEffect(languageDialectContinuums, "dialect_continua", outFile)
+	_, err = outFile.WriteString("\n\n")
+	writeEffect(languageUnions, "language_union", outFile)
+	// _, err = outFile.WriteString("\n\n")
+	// writeEffect(languageCreoles, "language_creole", outFile)
 	_, err = outFile.WriteString("}")
 
 	fmt.Println("Creating localization files...")

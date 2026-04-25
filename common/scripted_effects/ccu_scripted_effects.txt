@@ -145,4 +145,29 @@ ccu_initialize_culture = {
 	else_if = { limit = { has_cultural_parameter = language_family_yam } set_variable = { name = language_family value = 43 } }
 	else_if = { limit = { has_cultural_parameter = language_family_yukaghir } set_variable = { name = language_family value = 44 } }
 	else_if = { limit = { has_cultural_parameter = same_language_family_choice_factor } set_variable = { name = language_family value = 45 } }
+
+
+	if = { limit = { has_cultural_parameter = kulturbund_north_sea } set_variable = { name = kulturbund value = 0 } }
+
+
+	if = { limit = { has_cultural_parameter = dialect_continua_eastern_romance } set_variable = { name = dialect_continua value = 0 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_loloish } set_variable = { name = dialect_continua value = 1 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_malayo_chamic } set_variable = { name = dialect_continua value = 2 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_netherlandic } set_variable = { name = dialect_continua value = 3 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_north_slavic } set_variable = { name = dialect_continua value = 4 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_proto_romance } set_variable = { name = dialect_continua value = 5 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_romance } set_variable = { name = dialect_continua value = 6 } }
+	else_if = { limit = { has_cultural_parameter = dialect_continua_south_slavic } set_variable = { name = dialect_continua value = 7 } }
+
+
+	if = { limit = { has_cultural_parameter = language_union_andaman } set_variable = { name = language_union value = 0 } }
+	else_if = { limit = { has_cultural_parameter = language_union_balkan } set_variable = { name = language_union value = 1 } }
+	else_if = { limit = { has_cultural_parameter = language_union_british } set_variable = { name = language_union value = 2 } }
+	else_if = { limit = { has_cultural_parameter = language_union_caucasus } set_variable = { name = language_union value = 3 } }
+	else_if = { limit = { has_cultural_parameter = language_union_east_papuan } set_variable = { name = language_union value = 4 } }
+	else_if = { limit = { has_cultural_parameter = language_union_formosan } set_variable = { name = language_union value = 5 } }
+	else_if = { limit = { has_cultural_parameter = language_union_indian } set_variable = { name = language_union value = 6 } }
+	else_if = { limit = { has_cultural_parameter = language_union_moluccan } set_variable = { name = language_union value = 7 } }
+	else_if = { limit = { has_cultural_parameter = language_union_steppe_siberian } set_variable = { name = language_union value = 8 } }
+	else_if = { limit = { has_cultural_parameter = same_language_union_choice_factor } set_variable = { name = language_union value = 9 } }
 }
