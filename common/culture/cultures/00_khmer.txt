@@ -11,12 +11,10 @@
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_angkorian_architecture
+		tradition_angkorian_architecture  	# replaces tradition_fervent_temple_builders
 		tradition_warrior_caste
 		tradition_hereditary_hierarchy
-		tradition_religion_blending
 
-		#tradition_fervent_temple_builders - vanilla
 		#tradition_mystical_ancestors - vanilla
 	}
 
@@ -40,16 +38,14 @@
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx khmer_clothing_gfx }
+	clothing_gfx = { southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		20 = southeast_asian_mon_1
-		10 = asian_austronesian
+		100 = asian_malay
 	}
 }
 
@@ -77,6 +73,12 @@ mon = {
 		fallback = tradition_agrarian
 	}
 
+	dlc_tradition = {
+		trait = tradition_fp2_malleable_subjects
+		requires_dlc_flag = the_fate_of_iberia
+		fallback = tradition_xenophilic
+	}
+
 	#dlc_tradition = {
 		#trait = tradition_culture_blending
 		#requires_dlc_flag = hybridize_culture
@@ -86,16 +88,17 @@ mon = {
 
 	coa_gfx = { burman_group_coa_gfx mon_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx mon_clothing_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx mon_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = southeast_asian_mon_1
+		100 = asian_malay
+		#10 = southeast_asian_mon_1
 	}
 }
 
+#clothing_gfx = { khmer_clothing_gfx }
 #clothing_gfx = { austronesian_clothing_gfx }
