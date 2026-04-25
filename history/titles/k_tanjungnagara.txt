@@ -1,0 +1,728 @@
+# Any government defined as wanua_government here will be switched back to tribal_government if the TGP DLC is not active. 
+# This is done by effect in the game_start.txt on_action file.
+
+k_tanjungnagara = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
+
+d_BOR_tanjungpura = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	800.1.1 = {
+		government = mandala_government
+		holder = tanjungpura003 # Krysna Pandita
+		liege = d_BOR_tanjungpura
+	}
+	#
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_tanjungpura_01_fic	#fictional
+	}
+	891.11.3 = {
+		holder = malay_tanjungpura_02_fic	#fictional
+	}
+	# Historical (?) rulers
+	900.1.1 = {
+		holder = tanjungpura005 # Hyang-Ta
+	}
+	977.1.1 = {
+		holder = tanjungpura006 # Siak Bahulun
+	}
+	#
+	1025.1.1 = {
+		holder = malay_tanjungpura_06_fic	#fictional
+	}
+	1043.6.12 = {
+		holder = malay_tanjungpura_07_fic	#fictional
+	}
+	1086.7.28 = {
+		holder = malay_tanjungpura_08_fic	#fictional
+	}
+	1124.9.12 = {
+		holder = malay_tanjungpura_09_fic	#fictional
+	}
+	1152.6.7 = {
+		holder = malay_tanjungpura_10_fic	#fictional
+	}
+	1190.6.5 = {
+		holder = malay_tanjungpura_11_fic	#fictional
+	}
+	1222.1.30 = {
+		holder = malay_tanjungpura_12_fic	#fictional
+	}	
+	1257.3.6 = {
+		holder = malay_tanjungpura_13_fic	#fictional
+	}
+	#
+	1290.1.1 = {
+		holder = tanjungpura008 # Rangga Sentap
+	}
+}
+
+c_tanjungpura = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	800.1.1 = {
+		government = mandala_government
+		holder = tanjungpura003 # Krysna Pandita
+		liege = d_BOR_tanjungpura
+	}
+	#
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_tanjungpura_01_fic	#fictional
+	}
+	891.11.3 = {
+		holder = malay_tanjungpura_02_fic	#fictional
+	}
+	# Historical (?) rulers
+	900.1.1 = {
+		holder = tanjungpura005 # Hyang-Ta
+	}
+	977.1.1 = {
+		holder = tanjungpura006 # Siak Bahulun
+	}
+	#
+	1025.1.1 = {
+		holder = malay_tanjungpura_06_fic	#fictional
+	}
+	1043.6.12 = {
+		holder = malay_tanjungpura_07_fic	#fictional
+	}
+	1086.7.28 = {
+		holder = malay_tanjungpura_08_fic	#fictional
+	}
+	1124.9.12 = {
+		holder = malay_tanjungpura_09_fic	#fictional
+	}
+	1152.6.7 = {
+		holder = malay_tanjungpura_10_fic	#fictional
+	}
+	1190.6.5 = {
+		holder = malay_tanjungpura_11_fic	#fictional
+	}
+	1222.1.30 = {
+		holder = malay_tanjungpura_12_fic	#fictional
+	}	
+	1257.3.6 = {
+		holder = malay_tanjungpura_13_fic	#fictional
+	}
+	#
+	1290.1.1 = {
+		holder = tanjungpura008 # Rangga Sentap
+	}
+}
+
+c_BOR_sukadana = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
+
+	800.1.1 = {
+		government = mandala_government
+		holder = tanjungpura003 # Krysna Pandita
+		liege = d_BOR_tanjungpura
+	}
+	#
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_tanjungpura_01_fic	#fictional
+	}
+	891.11.3 = {
+		holder = malay_tanjungpura_02_fic	#fictional
+	}
+	# Historical (?) rulers
+	900.1.1 = {
+		holder = tanjungpura005 # Hyang-Ta
+	}
+	977.1.1 = {
+		holder = tanjungpura006 # Siak Bahulun
+	}
+	#
+	1025.1.1 = {
+		holder = malay_tanjungpura_06_fic	#fictional
+	}
+	1043.6.12 = {
+		holder = malay_tanjungpura_07_fic	#fictional
+	}
+	1086.7.28 = {
+		holder = malay_tanjungpura_08_fic	#fictional
+	}
+	1124.9.12 = {
+		holder = malay_tanjungpura_09_fic	#fictional
+	}
+	1152.6.7 = {
+		holder = malay_tanjungpura_10_fic	#fictional
+	}
+	1190.6.5 = {
+		holder = malay_tanjungpura_11_fic	#fictional
+	}
+	1222.1.30 = {
+		holder = malay_tanjungpura_12_fic	#fictional
+	}	
+	1257.3.6 = {
+		holder = malay_tanjungpura_13_fic	#fictional
+	}
+	#
+	1290.1.1 = {
+		holder = tanjungpura008 # Rangga Sentap
+	}
+}
+
+c_BOR_waringin = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 12 }
+
+	800.1.1 = {
+		government = mandala_government
+		holder = tanjungpura003 # Krysna Pandita
+		liege = d_BOR_tanjungpura
+	}
+	#
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_tanjungpura_01_fic	#fictional
+	}
+	891.11.3 = {
+		holder = malay_tanjungpura_02_fic	#fictional
+	}
+	900.1.1 = {
+		liege = d_BOR_tanjungpura
+	}
+	935.2.11 = {
+		holder = malay_tanjungpura_03_fic	#fictional
+	}
+	965.1.16 = {
+		holder = malay_tanjungpura_04_fic	#fictional
+	}
+	992.12.15 = {
+		holder = malay_tanjungpura_05_fic	#fictional
+	}
+	1020.1.20 = {
+		holder = malay_tanjungpura_06_fic	#fictional
+	}
+	1043.6.12 = {
+		holder = malay_tanjungpura_07_fic	#fictional
+	}
+	1086.7.28 = {
+		holder = malay_tanjungpura_08_fic	#fictional
+	}
+	1124.9.12 = {
+		holder = malay_tanjungpura_09_fic	#fictional
+	}
+	1152.6.7 = {
+		holder = malay_tanjungpura_10_fic	#fictional
+	}
+	1190.6.5 = {
+		holder = malay_tanjungpura_11_fic	#fictional
+	}
+	1222.1.30 = {
+		holder = malay_tanjungpura_12_fic	#fictional
+	}	
+	1257.3.6 = {
+		holder = malay_tanjungpura_13_fic	#fictional
+	}
+	#
+	1290.1.1 = {
+		holder = tanjungpura008 # Rangga Sentap
+	}
+}
+
+c_lamandau = {
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = sea_bidayuh_tanjungpura_01
+	}
+	# more later, maybe make tributary
+}
+
+c_seruyan_hulu = {
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = sea_bidayuh_tanjungpura_02
+	}
+	# more later, maybe make tributary
+}
+
+
+d_wijayapura = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	# Wijayapura from ~7th to ~9th
+	850.1.1 = {
+		government = mandala_government
+		holder = malays_sambas_01_fic	#fictional
+	}
+	886.2.21 = {
+		holder = 0
+	}
+}
+
+c_BOR_sambas = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 16 }
+
+	# Wijayapura from ~7th to ~9th
+	850.1.1 = {
+		government = mandala_government
+		holder = malays_sambas_01_fic	#fictional
+	}
+	886.2.21 = {
+		holder = malays_sambas_02_fic	#fictional
+	}
+	921.5.18 = {
+		holder = malays_sambas_03_fic	#fictional
+	}
+	944.3.21 = {
+		holder = malays_sambas_04_fic	#fictional
+	}
+	978.3.27 = {
+		holder = malays_sambas_05_fic	#fictional
+	}
+	1021.4.21 = {
+		holder = malays_sambas_06_fic	#fictional
+	}
+	1049.6.15 = {
+		holder = malays_sambas_07_fic	#fictional
+	}
+	1069.10.11 = {
+		holder = malays_sambas_08_fic	#fictional
+	}
+	1104.6.28 = {
+		holder = malays_sambas_09_fic	#fictional
+	}
+	1145.9.7 = {
+		holder = malays_sambas_10_fic	#fictional
+	}
+	1172.11.7 = {
+		holder = malays_sambas_11_fic	#fictional
+	}
+	1200.9.2 = {
+		holder = malays_sambas_12_fic	#fictional
+	}
+	1246.4.24 = {
+		holder = malays_sambas_13_fic	#fictional
+	}
+}
+
+c_pinyuh = {
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = sea_bidayuh_wijayapura_01
+	}
+	# more later, maybe make tributary
+}
+
+c_bengkayang = {
+	# Wijayapura from ~7th to ~9th
+	850.1.1 = {
+		government = mandala_government
+		holder = malays_sambas_01_fic	#fictional
+	}
+	886.2.21 = {
+		holder = malays_sambas_02_fic	#fictional
+	}
+	921.5.18 = {
+		holder = malays_sambas_03_fic	#fictional
+	}
+	944.3.21 = {
+		holder = malays_sambas_04_fic	#fictional
+	}
+	978.3.27 = {
+		holder = malays_sambas_05_fic	#fictional
+	}
+	1021.4.21 = {
+		holder = malays_sambas_06_fic	#fictional
+	}
+	1049.6.15 = {
+		holder = malays_sambas_07_fic	#fictional
+	}
+	1069.10.11 = {
+		holder = malays_sambas_08_fic	#fictional
+	}
+	1104.6.28 = {
+		holder = malays_sambas_09_fic	#fictional
+	}
+	1145.9.7 = {
+		holder = malays_sambas_10_fic	#fictional
+	}
+	1172.11.7 = {
+		holder = malays_sambas_11_fic	#fictional
+	}
+	1200.9.2 = {
+		holder = malays_sambas_12_fic	#fictional
+	}
+	1246.4.24 = {
+		holder = malays_sambas_13_fic	#fictional
+	}
+}
+
+c_anambas = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 15 }
+
+	851.1.1 = {
+		government = wanua_government
+		holder = malay_riauisl_01_fic	#fictional
+	}
+	1065.1.1 = {
+		holder = malay_riauisl_10_fic	#fictional
+	}
+	1176.1.1 = {
+		holder = malay_riauisl_20_fic	#fictional
+	}
+}
+
+c_riau = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 15 }
+
+	851.1.1 = {
+		government = wanua_government
+		holder = malay_riauisl_01_fic	#fictional
+	}
+	1065.1.1 = {
+		holder = malay_riauisl_10_fic	#fictional
+	}
+	1176.1.1 = {
+		holder = malay_riauisl_20_fic	#fictional
+	}
+}
+
+
+d_sintang = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+}
+
+c_sanggau = {
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = dayak_tanahtaman_01_fic	#fictional
+	}
+	889.5.20 = {
+		holder = dayak_tanahtaman_02_fic	#fictional
+	}
+	912.3.16 = {
+		holder = dayak_tanahtaman_03_fic	#fictional
+	}
+	945.6.21 = {
+		holder = dayak_tanahtaman_04_fic	#fictional
+	}
+	973.6.26 = {
+		holder = dayak_tanahtaman_05_fic	#fictional
+	}
+	1009.12.9 = {
+		holder = dayak_tanahtaman_06_fic	#fictional
+	}
+	1056.8.12 = {
+		holder = dayak_tanahtaman_07_fic	#fictional
+	}
+	1082.9.7 = {
+		holder = dayak_tanahtaman_08_fic	#fictional
+	}
+	1110.2.5 = {
+		holder = dayak_tanahtaman_09_fic	#fictional
+	}
+	1145.6.12 = {
+		holder = dayak_tanahtaman_10_fic	#fictional
+	}
+	1161.6.2 = {
+		holder = dayak_tanahtaman_11_fic	#fictional
+	}
+	1209.5.27 = {
+		holder = dayak_tanahtaman_12_fic	#fictional
+	}
+}
+
+c_ketungau = {
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = dayak_tanahtaman_01_fic	#fictional
+	}
+	889.5.20 = {
+		holder = dayak_tanahtaman_02_fic	#fictional
+	}
+	912.3.16 = {
+		holder = dayak_tanahtaman_03_fic	#fictional
+	}
+	945.6.21 = {
+		holder = dayak_tanahtaman_04_fic	#fictional
+	}
+	973.6.26 = {
+		holder = dayak_tanahtaman_05_fic	#fictional
+	}
+	1009.12.9 = {
+		holder = dayak_tanahtaman_06_fic	#fictional
+	}
+	1056.8.12 = {
+		holder = dayak_tanahtaman_07_fic	#fictional
+	}
+	1082.9.7 = {
+		holder = dayak_tanahtaman_08_fic	#fictional
+	}
+	1110.2.5 = {
+		holder = dayak_tanahtaman_09_fic	#fictional
+	}
+	1145.6.12 = {
+		holder = dayak_tanahtaman_10_fic	#fictional
+	}
+	1161.6.2 = {
+		holder = dayak_tanahtaman_11_fic	#fictional
+	}
+	1209.5.27 = {
+		holder = dayak_tanahtaman_12_fic	#fictional
+	}
+}
+
+c_sekadau = {
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = sea_bidayuh_sintang_01 	#fictional
+	}
+	# more later, maybe make tributary
+}
+
+c_BOR_sintang = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
+
+	800.1.1 = {
+		government = wanua_government
+	}
+	850.1.1 = {
+		holder = dayak_sintang_01_fic	#fictional
+	}
+	898.11.9 = {
+		holder = dayak_sintang_02_fic	#fictional
+	}
+	913.2.15 = {
+		holder = dayak_sintang_03_fic	#fictional
+	}
+	956.4.26 = {
+		holder = dayak_sintang_04_fic	#fictional
+	}
+	980.12.24 = {
+		holder = dayak_sintang_05_fic	#fictional
+	}
+	1025.7.26 = {
+		holder = dayak_sintang_06_fic	#fictional
+	}
+	1052.8.1 = {
+		holder = dayak_sintang_07_fic	#fictional
+	}
+	1088.2.6 = {
+		holder = dayak_sintang_08_fic	#fictional
+	}
+	1132.10.13 = {
+		holder = dayak_sintang_09_fic	#fictional
+	}
+	1150.8.7 = {
+		government = mandala_government
+		holder = dayak_sintang_10_fic	#fictional
+	}
+	1195.5.1 = {
+		holder = dayak_sintang_11_fic	#fictional
+	}
+}
+
+
+d_selimbau = {
+	550.1.1 = {
+		holder = selimbau001
+		government = wanua_government
+	}
+	600.1.1 = {
+		holder = selimbau002
+	}
+	650.1.1 = {
+		holder = selimbau003
+	}
+	710.1.1 = {
+		holder = selimbau004
+	}
+	780.1.1 = {
+		holder = selimbau005
+	}
+	850.1.1 = {
+		holder = selimbau006
+	}
+	920.1.1 = {
+		holder = selimbau007
+	}
+	980.1.1 = {
+		holder = selimbau008
+	}
+	1040.1.1 = {
+		holder = selimbau009
+	}
+	1100.1.1 = {
+		holder = selimbau010
+	}
+	1150.1.1 = {
+		holder = selimbau011
+	}
+	1200.1.1 = {
+		holder = selimbau012
+	}
+	1250.1.1 = {
+		holder = selimbau013
+	}
+	1280.1.1 = {
+		holder = selimbau014
+	}
+	1300.1.1 = {
+		holder = selimbau015
+	}
+	1380.1.1 = {
+		holder = selimbau016
+	}
+	1435.1.1 = {
+		holder = selimbau017
+	}
+	1490.1.1 = {
+		holder = selimbau018
+	}
+}
+
+c_BOR_tanah_taman = {
+	550.1.1 = {
+		holder = selimbau001
+		government = wanua_government
+	}
+	600.1.1 = {
+		holder = selimbau002
+	}
+	650.1.1 = {
+		holder = selimbau003
+	}
+	710.1.1 = {
+		holder = selimbau004
+	}
+	780.1.1 = {
+		holder = selimbau005
+	}
+	850.1.1 = {
+		holder = selimbau006
+	}
+	920.1.1 = {
+		holder = selimbau007
+	}
+	980.1.1 = {
+		holder = selimbau008
+	}
+	1040.1.1 = {
+		holder = selimbau009
+	}
+	1100.1.1 = {
+		holder = selimbau010
+	}
+	1150.1.1 = {
+		holder = selimbau011
+	}
+	1200.1.1 = {
+		holder = selimbau012
+	}
+	1250.1.1 = {
+		holder = selimbau013
+	}
+	1280.1.1 = {
+		holder = selimbau014
+	}
+	1300.1.1 = {
+		holder = selimbau015
+	}
+	1380.1.1 = {
+		holder = selimbau016
+	}
+	1435.1.1 = {
+		holder = selimbau017
+	}
+	1490.1.1 = {
+		holder = selimbau018
+	}
+}
+
+c_seberuang = {
+	550.1.1 = {
+		holder = selimbau001
+		government = wanua_government
+	}
+	600.1.1 = {
+		holder = selimbau002
+	}
+	650.1.1 = {
+		holder = selimbau003
+	}
+	710.1.1 = {
+		holder = selimbau004
+	}
+	780.1.1 = {
+		holder = selimbau005
+	}
+	850.1.1 = {
+		holder = selimbau006
+	}
+	920.1.1 = {
+		holder = selimbau007
+	}
+	980.1.1 = {
+		holder = selimbau008
+	}
+	1040.1.1 = {
+		holder = selimbau009
+	}
+	1100.1.1 = {
+		holder = selimbau010
+	}
+	1150.1.1 = {
+		holder = selimbau011
+	}
+	1200.1.1 = {
+		holder = selimbau012
+	}
+	1250.1.1 = {
+		holder = selimbau013
+	}
+	1280.1.1 = {
+		holder = selimbau014
+	}
+	1300.1.1 = {
+		holder = selimbau015
+	}
+	1380.1.1 = {
+		holder = selimbau016
+	}
+	1435.1.1 = {
+		holder = selimbau017
+	}
+	1490.1.1 = {
+		holder = selimbau018
+	}
+}

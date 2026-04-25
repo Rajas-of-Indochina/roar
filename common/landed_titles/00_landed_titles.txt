@@ -81386,13 +81386,13 @@ e_kalimantan = {
 			c_banjarmasin = {
 				color = { 20 120 120 }
 
-				b_amuntai = {
-					province = 18426
+				b_banjarmasin = {
+					province = 15887
 
 					color = { 20 120 120 }
 				}
-				b_banjarmasin = {
-					province = 15887
+				b_amuntai = {
+					province = 18426
 
 					color = { 20 120 120 }
 				}
@@ -81909,11 +81909,17 @@ e_kalimantan = {
 		}
 	}
 
-	k_tanjungpura = {
+	k_tanjungnagara = {
+		# k_tanjungpura in old RoA
 		color = { 11 87 70 }
 
-		d_tanjungpura = {
+		capital = c_tanjungpura
+
+		d_BOR_tanjungpura = {
+			# d_tanjungpura in old RoA
 			color = { 20 110 90 }
+
+			capital = c_tanjungpura
 
 			c_tanjungpura = {
 				color = { 35 145 120 }
@@ -81934,8 +81940,28 @@ e_kalimantan = {
 					color = { 35 145 120 }
 				}
 			}
+			c_BOR_sukadana = {
+				# c_sukadana in Old RoA
+				color = { 40 150 130 }
 
-			c_tayapura = {
+				b_BOR_Sukadana = {
+					province = 16666
+
+					color = { 40 150 130 }
+				}
+				b_karimata = {
+					province = 16569
+
+					color = { 40 150 130 }
+				}
+				b_kubu = {
+					province = 18442
+
+					color = { 40 150 130 }
+				}
+			}
+			c_BOR_waringin = {
+				# c_tayapura in old RoA
 				color = { 15 80 65 }
 
 				b_sukamara = {
@@ -81943,7 +81969,7 @@ e_kalimantan = {
 
 					color = { 15 80 65 }
 				}
-				b_seruyan_hilir = {
+				b_BOR_Seruyan = {
 					province = 15992
 
 					color = { 15 80 65 }
@@ -81954,7 +81980,6 @@ e_kalimantan = {
 					color = { 15 80 65 }
 				}
 			}
-
 			c_lamandau = {
 				color = { 45 165 135 }
 
@@ -81979,7 +82004,6 @@ e_kalimantan = {
 					color = { 45 165 135 }
 				}
 			}
-
 			c_seruyan_hulu = {
 				color = { 25 100 80 }
 
@@ -82004,10 +82028,13 @@ e_kalimantan = {
 		d_wijayapura = {
 			color = { 30 120 100 }
 
-			c_lemukutan = {
+			capital = c_BOR_sambas
+
+			c_BOR_sambas = {
+				# c_lemukutan in old RoA
 				color = { 50 170 150 }
 
-				b_lemukutan = {
+				b_BOR_Sambas = {
 					province = 17207
 
 					color = { 50 170 150 }
@@ -82018,47 +82045,6 @@ e_kalimantan = {
 					color = { 50 170 150 }
 				}
 			}
-
-			c_anambas = {
-				color = { 20 85 70 }
-
-				b_anambas = {
-					province = 15460
-
-					color = { 20 85 70 }
-				}
-			}
-
-			c_natuna = {
-				color = { 10 65 55 }
-
-				b_natuna = {
-					province = 15639
-
-					color = { 10 65 55 }
-				}
-			}
-
-			c_sukadana = {
-				color = { 40 150 130 }
-
-				b_sukadana = {
-					province = 16666
-
-					color = { 40 150 130 }
-				}
-				b_karimata = {
-					province = 16569
-
-					color = { 40 150 130 }
-				}
-				b_kubu = {
-					province = 18442
-
-					color = { 40 150 130 }
-				}
-			}
-
 			c_pinyuh = {
 				color = { 25 105 90 }
 
@@ -82078,30 +82064,51 @@ e_kalimantan = {
 					color = { 25 105 90 }
 				}
 			}
-		}
+			c_bengkayang = {
+				color = { 45 160 140 }
 
-		d_ketungau = {
-			color = { 18 95 80 }
+				b_bengkayang = {
+					province = 17261
 
-			c_ketungau = {
-				color = { 35 140 120 }
-
-				b_ketungau = {
-					province = 17191
-
-					color = { 35 140 120 }
+					color = { 45 160 140 }
 				}
-				b_jasa = {
-					province = 17177
+				b_seluas = {
+					province = 17282
 
-					color = { 35 140 120 }
+					color = { 45 160 140 }
 				}
 			}
+			c_anambas = {
+				color = { 20 85 70 }
+
+				b_siantan = {
+					province = 15460
+
+					color = { 20 85 70 }
+				}
+			}
+			c_riau = { #Natuna
+				# c_natuna in old RoA
+				color = { 10 65 55 }
+
+				b_natuna = {
+					province = 15639
+
+					color = { 10 65 55 }
+				}
+			}
+		}
+
+		d_sintang = {
+			# d_ketungau in old RoA
+			color = { 18 95 80 }
+
+			capital = c_BOR_sintang
 
 			c_sanggau = {
 				color = { 22 85 70 }
 
-				b_sanggau = {
+				b_BOR_Sanggau = {
 					province = 17050
 
 					color = { 22 85 70 }
@@ -82117,25 +82124,28 @@ e_kalimantan = {
 					color = { 22 85 70 }
 				}
 			}
+			c_ketungau = {
+				color = { 35 140 120 }
 
-			c_bengkayang = {
-				color = { 45 160 140 }
+				b_ketungau = {
+					province = 17191
 
-				b_bengkayang = {
-					province = 17261
-
-					color = { 45 160 140 }
+					color = { 35 140 120 }
 				}
-				b_seluas = {
-					province = 17282
+				b_jasa = {
+					province = 17177
 
-					color = { 45 160 140 }
+					color = { 35 140 120 }
 				}
 			}
-
-			c_semandang = {
+			c_sekadau = {
 				color = { 28 110 95 }
 
+				b_BOR_Sekadao = {
+					province = 18444
+
+					color = { 28 110 95 }
+				}
 				b_meliau = {
 					province = 16940
 
@@ -82146,18 +82156,41 @@ e_kalimantan = {
 
 					color = { 28 110 95 }
 				}
-				b_sekadau = {
-					province = 18444
+			}
+			c_BOR_sintang = {
+				color = { 40 155 135 }
 
-					color = { 28 110 95 }
+				b_BOR_Sintang = {
+					province = 18445
+
+					color = { 40 155 135 }
+				}
+				b_kayan_sintang = {
+					province = 16784
+
+					color = { 40 155 135 }
+				}
+				b_nanga_pinoh = {
+					province = 16803
+
+					color = { 40 155 135 }
+				}
+				b_belimbing = {
+					province = 18438
+
+					color = { 40 155 135 }
 				}
 			}
 		}
 
-		d_kapuas_hulu = { # Selimbau
+		d_selimbau = {
+			# d_kapuas_hulu is old name
 			color = { 14 75 65 }
 
-			c_putussibau = {
+			capital = c_BOR_tanah_taman
+
+			c_BOR_tanah_taman = {
+				# c_putussibau in old RoA
 				color = { 32 135 115 }
 
 				b_putussibau = {
@@ -82176,7 +82209,6 @@ e_kalimantan = {
 					color = { 32 135 115 }
 				}
 			}
-
 			c_seberuang = {
 				color = { 18 85 75 }
 
@@ -82201,34 +82233,8 @@ e_kalimantan = {
 					color = { 18 85 75 }
 				}
 			}
-
-			c_sintang = {
-				color = { 40 155 135 }
-
-				b_sintang = {
-					province = 18445
-
-					color = { 40 155 135 }
-				}
-				b_kayan_sintang = {
-					province = 16784
-
-					color = { 40 155 135 }
-				}
-				b_nanga_pinoh = {
-					province = 16803
-
-					color = { 40 155 135 }
-				}
-				b_belimbing = {
-					province = 18438
-
-					color = { 40 155 135 }
-				}
-			}
 		}
 	}
-
 }
 
 e_suvarnabhumi = {
@@ -82308,7 +82314,6 @@ e_suvarnabhumi = {
 					color = { 116 10 174 }
 				}
 			}
-
 			c_salin = {
 				color = { 116 10 174 }
 
@@ -82337,7 +82342,6 @@ e_suvarnabhumi = {
 					color = { 116 10 174 }
 				}
 			}
-
 			c_mindat = {
 				color = { 106 60 174 }
 
@@ -82356,7 +82360,6 @@ e_suvarnabhumi = {
 					}
 				}
 			}
-
 			c_pakokku = {
 				color = { 116 50 164 }
 
@@ -82376,7 +82379,6 @@ e_suvarnabhumi = {
 					color = { 116 50 164 }
 				}
 			}
-
 			c_minbu = {
 				color = { 116 40 204 }
 
@@ -82400,7 +82402,6 @@ e_suvarnabhumi = {
 					color = { 116 40 204 }
 				}
 			}
-
 			c_mindon = {
 				color = { 96 50 204 }
 
