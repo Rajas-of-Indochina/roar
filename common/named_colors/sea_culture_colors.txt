@@ -13,7 +13,6 @@
 	bahnar  = { 0 84 31 }
 	bai = { 204 204 204 }
 	balhae = { 42 195 209 }
-	bali = { 147 145 32 }
 	banjar = { 259 202 67 }
 	barqut = { 89 37 186 }
 	barsil = { 99 69 31 }
@@ -105,7 +104,6 @@
 	nepali = { 164 90 82 }
 	ngero = { 20 219 189 }
 	nias = { 186 98 30 }
-	nicobar = { 153 168 50 }
 	nivkh = { 131 127 144 }
 	nong = { 187 159 144 }
 	nuristani = { 0.882 0.721 0.478 }
@@ -113,8 +111,8 @@
 	onggirad = { 102 122 47 }
 	ongud = { 194 176 120 }
 	ot_danum = { 272 115 43 }
-	pahari =  { 255 90 95 }
-	paiwan = { 53 245 25 }
+	pahari = { 255 90 95 }
+	paiwan = { 209 182 125 }
 	palauan = { 0 154 255 }
 	palaung = { 0.5 0.55 0.35 }
 	palawan = { 178 127 181 }
@@ -146,7 +144,6 @@
 	siraya = { 145 89 39 }
 	solqumyt = { 167 165 139 }
 	stieng = { 73 255 77 }
-	suau = { 78 215 91 }
 	subanen = { 134 57 87 }
 	sunda = { 235 164 52 }
 	tagalog = { 153 157 182 }
@@ -193,44 +190,59 @@
 	tush = { 198 110 1 }
 	udi = { 99 76 80 }
 
-	# Indian colours
+	# South Asia - Indian colours
 	rajput = { 170 30 40 }
 	gujarati = { 102 51 51 }
 
-	# Andamanese colours
+	# South Asia - Tibetan colours
+	bodpa_sea = hsv{ 0.6 0.8 0.3 }
+	garo = { 90 150 200 }
+	kachari = { 87 111 171 }
+	kirati = hsv{ 0.58 0.94 0.7 }
+	lhomon = hsv{ 0.62 0.9 0.7 }
+	meitei = hsv{ 0.59 0.55 0.8 }
+	sumpa = hsv{ 0.6 0.9 0.7 }
+	tani = { 0.3 0.55 0.8 }
+	tripuri = { 60 130 160 }
+	tsangpa = hsv{ 0.66 0.69 0.58 }
+	zhangzhung = hsv{ 0.55 0.7 0.7 }
+
+	# SEA - Andaman & Nicobar colours
 	andaman = { 94 42 52 }
+	nicobar = { 282 108 85 }
 	ongan = { 82 26 57 }
 
-	# Dayak colours
-	apo_kayan = { 282 108 85 }
+	# SEA - Dayak colours
+	apo_kayan = { 153 168 50 }
 	bidayuh = { 119 187 54 }
-	iban = { 267 212 186 }
-	kadazan = { 47 26 107 }
-	murut = { 34 57 204 }
-	ngaju = { 119 187 54  }
+	iban = { 167 187 77 }
+	kadazan = { 108 234 98 }
+	murut = { 78 215 91 }
+	ngaju = { 107 167 66 }
 
-	# Mon-Khmer colours
-	bnam  = { 150 130 190 }
-	chong = { 160 210 220 }
-	khmer = { 0.3 0.3 0.7 }
-	mon = { 0.35 0.6 0.1 }
-	sambor = { 172 172 240 }
-
-	# Malayic colours
+	# SEA - Malayic colours
+	bali = { 213 104 0 }
 	lampung = { 181 69 44 }
-	sama = { 80 52 8 }
-	samawa = { 143 120 76 }
+	sama = { 223 134 111 }
+	samawa = { 147 145 32 }
 
-	# Moluka colours
+	# SEA - Moluka colours
 	biak = { 95 161 3 }
-	buli = { 97 288 33 }
+	buli = { 53 245 25 }
 	halmahera = { 17 238 33 }
 	nunusaku = { 37 288 87 }
 	sumba = { 57 288 33 }
 	sula_taliabu = { 44 288 66 }
 	timor = { 70 288 13 }
 
-	# Sulawesi colours
+	# SEA - Mon-Khmer colours
+	bnam  = { 150 130 190 }
+	chong = { 160 210 220 }
+	khmer = { 0.3 0.3 0.7 }
+	mon = { 0.35 0.6 0.1 }
+	sambor = { 172 172 240 }
+
+	# SEA - Sulawesi colours
 	bugis = { 7 128 214 }
 	bungku = { 107 288 234 }
 	gorontalo = { 180 160 140 }
@@ -245,35 +257,25 @@
 	tomini = { 142 194 118 }
 	toraja = { 162 238 242 }
 
-	# Tibetan colours
-	bodpa_sea = hsv{ 0.6 0.8 0.3 }
-	garo = { 90 150 200 }
-	kachari = { 87 111 171 }
-	kirati = hsv{ 0.58 0.94 0.7 }
-	lhomon = hsv{ 0.62 0.9 0.7 }
-	meitei = hsv{ 0.59 0.55 0.8 }
-	sumpa = hsv{ 0.6 0.9 0.7 }
-	tani = { 0.3 0.55 0.8 }
-	tripuri = { 60 130 160 }
-	tsangpa = hsv{ 0.66 0.69 0.58 }
-	zhangzhung = hsv{ 0.55 0.7 0.7 }
+	# Melanesian colours
+	suau = { 33 124 103 }
 
-	# Papuan colours - North
+	# Papuan colours
 	abui = { 233 75 248 }
 	amung = { 101 41 99 }
 	anim = { 69 82 131 }
-	asmat = { 33 124 103 }
-	awyu = { 223 134 111 }
+	asmat = { 34 149 68 }
+	awyu = { 80 52 8 }
 	baining = { 162 104 252 }
-	bauzi = { 213 104 0 }
+	bauzi = { 143 120 76 }
 	bosavi = { 63 89 94 }
 	chimbu = { 223 187 205 }
 	enga = { 183 205 202 }
-	gogodala = { 209 182 125 }
+	gogodala = { 97 288 33 }
 	kayagar = { 121 15 223 }
-	kiwaian = { 34 149 68 }
+	kiwaian = { 34 57 204 }
 	kwerba = { 22 61 171 }
-	madang = { 167 187 77 }
+	madang = { 267 212 186 }
 	mairasi = { 197 158 83 }
 	mantion = { 117 123 91 }
 	mek = { 130 47 158  }
@@ -283,7 +285,7 @@
 	nasioi = { 27 129 21 }
 	ndani = { 171 22 22 }
 	ok = { 86 93 160 }
-	oriomo = { 108 234 98 }
+	oriomo = { 47 26 107 }
 	pauwasi = { 209 187 241 }
 	sepik = { 120 206 144 }
 	yam = { 114 209 157 }

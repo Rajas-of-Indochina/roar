@@ -1837,7 +1837,7 @@ language_ngaju = {
 		}
 	}
 	parameters = {
-		language_group_west_barito = yes
+		language_group_barito = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -1849,7 +1849,7 @@ language_ngaju = {
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_west_barito }
+			limit = { has_cultural_parameter = language_group_barito }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -2095,6 +2095,43 @@ language_saluan = {
 
 	color = saluan
 }
+
+language_sama_bajaw = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sama_bajaw
+		}
+	}
+	parameters = {
+		language_group_barito = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sama_bajaw }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_barito }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = sama
+}
+
 
 language_suau = {
 	type = language
