@@ -1,57 +1,84 @@
 # k_banjar
-## d_kuripan ###################################
-### c_banjarmasin
+## d_BOR_nan_sarunai ###################################
+### c_BOR_banjar
 15887 = { # Banjarmasin
+	# centre of the Banjarese culture and the capital of the Sultanate of Banjar
 	culture = malay
 	religion = vajrayana
 
 	holding = temple_citadel_holding
-}
-18426 = { # Amuntai
-	holding = none
+
+	# History
+	#1150.1.1 = {
+		#culture = banjar
+	#}
 }
 17808 = { # Martapira
 	holding = none
 }
 16028 = { # Kandangan
-	holding = city_holding
+	holding = city_holding  	# to make county a bit more settled
 }
 
-### c_tanah_bumbu
+### c_BOR_taiao
 15008 = { # Tanah Bumbu
-	culture = malay
-	religion = vajrayana
+	# coastal settlement and a shipping hub
+	culture = maanyan
+	religion = kaharingan
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
+
+	# History
+	#950.1.1 = {
+		#holding = castle_holding
+	#}
+	#1150.1.1 = {
+		#culture = banjar
+		#religion = vajrayana
+	#}
 }
 16081 = { # Bungkukan
+	# a village
 	holding = none
 }
-18416 = { # Sawuku
+18416 = { # Laut Island
+	# Laut Island
 	holding = none
 }
 
-### c_paser
+### c_BOR_tabalung
 16330 = { # Tabalong
-	culture = malay
-	religion = vajrayana
+	# settled by Malay around 520 AD and served as trade-hub since
+	culture = maanyan
+	religion = kaharingan
 
-	holding = city_holding
+	holding = temple_citadel_holding
+
+	# History
+	# add Malay minority
+	#1150.1.1 = {
+		#culture = banjar
+		#religion = vajrayana
+	#}
+}
+18426 = { # Kota Raden
+	holding = none
 }
 16526 = { # Long Ikis
-	holding = none
-}
-18430 = { # Kerang
 	holding = none
 }
 18437 = { # Penajam
 	holding = none
 }
+18430 = { # Pasir
+	holding = none
+}
 
 
 ## d_katingan ###################################
-### c_baamang
-18421 = { # Baamang
+### c_BOR_sampit
+18421 = { # Sampit
+	# according to legends it used to be a capital of small river-based kingdom of Sampit ; nowadays a timber port town
 	culture = malay
 	religion = vajrayana
 
@@ -77,8 +104,8 @@
 
 ### c_katingan_kuala
 16072 = { # Katingan Kuala
-	culture = malay
-	religion = vajrayana
+	culture = ngaju
+	religion = kaharingan
 
 	holding = tribal_holding
 }

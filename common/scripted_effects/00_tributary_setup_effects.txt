@@ -1420,12 +1420,12 @@ tgp_1178_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
-	title:d_BOR_nan_sarunai.holder = {
-		save_scope_as = suzerain
-		title:c_BOR_banjar.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:d_BOR_nan_sarunai.holder = {
+		#save_scope_as = suzerain
+		#title:c_BOR_banjar.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 }
 
 base_867_tributary_setup_effect = {

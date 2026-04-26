@@ -81355,28 +81355,24 @@ e_kalimantan = {
 	k_banjar = {
 		color = { 0 156 156 }
 
-		capital = c_banjarmasin
+		capital = c_BOR_banjar
 
-		d_kuripan = {
-			# unsure why this name, might just change it later
+		d_BOR_nan_sarunai = {
+			# d_kuripan in old RoA
 			color = { 15 190 190 }
 
-			capital = c_banjarmasin
+			capital = c_BOR_banjar
 
-			c_banjarmasin = {
+			c_BOR_banjar = {
+				# c_banjarmasin in old RoA
 				color = { 20 120 120 }
 
-				b_banjarmasin = {
+				b_BOR_Banjar = {
 					province = 15887
 
 					color = { 20 120 120 }
 				}
-				b_amuntai = {
-					province = 18426
-
-					color = { 20 120 120 }
-				}
-				b_martapura = {
+				b_BOR_Martapura = {
 					province = 17808
 
 					color = { 20 120 120 }
@@ -81387,7 +81383,8 @@ e_kalimantan = {
 					color = { 20 120 120 }
 				}
 			}
-			c_tanah_bumbu = {
+			c_BOR_taiao = {
+				# c_tanah_bumbu in old RoA
 				color = { 50 220 220 }
 
 				b_tanah_bumbu = {
@@ -81400,17 +81397,23 @@ e_kalimantan = {
 
 					color = { 50 220 220 }
 				}
-				b_sawuku = {
+				b_BOR_Laut = {
 					province = 18416
 
 					color = { 50 220 220 }
 				}
 			}
-			c_paser = {
+			c_BOR_tabalung = {
+				# c_paser in old RoA
 				color = { 45 230 230 }
 
 				b_tabalong = {
 					province = 16330
+
+					color = { 45 230 230 }
+				}
+				b_BOR_Kota_Raden = {
+					province = 18426
 
 					color = { 45 230 230 }
 				}
@@ -81424,7 +81427,7 @@ e_kalimantan = {
 
 					color = { 45 230 230 }
 				}
-				b_kerang = {
+				b_BOR_Pasir = {
 					province = 18430
 
 					color = { 45 230 230 }
@@ -81435,12 +81438,13 @@ e_kalimantan = {
 		d_katingan = {
 			color = { 10 135 135 }
 
-			capital = c_baamang
+			capital = c_BOR_sampit
 
-			c_baamang = {
+			c_BOR_sampit = {
+				# c_baamang in old RoA
 				color = { 40 200 200 }
 
-				b_baamang = {
+				c_BOR_sampit = {
 					province = 18421
 
 					color = { 40 200 200 }
@@ -81454,7 +81458,7 @@ e_kalimantan = {
 			c_katingan_hilir = {
 				color = { 22 125 125 }
 
-				b_katingan_hilir = {
+				b_BOR_Katingan = {
 					province = 16386
 
 					color = { 22 125 125 }
@@ -81541,7 +81545,7 @@ e_kalimantan = {
 			c_kapuas = {
 				color = { 15 95 95 }
 
-				b_kuala_kapuas = {
+				b_BOR_Kapuas = {
 					province = 18419
 
 					color = { 15 95 95 }
@@ -81967,7 +81971,7 @@ e_kalimantan = {
 
 					color = { 15 80 65 }
 				}
-				b_BOR_Seruyan = {
+				b_BOR_Pembuang = {
 					province = 15992
 
 					color = { 15 80 65 }
@@ -82005,7 +82009,7 @@ e_kalimantan = {
 			c_seruyan_hulu = {
 				color = { 25 100 80 }
 
-				b_seruyan_hulu = {
+				b_BOR_Seruyan = {
 					province = 16430
 
 					color = { 25 100 80 }
