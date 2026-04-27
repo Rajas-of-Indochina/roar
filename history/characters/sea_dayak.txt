@@ -4,7 +4,7 @@ dayak_segara_00 = {
 	name = "Kudungga"
 	dynasty = dayak_segara
 	religion = kaharingan
-	culture = apo_kayan
+	culture = tunjung
 	320.1.1 = {	#unknown
 		birth = yes
 	}
@@ -200,7 +200,7 @@ selimbau018	= {
 }
 
 
-### placeholders
+### fictional
 dayak_taiao_06_fic = {
 	name = "Majin"
 	dynasty = dayak_selatalun
@@ -227,7 +227,8 @@ dayak_taiao_11_fic = {
 		death = yes
 	}
 }
-#
+
+### fictional placeholders
 sea_bidayuh_sintang_01 = {
 	name = "Tabo"
 	religion = kaharingan
@@ -403,44 +404,100 @@ sea_ngaju_dohoi_03 = {
 	1201.1.1 = { death = yes }
 }
 
+sea_tunjung_01 = {
+	name = "Pioh"
+	religion = kaharingan
+	culture = tunjung
 
-mahakam001 = { # mahakam fictional ruler
-	name = "Dungau" # fictional
-	religion = "kaharingan"
+	837.1.1 = { birth = yes }
+	898.1.1 = { death = yes }
+}
+sea_tunjung_02 = {
+	name = "Ngeging"
+	religion = kaharingan
+	culture = tunjung
+
+	1042.1.1 = { birth = yes }
+	1094.1.1 = { death = yes }
+}
+sea_tunjung_03 = {
+	name = "Kubu"
+	religion = kaharingan
+	culture = tunjung
+
+	1146.1.1 = { birth = yes }
+	1202.1.1 = { death = yes }
+}
+
+sea_kayan_mahakam_01 = {
+	name = "Dungau"
+	religion = kaharingan
 	culture = apo_kayan
 
-	849.1.1 = {
-		birth = yes
-	}
-	885.1.1 = {
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
-kayan001 = { # kayan fictional ruler
-	name = "Laki_Bo" # fictional
-	religion = "kaharingan"
+sea_kayan_mahakam_02 = {
+	name = "Hanjak"
+	religion = kaharingan
 	culture = apo_kayan
 
-	849.1.1 = {
-		birth = yes
-	}
-	885.1.1 = {
-		death = yes
-	}
+	1049.1.1 = { birth = yes }
+	1101.1.1 = { death = yes }
 }
+sea_kayan_mahakam_03 = {
+	name = "Jau"
+	religion = kaharingan
+	culture = apo_kayan
+
+	1141.1.1 = { birth = yes }
+	1203.1.1 = { death = yes }
+}
+#
+sea_kayan_wehea_01 = {
+	name = "Balawa"
+	religion = kaharingan
+	culture = apo_kayan
+
+	842.1.1 = { birth = yes }
+	894.1.1 = { death = yes }
+}
+sea_kayan_wehea_02 = {
+	name = "Ansor"
+	religion = kaharingan
+	culture = apo_kayan
+
+	1029.1.1 = { birth = yes }
+	1086.1.1 = { death = yes }
+}
+sea_kayan_wehea_03 = {
+	name = "Nyaui"
+	religion = kaharingan
+	culture = apo_kayan
+
+	1146.1.1 = { birth = yes }
+	1203.1.1 = { death = yes }
+}
+#
+sea_kayan_agung_baru_01 = {
+	name = "Laki_Bo"
+	religion = kaharingan
+	culture = apo_kayan
+
+	844.1.1 = { birth = yes }
+	888.1.1 = { death = yes }
+}
+
+
+### NEEDS CLEANUP
 melanau001 = { # melanau fictional ruler
 	name = "Tugau" # fictional
-	religion = "kaharingan"
-	culture = "iban"
+	religion = kaharingan
+	culture = iban
 
-	849.1.1 = {
-		birth = yes
-	}
-	885.1.1 = {
-		death = yes
-	}
+	847.1.1 = { birth = yes }
+	897.1.1 = { death = yes }
 }
-
 dayak001 = {
 	name = "Mamut"
 	religion = kaharingan

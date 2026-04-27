@@ -8,7 +8,7 @@
 
 	holding = temple_citadel_holding
 }
-18440 = { # Semboja
+18440 = { # Samboja
 	holding = none
 }
 18446 = { # Tenggarong AKA Tangga Arung AKA Tepian Pandan
@@ -24,12 +24,20 @@
 	culture = kutai
 	religion = kaharingan
 
-	holding = castle_holding
+	holding = tribal_holding
+
+	# History
+	1000.1.1 = {
+		holding = castle_holding
+	}
 }
 17061 = { # Bontang
 	holding = none
 }
 17214 = { # Bengalon
+	holding = none
+}
+18450 = { # Kenohan
 	holding = none
 }
 
@@ -43,7 +51,85 @@
 17051 = { # Long Hubung
 	holding = none
 }
-18450 = { # Kenohan
+
+### c_muara_wahau
+18456 = { # Muara Wehea
+	# shares name with a forest
+	culture = apo_kayan
+	religion = kaharingan
+
+	holding = tribal_holding
+}
+17151 = { # Busang
+	holding = none
+}
+17084 = { # Muara Bengkal
+	holding = none
+}
+
+### c_BOR_kutai_jauh
+18441 = { # Muara Lawa
+	culture = tunjung
+	religion = kaharingan
+
+	holding = tribal_holding
+}
+16914 = { # Sendawar
+	holding = none
+}
+16747 = { # Bongan
+	holding = none
+}
+
+
+## d_kayan ###################################
+### c_basap
+18330 = { # Sambaliung
+	culture = apo_kayan
+	religion = kaharingan
+
+	holding = tribal_holding
+}
+18461 = { # Talisayan
+	holding = none
+}
+
+### c_kelay
+17318 = { # Kelay
+	culture = apo_kayan
+	religion = kaharingan
+
+	holding = tribal_holding
+}
+15022 = { # Segah
+	holding = none
+}
+18329 = { # Peso
+	holding = none
+}
+
+### c_naha_aya
+18334 = { # Naha Aya
+	culture = apo_kayan
+	religion = kaharingan
+
+	holding = tribal_holding
+}
+15317 = { # Apau Ping
+	holding = none
+}
+18329 = { # Bahau
+	holding = none
+}
+
+### c_datadian
+15018 = { # Datadian
+	culture = apo_kayan
+	religion = kaharingan
+
+	holding = tribal_holding
+}
+17428 = { # Kihammawon
 	holding = none
 }
 
@@ -58,34 +144,6 @@
 	holding = none
 }
 17235 = { # Long Apari
-	holding = none
-}
-
-### c_muara_wahau
-18456 = { # Muara Wahau
-	culture = apo_kayan
-	religion = kaharingan
-
-	holding = tribal_holding
-}
-17151 = { # Busang
-	holding = none
-}
-17084 = { # Muara Bengkal
-	holding = none
-}
-
-### c_tunjung
-18441 = { # Muara Lawa
-	culture = ngaju
-	religion = kaharingan
-
-	holding = tribal_holding
-}
-16914 = { # Sendawar
-	holding = none
-}
-16747 = { # Bongan
 	holding = none
 }
 
@@ -149,56 +207,3 @@
 15774 = { # Kalabakan
 	holding = none
 }
-
-
-## d_kayan ###################################
-### c_basap
-18330 = { # Sambaliung
-	culture = apo_kayan
-	religion = kaharingan
-
-	holding = tribal_holding
-}
-18461 = { # Talisayan
-	holding = none
-}
-
-### c_kelay
-17318 = { # Kelay
-	culture = apo_kayan
-	religion = kaharingan
-
-	holding = tribal_holding
-}
-15022 = { # Segah
-	holding = none
-}
-18329 = { # Peso
-	holding = none
-}
-
-### c_naha_aya
-18334 = { # Naha Aya
-	culture = apo_kayan
-	religion = kaharingan
-
-	holding = tribal_holding
-}
-15317 = { # Apau Ping
-	holding = none
-}
-18329 = { # Bahau
-	holding = none
-}
-
-### c_datadian
-15018 = { # Datadian
-	culture = apo_kayan
-	religion = kaharingan
-
-	holding = tribal_holding
-}
-17428 = { # Kihammawon
-	holding = none
-}
-

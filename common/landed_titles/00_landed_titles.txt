@@ -75394,6 +75394,7 @@ e_java = {
 				}
 			}
 			c_JAV_madura = {
+				# c_madura in old RoA
 				color = { 135 35 25 }
 
 				b_JAV_Sampang = {
@@ -81647,7 +81648,7 @@ e_kalimantan = {
 
 					color = { 38 105 165 }
 				}
-				b_semboja = {
+				b_samboja = {
 					province = 18440
 
 					color = { 38 105 165 }
@@ -81678,6 +81679,31 @@ e_kalimantan = {
 					color = { 35 100 155 }
 				}
 			}
+			c_BOR_kutai_jauh = {
+				# c_tunjung in old RoA
+				color = { 30 110 160 }
+
+				b_muara_lawa = {
+					province = 18441
+
+					color = { 30 110 160 }
+				}
+				b_sendawar = {
+					province = 16914
+
+					color = { 30 110 160 }
+				}
+				b_bongan = {
+					province = 16747
+
+					color = { 30 110 160 }
+				}
+				b_kenohan = {
+					province = 18450
+
+					color = { 30 110 160 }
+				}
+			}
 			c_mahakam = {
 				color = { 20 75 130 }
 
@@ -81691,10 +81717,95 @@ e_kalimantan = {
 
 					color = { 20 75 130 }
 				}
-				b_kenohan = {
-					province = 18450
+			}
+			c_muara_wahau = {
+				color = { 28 85 145 }
 
-					color = { 20 75 130 }
+				b_BOR_Muara_Wehea = {
+					province = 18456
+
+					color = { 28 85 145 }
+				}
+				b_busang = {
+					province = 17151
+
+					color = { 28 85 145 }
+				}
+				b_muara_bengkal = {
+					province = 17084
+
+					color = { 28 85 145 }
+				}
+			}
+		}
+
+		d_kayan = {
+			color = { 8 45 80 }
+
+			c_basap = {
+				color = { 30 90 145 }
+
+				b_sambaliung = {
+					province = 18330
+
+					color = { 30 90 145 }
+				}
+				b_talisayan = {
+					province = 18461
+
+					color = { 30 90 145 }
+				}
+			}
+			c_kelay = {
+				color = { 16 60 110 }
+
+				b_kelay = {
+					province = 17318
+
+					color = { 16 60 110 }
+				}
+				b_segah = {
+					province = 15022
+
+					color = { 16 60 110 }
+				}
+				b_peso = {
+					province = 18329
+
+					color = { 16 60 110 }
+				}
+			}
+			c_naha_aya = {
+				color = { 42 110 170 }
+
+				b_naha_aya = {
+					province = 18334
+
+					color = { 42 110 170 }
+				}
+				b_bahau = {
+					province = 15317
+
+					color = { 42 110 170 }
+				}
+				b_apau_ping = {
+					province = 15352
+
+					color = { 42 110 170 }
+				}
+			}
+			c_datadian = {
+				color = { 20 70 120 }
+
+				b_datadian = {
+					province = 15018
+
+					color = { 20 70 120 }
+				}
+				b_kihammawon = {
+					province = 17428
+
+					color = { 20 70 120 }
 				}
 			}
 			c_agung_baru = {
@@ -81714,44 +81825,6 @@ e_kalimantan = {
 					province = 17235
 
 					color = { 45 120 180 }
-				}
-			}
-			c_muara_wahau = {
-				color = { 28 85 145 }
-
-				b_muara_wahau = {
-					province = 18456
-
-					color = { 28 85 145 }
-				}
-				b_busang = {
-					province = 17151
-
-					color = { 28 85 145 }
-				}
-				b_muara_bengkal = {
-					province = 17084
-
-					color = { 28 85 145 }
-				}
-			}
-			c_tunjung = {
-				color = { 30 110 160 }
-
-				b_muara_lawa = {
-					province = 18441
-
-					color = { 30 110 160 }
-				}
-				b_sendawar = {
-					province = 16914
-
-					color = { 30 110 160 }
-				}
-				b_bongan = {
-					province = 16747
-
-					color = { 30 110 160 }
 				}
 			}
 		}
@@ -81838,77 +81911,6 @@ e_kalimantan = {
 					province = 15774
 
 					color = { 22 75 125 }
-				}
-			}
-		}
-
-		d_kayan = {
-			color = { 8 45 80 }
-
-			c_basap = {
-				color = { 30 90 145 }
-
-				b_sambaliung = {
-					province = 18330
-
-					color = { 30 90 145 }
-				}
-				b_talisayan = {
-					province = 18461
-
-					color = { 30 90 145 }
-				}
-			}
-			c_kelay = {
-				color = { 16 60 110 }
-
-				b_kelay = {
-					province = 17318
-
-					color = { 16 60 110 }
-				}
-				b_segah = {
-					province = 15022
-
-					color = { 16 60 110 }
-				}
-				b_peso = {
-					province = 18329
-
-					color = { 16 60 110 }
-				}
-			}
-			c_naha_aya = {
-				color = { 42 110 170 }
-
-				b_naha_aya = {
-					province = 18334
-
-					color = { 42 110 170 }
-				}
-				b_bahau = {
-					province = 15317
-
-					color = { 42 110 170 }
-				}
-				b_apau_ping = {
-					province = 15352
-
-					color = { 42 110 170 }
-				}
-			}
-			c_datadian = {
-				color = { 20 70 120 }
-
-				b_datadian = {
-					province = 15018
-
-					color = { 20 70 120 }
-				}
-				b_kihammawon = {
-					province = 17428
-
-					color = { 20 70 120 }
 				}
 			}
 		}
