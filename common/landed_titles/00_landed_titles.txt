@@ -81625,16 +81625,23 @@ e_kalimantan = {
 	k_tarakan = {
 		color = { 0 33 60 }
 
-		capital = c_samarenda
+		capital = c_BOR_martapura	#AKA Kutai Martadipura
 
-		d_kutai = {
+		d_BOR_kutai = {
+			# d_kutai in old RoA
 			color = { 14 60 105 }
 
-			capital = c_samarenda
+			capital = c_BOR_martapura	#AKA Kutai Martadipura
 
-			c_samarenda = {
+			c_BOR_martapura = {
+				# c_samarenda
 				color = { 38 105 165 }
 
+				b_BOR_Muara_Kaman = {
+					province = 18448
+
+					color = { 38 105 165 }
+				}
 				b_tenggarong = {
 					province = 18446
 
@@ -81645,15 +81652,30 @@ e_kalimantan = {
 
 					color = { 38 105 165 }
 				}
-				b_muara_kaman = {
-					province = 18448
-
-					color = { 38 105 165 }
-				}
-				b_loa_kulu = {
+				b_BOR_Pemarangan = {
 					province = 16831
 
 					color = { 38 105 165 }
+				}
+			}
+			c_BOR_kutai_utara = {
+				# c_sangata in old RoA
+				color = { 35 100 155 }
+
+				b_BOR_Sangkulirang = {
+					province = 18458
+
+					color = { 35 100 155 }
+				}
+				b_BOR_Bontang = {
+					province = 17061
+
+					color = { 35 100 155 }
+				}
+				b_bengalon = {
+					province = 17214
+
+					color = { 35 100 155 }
 				}
 			}
 			c_mahakam = {
@@ -81711,25 +81733,6 @@ e_kalimantan = {
 					province = 17084
 
 					color = { 28 85 145 }
-				}
-			}
-			c_sangata = {
-				color = { 35 100 155 }
-
-				b_sangkulirang = {
-					province = 18458
-
-					color = { 35 100 155 }
-				}
-				b_sangata = {
-					province = 17061
-
-					color = { 35 100 155 }
-				}
-				b_bengalon = {
-					province = 17214
-
-					color = { 35 100 155 }
 				}
 			}
 			c_tunjung = {
