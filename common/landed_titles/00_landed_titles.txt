@@ -81161,7 +81161,7 @@ e_kalimantan = {
 					name_list_malayic = cn_brunei
 				}
 
-				b_burune = {
+				b_BOR_Brunei = {
 					province = 15843
 
 					color = { 35 175 210 }
@@ -81170,7 +81170,7 @@ e_kalimantan = {
 						name_list_malayic = cn_brunei
 					}
 				}
-				b_belait = {
+				b_BOR_Seria_Belait = {
 					province = 18369
 
 					color = { 35 175 210 }
@@ -81742,10 +81742,12 @@ e_kalimantan = {
 		d_kayan = {
 			color = { 8 45 80 }
 
+			capital = c_basap #placeholder
+
 			c_basap = {
 				color = { 30 90 145 }
 
-				b_sambaliung = {
+				b_BOR_Sambiliong = {
 					province = 18330
 
 					color = { 30 90 145 }
@@ -81756,7 +81758,8 @@ e_kalimantan = {
 					color = { 30 90 145 }
 				}
 			}
-			c_kelay = {
+			c_BOR_berau = {
+				# c_kelay in old RoA
 				color = { 16 60 110 }
 
 				b_kelay = {
@@ -81832,16 +81835,19 @@ e_kalimantan = {
 		d_tidung = {
 			color = { 10 55 95 }
 
-			c_tarakan = {
+			capital = c_BOR_menjelutung
+
+			c_BOR_menjelutung = {
+				# c_tarakan in old RoA
 				color = { 35 95 150 }
 
-				b_tarakan = {
-					province = 15463
+				b_BOR_Tarakan = {
+					province = 15626
 
 					color = { 35 95 150 }
 				}
-				b_tidung = {
-					province = 15626
+				b_BOR_Tanjung_Selor = {
+					province = 15463
 
 					color = { 35 95 150 }
 				}
@@ -81851,16 +81857,25 @@ e_kalimantan = {
 					color = { 35 95 150 }
 				}
 			}
-			c_tawau = {
-				color = { 18 65 115 }
+			c_BOR_lahad_datu = {
+				color = { 20 80 160 }
 
-				b_tawau = {
-					province = 15749
+				b_BOR_Lahad_Datu = {
+					province = 15874
 
 					color = { 18 65 115 }
 				}
-				b_lahad_datu = {
-					province = 15874
+				b_kalabakan = {
+					province = 15774
+
+					color = { 22 75 125 }
+				}
+			}
+			c_tawau = {
+				color = { 18 65 115 }
+
+				b_BOR_Tawau = {
+					province = 15749
 
 					color = { 18 65 115 }
 				}
@@ -81889,7 +81904,8 @@ e_kalimantan = {
 					color = { 45 115 175 }
 				}
 			}
-			c_koningau = {
+			c_BOR_nabawan = {
+				# c_koningau in old RoA
 				color = { 22 75 125 }
 
 				b_koningau = {
@@ -81904,11 +81920,6 @@ e_kalimantan = {
 				}
 				b_nabawan = {
 					province = 15809
-
-					color = { 22 75 125 }
-				}
-				b_kalabakan = {
-					province = 15774
 
 					color = { 22 75 125 }
 				}
@@ -90367,7 +90378,7 @@ e_panyupayana = {
 
 					color = { 154 193 121 }
 				}
-				b_sibutu = {
+				b_BOR_Sibutu = {
 					province = 11157
 
 					color = { 154 193 121 }
@@ -90426,10 +90437,12 @@ e_panyupayana = {
 		d_sandakan = {
 			color = { 104 143 71 }
 
+			capital = c_BOR_kudat
+
 			c_kinabatangan = {
 				color = { 114 153 81 }
 
-				b_kinabatangan = {
+				b_BOR_Kinabatangan = {
 					province = 18403
 
 					color = { 114 153 81 }
@@ -90453,13 +90466,14 @@ e_panyupayana = {
 
 					color = { 94 133 61 }
 				}
-				b_ranau = {
+				b_BOR_Ranau = {
 					province = 16477
 
 					color = { 104 143 71 }
 				}
 			}
-			c_tomborungan = {
+			c_BOR_kudat = {
+				# c_tomborungan in old RoA
 				color = { 124 163 91 }
 
 				b_tomborungan = {

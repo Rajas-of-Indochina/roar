@@ -263,28 +263,52 @@ c_muara_wahau = {
 
 ### d_kayan
 c_basap = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 7 }
+
 	860.1.1 = {
-		holder = dayak010
+		holder = sea_kayan_berau_01
 		government = wanua_government
 	}
+	# more history later
 }
-c_kelay = {
-	860.1.1 = {
-		holder = dayak010
+
+c_BOR_berau = {
+	800.1.1 = {
 		government = wanua_government
 	}
+	860.1.1 = {
+		holder = dayak_berau_01_fic	#placeholder
+	}
+	#
+	1060.1.1 = {
+		holder = dayak_berau_10_fic	#placeholder
+	}
+	#
+	1170.1.1 = {
+		holder = dayak_berau_20_fic	#placeholder
+	}
 }
+
 c_naha_aya = {
-	860.1.1 = {
-		holder = dayak005
+	800.1.1 = {
 		government = wanua_government
 	}
+	860.1.1 = {
+		holder = sea_kayan_datadian_01
+	}
+	# more history later
 }
+
 c_datadian = {
-	860.1.1 = {
-		holder = dayak004
+	800.1.1 = {
 		government = wanua_government
 	}
+	860.1.1 = {
+		holder = sea_kayan_datadian_01
+	}
+	# more history later
 }
 
 c_agung_baru = {
@@ -294,31 +318,110 @@ c_agung_baru = {
 	860.1.1 = {
 		holder = sea_kayan_agung_baru_01
 	}
+	# more history later
 }
 
 
 ### d_tidung
-c_tarakan = {
-	860.1.1 = {
-		holder = dayak005
+c_BOR_menjelutung = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 12 }
+
+	800.1.1 = {
 		government = wanua_government
 	}
+	860.1.1 = {
+		government = wanua_government
+		holder = dayak_menjelutung_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = dayak_menjelutung_10_fic	#fictional
+	}
+	1071.8.4 = {
+		holder = dayak_menjelutung_11_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = dayak_menjelutung_21_fic	#fictional
+	}
 }
+
+c_BOR_lahad_datu = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 8 }
+
+	800.1.1 = {
+		government = wanua_government
+	}
+	860.1.1 = {
+		holder = dayak_lahaddatu_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = dayak_lahaddatu_10_fic	#fictional
+	}
+	1068.2.24 = {
+		holder = dayak_lahaddatu_11_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = dayak_lahaddatu_20_fic	#fictional
+	}
+}
+
 c_tawau = {
-	860.1.1 = {
-		holder = dayak008
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 3 }
+	1178.1.1 = { change_development_level = 5 }
+
+	800.1.1 = {
 		government = wanua_government
 	}
+	860.1.1 = {
+		holder = sea_tawau_01
+	}
+	# more history later
 }
+
 c_malinau = {
-	860.1.1 = {
-		holder = dayak005
+	800.1.1 = {
 		government = wanua_government
 	}
-}
-c_koningau = {
 	860.1.1 = {
-		holder = dayak006
+		holder = sea_murut_tidung_01
+	}
+	# more history later
+}
+
+c_BOR_nabawan = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	800.1.1 = {
 		government = wanua_government
+	}
+	860.1.1 = {
+		holder = dayak_nabawan_01_fic	#fictional
+	}
+	887.1.22 = {
+		holder = dayak_nabawan_02_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = dayak_nabawan_10_fic	#fictional
+	}
+	1070.8.22 = {
+		holder = dayak_nabawan_11_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = dayak_nabawan_20_fic	#fictional
+	}
+	1199.12.6 = {
+		holder = dayak_nabawan_21_fic	#fictional
 	}
 }

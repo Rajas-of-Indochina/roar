@@ -16,7 +16,7 @@
 	holding = city_holding
 }
 16831 = { # Pemarangan
-	holding = none
+	holding = church_holding
 }
 
 ### c_BOR_kutai_utara
@@ -84,7 +84,7 @@
 
 ## d_kayan ###################################
 ### c_basap
-18330 = { # Sambaliung
+18330 = { # Sambaliung AKA Sambiliong
 	culture = apo_kayan
 	religion = kaharingan
 
@@ -149,17 +149,30 @@
 
 
 ## d_tidung ###################################
-### c_tarakan
-15463 = { # Tarakan
+### c_BOR_menjelutung
+15626 = { # Tarakan
+	# city on the island of the same name ; settled by Tidung people around 1076 AD, served as capital of Tarakan Kingdom
 	culture = murut
 	religion = momolianism
 
 	holding = tribal_holding
 }
-15626 = { # Tidung
+15463 = { # Tanjung Selor
+	# small coastal market town under Sultanate of Bulungan
 	holding = none
 }
 18362 = { # Nunukan
+	holding = none
+}
+
+### c_BOR_lahad_datu
+15874 = { # Lahad Datu
+	culture = kadazan
+	religion = momolianism
+
+	holding = tribal_holding
+}
+15774 = { # Kalabakan
 	holding = none
 }
 
@@ -169,9 +182,6 @@
 	religion = umboh
 
 	holding = tribal_holding
-}
-15874 = { # Lahad Datu
-	holding = none
 }
 18389 = { # Semporna
 	holding = none
@@ -191,7 +201,7 @@
 	holding = none
 }
 
-### c_koningau
+### c_BOR_nabawan
 15851 = { # Koningau
 	culture = kadazan
 	religion = momolianism
@@ -202,8 +212,5 @@
 	holding = none
 }
 15809 = { # Nabawan
-	holding = none
-}
-15774 = { # Kalabakan
 	holding = none
 }
