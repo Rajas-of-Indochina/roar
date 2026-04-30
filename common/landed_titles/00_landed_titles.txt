@@ -81136,25 +81136,27 @@ e_kalimantan = {
 
 	#capital = 
 
-	k_burune = {
+	k_barune = {
 		color = { 0 104 138 }
 
-		capital = c_burune
+		capital = c_BOR_brunei
 
 		cultural_names = {
 			name_list_malayic = cn_brunei
 		}
 
-		d_burune = {
+		d_BOR_barune = {
+			#d_burune in old RoA
 			color = { 10 130 165 }
 
-			capital = c_burune
+			capital = c_BOR_brunei
 
 			cultural_names = {
 				name_list_malayic = cn_brunei
 			}
 
-			c_burune = {
+			c_BOR_brunei = {
+				# c_burune in old RoA
 				color = { 35 175 210 }
 
 				cultural_names = {
@@ -81184,7 +81186,7 @@ e_kalimantan = {
 			c_pulo_tigah = {
 				color = { 15 95 120 }
 
-				b_pulo_tigah = {
+				b_ulu_padas = {
 					province = 18402
 
 					color = { 15 95 120 }
@@ -81209,58 +81211,6 @@ e_kalimantan = {
 					color = { 45 185 215 }
 				}
 			}
-			c_belaga = {
-				color = { 20 110 140 }
-
-				b_belaga = {
-					province = 15014
-
-					color = { 20 110 140 }
-				}
-				b_long_murum = {
-					province = 15015
-
-					color = { 20 110 140 }
-				}
-			}
-			c_miri = {
-				color = { 50 195 225 }
-
-				b_miri = {
-					province = 18346
-
-					color = { 50 195 225 }
-				}
-				b_baram = {
-					province = 15447
-
-					color = { 50 195 225 }
-				}
-				b_pa_dali = {
-					province = 15484
-
-					color = { 50 195 225 }
-				}
-			}
-			c_bintulu = {
-				color = { 30 145 175 }
-
-				b_sibuti = {
-					province = 18347
-
-					color = { 30 145 175 }
-				}
-				b_tatau = {
-					province = 15013
-
-					color = { 30 145 175 }
-				}
-				b_sebauh = {
-					province = 18336
-
-					color = { 30 145 175 }
-				}
-			}
 		}
 
 		d_BOR_santubong = {
@@ -81273,7 +81223,7 @@ e_kalimantan = {
 				# c_sarawak in old RoA
 				color = { 40 170 205 }
 
-				b_santubong = {
+				b_BOR_Santubong = {
 					province = 18463
 
 					color = { 40 170 205 }
@@ -81287,44 +81237,6 @@ e_kalimantan = {
 					province = 17311
 
 					color = { 40 170 205 }
-				}
-			}
-			c_kapit = {
-				color = { 18 95 125 }
-
-				b_song = {
-					province = 17411
-
-					color = { 18 95 125 }
-				}
-				b_nanga_merit = {
-					province = 18328
-
-					color = { 18 95 125 }
-				}
-				b_kapit = {
-					province = 18465
-
-					color = { 18 95 125 }
-				}
-			}
-			c_melanau = {
-				color = { 55 200 230 }
-
-				b_melanau = {
-					province = 18332
-
-					color = { 55 200 230 }
-				}
-				b_tanga_sirik = {
-					province = 18326
-
-					color = { 55 200 230 }
-				}
-				b_BOR_Kanowit = {
-					province = 18327
-
-					color = { 55 200 230 }
 				}
 			}
 			c_simanggang = {
@@ -81344,6 +81256,105 @@ e_kalimantan = {
 					province = 17434
 
 					color = { 28 140 170 }
+				}
+			}
+			c_melanau = {
+				color = { 55 200 230 }
+
+				b_BOR_Melano = {
+					province = 18332
+
+					color = { 55 200 230 }
+				}
+				b_tanga_sirik = {
+					province = 18326
+
+					color = { 55 200 230 }
+				}
+				b_BOR_Kanowit = {
+					province = 18327
+
+					color = { 55 200 230 }
+				}
+			}
+		}
+
+		d_iban = {
+			color = { 40 140 180 }
+
+			capital = c_BOR_iban
+
+			c_BOR_iban = {
+				# c_bintulu in old RoA
+				color = { 30 145 175 }
+
+				b_BOR_Bintulu = {
+					province = 18347
+
+					color = { 30 145 175 }
+				}
+				b_tatau = {
+					province = 15013
+
+					color = { 30 145 175 }
+				}
+				b_sebauh = {
+					province = 18336
+
+					color = { 30 145 175 }
+				}
+			}
+			c_miri = {
+				color = { 50 195 225 }
+
+				b_BOR_Miri = {
+					province = 18346
+
+					color = { 50 195 225 }
+				}
+				b_baram = {
+					province = 15447
+
+					color = { 50 195 225 }
+				}
+				b_pa_dali = {
+					province = 15484
+
+					color = { 50 195 225 }
+				}
+			}
+			c_belaga = {
+				color = { 20 110 140 }
+
+				b_belaga = {
+					province = 15014
+
+					color = { 20 110 140 }
+				}
+				b_long_murum = {
+					province = 15015
+
+					color = { 20 110 140 }
+				}
+			}
+			c_BOR_rajang = {
+				# c_kapit in old RoA
+				color = { 18 95 125 }
+
+				b_BOR_Long = {
+					province = 17411
+
+					color = { 18 95 125 }
+				}
+				b_nanga_merit = {
+					province = 18328
+
+					color = { 18 95 125 }
+				}
+				b_BOR_Rajang_Atas = {
+					province = 18465
+
+					color = { 18 95 125 }
 				}
 			}
 		}
