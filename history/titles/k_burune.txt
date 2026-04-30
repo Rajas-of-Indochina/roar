@@ -134,12 +134,16 @@ c_bintulu = {
 		government = wanua_government
 	}
 }
-### d_santubong
 
-d_santubong = {
+
+d_BOR_santubong = {
+	# some theorise it lasted from 300 BCE to 1647 CE
+	# this corresponds with start of southern Indian trade with Southeast Asia until the end of Sultanate of Sarawak
+
+	# placeholder rulers to represent the Malay influenced shore
 	860.1.1 = {
-		holder = santubong001 # Placeholder
 		government = mandala_government
+		holder = santubong001
 	}
 	885.1.1 = {
 		holder = santubong002
@@ -184,10 +188,16 @@ d_santubong = {
 		holder = santubong015
 	}
 }
-c_sarawak = {
+
+c_BOR_santubong = {
 	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 14 }
+
+	# placeholder rulers to represent the Malay influenced shore
 	860.1.1 = {
-		holder = santubong001 # Placeholder
+		government = mandala_government
+		holder = santubong001
 	}
 	885.1.1 = {
 		holder = santubong002
@@ -232,107 +242,66 @@ c_sarawak = {
 		holder = santubong015
 	}
 }
+
 c_simanggang = {
-	867.1.1 = { change_development_level = 5 }
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 10 }
+
+	800.1. = {
+		government = wanua_government
+	}
 	860.1.1 = {
-		holder = santubong001 # Placeholder
+		liege = d_BOR_santubong
+		holder = dayak_santubong_01_fic	#fictional
 	}
-	885.1.1 = {
-		holder = santubong002
+	889.1.22 = {
+		holder = dayak_santubong_02_fic	#fictional
 	}
-	915.1.1 = {
-		holder = santubong003
+	931.9.17 = {
+		holder = dayak_santubong_03_fic	#fictional
 	}
-	945.1.1 = {
-		holder = santubong004
+	968.8.3 = {
+		holder = dayak_santubong_04_fic	#fictional
 	}
-	975.1.1 = {
-		holder = santubong005
+	994.7.2 = {
+		holder = dayak_santubong_05_fic	#fictional
 	}
-	1005.1.1 = {
-		holder = santubong006
+	1033.7.7 = {
+		holder = dayak_santubong_06_fic	#fictional
 	}
-	1035.1.1 = {
-		holder = santubong007
+	1061.11.8 = {
+		holder = dayak_santubong_07_fic	#fictional
 	}
-	1065.1.1 = {
-		holder = santubong008
+	1099.6.4 = {
+		holder = dayak_santubong_08_fic	#fictional
 	}
-	1095.1.1 = {
-		holder = santubong009
+	1126.2.20 = {
+		holder = dayak_santubong_09_fic	#fictional
 	}
-	1125.1.1 = {
-		holder = santubong010
+	1145.12.15 = {
+		holder = dayak_santubong_10_fic	#fictional
 	}
-	1155.1.1 = {
-		holder = santubong011
-	}
-	1185.1.1 = {
-		holder = santubong012
-	}
-	1215.1.1 = {
-		holder = santubong013
-	}
-	1245.1.1 = {
-		holder = santubong014
-	}
-	1275.1.1 = {
-		holder = santubong015
+	1190.6.24 = {
+		holder = dayak_santubong_11_fic	#fictional
 	}
 }
+
 c_melanau = {
-	867.1.1 = { change_development_level = 1 }
-	860.1.1 = {
-		holder = melanau001 # Placeholder
+
+	800.1. = {
 		government = wanua_government
 	}
-	885.1.1 = {
-		holder = santubong002
-	}
-	915.1.1 = {
-		holder = santubong003
-	}
-	945.1.1 = {
-		holder = santubong004
-	}
-	975.1.1 = {
-		holder = santubong005
-	}
-	1005.1.1 = {
-		holder = santubong006
-	}
-	1035.1.1 = {
-		holder = santubong007
-	}
-	1065.1.1 = {
-		holder = santubong008
-	}
-	1095.1.1 = {
-		holder = santubong009
-	}
-	1125.1.1 = {
-		holder = santubong010
-	}
-	1155.1.1 = {
-		holder = santubong011
-	}
-	1185.1.1 = {
-		holder = santubong012
-	}
-	1215.1.1 = {
-		holder = santubong013
-	}
-	1245.1.1 = {
-		holder = santubong014
-	}
-	1275.1.1 = {
-		holder = santubong015
+	860.1.1 = {
+		holder = melanau001 # Placeholder
 	}
 }
+
 c_kapit = {
-	867.1.1 = { change_development_level = 1 }
+	800.1. = {
+		government = wanua_government
+	}
 	860.1.1 = {
 		holder = melanau001 # Placeholder
-		government = wanua_government
 	}
 }
