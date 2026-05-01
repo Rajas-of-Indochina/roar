@@ -1,46 +1,5 @@
 ﻿## In alphabetical order ##
 
-biak = {
-	color = biak
-
-	ethos = ethos_spiritual
-	heritage = heritage_moluccan
-	language = language_biak
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_festivities
-		tradition_xenophilic
-	}
-
-	dlc_tradition = {
-		trait = tradition_fp2_ritualised_friendship
-		requires_dlc_flag = the_fate_of_iberia
-	}
-
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
-	}
-
-	name_list = name_list_moluccan
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		10 = asian_malay
-		90 = asian_austronesian
-	}
-}
-
 buli = {
 	color = buli
 
@@ -62,7 +21,7 @@ buli = {
 
 	name_list = name_list_moluccan
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -101,7 +60,7 @@ maluku = {
 
 	name_list = name_list_moluccan
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -132,7 +91,7 @@ nunusaku = {
 
 	name_list = name_list_moluccan
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -149,21 +108,24 @@ nunusaku = {
 sumba = {
 	color = sumba
 
-	ethos = ethos_spiritual
+
+	ethos = ethos_bellicose # clan warfare, slave raids, and headhunting (which had ritual/religious importance) were common even during the colonial period
 	heritage = heritage_moluccan
 	language = language_sumba
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_hereditary_hierarchy
-		tradition_horse_breeder
-		tradition_staunch_traditionalists
+		tradition_horse_breeder 			# cybr: horses were bred to adapt to local climates and are an important status symbol, even poor peasants will own at least a few
+		tradition_artisans 					# cybr: Sumba textiles, such as their varieties of ikat, are well-regarded and popular; cloths were an important part of local economy and feasts
+		tradition_fervent_temple_builders 	# cybr: long-lasting tradition of megalith construction and tomb building on the island
+		tradition_hereditary_hierarchy 		# cybr: stratified class system
+		tradition_noble_adoption 			# cybr: adoption was done to ensure male inheritance
 	}
 
 	name_list = name_list_sumba
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -172,8 +134,8 @@ sumba = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_malay
-		90 = asian_austronesian
+		15 = asian_malay
+		85 = asian_austronesian
 	}
 }
 
@@ -194,7 +156,7 @@ sula_taliabu = {
 
 	name_list = name_list_moluccan
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -211,23 +173,29 @@ sula_taliabu = {
 timor = {
 	color = timor
 
-	ethos = ethos_communal
+	ethos = ethos_courtly # To represent the Wehali system on Timor
 	heritage = heritage_moluccan
 	language = language_timor
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_maritime_mercantilism
-		tradition_fishermen
-		tradition_isolationist
-		tradition_hard_working
+		tradition_isolationist 			# cybr: Despite exporting resources like sandalwood, they rarely ventured to other islands and saw Wehali on Timor as the origin of the world
+		tradition_equal_inheritance 	# cybr: there were occasions of queens regnant on Timor
+		tradition_astute_diplomats 		# cybr: Wehali kingdom's system of dividing between the "Masculine" liurai lords and the "passive" Maromak Oan ("son of god") who stood at the apex, connected through marriage alliances and ancestral ties
+		#tradition_mystical_ancestors 	# cybr: see above for mystical ancestors - removed to make way for the Tropical Purveyors tradition
 		tradition_RICE_tropical_purveyors 	# provided by CybrxKhan
+	}
+
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_maritime_mercantilism
 	}
 
 	name_list = name_list_timor
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -236,8 +204,9 @@ timor = {
 	house_coa_mask_scale = { 0.85 0.85 }
 
 	ethnicities = {
-		10 = asian_malay
-		90 = asian_austronesian
+		15 = asian_malay
+		80 = asian_austronesian
+		5 = papuan
 	}
 }
 
