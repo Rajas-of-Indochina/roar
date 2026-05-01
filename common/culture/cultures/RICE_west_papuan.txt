@@ -1,5 +1,4 @@
 ﻿
-# Based off of Rajas of Asia's version
 biak = {
 	color = biak
 
@@ -10,9 +9,9 @@ biak = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		#tradition_festivities 		# Wor rituals and ceremonies
+		tradition_festivities 		# Wor rituals and ceremonies
 		tradition_xenophilic 		# Liked to travel far and wide and adapt aspects of other cultures, put positive value on foreign elements
-		#tradition_hard_working 	# Representing their many voyages and adventures abroad
+		tradition_hard_working  	# Representing their many voyages and adventures abroad
 	}
 
 	dlc_tradition = {
@@ -43,15 +42,15 @@ biak = {
 	}
 }
 
-# Irarutu
 irarutu = {
 	color = { 55 69 66 }
 
 	ethos = ethos_egalitarian # Indonesian wikipedia says they're tolerant and pluralistic, don't know how accurate this is since it had no sources, but they are in an area with a lot of Austronesian and Papuan mixing
-	heritage = heritage_moluccan
+	heritage = heritage_papuan
 	language = language_timor # Central-Malayo-Polynesian languages, of which Kei–Tanimbar count
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
+
 	traditions = {
 		tradition_nudists 		# Used to be like this, and it is Papua
 		tradition_wetlanders 	# From a more marshy area with mangroves
@@ -60,7 +59,7 @@ irarutu = {
 		# Tropical Purveyors
 	}
 
-	name_list = name_list_malay # Possibly in Central Malayo-Polynesian, seperate branch than Biak which is in Eastern Malayo-Polynesian possibly
+	name_list = name_list_timor # Possibly in Central Malayo-Polynesian, seperate branch than Biak which is in Eastern Malayo-Polynesian possibly
 
 	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
@@ -76,16 +75,17 @@ irarutu = {
 	}
 }
 
-# Onin/Wanin
-# https://shs.hal.science/halshs-02930841/file/Usher_and_Schapper2018_Onin.pdf
 onin = {
+	# Onin/Wanin
+	# https://shs.hal.science/halshs-02930841/file/Usher_and_Schapper2018_Onin.pdf
 	color = { 128 169 58 }
 
 	ethos = ethos_egalitarian
-	heritage = heritage_moluccan
+	heritage = heritage_papuan
 	language = language_timor # Central-Malayo-Polynesian languages, of which Kei–Tanimbar count
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
+
 	traditions = {
 		tradition_nudists
 		tradition_ancient_miners 		# Early Europeans reported they were extensive gold miners in Onin peninsula
@@ -99,7 +99,7 @@ onin = {
 		requires_dlc_flag = hybridize_culture
 	}
 
-	name_list = name_list_malay # Possibly in Central Malayo-Polynesian, seperate branch than Biak which is in Eastern Malayo-Polynesian possibly
+	name_list = name_list_timor # Possibly in Central Malayo-Polynesian, seperate branch than Biak which is in Eastern Malayo-Polynesian possibly
 
 	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
@@ -115,7 +115,6 @@ onin = {
 	}
 }
 
-# Wamesa
 wamesa = {
 	color = { 111 169 169 }
 
@@ -124,6 +123,7 @@ wamesa = {
 	language = language_biak
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
+
 	traditions = {
 		tradition_jungle_dwellers 		# Sago farmers
 		tradition_medicinal_plants 		# Ethnobotanical knowledge of forest plants?
@@ -147,16 +147,16 @@ wamesa = {
 	}
 }
 
-# Waropen
-# https://www.everyculture.com/Oceania/Waropen.html
 waropen = {
-	color = { 58 120 108 }
+	# https://www.everyculture.com/Oceania/Waropen.html
+	color = waropen
 
 	ethos = ethos_egalitarian
 	heritage = heritage_moluccan
-	language = language_biak
+	language = language_waropen
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
+
 	traditions = {
 		tradition_jungle_dwellers 		# Sago farmers
 		tradition_martial_admiration 	# Traditionally honorific titles were acquired through warfare by killing or enslaving others

@@ -91,13 +91,6 @@ papua014 = { # c_yapen
 	841.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }
-papua015 = { # c_nabire
-	name = "Manuwai"
-	culture = "bauzi"
-	faith = "penunggu"
-	835.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
 papua016 = { # c_dogiyai
 	name = "Nilik"
 	culture = "ndani"
@@ -322,13 +315,6 @@ papua054 = { # c_kemoro
 	839.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }
-papua070 = {
-	name = "Khanduop"
-	culture = "abui"
-	faith = "penunggu"
-	840.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
 papua071 = {
 	name = "Pakure"
 	culture = "sougb"
@@ -336,20 +322,7 @@ papua071 = {
 	840.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }
-papua072 = {
-	name = "Kewago"
-	culture = "abui"
-	faith = "penunggu"
-	820.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
-papua073 = {
-	name = "Sefanpo"
-	culture = "abui"
-	faith = "penunggu"
-	841.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
+
 
 # Austronesians
 papua033 = { # c_kerema
@@ -366,17 +339,10 @@ papua029 = { # c_kwale
 	844.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }
-papua074 = {
-	name = "Wena"
-	culture = "mairasi"
-	faith = "penunggu"
-	830.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
 papua075 = {
 	name = "Leiron"
-	culture = "abui"
-	faith = "penunggu"
+	culture = abui
+	religion = abui_pagan
 	840.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }
@@ -399,13 +365,6 @@ papua078 = {
 	culture = "sougb"
 	faith = "penunggu"
 	847.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
-papua079 = {
-	name = "U-mue"
-	culture = "mairasi"
-	faith = "penunggu"
-	832.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }
 
@@ -433,5 +392,52 @@ papua046 = { # c_maluligal
 	culture = "kaurareg"
 	faith = "tagai"
 	824.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
+}
+
+## d_bomberai
+papua070 = {
+	name = "Khanduop"
+	culture = abui
+	religion = abui_pagan
+	840.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
+}
+papua072 = {
+	name = "Kewago"
+	culture = abui
+	religion = abui_pagan
+	820.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
+}
+papua073 = {
+	name = "Sefanpo"
+	culture = abui
+	religion = abui_pagan
+	841.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
+}
+papua074 = {
+	name = "Wena"
+	culture = "mairasi"
+	faith = "fakfak_pagan"
+	830.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
+}
+papua079 = {
+	name = "U-mue"
+	culture = "fakfak_pagan"
+	faith = "penunggu"
+	832.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
+}
+
+
+### non-"Papuan"
+papua015 = { # c_nabire
+	name = "Manuwai"
+	culture = "waropen"
+	faith = "biak_pagan"
+	835.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
 }

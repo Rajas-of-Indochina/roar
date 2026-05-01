@@ -625,6 +625,122 @@ language_siraya = {
 ### ### ###
 
 
+### Austronesian Family - Malayo-Polynesian - South Halmaheran
+language_biak = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_biak
+		}
+	}
+	parameters = {
+		language_group_south_halmaheran = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_biak }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_halmaheran }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = biak
+}
+
+language_buli = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_buli
+		}
+	}
+	parameters = {
+		language_group_south_halmaheran = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_buli }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_halmaheran }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = buli
+}
+
+language_waropen = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_waropen
+		}
+	}
+	parameters = {
+		language_group_south_halmaheran = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_waropen }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_halmaheran }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = waropen
+}
+### ### ###
+
+
 ### Austronesian Family - Malayo-Polynesian
 language_ati = {
 	type = language
@@ -731,42 +847,6 @@ language_batak = {
 	}
 
 	color = batak
-}
-
-language_biak = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_biak
-		}
-	}
-	parameters = {
-		language_group_south_halmaheran = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_biak }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_south_halmaheran }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = biak
 }
 
 language_bidayuh = {
@@ -880,47 +960,6 @@ language_bugis = {
 	}
 
 	color = bugis
-}
-
-language_buli = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_buli
-		}
-	}
-	parameters = {
-		language_group_south_halmaheran = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_moluccan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_buli }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_south_halmaheran }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = buli
 }
 
 language_bungku = {
