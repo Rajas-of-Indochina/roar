@@ -1,5 +1,4 @@
 ﻿# Languages added by Rajas of Asia
-
 ### Austroasiatic Family ###
 language_aslian = {
 	type = language
@@ -2549,6 +2548,43 @@ language_uneapa = {
 	color = uneapa
 }
 
+language_yab = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_yab
+		}
+	}
+	parameters = {
+		language_group_oceanic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_east_papuan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_yab }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_east_papuan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = yab
+}
+
 language_yap = {
 	type = language
 	is_shown = {
@@ -3698,6 +3734,41 @@ language_yue_chinese = {
 ### ### ###
 
 
+language_abui = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_abui
+		}
+	}
+	parameters = {
+		language_branch_timor = yes
+		language_family_trans_new_guinea = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_abui }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_timor }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_trans_new_guinea }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = abui
+}
 
 language_halmahera = {
 	type = language
@@ -3735,11 +3806,105 @@ language_halmahera = {
 	color = halmahera
 }
 
-language_abui = {
+language_maybrat = {
+	# either slightly related to Bird Head languages or Language Isolate
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_abui
+			LANGUAGE = language_maybrat
+		}
+	}
+	parameters = {
+		language_branch_maybrat = yes
+		language_family_west_papuan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_moi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_maybrat }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_west_papuan }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = maybrat
+}
+
+language_moi = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_moi
+		}
+	}
+	parameters = {
+		language_branch_west_bird_head = yes
+		language_family_west_papuan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_moi }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_west_bird_head }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_west_papuan }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = moi
+}
+
+language_tehit = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_tehit
+		}
+	}
+	parameters = {
+		language_branch_west_bird_head = yes
+		language_family_west_papuan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_tehit }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_west_bird_head }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_west_papuan }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = tehit
+}
+
+language_makasae = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_makasae
 		}
 	}
 	parameters = {
@@ -3751,7 +3916,7 @@ language_abui = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_abui }
+			limit = { has_cultural_pillar = language_makasae }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
@@ -3768,18 +3933,18 @@ language_abui = {
 		}
 	}
 
-	color = abui
+	color = makasae
 }
 
-language_mantion = {
+language_sougb = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_mantion
+			LANGUAGE = language_sougb
 		}
 	}
 	parameters = {
-		language_branch_mantion = yes
+		language_branch_sougb = yes
 		language_family_west_papuan = yes
 		language_union_moluccan = yes
 	}
@@ -3787,11 +3952,11 @@ language_mantion = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_mantion }
+			limit = { has_cultural_pillar = language_sougb }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_branch_mantion }
+			limit = { has_cultural_parameter = language_branch_sougb }
 			multiply = same_language_branch_choice_factor
 		}
 		else_if = {
@@ -3804,7 +3969,7 @@ language_mantion = {
 		}
 	}
 
-	color = mantion
+	color = sougb
 }
 
 language_yapen = {
@@ -3874,40 +4039,35 @@ language_mairasi = {
 	color = mairasi
 }
 
-language_evenk = {
+language_aekyom = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_evenk
+			LANGUAGE = language_aekyom
 		}
 	}
 	parameters = {
-		language_branch_evenki = yes
-		language_family_tungusic = yes
-		language_union_steppe_siberian = yes
+		language_branch_central_west_new_guinea = yes
+		language_family_trans_new_guinea = yes
 	}
 
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_evenk }
+			limit = { has_cultural_pillar = language_aekyom }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_branch_evenki }
+			limit = { has_cultural_parameter = language_branch_central_west_new_guinea }
 			multiply = same_language_branch_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_family_tungusic }
+			limit = { has_cultural_parameter = language_family_trans_new_guinea }
 			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_steppe_siberian }
-			multiply = same_language_union_choice_factor
 		}
 	}
 
-	color = { 195 195 195 }
+	color = aekyom
 }
 
 language_amung = {
@@ -4256,6 +4416,37 @@ language_gogodala = {
 	color = gogodala
 }
 
+language_huli = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_huli
+		}
+	}
+	parameters = {
+		language_branch_engan = yes
+		language_family_trans_new_guinea = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_huli }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_engan }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_trans_new_guinea }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = huli
+}
+
 language_kayagar = {
 	type = language
 	is_shown = {
@@ -4597,6 +4788,37 @@ language_pauwasi = {
 	color = pauwasi
 }
 
+language_sentani = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sentani
+		}
+	}
+	parameters = {
+		language_branch_demta_sentani = yes
+		language_family_trans_new_guinea = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sentani }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_demta_sentani }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_trans_new_guinea }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = sentani
+}
+
 language_sepik = {
 	type = language
 	is_shown = {
@@ -4897,7 +5119,7 @@ language_korean = {
 
 
 
-### Japonic
+### Japonic Family
 language_emishi = {
 	type = language
 	is_shown = {
@@ -4964,7 +5186,47 @@ language_ryukyu = {
 
 
 
-### Andaman + Ongan
+### Tungustic Family
+language_evenk = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_evenk
+		}
+	}
+	parameters = {
+		language_branch_evenki = yes
+		language_family_tungusic = yes
+		language_union_steppe_siberian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_evenk }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_evenki }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_tungusic }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_steppe_siberian }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = { 195 195 195 }
+}
+### ### ###
+
+
+
+### Language Isolates
 language_andaman = {
 	type = language
 	is_shown = {
@@ -5035,6 +5297,69 @@ language_ongan = {
 	}
 
 	color = ongan
+}
+
+# Papuan Isolates
+language_abun = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_abun
+		}
+	}
+	parameters = {
+		language_branch_abun = yes
+		language_family_abun = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_abun }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_abun }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_abun }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = abun
+}
+
+language_mpur = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_mpur
+		}
+	}
+	parameters = {
+		language_branch_mpur = yes
+		language_family_mpur = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_mpur }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_mpur }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_mpur }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = mpur
 }
 ### ### ###
 
