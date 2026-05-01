@@ -820,8 +820,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 
 	culture:vedda = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
-		add_culture_tradition = tradition_RICE_cave_dwellers
-		remove_variable = tradition_cooldown
+		#add_culture_tradition = tradition_RICE_cave_dwellers
 	}
 
 	culture:sinhala = {
@@ -1935,4 +1934,195 @@ RICE_setup_bamian_flavor_pack_effect = {
 			}
 		}
 	}
+}
+
+RICE_setup_aslian_flavor_pack_effect = {
+
+	############################################################
+	#
+	# DNA
+	#
+	############################################################
+
+
+	############################################################ 
+	#
+	# CULTURE CHANGES
+	#
+	############################################################ 
+
+	culture:senoi = {
+		add_culture_tradition = tradition_RICE_rainforest_ritualists
+		remove_variable = tradition_cooldown
+	}
+
+	culture:semang = {
+		add_culture_tradition = tradition_RICE_rainforest_ritualists
+		remove_variable = tradition_cooldown
+	}
+
+	culture:jakun = {
+		add_culture_tradition = tradition_RICE_rainforest_ritualists
+		remove_variable = tradition_cooldown
+	}
+
+	culture:papuan = {
+		add_culture_tradition = tradition_RICE_tropical_purveyors
+		remove_variable = tradition_cooldown
+	}
+
+	
+	############################################################
+	#
+	# RELIGION CHANGES
+	#
+	############################################################
+
+
+	############################################################
+	#
+	# CULTURE/RELIGION MAP CHANGES
+	#
+	############################################################
+
+
+	############################################################
+	#
+	# HISTORY/TITLE CHANGES
+	#
+	############################################################ 
+
+	# Give Bah Lud his titles in Malaysia
+	character:RICE_aslian_001 ?= {
+		if = {
+			limit = {
+				has_global_variable = is_RICE_loaded_global_variable
+				is_alive = yes
+			}
+			get_title = title:c_MAL_semantan
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+			add_courtier = character:RICE_aslian_002
+			set_sexuality = heterosexual
+			add_character_modifier = {
+				modifier = RICE_aslian_aspiration_become_semai_hero
+			}
+			set_variable = {
+				name = RICE_historical_aspiration
+				value = flag:bah_lud
+			}
+		}
+	}	
+
+	
+	############################################################
+	#
+	# BUILDING
+	#
+	############################################################
+
+	if = {
+		limit = {
+			has_global_variable = is_RICE_loaded_global_variable
+			title:b_MAL_Pekan = {
+				title_province = { has_special_building = no }
+			}
+		}
+		title:b_MAL_Pekan.title_province = {
+			add_special_building = RICE_aslian_pahang_gold_mines_01
+		}
+	}
+
+	# Replaced by the vanilla DLC CCP equivalent
+
+	if = {
+		limit = {
+			has_global_variable = is_RICE_loaded_global_variable
+			title:b_BOR_Kudat = {
+				title_province = { has_special_building = no }
+			}
+		}
+		title:b_BOR_Kudat.title_province = {
+			add_special_building = RICE_aslian_mount_kinabalu
+		}
+	}
+
+	############################################################
+	#
+	# MISCELLANEOUS
+	#
+	############################################################
+
+	# Give Austroasiatic faiths the "Austroasiatic Roots" special doctrine
+	# Give Dangerous Tiger to most faiths by default
+	# bahnaric_religion, kuy_religion, wa_religion, pearic_religion, sarnaism_religion
+	every_religion_global = {
+		limit = {
+			OR = {
+				this = religion:vietic_religion
+				this = religion:kuy_religion
+				this = religion:bahnaric_religion
+				this = religion:wa_religion
+				this = religion:aslian_religion
+				this = religion:khmuic_religion
+				this = religion:pearic_religion
+				this = religion:sarnaism_religion
+				this = religion:khasi_religion
+			}
+		}
+		every_faith = {
+			add_doctrine = rice_austroasiatic_retributive_tiger
+			if = {
+				limit = {
+					NOT = { has_doctrine = special_doctrine_is_austroasiatic_faith }
+				}
+				add_doctrine = special_doctrine_is_austroasiatic_faith
+			}
+		}
+	}
+	religion:vietic_religion = {
+		every_faith = {
+			remove_doctrine = rice_austroasiatic_retributive_tiger
+			add_doctrine = rice_austroasiatic_majestic_tiger
+		}
+	}
+	religion:aslian_religion = {
+		every_faith = {
+			remove_doctrine = rice_austroasiatic_retributive_tiger
+			add_doctrine = rice_austroasiatic_wise_tiger
+		}
+	}
+	religion:khmuic_religion = {
+		every_faith = {
+			remove_doctrine = rice_austroasiatic_retributive_tiger
+			add_doctrine = rice_austroasiatic_savage_tiger
+		}
+	}
+	religion:khasi_religion = {
+		every_faith = {
+			remove_doctrine = rice_austroasiatic_retributive_tiger
+			add_doctrine = rice_austroasiatic_majestic_tiger
+		}
+	}
+}
+
+RICE_setup_general_southeast_asian_culture_faith_effect = {
+	
+	#########################################################################
+	#
+	# CULTURE AND RELIGION CHANGES
+	#
+	# Cultures are listed in alphabetical order
+	#
+	#########################################################################
+
+	# generally had to delete everything so RoA setup does not break lol
+
+
+	#########################################################################
+	#
+	# CULTURE AND RELIGION HISTORY
+	#
+	#########################################################################
+
+	# generally had to delete everything so RoA setup does not break lol
 }

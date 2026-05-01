@@ -13,12 +13,14 @@ senoi = {
 	traditions = {
 		tradition_isolationist
 		tradition_jungle_dwellers
-		tradition_collective_lands
+		tradition_welcoming
 		tradition_pacifism
+		tradition_RICE_rainforest_ritualists
+
+		#tradition_collective_lands - old RoA tradition that needs checking
 	}
 
-	name_list = name_list_malay
-	#name_list = name_list_malayic - old RoA
+	name_list = name_list_senoi
 
 	coa_gfx = { austronesian_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
@@ -47,8 +49,9 @@ semang = {
 	traditions = {
 		tradition_isolationist
 		tradition_jungle_dwellers
-		#tradition_collective_lands
 		tradition_pacifism
+		tradition_migratory
+		tradition_RICE_rainforest_ritualists
 	}
 
 	name_list = name_list_senoi
@@ -80,7 +83,7 @@ moklen = {
 	traditions = {
 		tradition_fishermen
 		tradition_staunch_traditionalists
-		tradition_migratory
+		tradition_RICE_sea_nomads 	#msl_note: thanks to CybrxKhan it replaces "tradition_migratory"
 		tradition_collective_lands
 	}
 
@@ -117,9 +120,9 @@ jakun = {
 
 	traditions = {
 		tradition_isolationist
-		#tradition_jungle_dwellers
 		tradition_pacifism
 		tradition_hunters
+		tradition_RICE_rainforest_ritualists
 	}
 
 	dlc_tradition = {
