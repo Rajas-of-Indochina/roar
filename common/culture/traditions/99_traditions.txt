@@ -26,7 +26,6 @@ tradition_maritime_mercantilism = {
 	}
 	character_modifier = {
 		republic_government_vassal_opinion = 10
-		coastal_sea_travel_danger = low_sea_danger_reduction
 		sea_travel_danger = low_sea_danger_reduction
 	}
 
@@ -361,16 +360,20 @@ tradition_agrarian = {
 		4 = farmland.dds
 	}
 
+	is_shown = {
+		NOT = {
+			culture_tradition:tradition_intensive_farming = { is_in_list = traits }
+		}
+	}
+
 	can_pick = {
 		custom_tooltip = {
 			text = culture_in_farmlands_or_floodplains_terrain_desc
 			any_culture_county = {
-				any_county_province = {
-					OR = {
-						terrain = farmlands
-						terrain = floodplains
-						terrain = plains
-					}
+				county_has_province_with_terrain = {
+					terrain = farmlands
+					terrain = floodplains
+					terrain = plains
 				}
 			}
 		}
@@ -427,12 +430,10 @@ tradition_agrarian = {
 					NOT = {
 						any_culture_county = {
 							count >= 5
-							any_county_province = {
-								OR = {
-									terrain = farmlands
-									terrain = floodplains
-									terrain = plains
-								}
+							county_has_province_with_terrain = {
+								terrain = farmlands
+								terrain = floodplains
+								terrain = plains
 							}
 						}
 					}
@@ -452,11 +453,11 @@ tradition_agrarian = {
 					desc = inspired_by_culture_desc
 				}
 			}
-
+			
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
-
+	
 	ai_will_do = {
 		value = 400
 		if = {
@@ -466,12 +467,10 @@ tradition_agrarian = {
 						any_sub_realm_county = {
 							count >= 2
 							culture = scope:character.culture
-							any_county_province = {
-								OR = {
-									terrain = farmlands
-									terrain = floodplains
-									terrain = plains
-								}
+							county_has_province_with_terrain = {
+								terrain = farmlands
+								terrain = floodplains
+								terrain = plains	# this might break balance
 							}
 						}
 					}
@@ -519,11 +518,9 @@ tradition_mountaineers = {
 		custom_description = {
 			text = culture_in_mountains_desc
 			any_culture_county = {
-				any_county_province = {
-					OR = {
-						terrain = mountains
-						terrain = desert_mountains
-					}
+				county_has_province_with_terrain = {
+					terrain = mountains
+					terrain = desert_mountains
 				}
 			}
 		}
@@ -570,11 +567,9 @@ tradition_mountaineers = {
 					NOT = {
 						any_culture_county = {
 							percent >= 0.3
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = desert_mountains
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = desert_mountains
 							}
 						}
 					}
@@ -594,7 +589,7 @@ tradition_mountaineers = {
 					desc = inspired_by_culture_desc
 				}
 			}
-
+			
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
@@ -607,11 +602,9 @@ tradition_mountaineers = {
 						any_sub_realm_county = {
 							percent >= 0.2
 							culture = scope:character.culture
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = desert_mountains
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = desert_mountains
 							}
 						}
 					}
@@ -624,11 +617,9 @@ tradition_mountaineers = {
 				scope:character.culture ?= {
 					any_culture_county = {
 						percent > 0.6
-						any_county_province = {
-							OR = {
+						county_has_province_with_terrain = {
 								terrain = mountains
 								terrain = desert_mountains
-							}
 						}
 					}
 				}
@@ -640,11 +631,9 @@ tradition_mountaineers = {
 				scope:character.culture ?= {
 					any_culture_county = {
 						percent > 0.4
-						any_county_province = {
-							OR = {
-								terrain = mountains
-								terrain = desert_mountains
-							}
+						county_has_province_with_terrain = {
+							terrain = mountains
+							terrain = desert_mountains
 						}
 					}
 				}
@@ -680,11 +669,9 @@ tradition_horn_mountain_skirmishing = {
 		custom_description = {
 			text = culture_in_mountains_desc
 			any_culture_county = {
-				any_county_province = {
-					OR = {
-						terrain = mountains
-						terrain = desert_mountains
-					}
+				county_has_province_with_terrain = {
+					terrain = mountains
+					terrain = desert_mountains
 				}
 			}
 		}
@@ -731,11 +718,9 @@ tradition_horn_mountain_skirmishing = {
 					NOT = {
 						any_culture_county = {
 							percent >= 0.3
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = desert_mountains
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = desert_mountains
 							}
 						}
 					}
@@ -768,11 +753,9 @@ tradition_horn_mountain_skirmishing = {
 					scope:character = {
 						any_sub_realm_county = {
 							culture = scope:character.culture
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = desert_mountains
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = desert_mountains
 							}
 						}
 					}
@@ -807,12 +790,10 @@ tradition_caucasian_wolves = {
 		custom_description = {
 			text = culture_in_mountains_or_hills_desc
 			any_culture_county = {
-				any_county_province = {
-					OR = {
-						terrain = mountains
-						terrain = hills
-						terrain = desert_mountains
-					}
+				county_has_province_with_terrain = {
+					terrain = mountains
+					terrain = hills
+					terrain = desert_mountains
 				}
 			}
 		}
@@ -865,12 +846,10 @@ tradition_caucasian_wolves = {
 					NOT = {
 						any_culture_county = {
 							percent >= 0.3
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = hills
-									terrain = desert_mountains
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = hills
+								terrain = desert_mountains
 							}
 						}
 					}
@@ -903,12 +882,10 @@ tradition_caucasian_wolves = {
 					scope:character = {
 						any_sub_realm_county = {
 							culture = scope:character.culture
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = hills
-									terrain = desert_mountains
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = hills
+								terrain = desert_mountains
 							}
 						}
 					}
@@ -928,9 +905,12 @@ tradition_isolationist = {
 		4 = noble.dds
 	}
 
-	is_shown = {
+	can_pick = {
+		# Mutually exclusive with other Isolationist
 		NOR = {
-			has_cultural_tradition = tradition_endogamous
+			culture_tradition:tradition_endogamous = { is_in_list = traits }
+			culture_tradition:tradition_tgp_inward_perfection = { is_in_list = traits }
+			culture_tradition:tradition_cultural_primacy = { is_in_list = traits }
 		}
 	}
 
@@ -949,7 +929,7 @@ tradition_isolationist = {
 	character_modifier = {
 		diplomatic_range_mult = -0.25
 		same_culture_opinion = 5
-
+		
 		ai_war_chance = -0.5
 		ai_war_cooldown = 5
 	}
@@ -983,9 +963,7 @@ tradition_isolationist = {
 						any_sub_realm_county = {
 							culture = scope:character.culture
 							any_neighboring_county = {
-								NOT = {
-									culture = scope:character.culture
-								}
+								culture != scope:character.culture
 								culture = {
 									cultural_acceptance = { target = scope:character.culture value >= 40 }
 								}
@@ -1020,7 +998,7 @@ tradition_isolationist = {
 					desc = inspired_by_culture_desc
 				}
 			}
-
+			
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
@@ -1075,11 +1053,9 @@ tradition_mountaineer_ruralism = {
 		custom_description = {
 			text = culture_in_mountains_desc
 			any_culture_county = {
-				any_county_province = {
-					OR = {
-						terrain = mountains
-						terrain = desert_mountains
-					}
+				county_has_province_with_terrain = {
+					terrain = mountains
+					terrain = desert_mountains
 				}
 			}
 		}
@@ -1127,7 +1103,7 @@ tradition_mountaineer_ruralism = {
 					NOT = {
 						any_culture_county = {
 							percent >= 0.3
-							any_county_province = {
+							county_has_province_with_terrain = {
 								terrain = mountains
 							}
 						}
@@ -1161,11 +1137,9 @@ tradition_mountaineer_ruralism = {
 					scope:character = {
 						any_sub_realm_county = {
 							culture = scope:character.culture
-							any_county_province = {
-								OR = {
-									terrain = mountains
-									terrain = hills
-								}
+							county_has_province_with_terrain = {
+								terrain = mountains
+								terrain = hills
 							}
 						}
 					}
@@ -1177,11 +1151,9 @@ tradition_mountaineer_ruralism = {
 			limit = {
 				any_culture_county = {
 					percent >= 0.6
-					any_county_province = {
-						OR = {
-							terrain = mountains
-							terrain = hills
-						}
+					county_has_province_with_terrain = {
+						terrain = mountains
+						terrain = hills
 					}
 				}
 			}
@@ -1213,7 +1185,7 @@ tradition_highland_warriors = {
 		custom_description = {
 			text = culture_in_hills_desc
 			any_culture_county = {
-				any_county_province = {
+				county_has_province_with_terrain = {
 					terrain = hills
 				}
 			}
@@ -1259,7 +1231,7 @@ tradition_highland_warriors = {
 					NOT = {
 						any_culture_county = {
 							percent >= 0.3
-							any_county_province = {
+							county_has_province_with_terrain = {
 								terrain = hills
 							}
 						}
@@ -1280,11 +1252,11 @@ tradition_highland_warriors = {
 					desc = inspired_by_culture_desc
 				}
 			}
-
+			
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
-
+	
 	ai_will_do = {
 		value = 100
 		if = {
@@ -1294,7 +1266,7 @@ tradition_highland_warriors = {
 						any_sub_realm_county = {
 							percent >= 0.2
 							culture = scope:character.culture
-							any_county_province = {
+							county_has_province_with_terrain = {
 								terrain = hills
 							}
 						}
@@ -1308,7 +1280,7 @@ tradition_highland_warriors = {
 				scope:character.culture ?= {
 					any_culture_county = {
 						percent > 0.6
-						any_county_province = {
+						county_has_province_with_terrain = {
 							terrain = hills
 						}
 					}
@@ -1321,7 +1293,7 @@ tradition_highland_warriors = {
 				scope:character.culture ?= {
 					any_culture_county = {
 						percent > 0.4
-						any_county_province = {
+						county_has_province_with_terrain = {
 							terrain = hills
 						}
 					}
