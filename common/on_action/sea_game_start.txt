@@ -157,45 +157,45 @@ acculturate_steppelads = {
 	}
 }
 
-assign_nanzhao_state = {
-	effect = {
-		if = {
-			limit = {
-				current_date < 902.1.1
-			}
-			title:k_nanzhao = {
-				set_variable = nanzhao
-			}
-		}
-		else_if = {
-			limit = {
-				current_date >= 902.1.1
-				current_date < 928.1.1
-			}
-			title:k_nanzhao = {
-				set_variable = dachanghe
-			}
-		}
-		else_if = {
-			limit = {
-				current_date >= 928.1.1
-				current_date < 929.1.1
-			}
-			title:k_nanzhao = {
-				set_variable = datianxing
-			}
-		}
-		else_if = {
-			limit = {
-				current_date >= 929.1.1
-				current_date < 937.1.1
-			}
-			title:k_nanzhao = {
-				set_variable = dayining
-			}
-		}
-	}
-}
+# assign_nanzhao_state = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				current_date < 902.1.1
+# 			}
+# 			title:k_nanzhao = {
+# 				set_variable = nanzhao
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				current_date >= 902.1.1
+# 				current_date < 928.1.1
+# 			}
+# 			title:k_nanzhao = {
+# 				set_variable = dachanghe
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				current_date >= 928.1.1
+# 				current_date < 929.1.1
+# 			}
+# 			title:k_nanzhao = {
+# 				set_variable = datianxing
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				current_date >= 929.1.1
+# 				current_date < 937.1.1
+# 			}
+# 			title:k_nanzhao = {
+# 				set_variable = dayining
+# 			}
+# 		}
+# 	}
+# }
 
 ###### ###### ###### ######
 
@@ -221,18 +221,18 @@ on_game_start_after_lobby = {
 
 set_court_languages = {
 	effect = {
-		if = {
-			limit = { exists = title:e_nanzhao.holder }
-			title:e_nanzhao.holder = { set_court_language = language_chinese }
-		}
-		if = {
-			limit = { exists = title:k_nanzhao.holder }
-			title:k_nanzhao.holder = { set_court_language = language_chinese }
-		}
-		if = {
-			limit = { exists = title:k_annam.holder }
-			title:k_annam.holder = { set_court_language = language_chinese }
-		}
+		# if = {
+		# 	limit = { exists = title:e_nanzhao.holder }
+		# 	title:e_nanzhao.holder = { set_court_language = language_chinese }
+		# }
+		# if = {
+		# 	limit = { exists = title:k_nanzhao.holder }
+		# 	title:k_nanzhao.holder = { set_court_language = language_chinese }
+		# }
+		# if = {
+		# 	limit = { exists = title:k_annam.holder }
+		# 	title:k_annam.holder = { set_court_language = language_chinese }
+		# }
 		if = {
 			limit = { exists = title:k_abkhazia.holder }
 			title:k_abkhazia.holder = { set_court_language = language_georgian }
@@ -673,7 +673,8 @@ sea_historical_artifacts = {
 
 			if = { # Heirloom Seal of the Realm
 				limit = { current_date <= 907.1.1 }
-				title:e_celestia_china.holder = {
+				# title:e_celestia_china.holder = {
+				title:h_china.holder = {
 					create_artifact_heirloom_seal = { OWNER = this }
 				}
 			}
@@ -687,7 +688,8 @@ sea_historical_artifacts = {
 
 			if = { # Wujing Zongyao / 武經總要
 				limit = { current_date > 1044.1.1 }
-				title:e_celestia_china.holder = {
+				# title:e_celestia_china.holder = {
+				title:h_china.holder = {
 					create_artifact_wujing_zongyao_effect = { OWNER = this }
 				}
 			}

@@ -1,0 +1,632 @@
+﻿
+namespace = sea_invite_courtiers
+
+# Invite male courtier
+sea_invite_courtiers.0001 = {
+	type = character_event
+	title = sea_invite_courtiers.0001.title
+	desc = sea_invite_courtiers.0001.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:target
+		animation = idle
+	}
+
+	trigger = { exists = capital_province } #If I lost it before I got this event, I shouldn't get a physician
+
+	immediate = {
+		every_held_title = {
+			limit = { tier = tier_county }
+			if = {
+				limit = { holder = root }
+				add_to_list = counties_list
+			}
+		}
+
+		random_in_list = {
+			list = counties_list
+			save_scope_as = target_county
+		}
+
+		scope:target_county = {
+			if = {
+				limit = { county_has_minority_culture_trigger = yes }
+
+				culture = {
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+				}
+
+				if = {
+					limit = { county_has_large_minority_culture_trigger = yes }
+					every_in_list = {
+						variable = culture_minorities_large
+						add_to_temporary_list = potential_cultures
+						add_to_temporary_list = potential_cultures
+					}
+				}
+
+				if = {
+					limit = { county_has_small_minority_culture_trigger = yes }
+					every_in_list = {
+						variable = culture_minorities_small
+						add_to_temporary_list = potential_cultures
+					}
+				}
+
+				random_in_list = {
+					list = potential_cultures
+					save_scope_as = target_culture
+				}
+			}
+			else = {
+				culture = { save_scope_as = target_culture }
+			}
+
+			if = {
+				limit = { county_has_minority_faith_trigger = yes }
+
+				faith = {
+					add_to_temporary_list = potential_faiths
+					add_to_temporary_list = potential_faiths
+					add_to_temporary_list = potential_faiths
+					add_to_temporary_list = potential_faiths
+				}
+
+				if = {
+					limit = { county_has_large_minority_faith_trigger = yes }
+					every_in_list = {
+						variable = faith_minorities_large
+						add_to_temporary_list = potential_faiths
+						add_to_temporary_list = potential_faiths
+					}
+				}
+
+				if = {
+					limit = { county_has_small_minority_faith_trigger = yes }
+					every_in_list = {
+						variable = faith_minorities_small
+						add_to_temporary_list = potential_faiths
+					}
+				}
+
+				random_in_list = {
+					list = potential_faiths
+					save_scope_as = target_faith
+				}
+			}
+			else = {
+				faith = { save_scope_as = target_faith }
+			}
+		}
+
+		# Create random courtier
+		create_character = {
+			employer = root
+			age = { 18 50 }
+			gender = male
+			random_traits = yes
+			faith = scope:target_faith
+			culture = scope:target_culture
+			dynasty = generate
+			save_scope_as = target
+		}
+	}
+
+	# Hire them
+	option = {
+		name = sea_invite_courtiers.0001.a
+	}
+
+	# Don't hire them
+	option = {
+		name = sea_invite_courtiers.0001.b
+		hidden_effect = {
+			scope:target = {
+				move_to_pool = yes
+			}
+		}
+	}
+}
+
+# Invite female courtier
+sea_invite_courtiers.0002 = {
+	type = character_event
+	title = sea_invite_courtiers.0002.title
+	desc = sea_invite_courtiers.0002.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:target
+		animation = idle
+	}
+
+	trigger = { exists = capital_province } #If I lost it before I got this event, I shouldn't get a physician
+
+	immediate = {
+		every_held_title = {
+			limit = { tier = tier_county }
+			if = {
+				limit = { holder = root }
+				add_to_list = counties_list
+			}
+		}
+
+		random_in_list = {
+			list = counties_list
+			save_scope_as = target_county
+		}
+
+		scope:target_county = {
+			if = {
+				limit = { county_has_minority_culture_trigger = yes }
+
+				culture = {
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+				}
+
+				if = {
+					limit = { county_has_large_minority_culture_trigger = yes }
+					every_in_list = {
+						variable = culture_minorities_large
+						add_to_temporary_list = potential_cultures
+						add_to_temporary_list = potential_cultures
+					}
+				}
+
+				if = {
+					limit = { county_has_small_minority_culture_trigger = yes }
+					every_in_list = {
+						variable = culture_minorities_small
+						add_to_temporary_list = potential_cultures
+					}
+				}
+
+				random_in_list = {
+					list = potential_cultures
+					save_scope_as = target_culture
+				}
+			}
+			else = {
+				culture = { save_scope_as = target_culture }
+			}
+
+			if = {
+				limit = { county_has_minority_faith_trigger = yes }
+
+				faith = {
+					add_to_temporary_list = potential_faiths
+					add_to_temporary_list = potential_faiths
+					add_to_temporary_list = potential_faiths
+					add_to_temporary_list = potential_faiths
+				}
+
+				if = {
+					limit = { county_has_large_minority_faith_trigger = yes }
+					every_in_list = {
+						variable = faith_minorities_large
+						add_to_temporary_list = potential_faiths
+						add_to_temporary_list = potential_faiths
+					}
+				}
+
+				if = {
+					limit = { county_has_small_minority_faith_trigger = yes }
+					every_in_list = {
+						variable = faith_minorities_small
+						add_to_temporary_list = potential_faiths
+					}
+				}
+
+				random_in_list = {
+					list = potential_faiths
+					save_scope_as = target_faith
+				}
+			}
+			else = {
+				faith = { save_scope_as = target_faith }
+			}
+		}
+
+		# Create random courtier
+		create_character = {
+			employer = root
+			age = { 18 35 }
+			gender = female
+			random_traits = yes
+			faith = scope:target_faith
+			culture = scope:target_culture
+			dynasty = generate
+			save_scope_as = target
+		}
+	}
+
+	# Hire them
+	option = {
+		name = sea_invite_courtiers.0002.a
+	}
+
+	# Don't hire them
+	option = {
+		name = sea_invite_courtiers.0002.b
+		hidden_effect = {
+			scope:target = {
+				move_to_pool = yes
+			}
+		}
+	}
+}
+
+# Invite holy person
+sea_invite_courtiers.0003 = {
+	type = character_event
+	title = sea_invite_courtiers.0003.title
+	desc = sea_invite_courtiers.0003.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:target
+		animation = idle
+	}
+
+	trigger = { exists = capital_province } #If I lost it before I got this event, I shouldn't get a physician
+
+	immediate = {
+		every_held_title = {
+			limit = { tier = tier_county }
+			if = {
+				limit = { holder = root }
+				add_to_list = counties_list
+			}
+		}
+
+		random_in_list = {
+			list = counties_list
+			save_scope_as = target_county
+		}
+
+		scope:target_county = {
+			if = {
+				limit = { county_has_minority_culture_trigger = yes }
+
+				culture = {
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+					add_to_temporary_list = potential_cultures
+				}
+
+				if = {
+					limit = { county_has_large_minority_culture_trigger = yes }
+					every_in_list = {
+						variable = culture_minorities_large
+						add_to_temporary_list = potential_cultures
+						add_to_temporary_list = potential_cultures
+					}
+				}
+
+				if = {
+					limit = { county_has_small_minority_culture_trigger = yes }
+					every_in_list = {
+						variable = culture_minorities_small
+						add_to_temporary_list = potential_cultures
+					}
+				}
+
+				random_in_list = {
+					list = potential_cultures
+					save_scope_as = target_culture
+				}
+			}
+			else = {
+				culture = { save_scope_as = target_culture }
+			}
+		}
+
+		# Create random courtier
+		create_character = {
+			employer = root
+			age = { 25 55 }
+			gender_female_chance = {
+				if = {
+					limit = { root.faith = { has_doctrine = doctrine_clerical_gender_male_only } }
+					add = 0
+				}
+				else_if = {
+					limit = { root.faith = { has_doctrine = doctrine_clerical_gender_female_only } }
+					add = 100
+				}
+				else = {
+					add = 50
+				}
+			}
+			random_traits_list = {
+				count = 1
+				education_learning_2 = {}
+				education_learning_3 = {}
+				education_learning_4 = {}
+			}
+			random_traits = yes
+			random_traits_list = {
+				count = { 1 2 }
+				lustful = {
+					trigger = {
+						root.faith = { trait_is_virtue = lustful }
+					}
+				}
+				chaste = {
+					trigger = {
+						root.faith = { trait_is_virtue = chaste }
+					}
+				}
+				gluttonous = {
+					trigger = {
+						root.faith = { trait_is_virtue = gluttonous }
+					}
+				}
+				temperate = {
+					trigger = {
+						root.faith = { trait_is_virtue = temperate }
+					}
+				}
+				greedy = {
+					trigger = {
+						root.faith = { trait_is_virtue = greedy }
+					}
+				}
+				generous = {
+					trigger = {
+						root.faith = { trait_is_virtue = generous }
+					}
+				}
+				wrathful = {
+					trigger = {
+						root.faith = { trait_is_virtue = wrathful }
+					}
+				}
+				calm = {
+					trigger = {
+						root.faith = { trait_is_virtue = calm }
+					}
+				}
+				patient = {
+					trigger = {
+						root.faith = { trait_is_virtue = patient }
+					}
+				}
+				impatient = {
+					trigger = {
+						root.faith = { trait_is_virtue = impatient }
+					}
+				}
+				arrogant = {
+					trigger = {
+						root.faith = { trait_is_virtue = arrogant }
+					}
+				}
+				humble = {
+					trigger = {
+						root.faith = { trait_is_virtue = humble }
+					}
+				}
+				deceitful = {
+					trigger = {
+						root.faith = { trait_is_virtue = deceitful }
+					}
+				}
+				honest = {
+					trigger = {
+						root.faith = { trait_is_virtue = honest }
+					}
+				}
+				craven = {
+					trigger = {
+						root.faith = { trait_is_virtue = craven }
+					}
+				}
+				brave = {
+					trigger = {
+						root.faith = { trait_is_virtue = brave }
+					}
+				}
+				ambitious = {
+					trigger = {
+						root.faith = { trait_is_virtue = ambitious }
+					}
+				}
+				content = {
+					trigger = {
+						root.faith = { trait_is_virtue = content }
+					}
+				}
+				arbitrary = {
+					trigger = {
+						root.faith = { trait_is_virtue = arbitrary }
+					}
+				}
+				just = {
+					trigger = {
+						root.faith = { trait_is_virtue = just }
+					}
+				}
+				paranoid = {
+					trigger = {
+						root.faith = { trait_is_virtue = paranoid }
+					}
+				}
+				trusting = {
+					trigger = {
+						root.faith = { trait_is_virtue = trusting }
+					}
+				}
+				compassionate = {
+					trigger = {
+						root.faith = { trait_is_virtue = compassionate }
+					}
+				}
+				callous = {
+					trigger = {
+						root.faith = { trait_is_virtue = callous }
+					}
+				}
+				sadistic = {
+					trigger = {
+						root.faith = { trait_is_virtue = sadistic }
+					}
+				}
+				stubborn = {
+					trigger = {
+						root.faith = { trait_is_virtue = stubborn }
+					}
+				}
+				fickle = {
+					trigger = {
+						root.faith = { trait_is_virtue = fickle }
+					}
+				}
+				vengeful = {
+					trigger = {
+						root.faith = { trait_is_virtue = vengeful }
+					}
+				}
+				forgiving = {
+					trigger = {
+						root.faith = { trait_is_virtue = forgiving }
+					}
+				}
+				transgender = {
+					trigger = {
+						root.faith = { trait_is_virtue = transgender }
+					}
+				}
+			}
+			random_traits = yes
+			faith = root.faith
+			culture = scope:target_culture
+			save_scope_as = target
+		}
+	}
+
+	# Hire them
+	option = {
+		name = sea_invite_courtiers.0003.a
+	}
+
+	# Don't hire them
+	option = {
+		name = sea_invite_courtiers.0003.b
+		hidden_effect = {
+			scope:target = {
+				move_to_pool = yes
+			}
+		}
+	}
+}
+
+# Invite Janissary
+sea_invite_courtiers.0004 = {
+	type = character_event
+	title = sea_invite_courtiers.0004.title
+	desc = sea_invite_courtiers.0004.desc
+
+	theme = realm
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:target
+		animation = idle
+	}
+
+	trigger = { exists = capital_province } #If I lost it before I got this event, I shouldn't get a physician
+
+	immediate = {
+
+		every_realm_county = {
+			if = {
+				limit = { this.holder = root }
+				add_to_list = counties_list
+				add_to_list = counties_list
+			}
+			else = {
+				add_to_list = counties_list
+			}
+		}
+
+		random_in_list = {
+			list = counties_list
+			save_scope_as = target_county
+		}
+
+		# Create random courtier
+		create_character = {
+			employer = root
+			age = { 30 45 }
+			gender_female_chance = 0
+			faith = faith:alevi
+			culture = root.culture
+			random_traits_list = {
+				count = 1
+				education_martial_2 = {}
+				education_martial_3 = {}
+				education_martial_4 = {}
+			}
+			prowess = 10
+			#Personality
+			trait = janissary
+			trait = zealous
+		
+			random_traits_list = {
+				count = 1
+				loyal = {}
+				disloyal = {}
+				strong = {}
+				athletic = {}
+			}
+			save_scope_as = target
+		}
+	}
+
+	# Hire them
+	option = {
+		name = sea_invite_courtiers.0004.a
+		court_position_grant_effect = {
+			CANDIDATE = scope:target
+			POS = janissary_agha_court_position
+			EMPLOYER = root
+		}
+	}
+
+	# Don't hire them
+	option = {
+		name = sea_invite_courtiers.0004.b
+		hidden_effect = {
+			scope:target = {
+				move_to_pool = yes
+			}
+		}
+	}
+}

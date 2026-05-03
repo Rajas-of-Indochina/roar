@@ -1,8 +1,10 @@
-﻿call_for_confederation_decision = {
+﻿### Call for Confederation ###
+call_for_confederation_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
 	}
 	decision_group_type = major
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 8
@@ -112,21 +114,13 @@
 
 	is_valid_showing_failures_only = {
 		age >= 6
+		NOT = { has_trait = infirm }
+		is_available = yes
 		trigger_if = {
 			limit = {
-				is_ai = no
+				is_ai = yes
 			}
-			NOT = { exists = involved_activity }
-			NOT = { has_trait = infirm }
-			is_physically_able = yes
-			is_travelling = no
-		}
-		trigger_else = {
-			is_imprisoned = no
-			is_incapable = no
-			is_alive = yes
 			is_migrating = no
-			NOT = { has_trait = infirm }
 		}
 	}
 
@@ -428,7 +422,7 @@ leave_confederation_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
 	}
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 12
@@ -1706,7 +1700,7 @@ study_commander_trait_decision = {
 		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_concession.dds"
 	} 
 	decision_group_type = nomad_minor
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 144
@@ -1828,6 +1822,19 @@ mpo_decision_fertility_dance = {
         }
     }
 
+    widget = {
+        controller = create_holy_order
+        barony_valid = {
+            trigger_if = {
+                limit = { exists = this }
+                is_capital_barony = yes
+                county = {
+                    uses_county_fertility = yes
+                }
+            }
+        }
+    }
+
     effect = {
         scope:barony.county = { save_scope_as = fertility_county }
         custom_tooltip = {
@@ -1862,20 +1869,7 @@ mpo_decision_fertility_dance = {
 			}		
 		}
     }
-
-    widget = {
-        controller = create_holy_order
-        barony_valid = {
-            trigger_if = {
-                limit = { exists = this }
-                is_capital_barony = yes
-                county = {
-                    uses_county_fertility = yes
-                }
-            }
-        }
-    }
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 36
@@ -2091,7 +2085,7 @@ mpo_decision_introduce_heir = {
 			}
 		}
 	}
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 36
@@ -2346,16 +2340,13 @@ mpo_decision_introduce_heir = {
 #	dlc_mpo_steppe_persia_expansion
 #	dlc_mpo_steppe_siberia_further_expansion
 ## Eastern Steppe expansion regions:
-#	world_steppe_tarim
+#	dlc_mpo_steppe_hexi_tarim_expansion
+#	dlc_mpo_steppe_north_china_expansion
+#	dlc_mpo_steppe_central_china_expansion
+#	world_asia_korea
+#	world_asia_japan
 
 ### Expand The Steppe Decision ###
-
-## Additional
-#   sea_mpo_steppe_hexi_addon
-#   sea_mpo_steppe_north_china_addon
-#   sea_mpo_steppe_manchuria_addon
-#   sea_mpo_steppe_korea_addon
-
 expand_the_steppe_decision = {
     picture = {
         reference = "gfx/interface/illustrations/event_scenes/mpo_raid_burning_asian.dds"
@@ -2750,11 +2741,11 @@ expand_the_steppe_decision = {
 		## Eastern Steppe
 
 		item = {
-			value = world_steppe_tarim
+			value = dlc_mpo_steppe_hexi_tarim_expansion
 			is_shown = {
 	            situation:the_great_steppe ?= {
 	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:world_steppe_tarim
+	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_hexi_tarim_expansion
 	                }
 	            }
 			}
@@ -2764,60 +2755,27 @@ expand_the_steppe_decision = {
 					situation:the_great_steppe ?= {
 	                    NOT = {
 	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = world_steppe_tarim
+	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_hexi_tarim_expansion
 	                        }
 	                    }
 	                }
 	                any_realm_province = {
-	                    geographical_region = world_steppe_tarim
+	                    geographical_region = dlc_mpo_steppe_hexi_tarim_expansion
 	                }
 				}
 			}
-			localization = world_steppe_tarim
-			icon = "gfx/interface/icons/message_feed/banner.dds"
-			ai_chance = {
-				value = 100
-			}
-		}
-
-		## ROA Additions
-
-		item = {
-			value = sea_mpo_steppe_hexi_addon
-			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:sea_mpo_steppe_hexi_addon
-	                }
-	            }
-			}
-			is_valid = {
-				custom_tooltip = {
-					text = custom_hexi_expand_steppe_tt
-					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = sea_mpo_steppe_hexi_addon
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = sea_mpo_steppe_hexi_addon
-	                }
-				}
-			}
-			localization = sea_mpo_steppe_hexi_addon
+			localization = dlc_mpo_steppe_hexi_tarim_expansion
 			icon = "gfx/interface/icons/message_feed/banner.dds"
 			ai_chance = {
 				value = 100
 			}
 		}
 		item = {
-			value = sea_mpo_steppe_north_china_addon
+			value = dlc_mpo_steppe_north_china_expansion
 			is_shown = {
 	            situation:the_great_steppe ?= {
 	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:sea_mpo_steppe_north_china_addon
+	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_north_china_expansion
 	                }
 	            }
 			}
@@ -2827,57 +2785,57 @@ expand_the_steppe_decision = {
 					situation:the_great_steppe ?= {
 	                    NOT = {
 	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = sea_mpo_steppe_north_china_addon
+	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_north_china_expansion
 	                        }
 	                    }
 	                }
 	                any_realm_province = {
-	                    geographical_region = sea_mpo_steppe_north_china_addon
+	                    geographical_region = dlc_mpo_steppe_north_china_expansion
 	                }
 				}
 			}
-			localization = sea_mpo_steppe_north_china_addon
+			localization = dlc_mpo_steppe_north_china_expansion
 			icon = "gfx/interface/icons/message_feed/banner.dds"
 			ai_chance = {
 				value = 100
 			}
 		}
 		item = {
-			value = sea_mpo_steppe_manchuria_addon
+			value = dlc_mpo_steppe_central_china_expansion
 			is_shown = {
 	            situation:the_great_steppe ?= {
 	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:sea_mpo_steppe_manchuria_addon
+	                	#region_is_adjacent = geographical_region:dlc_mpo_steppe_central_china_expansion
 	                }
 	            }
 			}
 			is_valid = {
 				custom_tooltip = {
-					text = custom_manchuria_expand_steppe_tt
+					text = custom_central_china_expand_steppe_tt
 					situation:the_great_steppe ?= {
 	                    NOT = {
 	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = sea_mpo_steppe_manchuria_addon
+	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_central_china_expansion
 	                        }
 	                    }
 	                }
 	                any_realm_province = {
-	                    geographical_region = sea_mpo_steppe_manchuria_addon
+	                    geographical_region = dlc_mpo_steppe_central_china_expansion
 	                }
 				}
 			}
-			localization = sea_mpo_steppe_manchuria_addon
+			localization = dlc_mpo_steppe_central_china_expansion
 			icon = "gfx/interface/icons/message_feed/banner.dds"
 			ai_chance = {
 				value = 100
 			}
 		}
 		item = {
-			value = sea_mpo_steppe_korea_addon
+			value = world_asia_korea
 			is_shown = {
 	            situation:the_great_steppe ?= {
 	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:sea_mpo_steppe_korea_addon
+	                	region_is_adjacent = geographical_region:world_asia_korea
 	                }
 	            }
 			}
@@ -2887,16 +2845,45 @@ expand_the_steppe_decision = {
 					situation:the_great_steppe ?= {
 	                    NOT = {
 	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = sea_mpo_steppe_korea_addon
+	                            situation_sub_region_has_geographical_region = world_asia_korea
 	                        }
 	                    }
 	                }
 	                any_realm_province = {
-	                    geographical_region = sea_mpo_steppe_korea_addon
+	                    geographical_region = world_asia_korea
 	                }
 				}
 			}
-			localization = sea_mpo_steppe_korea_addon
+			localization = world_asia_korea
+			icon = "gfx/interface/icons/message_feed/banner.dds"
+			ai_chance = {
+				value = 100
+			}
+		}
+		item = {
+			value = world_asia_japan
+			is_shown = {
+				# there is no strait in Japan XD
+				any_realm_province = {
+					geographical_region = special_mongol_empire_blue_horde_region
+				}
+			}
+			is_valid = {
+				custom_tooltip = {
+					text = custom_japan_expand_steppe_tt
+					situation:the_great_steppe ?= {
+	                    NOT = {
+	                        any_situation_sub_region = {
+	                            situation_sub_region_has_geographical_region = world_asia_japan
+	                        }
+	                    }
+	                }
+	                any_realm_province = {
+	                    geographical_region = world_asia_japan
+	                }
+				}
+			}
+			localization = world_asia_japan
 			icon = "gfx/interface/icons/message_feed/banner.dds"
 			ai_chance = {
 				value = 100
@@ -2927,12 +2914,11 @@ expand_the_steppe_decision = {
 			great_steppe_not_in_sub_region_trigger = { REGION = world_khorasan }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_persia_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_siberia_further_expansion }
-			great_steppe_not_in_sub_region_trigger = { REGION = world_steppe_tarim }
-
-			great_steppe_not_in_sub_region_trigger = { REGION = sea_mpo_steppe_hexi_addon }
-			great_steppe_not_in_sub_region_trigger = { REGION = sea_mpo_steppe_north_china_addon }
-			great_steppe_not_in_sub_region_trigger = { REGION = sea_mpo_steppe_manchuria_addon }
-			great_steppe_not_in_sub_region_trigger = { REGION = sea_mpo_steppe_korea_addon }
+			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_hexi_tarim_expansion }
+			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_north_china_expansion }
+			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_central_china_expansion }
+			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_korea }
+			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_japan }
         }
     }
 
@@ -2946,102 +2932,106 @@ expand_the_steppe_decision = {
 	    	}
 		    completely_controls_region = ghw_region_anatolia
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:custom_eastern_balkans = yes
 	    	}
 		    completely_controls_region = custom_eastern_balkans
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:ghw_region_northern_russia = yes
 	    	}
 		    completely_controls_region = ghw_region_northern_russia
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:ghw_region_southern_russia = yes
 	    	}
 		    completely_controls_region = ghw_region_southern_russia
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:custom_hungary = yes
 	    	}
 		    completely_controls_region = custom_hungary
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:ghw_region_poland = yes
 	    	}
 		    completely_controls_region = ghw_region_poland
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:ghw_region_baltic = yes
 	    	}
 		    completely_controls_region = ghw_region_baltic
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:dlc_mpo_steppe_caucasus_expansion = yes
 	    	}
 		    completely_controls_region = dlc_mpo_steppe_caucasus_expansion
 		}
 
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:world_transoxiana = yes
 	    	}
 		    completely_controls_region = world_transoxiana
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:world_khorasan = yes
 	    	}
 		    completely_controls_region = world_khorasan
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:dlc_mpo_steppe_persia_expansion = yes
 	    	}
 		    completely_controls_region = dlc_mpo_steppe_persia_expansion
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
 	    		scope:dlc_mpo_steppe_siberia_further_expansion = yes
 	    	}
 		    completely_controls_region = dlc_mpo_steppe_siberia_further_expansion
 		}
-        trigger_if = {
+
+        trigger_else_if = {
         	limit = {
-	    		scope:world_steppe_tarim = yes
+	    		scope:dlc_mpo_steppe_hexi_tarim_expansion = yes
 	    	}
-		    completely_controls_region = world_steppe_tarim
+		    completely_controls_region = dlc_mpo_steppe_hexi_tarim_expansion
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
-	    		scope:sea_mpo_steppe_hexi_addon = yes
+	    		scope:dlc_mpo_steppe_north_china_expansion = yes
 	    	}
-		    completely_controls_region = sea_mpo_steppe_hexi_addon
+		    completely_controls_region = dlc_mpo_steppe_north_china_expansion
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
-	    		scope:sea_mpo_steppe_north_china_addon = yes
+	    		scope:dlc_mpo_steppe_central_china_expansion = yes
 	    	}
-		    completely_controls_region = sea_mpo_steppe_north_china_addon
+		    completely_controls_region = dlc_mpo_steppe_central_china_expansion
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
-	    		scope:sea_mpo_steppe_manchuria_addon = yes
+	    		scope:world_asia_korea = yes
 	    	}
-		    completely_controls_region = sea_mpo_steppe_manchuria_addon
+		    completely_controls_region = world_asia_korea
 		}
-        trigger_if = {
+        trigger_else_if = {
         	limit = {
-	    		scope:sea_mpo_steppe_korea_addon = yes
+	    		scope:world_asia_japan = yes
 	    	}
-		    completely_controls_region = sea_mpo_steppe_korea_addon
+		    completely_controls_region = world_asia_japan
+		}
+        trigger_else = {
+        	always = no
 		}
     }
 
@@ -3079,8 +3069,8 @@ expand_the_steppe_decision = {
         }
     }
 
-    effect = {
-    	# Send a toast to yourself, as a confirmation that the Steppe Expansion happened
+	effect = {
+		# Send a toast to yourself, as a confirmation that the Steppe Expansion happened
 		save_scope_as = steppe_expander
 		send_interface_toast = {
 			type = steppe_expansion_happened
@@ -3457,7 +3447,7 @@ mpo_become_greatest_of_khans_decision = {
 	cooldown = {
 		years = 5
 	}
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 0
@@ -3740,7 +3730,6 @@ mpo_become_greatest_of_khans_decision = {
 	}
 
 	effect = {
-		
 		custom_description_no_bullet = { text = mpo_gok_war_of_submission_will_happen_tt }
 		custom_tooltip = mpo_gok_cravens_wont_fight_tt
 		custom_tooltip = mpo_gok_obedient_vassals_join_war_tt
@@ -3784,7 +3773,6 @@ mpo_become_greatest_of_khans_decision = {
 				}
 				add_realm_law_skip_effects = single_heir_succession_kurultai_law
 			}
-			custom_tooltip = gain_gok_dynasty_modifier_tt
 		}
 
 		custom_description_no_bullet = { text = mpo_gok_war_of_submission_defeat_tt }
@@ -4289,6 +4277,8 @@ mpo_gok_world_conquest_decision = {
 	decision_group_type = nomad_major
 	desc = mpo_gok_world_conquest_decision_desc
 
+	cooldown = { years = 5 }
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 0
@@ -4656,7 +4646,7 @@ settle_people_decision = {
 		reference = "gfx/interface/illustrations/holding_types/city_western.dds"
 	} 
 	decision_group_type = nomad_major
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 36
@@ -5716,7 +5706,7 @@ step_away_from_the_steppe_decision = {
 		reference = "gfx/interface/illustrations/event_scenes/mpo_rural_village_asian.dds"
 	} 
 	decision_group_type = nomad_minor
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 36
@@ -6500,7 +6490,7 @@ confederation_kingdom_decision = {
 		reference = "gfx/interface/illustrations/decisions/mpo_decision_confederation.dds"
 	}
 	decision_group_type = major
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 12
@@ -6509,7 +6499,7 @@ confederation_kingdom_decision = {
 		empire = 0
 		hegemony = 0
 	}
-
+	
 	desc = confederation_kingdom_decision_desc
 
 	is_shown = {
@@ -6741,7 +6731,7 @@ settle_the_steppe_decision = {
 		reference = "gfx/interface/illustrations/event_story/mpo_steppe_region.dds"
 	} 
 	decision_group_type = nomad_major
-
+	
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 0

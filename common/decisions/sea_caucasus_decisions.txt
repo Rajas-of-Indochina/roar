@@ -2926,18 +2926,6 @@ form_aluank_decision = {
 					this = culture:armenian
 				}
 			}
-			armenian_struggle_is_local_culture_trigger = {
-				CULTURE = THIS
-			}
-		}
-		armenian_struggle_is_local_faith_trigger = {
-			FAITH = ROOT.faith
-		}
-		trigger_if = {
-			limit = {
-				exists = struggle:armenian_struggle
-			}
-			has_trait = pro_armenian
 		}
 		trigger_if = {
 			limit = {

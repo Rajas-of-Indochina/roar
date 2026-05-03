@@ -608,7 +608,7 @@ e_great_liao = { #aka Great Liao / Liao dynasty
 	color = { 15 150 105 }
 	can_use_nomadic_naming = no
 
-	capital = c_LIAO_linhuang
+	capital = c_shangjing
 	#Liao dynasty's capital is offmap, so this capital setup is just here mechanically
 
 	can_create = {
@@ -638,7 +638,7 @@ e_jin = { #aka Great Jin / Jin dynasty
 	color = { 210 175 50 }
 	can_use_nomadic_naming = no
 
-	capital = c_LIAO_linhuang
+	capital = c_shangjing
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
@@ -671,7 +671,7 @@ k_naiman = {
 
 	definite_form = yes
 
-	capital = c_tseel
+	capital = c_yeson_bulag
 }
 
 #Jewish Religious Heads
@@ -71773,7 +71773,7 @@ e_amur = {
 	# e_andong in vanilla
 	color = { 108 65 15 }
 
-	capital = c_kusunkotan
+	capital = c_tomori
 
 	k_amgun = {
 		# in vanilla split between k_amur and k_aynumosir
@@ -74554,7 +74554,7 @@ e_amur = {
 	k_aynumosir = {
 		color = { 141 70 23 }
 
-		capital = c_kusunkotan
+		capital = c_simenas
 
 		can_create = {
 			japan_government_japan_kingdom_restriction_trigger = yes
@@ -77759,7 +77759,7 @@ e_srivijaya = {
 				}
 			}
 
-			c_beruas = {
+			c_poronai = {
 				color = { 22 65 68 }
 
 				b_kuala_kangsar = {
@@ -95061,7 +95061,7 @@ h_china = {
 		k_xia = {
 			color = { 55 55 50 }
 
-			capital = c_lingzhou
+			capital = c_lingzhou_xia
 
 			d_shuofang = {
 				color = { 69 38 35 }
@@ -95409,7 +95409,7 @@ h_china = {
 				}
 			}
 			d_xinan = {
-				capital = c_lxj_yunneizhou
+				capital = c_shengzhou_xia
 
 				color = { 40 25 10 }
 
@@ -98652,12 +98652,12 @@ h_china = {
 		k_qianzhong = {
 			color = { 22 201 165 }
 
-			capital = c_luodian
+			capital = c_fushuizhou_china
 
 			d_luodian = {
 				color = { 17 209 110 }
 
-				capital = c_luodian
+				capital = c_fushuizhou_china
 
 				c_fushuizhou_china = {
 					color = { 100 180 140 }
@@ -98914,7 +98914,7 @@ h_china = {
 			d_shimen = {
 				color = { 50 207 176 }
 
-				capital = c_yinzhou_1
+				capital = c_jingzhou_1
 
 				c_jingzhou_2 = {
 					color = { 67 243 115 }
@@ -100617,7 +100617,7 @@ h_china = {
 			d_yongguan = {
 				color = { 81 100 63 }
 
-				capital = c_yongzhou_1
+				capital = c_binzhou_1
 
 				c_binzhou_1 = {
 					color = { 58 72 42 }
@@ -101842,7 +101842,7 @@ e_goryeo = {
 
 			cultural_names = {
 				name_list_khitan = cn_dongjing
-				name_list_fuyo = cn_yodong
+				# name_list_fuyo = cn_yodong
 				name_list_samhan = cn_yodong
 			}
 
