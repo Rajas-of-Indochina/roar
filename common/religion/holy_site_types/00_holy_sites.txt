@@ -1011,7 +1011,7 @@ preah_vihear = {
 my_son = {
 	# complex of temples dedicated to Shiva, venerated there as Bhadreshvara
 	county = c_indrapura
-	barony = b_my_son
+	# barony = b_my_son
 
 	character_modifier = {
 		name = holy_site_my_son_effect_name
@@ -1033,8 +1033,8 @@ bayon = {
 
 bumiayu = {
 	# Shaivism temple, which eventually shifted into Buddhist site
-	county = c_SUM_palembang
-	barony = b_SUM_Musi
+	county = c_palembang
+	# barony = b_SUM_Musi
 
 	character_modifier = {
 		name = holy_site_bumiayu_effect_name
@@ -1046,7 +1046,7 @@ bumiayu = {
 khao_khlang_nai = {
 	# Vaishnavism temple turned Buddhist sanctuary
 	county = c_lop_buri
-	barony = b_sri_thep
+	# barony = b_sri_thep
 
 	character_modifier = {
 		name = holy_site_khao_khlang_nai_effect_name
@@ -1212,8 +1212,8 @@ jumla = {
 #Qiangic/Hsexje
 
 maowun = {
-	#county = c_hanzhou - vanilla
-	county = c_maowun
+	county = c_hanzhou
+	# county = c_maowun
 
 	character_modifier = {
 		name = holy_site_maowun_effect_name
@@ -1268,8 +1268,8 @@ xingqing = {
 }
 
 yijinai = {
-	#county = c_tongcheng - vanilla
-	county = c_yijinai
+	county = c_tongcheng
+	# county = c_yijinai
 
 	character_modifier = {
 		name = holy_site_yijinai_effect_name
@@ -1278,7 +1278,7 @@ yijinai = {
 }
 
 alxa = {
-	county = c_alxa - vanilla
+	county = c_alxa
 	# county = c_liangzhou
 	barony = b_alxa
 
@@ -1830,7 +1830,7 @@ bost = {
 
 khotan = {
 	county = c_khotan
-	barony = b_lafak #Rawak Stupa
+	# barony = b_lafak #Rawak Stupa
 
 	character_modifier = {
 		name = holy_site_khotan_effect_name
@@ -2695,7 +2695,7 @@ siang = {
 }
 
 tengchong = {
-	county = c_monyin
+	county = c_triang_bang
 
 	character_modifier = {
 		name = holy_site_tengchong_effect_name
@@ -2726,7 +2726,7 @@ shicheng = {
 }
 
 jinglong = {
-	county = c_chiang_rung
+	county = c_chiang_hung
 
 	character_modifier = {
 		name = holy_site_jinglong_effect_name
@@ -2755,7 +2755,7 @@ jianchang = {
 zhaotong = {
 	# Yi people consider Zhaotong to be their homeland ; also known as Zizipuwu
 	# replaced with zizipuwu holy site
-	county = c_huizhou		# this location makes no sense
+	county = c_huizhou_china		# this location makes no sense
 
 	character_modifier = {
 		name = holy_site_zhaotong_effect_name
@@ -2811,7 +2811,7 @@ donggang = {
 #####################
 
 cotabato = {
-	county = c_PHI_cotabato
+	county = c_kotabatu
 
 	character_modifier = {
 		name = holy_site_cotabato_effect_name
@@ -2821,7 +2821,7 @@ cotabato = {
 }
 
 biri_larosa = {
-	county = c_PHI_samar
+	county = c_basay
 
 	character_modifier = {
 		name = holy_site_biri_larosa_effect_name
@@ -2830,7 +2830,7 @@ biri_larosa = {
 }
 
 pinatubo = {
-	county = c_PHI_tondo
+	county = c_tondo
 
 	character_modifier = {
 		name = holy_site_pinatubo_effect_name
@@ -2839,7 +2839,9 @@ pinatubo = {
 }
 
 ivatan = {
-	county = c_PHI_ivatan
+	# county = c_PHI_ivatan
+	county = c_balintang
+	barony = b_babuyan
 
 	character_modifier = {
 		name = holy_site_pulag_effect_name
@@ -2848,7 +2850,7 @@ ivatan = {
 }
 
 mantalingajan = {
-	county = c_PHI_south_palawan
+	county = c_ipolot
 
 	character_modifier = {
 		name = holy_site_mantalingajan_effect_name
@@ -2890,7 +2892,7 @@ magadha = {
 # Qufu already covered elsewhere
 
 vien_chan = {
-	county = c_vien_chan
+	county = c_chantabuli
 
 	character_modifier = {
 		name = holy_site_vien_chan_effect_name
@@ -2932,7 +2934,7 @@ cao_bang = {
 # Tarayka already covered elsewhere
 
 molihewen = {
-	county = c_eman_molihewen
+	county = c_ulagach
 
 	character_modifier = {
 		name = holy_site_molihewen_effect_name
@@ -2941,7 +2943,7 @@ molihewen = {
 }
 
 yam_alin = {
-	county = c_eman_yam_alin
+	county = c_yam-alin
 
 	character_modifier = {
 		name = holy_site_yam_alin_effect_name
@@ -2958,14 +2960,14 @@ chupka = {
 	}
 }
 
-yizhou = {
-	county = c_BAL_dongpyeong_yizhou
+# yizhou = {
+# 	county = c_BAL_dongpyeong_yizhou
 
-	character_modifier = {
-		name = holy_site_yizhou_effect_name
-		levy_size = 0.1
-	}
-}
+# 	character_modifier = {
+# 		name = holy_site_yizhou_effect_name
+# 		levy_size = 0.1
+# 	}
+# }
 
 #####################
 # Utaki				#
@@ -3081,8 +3083,10 @@ quanzhou = {
 }
 
 turpan = {
-	county = c_kara_khoja
-	barony = b_turpan
+	# county = c_kara_khoja
+	# barony = b_turpan
+	county = c_turfan
+	barony = b_qara-khoja
 
 	character_modifier = {
 		name = holy_site_turpan_effect_name
@@ -3153,7 +3157,7 @@ dongting = {
 }
 
 wehale = {
-	county = c_IDO_wehale
+	county = c_belu
 
 	character_modifier = {
 		name = holy_site_wehale_effect_name
@@ -3245,7 +3249,7 @@ sonba_i = {
 }
 
 riak_nan_berbedur = {
-	county = c_SUM_riak_nan_berbedur
+	county = c_inderapura
 
 	character_modifier = {
 		name = holy_site_riak_nan_berbedur_effect_name
@@ -3254,7 +3258,7 @@ riak_nan_berbedur = {
 }
 
 gangganegara = {
-	county = c_MAL_gangganegara
+	county = c_poronai
 
 	character_modifier = {
 		name = holy_site_gangganegara_effect_name
@@ -3289,8 +3293,7 @@ makkarinupuri = {
 }
 
 tarayka = {
-	county = c_tarayka
-	barony = b_tarayka
+	county = c_poronai
 
 	character_modifier = {
 		name = holy_site_tarayka_effect_name
@@ -3359,7 +3362,7 @@ daozhou = {
 }
 
 anlong = {
-	county = c_yanchuan
+	county = c_yan_an
 
 	character_modifier = {
 		name = holy_site_anlong_effect_name
@@ -3383,7 +3386,7 @@ haripunjaya = {
 }
 
 c_nguu_hong = {
-	county = c_quoc_oai
+	county = c_thang_long
 
 	character_modifier = {
 		name = holy_site_nguu_hong_effect_name
@@ -3441,8 +3444,7 @@ goseong = {
 #####################
 
 baekdu = { # Mount Paektu/Baekdu
-	county = c_BAL_east_amnok
-	barony = b_FIC_Liao_Changbaishan
+	county = c_seongyeong
 
 	character_modifier = {
 		name = holy_site_baekdu_effect_name

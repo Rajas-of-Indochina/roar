@@ -431,7 +431,7 @@ ROA_867_tributary_setup_effect = {
 		title:d_pahang.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_beruas.holder = {
+		title:c_poronai.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_ujong_tanah.holder = {
@@ -578,7 +578,7 @@ ROA_867_tributary_setup_effect = {
 	}
 
 	# Lavapura
-	title:d_lavapura.holder = {
+	title:d_lop_buri.holder = {
 		save_scope_as = suzerain
 		title:c_u_thong.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1075,7 +1075,7 @@ ROA_936_tributary_setup_effect = {
 		title:c_ujong_tanah.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_beruas.holder = {
+		title:c_poronai.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_pahang.holder = {
@@ -1136,7 +1136,7 @@ ROA_936_tributary_setup_effect = {
 	}
 
 	#### Lavo
-	title:d_lavapura.holder = {
+	title:d_lop_buri.holder = {
 		save_scope_as = suzerain
 		title:c_u_thong.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1179,7 +1179,8 @@ ROA_936_tributary_setup_effect = {
 	}
 
 	# China
-	title:e_celestia_china.holder = {
+	# title:e_celestia_china.holder = {
+	title:h_china.holder = {
 		save_scope_as = suzerain
 		title:d_liangzhou.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1474,7 +1475,7 @@ ROA_1066_tributary_setup_effect = {
 	# Kambuja
 	title:e_kambujadesa.holder = {
 		save_scope_as = suzerain
-		title:d_lavapura.holder = {
+		title:d_lop_buri.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_koh_kong.holder = {
@@ -1514,9 +1515,10 @@ ROA_1066_tributary_setup_effect = {
 	# Liao
 	title:e_liao.holder = {
 		save_scope_as = suzerain
-		title:e_celestia_china.holder = {
+		# title:e_celestia_china.holder = {
+		title:h_china.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_have_10_and_leave_me_be_effect
+			ROA_have_10_and_leave_me_be_effect = yes
 		}
 		title:d_hoewon.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1673,7 +1675,7 @@ ROA_1066_tributary_setup_effect = {
 		title:k_palembang.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_beruas.holder = {
+		title:c_poronai.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_panai.holder = {
@@ -1695,7 +1697,7 @@ ROA_1066_tributary_setup_effect = {
 		title:c_bangka.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		#title:c_beruas.holder = {
+		#title:c_poronai.holder = {
 		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		#}
 		#title:d_pahang.holder = {
@@ -2035,7 +2037,7 @@ ROA_1178_tributary_setup_effect = {
 	### Kambuja
 	title:e_kambujadesa.holder = {
 		save_scope_as = suzerain
-		title:d_lavapura.holder = {
+		title:d_lop_buri.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_nong_khai.holder = {
