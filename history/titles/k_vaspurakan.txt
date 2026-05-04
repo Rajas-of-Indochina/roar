@@ -150,7 +150,7 @@ d_vaspurakan = {
 			if = {
 				limit = {
 					exists = holder
-					has_government = feudal_government
+					holder = { has_government = feudal_government }
 				}
 				holder = {
 					change_government = clan_government
@@ -1925,14 +1925,6 @@ d_derzene = {
 	1202.1.1 = {
 		holder = 232760
 	}
-	1202.7.1 = {
-		liege = d_hayk-shirak
-		#holder = 159207
-	}
-	1225.1.2 = {
-		liege = "d_erzerum"
-		holder = 34233
-	}
 	#placeholders
 	1230.1.1 = {
 		holder = 34398
@@ -1945,7 +1937,6 @@ d_derzene = {
 	}
 	1300.1.1 = {
 		holder = 34401
-		liege = d_charsianon
 	}
 }
 
