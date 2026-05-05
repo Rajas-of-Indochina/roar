@@ -144,6 +144,14 @@ ballista_elephant = {
 		harsh_winter = { damage = -40 toughness = -10 }
 	}
 
+	can_recruit = {
+		AND = {
+			culture ?= { has_innovation = innovation_elephantry }
+			culture ?= { has_innovation = ballista_elephant }
+			NOT = { has_government = landless_adventurer_government }
+		}
+	}
+
 	buy_cost = { gold = ballista_elephant_recruitment_cost }
 	low_maintenance_cost = { gold = ballista_elephant_low_maint_cost }
 	high_maintenance_cost = { gold = ballista_elephant_high_maint_cost }
@@ -176,6 +184,10 @@ nangchen_cavalry = {
 
 	winter_bonus = {
 		harsh_winter = { damage = -5 toughness = -2 }
+	}
+
+	can_recruit = {
+		culture ?= { has_innovation = innovation_highland_horse_breeding }
 	}
 
 	buy_cost = { gold = caballero_recruitment_cost }
@@ -498,7 +510,16 @@ janissaries_roa = {  #supposed to be OP
 		pikemen = 1
 		archers = 1
 	}
-	
+
+	can_recruit = {
+		gunpowder_raise_limit_existing_gunpowder_units < gunpowder_raise_limit_existing_gunpowder_buildings	# one powder magazine must be owned to support three handgunner regiments, regardless of maa size
+		culture = { has_cultural_parameter = unlock_late_medieval_gunpowder_units }
+		AND = {
+			culture ?= { has_innovation = innovation_janissaries }
+			NOT = { has_government = landless_adventurer_government }
+		}
+	}
+
 	buy_cost = { gold = huscarls_recruitment_cost }
 	low_maintenance_cost = { gold = huscarls_low_maint_cost }
 	high_maintenance_cost = { gold = huscarls_high_maint_cost }

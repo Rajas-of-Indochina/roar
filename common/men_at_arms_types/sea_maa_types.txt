@@ -21,6 +21,7 @@
 @provisions_cost_special_bankrupting = 24
 
 fire_lances = {
+	# needs tweaking
 	type = pikemen
 
 	damage = 26
@@ -40,13 +41,17 @@ fire_lances = {
 		heavy_cavalry = 1
 	}
 
+	can_recruit = {
+		culture ?= { has_innovation = innovation_fire_lances }
+	}
+
 	buy_cost = { gold = fire_lances_recruitment_cost }
 	low_maintenance_cost = { gold = fire_lances_low_maint_cost }
 	high_maintenance_cost = { gold = fire_lances_high_maint_cost }
 	provision_cost = @provisions_cost_infantry_moderate
 
 	stack = 100
-	icon = pikemen
+	icon = zhanmadao_infantry
 }
 
 hand_cannons = {
@@ -67,6 +72,10 @@ hand_cannons = {
 	counters = {
 		heavy_infantry = 1
 		heavy_cavalry = 1
+	}
+
+	can_recruit = {
+		culture ?= { has_innovation = innovation_hand_cannons }
 	}
 
 	buy_cost = { gold = fire_lances_recruitment_cost }

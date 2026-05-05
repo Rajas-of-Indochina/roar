@@ -502,7 +502,6 @@ darjeeling = {
 		dynasty_house_opinion = 5
 	}
 }
-
 khotang = {
 	# Represents Halesi-Maratika/Mahadev Temple Caves, a venerated pilgrimage site for Hindus, Buddhists and Kirat
 	county = c_khotang
@@ -512,7 +511,6 @@ khotang = {
 		diplomacy_per_piety_level = 1
 	}
 }
-
 paro = {
 	# Paro Valley and surrounding areas are home to many sacred sites
 	county = c_paro
@@ -535,7 +533,6 @@ goalpara = {
 		diplomacy_per_piety_level = 1
 	}
 }
-
 homalin = {
 	# Important site for Kuki and Naga people
 	county = c_homalin		# location needs an update
@@ -545,7 +542,6 @@ homalin = {
 		same_faith_opinion = 5
 	}
 }
-
 manikuta = {
 	# Manikuta Hill - seems to be an important religious site for multiple religious groups
 	county = c_kamarupanagara
@@ -557,7 +553,6 @@ manikuta = {
 		same_culture_opinion = 5
 	}
 }
-
 manipur = {
 	# Mount Koubru and other sacred areas in Manipur
 	county = c_manipur
@@ -568,7 +563,6 @@ manipur = {
 		same_culture_opinion = 5
 	}
 }
-
 srihatta = {
 	#AKA: Sylhet ; should probably be swapped for something else
 	county = c_srihatta
@@ -578,7 +572,6 @@ srihatta = {
 		monthly_piety_gain_per_happy_powerful_vassal_mult = 0.02
 	}
 }
-
 tripura = {
 	# Inhabited for a long time ; important site of Tripuri people
 	county = c_karmanta
@@ -589,7 +582,6 @@ tripura = {
 		piety_level_impact_mult = 0.5
 	}
 }
-
 unakoti = {
 	# Sculptural emblem and ancient Shaivite place that hosts rock carvings, figures and images of gods and goddesses
 	county = c_harikela
@@ -704,7 +696,6 @@ lugu_lake = {
 		monthly_lifestyle_xp_gain_mult = 0.15
 	}
 }
-
 zizipuwu = {
 	# Yi people consider Zizipuwu/Zhaotong to be their homeland
 	county = c_u_mung
@@ -730,7 +721,6 @@ ha_long = {
 		diplomacy_per_piety_level = 1
 	}
 }
-
 po_nagar = {
 	# temple dedicated to Yan Po Nagar, the goddess of Cham, identified with the Hindu goddesses Bhagavati and Harit
 	county = c_kauthara
@@ -745,44 +735,64 @@ po_nagar = {
 
 
 ### Java holy sites ###
+batuwara = {
+	county = c_salakanagara
+	barony = b_pulasari
+
+	character_modifier = {
+		name = holy_site_batuwara_effect_name
+		knight_effectiveness_mult = 0.2
+		prowess_per_piety_level = 1
+	}
+}
 lake_ranau = {
 	county = c_JAV_cimanuk
 
 	character_modifier = {
 		name = holy_site_lake_ranau_effect_name
-
-		health = 0.1
+		fertility = 0.1
 	}
 }
-
 mount_bromo = {
+	# name Bromo comes from the Javanese pronunciation of Brahma ; also there is an idol of Ganesha there
+	# been sacred site to Tenggerese people for centuries ; has a rather grim myth as a reason to why it is sacred
 	county = c_pamotan
 	barony = b_JAV_Brahma
 
 	character_modifier = {
 		name = holy_site_mount_bromo_effect_name
-		fertility = 0.2
+		learning_per_piety_level = 1
+		monthly_prestige_gain_mult = 0.1
 	}
 }
-
 semar_cave = {
+	# sacred cave located near Warna Lake, in Dieng Plateau ; name derived from a fat character from Wayang mythology
 	county = c_JAV_panaraban
 	barony = b_garung
 
 	character_modifier = {
 		name = holy_site_semar_cave_effect_name
-		learning_per_piety_level = 1
-		monthly_piety_gain_mult = 0.2
+		learning = 1
+		health = 0.1
 	}
 }
-
 slamet = {
 	county = c_nusalarang
 
 	character_modifier = {
 		name = holy_site_slamet_effect_name
 		clergy_opinion = 5
-		monthly_prestige_gain_mult = 0.1
+		monthly_piety_gain_mult = 0.1
+	}
+}
+tambora = {
+	county = c_dompo
+	barony = b_tambora
+
+	character_modifier = {
+		name = holy_site_tambora_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.1
 	}
 }
 ### ### ### ###
@@ -855,6 +865,127 @@ jangubai_cave_temple = {
 ### ### ### ###
 
 
+### ### Philippines Holy Sites ### ###
+lake_lanao = {
+	county = c_masiu
+
+	character_modifier = {
+		name = holy_site_lake_lanao_effect_name
+		men_at_arms_maintenance = -0.1
+		fertility = 0.2
+	}
+}
+### ### ### ###
+
+
+### ### Mollucas Holy Sites ### ###
+#buru-sula - in vanilla 00_holy_sites
+goa_keramat = {
+	# Keramat Cave served local populations as a spiritual site for generations - even after conversion to Islam
+	county = c_waigama
+	barony = b_matbat
+
+	character_modifier = {
+		name = holy_site_goa_keramat_effect_name
+		development_growth_factor = 0.05
+		different_faith_opinion = 10
+	}
+}
+mount_gamalama = {
+	# volcano mountain that comprises the entire Ternate island
+	county = c_SuMa_ternate
+
+	character_modifier = {
+		name = holy_site_mount_gamalama_effect_name
+		stewardship = 1
+		enemy_hostile_scheme_success_chance_add = -4
+	}
+}
+mount_kie_matubu = {
+	# volcano mountain on Tidore Island ; its forests are forbidden to outsiders to to their religious significance
+	county = c_SuMa_tidore
+
+	character_modifier = {
+		name = holy_site_mount_kie_matubu_effect_name
+		stewardship = 1
+		owned_personal_scheme_success_chance_add = 4
+	}
+}
+mount_nunusaku = {
+	# sacred mountain to people of Mollucas
+	# "(...) Nine families of mankind came forth in the beginning from Mount Nunusaku, where the people had emerged from clusters of bananas (...)"
+	county = c_masohi
+	barony = b_masohi
+
+	character_modifier = {
+		name = holy_site_mount_nunusaku_effect_name
+		monthly_prestige_gain_mult = 0.1
+		prowess_per_prestige_level = 1
+	}
+}
+### ### ### ###
+
+
+### ### PAPUA+ Holy Sites ### ###
+alor = {
+	county = c_alor
+
+	character_modifier = {
+		name = holy_site_alor_effect_name
+		different_culture_opinion = 10
+	}
+}
+biak = {
+	county = c_biak
+
+	character_modifier = {
+		name = holy_site_biak_effect_name
+		martial = 1
+		prowess_per_prestige_level = 1
+	}
+}
+#kepala_burung - in vanilla 00_holy_sites
+kombuglu = { # Mount Wilhelm
+	county = c_wahgi
+	barony = b_kundiawa
+
+	character_modifier = {
+		name = holy_site_kombuglu_effect_name
+		stewardship = 1
+		courtier_and_guest_opinion = 5
+	}
+}
+lake_boazi = {
+	county = c_boazi
+
+	character_modifier = {
+		name = holy_site_lake_boazi_effect_name
+		army_maintenance_mult = -0.05
+		stewardship = 1
+	}
+}
+mount_arfak = {
+	county = c_sougb
+	barony = b_hatam
+
+	character_modifier = {
+		name = holy_site_myitsone_effect_name
+		learning_per_piety_level = 1
+		monthly_piety_gain_mult = 0.05
+	}
+}
+#papua_selatan - in vanilla 00_holy_sites
+puncak_jaya = {
+	county = c_nemangkawi
+
+	character_modifier = {
+		name = holy_site_puncak_jaya_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+### ### ### ###
+
+
 ### RICE Holy Sites ###
 kataragama = {
 	county = c_rohana
@@ -866,7 +997,6 @@ kataragama = {
 		enemy_hostile_scheme_success_chance_add = -5
 	}
 }
-
 kinnaur = {
 	# Kinnaur Valley
 	county = c_kamru
@@ -879,8 +1009,6 @@ kinnaur = {
 		mountains_attrition_mult = -0.1
 	}
 }
-
-
 MAL_semantan = {
 	county = c_MAL_semantan # Middle of Senoi area
 
@@ -892,9 +1020,8 @@ MAL_semantan = {
 		#jungle_development_growth_factor = 0.1
 	}
 }
-
-# Area around the old seat of the legendary Hung kings, modern Phú Thọ province
 chau_phong = {
+	# Area around the old seat of the legendary Hung kings, modern Phú Thọ province
 	county = c_lam_tay
 	barony = b_chau_phong
 
@@ -902,26 +1029,6 @@ chau_phong = {
 		name = holy_site_chau_phong_effect_name
 		legitimacy_gain_mult = 0.1
 		monthly_prestige_gain_per_knight_mult = 0.01		
-	}
-}
-
-mount_gamalama = {
-	county = c_SuMa_ternate
-
-	character_modifier = {
-		name = holy_site_mount_gamalama_effect_name
-		stewardship = 1
-		enemy_hostile_scheme_success_chance_add = -4
-	}
-}
-
-mount_kie_matubu = {
-	county = c_SuMa_tidore
-
-	character_modifier = {
-		name = holy_site_mount_kie_matubu_effect_name
-		stewardship = 1
-		owned_personal_scheme_success_chance_add = 4
 	}
 }
 ### ### ### ###
