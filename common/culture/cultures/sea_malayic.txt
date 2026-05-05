@@ -221,8 +221,6 @@ mentawai = {
 	}
 }
 
-# Minangkabau - note to self, hadn't diverged from Malay as a distinct identity until the end of the game timeframe
-
 nias = {
 	color = nias
 
@@ -286,17 +284,28 @@ rejang = {
 }
 
 samawa = {
+	# AKA: Sumbawa
 	color = samawa
 
 	ethos = ethos_communal
 	heritage = heritage_malayic
-	language = language_malay
+	language = language_bali
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_horse_breeder
-		tradition_storytellers
+		tradition_horse_breeder 	# msl_note: noted as horse suppliers to other SEA people
+		tradition_storytellers  	# msl_note: very rich oral tradition of legends, tales and dances
+		tradition_mystical_ancestors 	# msl_note: tracing of family tree is done from both the male and female line
+		# msl_note: they seem to have been suppliers of valuable fragrant wood and honey - might qualify for 'tradition_RICE_tropical_purveyors'
+		# msl_note: might qualify for Ade? They seem to have rather strict societal rules
+	}
+
+ 	# msl_note: noted as rice suppliers to other SEA people
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_bima
@@ -409,28 +418,32 @@ sunda = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_equal_inheritance
-		#tradition_storytellers
-		tradition_culinary_art
-		#tradition_family_entrepreneurship
-		tradition_artisans
+		tradition_equal_inheritance 	# msl_note: had both queens and kings ruling over Sundanese realms
+		tradition_culinary_art  	# msl_note: Sundanese cuisine is one of the most famous in Indonesia, characterised by its freshness
+		tradition_artisans  	# msl_note: mostly oral tradition but rich in various forms of art ; small-scale entrepreneurship is very popular
+		#tradition_storytellers  	# msl_note: rich oral tradition combined with dances and puppet shows
+		#tradition_family_entrepreneurship  	# msl_note: small-scale entrepreneurship is very popular
 	}
 
+ 	# msl_note: this entire tradition should be re-thought
+	dlc_tradition = {
+		trait = tradition_tgp_esoteric_power
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_family_entrepreneurship
+	}
+
+ 	# msl_note: unsure if they should have this? ; potentially delete
 	dlc_tradition = {
 		trait = tradition_maritime_way_of_life
 		requires_dlc_flag = all_under_heaven
 		fallback = tradition_seafaring
 	}
 
+  	# msl_note: traditional occupation of Sundanese people is agriculture, especially rice cultivation
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
 		fallback = tradition_agrarian
-	}
-	
-	dlc_tradition = {
-		trait = tradition_tgp_esoteric_power
-		requires_dlc_flag = all_under_heaven
 	}
 
 	name_list = name_list_sunda

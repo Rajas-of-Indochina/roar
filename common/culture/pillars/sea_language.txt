@@ -370,7 +370,7 @@ language_vietnamese = {
 
 
 
-### Austronesian Family
+### Austronesian Family - Not Malayo-Polynesian
 language_amis = {
 	type = language
 	is_shown = {
@@ -625,7 +625,552 @@ language_siraya = {
 ### ### ###
 
 
-### Austronesian Family - Malayo-Polynesian - South Halmaheran
+### Austronesian Family - Malayo-Polynesian - Barito
+language_maanyan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_maanyan
+		}
+	}
+	parameters = {
+		language_group_barito = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_maanyan }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_barito }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = maanyan
+}
+
+language_ngaju = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_ngaju
+		}
+	}
+	parameters = {
+		language_group_barito = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_ngaju }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_barito }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = ngaju
+}
+
+language_sama_bajaw = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sama_bajaw
+		}
+	}
+	parameters = {
+		language_group_barito = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sama_bajaw }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_barito }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = sama
+}
+
+language_tunjung = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_tunjung
+		}
+	}
+	parameters = {
+		language_group_barito = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_tunjung }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_barito }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = tunjung
+}
+### ### ###
+
+
+### Austronesian Family - Malayo-Polynesian - Celebic + Sulawesi
+language_bugis = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_bugis
+		}
+	}
+	parameters = {
+		language_group_south_sulawesi = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_bugis }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_sulawesi }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = bugis
+}
+
+language_bungku = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_bungku
+		}
+	}
+	parameters = {
+		language_group_celebic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_bungku }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_celebic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = bungku
+}
+
+language_kaili_pamona = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_kaili_pamona
+		}
+	}
+	parameters = {
+		language_group_celebic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_kaili_pamona }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_celebic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = kaili
+}
+
+language_makassar = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_makassar
+		}
+	}
+	parameters = {
+		language_group_south_sulawesi = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_makassar }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_sulawesi }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = makassar
+}
+
+language_mandar = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_mandar
+		}
+	}
+	parameters = {
+		language_group_south_sulawesi = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_mandar }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_sulawesi }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = mandar
+}
+
+language_muna = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_muna
+		}
+	}
+	parameters = {
+		language_group_celebic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_muna }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_celebic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = muna
+}
+
+language_saluan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_saluan
+		}
+	}
+	parameters = {
+		language_group_celebic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_saluan }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_celebic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = saluan
+}
+
+language_tolaki = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_tolaki
+		}
+	}
+	parameters = {
+		language_group_celebic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_tolaki }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_celebic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = bungku
+}
+
+language_tomini = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_tomini
+		}
+	}
+	parameters = {
+		language_group_celebic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_tomini }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_celebic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = tomini
+}
+
+language_toraja = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_toraja
+		}
+	}
+	parameters = {
+		language_group_south_sulawesi = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_toraja }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_south_sulawesi }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = { 162 238 242 }
+}
+### ### ###
+
+
+### Austronesian Family - Malayo-Polynesian - Halmaheran (South)
 language_biak = {
 	type = language
 	is_shown = {
@@ -741,7 +1286,7 @@ language_waropen = {
 ### ### ###
 
 
-### Austronesian Family - Malayo-Polynesian
+### Austronesian Family - Malayo-Polynesian - Philippines
 language_ati = {
 	type = language
 	is_shown = {
@@ -776,113 +1321,6 @@ language_ati = {
 	}
 
 	color = ati
-}
-
-language_bali = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_bali
-		}
-	}
-	parameters = {
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_bali }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = bali
-}
-
-language_batak = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_batak
-		}
-	}
-	parameters = {
-		language_group_northwest_sumatra = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_batak }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_northwest_sumatra }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = batak
-}
-
-language_bidayuh = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_bidayuh
-		}
-	}
-	parameters = {
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_bidayuh }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = bidayuh
 }
 
 language_bilic = {
@@ -921,165 +1359,6 @@ language_bilic = {
 	color = bilic
 }
 
-language_bugis = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_bugis
-		}
-	}
-	parameters = {
-		language_group_south_sulawesi = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_moluccan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_bugis }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_south_sulawesi }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = bugis
-}
-
-language_bungku = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_bungku
-		}
-	}
-	parameters = {
-		language_group_celebic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_moluccan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_bungku }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_celebic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = bungku
-}
-
-language_chamorro = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_chamorro
-		}
-	}
-	parameters = {
-		language_group_chamorro = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_chamorro }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_chamorro }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = chamorro
-}
-
-language_chamic = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_chamic
-		}
-	}
-	parameters = {
-		dialect_continua_malayo_chamic = yes
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_chamic }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
-			multiply = same_language_dialect_continuum_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = cham
-}
-
 language_central_luzon = {
 	type = language
 	is_shown = {
@@ -1116,42 +1395,6 @@ language_central_luzon = {
 	color = sinauna
 }
 
-language_dusun = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_dusun
-		}
-	}
-	parameters = {
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_dusun }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = kadazan
-}
-
 language_filipino = {
 	type = language
 	is_shown = {
@@ -1186,499 +1429,6 @@ language_filipino = {
 	}
 
 	color = tawo
-}
-
-language_gayo = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_gayo
-		}
-	}
-	parameters = {
-		language_group_northwest_sumatra = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_gayo }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_northwest_sumatra }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = gayo
-}
-
-language_iban = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_iban
-		}
-	}
-	parameters = {
-		dialect_continua_malayo_chamic = yes
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_iban }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
-			multiply = same_language_dialect_continuum_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = iban
-}
-
-language_java = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_java
-		}
-	}
-	parameters = {
-		language_group_javanese = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_java }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_javanese }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = java
-}
-
-language_kaili_pamona = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_kaili_pamona
-		}
-	}
-	parameters = {
-		language_group_celebic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_moluccan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_kaili_pamona }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_celebic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = kaili
-}
-
-language_kayan = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_kayan
-		}
-	}
-	parameters = {
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_kayan }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = apo_kayan
-}
-
-language_lampung = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_lampung
-		}
-	}
-	parameters = {
-		language_group_lampungic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_lampung }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_lampungic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = lampung
-}
-
-language_maanyan = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_maanyan
-		}
-	}
-	parameters = {
-		language_group_barito = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_maanyan }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_barito }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = maanyan
-}
-
-language_makassar = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_makassar
-		}
-	}
-	parameters = {
-		language_group_south_sulawesi = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_moluccan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_makassar }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_south_sulawesi }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = makassar
-}
-
-language_malaita = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_malaita
-		}
-	}
-	parameters = {
-		language_group_oceanic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_east_papuan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_malaita }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_oceanic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_east_papuan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = malaita
-}
-
-language_malay = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_malay
-		}
-	}
-	parameters = {
-		dialect_continua_malayo_chamic = yes
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_malay }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
-			multiply = same_language_dialect_continuum_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = malay
-}
-
-language_mandar = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_mandar
-		}
-	}
-	parameters = {
-		language_group_south_sulawesi = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_mandar }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_south_sulawesi }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = mandar
-}
-
-language_manus = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_manus
-		}
-	}
-	parameters = {
-		language_group_oceanic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_manus }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_oceanic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = manus
-}
-
-language_micronesian = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_micronesian
-		}
-	}
-	parameters = {
-		language_group_oceanic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_micronesian }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_oceanic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = chamorro
 }
 
 language_minahasa = {
@@ -1722,15 +1472,15 @@ language_minahasa = {
 	color = minahasa
 }
 
-language_moklen = {
+language_northern_luzon = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_moklen
+			LANGUAGE = language_northern_luzon
 		}
 	}
 	parameters = {
-		language_group_greater_north_borneo = yes
+		language_group_philippine = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -1738,11 +1488,11 @@ language_moklen = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_moklen }
+			limit = { has_cultural_pillar = language_northern_luzon }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			limit = { has_cultural_parameter = language_group_philippine }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -1755,18 +1505,57 @@ language_moklen = {
 		}
 	}
 
-	color = moklen
+	color = idaya
+}
+### ### ###
+
+
+### Austronesian Family - Malayo-Polynesian - Other
+language_batak = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_batak
+		}
+	}
+	parameters = {
+		language_group_northwest_sumatra = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_batak }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_northwest_sumatra }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = batak
 }
 
-language_motu = {
+language_chamorro = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_motu
+			LANGUAGE = language_chamorro
 		}
 	}
 	parameters = {
-		language_group_oceanic = yes
+		language_group_chamorro = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -1774,11 +1563,11 @@ language_motu = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_motu }
+			limit = { has_cultural_pillar = language_chamorro }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_oceanic }
+			limit = { has_cultural_parameter = language_group_chamorro }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -1791,31 +1580,30 @@ language_motu = {
 		}
 	}
 
-	color = motu
+	color = chamorro
 }
 
-language_muna = {
+language_gayo = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_muna
+			LANGUAGE = language_gayo
 		}
 	}
 	parameters = {
-		language_group_celebic = yes
+		language_group_northwest_sumatra = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
-		language_union_moluccan = yes
 	}
 
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_muna }
+			limit = { has_cultural_pillar = language_gayo }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_celebic }
+			limit = { has_cultural_parameter = language_group_northwest_sumatra }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -1826,24 +1614,20 @@ language_muna = {
 			limit = { has_cultural_parameter = language_family_austronesian }
 			multiply = same_language_family_choice_factor
 		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
 	}
 
-	color = muna
+	color = gayo
 }
 
-language_murut = {
+language_java = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_murut
+			LANGUAGE = language_java
 		}
 	}
 	parameters = {
-		language_group_greater_north_borneo = yes
+		language_group_javanese = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -1851,11 +1635,11 @@ language_murut = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_murut }
+			limit = { has_cultural_pillar = language_java }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			limit = { has_cultural_parameter = language_group_javanese }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -1868,7 +1652,43 @@ language_murut = {
 		}
 	}
 
-	color = murut
+	color = java
+}
+
+language_lampung = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_lampung
+		}
+	}
+	parameters = {
+		language_group_lampungic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_lampung }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_lampungic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = lampung
 }
 
 language_nias_mentawai = {
@@ -1906,83 +1726,6 @@ language_nias_mentawai = {
 	}
 
 	color = mentawai
-}
-
-language_ngaju = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_ngaju
-		}
-	}
-	parameters = {
-		language_group_barito = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_ngaju }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_barito }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = ngaju
-}
-
-language_ngero = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_ngero
-		}
-	}
-	parameters = {
-		language_group_oceanic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_east_papuan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_ngero }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_oceanic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_east_papuan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = ngero
 }
 
 language_nunusaku = {
@@ -2026,42 +1769,6 @@ language_nunusaku = {
 	color = nunusaku
 }
 
-language_northern_luzon = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_northern_luzon
-		}
-	}
-	parameters = {
-		language_group_philippine = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_northern_luzon }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_philippine }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = idaya
-}
-
 language_palauan = {
 	type = language
 	is_shown = {
@@ -2096,156 +1803,6 @@ language_palauan = {
 	}
 
 	color = palauan
-}
-
-language_rejang = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_rejang
-		}
-	}
-	parameters = {
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_rejang }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = rejang
-}
-
-language_saluan = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_saluan
-		}
-	}
-	parameters = {
-		language_group_celebic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-		language_union_moluccan = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_saluan }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_celebic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
-			multiply = same_language_union_choice_factor
-		}
-	}
-
-	color = saluan
-}
-
-language_sama_bajaw = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_sama_bajaw
-		}
-	}
-	parameters = {
-		language_group_barito = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_sama_bajaw }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_barito }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = sama
-}
-
-
-language_suau = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_suau
-		}
-	}
-	parameters = {
-		language_group_oceanic = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_suau }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_oceanic }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = suau
 }
 
 language_sumba = {
@@ -2320,42 +1877,6 @@ language_sula_taliabu = {
 	color = sula_taliabu
 }
 
-language_sunda = {
-	type = language
-	is_shown = {
-		language_is_shown_trigger = {
-			LANGUAGE = language_sunda
-		}
-	}
-	parameters = {
-		language_group_greater_north_borneo = yes
-		language_branch_malayo_polynesian = yes
-		language_family_austronesian = yes
-	}
-
-	ai_will_do = {
-		value = 10
-		if = {
-			limit = { has_cultural_pillar = language_sunda }
-			multiply = same_language_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_group_greater_north_borneo }
-			multiply = same_language_group_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
-			multiply = same_language_branch_choice_factor
-		}
-		else_if = {
-			limit = { has_cultural_parameter = language_family_austronesian }
-			multiply = same_language_family_choice_factor
-		}
-	}
-
-	color = sunda
-}
-
 language_timor = {
 	type = language
 	is_shown = {
@@ -2396,29 +1917,452 @@ language_timor = {
 
 	color = timor
 }
+### ### ###
 
-language_tolaki = {
+
+### Austronesian Family - Malayo-Polynesian - Greater North Borneo Branch
+language_bali = {
+	# used to represent entire Bali–Sasak–Sumbawa group
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_tolaki
+			LANGUAGE = language_bali
 		}
 	}
 	parameters = {
-		language_group_celebic = yes
+		dialect_continua_malayo_chamic = yes
+		language_group_greater_north_borneo = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
-		language_union_moluccan = yes
 	}
 
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_tolaki }
+			limit = { has_cultural_pillar = language_bali }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_celebic }
+			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = bali
+}
+
+language_bidayuh = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_bidayuh
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_bidayuh }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = bidayuh
+}
+
+language_chamic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_chamic
+		}
+	}
+	parameters = {
+		dialect_continua_malayo_chamic = yes
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_chamic }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = cham
+}
+
+language_dusun = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_dusun
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_dusun }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = kadazan
+}
+
+language_iban = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_iban
+		}
+	}
+	parameters = {
+		dialect_continua_malayo_chamic = yes
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_iban }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = iban
+}
+
+language_kayan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_kayan
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_kayan }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = apo_kayan
+}
+
+language_malay = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_malay
+		}
+	}
+	parameters = {
+		dialect_continua_malayo_chamic = yes
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_malay }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_malayo_chamic }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = malay
+}
+
+language_moklen = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_moklen
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_moklen }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = moklen
+}
+
+language_murut = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_murut
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_murut }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = murut
+}
+
+language_rejang = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_rejang
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_rejang }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = rejang
+}
+
+language_sunda = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_sunda
+		}
+	}
+	parameters = {
+		language_group_greater_north_borneo = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_sunda }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_greater_north_borneo }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = sunda
+}
+### ### ###
+
+
+### Austronesian Family - Malayo-Polynesian - Oceanic
+language_malaita = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_malaita
+		}
+	}
+	parameters = {
+		language_group_oceanic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_east_papuan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_malaita }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_oceanic }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -2430,23 +2374,23 @@ language_tolaki = {
 			multiply = same_language_family_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_union_moluccan }
+			limit = { has_cultural_parameter = language_union_east_papuan }
 			multiply = same_language_union_choice_factor
 		}
 	}
 
-	color = bungku
+	color = malaita
 }
 
-language_tomini = {
+language_manus = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_tomini
+			LANGUAGE = language_manus
 		}
 	}
 	parameters = {
-		language_group_celebic = yes
+		language_group_oceanic = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -2454,11 +2398,11 @@ language_tomini = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_tomini }
+			limit = { has_cultural_pillar = language_manus }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_celebic }
+			limit = { has_cultural_parameter = language_group_oceanic }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -2471,18 +2415,18 @@ language_tomini = {
 		}
 	}
 
-	color = tomini
+	color = manus
 }
 
-language_toraja = {
+language_micronesian = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_toraja
+			LANGUAGE = language_micronesian
 		}
 	}
 	parameters = {
-		language_group_south_sulawesi = yes
+		language_group_oceanic = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -2490,11 +2434,11 @@ language_toraja = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_toraja }
+			limit = { has_cultural_pillar = language_micronesian }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_south_sulawesi }
+			limit = { has_cultural_parameter = language_group_oceanic }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -2507,18 +2451,18 @@ language_toraja = {
 		}
 	}
 
-	color = { 162 238 242 }
+	color = chamorro
 }
 
-language_tunjung = {
+language_motu = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_tunjung
+			LANGUAGE = language_motu
 		}
 	}
 	parameters = {
-		language_group_barito = yes
+		language_group_oceanic = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
 	}
@@ -2526,11 +2470,11 @@ language_tunjung = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_tunjung }
+			limit = { has_cultural_pillar = language_motu }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_group_barito }
+			limit = { has_cultural_parameter = language_group_oceanic }
 			multiply = same_language_group_choice_factor
 		}
 		else_if = {
@@ -2543,7 +2487,84 @@ language_tunjung = {
 		}
 	}
 
-	color = tunjung
+	color = motu
+}
+
+language_ngero = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_ngero
+		}
+	}
+	parameters = {
+		language_group_oceanic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_east_papuan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_ngero }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_oceanic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_east_papuan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = ngero
+}
+
+language_suau = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_suau
+		}
+	}
+	parameters = {
+		language_group_oceanic = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_suau }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_oceanic }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = suau
 }
 
 language_uneapa = {
@@ -2659,6 +2680,7 @@ language_yap = {
 
 	color = yap
 }
+### ### ###
 
 
 
