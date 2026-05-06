@@ -421,6 +421,7 @@ sunda = {
 		tradition_equal_inheritance 	# msl_note: had both queens and kings ruling over Sundanese realms
 		tradition_culinary_art  	# msl_note: Sundanese cuisine is one of the most famous in Indonesia, characterised by its freshness
 		tradition_artisans  	# msl_note: mostly oral tradition but rich in various forms of art ; small-scale entrepreneurship is very popular
+		tradition_maritime_mercantilism  	# msl_note: Sunda cities played crucial role in spice trade of SEA
 		#tradition_storytellers  	# msl_note: rich oral tradition combined with dances and puppet shows
 		#tradition_family_entrepreneurship  	# msl_note: small-scale entrepreneurship is very popular
 	}
@@ -432,12 +433,7 @@ sunda = {
 		fallback = tradition_family_entrepreneurship
 	}
 
- 	# msl_note: unsure if they should have this? ; potentially delete
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
-	}
+ 	# msl_note: tradition_maritime_way_of_life and tradition_seafaring are not really match well with how Sunda kingdoms worked
 
   	# msl_note: traditional occupation of Sundanese people is agriculture, especially rice cultivation
 	dlc_tradition = {
