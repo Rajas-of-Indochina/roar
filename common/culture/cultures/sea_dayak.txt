@@ -276,7 +276,7 @@ tunjung = {
 		# msl_note: traditionally lived in longhouse communities
 	}
 
-	# msl_note: farming plays crucial part to their livelihood ; unsure if this one fits though
+	# msl_note: farming rice plays crucial part to their livelihood
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
@@ -332,6 +332,14 @@ kutai = {
 		requires_dlc_flag = hybridize_culture
 		fallback = tradition_xenophilic
 	}
+
+	# msl_note: to represent their bigger settlements on the coast and Malay influences
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_jungle_dwellers
+	}
+
 
 	name_list = name_list_dayak
 
