@@ -81134,7 +81134,7 @@ e_kalimantan = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
 
-	#capital = 
+	capital = c_BOR_banjar
 
 	k_barune = {
 		color = { 0 104 138 }
@@ -82267,7 +82267,7 @@ e_suvarnabhumi = {
 	# e_burma in old RoA
 	color = { 227 108 3 }
 
-	#capital =
+	capital = c_pagan
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
@@ -82736,8 +82736,12 @@ e_suvarnabhumi = {
 	k_tagaung = {
 		color = { 204 67 190 }
 
+		capital = c_takon
+
 		d_tagaung = {
 			color = { 204 67 190 }
+
+			capital = c_takon
 
 			c_takon = {
 				color = { 204 67 190 }
@@ -82747,20 +82751,17 @@ e_suvarnabhumi = {
 
 					color = { 204 67 190 }
 				}
-
 				b_kawlin = {
 					province = 9645
 
 					color = { 204 67 190 }
 				}
-
 				b_pinlebu = {
 					province = 15704
 
 					color = { 204 67 190 }
 				}
 			}
-
 			c_myataung = {
 				color = { 118 16 153 }
 
@@ -82769,20 +82770,17 @@ e_suvarnabhumi = {
 
 					color = { 118 16 153 }
 				}
-
 				b_myataung = {
 					province = 15687
 
 					color = { 118 16 153 }
 				}
-
 				b_indaw = {
 					province = 15849
 
 					color = { 118 16 153 }
 				}
 			}
-
 			c_homalin = {
 				color = { 144 69 184 }
 
@@ -82792,7 +82790,6 @@ e_suvarnabhumi = {
 					color = { 144 69 184 }
 				}
 			}
-
 			c_maukkadaw = {
 				color = { 144 47 180 }
 
@@ -82801,7 +82798,6 @@ e_suvarnabhumi = {
 
 					color = { 144 47 180 }
 				}
-
 				b_paungbyin = {
 					province = 15667
 
@@ -83274,6 +83270,8 @@ e_suvarnabhumi = {
 	k_thaton = {
 		color = { 76 40 181 }
 
+		capital = c_thaton
+
 		ai_primary_priority = {
 			if = {
 				limit = {
@@ -83293,6 +83291,8 @@ e_suvarnabhumi = {
 		d_thaton = {
 			color = { 76 40 181 }
 
+			capital = c_thaton
+
 			cultural_names = {
 				name_list_mon = cn_sadhuim
 				name_list_tai = cn_suthamwadee
@@ -83302,6 +83302,13 @@ e_suvarnabhumi = {
 
 			c_thaton = {
 				color = { 76 40 181 }
+
+				cultural_names = {
+					name_list_mon = cn_sadhuim
+					name_list_tai = cn_suthamnakhon
+					name_list_siamese = cn_suthamnakhon
+					name_list_shan = cn_suthamnakhon
+				}
 
 				b_thaton = {
 					province = 9627
@@ -83315,7 +83322,6 @@ e_suvarnabhumi = {
 						name_list_shan = cn_suthamnakhon
 					}
 				}
-
 				b_donwun = {
 					province = 9630
 
@@ -83325,26 +83331,22 @@ e_suvarnabhumi = {
 						name_list_burmese = cn_kyaikhto
 					}
 				}
-
 				b_taikkala = {
 					province = 15572
 
 					color = { 76 40 181 }
 				}
-
 				b_bikalaeng = {
 					province = 15648
 
 					color = { 76 40 181 }
 				}
-
 				b_yan_tamim = {
 					province = 15367
 
 					color = { 76 40 181 }
 				}
 			}
-
 			c_mawlamyine = {
 				color = { 113 82 177 }
 
@@ -83366,7 +83368,6 @@ e_suvarnabhumi = {
 						name_list_shan = cn_mortama
 					}
 				}
-
 				b_mawlamyine = {
 					province = 9629
 
@@ -83379,13 +83380,11 @@ e_suvarnabhumi = {
 						name_list_shan = cn_morlumlerng
 					}
 				}
-
 				b_mudeung = {
 					province = 17468
 
 					color = { 56 20 181 }
 				}
-
 				b_kyaikkami = {
 					province = 17421
 
@@ -83396,7 +83395,6 @@ e_suvarnabhumi = {
 					}
 				}
 			}
-
 			c_hpa_an = {
 				color = { 164 66 245 }
 
@@ -83409,20 +83407,17 @@ e_suvarnabhumi = {
 						name_list_mon = cn_duwop
 					}
 				}
-
 				b_hlaingbwe = {
 					province = 15549
 
 					color = { 164 66 245 }
 				}
-
 				b_to_kaw_to = {
 					province = 15378
 
 					color = { 164 66 245 }
 				}
 			}
-
 			c_hpapun = {
 				color = { 145 66 244 }
 
@@ -83439,7 +83434,6 @@ e_suvarnabhumi = {
 						name_list_mon = cn_bu_tho
 					}
 				}
-
 				b_kamamaung = {
 					province = 15764
 
@@ -85053,6 +85047,8 @@ e_suvarnabhumi = {
 	k_haripunjaya = {
 		color = { 40 115 138 }
 
+		capital = c_haripunjaya
+
 		cultural_names = {
 			name_list_mon = cn_haripunchai
 			name_list_lanna = cn_lanna
@@ -85063,6 +85059,8 @@ e_suvarnabhumi = {
 
 		d_haripunjaya = {
 			color = { 31 60 147 }
+
+			capital = c_haripunjaya
 
 			cultural_names = {
 				name_list_mon = cn_haripunchai
@@ -85977,15 +85975,19 @@ e_suvarnabhumi = {
 
 e_kambuja = {
 	color = { 41 69 238 }
+
 	capital = c_angkor
 
 	k_funan = { #Kingdom of Angkor
 		color = { 0 50 150 }
+
 		capital = c_angkor
 
 		d_angkor = {
 			# d_aninditapura in old RoA
 			color = { 0 39 160 }
+
+			capital = c_angkor
 
 			c_angkor = {
 				# c_aninditapura in old RoA
@@ -89209,11 +89211,15 @@ e_iri-an = {
 		}
 	}
 }
+
 e_panyupayana = {
+	color = { 255 255 79 }
+
+	#capital = 
+
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
-	color = { 255 255 79 }
 
 	k_lusung = {	#Luzon
 		color = { 63 117 138 }
@@ -90699,6 +90705,8 @@ e_panyupayana = {
 
 e_nusantara = {
 	color = { 107 160 60 }
+
+	capital = c_SuMa_luwu #placeholder
 
 	k_sulawesi = {
 		color = { 88 207 70 }
@@ -101618,7 +101626,6 @@ h_china = {
 		capital = c_jingzhao
 	}
 }
-
 
 e_goryeo = {
 	color = { 220 205 250 }
