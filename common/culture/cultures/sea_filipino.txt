@@ -1,4 +1,38 @@
-﻿
+﻿## In alphabetical order ##
+
+buranun = {
+	# represents Buranun, Tagimaha and Baklaya - indigenous people of Sulu archipelago
+	color = buranun
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_filipino
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_fishermen 			# msl_note: to represent the coastal populations
+		tradition_culture_blending 		# msl_note: to represent their future assimilation into Tausug population
+		tradition_religion_blending 	# msl_note: to represent their future conversion to Islam under Sulu Sultanate
+		tradition_quarrelsome 			# msl_note: to represent their conflicts with Orang Dampuan Chams and other later arrivals to the archipelago
+	}
+
+	# msl_note: tradition_seafaring/tradition_maritime_way_of_life was removed for Buranun as it was more so Tausug who established Sulu Sultanate
+
+	name_list = name_list_filipino
+
+	coa_gfx = { sulu_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { mindanaoan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
+## Files To Sort
 tawo = {
 	color = tawo
 
@@ -10,9 +44,9 @@ tawo = {
 
 	name_list = name_list_tawo
 
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { visayan_clothing_gfx southeast_asian_clothing_gfx }
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { visayan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -20,33 +54,6 @@ tawo = {
 		tradition_seafaring
 		tradition_mystical_ancestors
 		tradition_migratory
-		tradition_SEA_jungle_warfare
-	}
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
-buranun = {
-	color = buranun
-
-	ethos = ethos_bellicose
-	heritage = heritage_filipino
-	language = language_filipino
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	name_list = name_list_filipino
-
-	coa_gfx = { sulu_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { mindanaoan_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	traditions = {
-		tradition_culture_blending
-		tradition_seafaring
 		tradition_SEA_jungle_warfare
 	}
 
@@ -66,9 +73,9 @@ sinauna = {
 
 	name_list = name_list_filipino
 
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -94,9 +101,9 @@ danao = {
 
 	name_list = name_list_danao
 
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { mindanaoan_clothing_gfx southeast_asian_clothing_gfx }
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { mindanaoan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -122,9 +129,9 @@ palawan = {
 
 	name_list = name_list_filipino
 
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { tagalog_clothing_gfx southeast_asian_clothing_gfx }
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { tagalog_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -150,9 +157,9 @@ idaya = {
 
 	name_list = name_list_idaya
 
-	coa_gfx = { ifugao_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx southeast_asian_clothing_gfx }
+	coa_gfx = { ifugao_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -189,8 +196,8 @@ aeta = {
 	name_list = name_list_filipino
 
 	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -220,8 +227,8 @@ ati = {
 	name_list = name_list_filipino
 
 	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -250,8 +257,8 @@ manobo = {
 	name_list = name_list_manobo
 
 	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -279,8 +286,8 @@ bilic = {
 	name_list = name_list_filipino
 
 	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -309,8 +316,8 @@ subanen = {
 	name_list = name_list_filipino
 
 	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
@@ -339,8 +346,8 @@ mansaka = {
 	name_list = name_list_filipino
 
 	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { indian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 
 	traditions = {
