@@ -377,6 +377,118 @@ d_zayidi = {
 	# (...)
 }
 
+e_mongol_empire = {
+	20.1.1 = {
+	}
+	1206.1.1 = {
+		holder = 125501
+	}
+	1227.12.2 = {
+		holder = 0
+	}
+}
+
+e_great_liao = {
+	916.1.1 = {
+		effect = {
+			# Linhuang Shangji
+			set_capital_county = title:c_LIAO_linhuang
+		}
+		government = steppe_admin_government
+		holder = 194325	#TAIZU aka Yelü Abaoji
+	}
+	926.9.6 = {
+		holder = 194326	#TAIZONG aka Yelü Deguang
+	}
+	947.5.15 = {
+		holder = 194328	#SHIZONG aka Yelü Ruan
+	}
+	951.10.7 = {
+		holder = 194329	#MUZONG aka Yelü Jing
+	}
+	969.3.12 = {
+		holder = 194330	#JINGZONG aka Yelü Xian
+	}
+	982.10.13 = {
+		holder = 194331	#SHENGZONG aka Yelü Longxu
+	}
+	1031.6.25 = {
+		holder = 194332	#XINGZONG aka Yelü Zongzhen
+	}
+	1055.8.28 = {
+		holder = 194333	#DAOZONG aka Yelü Hongji
+	}
+	1101.2.12 = {
+		holder = 194334	#SHIZONG aka Yelü Ruan
+	}
+	1125.3.26 = {
+		holder = 0
+	}
+}
+
+e_jin = {
+	#JIN dynasty = Jurchen Jin
+	1115.1.1 = {
+		holder = jurchen_wanyan_8	#TAIZU aka Wanyan Aguda
+	}
+	1123.9.19 = {
+		holder = jurchen_wanyan_33	#TAIZONG aka Wanyan Wuqimai
+	}
+	1135.2.9 = {
+		holder = jurchen_wanyan_12	#XIZONG aka Wanyan Hela
+	}
+	1150.1.9 = {
+		holder = jurchen_wanyan_13	#Wanyan Digunai
+	}
+	1161.12.15 = {
+		holder = jurchen_wanyan_14	#SHIZONG aka Wanyan Wulu
+		government = steppe_admin_government
+	}
+}
+
+e_kara_khitai = {
+	1124.1.1 = {
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+		government = steppe_admin_government
+	}
+	
+	#1134 Kara Khitais capture Balashagun and make it capital
+	#1137 Kara Khitais vassalize/capture eastern Karakhanid khaganate
+	#1141 Kara Khitais vassalize/capture western Karakhanid khaganate
+	
+	1143.1.1 = {
+		holder = 188907	#Yelü-Yilie = Emperor Renzong
+	}
+	1178.1.1 = {
+		holder = 188912	#Yelü Zhilugu
+		effect = {
+			# Balashagun
+			set_capital_county = title:c_balashagun
+			if = {
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = {
+					set_court_language = language_chinese
+					if = {
+						limit = { NOT = { knows_court_language_of = this } }
+						learn_court_language_of = this
+					}
+				}
+			}
+		}
+	}
+	1211.1.1 = {
+		holder = 188914	#Kuchlug
+	}
+	
+	#Mongols
+	1218.1.1 = {
+		holder = 0
+	}
+}
+
 k_pechenegs = {
 	#Pechenegs in the Pontic Steppe
 	901.1.1 = {
