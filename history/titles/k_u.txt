@@ -2,7 +2,7 @@ k_u = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
 	1178.1.1 = { change_development_level = 24 }
-	
+
 	#Yarlung Kingdom
 	579.1.1={
 		holder = 247072
@@ -237,9 +237,8 @@ d_yarlung = {
 		holder = 247267
 	}
 	#Phagmodrupa Kingdom established
-	1349.1.1={
+	1354.1.1={
 		liege = "k_u"
-		holder = 247267
 	}
 }
 
@@ -248,7 +247,7 @@ c_zetang = {
 	#Yarlung Kingdom
 
 	42.1.1={
-		liege = "k_u"
+		liege = "d_yarlung"
 		holder = 247051
 	}
 	51.1.1={
@@ -446,7 +445,7 @@ c_nagarze = {
 	#Yarlung Kingdom
 
 	42.1.1={
-		liege = "k_u"
+		liege = "d_yarlung"
 		holder = 247051
 	}
 	51.1.1={
@@ -744,7 +743,7 @@ c_comai = {
 #	#Yarlung Kingdom
 #
 #	42.1.1={
-#		liege = "k_u"
+#		liege = "d_yarlung"
 #		holder = 247051
 #	}
 #	51.1.1={
@@ -1981,9 +1980,9 @@ c_damxung = {
 
 d_nagchu = {
 	#Sumpa Kingdom (c.200 - 755)
-	200.1.1={
-		#liege = "k_sumpa"
-	}
+	# 200.1.1={
+	#	liege = "k_sumpa"
+	# }
 	#Nakchu vassals - fictional placeholders
 	740.1.1={
 		holder = 305542
@@ -2096,12 +2095,11 @@ d_nagchu = {
 
 c_nagchu = {
 	#Sumpa Kingdom (c.200 - 755)
-	200.1.1={
-		liege = "d_nagchu"
-	}
+	# 200.1.1
 	#Nakchu vassals - fictional placeholders
 	740.1.1={
 		holder = 305542
+		liege = "d_nagchu"
 	}
 	800.1.1={
 		holder = 305513
@@ -2195,9 +2193,7 @@ c_nagchu = {
 
 c_baingoin = {
 	#Sumpa Kingdom (c.200 - 755)
-	200.1.1={
-		liege = "d_nagchu"
-	}
+	# 200.1.1
 	615.1.1={
 		holder = 305546
 	}
@@ -2212,6 +2208,7 @@ c_baingoin = {
 	}
 	740.1.1={
 		holder = 247341
+		liege = "d_nagchu"
 	}
 	#Last King Assassinated by the Tibetans, son fled to China
 	#Tong vassals under Tibetan ruler - fictional placeholders
@@ -2316,12 +2313,11 @@ c_baingoin = {
 
 c_lhari = {
 	#Sumpa Kingdom (c.200 - 755)
-	200.1.1={
-		liege = "d_nagchu"
-	}
+	# 200.1.1
 	#Nakchu vassals - fictional placeholders
 	740.1.1={
 		holder = 305542
+		liege = "d_nagchu"
 	}
 	800.1.1={
 		holder = 305513
@@ -2530,12 +2526,11 @@ d_conyi = {
 
 c_cozhelhoma = {
 	#Zhangzhung Kingdom conquered by Tibetan Empire
-	625.1.1={
-		liege = "d_conyi"
-	}
+	# 625.1.1
 	#Tong nomads (Conyi) - fictional placeholders (placeholder female dominated tribe)
 	755.1.1={
 		holder = 242405
+		liege = "d_conyi"
 	}
 	800.1.1={
 		holder = 305610
@@ -2750,12 +2745,11 @@ c_cozhelhoma = {
 
 c_garco = {
 	#Sumpa Kingdom (c.200 - 755)
-	200.1.1={
-		liege = "d_nagchu"
-	}
+	# 200.1.1
 	#Pelgon vassals (Garco) - fictional placeholders
 	740.1.1={
 		holder = 305580
+		liege = "d_nagchu"
 	}
 	800.1.1={
 		holder = 305581
