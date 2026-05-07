@@ -16,31 +16,38 @@
     11054 = { # b_nahalin
         holding = none
     }
-    11055 = { # b_sialo
+    11055 = { # Siaro AKA Sialo
         holding = none
     }
 
-##d_panay
-#c_oton
-    15811 = { # b_oton
-        culture = tawo
-        religion = dayaw
 
-        holding = tribal_holding
+## d_panay
+### c_oton
+15811 = { # b_oton
+	culture = tawo
+	religion = dayaw
 
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    15684 = { # b_tigbawan
-        holding = none
-    }
-    11063 = { # b_hantik
-        holding = none
-    }
-    11061 = { # b_himal_os
-        holding = none
-    }
+	holding = tribal_holding
+	special_building_slot = generic_university
+
+	# History
+	1050.1.1 = { #Bothoan Oral "Community Academy"
+		special_building = generic_university
+	}
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+15684 = { # b_tigbawan
+	holding = none
+}
+11063 = { # Hamtik
+	holding = none
+}
+11061 = { # Himal-os
+	holding = none
+}
+
 #c_akean
     16015 = { # b_batan
         culture = ati
@@ -53,7 +60,7 @@
             religion = dayaw
         }
     }
-    11064 = { # b_akean
+    11064 = { # Akean
         holding = none
     }
     11036 = { # b_lomlom
@@ -89,7 +96,7 @@
 		holding = none
 	}
 #c_binalbagan
-    15420 = { # b_binalbagan
+    15420 = { # Binalbagan
         culture = ati
         religion = malyari
 
@@ -98,7 +105,7 @@
     11060 = { # b_magsungay
         holding = none
     }
-    11058 = { # b_ilog
+    11058 = { # Ilog
         holding = none
     }
 #c_diyolongan
@@ -130,7 +137,7 @@
             religion = dayaw
         }
     }
-    11053 = { # b_bo_ol
+    11053 = { # b_PHI_Bool
         holding = none
     }
 

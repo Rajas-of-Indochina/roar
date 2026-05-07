@@ -1547,6 +1547,47 @@ language_batak = {
 	color = batak
 }
 
+language_bima = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_bima
+		}
+	}
+	parameters = {
+		language_group_bima = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_bima }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_bima }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = bima
+}
+
 language_chamorro = {
 	type = language
 	is_shown = {
@@ -1816,6 +1857,7 @@ language_sumba = {
 		language_group_sumba_flores = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
+		language_union_moluccan = yes
 	}
 
 	ai_will_do = {
@@ -1835,6 +1877,10 @@ language_sumba = {
 		else_if = {
 			limit = { has_cultural_parameter = language_family_austronesian }
 			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
 		}
 	}
 
@@ -3803,7 +3849,7 @@ language_abui = {
 		}
 	}
 	parameters = {
-		language_branch_timor = yes
+		language_branch_timor_alor_pantar = yes
 		language_family_trans_new_guinea = yes
 		language_union_moluccan = yes
 	}
@@ -3815,7 +3861,7 @@ language_abui = {
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_branch_timor }
+			limit = { has_cultural_parameter = language_branch_timor_alor_pantar }
 			multiply = same_language_branch_choice_factor
 		}
 		else_if = {
@@ -3969,7 +4015,7 @@ language_makasae = {
 		}
 	}
 	parameters = {
-		language_branch_timor = yes
+		language_branch_timor_alor_pantar = yes
 		language_family_trans_new_guinea = yes
 		language_union_moluccan = yes
 	}
@@ -3981,7 +4027,7 @@ language_makasae = {
 			multiply = same_language_choice_factor
 		}
 		else_if = {
-			limit = { has_cultural_parameter = language_branch_timor }
+			limit = { has_cultural_parameter = language_branch_timor_alor_pantar }
 			multiply = same_language_branch_choice_factor
 		}
 		else_if = {
