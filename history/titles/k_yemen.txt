@@ -32,9 +32,9 @@ d_sanaa = {
 	1066.1.1 = { change_development_level = 12 }
 	1178.1.1 = { change_development_level = 17 }
 
-	630.1.1 = {
-		liege = e_arabia
-	}
+	# 630.1.1 = {
+	#	liege = e_arabia
+	# }
 	#
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
@@ -157,13 +157,10 @@ c_sanaa = {
 	867.1.1 = {	change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
 	1178.1.1 = { change_development_level = 20 }
-	
-	630.1.1 = {
-		liege = "d_sanaa"
-	}
-	#
+
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
+		liege = "d_sanaa"
 	}
 	#
 	847.1.1 = {
@@ -354,18 +351,15 @@ c_tihamat-al-yamani = {
 }
 
 c_najran = {
-	630.1.1 = {
-		liege = "d_sanaa"
-		government = tribal_government
-	}
-	#
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
+		liege = "d_sanaa"
 	}
 	# Harb
 	847.1.1 = {
 		holder = bedouin0085
 		liege = d_jawf-al-yamani
+		government = tribal_government
 	}
 	866.1.1 = {
 		holder = bedouin0086
@@ -470,10 +464,6 @@ c_najran = {
 }
 
 c_zabid = {
-	630.1.1 = {
-		liege = "d_sanaa"
-	}
-	#
 	768.1.1 = {
 		holder = 188742
 	}
@@ -583,13 +573,10 @@ d_jawf-al-yamani = {
 }
 
 c_jawf-al-yamani = {
-	630.1.1 = {
-		liege = "d_sanaa"
-		government = tribal_government
-	}
-	#
 	768.1.1 = {
 		holder = 188743
+		liege = "d_sanaa"
+		government = tribal_government
 	}
 	# Harb
 	847.1.1 = {
@@ -671,18 +658,15 @@ c_jawf-al-yamani = {
 }
 
 c_wabar = {
-	630.1.1 = {
-		liege = "d_sanaa"
-		government = tribal_government
-	}
-	#
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
+		liege = "d_sanaa"
 	}
 	#
 	847.1.1 = {
 		liege = d_jawf-al-yamani
 		holder = bedouin0085
+		government = tribal_government
 	}
 	866.1.1 = {
 		holder = bedouin0086
@@ -887,12 +871,9 @@ c_taizz = {
 }
 
 c_mandab = {
-	630.1.1 = {
-		liege = "d_sanaa"
-	}
-	#
 	760.1.1 = {
 		holder = 188744
+		liege = "d_sanaa"
 	}
 	#
 	818.1.1 = {
@@ -984,12 +965,9 @@ c_mandab = {
 }
 
 c_dathina = {
-	630.1.1 = {
-		liege = "d_sanaa"
-	}
-	#
 	768.1.1 = {
 		holder = 188743
+		liege = "d_sanaa"
 	}
 	#
 	818.1.1 = {
@@ -1074,13 +1052,10 @@ c_dathina = {
 
 # d_hadramawt
 c_hadramawt = {
-	630.1.1 = {
-		liege = "d_sanaa"
-		government = tribal_government
-	}
-	#
 	765.1.1 = {
 		holder = 188732 # Yufirids
+		liege = "d_sanaa"
+		government = tribal_government
 	}
 	800.1.1 = {
 		holder = 188733 # Yufirids
@@ -1164,13 +1139,10 @@ c_hadramawt = {
 }
 
 c_ahqaf = {
-	630.1.1 = {
-		liege = "d_sanaa"
-		government = tribal_government
-	}
-	#
 	765.1.1 = {
 		holder = 188732 # Yufirids
+		liege = "d_sanaa"
+		government = tribal_government
 	}
 	800.1.1 = {
 		holder = 188733 # Yufirids
@@ -1257,13 +1229,10 @@ c_kinda_sakun = {
 	# c_kathiri
 	1178.1.1 = { change_development_level = 12 }
 
-	630.1.1 = {
-		liege = "d_sanaa"
-		government = tribal_government
-	}
-	#
 	765.1.1 = {
 		holder = 188732 # Yufirids
+		liege = "d_sanaa"
+		government = tribal_government
 	}
 	800.1.1 = {
 		holder = 188733 # Yufirids
@@ -1346,13 +1315,10 @@ c_kinda_sakun = {
 
 # d_mahra
 c_mahra = {
-	630.1.1 = {
-		liege = d_sanaa
-		government = tribal_government
-	}
-	#
 	768.1.1 = {
 		holder = 188745
+		liege = d_sanaa
+		government = tribal_government
 	}
 	866.1.1 = {
 		liege = 0
@@ -1401,13 +1367,10 @@ c_mahra = {
 }
 
 c_al-asa = {
-	630.1.1 = {
-		liege = d_sanaa
-		government = tribal_government
-	}
-	#
 	768.1.1 = {
 		holder = 188745
+		liege = d_sanaa
+		government = tribal_government
 	}
 	#
 	866.1.1 = {
@@ -1457,13 +1420,9 @@ c_al-asa = {
 }
 
 c_dhofar = {
-	665.1.1 = {
-		liege = d_oman
-		government = tribal_government
-	}
-	#
 	767.1.1 = {
 		holder = 188765
+		government = tribal_government
 	}
 	#
 	867.1.1 = {

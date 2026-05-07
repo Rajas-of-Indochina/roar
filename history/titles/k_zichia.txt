@@ -213,7 +213,6 @@ c_aghuchips = {
 		holder = circassian_kogotluko
 		government = tribal_government
 		succession_laws = { tribal_elective_succession_law }
-		liege = d_zichia
 	}
 	585.1.1 = {
 		holder = circassian_kherotko
@@ -224,9 +223,6 @@ c_aghuchips = {
 	655.1.1 = {
 		holder = circassian_khatat
 	}
-	691.1.1 = {
-		liege = d_zichia
-	}
 	730.1.1 = {
 		holder = circassian_cheriy
 	}
@@ -236,17 +232,23 @@ c_aghuchips = {
 	820.1.1 = {
 		holder = qermisha_berzeg
 	}
+	850.1.1 = {
+		liege = d_zichia
+	}
 	867.1.1 = {
 		holder = circassian_weke
 	}
+	#
 	940.1.1 = {
 		holder = circassian_pschibezruqo
 	}
+	#
 	1050.1.1 = {
 		government = anarchist_government #zichia collapse
 		liege = 0
 		holder = aghuchips_holder
 	}
+	#
 	1170.1.1 = {
 		government = tribal_government
 		liege = d_zichia
@@ -284,7 +286,6 @@ c_tuahy = {
 		holder = abkhaz_rismag_4
 	}
 	430.1.1 = {
-		liege = d_zichia
 		holder = sadz_abkhaz_1
 	}
 	467.1.1 = {
@@ -310,6 +311,9 @@ c_tuahy = {
 	}
 	840.1.1 = {
 		holder = sadz_abkhaz_9
+	}
+	850.1.1 = {
+		liege = d_zichia
 	}
 	867.1.1 = {
 		holder = qermisha_berzeg
@@ -806,7 +810,6 @@ c_sadzy = {
 		holder = abkhaz_rismag_4
 	}
 	430.1.1 = {
-		liege = d_zichia
 		holder = sadz_abkhaz_1
 	}
 	467.1.1 = {
@@ -832,6 +835,9 @@ c_sadzy = {
 	}
 	840.1.1 = {
 		holder = sadz_abkhaz_9
+	}
+	850.1.1 = {
+		liege = d_zichia
 	}
 	900.1.1 = {
 		holder = sadz_abkhaz_10
@@ -882,12 +888,12 @@ c_zichia = {
 	1066.1.1 = {
 		holder = bata_circassian_generic_1
 		government = tribal_government
-		liege = d_zichia #for the siward story to work
+		liege = 0
+		#liege = d_zichia #for the siward story to work
 	}
 	1087.1.1 = {
 		holder = 161266
 		government = feudal_government
-		liege = 0
 	}
 	1088.1.1 = {
 		holder = siward_2
