@@ -32,6 +32,39 @@ buranun = {
 	}
 }
 
+ivatan = {
+	# indigenous inhabitants of Batanes and Babuyan Islands
+	color = ivatan
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_batanic
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_highland_warriors 		# msl_note: they constructed fortified hills protected by sheer embankments known as 'ijang' ; tradition covers the hill 'defences'
+		tradition_hill_dwellers 		# msl_note: Batanes and Babuyan Islands are rather hill-like
+		tradition_fishermen 			# msl_note: sea and fishing are crucial elements of Ivatan peoples' lives
+		tradition_storytellers 			# msl_note: rich oral traditions, more written below
+		# msl_note: three folk song styles - 'laji', 'kanta' and 'kalusan' ; also 'kabbata' legends and 'rawod' chronicle-chants
+		# msl_note: due to severe weather conditions, they mostly farm root vegetables and tend to hide their animals away
+		# msl_note: very cool traditional headware called 'vakul' that protects them from harsh weather
+	}
+
+	name_list = name_list_idaya 	# or name_list_filipino
+
+	coa_gfx = { ifugao_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
+
 ## Files To Sort
 tawo = {
 	color = tawo

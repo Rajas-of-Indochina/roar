@@ -1323,6 +1323,43 @@ language_ati = {
 	color = ati
 }
 
+language_batanic = {
+	# probably one of the oldest Filipino languages
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_batanic
+		}
+	}
+	parameters = {
+		language_group_philippine = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_batanic }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_philippine }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = ivatan
+}
+
 language_bilic = {
 	type = language
 	is_shown = {
