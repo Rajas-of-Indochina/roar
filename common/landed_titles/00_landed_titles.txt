@@ -671,7 +671,7 @@ k_naiman = {
 
 	definite_form = yes
 
-	capital = c_yeson_bulag
+	capital = c_yeson_bulag 	# c_tseel in vanilla
 }
 
 #Jewish Religious Heads
@@ -864,6 +864,12 @@ k_austria = {
 	capital = c_vienna
 
 	#roman = "Noricum"
+}
+
+k_carantania = {
+	color = { 90 130 100 }
+
+	capital = c_karnten
 }
 
 k_visigoths = {
@@ -1177,12 +1183,64 @@ e_north_sea = {
 	}
 }
 
+e_carthage = {
+	color = { 45 0 11 }
+	definite_form = yes
+	can_be_named_after_dynasty = no
+	
+	capital = c_tunis #Tunis 
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+}
+
 # TITULAR KINGDOMS
 
 k_pechenegs = {
 	color = { 132 108 72}
 
 	capital = c_odessa # Odessa
+}
+# Carthage 
+k_carthage = {
+	color = { 0 33 60 }
+
+	capital = c_tunis
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+}
+
+k_tripolitania = {
+	color = { 150 20 0 }
+
+	capital = c_tripolitana
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+}
+
+k_mauretania = {
+	color = { 136 14 11 }
+
+	capital = c_algier
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+}
+
+k_carthago_nova = {
+	color = { 116 44 2 }
+
+	capital = c_murcia
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
 }
 
 # TITULAR DUCHIES
@@ -1623,12 +1681,12 @@ e_britannia = {
 					color = { 255 15 15 }
 				}
 				b_hartlepool = {
-					province = 1607
+					province = 1608
 
 					color = { 255 15 15 }
 				}
 				b_darlington = {
-					province = 1608
+					province = 1607
 
 					color = { 255 15 15 }
 				}
@@ -1870,11 +1928,10 @@ e_britannia = {
 				color = { 255 139 15 }
 
 				b_pockington = {
-					province = 1588
-
 					cultural_names = {
 						name_list_anglo_saxon = cn_poclintun
 					}
+					province = 1588
 
 					color = { 255 160 59 }
 				}
@@ -1900,8 +1957,6 @@ e_britannia = {
 				}
 
 				b_leeds = {
-					province = 1591
-
 					cultural_names = {
 						name_list_welsh = cn_ladenses
 						name_list_cumbrian = cn_ladenses
@@ -1911,6 +1966,7 @@ e_britannia = {
 
 						name_list_anglo_saxon = cn_leodis
 					}
+					province = 1591
 
 					color = { 255 120 35 }
 				}
@@ -4477,6 +4533,18 @@ e_britannia = {
 
 		capital = c_isle_of_man	#Mann
 	}
+
+	k_cumbria = {
+		color = { 255 100 35 }
+
+		capital = c_cumberland # Cumberland
+
+		d_cumbria = {
+			color = { 220 130 75 }
+			
+			capital = c_cumberland # Cumberland
+		}
+	}
 }
 
 e_germany = {
@@ -6866,35 +6934,6 @@ e_germany = {
 				}
 			}
 		}
-
-		d_istria = {
-			color = { 75 110 105 }
-
-			c_pula = {
-				color = { 75 110 105 }
-
-				b_pula = {
-					province = 2518
-
-					color = { 75 110 105 }
-				}
-				b_piran = {
-					province = 2519
-
-					color = { 75 110 105 }
-				}
-				b_pazin = {
-					province = 2520
-
-					color = { 75 110 105 }
-				}
-				b_labin = {
-					province = 2522
-
-					color = { 75 110 105 }
-				}
-			}
-		}
 	}
 
 	k_east_francia = {	#Germany
@@ -8010,7 +8049,7 @@ e_byzantium = {
 			NOT = {
 				any_held_title = {
 					this = title:e_latin_empire
-				}
+				} 
 			}
 		}
 	}
@@ -13462,6 +13501,7 @@ e_byzantium = {
 				name_list_maghrebi = cn_siqilliya
 				name_list_andalusian = cn_siqilliya
 				name_list_yemeni = cn_siqilliya
+				name_list_carthaginian = cn_sicilia
 			}
 
 			c_palermo = {
@@ -13474,6 +13514,7 @@ e_byzantium = {
 					name_list_maghrebi = cn_balarm
 					name_list_andalusian = cn_balarm
 					name_list_yemeni = cn_balarm
+					name_list_carthaginian = cn_panormus 
 				}
 
 				b_palermo = {
@@ -13494,6 +13535,10 @@ e_byzantium = {
 					province = 2636
 
 					color = { 155 254 86 }
+
+					cultural_names = { 
+						name_list_carthaginian = cn_lilybaeum 
+					}
 				}
 				b_calatafimi = {
 					province = 2645
@@ -13604,10 +13649,18 @@ e_byzantium = {
 			c_malta = {
 				color = { 120 255 60 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_maleth
+				}
+
 				b_malta = {
 					province = 2646
 
 					color = { 120 255 60 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_maleth
+					}
 				}
 			}
 		}
@@ -14656,6 +14709,35 @@ e_italy = {
 				}
 			}
 		}
+
+		d_istria = {
+			color = { 75 110 105 }
+
+			c_pula = {
+				color = { 75 110 105 }
+
+				b_pula = {
+					province = 2518
+
+					color = { 75 110 105 }
+				}
+				b_piran = {
+					province = 2519
+
+					color = { 75 110 105 }
+				}
+				b_pazin = {
+					province = 2520
+
+					color = { 75 110 105 }
+				}
+				b_labin = {
+					province = 2522
+
+					color = { 75 110 105 }
+				}
+			}
+		}
 	}
 
 	k_sardinia = {	#Sardinia & Corsica
@@ -14726,13 +14808,25 @@ e_italy = {
 
 			capital = c_cagliari # Cagliari
 
+			cultural_names = {
+				name_list_carthaginian = cn_sardinia
+			}
+
 			c_cagliari = {
 				color = { 220 160 250 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_caralis
+				}
 
 				b_cagliari = {
 					province = 2653
 
 					color = { 220 160 250 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_caralis
+					}
 				}
 				b_iglesias = {
 					province = 2654
@@ -14761,6 +14855,10 @@ e_italy = {
 			}
 			c_gallura = {
 				color = { 195 175 225 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_tibia
+				}
 
 				b_olbia = {
 					province = 2658
