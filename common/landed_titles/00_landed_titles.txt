@@ -27889,6 +27889,11 @@ e_volga-ural = {
 			}
 		}
 	}
+
+	# k_permia = {
+		# moved to e_permia
+	# }
+
 	k_bashkiria = {
 		color = { 50 65 55 }
 
@@ -32252,9 +32257,9 @@ e_mongolia = {
 
 		capital = c_urshi_un  #placeholder
 
-		#cultural_names = {
-		#	name_list_khitan = cn_great_liao	# technically should only be the Liao specifically
-		#}
+		cultural_names = {
+			name_list_khitan = cn_great_liao	# technically should only be the Liao specifically
+		}
 
 		d_shilka = {
 			color = { 81 98 30 }
@@ -46236,6 +46241,7 @@ e_spain = {
 				name_list_maghrebi = cn_garnatah
 				name_list_andalusian = cn_garnatah
 				name_list_yemeni = cn_garnatah
+				name_list_carthaginian = cn_bastetani
 			}
 
 			c_granada = {
@@ -46252,12 +46258,26 @@ e_spain = {
 					name_list_maghrebi = cn_garnatah
 					name_list_andalusian = cn_garnatah
 					name_list_yemeni = cn_garnatah
+					name_list_carthaginian = cn_basti
 				}
 
 				b_granada = {
 					province = 1978
 
 					color = { 40 150 40 }
+
+					cultural_names = {
+						name_list_bedouin = cn_garnatah
+						name_list_baranis = cn_garnatah
+						name_list_butr = cn_garnatah
+						name_list_zaghawa = cn_garnatah
+						name_list_levantine = cn_garnatah
+						name_list_egyptian = cn_garnatah
+						name_list_maghrebi = cn_garnatah
+						name_list_andalusian = cn_garnatah
+						name_list_yemeni = cn_garnatah
+						name_list_carthaginian = cn_basti
+					}
 				}
 				b_quesada = { #huescar
 					province = 1976
@@ -46355,12 +46375,26 @@ e_spain = {
 					name_list_maghrebi = cn_malaqah
 					name_list_andalusian = cn_malaqah
 					name_list_yemeni = cn_malaqah
+					name_list_carthaginian = cn_malaca
 				}
 
 				b_malaga = {
 					province = 1846
 
 					color = { 20 130 20 }
+
+					cultural_names = {
+						name_list_bedouin = cn_malaqah
+						name_list_baranis = cn_malaqah
+						name_list_butr = cn_malaqah
+						name_list_zaghawa = cn_malaqah
+						name_list_levantine = cn_malaqah
+						name_list_egyptian = cn_malaqah
+						name_list_maghrebi = cn_malaqah
+						name_list_andalusian = cn_malaqah
+						name_list_yemeni = cn_malaqah
+						name_list_carthaginian = cn_malaca
+					}
 				}
 				b_nerja = {
 					province = 1847
@@ -46391,6 +46425,7 @@ e_spain = {
 				name_list_maghrebi = cn_isbiliyyah
 				name_list_andalusian = cn_isbiliyyah
 				name_list_yemeni = cn_isbiliyyah
+				name_list_carthaginian = cn_tudetani
 			}
 
 			c_sevilla = {
@@ -46407,6 +46442,7 @@ e_spain = {
 					name_list_maghrebi = cn_isbiliyyah
 					name_list_andalusian = cn_isbiliyyah
 					name_list_yemeni = cn_isbiliyyah
+					name_list_carthaginian = cn_hispalis
 				}
 
 				b_sevilla = {
@@ -46424,6 +46460,7 @@ e_spain = {
 						name_list_maghrebi = cn_isbiliyyah
 						name_list_andalusian = cn_isbiliyyah
 						name_list_yemeni = cn_isbiliyyah
+						name_list_carthaginian = cn_hispalis
 					}
 				}
 				b_carmona = {
@@ -46456,6 +46493,7 @@ e_spain = {
 					name_list_maghrebi = cn_qadis
 					name_list_andalusian = cn_qadis
 					name_list_yemeni = cn_qadis
+					name_list_carthaginian = cn_gades
 				}
 
 				b_cadiz = {
@@ -46473,6 +46511,7 @@ e_spain = {
 						name_list_maghrebi = cn_qadis
 						name_list_andalusian = cn_qadis
 						name_list_yemeni = cn_qadis
+						name_list_carthaginian = cn_gades
 					}
 				}
 				b_tarifa = {
@@ -46500,12 +46539,26 @@ e_spain = {
 					name_list_maghrebi = cn_al_gazirah_al_hadra
 					name_list_andalusian = cn_al_gazirah_al_hadra
 					name_list_yemeni = cn_al_gazirah_al_hadra
+					name_list_carthaginian = cn_calpe
 				}
 
 				b_algeciras = {
 					province = 1845
 
 					color = { 130 175 0 }
+
+					cultural_names = {
+						name_list_bedouin = cn_al_gazirah_al_hadra
+						name_list_baranis = cn_al_gazirah_al_hadra
+						name_list_butr = cn_al_gazirah_al_hadra
+						name_list_zaghawa = cn_al_gazirah_al_hadra
+						name_list_levantine = cn_al_gazirah_al_hadra
+						name_list_egyptian = cn_al_gazirah_al_hadra
+						name_list_maghrebi = cn_al_gazirah_al_hadra
+						name_list_andalusian = cn_al_gazirah_al_hadra
+						name_list_yemeni = cn_al_gazirah_al_hadra
+						name_list_carthaginian = cn_calpe
+					}
 				}
 				b_arcos = {
 					province = 1982
@@ -47287,6 +47340,7 @@ e_spain = {
 				name_list_maghrebi = cn_balansiyyah
 				name_list_andalusian = cn_balansiyyah
 				name_list_yemeni = cn_balansiyyah
+				name_list_carthaginian = cn_ilecarvones
 			}
 
 			c_valencia = {
@@ -47303,6 +47357,7 @@ e_spain = {
 					name_list_maghrebi = cn_balansiyyah
 					name_list_andalusian = cn_balansiyyah
 					name_list_yemeni = cn_balansiyyah
+					name_list_carthaginian = cn_saguntum
 				}
 
 				b_valencia = {
@@ -47320,6 +47375,7 @@ e_spain = {
 						name_list_maghrebi = cn_balansiyyah
 						name_list_andalusian = cn_balansiyyah
 						name_list_yemeni = cn_balansiyyah
+						name_list_carthaginian = cn_saguntum
 					}
 				}
 				b_murviedro = {
@@ -47353,12 +47409,26 @@ e_spain = {
 					name_list_maghrebi = cn_burjanna
 					name_list_andalusian = cn_burjanna
 					name_list_yemeni = cn_burjanna
+					name_list_carthaginian = cn_cartalias
 				}
 
 				b_castellon = {
 					province = 1857
 
 					color = { 85 170 125 }
+
+					cultural_names = {
+						name_list_bedouin = cn_burjanna
+						name_list_baranis = cn_burjanna
+						name_list_butr = cn_burjanna
+						name_list_zaghawa = cn_burjanna
+						name_list_levantine = cn_burjanna
+						name_list_egyptian = cn_burjanna
+						name_list_maghrebi = cn_burjanna
+						name_list_andalusian = cn_burjanna
+						name_list_yemeni = cn_burjanna
+						name_list_carthaginian = cn_cartalias
+					}
 				}
 				b_amposta = {
 					province = 1858
@@ -47445,11 +47515,25 @@ e_spain = {
 					name_list_maghrebi = cn_al_laqant
 					name_list_andalusian = cn_al_laqant
 					name_list_yemeni = cn_al_laqant
+					name_list_carthaginian = cn_herna
 				}
 				b_alicante = {
 					province = 1853
 
 					color = { 75 155 85 }
+
+					cultural_names = {
+						name_list_bedouin = cn_al_laqant
+						name_list_baranis = cn_daniyyah
+						name_list_butr = cn_daniyyah
+						name_list_zaghawa = cn_daniyyah
+						name_list_levantine = cn_al_laqant
+						name_list_egyptian = cn_al_laqant
+						name_list_maghrebi = cn_al_laqant
+						name_list_andalusian = cn_al_laqant
+						name_list_yemeni = cn_al_laqant
+						name_list_carthaginian = cn_herna
+					}
 				}
 				b_albacete = {
 					province = 1940
@@ -47578,6 +47662,7 @@ e_spain = {
 				name_list_maghrebi = cn_mursiyyah
 				name_list_andalusian = cn_mursiyyah
 				name_list_yemeni = cn_mursiyyah
+				name_list_carthaginian = cn_carthago_nova
 			}
 
 			c_murcia = {
@@ -47594,12 +47679,26 @@ e_spain = {
 					name_list_maghrebi = cn_mursiyyah
 					name_list_andalusian = cn_mursiyyah
 					name_list_yemeni = cn_mursiyyah
+					name_list_carthaginian = cn_carthago_nova
 				}
 
 				b_murcia = {
 					province = 1852
 
 					color = { 27 130 60 }
+
+					cultural_names = {
+						name_list_bedouin = cn_mursiyyah
+						name_list_baranis = cn_mursiyyah
+						name_list_butr = cn_mursiyyah
+						name_list_zaghawa = cn_mursiyyah
+						name_list_levantine = cn_mursiyyah
+						name_list_egyptian = cn_mursiyyah
+						name_list_maghrebi = cn_mursiyyah
+						name_list_andalusian = cn_mursiyyah
+						name_list_yemeni = cn_mursiyyah
+						name_list_carthaginian = cn_carthago_nova
+					}
 				}
 				b_cartagena = {
 					province = 1851
@@ -49864,6 +49963,10 @@ e_maghreb = {
 			c_gharb = {
 				color = { 252 89 13 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_sala
+				}
+
 				b_sala = {
 					province = 4700
 
@@ -49902,13 +50005,25 @@ e_maghreb = {
 
 			capital = c_tangiers # Tangiers
 
+			cultural_names = {
+				name_list_carthaginian = cn_tingis
+			}
+
 			c_tangiers = {
 				color = { 209 65 46 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_tingis
+				}
 
 				b_tangiers = {
 					province = 4683
 
 					color = { 209 65 46 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_tingis
+					}
 				}
 				b_asila = {
 					province = 4684
@@ -49936,12 +50051,23 @@ e_maghreb = {
 					name_list_maghrebi = cn_sabtah
 					name_list_andalusian = cn_sabtah
 					name_list_yemeni = cn_sabtah
+					name_list_carthaginian = cn_abdyla
 				}
 
 				b_sabta = {
 					province = 4682
 
 					color = { 219 86 68 }
+
+					cultural_names = {
+						name_list_bedouin = cn_sabtah
+						name_list_levantine = cn_sabtah
+						name_list_egyptian = cn_sabtah
+						name_list_maghrebi = cn_sabtah
+						name_list_andalusian = cn_sabtah
+						name_list_yemeni = cn_sabtah
+						name_list_carthaginian = cn_abdyla
+					}
 				}
 				b_tittawan = {
 					province = 4681
@@ -49964,12 +50090,23 @@ e_maghreb = {
 					name_list_maghrebi = cn_malilah
 					name_list_andalusian = cn_malilah
 					name_list_yemeni = cn_malilah
+					name_list_carthaginian = cn_rusaddir
 				}
 
 				b_melilla = {
 					province = 4678
 
 					color = { 255 79 56 }
+
+					cultural_names = {
+						name_list_bedouin = cn_malilah
+						name_list_levantine = cn_malilah
+						name_list_egyptian = cn_malilah
+						name_list_maghrebi = cn_malilah
+						name_list_andalusian = cn_malilah
+						name_list_yemeni = cn_malilah
+						name_list_carthaginian = cn_rusaddir
+					}
 				}
 				b_nakur = {
 					province = 4679
@@ -50181,6 +50318,10 @@ e_maghreb = {
 			c_orania = {
 				color = { 134 227 0 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_quinea
+				}
+
 				b_oran = {
 					province = 4666
 
@@ -50200,10 +50341,18 @@ e_maghreb = {
 			c_hunyan = {
 				color = { 108 163 28 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_siga
+				}
+
 				b_hunyan = {
 					province = 4669
 
 					color = { 108 163 28 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_siga
+					}
 				}
 				b_arsgul = {
 					province = 4668
@@ -50321,13 +50470,25 @@ e_maghreb = {
 
 			capital = c_algier # Algier
 
+			cultural_names = {
+				name_list_carthaginian = cn_icosium
+			}
+
 			c_algier = {
 				color = { 92 148 52 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_icosium
+				}
 
 				b_algiers = {
 					province = 4650
 
 					color = { 92 148 52 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_icosium
+					}
 				}
 				b_medea = {
 					province = 4648
@@ -50348,10 +50509,18 @@ e_maghreb = {
 			c_tanas = {
 				color = { 70 133 25 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_iol
+				}
+
 				b_tanas = {
 					province = 4653
 
 					color = { 70 133 25 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_iol
+					}
 				}
 				b_sharshal = {
 					province = 4652
@@ -50371,13 +50540,25 @@ e_maghreb = {
 
 			capital = c_bejaia # Bejaia
 
+			cultural_names = {
+				name_list_carthaginian = cn_saldae
+			}
+
 			c_bejaia = {
 				color = { 192 219 53 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_saldae
+				}
 
 				b_bejaia = {
 					province = 4637
 
 					color = { 192 219 53 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_saldae
+					}
 				}
 				b_jijel = {
 					province = 4636
@@ -50416,8 +50597,16 @@ e_maghreb = {
 
 			capital = c_hodna # Tubna
 
+			cultural_names = {
+				name_list_carthaginian = cn_cirta
+			}
+
 			c_hodna = {
 				color = { 75 117 33 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_cirta
+				}
 
 				b_tubna = {
 					province = 4644
@@ -50574,13 +50763,25 @@ e_maghreb = {
 
 			capital = c_kairwan # Kairouan
 
+			cultural_names = {
+				name_list_carthaginian = cn_zama
+			}
+
 			c_kairwan = {
 				color = { 47 78 135 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_zama
+				}
 
 				b_kairouan = {
 					province = 4594
 
 					color = { 47 78 135 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_zama
+					}
 				}
 				b_jalula = {
 					province = 4592
@@ -50658,13 +50859,25 @@ e_maghreb = {
 
 			capital = c_tunis # Tunis
 
+			cultural_names = {
+				name_list_carthaginian = cn_carthage
+			}
+
 			c_tunis = {
 				color = { 96 128 224 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_carthage
+				}
 
 				b_tunis = {
 					province = 4582
 
 					color = { 96 128 224 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_carthage
+					}
 				}
 				b_zaghwan = {
 					province = 4581
@@ -50689,6 +50902,10 @@ e_maghreb = {
 			}
 			c_satfura = {
 				color = { 77 117 240 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_thabraca
+				}
 
 				b_banzart = {
 					province = 4585
@@ -50728,10 +50945,18 @@ e_maghreb = {
 			c_mahdiya = {
 				color = { 122 140 196 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_hadrumetum	
+				}
+
 				b_mahdiya = {
 					province = 4578
 
 					color = { 122 140 196 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_hadrumetum	
+					}
 				}
 				b_monastir = {
 					province = 4579
@@ -50750,6 +50975,10 @@ e_maghreb = {
 			color = { 75 80 165 }
 
 			capital = c_constantine # Constantine
+
+			cultural_names = {
+				name_list_carthaginian = cn_hippo
+			}
 
 			c_constantine = {
 				color = { 78 77 162 }
@@ -50783,10 +51012,18 @@ e_maghreb = {
 			c_annaba = {
 				color = { 72 83 169 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_hippo
+				}
+
 				b_annaba = {
 					province = 4588
 
 					color = { 72 83 169 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_hippo
+					}
 				}
 				b_qalama = {
 					province = 4630
@@ -50823,10 +51060,18 @@ e_maghreb = {
 			c_sfax = {
 				color = { 25 47 117 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_tabrua
+				}
+
 				b_sfax = {
 					province = 4575
 
 					color = { 25 47 117 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_tabrua
+					}
 				}
 				b_el_jem = {
 					province = 4576
@@ -50845,6 +51090,10 @@ e_maghreb = {
 			color = { 66 82 227 }
 
 			capital = c_qashtiliya # Tozeur
+
+			cultural_names = {
+				name_list_carthaginian = cn_sufetula
+			}
 
 			c_qashtiliya = {
 				color = { 57 71 196 }
@@ -50946,10 +51195,18 @@ e_maghreb = {
 			c_djerba = {
 				color = { 8 108 196 }
 
+				cultural_names = {
+					name_list_carthaginian = cn_girba
+				}
+
 				b_jerba = {
 					province = 4562
 
 					color = { 8 108 196 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_girba
+					}
 				}
 				b_jarjis = {
 					province = 4565
@@ -50998,13 +51255,25 @@ e_maghreb = {
 
 			capital = c_syrte
 
+			cultural_names = {
+				name_list_carthaginian = cn_syrtis
+			}
+
 			c_syrte = {
 				color = { 43 45 161 }
+
+				cultural_names = {
+					name_list_carthaginian = cn_syrtis
+				}
 
 				b_syrte = {
 					province = 4552
 
 					color = { 43 45 161 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_syrtis
+					}
 				}
 				b_al_aghaila = {
 					province = 4550
@@ -51029,6 +51298,10 @@ e_maghreb = {
 					province = 4554
 
 					color = { 54 56 133 }
+
+					cultural_names = {
+						name_list_carthaginian = cn_charax
+					}
 				}
 				b_misurata = {
 					province = 4555
@@ -79131,6 +79404,21 @@ d_laamp_el_cid = { # El Cid
 	ai_primary_priority = { add = @never_primary_score }
 }
 
+d_laamp_henry_of_skalitz = { # Henry of Skalitz
+	color = { 100 100 100 }
+	capital = c_boleslav
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	disable_regnal_numbers = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
 d_laamp_crispin = { # Robert Crispin
 	color = { 100 100 100 }
 	capital = c_byzantion # Constantinople, capital of ERE
@@ -79405,6 +79693,15 @@ k_winideheim = {
 	color = { 158 102 36 }
 
 	capital = c_praha # Praha
+
+	can_create = { always = no }
+}
+k_cossack = {
+	color = { 40 160 40 }
+	
+	definite_form = yes
+	
+	capital = c_tana
 
 	can_create = { always = no }
 }
@@ -101963,8 +102260,8 @@ e_goryeo = {
 
 			cultural_names = {
 				name_list_khitan = cn_dongjing
-				# name_list_fuyo = cn_yodong
-				name_list_samhan = cn_yodong
+				name_list_balhae = cn_yodong
+				name_list_korean = cn_yodong
 			}
 
 			c_sheli = {
