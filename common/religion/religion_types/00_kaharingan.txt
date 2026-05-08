@@ -1,9 +1,9 @@
 ﻿kaharingan_religion = { # Dayak folk religions ; dayak_religion before AUH
 	family = rf_pagan
+ 	graphical_faith = "pagan_gfx"
+	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
-
-	doctrine = pagan_hostility_doctrine
 
 	#Main Group
 	doctrine = doctrine_polytheist
@@ -27,7 +27,7 @@
 	doctrine = doctrine_witchcraft_accepted
 
 	#Clerical Functions
-	doctrine = doctrine_clerical_function_alms_and_pacification
+	doctrine = doctrine_clerical_function_recruitment
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_spiritual_appointment
@@ -37,7 +37,6 @@
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_cremation
-	#doctrine = doctrine_funeral_bewailment
 
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
@@ -262,13 +261,6 @@
 			color = { 47 26 107 }
 			icon = momolianism
 			reformed_icon = momolianism_reformed
-
-			# Vanilla holy sites
-			#holy_site = iban
-			#holy_site = kudat
-			#holy_site = taiao
-			#holy_site = sukadana
-			#holy_site = kutai
 
 			# RoA holy sites
 			holy_site = kinabalu

@@ -1,10 +1,10 @@
 ﻿dualism_religion = {
 	family = rf_abrahamic
-
 	piety_icon_group = "zoroastrian"
 
+	doctrine = abrahamic_hostility_doctrine
+
 	#Main Group
-	doctrine = doctrine_monotheist
 	doctrine = doctrine_polytheist
 	doctrine = doctrine_spiritual_head
 	doctrine = doctrine_gender_male_dominated
@@ -32,7 +32,6 @@
 	doctrine = doctrine_clerical_succession_spiritual_appointment
 
 	#Special Doctrine for Gnostic mechanics
-	doctrine = abrahamic_hostility_doctrine
 	doctrine = special_doctrine_is_gnostic_faith
 
 	#Allow pilgrimages
@@ -237,6 +236,7 @@
 			color = { 0.7 0.7 0.4 }
 			religious_head = d_manichean
 			icon = manichean
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = ahvaz
 			holy_site = yijinai # As most of China is not on the map, this works to represent the large Chinese following of the faith
@@ -359,6 +359,7 @@
 		mandeaism = {
 			color = { 0.5 0.75 0.3 }
 			icon = dualism
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = baghdad
 			holy_site = farz
@@ -476,6 +477,7 @@
 		sabianism = {
 			color = { 0.6 0.6 0.4 }
 			icon = sabianism
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = baghdad
 			holy_site = farz
@@ -531,6 +533,7 @@
 		valentinianism = {
 			color = { 0.8 0.6 0.4 }
 			icon = valentinianism
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = rome
@@ -644,6 +647,7 @@
 		sethianism = {
 			color = { 0.8 0.6 0.4 }
 			icon = sethianism
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = rome
@@ -764,6 +768,7 @@
 		priscillianism = {
 			color = { 0.3 0.6 0.2 }
 			icon = priscillianism
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = toledo
@@ -881,6 +886,7 @@
 		cainitism = {
 			color = { 0.3 0.6 0.2 }
 			icon = cainitism
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = ushi-darena
 			holy_site = nok_kundi
@@ -913,9 +919,11 @@
 		}
 
 		mingism = {
+			# replaced chinese_manichean
 			color = { 236 213 129 }
 			religious_head = d_manichean
 			icon = mingism
+			graphical_faith = "sinitic_gfx"
 
 			holy_site = luoyang
 			holy_site = chang_an
@@ -954,9 +962,5 @@
 				EvilGodNames = { mingism_devil_name }
 			}
 		}
-
-		#chinese_manichean = {
-			# for now crossed out until we get feedback from Khan how to adjust Mingism (aka this faith but from AUH)
-		#}
 	}
 }

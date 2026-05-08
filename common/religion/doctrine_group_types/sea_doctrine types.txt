@@ -97,6 +97,9 @@ rice_doctrine_buddhist_canon = {
 
 	is_available_on_create = {
 		religion_tag = buddhism_religion
+		NOT = {
+			has_doctrine = special_doctrine_is_maitreya
+		}
 	}
 
 	doctrine_types = {

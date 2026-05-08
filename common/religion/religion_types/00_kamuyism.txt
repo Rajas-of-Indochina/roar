@@ -1,6 +1,9 @@
 ﻿kamuyism_religion = { # Ainu folk religion
 	family = rf_pagan
-
+	graphical_faith = "kamuyism_gfx"
+	#Unique Temples with CCP7
+	#Falls back to Shinto temples for owners of EP4
+	#Falls back to general Pagan with none of the above
 	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
@@ -259,7 +262,6 @@
 
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_communal_identity
-			#doctrine = tenet_astrology
 
 			doctrine_selection_pair = {
 				requires_dlc_flag = all_under_heaven

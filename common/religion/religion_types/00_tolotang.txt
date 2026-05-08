@@ -2,7 +2,7 @@
 	# https://id.wikipedia.org/wiki/Tolotang
 
 	family = rf_pagan
-
+	graphical_faith = pagan_gfx
 	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
@@ -225,9 +225,12 @@
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_spirit_guides
-			doctrine = tenet_sun_worship
+			doctrine = tenet_ancestor_worship
 			doctrine = tenet_sanctity_of_nature
-			#doctrine = tenet_eastern_syncretism	# syncretic elements are from later history
+
+			# Vanilla
+			#doctrine = tenet_sun_worship	# msl_note: I am unsure why they got that ; more info needed
+			#doctrine = tenet_eastern_syncretism	# msl_note: syncretic elements are from later history
 		}
 	}
 }

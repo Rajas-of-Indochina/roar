@@ -1,8 +1,10 @@
 ﻿biliku_religion = { # Andaman Islands folk religion
 	family = rf_pagan
-	doctrine = pagan_hostility_doctrine
+	graphical_faith = pagan_gfx
 
 	pagan_roots = yes
+
+	doctrine = pagan_hostility_doctrine
 
 	traits = {
 		virtues = { just brave gregarious }
@@ -203,7 +205,7 @@
 		PriestFemalePlural = biliku_priest_plural
 		PriestNeuter = biliku_priest
 		PriestNeuterPlural = biliku_priest_plural
-		AltPriestTermPlural = biliku_priest_term_plural
+		AltPriestTermPlural = biliku_priest_plural
 		BishopMale = biliku_bishop
 		BishopMalePlural = biliku_bishop_plural
 		BishopFemale = biliku_bishop
@@ -261,6 +263,12 @@
 			icon = pulugaism
 			reformed_icon = pulugaism_reformed
 
+			#traits = {
+			#	virtues = { vengeful just brave }
+			#	sins = { greedy arbitrary craven }
+			#}
+			
+			holy_site = ar_kol
 			holy_site = nakkavaram
 			holy_site = dagon
 			holy_site = kanchipuram

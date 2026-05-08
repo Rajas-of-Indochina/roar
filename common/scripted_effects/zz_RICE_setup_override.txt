@@ -1826,7 +1826,9 @@ RICE_setup_magadha_flavor_pack_effect = {
 			add_doctrine = rice_mahayana_canon_doctrine
 		}
 	}
-	# Failsafe in case other mods add in other variations of Buddhism
+    # Failsafe in case other mods add in other variations of Buddhism
+    # Switched to Mahayana canon aka East Asia canon after All Under Heaven
+    # Since there's way more Mahayana faiths now than Theravada/Vajrayana
 	religion:buddhism_religion = {
 		every_faith = {
 			limit = {
@@ -1837,7 +1839,7 @@ RICE_setup_magadha_flavor_pack_effect = {
 					has_doctrine = rice_pudgalavada_canon_doctrine
 				}
 			}
-			add_doctrine = rice_theravada_canon_doctrine
+			add_doctrine = rice_mahayana_canon_doctrine
 		}
 	}
 

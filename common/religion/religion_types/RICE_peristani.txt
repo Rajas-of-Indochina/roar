@@ -1,10 +1,9 @@
 ﻿peristani_religion = {
 	family = rf_pagan
-	graphical_faith = "dharmic_gfx"
+	graphical_faith = pagan_gfx
+	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
-
-	doctrine = pagan_hostility_doctrine
 
 	#Main Group
 	doctrine = doctrine_polytheist
@@ -57,7 +56,7 @@
 		{ name = "holy_order_warriors_of_mahandeo" }
 	}
 
-	holy_order_maa = { mubarizun }
+	holy_order_maa = { RICE_pamir_tribesmen }
 
 	localization = {
 		#High God Name
@@ -223,6 +222,7 @@
 			color = { 0.77 0.99 0.98 }
 			icon = RICE_icon_dezawist
 			reformed_icon = RICE_icon_dezawist_reformed
+			graphical_faith = dharmic_gfx
 
 			holy_site = kabul
 			holy_site = kinnaur

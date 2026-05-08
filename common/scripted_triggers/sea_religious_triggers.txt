@@ -94,29 +94,51 @@ religion_is_east_asian_trigger = {  # needs to be worked on
 	}
 }
 
-broadly_dharmic_trigger = {  # needs to be worked on
+broadly_dharmic_trigger = {
+	# This category makes no god damn sense because basically who as much as saw Dharmic faith can join it
 	OR = {
 		faith.religion = religion:buddhism_religion
 		faith.religion = religion:hinduism_religion
 		faith.religion = religion:jainism_religion
 		faith.religion = religion:bon_religion
 		faith.religion = religion:dab_qhuas_religion
-		faith.religion = religion:aluk_religion
+		faith.religion = religion:aluk_religion 	# ????
 		faith.religion = religion:dayawism_religion
 		faith.religion = religion:hantuism_religion
 		faith.religion = religion:kaharingan_religion
 		faith.religion = religion:satsana_phi_religion
 		faith.religion = religion:tolotang_religion
-		faith.religion = religion:utaki_religion
+		faith.religion = religion:utaki_religion	# ????
 		faith.religion = religion:bimoism_religion
 		faith.religion = religion:moism_religion
 		faith.religion = religion:muism_religion
 		faith.religion = religion:qiangic_religion
+		# RoA + RICE
+		faith.religion = religion:aslian_religion
+		faith.religion = religion:austronesian_religion
+		faith.religion = religion:bahnaric_religion
+		faith.religion = religion:brahmaputran_religion
+		faith.religion = religion:burmic_religion
+		faith.religion = religion:filipino_religion
+		faith.religion = religion:formosa_religion
+		faith.religion = religion:indian_religion
+		faith.religion = religion:javanese_religion
+		faith.religion = religion:khasi_religion
+		faith.religion = religion:khmuic_religion
+		faith.religion = religion:kuy_religion
+		faith.religion = religion:lesser_sunda_religion
+		faith.religion = religion:moluccan_religion
+		faith.religion = religion:pearic_religion
+		faith.religion = religion:sanamahism_religion
+		faith.religion = religion:sulawesi_religion
+		faith.religion = religion:wa_religion
+		faith.religion = religion:vietic_religion
 	}
 }
 
 south_east_asian_pagan_trigger = {  # needs to be worked on
 	OR = {
+		# Vanilla seems to only count Maritime SEA ones
 		# Vanilla
 		faith.religion = religion:aluk_religion
 		faith.religion = religion:dayawism_religion
@@ -124,10 +146,27 @@ south_east_asian_pagan_trigger = {  # needs to be worked on
 		faith.religion = religion:kaharingan_religion
 		faith.religion = religion:tolotang_religion
 		faith.religion = religion:biliku_religion
-		# RoA
+		# RoA + RICE
+		faith.religion = religion:aslian_religion
+		faith.religion = religion:austronesian_religion
+		faith.religion = religion:bahnaric_religion
+		faith.religion = religion:burmic_religion
+		faith.religion = religion:filipino_religion
+		faith.religion = religion:formosa_religion
+		faith.religion = religion:javanese_religion
+		faith.religion = religion:khmuic_religion
+		faith.religion = religion:kuy_religion
+		faith.religion = religion:lesser_sunda_religion
+		faith.religion = religion:melanesian_religion
+		faith.religion = religion:micronesian_religion
+		faith.religion = religion:moluccan_religion
 		faith.religion = religion:oceanic_religion
 		faith.religion = religion:palau_religion
 		faith.religion = religion:papuan_religion
+		faith.religion = religion:pearic_religion
+		faith.religion = religion:sulawesi_religion
+		faith.religion = religion:wa_religion
+		faith.religion = religion:west_papuan_religion
 	}
 }
 

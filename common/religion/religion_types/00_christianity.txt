@@ -323,6 +323,7 @@
 		orthodox = {
 			color = { 0.7 0 0.5 }
 			religious_head = k_orthodox
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = constantinople
@@ -394,85 +395,11 @@
 			}
 		}
 
-		georgian_orthodox = {
-			icon = georgian_orthodox
-			color = { 237 150 140}
-			religious_head = d_georgian_patriarchate
-
-			#holy sites temporary until we figure the provinces
-			holy_site = jerusalem
-			holy_site = constantinople
-			holy_site = rome
-			holy_site = antioch
-			holy_site = mtskheta
-
-			#Special Tolerance
-			doctrine = orthodox_roa_doctrine
-			doctrine = special_doctrine_ecumenical_christian
-
-			#Tenets
-			doctrine = tenet_communion
-			doctrine = tenet_communal_identity
-			doctrine = tenet_monasticism
-
-			holy_order_names = {
-				{ name = "holy_order_brotherhood_of_the_holy_sepulchre" }
-				{ name = "holy_order_knights_of_the_first_patrirchate" }
-				{ name = "holy_order_order_of_the_holy_virgin" }
-			}
-
-			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
-				#FertilityGod
-				FertilityGodName = west_christian_fertility_god_name
-				FertilityGodNamePossessive = west_christian_fertility_god_name_possessive
-				FertilityGodSheHe = CHARACTER_SHEHE_SHE
-				FertilityGodHerHis = CHARACTER_HERHIS_HER
-				FertilityGodHerHim = CHARACTER_HERHIM_HER
-
-				#WealthGod
-				WealthGodName = west_christian_wealth_god_name
-				WealthGodNamePossessive = west_christian_wealth_god_name_possessive
-				WealthGodSheHe = CHARACTER_SHEHE_HE
-				WealthGodHerHis = CHARACTER_HERHIS_HIS
-				WealthGodHerHim = CHARACTER_HERHIM_HIM
-
-				#HouseholdGod
-				HouseholdGodName = west_christian_household_god_name
-				HouseholdGodNamePossessive = west_christian_household_god_name_possessive
-				HouseholdGodSheHe = CHARACTER_SHEHE_HE
-				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
-				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
-
-				#KnowledgeGod
-				KnowledgeGodName = west_christian_knowledge_god_name
-				KnowledgeGodNamePossessive = west_christian_knowledge_god_name_possessive
-				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
-
-				#WarGod
-				WarGodName = west_christian_war_god_name
-				WarGodNamePossessive = west_christian_war_god_name_possessive
-				WarGodSheHe = CHARACTER_SHEHE_HE
-				WarGodHerHis = CHARACTER_HERHIS_HIS
-				WarGodHerHim = CHARACTER_HERHIM_HIM
-
-				#WaterGod
-				WaterGodName = west_christian_water_god_name
-				WaterGodNamePossessive = west_christian_water_god_name_possessive
-				WaterGodSheHe = CHARACTER_SHEHE_HE
-				WaterGodHerHis = CHARACTER_HERHIS_HIS
-				WaterGodHerHim = CHARACTER_HERHIM_HIM
-
-				# Patriarchs instead of Popes
-				ReligiousHeadName = orthodox_religious_head_title
-				ReligiousHeadTitleName = orthodox_religious_head_title_name
-			}
-		}
-
 		coptic = {
 			color = { 210 235 87 }
 			religious_head = d_coptic_papacy
+			graphical_faith = "orthodox_gfx"
+
 			holy_site = alexandria
 			holy_site = jerusalem
 			holy_site = antioch
@@ -481,7 +408,8 @@
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
-			# doctrine = special_doctrine_is_coptic_faith
+			#doctrine = special_doctrine_is_coptic_faith
+
 			#Main Group
 			doctrine = doctrine_pluralism_pluralistic
 
@@ -546,7 +474,8 @@
 		armenian_apostolic = {
 			color = { 0.8 0.4 0.1 }
 			religious_head = d_apostolic_church
-			icon = christianity_Armenian
+			icon = christianity_armenian
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = antioch	#might replace this one
@@ -618,6 +547,7 @@
 			color = { 0.4 0.5 0.8 }
 			icon = conversos
 			religious_head = k_papal_state
+			graphical_faith = "catholic_gfx"
 
 			holy_site = jerusalem
 			holy_site = rome
@@ -743,6 +673,7 @@
 			color = { 0.5 0.2 0.4 }
 			icon = christianity_iconoclasm
 			religious_head = d_iconoclast
+			graphical_faith = "orthodox_gfx"
 
 			#Shared with Orthodox
 			holy_site = jerusalem
@@ -766,6 +697,7 @@
 		bogomilist = {
 			color = { 0.7 0 0.2 }
 			icon = christianity_bogomilist
+			graphical_faith = "orthodox_gfx"
 
 			#Shared with Orthodox
 			holy_site = jerusalem
@@ -809,6 +741,7 @@
 		paulician  = {
 			color = { 0.6 0.1 0.4 }
 			icon = christianity_paulicanism
+			graphical_faith = "orthodox_gfx"
 
 			#Shared with Armenian?
 			holy_site = jerusalem
@@ -843,6 +776,7 @@
 		nestorian = {
 			color = { 0.8 0.3 0.5 }
 			religious_head = d_patriarchate_in_the_east
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = baghdad
@@ -878,6 +812,7 @@
 		messalian = {
 			color = { 0.6 0.1 0.4 }
 			icon = christianity_messalian
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = constantinople
@@ -1266,10 +1201,88 @@
 			}
 		}
 
+		georgian_orthodox = {
+			icon = georgian_orthodox
+			color = { 237 150 140}
+			religious_head = d_georgian_patriarchate
+			graphical_faith = "orthodox_gfx"
+
+			#holy sites temporary until we figure the provinces
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = antioch
+			holy_site = mtskheta
+
+			#Special Tolerance
+			doctrine = orthodox_roa_doctrine
+			doctrine = special_doctrine_ecumenical_christian
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_communal_identity
+			doctrine = tenet_monasticism
+
+			holy_order_names = {
+				{ name = "holy_order_brotherhood_of_the_holy_sepulchre" }
+				{ name = "holy_order_knights_of_the_first_patrirchate" }
+				{ name = "holy_order_order_of_the_holy_virgin" }
+			}
+
+			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
+				#FertilityGod
+				FertilityGodName = west_christian_fertility_god_name
+				FertilityGodNamePossessive = west_christian_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = west_christian_wealth_god_name
+				WealthGodNamePossessive = west_christian_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = west_christian_household_god_name
+				HouseholdGodNamePossessive = west_christian_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = west_christian_knowledge_god_name
+				KnowledgeGodNamePossessive = west_christian_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+				#WarGod
+				WarGodName = west_christian_war_god_name
+				WarGodNamePossessive = west_christian_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WaterGod
+				WaterGodName = west_christian_water_god_name
+				WaterGodNamePossessive = west_christian_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+				# Patriarchs instead of Popes
+				ReligiousHeadName = orthodox_religious_head_title
+				ReligiousHeadTitleName = orthodox_religious_head_title_name
+			}
+		}
+
 		circassian_christianity = {
 			color = { 288 65 51 }
 			icon = budded_cross_alt_04
 			religious_head = k_orthodox
+			graphical_faith = "orthodox_gfx"
 			
 			holy_site = constantinople
 			holy_site = zikhopol
@@ -1411,6 +1424,7 @@
 			icon = mtielta_cross
 			color = { 217 180 130 }
 			religious_head = d_georgian_patriarchate
+			graphical_faith = "orthodox_gfx"
 
 			#holy sites temporary until we figure the provinces
 			holy_site = jerusalem
@@ -1531,10 +1545,10 @@
 		}
 
 		NEC_orthodox = {
+			color = { 130 215 175 } 	#color = { 217 180 130 }
 			icon = nasraniyab_cross
-			#color = { 217 180 130 }
-			color = { 130 215 175 }
 			religious_head = d_georgian_patriarchate
+			graphical_faith = "orthodox_gfx"
 
 			#holy sites temporary until we figure the provinces (fix this!!!)
 			holy_site = jerusalem
@@ -1658,6 +1672,7 @@
 		tondrakian = {
 			color = { 0.9 0.5 0.2 }
 			icon = tondrakian
+			graphical_faith = "orthodox_gfx"
 
 			holy_site = jerusalem
 			holy_site = babylon_tondrakian	# site of Smbat's purported burial after his body was returned to his disciples by the Abbasids
