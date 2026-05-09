@@ -87708,7 +87708,7 @@ e_kambuja = {
 			c_mnong = {
 				color = { 118 93 221 }
 
-				b_gar_ = {
+				b_gar = {
 					province = 16359
 
 					color = { 118 93 221 }
@@ -89801,7 +89801,8 @@ e_panyupayana = {
 		d_dumagat = {
 			color = { 146 222 55 }
 
-			c_kasiguran = {
+			c_PHI_kasiguranin = {
+				# c_kasiguran in old RoA
 				color = { 195 230 21 }
 
 				b_kasiguran = {
@@ -89972,9 +89973,13 @@ e_panyupayana = {
 	k_amianan = {
 		color = { 79 66 0 }
 
+		capital = c_PHI_pangasinan
+
 		d_PHI_ilocana = {
 			# d_iluek in old RoA
 			color = { 79 66 0 }
+
+			capital = c_PHI_samtoy
 
 			c_PHI_samtoy = { # Ilocano
 				# c_laoag in old RoA
@@ -90018,7 +90023,7 @@ e_panyupayana = {
 
 					color = { 95 105 25 }
 				}
-				b_kalinga = {
+				b_PHI_Kalinga = {
 					province = 15693
 
 					color = { 95 105 25 }
@@ -90033,6 +90038,8 @@ e_panyupayana = {
 
 		d_pangasinan = {
 			color = { 150 124 40 }
+
+			capital = c_PHI_pangasinan
 
 			c_PHI_pangasinan = {
 				# c_binalatongan in old RoA
@@ -90059,7 +90066,8 @@ e_panyupayana = {
 					color = { 190 150 70 }
 				}
 			}
-			c_bugyas = {
+			c_PHI_igorot = {
+				# c_bugyas in old RoA
 				color = { 165 135 95 }
 
 				b_bugyas = {
@@ -90067,7 +90075,7 @@ e_panyupayana = {
 
 					color = { 165 135 95 }
 				}
-				b_kafagway = {
+				b_PHI_Benguet = { # Kafagway
 					province = 15157
 
 					color = { 165 135 95 }
@@ -90094,8 +90102,10 @@ e_panyupayana = {
 			}
 		}
 
-		d_cagayan_valley = {
+		d_PHI_cagayan = {
 			color = { 234 217 18 }
+
+			capital = c_bayombong
 
 			c_aparri = {
 				color = { 255 235 80 }
@@ -90115,7 +90125,7 @@ e_panyupayana = {
 
 					color = { 255 235 80 }
 				}
-				b_gatara = {
+				b_PHI_Apayo = {
 					province = 17615
 
 					color = { 255 235 80 }
@@ -90145,10 +90155,11 @@ e_panyupayana = {
 					color = { 210 190 40 }
 				}
 			}
-			c_bolo_ph = {
+			c_PHI_cagayan_valley = {
+				# c_bolo_ph in old RoA
 				color = { 180 170 60 }
 
-				b_bolo_ph = {
+				b_PHI_Bolo = {
 					province = 18324
 
 					color = { 180 170 60 }

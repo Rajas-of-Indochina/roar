@@ -102,24 +102,34 @@ d_pangpang = {
 			holder = tagalog003 # Fictional ruler
 		}
 	}
-## d_dumagat
 
-	c_kasiguran = {
-		867.1.1 = { change_development_level = 2 }
-		860.1.1 = {
-			holder = aeta001
-			government = wanua_government
-		}
-		1065.1.1 = {
-			holder = tagalog001 # Fictional ruler
-		}
+
+## d_dumagat
+c_PHI_kasiguranin = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 3 }
+	1178.1.1 = { change_development_level = 5 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = iloko_kasiguranin_01_fic	#fictional
 	}
-	c_binangonan = {
-		860.1.1 = {
-			holder = aeta003
-			government = wanua_government
-		}
+	1060.1.1 = {
+		holder = iloko_kasiguranin_10_fic	#fictional
 	}
+	1170.1.1 = {
+		holder = iloko_kasiguranin_20_fic	#fictional
+	}
+}
+
+c_binangonan = {
+	860.1.1 = {
+		holder = aeta003
+		government = wanua_government
+	}
+}
+
+
 ## d_bicol
 	c_albay = {
 		860.1.1 = {
