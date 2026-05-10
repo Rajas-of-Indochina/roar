@@ -110,15 +110,17 @@ d_kabardia = {
 		trigger = {
 			holder.culture = culture:circassian
 			NOT = {
-			holder.religion = religion:islam_religion
+				holder.religion = religion:islam_religion
 			}
 		}
 		coat_of_arms = d_alania_kabardia
 	}
 	item = {
 		trigger = {
-			holder.culture = culture:circassian
-			holder.religion = religion:islam_religion
+			AND = {
+				holder.culture = culture:circassian
+				holder.religion = religion:islam_religion
+			}
 		}
 		coat_of_arms = d_alania_kabardia_islam
 	}
