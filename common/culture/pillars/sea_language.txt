@@ -1935,6 +1935,7 @@ language_sula_taliabu = {
 		language_group_central_maluku = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
+		language_union_moluccan = yes
 	}
 
 	ai_will_do = {
@@ -1954,6 +1955,10 @@ language_sula_taliabu = {
 		else_if = {
 			limit = { has_cultural_parameter = language_family_austronesian }
 			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
 		}
 	}
 
