@@ -144,6 +144,44 @@ nunusaku = {
 	}
 }
 
+raja_ampat = {
+	# temporary placeholder - represents various native people of Raja Ampat archipelago ; distant "relatives" of Biak people
+	# This includes: Waigeo, Ma'ya, Salawati, Batanta and many other groups
+	color = raja_ampat
+
+	ethos = ethos_communal
+	heritage = heritage_moluccan
+	language = language_raja_ampat
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_jungle_warriors 			# msl_note: to boost their combat chances for their terrain
+		tradition_culture_blending 			# msl_note: represents various influences on those cultures from various outside groups
+		tradition_fishermen 				# msl_note: fishing in coastal waters became essential part of life for many inhabitants of the archipelago
+		tradition_family_entrepreneurship 	# msl_note: represents their rather peculiar approach to close family ties
+		tradition_wedding_ceremonies 		# msl_note: they have rather peculiar marital system called 'Gelet Exogamy'
+	}
+
+	# msl_note: tradition_maritime_way_of_life/tradition_seafaring does not make much sense for these groups
+
+	name_list = name_list_biak
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		55 = asian_austronesian
+		40 = papuan
+		5 = asian_malay
+	}
+}
+
 sumba = {
 	color = sumba
 
@@ -183,7 +221,7 @@ sula_taliabu = {
 
 	ethos = ethos_bellicose
 	heritage = heritage_moluccan
-	language = language_sula_taliabu
+	language = language_sula_buru
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
