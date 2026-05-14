@@ -1589,6 +1589,47 @@ language_northern_luzon = {
 
 
 ### Austronesian Family - Malayo-Polynesian - Other
+language_aru = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_aru
+		}
+	}
+	parameters = {
+		language_group_aru = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_aru }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_aru }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = aru
+}
+
 language_batak = {
 	type = language
 	is_shown = {
@@ -2004,6 +2045,47 @@ language_sula_buru = {
 	}
 
 	color = sula_taliabu
+}
+
+language_yamdena = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_yamdena
+		}
+	}
+	parameters = {
+		language_group_kei_tanimbar = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+		language_union_moluccan = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_yamdena }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_kei_tanimbar }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_union_moluccan }
+			multiply = same_language_union_choice_factor
+		}
+	}
+
+	color = tanimbar
 }
 
 language_timor = {
