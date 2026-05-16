@@ -109,6 +109,41 @@ buli = {
 	}
 }
 
+buru = {
+	# represents various people of Buru island: Buru, Lisela, Ambelau and others
+	# Endonyms are Gebfuka and Gebemliar
+	color = buru
+
+	ethos = ethos_communal
+	heritage = heritage_moluccan
+	language = language_sula_buru
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_tribe_unity 			# msl_note: familial and communal bonds always played important part in lives of Buru people
+		tradition_highland_warriors 	# msl_note: terrain based choice to boost their defence
+		tradition_hunters 				# msl_note: to this day hunting babirusas is quite important part of livelihood for inland population
+		tradition_fishermen 			# msl_note: tuna fishing makes up important part of the livelihood for coastal population
+		# msl_note: people of Sula archipelago rely on coconuts in their daily livelihood - unsure if any tradition fits for that
+	}
+
+	name_list = name_list_moluccan
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		10 = asian_malay
+		90 = asian_austronesian
+	}
+}
+
 #kei = {
 	# to be added in future
 #}
@@ -187,8 +222,9 @@ nunusaku = {
 }
 
 raja_ampat = {
-	# temporary placeholder - represents various native people of Raja Ampat archipelago ; distant "relatives" of Biak people
+	# represents various native people of Raja Ampat archipelago ; distant "relatives" of Biak people
 	# This includes: Waigeo, Ma'ya, Salawati, Batanta and many other groups
+	# kind of placeholder? or more so generic culture for a large variety of smaller ones
 	color = raja_ampat
 
 	ethos = ethos_communal
@@ -258,18 +294,21 @@ sumba = {
 }
 
 sula_taliabu = {
+	# represents various people of Sula archipelago
 	color = sula_taliabu
 
-	ethos = ethos_bellicose
+	ethos = ethos_communal
 	heritage = heritage_moluccan
 	language = language_sula_buru
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_quarrelsome
-		tradition_jungle_warriors
-		tradition_fishermen
+		tradition_tribe_unity 		# msl_note: unity and peace among various tribes was kept usually through the policy of 'Mangkalomu' to help solve things peacefuly
+		tradition_jungle_warriors 	# msl_note: terrain based choice to boost their defence
+		tradition_fishermen 		# msl_note: fishing makes up important part of their livelihood
+		tradition_hunters 			# msl_note: noted to have been relying on hunting far longer than inhabitants of other nearby archipelagos and islands
+		# msl_note: people of Sula archipelago rely on coconuts in their daily livelihood - unsure if any tradition fits for that
 	}
 
 	name_list = name_list_moluccan
