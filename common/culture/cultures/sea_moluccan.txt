@@ -74,6 +74,7 @@ bima = {
 }
 
 buli = {
+	# needs overhaul
 	color = buli
 
 	ethos = ethos_communal
@@ -108,7 +109,7 @@ buli = {
 	}
 }
 
-#Kei = {
+#kei = {
 	# to be added in future
 #}
 
@@ -123,12 +124,13 @@ maluku = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_religion_blending	
-		tradition_family_entrepreneurship
-		tradition_thalassocratic
+		tradition_religion_blending 		# msl_note: rather quick to adapt various new religions
+		tradition_family_entrepreneurship 	# msl_note: very family oriented
+		tradition_thalassocratic 			# msl_note: Ternate and Tidore are both well known for their involvment in SEA trade
 		tradition_RICE_tropical_purveyors 	# provided by CybrxKhan
 	}
 
+	# msl_note: Ternate and Tidore established grand realms through their sea voyages
 	dlc_tradition = {
 		trait = tradition_maritime_way_of_life
 		requires_dlc_flag = all_under_heaven
@@ -152,6 +154,7 @@ maluku = {
 }
 
 nunusaku = {
+	# represents the diverse people of Lease Islands along Banda and Buru islands ; a bit of generic placeholder
 	color = nunusaku
 
 	ethos = ethos_bellicose
@@ -164,6 +167,7 @@ nunusaku = {
 		tradition_quarrelsome
 		tradition_jungle_warriors
 		tradition_staunch_traditionalists
+		tradition_RICE_tropical_purveyors 	# provided by CybrxKhan
 	}
 
 	name_list = name_list_moluccan
