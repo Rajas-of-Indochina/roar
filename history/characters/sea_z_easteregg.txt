@@ -93,3 +93,31 @@ egg_patlichan = { # Patlichan
 	#culture = polish
 	#religion = catholic
 #}
+
+egg_aia = {
+	name = "Aia"
+	dynasty = bisayan_leyte
+	female = yes
+	culture = bisayan
+	religion = dayawism
+
+	trait = gregarious
+	trait = brave
+	trait = compassionate
+
+	trait = lifestyle_traveler
+	trait = lifestyle_wayfarer
+
+	1035.1.7 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		learn_language = language_iberian # Português
+		employer = bisayan_tandaya_10_fic
+	}
+	1097.1.1 = {
+		# May 5, 2026
+		# Rest in peace
+		death = yes
+	}
+}
