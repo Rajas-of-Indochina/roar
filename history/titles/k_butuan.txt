@@ -1,4 +1,9 @@
-﻿
+﻿k_butuan = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
+
 d_kalagan = {
 	#Kingdom of Butuan founded in Xth
 	978.1.1 = {
@@ -18,100 +23,112 @@ d_kalagan = {
 		holder = bisayan_butuan_20_fic	#fictional
 	}
 }
-	c_butuan = {
-		867.1.1 = { change_development_level = 6 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 20 }
 
-		867.1.1 = {
-			government = wanua_government
-			holder = bisayan_butuan_01_fic	#fictional
-		}
+c_butuan = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 20 }
 
-		#Kingdom of Butuan founded in Xth
-		978.1.1 = {
-			holder = bisayan_butuan_10	#Bantuan
-		}
-		989.1.1 = {
-			holder = bisayan_butuan_11	#Kiling
-		}
-		1009.1.1 = {
-			holder = bisayan_butuan_12	#Sri Bata Shaja
-		}
-		1046.1.1 = {
-			holder = bisayan_butuan_13_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = bisayan_butuan_20_fic	#fictional
-		}
+	867.1.1 = {
+		government = wanua_government
+		holder = bisayan_butuan_01_fic	#fictional
 	}
-	c_tandag = {
-		867.1.1 = { change_development_level = 2 }
-		860.1.1 = {
-			holder = bisayan_calagan_01_fic # Fictional ruler
-			liege = d_kalagan
-			government = wanua_government
-		}
-
-		#Kingdom of Butuan founded in Xth
-		978.1.1 = {
-			holder = bisayan_butuan_10	#Bantuan
-		}
-		989.1.1 = {
-			holder = bisayan_butuan_11	#Kiling
-		}
-		1009.1.1 = {
-			holder = bisayan_butuan_12	#Sri Bata Shaja
-		}
-		1046.1.1 = {
-			holder = bisayan_butuan_13_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = bisayan_butuan_20_fic	#fictional
-		}
+	#Kingdom of Butuan founded in Xth
+	978.1.1 = {
+		holder = bisayan_butuan_10	#Bantuan
 	}
-	# c_agusan # New placeholder(s) needed
+	989.1.1 = {
+		holder = bisayan_butuan_11	#Kiling
+	}
+	1009.1.1 = {
+		holder = bisayan_butuan_12	#Sri Bata Shaja
+	}
+	1046.1.1 = {
+		holder = bisayan_butuan_13_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = bisayan_butuan_20_fic	#fictional
+	}
+}
+
+c_tandag = {
+	867.1.1 = { change_development_level = 2 }
+	860.1.1 = {
+		holder = bisayan_calagan_01_fic # Fictional ruler
+		liege = d_kalagan
+		government = wanua_government
+	}
+	#Kingdom of Butuan founded in Xth
+	978.1.1 = {
+		holder = bisayan_butuan_10	#Bantuan
+	}
+	989.1.1 = {
+		holder = bisayan_butuan_11	#Kiling
+	}
+	1009.1.1 = {
+		holder = bisayan_butuan_12	#Sri Bata Shaja
+	}
+	1046.1.1 = {
+		holder = bisayan_butuan_13_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = bisayan_butuan_20_fic	#fictional
+	}
+}
+
+c_agusan ={
+	860.1.1 = {
+		government = wanua_government
+	}
+}
+
+
 d_dabaw = {
 	867.1.1 = { change_development_level = 2 }
 }
-	c_dabaw = {
-		867.1.1 = {
-			government = wanua_government
-			holder = bisayan_mandaya_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = bisayan_mandaya_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = bisayan_mandaya_20_fic	#fictional
-		}
-    }
-    c_nabunturan = {
-		867.1.1 = {
-			government = wanua_government
-			holder = bisayan_mandaya_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = bisayan_mandaya_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = bisayan_mandaya_20_fic	#fictional
-		}
-    }
+
+c_dabaw = {
+	867.1.1 = {
+		government = wanua_government
+		holder = bisayan_mandaya_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = bisayan_mandaya_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = bisayan_mandaya_20_fic	#fictional
+	}
+}
+
+c_nabunturan = {
+	867.1.1 = {
+		government = wanua_government
+		holder = bisayan_mandaya_01_fic	#fictional
+	}
+	1066.1.1 = {
+		holder = bisayan_mandaya_10_fic	#fictional
+	}
+	1178.1.1 = {
+		holder = bisayan_mandaya_20_fic	#fictional
+	}
+}
+
+
 ## d_himologan
-	c_himologan = {
-    	860.1.1 = {
-    		holder = mindanao007
-			government = wanua_government
-    	}
-    }
-    c_bukidnon = {
-    	860.1.1 = {
-    		holder = mindanao007
-			government = wanua_government
-    	}
-    	1060.1.1 = {
-    		holder = manobo002
-			government = wanua_government
-    	}
-    }
+c_himologan = {
+	860.1.1 = {
+		holder = mindanao007
+		government = wanua_government
+	}
+}
+
+c_bukidnon = {
+	860.1.1 = {
+		holder = mindanao007
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = manobo002
+		government = wanua_government
+	}
+}
