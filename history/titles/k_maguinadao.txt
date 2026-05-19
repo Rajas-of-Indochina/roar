@@ -37,18 +37,27 @@
 			holder = bisayan_maguindanao_20_fic
 		}
     }
-    c_sarangani = {
-		860.1.1 = {
-			holder = bisayan_sarangani_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = bisayan_sarangani_10_fic
-		}
-		1170.1.1 = {
-			holder = bisayan_sarangani_20_fic
-		}
-    }
+
+c_PHI_sarangani = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
+
+	860.1.1 = {
+		holder = bisayan_sarangani_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = bisayan_sarangani_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = bisayan_sarangani_20_fic
+	}
+}
+
+
 d_lanao = {
 	867.1.1 = { change_development_level = 2 }
 }
