@@ -1,5 +1,76 @@
 ﻿## In alphabetical order ##
 
+aeta = {
+	# AKA: Agta, Dumagat
+	# collective terms for several indigenous peoples of Luzon islands ; usually refers to so called "Negrito" groups
+	color = aeta
+
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_northern_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
+		tradition_staunch_traditionalists 	# msl_note: they preserved their traditional way of life for centuries ; might qualify for tradition_SEA_ade ?
+		tradition_tribe_unity 				# msl_note: very tigh-knit communities based around family relations
+		tradition_migratory 				# msl_note: Negritos were traditionally nomadic people
+		tradition_language_scholars 		# msl_note: Aeta is a term for many different people, each adopting a different language depending on what their Austronesian neighbours used
+		# msl_note: traditionally practiced hunter-gathering and swidden farming
+		# msl_note: very communal people, often sharing food and usable land with each other ; maybe give tradition_collective_lands ?
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		90 = papuan
+		10 = asian_austronesian
+	}
+}
+
+ati = {
+	# indigenous peoples in the Visayan Islands (mainly islands of Boracay, Panay and Negros) ; counted as part of the "Negrito" groups
+	color = ati
+
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_ati
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_hill_dwellers 		# msl_note: they have an entire festival related to hills being their home, called 'Ati-atihan'
+		tradition_medicinal_plants 		# msl_note: known practitioners of herbal medicine
+		tradition_migratory 			# msl_note: Negritos were traditionally nomadic people, Ati known as especially mobile
+		tradition_festivities 			# msl_note: 'Ati-atihan' festival is one of their most important festivities ; it is named in their honor
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		90 = papuan
+		10 = asian_austronesian
+	}
+}
+
 buranun = {
 	# represents Buranun, Tagimaha and Baklaya - indigenous people of Sulu archipelago
 	color = buranun
@@ -331,71 +402,6 @@ palawan = {
 
 	ethnicities = {
 		100 = asian_austronesian
-	}
-}
-
-aeta = {
-	# AKA: Agta and Dumagat
-	# collective terms for several indigenous peoples of Luzon islands ; usually refers to so called "negrito" groups
-	color = aeta
-
-	ethos = ethos_stoic
-	heritage = heritage_filipino
-	language = language_northern_luzon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-		tradition_staunch_traditionalists
-		tradition_stalwart_defenders
-		tradition_migratory
-		tradition_language_scholars
-	}
-
-	name_list = name_list_filipino
-
-	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		10 = papuan
-	}
-}
-
-ati = {
-	color = ati
-
-	ethos = ethos_communal
-	heritage = heritage_filipino
-	language = language_ati
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-		tradition_medicinal_plants
-		tradition_migratory
-		tradition_festivities
-	}
-
-	name_list = name_list_filipino
-
-	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		10 = papuan
 	}
 }
 
