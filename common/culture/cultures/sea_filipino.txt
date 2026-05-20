@@ -6,7 +6,7 @@ buranun = {
 
 	ethos = ethos_bellicose
 	heritage = heritage_filipino
-	language = language_filipino
+	language = language_filipino	# greater central philippine
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
 
@@ -46,9 +46,10 @@ idaya = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		# msl_note: shpuld they have tradition_SEA_jungle_warfare? Cause rn they are only Filipino group without it
+		tradition_stalwart_defenders 		# msl_note: known warriors with knack for defending their land
 		tradition_hill_dwellers 			# msl_note: terrain based pick
 		tradition_storytellers 				# msl_note: rich oral traditions among Cordilleran peoples
-		tradition_stalwart_defenders 		# msl_note: idk, for defendng their territory I guess?
 		# msl_note: tradition_mystical_ancestors could fit their ancestor worship, but religion already covers that
 	}
 
@@ -91,7 +92,7 @@ ivatan = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_highland_warriors 		# msl_note: they constructed fortified hills protected by sheer embankments known as 'ijang' ; tradition covers the hill 'defences'
+		tradition_highland_warriors 	# msl_note: they constructed fortified hills protected by sheer embankments known as 'ijang' ; tradition covers the hill 'defences'
 		tradition_hill_dwellers 		# msl_note: Batanes and Babuyan Islands are rather hill-like
 		tradition_fishermen 			# msl_note: sea and fishing are crucial elements of Ivatan peoples' lives
 		tradition_storytellers 			# msl_note: rich oral traditions, more written below
@@ -115,6 +116,91 @@ ivatan = {
 	}
 }
 
+mansaka = {
+	# Meaning 'people of the clearings' ; indigenous inhabitants of Davao provinces of Mindanao
+	# https://www.yodisphere.com/2022/09/Mansaka-Tribe-Culture-Traditions.html
+	color = mansaka
+
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_filipino	# greater central philippine
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_SEA_ade 				# msl_note: to represent their rich oral traditions and laws pretty similar to Sulawesi and Dayak ones ; replaced tradition_storytellers
+		tradition_polygamous 			# msl_note: polygamy is practiced as long as every wife can be given right living conditions
+		tradition_collective_lands 		# msl_note: very communal people, many people work together during 
+		# very nature concious in their farming ; a rather fascinating thing to read about
+	}
+
+	# msl_note: 'people of the clearings' from the word 'saka' which refers to the farming fields
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		80 = asian_austronesian
+		15 = asian_malay
+		5 = papuan
+	}
+}
+
+manuvu = { # Manuvu
+	# AKA: Manobo, Menobo, Menuvu or Minuvu
+	# highly diverse group of indigenous inhabitants of Mindanao
+	# https://www.yodisphere.com/2022/05/Manobo-Tribe-History-Culture-Traditions.html
+	color = manuvu
+
+	ethos = ethos_stoic
+	heritage = heritage_filipino
+	language = language_filipino	# greater central philippine
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
+		tradition_SEA_ade 					# msl_note: various oral traditions and laws represented through this ; replaces tradition_staunch_traditionalists
+		tradition_hill_dwellers 			# msl_note: terrain based choice ; to fit their placement in the inland Mindanao
+		tradition_equal_inheritance 		# msl_note: both men and women could aim for role of tribe elders/chieftains, called 'datu'/'bai'
+	}
+
+	# msl_note: rice cultivation is central to Manuvu livelihood, with various rituals and ceremonies tied to it
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	name_list = name_list_manuvu
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		90 = asian_austronesian
+		10 = papuan
+	}
+}
+
 # panganisan = {
 	# to be added
 # }
@@ -127,9 +213,17 @@ balanghay = {
 
 	ethos = ethos_bellicose
 	heritage = heritage_filipino
-	language = language_filipino
+	language = language_filipino	# greater central philippine
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_practiced_pirates
+		tradition_seafaring
+		tradition_mystical_ancestors
+		tradition_migratory
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+	}
 
 	name_list = name_list_balanghay
 
@@ -140,14 +234,6 @@ balanghay = {
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
-
-	traditions = {
-		tradition_practiced_pirates
-		tradition_seafaring
-		tradition_mystical_ancestors
-		tradition_migratory
-		tradition_SEA_jungle_warfare
-	}
 
 	ethnicities = {
 		100 = asian_austronesian
@@ -164,6 +250,13 @@ suku = {
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
 
+	traditions = {
+		tradition_artisans
+		tradition_storytellers
+		tradition_xenophilic
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+	}
+
 	name_list = name_list_filipino
 
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
@@ -173,13 +266,6 @@ suku = {
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
-
-	traditions = {
-		tradition_artisans
-		tradition_storytellers
-		tradition_xenophilic
-		tradition_SEA_jungle_warfare
-	}
 
 	ethnicities = {
 		100 = asian_austronesian
@@ -191,9 +277,16 @@ danao = {
 
 	ethos = ethos_bellicose
 	heritage = heritage_filipino
-	language = language_filipino
+	language = language_filipino	# greater central philippine
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_religion_blending
+		tradition_practiced_pirates
+		tradition_music_theory
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+	}
 
 	name_list = name_list_danao
 
@@ -205,13 +298,6 @@ danao = {
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
-	traditions = {
-		tradition_religion_blending
-		tradition_practiced_pirates
-		tradition_music_theory
-		tradition_SEA_jungle_warfare
-	}
-
 	ethnicities = {
 		100 = asian_austronesian
 	}
@@ -222,9 +308,16 @@ palawan = {
 
 	ethos = ethos_communal
 	heritage = heritage_filipino
-	language = language_filipino
+	language = language_filipino	# greater central philippine
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_religion_blending
+		tradition_festivities
+		tradition_hard_working
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+	}
 
 	name_list = name_list_filipino
 
@@ -235,13 +328,6 @@ palawan = {
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
-
-	traditions = {
-		tradition_religion_blending
-		tradition_festivities
-		tradition_hard_working
-		tradition_SEA_jungle_warfare
-	}
 
 	ethnicities = {
 		100 = asian_austronesian
@@ -259,9 +345,17 @@ aeta = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_staunch_traditionalists
+		tradition_stalwart_defenders
+		tradition_migratory
+		tradition_language_scholars
+	}
+
 	name_list = name_list_filipino
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx  }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -269,18 +363,8 @@ aeta = {
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
-	traditions = {
-		tradition_staunch_traditionalists
-		tradition_stalwart_defenders
-		tradition_migratory
-		tradition_language_scholars
-		tradition_SEA_jungle_warfare
-	}
-
 	ethnicities = {
 		10 = papuan
-
-		#40 = negritos_1
 	}
 }
 
@@ -293,42 +377,16 @@ ati = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
-	name_list = name_list_filipino
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
 	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
 		tradition_medicinal_plants
 		tradition_migratory
 		tradition_festivities
-		tradition_SEA_jungle_warfare
 	}
 
-	ethnicities = {
-		10 = papuan
+	name_list = name_list_filipino
 
-		#40 = negritos_1
-	}
-}
-
-manobo = {
-	color = manobo
-
-	ethos = ethos_egalitarian
-	heritage = heritage_filipino
-	language = language_filipino
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	name_list = name_list_manobo
-
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx  }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -336,16 +394,8 @@ manobo = {
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
-	traditions = {
-		tradition_equal_inheritance
-		tradition_staunch_traditionalists
-		tradition_SEA_jungle_warfare
-	}
-
 	ethnicities = {
 		10 = papuan
-
-		#40 = negritos_1
 	}
 }
 
@@ -358,9 +408,16 @@ bilic = {
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
+	traditions = {
+		tradition_metal_craftsmanship
+		tradition_staunch_traditionalists
+		tradition_music_theory
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+	}
+
 	name_list = name_list_filipino
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx  }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -368,17 +425,8 @@ bilic = {
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
-	traditions = {
-		tradition_metal_craftsmanship
-		tradition_staunch_traditionalists
-		tradition_music_theory
-		tradition_SEA_jungle_warfare
-	}
-
 	ethnicities = {
 		10 = papuan
-
-		#40 = negritos_1
 	}
 }
 
@@ -387,13 +435,20 @@ subanen = {
 
 	ethos = ethos_communal
 	heritage = heritage_filipino
-	language = language_filipino
+	language = language_filipino	# greater central philippine
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
+	traditions = {
+		tradition_polygamous
+		tradition_collective_lands
+		tradition_storytellers
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+	}
+
 	name_list = name_list_filipino
 
-	coa_gfx = { austronesian_group_coa_gfx }
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx  }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
@@ -401,50 +456,8 @@ subanen = {
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
 
-	traditions = {
-		tradition_polygamous
-		tradition_collective_lands
-		tradition_storytellers
-		tradition_SEA_jungle_warfare
-	}
-
 	ethnicities = {
 		10 = papuan
-
-		#40 = negritos_1
-	}
-}
-
-mansaka = {
-	color = mansaka
-
-	ethos = ethos_communal
-	heritage = heritage_filipino
-	language = language_filipino
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	name_list = name_list_filipino
-
-	coa_gfx = { austronesian_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	traditions = {
-		tradition_polygamous
-		tradition_collective_lands
-		tradition_storytellers
-		tradition_SEA_jungle_warfare
-	}
-
-	ethnicities = {
-		10 = papuan
-
-		#40 = negritos_1
 	}
 }
 
