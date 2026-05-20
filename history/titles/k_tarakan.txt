@@ -9,6 +9,7 @@ d_BOR_kutai = {
 	# rules dates are somewhat sketchy, probably not entirely historical
 
 	350.1.1 = {
+		government = wanua_government
 		holder = dayak_segara_00	#Kudungga
 	}
 	375.1.1 = {
@@ -75,10 +76,12 @@ c_BOR_martapura = {
 	1178.1.1 = { change_development_level = 15 }
 
 	350.1.1 = {
+		government = wanua_government
 		holder = dayak_segara_00	#Kudungga
 		liege = d_BOR_kutai
 	}
 	375.1.1 = {
+		government = mandala_government
 		holder = dayak_segara_01	#Aswawarman
 		liege = d_BOR_kutai
 	}
@@ -142,6 +145,7 @@ c_BOR_kutai_utara = {
 	1178.1.1 = { change_development_level = 7 }
 
 	350.1.1 = {
+		government = wanua_government
 		holder = dayak_segara_00	#Kudungga
 		liege = d_BOR_kutai
 	}
@@ -211,7 +215,7 @@ c_BOR_kutai_jauh = {
 
 	800.1.1 = {
 		government = wanua_government
-		liege = d_BOR_kutai 	# make tributary
+		# make tributary of d_BOR_kutai
 	}
 	860.1.1 = {
 		holder = sea_tunjung_01
@@ -227,10 +231,8 @@ c_BOR_kutai_jauh = {
 }
 
 c_mahakam = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_kayan_mahakam_01
 	}
 	#
@@ -244,10 +246,8 @@ c_mahakam = {
 }
 
 c_muara_wahau = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_kayan_wehea_01
 	}
 	#
@@ -267,20 +267,16 @@ c_basap = {
 	1066.1.1 = { change_development_level = 4 }
 	1178.1.1 = { change_development_level = 7 }
 
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
-		holder = sea_kayan_berau_01
+		government = wanua_government
+		holder = sea_kayan_basap_01
 	}
 	# more history later
 }
 
 c_BOR_berau = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = dayak_berau_01_fic	#placeholder
 	}
 	#
@@ -294,30 +290,24 @@ c_BOR_berau = {
 }
 
 c_naha_aya = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_kayan_datadian_01
 	}
 	# more history later
 }
 
 c_datadian = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_kayan_datadian_01
 	}
 	# more history later
 }
 
 c_agung_baru = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_kayan_agung_baru_01
 	}
 	# more history later
@@ -330,9 +320,6 @@ c_BOR_menjelutung = {
 	1066.1.1 = { change_development_level = 7 }
 	1178.1.1 = { change_development_level = 12 }
 
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
 		government = wanua_government
 		holder = dayak_menjelutung_01_fic	#fictional
@@ -355,10 +342,8 @@ c_BOR_lahad_datu = {
 	1066.1.1 = { change_development_level = 5 }
 	1178.1.1 = { change_development_level = 8 }
 
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = dayak_lahaddatu_01_fic	#fictional
 	}
 	#
@@ -379,20 +364,23 @@ c_tawau = {
 	1066.1.1 = { change_development_level = 3 }
 	1178.1.1 = { change_development_level = 5 }
 
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_kadazan_tawau_01
 	}
-	# more history later
+	#
+	1060.1.1 = {
+		holder = sea_kadazan_tawau_02
+	}
+	#
+	1170.1.1 = {
+		holder = sea_kadazan_tawau_03
+	}
 }
 
 c_malinau = {
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_murut_malinau_01
 	}
 	#
@@ -410,10 +398,8 @@ c_BOR_nabawan = {
 	1066.1.1 = { change_development_level = 2 }
 	1178.1.1 = { change_development_level = 4 }
 
-	800.1.1 = {
-		government = wanua_government
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = dayak_nabawan_01_fic	#fictional
 	}
 	887.1.22 = {

@@ -136,62 +136,6 @@ c_BOR_sukadana = {
 	891.11.3 = {
 		holder = malay_tanjungpura_02_fic	#fictional
 	}
-	# Historical (?) rulers
-	900.1.1 = {
-		holder = tanjungpura005 # Hyang-Ta
-	}
-	977.1.1 = {
-		holder = tanjungpura006 # Siak Bahulun
-	}
-	#
-	1025.1.1 = {
-		holder = malay_tanjungpura_06_fic	#fictional
-	}
-	1043.6.12 = {
-		holder = malay_tanjungpura_07_fic	#fictional
-	}
-	1086.7.28 = {
-		holder = malay_tanjungpura_08_fic	#fictional
-	}
-	1124.9.12 = {
-		holder = malay_tanjungpura_09_fic	#fictional
-	}
-	1152.6.7 = {
-		holder = malay_tanjungpura_10_fic	#fictional
-	}
-	1190.6.5 = {
-		holder = malay_tanjungpura_11_fic	#fictional
-	}
-	1222.1.30 = {
-		holder = malay_tanjungpura_12_fic	#fictional
-	}	
-	1257.3.6 = {
-		holder = malay_tanjungpura_13_fic	#fictional
-	}
-	#
-	1290.1.1 = {
-		holder = tanjungpura008 # Rangga Sentap
-	}
-}
-
-c_BOR_waringin = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 12 }
-
-	800.1.1 = {
-		government = mandala_government
-		holder = tanjungpura003 # Krysna Pandita
-		liege = d_BOR_tanjungpura
-	}
-	#
-	860.1.1 = {
-		government = mandala_government
-		holder = malay_tanjungpura_01_fic	#fictional
-	}
-	891.11.3 = {
-		holder = malay_tanjungpura_02_fic	#fictional
-	}
 	900.1.1 = {
 		liege = d_BOR_tanjungpura
 	}
@@ -231,6 +175,26 @@ c_BOR_waringin = {
 	#
 	1290.1.1 = {
 		holder = tanjungpura008 # Rangga Sentap
+	}
+}
+
+c_BOR_waringin = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 12 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_bidayuh_waringin_01
+		liege = d_BOR_tanjungpura
+	}
+	#
+	1060.1.1 = {
+		holder = sea_bidayuh_waringin_02
+	}
+	#
+	1170.1.1 = {
+		holder = sea_bidayuh_waringin_03
 	}
 }
 
@@ -352,46 +316,17 @@ c_pinyuh = {
 }
 
 c_bengkayang = {
-	# Wijayapura from ~7th to ~9th
-	850.1.1 = {
-		government = mandala_government
-		holder = malays_sambas_01_fic	#fictional
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_bidayuh_bengkayang_01
 	}
-	886.2.21 = {
-		holder = malays_sambas_02_fic	#fictional
+	#
+	1060.1.1 = {
+		holder = sea_bidayuh_bengkayang_02
 	}
-	921.5.18 = {
-		holder = malays_sambas_03_fic	#fictional
-	}
-	944.3.21 = {
-		holder = malays_sambas_04_fic	#fictional
-	}
-	978.3.27 = {
-		holder = malays_sambas_05_fic	#fictional
-	}
-	1021.4.21 = {
-		holder = malays_sambas_06_fic	#fictional
-	}
-	1049.6.15 = {
-		holder = malays_sambas_07_fic	#fictional
-	}
-	1069.10.11 = {
-		holder = malays_sambas_08_fic	#fictional
-	}
-	1104.6.28 = {
-		holder = malays_sambas_09_fic	#fictional
-	}
-	1145.9.7 = {
-		holder = malays_sambas_10_fic	#fictional
-	}
-	1172.11.7 = {
-		holder = malays_sambas_11_fic	#fictional
-	}
-	1200.9.2 = {
-		holder = malays_sambas_12_fic	#fictional
-	}
-	1246.4.24 = {
-		holder = malays_sambas_13_fic	#fictional
+	#
+	1170.1.1 = {
+		holder = sea_bidayuh_bengkayang_03
 	}
 }
 
