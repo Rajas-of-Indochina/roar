@@ -71,6 +71,52 @@ ati = {
 	}
 }
 
+bilic = {
+	# represents various indigenous inhabitants of southern Mindanao - Bagobo, Blaan, Tboli and Teduray
+	# https://en.wikipedia.org/wiki/Blaan_people ; https://en.wikipedia.org/wiki/Tboli_people ; https://en.wikipedia.org/wiki/Teduray_people ; https://en.wikipedia.org/wiki/South_Mindanao_languages
+	# https://www.yodisphere.com/2022/09/Tiboli-Tboli-Tribe-Culture-Traditions.html
+	color = bilic
+
+	ethos = ethos_spiritual		# alternatively ethos_communal
+	heritage = heritage_filipino
+	language = language_bilic
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_SEA_ade 				# msl_note: oral laws and traditions alongside the communal lifestyle, shape the livelihood of Bilic people ; replaced tradition_staunch_traditionalists
+		tradition_metal_craftsmanship 	# msl_note: Blaan people are famed for their tradition of creating art from brass and copper
+		tradition_music_theory 			# msl_note: Tboli people are famed for their musical heritage consisting of various types of agung ensembles
+		# msl_note: interesting enough many Bilic people did not really have villages, instead living in clusters of few houses without a specific cheiftain or any similar central character
+		# msl_note: like many other indigenous inhabitants of Mindanao, they practiced 'kaingin' or 'tniba' method of clearing land for farming, while also relying on jungle resources for their survival
+		# msl_note: Blaans and other Bilic people are well known for their usage of abaca fiber, which weaving is known as 'mabal' with produced clothing known as 'tabih'
+		# msl_note: probably not time accurate but Tboli people have fascianting relation with horses ; image of women in tradtional outfits and on horses goes hard
+	}
+
+	# msl_note: rice plays a central role in lives of Bilic peoples, especially for the Tboli people whom often used it as representation of goodwill and repayment for labour in 'sbasa' system
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		90 = asian_austronesian
+		10 = papuan
+	}
+}
+
 buranun = {
 	# represents Buranun, Tagimaha and Baklaya - indigenous people of Sulu archipelago
 	color = buranun
@@ -95,6 +141,49 @@ buranun = {
 
 	coa_gfx = { sulu_coa_gfx filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { mindanaoan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
+danao = {
+	# represents inidgenous inhabitants of western Mindanao who speak Danao languages - Maguindanaon, Maranao and Iranun peoples
+	# https://en.wikipedia.org/wiki/Maguindanao_people ; https://en.wikipedia.org/wiki/Maranao_people ; https://en.wikipedia.org/wiki/Iranun_people
+	color = danao
+
+	ethos = ethos_bellicose		# msl_note: artists and warriors alike
+	heritage = heritage_filipino
+	language = language_filipino	# greater central philippine
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_metal_craftsmanship 	# msl_note: Danao are renowned metalworkers, famed for their craft of 'keris' swords and other weapons, as well as gongs and various metal art pieces
+		tradition_poetry 				# msl_note: Maguindanaon are famed for their riddles, rhymes and other short forms of poetry
+		tradition_music_theory 			# msl_note: Danano peoples are famed for their 'kulintang' music - a type of gong music
+		# msl_note: Maguindanaon are famed for their riddles that help promoting the social bonds and are used as pedagogic tools
+		# msl_note: tradition_practiced_pirates might work better for later time periods
+		# msl_note: tradition_religion_blending might also be more accurate but for later time periods
+	}
+
+	# msl_note: like for many other Filipino groups, rice was staple of their farming
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	name_list = name_list_danao
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
 	clothing_gfx = { mindanaoan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 	house_coa_frame = house_frame_26
@@ -201,9 +290,11 @@ mansaka = {
 	traditions = {
 		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
 		tradition_SEA_ade 				# msl_note: to represent their rich oral traditions and laws pretty similar to Sulawesi and Dayak ones ; replaced tradition_storytellers
-		tradition_polygamous 			# msl_note: polygamy is practiced as long as every wife can be given right living conditions
+		tradition_medicinal_plants 		# msl_note: known practitioners of herbal medicine
 		tradition_collective_lands 		# msl_note: very communal people, many people work together during 
-		# very nature concious in their farming ; a rather fascinating thing to read about
+		# msl_note: very nature concious in their farming ; a rather fascinating thing to read about
+		# msl_note: polygamy is practiced as long as every wife can be given right living conditions
+		# msl_note: tradition_polygamous is a kinda nothing tradition though, so I removed it to not waste a slot
 	}
 
 	# msl_note: 'people of the clearings' from the word 'saka' which refers to the farming fields
@@ -273,11 +364,55 @@ manuvu = { # Manuvu
 }
 
 # panganisan = {
-	# to be added
+# consider adding or as divergent culture
 # }
 
+subanen = {
+	# AKA: Subanon or Subanun ; indigenous peoples of the Zamboanga peninsula
+	# https://en.wikipedia.org/wiki/Subanon_people
+	# https://www.yodisphere.com/2022/09/Subanon-Subanen-Tribe-Culture-Traditions.html
+	color = subanen
 
-## Files To Sort
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_filipino	# greater central philippine
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_SEA_ade 				# msl_note: oral laws and traditions shape the communal society of Subanen people
+		tradition_collective_lands 		# msl_note: they moved from field to field, entire families tending to the crops
+		tradition_equal_inheritance 	# msl_note: general lack of typically 'women' and 'men' roles in society - women help in fields and men in kitchen and with children ; not fully fitting for this tradition but I think it would be neat to be represented as a tradition somehow
+		# msl_note: tradition_storytellers - rich oral traditions composing of various stories, epics and folktales ; removed for sake of space
+		# msl_note: tradition_polygamous is a kinda nothing tradition so I removed it to not waste a slot
+	}
+
+	# msl_note: rice cultivation is very important part of their livelihood
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		90 = asian_austronesian
+		10 = papuan
+	}
+}
+
+
+## Files Still To Sort
 balanghay = {
 	# tawo in old RoA
 	color = balanghay
@@ -343,37 +478,6 @@ suku = {
 	}
 }
 
-danao = {
-	color = danao
-
-	ethos = ethos_bellicose
-	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religion_blending
-		tradition_practiced_pirates
-		tradition_music_theory
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-	}
-
-	name_list = name_list_danao
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { mindanaoan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
 palawan = {
 	color = palawan
 
@@ -402,68 +506,6 @@ palawan = {
 
 	ethnicities = {
 		100 = asian_austronesian
-	}
-}
-
-bilic = {
-	color = bilic
-
-	ethos = ethos_spiritual
-	heritage = heritage_filipino
-	language = language_bilic
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_metal_craftsmanship
-		tradition_staunch_traditionalists
-		tradition_music_theory
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-	}
-
-	name_list = name_list_filipino
-
-	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		10 = papuan
-	}
-}
-
-subanen = {
-	color = subanen
-
-	ethos = ethos_communal
-	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_polygamous
-		tradition_collective_lands
-		tradition_storytellers
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-	}
-
-	name_list = name_list_filipino
-
-	coa_gfx = { austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		10 = papuan
 	}
 }
 
