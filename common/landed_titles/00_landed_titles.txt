@@ -1187,8 +1187,8 @@ e_carthage = {
 	color = { 45 0 11 }
 	definite_form = yes
 	can_be_named_after_dynasty = no
-	
-	capital = c_tunis #Tunis 
+
+	capital = c_tunis #Tunis
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
@@ -1202,7 +1202,7 @@ k_pechenegs = {
 
 	capital = c_odessa # Odessa
 }
-# Carthage 
+# Carthage
 k_carthage = {
 	color = { 0 33 60 }
 
@@ -4541,7 +4541,7 @@ e_britannia = {
 
 		d_cumbria = {
 			color = { 220 130 75 }
-			
+
 			capital = c_cumberland # Cumberland
 		}
 	}
@@ -8049,7 +8049,7 @@ e_byzantium = {
 			NOT = {
 				any_held_title = {
 					this = title:e_latin_empire
-				} 
+				}
 			}
 		}
 	}
@@ -13520,7 +13520,7 @@ e_byzantium = {
 					name_list_maghrebi = cn_balarm
 					name_list_andalusian = cn_balarm
 					name_list_yemeni = cn_balarm
-					name_list_carthaginian = cn_panormus 
+					name_list_carthaginian = cn_panormus
 				}
 
 				b_palermo = {
@@ -13543,8 +13543,8 @@ e_byzantium = {
 
 					color = { 155 254 86 }
 
-					cultural_names = { 
-						name_list_carthaginian = cn_lilybaeum 
+					cultural_names = {
+						name_list_carthaginian = cn_lilybaeum
 					}
 				}
 				b_calatafimi = {
@@ -50953,7 +50953,7 @@ e_maghreb = {
 				color = { 122 140 196 }
 
 				cultural_names = {
-					name_list_carthaginian = cn_hadrumetum	
+					name_list_carthaginian = cn_hadrumetum
 				}
 
 				b_mahdiya = {
@@ -50962,7 +50962,7 @@ e_maghreb = {
 					color = { 122 140 196 }
 
 					cultural_names = {
-						name_list_carthaginian = cn_hadrumetum	
+						name_list_carthaginian = cn_hadrumetum
 					}
 				}
 				b_monastir = {
@@ -77271,7 +77271,7 @@ e_srivijaya = {
 		d_SUM_bangkahulu = {
 			color = { 110 100 50 }
 
-			c_bengkulu = {
+			c_SUM_bengkulu = {
 				color = { 120 110 60 }
 
 				b_bengkulu = {
@@ -77295,7 +77295,7 @@ e_srivijaya = {
 					color = { 140 130 80 }
 				}
 			}
-			c_SUM_bengkulu = {
+			c_selebar = {
 				color = { 130 120 70 }
 
 				b_SUM_seluma = {
@@ -77664,8 +77664,22 @@ e_srivijaya = {
 			color = { 35 155 150 }
 
 			c_SUM_lingga = {
+				color = { 25 145 140 }
+
+				b_lingga = {
+					province = 16830
+
+					color = { 25 145 140 }
+				}
+			}
+			c_SUM_batam = {
 				color = { 45 165 160 }
 
+				b_SUM_batam = {
+					province = 11277
+
+					color = { 35 155 150 }
+				}
 				b_karimun = {
 					province = 17198
 
@@ -77675,20 +77689,6 @@ e_srivijaya = {
 					province = 17255
 
 					color = { 55 175 170 }
-				}
-				b_SUM_batam = {
-					province = 11277
-
-					color = { 35 155 150 }
-				}
-			}
-			c_lingga = {
-				color = { 25 145 140 }
-
-				b_lingga = {
-					province = 16830
-
-					color = { 25 145 140 }
 				}
 			}
 		}
@@ -79693,9 +79693,9 @@ k_winideheim = {
 }
 k_cossack = {
 	color = { 40 160 40 }
-	
+
 	definite_form = yes
-	
+
 	capital = c_tana
 
 	can_create = { always = no }
@@ -89605,7 +89605,7 @@ e_iri-an = {
 e_panyupayana = {
 	color = { 255 255 79 }
 
-	#capital = 
+	#capital =
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
