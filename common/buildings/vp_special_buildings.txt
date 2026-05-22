@@ -58,60 +58,60 @@ borobudur_temple_01 = {
 # Angkor Wat
 ############
 
-sea_angkor_wat_01 = {
-    # vanilla is temples_angkor_01
+# sea_angkor_wat_01 = {
+#     # vanilla is temples_angkor_01
 
-	asset = {
-		type = pdxmesh
-		name = "wonder_angkorwat_01_mesh"
-	}
+# 	asset = {
+# 		type = pdxmesh
+# 		name = "wonder_angkorwat_01_mesh"
+# 	}
 
-	construction_time = very_slow_construction_time
-	type_icon = "icon_sea_angkor_wat.dds"
+# 	construction_time = very_slow_construction_time
+# 	type_icon = "icon_sea_angkor_wat.dds"
 
-	can_construct_potential = {
-		always = yes
-	}
-	show_disabled = yes
+# 	can_construct_potential = {
+# 		always = yes
+# 	}
+# 	show_disabled = yes
 
-	is_enabled = {
-		custom_description = {
-			text = angkor_wat_holder_requirement
-			scope:holder = {
-				OR = {
-					religion = religion:buddhism_religion
-					religion = religion:hinduism_religion
-				}
-			}
-		}
-	}
+# 	is_enabled = {
+# 		custom_description = {
+# 			text = angkor_wat_holder_requirement
+# 			scope:holder = {
+# 				OR = {
+# 					religion = religion:buddhism_religion
+# 					religion = religion:hinduism_religion
+# 				}
+# 			}
+# 		}
+# 	}
 
-	character_modifier = {
-		monthly_dynasty_prestige_mult = 0.05
-		monthly_county_control_growth_factor = 0.1
-		monthly_piety = 0.5
-		knight_effectiveness_mult = 0.1
-	}
+# 	character_modifier = {
+# 		monthly_dynasty_prestige_mult = 0.05
+# 		monthly_county_control_growth_factor = 0.1
+# 		monthly_piety = 0.5
+# 		knight_effectiveness_mult = 0.1
+# 	}
 
-	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.3
-		development_growth = 0.2
-	}
+# 	county_modifier = {
+# 		tax_mult = 0.2
+# 		development_growth_factor = 0.3
+# 		development_growth = 0.2
+# 	}
 
-	province_modifier = {
-		monthly_income = 3
-		fort_level = 2
-	}
+# 	province_modifier = {
+# 		monthly_income = 3
+# 		fort_level = 2
+# 	}
 
-	ai_value = {
-		base = 100
-	}
+# 	ai_value = {
+# 		base = 100
+# 	}
 
-	type = special
+# 	type = special
 
-	flag = travel_point_of_interest_religious
-}
+# 	flag = travel_point_of_interest_religious
+# }
 
 ##############
 # Pura Besakih

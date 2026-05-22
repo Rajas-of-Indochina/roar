@@ -106,36 +106,6 @@
 				limit = { is_struggle_parameter_active_cheaper_to_convert_to_struggle_culture_trigger = yes }
 				multiply = 0.25
 			}
-			if = {
-				limit = {
-					capital_county = {
-						any_county_struggle = { has_struggle_phase_parameter = cheaper_to_convert_to_roman_struggle_culture }
-					}
-					NOT = { armenian_struggle_is_roman_culture_trigger = { CULTURE = ROOT.culture } }
-					armenian_struggle_is_roman_culture_trigger = { CULTURE = capital_province.culture }
-				}
-				multiply = 0.25
-			}
-			if = {
-				limit = {
-					capital_county = {
-						any_county_struggle = { has_struggle_phase_parameter = cheaper_to_convert_to_persian_struggle_culture }
-					}
-					NOT = { armenian_struggle_is_persian_culture_trigger = { CULTURE = ROOT.culture } }
-					armenian_struggle_is_persian_culture_trigger = { CULTURE = capital_province.culture }
-				}
-				multiply = 0.25
-			}
-			if = {
-				limit = {
-					capital_county = {
-						any_county_struggle = { has_struggle_phase_parameter = cheaper_to_convert_to_armenian_struggle_culture }
-					}
-					NOT = { armenian_struggle_is_local_culture_trigger = { CULTURE = ROOT.culture } }
-					armenian_struggle_is_local_culture_trigger = { CULTURE = capital_province.culture }
-				}
-				multiply = 0.25
-			}
 
 			# Make sure it's never dumb numbers.
 			min = 25
@@ -180,60 +150,6 @@
 				involvement = involved
 				activate_struggle_catalyst = {
 					catalyst = catalyst_convert_local_culture_faith
-					character = root
-				}
-			}
-		}
-		if = {
-			limit = {
-				any_character_struggle = {
-					involvement = involved
-					phase_has_catalyst = catalyst_convert_local_culture_faith_pro_roman
-					is_culture_involved_in_struggle = root.capital_province.culture
-				}
-				NOT = { armenian_struggle_is_roman_culture_trigger = { CULTURE = ROOT.culture } }
-				armenian_struggle_is_roman_culture_trigger = { CULTURE = capital_province.culture }
-			}
-			every_character_struggle = {
-				involvement = involved
-				activate_struggle_catalyst = {
-					catalyst = catalyst_convert_local_culture_faith_pro_roman
-					character = root
-				}
-			}
-		}
-		if = {
-			limit = {
-				any_character_struggle = {
-					involvement = involved
-					phase_has_catalyst = catalyst_convert_local_culture_faith_pro_persian
-					is_culture_involved_in_struggle = root.capital_province.culture
-				}
-				NOT = { armenian_struggle_is_persian_culture_trigger = { CULTURE = ROOT.culture } }
-				armenian_struggle_is_persian_culture_trigger = { CULTURE = capital_province.culture }
-			}
-			every_character_struggle = {
-				involvement = involved
-				activate_struggle_catalyst = {
-					catalyst = catalyst_convert_local_culture_faith_pro_persian
-					character = root
-				}
-			}
-		}
-		if = {
-			limit = {
-				any_character_struggle = {
-					involvement = involved
-					phase_has_catalyst = catalyst_convert_local_culture_faith_pro_armenian
-					is_culture_involved_in_struggle = root.capital_province.culture
-				}
-				NOT = { armenian_struggle_is_local_culture_trigger = { CULTURE = ROOT.culture } }
-				armenian_struggle_is_local_culture_trigger = { CULTURE = capital_province.culture }
-			}
-			every_character_struggle = {
-				involvement = involved
-				activate_struggle_catalyst = {
-					catalyst = catalyst_convert_local_culture_faith_pro_armenian
 					character = root
 				}
 			}
@@ -612,36 +528,6 @@ assimilate_local_traditions_decision = {
 			# Account for struggle phase.
 			if = {
 				limit = { is_struggle_parameter_active_cheaper_to_convert_to_struggle_culture_trigger = yes }
-				multiply = 0.25
-			}
-			if = {
-				limit = {
-					capital_county = {
-						any_county_struggle = { has_struggle_phase_parameter = cheaper_to_convert_to_roman_struggle_culture }
-					}
-					NOT = { armenian_struggle_is_roman_culture_trigger = { CULTURE = ROOT.culture } }
-					armenian_struggle_is_roman_culture_trigger = { CULTURE = capital_province.culture }
-				}
-				multiply = 0.25
-			}
-			if = {
-				limit = {
-					capital_county = {
-						any_county_struggle = { has_struggle_phase_parameter = cheaper_to_convert_to_persian_struggle_culture }
-					}
-					NOT = { armenian_struggle_is_persian_culture_trigger = { CULTURE = ROOT.culture } }
-					armenian_struggle_is_persian_culture_trigger = { CULTURE = capital_province.culture }
-				}
-				multiply = 0.25
-			}
-			if = {
-				limit = {
-					capital_county = {
-						any_county_struggle = { has_struggle_phase_parameter = cheaper_to_convert_to_armenian_struggle_culture }
-					}
-					NOT = { armenian_struggle_is_local_culture_trigger = { CULTURE = ROOT.culture } }
-					armenian_struggle_is_local_culture_trigger = { CULTURE = capital_province.culture }
-				}
 				multiply = 0.25
 			}
 
