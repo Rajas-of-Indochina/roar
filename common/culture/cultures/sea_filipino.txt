@@ -71,6 +71,53 @@ ati = {
 	}
 }
 
+balanghay = {
+	# represents ancestors of various modern day Central Philippines cultures such as: Tagalog, Bisaya, Cebuano, Bikol, Hiligaynon, Waray and many other
+	# tawo in old RoA
+	color = balanghay
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_filipino	# Central Philippine
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		# Feels like it could be adjusted but it is good enough for now
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_practiced_pirates 	# msl_note: practiced seasonal sea raiding for vengeance, slaves, and valuables alongside headhunting
+		tradition_migratory 			# msl_note: moved around A LOT
+		tradition_mystical_ancestors 	# msl_note: to represent their legendary ancestries and various stories tied to them
+	}
+
+	# msl_note: Culture is literally named after 'balanghay' ships ; travelled far and wide on those
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_balanghay
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { visayan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
 bilic = {
 	# represents various indigenous inhabitants of southern Mindanao - Bagobo, Blaan, Tboli and Teduray
 	# https://en.wikipedia.org/wiki/Blaan_people ; https://en.wikipedia.org/wiki/Tboli_people ; https://en.wikipedia.org/wiki/Teduray_people ; https://en.wikipedia.org/wiki/South_Mindanao_languages
@@ -123,7 +170,7 @@ buranun = {
 
 	ethos = ethos_bellicose
 	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
+	language = language_filipino	# central philippine (bisayan?)
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
 
@@ -159,7 +206,7 @@ danao = {
 
 	ethos = ethos_bellicose		# msl_note: artists and warriors alike
 	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
+	language = language_danao
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
 
@@ -196,7 +243,7 @@ danao = {
 }
 
 idaya = {
-	# ancestor culture to Iloko, Ifugao and Ibanag
+	# represents ancestor culture to Iloko, Ifugao Ibanag and pther Cordilleran speakers
 	color = idaya
 
 	ethos = ethos_bellicose
@@ -211,13 +258,6 @@ idaya = {
 		tradition_hill_dwellers 			# msl_note: terrain based pick
 		tradition_storytellers 				# msl_note: rich oral traditions among Cordilleran peoples
 		# msl_note: tradition_mystical_ancestors could fit their ancestor worship, but religion already covers that
-	}
-
-	# msl_note: very adept at rice-terrace farming
-	dlc_tradition = {
-		trait = tradition_tgp_rice_cultivators
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_agrarian
 	}
 
 	# msl_note: generic Filipino tradition to represent Barangay system
@@ -283,7 +323,7 @@ mansaka = {
 
 	ethos = ethos_communal
 	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
+	language = language_filipino	# central philippine
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
@@ -329,7 +369,7 @@ manuvu = { # Manuvu
 
 	ethos = ethos_stoic
 	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
+	language = language_manuvu
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
@@ -375,7 +415,7 @@ subanen = {
 
 	ethos = ethos_communal
 	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
+	language = language_subanen
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
@@ -413,39 +453,6 @@ subanen = {
 
 
 ## Files Still To Sort
-balanghay = {
-	# tawo in old RoA
-	color = balanghay
-
-	ethos = ethos_bellicose
-	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_practiced_pirates
-		tradition_seafaring
-		tradition_mystical_ancestors
-		tradition_migratory
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-	}
-
-	name_list = name_list_balanghay
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { visayan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
 suku = {
 	# sinauna in old RoA
 	color = suku
@@ -483,7 +490,7 @@ palawan = {
 
 	ethos = ethos_communal
 	heritage = heritage_filipino
-	language = language_filipino	# greater central philippine
+	language = language_palawan
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
 

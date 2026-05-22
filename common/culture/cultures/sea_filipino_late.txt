@@ -1,5 +1,55 @@
 ﻿## In alphabetical order ##
 
+bisayan = {
+	# native inhabitans of Bisaya/Visaya Islands who later also colonised many places around Mindanao
+	# https://en.wikipedia.org/wiki/Visayans
+	color = bisayan 		#color = { 0.9 0.1 0.3 } - vanilla
+
+	created = 1000.1.1
+	parents = { balanghay }
+
+	ethos = ethos_bellicose
+	heritage = heritage_filipino
+	language = language_filipino	# central philippine
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
+		tradition_practiced_pirates 		# msl_note: raided far and wide along the shores, even as far as southern China
+		tradition_poetry 					# msl_note: poetry and theater play important cultural roles in Bisayan culture
+		tradition_migratory 				# msl_note: travelled and settled in many places around southern Philippines
+	}
+
+ 	# msl_note: Their colonisation of Mindanao and other maritime travells and raids speak for themselves
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_bisayan
+	#name_list = name_list_bisaya
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { visayan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
 ifugao = {
 	# AKA Ipugaw or Igorot - the indigenous peoples of the Cordillera
 	color = ifugao
@@ -49,31 +99,42 @@ ifugao = {
 	}
 }
 
-
-### TO SORT
 tagalog = {
-	#color = { 0.4 0.3 0.7 } - vanilla
-	color = tagalog
+	# native inhabitants to parts of central and southern Luzon
+	# https://en.wikipedia.org/wiki/Tagalog_people
+	color = tagalog 		#color = { 0.4 0.3 0.7 } - vanilla
 
 	created = 1000.1.1
 	parents = { balanghay suku }
 
 	ethos = ethos_egalitarian
 	heritage = heritage_filipino
-	language = language_filipino
+	language = language_filipino	# central philippine
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_SEA_jungle_warfare
-		tradition_maritime_mercantilism
-		tradition_religion_blending
-		tradition_sacred_hunts
-		tradition_warriors_by_merit
-
-		#tradition_loyal_soldiers - vanilla
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
+		tradition_metal_craftsmanship		# msl_note: Tagalog were considered skilled metalworkers, it being one of their most prominent trades
+		tradition_maritime_mercantilism 	# msl_note: Tagalog are famous for their maritime trade and riches earned through it
+		# msl_note: tradition_poetry would also be fitting but not enough space ; Tagalog poetry is quite famous
 	}
-	
+
+	# msl_note: not as much of seafarers as Bisaya but still travelled far and wide for trade so...
+	dlc_tradition = {
+		trait = tradition_maritime_way_of_life
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_seafaring
+	}
+
+	# msl_note: thanks to many of their settlements being in lowlands, Tagalog were able to establish extensive irrigated rice agriculture for their settlements 
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
 	dlc_tradition = {
 		trait = tradition_tgp_barangay_confederations
 		requires_dlc_flag = all_under_heaven
@@ -85,7 +146,6 @@ tagalog = {
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { tagalog_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
@@ -95,56 +155,8 @@ tagalog = {
 	}
 }
 
-bisayan = {
-	#color = { 0.9 0.1 0.3 } - vanilla
-	color = bisayan
 
-	created = 1000.1.1
-	parents = { balanghay }
-
-	ethos = ethos_bellicose
-	heritage = heritage_filipino
-	language = language_filipino
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_SEA_jungle_warfare
-		tradition_practiced_pirates
-		tradition_poetry
-		tradition_migratory
-
-		#tradition_mystical_ancestors - vanilla
-	}
-
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
-	}
-
-	dlc_tradition = {
-		trait = tradition_tgp_barangay_confederations
-		requires_dlc_flag = all_under_heaven
-	}
-
-	name_list = name_list_bisayan
-	#name_list = name_list_bisaya
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { visayan_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
+### TO SORT
 pampangan = {
 	color = pampangan
 
@@ -158,7 +170,7 @@ pampangan = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_SEA_jungle_warfare
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
 		tradition_legalistic
 		tradition_culinary_art
 		tradition_stand_and_fight
@@ -176,7 +188,6 @@ pampangan = {
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
@@ -225,7 +236,6 @@ iloko = {
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
@@ -264,7 +274,6 @@ ibanag = {
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }
@@ -287,7 +296,7 @@ sambal = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_SEA_jungle_warfare
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
 		tradition_stalwart_defenders
 		tradition_warrior_culture
 		tradition_staunch_traditionalists
@@ -305,7 +314,6 @@ sambal = {
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
-
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
 	house_coa_mask_scale = { 0.85 0.85 }

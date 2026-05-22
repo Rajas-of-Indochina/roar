@@ -1473,6 +1473,47 @@ language_central_luzon = {
 	color = suku
 }
 
+language_danao = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_danao
+		}
+	}
+	parameters = {
+		dialect_continua_greater_central_philippine = yes
+		language_group_philippine = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_danao }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_greater_central_philippine }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_philippine }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = danao
+}
+
 language_filipino = {
 	type = language
 	is_shown = {
@@ -1481,6 +1522,7 @@ language_filipino = {
 		}
 	}
 	parameters = {
+		dialect_continua_greater_central_philippine = yes
 		language_group_philippine = yes
 		language_branch_malayo_polynesian = yes
 		language_family_austronesian = yes
@@ -1491,6 +1533,10 @@ language_filipino = {
 		if = {
 			limit = { has_cultural_pillar = language_filipino }
 			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_greater_central_philippine }
+			multiply = same_language_dialect_continuum_choice_factor
 		}
 		else_if = {
 			limit = { has_cultural_parameter = language_group_philippine }
@@ -1507,6 +1553,88 @@ language_filipino = {
 	}
 
 	color = balanghay
+}
+
+language_gorontalo_mongondow = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_gorontalo_mongondow
+		}
+	}
+	parameters = {
+		dialect_continua_greater_central_philippine = yes
+		language_group_philippine = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_gorontalo_mongondow }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_greater_central_philippine }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_philippine }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = gorontalo
+}
+
+language_manuvu = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_manuvu
+		}
+	}
+	parameters = {
+		dialect_continua_greater_central_philippine = yes
+		language_group_philippine = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_manuvu }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_greater_central_philippine }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_philippine }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = manuvu
 }
 
 language_minahasa = {
@@ -1584,6 +1712,88 @@ language_northern_luzon = {
 	}
 
 	color = idaya
+}
+
+language_palawan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_palawan
+		}
+	}
+	parameters = {
+		dialect_continua_greater_central_philippine = yes
+		language_group_philippine = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_palawan }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_greater_central_philippine }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_philippine }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = palawan
+}
+
+language_subanen = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_subanen
+		}
+	}
+	parameters = {
+		dialect_continua_greater_central_philippine = yes
+		language_group_philippine = yes
+		language_branch_malayo_polynesian = yes
+		language_family_austronesian = yes
+	}
+
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_subanen }
+			multiply = same_language_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = dialect_continua_greater_central_philippine }
+			multiply = same_language_dialect_continuum_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_group_philippine }
+			multiply = same_language_group_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_branch_malayo_polynesian }
+			multiply = same_language_branch_choice_factor
+		}
+		else_if = {
+			limit = { has_cultural_parameter = language_family_austronesian }
+			multiply = same_language_family_choice_factor
+		}
+	}
+
+	color = subanen
 }
 ### ### ###
 
