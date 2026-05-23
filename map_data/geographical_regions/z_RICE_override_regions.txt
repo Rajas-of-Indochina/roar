@@ -1,0 +1,286 @@
+RICE_hephthalite_former_empire_region = {
+	duchies = {
+		#Kashmir
+		d_kasmira d_pamir d_gilgit
+		#Punjab
+		d_multan d_lahore d_gandhara
+		#k_kabulistan
+		d_kabul d_zabulistan d_nuristan d_chitral
+		#khorasan
+		d_herat d_ghur d_merv d_balkh
+		#k_transoxiana
+		d_soghd d_badakhshan d_khuttal d_osrushana d_ferghana
+	}
+}
+
+RICE_greater_pamir_region = {
+	duchies = {		
+		#k_transoxiana
+		d_badakhshan
+		#Maryul
+		d_ladakh d_zanskar d_baltiyul
+		#Kashmir
+		d_gilgit #d_kasmira
+	}
+}
+
+RICE_northern_tarim_basin = {
+	duchies = {
+		d_kucha d_konchi d_shanshan
+	}
+}
+
+RICE_greater_khotan_area = {
+	duchies = {
+		# k_khotan
+		d_kashgar d_khotan d_shanshan d_kucha d_konchi
+		# k_maryul
+		d_aksai_chin d_baltiyul d_zanskar d_ladakh
+		# k_kashmir
+		d_gilgit
+		# k_transoxiana
+		d_badakhshan
+	}
+}
+
+RICE_former_tang_western_region = {
+	regions = {
+		world_steppe_tarim
+	}
+	kingdoms = {
+		k_hexi k_xia
+	}
+	duchies = {
+		#Xia
+		#d_xia d_wuluhai d_zhenfan d_liangzhou d_shanzhou d_qilin d_ganzhou d_yijinai d_guiyi d_aksay
+		#  k_dzungaria
+		d_agni d_tarbagatai d_manas d_turpan d_beiting d_kara_khoja
+		# k_zhetysu
+		d_ordukent d_saryesik d_qoksu d_illiq
+		#k_transoxiana
+		d_soghd d_badakhshan d_khuttal d_osrushana d_ferghana
+		# k_syr_darya
+		d_betpaqdala d_chah d_talas
+		# Others
+		d_gilgit d_baltiyul d_ladakh d_aksai_chin d_zanskar
+	}
+}
+
+# Hexi Corridor
+RICE_dunhuang_region = {
+	kingdoms = {
+		k_hexi k_xia
+	}
+	duchies = {
+		#Xia
+		#d_xia d_wuluhai d_zhenfan d_liangzhou d_shanzhou d_qilin d_ganzhou d_yijinai d_guiyi d_aksay
+		#Dzungaria
+		#d_kara_khoja
+		#Khotan
+		d_shanshan d_konchi
+	}
+	# counties = {
+		# c_chamil #c_beshbalik c_kara_khoja
+	# }
+
+}
+
+RICE_arakan_region = {
+	duchies = {
+		d_chattogram d_ramu d_arakan d_sandoway
+	}
+}
+
+RICE_mini_pamir_region = {
+	duchies = {		
+		#Kashmir
+		d_gilgit d_kasmira
+	}
+}
+
+RICE_greater_kurdistan_region = {
+	duchies = {
+		# k_vaspurakan
+		d_mesopotamia d_derzene d_taron d_turuberan d_vaspurakan d_shavarshan
+		# k_jazira
+		d_diyarrabia d_diyarbakr d_kurdistan
+		# k_adurbadagan
+		d_azerbaijan d_persarmenia d_iraq-i-aram d_ardabil d_arasbaran d_bazgan
+		# k_shirvan
+		d_shirvan d_layzan d_arran
+		# k_persia
+		d_hamadan d_kermanshah
+	}
+}
+
+RICE_hephthalite_influence_region = {
+	regions = {
+		world_middle_east_persia
+		world_india_rajastan
+		world_steppe_tarim
+	}
+	duchies = {
+		#Guge
+		d_ngari d_kinnaur d_purang
+		#Maryul
+		d_ladakh d_zanskar d_baltiyul d_aksai_chin d_rutog
+	}
+}
+
+RICE_upper_tibet = {
+	duchies = {
+		#Kashmir
+		d_gilgit
+		#Guge
+		d_ngari d_kinnaur d_purang
+		#Maryul
+		d_ladakh d_zanskar d_baltiyul d_aksai_chin d_rutog
+	}
+}
+
+RICE_qinghai_and_amdo = {
+	duchies = {
+		#Amdo
+		d_xining d_tuyuhun d_nagormo d_amdo d_zadoi d_qumarleb d_aksay
+	}
+}
+
+RICE_pamir_and_tocharistan_region = {
+	duchies = {		
+		#Kashmir
+		d_gilgit d_kasmira
+		#Punjab
+		d_gandhara
+		#k_kabulistan
+		d_kabul d_zabulistan d_nuristan d_chitral
+		#k_transoxiana
+		d_badakhshan d_khuttal d_ferghana
+		#k_khorasan
+		d_ghur d_herat d_balkh
+	}
+	counties = {
+		c_terek_pass
+	}
+}
+
+RICE_western_central_tibet_and_northern_india = {
+	duchies = {
+		#Ü
+		d_yarlung d_lhasa d_nagchu d_conyi
+		#Tsang
+		d_xigaze d_sagya d_ngamring d_nyima
+		#Guge
+		d_ngari d_kinnaur d_purang
+		#Maryul
+		d_ladakh d_zanskar d_baltiyul d_aksai_chin d_rutog
+		#Kashmir
+		d_gilgit d_kasmira
+		#Himalaya
+		d_kurmanchal d_khasa d_nepal d_limbuwan
+		#Xia
+		d_qilian d_aksay
+	}
+}
+
+RICE_european_cochineal_armenia_region = {
+	duchies = {		
+		# Armenian Cochineal
+		d_vaspurakan d_shavarshan d_taron d_turuberan d_derzene d_mesopotamia
+	}
+}
+
+RICE_volga_dnieper_trade_region = {
+	regions = {
+		ghw_region_russia
+	}
+	duchies = {	
+		#Moldavia
+		d_bukovina d_moldova d_bugeac
+		#Pontic Steppe
+		d_yedisan d_kizilyedisan d_levedia d_red_levedia d_don_valley d_tana
+		# Gazaria
+		d_tmutarakan d_crimea d_klimata d_azov d_sarkel
+		# Zichia 
+		d_khegayk d_eudusia d_zichia d_papagia
+		# Caspian Steppe
+		d_itil d_khazaria d_ouzoy d_pecheneg d_mugodzhar_hills d_aqtobe d_atyrau d_manatau
+		# Alania
+		d_kassogia d_alania d_osseti d_karabulakia d_chechnya d_chetqal
+		# Sarir
+		d_khundzeti d_didoeti d_kaitag d_kumukh d_tsuketi d_lezgia d_shavaran d_derbent d_djindan d_khunia
+		#Volga Bulgaria
+		d_volga_bulgaria d_kazan d_chuvashia d_vetluga d_mari
+		# Bashkiria
+		d_ufa d_sakmara d_uraltau d_belaya d_bugurslan
+		# Vladimir
+		d_opolye d_ryazan d_murom d_nizhny_novgorod
+		# Ruthenia
+		d_voronezh
+		# Mordvinia
+		d_mordvinia d_burtasia d_moksha d_khopyor
+		# Permia
+		d_perm d_ural d_udmurtia
+		# Other
+		d_jalmat d_vogulia d_pyras
+		#Bjarmaland
+		d_biarmia d_vologda d_chudia d_ustyug d_pinega
+	}
+}
+
+# Limited Dunhuang region and Kingdom of Qocho
+RICE_greater_qocho_region = {
+	kingdoms = {
+		k_hexi #k_xia
+	}
+	duchies = {
+		# Khotan
+		d_kucha d_konchi d_shanshan
+		#Dzungaria
+		d_agni d_tarbagatai d_manas d_turpan d_beiting
+		#Xia
+		#d_guiyi d_aksay d_ganzhou d_yijinai
+	}
+}
+
+RICE_burma_minus_arakan = {
+	# duchies = {
+	# 	d_pagan d_tagaung d_sriksetra d_ramannadesa
+	# }
+	regions = {
+		world_burma
+	}
+}
+
+RICE_malaysia_and_western_indonesia = {
+	regions = {
+		world_asia_malaysia world_asia_borneo
+	}
+	duchies = {
+		# k_samudera
+		d_perlak d_pasai d_lamuri d_SUM_Aru d_batak d_gayo d_handumans
+		# k_palembang
+		d_lampung d_SUM_palembang d_basemah d_SUM_bangkahulu
+		# k_melayu
+		d_SUM_jambi d_minangkabau d_kerinci d_riau d_siak
+		# k_yavakadvipa
+		d_JAV_mataram d_janggala d_kalingga d_panjalu d_lumajang
+		# k_sunda
+		d_sunda d_galuh
+	}
+}
+
+RICE_philippines_and_eastern_indonesia = {
+	regions = {
+		world_asia_philippines world_asia_borneo world_asia_sulawesi_maluku
+	}
+	duchies = {
+		# k_yavakadvipa
+		d_JAV_mataram d_janggala d_kalingga d_panjalu d_lumajang
+		# k_sunda
+		d_sunda d_galuh
+		# k_bali_sea
+		d_IDO_bali d_bima
+		# k_ujung_samudranta
+		d_doberai d_bomberai
+	}
+}
