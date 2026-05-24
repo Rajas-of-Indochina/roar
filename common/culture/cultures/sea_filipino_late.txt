@@ -99,6 +99,61 @@ ifugao = {
 	}
 }
 
+kapampangan = {
+	# indigenous inhabitants of the 'Pampanaga' region in Central Luzon
+	# https://en.wikipedia.org/wiki/Kapampangan_people
+	# https://www.yodisphere.com/2022/09/Kapampangan-Pampanga-Culture-Traditions.html
+	color = kapampangan
+
+	created = 1000.1.1
+	parents = { suku idaya }
+
+	ethos = ethos_egalitarian
+	heritage = heritage_filipino
+	language = language_central_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_legalistic 			# msl_note: Kapampangan are noted for their well established system of laws and rules
+		tradition_culinary_art 			# msl_note: Kapampangan cuisine is often hailed by fellow Filipino as the best one in all Philippines
+		tradition_artisans 				# msl_note: Kapampangan are famed artisians, well known for their arts and crafts
+		# msl_note: tradition_stand_and_fight might be fitting but not enough slots ; they often fought for what was theirs
+	}
+
+	# msl_note: Kapampangan people are noted to be highly agrarain, with rice playing the crucial role in their livelihood
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_kapampangan
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
+# panganisan = {
+# consider adding or as divergent culture
+# }
+
 tagalog = {
 	# native inhabitants to parts of central and southern Luzon
 	# https://en.wikipedia.org/wiki/Tagalog_people
@@ -157,46 +212,6 @@ tagalog = {
 
 
 ### TO SORT
-pampangan = {
-	color = pampangan
-
-	created = 1000.1.1
-	parents = { suku idaya }
-
-	ethos = ethos_bellicose
-	heritage = heritage_filipino
-	language = language_central_luzon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
-		tradition_legalistic
-		tradition_culinary_art
-		tradition_stand_and_fight
-		tradition_agrarian
-	}
-
-	dlc_tradition = {
-		trait = tradition_tgp_barangay_confederations
-		requires_dlc_flag = all_under_heaven
-	}
-
-	name_list = name_list_pampangan
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
 iloko = {
 	# replaces RoA's ilokano
 	#color = { 0.8 0.4 0.0 } - vanilla
@@ -263,6 +278,7 @@ ibanag = {
 		tradition_martial_admiration
 	}
 
+	# msl_note: generic Filipino tradition to represent Barangay system
 	dlc_tradition = {
 		trait = tradition_tgp_barangay_confederations
 		requires_dlc_flag = all_under_heaven
@@ -303,6 +319,7 @@ sambal = {
 		tradition_mystical_ancestors
 	}
 
+	# msl_note: generic Filipino tradition to represent Barangay system
 	dlc_tradition = {
 		trait = tradition_tgp_barangay_confederations
 		requires_dlc_flag = all_under_heaven

@@ -85,9 +85,10 @@ balanghay = {
 	traditions = {
 		# Feels like it could be adjusted but it is good enough for now
 		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-		tradition_practiced_pirates 	# msl_note: practiced seasonal sea raiding for vengeance, slaves, and valuables alongside headhunting
 		tradition_migratory 			# msl_note: moved around A LOT
 		tradition_mystical_ancestors 	# msl_note: to represent their legendary ancestries and various stories tied to them
+		# msl_note: removed tradition_practiced_pirates for skae of space event though it fits ; read note below
+		# msl_note: practiced seasonal sea raiding for vengeance, slaves, and valuables alongside headhunting
 	}
 
 	# msl_note: Culture is literally named after 'balanghay' ships ; travelled far and wide on those
@@ -117,6 +118,12 @@ balanghay = {
 		100 = asian_austronesian
 	}
 }
+
+# batak = {
+	# indigeonus inhabitants of Palawan Island, mainly its more mountainous regions ; considered part of Filipino 'negrito' people
+	# https://en.wikipedia.org/wiki/Peoples_of_Palawan
+	# https://www.yodisphere.com/2023/09/Batak-Tribe-Palawan-Culture.html
+# }
 
 bilic = {
 	# represents various indigenous inhabitants of southern Mindanao - Bagobo, Blaan, Tboli and Teduray
@@ -285,7 +292,7 @@ ivatan = {
 	# indigenous inhabitants of Batanes and Babuyan Islands
 	color = ivatan
 
-	ethos = ethos_bellicose
+	ethos = ethos_communal
 	heritage = heritage_filipino
 	language = language_batanic
 	martial_custom = martial_custom_equal
@@ -403,9 +410,51 @@ manuvu = { # Manuvu
 	}
 }
 
-# panganisan = {
-# consider adding or as divergent culture
-# }
+palawan = {
+	# represents various indgienous cultures of northern and southern parts of Palawan Island
+	# https://en.wikipedia.org/wiki/Peoples_of_Palawan
+	# https://www.yodisphere.com/2022/09/Palawan-Tribe-People-Culture-Tradition-History.html
+	color = palawan
+
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_palawan
+	martial_custom = martial_custom_equal
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_SEA_ade 				# msl_note: various oral laws and customs helped indigenous Plawans preserve their way of life throughout centuries
+		tradition_collective_lands 		# msl_note: Palawan societies didn't really have a concept of land ownership until arrival of later settlers
+		tradition_equal_inheritance 	# msl_note: traditional societies of indigenous Palawans are considered very equal and egalitarian
+		# msl_note: tradition_hard_working was removed as the exact bonuses don't really fit the indigenous people of Plawan Island
+		# msl_note: various indigenous people of Palawan are considered excellent in art of basketry and wood carving
+		# msl_note: coconut farming is important part of livelihood for some Palawan people, such as Molbog
+		# msl_note: Molbog people have Philippine mouse-deer as a sacred animal 
+	}
+
+	# msl_note: rice is considered a divine gift by Tagbanwa people and makes up crucial element of livelihood to various people of Palawan Island
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx  }
+	clothing_gfx = { tagalog_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		90 = asian_austronesian
+		10 = papuan
+	}
+}
 
 subanen = {
 	# AKA: Subanon or Subanun ; indigenous peoples of the Zamboanga peninsula
@@ -451,9 +500,8 @@ subanen = {
 	}
 }
 
-
-## Files Still To Sort
 suku = {
+	# represents ancestral culture to various Central Luzon languages speakers ; name inspired by legendary figure of Suku/Sinukuan from Kapampangan mythology
 	# sinauna in old RoA
 	color = suku
 
@@ -464,10 +512,22 @@ suku = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_artisans
-		tradition_storytellers
-		tradition_xenophilic
 		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_artisans 				# msl_note: Kapampangan and other people of Central Luzon are famed artisians, well known for their various crafts
+		tradition_xenophilic 			# msl_note: to represent their common contact with other groups and intermixing that resulted in many modern Filipino cultures
+	}
+
+	# msl_note: Rice playc crucial role in livelihood for people of Central Luzon
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
 	}
 
 	name_list = name_list_filipino
@@ -475,37 +535,6 @@ suku = {
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx  }
 	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
-palawan = {
-	color = palawan
-
-	ethos = ethos_communal
-	heritage = heritage_filipino
-	language = language_palawan
-	martial_custom = martial_custom_equal
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_religion_blending
-		tradition_festivities
-		tradition_hard_working
-		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
-	}
-
-	name_list = name_list_filipino
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx  }
-	clothing_gfx = { tagalog_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
