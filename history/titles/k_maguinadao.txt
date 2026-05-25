@@ -1,42 +1,58 @@
-﻿
+﻿k_maguinadao = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
+
 ## d_kotabatu
-	c_kotabatu = {
-		867.1.1 = { change_development_level = 3 }
-		860.1.1 = {
-			holder = bisayan_cotabato_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = bisayan_cotabato_10_fic
-		}
-		1170.1.1 = {
-			holder = bisayan_cotabato_20_fic
-		}
+c_kotabatu = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 9 }
+
+	860.1.1 = {
+		holder = bisayan_cotabato_01_fic
+		government = wanua_government
 	}
-	c_ilianen = {
-		860.1.1 = {
-			holder = bisayan_cotabato_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = bisayan_cotabato_10_fic
-		}
-		1170.1.1 = {
-			holder = bisayan_cotabato_20_fic
-		}
-    }
-	c_tboli = {
-		860.1.1 = {
-			holder = bisayan_maguindanao_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = bisayan_maguindanao_10_fic
-		}
-		1170.1.1 = {
-			holder = bisayan_maguindanao_20_fic
-		}
-    }
+	1060.1.1 = {
+		holder = bisayan_cotabato_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_cotabato_20_fic
+	}
+}
+
+c_ilianen = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 7 }
+
+	860.1.1 = {
+		holder = sea_manuvu_bukidnon_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_manuvu_bukidnon_02_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_manuvu_bukidnon_03_fic
+	}
+}
+
+c_tboli = {
+	860.1.1 = {
+		holder = bisayan_maguindanao_01_fic
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = bisayan_maguindanao_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_maguindanao_20_fic
+	}
+}
 
 c_PHI_sarangani = {
 	867.1.1 = { change_development_level = 3 }
@@ -61,46 +77,51 @@ c_PHI_sarangani = {
 d_lanao = {
 	867.1.1 = { change_development_level = 2 }
 }
-	c_masiu = {
-    	860.1.1 = {
-    		holder = bisayan_lanao_01_fic
-			government = wanua_government
-    	}
-    	1060.1.1 = {
-    		holder = bisayan_lanao_10_fic
-    	}
-    	1170.1.1 = {
-    		holder = bisayan_lanao_20_fic
-    	}
-    }
+
+c_masiu = {
+	860.1.1 = {
+		holder = bisayan_lanao_01_fic
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = bisayan_lanao_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_lanao_20_fic
+	}
+}
+
+
 ## d_samboangan
-    c_samboangan = {
-    	860.1.1 = {
-    		holder = bisayan_zamboanga_01_fic
-			government = wanua_government
-    	}
-    	1011.1.1 = {
-    		holder = bisayan_zamboanga_10
-    	}
-    	1060.1.1 = {
-    		holder = bisayan_zamboanga_11_fic
-    	}
-    	1170.1.1 = {
-    		holder = bisayan_zamboanga_20_fic
-    	}
-    }
-    c_dapitan = {
-    	860.1.1 = {
-    		holder = bisayan_zamboanga_01_fic
-			government = wanua_government
-    	}
-    	1011.1.1 = {
-    		holder = bisayan_zamboanga_10
-    	}
-    	1060.1.1 = {
-    		holder = bisayan_zamboanga_11_fic
-    	}
-    	1170.1.1 = {
-    		holder = bisayan_zamboanga_20_fic
-    	}
-    }
+c_samboangan = {
+	860.1.1 = {
+		holder = bisayan_zamboanga_01_fic
+		government = wanua_government
+	}
+	#
+	1011.1.1 = {
+		holder = bisayan_zamboanga_10
+	}
+	1060.1.1 = {
+		holder = bisayan_zamboanga_11_fic
+	}
+	#
+	1170.1.1 = {
+		holder = bisayan_zamboanga_20_fic
+	}
+}
+
+c_dapitan = {
+	860.1.1 = {
+		holder = sea_subanen_dapitan_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_subanen_dapitan_02_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_subanen_dapitan_03_fic
+	}
+}
