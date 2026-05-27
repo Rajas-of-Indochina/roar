@@ -90600,7 +90600,7 @@ e_panyupayana = {
 			c_bukidnon = {
 				color = { 165 115 65 }
 
-				b_kalasungay = {
+				b_PHI_Malaybalay = {
 					province = 11077
 
 					color = { 165 115 65 }
@@ -90622,14 +90622,20 @@ e_panyupayana = {
 	k_maguinadao = {
 		color = { 249 218 4 }
 
-		d_kotabatu = {
+		capital = c_PHI_lanao
+
+		d_PHI_maguindanao = {
+			# d_kotabatu ind old RoA
 			color = { 255 230 40 }
+
+			capital = c_PHI_cotabato
 
 			cultural_names = {
 				name_list_danao = cn_kutawatu
 			}
 
-			c_kotabatu = {
+			c_PHI_cotabato = {
+				# c_kotabatu in old RoA
 				color = { 255 235 60 }
 
 				cultural_names = {
@@ -90665,7 +90671,8 @@ e_panyupayana = {
 					color = { 225 200 10 }
 				}
 			}
-			c_tboli = {
+			c_PHI_maguindanao = {
+				# c_tboli in old RoA
 				color = { 249 218 4 }
 
 				b_buluan = {
@@ -90683,7 +90690,7 @@ e_panyupayana = {
 
 					color = { 239 208 0 }
 				}
-				b_lebak = {
+				b_PHI_Lebak = {
 					province = 16930
 
 					color = { 255 235 50 }
@@ -90698,7 +90705,7 @@ e_panyupayana = {
 
 					color = { 219 188 0 }
 				}
-				b_lais_ph = {
+				b_PHI_Lais = {
 					province = 16402
 
 					color = { 229 198 10 }
@@ -90709,10 +90716,13 @@ e_panyupayana = {
 		d_lanao = {
 			color = { 255 190 30 }
 
-			c_masiu = {
+			capital = c_PHI_lanao
+
+			c_PHI_lanao = {
+				# c_masiu in old RoA
 				color = { 255 200 40 }
 
-				b_masiu = {
+				b_PHI_Masiu = {
 					province = 17587
 
 					color = { 255 200 40 }
@@ -90738,8 +90748,13 @@ e_panyupayana = {
 		d_samboangan = {
 			color = { 240 230 100 }
 
-			c_samboangan = {
+			capital = c_PHI_zamboanga
+
+			c_PHI_zamboanga = {
+				#c_samboangan in old RoA
 				color = { 250 240 110 }
+
+				# we need b_PHI_Tukuran
 
 				b_samboangan = {
 					province = 11084
@@ -90756,6 +90771,11 @@ e_panyupayana = {
 
 					color = { 230 220 90 }
 				}
+				b_PHI_Kumalarang = {
+					province = 17520
+
+					color = { 235 225 110 }
+				}
 			}
 			c_dapitan = {
 				color = { 255 245 130 }
@@ -90769,11 +90789,6 @@ e_panyupayana = {
 					province = 11082
 
 					color = { 245 235 120 }
-				}
-				b_kumalarang = {
-					province = 17520
-
-					color = { 235 225 110 }
 				}
 			}
 		}
