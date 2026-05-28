@@ -74763,6 +74763,8 @@ e_amur = {
 			}
 		}
 		d_liaoxi = {
+			color = { 185 145 20 }
+
 			capital = c_LIAO_chaoyang
 
 			c_LIAO_chaoyang = {
@@ -74776,12 +74778,12 @@ e_amur = {
 				b_Liao_Chuanzhou = {
 					province = 11761
 
-					color = { 200 240 20 }
+					color = { 190 225 40 }
 				}
 				b_Liao_Qianzhou2 = {
 					province = 11772
 
-					color = { 190 245 60 }
+					color = { 190 225 40 }
 				}
 			}
 			c_lnj_liaoxi = {
@@ -74790,17 +74792,17 @@ e_amur = {
 				b_cirlzj_qinhuangdao = {
 					province = 12422
 
-					color = { 160 197 86 }
+					color = { 213 155 86 }
 				}
 				b_pingzhou = {
 					province = 9694
 
-					color = { 196 235 17 }
+					color = { 213 155 86 }
 				}
 				b_cirlzj_longtan = {
 					province = 12421
 
-					color = { 253 231 116 }
+					color = { 213 155 86 }
 				}
 			}
 			c_lnj_liaoxibei = {
@@ -74809,22 +74811,22 @@ e_amur = {
 				b_cirlzj_yuhejing = {
 					province = 12424
 
-					color = { 197 151 39 }
+					color = { 254 255 123 }
 				}
 				b_Liao_Liping = {
 					province = 11760
 
-					color = { 190 225 40 }
+					color = { 254 255 123 }
 				}
 				b_cirlzj_fusu = {
 					province = 12423
 
-					color = { 167 173 103 }
+					color = { 254 255 123 }
 				}
 				b_Liao_Andefu = {
 					province = 11775
 
-					color = { 190 245 60 }
+					color = { 254 255 123 }
 				}
 			}
 			c_LIAO_jinzhou = {
@@ -74862,12 +74864,12 @@ e_amur = {
 				b_Liao_Qianzhou = {
 					province = 11764
 
-					color = { 185 145 20 }
+					color = { 200 240 20 }
 				}
 				b_Liao_Suizhou = {
 					province = 11766
 
-					color = { 185 145 20 }
+					color = { 200 240 20 }
 				}
 			}
 		}
@@ -99206,6 +99208,10 @@ h_china = {
 			}
 
 			d_luoshi = {
+				color = { 11 100 178 }
+
+				capital = c_qianxi
+
 				c_qianxi = {
 					color = { 39 39 114 }
 
@@ -102130,6 +102136,8 @@ e_goryeo = {
 	k_goguryeo = {
 		color = { 136 81 148 }
 
+		capital = c_seogyeong
+
 		d_yukju = {
 			color = { 30 40 145 }
 
@@ -102157,7 +102165,6 @@ e_goryeo = {
 					province = 17909
 				}
 			}
-
 			c_uiju = {
 				color = { 60 60 130 }
 
@@ -102172,7 +102179,6 @@ e_goryeo = {
 					color = { 60 60 130 }
 				}
 			}
-
 			c_gwiju = {
 				color = { 40 45 170 }
 
@@ -102192,7 +102198,6 @@ e_goryeo = {
 					color = { 40 45 170 }
 				}
 			}
-
 			c_taeju = {
 				color = { 30 35 220 }
 
@@ -102243,7 +102248,6 @@ e_goryeo = {
 					color = { 135 42 169 }
 				}
 			}
-
 			c_seongju = {
 				color = { 180 92 195 }
 
@@ -102268,7 +102272,6 @@ e_goryeo = {
 					color = { 180 92 195 }
 				}
 			}
-
 			c_yeongwon = {
 				color = { 155 100 165 }
 
@@ -102297,6 +102300,8 @@ e_goryeo = {
 
 		d_liaodong = {
 			color = { 5 170 85 }
+
+			capital = c_sheli
 
 			cultural_names = {
 				name_list_khitan = cn_dongjing
@@ -102338,33 +102343,35 @@ e_goryeo = {
 					color = { 128 91 164 }
 				}
 			}
-
 			c_shenzhou_jilin = {
 				color = { 7 72 132 }
 
 				b_xincheng_jilin = {
 					province = 15236
+
+					color = { 7 72 132 }
 				}
 				b_nansu = {
 					province = 18173
+
+					color = { 7 72 132 }
 				}
 				b_Liao_Shuangzhou = {
 					province = 11771
 
-					color = { 185 145 20 }
+					color = { 7 72 132 }
 				}
 				b_Liao_Shenyang = {
 					province = 11785
 
-					color = { 10 175 90 }
+					color = { 7 72 132 }
 				}
 				b_Liao_Tangzhou = {
 					province = 11784
 
-					color = { 10 175 90 }
+					color = { 7 72 132 }
 				}
 			}
-
 			c_LIAO_shenyang = {
 				color = { 10 175 90 }
 
@@ -102380,9 +102387,10 @@ e_goryeo = {
 				}
 				b_gaimou = {
 					province = 18040
+
+					color = { 10 175 90 }
 				}
 			}
-
 			c_LIAO_zhenzhou = {
 				color = { 30 120 100 }
 
@@ -102394,15 +102402,14 @@ e_goryeo = {
 				b_Liao_Yaozhou = {
 					province = 11788
 
-					color = { 10 175 90 }
+					color = { 30 120 100 }
 				}
 				b_Liao_Tongzhou = {
 					province = 11789
 
-					color = { 45 205 175 }
+					color = { 30 120 100 }
 				}
 			}
-
 			c_LIAO_diezhou = {
 				color = { 45 205 175 }
 
@@ -102413,12 +102420,15 @@ e_goryeo = {
 				}
 				b_bakjak = {
 					province = 17885
+
+					color = { 45 205 175 }
 				}
 				b_wugu = {
 					province = 17862
+
+					color = { 45 205 175 }
 				}
 			}
-
 			c_LIAO_guidezhou = {
 				color = { 35 170 70 }
 
@@ -102447,6 +102457,8 @@ e_goryeo = {
 
 		d_jilin = {
 			color = { 81 81 148 }
+
+			#capital =
 
 			c_fuyu = {
 				color = { 9 91 164 }
@@ -102501,28 +102513,69 @@ e_goryeo = {
 					color = { 15 90 50 }
 				}
 			}
-
 		}
+
 		d_amnok = {
 			color = { 148 81 98 }
 
+			capital = c_seongyeong
+
+			c_seongyeong = {
+				color = { 132 72 87 }
+
+				b_seongeyong = {
+					province = 18132
+
+					color = { 132 72 87 }
+				}
+				b_qingjin_TEMP = {
+					province = 15249
+
+					color = { 132 72 87 }
+				}
+				b_sinju = {
+					province = 18077
+
+					color = { 132 72 87 }
+				}
+				b_guowu_TEMP = {
+					province = 18083
+
+					color = { 132 72 87 }
+				}
+				b_punju = {
+					province = 17982
+
+					color = { 132 72 87 }
+				}
+			}
 			c_changamju = {
 				color = { 174 107 124 }
 
 				b_cheonmunryeong = {
 					province = 15247
+
+					color = { 174 107 124 }
 				}
 				b_luotongshan = {
 					province = 18151
+
+					color = { 174 107 124 }
 				}
 				b_gungnae = {
 					province = 18087
+
+					color = { 174 107 124 }
 				}
 				b_gaemo = {
 					province = 18104
+
+					color = { 174 107 124 }
 				}
 				b_changam = {
 					province = 18029
+
+					color = { 174 107 124 }
 				}
 			}
 			c_anshiju = {
@@ -102530,39 +102583,31 @@ e_goryeo = {
 
 				b_jeongju = {
 					province = 18053
+
+					color = { 164 91 109 }
 				}
 				b_zuoyan_TEMP = {
 					province = 17951
+
+					color = { 164 91 109 }
 				}
 				b_kanggye = {
 					province = 17945
+
+					color = { 164 91 109 }
 				}
 				b_yongbyon = {
 					province = 17906
-				}
-			}
-			c_seongyeong = {
-				color = { 132 72 87 }
 
-				b_seongeyong = {
-					province = 18132
-				}
-				b_qingjin_TEMP = {
-					province = 15249
-				}
-				b_sinju = {
-					province = 18077
-				}
-				b_guowu_TEMP = {
-					province = 18083
-				}
-				b_punju = {
-					province = 17982
+					color = { 164 91 109 }
 				}
 			}
 		}
+
 		d_namhae = {
 			color = { 90 55 117 }
+
+			capital = c_okjeo
 
 			c_okjeo = {
 				color = { 115 63 102 }
