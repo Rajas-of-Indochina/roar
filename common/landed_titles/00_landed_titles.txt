@@ -89861,7 +89861,7 @@ e_iri-an = {
 e_panyupayana = {
 	color = { 255 255 79 }
 
-	#capital =
+	capital = c_maynila
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
@@ -89872,14 +89872,20 @@ e_panyupayana = {
 
 		d_maynila = {
 			color = { 74 105 168 }
+
+			capital = c_maynila
 		}
 
 		d_tondo = {
 			color = { 205 150 21 }
+
+			capital = c_tondo
 		}
 
 		d_tagalog = {
 			color = { 58 108 135 }
+
+			capital = c_maynila
 
 			c_maynila = {
 				color = { 74 105 168 }
@@ -89961,6 +89967,8 @@ e_panyupayana = {
 
 		d_pangpang = {
 			color = { 148 181 168 }
+
+			capital = c_tondo
 
 			c_tondo = {
 				color = { 42 112 102 }
@@ -90481,42 +90489,18 @@ e_panyupayana = {
 	k_kabisay-an = {
 		color = { 196 66 10 }
 
-		d_sugbu = {
-			color = { 216 86 30 }
-
-			c_sugbu = {
-				color = { 226 96 40 }
-
-				b_sugbu = {
-					province = 15576
-
-					color = { 226 96 40 }
-				}
-				b_manktan = {
-					province = 15547
-
-					color = { 226 96 40 }
-				}
-				b_nahalin = {
-					province = 11054
-
-					color = { 226 96 40 }
-				}
-				b_PHI_Siaro = {
-					province = 11055
-
-					color = { 226 96 40 }
-				}
-			}
-		}
+		capital = c_PHI_panay
 
 		d_panay = {
 			color = { 176 46 0 }
 
-			c_oton = {
+			capital = c_PHI_panay
+
+			c_PHI_panay = {
+				# c_oton in old RoA
 				color = { 186 56 10 }
 
-				b_oton = {
+				b_PHI_Irong_Irong = {
 					province = 15811
 
 					color = { 186 56 10 }
@@ -90572,8 +90556,10 @@ e_panyupayana = {
 			}
 		}
 
-		d_buglas = {
+		d_buglas = {	# Negros Island
 			color = { 186 86 50 }
+
+			capital = c_tanghay
 
 			c_tanghay = {
 				color = { 196 96 60 }
@@ -90583,18 +90569,19 @@ e_panyupayana = {
 
 					color = { 196 96 60 }
 				}
-				b_bais = {
+				b_PHI_Dananguet = {
 					province = 15088
 
 					color = { 206 106 70 }
 				}
-				b_katagusan = {
+				b_PHI_Katugasan = {
 					province = 11056
 
 					color = { 186 86 50 }
 				}
 			}
-			c_binalbagan = {
+			c_PHI_buglas = {
+				# c_binalbagan in old RoA
 				color = { 176 76 40 }
 
 				b_PHI_Binalbagan = {
@@ -90629,10 +90616,44 @@ e_panyupayana = {
 			}
 		}
 
+		d_sugbu = {
+			color = { 216 86 30 }
+
+			capital = c_sugbu
+
+			c_sugbu = {
+				color = { 226 96 40 }
+
+				b_PHI_Sugbu = {
+					province = 15576
+
+					color = { 226 96 40 }
+				}
+				b_manktan = {
+					province = 15547
+
+					color = { 226 96 40 }
+				}
+				b_nahalin = {
+					province = 11054
+
+					color = { 226 96 40 }
+				}
+				b_PHI_Siaro = {
+					province = 11055
+
+					color = { 226 96 40 }
+				}
+			}
+		}
+
 		d_bo_ol = {
 			color = { 220 110 60 }
 
-			c_panglao = {
+			capital = c_PHI_bool_and_cebu
+
+			c_PHI_bool_and_cebu = {
+				# c_panglao in old RoA
 				color = { 230 120 70 }
 
 				b_panglao = {
@@ -90648,13 +90669,15 @@ e_panyupayana = {
 			}
 		}
 
-		d_east_bisaya = {
+		d_PHI_visayas = {
+			# d_east_bisaya in old RoA
 			color = { 146 36 5 }
 
-			c_tiayban = {
+			c_PHI_samar = {
+				# c_tiayban in old RoA
 				color = { 156 46 15 }
 
-				b_libunao = {
+				b_PHI_Catbalogan = { # Tiayban
 					province = 16194
 
 					color = { 156 46 15 }
@@ -90664,7 +90687,7 @@ e_panyupayana = {
 
 					color = { 166 56 25 }
 				}
-				b_kataruman = {
+				b_PHI_Catarman = {
 					province = 16417
 
 					color = { 146 36 5 }
@@ -90678,7 +90701,7 @@ e_panyupayana = {
 
 					color = { 136 26 0 }
 				}
-				b_borongan = {
+				b_PHI_Borongan = {
 					province = 15789
 
 					color = { 126 16 0 }
@@ -90689,10 +90712,11 @@ e_panyupayana = {
 					color = { 146 36 5 }
 				}
 			}
-			c_kankabatok = {
+			c_PHI_tandaya = {
+				# c_kankabatok in old RoA
 				color = { 166 56 25 }
 
-				b_kankabatok = {
+				b_PHI_Kankabatok = {	#Tacloban
 					province = 15867
 
 					color = { 166 56 25 }
@@ -90702,7 +90726,7 @@ e_panyupayana = {
 
 					color = { 176 66 35 }
 				}
-				b_biliran = {
+				b_PHI_Panamao = {   #Biliran
 					province = 16037
 
 					color = { 156 46 15 }

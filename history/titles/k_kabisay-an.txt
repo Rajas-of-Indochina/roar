@@ -1,136 +1,231 @@
-﻿#d_sugbu
-    c_sugbu = {
-        867.1.1 = { change_development_level = 3 }
-        860.1.1 = {
-            holder = bisayan_boolcebu_01_fic
-			government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_boolcebu_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_boolcebu_20_fic
-        }
-    }
-#d_panay
-    c_oton = {
-        867.1.1 = { change_development_level = 5 }
-        1066.1.1 = { change_development_level = 10 }
-        1178.1.1 = { change_development_level = 17 }
+﻿k_kabisay-an = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
 
-        #Kingdom of Madja-as possibly already had relations with China in the 800s
-        #Some sources suggest it started in the XIIth century
-        862.1.1 = {
-            holder = bisayan_panay_01_fic   #fictional
-            government = wanua_government
-        }
-        1055.1.1 = {
-            holder = bisayan_panay_10   #Seri Maharajah, maybe
-        }
-        1073.1.1 = {
-            holder = bisayan_panay_11   #Makatunaw, maybe
-        }
-        1170.1.1 = {
-            holder = bisayan_panay_20   #Balengkaka, unknown when he ruled
-        }
-    }
-    c_akean = {
-        860.1.1 = {
-            holder = ati004
-			government = wanua_government
-        }
-    }
-    c_dumangas = {
-        860.1.1 = {
-            holder = ati005
-			government = wanua_government
-        }
-    }
-#d_buglas
-    c_tanghay = {
-        867.1.1 = { change_development_level = 3 }
-        860.1.1 = {
-            holder = bisayan_buglas_01_fic
-			government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_buglas_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_buglas_20_fic
-        }
-    }
-    c_diyolongan = {
-        860.1.1 = {
-            holder = bisayan_buglas_01_fic
-            government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_buglas_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_buglas_20_fic
-        }
-    }
-    c_binalbagan = {
-        860.1.1 = {
-            holder = ati002
-			government = wanua_government
-        }
-    }
-#d_bo_ol
-    c_panglao = {
-        860.1.1 = {
-            holder = ati001
-			government = wanua_government
-        }
-    }
-#d_east_bisaya
-    c_tiayban = {
-        860.1.1 = {
-            holder = bisayan_samar_01_fic
-            government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_samar_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_samar_20_fic
-        }
-    }
-    c_basay = {
-        860.1.1 = {
-            holder = bisayan_samar_01_fic
-            government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_samar_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_samar_20_fic
-        }
-    }
-    c_kankabatok = {
-        860.1.1 = {
-            holder = bisayan_tandaya_01_fic
-            government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_tandaya_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_tandaya_20_fic
-        }
-    }
-    c_abuyog = {
-        860.1.1 = {
-            holder = bisayan_tandaya_01_fic
-            government = wanua_government
-        }
-        1060.1.1 = {
-            holder = bisayan_tandaya_10_fic
-        }
-        1170.1.1 = {
-            holder = bisayan_tandaya_20_fic
-        }
-    }
+## d_panay
+c_PHI_panay = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 17 }
+
+	# Kingdom of Madja-as possibly already had relations with China in the 800s
+	# Some sources suggest it started in the XIIth century
+	862.1.1 = {
+		holder = bisayan_panay_01_fic   #fictional
+		government = wanua_government
+	}
+	#
+	1055.1.1 = {
+		holder = bisayan_panay_10   #Seri Maharajah, maybe
+	}
+	1073.1.1 = {
+		holder = bisayan_panay_11   #Makatunaw, maybe
+	}
+	#
+	1170.1.1 = {
+		holder = bisayan_panay_20   #Balengkaka, unknown when he ruled
+	}
+}
+
+c_akean = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 12 }
+
+	860.1.1 = {
+		holder = sea_ati_akean_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_bisayan_akean_01_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_bisayan_akean_02_fic
+	}
+}
+
+c_dumangas = {
+	860.1.1 = {
+		holder = sea_ati_dumangas_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_ati_dumangas_02_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_ati_dumangas_03_fic
+	}
+}
+
+
+## d_buglas
+c_tanghay = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
+
+	860.1.1 = {
+		holder = bisayan_buglas_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = bisayan_buglas_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = bisayan_buglas_20_fic
+	}
+}
+
+c_diyolongan = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 8 }
+
+	860.1.1 = {
+		holder = sea_ati_diyolongan_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = bisayan_buglas_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = bisayan_buglas_20_fic
+	}
+}
+
+c_PHI_buglas = {
+	860.1.1 = {
+		holder = sea_ati_binalbagan_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_ati_binalbagan_02_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_ati_binalbagan_03_fic
+	}
+}
+
+
+## d_sugbu
+c_sugbu = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 18 }
+
+	860.1.1 = {
+		holder = bisayan_boolcebu_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = bisayan_boolcebu_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = bisayan_boolcebu_20_fic
+	}
+}
+
+
+## d_bo_ol
+c_PHI_bool_and_cebu = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 8 }
+
+	860.1.1 = {
+		holder = sea_ati_bool_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_bisayan_bool_01_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_bisayan_bool_02_fic
+	}
+}
+
+
+## d_PHI_visayas
+c_PHI_samar = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
+
+	860.1.1 = {
+		holder = bisayan_samar_01_fic
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = bisayan_samar_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_samar_20_fic
+	}
+}
+
+c_basay = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
+
+	860.1.1 = {
+		holder = bisayan_samar_01_fic
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = bisayan_samar_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_samar_20_fic
+	}
+}
+
+c_PHI_tandaya = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 11 }
+
+	860.1.1 = {
+		holder = bisayan_tandaya_01_fic
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = bisayan_tandaya_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_tandaya_20_fic
+	}
+}
+
+c_abuyog = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 8 }
+
+	860.1.1 = {
+		holder = bisayan_tandaya_01_fic
+		government = wanua_government
+	}
+	1060.1.1 = {
+		holder = bisayan_tandaya_10_fic
+	}
+	1170.1.1 = {
+		holder = bisayan_tandaya_20_fic
+	}
+}

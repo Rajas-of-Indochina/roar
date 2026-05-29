@@ -1,29 +1,7 @@
-##d_sugbu
-#c_sugbu
-    15576 = { # b_sugbu
-        culture = balanghay
-        religion = dayawism
-
-        holding = tribal_holding
-
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    15547 = { # b_manktan
-        holding = none
-    }
-    11054 = { # b_nahalin
-        holding = none
-    }
-    11055 = { # Siaro AKA Sialo
-        holding = none
-    }
-
-
-## d_panay
-### c_oton
-15811 = { # b_oton
+# k_kabisay-an
+## d_panay ###################################
+### c_PHI_panay
+15811 = { # Irong Irong
 	culture = balanghay
 	religion = dayawism
 
@@ -31,7 +9,7 @@
 	special_building_slot = generic_university
 
 	# History
-	1050.1.1 = { #Bothoan Oral "Community Academy"
+	1050.1.1 = { # Bothoan Oral "Community Academy"
 		special_building = generic_university
 	}
 	1060.1.1 = {
@@ -48,162 +26,214 @@
 	holding = none
 }
 
-#c_akean
-    16015 = { # b_batan
-        culture = ati
-        religion = talaingat_ariya
+### c_akean
+16015 = { # Batan
+	culture = ati
+	religion = talaingat_ariya
 
-        holding = tribal_holding
+	holding = tribal_holding
 
-        1060.1.1 = {
-            culture = bisayan
-            religion = dayawism
-        }
-    }
-    11064 = { # Akean
-        holding = none
-    }
-    11036 = { # b_lomlom
-        holding = none
-    }
-#c_dumangas
-    15969 = { # b_bamban
-        culture = ati
-        religion = talaingat_ariya
-
-        holding = tribal_holding
-    }
-    11062 = { # b_pasi
-        holding = none
-    }
-
-##d_buglas
-#c_tanghay
-    11057 = { # b_tanghay
-        culture = balanghay
-        religion = dayawism
-
-        holding = tribal_holding
-
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    15088 = { # b_bais
-        holding = none
-    }
-	11056 = {
-		holding = none
+	# History
+	1060.1.1 = {
+		# to represent the slow colonisation of coastal areas by Bisayans
+		culture = bisayan
+		religion = dayawism
 	}
-#c_binalbagan
-    15420 = { # Binalbagan
-        culture = ati
-        religion = talaingat_ariya
+}
+11064 = { # Akean
+	holding = none
+}
+11036 = { # Lomlom
+	holding = none
+}
 
-        holding = tribal_holding
-    }
-    11060 = { # b_magsungay
-        holding = none
-    }
-    11058 = { # Ilog
-        holding = none
-    }
-#c_diyolongan
-    15415 = { # b_tayasan
-        culture = ati
-        religion = talaingat_ariya
+### c_dumangas
+15969 = { # Bamban
+	culture = ati		# not fully accurate but no better way to represent inland Ati people
+	religion = talaingat_ariya
 
-        holding = tribal_holding
+	holding = tribal_holding
+}
+11062 = { # Pasi
+	holding = none
+}
 
-        1060.1.1 = {
-            culture = bisayan
-            religion = dayawism
-        }
-    }
-    11059 = { # b_sigay
-        holding = none
-    }
 
-##d_bo_ol
-#c_panglao
-    15330 = { # b_panglao
-        culture = ati
-        religion = talaingat_ariya
+## d_buglas ###################################
+### c_tanghay
+11057 = { # Tanghay AKA Tanjay
+	culture = balanghay
+	religion = dayawism
 
-        holding = tribal_holding
+	holding = tribal_holding
 
-        1060.1.1 = {
-            culture = bisayan
-            religion = dayawism
-        }
-    }
-    11053 = { # b_PHI_Bool
-        holding = none
-    }
+	# History
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+15088 = { # Dananguet
+	holding = none
 
-##d_east_bisaya
-#c_tiayban
-    16194 = { # b_libunao
-        culture = balanghay
-        religion = dayawism
+	# History
+	1060.1.1 = {
+		# according Laura L. Junker it was already the site of a Chiefly Polity practicing intense commerce and industry by the 1100s AD
+		holding = city_holding
+	}
+}
+11056 = { # Katagusan
+	holding = none
+}
 
-        holding = tribal_holding
+### c_PHI_buglas
+15420 = { # Binalbagan
+	culture = ati
+	religion = talaingat_ariya
 
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    16390 = { # b_palapag
-        holding = none
-    }
-    16417 = { # b_kataruman
-        holding = none
-    }
-#c_basay
-    15970 = { # b_kalbiga
-        culture = balanghay
-        religion = dayawism
+	holding = tribal_holding
+}
+11060 = { # Magsungay AKA Bacolod
+	holding = none
+}
+11058 = { # Ilog
+	holding = none
+}
 
-        holding = tribal_holding
+### c_diyolongan
+15415 = { # Tayasan
+	culture = ati
+	religion = talaingat_ariya
 
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    15789 = { # b_borongan
-        holding = none
-    }
-    16195 = { # b_tubig
-        holding = none
-    }
-#c_kankabatok
-    15867 = { # b_kankabatok
-        culture = balanghay
-        religion = dayawism
+	holding = tribal_holding
 
-        holding = tribal_holding
+	# History
+	1060.1.1 = {
+		# to represent the slow colonisation of coastal areas by Bisayans
+		culture = bisayan
+		religion = dayawism
+	}
+}
+11059 = { # Sigay
+	holding = none
+}
 
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    15741 = { # b_ormok
-        holding = none
-    }
-    16037 = { # b_biliran
-        holding = none
-    }
-#c_abuyog
-    15594 = { # b_abuyog
-        culture = balanghay
-        religion = dayawism
 
-        holding = tribal_holding
+## d_sugbu ###################################
+### c_sugbu
+15576 = { # Sugbu
+	culture = balanghay
+	religion = dayawism
 
-        1060.1.1 = {
-            culture = bisayan
-        }
-    }
-    15428 = { # b_limasawa
-        holding = none
-    }
+	holding = tribal_holding
+
+	# History
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+15547 = { # Manktan
+	holding = none
+}
+11054 = { # Nahalin
+	holding = none
+}
+11055 = { # Siaro AKA Sialo
+	holding = none
+}
+
+
+## d_bo_ol ###################################
+### c_PHI_bool_and_cebu
+15330 = { # Panglao
+	culture = ati
+	religion = talaingat_ariya
+
+	holding = tribal_holding
+
+	# History
+	1060.1.1 = {
+		# to represent the slow colonisation of coastal areas by Bisayans
+		culture = bisayan
+		religion = dayawism
+	}
+}
+11053 = { # Bool
+	holding = none
+}
+
+
+## d_PHI_visayas ###################################
+### c_PHI_samar
+16194 = { # Tiayban
+	culture = balanghay
+	religion = dayawism
+
+	holding = tribal_holding
+
+	# History
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+16390 = { # Palapag
+	holding = none
+}
+16417 = { # Kataruman
+	holding = none
+}
+
+### c_basay
+15970 = { # Kalbiga
+	culture = balanghay
+	religion = dayawism
+
+	holding = tribal_holding
+
+	# History
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+15789 = { # Borongan
+	holding = none
+}
+16195 = { # Tubig
+	holding = none
+}
+
+### c_PHI_tandaya
+15867 = { # Kankabatok
+	culture = balanghay
+	religion = dayawism
+
+	holding = tribal_holding
+
+	# History
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+15741 = { # Ormok
+	holding = none
+}
+16037 = { # Panamao AKA Biliran
+	# 'Panamao' is the name of an ethnic fishing net, while 'Biliran' is the name for the grass used for mat-weaving
+	# name seems to have changed after erruption of Mt Panamao
+	holding = none
+}
+
+### c_abuyog
+15594 = { # Abuyog
+	culture = balanghay
+	religion = dayawism
+
+	holding = tribal_holding
+
+	# History
+	1060.1.1 = {
+		culture = bisayan
+	}
+}
+15428 = { # Limasawa
+	holding = none
+}
