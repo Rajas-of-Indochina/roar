@@ -1,4 +1,5 @@
 ﻿## In alphabetical order ##
+# many will have 6 traditions rather than 5 because there is just not enough slots for everything
 
 bisayan = {
 	# native inhabitans of Bisaya/Visaya Islands who later also colonised many places around Mindanao
@@ -49,8 +50,61 @@ bisayan = {
 	}
 }
 
+ibanag = {
+	# AKA: Ybanag, Ybanak or Ibanak
+	# https://en.wikipedia.org/wiki/Ibanag_people
+	# https://web.archive.org/web/20260307032519/https://www.yodisphere.com/2022/08/Ibanag-Tribe-Culture.html
+	color = ibanag
+
+	created = 1000.1.1
+	parents = { idaya }
+
+	ethos = ethos_communal
+	heritage = heritage_filipino
+	language = language_northern_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_isolationist 			# msl_note: very communal people that mostly kept to themselves ; still traded and interacted with others though so...
+		tradition_music_theory 			# msl_note: Ibanag dances, songs and music acompany them throughout their lives 
+		tradition_storytellers 			# msl_note: rich oral traditions with many stories and legends
+		# msl_note: I could not see anything pointing towards tradition_martial_admiration like it was in old RoA setup
+	}
+
+	# msl_note: Cordilleran people are famed for their rice terraces ; Ibanag were particularly agrarian people
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_iloko
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
 ifugao = {
 	# AKA Ipugaw or Igorot - the indigenous peoples of the Cordillera
+	# https://en.wikipedia.org/wiki/Ifugao_people
+	# https://web.archive.org/web/20260118021346/https://www.yodisphere.com/2022/08/Ifugao-People-Cordillera.html
 	color = ifugao
 
 	created = 1000.1.1
@@ -63,6 +117,7 @@ ifugao = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
 		tradition_mountain_homes 		# msl_note: terrain based choice ; alternatively tradition_hill_dwellers
 		tradition_storytellers 			# msl_note: rich oral literary traditions of 'hudhud' and 'alim'
 		tradition_legalistic 			# msl_note: to represent their strict legal system, based on the 'amama-a' elders
@@ -70,7 +125,7 @@ ifugao = {
 		# msl_note: tradition_fp1_trials_by_combat could fit their trials by ordeal ; not enough space
 	}
 
-	# msl_note: very adept at rice-terrace farming
+	# msl_note: Cordilleran people are famed for their rice terraces
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
@@ -98,10 +153,63 @@ ifugao = {
 	}
 }
 
+iloko = {
+	# ilokano in old RoA
+	# AKA: Ilokáno, Ilóko, Ilúko, or Samtóy
+	# https://en.wikipedia.org/wiki/Ilocano_people
+	# https://web.archive.org/web/20260212032521/https://www.yodisphere.com/2022/09/Ilocano-People-History-Culture.html
+	color = ilokano		#color = { 0.8 0.4 0.0 } - vanilla
+
+	created = 1000.1.1
+	parents = { idaya }
+
+	ethos = ethos_egalitarian		# used to have ethos_bellicose but they didn't seem very warlike to me from the reads
+	heritage = heritage_filipino
+	language = language_northern_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
+		tradition_hill_dwellers 			# msl_note: terrain based choice
+		tradition_maritime_mercantilism 	# msl_note: engaged in active trade with neighbourning groups and Chinese alike
+		tradition_artisans 					# msl_note: famed for their jewelery, clothing and various arts and crafts
+		# msl_note: tradition_storytellers would fit to represent their oral traditions ; not enough slots
+		# msl_note: tradition_stalwart_defenders would fit as Ilokano were famed for their resilient fight against various enemies to defend their homeland ; not enough slots
+	}
+
+	# msl_note: Cordilleran people are famed for their rice terraces
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_iloko
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
 kapampangan = {
 	# indigenous inhabitants of the 'Pampanaga' region in Central Luzon
 	# https://en.wikipedia.org/wiki/Kapampangan_people
-	# https://www.yodisphere.com/2022/09/Kapampangan-Pampanga-Culture-Traditions.html
+	# https://web.archive.org/web/20260225085808/https://www.yodisphere.com/2022/09/Kapampangan-Pampanga-Culture-Traditions.html
 	color = kapampangan
 
 	created = 1000.1.1
@@ -153,6 +261,50 @@ kapampangan = {
 # consider adding or as divergent culture
 # }
 
+sambal = {
+	# AKA: Zambal
+	# https://en.wikipedia.org/wiki/Sambal_people
+	color = sambal
+
+	created = 1000.1.1
+	parents = { suku }
+
+	ethos = ethos_spiritual		# surprised this is not ethos_bellicose with how warlike they were
+	heritage = heritage_filipino
+	language = language_central_luzon
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
+		tradition_warrior_culture 			# msl_note: known to be militant and fierce fighters notorious for their raids
+		tradition_martial_admiration 		# msl_note: their society deeply admired martial prowess and social standing was often tied to it
+		tradition_staunch_traditionalists 	# msl_note: very firm about their traditions which they fiercly protected
+		# msl_note: tradition_mystical_ancestors could work to represent their legendary ancestral lineages ; not enough slots
+		# msl_note: tradition_stalwart_defenders could probably fit to represent their fierce defence of their land ; not enough slots
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
 tagalog = {
 	# native inhabitants to parts of central and southern Luzon
 	# https://en.wikipedia.org/wiki/Tagalog_people
@@ -199,136 +351,6 @@ tagalog = {
 	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
 	clothing_gfx = { tagalog_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
-
-### TO SORT
-iloko = {
-	# replaces RoA's ilokano
-	#color = { 0.8 0.4 0.0 } - vanilla
-	color = ilokano
-
-	created = 1000.1.1
-	parents = { idaya }
-
-	ethos = ethos_bellicose
-	heritage = heritage_filipino
-	language = language_northern_luzon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_maritime_mercantilism
-		tradition_storytellers
-		tradition_artisans
-		tradition_stalwart_defenders
-		tradition_hill_dwellers
-	}
-
-	dlc_tradition = {
-		trait = tradition_tgp_rice_cultivators
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_agrarian
-	}
-	
-	dlc_tradition = {
-		trait = tradition_tgp_barangay_confederations
-		requires_dlc_flag = all_under_heaven
-	}
-
-	name_list = name_list_iloko
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
-ibanag = {
-	color = ibanag
-
-	created = 1000.1.1
-	parents = { idaya }
-
-	ethos = ethos_communal
-	heritage = heritage_filipino
-	language = language_northern_luzon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_agrarian
-		tradition_isolationist
-		tradition_martial_admiration
-	}
-
-	# msl_note: generic Filipino tradition to represent Barangay system
-	dlc_tradition = {
-		trait = tradition_tgp_barangay_confederations
-		requires_dlc_flag = all_under_heaven
-	}
-
-	name_list = name_list_iloko
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { north_luzon_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
-	house_coa_frame = house_frame_26
-	house_coa_mask_offset = { 0.0 0.0 }
-	house_coa_mask_scale = { 0.85 0.85 }
-
-	ethnicities = {
-		100 = asian_austronesian
-	}
-}
-
-sambal = {
-	color = sambal
-
-	created = 1000.1.1
-	parents = { suku }
-
-	ethos = ethos_spiritual
-	heritage = heritage_filipino
-	language = language_central_luzon
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_SEA_jungle_warfare 		# msl_note: generic Filipino tradition
-		tradition_stalwart_defenders
-		tradition_warrior_culture
-		tradition_staunch_traditionalists
-		tradition_mystical_ancestors
-	}
-
-	# msl_note: generic Filipino tradition to represent Barangay system
-	dlc_tradition = {
-		trait = tradition_tgp_barangay_confederations
-		requires_dlc_flag = all_under_heaven
-	}
-
-	name_list = name_list_filipino
-
-	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { malay_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx }
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }

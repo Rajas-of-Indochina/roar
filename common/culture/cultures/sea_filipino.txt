@@ -122,13 +122,13 @@ balanghay = {
 # batak = {
 	# indigeonus inhabitants of Palawan Island, mainly its more mountainous regions ; considered part of Filipino 'negrito' people
 	# https://en.wikipedia.org/wiki/Peoples_of_Palawan
-	# https://www.yodisphere.com/2023/09/Batak-Tribe-Palawan-Culture.html
+	# https://web.archive.org/web/20260428030703/https://www.yodisphere.com/2023/09/Batak-Tribe-Palawan-Culture.html
 # }
 
 bilic = {
 	# represents various indigenous inhabitants of southern Mindanao - Bagobo, Blaan, Tboli and Teduray
 	# https://en.wikipedia.org/wiki/Blaan_people ; https://en.wikipedia.org/wiki/Tboli_people ; https://en.wikipedia.org/wiki/Teduray_people ; https://en.wikipedia.org/wiki/South_Mindanao_languages
-	# https://www.yodisphere.com/2022/09/Tiboli-Tboli-Tribe-Culture-Traditions.html
+	# https://web.archive.org/web/20251219080317/https://www.yodisphere.com/2022/09/Tiboli-Tboli-Tribe-Culture-Traditions.html
 	color = bilic
 
 	ethos = ethos_spiritual		# alternatively ethos_communal
@@ -253,18 +253,24 @@ idaya = {
 	# represents ancestor culture to Iloko, Ifugao Ibanag and pther Cordilleran speakers
 	color = idaya
 
-	ethos = ethos_bellicose
+	ethos = ethos_stoic
 	heritage = heritage_filipino
 	language = language_northern_luzon
 	martial_custom = martial_custom_equal
 	head_determination = head_determination_domain
 
 	traditions = {
-		# msl_note: shpuld they have tradition_SEA_jungle_warfare? Cause rn they are only Filipino group without it
-		tradition_stalwart_defenders 		# msl_note: known warriors with knack for defending their land
-		tradition_hill_dwellers 			# msl_note: terrain based pick
-		tradition_storytellers 				# msl_note: rich oral traditions among Cordilleran peoples
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_hill_dwellers 		# msl_note: terrain based pick
+		tradition_storytellers 			# msl_note: rich oral traditions among Cordilleran people
 		# msl_note: tradition_mystical_ancestors could fit their ancestor worship, but religion already covers that
+	}
+
+	# msl_note: Cordilleran people are famed for their rice terraces
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	# msl_note: generic Filipino tradition to represent Barangay system
@@ -325,7 +331,7 @@ ivatan = {
 
 mansaka = {
 	# Meaning 'people of the clearings' ; indigenous inhabitants of Davao provinces of Mindanao
-	# https://www.yodisphere.com/2022/09/Mansaka-Tribe-Culture-Traditions.html
+	# https://web.archive.org/web/20260308004007/https://www.yodisphere.com/2022/09/Mansaka-Tribe-Culture-Traditions.html
 	color = mansaka
 
 	ethos = ethos_communal
@@ -371,7 +377,7 @@ mansaka = {
 manuvu = { # Manuvu
 	# AKA: Manobo, Menobo, Menuvu or Minuvu
 	# highly diverse group of indigenous inhabitants of Mindanao
-	# https://www.yodisphere.com/2022/05/Manobo-Tribe-History-Culture-Traditions.html
+	# https://web.archive.org/web/20250615040924/https://www.yodisphere.com/2022/05/Manobo-Tribe-History-Culture-Traditions.html
 	color = manuvu
 
 	ethos = ethos_stoic
@@ -413,7 +419,7 @@ manuvu = { # Manuvu
 palawan = {
 	# represents various indgienous cultures of northern and southern parts of Palawan Island
 	# https://en.wikipedia.org/wiki/Peoples_of_Palawan
-	# https://www.yodisphere.com/2022/09/Palawan-Tribe-People-Culture-Tradition-History.html
+	# https://web.archive.org/web/20260308003725/https://www.yodisphere.com/2022/09/Palawan-Tribe-People-Culture-Tradition-History.html
 	color = palawan
 
 	ethos = ethos_communal
@@ -459,7 +465,7 @@ palawan = {
 subanen = {
 	# AKA: Subanon or Subanun ; indigenous peoples of the Zamboanga peninsula
 	# https://en.wikipedia.org/wiki/Subanon_people
-	# https://www.yodisphere.com/2022/09/Subanon-Subanen-Tribe-Culture-Traditions.html
+	# https://web.archive.org/web/20251207224316/https://www.yodisphere.com/2022/09/Subanon-Subanen-Tribe-Culture-Traditions.html
 	color = subanen
 
 	ethos = ethos_communal
