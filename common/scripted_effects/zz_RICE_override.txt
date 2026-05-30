@@ -191,11 +191,7 @@ RICE_invite_norse_main_effect = {
 						}
 						save_scope_as = norse_colonists
 					}
-					add_culture_minority_effect = {
-						COUNTY = county
-						CULTURE = scope:norse_colonists
-						SIZE = small
-					}
+					promote_culture_minority_effect = { CULTURE = scope:norse_colonists }
 				}
 			}
 		}
@@ -546,11 +542,7 @@ RICE_invite_norman_main_effect = {
 						}
 					}
 					save_scope_as = county
-					add_culture_minority_effect = {
-						COUNTY = county
-						CULTURE = culture:norman
-						SIZE = small
-					}
+					promote_culture_minority_effect = { CULTURE = culture:norman }
 				}
 			}
 		}
@@ -892,31 +884,28 @@ RICE_pamir_brahui_migration_effect = {
 		add_county_modifier = {
 			modifier = RICE_pamir_brahui_tribes
 		}
-	}
-	add_culture_minority_effect = {
-		CULTURE = culture:brahui
-		SIZE = small
-		COUNTY = title:c_kalat
+		add_culture_minority_effect = {
+			CULTURE = culture:brahui
+			SIZE = small
+		}
 	}
 	title:c_sibi = {
 		add_county_modifier = {
 			modifier = RICE_pamir_brahui_tribes
 		}
-	}
-	add_culture_minority_effect = {
-		CULTURE = culture:brahui
-		SIZE = large
-		COUNTY = title:c_sibi
+		add_culture_minority_effect = {
+			CULTURE = culture:brahui
+			SIZE = small
+		}
 	}
 	title:c_turan = {
 		add_county_modifier = {
 			modifier = RICE_pamir_brahui_tribes
 		}
-	}
-	add_culture_minority_effect = {
-		CULTURE = culture:brahui
-		SIZE = large
-		COUNTY = title:c_turan
+		add_culture_minority_effect = {
+			CULTURE = culture:brahui
+			SIZE = small
+		}
 	}
 }
 
@@ -1506,8 +1495,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			# Check for a religious minority of the right type then if none are found default to Catholic
 			if = {
 				limit = {
-					county_has_large_faith_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = large
 						TRIGGER = RICE_sicily_faith_is_latin_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1518,8 +1510,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			}
 			else_if = {
 				limit = {
-					county_has_small_faith_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = small
 						TRIGGER = RICE_sicily_faith_is_latin_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1534,8 +1529,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			# Do the same for cultures, defaulting to Lombard
 			if = {
 				limit = {
-					county_has_large_culture_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = culture
+						SIZE = large
 						TRIGGER = RICE_sicily_culture_is_latin_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1546,8 +1544,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			}
 			else_if = {
 				limit = {
-					county_has_small_culture_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = culture
+						SIZE = small
 						TRIGGER = RICE_sicily_culture_is_latin_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1564,8 +1565,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			# Check for a religious minority of the right type then if none are found default to Orthodox
 			if = {
 				limit = {
-					county_has_large_faith_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = large
 						TRIGGER = RICE_sicily_faith_is_greek_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1576,8 +1580,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			}
 			else_if = {
 				limit = {
-					county_has_small_faith_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = small
 						TRIGGER = RICE_sicily_faith_is_greek_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1592,8 +1599,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			# Do the same for cultures, defaulting to Greek
 			if = {
 				limit = {
-					county_has_large_culture_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = culture
+						SIZE = large
 						TRIGGER = RICE_sicily_culture_is_greek_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1604,8 +1614,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			}
 			else_if = {
 				limit = {
-					county_has_small_culture_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = culture
+						SIZE = small
 						TRIGGER = RICE_sicily_culture_is_greek_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1622,25 +1635,31 @@ RoA_RICE_stronghold_minorities_effect = {
 			# Check for a religious minority of the right type then if none are found default to Ashari
 			if = {
 				limit = {
-					county_has_large_faith_minority_with_trigger = {
-						TRIGGER = RICE_sicily_faith_is_latin_trigger
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = large
+						TRIGGER = RICE_sicily_faith_is_arabic_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
 					variable = faith_minorities_large
-					limit = { RICE_sicily_faith_is_latin_trigger = yes }
+					limit = { RICE_sicily_faith_is_arabic_trigger = yes }
 					save_scope_as = county_faith
 				}
 			}
 			else_if = {
 				limit = {
-					county_has_small_faith_minority_with_trigger = {
-						TRIGGER = RICE_sicily_faith_is_latin_trigger
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = small
+						TRIGGER = RICE_sicily_faith_is_arabic_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
 					variable = faith_minorities_small
-					limit = { RICE_sicily_faith_is_latin_trigger = yes }
+					limit = { RICE_sicily_faith_is_arabic_trigger = yes }
 					save_scope_as = county_faith
 				}
 			}
@@ -1650,8 +1669,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			# Do the same for cultures, defaulting to Maghrebi
 			if = {
 				limit = {
-					county_has_large_culture_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = culture
+						SIZE = large
 						TRIGGER = RICE_sicily_culture_is_arabic_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {
@@ -1662,8 +1684,11 @@ RoA_RICE_stronghold_minorities_effect = {
 			}
 			else_if = {
 				limit = {
-					county_has_small_culture_minority_with_trigger = {
+					county_has_type_minority_with_trigger = {
+						TYPE = culture
+						SIZE = small
 						TRIGGER = RICE_sicily_culture_is_arabic_trigger
+						CHECK = yes
 					}
 				}
 				random_in_list = {

@@ -1,0 +1,726 @@
+﻿namespace = minorities
+
+####
+# Minorities events
+# 01xx -> Faith Expulsion 
+# 02xx -> Culture Expulsion
+# 03xx -> Council Tasks
+
+
+# scripted_effect setup_expel_faith_minorities_effect = {
+#     every_sub_realm_county = {
+#         limit = {
+#             county_has_faith_minority = yes
+#         }
+#         every_in_list = {
+#             variable = faith_minorities_small
+#             limit = {
+#                 ROOT.faith = {
+# 					faith_hostility_level = {
+# 						target = PREV
+# 						value >= faith_hostile_level
+# 					}
+# 				}
+				
+# 				NOT = {
+# 					ROOT = {
+# 						is_target_in_variable_list = {
+# 							name = faith_options
+# 							target = PREV
+# 						}
+# 					}
+# 				}
+#             }
+#             ROOT = {
+#                 add_to_variable_list = {
+#                     name = faith_options
+#                     target = PREV
+#                 }
+#             }
+#         }
+#         every_in_list = {
+#             variable = faith_minorities_large
+#             limit = {
+#                 ROOT.faith = {
+# 					faith_hostility_level = {
+# 						target = PREV
+# 						value >= faith_hostile_level
+# 					}
+# 				}
+				
+# 				NOT = {
+# 					ROOT = {
+# 						is_target_in_variable_list = {
+# 							name = faith_options
+# 							target = PREV
+# 						}
+# 					}
+# 				}
+#             }
+#             ROOT = {
+#                 add_to_variable_list = {
+#                     name = faith_options
+#                     target = PREV
+#                 }
+#             }
+#         }
+#     }
+# }
+
+# scripted_effect expel_faith_minorities_effect = {
+# 	every_sub_realm_county = {
+# 		limit = {
+# 			county_has_specific_faith_minority_trigger = { FAITH = scope:expelled_faith }
+# 		}
+# 		save_scope_as = source_county
+# 		find_faith_migration_target_effect = {
+# 			FAITH = scope:expelled_faith
+# 		}
+# 		# replace with more refined migration algo later
+# 		# random_neighboring_county = {
+# 		# 	limit = { NOT = { holder = ROOT } }
+# 		# 	save_scope_as = target_county
+# 		# }
+# 		faith_migration_effect = {
+# 			SOURCE_COUNTY = scope:source_county
+# 			TARGET_COUNTY = scope:target_county
+# 			FAITH = scope:expelled_faith
+# 		}
+# 	}
+# }
+
+# minorities.0100 = {
+# 	type = character_event
+# 	title = minorities.0100.t
+# 	desc = minorities.0100.desc
+
+# 	left_portrait = {
+# 		character = root
+# 		animation = disapproval
+# 	}
+# 	widget = {
+# 		gui = "sea_select_faith_widget"
+# 		container = "custom_widgets_container"
+# 	}
+# 	theme = dread
+
+# 	immediate = {
+# 		remove_variable = selected_faith
+# 		clear_variable_list = faith_options
+#         setup_expel_faith_minorities_effect = yes
+# 	}
+# 	option = {
+# 		name = minorities.0300.confirm
+# 		if = {
+# 			limit = {
+# 				has_variable = selected_faith
+# 			}
+# 			var:selected_faith = { save_scope_as = expelled_faith }
+# 			expel_faith_minorities_effect = yes
+# 		}
+# 		else = {
+# 			custom_tooltip = minorities.0300.cancel
+# 			remove_variable = expelled_or_purged_peasants
+# 		}
+# 	}
+# 	after = {
+# 		remove_variable = selected_faith
+# 	}
+# }
+
+# AI random faith minority expulsion pulse event
+
+minorities.0101 = {
+	type = character_event
+	hidden = yes
+	trigger = {
+		any_sub_realm_county = {
+			OR = {
+				county_has_expellable_faith_trigger = {
+					SIZE = small
+					FAITH = ROOT.faith
+				}
+				county_has_expellable_faith_trigger = {
+					SIZE = small
+					FAITH = ROOT.faith
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				faith = {
+					OR = {
+						has_doctrine = tenet_tax_nonbelievers
+						has_doctrine = special_doctrine_jizya
+					}
+				}
+			}
+			calc_true_if = {
+				amount >= 3
+				has_trait = sadistic
+				has_trait = callous
+				has_trait = wrathful
+				has_trait = zealous
+				ai_zeal >= 50
+				faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+			}
+		}
+		calc_true_if = {
+			amount >= 2
+			has_trait = sadistic
+			has_trait = callous
+			has_trait = wrathful
+			has_trait = zealous
+			ai_zeal >= 50
+			faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+		}
+	}
+	immediate = {
+		trigger_event = {
+			id = minorities.0102
+			months = { 1 11 }
+		}
+	}
+}
+
+minorities.0102 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = expeller
+		random_sub_realm_county = {
+			limit = {
+				OR = {
+					county_has_expellable_faith_trigger = {
+						SIZE = small
+						FAITH = ROOT.faith
+					}
+					county_has_expellable_faith_trigger = {
+						SIZE = large
+						FAITH = ROOT.faith
+					}
+				}
+			}
+			save_scope_as = county
+			if = {
+				limit = {
+					county_has_expellable_faith_trigger = {
+						SIZE = large
+						FAITH = ROOT.faith
+					}
+				}
+				random_in_list = {
+					variable = faith_minorities_large
+					limit = {
+						save_temporary_scope_as = faith_temp
+						"ROOT.faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+					}
+					save_scope_as = expelled_faith
+				}
+			}
+			else_if = {
+				limit = {
+					county_has_expellable_faith_trigger = {
+						SIZE = small
+						FAITH = ROOT.faith
+					}
+				}
+				random_in_list = {
+					variable = faith_minorities_small
+					limit = {
+						save_temporary_scope_as = faith_temp
+						"ROOT.faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+					}
+					send_interface_message = {
+						title = "WAHHHHH"
+					}
+					save_scope_as = expelled_faith
+				}
+			}
+		}
+		expel_county_faith_minority_effect = {
+			COUNTY = scope:county
+			FAITH = scope:expelled_faith
+			CHARACTER = scope:expeller
+		}
+	}
+}
+
+# scripted_effect setup_expel_culture_minorities_effect = {
+#     every_sub_realm_county = {
+#         limit = {
+#             county_has_culture_minority = yes
+#         }
+#         every_in_list = {
+#             variable = culture_minorities_small
+#             limit = {
+# 				NOT = {
+# 					ROOT = {
+# 						is_target_in_variable_list = {
+# 							name = culture_options
+# 							target = PREV
+# 						}
+# 					}
+# 				}
+#             }
+			
+#             ROOT = {
+#                 add_to_variable_list = {
+#                     name = culture_options
+#                     target = PREV
+#                 }
+#             }
+#         }
+#         every_in_list = {
+#             variable = culture_minorities_large
+#             limit = {
+# 				NOT = {
+# 					ROOT = {
+# 						is_target_in_variable_list = {
+# 							name = culture_options
+# 							target = PREV
+# 						}
+# 					}
+# 				}
+#             }
+			
+#             ROOT = {
+#                 add_to_variable_list = {
+#                     name = culture_options
+#                     target = PREV
+#                 }
+#             }
+#         }
+#     }
+# }
+
+# scripted_effect expel_culture_minorities_effect = {
+# 	every_sub_realm_county = {
+# 		limit = {
+# 			county_has_specific_culture_minority_trigger = { CULTURE = scope:expelled_culture }
+# 		}
+# 		save_scope_as = source_county
+# 		find_culture_migration_target_effect = {
+# 			CULTURE = scope:expelled_culture
+# 		}
+# 		# replace with more refined migration algo later
+# 		# random_neighboring_county = {
+# 		# 	limit = { NOT = { holder = ROOT } }
+# 		# 	save_scope_as = target_county
+# 		# }
+# 		culture_migration_effect = {
+# 			SOURCE_COUNTY = scope:source_county
+# 			TARGET_COUNTY = scope:target_county
+# 			CULTURE = scope:expelled_culture
+# 		}
+# 	}
+# }
+
+# minorities.0200 = {
+# 	type = character_event
+# 	title = minorities.0100.t
+# 	desc = minorities.0100.desc
+
+# 	left_portrait = {
+# 		character = root
+# 		animation = disapproval
+# 	}
+# 	widget = {
+# 		gui = "sea_select_culture_widget"
+# 		container = "custom_widgets_container"
+# 	}
+# 	theme = dread
+
+# 	immediate = {
+# 		remove_variable = selected_culture
+# 		clear_variable_list = culture_options
+#         setup_expel_culture_minorities_effect = yes
+# 	}
+# 	option = {
+# 		name = minorities.0300.confirm
+# 		if = {
+# 			limit = {
+# 				has_variable = selected_culture
+# 			}
+# 			var:selected_culture = { save_scope_as = expelled_culture }
+# 			expel_culture_minorities_effect = yes
+# 		}
+# 		else = {
+# 			custom_tooltip = minorities.0300.cancel
+# 			remove_variable = expelled_or_purged_peasants
+# 		}
+# 	}
+# 	after = {
+# 		remove_variable = selected_culture
+# 	}
+# }
+
+# AI random culture minority expulsion pulse event
+
+minorities.0201 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		any_sub_realm_county = {
+			OR = {
+				county_has_expellable_culture_trigger = {
+					SIZE = small
+					CULTURE = ROOT.culture
+				}
+				county_has_expellable_culture_trigger = {
+					SIZE = large
+					CULTURE = ROOT.culture
+				}
+			}
+		}
+		trigger_if = {
+			limit = { culture = { has_cultural_tradition = tradition_ruling_caste } }
+			calc_true_if = {
+				amount >= 3
+				has_trait = sadistic
+				has_trait = wrathful
+				has_trait = callous
+				has_trait = populist_leader
+				ai_vengefulness >= 50
+				culture = { has_cultural_tradition = tradition_isolationist }
+			}
+		}
+		trigger_else = {
+			calc_true_if = {
+				amount >= 2
+				has_trait = sadistic
+				has_trait = wrathful
+				has_trait = callous
+				has_trait = populist_leader
+				ai_vengefulness >= 50
+				culture = { has_cultural_tradition = tradition_isolationist }
+			}
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = minorities.0202
+			months = { 1 11 }
+		}
+	}
+}
+
+minorities.0202 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = expeller
+		random_sub_realm_county = {
+			limit = {
+				OR = {
+					county_has_expellable_culture_trigger = {
+						SIZE = small
+						CULTURE = ROOT.culture
+					}
+					county_has_expellable_culture_trigger = {
+						SIZE = small
+						CULTURE = ROOT.culture
+					}
+				}
+			}
+			save_scope_as = county
+			if = {
+				limit = {
+					county_has_expellable_culture_trigger = {
+						SIZE = large
+						CULTURE = ROOT.culture
+					}
+				}
+				random_in_list = {
+					variable = culture_minorities_large
+					limit = {
+						scope:expeller.culture = {
+							NOT = { has_same_culture_heritage = prev }
+						}
+					}
+					save_scope_as = expelled_culture
+				}
+			}
+			else_if = {
+				limit = {
+					county_has_expellable_culture_trigger = {
+						SIZE = small
+						CULTURE = ROOT.culture
+					}
+				}
+				random_in_list = {
+					variable = culture_minorities_small
+					limit = {
+						scope:expeller.culture = {
+							NOT = { has_same_culture_heritage = prev }
+						}
+					}
+					save_scope_as = expelled_culture
+				}
+			}
+		}
+		expel_county_culture_minority_effect = {
+			COUNTY = scope:county
+			CULTURE = scope:expelled_culture
+			CHARACTER = scope:expeller
+		}
+	}
+}
+
+scripted_effect setup_promote_religious_minorities_effect = {
+	scope:county = {
+		every_in_list = {
+			variable = faith_minorities_large
+			limit = {
+				NOT = { THIS = scope:councillor_liege.faith }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = faith_options
+					target = PREV
+				}
+			}
+		}
+		every_in_list = {
+			variable = faith_minorities_small
+			limit = {
+				NOT = { THIS = scope:councillor_liege.faith }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = faith_options
+					target = PREV
+				}
+			}
+		}
+	}
+}
+
+scripted_effect setup_promote_culture_minorities_effect = {
+	scope:county = {
+		every_in_list = {
+			variable = culture_minorities_large
+			limit = {
+				NOT = { THIS = scope:councillor_liege.culture }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = culture_options
+					target = PREV
+				}
+			}
+		}
+		every_in_list = {
+			variable = culture_minorities_small
+			limit = {
+				NOT = { THIS = scope:councillor_liege.culture }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = culture_options
+					target = PREV
+				}
+			}
+		}
+	}
+}
+
+# Promote minorities
+# New and Improved: Condensed to a single event with a special combined gui!
+minorities.0300 = {
+	type = character_event
+	title = minorities.0300.t
+	desc = minorities.0300.desc
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = personality_rational
+	}
+	theme = realm
+	immediate = {
+		if = {
+			limit = { NOT = { has_realm_law_flag = disable_minority_faith_promotion } }
+			setup_promote_religious_minorities_effect = yes
+		}
+		if = {
+			limit = { NOT = { has_realm_law_flag = disable_minority_culture_promotion } }
+			setup_promote_culture_minorities_effect = yes
+		}
+		scope:county = {
+			remove_variable = faith_to_convert
+			remove_variable = culture_to_convert
+		}
+	}
+	widget = {
+		gui = "sea_select_combined_widget"
+		container = "custom_widgets_container"
+	}
+
+	option = {
+		name = minorities.0300.confirm
+		if = {
+			limit = {
+				exists = var:selected_culture
+			}
+			var:selected_culture = { save_scope_as = selected_culture }
+			scope:county = {
+				set_variable = {
+					name = culture_to_convert
+					value = scope:selected_culture
+				}
+			}
+			custom_tooltip = task_promote_minority_effect_event_desc_culture
+		}
+		else_if = {
+			limit = {
+				exists = var:selected_faith
+			}
+			var:selected_faith = { save_scope_as = selected_faith }
+			scope:county = {
+				set_variable = {
+					name = faith_to_convert
+					value = scope:selected_faith
+				}
+			}
+			custom_tooltip = task_promote_minority_effect_event_desc_faith
+		}
+		else = {
+			custom_tooltip = minorities.0100.cancel
+			cp:councillor_steward = {
+				set_council_task = { task_type = task_collect_taxes }
+			}
+		}
+	}
+	after = {
+		clear_variable_list = faith_options
+		clear_variable_list = culture_options
+		remove_variable = selected_culture
+		remove_variable = selected_faith
+	}
+}
+
+# Chaplain expels minority
+minorities.0301 = {
+	type = character_event
+	title = minorities.0301.t
+	desc = minorities.0301.desc
+
+	left_portrait = {
+		character = root
+		animation = threatening
+	}
+
+	right_portrait = {
+		character = cp:councillor_court_chaplain
+		animation = personality_zealous
+	}
+	theme = realm
+	immediate = {
+		setup_promote_religious_minorities_effect = yes
+		scope:county = { remove_variable = faith_to_expel }
+	}
+	widget = {
+		gui = "sea_select_faith_widget"
+		container = "custom_widgets_container"
+	}
+	option = {
+		name = minorities.0301.confirm
+		if = {
+			limit = { exists = var:selected_faith }
+			var:selected_faith = { save_scope_as = selected_faith }
+			scope:county ={
+				custom_tooltip = begin_expel_faith_tt
+				set_variable = {
+					name = faith_to_expel
+					value = scope:selected_faith
+				}
+			}
+		}
+		else = {
+			custom_tooltip = minorities.0100.cancel
+			cp:councillor_court_chaplain = {
+				set_council_task = { task_type = task_religious_relations }
+			}
+		}
+	}
+	after = {
+		clear_variable_list = faith_options
+		remove_variable = selected_faith
+	}
+}
+
+scripted_effect setup_steward_expel_effect = {
+	scope:county = {
+		every_in_list = {
+			variable = culture_minorities_small
+			ROOT = {
+				add_to_variable_list = { name = culture_options target = PREV }
+			}
+		}
+		every_in_list = {
+			variable = culture_minorities_large
+			ROOT = {
+				add_to_variable_list = { name = culture_options target = PREV }
+			}
+		}
+	}
+}
+
+# Steward expels minority
+minorities.0302 = {
+	type = character_event
+	title = minorities.0302.t
+	desc = minorities.0302.desc
+
+	left_portrait = {
+		character = root
+		animation = threatening
+	}
+
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = personality_zealous
+	}
+	theme = realm
+	immediate = {
+		setup_promote_culture_minorities_effect = yes
+		scope:county = { remove_variable = culture_to_expel }
+	}
+	widget = {
+		gui = "sea_select_culture_widget"
+		container = "custom_widgets_container"
+	}
+	option = {
+		name = minorities.0301.confirm
+		if = {
+			limit = { exists = var:selected_culture }
+			var:selected_culture = { save_scope_as = selected_culture }
+			scope:county ={
+				custom_tooltip = begin_expel_culture_tt
+				set_variable = {
+					name = culture_to_expel
+					value = scope:selected_culture
+				}
+			}
+		}
+		else = {
+			custom_tooltip = minorities.0100.cancel
+			cp:councillor_steward = {
+				set_council_task = { task_type = task_collect_taxes }
+			}
+		}
+	}
+	after = {
+		clear_variable_list = culture_options
+		remove_variable = selected_culture
+	}
+}

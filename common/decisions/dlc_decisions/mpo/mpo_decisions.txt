@@ -2338,7 +2338,7 @@ mpo_decision_introduce_heir = {
 #	world_transoxiana
 #	world_khorasan
 #	dlc_mpo_steppe_persia_expansion
-#	dlc_mpo_steppe_central_siberia_addon
+#	dlc_mpo_steppe_siberia_further_expansion
 ## Eastern Steppe expansion regions:
 #	dlc_mpo_steppe_hexi_tarim_expansion
 #	dlc_mpo_steppe_north_china_expansion
@@ -2648,11 +2648,11 @@ expand_the_steppe_decision = {
 			}
 		}
 		item = {
-			value = dlc_mpo_steppe_central_siberia_addon
+			value = dlc_mpo_steppe_siberia_further_expansion
 			is_shown = {
 	            situation:the_great_steppe ?= {
 	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_central_siberia_addon
+	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_siberia_further_expansion
 	                }
 	            }
 			}
@@ -2662,16 +2662,16 @@ expand_the_steppe_decision = {
 					situation:the_great_steppe ?= {
 	                    NOT = {
 	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_central_siberia_addon
+	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_siberia_further_expansion
 	                        }
 	                    }
 	                }
 	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_central_siberia_addon
+	                    geographical_region = dlc_mpo_steppe_siberia_further_expansion
 	                }
 				}
 			}
-			localization = dlc_mpo_steppe_central_siberia_addon
+			localization = dlc_mpo_steppe_siberia_further_expansion
 			icon = "gfx/interface/icons/message_feed/banner.dds"
 			ai_chance = {
 				value = 0 #Tribes of the North
@@ -2913,7 +2913,7 @@ expand_the_steppe_decision = {
 			great_steppe_not_in_sub_region_trigger = { REGION = world_transoxiana }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_khorasan }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_persia_expansion }
-			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_central_siberia_addon }
+			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_siberia_further_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_hexi_tarim_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_north_china_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_central_china_expansion }
@@ -2995,9 +2995,9 @@ expand_the_steppe_decision = {
 		}
         trigger_else_if = {
         	limit = {
-	    		scope:dlc_mpo_steppe_central_siberia_addon = yes
+	    		scope:dlc_mpo_steppe_siberia_further_expansion = yes
 	    	}
-		    completely_controls_region = dlc_mpo_steppe_central_siberia_addon
+		    completely_controls_region = dlc_mpo_steppe_siberia_further_expansion
 		}
 
         trigger_else_if = {

@@ -1,0 +1,45 @@
+has_followers_trigger = {
+	OR = {
+		num_character_followers >= 1
+		num_county_followers >= 1
+		faith_has_minority_counties = yes
+	}
+}
+
+is_valid_for_hybridising_trigger = {
+	$CHARACTER$ = {
+		culture = {
+			NOT = { has_same_culture_heritage = $CULTURE$ }
+			culture_age >= culture_hybrid_cooldown
+		}
+		custom_description = {
+			text = culture_present_in_realm_for_hybridization
+			any_sub_realm_county = {
+				OR = {
+					culture = $CULTURE$
+					county_has_specific_culture_minority_trigger = { CULTURE = $CULTURE$ }
+				}
+			}
+		}
+		custom_description = {
+			text = culture_is_not_parent_culture
+			culture = {
+				NOT = {
+					any_parent_culture = {
+						this = $CULTURE$
+					}
+				}
+			}
+		}
+		custom_description = {
+			text = culture_is_not_child_culture
+			$CULTURE$ = {
+				NOT = {
+					any_parent_culture = {
+						this = $CHARACTER$.culture
+					}
+				}
+			}
+		}
+	}
+}

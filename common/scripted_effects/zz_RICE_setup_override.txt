@@ -1204,70 +1204,80 @@ RICE_setup_pamir_flavor_pack_effect = {
 			current_date > 700.1.1
 			current_date < 900.1.1
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:turco_hephthalite
-			SIZE = large
-			COUNTY = title:c_west-tokharestan
+		title:c_west-tokharestan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:turco_hephthalite
-			SIZE = large
-			COUNTY = title:c_east-tokharestan
+		title:c_east-tokharestan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:turco_hephthalite
-			SIZE = large
-			COUNTY = title:c_balkh
+		title:c_balkh = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
 		}
-		add_faith_minority_effect = {
-			FAITH = faith:zunism
-			SIZE = small
-			COUNTY = title:c_ghazna
+		title:c_ghazna = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:zun_pagan
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:turco_hephthalite
-			SIZE = large
-			COUNTY = title:c_ghazna
+		title:c_rukhaj = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:turco_hephthalite
-			SIZE = large
-			COUNTY = title:c_rukhaj
+		title:c_zabulistan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:turco_hephthalite
-			SIZE = large
-			COUNTY = title:c_zabulistan
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:afghan
-			SIZE = large
-			COUNTY = title:c_zamindawar
+		title:c_zamindawar = {
+			add_culture_minority_effect = {
+				CULTURE = culture:afghan
+				SIZE = large
+			}
 		}
 	}
 	else_if = {
 		limit = {
 			current_date >= 900.1.1
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:khalaj
-			SIZE = small
-			COUNTY = title:c_ghazna
+		title:c_ghazna = {
+			add_culture_minority_effect = {
+				CULTURE = culture:khalaj
+				SIZE = small
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:afghan
-			SIZE = small
-			COUNTY = title:c_zamindawar
+		title:c_rukhaj = {
+			add_culture_minority_effect = {
+				CULTURE = culture:afghan
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:afghan
-			SIZE = large
-			COUNTY = title:c_zabulistan
+		title:c_zabulistan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:afghan
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:afghan
-			SIZE = large
-			COUNTY = title:c_rukhaj
+		title:c_zamindawar = {
+			add_culture_minority_effect = {
+				CULTURE = culture:afghan
+				SIZE = small
+			}
 		}
 	}
 
@@ -1275,20 +1285,23 @@ RICE_setup_pamir_flavor_pack_effect = {
 		limit = {
 			current_date > 1000.1.1
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:brahui
-			SIZE = large
-			COUNTY = title:c_sibi
+		title:c_sibi = {
+			add_culture_minority_effect = {
+				CULTURE = culture:brahui
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:brahui
-			SIZE = large
-			COUNTY = title:c_turan
+		title:c_turan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:brahui
+				SIZE = large
+			}
 		}
-		add_culture_minority_effect = {
-			CULTURE = culture:brahui
-			SIZE = small
-			COUNTY = title:c_kalat
+		title:c_kalat = {
+			add_culture_minority_effect = {
+				CULTURE = culture:brahui
+				SIZE = large
+			}
 		}
 	}
 

@@ -1,0 +1,132 @@
+﻿l_english:
+#  Game Concepts
+ game_concept_minority:0 "Minority"
+ game_concept_minority_small:0 "Small Minority"
+ game_concept_minority_large:0 "Large Minority"
+ game_concept_minorities:0 "Minorities"
+ game_concept_minority_desc:0 "A Minority represents a portion of the population of a [county|E] which follows another [faith|E] or belongs to another [culture|E].\n\nMinorities may be small or large. A small minority may grow to become a large minority, and a large minority may grow enough to displace the original faith of the county, which becomes a new minority in that county."
+
+ game_concept_minority_culture:0 "Cultural Minority"
+ game_concept_minority_cultures:0 "Cultural Minorities"
+ game_concept_minority_culture_small:0 "Small Cultural Minority"
+ game_concept_minority_culture_large:0 "Large Cultural Minority"
+ game_concept_minority_culture_desc:0 "A Cultural Minority is a [minority|E] that represents a portion of the county whose [culture|E] is different from that of the county."
+
+ game_concept_minority_faith:0 "Religious Minority"
+ game_concept_minority_faith_small:0 "Small Religious Minority"
+ game_concept_minority_faith_large:0 "Large Religious Minority"
+ game_concept_minority_faiths:0 "Religious Minorities"
+ game_concept_minority_faith_desc:0 "A Religious Minority is a [minority|E] that represents a portion of the county that follows a different [faith|E] from the rest of the county."
+
+ game_concept_migrate_minority:0 "$game_concept_migrate$"
+ game_concept_minority_migration:0 "$game_concept_migration$"
+ game_concept_migrate_minority_desc:0 "When expelled via the $task_expel_cultural_minority$ or $task_expel_religious_minority$ [councillor_tasks|E], [minorities|E] will seek out a new random county to take up residence in, with the attractiveness of the county based on its [development|E], the [dread|E] of its [top_liege|E], as well as how cosmopolitan and accommodating the county is to that minority."
+
+ # Council Tasks
+
+ task_conversion_china_promotion_effect_desc:0 "#S At #V 100%#!#!:\n$TAB$The [county|E] will promote a minority [councillor.GetLiege.GetFaith.GetTextIcon][councillor.GetLiege.GetFaith.GetName] population."
+ task_conversion_promotion_effect_desc:0 "#S At #V 100%#!#!:\n$TAB$The [county|E] will promote a minority [councillor.GetFaith.GetTextIcon][councillor.GetFaith.GetAdjective] population."
+ MINORITIES_SYSTEM_REASON:0 "Minorities System"
+
+ task_promote_minority:0 "Promote Minority in County"
+ task_promote_minority_effect_desc:0 "A [minority|E] in the [county|E] will be promoted."
+ task_promote_minority_effect_desc_faith:0 "A [county.MakeScope.Var('faith_to_convert').Faith.GetTextIcon][county.MakeScope.Var('faith_to_convert').Faith.GetAdjective] [minority_faith|E] will be promoted in the [county|E]."
+ task_promote_minority_effect_desc_culture:0 "A [county.MakeScope.Var('culture_to_convert').Culture.GetName] [minority_culture|E] will be promoted in the [county|E]."
+ must_have_different_faith_or_culture_to_promote_tt:0 "[county.GetNameNoTier] has no minorities you can promote!"
+
+ task_expel_religious_minority:0 "Expel Religious Minorities"
+ task_expel_religious_minority_desc:0 "Expel a [minority_faith|E] from the [county|E]"
+ task_expel_religious_minority_active_desc:0 "Expel the [county.MakeScope.Var('faith_to_expel').Faith.GetTextIcon][county.MakeScope.Var('faith_to_expel').Faith.GetAdjective] [minority_faith|E] in [county.GetNameNoTier]"
+
+ task_expel_cultural_minority:0 "Expel Cultural Minorities"
+ task_expel_cultural_minority_desc:0 "Expel a [minority_culture|E] from the [county|E]"
+ task_expel_cultural_minority_active_desc:0  "Expel the [county.MakeScope.Var('culture_to_expel').Culture.GetName] [minority_culture|E] in [county.GetNameNoTier]"
+
+ task_invite_settlers:0 "Invite Settlers"
+ task_kurultai_invite_settlers_1:0 "$task_invite_settlers$"
+ task_kurultai_invite_settlers_2:0 "$task_invite_settlers$"
+ task_kurultai_invite_settlers_3:0 "$task_invite_settlers$"
+ task_kurultai_invite_settlers_4:0 "$task_invite_settlers$"
+ task_invite_settlers_effect_desc:0 "Invite settlers from a foreign [county|E] to become [minorities|E] in your own."
+ task_invite_settlers_effect_culture_desc:0 "\n$EFFECT_LIST_BULLET$ A [county.GetProvince.GetCounty.GetCulture.GetName] [minority_culture|E] may appear in one of your counties."
+ task_invite_settlers_effect_faith_desc:0 "\n$EFFECT_LIST_BULLET$ A [county.GetProvince.GetCounty.GetFaith.GetTextIcon][county.GetProvince.GetCounty.GetFaith.GetAdjective] [minority_faith|E] may appear in one of your counties."
+ CHANCELLOR_INVITE_SETTLERS_PROGRESS_BASE:0 "$COURT_CHAPLAIN_PROGRESS_BASE$"
+ DISASTER_RECOVERY_REASON:0 "[natural_disaster|E] recovery"
+ NOT_BORDERING_REALM_REASON:0 "[county.GetNameNoTier] not bordering [realm|E]"
+ CHANCELLOR_INVITE_SETTLERS_INNOVATION_BONUS_EAST_SETTLING:0 "$STEWARD_PROMOTE_CULTURE_INNOVATION_BONUS_EAST_SETTLING$"
+ CRUSADER_STATE_REASON:0 "[GetTrait('crusader_king').GetName( councillor_liege )]"
+ invite_settlers_different_faith_culture_tt:0 "None of my counties have a different [faith|E] or [culture|E] from [county.GetNameNoTier]"
+
+ # Laws
+ MY_REALM_WINDOW_LAWS_MINORITY_LAWS:0 "Minority Laws"
+ religious_minorities_law:0 "Religious Policies"
+ religious_minorities_law_singular:0 "Religious Policy"
+ religious_minorities_harsh:0 "Harsh Religious Policy"
+ religious_minorities_harsh_effects:0 "$EFFECT_LIST_BULLET$#indent_newline:3 [minority_faiths|E] will be #N less likely#! to [migrate_minority|E] to your [realm|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_promote_minority$ [councillor_task|E] can't promote [minority_faiths|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_invite_settlers$ [councillor_task|E] must target same-faith counties.#!"
+ religious_minorities_lenient:0 "Lenient Religious Policy"
+ religious_minorities_lenient_effects:0 "$EFFECT_LIST_BULLET$#indent_newline:3 $task_promote_minority$ [councillor_task|E] can promote [minority_faiths|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_invite_settlers$ [councillor_task|E] can target different-faith counties.#!"
+ religious_minorities_welcoming:0 "Cosmopolitan Religious Policy"
+ religious_minorities_welcoming_effects:0 "$EFFECT_LIST_BULLET$#indent_newline:3 [minority_faiths|E] will be #P more likely#! to [migrate_minority|E] to your [realm|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_promote_minority$ [councillor_task|E] can promote [minority_faiths|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_invite_settlers$ [councillor_task|E] can target different-faith counties.#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_expel_religious_minority$ [councillor_task|E] disabled.#!"
+
+ cultural_minorities_law:0 "Cultural Policies"
+ cultural_minorities_law_singular:0 "Cultural Policy"
+ cultural_minorities_harsh:0 "Harsh Cultural Policy"
+ cultural_minorities_harsh_effects:0 "$EFFECT_LIST_BULLET$#indent_newline:3 [minority_cultures|E] will be #N less likely#! to [migrate_minority|E] to your [realm|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_promote_minority$ [councillor_task|E] can't promote [minority_cultures|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_invite_settlers$ [councillor_task|E] must target same-culture counties.#!"
+ cultural_minorities_lenient:0 "Lenient Cultural Policy"
+ cultural_minorities_lenient_effects:0 "$EFFECT_LIST_BULLET$#indent_newline:3 $task_promote_minority$ [councillor_task|E] can promote [minority_cultures|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_invite_settlers$ [councillor_task|E] can target different-culture counties.#!"
+ cultural_minorities_welcoming:0 "Cosmopolitan Cultural Policy"
+ cultural_minorities_welcoming_effects:0 "$EFFECT_LIST_BULLET$#indent_newline:3 [minority_cultures|E] will be #P more likely#! to [migrate_minority|E] to your [realm|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_promote_minority$ [councillor_task|E] can promote [minority_cultures|E].#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_invite_settlers$ [councillor_task|E] can target different-culture counties.#!\n$EFFECT_LIST_BULLET$#indent_newline:3 $task_expel_cultural_minority$ [councillor_task|E] disabled.#!"
+
+ # script values
+ base_attraction_tt:0 "Base attraction: $VALUE|0$"
+ development_level_attraction_tt:0 "[development|E]: $VALUE|0$"
+ liege_dread_factor_tt:0 "[top_liege|E] [dread|E]: $VALUE|0$"
+ welcoming_policy_tt:0 "Cosmopolitan Policies: $VALUE|0$"
+ harsh_policy_tt:0 "Harsh Policies: $VALUE|0$"
+ cosmopolitanism_factor_tt:0 "Minorities Present: $VALUE|0$"
+ acceptance_factor_tt:0 "[cultural_acceptance|E]: $VALUE|0$"
+ faith_hostility_factor_tt:0 "[faith_hostility|E]: $VALUE|0$"
+
+ # Events
+ minorities.0100.cancel:0 "Perhaps not..."
+
+ minorities.0300.t:0 "Promoting Minorities?"
+ minorities.0300.desc:0 "The people of my realm are not totally homogenous. Perhaps I should consider promoting the growth of one of the minority communities within my borders?"
+ minorities.0300.religion:0 "Promote a faith"
+ minorities.0300.culture:0 "Promote a culture"
+ minorities.0300.confirm:0 "I have made my decision!"
+
+ minorities.0301.t:0 "Religious Expulsion"
+ minorities.0301.desc:0 "All manner of heretic, infidel, and schismatic hides within the hidden underbelly of my realm, but I will tolerate it no longer! I have summoned [councillor.GetName] to direct [councillor.GetHerHim] in finally ridding [county.GetNameNoTier] of the vile..."
+ minorities.0301.confirm:0 "CAST THEM OUT!"
+ begin_expel_faith_tt:0 "[councillor.GetFirstNameNoTooltip] will begin expelling the [GetPlayer.MakeScope.Var('selected_faith').Faith.GetTextIcon][GetPlayer.MakeScope.Var('selected_faith').Faith.GetAdjective] [minority_faith|E] in [county.GetNameNoTier]"
+ 
+ minorities.0302.t:0 "Ethnic Expulsion"
+ minorities.0302.desc:0 "Foreign reprobates have taken up residence in my lands, with their strange and wicked customs, complaints of their horrid stench reaching my ears daily. Today, I summon [councillor.GetName] to have [councillor.GetHerHim] finally cleanse [county.GetNameNoTier] of the plague of..."
+ begin_expel_culture_tt:0 "[councillor.GetFirstNameNoTooltip] will begin expelling the [GetPlayer.MakeScope.Var('selected_culture').Culture.GetName] [minority_culture|E] in [county.GetNameNoTier]"
+
+ # UI messages
+ msg_culture_migration:0 "Cultural Migration"
+ msg_culture_migration_desc:0 "A [loc_culture.Culture.GetName] population from [loc_source.GetName] has migrated to [loc_target.GetName]."
+ msg_faith_migration:0 "Religious Migration"
+ msg_faith_migration_desc:0 "A [loc_faith.GetTextIcon][loc_faith.GetAdjective] population from [loc_source.GetName] has migrated to [loc_target.GetName]."
+ msg_combined_migration:0 "Migration"
+ sg_combined_migration_desc:0 "A [loc_culture.Culture.GetName] [loc_faith.GetTextIcon][loc_faith.GetAdjective] from [loc_source.GetName] has migrated to [loc_target.GetName]."
+
+ # GUI
+ faith_minority_map_mode_tooltip: "Minorities"
+ faith_minority_map_mode_revert_tooltip: "Faith Map"
+ #Legend
+ FAITH_MINORITY_MAP_LEGEND: "Faith Minorities"
+ FAITH_MINORITY_MAP_LEGEND_MAJORITY: "Majority Faith"
+ FAITH_MINORITY_MAP_LEGEND_MAJORITY_SHARED_HOF: "Majority Faith (same HOF)"
+ FAITH_MINORITY_MAP_LEGEND_LARGE_MINORITY: "Large Minority"
+ FAITH_MINORITY_MAP_LEGEND_SMALL_MINORITY: "Small Minority"
+
+ culture_minority_map_mode_tooltip: "Minorities"
+ culture_minority_map_mode_revert_tooltip: "Culture Map"
+ #Legend
+ CULTURE_MINORITY_MAP_LEGEND: "Cultural Minorities"
+ CULTURE_MINORITY_MAP_LEGEND_MAJORITY: "Majority Culture"
+ CULTURE_MINORITY_MAP_LEGEND_LARGE_MINORITY: "Large Minority"
+ CULTURE_MINORITY_MAP_LEGEND_SMALL_MINORITY: "Small Minority"

@@ -1,0 +1,50 @@
+﻿debug_clear_minorities = {
+    clear_variable_list = faith_minorities_small
+    clear_variable_list = faith_minorities_large
+    clear_variable_list = culture_minorities_small
+    clear_variable_list = culture_minorities_large
+}
+
+debug_spawn_faith_minority = {
+    faith = { save_scope_as = old_faith }
+    random_religion_global = {
+        random_faith = {
+            limit = { NOT = { this = scope:old_faith } }
+            save_scope_as = faith
+        }
+    }
+    promote_faith_minority_effect = {
+        FAITH = scope:faith
+    }
+}
+
+debug_spawn_culture_minority = {
+    random_culture_global = {
+        limit = { NOT = { this = PREV.culture } }
+        save_scope_as = culture
+    }
+    custom_tooltip = "[culture.GetName]"
+    # promote_culture_minority_effect = {
+    #     CULTURE = scope:culture
+    # }
+    promote_culture_minority_effect = { CULTURE = scope:culture }
+}
+
+# Run in County Scope
+debug_faith_migration_test = {
+    random_in_list = {
+        variable = faith_minorities_small
+        save_scope_as = migrating_faith
+    }
+    custom_tooltip = "[migrating_faith.GetName]"
+    random_neighboring_county = {
+        limit = { NOT = { faith = scope:migrating_faith } }
+        save_scope_as = target_county
+    }
+    custom_tooltip = "[target_county.GetName]"
+    faith_migration_effect = {
+        FAITH = scope:migrating_faith
+        TARGET_COUNTY = scope:target_county
+        SOURCE_COUNTY = THIS
+    }
+}

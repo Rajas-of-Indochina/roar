@@ -70,6 +70,7 @@ window = {
 			blockoverride "button_close"
 			{
 				onclick = "[FaithWindow.Close]"
+				onclick = "[SetMapMode( 'realms' )]"
 			}
 
 			blockoverride "button_back"
@@ -77,6 +78,7 @@ window = {
 				visible = "[HasViewHistory]"
 				onclick = "[OpenFromViewHistory]"
 				tooltip = "[GetViewHistoryTooltip]"
+				onclick = "[SetMapMode( 'realms' )]"
 			}
 
 			blockoverride "button_me"
@@ -133,7 +135,68 @@ window = {
 					hbox = {
 						layoutpolicy_horizontal = expanding
 
-						expand = {}
+						##### Changed from Vanilla vvvvvv
+						vbox = {
+							min_width = 85
+							ignoreinvisible = yes
+							#Minorities Map Mode
+							button_round = {
+								name = "culture_minority_map_mode"
+								visible = "[Not(IsMapMode('minority_faiths_map_mode'))]"
+
+								size = { 50 50 }
+
+								datacontext = "[GetScriptedGui('minority_faiths_map_mode')]"
+
+								onclick = "[SetMapMode('minority_faiths_map_mode')]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( FaithWindow.GetFaith.MakeScope ).End )]"
+								down = "[And( GetScriptedGui('minority_faiths_map_mode').IsShown(GuiScope.End), IsMapMode('minority_faiths_map_mode') )]"
+								enabled = "[GetScriptedGui('minority_faiths_map_mode').IsValid(GuiScope.End)]"
+
+								texture = "gfx/interface/buttons/button_round_frame.dds"
+
+								tooltip = "faith_minority_map_mode_tooltip"
+								using = tooltip_ws
+
+								icon = {
+									parentanchor = hcenter|vcenter
+									texture = "gfx/interface/icons/faith_minority_large.dds"
+									size = { 35 35 }
+									position = { 1 1 }
+								}
+							}
+							#Reset Minorities Map Mode
+							button_round = {
+								name = "faith_minority_map_revert_mode"
+								visible = "[IsMapMode('minority_faiths_map_mode')]"
+
+								size = { 50 50 }
+
+								onclick = "[GetScriptedGui('reset_custom_map_mode_effect').Execute(GuiScope.End)]"
+								onclick = "[SetMapMode('religions')]"
+
+								texture = "gfx/interface/buttons/button_round_frame.dds"
+
+								tooltip = "faith_minority_map_mode_revert_tooltip"
+								using = tooltip_ws
+								icon = {
+									parentanchor = hcenter|vcenter
+									texture = "gfx/interface/icons/court_position_task_types/antiquarian_court_position_task_scout_for_artifacts.dds"
+									size = { 40 40 }
+								}
+							}
+						}
+
+						# spacer = {
+						# 	visible = "[ObjectsEqual( GetPlayer.GetFaith, Faith.Self )]"
+						# 	size = { 40 0 }
+						# }
+						spacer = {
+							visible = "[Not(ObjectsEqual( GetPlayer.GetFaith, Faith.Self ))]"
+							size = { -10 0 }
+						}
+
+						##### Changed from Vanilla ^^^^^
 
 						vbox = {
 							layoutpolicy_vertical = expanding

@@ -1,0 +1,79 @@
+﻿vbox = {
+	name = "sea_select_faith_widget"
+	button_standard = {
+		size = { 450 40 }
+		datacontext = "[GetScriptedGui( 'clear_selected_faith' )]"
+		enabled = "[ScriptedGui.IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) ]"
+		onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
+		hbox = {
+			expand = {}
+			text_single = {
+				raw_text = "Clear Selection:"
+			}
+			text_single = {
+				raw_text = " [GetPlayer.MakeScope.Var('selected_faith').Faith.GetTextIcon][GetPlayer.MakeScope.Var('selected_faith').Faith.GetName]"
+				visible = "[ScriptedGui.IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) ]"
+			}
+			text_single = {
+				raw_text = " @warning_icon!None"
+				visible = "[Not(ScriptedGui.IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End ))]"
+			}
+			expand = {}
+		}
+	}
+	scrollbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+		# parentanchor = hcenter|top
+		minimumsize = { 240 100 }
+
+		background = {
+			using = Background_Bottom_Fade
+		}
+		blockoverride "scrollbox_content" {
+			dynamicgridbox = {
+				flipdirection = yes
+				datamodel_wrap = 6
+
+				datamodel = "[GetPlayer.MakeScope.GetList('faith_options')]"
+
+				item = {
+					button_standard = {
+						size = { 64 64 }
+						datacontext = "[Faith.MakeScope]"
+						datacontext = "[GetScriptedGui( 'select_faith' )]"
+						onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'faith', Scope.Faith.MakeScope ).End ) ]"
+						spacing = 2
+						using = tooltip_ne
+						tooltipwidget = { faith_minorities_tooltip = {} }
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							expand = {}
+							icon = {
+								size = { 32 32 }
+								texture = "[Scope.Faith.GetIcon]"
+							}
+							expand = {}
+
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								# layoutpolicy_vertical = expanding
+
+								text_single = {
+									name = "faith_name"
+									align = right|nobaseline
+									text = "[Scope.Faith.GetNameNoTooltip]"
+									using = Font_Size_Medium
+									default_format = "#high"
+									max_width = 60
+								}
+							}
+						}
+					}
+				}
+				expand = {}
+			}
+		}
+	}
+}

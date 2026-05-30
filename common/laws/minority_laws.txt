@@ -1,0 +1,557 @@
+@minority_law_cooldown_years = 5
+
+religious_minorities_law = {
+    default = religious_minorities_lenient
+    flag = minorities_law
+    flag = religious_minorities_law
+    
+    religious_minorities_harsh = {
+
+		modifier = {
+			different_faith_opinion = -10
+			clergy_opinion = 10
+			minority_opinion = -5
+			zealot_opinion = 5
+		}
+
+        flag = reduced_faith_migrations
+        flag = disable_minority_faith_promotion
+
+        can_have = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_keep = {
+            can_have_minority_laws_trigger = yes
+        }
+
+		pass_cost = {
+			prestige = increase_crown_authority_prestige_cost
+		}
+
+		on_pass = {
+			set_variable = {
+				name = minority_law_cooldown
+				years = @minority_law_cooldown_years
+			}
+		}
+
+		ai_will_do = {
+			value = -50
+
+			# Factor for personality
+			add = ai_zeal
+			add = ai_vengefulness
+
+			add = {
+				value = ai_honor
+				multiply = -1
+			}
+			add = {
+				value = ai_compassion
+				multiply = -1
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = holy_warrior
+						has_trait = crusader_king
+					}
+				}
+				add = 100
+			}
+			if = {
+				limit = {
+					faith = {
+						has_doctrine = doctrine_pluralism_fundamentalist
+					}
+				}
+				add = 25
+			}
+			if = {
+				limit = {
+					# Check to make sure that the HRE, ERE, theocrats and heads of faith are not going to be all uwu huggy wuggy with other faiths
+					OR = {
+						has_title = title:e_hre
+						has_title = title:e_byzantium
+						has_title = faith.religious_head_title
+						has_government = theocracy_government
+					}
+				}
+				add = 1000
+			}
+		}
+        
+    }
+    religious_minorities_lenient = {
+        modifier = {
+            zealot_opinion = -5
+        }
+
+        can_have = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_keep = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        should_start_with = {
+            always = yes
+        }
+
+        can_pass = {
+            OR = {
+                has_realm_law = religious_minorities_harsh
+                has_realm_law = religious_minorities_welcoming
+            }
+			custom_description = {
+				subject = root
+				text = "has_minority_law_cooldown"
+				NOT = { has_variable = minority_law_cooldown }
+			}
+        }
+
+		pass_cost = {
+			prestige = increase_crown_authority_prestige_cost
+		}
+
+		on_pass = {
+			set_variable = {
+				name = minority_law_cooldown
+				years = @minority_law_cooldown_years
+			}
+		}
+
+		ai_will_do = {
+			value = 0
+
+			if = {
+				# Chance to be intolerant
+				limit = { has_realm_law = religious_minorities_welcoming }
+				add = -50
+
+				# Factor for personality
+				add = ai_zeal
+				add = ai_vengefulness
+
+				add = {
+					value = ai_honor
+					multiply = -1
+				}
+				add = {
+					value = ai_compassion
+					multiply = -1
+				}
+				if = {
+					limit = {
+						OR = {
+							has_trait = holy_warrior
+							has_trait = crusader_king
+						}
+					}
+					add = 100
+				}
+				if = {
+					limit = {
+						# Check to make sure that the HRE, ERE, theocrats and heads of faith are not going to be all uwu huggy wuggy with other faiths
+						OR = {
+							has_title = title:e_hre
+							has_title = title:e_byzantium
+							has_title = faith.religious_head_title
+							has_government = theocracy_government
+						}
+					}
+					add = 1000
+				}
+			}
+			else_if = {
+				# Chance to be tolerant
+				limit = { has_realm_law = religious_minorities_harsh }
+				add = 50
+
+				# Factor for personality
+				add = ai_honor
+				add = ai_compassion
+
+				add = {
+					value = ai_zeal
+					multiply = -1
+				}
+				add = {
+					value = ai_vengefulness
+					multiply = -1
+				}
+				if = {
+					limit = {
+						OR = {
+							has_trait = holy_warrior
+							has_trait = crusader_king
+						}
+					}
+					add = -100
+				}
+				if = {
+					limit = {
+						faith = {
+							has_doctrine = doctrine_pluralism_pluralistic
+						}
+					}
+					add = 25
+				}
+			}
+			if = {
+				limit = {
+					faith = {
+						has_doctrine = doctrine_pluralism_righteous
+					}
+				}
+				add = 50
+			}
+			if = {
+				limit = {
+					# Check to make sure that the HRE, ERE, theocrats and heads of faith are not going to be all uwu huggy wuggy with other faiths
+					OR = {
+						has_title = title:e_hre
+						has_title = title:e_byzantium
+						has_title = faith.religious_head_title
+						has_government = theocracy_government
+					}
+				}
+				add = -1000
+			}
+		}
+    }
+    religious_minorities_welcoming = {
+
+		modifier = {
+			different_faith_opinion = 10
+			clergy_opinion = -10
+			minority_opinion = 5
+			zealot_opinion = -10
+		}
+
+        flag = increased_faith_migrations
+        flag = disable_faith_expulsion
+
+        can_have = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_keep = {
+            can_have_minority_laws_trigger = yes
+        }
+
+		can_pass = {
+			has_realm_law = religious_minorities_lenient
+			custom_description = {
+				subject = root
+				text = "has_minority_law_cooldown"
+				NOT = { has_variable = minority_law_cooldown }
+			}
+		}
+
+		pass_cost = {
+			prestige = increase_crown_authority_prestige_cost
+		}
+
+		on_pass = {
+			set_variable = {
+				name = minority_law_cooldown
+				years = @minority_law_cooldown_years
+			}
+		}
+
+		ai_will_do = {
+			value = 0
+			# Factor for personality
+			add = ai_honor
+			add = ai_compassion
+
+			add = {
+				value = ai_zeal
+				multiply = -1
+			}
+			add = {
+				value = ai_vengefulness
+				multiply = -1
+			}
+			if = {
+				limit = {
+					faith = {
+						has_doctrine = doctrine_pluralism_pluralistic
+					}
+				}
+				add = 25
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = holy_warrior
+						has_trait = crusader_king
+					}
+				}
+				add = -100
+			}
+			if = {
+				limit = {
+					# Check to make sure that the HRE, ERE, theocrats and heads of faith are not going to be all uwu huggy wuggy with other faiths
+					OR = {
+						has_title = title:e_hre
+						has_title = title:e_byzantium
+						has_title = faith.religious_head_title
+						has_government = theocracy_government
+					}
+				}
+				add = -1000
+			}
+        }
+    }
+}
+
+cultural_minorities_law = {
+    default = cultural_minorities_lenient
+    flag = minorities_law
+    flag = cultural_minorities_law
+
+    cultural_minorities_harsh = {
+
+		modifier = {
+			different_culture_opinion = 10
+			same_culture_opinion = -5
+			minority_opinion = 5
+			courtly_opinion = -10
+		}
+
+        flag = reduced_culture_migrations
+        flag = disable_minority_culture_promotion
+
+        modifier = {
+            courtly_opinion = -5
+        }
+
+        can_have = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_keep = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_pass = {
+            has_realm_law = cultural_minorities_lenient
+			custom_description = {
+				subject = root
+				text = "has_minority_law_cooldown"
+				NOT = { has_variable = minority_law_cooldown }
+			}
+        }
+
+		pass_cost = {
+			prestige = increase_crown_authority_prestige_cost
+		}
+
+		on_pass = {
+			set_variable = {
+				name = minority_law_cooldown
+				years = @minority_law_cooldown_years
+			}
+		}
+
+		ai_will_do = {
+			value = 0
+			# Factor for personality
+			add = ai_honor
+			add = ai_compassion
+
+			add = {
+				value = ai_zeal
+				multiply = -1
+			}
+			add = {
+				value = ai_vengefulness
+				multiply = -1
+			}
+			if = {
+				limit = {
+					culture = {
+						OR = {
+							has_cultural_tradition = tradition_xenophilic
+							has_cultural_parameter = cheaper_to_hybridize
+						}
+					}
+				}
+				add = -50
+			}
+		}
+    }
+    cultural_minorities_lenient = {
+
+        modifier = {
+            courtly_opinion = -5
+        }
+
+        can_have = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_keep = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_pass = {
+            OR = {
+                has_realm_law = cultural_minorities_harsh
+                has_realm_law = cultural_minorities_welcoming
+            }
+			custom_description = {
+				subject = root
+				text = "has_minority_law_cooldown"
+				NOT = { has_variable = minority_law_cooldown }
+			}
+        }
+
+		pass_cost = {
+			prestige = increase_crown_authority_prestige_cost
+		}
+
+		on_pass = {
+			set_variable = {
+				name = minority_law_cooldown
+				years = @minority_law_cooldown_years
+			}
+		}
+
+        should_start_with = { always = yes }
+
+		ai_will_do = {
+			value = 0
+
+			if = {
+				# Chance to be intolerant
+				limit = { has_realm_law = cultural_minorities_welcoming }
+				add = -50
+
+				# Factor for personality
+				add = ai_zeal
+				add = ai_vengefulness
+
+				add = {
+					value = ai_honor
+					multiply = -1
+				}
+				add = {
+					value = ai_compassion
+					multiply = -1
+				}
+				if = {
+					limit = {
+						culture = {
+							OR = {
+								has_cultural_tradition = tradition_xenophilic
+								has_cultural_parameter = cheaper_to_hybridize
+							}
+						}
+					}
+					add = -50
+				}
+			}
+			else_if = {
+				# Chance to be tolerant
+				limit = { has_realm_law = cultural_minorities_harsh }
+				add = 50
+
+				# Factor for personality
+				add = ai_honor
+				add = ai_compassion
+
+				add = {
+					value = ai_zeal
+					multiply = -1
+				}
+				add = {
+					value = ai_vengefulness
+					multiply = -1
+				}
+				if = {
+					limit = {
+						culture = {
+							OR = {
+								has_cultural_tradition = tradition_xenophilic
+								has_cultural_parameter = cheaper_to_hybridize
+							}
+						}
+					}
+					add = 50
+				}
+			}
+		}
+    }
+    cultural_minorities_welcoming = {
+
+		modifier = {
+			different_culture_opinion = -10
+			same_culture_opinion = 5
+			minority_opinion = -5
+			courtly_opinion = 5
+		}
+
+        flag = increased_culture_migrations
+        flag = disable_culture_expulsion
+
+        can_have = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_keep = {
+            can_have_minority_laws_trigger = yes
+        }
+
+        can_pass = {
+            has_realm_law = cultural_minorities_lenient
+			custom_description = {
+				subject = root
+				text = "has_minority_law_cooldown"
+				NOT = { has_variable = minority_law_cooldown }
+			}
+        }
+
+		pass_cost = {
+			prestige = increase_crown_authority_prestige_cost
+		}
+
+		on_pass = {
+			set_variable = {
+				name = minority_law_cooldown
+				years = @minority_law_cooldown_years
+			}
+		}
+
+		ai_will_do = {
+			value = -50
+			# Factor for personality
+			add = ai_zeal
+			add = ai_vengefulness
+
+			add = {
+				value = ai_honor
+				multiply = -1
+			}
+			add = {
+				value = ai_compassion
+				multiply = -1
+			}
+			if = {
+				limit = {
+					culture = {
+						OR = {
+							has_cultural_tradition = tradition_xenophilic
+							has_cultural_parameter = cheaper_to_hybridize
+						}
+					}
+				}
+				add = 50
+			}
+		}
+    }
+}

@@ -1,0 +1,328 @@
+﻿county_has_small_faith_minority = {
+    has_variable_list = faith_minorities_small
+    variable_list_size = {
+        name = faith_minorities_small
+        value > 0
+    }
+}
+
+county_has_large_faith_minority = {
+    has_variable_list = faith_minorities_large
+    variable_list_size = {
+        name = faith_minorities_large
+        value > 0
+    }
+}
+
+county_has_faith_minority = {
+    OR = {
+        county_has_large_faith_minority = yes
+        county_has_small_faith_minority = yes
+    }
+}
+
+county_has_specific_small_faith_minority_trigger = {
+    is_target_in_variable_list = {
+        name = faith_minorities_small
+        target = $FAITH$
+    }
+}
+county_has_specific_large_faith_minority_trigger = {
+    is_target_in_variable_list = {
+        name = faith_minorities_large
+        target = $FAITH$
+    }
+}
+county_has_specific_faith_minority_trigger = {
+    OR = {
+        county_has_specific_small_faith_minority_trigger = { FAITH = $FAITH$ }
+        county_has_specific_large_faith_minority_trigger = { FAITH = $FAITH$ }
+    }
+}
+
+county_has_small_culture_minority = {
+    has_variable_list = culture_minorities_small
+    variable_list_size = {
+        name = culture_minorities_small
+        value > 0
+    }
+}
+
+county_has_large_culture_minority = {
+    has_variable_list = culture_minorities_large
+    variable_list_size = {
+        name = culture_minorities_large
+        value > 0
+    }
+}
+
+county_has_culture_minority = {
+    OR = {
+        county_has_large_culture_minority = yes
+        county_has_small_culture_minority = yes
+    }
+}
+
+county_has_specific_small_culture_minority_trigger = {
+    is_target_in_variable_list = {
+        name = culture_minorities_small
+        target = $CULTURE$
+    }
+}
+county_has_specific_large_culture_minority_trigger = {
+    is_target_in_variable_list = {
+        name = culture_minorities_large
+        target = $CULTURE$
+    }
+}
+county_has_specific_culture_minority_trigger = {
+    OR = {
+        county_has_specific_small_culture_minority_trigger = { CULTURE = $CULTURE$ }
+        county_has_specific_large_culture_minority_trigger = { CULTURE = $CULTURE$ }
+    }
+}
+
+# TRIGGER is ANY simple scripted trigger (takes yes, no or a scope)
+# CHECK is the thing being checked by the trigger (the yes, no or scope)
+# you could maybe get crazier with it but don't come crying to me
+# TYPE is faith or culture
+# SIZE is the minority size (small or large)
+# call from county scope
+county_has_type_minority_with_trigger = {
+	any_in_list = {
+		list = $TYPE$_minorities_$SIZE$
+		$TRIGGER$ = $CHECK$
+	}
+}
+
+county_has_type_minority_trigger_not = {
+	any_in_list = {
+		list = $TYPE$_minorities_$SIZE$
+		NOT = { $TRIGGER$ = $CHECK$ }
+	}
+}
+
+county_has_expellable_culture_trigger = {
+	any_in_list = {
+		variable = culture_minorities_$SIZE$
+		NOT = { has_same_culture_heritage = $CULTURE$ }
+	}
+}
+
+county_has_expellable_faith_trigger = {
+	$FAITH$ = { save_temporary_scope_as = the_faith }
+	any_in_list = {
+		variable = faith_minorities_$SIZE$
+		save_temporary_scope_as = faith_temp
+		"scope:the_faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+	}
+}
+
+# CULTURE = culture that wants to migrate
+# TARGET = county that is being evaluated
+is_valid_culture_migration_target_trigger = {
+	$CULTURE$ = {
+		cultural_acceptance = {
+			# they don't need to love them but they need to not actively hate them
+			target = $TARGET$.culture
+			value > 10
+		}
+	}
+	# TODO: Add migration block triggers later
+}
+
+can_have_minority_laws_trigger = {
+	NOT = {
+		government_has_flag = government_is_nomadic
+		government_has_flag = government_is_stateless
+		government_has_flag = government_is_herder
+		government_has_flag = cannot_be_vassal_or_liege
+	}
+	is_landed = yes
+}
+
+# faith scope
+faith_has_minority_counties = {
+	any_county = {
+		county_has_specific_faith_minority_trigger = { FAITH = prev }
+	}
+}
+
+
+# PDX in their finite wisdom decided to only make culture-scope heritage group triggers for East Asians so now I need to do it robble robble
+#ASIA
+has_asian_heritage_pillar_trigger = {
+	OR = {
+		has_east_asian_heritage_pillar_trigger = yes
+		has_west_asian_heritage_pillar_trigger = yes
+		has_south_asian_heritage_pillar_trigger = yes
+		has_southeast_asian_heritage_pillar_trigger = yes
+		has_north_asian_heritage_pillar_trigger = yes
+		has_central_asian_heritage_pillar_trigger = yes
+	}
+}
+has_west_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_iranian
+		has_cultural_pillar = heritage_turkic
+		has_cultural_pillar = heritage_tocharian
+		has_cultural_pillar = heritage_hunnic
+	}
+}
+has_south_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_austronesian
+		has_cultural_pillar = heritage_indo_aryan
+		has_cultural_pillar = heritage_dravidian
+		has_cultural_pillar = heritage_burman
+		has_cultural_pillar = heritage_qiangic 
+	}
+}
+
+has_southeast_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_viet
+		has_cultural_pillar = heritage_mon_khmer
+		has_cultural_pillar = heritage_burman
+		has_cultural_pillar = heritage_austronesian
+		has_cultural_pillar = heritage_tai
+	} 
+}
+
+has_north_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_turkic
+		has_cultural_pillar = heritage_mongolic
+		has_cultural_pillar = heritage_ugro_permian
+		has_north_east_asian_heritage_pillar_trigger = yes
+	}
+}
+
+has_north_east_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_nivkh
+		has_cultural_pillar = heritage_ainuic
+		has_cultural_pillar = heritage_tungusic
+	}
+}
+has_central_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_turkic
+		has_cultural_pillar = heritage_tocharian
+        has_east_central_asian_heritage_pillar_trigger = yes
+	}
+}
+has_east_central_asian_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_qiangic
+		has_cultural_pillar = heritage_mongolic
+	}
+}
+
+#AFRICA
+has_african_heritage_pillar_trigger = {
+	OR = {
+		has_central_african_heritage_pillar_trigger = yes
+		has_east_african_heritage_pillar_trigger = yes
+		has_north_african_heritage_pillar_trigger = yes
+		has_west_african_heritage_pillar_trigger = yes
+	}
+}
+has_west_african_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_akan
+		has_cultural_pillar = heritage_sahelian
+		has_cultural_pillar = heritage_senegambian
+		has_cultural_pillar = heritage_west_african
+		has_cultural_pillar = heritage_yoruba
+	}
+}
+has_east_african_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_bantu
+		has_cultural_pillar = heritage_east_african
+		has_cultural_pillar = heritage_somalian
+	}
+}
+has_north_african_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_berber
+		has_cultural_pillar = heritage_egyptian
+	}
+}
+has_central_african_heritage_pillar_trigger = {
+	has_cultural_pillar = heritage_central_african
+}
+
+#MENA
+has_mena_heritage_pillar_trigger = {
+	OR = {
+	    has_cultural_pillar = heritage_arabic
+	    has_cultural_pillar = heritage_syriac
+	    has_cultural_pillar = heritage_iranian
+		has_north_african_heritage_pillar_trigger = yes
+	}
+}
+
+#EUROPE
+has_european_heritage_pillar_trigger = {
+	OR = {
+		has_west_european_heritage_pillar_trigger = yes
+		has_east_european_heritage_pillar_trigger = yes
+		has_north_european_heritage_pillar_trigger = yes
+		has_south_european_heritage_pillar_trigger = yes
+		has_central_european_heritage_pillar_trigger = yes
+	}
+}
+has_west_european_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_goidelic
+		has_cultural_pillar = heritage_west_germanic
+		has_cultural_pillar = heritage_brythonic
+		has_cultural_pillar = heritage_israelite
+	}
+}
+has_east_european_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_turkic
+		has_cultural_pillar = heritage_volga_finnic
+		has_cultural_pillar = heritage_east_slavic
+		has_cultural_pillar = heritage_baltic
+		has_cultural_pillar = heritage_caucasian
+	}
+}
+has_north_european_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_balto_finnic
+		has_cultural_pillar = heritage_north_germanic
+		has_cultural_pillar = heritage_ugro_permian
+		has_cultural_pillar = heritage_gothic
+	}
+}
+has_south_european_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_iberian
+		has_cultural_pillar = heritage_latin
+		has_cultural_pillar = heritage_byzantine
+		has_cultural_pillar = heritage_south_slavic
+		has_cultural_pillar = heritage_israelite
+		has_cultural_pillar = heritage_vlach
+		has_cultural_pillar = heritage_ancient_greek
+	}
+}
+has_central_european_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_magyar
+		has_cultural_pillar = heritage_west_slavic
+		has_cultural_pillar = heritage_central_germanic
+		has_cultural_pillar = heritage_frankish
+		has_cultural_pillar = heritage_israelite
+	}
+}
+has_slavic_heritage_pillar_trigger = {
+	OR = {
+		has_cultural_pillar = heritage_south_slavic
+		has_cultural_pillar = heritage_east_slavic
+		has_cultural_pillar = heritage_west_slavic
+	}
+}
