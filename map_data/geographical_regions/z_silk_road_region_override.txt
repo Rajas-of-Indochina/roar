@@ -1,0 +1,448 @@
+dlc_tgp_silk_road_route_china = {
+	should_remember_counties_order = yes
+	counties = {
+	# Bejing to Weizhou, via Kaifeng and Chang'an
+		c_youzhou # Beijing
+		c_zhuozhou
+		c_mozhou
+		c_hejian
+		c_jizhou
+		c_beizhou
+		c_bozhou_1
+		c_weizhou
+		c_puzhou_2
+		c_huazhou
+		c_bianzhou # Kaifeng
+		c_zhengzhou
+		c_henan
+		c_shanzhou_2
+		c_guozhou
+		c_huayin
+		c_jingzhao # Chang'an
+		c_fengxiang
+		c_longzhou_2
+		c_qinzhou_1
+		c_weizhou_2
+	# Chang'an to Chengdu
+		c_yangzhou_1
+		c_xingyuan
+		c_lizhou_2
+		c_jianzhou_1
+		c_mianzhou
+		c_tongchuan
+		c_hanzhou
+		c_chengdu
+		c_qiongzhou
+		c_meizhou
+		c_yazhou_2
+		c_qiongbu
+	# Chengdu to Nanhai, via Changsha
+		# c_chengdu
+		c_jianyang
+		c_puzhou
+		c_suining
+		c_yuzhou_2
+		c_fuzhou_4
+		c_zhongzhou
+		c_wanzhou
+		c_kuizhou
+		c_guizhou
+		c_xiazhou_1
+		c_liyang
+		c_yuezhou_1
+		c_tanzhou # Changsha
+		c_hengzhou
+		c_chenzhou_1
+		c_lianzhou
+		c_yingde
+		c_guangzhou_1 # Nanhai
+	# Kaifeng to Suzhou
+		# c_bianzhou # Kaifeng
+		c_huaining
+		c_songzhou
+		c_bozhou
+		c_yingzhou
+		c_haozhou
+		c_chuzhou_2
+		c_yangzhou
+		c_jiangning
+		c_runzhou
+		c_changzhou
+		c_suzhou_2 # Suzhou
+	#Dali to Tibet
+		c_dali
+		c_yi_du
+		c_deqen
+	}
+}
+
+dlc_tgp_silk_road_route_india = {
+	should_remember_counties_order = yes
+	counties = {
+	# Kathmandu to Pataliputra
+		# c_nyalam
+		c_kathmandu
+		c_simaramapura
+		c_mithila
+		# c_magadha
+	# Kanyakubja to Gauda to Chatigama
+		# c_gwalior
+		c_kanyakubja
+		c_asni
+		c_prayaga
+		c_varanasi
+		c_sasaram
+		c_magadha
+		c_mudgagiri
+		c_gauda
+		c_bikrampur
+		c_samatata
+	# Lahur to Khambhat
+		# c_lahur
+		c_tribandapura
+		c_hisar
+		c_delhi
+		c_mathura
+		c_sripatha
+		c_gwalior
+		c_candhoba
+		c_sarangpur
+		c_ujjayini
+		c_dhara
+		c_dadhipadra
+		c_vadodara
+		c_khetaka
+
+	# Bamian to Debul
+		# c_upper_ghur
+		c_bamian
+		c_kabul
+		c_nagarahara
+		c_purushapura
+		c_nandana
+		c_bhera
+		c_lahur
+		c_dipalpur
+		c_multan
+		c_uch
+		c_vijnot
+		c_aror
+		c_siwistan
+		c_mansura
+		c_debul
+
+	# Kanggra to Lahur
+		# c_dhankar
+		c_kangra
+		c_trigarta
+		# c_lahur
+	}
+}
+
+dlc_tgp_silk_road_route_central_asia = {
+	should_remember_counties_order = yes
+	counties = {
+
+	# Merv to Kashgar
+		c_merv
+		c_amol
+		c_firabr
+		c_bukhara
+		c_dabusiya
+		c_zarafshan
+		c_samarkand
+		c_oshrusana
+		c_khojand
+		c_nasaiya
+		c_uzgend
+		c_terek_pass
+		c_kashgar
+	# Kashgar to Yumen, northern route
+		# c_kashgar
+		c_bachu
+		c_aqsu
+		c_muzat
+		c_luntai
+		c_korla
+		c_lop_nur
+		c_shouchang
+		c_shazhou
+	# Kashgar to Dunhuang, southern route
+		# c_kashgar
+		c_yarkand
+		c_jiliang
+		c_khotan
+		c_keriya
+		c_niya
+		c_saca
+		c_qiemo
+		c_charkliq
+		# c_luobupo
+	# Yumen to Lanzhou
+		c_yulin_guiyi
+		c_jiuquan
+		c_ganzhou
+		c_fanhe
+		c_liangzhou
+		c_guangwu
+		c_lanzhou_1
+	}
+}
+
+tgp_silk_road_central_asia_region = {
+	kingdoms = {
+		k_hexi k_xia
+	}
+	duchies = {
+		d_gilgit # Tibet
+		d_kashgar d_khotan d_kucha d_konchi d_shanshan # Tarim
+		d_soghd d_ferghana d_osrushana d_badakhshan d_khuttal
+		d_balkh # Khorasan
+		# most of k_transoxiana except for Khwarezm and Uzboy
+	}
+	counties = {
+		c_amol c_guzgan c_merv c_zamm
+	}
+}
+
+dlc_tgp_silk_road_route_transcaspia = {
+	should_remember_counties_order = yes
+	counties = {
+		#
+	# Chah (connected to Khojand) to Aralkizil
+		c_chah
+		c_otrar
+		c_shavgar
+		c_sighnaq
+		c_jend
+		c_kara-mugai
+		c_raimskoe
+		c_ak-dzulpas
+		c_barsuki
+		c_namastau
+		c_baisary
+		c_kainar
+		c_atyrau
+		c_kishi_saray
+		c_saray
+		c_itil
+		c_astrakhan
+		c_beksima
+		c_aksay_SARKEL
+		c_sarkel
+		c_semikarakala
+		c_manych
+		c_azov
+		c_khumar
+		c_grune
+		c_psije
+		c_coparia
+		c_tmutarakan
+		c_khegayk
+		c_zichia
+		c_janeqo
+		c_abzakhia
+		c_papagi
+		c_sapakhi
+		c_abazinia
+		c_maghas
+		c_tsatybaerzond
+		c_malkaria
+		c_digoria
+		c_dvaleti
+		c_racha
+		c_argveti
+		c_shida_kartli
+		c_tbilisi
+		c_somkhiti
+		c_lori
+		c_nig
+		# and thence to c_dvin
+	# Darghan (connected to Amol) to Aralkizil
+		c_darghan
+		c_khiva
+		c_zamakhshar
+		c_gurganj
+		c_aralkizil
+		# c_namastau	
+	}
+}
+
+tgp_silk_road_transcaspia_region = {
+	duchies = {
+		# k_syr_darya
+		d_syr_darya d_chah d_betpaqdala d_talas
+		# k_oghuz_il
+		d_aral_il d_aral_karakum d_barsuki d_garabogazkol d_jemba d_transcaspiana
+		# k_caspian_steppe
+		d_khazaria d_atyrau d_ouzoy d_itil
+		# k_gazaria
+		d_azov d_sarkel d_tmutarakan d_crimea d_klimata
+		# k_zichia
+		d_eudusia d_papagia d_khegayk d_zichia
+		# k_caucasus
+		d_alania d_chetqal d_kassogia d_karabulakia d_osseti d_chechnya
+		# k_sarir_roa
+		d_khundzeti d_didoeti d_kaitag d_kumukh d_tsuketi d_lezgia d_shavaran d_derbent d_djindan d_khunia
+		d_khorezm d_uzboy # Transoxiana
+	}
+	counties = {
+		c_itil c_saqsin # Caspian Steppe
+	}
+}
+
+dlc_tgp_silk_road_route_occident = {
+	should_remember_counties_order = yes
+	counties = {
+	# Constantinople to Dvin
+		c_byzantion
+		c_bithynia
+		c_prusa
+		c_phrygia
+		c_galatia
+		c_charsianon
+		c_sebasteia # see below for leg connecting with Cairo
+		c_tephrice
+		c_mesopotamia
+		c_theodosiopolis
+		c_mardali
+		c_varaznunik
+		c_bagrewand
+		c_eriduakhi
+		c_dvin
+
+	# Cairo up to Sivas/Sebasteia
+		c_cairo
+		c_sharkiya
+		c_damietta
+		c_farama
+		c_ghazza
+		c_jaffa
+		c_acre
+		c_tiberias
+		c_damascus
+		c_juwair
+		c_qaryatan
+		c_homs
+		c_hama
+		c_qinnasrin
+		c_aleppo
+		c_aintab
+		c_edessa
+		c_amida
+		c_melitene
+		c_azysia
+		# c_sebasteia
+
+	# Dvin to Herat
+		# c_dvin
+		c_nakhichevan
+		c_bakran
+		c_tabriz
+		c_maragha
+		c_garrus
+		c_hamadan
+		c_rayy
+		c_khuwar
+		c_damghan
+		c_baihaq
+		c_nishapur
+		c_bakharz
+		c_herat
+		c_ghur
+		c_upper_ghur
+		# c_bamian
+
+	# Merv to Nishapur
+		# c_merv
+		#c_sarakhs
+		#c_tus
+		# c_nishapur
+
+	# Aleppo to Hamadan via Baghdad
+		# c_aleppo
+		c_dausar
+		c_raqqa
+		c_khabur
+		c_hadithat-ana
+		c_anbar
+		c_baghdad
+		c_hulwan
+		c_kermanshah
+		c_dinawar
+		# c_hamadan
+
+	# little bonus additions: Antioch and Jerusalem
+		c_antiocheia
+		c_jerusalem
+	}
+}
+
+tgp_silk_road_occident_region = {
+	duchies = {
+		# k_thessalonika
+		d_aegean_islands
+		# k_nikaea
+		d_ephese d_opsikion d_thracesia d_optimatoi d_bucellaria 
+		# k_pontus
+		d_armeniac d_chaldia d_colonea d_paphlagonia d_sebasteia
+		# k_anatolia
+		d_anatolia d_charsianon d_cappadocia d_cibyrrhaeot d_cilicia
+		# k_ayrarat
+		d_hayk-shirak d_hayk-dvin d_kars d_bagrevand d_tashir
+		# k_vaspurakan
+		d_vaspurakan d_shavarshan d_taron d_turuberan d_derzene d_mesopotamia
+		# k_syunik
+		d_syunik-baghk d_syunik-vayotsdzor d_artsakh d_gardman d_nakhichevan
+		# k_iberia
+		d_tbilisi d_kartli d_kidekari d_samtskhe d_klarjeti d_tao d_speri
+		# k_kakheti
+		d_kakheti d_pkhovi d_hereti d_shaki
+		# k_abkhazia
+		d_imereti d_abkhazia d_samagrelo d_svaneti d_lazeti
+		# k_shirvan
+		d_shirvan d_layzan d_arran
+		# k_adurbadagan
+		d_azerbaijan d_iraq-i-aram d_ardabil d_arasbaran d_persarmenia d_bazgan
+		# k_syria
+		d_damascus d_aleppo d_antioch d_edessa d_homs d_lebanon d_palmyra
+		# k_jerusalem
+		d_palestine d_urdunn
+		# k_daylam
+		d_daylam d_tabaristan d_gurgan # Daylam
+		# k_persia
+		d_isfahan d_kirman d_yazd d_rayy d_hamadan d_fars d_hormuz d_khuzestan d_kermanshah
+		# k_mesopotamia
+		d_samarra d_wasit d_kufa d_basra d_baghdad
+		# k_jazira
+		d_kurdistan d_diyarrabia d_diyarmudar d_diyarbakr d_euphrates
+		# k_khorasan
+		d_nishapur d_ghur d_herat d_nasa d_kohestan
+	}
+	counties = {
+		c_farama c_damietta c_sharkiya c_cairo # Egypt
+		c_byzantion # Byzantium
+		c_rivsharan c_sarakhs c_marvarrud # Khorasan
+	}
+}
+
+tgp_silk_road_asia_minor_minus_georgia = {
+	duchies = {
+		# k_thessalonika
+		d_aegean_islands
+		# k_nikaea
+		d_ephese d_opsikion d_thracesia d_optimatoi d_bucellaria 
+		# k_pontus
+		d_armeniac d_chaldia d_colonea d_paphlagonia d_sebasteia
+		# k_anatolia
+		d_anatolia d_charsianon d_cappadocia d_cibyrrhaeot d_cilicia
+		# k_ayrarat
+		d_hayk-shirak d_hayk-dvin d_kars d_bagrevand d_tashir
+		# k_vaspurakan
+		d_vaspurakan d_shavarshan d_taron d_turuberan d_derzene d_mesopotamia
+		# k_syunik
+		d_syunik-baghk d_syunik-vayotsdzor d_artsakh d_gardman d_nakhichevan
+		# k_shirvan
+		d_shirvan d_layzan d_arran
+	}
+}
