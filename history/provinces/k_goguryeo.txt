@@ -28,7 +28,7 @@
 
 	1000.1.1 = {
 		culture = goryeo
-		religion = avatamsaka
+		religion = vinaya
 	}
 }
 9890 = { # b_Goryeo_Bukgye_Cheolju
@@ -43,7 +43,7 @@
 
 	1000.1.1 = {
 		culture = goryeo
-		religion = avatamsaka
+		religion = vinaya
 	}
 }
 9892 = { # b_Goryeo_Bukgye_Seonju
@@ -61,7 +61,7 @@
 
 	1000.1.1 = {
 		culture = goryeo
-		religion = avatamsaka
+		religion = vinaya
 	}
 }
 9895 = { # b_Goryeo_Bukgye_Sukju
@@ -85,7 +85,7 @@
 	}
 	1000.1.1 = {
 		culture = goryeo
-		religion = avatamsaka
+		religion = vinaya
 	}
 }
 9900 = { # b_Goryeo_Bukgye_Tonghae
@@ -144,7 +144,7 @@
 ## d_liaodong
 ### c_sheli
 17751 = { # b_jili
-	religion = avatamsaka
+	religion = vinaya
 	culture = goguryeo
 
 	holding = castle_holding
@@ -169,6 +169,10 @@
 15236 = { # b_xincheng_jilin
 	religion = vinaya
 	culture = balhae
+
+	1050.1.1 = {
+		culture = khitan
+	}
 
 	holding = castle_holding
 }
@@ -215,7 +219,7 @@
 
 ### c_LIAO_diezhou
 11795 = { # b_Liao_Kaizhou
-	religion = avatamsaka
+	religion = vinaya
 	culture = goguryeo
 
 	holding = castle_holding
@@ -229,7 +233,7 @@
 
 ### c_LIAO_guidezhou
 11799 = { # b_Liao_Guidezhou
-	religion = avatamsaka
+	religion = vinaya
 	culture = goguryeo
 
 	holding = castle_holding
@@ -271,6 +275,10 @@
 	religion = vinaya
 	culture = balhae
 
+	1050.1.1 = {
+		culture = jurchen
+	}
+
 	holding = castle_holding
 }
 15885 = { # b_zuochi_TEMP
@@ -286,7 +294,7 @@
 ## d_amnok
 ### c_changamju
 15247 = { # b_cheonmunryeong
-	religion = avatamsaka
+	religion = vinaya
 	culture = goguryeo
 
 	holding = castle_holding
@@ -323,10 +331,17 @@
 
 ### c_seongyeong
 18132 = { # b_seongeyong
-	religion = avatamsaka
+	religion = vinaya
 	culture = goguryeo
 
-	holding = castle_holding
+    1050.1.1 = {
+        culture = balhae
+    }
+    1150.1.1 = {
+        culture = goguryeo
+    }
+
+    holding = castle_holding
 }
 15249 = { # b_qingjin_TEMP
 
@@ -348,6 +363,10 @@
 	religion = mu
 	culture = goguryeo
 
+	1050.1.1 = {
+	    culture = goryeo
+	}
+
 	holding = castle_holding
 }
 17894 = { # b_jeongju_okjeo
@@ -359,7 +378,7 @@
 
 ### c_chonghae
 17950 = { # b_chonghae
-	religion = avatamsaka
+	religion = vinaya
 	culture = goguryeo
 
 	holding = castle_holding

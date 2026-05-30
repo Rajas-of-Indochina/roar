@@ -1,41 +1,295 @@
-﻿# k_goguryeo
-# d_yukju
-    # c_jangjeong
-    # c_uiju
-    # c_gwiju
-    # c_taeju
-# d_bukgye
-    # c_seogyeong
-    # c_seongju
-    # c_yeongwon
+﻿k_goguryeo = {
+    1.1.1 = {
+        government = meritocratic_government
+        #holder = korean_go_goguryeo_49 # Yu_ri_myeong
+    }
+    18.10.1 = {
+        #holder = korean_go_goguryeo_43 # Dae_mu_sin
+    }
+    44.10.1 = {
+        #holder = korean_go_goguryeo_42 # Min_jung
+    }
+    48.1.1 = {
+        #holder = korean_go_goguryeo_45 # Mo_bon
+    }
+    53.11.1 = {
+        holder = korean_go_goguryeo_39 # Tae_jo the Great
+    }
+    121.11.1 = {
+        holder = korean_go_goguryeo_35 # Cha_dae
+    }
+    165.10.1 = {
+        holder = korean_go_goguryeo_34 # Sin_dae
+    }
+    179.12.1 = {
+        holder = korean_go_goguryeo_31 # Go_guk_cheon
+    }
+    197.5.1 = {
+        holder = korean_go_goguryeo_29 # San_sang
+    }
+    227.5.1 = {
+        holder = korean_go_goguryeo_28 # Dong_cheon
+    }
+    248.9.1 = {
+        holder = korean_go_goguryeo_25 # Jung_cheon
+    }
+    270.10.1 = {
+        holder = korean_go_goguryeo_21 # Seo_cheon
+    }
+    292.1.1 = {
+        holder = korean_go_goguryeo_20 # Bong_sang
+    }
+    300.9.1 = {
+        holder = korean_go_goguryeo_18 # Mi_cheon
+    }
+    331.2.1 = {
+        holder = korean_go_goguryeo_16 # Go_gug_won
+    }
+    371.11.17 = {
+        holder = korean_go_goguryeo_15 # So_su_rim
+    }
+    384.11.1 = {
+        holder = korean_go_goguryeo_14 # Go_gug_yang
+    }
+    391.5.1 = {
+        holder = korean_go_goguryeo_13 # Gwang_gae_to
+    }
+    412.10.1 = {
+        holder = korean_go_goguryeo_12 # Jang_su
+    }
+    491.12.1 = {
+        holder = korean_go_goguryeo_10 # Mun_ja_myeong
+    }
+    519.1.1 = {
+        holder = korean_go_goguryeo_9 # An_jang
+    }
+    531.5.1 = {
+        holder = korean_go_goguryeo_8 # An_won
+    }
+    545.3.1 = {
+        holder = korean_go_goguryeo_7 # Yang_won
+    }
+    559.3.1 = {
+        holder = korean_go_goguryeo_3 # Pyeong_won
+    }
+    590.10.1 = {
+        holder = korean_go_goguryeo_6 # Yeong_yang
+    }
+    618.9.1 = {
+        holder = korean_go_goguryeo_4 # Yeong_nyu
+    }
+    642.10.1 = {
+        holder = korean_go_goguryeo_1 # King Bo_jang
+    }
+    668.11.3 = {
+        holder = 0
+    }
+}
+
+d_yukju = {
+    867.1.1 = {
+        liege = k_balhae
+        government = meritocratic_government
+        holder = balhae_wi_1 #
+    }
+    1066.1.1 = {
+        liege = e_goryeo
+        government = meritocratic_government
+        holder = korean_yang_anak_2 # Dae_chun
+    }
+    1178.1.1 = {
+        holder = korean_mun_gangneung_4 # Jang_pil
+    }
+}
+    c_jangjeong = {
+        867.1.1 = { change_development_level = 3 }
+        1066.1.1 = { change_development_level = 6 }
+        1178.1.1 = { change_development_level = 10 }
+
+        867.1.1 = {
+            liege = d_yukju
+            government = meritocratic_government
+            holder = balhae_wi_1 #
+        }
+        1066.1.1 = {
+            holder = korean_yang_anak_2 # Dae_chun
+        }
+        1178.1.1 = {
+            holder = korean_mun_gangneung_4 # Jang_pil
+        }
+    }
+    c_uiju = {
+        867.1.1 = { change_development_level = 6 }
+        1066.1.1 = { change_development_level = 11 }
+        1178.1.1 = { change_development_level = 19 }
+
+        867.1.1 = {
+            liege = d_yukju
+            government = meritocratic_government
+            holder = balhae_wi_1 #
+        }
+        1066.1.1 = {
+            holder = korean_yang_anak_2 # Dae_chun
+        }
+        1178.1.1 = {
+            holder = korean_mun_gangneung_4 # Jang_pil
+        }
+    }
+    c_gwiju = {
+        867.1.1 = { change_development_level = 4 }
+        1066.1.1 = { change_development_level = 7 }
+        1178.1.1 = { change_development_level = 12 }
+
+        867.1.1 = {
+            liege = d_yukju
+            government = meritocratic_government
+            holder = balhae_wi_1 #
+        }
+        1066.1.1 = {
+            holder = korean_yang_anak_2 # Dae_chun
+        }
+        1178.1.1 = {
+            holder = korean_baek_daeheung_2 # Im_ji
+        }
+    }
+    c_taeju = {
+        867.1.1 = { change_development_level = 5 }
+        1066.1.1 = { change_development_level = 9 }
+        1178.1.1 = { change_development_level = 15 }
+
+        867.1.1 = {
+            liege = d_yukju
+            government = meritocratic_government
+            holder = balhae_wi_1 #
+        }
+        1066.1.1 = {
+            holder = korean_yang_anak_2 # Dae_chun
+        }
+        1178.1.1 = {
+            holder = korean_baek_daeheung_2 # Im_ji
+        }
+    }
+
+d_bukgye = {
+    867.1.1 = {
+        liege = k_silla
+        government = meritocratic_government
+        holder = korean_geom_nakrang_1 #
+    }
+    1066.1.1 = {
+        liege = e_goryeo
+        holder = korean_wang_goryeo_22 # Gi
+    }
+    1178.1.1 = {
+        holder = korean_yun_papyeong_20 # Sang_yeong
+    }
+}
+    c_seogyeong = {
+        867.1.1 = { change_development_level = 9 }
+        1066.1.1 = { change_development_level = 16 }
+        1178.1.1 = { change_development_level = 29 }
+
+        867.1.1 = {
+            liege = d_bukgye
+            government = meritocratic_government
+            holder = korean_geom_nakrang_1 #
+        }
+        918.1.1 = {
+            holder = korean_wang_goryeo_45 # Sing_nyeom
+        }
+        949.1.1 = {
+            holder = korean_wang_goryeo_48 # Ham_yun
+        }
+        1066.1.1 = {
+            holder = korean_wang_goryeo_22 # Gi
+        }
+        1178.1.1 = {
+            holder = korean_du_dureung_9 # Gyeong_seung
+        }
+    }
+    c_seongju = {
+        867.1.1 = { change_development_level = 4 }
+        1066.1.1 = { change_development_level = 7 }
+        1178.1.1 = { change_development_level = 12 }
+
+        867.1.1 = {
+            liege = d_bukgye
+            government = meritocratic_government
+            holder = korean_hwangbo_3 # Mo_jam
+        }
+        1066.1.1 = {
+            liege = d_bukgye
+            holder = korean_wang_goryeo_22 # Gi
+        }
+        1178.1.1 = {
+            holder = korean_yun_papyeong_20 # Sang_yeong
+        }
+    }
+    c_yeongwon = {
+        867.1.1 = { change_development_level = 3 }
+        1066.1.1 = { change_development_level = 6 }
+        1178.1.1 = { change_development_level = 10 }
+
+        867.1.1 = {
+            government = tribal_government
+            holder = mohe_a_1 # Eo_gan
+        }
+        1066.1.1 = {
+            liege = d_bukgye
+            government = meritocratic_government
+            holder = korean_wang_goryeo_22 # Gi
+        }
+        1178.1.1 = {
+            holder = korean_yun_papyeong_20 # Sang_yeong
+        }
+    }
 # d_liaodong
     c_sheli = {
-        # Khitan Empire declared
-
-        926.9.6 = {
-            holder = 194326
-            government = nomad_government
+        150.1.1 = {
+            government = feudal_government
+            holder = korean_gim_gimhae_26 # Su_ro
         }
-        947.5.15 = {
-            holder = 194328
+        199.3.23 = {
+            holder = korean_gim_gimhae_27 # Geo_deung
         }
-        951.10.7 = {
-            holder = 194329
+        253.9.17 = {
+            holder = korean_gim_gimhae_28 # Ma_pum
         }
-        969.3.12 = {
-            holder = 194330
+        291.1.29 = {
+            holder = korean_gim_gimhae_29 # Geo_jil_mi
         }
-        982.10.13 = {
-            holder = 194331
+        346.7.8 = {
+            holder = korean_gim_gimhae_30 # I_si_pum
         }
-        1031.6.25 = {
-            holder = 194332
+        407.7.10 = {
+            holder = korean_gim_gimhae_31 # Jwa_ji
         }
-        1055.8.28 = {
-            holder = 194333
+        421.5.21 = {
+            holder = korean_gim_gimhae_32 # Chwi_hui
         }
-        1101.2.12 = {
-            holder = 194334
+        451.2.3 = {
+            holder = korean_gim_gimhae_33 # Jil_ji
+        }
+        492.10.4 = {
+            holder = korean_gim_gimhae_34 # Gyeom_ji
+        }
+        521.4.7 = {
+            holder = korean_gim_gimhae_35 # Gu_hyeong
+        }
+        867.1.1 = { change_development_level = 3 }
+        1066.1.1 = { change_development_level = 5 }
+        1178.1.1 = { change_development_level = 9 }
+        867.1.1 = {
+            liege = d_jinju
+            government = meritocratic_government
+            holder = korean_gim_gimhae_4 # Gyeong_ju
+        }
+        1066.1.1 = {
+            liege = d_jinju
+            holder = korean_gang_jinju_3 # Dan_B2E8
+        }
+        1178.1.1 = {
+            holder = korean_gim_gimhae_21 # Su_seong
         }
     }
     c_shenzhou_jilin = {
@@ -68,149 +322,90 @@
         }
     }
     c_LIAO_shenyang = {
-        # Khitan Empire declared
+        867.1.1 = { change_development_level = 8 }
+        1066.1.1 = { change_development_level = 14 }
+        1178.1.1 = { change_development_level = 23 }
 
-        926.9.6 = {
-            holder = 194326
-            government = nomad_government
+        867.1.1 = {
+            government = meritocratic_government
+            holder = balhae_go_1 #
+            liege = k_balhae
         }
-        947.5.15 = {
-            holder = 194328
+        1066.1.1 = {
+            holder = nn_yelu_alian
         }
-        951.10.7 = {
-            holder = 194329
-        }
-        969.3.12 = {
-            holder = 194330
-        }
-        982.10.13 = {
-            holder = 194331
-        }
-        1031.6.25 = {
-            holder = 194332
-        }
-        1055.8.28 = {
-            holder = 194333
-        }
-        1101.2.12 = {
-            holder = 194334
+        1178.1.1 = {
+            holder = jurchen_hesujia_fic_1
         }
     }
     c_LIAO_zhenzhou = {
-        # Khitan Empire declared
+        867.1.1 = { change_development_level = 8 }
+        1066.1.1 = { change_development_level = 14 }
+        1178.1.1 = { change_development_level = 23 }
 
-        926.9.6 = {
-            holder = 194326
-            government = nomad_government
+        867.1.1 = {
+            government = meritocratic_government
+            holder = balhae_go_1 #
+            liege = k_balhae
         }
-        947.5.15 = {
-            holder = 194328
+        1066.1.1 = {
+            holder = nn_yelu_alian
         }
-        951.10.7 = {
-            holder = 194329
-        }
-        969.3.12 = {
-            holder = 194330
-        }
-        982.10.13 = {
-            holder = 194331
-        }
-        1031.6.25 = {
-            holder = 194332
-        }
-        1055.8.28 = {
-            holder = 194333
-        }
-        1101.2.12 = {
-            holder = 194334
+        1178.1.1 = {
+            holder = jurchen_hesujia_fic_1
         }
     }
     c_LIAO_diezhou = {
-        # Khitan Empire declared
+        867.1.1 = { change_development_level = 5 }
+        1066.1.1 = { change_development_level = 8 }
+        1178.1.1 = { change_development_level = 12 }
 
-        926.9.6 = {
-            holder = 194326
+        867.1.1 = {
+            government = meritocratic_government
+            liege = d_LIAO_dongjing #under k_balhae
+            holder = balhae_nan_1   #fic ruler
+        }
+        1066.1.1 = {
+            holder = balhae_go_8 # Gwan_74D8
+        }
+        1178.1.1 = {
             government = nomad_government
-        }
-        947.5.15 = {
-            holder = 194328
-        }
-        951.10.7 = {
-            holder = 194329
-        }
-        969.3.12 = {
-            holder = 194330
-        }
-        982.10.13 = {
-            holder = 194331
-        }
-        1031.6.25 = {
-            holder = 194332
-        }
-        1055.8.28 = {
-            holder = 194333
-        }
-        1101.2.12 = {
-            holder = 194334
+            holder = jurchen_hesujia_fic_1
         }
     }
     c_LIAO_guidezhou = {
-        # Khitan Empire declared
+        867.1.1 = { change_development_level = 5 }
+        1066.1.1 = { change_development_level = 8 }
+        1178.1.1 = { change_development_level = 12 }
 
-        926.9.6 = {
-            holder = 194326
-            government = nomad_government
+        867.1.1 = {
+            government = meritocratic_government
+            liege = d_LIAO_dongjing #under k_balhae
+            holder = balhae_mun_1   #fic ruler
         }
-        947.5.15 = {
-            holder = 194328
+        1066.1.1 = {
+            holder = nn_yelu_alian
         }
-        951.10.7 = {
-            holder = 194329
-        }
-        969.3.12 = {
-            holder = 194330
-        }
-        982.10.13 = {
-            holder = 194331
-        }
-        1031.6.25 = {
-            holder = 194332
-        }
-        1055.8.28 = {
-            holder = 194333
-        }
-        1101.2.12 = {
-            holder = 194334
+        1178.1.1 = {
+            holder = jurchen_hesujia_fic_1
         }
     }
 # d_jilin
     c_fuyu = {
-        # Khitan Empire declared
-
-        926.9.6 = {
-            holder = 194326
+        867.1.1 = {
+            liege = d_BAL_buyeo
+            holder = balhae_o_1 # Heung
+            government = meritocratic_government
+        }
+        1066.1.1 = {
             government = nomad_government
+            holder = khitan_balfuzhou_10_fic
+            liege = k_balhae    #Liao eastern circuit
         }
-        947.5.15 = {
-            holder = 194328
-        }
-        951.10.7 = {
-            holder = 194329
-        }
-        969.3.12 = {
-            holder = 194330
-        }
-        982.10.13 = {
-            holder = 194331
-        }
-        1031.6.25 = {
-            holder = 194332
-        }
-        1055.8.28 = {
-            holder = 194333
-        }
-        1101.2.12 = {
-            holder = 194334
+        1178.1.1 = {
+            holder = jurchen_bilan_fic_1
+            government = nomad_government
+            liege = e_jin
         }
     }
     c_LIAO_yinzhou = {
@@ -243,9 +438,95 @@
         }
     }
 # d_amnok
-    # c_changamju
-    # c_anshiju
-    # c_seongyeong
+    c_changamju = {
+        867.1.1 = {
+            holder = balhae_yang_2 # Seong_gyu
+            government = meritocratic_government
+            liege = k_balhae
+        }
+        1066.1.1 = {
+            government = nomad_government
+            holder = jurchen_yalu_10_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+        #JIN dynasty
+        1178.1.1 = {
+            holder = jurchen_tangguo_20_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+    }
+    c_anshiju = {
+        867.1.1 = {
+            holder = balhae_yang_2 # Seong_gyu
+            government = meritocratic_government
+            liege = k_balhae
+        }
+        1066.1.1 = {
+            government = nomad_government
+            holder = jurchen_yalu_10_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+        #JIN dynasty
+        1178.1.1 = {
+            holder = jurchen_tangguo_20_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+    }
+    c_seongyeong = {
+        867.1.1 = {
+            holder = balhae_yang_2 # Seong_gyu
+            government = meritocratic_government
+            liege = k_balhae
+        }
+        1066.1.1 = {
+            government = nomad_government
+            holder = jurchen_tangguo_10_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+        #JIN dynasty
+        1178.1.1 = {
+            holder = jurchen_tangguo_20_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+    }
 # d_namhae
-    # c_okjeo
-    # c_chonghae
+    c_okjeo = {
+        867.1.1 = {
+            liege = k_balhae
+            holder = balhae_yeol_1 #
+            government = meritocratic_government
+            #succession_laws = { noble_family_succession_law }
+        }
+        1066.1.1 = {
+            government = nomad_government
+            holder = jurchen_helandian_11_fic
+            liege = d_BAL_amnok_jangryeong
+        }
+        #JIN dynasty
+        1178.1.1 = {
+            holder = jurchen_helandian_20_fic
+            liege = e_jin
+        }
+    }
+    c_chonghae = {
+        867.1.1 = { change_development_level = 3 }
+        1066.1.1 = { change_development_level = 6 }
+        1178.1.1 = { change_development_level = 10 }
+
+        867.1.1 = {
+            liege = d_haeju
+            government = meritocratic_government
+            holder = korean_gang_sincheon_121 # Man_ru
+        }
+        # 김흥조 - Kim Jeung_jo - ?
+        1000.1.1 = { # ?
+            holder = korean_choe_haeju_1 # On
+        }
+        1027.1.1 = {
+            government = meritocratic_government
+            holder = korean_choe_haeju_2 # Chung
+        }
+        1178.1.1 = {
+            holder = korean_jeong_haeju_2 # Gyun
+        }
+    }
