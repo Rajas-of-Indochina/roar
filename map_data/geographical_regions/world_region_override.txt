@@ -1,4 +1,22 @@
-# fill this in later just adding missing stuff from maritime SEA for now
+world_europe = {
+	regions = {
+		world_europe_west world_europe_south world_europe_east world_europe_north world_europe_permia
+	}
+}
+
+world_europe_permia = {
+	duchies = {
+		# k_permia
+		d_perm d_ural d_udmurtia d_cherdyn
+		# k_bjarmaland
+		d_biarmia d_vologda d_chudia d_ustyug d_pinega
+		# k_nenetsia
+		d_pechora d_izhma d_ortina d_nenetsia
+		# k_vychegda
+		d_vym d_vychegda d_pyras d_mezen
+	}
+}
+
 world_europe_north = {
 	duchies = {
 		#Sweden
@@ -15,6 +33,27 @@ world_europe_north = {
 		#Sapmi
 		d_aarjetje d_duortnoseatnu d_giemajohka d_guoldat d_vuovdisamieana
 		# 
+	}
+}
+
+world_europe_east = {
+	duchies = {
+		#Wendish minus Pomerania minus Bohemia
+		d_mazovia d_upper_silesia d_lower_silesia d_lesser_poland d_wielkopolska d_kuyavia d_livonia d_prussia d_masuria d_grodno d_pinsk d_minsk d_polotsk d_smolensk d_lithuanians d_courland d_latgalians d_samogitia
+		# d_greater_poland d_silesia d_yatviags
+		#Russia
+		d_novgorod d_vepsia d_luki d_kiev d_karachev d_novosil d_opolye d_nizhny_novgorod d_turov d_chernigov d_ryazan d_pereyaslavl d_voronezh d_murom
+		# d_beloozero d_pskov
+		#Galicia-Volhynia
+		d_volhynia d_halych d_cherven_cities
+		#Moldavia
+		d_moldova d_bugeac d_bukovina
+		#West Perm
+		# d_hlynov d_bjarmia
+		#Hungary
+		d_visegrad d_somogy d_nyitra d_ungvar d_transcarpathia d_transylvania d_bihar d_temes d_bacs d_gyor d_syrmia
+		#Estonia
+		d_esthonia
 	}
 }
 
@@ -138,8 +177,6 @@ world_steppe_west = {
 		d_mordvinia d_moksha d_burtasia d_khopyor
 		# k_bashkiria
 		d_ufa d_sakmara d_uraltau d_belaya d_bugurslan
-		# k_permia
-		d_perm d_ural d_udmurtia d_cherdyn
 		# k_zichia
 		d_eudusia d_papagia d_khegayk d_zichia
 		# k_caucasus
@@ -189,6 +226,12 @@ world_steppe_east = {
 		d_ujumuchin d_sanggan d_omnogobi
 		# k_amur
 		d_solon d_ulyagir d_yakesa
+		# k_shiwei
+		d_nonni d_dumaglu d_hulan d_wuluo
+		# k_raole
+		d_LIAO_zhongjing d_yanyun_yuyi d_liaoxi
+		# k_khitan
+		d_xiliao d_taoer d_irkin
 	}
 }
 
