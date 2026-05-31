@@ -1,0 +1,253 @@
+# The Eagle, The Lion and the Mountain
+
+situation_caucasus = {
+	window = situation
+
+	gui_window_name = window_situation_caucasus
+
+	gui_tooltip_group_focues = no
+
+	map_mode = sub_regions
+	
+	situation_group_type = major
+
+	sub_regions = {
+		# major regions
+		# you MUST control these to "win"
+		armenia_proper = {
+			map_color = { 203 76 76 }
+			geographical_regions = { custom_armenia_proper }
+		}
+		iberia = {
+			map_color = { 200 193 193 }
+			geographical_regions = { custom_caucasian_iberia }
+		}
+		albania = {
+			map_color = { 64 95 44 }
+			geographical_regions = { custom_caucasian_albania }
+		}
+		# additional regions
+		persarmenia = {
+			map_color = { 55 76 179 }
+			geographical_regions = { custom_persarmenia }
+		}
+		lesser_armenia = {
+			map_color = { 205 130 85 }
+			geographical_regions = { custom_lesser_armenia }
+		}
+		cilicia = {
+			map_color = { 223 117 26 }
+			geographical_regions = { custom_armenian_cilicia }
+		}
+		syria = {
+			map_color = { 145 130 88 }
+			geographical_regions = { custom_syria }
+		}
+		jazira = {
+			map_color = { 10 205 90 }
+			geographical_regions = { custom_jazira }
+		}
+	}
+
+	participant_groups = {
+		pro_roman = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_roman.dds"
+			is_character_valid = {
+				OR = {
+					# Must have realm counties in the region
+					any_realm_county = { title_province = { geographical_region = situation_caucasus_region } }
+					# or else maintain a domicile there
+					domicile.domicle_location = { geographical_region = situation_caucasus_region }
+					# or be the literal actual Roman Emperor
+					has_title = title:e_byzantium
+					has_title = title:h_eastern_roman_empire
+					has_title = title:h_roman_empire
+				}
+				NOT = {
+					# But never the emperor of Persia, or Arabia, nor a Caliph of a unified Islam
+					has_title = title:e_persia
+					has_title = title:e_arabia
+					has_title = title:h_dar_al_islam
+				}
+			}
+		}
+		pro_perso_arabic = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_perso_arabic.dds"
+			is_character_valid = {
+				OR = {
+					# Must have realm counties in the region
+					any_realm_county = { title_province = { geographical_region = situation_caucasus_region } }
+					# or else maintain a domicile there
+					domicile.domicle_location = { geographical_region = situation_caucasus_region }
+					# or be the emperor of Persia, or Arabia, nor a Caliph of a unified Islam
+					has_title = title:e_persia
+					has_title = title:e_arabia
+					has_title = title:h_dar_al_islam
+				}
+				NOT = {
+					# But never the literal actual Roman Emperor
+					has_title = title:e_byzantium
+					has_title = title:h_eastern_roman_empire
+					has_title = title:h_roman_empire
+				}
+			}
+		}
+		autonomist = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_autonomist.dds"
+				OR = {
+					# Must have a capital in the region
+					capital_county = { title_province = { geographical_region = situation_caucasus_region } }
+					# or else maintain a domicile there
+					domicile.domicle_location = { geographical_region = situation_caucasus_region }
+				}
+			is_character_valid = {
+				NOT = {
+					# But never the literal actual Roman Emperor nor the emperor of Persia, or Arabia, nor a Caliph of a unified Islam
+					has_title = title:e_byzantium
+					has_title = title:h_eastern_roman_empire
+					has_title = title:h_roman_empire
+					has_title = title:e_persia
+					has_title = title:e_arabia
+					has_title = title:h_dar_al_islam
+				}
+			}
+		}
+		interloper = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_interloper.dds"
+		}
+	}
+
+	on_start = {}
+
+	on_end = {}
+
+	on_monthly = {}
+
+	on_yearly = {}
+
+	on_join = {
+		auto_assign_caucasus_stance = yes
+	}
+
+	on_leave = {}
+
+	is_unique = yes
+
+	keep_full_history = no
+
+	migration = no
+
+	start_phase = situation_caucasus_disputed_control
+
+	phases = {
+		situation_caucasus_disputed_control = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_interloper.dds"
+			parameters = {}
+			on_start = {}
+			on_end = {}
+			max_duration = { years = 5 }
+			max_duration_next_phase = weighted_non_takeover
+			future_phases = {
+				situation_caucasus_disputed_control = {
+					takeover_type = points
+					takeover_points = 1000
+					weight = 1000
+				}
+				situation_caucasus_roman_control = {
+					takeover_type = points
+					takeover_points = 1000
+					weight = 0
+				}
+				situation_caucasus_perso_arabic_control = {
+					takeover_type = points
+					takeover_points = 1000
+					weight = 0
+				}
+				situation_caucasus_local_control = {
+					takeover_type = points
+					takeover_points = 1000
+					weight = 0
+				}
+			}
+		}
+		situation_caucasus_roman_control = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_roman.dds"
+			parameters = {}
+			on_start = {}
+			on_end = {}
+			max_duration = { years = 5 }
+			max_duration_next_phase = highest_points
+			future_phases = {
+				situation_caucasus_disputed_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_roman_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_perso_arabic_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_local_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+			}
+		}
+		situation_caucasus_perso_arabic_control = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_perso_arabic.dds"
+			parameters = {}
+			on_start = {}
+			on_end = {}
+			max_duration = { years = 5 }
+			max_duration_next_phase = highest_points
+			future_phases = {
+				situation_caucasus_disputed_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_roman_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_perso_arabic_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_local_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+			}
+		}
+		situation_caucasus_local_control = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_autonomist.dds"
+			parameters = {}
+			on_start = {}
+			on_end = {}
+			max_duration = { years = 5 }
+			max_duration_next_phase = highest_points
+			future_phases = {
+				situation_caucasus_disputed_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_roman_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_perso_arabic_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+				situation_caucasus_local_control = {
+					takeover_type = points
+					takeover_points = 1000
+				}
+			}
+		}
+	}
+
+}
