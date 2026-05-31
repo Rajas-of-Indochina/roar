@@ -1,6 +1,27 @@
 auto_assign_caucasus_stance = {
-	# Go by faith first
+	# hard rules for specific titles
 	if = {
+		limit = {
+			OR = {
+				has_title = title:e_byzantium
+				has_title = title:h_eastern_roman_empire
+				has_title = title:h_roman_empire
+			}
+		}
+		set_caucasus_alignment = { FLAG = pro_roman }
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_title = title:e_persia
+				has_title = title:e_arabia
+				has_title = title:h_dar_al_islam
+			}
+		}
+		set_caucasus_alignment = { FLAG = pro_perso_arabic }
+	}
+	# Go by faith first
+	else_if = {
 		limit = {
 			faith = { faith_is_pro_roman_trigger = yes }
 		}
@@ -10,7 +31,7 @@ auto_assign_caucasus_stance = {
 		limit = {
 			faith = { faith_is_pro_perso_arabic_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = pro_perso_arabic}
+		set_caucasus_alignment = { FLAG = pro_perso_arabic }
 	}
 	else_if = {
 		limit = {
@@ -29,7 +50,7 @@ auto_assign_caucasus_stance = {
 		limit = {
 			culture = { culture_is_pro_perso_arabic_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = pro_perso_arabic}
+		set_caucasus_alignment = { FLAG = pro_perso_arabic }
 	}
 	else_if = {
 		limit = {
