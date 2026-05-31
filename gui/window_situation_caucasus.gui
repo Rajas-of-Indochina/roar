@@ -1,0 +1,368 @@
+window = {
+	name = "window_situation_caucasus"
+	widgetid = "window_situation_caucasus"
+	datacontext = "[GetSituation('situation_caucasus')]"
+	datacontext = "[GetVariableSystem]"
+	datacontext = "[GetPlayer]"
+	parentanchor = top|right
+	layer = windows_layer
+	allow_outside = yes
+	movable = no
+
+	using = Window_Size_MainTab
+	using = sound_situation_panel
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Sound_WindowShow_Standard
+		using = Window_Position_MainTab
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Sound_WindowHide_Standard
+		using = Window_Position_MainTab_Hide
+	}
+
+	margin_widget = {
+		size = { 100% 100% }
+		margin = { 0 30 }
+		margin_right = 13
+
+		widget = {
+			size = { 100% 100% }
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				using = Window_Margins
+
+				# using = Animation_Tab_Switch
+
+				header_pattern = {
+					layoutpolicy_horizontal = expanding
+
+					blockoverride "header_text"
+					{
+						text = "SITUATION_CAUCASUS_WINDOW_HEADER"
+					}
+
+					blockoverride "button_back"
+					{
+						onclick = "[OpenGameView( 'situations' )]"
+					}
+
+					blockoverride "button_close"
+					{
+						onclick = "[SituationWindow.Close]"
+					}
+				}
+
+				vbox = {
+					layoutpolicy_vertical = growing
+					layoutpolicy_horizontal = expanding
+
+					background = {
+						using = Background_Area_Dark
+					}
+
+				}
+
+				scrollbox = {
+					name = "sub_region_scrollarea"
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					blockoverride "scrollbox_content"
+					{
+						vbox = {
+							datamodel = "[Situation.GetSubRegions]"
+							layoutpolicy_horizontal = expanding
+							spacing = 10
+
+							item = {
+								# hbox_situation_caucasus_subregion = {}
+								caucasus_sub_region_item = {
+									layoutpolicy_horizontal = expanding
+								}
+							}
+						}
+					}
+				}
+
+				# vbox_season_contents = {
+				# 	datacontext = "[SteppeWindow.GetSelectedSubRegion]"
+				# }
+
+				# vbox_nomads_of_situation = {}
+
+				expand = {}
+
+				vbox_situation_caucasus_decisions = {}
+			}
+		}
+	}
+
+	situation_mini_map_mode = {}
+}
+
+types CaucasusSituationTypes
+{
+	type hbox_situation_caucasus_subregion = hbox {
+		layoutpolicy_horizontal = expanding
+		icon = {
+			size = { 64 64 }
+			texture = "[SituationSubRegion.GetCurrentPhase.GetType.GetIcon]"
+		}
+		expand = {}
+		text_single = {
+			text = "THE_GREAT_STEPPE_WINDOW_SUB_REGION_NAME"
+		}
+	}
+
+	type button_expandable_toggle_caucasus = button_tertiary {
+		layoutpolicy_horizontal = expanding
+
+
+		block "onclick"
+		{
+			onclick = "[PdxGuiFoldOut.Toggle]"
+		}
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			ignoreinvisible = yes
+
+			margin = { 15 0 }
+			spacing = 5
+
+			button_expand_fold_out = {
+				block "foldout_button" {}
+			}
+
+			vbox = {
+				layoutpolicy_vertical = expanding
+
+				expand = {}
+
+				icon = {
+					texture = "[SituationSubRegion.GetCurrentPhase.GetType.GetIcon]"
+					size = { 80 80 }
+					scale = 0.9
+				}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = nobaseline
+					alwaystransparent = yes
+					autoresize = no
+
+					block "text" {}
+				}
+				text_single = {
+					datacontext = "[SituationSubRegion.GetCurrentPhase]"
+					layoutpolicy_horizontal = expanding
+					text = "CURRENT_PHASE_IN_SUBREGION_HEADER"
+					align = nobaseline
+					autoresize = no
+				}
+			}
+		}
+	}
+
+	type caucasus_sub_region_item = vbox {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding
+
+		oncreate = "[BindFoldOutContext]"
+		visible = "[SituationSubRegion.IsValid]"
+
+		button_expandable_toggle_caucasus = {
+			datacontext = "[SituationSubRegion.GetBazaarBuilding]"
+			layoutpolicy_horizontal = expanding
+			size = { 0 90 }
+
+			blockoverride "onclick"
+			{
+				onclick = "[PdxGuiFoldOut.Toggle]"
+				# onclick = "[SilkRoadWindow.ToggleSubRegion( SituationSubRegion.Self )]"
+			}
+
+			blockoverride "text"
+			{
+				text = "[SituationSubRegion.GetNameNoTooltip]"
+			}
+		}
+
+		vbox = {
+			name = "current_sub_region"
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+			layoutpolicy_horizontal = expanding
+
+			vbox = {
+				name = "current_phase_widget"
+				datacontext = "[SituationSubRegion.GetCurrentPhase]"
+				layoutpolicy_horizontal = expanding
+
+				vbox = {
+					layoutpolicy_horizontal = expanding
+					spacing = 5
+
+					background = {
+						using = Background_Area
+					}
+
+					background = {
+						using = Background_Frame
+
+						modify_texture = {
+							texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+							blend_mode = alphamultiply
+							mirror = vertical
+						}
+					}
+
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						background = {
+							using = Background_Area
+							margin = { -2 0 }
+							margin_top = -5
+							margin_bottom = -2
+						}
+
+						### PHASE EFFECTS
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							margin = { 10 5 }
+							spacing = 5
+
+							hbox = {
+								layoutpolicy_horizontal = expanding
+
+								button_sidepanel_left = {
+									datacontext = "[SituationSubRegion.GetCurrentPhase]"
+									datacontext = "[SilkRoadWindow.AccessParticipantCharacterList]"
+									datacontext = "[SituationParticipantCharacterList.AccessCharacterList]"
+
+									onclick = "[SilkRoadWindow.SetSelectedSubRegion(SituationSubRegion.Self)]"
+									onclick = "[SilkRoadWindow.ToggleSubRegionCatalysts(SituationSubRegion.Self)]"
+									onclick = "[SilkRoadWindow.AccessParticipantCharacterList.Close]"
+
+									down = "[And(Not(SituationParticipantCharacterList.IsVisible), SilkRoadWindow.IsCurrentSubRegionToggled(SituationSubRegion.Self))]"
+
+									blockoverride "button_text"
+									{
+										text = "DYNASTIC_CYCLE_WINDOW_TOGGLE_CATALYSTS"
+										max_width = 160
+									}
+
+									tooltip = "SITUATION_SUBREGION_CATALYSTS_BUTTON_TOOLIP"
+								}
+
+								expand = {}
+
+								text_single = {
+									text = "SITUATION_PHASE_TYPE_MODIFIERS_LABEL"
+									default_format = "#bold;italic"
+									align = nobaseline
+
+									margin_left = 5
+									max_width = 220
+								}
+							}
+
+
+							hbox = {
+								layoutpolicy_horizontal = expanding
+								margin = { 4 2 }
+
+								hbox = {
+									layoutpolicy_vertical = expanding
+									name = "phases"
+									datamodel = "[SituationPhase.GetFuturePhases]"
+									item = {
+										vbox = {
+											layoutpolicy_vertical = expanding
+											datacontext = "[FutureSituationPhase.GetType]"
+											icon = {
+												texture = "[FutureSituationPhase.GetType.GetIcon]"
+												size = { 54 54 }
+											}
+											text_single = {
+												# parentanchor = center
+												# position = { 0 0 }
+												text = "SITUATION_PHASE_POINT_TAKEOVER_VALUE"
+											}
+												
+											progressbar_standard = {
+												# parentanchor = center
+												size = { 75 15 }
+												position = { 0 -20 }
+												value = "[FutureSituationPhase.GetRelativeProgressPercent]"
+												progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
+											}
+											tooltipwidget = {
+												using = situation_phase_type_tooltip
+											}
+										}
+									}
+								}
+
+								expand = {}
+
+								fixedgridbox = {
+									name = "effects"
+									datacontext = "[SituationSubRegion.GetCurrentPhase.GetType]"
+									datamodel = "[SituationSubRegion.GetSituation.GetType.GetParticipantGroupTypes]"
+
+									addcolumn = 54
+									addrow = 48
+									setitemsizefromcell = yes
+									datamodel_wrap = 10
+									maxhorizontalslots = 10
+									maxverticalslots = 2
+									flipdirection = yes
+									layoutanchor = topleft
+
+									item = {
+										icon_situation_phase_effect_participant_group_item = {}
+									}
+								}
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	type vbox_situation_caucasus_decisions = vbox {
+		spacing = 5
+
+		button_decision_entry = {
+			name = "situation_caucasus_choose_alignment_decision"
+			datacontext = "[GetDecisionWithKey('situation_caucasus_choose_alignment_decision')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+	}
+}
+

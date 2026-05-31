@@ -1,0 +1,102 @@
+1.1.1 = {
+	effect = {
+		# Southern Caucasus Situation
+		start_situation = {
+			type = situation_caucasus
+			start_phase = situation_caucasus_disputed_control
+		}
+	}
+}
+
+867.1.1 = {
+	effect = {
+		situation:situation_caucasus = {
+			situation_sub_region:armenia_proper = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:iberia = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:albania = {
+				change_phase = { phase = situation_caucasus_local_control }
+			}
+			situation_sub_region:persarmenia = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:lesser_armenia = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:cilicia = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:syria = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:jazira = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+		}
+	}
+}
+
+1066.1.1 = {
+	effect = {
+		situation:situation_caucasus = {
+			situation_sub_region:armenia_proper = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:iberia = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:albania = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:persarmenia = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:lesser_armenia = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:cilicia = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:syria = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:jazira = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+		}
+	}
+}
+
+1178.1.1 = {
+	effect = {
+		situation:situation_caucasus = {
+			situation_sub_region:armenia_proper = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:iberia = {
+				change_phase = { phase = situation_caucasus_roman_control }
+			}
+			situation_sub_region:albania = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:persarmenia = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:lesser_armenia = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:cilicia = {
+				change_phase = { phase = situation_caucasus_disputed_control }
+			}
+			situation_sub_region:syria = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+			situation_sub_region:jazira = {
+				change_phase = { phase = situation_caucasus_perso_arabic_control }
+			}
+		}
+	}
+}

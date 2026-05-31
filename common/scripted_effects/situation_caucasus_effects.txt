@@ -1,0 +1,53 @@
+auto_assign_caucasus_stance = {
+	# Go by faith first
+	if = {
+		limit = {
+			faith = { faith_is_pro_roman_trigger = yes }
+		}
+		set_caucasus_alignment = { FLAG = pro_roman }
+	}
+	else_if = {
+		limit = {
+			faith = { faith_is_pro_perso_arabic_trigger = yes }
+		}
+		set_caucasus_alignment = { FLAG = pro_perso_arabic}
+	}
+	else_if = {
+		limit = {
+			faith = { faith_is_autonomist_trigger = yes }
+		}
+		set_caucasus_alignment = { FLAG = autonomist }
+	}
+	# Then by culture if faith doesn't do it
+	else_if = {
+		limit = {
+			culture = { culture_is_pro_roman_trigger = yes }
+		}
+		set_caucasus_alignment = { FLAG = pro_roman }
+	}
+	else_if = {
+		limit = {
+			culture = { culture_is_pro_perso_arabic_trigger = yes }
+		}
+		set_caucasus_alignment = { FLAG = pro_perso_arabic}
+	}
+	else_if = {
+		limit = {
+			culture = { culture_is_autonomist_trigger = yes }
+		}
+		set_caucasus_alignment = { FLAG = autonomist }
+	}
+	else = {
+		set_caucasus_alignment = { FLAG = interloper }
+	}
+}
+
+# just a shortcut
+# FLAG options: pro_roman pro_perso_arabic autonomist interloper
+set_caucasus_alignment = {
+	set_variable = {
+		name = caucasus_alignment
+		value = flag:$FLAG$
+	}
+	hidden_effect = { recalculate_participant_group = situation:situation_caucasus }
+}
