@@ -5,13 +5,20 @@ situation_caucasus = {
 
 	gui_window_name = window_situation_caucasus
 
-	gui_tooltip_group_focues = no
+	gui_tooltip_group_focues = yes
 
 	map_mode = sub_regions
 	
 	situation_group_type = major
 
+	icon = {
+		reference = "gfx/interface/icons/situation_types/game_rule_extra_nomads_tibet.dds"
+	}
+
 	sub_regions = {
+		big_group = {
+			geographical_regions = { situation_caucasus_region }
+		}
 		# major regions
 		# you MUST control these to "win"
 		armenia_proper = {
@@ -69,6 +76,7 @@ situation_caucasus = {
 					has_title = title:e_arabia
 					has_title = title:h_dar_al_islam
 				}
+				var:caucasus_alignment ?= flag:pro_roman
 			}
 		}
 		pro_perso_arabic = {
@@ -90,6 +98,7 @@ situation_caucasus = {
 					has_title = title:h_eastern_roman_empire
 					has_title = title:h_roman_empire
 				}
+				var:caucasus_alignment ?= flag:pro_perso_arabic
 			}
 		}
 		autonomist = {
@@ -111,6 +120,7 @@ situation_caucasus = {
 					has_title = title:h_dar_al_islam
 				}
 			}
+			var:caucasus_alignment ?= flag:autonomist
 		}
 		interloper = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_interloper.dds"
