@@ -2343,6 +2343,8 @@ mpo_decision_introduce_heir = {
 #	dlc_mpo_steppe_hexi_tarim_expansion
 #	dlc_mpo_steppe_north_china_expansion
 #	dlc_mpo_steppe_central_china_expansion
+#   dlc_mpo_steppe_east_buryatia_addon
+#	dlc_mpo_steppe_east_andong_addon
 #	world_asia_korea
 #	world_asia_japan
 
@@ -2805,7 +2807,7 @@ expand_the_steppe_decision = {
 			is_shown = {
 	            situation:the_great_steppe ?= {
 	            	any_situation_sub_region = {
-	                	#region_is_adjacent = geographical_region:dlc_mpo_steppe_central_china_expansion
+	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_central_china_expansion
 	                }
 	            }
 			}
@@ -2825,6 +2827,66 @@ expand_the_steppe_decision = {
 				}
 			}
 			localization = dlc_mpo_steppe_central_china_expansion
+			icon = "gfx/interface/icons/message_feed/banner.dds"
+			ai_chance = {
+				value = 100
+			}
+		}
+		item = {
+			value = dlc_mpo_steppe_east_buryatia_addon
+			is_shown = {
+	            situation:the_great_steppe ?= {
+	            	any_situation_sub_region = {
+	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_east_buryatia_addon
+	                }
+	            }
+			}
+			is_valid = {
+				custom_tooltip = {
+					text = custom_central_china_expand_steppe_tt
+					situation:the_great_steppe ?= {
+	                    NOT = {
+	                        any_situation_sub_region = {
+	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_east_buryatia_addon
+	                        }
+	                    }
+	                }
+	                any_realm_province = {
+	                    geographical_region = dlc_mpo_steppe_east_buryatia_addon
+	                }
+				}
+			}
+			localization = dlc_mpo_steppe_east_buryatia_addon
+			icon = "gfx/interface/icons/message_feed/banner.dds"
+			ai_chance = {
+				value = 100
+			}
+		}
+		item = {
+			value = dlc_mpo_steppe_east_andong_addon
+			is_shown = {
+	            situation:the_great_steppe ?= {
+	            	any_situation_sub_region = {
+	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_east_andong_addon
+	                }
+	            }
+			}
+			is_valid = {
+				custom_tooltip = {
+					text = custom_central_china_expand_steppe_tt
+					situation:the_great_steppe ?= {
+	                    NOT = {
+	                        any_situation_sub_region = {
+	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_east_andong_addon
+	                        }
+	                    }
+	                }
+	                any_realm_province = {
+	                    geographical_region = dlc_mpo_steppe_east_andong_addon
+	                }
+				}
+			}
+			localization = dlc_mpo_steppe_east_andong_addon
 			icon = "gfx/interface/icons/message_feed/banner.dds"
 			ai_chance = {
 				value = 100
@@ -2917,6 +2979,8 @@ expand_the_steppe_decision = {
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_hexi_tarim_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_north_china_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_central_china_expansion }
+			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_east_buryatia_addon }
+			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_east_andong_addon }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_korea }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_japan }
         }
@@ -3017,6 +3081,18 @@ expand_the_steppe_decision = {
 	    		scope:dlc_mpo_steppe_central_china_expansion = yes
 	    	}
 		    completely_controls_region = dlc_mpo_steppe_central_china_expansion
+		}
+        trigger_else_if = {
+        	limit = {
+	    		scope:dlc_mpo_steppe_east_buryatia_addon = yes
+	    	}
+		    completely_controls_region = dlc_mpo_steppe_east_buryatia_addon
+		}
+        trigger_else_if = {
+        	limit = {
+	    		scope:dlc_mpo_steppe_east_andong_addon = yes
+	    	}
+		    completely_controls_region = dlc_mpo_steppe_east_andong_addon
 		}
         trigger_else_if = {
         	limit = {
