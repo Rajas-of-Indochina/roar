@@ -1,57 +1,93 @@
 # called from a faith scope
 faith_is_pro_roman_trigger = {
-	OR = {
-		# The Roman Church
-		this = faith:orthodox
-		religious_head_title = faith:orthodox.religious_head_title
-		# The OTHER Roman Church
-		this = faith:catholic
-		religious_head_title = faith:catholic.religious_head_title
-		# the Iconoclasts
-		this = faith:iconoclast
-		religious_head_title = faith:iconoclast.religious_head_title
-		# Hellenic Paganism
-		religion_tag = hellenism_religion
-		# also include a check for faiths marked pro-Roman by flag
-		has_variable = var:pro_roman
+	trigger_if = {
+		limit = {
+			OR = {
+				# var:caucasus_alignment ?= flag:pro_roman
+				var:caucasus_alignment ?= flag:pro_perso_arabic
+				var:caucasus_alignment ?= flag:autonomist
+			}
+		}
+		always = no
+	}
+	trigger_else = {
+		OR = {
+			# The Roman Church
+			this = faith:orthodox
+			religious_head_title = faith:orthodox.religious_head_title
+			# The OTHER Roman Church
+			this = faith:catholic
+			religious_head_title = faith:catholic.religious_head_title
+			# the Iconoclasts
+			this = faith:iconoclast
+			religious_head_title = faith:iconoclast.religious_head_title
+			# Hellenic Paganism
+			religion_tag = hellenism_religion
+			# also include a check for faiths marked pro-Roman by flag
+			var:caucasus_alignment ?= flag:pro_roman
+		}
 	}
 }
 
 faith_is_pro_perso_arabic_trigger = {
-	OR = {
-		# Zoroastrians (with exceptions)
-		religion = religion:zoroastrianism_religion
-		NOT = {
+	trigger_if = {
+		limit = {
+			OR = {
+				var:caucasus_alignment ?= flag:pro_roman
+				# var:caucasus_alignment ?= flag:pro_perso_arabic
+				var:caucasus_alignment ?= flag:autonomist
+			}
+		}
+		always = no
+	}
+	trigger_else = {
+		OR = {
+			# Zoroastrians (with exceptions)
+			religion = religion:zoroastrianism_religion
+			NOT = {
+				# Certain Zoroastrian sects
+				this = faith:barhailism
+				this = faith:urartuism
+				this = faith:mazdakism
+				this = faith:khurramism
+			}
+			# Nestorians - this will be handled by flag
+			# religious_head_title = faith:nestorian.religious_head_title
+			# Muslims
+			religion = religion:islam_religion
+			# explicitly marked pro-perso-arabic faiths
+			var:caucasus_alignment ?= flag:pro_perso_arabic
+		}
+	}
+}
+
+faith_is_autonomist_trigger = {
+	trigger_if = {
+		limit = {
+			OR = {
+				var:caucasus_alignment ?= flag:pro_roman
+				var:caucasus_alignment ?= flag:pro_perso_arabic
+				# var:caucasus_alignment ?= flag:autonomist
+			}
+		}
+		always = no
+	}
+	trigger_else = {
+		OR = {
+			# Armenian Apostolic and Tondrakian
+			this = faith:armenian_apostolic
+			this = faith:tondrakian
 			# Certain Zoroastrian sects
 			this = faith:barhailism
 			this = faith:urartuism
 			this = faith:mazdakism
 			this = faith:khurramism
+			# The Georgian Church - this will be done via variable flags and a decision later
+			# this = faith:georgian_orthodox
+			# religious_head_title = faith:georgian_orthodox.religious_head_title
+			# variable flag
+			var:caucasus_alignment ?= flag:autonomist
 		}
-		# Nestorians
-		religious_head_title = faith:nestorian.religious_head_title
-		# Muslims
-		religion = religion:islam_religion
-		# explicitly marked pro-perso-arabic faiths
-		has_variable = var:pro_perso_arabic
-	}
-}
-
-faith_is_autonomist_trigger = {
-	OR = {
-		# Armenian Apostolic and Tondrakian
-		this = faith:armenian_apostolic
-		this = faith:tondrakian
-		# Certain Zoroastrian sects
-		this = faith:barhailism
-		this = faith:urartuism
-		this = faith:mazdakism
-		this = faith:khurramism
-		# The Georgian Church
-		this = faith:georgian_orthodox
-		religious_head_title = faith:georgian_orthodox.religious_head_title
-		# variable flag
-		has_variable = var:autonomist
 	}
 }
 
@@ -63,39 +99,73 @@ faith_is_interloper_trigger = {
 
 # called from a culture scope
 culture_is_pro_roman_trigger = {
-	OR = {
-		this = culture:greek
-		this = culture:roman
-		this = culture:cappadocian
-		# This is where Europeans get dumped for lack of a better place
-		# Might add a separate group for Crusaders or treat them as Interlopers by default?
-		has_cultural_parameter = heritage_family_european
-		has_variable = var:pro_roman
+	trigger_if = {
+		limit = {
+			OR = {
+				# var:caucasus_alignment ?= flag:pro_roman
+				var:caucasus_alignment ?= flag:pro_perso_arabic
+				var:caucasus_alignment ?= flag:autonomist
+			}
+		}
+		always = no
+	}
+	trigger_else = {
+		OR = {
+			this = culture:greek
+			this = culture:roman
+			this = culture:cappadocian
+			# This is where Europeans get dumped for lack of a better place
+			# Might add a separate group for Crusaders or treat them as Interlopers by default?
+			has_cultural_parameter = heritage_family_european
+			var:caucasus_alignment ?= flag:pro_roman
+		}
 	}
 }
 
 culture_is_pro_perso_arabic_trigger = {
-	OR = {
-		# Persians and Arabs obvs
-		has_cultural_pillar = heritage_iranian
-		has_cultural_pillar = language_iranian
-		has_cultural_pillar = heritage_arabic
-		# I'm putting the Turks here for lack of a better place
-		# might also have them treated as Interlopers too perhaps?
-		has_cultural_pillar = language_turkic
-		has_cultural_pillar = heritage_on_oq
-		has_variable = var:pro_perso_arabic
+	trigger_if = {
+		limit = {
+			OR = {
+				var:caucasus_alignment ?= flag:pro_roman
+				# var:caucasus_alignment ?= flag:pro_perso_arabic
+				var:caucasus_alignment ?= flag:autonomist
+			}
+		}
+		always = no
+	}
+	trigger_else = {
+		OR = {
+			# Persians and Arabs obvs
+			has_cultural_pillar = heritage_iranian
+			has_cultural_pillar = language_iranian
+			has_cultural_pillar = heritage_arabic
+			# I'm putting the Turks here for lack of a better place
+			# might also have them treated as Interlopers too perhaps?
+			has_cultural_pillar = language_turkic
+			has_cultural_pillar = heritage_on_oq
+			var:caucasus_alignment ?= flag:pro_perso_arabic
+		}
 	}
 }
 
 culture_is_autonomist_trigger = {
-	OR = {
-		this = culture_armenian
-		this = culture:udi
-		has_cultural_pillar = heritage_ciscaucasian
-		has_cultural_pillar = heritage_caucasian
-		has_cultural_pillar = heritage_aghvank
-		has_variable = var:autonomist
+	trigger_if = {
+		limit = {
+			OR = {
+				var:caucasus_alignment ?= flag:pro_roman
+				var:caucasus_alignment ?= flag:pro_perso_arabic
+				# var:caucasus_alignment ?= flag:autonomist
+			}
+		}
+		always = no
+	}
+	trigger_else = {
+		OR = {
+			has_cultural_pillar = heritage_ciscaucasian
+			has_cultural_pillar = heritage_caucasian
+			has_cultural_pillar = heritage_aghvank
+			var:caucasus_alignment ?= flag:autonomist
+		}
 	}
 }
 
