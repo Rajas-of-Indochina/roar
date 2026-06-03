@@ -28,61 +28,14 @@ sea_gov_event.1000 = {
 				years = 5
 			}
 
-	    	# Remove title succession law
-	    	primary_title = {
-	    		remove_title_law = anarchist_elective_succession_law
-	    	}
-
         	# Update authority
-			if = {
-				limit = { has_realm_law = stateless_authority_0 }
-				remove_realm_law = stateless_authority_0
-			}
-			if = {
-				limit = { has_realm_law = stateless_authority_1 }
-				remove_realm_law = stateless_authority_1
-			}
-			if = {
-				limit = { has_realm_law = stateless_authority_2 }
-				remove_realm_law = stateless_authority_2
-			}
-			if = {
-				limit = { has_realm_law = stateless_authority_3 }
-				remove_realm_law = stateless_authority_3
-			}
-			if = {
-				limit = {
-					NOT = { has_realm_law = tribal_authority_0 }
-				}
-				add_realm_law_skip_effects = tribal_authority_0
-			}
+			add_realm_law_skip_effects = tribal_authority_0
 
 			# Convert vassals
 			every_vassal_or_below = {
 				limit = { has_government = anarchist_government }
 				change_government = tribal_government
-				if = {
-					limit = { has_realm_law = stateless_authority_0 }
-					remove_realm_law = stateless_authority_0
-				}
-				if = {
-					limit = { has_realm_law = stateless_authority_1 }
-					remove_realm_law = stateless_authority_1
-				}
-				if = {
-					limit = { has_realm_law = stateless_authority_2 }
-					remove_realm_law = stateless_authority_2
-				}
-				if = {
-					limit = { has_realm_law = stateless_authority_3 }
-					remove_realm_law = stateless_authority_3
-				}
-				if = {
-					limit = {
-						NOT = { has_realm_law = tribal_authority_0 }
-					}
-					add_realm_law_skip_effects = tribal_authority_0
-				}
+				add_realm_law_skip_effects = tribal_authority_0
 			}
 		}
 	}

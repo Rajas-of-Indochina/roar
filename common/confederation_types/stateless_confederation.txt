@@ -4,7 +4,7 @@ stateless_confederation = {
 	# Scope:
 	#  root - The confederation
 	#  bloc - The bloc being evaluated
-	# cohesion_base_change_monthly = stateless_cohesion_monthly_change
+	cohesion_base_change_monthly = stateless_cohesion_monthly_change
 
 	## At what point do cohesion growth start slowing down?
 	#
@@ -28,11 +28,26 @@ stateless_confederation = {
 	# A high tax (close to 1) gives a sharp slope of d returns, while a low value gives a slow turn down.
 	# None of them will however make the value go back under the soft cap (except for values >1.0).
 	#
-	# cohesion_soft_cap = stateless_cohesion_soft_cap
+	cohesion_soft_cap = tgp_shared_bloc_cohesion_soft_cap_value
+
 	cohesion_level = {
 		cohesion_threshold = 90
 		parameters = {
-			leader_can_tribalize = yes
+			confederation_can_tribalize = yes
+		}
+	}
+
+	cohesion_level = {
+		cohesion_threshold = 30
+		parameters = {
+			confederates_can_hold_multiple_counties = yes
+		}
+	}
+
+	cohesion_level = {
+		cohesion_threshold = 30
+		parameters = {
+			confederates_can_barter_favors = yes
 		}
 	}
 
@@ -43,10 +58,11 @@ stateless_confederation = {
 	#
 	# Scope:
 	#  root - The confederation
+	
 	is_valid_confederation = {
 		cohesion > 0
 	}
-	# on_confederation_destroyed = { on_stateless_confederation_desroyed_yes }
+	# on_confederation_destroyed = { on_stateless_confederation_destroyed = yes }
 
 	## Member character
 	#

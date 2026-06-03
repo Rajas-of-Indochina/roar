@@ -1,0 +1,57 @@
+stateless_cohesion_monthly_change = {
+	value = 0
+	# Bigger Confederations take longer to gain cohesion
+	add = {
+		value = {
+			every_confederation_member = { add = -0.1 }
+			max = 0
+			desc = "STATELESS_CONFEDERATION_COHESION_FROM_SIZE"
+		}
+	}
+	# Also Stateless Confederations don't like multi-county realms
+	add = {
+		every_confederation_member = {
+			add = {
+				value = realm_size
+				subtract = 1
+				multiply = -0.1
+			}
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_REALM_SIZES"
+	}
+	# Confederations where the representatives build up a lot of influence are more cohesive
+	add = {
+		every_confederation_member = {
+			add = {
+				value = influence_level
+				multiply = 0.1
+			}
+		}
+		min = 0
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_AVERAGE_INFLUENCE_LEVEL"
+	}
+	# And the Popular Opinion in each representative's county also affects cohesion
+	add = {
+		every_confederation_member = {
+			every_realm_county = {
+				add = {
+					value = county_opinion
+					multipy = 0.01
+				}
+			}
+		}
+		max = 1
+		min = -1
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COUNTY_OPINION"
+	}
+	# and owing favors within the confederation also improves cohesion
+	add = {
+		every_confederation_member = {
+			every_hooked_character = {
+				limit = { is_member_of_confederation = ROOT }
+			}
+			add = 0.1
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_HOOKS"
+	}
+}

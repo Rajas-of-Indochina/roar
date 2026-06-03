@@ -49,6 +49,11 @@ sea_stateless_title_handler = {
 			limit = {
 				tier = tier_county
 				NOT = { this = ROOT.capital_county }
+				# ...okay fine, if your Confederation has enough cohesion.
+				NAND = {
+					is_member_of_confederation = yes
+					confederation ?= { has_cohesion_level_parameter = confederates_can_hold_multiple_counties }
+				}
 			}
 			save_scope_as = title
 			create_character = {
