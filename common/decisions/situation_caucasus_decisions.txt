@@ -1,408 +1,4 @@
-﻿unify_armenian_principalities_decision = {
-	# Decision - Unify Armenian Principalities
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
-	}
-	decision_group_type = major
-	desc = unify_armenian_principalities_decision_desc
-	ai_check_interval_by_tier = {
-		barony = 0
-		county = 0
-		duchy = 60
-		kingdom = 60
-		empire = 0
-		hegemony = 0
-	}
-	is_shown = {
-		is_landed = yes
-		AND = {
-			capital_county.title_province = {
-				geographical_region = situation_caucasus_region
-			}
-			OR = {
-				culture = {
-					this = culture:armenian
-				}
-				culture = {
-					any_parent_culture_or_above = {
-						this = culture:armenian
-					}
-				}
-			}
-		}
-		title:k_armenian_principality = {
-			is_titular = yes
-		}
-	}
-	is_valid = {
-		is_independent_ruler = yes
-		OR = {
-			culture = {
-				this = culture:armenian
-			}
-			culture = {
-				any_parent_culture_or_above = {
-					this = culture:armenian
-				}
-			}
-		}
-		OR = {
-			has_title = title:k_vaspurakan
-			completely_controls = title:k_vaspurakan
-		}
-		OR = {
-			has_title = title:k_ayrarat
-			completely_controls = title:k_ayrarat
-		}
-		trigger_if = {
-			limit = {
-				exists = title:k_armenian_principality.holder
-			}
-			has_title = title:k_armenian_principality
-		}
-		OR = {
-			highest_held_title_tier <= tier_duchy
-			has_primary_title = title:k_vaspurakan
-			has_primary_title = title:k_armenian_principality
-			has_primary_title = title:k_ayrarat
-			has_primary_title = title:k_syunik
-		}
-		trigger_if = {
-			limit = {
-				has_legitimacy = yes
-			}
-			legitimacy_level >= 4
-		}
-		trigger_else = {
-			prestige_level >= 4
-		}
-	}
-	effect = {
-		show_as_tooltip = {
-			unify_armenian_principalities_decision_effect = yes
-		}
-		hidden_effect = {
-			save_scope_as = founder
-			trigger_event = {
-				id = caucasianroa.016
-			}
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
-
-form_georgia_decision = {
-	# Decision - Unite Sakartvelo
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
-	}
-	decision_group_type = major
-	desc = form_georgia_decision_desc
-	ai_check_interval_by_tier = {
-		barony = 0
-		county = 0
-		duchy = 60
-		kingdom = 60
-		empire = 0
-		hegemony = 0
-	}
-	is_shown = {
-		OR = {
-			capital_county.title_province = {
-				geographical_region = situation_caucasus_region
-			}
-			culture = {
-				AND = {
-					has_cultural_pillar = heritage_caucasian
-					any_parent_culture_or_above = {
-						this = culture:protokartvel
-					}
-				}
-			}
-			culture = {
-				OR = {
-					any_parent_culture_or_above = {
-						this = culture:abkhaz
-					}
-					this = culture:abkhaz
-				}
-				has_cultural_pillar = heritage_ciscaucasian
-			}
-		}
-		title:k_georgia = {
-			is_titular = yes
-		}
-	}
-	is_valid = {
-		# is_ai = no
-		is_independent_ruler = yes
-		OR = {
-			culture = {
-				has_cultural_pillar = heritage_caucasian
-			}
-			custom_tooltip = {
-				text = "[culture|E] is Abkhaz or descended from Abkhaz and has Ciscaucasian heritage"
-				culture = {
-					OR = {
-						any_parent_culture_or_above = {
-							this = culture:abkhaz
-						}
-						this = culture:abkhaz
-					}
-					has_cultural_pillar = heritage_ciscaucasian
-				}
-			}
-		}
-		calc_true_if = {
-			amount >= 2
-			OR = {
-				has_title = title:k_abkhazia
-				completely_controls = title:k_abkhazia
-			}
-			OR = {
-				has_title = title:k_iberia
-				completely_controls = title:k_iberia
-			}
-			OR = {
-				has_title = title:k_kakheti
-				completely_controls = title:k_kakheti
-			}
-		}
-		OR = {
-			highest_held_title_tier <= tier_duchy
-			has_primary_title = title:k_abkhazia
-			has_primary_title = title:k_iberia
-			has_primary_title = title:k_kakheti
-		}
-		legitimacy_level >= 4
-	}
-	cost = {
-		gold = 300
-		prestige = 200
-	}
-	effect = {
-		show_as_tooltip = {
-			form_georgia_decision_effect = yes
-		}
-		give_nickname = ROA_nick_georgian_the_unifier
-		save_scope_as = founder
-		hidden_effect = {
-			trigger_event = {
-				id = caucasianroa.014
-			}
-			every_player = {
-				limit = {
-					NOT = {
-						this = scope:founder
-					}
-					top_liege = {
-						OR = {
-							this = scope:founder
-							any_neighboring_and_across_water_top_liege_realm_owner = {
-								this = scope:founder
-							}
-						}
-					}
-				}
-				trigger_event = {
-					id = caucasianroa.015
-				}
-			}
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
-
-form_aluank_decision = {
-	# Decision - Esablish an Aghvan Kingdom
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
-	}
-	decision_group_type = major
-	desc = form_aluank_decision_desc
-
-	ai_check_interval_by_tier = {
-		barony = 0
-		county = 0
-		duchy = 120
-		kingdom = 60
-		empire = 0
-		hegemony = 0
-	}
-	is_shown = {
-		capital_county = {
-			title_province = {
-				geographical_region = situation_caucasus_region
-			}
-		}
-		title:k_aluank = {
-			is_titular = yes
-		}
-		highest_held_title_tier <= tier_duchy
-	}
-	is_valid = {
-		is_independent_ruler = yes
-		capital_county = {
-			title_province = {
-				geographical_region = custom_aluank
-			}
-		}
-		has_title = title:d_arran
-		completely_controls_region = custom_aluank
-		culture = {
-			OR = {
-				has_cultural_pillar = heritage_aghvank
-				this = culture:armenian
-				any_parent_culture = {
-					this = culture:armenian
-				}
-			}
-		}
-		trigger_if = {
-			limit = {
-				has_legitimacy = yes
-			}
-			legitimacy_level >= 4
-		}
-		trigger_else = {
-			prestige_level >= 4
-		}
-	}
-	effect = {
-		show_as_tooltip = {
-			form_aluank_decision_effect = yes
-		}
-		hidden_effect = {
-			save_scope_as = founder
-			trigger_event = caucasianroa.022
-		}
-	}
-	cost = {
-		gold = {
-			value = 0
-			if = {
-				limit = {
-					has_treasury = no
-				}
-				add = massive_gold_value
-			}
-		}
-		treasury = {
-			value = 0
-			if = {
-				limit = {
-					has_treasury = yes
-				}
-				add = massive_gold_value
-			}
-		}
-		prestige = {
-			value = medium_prestige_value
-		}
-	}
-}
-
-restore_ani_cathedral_decision = {
-	# Decision - Restore Ani Cathedral
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
-	}
-	decision_group_type = major
-	desc = restore_ani_cathedral_decision_desc
-
-	ai_check_interval_by_tier = {
-		barony = 0
-		county = 0
-		duchy = 30
-		kingdom = 120
-		empire = 120
-		hegemony = 120
-	}
-
-	is_shown = {
-		NOT = {
-			religion = religion:islam_religion
-		}
-		OR = {
-			culture = {
-				this = culture:armenian
-			}
-			culture = {
-				OR = {
-					any_parent_culture_or_above = {
-						culture = {
-							this = culture:armenian
-						}
-					}
-					has_cultural_pillar = language_armenian
-				}
-			}
-			religion = religion:christianity_religion
-		}
-		capital_county.title_province = {
-			OR = {
-				geographical_region = situation_caucasus_region
-				geographical_region = world_asia_minor
-				# geographical_region = world_north_caucasus
-			}
-		}
-		title:b_ani.title_province = {
-			has_building = ani_mosque
-		}
-	}
-	is_valid = {
-		AND = {
-			is_landed = yes
-			has_title = title:c_ani
-			religion = religion:christianity_religion
-		}
-	}
-	effect = {
-		custom_tooltip = restore_ani_cathedral_effect_tooltip
-		restore_ani_cathedral_effect = yes
-	}
-	cost = {
-		gold = {
-			value = 0
-			if = {
-				limit = {
-					has_treasury = no
-				}
-				add = minor_gold_value
-			}
-		}
-		treasury = {
-			value = 0
-			if = {
-				limit = {
-					has_treasury = yes
-				}
-				add = minor_gold_value
-			}
-		}
-		prestige = medium_prestige_value
-	}
-	ai_potential = {
-		religion = religion:christianity_religion
-		is_adult = yes
-	}
-	ai_will_do = {
-		base = 80
-		modifier = {
-			add = -20
-			has_trait = cynical
-		}
-		modifier = {
-			add = 20
-			has_trait = zealous
-		}
-	}
-}
-
+﻿### SITUATION MECHANICS DECISIONS
 situation_caucasus_choose_alignment_decision = {
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -421,13 +17,13 @@ situation_caucasus_choose_alignment_decision = {
 	cooldown = { years = 5 }
 
 	is_shown = {
-		# any_character_situation = {
-		# 	situation_type = situation_caucasus
-		# }
-		# OR = {
-		# 	is_landed = yes
-		# 	is_landless_adventurer = yes
-		# }
+		any_character_situation = {
+			situation_type = situation_caucasus
+		}
+		OR = {
+			is_landed = yes
+			is_landless_adventurer = yes
+		}
 	}
 
 	widget = {
@@ -561,6 +157,766 @@ situation_caucasus_choose_alignment_decision = {
 				set_caucasus_alignment = { FLAG = autonomist }
 			}
 		}
-		add_prestige = 1
+	}
+}
+
+situation_caucasus_align_culture_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 30
+		empire = 12
+		hegemony = 12
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+
+	is_shown = {
+		any_character_situation = {
+			situation_type = situation_caucasus
+		}
+		NOT = {
+			check_caucasus_alignment_trigger = { ALIGN = interloper }
+		}
+		is_landed = yes
+	}
+
+	is_valid = {
+		# use a global cooldown to prevent tug-of-wars
+		custom_tooltip = {
+			text = sway_culture_global_cooldown_tt
+			NOT = {
+				culture = { has_variable = sway_culture_cooldown }
+			}
+		}
+		culture = {
+			culture_head = ROOT
+		}
+
+		trigger_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
+			culture = { culture_is_pro_roman_trigger = no }
+		}
+		trigger_else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
+			culture = { culture_is_pro_perso_arabic_trigger = no }
+		}
+		trigger_else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
+			culture = { culture_is_pro_roman_trigger = no }
+		}
+	}
+
+	cost = {
+		piety = massive_piety_value
+	}
+
+	effect = {
+		if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
+			align_culture_culture_effect = {
+				TARGET = ROOT.culture
+				FLAG = pro_roman
+			}
+		}
+		else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
+			align_culture_culture_effect = {
+				TARGET = ROOT.culture
+				FLAG = pro_perso_arabic
+			}
+		}
+		else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
+			align_culture_culture_effect = {
+				TARGET = ROOT.culture
+				FLAG = autonomist
+			}
+		}
+	}
+}
+
+situation_caucasus_align_faith_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 30
+		empire = 12
+		hegemony = 12
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+
+	is_shown = {
+		any_character_situation = {
+			situation_type = situation_caucasus
+		}
+		NOT = {
+			check_caucasus_alignment_trigger = { ALIGN = interloper }
+		}
+		is_landed = yes
+	}
+
+	is_valid = {
+		# use a global cooldown to prevent tug-of-wars
+		custom_tooltip = {
+			text = sway_faith_global_cooldown_tt
+			NOT = {
+				faith = { has_variable = sway_faith_cooldown }
+			}
+		}
+		trigger_if = {
+			limit = {
+				exists = faith.religious_head
+			}
+			OR = {
+				faith = { religious_head = ROOT }
+				has_strong_usable_hook = faith.religious_head
+			}
+			piety_level >= very_high_piety_level
+		}
+		trigger_else = {
+			piety_level >= max_piety_level
+		}
+
+		trigger_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
+			faith = { faith_is_pro_roman_trigger = no }
+		}
+		trigger_else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
+			faith = { faith_is_pro_perso_arabic_trigger = no }
+		}
+		trigger_else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
+			faith = { faith_is_pro_roman_trigger = no }
+		}
+	}
+
+	cost = {
+		piety = massive_piety_value
+	}
+
+	effect = {
+		if = {
+			limit = {
+				exists = faith.religious_head
+				has_strong_usable_hook = faith.religious_head
+			}
+			use_hook = faith.religious_head
+		}
+		if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
+			align_culture_faith_effect = {
+				TARGET = ROOT.faith
+				FLAG = pro_roman
+			}
+		}
+		else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
+			align_culture_faith_effect = {
+				TARGET = ROOT.faith
+				FLAG = pro_perso_arabic
+			}
+		}
+		else_if = {
+			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
+			align_culture_faith_effect = {
+				TARGET = ROOT.faith
+				FLAG = autonomist
+			}
+		}
+	}
+}
+
+### FORMABLES
+
+unify_armenian_principalities_decision = {
+	# Decision - Unify Armenian Principalities
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = major
+	desc = unify_armenian_principalities_decision_desc
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+	is_shown = {
+		is_landed = yes
+		AND = {
+			capital_county.title_province = {
+				geographical_region = situation_caucasus_region
+			}
+			OR = {
+				culture = {
+					this = culture:armenian
+				}
+				culture = {
+					any_parent_culture_or_above = {
+						this = culture:armenian
+					}
+				}
+			}
+		}
+		title:k_armenian_principality = {
+			is_titular = yes
+		}
+	}
+	is_valid = {
+		is_independent_ruler = yes
+		OR = {
+			culture = {
+				this = culture:armenian
+			}
+			culture = {
+				any_parent_culture_or_above = {
+					this = culture:armenian
+				}
+			}
+		}
+		OR = {
+			has_title = title:k_vaspurakan
+			completely_controls = title:k_vaspurakan
+		}
+		OR = {
+			has_title = title:k_ayrarat
+			completely_controls = title:k_ayrarat
+		}
+		trigger_if = {
+			limit = {
+				exists = title:k_armenian_principality.holder
+			}
+			has_title = title:k_armenian_principality
+		}
+		OR = {
+			highest_held_title_tier <= tier_duchy
+			has_primary_title = title:k_vaspurakan
+			has_primary_title = title:k_armenian_principality
+			has_primary_title = title:k_ayrarat
+			has_primary_title = title:k_syunik
+		}
+		trigger_if = {
+			limit = {
+				has_legitimacy = yes
+			}
+			legitimacy_level >= 4
+		}
+		trigger_else_if = {
+			limit = { government_has_flag = government_has_influence }
+			influence_level >= 4
+		}
+		trigger_else = {
+			prestige_level >= 4
+		}
+	}
+	effect = {
+		show_as_tooltip = {
+			unify_armenian_principalities_decision_effect = yes
+		}
+		hidden_effect = {
+			save_scope_as = founder
+			trigger_event = {
+				id = caucasianroa.016
+			}
+		}
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+
+form_georgia_decision = {
+	# Decision - Unite Sakartvelo
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = major
+	desc = form_georgia_decision_desc
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+	is_shown = {
+		OR = {
+			capital_county.title_province = {
+				geographical_region = situation_caucasus_region
+			}
+			culture = {
+				AND = {
+					has_cultural_pillar = heritage_caucasian
+					any_parent_culture_or_above = {
+						this = culture:protokartvel
+					}
+				}
+			}
+			culture = {
+				OR = {
+					any_parent_culture_or_above = {
+						this = culture:abkhaz
+					}
+					this = culture:abkhaz
+				}
+				has_cultural_pillar = heritage_ciscaucasian
+			}
+		}
+		title:k_georgia = {
+			is_titular = yes
+		}
+	}
+	is_valid = {
+		# is_ai = no
+		is_independent_ruler = yes
+		OR = {
+			culture = {
+				has_cultural_pillar = heritage_caucasian
+			}
+			custom_tooltip = {
+				text = "[culture|E] is Abkhaz or descended from Abkhaz and has Ciscaucasian heritage"
+				culture = {
+					OR = {
+						any_parent_culture_or_above = {
+							this = culture:abkhaz
+						}
+						this = culture:abkhaz
+					}
+					has_cultural_pillar = heritage_ciscaucasian
+				}
+			}
+		}
+		calc_true_if = {
+			amount >= 2
+			OR = {
+				has_title = title:k_abkhazia
+				completely_controls = title:k_abkhazia
+			}
+			OR = {
+				has_title = title:k_iberia
+				completely_controls = title:k_iberia
+			}
+			OR = {
+				has_title = title:k_kakheti
+				completely_controls = title:k_kakheti
+			}
+		}
+		OR = {
+			highest_held_title_tier <= tier_duchy
+			has_primary_title = title:k_abkhazia
+			has_primary_title = title:k_iberia
+			has_primary_title = title:k_kakheti
+		}
+		trigger_if = {
+			limit = {
+				has_legitimacy = yes
+			}
+			legitimacy_level >= 4
+		}
+		trigger_else_if = {
+			limit = { government_has_flag = government_has_influence }
+			influence_level >= 4
+		}
+		trigger_else = {
+			prestige_level >= 4
+		}
+	}
+	cost = {
+		gold = 300
+		prestige = 200
+	}
+	effect = {
+		show_as_tooltip = {
+			form_georgia_decision_effect = yes
+		}
+		give_nickname = ROA_nick_georgian_the_unifier
+		save_scope_as = founder
+		hidden_effect = {
+			trigger_event = {
+				id = caucasianroa.014
+			}
+			every_player = {
+				limit = {
+					NOT = {
+						this = scope:founder
+					}
+					top_liege = {
+						OR = {
+							this = scope:founder
+							any_neighboring_and_across_water_top_liege_realm_owner = {
+								this = scope:founder
+							}
+						}
+					}
+				}
+				trigger_event = {
+					id = caucasianroa.015
+				}
+			}
+		}
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+
+form_aluank_decision = {
+	# Decision - Esablish an Aghvan Kingdom
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	}
+	decision_group_type = major
+	desc = form_aluank_decision_desc
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+	is_shown = {
+		capital_county = {
+			title_province = {
+				geographical_region = situation_caucasus_region
+			}
+		}
+		title:k_aluank = {
+			is_titular = yes
+		}
+		highest_held_title_tier <= tier_duchy
+	}
+	is_valid = {
+		is_independent_ruler = yes
+		capital_county = {
+			title_province = {
+				geographical_region = custom_aluank
+			}
+		}
+		has_title = title:d_arran
+		completely_controls_region = custom_aluank
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_aghvank
+				this = culture:armenian
+				any_parent_culture = {
+					this = culture:armenian
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				has_legitimacy = yes
+			}
+			legitimacy_level >= 4
+		}
+		trigger_else_if = {
+			limit = { government_has_flag = government_has_influence }
+			influence_level >= 4
+		}
+		trigger_else = {
+			prestige_level >= 4
+		}
+	}
+	effect = {
+		show_as_tooltip = {
+			form_aluank_decision_effect = yes
+		}
+		hidden_effect = {
+			save_scope_as = founder
+			trigger_event = caucasianroa.022
+		}
+	}
+	cost = {
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = massive_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = massive_gold_value
+			}
+		}
+		prestige = {
+			value = medium_prestige_value
+		}
+	}
+}
+
+decision_form_armenian_cilicia = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+	desc = decision_form_armenian_cilicia_desc
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		OR = {
+			culture = culture:armenian
+			culture = {
+				any_parent_culture_or_above = { this = culture:armenian }
+				has_cultural_pillar = heritage_caucasian
+			}
+			capital_county = {
+				title_province = { geographical_region = custom_armenian_cilicia }
+			}
+		}
+		highest_held_title_tier <= tier_duchy
+		is_titular = title:k_armenian_cilicia
+
+	}
+
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				top_liege = { highest_held_title_tier >= tier_empire }
+				has_usable_hook = top_liege
+			}
+		}
+		OR = {
+			has_title = title:d_cilicia
+			completely_controls = title:d_cilicia
+		}
+		OR = {
+			has_title = title:d_edessa
+			completely_controls = title:d_edessa
+		}
+		OR = {
+			legitimacy_level >= 3
+			dynasty.dynasty_prestige_level >= 5
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_adult = yes
+		is_available = yes
+	}
+
+	cost = {
+		gold = {
+			value = major_gold_value
+		}
+		prestige = {
+			value = medium_prestige_value
+		}
+	}
+
+	effect = {
+		# add_piety = 1
+		show_as_tooltip = {
+			decision_form_armenian_cilicia_effect = yes	
+		}
+		save_scope_as = founder
+		trigger_event = caucasianroa.019
+	}
+	
+}
+
+decision_form_cappadocia = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+	desc = decision_form_cappadocia_desc
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+	is_shown = {
+		OR = {
+			culture = culture:cappadocian
+			culture = {
+				any_parent_culture_or_above = { this = culture:cappadocian }
+				has_cultural_pillar = language_greek
+			}
+			capital_county = {
+				title_province = { geographical_region = world_asia_minor }
+			}
+		}
+		highest_held_title_tier <= tier_duchy
+		is_titular = title:k_cappadocia
+	}
+	is_valid = {
+		OR = {
+			is_independent_ruler = yes
+			AND = {
+				top_liege = { highest_held_title_tier >= tier_empire }
+				has_usable_hook = top_liege
+			}
+		}
+		completely_controls_region = custom_cappadocia
+		OR = {
+			culture = culture:cappadocian
+			culture = { has_cultural_pillar = language_greek }
+			culture = { has_cultural_pillar = heritage_iranian }
+		}
+		trigger_if = {
+			limit = {
+				has_legitimacy = yes
+			}
+			legitimacy_level >= 3
+		}
+		trigger_else_if = {
+			limit = { government_has_flag = government_has_influence }
+			influence_level >= 3
+		}
+		trigger_else = {
+			prestige_level >= 3
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_adult = yes
+		is_available = yes
+	}
+
+	cost = {
+		gold = {
+			value = major_gold_value
+		}
+		prestige = {
+			value = medium_prestige_value
+		}
+	}
+
+	effect = {
+		decision_form_cappadocia_effect = yes
+	}
+
+}
+
+### MISC
+
+restore_ani_cathedral_decision = {
+	# Decision - Restore Ani Cathedral
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	decision_group_type = major
+	desc = restore_ani_cathedral_decision_desc
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 30
+		kingdom = 120
+		empire = 120
+		hegemony = 120
+	}
+
+	is_shown = {
+		NOT = {
+			religion = religion:islam_religion
+		}
+		OR = {
+			culture = {
+				this = culture:armenian
+			}
+			culture = {
+				OR = {
+					any_parent_culture_or_above = {
+						culture = {
+							this = culture:armenian
+						}
+					}
+					has_cultural_pillar = language_armenian
+				}
+			}
+			religion = religion:christianity_religion
+		}
+		capital_county.title_province = {
+			OR = {
+				geographical_region = situation_caucasus_region
+				geographical_region = world_asia_minor
+				# geographical_region = world_north_caucasus
+			}
+		}
+		title:b_ani.title_province = {
+			has_building = ani_mosque
+		}
+	}
+	is_valid = {
+		AND = {
+			is_landed = yes
+			has_title = title:c_ani
+			religion = religion:christianity_religion
+		}
+	}
+	effect = {
+		custom_tooltip = restore_ani_cathedral_effect_tooltip
+		restore_ani_cathedral_effect = yes
+	}
+	cost = {
+		gold = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = no
+				}
+				add = minor_gold_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = {
+					has_treasury = yes
+				}
+				add = minor_gold_value
+			}
+		}
+		prestige = medium_prestige_value
+	}
+	ai_potential = {
+		religion = religion:christianity_religion
+		is_adult = yes
+	}
+	ai_will_do = {
+		base = 80
+		modifier = {
+			add = -20
+			has_trait = cynical
+		}
+		modifier = {
+			add = 20
+			has_trait = zealous
+		}
 	}
 }
