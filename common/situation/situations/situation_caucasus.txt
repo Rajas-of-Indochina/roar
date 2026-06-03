@@ -156,27 +156,23 @@ situation_caucasus = {
 			on_start = {}
 			on_end = {}
 			max_duration = { years = 5 }
-			max_duration_next_phase = weighted_non_takeover
+			max_duration_next_phase = highest_points
 			future_phases = {
 				situation_caucasus_disputed_control = {
 					takeover_type = points
 					takeover_points = 1000
-					weight = 1000
 				}
 				situation_caucasus_roman_control = {
 					takeover_type = points
 					takeover_points = 1000
-					weight = 0
 				}
 				situation_caucasus_perso_arabic_control = {
 					takeover_type = points
 					takeover_points = 1000
-					weight = 0
 				}
 				situation_caucasus_local_control = {
 					takeover_type = points
 					takeover_points = 1000
-					weight = 0
 				}
 			}
 		}
@@ -255,6 +251,17 @@ situation_caucasus = {
 				situation_caucasus_local_control = {
 					takeover_type = points
 					takeover_points = 1000
+				}
+			}
+		}
+		# This is just to deal with the fact that I can't just have global participant groups
+		situation_caucasus_dummy_phase = {
+			icon = "gfx/interface/icons/situations/situation_caucasus_interloper.dds"
+			max_duration = { years = 2000 }
+			max_duration_next_phase = situation_caucasus_dummy_phase
+			future_phases = {
+				situation_caucasus_dummy_phase = {
+					takeover_type = none
 				}
 			}
 		}
