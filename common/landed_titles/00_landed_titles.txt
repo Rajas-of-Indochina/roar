@@ -89874,17 +89874,7 @@ e_panyupayana = {
 	k_lusung = {	#Luzon
 		color = { 63 117 138 }
 
-		d_maynila = {
-			color = { 74 105 168 }
-
-			capital = c_maynila
-		}
-
-		d_tondo = {
-			color = { 205 150 21 }
-
-			capital = c_tondo
-		}
+		capital = c_maynila
 
 		d_tagalog = {
 			color = { 58 108 135 }
@@ -90175,67 +90165,83 @@ e_panyupayana = {
 		d_mait = {
 			color = { 64 129 134 }
 
-			c_mait_ph = {
+			capital = c_PHI_ma-i
+
+			c_PHI_ma-i = {
+				# c_mait_ph in old RoA
 				color = { 92 148 140 }
 
-				b_mait_ph = {
+				b_PHI_Ma-i = {
 					province = 16226
 
 					color = { 92 148 140 }
 				}
-				b_ilin = {
+				b_PHI_Magsaysay = {
 					province = 11040
 
 					color = { 92 148 140 }
 				}
-				b_bongabong = {
+				# b_PHI_Bongabong would be between b_PHI_Ma-i and b_PHI_Pinamalayan
+				b_PHI_Pinamalayan = {
 					province = 16556
 
 					color = { 92 148 140 }
 				}
 			}
-			c_paluan = {
-				color = { 51 112 104 }
-
-				b_lubang = {
-					province = 16858
-
-					color = { 51 112 104 }
-				}
-				b_paluan = {
-					province = 11038
-
-					color = { 51 112 104 }
-				}
-			}
-			c_mamburao = {
-				color = { 91 120 141 }
-
-				b_mamburaw = {
-					province = 16624
-
-					color = { 91 120 141 }
-				}
-				b_mangarin = {
-					province = 11039
-
-					color = { 91 120 141 }
-				}
-			}
-			c_minolo = {
+			c_PHI_minolo = {
 				color = { 51 102 174 }
 
-				b_minolo = {
+				b_PHI_Minolo = {
 					province = 16745
 
 					color = { 51 102 174 }
 				}
-				b_nauhang = {
+				b_PHI_Nauhang = {
 					province = 11037
 
 					color = { 51 102 174 }
 				}
 			}
+			c_PHI_lubang = {
+				color = { 51 112 104 }
+
+				b_PHI_Lubang = {
+					province = 16858
+
+					color = { 51 112 104 }
+				}
+			}
+			c_PHI_mamburao = {
+				color = { 91 120 141 }
+
+				b_PHI_Mamburao = {
+					province = 16624
+
+					color = { 91 120 141 }
+				}
+				b_PHI_Mangarin = {
+					province = 11039
+
+					color = { 91 120 141 }
+				}
+				b_PHI_Paluan = {
+					province = 11038
+
+					color = { 91 120 141 }
+				}
+			}
+		}
+
+		d_maynila = {
+			color = { 74 105 168 }
+
+			capital = c_maynila
+		}
+
+		d_tondo = {
+			color = { 205 150 21 }
+
+			capital = c_tondo
 		}
 	}
 

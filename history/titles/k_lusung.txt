@@ -1,12 +1,7 @@
-﻿
-d_tondo = {
-	860.1.1 = {
-		holder = tondo001 # Fictional ruler
-		government = wanua_government
-	}
-	1065.1.1 = {
-		holder = kapampangan001 # Fictional ruler
-	}
+﻿k_lusung = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
 }
 
 ## d_maynila
@@ -32,9 +27,11 @@ d_tondo = {
 			holder = tagalog_kalilayan_01_fic
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = tagalog_kalilayan_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = tagalog_kalilayan_20_fic
 		}
@@ -51,9 +48,11 @@ d_tondo = {
 			holder = tagalog_kalilayan_01_fic
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = tagalog_kalilayan_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = tagalog_kalilayan_20_fic
 		}
@@ -85,9 +84,11 @@ d_tondo = {
 			holder = tagalog_tondo_01
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = tagalog_tondo_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = tagalog_tondo_20_fic
 		}
@@ -112,6 +113,7 @@ d_tondo = {
 			holder = sambal001
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = sambal002
 		}
@@ -166,9 +168,11 @@ c_binangonan = {
 			holder = tagalog_ibalong_01_fic
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = tagalog_ibalong_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = tagalog_ibalong_20_fic
 		}
@@ -178,9 +182,11 @@ c_binangonan = {
 			holder = tagalog_ibalong_01_fic
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = tagalog_ibalong_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = tagalog_ibalong_20_fic
 		}
@@ -190,9 +196,11 @@ c_binangonan = {
 			holder = tagalog_ibalong_01_fic
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = tagalog_ibalong_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = tagalog_ibalong_20_fic
 		}
@@ -203,13 +211,17 @@ c_binangonan = {
 			holder = bisayan_masbate_01_fic
 			government = wanua_government
 		}
+		#
 		1060.1.1 = {
 			holder = bisayan_masbate_10_fic
 		}
+		#
 		1170.1.1 = {
 			holder = bisayan_masbate_20_fic
 		}
 	}
+
+
 d_mait = {
 	1060.1.1 = {
 		holder = tagalog_mai_10_fic
@@ -219,49 +231,79 @@ d_mait = {
 		holder = tagalog_mai_20_fic
 	}
 }
-	c_mait_ph = {
-		860.1.1 = {
-			change_development_level = 3
 
-			holder = tagalog_mai_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = tagalog_mai_10_fic
-		}
-		1170.1.1 = {
-			holder = tagalog_mai_20_fic
-		}
-	}
-	c_paluan = {
-		860.1.1 = {
-			holder = tagalog_mai_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = tagalog_mai_10_fic
-		}
-		1170.1.1 = {
-			holder = tagalog_mai_20_fic
-		}
-	}
-	c_mamburao = {
-		860.1.1 = {
-			holder = suku001
-			government = wanua_government
-		}
-	}
-	c_minolo = {
-		860.1.1 = {
-			change_development_level = 2
+c_PHI_ma-i = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 16 }
 
-			holder = tagalog_mai_01_fic
-			government = wanua_government
-		}
-		1060.1.1 = {
-			holder = tagalog_mai_10_fic
-		}
-		1170.1.1 = {
-			holder = tagalog_mai_20_fic
-		}
+	860.1.1 = {
+		holder = tagalog_mai_01_fic
+		government = wanua_government
 	}
+	#
+	1060.1.1 = {
+		holder = tagalog_mai_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = tagalog_mai_20_fic
+	}
+}
+
+c_PHI_minolo = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 12 }
+
+	860.1.1 = {
+		holder = tagalog_mai_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = tagalog_mai_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = tagalog_mai_20_fic
+	}
+}
+
+c_PHI_lubang = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 14 }
+
+	860.1.1 = {
+		holder = tagalog_mai_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = tagalog_mai_10_fic
+	}
+	#
+	1170.1.1 = {
+		holder = tagalog_mai_20_fic
+	}
+}
+
+c_PHI_mamburao = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	860.1.1 = {
+		holder = sea_mangyan_01_fic
+		government = wanua_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_mangyan_02_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_mangyan_03_fic
+	}
+}

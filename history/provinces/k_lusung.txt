@@ -256,62 +256,72 @@
 
 
 ## d_mait ###################################
-### c_mait_ph
-16226 = { # b_mait_ph
+### c_PHI_ma-i
+16226 = { # Ma-i AKA Mait
 	culture = suku
 	religion = talaingat_ariya
 
 	holding = tribal_holding
 
+	# History
 	1000.1.1 = {
-		culture = bisayan
-	religion = dayawism
+		culture = tagalog
+		# + Bisayan minority to represent Ratagnon people
+		# + Mangyan minority
 	}
 }
-11040 = { # b_ilin
+11040 = { # Magsaysay
 	holding = none
 }
-16556 = { # b_bongabong
+16556 = { # Pinamalayan
 	holding = none
 }
 
-### c_paluan
-16858 = { # b_lubang
+### c_PHI_minolo
+16745 = { # Minolo
 	culture = suku
 	religion = talaingat_ariya
 
 	holding = tribal_holding
 
+	# History
+	1000.1.1 = {
+		culture = tagalog
+		# + Mangyan minority
+	}
+}
+11037 = { # Nauhang
+	holding = none
+}
+
+### c_PHI_lubang
+16858 = { # Lubang
+	culture = suku
+	religion = talaingat_ariya
+
+	holding = tribal_holding
+
+	# History
 	1000.1.1 = {
 		culture = tagalog
 	}
 }
-11038 = { # b_paluan
-	holding = none
-}
 
-### c_mamburao
-16624 = { # b_mamburaw
-	culture = suku
-	religion = talaingat_ariya
-
-	holding = tribal_holding
-}
-11039 = { # b_mangarin
-	holding = none
-}
-
-### c_minolo
-16745 = { # b_minolo
+### c_PHI_mamburao
+16624 = { # Mamburao
 	culture = suku
 	religion = talaingat_ariya
 
 	holding = tribal_holding
 
+	# History
 	1000.1.1 = {
-		culture = tagalog
+		culture = mangyan
 	}
 }
-11037 = { # b_nauhang
+11039 = { # Mangarin
+	holding = none
+}
+11038 = { # Paluan
 	holding = none
 }

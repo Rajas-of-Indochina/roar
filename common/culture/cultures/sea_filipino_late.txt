@@ -257,6 +257,58 @@ kapampangan = {
 	}
 }
 
+mangyan = {
+	# generic name for the eight indigenous groups found in Mindoro each with its own tribal name, language, and customs
+	# https://en.wikipedia.org/wiki/Mangyan
+	# for now this is mainly representing Northern Mangyans
+	color = mangyan
+
+	created = 1000.1.1
+	parents = { suku }
+
+	ethos = ethos_stoic
+	heritage = heritage_filipino
+	language = language_central_luzon	# msl_note: there are multiple languages among Mangyan peopele ; Central Luzon languages chosen as they are most populous among Northern Mangyan
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_SEA_jungle_warfare 	# msl_note: generic Filipino tradition
+		tradition_storytellers 			# msl_note: oral traditions always played important role in Mangyan lives
+		tradition_poetry 				# msl_note: Mangyan people are famed for their song-poems that helped them preserve their traditions and legends throughout centuries
+		# msl_note: tradition_artisans - famed for their exceptional skill in weaving, pottery, and other crafts ; more fitting for Southern Mangyan who are rn part of 
+	}
+
+	# msl_note: mainly subsistence agriculturalists, living from variety of crops, including rice
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+	# msl_note: generic Filipino tradition to represent Barangay system
+	dlc_tradition = {
+		trait = tradition_tgp_barangay_confederations
+		requires_dlc_flag = all_under_heaven
+	}
+
+	name_list = name_list_filipino
+
+	coa_gfx = { filipino_coa_gfx austronesian_group_coa_gfx burman_group_coa_gfx }
+	building_gfx = { southeast_asian_building_gfx }
+	clothing_gfx = { tagalog_clothing_gfx malay_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { southeast_asian_unit_gfx }
+	house_coa_frame = house_frame_26
+	house_coa_mask_offset = { 0.0 0.0 }
+	house_coa_mask_scale = { 0.85 0.85 }
+
+	ethnicities = {
+		100 = asian_austronesian
+	}
+}
+
+#clothing_gfx = { austronesian_clothing_gfx }
+
 # panganisan = {
 # consider adding or as divergent culture
 # }
