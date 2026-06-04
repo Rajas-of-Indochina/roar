@@ -1,611 +1,659 @@
 ﻿
 k_dvaravati = {
-	867.1.1 = {
-		government = mandala_government
-		holder = mon_lavo_01_fic	#fictional
-		liege = 0
+	769.1.1 = { change_development_level = 6 }
+	1000.1.1 = { change_development_level = 9 }
+	1124.1.1 = { change_development_level = 11 }
+	1166.1.1 = { change_development_level = 15 }
+	1204.1.1 = { change_development_level = 20 }
+	1241.1.1 = { change_development_level = 24 }
+	1310.1.1 = { change_development_level = 30 }
+	900.1.1 = {
+		holder = lavo0002
 	}
-	1000.1.1 = {
-		holder = 0
-		government = mandala_government
-		#if = {
-		#	limit = {
-		#		exists = holder
-		#		NOT = { has_dlc_feature = tgp }
-		#	}
-		#	holder = {
-		#		change_government = feudal_government
-		#		add_realm_law_skip_effects = single_heir_succession_law
-		#	}
-		#}
+	930.1.1 = {
+		holder = lavo0003
 	}
-	1069.1.1 = {
+	960.1.1 = {
+		holder = lavo0004
+	}
+	990.1.1 = {
+		holder = lavo0005
+	}
+	1020.1.1 = {
+		holder = lavo0006
+	}
+	1050.1.1 = {
 		holder = 0
 	}
 }
 
 d_lop_buri = {
-	#867
-	867.1.1 = {
+	769.1.1 = { change_development_level = 12 }
+	1000.1.1 = { change_development_level = 18 }
+	1124.1.1 = { change_development_level = 20 }
+	1166.1.1 = { change_development_level = 24 }
+	1204.1.1 = { change_development_level = 29 }
+	1241.1.1 = { change_development_level = 33 }
+	1310.1.1 = { change_development_level = 39 }
+
+	860.1.1 = {
+		holder = lavo0001
 		government = mandala_government
-		holder = mon_lavo_01_fic	#fictional
+	}
+
+	# Fictional kings of Lavo
+
+	900.1.1 = {
+		holder = lavo0002
 		liege = k_dvaravati
 	}
-	927.1.1 = {
-		holder = mon_lavo_02	#Kampoch, possible ruler
+	930.1.1 = {
+		holder = lavo0003
 	}
-	946.1.1 = {
-		holder = 0
+	960.1.1 = {
+		holder = lavo0004
 	}
-	949.1.1 = {
-		holder = mon_lavo_03	#Vap Upendra, possible ruler
-		#liege = k_dvaravati
+	990.1.1 = {
+		holder = lavo0005
 	}
-	1000.1.1 = {
-		liege = 0
+	1020.1.1 = {
+		holder = lavo0006
 	}
-	1002.1.1 = {
-		holder = 0
+	1050.1.1 = {
+		holder = lavo0007
+		liege = e_kambujadesa
 	}
-	1030.1.1 = {
-		holder = khmer_lakshmipativarman_01
-		tributary_of = {	#"Conquered" by Suryavarman I in 1006-1050
-			suzerain = k_funan
-			contract_group = tributary_mandala
-		}
+	1080.1.1 = {
+		holder = lavo0008
 	}
 
-	#1066
-	1052.1.1 = {
-		holder = mon_lavo_04	#Chadachota
-		#tributary_of = {	#"Conquered" by Suryavarman I in 1006-1050
-		#	suzerain = k_funan
-		#	contract_group = tributary_mandala
-		#}
-	}
-	1066.1.1 = {
-		tributary_of = {
-			suzerain = k_funan
-			contract_group = tributary_mandala
-		}
-	}
-	1069.1.1 = {
-		holder = 0
-	}
-	1082.1.1 = {
-		holder = mon_lavo_05	#Phra Narai, possible ruler
-	}
 	1087.1.1 = {
-		holder = 0
-	}
-	1106.1.1 = {
-		holder = mon_lavo_06	#Kraisornrat, possible ruler
-	}
-	1112.1.1 = {
-		holder = mon_lavo_07	#Sri Thammasokkarat, possible ruler
-	}
-	1148.1.1 = {
-		holder = mon_lavo_08_fic	#fictional
+		effect = {
+			set_capital_county = title:c_ayutthaya
+		}
 	}
 
-	#1178
-	1170.12.17 = {
-		holder = mon_lavo_09_fic	#fictional
+	1110.1.1 = {
+		holder = lavo0009
 	}
-	1177.1.1 = {
-		liege = 0
-		tributary_of = {
-			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-			contract_group = tributary_mandala
-		}
+	1140.1.1 = {
+		holder = lavo0010
+	}
+	1170.1.1 = {
+		holder = lavo0011
+	}
+	1200.1.1 = {
+		holder = lavo0012
+	}
+	1230.1.1 = {
+		holder = lavo0013
+	}
+	1260.1.1 = {
+		holder = lavo0014
 	}
 }
 	c_lop_buri = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 12 }
-		1178.1.1 = { change_development_level = 21 }
-
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_lavo_01_fic	#fictional
-			liege = d_lop_buri
+		860.1.1 = {
+			holder = lavo0001
 		}
-		927.1.1 = {
-			holder = mon_lavo_02	#Kampoch, possible ruler
+		900.1.1 = {
+			holder = lavo0002
 		}
-		949.1.1 = {
-			holder = mon_lavo_03	#Vap Upendra, possible ruler
+		930.1.1 = {
+			holder = lavo0003
 		}
-		1030.1.1 = {
-			holder = khmer_lakshmipativarman_01
+		960.1.1 = {
+			holder = lavo0004
 		}
-
-		#1066
-		1052.1.1 = {
-			holder = mon_lavo_04	#Chadachota
+		990.1.1 = {
+			holder = lavo0005
 		}
-		1082.1.1 = {
-			holder = mon_lavo_05	#Phra Narai, possible ruler
+		1020.1.1 = {
+			holder = lavo0006
 		}
-		1106.1.1 = {
-			holder = mon_lavo_06	#Kraisornrat, possible ruler
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1112.1.1 = {
-			holder = mon_lavo_07	#Sri Thammasokkarat, possible ruler
+		1080.1.1 = {
+			holder = lavo0008
 		}
-		1148.1.1 = {
-			holder = mon_lavo_08_fic	#fictional
+		1110.1.1 = {
+			holder = lavo0009
 		}
-
-		#1178
-		1170.12.17 = {
-			holder = mon_lavo_09_fic	#fictional
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+		1260.1.1 = {
+			holder = lavo0014
 		}
 	}
 	c_si_thep = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 12 }
-		1178.1.1 = { change_development_level = 21 }
-
 		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_lavo_01_fic	#fictional
+		860.1.1 = {
+			holder = lavo010
+		}
+
+		#936
+		936.1.1 = {
+			holder = lavo012
 			liege = d_lop_buri
 		}
-		927.1.1 = {
-			holder = mon_lavo_02	#Kampoch, possible ruler
-		}
-		949.1.1 = {
-			holder = mon_lavo_03	#Vap Upendra, possible ruler
-		}
-		1030.1.1 = {
-			holder = khmer_lakshmipativarman_01
-		}
 
-		#1066
-		1052.1.1 = {
-			holder = mon_lavo_04	#Chadachota
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1082.1.1 = {
-			holder = mon_lavo_05	#Phra Narai, possible ruler
+		1080.1.1 = {
+			holder = lavo0008
 		}
-		1106.1.1 = {
-			holder = mon_lavo_06	#Kraisornrat, possible ruler
+		1110.1.1 = {
+			holder = lavo0009
 		}
-		1112.1.1 = {
-			holder = mon_lavo_07	#Sri Thammasokkarat, possible ruler
+		1140.1.1 = {
+			holder = lavo0010
 		}
-		1148.1.1 = {
-			holder = mon_lavo_08_fic	#fictional
+		1170.1.1 = {
+			holder = lavo0011
 		}
-
-		#1178
-		1170.12.17 = {
-			holder = mon_lavo_09_fic	#fictional
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+		1260.1.1 = {
+			holder = lavo0014
 		}
 	}
 	c_ayutthaya = {
-		867.1.1 = { change_development_level = 9 }
-		1066.1.1 = { change_development_level = 15 }
-		1178.1.1 = { change_development_level = 27 }
+		860.1.1 = {
+			holder = lavo011
+			liege = d_lop_buri
+		}
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_nahkonpathom_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+		930.1.1 = {
+			holder = lavo014
 		}
-		1066.1.1 = {
-			holder = mon_nahkonpathom_10_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1178.1.1 = {
-			holder = mon_nahkonpathom_20_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+		1260.1.1 = {
+			holder = lavo0014
 		}
 	}
 	c_samut_prakan = {
-		867.1.1 = { change_development_level = 9 }
-		1066.1.1 = { change_development_level = 15 }
-		1178.1.1 = { change_development_level = 27 }
+		860.1.1 = {
+			holder = lavo011
+		}
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_nahkonpathom_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+		930.1.1 = {
+			holder = lavo014
 		}
-		1066.1.1 = {
-			holder = mon_nahkonpathom_10_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1178.1.1 = {
-			holder = mon_nahkonpathom_20_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+		1260.1.1 = {
+			holder = lavo0014
 		}
 	}
 	c_phayuha_khiri = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 12 }
-		1178.1.1 = { change_development_level = 21 }
-
 		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_lavo_01_fic	#fictional
+		860.1.1 = {
+			holder = lavo010
+		}
+
+		#936
+		936.1.1 = {
+			holder = lavo012
 			liege = d_lop_buri
 		}
-		927.1.1 = {
-			holder = mon_lavo_02	#Kampoch, possible ruler
-		}
-		949.1.1 = {
-			holder = mon_lavo_03	#Vap Upendra, possible ruler
-		}
-		1030.1.1 = {
-			holder = khmer_lakshmipativarman_01
-		}
 
-		#1066
-		1052.1.1 = {
-			holder = mon_lavo_04	#Chadachota
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1082.1.1 = {
-			holder = mon_lavo_05	#Phra Narai, possible ruler
+		1080.1.1 = {
+			holder = lavo0008
 		}
-		1106.1.1 = {
-			holder = mon_lavo_06	#Kraisornrat, possible ruler
+		1110.1.1 = {
+			holder = lavo0009
 		}
-		1112.1.1 = {
-			holder = mon_lavo_07	#Sri Thammasokkarat, possible ruler
+		1140.1.1 = {
+			holder = lavo0010
 		}
-		1148.1.1 = {
-			holder = mon_lavo_08_fic	#fictional
+		1170.1.1 = {
+			holder = lavo0011
 		}
-
-		#1178
-		1170.12.17 = {
-			holder = mon_lavo_09_fic	#fictional
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+		1260.1.1 = {
+			holder = lavo0014
 		}
 	}
-## d_u_thong
-	c_u_thong = {
-		867.1.1 = { change_development_level = 9 }
-		1066.1.1 = { change_development_level = 15 }
-		1178.1.1 = { change_development_level = 27 }
+d_u_thong = {
+	1080.1.1 = {
+		holder = 420023
+	}
+	1107.1.1 = {
+		holder = 420028
+	}
+	1113.1.1 = {
+		holder = 420030
+	}
+	1150.1.1 = {
+		holder = 420031
+	}
+	1156.1.1 = {
+		holder = 420032
+	}
+	1165.1.1 = {
+		holder = 420033
+	}
+	1178.1.1 = {
+		holder = 420034
+	}
+	1218.1.1 = {
+		holder = 420035
+	}
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_nahkonpathom_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+	1238.1.1 = {
+		holder = sukhothai001
+	}
+}
+	c_u_thong = {
+		860.1.1 = {
+			holder = lavo003
 		}
-		1066.1.1 = {
-			holder = mon_nahkonpathom_10_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		930.1.1 = {
+			holder = lavo016
+			liege = d_lop_buri
 		}
-		1178.1.1 = {
-			holder = mon_nahkonpathom_20_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
+		}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
 		}
 	}
 	c_singhapura = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 12 }
-		1178.1.1 = { change_development_level = 21 }
+		860.1.1 = {
+			holder = lavo009
+		}
 
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_lavo_01_fic	#fictional
+		930.1.1 = {
+			holder = lavo017
 			liege = d_lop_buri
 		}
-		927.1.1 = {
-			holder = mon_lavo_02	#Kampoch, possible ruler
-		}
-		949.1.1 = {
-			holder = mon_lavo_03	#Vap Upendra, possible ruler
-		}
-		1030.1.1 = {
-			holder = khmer_lakshmipativarman_01
-		}
 
-		#1066
-		1052.1.1 = {
-			holder = mon_lavo_04	#Chadachota
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1082.1.1 = {
-			holder = mon_lavo_05	#Phra Narai, possible ruler
+		1080.1.1 = {
+			holder = lavo0008
 		}
-		1106.1.1 = {
-			holder = mon_lavo_06	#Kraisornrat, possible ruler
+		1110.1.1 = {
+			holder = lavo0009
 		}
-		1112.1.1 = {
-			holder = mon_lavo_07	#Sri Thammasokkarat, possible ruler
+		1140.1.1 = {
+			holder = lavo0010
 		}
-		1148.1.1 = {
-			holder = mon_lavo_08_fic	#fictional
+		1170.1.1 = {
+			holder = lavo0011
 		}
-
-		#1178
-		1170.12.17 = {
-			holder = mon_lavo_09_fic	#fictional
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
 		}
 	}
 	c_nakhon_pathom = {
-		867.1.1 = { change_development_level = 9 }
-		1066.1.1 = { change_development_level = 15 }
-		1178.1.1 = { change_development_level = 27 }
+		860.1.1 = {
+			holder = lavo003
+		}
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_nahkonpathom_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+		930.1.1 = {
+			holder = lavo016
+			liege = d_lop_buri
 		}
-		1066.1.1 = {
-			holder = mon_nahkonpathom_10_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1178.1.1 = {
-			holder = mon_nahkonpathom_20_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
 		}
 	}
 	c_ban_rai = {
-		867.1.1 = { change_development_level = 6 }
-		1066.1.1 = { change_development_level = 9 }
-		1178.1.1 = { change_development_level = 14 }
+		860.1.1 = {
+			holder = lavo009
+		}
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_khubua_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+		930.1.1 = {
+			holder = lavo017
+			liege = d_lop_buri
 		}
-		1066.1.1 = {
-			holder = mon_khubua_10_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1178.1.1 = {
-			holder = mon_khubua_20_fic	#fictional
-			tributary_of = {	#as "Chen-li-fu"
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
 		}
 	}
 	c_kanchanaburi = {
-		867.1.1 = { change_development_level = 6 }
-		1066.1.1 = { change_development_level = 9 }
-		1178.1.1 = { change_development_level = 14 }
+		860.1.1 = {
+			holder = lavo003
+		}
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_khubua_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+		930.1.1 = {
+			holder = lavo016
+			liege = d_lop_buri
 		}
-		1066.1.1 = {
-			holder = mon_khubua_10_fic	#fictional
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
 		}
-		1178.1.1 = {
-			holder = mon_khubua_20_fic	#fictional
-			tributary_of = {	#as "Chen-li-fu"
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
 		}
 	}
-
-## d_kra
-c_uthomporn  = {
+d_kra = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-
-		867.1.1 = {
+	1178.1.1 = { change_development_level = 6 }    
+}
+	c_uthomporn  = {
+		860.1.1 = {
+			holder = moklen001
 			government = mandala_government
-			holder = mon_phetchaburi_01_fic	#fictional
-			liege = 0
 		}
-		1066.1.1 = {
-			holder = mon_phetchaburi_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_funan
-				contract_group = tributary_mandala
-			}
+		936.1.1 = {
+			holder = moklen005
+		}
+		1060.1.1 = {
+			holder = moklen008
 		}
 		1178.1.1 = {
-			holder = mon_khubua_20_fic	#fictional
-			tributary_of = {	#as "Chen-li-fu"
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+			holder = moklen102
+			liege = d_takola
 		}
-}
-
-c_kraburi = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
-	860.1.1 = {
-		government = anarchist_government
-		holder = sea_moklen_kraburi_01_fic	#fictional
 	}
-	#
-	1060.1.1 = {
-		holder = sea_moklen_kraburi_03_fic	#fictional
-	}
-	#
-	1170.1.1 = {
-		holder = sea_moklen_kraburi_04_fic	#fictional
-	}
-}
-
-c_zardan = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-	1178.1.1 = { change_development_level = 9 }
-
-		867.1.1 = {
+	c_kraburi = {
+		860.1.1 = {
+			holder = moklen002
 			government = mandala_government
-			holder = mon_tenasserim_01_fic	#fictional
-			liege = 0
 		}
-		1066.1.1 = {
-			holder = mon_tenasserim_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
+		936.1.1 = {
+			holder = moklen004
+		}
+		1060.1.1 = {
+			holder = moklen007
 		}
 		1178.1.1 = {
-			holder = mon_tenasserim_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
+			holder = moklen101
+			liege = d_takola
 		}
-}
+	}
+	c_zardan = {
+		867.1.1 = { change_development_level = 4 }
+		1060.1.1 = { change_development_level = 6 }
+		1150.1.1 = { change_development_level = 12 }
 
-c_pashu = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-	1178.1.1 = { change_development_level = 9 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_tenasserim_01_fic	#fictional
-			liege = 0
+		860.1.1 = {
+			holder = moklen002
 		}
-		1066.1.1 = {
-			holder = mon_tenasserim_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
+		936.1.1 = {
+			holder = moklen004
 		}
+		1060.1.1 = {
+			holder = moklen007
+		}
+		#
 		1178.1.1 = {
-			holder = mon_tenasserim_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
+			holder = tambralinga100 # Semi-Historical
+			liege = d_takola
 		}
-}
-
-
-d_pribpri = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-	1178.1.1 = { change_development_level = 9 }
-}
+		1222.1.1 = {
+			holder = tambralinga101 # Historical, Fictional Coro. Date
+		}
+		1230.1.1 = {
+			holder = tambralinga102 # Historical
+		}
+		1262.1.1 = {
+			holder = tambralinga103 # Historical
+		}
+	}
+	c_pashu = {
+		860.1.1 = {
+			holder = moklen003
+			government = anarchist_government
+		}
+		936.1.1 = {
+			holder = moklen006
+		}
+		1060.1.1 = {
+			holder = moklen009
+			liege = k_pagan
+		}
+		1170.1.1 = {
+			holder = moklen100
+		}
+	}
+## d_pribpri
 	c_pribpri = {
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_phetchaburi_01_fic	#fictional
-			liege = 0
+		860.1.1 = {
+			holder = lavo005
 		}
-		1066.1.1 = {
-			holder = mon_phetchaburi_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_funan
-				contract_group = tributary_mandala
-			}
+
+		930.1.1 = {
+			holder = lavo015
+			liege = d_lop_buri
 		}
-		1178.1.1 = {
-			holder = mon_khubua_20_fic	#fictional
-			tributary_of = {	#as "Chen-li-fu"
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
+		}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+
+		1238.1.1 = {
+			holder = sukhothai001
 		}
 	}
 	c_khu_bua = {
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_phetchaburi_01_fic	#fictional
-			liege = 0
+		860.1.1 = {
+			holder = lavo005
 		}
-		1066.1.1 = {
-			holder = mon_phetchaburi_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_funan
-				contract_group = tributary_mandala
-			}
+
+		930.1.1 = {
+			holder = lavo016
+			liege = d_lop_buri
 		}
-		1178.1.1 = {
-			holder = mon_khubua_20_fic	#fictional
-			tributary_of = {	#as "Chen-li-fu"
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+
+		1050.1.1 = {
+			holder = lavo0007
+		}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+
+		1238.1.1 = {
+			holder = sukhothai001
 		}
 	}
 	c_pranburi = {
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_phetchaburi_01_fic	#fictional
-			liege = 0
+		860.1.1 = {
+			holder = lavo006
 		}
-		1066.1.1 = {
-			holder = mon_phetchaburi_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_funan
-				contract_group = tributary_mandala
-			}
+		930.1.1 = {
+			holder = lavo015
+			liege = d_lop_buri
 		}
-		1178.1.1 = {
-			holder = mon_khubua_20_fic	#fictional
-			tributary_of = {	#as "Chen-li-fu"
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+		1050.1.1 = {
+			holder = lavo0007
+		}
+		1080.1.1 = {
+			holder = lavo0008
+		}
+		1110.1.1 = {
+			holder = lavo0009
+		}
+		1140.1.1 = {
+			holder = lavo0010
+		}
+		1170.1.1 = {
+			holder = lavo0011
+		}
+		1200.1.1 = {
+			holder = lavo0012
+		}
+		1230.1.1 = {
+			holder = lavo0013
+		}
+		1238.1.1 = {
+			holder = sukhothai001
 		}
 	}

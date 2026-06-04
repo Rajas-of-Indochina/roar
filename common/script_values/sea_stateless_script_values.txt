@@ -3,7 +3,7 @@ stateless_cohesion_monthly_change = {
 	# Bigger Confederations take longer to gain cohesion
 	add = {
 		value = {
-			every_confederation_member = { add = -0.1 }
+			every_confederation_member = { add = -0.05 }
 			max = 0
 			desc = "STATELESS_CONFEDERATION_COHESION_FROM_SIZE"
 		}
@@ -51,7 +51,7 @@ stateless_cohesion_monthly_change = {
 				every_realm_county = { add = 1 }
 			}
 		}
-		multiply =
+		multiply = 0.005
 		max = 1
 		min = -1
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COUNTY_OPINION"
