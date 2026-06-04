@@ -233,6 +233,10 @@ d_bukgye = {
         867.1.1 = {
             government = tribal_government
             holder = mohe_a_1 # Eo_gan
+            tributary_of = {
+                suzerain = d_angkor
+                contract_group = tributary_mandala
+            }
         }
         1066.1.1 = {
             liege = d_bukgye
@@ -243,53 +247,40 @@ d_bukgye = {
             holder = korean_yun_papyeong_20 # Sang_yeong
         }
     }
-# d_liaodong
+d_liaodong = {
+    867.1.1 = {
+        government = meritocratic_government
+        holder = balhae_go_1 #
+        liege = k_balhae
+    }
+    1066.1.1 = {
+        effect = {
+            set_de_jure_liege_title = title:k_raole
+        }
+        holder = balhae_go_8 # Gwan_74D8
+        liege = 0
+    }
+    1178.1.1 = {
+        holder = jurchen_hesujia_fic_1
+        liege = e_jin
+        government = steppe_admin_government
+    }
+}
     c_sheli = {
-        150.1.1 = {
-            government = feudal_government
-            holder = korean_gim_gimhae_26 # Su_ro
-        }
-        199.3.23 = {
-            holder = korean_gim_gimhae_27 # Geo_deung
-        }
-        253.9.17 = {
-            holder = korean_gim_gimhae_28 # Ma_pum
-        }
-        291.1.29 = {
-            holder = korean_gim_gimhae_29 # Geo_jil_mi
-        }
-        346.7.8 = {
-            holder = korean_gim_gimhae_30 # I_si_pum
-        }
-        407.7.10 = {
-            holder = korean_gim_gimhae_31 # Jwa_ji
-        }
-        421.5.21 = {
-            holder = korean_gim_gimhae_32 # Chwi_hui
-        }
-        451.2.3 = {
-            holder = korean_gim_gimhae_33 # Jil_ji
-        }
-        492.10.4 = {
-            holder = korean_gim_gimhae_34 # Gyeom_ji
-        }
-        521.4.7 = {
-            holder = korean_gim_gimhae_35 # Gu_hyeong
-        }
-        867.1.1 = { change_development_level = 3 }
-        1066.1.1 = { change_development_level = 5 }
-        1178.1.1 = { change_development_level = 9 }
+        867.1.1 = { change_development_level = 8 }
+        1066.1.1 = { change_development_level = 14 }
+        1178.1.1 = { change_development_level = 23 }
+
         867.1.1 = {
-            liege = d_jinju
             government = meritocratic_government
-            holder = korean_gim_gimhae_4 # Gyeong_ju
+            holder = balhae_go_1 #
+            liege = k_balhae
         }
         1066.1.1 = {
-            liege = d_jinju
-            holder = korean_gang_jinju_3 # Dan_B2E8
+            holder = nn_yelu_alian
         }
         1178.1.1 = {
-            holder = korean_gim_gimhae_21 # Su_seong
+            holder = jurchen_hesujia_fic_1
         }
     }
     c_shenzhou_jilin = {
@@ -362,7 +353,7 @@ d_bukgye = {
 
         867.1.1 = {
             government = meritocratic_government
-            liege = d_LIAO_dongjing #under k_balhae
+            liege = d_liaodong #under k_balhae
             holder = balhae_nan_1   #fic ruler
         }
         1066.1.1 = {
@@ -380,7 +371,7 @@ d_bukgye = {
 
         867.1.1 = {
             government = meritocratic_government
-            liege = d_LIAO_dongjing #under k_balhae
+            liege = d_liaodong #under k_balhae
             holder = balhae_mun_1   #fic ruler
         }
         1066.1.1 = {
@@ -390,7 +381,21 @@ d_bukgye = {
             holder = jurchen_hesujia_fic_1
         }
     }
-# d_jilin
+d_jilin = {
+    867.1.1 = {
+        holder = balhae_o_1 # Heung
+        government = meritocratic_government
+        liege = k_balhae
+    }
+    1066.1.1 = {
+        holder = 0
+    }
+    1178.1.1 = {
+        government = nomad_government
+        holder = jurchen_adian_20_fic   #fictional
+        liege = e_jin
+    }
+}
     c_fuyu = {
         867.1.1 = {
             liege = d_BAL_buyeo
@@ -409,35 +414,39 @@ d_bukgye = {
         }
     }
     c_LIAO_yinzhou = {
-        # Khitan Empire declared
-
-        926.9.6 = {
-            holder = 194326
+        867.1.1 = {
+            government = meritocratic_government
+            holder = balhae_yeon_1
+            liege = k_balhae
+        }
+        1066.1.1 = {
             government = nomad_government
+            holder = khitan_jangryeong_10_fic
+            liege = k_balhae    #Liao eastern circuit
         }
-        947.5.15 = {
-            holder = 194328
-        }
-        951.10.7 = {
-            holder = 194329
-        }
-        969.3.12 = {
-            holder = 194330
-        }
-        982.10.13 = {
-            holder = 194331
-        }
-        1031.6.25 = {
-            holder = 194332
-        }
-        1055.8.28 = {
-            holder = 194333
-        }
-        1101.2.12 = {
-            holder = 194334
+        1178.1.1 = {
+            holder = jurchen_bilan_fic_1
+            government = nomad_government
+            liege = e_jin
         }
     }
-# d_amnok
+d_amnok = {
+    867.1.1 = {
+        holder = balhae_yang_2 # Seong_gyu
+        government = meritocratic_government
+        liege = k_balhae
+    }
+    1066.1.1 = {
+        government = nomad_government
+        holder = jurchen_yalu_10_fic
+        liege = 0
+    }
+    #JIN dynasty
+    1178.1.1 = {
+        holder = jurchen_tangguo_20_fic
+        liege = e_jin
+    }
+}
     c_changamju = {
         867.1.1 = {
             holder = balhae_yang_2 # Seong_gyu
@@ -509,24 +518,23 @@ d_bukgye = {
         }
     }
     c_chonghae = {
-        867.1.1 = { change_development_level = 3 }
-        1066.1.1 = { change_development_level = 6 }
-        1178.1.1 = { change_development_level = 10 }
+        867.1.1 = { change_development_level = 2 }
+        1066.1.1 = { change_development_level = 5 }
+        1178.1.1 = { change_development_level = 8 }
 
         867.1.1 = {
-            liege = d_haeju
+            holder = balhae_yeol_1 #
             government = meritocratic_government
-            holder = korean_gang_sincheon_121 # Man_ru
+            liege = k_balhae
         }
-        # 김흥조 - Kim Jeung_jo - ?
-        1000.1.1 = { # ?
-            holder = korean_choe_haeju_1 # On
+        1066.1.1 = {
+            government = nomad_government
+            holder = jurchen_helandian_12_fic
+            liege = d_BAL_amnok_jangryeong
         }
-        1027.1.1 = {
-            government = meritocratic_government
-            holder = korean_choe_haeju_2 # Chung
-        }
+        #JIN dynasty
         1178.1.1 = {
-            holder = korean_jeong_haeju_2 # Gyun
+            holder = jurchen_helandian_20_fic
+            liege = e_jin
         }
     }

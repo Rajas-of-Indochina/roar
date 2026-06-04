@@ -1,629 +1,606 @@
 ﻿
 k_balhae = {
-	769.1.1 = { change_development_level = 8 }
-	1000.1.1 = { change_development_level = 8 }
-	1124.1.1 = { change_development_level = 10 }
-	1166.1.1 = { change_development_level = 14 }
-	1204.1.1 = { change_development_level = 19 }
-	1241.1.1 = { change_development_level = 22 }
-	1310.1.1 = { change_development_level = 28 }
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 12 }
 
-	698.1.1 = {
-		holder = balhae001
-		government = feudal_government
+	867.1.1 = {
+		government = meritocratic_government
+		effect = {
+			if = { # Chinese influence on bureaucracy and literature
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = { set_court_language = language_chinese }
+			}
+		}
+	}
+	698.12.1 = {
+		holder = balhae_dae_1 # King Go
 	}
 	719.1.1 = {
-		holder = balhae002
+		holder = balhae_dae_2 # King Mu
 	}
 	737.1.1 = {
-		holder = balhae003
+		holder = balhae_dae_3 # King Mun
 	}
 	793.1.1 = {
-		holder = balhae004
+		holder = balhae_dae_4 # King Won_ui
 	}
-	793.12.1 = {
-		holder = balhae006
+	793.6.1 = {
+		holder = balhae_dae_5 # King Seong
 	}
 	794.1.1 = {
-		holder = balhae007
+		holder = balhae_dae_6 # King Gang
 	}
 	809.1.1 = {
-		holder = balhae008
+		holder = balhae_dae_7 # King Jeong
 	}
 	812.1.1 = {
-		holder = balhae009
+		holder = balhae_dae_8 # King Hui
 	}
-	817.1.1 = {
-		holder = balhae0101
+	817.2.1 = {
+		holder = balhae_dae_9 # King Gan
 	}
 	818.1.1 = {
-		holder = balhae010
+		holder = balhae_dae_10 # King Seon
 	}
-	830.1.1 = {
-		holder = balhae012
+	830.8.1 = {
+		holder = balhae_dae_11 # King I_jin
 	}
-	857.1.1 = {
-		holder = balhae013
+	858.2.1 = {
+		holder = balhae_dae_12 # King Geon_hwang
 	}
 	871.1.1 = {
-		holder = balhae015
+		holder = balhae_dae_22 # King Hyeon_seok
 	}
 	894.1.1 = {
-		holder = balhae016
+		holder = balhae_dae_14 # King Wi_hae
 	}
 	906.1.1 = {
-		holder = balhae017
+		holder = balhae_dae_15 # King In_seon
 	}
 	926.1.1 = {
 		holder = 0
 	}
-    #
-	1246.1.1 = {
-		holder = 172007
+	1066.1.1 = {
+		government = steppe_admin_government
+		holder = nn_yelu_alian
+		liege = e_great_liao
 	}
-}
-
-
-k_jeongan = {
-	# Jeongan / Later Balhae
-	930.1.1 = {
-		holder = jeongan001
-	}
-	976.1.1 = {
-		holder = jeongan002
-	}
-	986.1.1 = {
+	1087.7.1 = {
 		holder = 0
 	}
 }
+
+
+#k_jeongan = {
+#	# Jeongan / Later Balhae
+#	930.1.1 = {
+#		holder = jeongan001
+#	}
+#	976.1.1 = {
+#		holder = jeongan002
+#	}
+#	986.1.1 = {
+#		holder = 0
+#	}
+#}
 
 
 d_hyundeok = {
-	1060.1.1 = {
-		liege = e_liao
-		holder = liaov037
+	867.1.1 = {
 		government = meritocratic_government
-		effect = {
-			if = {
-				limit = {
-				exists = holder
-				NOT = { has_dlc_feature = roads_to_power }
-				}
-				holder = {
-				change_government = feudal_government
-				}
-			}
-		}
+		holder = balhae_dae_12 # King Geon_hwang
 	}
-	1170.1.1 = {
+	1066.1.1 = {
 		holder = 0
+		liege = 0
+	}
+
+	#JIN dynasty
+	1150.1.1 = {
+		government = nomad_government
+		holder = jurchen_jiagu_20_fic	#fictional
+		liege = e_jin
+	}
+	1176.1.1 = {
+		holder = jurchen_jiagu_21_fic	#fictional
 	}
 }
 
 	c_junggyeong = {
-		857.1.1 = {
-			holder = balhaev007
-			government = feudal_government
+		867.1.1 = {
+			government = meritocratic_government
+			holder = balhae_dongseong_1
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = jeonganv002
-			liege = k_jeongan
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tangkuo_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			liege = e_liao
-			holder = liaov037
-		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tangkuo_20_fic	#fictional
+			liege = e_jin
 		}
 	}
 
 	c_yeosanju = {
-		857.1.1 = {
-			holder = balhaev007
-			government = feudal_government
+		867.1.1 = {
+			government = meritocratic_government
+			holder = balhae_dongseong_1
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = jeonganv002
-			liege = k_jeongan
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tangkuo_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			liege = e_liao
-			holder = liaov037
-		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tangkuo_20_fic	#fictional
+			liege = e_jin
 		}
 	}
 
 	c_tong = {
-		857.1.1 = {
-			holder = balhaev011
-			government = feudal_government
+		867.1.1 = { change_development_level = 8 }
+		1066.1.1 = { change_development_level = 11 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1 = {
+			government = meritocratic_government
+			holder = balhae_mok_1
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = jeonganv004
-			liege = k_jeongan
+		1066.1.1 = {
+			holder = jurchen_nipanggu_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			liege = e_liao
-			holder = liaov037
+
+		#JIN dynasty
+		1150.1.1 = {
+			holder = jurchen_jiagu_20_fic	#fictional
+			liege = d_BAL_parhae
 		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		1176.1.1 = {
+			government = nomad_government
+			holder = jurchen_jiagu_21_fic	#fictional
 		}
 	}
 
 	c_gyerubu = {
-		857.1.1 = {
-			holder = balhaev007
-			# government = feudal_government
+		867.1.1 = {
+			government = meritocratic_government
+			holder = balhae_dongseong_1
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = jeonganv002
-			liege = k_jeongan
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tangkuo_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov037
-		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tangkuo_20_fic	#fictional
+			liege = e_jin
 		}
 	}
 
 
-d_yongwon = {
-	1170.1.1 = {
-	liege = e_jin
-	holder = jinv029
-	}
-}
-
+## d_yongwon
 	c_bugeo = {
-		857.1.1 = {
-			holder = balhaev008
-			government = feudal_government
+		867.1.1 = {
+			government = meritocratic_government
 			liege = k_balhae
+			holder = balhae_yeol_1 #
 		}
-		# Later Balhae/Jeongan
-		930.1.1 = {
-			holder = jeonganv005
-			liege = k_jeongan
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tangkuo_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov037
-		}
-		#
-		1170.1.1 = {
-			holder = jinv014
+
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tangkuo_20_fic	#fictional
 			liege = e_jin
 		}
 	}
 
 	c_dongyeong_balhae = {
-		857.1.1 = {
-			holder = balhaev008
-			government = feudal_government
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+
+		867.1.1 = {
+			government = meritocratic_government
 			liege = k_balhae
+			holder = balhae_yeol_1 #
 		}
-		# Later Balhae/Jeongan
-		930.1.1 = {
-			holder = jeonganv005
-			liege = k_jeongan
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_nipanggu_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov037
-		}
-		#
-		1170.1.1 = {
-			holder = jinv014
+
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tangkuo_20_fic	#fictional
+			liege = e_jin
 		}
 	}
 
 	c_yongmingcheng = {
-		857.1.1 = {
-			holder = balhaev013
-			government = feudal_government
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+
+		867.1.1 = {
 			liege = k_balhae
+			government = meritocratic_government
+			holder = balhae_seop_1 # Ri_gye
 		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tudan_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov042
-			government = tribal_government
-			liege = d_hoewon
-		}
-		#
-		1170.1.1 = {
-			holder = jinv029
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tudan_20_fic	#fictional
+			liege = d_BAL_dongpyeong
 		}
 	}
 
 	c_jeongni = {
-		857.1.1 = {
-			holder = balhaev014
-			government = feudal_government
-			liege = k_balhae
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+		867.1.1 = {
+			holder = mohe_yulou_1
 		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_yulou_8	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov041
-			government = tribal_government
-			liege = d_hoewon
-		}
-		#
-		1170.1.1 = {
-			holder = jinv029
+		1178.1.1 = {
+			holder = jurchen_yulou_12
+			liege = e_jin
 		}
 	}
 
 	c_anbyeon = {
-		857.1.1 = {
-			holder = balhaev015
-			government = feudal_government
-			liege = k_balhae
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+		867.1.1 = {
+			holder = mohe_yulou_1
 		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_yulou_8	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov041
-			liege = d_hoewon
-		}
-		#
-		1170.1.1 = {
-			holder = jinv029
+		1178.1.1 = {
+			holder = jurchen_yulou_12
+			liege = e_jin
 		}
 	}
 
 
 ## d_yongcheon
 	c_taju = {
-		857.1.1 = {
-			holder = balhaev013
-			government = feudal_government
-			liege = k_balhae
+		#867
+		867.1.1 = {
+			holder = mohe_yuexi_1
 		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
+
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_yuexi_8	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov043
-			government = tribal_government
-			liege = d_hoewon
-		}
-		#
-		1170.1.1 = {
-			holder = jinv029
+
+		1178.1.1 = {
+			holder = jurchen_yuexi_11
+			liege = e_jin
 		}
 	}
 
     c_beychi = {
-		698.1.1 = {
-			holder = balhae001
+		867.1.1 = {
+			government = tribal_government
+			holder = mohe_funie_1
+			liege = k_balhae
 		}
-		719.1.1 = {
-			holder = balhae002
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tudan_10_fic	#fictional
+			liege = 0
 		}
-		737.1.1 = {
-			holder = balhae003
-		}
-		793.1.1 = {
-			holder = balhae004
-		}
-		793.12.1 = {
-			holder = balhae006
-		}
-		794.1.1 = {
-			holder = balhae007
-		}
-		809.1.1 = {
-			holder = balhae008
-		}
-		812.1.1 = {
-			holder = balhae009
-		}
-		817.1.1 = {
-			holder = balhae0101
-		}
-		818.1.1 = {
-			holder = balhae010
-		}
-		830.1.1 = {
-			holder = balhae012
-		}
-		857.1.1 = {
-			holder = balhae013
-		}
-		871.1.1 = {
-			holder = balhae015
-		}
-		894.1.1 = {
-			holder = balhae016
-		}
-		906.1.1 = {
-			holder = balhae017
-		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
-		}
-		#
-		1060.1.1 = {
-			holder = liaov042
-			liege = d_hoewon
-		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tudan_20_fic	#fictional
+			liege = d_BAL_dongpyeong
 		}
 	}
 
 	c_ying = {
-		1.1.1 = { change_development_level = 0 }
-		769.1.1 = { change_development_level = 2 }
-		1000.1.1 = { change_development_level = 3 }
-		1100.1.1 = { change_development_level = 6 }
-
-		857.1.1 = {
-			holder = balhaev012
-			government = tribal_government
-			liege = k_balhae
+		867.1.1 = {
+			government = nomad_government
+			holder = jurchen_odoli_01_fic
+			liege = 0	#Balhae trib
 		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
+		1066.1.1 = {
+			holder = jurchen_yueliji_10_fic	#fictional, 5 Nations Tribe
+			liege = d_BAL_moe_su	#Wanyan Wugunai
 		}
-		#
-		1060.1.1 = {
-			holder = liaov043
-			liege = d_hoewon
-		}
-		#
+		#JIN dynasty
 		1178.1.1 = {
-			holder = jinv010
+			holder = jurchen_yueliji_20_fic	#fictional
+			liege = d_BAL_moe_su
 		}
 	}
 
 	c_sanggyeong = {
-		698.1.1 = {
-			holder = balhae001
+		867.1.1 = { change_development_level = 8 }
+		1066.1.1 = { change_development_level = 11 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1 = {
+			government = meritocratic_government
+			holder = balhae_dae_12 # King Geon_hwang
 		}
-		719.1.1 = {
-			holder = balhae002
+		1066.1.1 = {
+			holder = jurchen_wanyan_6 # Wugunai
+			liege = d_BAL_moe_su
 		}
-		737.1.1 = {
-			holder = balhae003
+
+		#JIN dynasty
+		1150.1.1 = {
+			holder = jurchen_jiagu_20_fic	#fictional
+			liege = d_BAL_parhae
 		}
-		793.1.1 = {
-			holder = balhae004
-		}
-		793.12.1 = {
-			holder = balhae006
-		}
-		794.1.1 = {
-			holder = balhae007
-		}
-		809.1.1 = {
-			holder = balhae008
-		}
-		812.1.1 = {
-			holder = balhae009
-		}
-		817.1.1 = {
-			holder = balhae0101
-		}
-		818.1.1 = {
-			holder = balhae010
-		}
-		830.1.1 = {
-			holder = balhae012
-		}
-		857.1.1 = {
-			holder = balhae013
-		}
-		871.1.1 = {
-			holder = balhae015
-		}
-		894.1.1 = {
-			holder = balhae016
-		}
-		906.1.1 = {
-			holder = balhae017
-		}
-		#
-		930.1.1 = {
-			holder = jeonganv003
-			liege = k_jeongan
-		}
-		#
-		1060.1.1 = {
-			holder = liaov053
-			liege = e_liao
-		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		1176.1.1 = {
+			government = nomad_government
+			holder = jurchen_jiagu_21_fic	#fictional
 		}
 	}
 
 	c_solbin = {
-		857.1.1 = {
-			holder = balhaev013
-			government = feudal_government
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+
+		867.1.1 = {
 			liege = k_balhae
+			government = meritocratic_government
+			holder = balhae_seop_1 # Ri_gye
 		}
-		# Khitans
-		930.1.1 = {
-			holder = jurchen_wanyan_1
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tudan_10_fic	#fictional
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov042
-			liege = d_hoewon
-		}
-		#
-		1170.1.1 = {
-			holder = jinv029
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tudan_20_fic	#fictional
+			liege = d_BAL_dongpyeong
 		}
 	}
 
 
 d_buyeo = {
-	1.1.1 = { change_development_level = 0 }
-	769.1.1 = { change_development_level = 2 }
-	1000.1.1 = { change_development_level = 3 }
-	1100.1.1 = { change_development_level = 6 }
+	867.1.1 = {
+		holder = 0
+		liege = 0
+	}
 
-	# Khitans
-	930.1.1 = {
-		holder = liaov063
-		liege = e_liao
-		government = tribal_government
+	#Wanyan Jurchens
+	#Wanyan clan arrived here before, but timeline very unsure
+	1023.1.1 = {	#unsure when reign started
+		government = nomad_government
+		holder = jurchen_wanyan_5	#Wanyan Shilu = Zhaozu
+		liege = 0
 	}
-	#
-	1060.1.1 = {
-		holder = liaov053
-		liege = e_liao
+	1055.1.1 = {	#unsure when reign started
+		holder = jurchen_wanyan_6	#Wanyan Wugunai = Jingzu
 	}
-	#
-	1170.1.1 = {
-		government = feudal_government
-		holder = jinv010
+	1074.1.1 = {
+		holder = jurchen_wanyan_7	#Wanyan Helibo = Shizu
+	}
+	1092.1.1 = {
+		holder = jurchen_wanyan_22 #Wanyan Polashu = Suzong
+	}
+	1094.1.1 = {
+		holder = jurchen_wanyan_23 #Wanyan Yingge = Muzong
+	}
+
+	#JIN dynasty
+	1113.1.1 = {
+		holder = jurchen_wanyan_8	#Wanyan Aguda = JIN Taizu
+	}
+	1178.1.1 = {
+		holder = jurchen_wanyan_14	#placeholder
 		liege = e_jin
 	}
 }
 
 	c_buyeo = {
-		857.1.1 = {
-			holder = balhaev004
-			government = feudal_government
+		867.1.1 = {
+			government = meritocratic_government
+			holder = balhae_o_1 # Heung
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = liaov063
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_adian_10_fic	#fic character, maybe Adian tribe
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov053
-			liege = e_liao
-		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		#JIN dynasty
+		1178.1.1 = {
+			government = nomad_government
+			holder = jurchen_adian_20_fic	#fictional
+			liege = d_BAL_buyeo
 		}
 	}
 
 	c_sumo = {
-		857.1.1 = {
-			holder = balhaev006
-			government = tribal_government
+		867.1.1 = {
+			government = meritocratic_government
+			holder = mohe_sumo_1
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = liaov063
+
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_jiagu_10_fic	#fic character, Jiagu tribe
+			liege = 0
 		}
-		#
-		1060.1.1 = {
-			holder = liaov053
-			liege = e_liao
+
+		#JIN dynasty
+		1113.1.1 = {
+			holder = jurchen_wanyan_8	#Wanyan Aguda = JIN Taizu
 		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		1150.1.1 = {
+			holder = jurchen_jiagu_20_fic	#fictional
+			liege = d_BAL_parhae
+		}
+		1176.1.1 = {
+			holder = jurchen_jiagu_22_fic	#fictional
 		}
 	}
 
 	c_achegu = {
-		857.1.1 = {
-			holder = balhaev009
-			government = tribal_government
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+
+		867.1.1 = {
+			government = meritocratic_government
+			holder = mohe_boduo_1 #
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = liaov063
+
+		#Wanyan Jurchens
+		#Wanyan clan arrived here before, but timeline very unsure
+		1023.1.1 = {	#unsure when reign started
+			government = nomad_government
+			holder = jurchen_wanyan_5	#Wanyan Shilu = Zhaozu
+			liege = d_BAL_moe_su
 		}
-		#
-		1060.1.1 = {
-			holder = liaov053
-			liege = e_liao
+		1055.1.1 = {	#unsure when reign started
+			holder = jurchen_wanyan_6	#Wanyan Wugunai = Jingzu
 		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		1074.1.1 = {
+			holder = jurchen_wanyan_7	#Wanyan Helibo = Shizu
+		}
+		1092.1.1 = {
+			holder = jurchen_wanyan_22 #Wanyan Polashu = Suzong
+		}
+		1094.1.1 = {
+			holder = jurchen_wanyan_23 #Wanyan Yingge = Muzong
+		}
+
+		#JIN dynasty
+		1113.1.1 = {
+			holder = jurchen_wanyan_8	#Wanyan Aguda = JIN Taizu
+		}
+		1178.1.1 = {
+			holder = jurchen_huilan_fic_1
+			government = nomad_government
+			liege = e_jin
 		}
 	}
 
 	c_huhan = {
-		857.1.1 = {
-			holder = balhaev009
-			government = tribal_government
+		867.1.1 = { change_development_level = 7 }
+		1066.1.1 = { change_development_level = 10 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1 = {
+			government = meritocratic_government
+			holder = mohe_boduo_1 #
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = liaov063
+
+		#Wanyan Jurchens
+		#Wanyan clan arrived here before, but timeline very unsure
+		1023.1.1 = {	#unsure when reign started
+			government = nomad_government
+			holder = jurchen_wanyan_5	#Wanyan Shilu = Zhaozu
+			liege = d_BAL_moe_su
 		}
-		#
-		1060.1.1 = {
-			holder = liaov053
-			liege = e_liao
+		1055.1.1 = {	#unsure when reign started
+			holder = jurchen_wanyan_6	#Wanyan Wugunai = Jingzu
 		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		1074.1.1 = {
+			holder = jurchen_wanyan_7	#Wanyan Helibo = Shizu
+		}
+		1092.1.1 = {
+			holder = jurchen_wanyan_22 #Wanyan Polashu = Suzong
+		}
+		1094.1.1 = {
+			holder = jurchen_wanyan_23 #Wanyan Yingge = Muzong
+		}
+
+		#JIN dynasty
+		1113.1.1 = {
+			holder = jurchen_wanyan_8	#Wanyan Aguda = JIN Taizu
+		}
+		1178.1.1 = {
+			holder = jurchen_huilan_fic_1
+			government = nomad_government
+			liege = e_jin
 		}
 	}
 
 	c_makhil_amur = {
-		857.1.1 = {
-			holder = balhaev009
-			government = tribal_government
+		867.1.1 = { change_development_level = 7 }
+		1066.1.1 = { change_development_level = 10 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1 = {
+			government = meritocratic_government
+			holder = mohe_boduo_1 #
 			liege = k_balhae
 		}
-		#
-		930.1.1 = {
-			holder = liaov063
+
+		#Wanyan Jurchens
+		#Wanyan clan arrived here before, but timeline very unsure
+		1023.1.1 = {	#unsure when reign started
+			government = nomad_government
+			holder = jurchen_wanyan_5	#Wanyan Shilu = Zhaozu
+			liege = d_BAL_moe_su
 		}
-		#
-		1060.1.1 = {
-			holder = liaov053
-			liege = e_liao
+		1055.1.1 = {	#unsure when reign started
+			holder = jurchen_wanyan_6	#Wanyan Wugunai = Jingzu
 		}
-		#
-		1170.1.1 = {
-			holder = jinv010
+		1074.1.1 = {
+			holder = jurchen_wanyan_7	#Wanyan Helibo = Shizu
+		}
+		1092.1.1 = {
+			holder = jurchen_wanyan_22 #Wanyan Polashu = Suzong
+		}
+		1094.1.1 = {
+			holder = jurchen_wanyan_23 #Wanyan Yingge = Muzong
+		}
+
+		#JIN dynasty
+		1113.1.1 = {
+			holder = jurchen_wanyan_8	#Wanyan Aguda = JIN Taizu
+		}
+		1178.1.1 = {
+			holder = jurchen_huilan_fic_1
+			government = nomad_government
+			liege = e_jin
 		}
 	}

@@ -104,18 +104,18 @@ d_tenno = {
 #	capital = c_lhasa
 #}
 
-e_kambujadesa = {
-
-	can_create = {
-		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
-	}
-	color = { 253 40 121 }
-
-	capital = c_angkor
-
-	definite_form = yes
-	can_be_named_after_dynasty = no
-}
+#e_kambujadesa = {
+#
+#	can_create = {
+#		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+#	}
+#	color = { 253 40 121 }
+#
+#	capital = c_angkor
+#
+#	definite_form = yes
+#	can_be_named_after_dynasty = no
+#}
 
 e_dai_viet = {
 
@@ -128,18 +128,18 @@ e_dai_viet = {
 	can_be_named_after_dynasty = no
 }
 
-e_liao_dynasty = {
-
-	can_create = {
-		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
-	}
-	color = { 35 82 45 }
-
-	definite_form = yes
-	capital = c_LIAO_linhuang
-
-	can_be_named_after_dynasty = no
-}
+#e_liao_dynasty = {
+#
+#	can_create = {
+#		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+#	}
+#	color = { 35 82 45 }
+#
+#	definite_form = yes
+#	capital = c_LIAO_linhuang
+#
+#	can_be_named_after_dynasty = no
+#}
 
 k_sukhothai = {
 	color = { 191 119 17 }
@@ -511,4 +511,10 @@ d_laamp_tamish = { # Tamish, pecheneg mercenary
 	destroy_if_invalid_heir = yes
 
 	ai_primary_priority = { add = @never_primary_score }
+}
+
+
+
+k_jeongan = {
+	color = { 94 98 117 }
 }
