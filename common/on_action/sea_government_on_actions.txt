@@ -35,35 +35,35 @@ on_title_gain = {
 # this is to make sure that if they manage to seize any then they get handed out to confederate or destroyed
 # if you see a stateless character with a title tier higher than count then something's gone hinky, amiss or perhaps even pear-shaped
 sea_stateless_title_handler = {
-	trigger = {
-		government_has_flag = government_is_stateless
-	}
 	effect = {
-		# No duchies or kingdoms! You're a stateless society, you reject that kind of authority, dingus!
-		every_held_title = {
-			limit = { tier > tier_duchy }
-			ROOT = { destroy_title = PREV }
-		}
-		# Also no land grabbing! If you want to expand your borders you gotta reform into a state society
-		every_held_title = {
+		if = {
 			limit = {
-				tier = tier_county
-				NOT = { this = ROOT.capital_county }
-				# ...okay fine, if your Confederation has enough cohesion.
-				NAND = {
-					is_member_of_confederation = yes
-					confederation ?= { has_cohesion_level_parameter = confederates_can_hold_multiple_counties }
+				government_has_flag = government_is_stateless
+			}
+			# No duchies, no kingdoms
+			if = {
+				limit = { scope:title.tier >= tier_duchy }
+				destroy_title = scope:title
+			}
+			# Also no holding land outside your capital
+			else_if = {
+				limit = {
+					NOT = { scope:title = ROOT.capital_county }
+					# ...unless you have over 50% Cohesion
+					NOT = {
+						is_confederation_member = yes
+						confederation = { has_cohesion_level_parameter = confederates_can_hold_multiple_counties }
+					}
 				}
+				create_character = {
+					location = scope:title.title_province
+					template = generic_peasant_character
+					faith = scope:title.faith
+					culture = scope:title.culture
+					save_scope_as = new_count
+				}
+				give_commune_county_effect = yes
 			}
-			save_scope_as = title
-			create_character = {
-				location = scope:title.title_province
-				template = generic_peasant_character
-				faith = scope:title.faith
-				culture = scope:title.culture
-				save_scope_as = new_count
-			}
-			give_commune_county_effect = yes
 		}
 	}
 }

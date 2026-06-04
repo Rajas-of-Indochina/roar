@@ -1,0 +1,1525 @@
+stateless_gift_goods_interaction = {
+	icon = artisan_inspiration
+	category = interaction_category_friendly
+	common_interaction = yes
+	interface_priority = 65
+	desc = stateless_gift_goods_interaction_desc
+
+	greeting = positive
+	notification_text = SEND_GIFT_GOODS_PROPOSAL
+
+	answer_accept_key = SEND_GIFT_GOODS_ACCEPT
+	answer_reject_key = SEND_GIFT_GOODS_REJECT
+
+	ai_targets = {
+		ai_recipients = scripted_relations
+		ai_recipients = neighboring_rulers
+		ai_recipients = suzerain
+	}
+
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+
+	ai_frequency_by_tier = {
+		# if you're getting duchy+ tier stateless characters I fucked up
+		barony = 0
+		county = 60
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+
+	is_shown = {
+		NOT = { scope:recipient = scope:actor }
+		scope:actor = { government_has_flag = government_is_stateless }
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor.barter_goods >= gift_value
+	}
+
+	on_auto_accept = {
+		scope:recipient = {
+			trigger_event = sea_gov_event.0001
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			# Verify that they could become friend
+			if = {
+				limit = {
+					NAND = {
+						has_relation_friend = scope:actor
+						has_relation_lover = scope:actor
+						has_relation_soulmate = scope:actor
+						has_relation_best_friend = scope:actor
+					}
+					# ...provided they don't have a wholly monetary economy.
+					government_allows = barter
+				}
+				gifting_leads_towards_friendship_effect = yes
+			}
+		}
+
+		scope:actor = {
+			# Warning for multiple gifts
+			if = {
+				limit = {
+					is_ai = no
+					scope:recipient = {
+						has_opinion_modifier = {
+							target = scope:actor
+							modifier = sent_herd_opinion
+						}
+					}
+				}
+				custom_tooltip = ALREADY_SENT_GIFT_HERD_WARNING
+			}
+
+			send_interface_message = {
+				type = event_gold_neutral
+				title = gift_interaction_notification
+				right_icon = scope:recipient
+				add_barter_goods = {
+					value = scope:actor.gift_value
+					multiply = -1
+				}
+				stress_impact = {
+					greedy = medium_stress_impact_gain
+				}
+				if = {
+					limit = {
+						scope:recipient = {
+							NOT = {
+								is_heir_of = scope:actor
+							}
+						}
+					}
+					stress_impact = {
+						generous = medium_stress_impact_loss
+					}
+				}
+
+				change_influence = minor_influence_gain
+
+				#FP3 Tenet Communal Possessions Perk - piety gain for gift giving.
+				if = {
+					limit = {
+						scope:actor = {
+							faith = {
+					 			has_doctrine_parameter = piety_from_gifts_active
+					 		}
+					 	}
+					}
+					scope:actor = {
+						add_piety = minor_piety_gain
+					}
+				}
+
+				# Let's apply the opinion modifier last, as to apply everything else correctly first
+				scope:recipient = {
+					if = {
+						limit = { government_allows = barter }
+						add_barter_goods = {
+							value = scope:actor.gift_value
+						}
+					}
+					else = {
+						add_gold = {
+							value = scope:actor.gift_value
+							multiply = 0.5
+						}
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = sent_herd_opinion
+						opinion = sent_goods_opinion_value
+					}
+				}
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 0
+		modifier = {
+			add = 100
+			desc = GOODS_REASON
+		}
+	}
+
+	ai_potential = {
+		is_available_at_peace_ai_adult = yes
+		ai_greed < medium_positive_ai_value
+		domicile.herd >= {
+			value = major_herd_value_static
+			multiply = 3
+		}
+		NOT = { has_variable = conqueror }
+		ai_should_focus_on_building_in_their_capital = no
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = auto_accept_interaction_ai
+			object = scope:recipient
+			scope:recipient = {
+				is_ai = yes
+			}
+		}
+	}
+
+	ai_min_reply_days = 1
+	ai_max_reply_days = 1
+
+	ai_will_do = {
+		base = 100
+
+		modifier = { # Do not send double-gifts
+			factor = 0
+			scope:recipient = {
+				has_opinion_modifier = {
+					target = scope:actor
+					modifier = sent_herd_opinion
+				}
+			}
+		}
+
+		modifier = { # Special Blood Brother weight
+			add = 100
+			scope:actor = {
+				has_relation_blood_brother = scope:recipient
+				domicile.herd >= { # Do not lose all your Herd for this
+					value = herd_gift_value
+					multiply = 2
+				}
+			}
+		}
+
+		modifier = {
+			add = 100
+			scope:recipient = {
+				is_tributary_of = scope:actor
+				OR = {
+					ai_greed <= -50
+					is_obedient_to = scope:actor
+					opinion = {
+						target = scope:actor
+						value >= 50
+					}
+				}
+			}
+		}
+
+		# This helps Stateless Confederation cohesion
+		modifier = {
+			add = 100
+			scope:recipient = {
+				is_confederation_member = yes
+				confederation = scope:actor.confederation
+			}
+		}
+
+		modifier = { # Basic Filtering
+			factor = 0
+			scope:recipient = {
+				NOR = {
+					AND = { # Generous characters will give gifts to their friends/lovers
+						OR = {
+							has_secret_relation_lover = scope:actor
+							has_relation_lover = scope:actor
+							has_relation_soulmate = scope:actor
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+						}
+						scope:actor = {
+							OR = {
+								ai_greed <= high_negative_ai_value
+								AND = {
+									ai_greed < 0
+									culture = {
+										has_cultural_parameter = gives_more_gifts
+									}
+								}
+							}
+						}
+					}
+					AND = { # Characters with the Generous Cultural Tradition will give gifts to more people
+						is_ruler = yes
+						OR = {
+							is_allied_to = scope:actor
+							is_close_or_extended_family_of = scope:actor
+						}
+						scope:actor = {
+							ai_greed < 0
+							culture = {
+								has_cultural_parameter = gives_more_gifts
+							}
+						}
+					}
+					AND = { # Characters with the loyal trait more likely to give gifts to friends/lieges
+						OR = {
+							scope:actor.liege ?= this
+							has_relation_friend = scope:actor
+							has_relation_best_friend = scope:actor
+							is_allied_to = scope:actor
+							is_close_or_extended_family_of = scope:actor
+						}
+						scope:actor = {
+							ai_greed <= 0
+							has_trait = loyal
+						}
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				opinion = {
+					target = scope:actor
+					value < 0
+				}
+				NAND = {
+					is_vassal_of = scope:actor
+					scope:actor = {
+						ai_rationality > 50
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+	}
+}
+
+# Pay Influence to gain a hook on a stateless co-confederate
+# helps with cohesion
+# also helps you to centralize later
+barter_favors_interaction = {
+	icon = hook_icon
+	category = interaction_category_diplomacy
+	desc = barter_favors_interaction_desc
+	popup_on_receive = yes
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 12
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	interface_priority = 300
+	common_interaction = yes
+
+	is_shown = {
+		scope:actor = {
+			is_confederation_member = yes
+			government_has_flag = government_is_stateless
+		}
+		scope:recipient = {
+			is_confederation_member = yes
+			confederation = scope:actor.confederation
+			government_has_flag = government_is_stateless
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor.influence >= favor_influence_value
+		is_adult = yes
+		scope:recipient = {
+			is_adult = yes
+		}
+	}
+
+	greeting = positive
+	notification_text = BARTER_FAVORS_INTERACTION_NOTIFICIATION
+
+	ai_accept = {
+		base = -50
+
+		# RELATIONS MODIFIERS
+		modifier = { #Friend modifier.
+			desc = offer_vassalization_interaction_aibehavior_friend_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_friend = scope:actor
+					NOT = { has_relation_best_friend = scope:actor }
+				}
+			}
+			add = 20
+		}
+		modifier = { #Best Friend modifier.
+			desc = offer_vassalization_interaction_aibehavior_best_friend_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_best_friend = scope:actor
+				}
+			}
+			add = 50
+		}
+		modifier = { #Lover modifier.
+			desc = interaction_lover
+			trigger = {
+				scope:recipient = {
+					has_relation_lover = scope:actor
+					NOT = { has_relation_soulmate = scope:actor }
+				}
+			}
+			add = 20
+		}
+		modifier = { #Soulmate modifier.
+			desc = interaction_soulmate
+			trigger = {
+				scope:recipient = {
+					has_relation_soulmate = scope:actor
+				}
+			}
+			add = 50
+		}
+		modifier = { #Rivalry modifier.
+			desc = offer_vassalization_interaction_aibehavior_rival_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_rival = scope:actor
+					NOT = { has_relation_nemesis = scope:actor }
+				}
+			}
+			add = -50
+		}
+		modifier = { #Nemesis modifier.
+			desc = offer_vassalization_interaction_aibehavior_nemesis_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_nemesis = scope:actor
+				}
+			}
+			add = -100
+		}
+		# PERSONALITY MODIFIERS
+		modifier = { # Brave vs. Craven
+			desc = brave_vs_craven_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = craven }
+						scope:recipient = { has_trait = brave }
+					}
+					AND = {
+						scope:actor = { has_trait = brave }
+						scope:recipient = { has_trait = craven }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # Calm vs. Wrathful
+			desc = wrathful_vs_calm_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = calm }
+						scope:recipient = { has_trait = wrathful }
+					}
+					AND = {
+						scope:actor = { has_trait = wrathful }
+						scope:recipient = { has_trait = calm }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # chaste vs. lustful
+			desc = chaste_vs_lustful_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = lustful }
+						scope:recipient = { has_trait = chaste }
+					}
+					AND = {
+						scope:actor = { has_trait = chaste }
+						scope:recipient = { has_trait = lustful }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # content vs. ambitious
+			desc = content_vs_ambitious_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = ambitious }
+						scope:recipient = { has_trait = content }
+					}
+					AND = {
+						scope:actor = { has_trait = content }
+						scope:recipient = { has_trait = ambitious }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # diligent vs. lazy
+			desc = diligent_vs_lazy_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = lazy }
+						scope:recipient = { has_trait = diligent }
+					}
+					AND = {
+						scope:actor = { has_trait = diligent }
+						scope:recipient = { has_trait = lazy }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # forgiving vs. vengeful
+			desc = forgiving_vs_vengeful_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = vengeful }
+						scope:recipient = { has_trait = forgiving }
+					}
+					AND = {
+						scope:actor = { has_trait = forgiving }
+						scope:recipient = { has_trait = vengeful }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # generous vs. greedy
+			desc = generous_vs_greedy_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = greedy }
+						scope:recipient = { has_trait = generous }
+					}
+					AND = {
+						scope:actor = { has_trait = generous }
+						scope:recipient = { has_trait = greedy }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # honest vs. shy
+			desc = honest_vs_shy_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = shy }
+						scope:recipient = { has_trait = honest }
+					}
+					AND = {
+						scope:actor = { has_trait = honest }
+						scope:recipient = { has_trait = shy }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # humble vs. deceitful
+			desc = humble_vs_deceitful_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = deceitful }
+						scope:recipient = { has_trait = humble }
+					}
+					AND = {
+						scope:actor = { has_trait = humble }
+						scope:recipient = { has_trait = deceitful }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # just vs. arrogant
+			desc = just_vs_arrogant_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = arrogant }
+						scope:recipient = { has_trait = just }
+					}
+					AND = {
+						scope:actor = { has_trait = just }
+						scope:recipient = { has_trait = arrogant }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # patient vs. arbitrary
+			desc = patient_vs_arbitrary_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = arbitrary }
+						scope:recipient = { has_trait = patient }
+					}
+					AND = {
+						scope:actor = { has_trait = patient }
+						scope:recipient = { has_trait = arbitrary }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # temperate vs. impatient
+			desc = temperate_vs_impatient_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = impatient }
+						scope:recipient = { has_trait = temperate }
+					}
+					AND = {
+						scope:actor = { has_trait = temperate }
+						scope:recipient = { has_trait = impatient }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # trusting vs. gluttonous
+			desc = trusting_vs_gluttonous_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = gluttonous }
+						scope:recipient = { has_trait = trusting }
+					}
+					AND = {
+						scope:actor = { has_trait = trusting }
+						scope:recipient = { has_trait = gluttonous }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # zealous vs. paranoid
+			desc = zealous_vs_paranoid_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = paranoid }
+						scope:recipient = { has_trait = zealous }
+					}
+					AND = {
+						scope:actor = { has_trait = zealous }
+						scope:recipient = { has_trait = paranoid }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # compassionate vs. cynical
+			desc = zealous_vs_cynical_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = cynical }
+						scope:recipient = { has_trait = zealous }
+					}
+					AND = {
+						scope:actor = { has_trait = compassionate }
+						scope:recipient = { has_trait = cynical }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # compassionate vs. calloud
+			desc = compassionate_vs_callous_tt
+			trigger = {
+				OR = {
+					AND = {
+						OR = {
+							scope:actor = { has_trait = callous }
+							scope:actor = { has_trait = sadistic }
+						}
+						scope:recipient = { has_trait = compassionate }
+					}
+					AND = {
+						scope:actor = { has_trait = compassionate }
+						OR = {
+							scope:recipient = { has_trait = callous }
+							scope:recipient = { has_trait = sadistic }
+						}
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # fickle vs. stubborn
+			desc = fickle_vs_stubborn_tt
+			trigger = {
+				OR = {
+					AND = {
+						OR = {
+							scope:actor = { has_trait = fickle }
+							scope:actor = { has_trait = eccentric }
+						}
+						scope:recipient = { has_trait = stubborn }
+					}
+					AND = {
+						scope:actor = { has_trait = eccentric }
+						OR = {
+							scope:recipient = { has_trait = fickle }
+							scope:recipient = { has_trait = eccentric }
+						}
+					}
+				}
+			}
+			add = -10
+		}
+
+		# OPINION MODIFIERS
+		modifier = {
+			add = intimidated_reason_value
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_reason_value
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		opinion_modifier = { #Compare Opinion modifier.
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 0.35
+		}
+
+		# MISC MODIFIERS
+		modifier = {
+			desc = barter_favors_interaction_same_culture_tt
+			trigger = {
+				scope:recipient.culture = scope:actor.culture
+			}
+			add = 10
+		}
+		modifier = {
+			desc = barter_favors_interaction_same_culture_heritage_tt
+			trigger = {
+				scope:recipient.culture = {
+					NOT = { THIS = scope:actor.culture }
+					has_same_culture_heritage = scope:actor.culture
+				}
+			}
+			add = 5
+		}
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
+		}
+
+	}
+
+	# Regular weak hook
+	send_option = {
+		flag = weak_hook
+		starts_enabled = { always = yes	}
+		localization = HOOK_STATE_WEAK
+	}
+	# Strong hook
+	send_option = {
+		flag = strong_hook
+		localization = HOOK_STATE_STRONG
+	}
+
+	ai_min_reply_days = 1
+	ai_max_reply_days = 5
+	
+	on_accept = {
+		send_interface_message = {
+			type = event_hook_good
+			title = favor_interaction_notification
+			right_icon = scope:recipient
+			if = {
+				limit = { scope:strong_hook = yes }
+				add_hook = {
+					type = strong_favor_hook
+					target = scope:recipient
+				}
+			}
+			else = {
+				add_hook = {
+					type = favor_hook
+					target = scope:recipient
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		send_interface_message = {
+			type = event_hook_bad
+			title = favor_interaction_rejected
+			right_icon = scope:recipient
+		}
+	}
+
+	cost = {
+		influence = {
+			value = major_influence_value
+			if = {
+				# cheaper if you're already close to them
+				limit = {
+					scope:actor = {
+						OR = {
+							has_relation_friend = scope:actor
+							has_relation_lover = scope:actor
+							has_relation_soulmate = scope:actor
+							has_relation_best_friend = scope:actor
+						}
+					}
+				}
+				multiply = 0.75
+			}
+			if = {
+				limit = { scope:strong_hook = yes }
+				multiply = 3
+			}
+		}
+	}
+}
+
+stateless_confederation_interaction = {
+	category = interaction_category_diplomacy
+	icon = offer_confederation_interaction
+
+	desc = offer_confederation_interaction_desc
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers_including_tributary_borders
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 8
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	popup_on_receive = yes
+	pause_on_receive = yes
+
+	common_interaction = yes
+
+	cooldown_against_recipient = { years = 3 }
+
+	is_shown = {
+		scope:actor = {
+			government_has_flag = government_is_stateless
+			is_playable_character = yes
+			OR = {
+				is_independent_ruler = yes
+				confederation ?= { confederation_type = confederation_type:stateless_confederation }
+			}
+		}
+		scope:recipient = {
+			is_playable_character = yes
+			is_independent_ruler = yes
+			government_has_flag = government_is_stateless
+			NOT = { this = scope:actor }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = { is_imprisoned = no }
+		scope:recipient = {
+			custom_tooltip = {
+				text = is_stateless_tt
+				government_has_flag = government_is_stateless
+			}
+			is_playable_character = yes
+			is_landed = yes
+			is_alive = yes
+			NOR = {
+				has_trait = conqueror
+				has_trait = greatest_of_khans
+				custom_tooltip = {
+					text = no_raiding_hostility_tt
+					scope:actor = {
+						is_causing_raid_hostility_towards = prev
+					}
+				}
+			}
+			is_imprisoned = no
+			is_at_war = no
+			is_confederation_member = no
+		}
+	}
+
+	cost = {
+		influence = {
+			value = scope:actor.minor_influence_value
+		}
+	}
+
+	greeting = positive
+	notification_text = OFFER_CONFEDERATION_INTERACTION_NOTIFICATION
+
+	ai_accept = {
+		base = -25
+
+		# RELATIONS MODIFIERS
+		modifier = { #Friend modifier.
+			desc = offer_vassalization_interaction_aibehavior_friend_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_friend = scope:actor
+					NOT = { has_relation_best_friend = scope:actor }
+				}
+			}
+			add = 20
+		}
+		modifier = { #Best Friend modifier.
+			desc = offer_vassalization_interaction_aibehavior_best_friend_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_best_friend = scope:actor
+				}
+			}
+			add = 50
+		}
+		modifier = { #Lover modifier.
+			desc = interaction_lover
+			trigger = {
+				scope:recipient = {
+					has_relation_lover = scope:actor
+					NOT = { has_relation_soulmate = scope:actor }
+				}
+			}
+			add = 20
+		}
+		modifier = { #Soulmate modifier.
+			desc = interaction_soulmate
+			trigger = {
+				scope:recipient = {
+					has_relation_soulmate = scope:actor
+				}
+			}
+			add = 50
+		}
+		modifier = { #Rivalry modifier.
+			desc = offer_vassalization_interaction_aibehavior_rival_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_rival = scope:actor
+					NOT = { has_relation_nemesis = scope:actor }
+				}
+			}
+			add = -50
+		}
+		modifier = { #Nemesis modifier.
+			desc = offer_vassalization_interaction_aibehavior_nemesis_tt
+			trigger = {
+				scope:recipient = {
+					has_relation_nemesis = scope:actor
+				}
+			}
+			add = -100
+		}
+		# PERSONALITY MODIFIERS
+		modifier = { # Brave vs. Craven
+			desc = brave_vs_craven_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = craven }
+						scope:recipient = { has_trait = brave }
+					}
+					AND = {
+						scope:actor = { has_trait = brave }
+						scope:recipient = { has_trait = craven }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # Calm vs. Wrathful
+			desc = wrathful_vs_calm_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = calm }
+						scope:recipient = { has_trait = wrathful }
+					}
+					AND = {
+						scope:actor = { has_trait = wrathful }
+						scope:recipient = { has_trait = calm }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # chaste vs. lustful
+			desc = chaste_vs_lustful_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = lustful }
+						scope:recipient = { has_trait = chaste }
+					}
+					AND = {
+						scope:actor = { has_trait = chaste }
+						scope:recipient = { has_trait = lustful }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # content vs. ambitious
+			desc = content_vs_ambitious_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = ambitious }
+						scope:recipient = { has_trait = content }
+					}
+					AND = {
+						scope:actor = { has_trait = content }
+						scope:recipient = { has_trait = ambitious }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # diligent vs. lazy
+			desc = diligent_vs_lazy_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = lazy }
+						scope:recipient = { has_trait = diligent }
+					}
+					AND = {
+						scope:actor = { has_trait = diligent }
+						scope:recipient = { has_trait = lazy }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # forgiving vs. vengeful
+			desc = forgiving_vs_vengeful_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = vengeful }
+						scope:recipient = { has_trait = forgiving }
+					}
+					AND = {
+						scope:actor = { has_trait = forgiving }
+						scope:recipient = { has_trait = vengeful }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # generous vs. greedy
+			desc = generous_vs_greedy_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = greedy }
+						scope:recipient = { has_trait = generous }
+					}
+					AND = {
+						scope:actor = { has_trait = generous }
+						scope:recipient = { has_trait = greedy }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # honest vs. shy
+			desc = honest_vs_shy_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = shy }
+						scope:recipient = { has_trait = honest }
+					}
+					AND = {
+						scope:actor = { has_trait = honest }
+						scope:recipient = { has_trait = shy }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # humble vs. deceitful
+			desc = humble_vs_deceitful_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = deceitful }
+						scope:recipient = { has_trait = humble }
+					}
+					AND = {
+						scope:actor = { has_trait = humble }
+						scope:recipient = { has_trait = deceitful }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # just vs. arrogant
+			desc = just_vs_arrogant_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = arrogant }
+						scope:recipient = { has_trait = just }
+					}
+					AND = {
+						scope:actor = { has_trait = just }
+						scope:recipient = { has_trait = arrogant }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # patient vs. arbitrary
+			desc = patient_vs_arbitrary_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = arbitrary }
+						scope:recipient = { has_trait = patient }
+					}
+					AND = {
+						scope:actor = { has_trait = patient }
+						scope:recipient = { has_trait = arbitrary }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # temperate vs. impatient
+			desc = temperate_vs_impatient_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = impatient }
+						scope:recipient = { has_trait = temperate }
+					}
+					AND = {
+						scope:actor = { has_trait = temperate }
+						scope:recipient = { has_trait = impatient }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # trusting vs. gluttonous
+			desc = trusting_vs_gluttonous_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = gluttonous }
+						scope:recipient = { has_trait = trusting }
+					}
+					AND = {
+						scope:actor = { has_trait = trusting }
+						scope:recipient = { has_trait = gluttonous }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # zealous vs. paranoid
+			desc = zealous_vs_paranoid_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = paranoid }
+						scope:recipient = { has_trait = zealous }
+					}
+					AND = {
+						scope:actor = { has_trait = zealous }
+						scope:recipient = { has_trait = paranoid }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # compassionate vs. cynical
+			desc = zealous_vs_cynical_tt
+			trigger = {
+				OR = {
+					AND = {
+						scope:actor = { has_trait = cynical }
+						scope:recipient = { has_trait = zealous }
+					}
+					AND = {
+						scope:actor = { has_trait = compassionate }
+						scope:recipient = { has_trait = cynical }
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # compassionate vs. calloud
+			desc = compassionate_vs_callous_tt
+			trigger = {
+				OR = {
+					AND = {
+						OR = {
+							scope:actor = { has_trait = callous }
+							scope:actor = { has_trait = sadistic }
+						}
+						scope:recipient = { has_trait = compassionate }
+					}
+					AND = {
+						scope:actor = { has_trait = compassionate }
+						OR = {
+							scope:recipient = { has_trait = callous }
+							scope:recipient = { has_trait = sadistic }
+						}
+					}
+				}
+			}
+			add = -10
+		}
+		modifier = { # fickle vs. stubborn
+			desc = fickle_vs_stubborn_tt
+			trigger = {
+				OR = {
+					AND = {
+						OR = {
+							scope:actor = { has_trait = fickle }
+							scope:actor = { has_trait = eccentric }
+						}
+						scope:recipient = { has_trait = stubborn }
+					}
+					AND = {
+						scope:actor = { has_trait = eccentric }
+						OR = {
+							scope:recipient = { has_trait = fickle }
+							scope:recipient = { has_trait = eccentric }
+						}
+					}
+				}
+			}
+			add = -10
+		}
+
+		# OPINION MODIFIERS
+		modifier = {
+			add = intimidated_reason_value
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 1
+				}
+			}
+			desc = INTIMIDATED_REASON
+		}
+		modifier = {
+			add = cowed_reason_value
+			scope:recipient = {
+				has_dread_level_towards = {
+					target = scope:actor
+					level = 2
+				}
+			}
+			desc = COWED_REASON
+		}
+		opinion_modifier = { #Compare Opinion modifier.
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 0.35
+		}
+
+		# MISC MODIFIERS
+		modifier = {
+			desc = stateless_confederation_interaction_influence_level_tt
+			add = {
+				value = scope:actor.influence_level
+				multiply = 10
+			}
+		}
+		modifier = {
+			desc = barter_favors_interaction_same_culture_tt
+			trigger = {
+				scope:recipient.culture = scope:actor.culture
+			}
+			add = 10
+		}
+		modifier = {
+			desc = barter_favors_interaction_same_culture_heritage_tt
+			trigger = {
+				scope:recipient.culture = {
+					NOT = { THIS = scope:actor.culture }
+					has_same_culture_heritage = scope:actor.culture
+				}
+			}
+			add = 5
+		}
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			#checking that the delay hasn't made the character invalid
+			limit = {
+				scope:recipient = {
+					is_playable_character = yes
+				}
+			}
+			scope:actor = { create_or_add_to_stateless_confederation_effect = { TARGET = scope:recipient } }
+			if = {
+				limit = {
+					scope:actor = {
+						is_at_war_as_defender = yes
+						any_character_war = {
+							primary_defender = {
+								OR = {
+									this = scope:actor
+									AND = {
+										exists = scope:actor.confederation
+										is_member_of_confederation = scope:actor.confederation
+									}
+								}
+							}
+							is_defender = scope:actor
+							NOR = {
+								any_war_attacker = {
+									is_allied_to = scope:recipient
+								}
+								any_war_attacker = {
+									this = scope:recipient
+								}
+								any_war_defender = {
+									this = scope:recipient
+								}
+								any_war_attacker = {
+									scope:recipient = {
+										has_truce = prev
+									}
+								}
+							}
+						}
+					}
+				}
+				scope:actor = {
+					every_character_war = {
+						limit = {
+							primary_defender = {
+								OR = {
+									this = scope:actor
+									AND = {
+										exists = scope:actor.confederation
+										is_member_of_confederation = scope:actor.confederation
+									}
+								}
+							}
+							is_defender = scope:actor
+							NOR = {
+								any_war_attacker = {
+									is_allied_to = scope:recipient
+								}
+								any_war_attacker = {
+									this = scope:recipient
+								}
+								any_war_defender = {
+									this = scope:recipient
+								}
+								any_war_attacker = {
+									scope:recipient = {
+										has_truce = prev
+									}
+								}
+							}
+						}
+						add_defender = scope:recipient
+					}
+					#Lose legitimacy unless you're taking on a war too
+					if = {
+						limit = {
+							NOT = {
+								scope:recipient = {
+									is_at_war_as_defender = yes
+									any_character_war = {
+										is_war_leader = scope:recipient
+										is_defender = scope:recipient
+										NOR = {
+											any_war_attacker = {
+												is_allied_to = scope:actor
+											}
+											any_war_attacker = {
+												this = scope:actor
+											}
+											any_war_attacker = {
+												scope:actor = {
+													has_truce = prev
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						add_legitimacy = medium_legitimacy_loss
+						custom_tooltip = confederation_legitimacy_loss_war_tt
+					}
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		#Stop spamming players with this
+		if = {
+			limit = {
+				exists = scope:actor.confederation
+				scope:recipient = {
+					is_ai = no
+				}
+			}
+			scope:recipient = {
+				set_variable = {
+					name = refused_confederation
+					value = scope:actor.confederation
+					years = 3
+				}
+			}
+		}
+		scope:actor = {
+			#letter response
+			trigger_event = mpo_interactions_events.0004
+		}
+	}
+
+	ai_potential = {
+		age >= 6
+		OR = {
+			is_independent_ruler = yes
+			is_confederation_member = yes
+		}
+		government_has_flag = government_is_stateless
+	}
+
+	ai_will_do = {
+		base = 50
+
+		modifier = {
+			add = 25
+			scope:actor = {
+				OR = {
+					has_trait = ambitious
+					has_trait = gregarious
+					has_trait = brave
+				}
+			}
+		}
+		modifier = {
+			add = 25
+			scope:actor = {
+				confederation_neighboring_foe_trigger = { CHARACTER = scope:actor }
+			}
+		}
+		modifier = {
+			add = 25
+			scope:recipient = {
+				confederation_neighboring_foe_trigger = { CHARACTER = scope:recipient }
+			}
+		}
+		modifier = {
+			add = -25
+			scope:recipient = {
+				is_at_war = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				#Will only throw the confederation into a war
+				scope:recipient = {
+					is_at_war = yes
+					NOR = {
+						any_character_war = { primary_defender = scope:recipient }
+						culture = scope:actor.culture
+						scope:actor.confederation ?= {
+							any_confederation_member = {
+								count >= 4
+								highest_held_title_tier >= tier_county
+							}
+						}
+						reverse_opinion = {
+							target = scope:actor
+							value >= 30
+						}
+					}
+				}
+				AND = {
+					exists = scope:actor.confederation
+					scope:recipient = {
+						has_variable = left_confederation
+						var:left_confederation ?= {
+							this = scope:actor.confederation
+						}
+					}
+				}
+				#Recipient hasn't been asked to join this confederation already
+				scope:recipient = {
+					has_variable = refused_confederation
+					exists = scope:actor.confederation
+					var:refused_confederation = {
+						this = scope:actor.confederation
+					}
+				}
+			}
+		}
+	}
+
+
+
+}

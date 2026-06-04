@@ -27,7 +27,13 @@ stateless_cohesion_monthly_change = {
 				multiply = 0.1
 			}
 		}
-		min = 0
+		divide = {
+			value = 0
+			every_confederation_member = {
+				add = 1
+			}
+		}
+		# min = 0
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_AVERAGE_INFLUENCE_LEVEL"
 	}
 	# And the Popular Opinion in each representative's county also affects cohesion
@@ -36,10 +42,16 @@ stateless_cohesion_monthly_change = {
 			every_realm_county = {
 				add = {
 					value = county_opinion
-					multipy = 0.01
 				}
 			}
 		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				every_realm_county = { add = 1 }
+			}
+		}
+		multiply =
 		max = 1
 		min = -1
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COUNTY_OPINION"
@@ -49,9 +61,87 @@ stateless_cohesion_monthly_change = {
 		every_confederation_member = {
 			every_hooked_character = {
 				limit = { is_member_of_confederation = ROOT }
+				add = 0.1
 			}
-			add = 0.1
 		}
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_HOOKS"
+	}
+}
+
+sent_goods_opinion_value = {
+	value = 5
+	add = {
+		if = {
+			limit = {
+				scope:actor.diplomacy > 0
+			}
+			add = {
+				value = scope:actor.diplomacy
+				multiply = 3
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient.ai_greed > 0
+			}
+			add = {
+				value = scope:recipient.ai_greed
+				divide = 3
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient.liege = scope:actor
+			}
+			divide = 1.5
+		}
+		if = {
+			limit = {
+				scope:recipient = scope:actor.faith.religious_head
+			}
+			divide = 3
+		}
+		if = {
+			limit = {
+				scope:actor.culture ?= {
+					has_innovation = fp3_innovation_fritware
+				}
+			}
+			multiply = 1.2
+		}
+		max = 100
+	}
+	if = {
+		limit = {
+			scope:actor.culture = { has_cultural_parameter = more_gift_opinion }
+		}
+		multiply = 1.2
+	}
+	if = {
+		limit = {
+			scope:actor = { has_perk = thoughtful_perk }
+		}
+		multiply = 2
+	}
+	if = {
+		limit = { scope:recipient = { NOT = { government_allows = barter } } }
+	}
+}
+
+favor_influence_value = {
+	value = major_influence_value
+	if = {
+		# cheaper if you're already close to them
+		limit = {
+			scope:actor = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_soulmate = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+		multiply = 0.75
 	}
 }

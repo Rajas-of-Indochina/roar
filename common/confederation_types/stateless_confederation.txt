@@ -1,5 +1,7 @@
 stateless_confederation = {
 
+	house_based_confederation = yes
+
 	## The base monthly change for the cohesion value
 	# Scope:
 	#  root - The confederation
@@ -35,12 +37,20 @@ stateless_confederation = {
 		parameters = {
 			confederation_can_tribalize = yes
 		}
+
+		any_member_house_member = {
+			monthly_influence = 0.5
+		}
 	}
 
 	cohesion_level = {
-		cohesion_threshold = 30
+		cohesion_threshold = 60
 		parameters = {
 			confederates_can_hold_multiple_counties = yes
+		}
+
+		any_member_house_member = {
+			monthly_influence = 0.3
 		}
 	}
 
@@ -48,6 +58,10 @@ stateless_confederation = {
 		cohesion_threshold = 30
 		parameters = {
 			confederates_can_barter_favors = yes
+		}
+
+		any_member_house_member = {
+			monthly_influence = 0.1
 		}
 	}
 

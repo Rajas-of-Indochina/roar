@@ -1,4 +1,61 @@
-﻿# ROOT - character handing the county off
+create_or_add_to_stateless_confederation_effect = {
+	if = {
+		limit = {
+			is_confederation_member = yes
+		}
+		confederation = { add_confederation_member_house = $TARGET$.house }
+	}
+	else = {
+		#You two are in the same duchy, name it after that
+		if = {
+			limit = {
+				exists = $TARGET$.capital_county
+				capital_county.duchy = {
+					any_de_jure_county = {
+						this = $TARGET$.capital_county
+					}
+				}
+			}
+			capital_county = {
+				duchy = {
+					save_scope_as = capital_duchy
+				}
+			}
+		}
+		#You are a duke, name it after your duchy
+		else_if = {
+			limit = {
+				primary_title = {
+					tier = tier_duchy
+					any_de_jure_county = {
+						holder = $TARGET$
+					}
+				}
+			}
+			primary_title = {
+				save_scope_as = capital_duchy
+			}
+		}
+		#Name after your capital duchy
+		else = {
+			capital_county = {
+				duchy = {
+					save_scope_as = capital_duchy
+				}
+			}
+		}
+		create_confederation = {
+			name = CONFEDERATION_DUCHY_NAME
+			type = confederation_type:stateless_confederation
+			leader = house
+		}
+		scope:new_confederation = {
+			confederation = { add_confederation_member_house = $TARGET$.house }
+		}
+	}
+}
+
+# ROOT - character handing the county off
 # scope:new_count - Character to be given the county
 # scope:title - the county being handed off
 give_commune_county_effect = {
@@ -30,6 +87,9 @@ give_commune_county_effect = {
 			modifier = stateless_given_county_opinion
 		}
 	}
+
+	create_or_add_to_stateless_confederation_effect = { TARGET = scope:new_count }
+	
 }
 
 

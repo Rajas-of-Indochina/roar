@@ -1,4 +1,53 @@
-﻿# Anarchist converts to tribalism
+namespace = sea_gov_event
+
+sea_gov_event.0001 = {
+	type = letter_event
+	opening = {
+		desc = char_interaction.0030.opening # Positive greeting
+	}
+	desc = mpo_interactions_events.0020.desc
+		
+	sender = scope:actor
+
+	option = {
+		name = mpo_interactions_events.0020.a
+
+		show_as_tooltip = {
+			scope:actor = {
+				add_barter_goods = {
+					value = scope:actor.gift_value
+					multiply = -1
+				}
+			}
+			scope:recipient = {
+				if = {
+					limit = { government_allows = barter }
+					add_barter_goods = {
+						value = scope:actor.gift_value
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = sent_goods_opinion
+						opinion = 20
+					}
+				}
+				else = {
+					add_gold = {
+						value = scope:actor.gift_value
+						multiply = 0.5
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = sent_goods_opinion
+						opinion = 20
+					}
+				}
+			}
+		}
+	}
+}
+
+# Anarchist converts to tribalism
 sea_gov_event.1000 = {
     type = character_event
 	title = sea_gov_event.1000.t
