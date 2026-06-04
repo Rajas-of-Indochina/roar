@@ -2811,6 +2811,7 @@ donggang = {
 #####################
 
 cotabato = {
+	# one of main regions of Maguindanaon people ; later capital of Maguindanao Sultanate
 	county = c_PHI_cotabato
 
 	character_modifier = {
@@ -2821,6 +2822,7 @@ cotabato = {
 }
 
 biri_larosa = {
+	# Biri is a sacred place for the Waray people, believed to be the home of Berbinota, beautiful goddess atributed with saving locals from starvation
 	county = c_basay
 
 	character_modifier = {
@@ -2830,25 +2832,31 @@ biri_larosa = {
 }
 
 pinatubo = {
+	# Mount Pinatubo is an active volcano and sacred site to local Aeta people, beleived to be home to the powerful god, Apûng Malyari
+	# also known to Sambal and Tagalog people for its fertile grounds with many myths surrounding it
 	county = c_tondo
 
 	character_modifier = {
 		name = holy_site_pinatubo_effect_name
+		martial = 1
 		jungle_tax_mult = 0.15
 	}
 }
 
 ivatan = {
+	# Babuyan Island might have ben one of the earliest routes of arrival for Filipino Austronesians
 	county = c_PHI_ivatan
 	barony = b_PHI_Babuyan
 
 	character_modifier = {
-		name = holy_site_pulag_effect_name
-		same_faith_opinion = 10
+		name = holy_site_iraya_effect_name
+		hills_development_growth_factor = 0.15
+		same_faith_opinion = 5
 	}
 }
 
 mantalingajan = {
+	# Mount Mantalingajan is the highest mountain in the Palawan island ; home to indigenous people and many species of animals
 	county = c_PHI_south_palawan
 
 	character_modifier = {

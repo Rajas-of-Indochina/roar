@@ -55,7 +55,7 @@
 
 	custom_faith_icons = {
 		custom_faith_1 custom_faith_2 custom_faith_3 custom_faith_4 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9 custom_faith_10 dualism_custom_1 zoroastrian_custom_1 zoroastrian_custom_2 buddhism_custom_1 buddhism_custom_2 buddhism_custom_3 buddhism_custom_4 taoism_custom_1 yazidi_custom_1 sunni_custom_2 sunni_custom_3 sunni_custom_4 muhakkima_1 muhakkima_2 muhakkima_4 muhakkima_5 muhakkima_6 judaism_custom_1 custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil custom_faith_boromian_circles custom_faith_lotus custom_faith_aum_tibetan custom_faith_pentagram custom_faith_pentagram_inverted custom_faith_burning_bush custom_faith_allah custom_faith_gankyil custom_faith_eye_of_providence custom_faith_dove custom_faith_ichthys custom_faith_lamb custom_faith_black_sheep custom_faith_ankh custom_faith_chi_rho custom_faith_hamsa custom_faith_cool_s custom_faith_magatama custom_faith_soto custom_faith_benzhuism
-		dayawism tulumanon
+		kabunian tulumanon
 	}
 
 	localization = {
@@ -231,33 +231,23 @@
 	}
 
 	faiths = {
-		dayawism = { 	# Bisaya, Palaw'an and Balanghayan people
+		dayawism = { 	# Bisaya, Tagalog, Palaw'an and other Balanghayan people
 			# AKA: Babaylanan
 			color = { 54 81 233 }
 			icon = babaylan
 			reformed_icon = babaylan_reformed
 
 			holy_site = mount_mayon
+			holy_site = biri_larosa
+			holy_site = makiling
 			holy_site = pinatubo
-			holy_site = sandawa
-			holy_site = laguna_de_bay
-			holy_site = huraw
-
-			# Vanilla
-			#holy_site = cotabato
-			#holy_site = ivatan
-			#holy_site = mantalingajan
-			#holy_site = biri_larosa
+			holy_site = mantalingajan
 
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_ancestor_worship
 			doctrine = tenet_mountain_worship
 			doctrine = tenet_spirit_guides
-
-			# Old RoA
-			#doctrine = tenet_carnal_exaltation
-			#doctrine = tenet_warmonger
 
 			doctrine = doctrine_monogamy
 		}
@@ -271,11 +261,11 @@
 			icon = sarimanok
 			reformed_icon = sarimanok_reformed
 
-			holy_site = mantalingajan
-			holy_site = pananaru
+			holy_site = apo_sandawa
 			holy_site = lake_lanao
-			holy_site = mount_mayon
-			holy_site = sandawa
+			holy_site = cotabato
+			holy_site = biri_larosa 	#placeholder
+			holy_site = pananaru 		#placeholder
 
 			doctrine = unreformed_faith_doctrine
 
@@ -459,10 +449,10 @@
 			reformed_icon = malyari_reformed
 
 			holy_site = pinatubo
+			holy_site = kalaya
 			holy_site = pulag
-			holy_site = arayat
-			holy_site = sandawa
-			holy_site = mantalingajan
+			holy_site = makiling
+			holy_site = taal
 
 			doctrine = unreformed_faith_doctrine
 
@@ -645,14 +635,14 @@
 			color = { 118 122 212 }
 
 			# replace with bulol
-			icon = kabunian
-			reformed_icon = kabunian_reformed
+			icon = dayawism		# close enough until we get better bulol
+			reformed_icon = reformed_dayawism
 
 			holy_site = pulag
-			holy_site = iraya
-			holy_site = huraw
+			holy_site = ivatan
 			holy_site = taal
 			holy_site = pinatubo
+			holy_site = makiling
 
 			doctrine = unreformed_faith_doctrine
 
