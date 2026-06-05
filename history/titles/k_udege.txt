@@ -1,234 +1,213 @@
 ﻿### k_udege
-d_khodyo = {
-	1170.1.1 = {
-		holder = udege011
+## d_khodyo
+	c_tulechi = {
+		867.1.1 = {
+			holder = mohe_heishuiyang_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = mohe_heishuiyang_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = mohe_heishuiyang_20_fic	#fictional
+		}
 	}
-}
+	c_mui = {
+		867.1.1 = {
+			holder = mohe_beihean_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = mohe_beihean_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = mohe_beihean_20_fic	#fictional
+		}
+	}
+	c_maa = {
+		867.1.1 = {
+			holder = mohe_wuguihai_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = mohe_wuguihai_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = mohe_wuguihai_20_fic	#fictional
+		}
+	}
+	c_samarga = {
+		867.1.1 = {
+			holder = mohe_wuguihai_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = mohe_wuguihai_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = mohe_wuguihai_20_fic	#fictional
+		}
+	}
+## d_uru
+	c_amgu = {
+		867.1.1 = { change_development_level = 0 }
+		1066.1.1 = { change_development_level = 0 }
+		1178.1.1 = { change_development_level = 0 }
 
-c_tulechi = {
-	860.1.1 = {
-		holder = udege003
+		867.1.1 = {
+			holder = mohe_yuexi_0
+			liege = d_BAL_anwon
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_wendihen_10_fic	#fictional
+			liege = 0
+		}
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_wendihen_20_fic	#fictional
+			liege = e_jin
+		}
 	}
-	930.1.1 = {
-		holder = udege005
+	c_kentsu = {
+		867.1.1 = { change_development_level = 0 }
+		1066.1.1 = { change_development_level = 0 }
+		1178.1.1 = { change_development_level = 0 }
+		867.1.1 = {
+			holder = mohe_yulou_1
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_wendihen_10_fic	#fictional
+			liege = 0
+		}
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_wendihen_20_fic	#fictional
+			liege = e_jin
+		}
 	}
-	1060.1.1 = {
-		holder = udege009
+	c_yeonghaeju = {
+		867.1.1 = { change_development_level = 0 }
+		1066.1.1 = { change_development_level = 0 }
+		1178.1.1 = { change_development_level = 0 }
+		867.1.1 = {
+			holder = mohe_yulou_1
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_yulou_8	#fictional
+			liege = 0
+		}
+		1178.1.1 = {
+			holder = jurchen_yulou_12
+			liege = e_jin
+		}
 	}
-	1170.1.1 = {
-		holder = udege011
-	}
-}
-
-c_mui = {
-	860.1.1 = {
-		holder = udege004
-	}
-	930.1.1 = {
-		holder = udege005
-	}
-	1060.1.1 = {
-		holder = udege008
-	}
-	1170.1.1 = {
-		holder = udege010
-	}
-}
-
-c_maa = {
-	860.1.1 = {
-		holder = udege003
-	}
-	930.1.1 = {
-		holder = udege005
-	}
-	1060.1.1 = {
-		holder = udege009
-	}
-	1170.1.1 = {
-		holder = udege011
-	}
-}
-
-c_samarga = {
-	860.1.1 = {
-		holder = balhaev010
-		liege = k_balhae
-	}
-	# Khitans
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = liaov040
-		government = tribal_government
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = udege011
-	}
-}
-
-
-d_uru = {
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = 0
-	}
-}
-
-c_amgu = {
-	860.1.1 = {
-		holder = balhaev010
-		liege = k_balhae
-	}
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = liaov040
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv030
-	}
-}
-
-c_kentsu = {
-	860.1.1 = {
-		holder = balhaev015
-		government = tribal_government
-		liege = k_balhae
-	}
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = liaov040
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv029
-	}
-}
-
-c_yeonghaeju = {
-	860.1.1 = {
-		holder = balhaev015
-		government = tribal_government
-		liege = k_balhae
-	}
-	1060.1.1 = {
-		holder = liaov041
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv029
-	}
-}
-
-
 d_anwon = {
-	860.1.1 = {
-		holder = balhaev010
+	#867
+	867.1.1 = {
+		holder = mohe_yuexi_1
 		government = tribal_government
-		liege = k_balhae
 	}
-	# Khitans
-	930.1.1 = {
+
+	1066.1.1 = {
 		holder = 0
-	}
-	1178.1.1 = {
-		liege = e_jin
-		holder = jinv030
+		liege = 0
 	}
 }
+	c_ulunga = {
+		867.1.1 = { change_development_level = 0 }
+		1066.1.1 = { change_development_level = 0 }
+		1178.1.1 = { change_development_level = 0 }
 
-c_ulunga = {
-	860.1.1 = {
-		holder = balhaev010
-		liege = k_balhae
+		867.1.1 = {
+			holder = mohe_yuexi_0
+			liege = d_BAL_anwon
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_hesheli_10_fic	#fictional
+			liege = 0
+		}
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_hesheli_20_fic	#fictional
+			liege = e_jin
+		}
 	}
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = liaov039
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv030
-	}
-}
+	c_yeongju = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
 
-c_yeongju = {
-	860.1.1 = {
-		holder = balhaev010
-		liege = k_balhae
-	}
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = liaov039
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv030
-	}
-}
+		#867
+		867.1.1 = {
+			holder = mohe_yuexi_1
+		}
 
-c_wolhui = {
-	860.1.1 = {
-		holder = balhaev010
-		liege = k_balhae
-	}
-	930.1.1 = {
-		holder = udege007
-	}
-	1060.1.1 = {
-		holder = liaov039
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv030
-	}
-}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_yuexi_8	#fictional
+			liege = 0
+		}
 
-c_bul-yeolju = {
-	860.1.1 = {
-		holder = balhaev016
-		government = tribal_government
-		liege = k_balhae
+		1178.1.1 = {
+			holder = jurchen_yuexi_11
+			liege = e_jin
+		}
 	}
-	930.1.1 = {
-		holder = jurchen_wanyan_1
-	}
-	1060.1.1 = {
-		holder = liaov043
-		liege = d_hoewon
-	}
-	1170.1.1 = {
-		holder = jinv028
-	}
-}
+	c_wolhui = {
+		867.1.1 = { change_development_level = 0 }
+		1066.1.1 = { change_development_level = 0 }
+		1178.1.1 = { change_development_level = 0 }
 
-c_dongyeong = {
-	860.1.1 = {
-		holder = balhaev016
-		government = tribal_government
-		liege = k_balhae
+		867.1.1 = {
+			holder = mohe_yuexi_0
+			liege = d_BAL_anwon
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_hesheli_10_fic	#fictional
+			liege = 0
+		}
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_hesheli_20_fic	#fictional
+			liege = e_jin
+		}
 	}
-	930.1.1 = {
-		holder = jurchen_wanyan_1
+	c_bul-yeolju = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 8 }
+
+		867.1.1 = {
+			government = tribal_government
+			holder = mohe_funie_1
+			liege = k_balhae
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_poali_10_fic	#fictional, 5 Nations Tribe
+			liege = d_BAL_moe_su	#Wanyan Wugunai
+		}
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_poali_20_fic	#fictional
+			liege = d_BAL_moe_su
+		}
 	}
-	1060.1.1 = {
-		holder = liaov043
-		liege = d_hoewon
+	c_dongyeong = {
+		867.1.1 = {
+			government = tribal_government
+			holder = mohe_funie_1
+			liege = k_balhae
+		}
+		1066.1.1 = {
+			government = nomad_government
+			holder = jurchen_tudan_10_fic	#fictional
+			liege = 0
+		}
+		#JIN dynasty
+		1178.1.1 = {
+			holder = jurchen_tudan_20_fic	#fictional
+			liege = d_BAL_dongpyeong
+		}
 	}
-	1170.1.1 = {
-		holder = jinv028
-	}
-}
