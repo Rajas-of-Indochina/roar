@@ -1182,7 +1182,7 @@ ROA_936_tributary_setup_effect = {
 	}
 
 	# China
-	# title:e_celestia_china.holder = {
+	#title:e_celestia_china.holder
 	title:h_china.holder = {
 		save_scope_as = suzerain
 		title:d_liangzhou.holder = {
@@ -1518,7 +1518,7 @@ ROA_1066_tributary_setup_effect = {
 	# Liao
 	title:e_liao.holder = {
 		save_scope_as = suzerain
-		# title:e_celestia_china.holder = {
+		#title:e_celestia_china.holder
 		title:h_china.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 			ROA_have_10_and_leave_me_be_effect = yes

@@ -299,11 +299,13 @@ c_BOR_sambas = {
 }
 
 c_pinyuh = {
-	800.1.1 = {
+	860.1.1 = {
 		government = wanua_government
-	}
-	850.1.1 = {
 		holder = sea_bidayuh_wijayapura_01
+		tributary_of = {
+			suzerain = d_wijayapura
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
@@ -319,6 +321,10 @@ c_bengkayang = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_bidayuh_bengkayang_01
+		tributary_of = {
+			suzerain = d_wijayapura
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
