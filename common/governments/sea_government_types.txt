@@ -1,16 +1,15 @@
 ﻿anarchist_government = {
 	government_rules = {
 		rulers_should_have_dynasty = yes
-		regiments_prestige_as_gold = yes
 		inherit_from_dynastic_government = no
 		legitimacy = no
+		council = no
 		uses_culture_named_realms = yes
 		use_as_base_on_landed = yes
 		affected_by_development = no
 		always_use_patronym = yes
-		conditional_maa_refill = yes
-		use_maa_maintenance = no
 		barter = yes
+		deny_powerful_vassal = yes
 	}
 
 	supply_limit_mult_for_others = -0.75
@@ -21,15 +20,31 @@
 
 	prestige_opinion_override = { -10 0 3 5 10 20 }
 
+	supply_limit_mult_for_others = 0
+
 	vassal_contract_group = anarchist_vassal
 
 	character_modifier = {
 		county_opinion_add = 10
 
-		title_creation_cost_mult = 10000
+		monthly_influence = 0.5
+
+		title_creation_cost_mult = 100000
 		army_maintenance_mult = -0.5
 		domain_tax_mult = -1.0
 		vassal_tax_mult = -1.0
+		men_at_arms_cap = -10
+		men_at_arms_limit = -10
+		mercenary_hire_cost_mult = 1
+
+		hostile_raid_time = 1.0
+
+		levy_toughness = 6
+
+		defender_advantage = 10
+		controlled_province_advantage = 10
+
+		garrison_size = 1
 
 		ai_war_chance = -0.75
 	}
@@ -42,6 +57,17 @@
 		government_should_be_seniority
 		government_has_influence
 		goods_for_money
+	}
+
+	ai = {
+		use_lifestyle = yes
+		arrange_marriage = yes
+		use_goals = yes
+		use_decisions = yes
+		use_scripted_guis = no
+		use_legends = no
+		perform_religious_reformation = no
+		use_great_projects = NO
 	}
 	color = { 30 30 30  }
 }

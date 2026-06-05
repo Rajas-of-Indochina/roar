@@ -14,9 +14,8 @@ sea_gov_event.0001 = {
 
 		show_as_tooltip = {
 			scope:actor = {
-				add_barter_goods = {
+				remove_barter_goods = {
 					value = scope:actor.gift_value
-					multiply = -1
 				}
 			}
 			scope:recipient = {

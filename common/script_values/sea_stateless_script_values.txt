@@ -64,6 +64,12 @@ stateless_cohesion_monthly_change = {
 				add = 0.1
 			}
 		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				add = 1
+			}
+		}
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_HOOKS"
 	}
 }
@@ -143,5 +149,13 @@ favor_influence_value = {
 			}
 		}
 		multiply = 0.75
+	}
+}
+
+replenishable_troops_with_barter_goods_value = {
+	value = replenishable_troops_value
+	max = {
+		add = scope:current_barter_goods_max_value_scope
+		multiply = gold_refill_value
 	}
 }

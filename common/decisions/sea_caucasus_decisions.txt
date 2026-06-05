@@ -1133,6 +1133,11 @@ circassian_decision_unify = {
 			}
 		}
 	}
+	is_valid_showing_failures_only = {
+		NOT = {
+			has_government = landless_adventurer_government
+		}
+	}
 	is_valid = {
 		save_temporary_scope_as = saved_scope
 		trigger_if = {
@@ -1144,6 +1149,10 @@ circassian_decision_unify = {
 					is_confederation_member = yes
 				}
 				confederation = {
+					trigger_if = {
+						limit = { confederation_type = confederation_type:stateless_confederation }
+						has_cohesion_level_parameter = confederation_can_tribalize
+					}
 					calc_true_if = {
 						amount >= 4
 						confederation_completely_controls = {
@@ -1266,15 +1275,7 @@ circassian_decision_unify = {
 				}
 			}
 		}
-		custom_tooltip = {
-			text = circassiannotstateless_requirement
-			NOT = {
-				has_government = anarchist_government
-			}
-			NOT = {
-				has_government = landless_adventurer_government
-			}
-		}
+		
 	}
 	effect = {
 		custom_tooltip = {

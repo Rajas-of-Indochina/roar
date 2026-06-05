@@ -55,9 +55,7 @@ sea_stateless_title_handler = {
 			else_if = {
 				limit = {
 					NOT = { scope:title = ROOT.capital_county }
-					# ...unless you have over 50% Cohesion
 					NOT = {
-						is_confederation_member = yes
 						confederation = { has_cohesion_level_parameter = confederates_can_hold_multiple_counties }
 					}
 				}

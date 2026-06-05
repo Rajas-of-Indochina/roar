@@ -83,9 +83,8 @@ stateless_gift_goods_interaction = {
 				type = event_gold_neutral
 				title = gift_interaction_notification
 				right_icon = scope:recipient
-				add_barter_goods = {
+				remove_barter_goods = {
 					value = scope:actor.gift_value
-					multiply = -1
 				}
 				stress_impact = {
 					greedy = medium_stress_impact_gain
@@ -338,14 +337,15 @@ barter_favors_interaction = {
 
 	is_valid_showing_failures_only = {
 		scope:actor.influence >= favor_influence_value
-		is_adult = yes
+		# is_adult = yes
 		scope:recipient = {
 			is_adult = yes
 		}
+		NOT = { scope:actor = { has_hook = scope:recipient } }
 	}
 
 	greeting = positive
-	notification_text = BARTER_FAVORS_INTERACTION_NOTIFICIATION
+	# notification_text = BARTER_FAVORS_INTERACTION_NOTIFICIATION
 
 	ai_accept = {
 		base = -50
@@ -869,7 +869,7 @@ stateless_confederation_interaction = {
 				government_has_flag = government_is_stateless
 			}
 			is_playable_character = yes
-			is_landed = yes
+			is_landed_ruler = yes
 			is_alive = yes
 			NOR = {
 				has_trait = conqueror
