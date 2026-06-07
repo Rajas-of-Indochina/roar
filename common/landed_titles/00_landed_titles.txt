@@ -72659,7 +72659,7 @@ e_andong = {
 	k_balhae = {
 		color = { 95 105 170 }
 
-		capital = c_junggyeong	#placeholder
+		capital = c_sanggyeong
 
 		cultural_names = {
 			name_list_khitan = cn_dan_gur
@@ -89865,7 +89865,7 @@ e_iri-an = {
 e_panyupayana = {
 	color = { 255 255 79 }
 
-	capital = c_maynila
+	capital = c_tondo
 
 	can_create = {
 		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
@@ -89874,91 +89874,7 @@ e_panyupayana = {
 	k_lusung = {	#Luzon
 		color = { 63 117 138 }
 
-		capital = c_maynila
-
-		d_PHI_tagalog = {
-			# d_tagalog in old RoA
-			color = { 58 108 135 }
-
-			capital = c_maynila
-
-			c_maynila = {
-				color = { 74 105 168 }
-
-				b_maynila = {
-					province = 17082
-
-					color = { 74 105 168 }
-				}
-				b_sapa = {
-					province = 17010
-
-					color = { 74 105 168 }
-				}
-				b_tangway = {
-					province = 17001
-
-					color = { 74 105 168 }
-				}
-			}
-			c_pangil = {
-				color = { 63 138 135 }
-
-				b_pila_ph = {
-					province = 16954
-
-					color = { 63 138 135 }
-				}
-				b_pangil = {
-					province = 16996
-
-					color = { 63 138 135 }
-				}
-			}
-			c_balayan = {
-				color = { 63 117 138 }
-
-				b_balayan = {
-					province = 16834
-
-					color = { 63 117 138 }
-				}
-				b_galban = {
-					province = 16850
-
-					color = { 63 117 138 }
-				}
-				b_tulay = {
-					province = 16907
-
-					color = { 63 117 138 }
-				}
-			}
-			c_tayabas = {
-				color = { 28 161 135 }
-
-				b_atimunan = {
-					province = 16868
-
-					color = { 28 161 135 }
-				}
-				b_tayabas = {
-					province = 16927
-
-					color = { 28 161 135 }
-				}
-				b_katanauan = {
-					province = 16720
-
-					color = { 28 161 135 }
-				}
-				b_buak = {
-					province = 11033
-
-					color = { 28 161 135 }
-				}
-			}
-		}
+		capital = c_tondo
 
 		d_PHI_pangpang = {
 			# d_pangpang in old RoA
@@ -90059,6 +89975,90 @@ e_panyupayana = {
 			}
 		}
 
+		d_PHI_tagalog = {
+			# d_tagalog in old RoA
+			color = { 58 108 135 }
+
+			capital = c_maynila
+
+			c_maynila = {
+				color = { 74 105 168 }
+
+				b_maynila = {
+					province = 17082
+
+					color = { 74 105 168 }
+				}
+				b_sapa = {
+					province = 17010
+
+					color = { 74 105 168 }
+				}
+				b_tangway = {
+					province = 17001
+
+					color = { 74 105 168 }
+				}
+			}
+			c_pangil = {
+				color = { 63 138 135 }
+
+				b_pila_ph = {
+					province = 16954
+
+					color = { 63 138 135 }
+				}
+				b_pangil = {
+					province = 16996
+
+					color = { 63 138 135 }
+				}
+			}
+			c_balayan = {
+				color = { 63 117 138 }
+
+				b_balayan = {
+					province = 16834
+
+					color = { 63 117 138 }
+				}
+				b_galban = {
+					province = 16850
+
+					color = { 63 117 138 }
+				}
+				b_tulay = {
+					province = 16907
+
+					color = { 63 117 138 }
+				}
+			}
+			c_tayabas = {
+				color = { 28 161 135 }
+
+				b_atimunan = {
+					province = 16868
+
+					color = { 28 161 135 }
+				}
+				b_tayabas = {
+					province = 16927
+
+					color = { 28 161 135 }
+				}
+				b_katanauan = {
+					province = 16720
+
+					color = { 28 161 135 }
+				}
+				b_buak = {
+					province = 11033
+
+					color = { 28 161 135 }
+				}
+			}
+		}
+
 		d_PHI_dumagat = {
 			# d_dumagat in old RoA
 			color = { 146 222 55 }
@@ -90067,26 +90067,27 @@ e_panyupayana = {
 				# c_kasiguran in old RoA
 				color = { 195 230 21 }
 
-				b_kasiguran = {
+				b_PHI_Kasiguran = {
 					province = 11015
 
 					color = { 195 230 21 }
 				}
-				b_umiray = {
+				b_PHI_Umiray = {
 					province = 17275
 
 					color = { 195 230 21 }
 				}
 			}
-			c_binangonan = {
+			c_PHI_binangonan = {
+				# c_binangonan in old RoA
 				color = { 98 214 89 }
 
-				b_PHI_Binangonan = {
+				b_PHI_Binangonan = {  #Infanta
 					province = 17127
 
 					color = { 98 214 89 }
 				}
-				b_polo = {
+				b_PHI_Polo = {
 					province = 11031
 
 					color = { 98 214 89 }

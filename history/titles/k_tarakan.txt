@@ -213,20 +213,29 @@ c_BOR_kutai_jauh = {
 	1066.1.1 = { change_development_level = 3 }
 	1178.1.1 = { change_development_level = 5 }
 
-	800.1.1 = {
-		government = wanua_government
-		# make tributary of d_BOR_kutai
-	}
 	860.1.1 = {
+		government = wanua_government
 		holder = sea_tunjung_01
+		tributary_of = {
+			suzerain = d_BOR_kutai
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
 		holder = sea_tunjung_02
+		tributary_of = {
+			suzerain = d_BOR_kutai
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1170.1.1 = {
 		holder = sea_tunjung_03
+		tributary_of = {
+			suzerain = d_BOR_kutai
+			contract_group = tributary_mandala_tribal
+		}
 	}
 }
 
