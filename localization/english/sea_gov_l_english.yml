@@ -54,7 +54,8 @@
  STATELESS_CONFEDERATION_COHESION_FROM_REALM_SIZES: "Number of non-capital counties held by members:"
  STATELESS_CONFEDERATION_COHESION_FROM_AVERAGE_INFLUENCE_LEVEL: "Average [influence_level|E] of members:"
  STATELESS_CONFEDERATION_COHESION_FROM_COUNTY_OPINION: "Average [county_opinion|E] of members:"
- STATELESS_CONFEDERATION_COHESION_FROM_HOOKS:0 "Number of [hooks|E] between members:"
+ STATELESS_CONFEDERATION_COHESION_FROM_HOOKS: "Number of [hooks|E] between members:"
+ STATELESS_CONFEDERATION_COHESION_FROM_COURT_TASK: "Members improving cohesion"
  stateless_confederation_level_parameter_confederation_can_tribalize: "Confederation can centralize into a [tribal_government|E]"
  stateless_confederation_level_parameter_confederates_can_hold_multiple_counties: "Members can hold more than one [county|E]"
  stateless_confederation_level_parameter_confederates_can_barter_favors: "Unlocks Barter for Favors Interaction"
@@ -108,6 +109,29 @@
  duke_anarchist_male:0 "Headman"
  duke_anarchist_female:0 "Headwoman"
  duchy_anarchist:0 "Commune"
+
+ stateless_martial_court_position: "Head of the Warriors"
+ stateless_martial_court_position_desc: "The $stateless_martial_court_position$ is a member of the community who has been entrusted with directing affairs relating to training for defense and coordinating strategy in times of war."
+ stateless_martial_court_position_task_prepare_defenses: "Prepare Defenses"
+ stateless_martial_court_position_task_prepare_defenses_desc:0 "Your $stateless_martial_court_position$ will direct the commune to prepare for an invasion, fortifying and getting ready to defend their homes."
+
+ stateless_learning_court_position: "Head of the Spirits"
+ stateless_learning_court_position_desc: "The $stateless_learning_court_position$ is entrusted by the community to keep the rituals of the community and see to their spiritual well-being, as well as dealing with the spirits on the community's behalf."
+ stateless_learning_court_position_task_perform_rituals: "Perform Rituals"
+ stateless_learning_court_position_task_perform_rituals_desc: "You will direct your $stateless_learning_court_position$ to focus on performing religious rituals."
+ stateless_learning_court_position_task_learn_foreign_faiths: "Learn Foreign Faiths"
+ stateless_learning_court_position_task_learn_foreign_faiths_desc: "Your $stateless_learning_court_position$ will learn about the religions of other communities, and how to respect their beliefs."
+
+ stateless_diplomacy_court_position: "Head of the People"
+ stateless_diplomacy_court_position_desc: "The $stateless_diplomacy_court_position$ sees to the people of the community, as well as serving as an envoy to those around us and helping to maintain social cohesion and cohesion with other nearby communities."
+ stateless_diplomacy_court_position_task_cohesion: "Foster Cohesion"
+ stateless_diplomacy_court_position_task_cohesion_desc: "Your $stateless_diplomacy_court_position$ works on fostering cohesion between members of your confederation."
+ stateless_diplomacy_court_position_task_harmony: "Promote Cultural Harmony"
+ stateless_diplomacy_court_position_task_harmony_desc: "Your $stateless_diplomacy_court_position$ will focus on engendering social harmony between the peoples in the commune and its neighbors, trying to smooth over cultural differences."
+
+ court_gardener_stateless:0 "Gardener"
+
+ INFLUENCE_COST_MAINTENANCE: "[influence_i] $VALUE|2$"
 
  stateless_kingdom_fracture_title:0 "[title.Title.GetNameNoTooltip] Shattered!"
  stateless_kingdom_fracture_tt:0 "[title.Title.GetNameNo] shattered as a result of being held by [ROOT.Char.GetName], a [stateless|E] ruler."

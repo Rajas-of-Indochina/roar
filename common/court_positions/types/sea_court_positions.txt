@@ -398,7 +398,6 @@
 # 	on_court_position_invalidated = {
 # 		seneschal_title_invalidated_effect = yes
 # 	}
-
 # 	# Scripted value to determine whether an AI will hire/fire a position or not. Hires over 0, fires under -50. Look in _court_positions.info for more extensive documentation!
 # 	candidate_score = {
 # 		value = 150
@@ -422,3 +421,757 @@
 #         }
 # 	}
 # }
+
+stateless_martial_court_position = {
+	sort_order = 2000
+	max_available_positions = 1
+	skill = martial
+
+	court_position_asset = {
+		trigger = {
+			culture = { has_cultural_pillar = heritage_mongolic }
+		}
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/corridor.dds"
+		localization_key = bodyguard_court_position_nomadic
+	}
+	
+	court_position_asset = {
+		trigger = {
+			is_independent_ruler = yes
+			highest_held_title_tier >= tier_empire
+			government_has_flag = government_is_celestial
+		}
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/tgp_chinese_corridor_day.dds"
+		localization_key = bodyguard_celestial_imperial
+	}
+
+	court_position_asset = {
+		trigger = {
+			is_independent_ruler = no
+			highest_held_title_tier <= tier_empire
+			government_has_flag = government_is_celestial
+		}
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/tgp_chinese_corridor_day.dds"
+		localization_key = bodyguard_celestial
+	}
+
+	court_position_asset = {
+		trigger = { culture_has_east_asian_heritage_pillar_trigger = yes }
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/tgp_chinese_corridor_day.dds"
+	}
+
+	court_position_asset = {
+		trigger = { culture_has_south_asian_heritage_pillar_trigger = yes }
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/bp1_corridor_indian_day.dds"
+	}
+
+	court_position_asset = {
+		trigger = {
+			OR = {
+				culture_has_mena_heritage_pillar_trigger = yes
+				culture_has_south_european_heritage_pillar_trigger = yes
+			}
+		}
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/fp2_corridor_day.dds"
+	}
+
+	court_position_asset = {
+		animation = menacing
+		background = "gfx/interface/illustrations/event_scenes/corridor.dds"
+	}
+
+	opinion = {
+		value = regular_court_position_opinion
+	}
+
+	# How high the aptitude has to be to reach the 5 different modifier levels
+	aptitude_level_breakpoints = { 20 40 60 80 }
+
+	aptitude = {
+		value = 25
+		add = {
+			value = martial
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_martial
+		}
+		add = {
+			value = prowess
+			multiply = 2
+			max = 50
+			desc = court_position_skill_prowess
+		}
+		if = {
+			limit = {
+				has_trait = brave
+			}
+			add = {
+				value = 15
+				desc = court_position_brave_trait
+			}
+		}
+		if = {
+			limit = { has_trait = overseer }
+			add = {
+				value = 15
+				desc = court_position_overseer_trait
+			}
+		}
+		if = {
+			limit = { has_trait = strategist }
+			add = {
+				value = 15
+				desc = court_position_strategist_trait
+			}
+		}
+		if = {
+			limit = { has_trait = shieldmaiden }
+			add = {
+				value = 15
+				desc = court_position_shieldmaiden_trait
+			}
+		}
+		if = {
+			limit = { has_trait = populist_leader }
+			add = {
+				value = 25
+				desc = court_position_populist_leader_trait
+			}
+		}
+		if = {
+			limit = { has_trait = peasant_leader }
+			add = {
+				value = 15
+				desc = court_position_peasant_leader_trait
+			}
+		}
+
+		add = court_position_aptitude_high_penalty_value
+		add = general_aptitude_bonus
+	}
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+		trigger_if = {
+			limit = {
+				is_ai = yes
+				highest_held_title_tier <= tier_county
+			}
+			always = no
+		}
+	}
+
+	valid_position = {
+		government_has_flag = government_is_stateless
+	}
+
+	is_shown_character = {
+		scope:employee = {
+			court_position_employee_shown_trigger = yes
+		}
+	}
+
+	valid_character = {
+		scope:employee = {
+			base_court_position_validity_trigger = { EMPLOYER = scope:liege }
+		}
+	}
+
+	revoke_cost = {
+		influence = {
+			value = medium_court_position_influence_revoke_cost
+			# Obligation makes it free
+			if = {
+				limit = {
+					court_position_obligation_hook_salary_trigger = {
+						POS = stateless_martial
+						LIEGE = ROOT
+					}
+				}
+				multiply = 0
+			}
+			# Avoid AI Inf issues
+			if = {
+				limit = {
+					exists = this
+					is_ai = yes
+				}
+				multiply = 0
+			}
+			# special case for events
+			if = {
+				limit = {
+					exists = this
+					has_character_flag = free_revoke_cost
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	salary = {
+		round = no
+		influence = {
+			value = stateless_martial_court_position_salary
+		}
+	}
+
+	base_employer_modifier = {
+		martial_per_influence_level = 1
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			levy_size = 0.1
+			levy_reinforcement_rate = 0.1
+			levy_toughness = -1
+			levy_screen = -1
+			monthly_influence_mult = 0.05
+		}
+		poor = {
+			levy_size = 0.2
+			levy_reinforcement_rate = 0.2
+			monthly_influence_mult = 0.1
+		}
+		average = {
+			levy_size = 0.3
+			levy_reinforcement_rate = 0.3
+			levy_toughness = 1
+			levy_screen = 1
+			monthly_influence_mult = 0.1
+		}
+		good = {
+			levy_size = 0.4
+			levy_reinforcement_rate = 0.4
+			levy_toughness = 2
+			levy_screen = 2
+			monthly_influence_mult = 0.15
+		}
+		excellent = {
+			levy_size = 0.5
+			levy_reinforcement_rate = 0.5
+			levy_toughness = 3
+			levy_screen = 3
+			monthly_influence_mult = 0.15
+		}
+	}
+
+	modifier = {
+		martial = 3
+		prowess = 2
+		monthly_prestige_gain_mult = 0.05
+	}
+
+	ai_position_score = {
+		value = 1000
+	}
+
+	ai_candidate_score = {
+		value = 50
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_candidate_aptitude_value
+		if = { # To stop petitioned positions immediately being fired by the AI
+			limit = {
+				court_position_petition_ai_weight_trigger = { ROLE = stateless_martial }
+			}
+			add = 1000
+		}
+	}
+}
+
+stateless_learning_court_position = {
+	sort_order = 2000
+	max_available_positions = 1
+	skill = learning
+
+	court_position_asset = {
+		trigger = { culture_has_east_asian_heritage_pillar_trigger = yes }
+		animation = prayer
+		background = "gfx/interface/illustrations/event_scenes/tgp_temple_asia.dds"
+	}
+
+	court_position_asset = {
+		animation = prayer
+		background = "gfx/interface/illustrations/event_scenes/temple.dds"
+	}
+
+	opinion = {
+		value = regular_court_position_opinion
+	}
+
+	# How high the aptitude has to be to reach the 5 different modifier levels
+	aptitude_level_breakpoints = { 20 40 60 80 }
+
+	aptitude = {
+		value = 25
+		add = {
+			value = learning
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_learning
+		}
+		if = {
+			limit = {
+				has_trait = possessed
+			}
+			add = {
+				value = 20
+				desc = court_position_possessed_trait
+			}
+		}
+		if = {
+			limit = {
+				num_virtuous_traits > 0
+			}
+			add = {
+				value = 15
+				multiply = num_virtuous_traits
+				desc = court_position_virtuous_traits
+			}
+		}
+		if = {
+			limit = { has_trait = theologian }
+			add = {
+				value = 15
+				desc = court_position_theologian_trait
+			}
+		}
+		if = {
+			limit = { has_trait = scholar }
+			add = {
+				value = 15
+				desc = court_position_scholar_trait
+			}
+		}
+		if = {
+			limit = {
+				has_trait = lifestyle_herbalist
+			}
+			add = {
+				value = 15
+				desc = court_position_herbalist_trait
+			}
+		}
+		if = {
+			limit = { has_trait = lifestyle_mystic }
+			if = {
+				limit = {
+					has_trait_xp = {
+						trait = lifestyle_mystic
+						value >= 100
+					}
+				}
+				add = {
+					value = 20
+					desc = court_position_mystic_3_trait
+				}
+			}
+			else_if = {
+				limit = {
+					has_trait_xp = {
+						trait = lifestyle_mystic
+						value >= 50
+					}
+				}
+				add = {
+					value = 10
+					desc = court_position_mystic_2_trait
+				}
+			}
+			else = {
+				add = {
+					value = 5
+					desc = court_position_mystic_1_trait
+				}
+			}
+		}
+
+		add = court_position_aptitude_high_penalty_value
+		add = general_aptitude_bonus
+	}
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+		trigger_if = {
+			limit = {
+				is_ai = yes
+				highest_held_title_tier <= tier_county
+			}
+			always = no
+		}
+	}
+
+	valid_position = {
+		government_has_flag = government_is_stateless
+	}
+
+	is_shown_character = {
+		scope:employee = {
+			court_position_employee_shown_trigger = yes
+		}
+	}
+
+	valid_character = {
+		scope:employee = {
+			base_court_position_validity_trigger = { EMPLOYER = scope:liege }
+		}
+	}
+
+	revoke_cost = {
+		influence = {
+			value = medium_court_position_influence_revoke_cost
+			# Obligation makes it free
+			if = {
+				limit = {
+					court_position_obligation_hook_salary_trigger = {
+						POS = stateless_learning
+						LIEGE = ROOT
+					}
+				}
+				multiply = 0
+			}
+			# Avoid AI Inf issues
+			if = {
+				limit = {
+					exists = this
+					is_ai = yes
+				}
+				multiply = 0
+			}
+			# special case for events
+			if = {
+				limit = {
+					exists = this
+					has_character_flag = free_revoke_cost
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	salary = {
+		round = no
+		influence = {
+			value = stateless_learning_court_position_salary
+		}
+	}
+
+	base_employer_modifier = {
+		learning_per_influence_level = 1
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			monthly_influence_mult = 0.05
+			monthly_piety_gain_mult = 0.02
+		}
+		poor = {
+			monthly_influence_mult = 0.1
+			monthly_piety_gain_mult = 0.05
+		}
+		average = {
+			monthly_influence_mult = 0.1
+			monthly_piety_gain_mult = 0.1
+		}
+		good = {
+			monthly_influence_mult = 0.15
+			monthly_piety_gain_mult = 0.15
+		}
+		excellent = {
+			monthly_influence_mult = 0.15
+			monthly_piety_gain_mult = 0.2
+		}
+	}
+
+	modifier = {
+		learning = 3
+		monthly_piety_gain_mult = 0.05
+	}
+
+	ai_position_score = {
+		value = 1000
+	}
+
+	ai_candidate_score = {
+		value = 50
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_candidate_aptitude_value
+		if = { # To stop petitioned positions immediately being fired by the AI
+			limit = {
+				court_position_petition_ai_weight_trigger = { ROLE = stateless_martial }
+			}
+			add = 1000
+		}
+	}
+}
+
+stateless_diplomacy_court_position = {
+	sort_order = 2000
+	max_available_positions = 1
+	skill = diplomacy
+
+	court_position_asset = {
+		trigger = { culture_has_east_asian_heritage_pillar_trigger = yes }
+		animation = storyteller
+		background = "gfx/interface/illustrations/event_scenes/tgp_tavern_asia.dds"
+	}
+
+	court_position_asset = {
+		trigger = { culture_has_mena_heritage_pillar_trigger = yes }
+		animation = storyteller
+		background = "gfx/interface/illustrations/event_scenes/bp2_tavern_mena.dds"
+	}
+
+	court_position_asset = {
+		trigger = {
+			root.culture ?= {
+				has_cultural_pillar = heritage_north_germanic
+			}
+		}
+		animation = storyteller
+		background = "gfx/interface/illustrations/event_scenes/tavern.dds"
+		localization_key = court_poet_skald
+	}
+
+	court_position_asset = {
+		animation = storyteller
+		background = "gfx/interface/illustrations/event_scenes/tavern.dds"
+	}
+
+	opinion = {
+		value = regular_court_position_opinion
+	}
+
+	# How high the aptitude has to be to reach the 5 different modifier levels
+	aptitude_level_breakpoints = { 20 40 60 80 }
+
+	aptitude = {
+		value = 25
+		add = {
+			value = diplomacy
+			multiply = 1.5
+			max = 50
+			desc = court_position_skill_diplomacy
+		}
+		add = {
+			value = stewardship
+			multiply = 0.5
+			max = 50
+			desc = court_position_skill_stewardship
+		}
+		add = {
+			value = intrigue
+			multiply = 0.5
+			max = 50
+			desc = court_position_skill_intrigue
+		}
+		if = {
+			limit = { has_trait = calm }
+			add = {
+				value = 10
+				desc = court_position_calm_trait
+			}
+		}
+		if = {
+			limit = { has_trait = gregarious }
+			add = {
+				value = 20
+				desc = court_position_trait_gregarious
+			}
+		}
+		if = {
+			limit = { has_trait = arrogant }
+			add = {
+				value = -15
+				desc = court_position_trait_arrogant
+			}
+		}
+		if = {
+			limit = { has_trait = callous }
+			add = {
+				value = -15
+				desc = court_position_trait_callous
+			}
+		}
+		if = {
+			limit = { has_trait = sadistic }
+			add = {
+				value = -15
+				desc = court_position_trait_sadistic
+			}
+		}
+		if = {
+			limit = { has_trait = family_first }
+			add = {
+				value = 15
+				desc = court_position_trait_family_first
+			}
+		}
+		if = {
+			limit = { has_trait = administrator }
+			value = 10
+			desc = court_position_trait_administrator
+		}
+		if = {
+			limit = { has_trait = schemer }
+			value = 10
+			desc = court_position_trait_schemer
+		}
+		if = {
+			limit = { has_trait = lifestyle_reveler }
+			if = {
+				limit = {
+					has_trait_xp = {
+						trait = lifestyle_reveler
+						value >= 100
+					}
+				}
+				add = {
+					value = 20
+					desc = court_position_reveler_3_trait
+				}
+			}
+			else_if = {
+				limit = {
+					has_trait_xp = {
+						trait = lifestyle_reveler
+						value >= 50
+					}
+				}
+				add = {
+					value = 10
+					desc = court_position_reveler_2_trait
+				}
+			}
+			else = {
+				add = {
+					value = 5
+					desc = court_position_reveler_1_trait
+				}
+			}
+		}
+
+
+		add = court_position_aptitude_high_penalty_value
+		add = general_aptitude_bonus
+	}
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+		trigger_if = {
+			limit = {
+				is_ai = yes
+				highest_held_title_tier <= tier_county
+			}
+			always = no
+		}
+	}
+
+	valid_position = {
+		government_has_flag = government_is_stateless
+	}
+
+	is_shown_character = {
+		scope:employee = {
+			court_position_employee_shown_trigger = yes
+		}
+	}
+
+	valid_character = {
+		scope:employee = {
+			base_court_position_validity_trigger = { EMPLOYER = scope:liege }
+		}
+	}
+
+	revoke_cost = {
+		influence = {
+			value = medium_court_position_influence_revoke_cost
+			# Obligation makes it free
+			if = {
+				limit = {
+					court_position_obligation_hook_salary_trigger = {
+						POS = stateless_diplomacy
+						LIEGE = ROOT
+					}
+				}
+				multiply = 0
+			}
+			# Avoid AI Inf issues
+			if = {
+				limit = {
+					exists = this
+					is_ai = yes
+				}
+				multiply = 0
+			}
+			# special case for events
+			if = {
+				limit = {
+					exists = this
+					has_character_flag = free_revoke_cost
+				}
+				multiply = 0
+			}
+		}
+	}
+
+	salary = {
+		round = no
+		influence = {
+			value = stateless_diplomacy_court_position_salary
+		}
+	}
+
+	base_employer_modifier = {
+		diplomacy_per_influence_level = 1
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			monthly_influence_mult = 0.1
+		}
+		poor = {
+			monthly_influence_mult = 0.15
+		}
+		average = {
+			monthly_influence_mult = 0.2
+		}
+		good = {
+			monthly_influence_mult = 0.25
+		}
+		excellent = {
+			monthly_influence_mult = 0.3
+		}
+	}
+
+	modifier = {
+		diplomacy = 3
+		stewardship = 1
+		intrigue = 1
+	}
+
+	ai_position_score = {
+		value = 1000
+	}
+
+	ai_candidate_score = {
+		value = 50
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_candidate_aptitude_value
+		if = { # To stop petitioned positions immediately being fired by the AI
+			limit = {
+				court_position_petition_ai_weight_trigger = { ROLE = stateless_martial }
+			}
+			add = 1000
+		}
+	}
+}

@@ -151,11 +151,11 @@ designate_heir_interaction = {
 					NOR = { 
 						government_has_flag = government_is_mandala
 						government_has_flag = government_is_landless_adventurer
+						government_has_flag = government_is_stateless
 					}
 				}
 				prestige >= designate_heir_cost
 			}
-			trigger_else = {}
 			trigger_if = {
 				limit = {
 					government_has_flag = government_is_landless_adventurer
@@ -164,12 +164,6 @@ designate_heir_interaction = {
 				scope:recipient = {
 					is_adult = yes
 				}
-			}
-			trigger_if = {
-				limit = {
-					government_has_flag = government_is_mandala
-				}
-				piety >= designate_heir_cost
 			}
 			custom_tooltip = {
 				text = designate_heir_interaction.tt.currently_coruling

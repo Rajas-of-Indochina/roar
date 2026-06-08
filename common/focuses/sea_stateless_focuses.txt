@@ -62,6 +62,24 @@ martial_stateless_focus = {
 	}
 }
 
+intrigue_stateless_focus = {
+	lifestyle = intrigue_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+	}
+
+	is_valid = {
+		government_has_flag = government_is_stateless
+	}
+
+	modifier = {
+		intrigue = 3
+		owned_scheme_secrecy_add = 20
+		hostile_scheme_phase_duration_add = -15
+	}
+}
+
 stewardship_stateless_focus = {
 	lifestyle = stewardship_lifestyle
 

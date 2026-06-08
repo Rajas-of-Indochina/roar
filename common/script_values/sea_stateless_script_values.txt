@@ -72,6 +72,25 @@ stateless_cohesion_monthly_change = {
 		}
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_HOOKS"
 	}
+	# as does actively working to improve cohesion
+	add = {
+		value = 0
+		every_confederation_member = {
+			add = this.stateless_cohesion_court_position_task_effect
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COURT_TASK"
+	}
+}
+
+stateless_cohesion_court_position_task_effect = {
+	value = 0
+	if = {
+		limit = { has_variable = fostering_chesion }
+		add = {
+			value = court_position:stateless_diplomacy_court_position.aptitude:stateless_diplomacy_court_position
+			multiply = 0.05
+		}
+	}
 }
 
 sent_goods_opinion_value = {
@@ -157,5 +176,137 @@ replenishable_troops_with_barter_goods_value = {
 	max = {
 		add = scope:current_barter_goods_max_value_scope
 		multiply = gold_refill_value
+	}
+}
+
+
+stateless_martial_court_position_salary = {
+	value = medium_court_position_influence_salary
+	# Set to 0 with Dynasty Perk Inner Circle
+	if = {
+		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_martial } }
+		multiply = {
+			value = 0
+			desc = inner_circle_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	if = {
+		limit = {
+			court_position_obligation_hook_salary_trigger = {
+				POS = stateless_martial
+				LIEGE = scope:liege
+			}
+		}
+		multiply = {
+			value = 0.5
+			desc = obligation_hook_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Halved salary
+	if = {
+		limit = {
+			court_position_halved_salary_trigger = { POS = stateless_martial }
+		}
+		multiply = {
+			value = 0.5
+			desc = court_position_halved_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# influence cost break
+	divide = {
+		value = scope:liege.influence_level
+		add = 1
+		min = 1
+	}
+}
+
+
+stateless_diplomacy_court_position_salary = {
+	value = medium_court_position_influence_salary
+	# Set to 0 with Dynasty Perk Inner Circle
+	if = {
+		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_diplomcy } }
+		multiply = {
+			value = 0
+			desc = inner_circle_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	if = {
+		limit = {
+			court_position_obligation_hook_salary_trigger = {
+				POS = stateless_diplomcy
+				LIEGE = scope:liege
+			}
+		}
+		multiply = {
+			value = 0.5
+			desc = obligation_hook_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Halved salary
+	if = {
+		limit = {
+			court_position_halved_salary_trigger = { POS = stateless_diplomcy }
+		}
+		multiply = {
+			value = 0.5
+			desc = court_position_halved_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# influence cost break
+	divide = {
+		value = scope:liege.influence_level
+		add = 1
+		min = 1
+	}
+}
+
+
+stateless_learning_court_position_salary = {
+	value = medium_court_position_influence_salary
+	# Set to 0 with Dynasty Perk Inner Circle
+	if = {
+		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_learning } }
+		multiply = {
+			value = 0
+			desc = inner_circle_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	if = {
+		limit = {
+			court_position_obligation_hook_salary_trigger = {
+				POS = stateless_learning
+				LIEGE = scope:liege
+			}
+		}
+		multiply = {
+			value = 0.5
+			desc = obligation_hook_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Halved salary
+	if = {
+		limit = {
+			court_position_halved_salary_trigger = { POS = stateless_learning }
+		}
+		multiply = {
+			value = 0.5
+			desc = court_position_halved_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# influence cost break
+	divide = {
+		value = scope:liege.influence_level
+		add = 1
+		min = 1
 	}
 }

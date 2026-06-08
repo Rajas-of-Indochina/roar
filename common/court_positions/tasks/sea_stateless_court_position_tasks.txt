@@ -1,0 +1,287 @@
+stateless_martial_court_position_task_prepare_defenses = {
+	court_position_types = { stateless_martial_court_position }
+
+	court_position_asset = {
+		animation = marshal_random_weapon
+	}
+
+	cost = {
+		round = no
+		influence = {
+			value = monthly_court_position_task_cost
+		}
+		barter_goods = {
+			value = monthly_court_position_task_cost
+		}
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			controlled_province_advantage = 2
+		}
+		poor = {
+			controlled_province_advantage = 5
+		}
+		average = {
+			controlled_province_advantage = 8
+			capital_fort_level = 1
+		}
+		good = {
+			controlled_province_advantage = 10
+			capital_fort_level = 1
+		}
+		excellent = {
+			controlled_province_advantage = 12
+			capital_fort_level = 1
+		}
+	}
+
+	is_shown = { always = yes }
+
+	ai_will_do = {
+		value = 0
+		if = {
+			limit = { scope:liege = { is_at_war = yes } }
+			add = 100
+		}
+	}
+}
+
+stateless_learning_court_position_task_perform_rituals = {
+	court_position_types = { stateless_learning_court_position }
+
+	cost = {
+		round = no
+		piety = {
+			value = monthly_court_position_task_cost
+		}
+		barter_goods = {
+			value = monthly_court_position_task_cost
+		}
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			monthly_influence = 0.1
+		}
+		poor = {
+			monthly_influence = 0.1
+		}
+		average = {
+			monthly_influence = 0.1
+		}
+		good = {
+			monthly_influence = 0.1
+		}
+		excellent = {
+			monthly_influence = 0.1
+		}
+	}
+
+	on_start = {
+		custom_tooltip = stateless_learning_court_position_task_perform_rituals_tt
+	}
+
+	on_monthly = {
+		# TODO: "perform rituals" events
+		# Will probably need a good number of them
+		# and they'll need to be filtered by religion/tenet/doctrine to make sense for everyone
+	}
+
+	ai_will_do = {
+		value = 50
+		add = scope:liege.ai_zeal
+	}
+}
+
+stateless_learning_court_position_task_learn_foreign_faiths = {
+	court_position_types = { stateless_learning_court_position }
+
+	cost = {
+		round = no
+		piety = {
+			add = monthly_court_position_task_cost
+		}
+		influence = {
+			add = monthly_court_position_task_cost
+		}
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			different_faith_opinion = 2
+			different_faith_county_opinion_mult = -0.02
+		}
+		poor = {
+			different_faith_opinion = 5
+			faith_conversion_piety_cost_mult = -0.02
+			different_faith_county_opinion_mult = -0.04
+		}
+		average = {
+			different_faith_opinion = 8
+			faith_conversion_piety_cost_mult = -0.05
+			different_faith_county_opinion_mult = -0.06
+		}
+		good = {
+			different_faith_opinion = 10
+			faith_conversion_piety_cost_mult = -0.08
+			different_faith_county_opinion_mult = -0.08
+		}
+		excellent = {
+			different_faith_opinion = 12
+			faith_conversion_piety_cost_mult = -0.010
+			different_faith_county_opinion_mult = -0.1
+		}
+	}
+
+	on_start = {
+		custom_tooltip = stateless_learning_court_position_task_learn_foreign_faiths_tt
+	}
+
+	on_monthly = {
+		# you can get events to convert to other faiths in your area on the cheap
+		# also this is the only way you can convert your county if your faiths don't match
+	}
+
+	ai_will_do = {
+		value = 50
+		subtract = scope:liege.ai_zeal
+	}
+}
+
+stateless_diplomacy_court_position_task_cohesion = {
+	court_position_types = { stateless_diplomacy_court_position }
+
+	court_position_asset = {
+		animation = debating
+	}
+
+	cost = {
+		round = no
+		influence = {
+			value = monthly_court_position_task_cost
+			multiply = {
+				value = 1
+				add = {
+					value = scope:liege.confederation.cohesion
+					divide = 20
+				}
+			}
+		}
+	}
+
+	on_start = {
+		scope:liege = {
+			set_variable = fostering_cohesion
+		}
+	}
+
+	on_end = {
+		scope:liege = {
+			remove_variable = fostering_cohesion
+		}
+	}
+
+	on_monthly = {
+		# we can put some cohesion-changing events here later
+	}
+
+	ai_will_do = {
+		value = 0
+		if = {
+			limit = { scope:liege = { is_confederation_member = yes } }
+			add = {
+				# AI desire to do this declines with confederation cohesion
+				value = 100
+				subtract = scope:liege.confederation.cohesion
+				# but also rises (more slowly) with liege greed because we want ambitious, greedy people to try and centralize
+				add = {
+					value = scope:liege.ai_greed
+					multiply = 0.5
+					min = 0
+				}
+			}
+			
+		}
+	}
+}
+
+stateless_diplomacy_court_position_task_harmony = {
+	court_position_types = { stateless_diplomacy_court_position }
+
+	court_position_asset = {
+		animation = personality_compassionate
+	}
+
+	cost = {
+		round = no
+		influence = {
+			value = monthly_court_position_task_cost
+		}
+		prestige = {
+			value = monthly_court_position_task_cost
+		}
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			learn_language_scheme_phase_duration_add = -4
+		}
+		poor = {
+			learn_language_scheme_phase_duration_add = -8
+		}
+		average = {
+			learn_language_scheme_phase_duration_add = -12
+		}
+		good = {
+			learn_language_scheme_phase_duration_add = -16
+		}
+		excellent = {
+			learn_language_scheme_phase_duration_add = -20
+		}
+	}
+
+	on_start = {
+		custom_tooltip = stateless_diplomacy_court_position_task_harmony_tt
+	}
+
+	on_monthly = {
+		# if you aren't the same culture as your county you get chances to convert to it for free
+		# or raise the acceptance between your cultures
+		# or hybridize the cultures if acceptance is high enough
+		# or more rarely a chance to convert the county to your culture
+
+		# if you ARE the same culture as your county you get to raise acceptance with an adjacent county culture
+		# and possibly hybridize with it
+	}
+
+	is_valid_showing_failures_only = {
+		OR = {
+			custom_tooltip = {
+				text = different_culture_from_county_tt
+				scope:liege = {
+					any_realm_county = { NOT = { culture = scope:liege.culture } }
+				}
+			}
+			custom_tooltip = {
+				text = different_neighboring_culture_tt
+				scope:liege = {
+					any_realm_county = {
+						any_neighboring_county = {
+							NOT = {
+								culture = scope:liege.culture
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		value = 50
+		subtract = scope:liege.ai_zeal
+		add = scope:liege.ai_compassion
+	}
+	
+}

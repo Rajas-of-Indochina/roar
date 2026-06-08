@@ -386,10 +386,16 @@ intrigue_skulduggery_focus = {
 	lifestyle = intrigue_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -450,10 +456,16 @@ intrigue_temptation_focus = {
 	lifestyle = intrigue_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -506,10 +518,16 @@ intrigue_intimidation_focus = {
 	lifestyle = intrigue_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -608,10 +626,16 @@ stewardship_wealth_focus = {
 	lifestyle = stewardship_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -659,10 +683,16 @@ stewardship_domain_focus = {
 	lifestyle = stewardship_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -704,10 +734,16 @@ stewardship_duty_focus = {
 	lifestyle = stewardship_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -781,10 +817,16 @@ learning_medicine_focus = {
 	lifestyle = learning_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -818,10 +860,16 @@ learning_scholarship_focus = {
 	lifestyle = learning_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -855,10 +903,16 @@ learning_theology_focus = {
 	lifestyle = learning_lifestyle
 	
 	is_shown = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		NOT = { government_has_flag = government_is_landless_adventurer }
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
@@ -905,10 +959,16 @@ learning_adventurer_focus = {
 	lifestyle = learning_lifestyle
 	
 	is_shown = {
-		government_has_flag = government_is_landless_adventurer
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 	is_valid = {
-		government_has_flag = government_is_landless_adventurer
+		NOT = {
+			government_has_flag = government_is_landless_adventurer
+			government_has_flag = government_is_stateless
+		}
 	}
 
 	desc = {
