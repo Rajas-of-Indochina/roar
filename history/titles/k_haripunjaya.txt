@@ -1,593 +1,312 @@
 ﻿
-k_haripunjaya = {
-	769.1.1 = { change_development_level = 2 }
-	1000.1.1 = { change_development_level = 5 }
-	1124.1.1 = { change_development_level = 7 }
-	1166.1.1 = { change_development_level = 11 }
-	1204.1.1 = { change_development_level = 16 }
-	1241.1.1 = { change_development_level = 20 }
-	1310.1.1 = { change_development_level = 26 }
-}
+### k_haripunjaya
 
 d_haripunjaya = {
-	769.1.1 = { change_development_level = 12 }
-	1000.1.1 = { change_development_level = 18 }
-	1124.1.1 = { change_development_level = 20 }
-	1166.1.1 = { change_development_level = 24 }
-	1204.1.1 = { change_development_level = 29 }
-	1241.1.1 = { change_development_level = 33 }
-	1310.1.1 = { change_development_level = 39 }
+	867.1.1 = { change_development_level = 9 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 26 }
 
-	663.1.1 = {
+	662.1.1 = {
 		government = mandala_government
-		holder = jamadevi002
+		holder = haripunjaya_ruler_1
+		liege = 0
+		#if = {
+		#	limit = {
+		#		exists = holder
+		#		NOT = { has_dlc_feature = tgp }
+		#	}
+		#	holder = {
+		#		change_government = feudal_government
+		#		add_realm_law_skip_effects = single_heir_succession_law
+		#	}
+		#}
 	}
-	691.1.1 = {
-		holder = jamadevi003
+	731.1.1 = {
+		holder = haripunjaya_ruler_2
 	}
-	750.1.1 = {
-		holder = jamadevi005
+	749.1.1 = {
+		holder = haripunjaya_ruler_3
 	}
-	790.1.1 = {
-		holder = jamadevi006
+	789.1.1 = {
+		holder = haripunjaya_ruler_4
 	}
-	817.1.1 = {
-		holder = jamadevi007
+	816.1.1 = {
+		holder = haripunjaya_ruler_5
 	}
-	847.1.1 = {
-		holder = jamadevi008
+	846.1.1 = {
+		holder = haripunjaya_ruler_6
 	}
-	857.1.1 = {
-		holder = jamadevi009
+
+	#867
+	856.1.1 = {
+		holder = haripunjaya_ruler_7
 	}
-	887.1.1 = {
-		holder = jamadevi010
+	886.1.1 = {
+		holder = haripunjaya_ruler_8
 	}
-	895.1.1 = {
-		holder = jamadevi011
+	894.1.1 = {
+		holder = haripunjaya_ruler_9
 	}
-	898.1.1 = {
-		holder = jamadevi012
+	903.1.1 = {
+		holder = haripunjaya_ruler_10
 	}
-	899.1.1 = {
-		holder = jamadevi013
+	912.1.1 = {
+		holder = haripunjaya_ruler_11
 	}
-	899.1.2 = {
-		holder = jamadevi014
+	921.1.1 = {
+		holder = haripunjaya_ruler_12
 	}
-	900.1.1 = {
-		holder = jamadevi015
+	930.1.1 = {
+		holder = haripunjaya_ruler_13
 	}
-	910.1.1 = {
-		holder = jamadevi016
+	939.1.1 = {
+		holder = haripunjaya_ruler_14
 	}
-	913.1.1 = {
-		holder = jamadevi017
+	948.1.1 = {
+		holder = haripunjaya_ruler_15
 	}
-	916.1.1 = {
-		holder = jamadevi018
+	957.1.1 = {
+		holder = haripunjaya_ruler_16
 	}
-	917.1.1 = {
-		holder = jamadevi019
+	966.1.1 = {
+		holder = haripunjaya_ruler_17
 	}
-	920.1.1 = {
-		holder = jamadevi020
+	975.1.1 = {
+		holder = haripunjaya_ruler_18
 	}
-	922.1.1 = {
-		holder = jamadevi021
-	}
-	924.1.1 = {
-		holder = jamadevi022
-	}
-	927.1.1 = {
-		holder = jamadevi023
-	}
-	947.1.1 = {
-		holder = jamadevi024
-	}
-	953.1.1 = {
-		holder = jamadevi025
-	}
-	962.1.1 = {
-		holder = jamadevi026
-	}
-	963.1.1 = {
-		holder = jamadevi027
-	}
-	967.1.1 = {
-		holder = jamadevi028
-	}
-	974.1.1 = {
-		holder = jamadevi029
-	}
-	977.1.1 = {
-		holder = jamadevi030
-	}
-	983.1.1 = {
-		holder = jamadevi031
+	984.1.1 = {
+		holder = haripunjaya_ruler_19
 	}
 	993.1.1 = {
-		holder = jamadevi032
+		holder = haripunjaya_ruler_20
 	}
-	1013.1.1 = {
-		holder = jamadevi033
+	1002.1.1 = {
+		holder = haripunjaya_ruler_21
 	}
-	1042.1.1 = {
-		holder = jamadevi034
+	1011.1.1 = {
+		holder = haripunjaya_ruler_22
 	}
-	1048.1.1 = {
-		holder = jamadevi035
+	1020.1.1 = {
+		holder = haripunjaya_ruler_23
 	}
-	1053.1.1 = {
-		holder = jamadevi036
+	1029.1.1 = {
+		holder = haripunjaya_ruler_24
 	}
-	1098.1.1 = {
-		holder = jamadevi037
+	1037.1.1 = {
+		holder = haripunjaya_ruler_25
 	}
-	1113.1.1 = {
-		holder = jamadevi038
+	1046.1.1 = {
+		holder = haripunjaya_ruler_26
 	}
-	1135.1.1 = {
-		holder = jamadevi039
+	1055.1.1 = {
+		holder = haripunjaya_ruler_27
 	}
-	1137.1.1 = {
-		holder = jamadevi040
+
+	#1066
+	1064.1.1 = {
+		holder = haripunjaya_ruler_28
 	}
-	1148.1.1 = {
-		holder = jamadevi041
-	}
-	1151.1.1 = {
-		holder = jamadevi042
-	}
-	1152.1.1 = {
-		holder = jamadevi043
-	}
-	1182.1.1 = {
-		holder = jamadevi044
-	}
-	1185.1.1 = {
-		holder = jamadevi045
-	}
-	1195.1.1 = {
-		holder = jamadevi046
-	}
-	1196.1.1 = {
-		holder = jamadevi047
-	}
-	1197.1.1 = {
-		holder = jamadevi048
-	}
-	1271.1.1 = {
-		holder = jamadevi049
+
+	#1178
+	1172.1.1 = {
+		holder = haripunjaya_ruler_40
 	}
 }
 	c_haripunjaya = {
-		663.1.1 = {
-			holder = jamadevi002
+		662.1.1 = {
+			government = mandala_government
+			holder = haripunjaya_ruler_1
+			liege = d_haripunjaya
+			#if = {
+			#	limit = {
+			#		exists = holder
+			#		NOT = { has_dlc_feature = tgp }
+			#	}
+			#	holder = {
+			#		change_government = feudal_government
+			#		add_realm_law_skip_effects = single_heir_succession_law
+			#	}
+			#}
 		}
-		691.1.1 = {
-			holder = jamadevi003
+		731.1.1 = {
+			holder = haripunjaya_ruler_2
 		}
-		750.1.1 = {
-			holder = jamadevi005
+		749.1.1 = {
+			holder = haripunjaya_ruler_3
 		}
-		790.1.1 = {
-			holder = jamadevi006
+		789.1.1 = {
+			holder = haripunjaya_ruler_4
 		}
-		817.1.1 = {
-			holder = jamadevi007
+		816.1.1 = {
+			holder = haripunjaya_ruler_5
 		}
-		847.1.1 = {
-			holder = jamadevi008
+		846.1.1 = {
+			holder = haripunjaya_ruler_6
 		}
-		857.1.1 = {
-			holder = jamadevi009
+
+		#867
+		856.1.1 = {
+			holder = haripunjaya_ruler_7
 		}
-		887.1.1 = {
-			holder = jamadevi010
+		886.1.1 = {
+			holder = haripunjaya_ruler_8
 		}
-		895.1.1 = {
-			holder = jamadevi011
+		894.1.1 = {
+			holder = haripunjaya_ruler_9
 		}
-		898.1.1 = {
-			holder = jamadevi012
+		903.1.1 = {
+			holder = haripunjaya_ruler_10
 		}
-		899.1.1 = {
-			holder = jamadevi013
+		912.1.1 = {
+			holder = haripunjaya_ruler_11
 		}
-		899.1.2 = {
-			holder = jamadevi014
+		921.1.1 = {
+			holder = haripunjaya_ruler_12
 		}
-		900.1.1 = {
-			holder = jamadevi015
+		930.1.1 = {
+			holder = haripunjaya_ruler_13
 		}
-		910.1.1 = {
-			holder = jamadevi016
+		939.1.1 = {
+			holder = haripunjaya_ruler_14
 		}
-		913.1.1 = {
-			holder = jamadevi017
+		948.1.1 = {
+			holder = haripunjaya_ruler_15
 		}
-		916.1.1 = {
-			holder = jamadevi018
+		957.1.1 = {
+			holder = haripunjaya_ruler_16
 		}
-		917.1.1 = {
-			holder = jamadevi019
+		966.1.1 = {
+			holder = haripunjaya_ruler_17
 		}
-		920.1.1 = {
-			holder = jamadevi020
+		975.1.1 = {
+			holder = haripunjaya_ruler_18
 		}
-		922.1.1 = {
-			holder = jamadevi021
-		}
-		924.1.1 = {
-			holder = jamadevi022
-		}
-		927.1.1 = {
-			holder = jamadevi023
-		}
-		947.1.1 = {
-			holder = jamadevi024
-		}
-		953.1.1 = {
-			holder = jamadevi025
-		}
-		962.1.1 = {
-			holder = jamadevi026
-		}
-		963.1.1 = {
-			holder = jamadevi027
-		}
-		967.1.1 = {
-			holder = jamadevi028
-		}
-		974.1.1 = {
-			holder = jamadevi029
-		}
-		977.1.1 = {
-			holder = jamadevi030
-		}
-		983.1.1 = {
-			holder = jamadevi031
+		984.1.1 = {
+			holder = haripunjaya_ruler_19
 		}
 		993.1.1 = {
-			holder = jamadevi032
+			holder = haripunjaya_ruler_20
 		}
-		1013.1.1 = {
-			holder = jamadevi033
+		1002.1.1 = {
+			holder = haripunjaya_ruler_21
 		}
-		1042.1.1 = {
-			holder = jamadevi034
+		1011.1.1 = {
+			holder = haripunjaya_ruler_22
 		}
-		1048.1.1 = {
-			holder = jamadevi035
+		1020.1.1 = {
+			holder = haripunjaya_ruler_23
 		}
-		1053.1.1 = {
-			holder = jamadevi036
+		1029.1.1 = {
+			holder = haripunjaya_ruler_24
 		}
-		1098.1.1 = {
-			holder = jamadevi037
+		1037.1.1 = {
+			holder = haripunjaya_ruler_25
 		}
-		1113.1.1 = {
-			holder = jamadevi038
+		1046.1.1 = {
+			holder = haripunjaya_ruler_26
 		}
-		1135.1.1 = {
-			holder = jamadevi039
+		1055.1.1 = {
+			holder = haripunjaya_ruler_27
 		}
-		1137.1.1 = {
-			holder = jamadevi040
+
+		#1066
+		1064.1.1 = {
+			holder = haripunjaya_ruler_28
 		}
-		1148.1.1 = {
-			holder = jamadevi041
-		}
-		1151.1.1 = {
-			holder = jamadevi042
-		}
-		1152.1.1 = {
-			holder = jamadevi043
-		}
-		1182.1.1 = {
-			holder = jamadevi044
-		}
-		1185.1.1 = {
-			holder = jamadevi045
-		}
-		1195.1.1 = {
-			holder = jamadevi046
-		}
-		1196.1.1 = {
-			holder = jamadevi047
-		}
-		1197.1.1 = {
-			holder = jamadevi048
-		}
-		1271.1.1 = {
-			holder = jamadevi049
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 	c_lampang = {
-		663.1.1 = {
-			holder = jamadevi002
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 9 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1. = {
+			government = mandala_government
+			holder = mon_lampang_01_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		691.1.1 = {
-			holder = jamadevi003
+		1059.1.1 = { # Phu Kam Yao / Phayo Kingdom
+			holder = chomtham # Phu Kam Yao / Phayo Kingdom
+			#tributary_of = {
+			#	suzerain = d_haripunjaya
+			#	contract_group = tributary_mandala
+			#}
 		}
-		750.1.1 = {
-			holder = jamadevi005
+		1066.1.1 = {
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		790.1.1 = {
-			holder = jamadevi006
+		1120.1.1 = {
+			holder = chomtham_successor_1
 		}
-		817.1.1 = {
-			holder = jamadevi007
+		1140.1.1 = {
+			holder = chomtham_successor_2
 		}
-		847.1.1 = {
-			holder = jamadevi008
+		1160.1.1 = {
+			holder = chomtham_successor_3
 		}
-		857.1.1 = {
-			holder = jamadevi009
+		1178.1.1 = {
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		887.1.1 = {
-			holder = jamadevi010
-		}
-		895.1.1 = {
-			holder = jamadevi011
-		}
-		898.1.1 = {
-			holder = jamadevi012
-		}
-		899.1.1 = {
-			holder = jamadevi013
-		}
-		899.1.2 = {
-			holder = jamadevi014
-		}
-		900.1.1 = {
-			holder = jamadevi015
-		}
-		910.1.1 = {
-			holder = jamadevi016
-		}
-		913.1.1 = {
-			holder = jamadevi017
-		}
-		916.1.1 = {
-			holder = jamadevi018
-		}
-		917.1.1 = {
-			holder = jamadevi019
-		}
-		920.1.1 = {
-			holder = jamadevi020
-		}
-		922.1.1 = {
-			holder = jamadevi021
-		}
-		924.1.1 = {
-			holder = jamadevi022
-		}
-		927.1.1 = {
-			holder = jamadevi023
-		}
-		947.1.1 = {
-			holder = jamadevi024
-		}
-		953.1.1 = {
-			holder = jamadevi025
-		}
-		962.1.1 = {
-			holder = jamadevi026
-		}
-		963.1.1 = {
-			holder = jamadevi027
-		}
-		967.1.1 = {
-			holder = jamadevi028
-		}
-		974.1.1 = {
-			holder = jamadevi029
-		}
-		977.1.1 = {
-			holder = jamadevi030
-		}
-		983.1.1 = {
-			holder = jamadevi031
-		}
-		993.1.1 = {
-			holder = jamadevi032
-		}
-		1013.1.1 = {
-			holder = jamadevi033
-		}
-		1042.1.1 = {
-			holder = jamadevi034
-		}
-		1048.1.1 = {
-			holder = jamadevi035
-		}
-		1053.1.1 = {
-			holder = jamadevi036
-		}
-		1098.1.1 = {
-			holder = jamadevi037
-		}
-		1113.1.1 = {
-			holder = jamadevi038
-		}
-		1135.1.1 = {
-			holder = jamadevi039
-		}
-		1137.1.1 = {
-			holder = jamadevi040
-		}
-		1148.1.1 = {
-			holder = jamadevi041
-		}
-		1151.1.1 = {
-			holder = jamadevi042
-		}
-		1152.1.1 = {
-			holder = jamadevi043
-		}
-		1182.1.1 = {
-			holder = jamadevi044
-		}
-		1185.1.1 = {
-			holder = jamadevi045
-		}
-		1195.1.1 = {
-			holder = jamadevi046
-		}
-		1196.1.1 = {
-			holder = jamadevi047
-		}
-		1197.1.1 = {
-			holder = jamadevi048
-		}
-		1271.1.1 = {
-			holder = jamadevi049
+		1180.1.1  = {
+			holder = ngoenyang_22
 		}
 	}
 	c_phrae = {
-		663.1.1 = {
-			holder = jamadevi002
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 9 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1. = {
+			government = mandala_government
+			holder = mon_lampang_01_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		691.1.1 = {
-			holder = jamadevi003
+		1059.1.1 = { # Phu Kam Yao / Phayo Kingdom
+			holder = chomtham # Phu Kam Yao / Phayo Kingdom
+			#tributary_of = {
+			#	suzerain = d_haripunjaya
+			#	contract_group = tributary_mandala
+			#}
 		}
-		750.1.1 = {
-			holder = jamadevi005
+		1066.1.1 = {
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		790.1.1 = {
-			holder = jamadevi006
+		1120.1.1 = {
+			holder = chomtham_successor_1
 		}
-		817.1.1 = {
-			holder = jamadevi007
+		1140.1.1 = {
+			holder = chomtham_successor_2
 		}
-		847.1.1 = {
-			holder = jamadevi008
+		1160.1.1 = {
+			holder = chomtham_successor_3
 		}
-		857.1.1 = {
-			holder = jamadevi009
+		1178.1.1 = {
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		887.1.1 = {
-			holder = jamadevi010
-		}
-		895.1.1 = {
-			holder = jamadevi011
-		}
-		898.1.1 = {
-			holder = jamadevi012
-		}
-		899.1.1 = {
-			holder = jamadevi013
-		}
-		899.1.2 = {
-			holder = jamadevi014
-		}
-		900.1.1 = {
-			holder = jamadevi015
-		}
-		910.1.1 = {
-			holder = jamadevi016
-		}
-		913.1.1 = {
-			holder = jamadevi017
-		}
-		916.1.1 = {
-			holder = jamadevi018
-		}
-		917.1.1 = {
-			holder = jamadevi019
-		}
-		920.1.1 = {
-			holder = jamadevi020
-		}
-		922.1.1 = {
-			holder = jamadevi021
-		}
-		924.1.1 = {
-			holder = jamadevi022
-		}
-		927.1.1 = {
-			holder = jamadevi023
-		}
-		947.1.1 = {
-			holder = jamadevi024
-		}
-		953.1.1 = {
-			holder = jamadevi025
-		}
-		962.1.1 = {
-			holder = jamadevi026
-		}
-		963.1.1 = {
-			holder = jamadevi027
-		}
-		967.1.1 = {
-			holder = jamadevi028
-		}
-		974.1.1 = {
-			holder = jamadevi029
-		}
-		977.1.1 = {
-			holder = jamadevi030
-		}
-		983.1.1 = {
-			holder = jamadevi031
-		}
-		993.1.1 = {
-			holder = jamadevi032
-		}
-		1013.1.1 = {
-			holder = jamadevi033
-		}
-		1042.1.1 = {
-			holder = jamadevi034
-		}
-		1048.1.1 = {
-			holder = jamadevi035
-		}
-		1053.1.1 = {
-			holder = jamadevi036
-		}
-		1098.1.1 = {
-			holder = jamadevi037
-		}
-		1113.1.1 = {
-			holder = jamadevi038
-		}
-		1135.1.1 = {
-			holder = jamadevi039
-		}
-		1137.1.1 = {
-			holder = jamadevi040
-		}
-		1148.1.1 = {
-			holder = jamadevi041
-		}
-		1151.1.1 = {
-			holder = jamadevi042
-		}
-		1152.1.1 = {
-			holder = jamadevi043
-		}
-		1182.1.1 = {
-			holder = jamadevi044
-		}
-		1185.1.1 = {
-			holder = jamadevi045
-		}
-		1195.1.1 = {
-			holder = jamadevi046
-		}
-		1196.1.1 = {
-			holder = jamadevi047
-		}
-		1197.1.1 = {
-			holder = jamadevi048
-		}
-		1271.1.1 = {
-			holder = jamadevi049
+		1180.1.1  = {
+			holder = ngoenyang_22
 		}
 	}
 
@@ -599,623 +318,1066 @@ k_sukhothai = {
 }
 
 d_tak = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-
-	860.1.1 = {
-		holder = tak001
-		government = mandala_government
-	}
-	930.1.1 = {
-		holder = mon065
-		liege = k_haripunjaya
-	}
-	1060.1.1 = {
-		holder = mon062
-		liege = k_haripunjaya
-	}
-
-	1238.1.1 = {
-		holder = sukhothai001
-	}
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
 }
 	c_ban_tak = {
-		860.1.1 = {
-			holder = tak001
+		662.1.1 = {
 			government = mandala_government
+			holder = haripunjaya_ruler_1
+			liege = d_haripunjaya
+			#if = {
+			#	limit = {
+			#		exists = holder
+			#		NOT = { has_dlc_feature = tgp }
+			#	}
+			#	holder = {
+			#		change_government = feudal_government
+			#		add_realm_law_skip_effects = single_heir_succession_law
+			#	}
+			#}
+		}
+		731.1.1 = {
+			holder = haripunjaya_ruler_2
+		}
+		749.1.1 = {
+			holder = haripunjaya_ruler_3
+		}
+		789.1.1 = {
+			holder = haripunjaya_ruler_4
+		}
+		816.1.1 = {
+			holder = haripunjaya_ruler_5
+		}
+		846.1.1 = {
+			holder = haripunjaya_ruler_6
+		}
+
+		#867
+		856.1.1 = {
+			holder = haripunjaya_ruler_7
+		}
+		886.1.1 = {
+			holder = haripunjaya_ruler_8
+		}
+		894.1.1 = {
+			holder = haripunjaya_ruler_9
+		}
+		903.1.1 = {
+			holder = haripunjaya_ruler_10
+		}
+		912.1.1 = {
+			holder = haripunjaya_ruler_11
+		}
+		921.1.1 = {
+			holder = haripunjaya_ruler_12
 		}
 		930.1.1 = {
-			holder = mon065
+			holder = haripunjaya_ruler_13
 		}
-		1060.1.1 = {
-			holder = mon062
+		939.1.1 = {
+			holder = haripunjaya_ruler_14
+		}
+		948.1.1 = {
+			holder = haripunjaya_ruler_15
+		}
+		957.1.1 = {
+			holder = haripunjaya_ruler_16
+		}
+		966.1.1 = {
+			holder = haripunjaya_ruler_17
+		}
+		975.1.1 = {
+			holder = haripunjaya_ruler_18
+		}
+		984.1.1 = {
+			holder = haripunjaya_ruler_19
+		}
+		993.1.1 = {
+			holder = haripunjaya_ruler_20
+		}
+		1002.1.1 = {
+			holder = haripunjaya_ruler_21
+		}
+		1011.1.1 = {
+			holder = haripunjaya_ruler_22
+		}
+		1020.1.1 = {
+			holder = haripunjaya_ruler_23
+		}
+		1029.1.1 = {
+			holder = haripunjaya_ruler_24
+		}
+		1037.1.1 = {
+			holder = haripunjaya_ruler_25
+		}
+		1046.1.1 = {
+			holder = haripunjaya_ruler_26
+		}
+		1055.1.1 = {
+			holder = haripunjaya_ruler_27
+		}
+
+		#1066
+		1064.1.1 = {
+			holder = haripunjaya_ruler_28
+		}
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 
 
 	c_phra_bang = {
-		860.1.1 = {
-			holder = lavo009
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 8 }
+		1178.1.1 = { change_development_level = 13 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_chakangrao_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = lavo017
-			liege = d_lop_buri
+		1066.1.1 = {
+			holder = mon_chakangrao_10_fic	#fictional
+			liege = 0
 		}
-		1060.1.1 = {
-			holder = lavo0007
+		1178.1.1 = {
+			holder = mon_chakangrao_20_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
 		}
 	}
 
 	c_chakangrao = {
-		860.1.1 = {
-			holder = lavo004
-			liege = d_tak
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 8 }
+		1178.1.1 = { change_development_level = 13 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_chakangrao_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = mon065
+		1066.1.1 = {
+			holder = mon_chakangrao_10_fic	#fictional
+			liege = 0
 		}
-		1060.1.1 = {
-			holder = mon062
+		1178.1.1 = {
+			holder = mon_chakangrao_20_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
 		}
 	}
 	c_mae_ramat = {
-		860.1.1 = {
-			government = tribal_government
-			holder = karen002
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 6 }
+		1178.1.1 = { change_development_level = 10 }
+
+		662.1.1 = {
+			government = mandala_government
+			holder = haripunjaya_ruler_1
+			liege = d_haripunjaya
+			#if = {
+			#	limit = {
+			#		exists = holder
+			#		NOT = { has_dlc_feature = tgp }
+			#	}
+			#	holder = {
+			#		change_government = feudal_government
+			#		add_realm_law_skip_effects = single_heir_succession_law
+			#	}
+			#}
+		}
+		731.1.1 = {
+			holder = haripunjaya_ruler_2
+		}
+		749.1.1 = {
+			holder = haripunjaya_ruler_3
+		}
+		789.1.1 = {
+			holder = haripunjaya_ruler_4
+		}
+		816.1.1 = {
+			holder = haripunjaya_ruler_5
+		}
+		846.1.1 = {
+			holder = haripunjaya_ruler_6
+		}
+
+		#867
+		856.1.1 = {
+			holder = haripunjaya_ruler_7
+		}
+		886.1.1 = {
+			holder = haripunjaya_ruler_8
+		}
+		894.1.1 = {
+			holder = haripunjaya_ruler_9
+		}
+		903.1.1 = {
+			holder = haripunjaya_ruler_10
+		}
+		912.1.1 = {
+			holder = haripunjaya_ruler_11
+		}
+		921.1.1 = {
+			holder = haripunjaya_ruler_12
 		}
 		930.1.1 = {
-			holder = karen011
-			liege = d_tak
+			holder = haripunjaya_ruler_13
 		}
-		1060.1.1 = {
-			holder = mon061
+		939.1.1 = {
+			holder = haripunjaya_ruler_14
 		}
-	}
-d_phetchabun = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
+		948.1.1 = {
+			holder = haripunjaya_ruler_15
+		}
+		957.1.1 = {
+			holder = haripunjaya_ruler_16
+		}
+		966.1.1 = {
+			holder = haripunjaya_ruler_17
+		}
+		975.1.1 = {
+			holder = haripunjaya_ruler_18
+		}
+		984.1.1 = {
+			holder = haripunjaya_ruler_19
+		}
+		993.1.1 = {
+			holder = haripunjaya_ruler_20
+		}
+		1002.1.1 = {
+			holder = haripunjaya_ruler_21
+		}
+		1011.1.1 = {
+			holder = haripunjaya_ruler_22
+		}
+		1020.1.1 = {
+			holder = haripunjaya_ruler_23
+		}
+		1029.1.1 = {
+			holder = haripunjaya_ruler_24
+		}
+		1037.1.1 = {
+			holder = haripunjaya_ruler_25
+		}
+		1046.1.1 = {
+			holder = haripunjaya_ruler_26
+		}
+		1055.1.1 = {
+			holder = haripunjaya_ruler_27
+		}
 
-	860.1.1 = {
-		holder = wa013
+		#1066
+		1064.1.1 = {
+			holder = haripunjaya_ruler_28
+		}
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
+		}
 	}
-	1060.1.1 = {
-		holder = 0
-	}
-	1238.1.1 = {
-		holder = sukhothai001
-	}
-}
+## d_phetchabun
 	c_phetchabun = {
-		860.1.1 = {
-			holder = wa013
-		}
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 12 }
 
-		#936
-		936.1.1 = {
-			holder = lavo012
-			liege = d_lop_buri
-		}
-
-		1060.1.1 = {
-			holder = siam002
-			liege = d_lop_buri
+		867.1.1 = {
 			government = mandala_government
+			holder = mon_phetchabun_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
+		}
+		1066.1.1 = {
+			holder = mon_phetchabun_10_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = mon_phetchabun_20_fic	#fictional
 		}
 	}
 	c_ken_thao = {
-		860.1.1 = {
-			holder = mon112
-			government = mandala_government
+		867.1.1 = {
+			holder = tai_nantaburi_01_fic	#fictional
+			liege = 0
 		}
-		930.1.1 = {
-			holder = mon066
+		1066.1.1 = {
+			holder = bhol_deva
 		}
-		1060.1.1 = {
-			holder = siam002
+		1178.1.1 = {
+			holder = tai_nantaburi_20_fic	#fictional
 		}
 	}
 	c_ban_yaeng = {
-		860.1.1 = {
-			holder = wa013
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 12 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_phetchabun_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = mon066
+		1066.1.1 = {
+			holder = mon_phetchabun_10_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
 		}
-		1060.1.1 = {
-			holder = siam002
+		1178.1.1 = {
+			holder = mon_phetchabun_20_fic	#fictional
 		}
 	}
 	c_dan_sai = {
-		860.1.1 = {
-			holder = wa013
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 12 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_phetchabun_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = mon066
+		1066.1.1 = {
+			holder = mon_phetchabun_10_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
 		}
-		1060.1.1 = {
-			holder = siam002
+		1178.1.1 = {
+			holder = mon_phetchabun_20_fic	#fictional
 		}
 	}
 
 d_nan = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 14 }
 
-	860.1.1 = {
-		holder = wa016
-		government = tribal_government
-	}
-	1060.1.1 = {
-		holder = 0
-	}
-	1238.1.1 = {
-		holder = sukhothai001
-	}
 }
 	c_nan = {
-		860.1.1 = {
-			holder = wa016
+		867.1.1 = {
+			holder = tai_nantaburi_01_fic	#fictional
+			liege = 0
 		}
-		930.1.1 = {
-			holder = tai025
-		}
-		1060.1.1 = {
-			holder = jamadevi036
+		1066.1.1 = {
+			holder = bhol_deva
 		}
 		1178.1.1 = {
-			liege = 0
-			holder = nan001
+			holder = tai_nantaburi_20_fic	#fictional
 		}
 	}
 	c_wiang_si_sa_ket = {
-		860.1.1 = {
-			holder = wa016
+		867.1.1 = {
+			holder = tai_nantaburi_01_fic	#fictional
+			liege = 0
 		}
-		930.1.1 = {
-			holder = wa023
-		}
-		1060.1.1 = {
-			holder = mon064
-			liege = k_haripunjaya
-			government = mandala_government
+		1066.1.1 = {
+			holder = bhol_deva
 		}
 		1178.1.1 = {
-			liege = 0
-			holder = nan001
+			holder = tai_nantaburi_20_fic	#fictional
 		}
 	}
 
-d_sayaburi = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-}
-	c_sayaburi = {
-		860.1.1 = {
-			holder = isana004
-		}
-		930.1.1 = {
-			holder = tai026
-		}
-		1060.1.1 = {
-			holder = jamadevi036
-		}
-	}
-	c_hong_sa = {
-		860.1.1 = {
-			holder = isana005
-		}
-		930.1.1 = {
-			holder = tai025
-		}
-		1060.1.1 = {
-			holder = jamadevi036
-		}
-	}
-
-d_chiang_mai = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-}
+## d_chiang_mai
 	c_chiang_mai = {
-		857.1.1 = {
-			holder = jamadevi009
+		662.1.1 = {
+			government = mandala_government
+			holder = haripunjaya_ruler_1
+			liege = d_haripunjaya
+			#if = {
+			#	limit = {
+			#		exists = holder
+			#		NOT = { has_dlc_feature = tgp }
+			#	}
+			#	holder = {
+			#		change_government = feudal_government
+			#		add_realm_law_skip_effects = single_heir_succession_law
+			#	}
+			#}
+		}
+		731.1.1 = {
+			holder = haripunjaya_ruler_2
+		}
+		749.1.1 = {
+			holder = haripunjaya_ruler_3
+		}
+		789.1.1 = {
+			holder = haripunjaya_ruler_4
+		}
+		816.1.1 = {
+			holder = haripunjaya_ruler_5
+		}
+		846.1.1 = {
+			holder = haripunjaya_ruler_6
+		}
+
+		#867
+		856.1.1 = {
+			holder = haripunjaya_ruler_7
+		}
+		886.1.1 = {
+			holder = haripunjaya_ruler_8
+		}
+		894.1.1 = {
+			holder = haripunjaya_ruler_9
+		}
+		903.1.1 = {
+			holder = haripunjaya_ruler_10
+		}
+		912.1.1 = {
+			holder = haripunjaya_ruler_11
+		}
+		921.1.1 = {
+			holder = haripunjaya_ruler_12
 		}
 		930.1.1 = {
-			holder = wa022
+			holder = haripunjaya_ruler_13
 		}
-		1060.1.1 = {
-			holder = jamadevi036
+		939.1.1 = {
+			holder = haripunjaya_ruler_14
+		}
+		948.1.1 = {
+			holder = haripunjaya_ruler_15
+		}
+		957.1.1 = {
+			holder = haripunjaya_ruler_16
+		}
+		966.1.1 = {
+			holder = haripunjaya_ruler_17
+		}
+		975.1.1 = {
+			holder = haripunjaya_ruler_18
+		}
+		984.1.1 = {
+			holder = haripunjaya_ruler_19
+		}
+		993.1.1 = {
+			holder = haripunjaya_ruler_20
+		}
+		1002.1.1 = {
+			holder = haripunjaya_ruler_21
+		}
+		1011.1.1 = {
+			holder = haripunjaya_ruler_22
+		}
+		1020.1.1 = {
+			holder = haripunjaya_ruler_23
+		}
+		1029.1.1 = {
+			holder = haripunjaya_ruler_24
+		}
+		1037.1.1 = {
+			holder = haripunjaya_ruler_25
+		}
+		1046.1.1 = {
+			holder = haripunjaya_ruler_26
+		}
+		1055.1.1 = {
+			holder = haripunjaya_ruler_27
+		}
+
+		#1066
+		1064.1.1 = {
+			holder = haripunjaya_ruler_28
+		}
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 	c_hot = {
-		857.1.1 = {
-			holder = jamadevi009
+		662.1.1 = {
+			government = mandala_government
+			holder = haripunjaya_ruler_1
+			liege = d_haripunjaya
+			#if = {
+			#	limit = {
+			#		exists = holder
+			#		NOT = { has_dlc_feature = tgp }
+			#	}
+			#	holder = {
+			#		change_government = feudal_government
+			#		add_realm_law_skip_effects = single_heir_succession_law
+			#	}
+			#}
+		}
+		731.1.1 = {
+			holder = haripunjaya_ruler_2
+		}
+		749.1.1 = {
+			holder = haripunjaya_ruler_3
+		}
+		789.1.1 = {
+			holder = haripunjaya_ruler_4
+		}
+		816.1.1 = {
+			holder = haripunjaya_ruler_5
+		}
+		846.1.1 = {
+			holder = haripunjaya_ruler_6
+		}
+
+		#867
+		856.1.1 = {
+			holder = haripunjaya_ruler_7
+		}
+		886.1.1 = {
+			holder = haripunjaya_ruler_8
+		}
+		894.1.1 = {
+			holder = haripunjaya_ruler_9
+		}
+		903.1.1 = {
+			holder = haripunjaya_ruler_10
+		}
+		912.1.1 = {
+			holder = haripunjaya_ruler_11
+		}
+		921.1.1 = {
+			holder = haripunjaya_ruler_12
 		}
 		930.1.1 = {
-			holder = wa022
+			holder = haripunjaya_ruler_13
 		}
-		1060.1.1 = {
-			holder = mon061
+		939.1.1 = {
+			holder = haripunjaya_ruler_14
+		}
+		948.1.1 = {
+			holder = haripunjaya_ruler_15
+		}
+		957.1.1 = {
+			holder = haripunjaya_ruler_16
+		}
+		966.1.1 = {
+			holder = haripunjaya_ruler_17
+		}
+		975.1.1 = {
+			holder = haripunjaya_ruler_18
+		}
+		984.1.1 = {
+			holder = haripunjaya_ruler_19
+		}
+		993.1.1 = {
+			holder = haripunjaya_ruler_20
+		}
+		1002.1.1 = {
+			holder = haripunjaya_ruler_21
+		}
+		1011.1.1 = {
+			holder = haripunjaya_ruler_22
+		}
+		1020.1.1 = {
+			holder = haripunjaya_ruler_23
+		}
+		1029.1.1 = {
+			holder = haripunjaya_ruler_24
+		}
+		1037.1.1 = {
+			holder = haripunjaya_ruler_25
+		}
+		1046.1.1 = {
+			holder = haripunjaya_ruler_26
+		}
+		1055.1.1 = {
+			holder = haripunjaya_ruler_27
+		}
+
+		#1066
+		1064.1.1 = {
+			holder = haripunjaya_ruler_28
+		}
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 	c_don = {
-		860.1.1 = {
-			holder = wa014
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 4 }
+		1178.1.1 = { change_development_level = 7 }
+
+		867.1.1 = {
+			holder = karen_1_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = wa019
+		1066.1.1 = {
+			holder = karen_2_fic
+			liege = d_haripunjaya
 		}
-		1060.1.1 = {
-			holder = wa026
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 	c_mae_la_noi = {
-		860.1.1 = {
-			holder = wa014
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 4 }
+		1178.1.1 = { change_development_level = 7 }
+
+		867.1.1 = {
+			holder = karen_1_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = wa019
+		1066.1.1 = {
+			holder = karen_2_fic
+			liege = d_haripunjaya
 		}
-		1060.1.1 = {
-			holder = wa026
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 	c_phrao = {
-		700.1.1 = {
-			holder = yonok001
+		662.1.1 = {
+			government = mandala_government
+			holder = haripunjaya_ruler_1
+			liege = d_haripunjaya
+			#if = {
+			#	limit = {
+			#		exists = holder
+			#		NOT = { has_dlc_feature = tgp }
+			#	}
+			#	holder = {
+			#		change_government = feudal_government
+			#		add_realm_law_skip_effects = single_heir_succession_law
+			#	}
+			#}
 		}
-		757.1.1 = {
-			holder = yonok002
+		731.1.1 = {
+			holder = haripunjaya_ruler_2
 		}
-		773.1.1 = {
-			holder = yonok003
+		749.1.1 = {
+			holder = haripunjaya_ruler_3
 		}
-		824.1.1 = {
-			holder = yonok004
+		789.1.1 = {
+			holder = haripunjaya_ruler_4
 		}
-		838.1.1 = {
-			holder = yonok005
+		816.1.1 = {
+			holder = haripunjaya_ruler_5
 		}
-		848.1.1 = {
-			holder = yonok006
+		846.1.1 = {
+			holder = haripunjaya_ruler_6
 		}
-		854.1.1 = {
-			holder = yonok007
+
+		#867
+		856.1.1 = {
+			holder = haripunjaya_ruler_7
 		}
-		875.1.1 = {
-			holder = yonok008
+		886.1.1 = {
+			holder = haripunjaya_ruler_8
 		}
-		896.1.1 = {
-			holder = yonok009
+		894.1.1 = {
+			holder = haripunjaya_ruler_9
+		}
+		903.1.1 = {
+			holder = haripunjaya_ruler_10
 		}
 		912.1.1 = {
-			holder = yonok010
+			holder = haripunjaya_ruler_11
 		}
-		920.1.1 = {
-			holder = yonok011
+		921.1.1 = {
+			holder = haripunjaya_ruler_12
 		}
-		932.1.1 = {
-			holder = yonok012
+		930.1.1 = {
+			holder = haripunjaya_ruler_13
 		}
-		946.1.1 = {
-			holder = yonok013
+		939.1.1 = {
+			holder = haripunjaya_ruler_14
+		}
+		948.1.1 = {
+			holder = haripunjaya_ruler_15
 		}
 		957.1.1 = {
-			holder = yonok014
+			holder = haripunjaya_ruler_16
 		}
-		964.1.1 = {
-			holder = yonok015
+		966.1.1 = {
+			holder = haripunjaya_ruler_17
 		}
-		974.1.1 = {
-			holder = yonok016
+		975.1.1 = {
+			holder = haripunjaya_ruler_18
 		}
-		985.1.1 = {
-			holder = yonok017
+		984.1.1 = {
+			holder = haripunjaya_ruler_19
 		}
-		1022.1.1 = {
-			holder = yonok018
+		993.1.1 = {
+			holder = haripunjaya_ruler_20
 		}
-		1030.1.1 = {
-			holder = yonok019
+		1002.1.1 = {
+			holder = haripunjaya_ruler_21
+		}
+		1011.1.1 = {
+			holder = haripunjaya_ruler_22
+		}
+		1020.1.1 = {
+			holder = haripunjaya_ruler_23
+		}
+		1029.1.1 = {
+			holder = haripunjaya_ruler_24
+		}
+		1037.1.1 = {
+			holder = haripunjaya_ruler_25
+		}
+		1046.1.1 = {
+			holder = haripunjaya_ruler_26
+		}
+		1055.1.1 = {
+			holder = haripunjaya_ruler_27
+		}
+
+		#1066
+		1064.1.1 = {
+			holder = haripunjaya_ruler_28
+		}
+
+		#1178
+		1172.1.1 = {
+			holder = haripunjaya_ruler_40
 		}
 	}
 
 d_chiang_saen = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-
-	638.1.1 = {
-		holder = ngoenyang1
-	}
-	664.1.1 = {
-		holder = ngoenyang2
-	}
-	690.1.1 = {
-		holder = ngoenyang3
-	}
-	716.1.1 = {
-		holder = ngoenyang4
-	}
-	742.1.1 = {
-		holder = ngoenyang5
-	}
-	768.1.1 = {
-		holder = ngoenyang6
-	}
-	794.1.1 = {
-		holder = ngoenyang7
-	}
-	820.1.1 = {
-		holder = ngoenyang8
-	}
-	850.1.1 = {
-		holder = ngoenyang9
-	}
-	876.1.1 = {
-		holder = ngoenyang10
-	}
-	902.1.1 = {
-		holder = ngoenyang11
-	}
-	928.1.1 = {
-		holder = ngoenyang12
-	}
-	954.1.1 = {
-		holder = ngoenyang13
-	}
-	980.1.1 = {
-		holder = ngoenyang14
-	}
-	1006.1.1 = {
-		holder = ngoenyang15
-	}
-	1032.1.1 = {
-		holder = ngoenyang16
-	}
-	1058.1.1 = {
-		holder = ngoenyang17
-	}
-	1084.1.1 = {
-		holder = ngoenyang18
-	}
-	1110.1.1 = {
-		holder = ngoenyang19
-	}
-	1136.1.1 = {
-		holder = ngoenyang20
-	}
-	1162.1.1 = {
-		holder = ngoenyang21
-	}
-	1188.1.1 = {
-		holder = ngoenyang22
-	}
-	1214.1.1 = {
-		holder = ngoenyang23
-	}
-	1240.1.1 = {
-		holder = ngoenyang24
-	}
-	1261.1.1 = {
-		holder = ngoenyang25
-	}
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 19 }
 }
 	c_chiang_saen = {
-		638.1.1 = {
-			holder = ngoenyang1
+		#867
+		867.1.1 = {
+			government = mandala_government
+			holder = ngoenyang_9 #Khiang
 		}
-		664.1.1 = {
-			holder = ngoenyang2
+
+		908.1.1 = {
+			holder = ngoenyang_10 # Khiu
 		}
-		690.1.1 = {
-			holder = ngoenyang3
-		}
-		716.1.1 = {
-			holder = ngoenyang4
-		}
-		742.1.1 = {
-			holder = ngoenyang5
-		}
-		768.1.1 = {
-			holder = ngoenyang6
-		}
-		794.1.1 = {
-			holder = ngoenyang7
-		}
-		820.1.1 = {
-			holder = ngoenyang8
-		}
-		850.1.1 = {
-			holder = ngoenyang9
-		}
-		876.1.1 = {
-			holder = ngoenyang10
-		}
-		902.1.1 = {
-			holder = ngoenyang11
-		}
+
 		928.1.1 = {
-			holder = ngoenyang12
+			holder = ngoenyang_11 # Thoeng
 		}
-		954.1.1 = {
-			holder = ngoenyang13
+
+		943.1.1 = {
+			holder = ngoenyang_12 # Tueng
 		}
+
+		963.1.1 = {
+			holder = ngoenyang_13 # Khon
+		}
+
 		980.1.1 = {
-			holder = ngoenyang14
+			holder = ngoenyang_14 # Som
 		}
-		1006.1.1 = {
-			holder = ngoenyang15
+
+		1001.1.1 = {
+			holder = ngoenyang_15 # Kuak
 		}
-		1032.1.1 = {
-			holder = ngoenyang16
+
+		1028.1.1 = {
+			holder = ngoenyang_16 # Kiu
 		}
-		1058.1.1 = {
-			holder = ngoenyang17
+
+		1043.1.1 = {
+			holder = ngoenyang_17 # Chong
 		}
-		1084.1.1 = {
-			holder = ngoenyang18
+
+		1050.1.1 = {
+			holder = ngoenyang_18
 		}
-		1110.1.1 = {
-			holder = ngoenyang19
+
+		1059.1.1 = {
+			holder = ngoenyang_19 # Chueng
 		}
-		1136.1.1 = {
-			holder = ngoenyang20
+
+		#1066
+		1080.1.1 = {
+			holder = ngoenyang_20 # Ngoen Rueang
 		}
-		1162.1.1 = {
-			holder = ngoenyang21
+
+		1156.1.1 = {
+			holder = ngoenyang_21 # Chuen
 		}
-		1188.1.1 = {
-			holder = ngoenyang22
+
+		#1178
+		1178.1.1 = {
+			holder = ngoenyang_22 # Ming
 		}
-		1214.1.1 = {
-			holder = ngoenyang23
+
+		1199.1.1 = {
+			holder = ngoenyang_23 # Mueang
 		}
-		1240.1.1 = {
-			holder = ngoenyang24
+
+		1250.1.1 = {
+			holder = ngoenyang_24 # Meng
 		}
+
 		1261.1.1 = {
-			holder = ngoenyang25
+			holder = ngoenyang_25 # Mangrai
 		}
 	}
 	c_chiang_khong = {
-		 638.1.1 = {
-			holder = ngoenyang1
+		#867
+		867.1.1 = {
+			government = mandala_government
+			holder = ngoenyang_9 #Khiang
 		}
-		664.1.1 = {
-			holder = ngoenyang2
+
+		908.1.1 = {
+			holder = ngoenyang_10 # Khiu
 		}
-		690.1.1 = {
-			holder = ngoenyang3
-		}
-		716.1.1 = {
-			holder = ngoenyang4
-		}
-		742.1.1 = {
-			holder = ngoenyang5
-		}
-		768.1.1 = {
-			holder = ngoenyang6
-		}
-		794.1.1 = {
-			holder = ngoenyang7
-		}
-		820.1.1 = {
-			holder = ngoenyang8
-		}
-		850.1.1 = {
-			holder = ngoenyang9
-		}
-		876.1.1 = {
-			holder = ngoenyang10
-		}
-		902.1.1 = {
-			holder = ngoenyang11
-		}
+
 		928.1.1 = {
-			holder = ngoenyang12
+			holder = ngoenyang_11 # Thoeng
 		}
-		954.1.1 = {
-			holder = ngoenyang13
+
+		943.1.1 = {
+			holder = ngoenyang_12 # Tueng
 		}
+
+		963.1.1 = {
+			holder = ngoenyang_13 # Khon
+		}
+
 		980.1.1 = {
-			holder = ngoenyang14
+			holder = ngoenyang_14 # Som
 		}
-		1006.1.1 = {
-			holder = ngoenyang15
+
+		1001.1.1 = {
+			holder = ngoenyang_15 # Kuak
 		}
-		1032.1.1 = {
-			holder = ngoenyang16
+
+		1028.1.1 = {
+			holder = ngoenyang_16 # Kiu
 		}
-		1058.1.1 = {
-			holder = ngoenyang17
+
+		1043.1.1 = {
+			holder = ngoenyang_17 # Chong
 		}
-		1084.1.1 = {
-			holder = ngoenyang18
+
+		1050.1.1 = {
+			holder = ngoenyang_18
 		}
-		1110.1.1 = {
-			holder = ngoenyang19
+
+		1059.1.1 = {
+			holder = ngoenyang_19 # Chueng
 		}
-		1136.1.1 = {
-			holder = ngoenyang20
+
+		#1066
+		1080.1.1 = {
+			holder = ngoenyang_20 # Ngoen Rueang
 		}
-		1162.1.1 = {
-			holder = ngoenyang21
+
+		1156.1.1 = {
+			holder = ngoenyang_21 # Chuen
 		}
-		1188.1.1 = {
-			holder = ngoenyang22
+
+		#1178
+		1178.1.1 = {
+			holder = ngoenyang_22 # Ming
 		}
-		1214.1.1 = {
-			holder = ngoenyang23
+
+		1199.1.1 = {
+			holder = ngoenyang_23 # Mueang
 		}
-		1240.1.1 = {
-			holder = ngoenyang24
+
+		1250.1.1 = {
+			holder = ngoenyang_24 # Meng
 		}
+
 		1261.1.1 = {
-			holder = ngoenyang25
+			holder = ngoenyang_25 # Mangrai
 		}
 	}
 	c_phayao = {
-		860.1.1 = {
-			holder = wa012
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 9 }
+		1178.1.1 = { change_development_level = 15 }
+
+		867.1.1. = {
+			government = mandala_government
+			holder = mon_lampang_01_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		1080.1.1 = {
-			holder = ngoenyang18
+		1059.1.1 = { # Phu Kam Yao / Phayo Kingdom
+			holder = chomtham # Phu Kam Yao / Phayo Kingdom
+			#tributary_of = {
+			#	suzerain = d_haripunjaya
+			#	contract_group = tributary_mandala
+			#}
+		}
+		1066.1.1 = {
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
+		}
+		1120.1.1 = {
+			holder = chomtham_successor_1
+		}
+		1140.1.1 = {
+			holder = chomtham_successor_2
 		}
 		1160.1.1 = {
-			holder = ngoenyang21_001
+			holder = chomtham_successor_3
+		}
+		1178.1.1 = {
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
+		}
+		1180.1.1  = {
+			holder = ngoenyang_22
 		}
 	}
-d_phayao = {
-	1160.1.1 = {
-		holder = ngoenyang21_001
-	}
-}
+## d_phayao
 
-d_sukhothai = {
-	1238.1.1 = {
-		holder = sukhothai001
-	}
-}
+## d_sukhothai
+
 	c_sukhothai = {
-		860.1.1 = {
-			holder = tak001
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 11 }
+		1178.1.1 = { change_development_level = 24 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_sukhothai_01_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		1060.1.1 = {
-			holder = mon062
+		1066.1.1 = {
+			holder = mon_sukhothai_10_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		1238.1.1 = {
-			holder = sukhothai001
+		1178.1.1 = {
+			holder = mon_sukhothai_20_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
 	}
 	c_phichai = {
-		860.1.1 = {
-			holder = mon112
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 11 }
+		1178.1.1 = { change_development_level = 24 }
+
+		867.1.1 = {
 			government = mandala_government
+			holder = mon_sukhothai_01_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
-		1060.1.1 = {
-			holder = mon064
+		1066.1.1 = {
+			holder = mon_sukhothai_10_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = mon_sukhothai_20_fic
+			tributary_of = {
+				suzerain = d_haripunjaya
+				contract_group = tributary_mandala
+			}
 		}
 	}
 	c_phitsanulok = {
-		860.1.1 = {
-			holder = mon112
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 12 }
+
+		867.1.1 = {
 			government = mandala_government
+			holder = mon_phetchabun_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
 		}
-		1060.1.1 = {
-			holder = siam001
-			liege = d_lop_buri
-			government = mandala_government
+		1066.1.1 = {
+			holder = mon_phetchabun_10_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = mon_phetchabun_20_fic	#fictional
 		}
 	}
 	c_tha_lo = {
-		860.1.1 = {
-			holder = lavo010
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 12 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_phetchabun_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_dvaravati
+				contract_group = tributary_mandala
+			}
 		}
-		930.1.1 = {
-			holder = lavo012
-			liege = d_lop_buri
+		1066.1.1 = {
+			holder = mon_phetchabun_10_fic	#fictional
+			tributary_of = {
+				suzerain = d_lop_buri
+				contract_group = tributary_mandala
+			}
 		}
-		1060.1.1 = {
-			holder = siam001
+		1178.1.1 = {
+			holder = mon_phetchabun_20_fic	#fictional
 		}
 	}
