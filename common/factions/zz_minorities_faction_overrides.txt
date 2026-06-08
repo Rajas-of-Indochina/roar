@@ -197,7 +197,7 @@ populist_faction = {
 					has_variable = faction_faith
                     OR = {
                         root.faith = var:faction_faith
-                        ROOT = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:faction.var:faction_faith } }
+                        ROOT = { county_has_specific_large_faith_minority = { FAITH = scope:faction.var:faction_faith } }
                     }
 				}
 			}

@@ -75,7 +75,7 @@ minority_cultures_map_mode = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_culture_minority_trigger = {
+					county_has_specific_large_culture_minority = {
 						CULTURE = scope:the_culture
 					}
 				}
@@ -83,7 +83,7 @@ minority_cultures_map_mode = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_small_culture_minority_trigger = {
+					county_has_specific_small_culture_minority = {
 						CULTURE = scope:the_culture
 					}
 				}
@@ -125,7 +125,7 @@ minority_faiths_map_mode = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority_trigger = {
+					county_has_specific_large_faith_minority = {
 						FAITH = scope:the_faith
 					}
 				}
@@ -133,7 +133,7 @@ minority_faiths_map_mode = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_small_faith_minority_trigger = {
+					county_has_specific_small_faith_minority = {
 						FAITH = scope:the_faith
 					}
 				}

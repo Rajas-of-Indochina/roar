@@ -49,12 +49,12 @@ promote_faith_minority_effect = {
         debug_log = "whuh-oh! FAITH Promotion had a fucky-wucky!"
     }
     else_if = {
-        limit = { county_has_specific_small_faith_minority_trigger = { FAITH = $FAITH$ } }
+        limit = { county_has_specific_small_faith_minority = { FAITH = $FAITH$ } }
         delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
         add_faith_minority_effect = { FAITH = $FAITH$ SIZE = large }
     }
     else_if = {
-        limit = { county_has_specific_large_faith_minority_trigger = { FAITH = $FAITH$ } }
+        limit = { county_has_specific_large_faith_minority = { FAITH = $FAITH$ } }
         delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = large }
         set_county_faith = $FAITH$
     }
@@ -65,11 +65,11 @@ promote_faith_minority_effect = {
 
 demote_faith_minority_effect = {
     if = {
-        limit = { county_has_specific_small_faith_minority_trigger = { FAITH = $FAITH$ } }
+        limit = { county_has_specific_small_faith_minority = { FAITH = $FAITH$ } }
         delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
     }
     else_if = {
-        limit = { county_has_specific_large_faith_minority_trigger = { FAITH = $FAITH$ } }
+        limit = { county_has_specific_large_faith_minority = { FAITH = $FAITH$ } }
         delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = large }
         add_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
     }
@@ -104,12 +104,12 @@ promote_culture_minority_effect = {
         custom_tooltip = "whuh-oh! CULTURE Promotion had a fucky-wucky!"
     }
     else_if = {
-        limit = { county_has_specific_small_culture_minority_trigger = { CULTURE = $CULTURE$ } }
+        limit = { county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ } }
         delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
         add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
     }
     else_if = {
-        limit = { county_has_specific_large_culture_minority_trigger = { CULTURE = $CULTURE$ } }
+        limit = { county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ } }
         delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
         set_county_culture = $CULTURE$
     }
@@ -120,11 +120,11 @@ promote_culture_minority_effect = {
 
 demote_culture_minority_effect = {
     if = {
-        limit = { county_has_specific_small_culture_minority_trigger = { CULTURE = $CULTURE$ } }
+        limit = { county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ } }
         delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
     }
     else_if = {
-        limit = { county_has_specific_large_culture_minority_trigger = { CULTURE = $CULTURE$ } }
+        limit = { county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ } }
         delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
         add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
     }
@@ -134,7 +134,8 @@ demote_culture_minority_effect = {
 # saves scope:culture which is a random culture picked from either the majority or a minority culture
 get_random_county_culture_effect = {
     random_list = {
-        2 = {
+        4 = {
+            trigger = { always = $MAJORITY$ }
             culture = { save_scope_as = culture }
         }
         1 = {
@@ -366,10 +367,12 @@ find_culture_migration_target_effect = {
 
 # run in county scope
 # saves scope:faith which is a random faith picked from either the majority or a minority faith
+# MAJORITY = is the majority allowed?
 get_random_county_faith_effect = {
     random_list = {
         # Get migrant faith
-        2 = {
+        4 = {
+            trigger = { always = $MAJORITY$ }
             faith = { save_scope_as = faith }
         }
         1 = {
@@ -608,14 +611,14 @@ find_faith_migration_target_effect = {
 replace_culture_minority_effect = {
     if = {
         limit = {
-            county_has_specific_small_culture_minority_trigger = { CULTURE = $OLD_MINORITY$ }
+            county_has_specific_small_culture_minority = { CULTURE = $OLD_MINORITY$ }
         }
         delete_culture_minority_effect = { SIZE = small CULTURE = $OLD_MINORITY$ }
         promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
     }
     else_if = {
         limit = {
-            county_has_specific_large_culture_minority_trigger = { CULTURE = $OLD_MINORITY$ }
+            county_has_specific_large_culture_minority = { CULTURE = $OLD_MINORITY$ }
         }
         delete_culture_minority_effect = { SIZE = small CULTURE = $OLD_MINORITY$ }
         promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
@@ -945,13 +948,15 @@ find_combined_migration_target_effect = {
 
 # Region-to-region migration for when you want a more refined, targeted form of migration.
 # Making this now so it'll be easy to use for RICE stuff later
+# SOURCE_REGION
+# TARGET_REGION
 
 quick_region_migration_effect = {
     random_county_in_region = {
         region = $SOURCE_REGION$
         save_scope_as = source_county
-        get_random_county_culture_effect = yes # scope:culture now saved
-        get_random_county_faith_effect = yes # scope:faith now saved
+        get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
+        get_random_county_faith_effect = { MAJORITY = yes } # scope:faith now saved
     }
     random_county_in_region = {
         region = $TARGET_REGION$

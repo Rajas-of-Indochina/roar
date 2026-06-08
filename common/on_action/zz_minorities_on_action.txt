@@ -48,8 +48,8 @@ yearly_random_migration_pulse = {
 			}
 			limit = { is_landless_type_title = no }
 			save_scope_as = source_county
-			get_random_county_culture_effect = yes #scope:culture now saved
-			get_random_county_faith_effect = yes #scope:faith now saved
+			get_random_county_culture_effect = { MAJORITY = yes } #scope:culture now saved
+			get_random_county_faith_effect = { MAJORITY = yes } #scope:faith now saved
 			find_combined_migration_target_effect = {
 				CULTURE = scope:culture
 				FAITH = scope:faith

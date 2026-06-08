@@ -21,13 +21,13 @@ county_has_faith_minority = {
     }
 }
 
-county_has_specific_small_faith_minority_trigger = {
+county_has_specific_small_faith_minority = {
     is_target_in_variable_list = {
         name = faith_minorities_small
         target = $FAITH$
     }
 }
-county_has_specific_large_faith_minority_trigger = {
+county_has_specific_large_faith_minority = {
     is_target_in_variable_list = {
         name = faith_minorities_large
         target = $FAITH$
@@ -35,8 +35,8 @@ county_has_specific_large_faith_minority_trigger = {
 }
 county_has_specific_faith_minority_trigger = {
     OR = {
-        county_has_specific_small_faith_minority_trigger = { FAITH = $FAITH$ }
-        county_has_specific_large_faith_minority_trigger = { FAITH = $FAITH$ }
+        county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
+        county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
     }
 }
 
@@ -63,13 +63,13 @@ county_has_culture_minority = {
     }
 }
 
-county_has_specific_small_culture_minority_trigger = {
+county_has_specific_small_culture_minority = {
     is_target_in_variable_list = {
         name = culture_minorities_small
         target = $CULTURE$
     }
 }
-county_has_specific_large_culture_minority_trigger = {
+county_has_specific_large_culture_minority = {
     is_target_in_variable_list = {
         name = culture_minorities_large
         target = $CULTURE$
@@ -77,8 +77,8 @@ county_has_specific_large_culture_minority_trigger = {
 }
 county_has_specific_culture_minority_trigger = {
     OR = {
-        county_has_specific_small_culture_minority_trigger = { CULTURE = $CULTURE$ }
-        county_has_specific_large_culture_minority_trigger = { CULTURE = $CULTURE$ }
+        county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ }
+        county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ }
     }
 }
 
@@ -90,14 +90,14 @@ county_has_specific_culture_minority_trigger = {
 # call from county scope
 county_has_type_minority_with_trigger = {
 	any_in_list = {
-		list = $TYPE$_minorities_$SIZE$
+		variable = $TYPE$_minorities_$SIZE$
 		$TRIGGER$ = $CHECK$
 	}
 }
 
 county_has_type_minority_trigger_not = {
 	any_in_list = {
-		list = $TYPE$_minorities_$SIZE$
+		variable = $TYPE$_minorities_$SIZE$
 		NOT = { $TRIGGER$ = $CHECK$ }
 	}
 }

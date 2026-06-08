@@ -23,7 +23,7 @@ task_conversion = {
 					highest_held_title_tier >= tier_hegemony
 					government_has_flag = government_has_merit
 				}
-                scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
 			}
 			desc = task_conversion_china_effect_desc
 		}
@@ -34,7 +34,7 @@ task_conversion = {
 					government_has_flag = government_has_merit
 				}
                 NOT = {
-                    scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                    scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                 }
 			}
 			desc = task_conversion_china_promotion_effect_desc
@@ -48,7 +48,7 @@ task_conversion = {
 						government_has_flag = government_has_merit
 					}
 				}
-                scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
 			}
 			desc = task_conversion_effect_desc
 		}
@@ -61,7 +61,7 @@ task_conversion = {
 					}
 				}
                 NOT = {
-                    scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                    scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                 }
 			}
 			desc = task_conversion_promotion_effect_desc
@@ -71,13 +71,13 @@ task_conversion = {
                 OR = {
                     NOT = { exists = scope:county }
                     AND = {
-                        scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                        scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                         scope:councillor_liege = {
                             highest_held_title_tier >= tier_hegemony
                             government_has_flag = government_has_merit
                         }
                     }
-                    scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                    scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                 } 
             }
 		    desc = task_conversion_development_loss_desc
@@ -92,13 +92,13 @@ task_conversion = {
                 OR = {
                     NOT = { exists = scope:county }
                     AND = {
-                        scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                        scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                         scope:councillor_liege = {
                             highest_held_title_tier >= tier_hegemony
                             government_has_flag = government_has_merit
                         }
                     }
-                    scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                    scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                 }
 			}
 			desc = minority_disapproves_conversion_tooltip
@@ -774,13 +774,13 @@ task_conversion = {
 					}
                     OR = {
                         AND = {
-                            scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                            scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                             scope:councillor_liege = {
                                 highest_held_title_tier >= tier_hegemony
                                 government_has_flag = government_has_merit
                             }
                         }
-                        scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                        scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                     } 
 				}
 				custom_tooltip = minority_disapproves_conversion
@@ -841,13 +841,13 @@ task_conversion = {
 						NOT = { has_variable = converted_development }
                         OR = {
                             AND = {
-                                scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                                scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                                 scope:councillor_liege = {
                                     highest_held_title_tier >= tier_hegemony
                                     government_has_flag = government_has_merit
                                 }
                             }
-                            scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                            scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                         } 
 					}
 					set_variable = {
@@ -859,13 +859,13 @@ task_conversion = {
                     limit = {
                         OR = {
                             AND = {
-                                scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                                scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                                 scope:councillor_liege = {
                                     highest_held_title_tier >= tier_hegemony
                                     government_has_flag = government_has_merit
                                 }
                             }
-                            scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                            scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                         } 
                     }
 					change_variable = {
@@ -878,13 +878,13 @@ task_conversion = {
                 limit = {
                     OR = {
                         AND = {
-                            scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor_liege.faith } }
+                            scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor_liege.faith } }
                             scope:councillor_liege = {
                                 highest_held_title_tier >= tier_hegemony
                                 government_has_flag = government_has_merit
                             }
                         }
-                        scope:county = { county_has_specific_large_faith_minority_trigger = { FAITH = scope:councillor.faith } }
+                        scope:county = { county_has_specific_large_faith_minority = { FAITH = scope:councillor.faith } }
                     } 
                 }
 			    change_development_level = convert_faith_development_loss
