@@ -4305,213 +4305,384 @@ setup_tondrakian_minorities = {
 				}
 			}
 			if = {
-				limit = {
-					game_start_date > 968.1.1
-					game_start_date < 1100.1.1
-				}
+				limit = { game_start_date >= 968.1.1 }
 				promote_faith_minority_effect = {
 					FAITH = faith:tondrakian
 				}
 			}
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
 		}
-		if = {
-			limit = { game_start_date < 968.1.1 }
-			title:c_aberani = {
+		title:c_aberani = {
+			if = {
+				limit = { game_start_date < 968.1.1 }
 				add_faith_minority_effect = {
 					FAITH = faith:armenian_apostolic
 					SIZE = large
 				}
 			}
-			title:c_kajberunik = {
-				add_faith_minority_effect = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				promote_faith_minority_effect = {
 					FAITH = faith:tondrakian
-					SIZE = large
 				}
 			}
-			title:c_rshtunik = {
-				add_faith_minority_effect = {
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
 					FAITH = faith:tondrakian
-					SIZE = large
 				}
 			}
+		}
+		title:c_kajberunik = {
 			add_faith_minority_effect = {
-				COUNTY = title:c_apahunik
 				FAITH = faith:tondrakian
 				SIZE = large
 			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_rshtunik = {
 			add_faith_minority_effect = {
-				COUNTY = title:c_tsaghkotn
 				FAITH = faith:tondrakian
 				SIZE = large
 			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_apahunik = {
 			add_faith_minority_effect = {
-				COUNTY = title:c_chaldoran
 				FAITH = faith:tondrakian
 				SIZE = large
 			}
-			title:c_aghbek = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_tsaghkotn = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = large
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_chaldoran = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = large
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_aghbek = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_artaz = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_bznunik = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_sghkunik = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_varaznunik = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_bagrewand = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_eriduakhi = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_dvin = {
+			add_faith_minority_effect = {
+				FAITH = faith:tondrakian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_nakhichevan = {
+			if = {
+				limit = { game_start_date < 968.1.1 }
 				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
 					SIZE = small
 				}
 			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_artaz
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_bznunik
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_sghkunik
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_varaznunik
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_bagrewand
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_eriduakhi
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_dvin
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_nakhichevan
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_vayotsdzor
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_goghtn
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_sisakan
-				FAITH = faith:tondrakian
-				SIZE = small
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
 			}
 		}
-		# needs a revamp for between 968 - 1050s
-		if = {
-			limit = {
-				game_start_date > 968.1.1
-				game_start_date < 1100.1.1
+		title:c_vayotsdzor = {
+			if = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
 			}
-			# by 1050s Tondrakians barely held on in their usual spot of Vaspurakan
-			add_faith_minority_effect = {
-				COUNTY = title:c_aberani
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_kajberunik
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_chaldoran
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_artaz
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			# remnants of the Tondrakians from big Armenian cities
-			add_faith_minority_effect = {
-				COUNTY = title:c_ani
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_shirak
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_dvin
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			#
-			add_culture_minority_effect = {
-				COUNTY = title:c_aleppo
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_aleppo
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_aintab
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_tall_hamid
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_alexandretta
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_antiocheia
-				FAITH = faith:tondrakian
-				SIZE = small
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
 			}
 		}
-		if = {
-			limit = { game_start_date >= 1100.1.1 }
-			add_culture_minority_effect = {
-				COUNTY = title:c_aleppo
-				CULTURE = culture:armenian
-				SIZE = large
+		title:c_goghtn = {
+			if = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
 			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_aleppo
-				FAITH = faith:tondrakian
-				SIZE = small
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
 			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_aintab
-				FAITH = faith:tondrakian
-				SIZE = small
+		}
+		title:c_sisakan = {
+			if = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
 			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_alexandretta
-				FAITH = faith:tondrakian
-				SIZE = small
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
 			}
-			add_faith_minority_effect = {
-				COUNTY = title:c_antiocheia
-				FAITH = faith:tondrakian
-				SIZE = small
+		}
+		# Briefly during Byzantine control of Armenia in 11th century, Tondrakinaism grew popular in big armenian cities
+		title:c_ani = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_shirak = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		# to represent Tondrakian expulsed from Armenia to Middle-East
+		title:c_aleppo = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:armenian
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = large
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_aintab = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = large
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_tall_hamid = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				demote_faith_minority_effect = {
+					FAITH = faith:tondrakian
+				}
+			}
+		}
+		title:c_alexandretta = {
+			if = {
+				limit = { game_start_date >= 968.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
+			}
+		}
+		title:c_antiocheia = {
+			if = {
+				limit = {
+					game_start_date >= 968.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:tondrakian
+					SIZE = small
+				}
 			}
 		}
 		if = {
