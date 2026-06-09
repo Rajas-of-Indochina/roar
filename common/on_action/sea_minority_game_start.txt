@@ -4,9 +4,10 @@
 		set_minorities_game_start
 		setup_indian_christian_minorities
 		setup_MENA_minorities
-		setup_RICE_minorities
+		setup_Euro_minorities
 		setup_tondrakian_minorities
 		setup_caucasus_south_minorities
+		setup_RICE_minorities
 	}
 }
 
@@ -162,522 +163,6 @@ set_minorities_game_start = {
 				SIZE = small
 			}
 		}
-
-		#### WESTERN EURO-ASIA ####
-		### Greece ###
-		# Byzantion
-		title:c_byzantion = {
-			add_culture_minority_effect = {
-				CULTURE = culture:radhanite
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:ashari
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:levantine
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
-		}
-
-
-		### Spain ###
-		title:c_cordoba = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = large
-			}
-		}
-		title:c_granada = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = large
-			}
-		}
-		title:c_malaga = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = large
-			}
-		}
-		title:c_sevilla = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = large
-			}
-		}
-		title:c_toledo = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = large
-			}
-		}
-		title:c_barcelona = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_lisboa = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_cabra = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_almeria = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_cadiz = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_algeciras = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_andujar = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_almader = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_calatrava = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_niebla = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_moura = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_avila = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_leon = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_soria = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_salamanca = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_cuellar = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_burgos = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_tangiers = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_fes = {
-			add_culture_minority_effect = {
-				CULTURE = culture:sephardi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-
-
-		### France ###
-		if = {
-			limit = {
-				game_start_date <= 972.1.1
-				game_start_date >= 887.1.1
-			}
-			title:c_provence = {
-				add_culture_minority_effect = {
-					CULTURE = culture:andalusian
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:muwalladi
-					SIZE = small
-				}
-			}
-		}
-		#
-		title:c_carcassonne = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_troyes = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-
-
-		### Germany ###
-		if = {
-			limit = { game_start_date <= 1066.1.1 }
-			title:c_magdeburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = small
-				}
-			}
-			title:c_mersenburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = small
-				}
-			}
-			title:c_stendal = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = small
-				}
-			}
-			title:c_dannenberg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = small
-				}
-			}
-			#
-			title:c_orlamunde = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = small
-				}
-			}
-			title:c_lobdaburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = small
-				}
-			}
-		}
-		#
-		if = {
-			limit = { game_start_date >= 1066.1.1 }
-			title:c_magdeburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = large
-				}
-			}
-			title:c_mersenburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = large
-				}
-			}
-			title:c_stendal = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = large
-				}
-			}
-			title:c_dannenberg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = large
-				}
-			}
-			title:c_wittenberg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:saxon
-					SIZE = small
-				}
-			}
-			#
-			title:c_orlamunde = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = large
-				}
-			}
-			title:c_lobdaburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = large
-				}
-			}
-			title:c_osterland = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = small
-				}
-			}
-			title:c_naumburg = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = small
-				}
-			}
-			title:c_vogtland = {
-				add_culture_minority_effect = {
-					CULTURE = culture:franconian
-					SIZE = small
-				}
-			}
-		}
-		#
-		title:c_metz = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_speyer = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_worms = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_cologne = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_magdeburg = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_praha = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_trier = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-		title:c_regensburg = {
-			add_culture_minority_effect = {
-				CULTURE = culture:ashkenazi
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-		}
-
-
-		### Ireland ###
-		title:c_dublin = {
-			add_culture_minority_effect = {
-				CULTURE = culture:irish
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:insular_celtic
-				SIZE = large
-			}
-		}
-
 
 		### Other Radhanite Locations ###
 		title:c_kiev = {
@@ -3581,15 +3066,6 @@ set_minorities_game_start = {
 	}
 }
 
-initial_spawn_minority_courtiers = {
-	effect = {
-		every_ruler = {
-			limit = { is_landed = yes highest_held_title_tier >= tier_county }
-			trigger_event = { on_action = spawn_minority_characters }
-		}
-	}
-}
-
 setup_indian_christian_minorities = {
 	effect = {
 		title:c_kerala = {
@@ -3840,14 +3316,13 @@ setup_MENA_minorities = {
 				SIZE = small
 			}
 		}
-		if = {
+		every_county = {
 			limit = {
 				game_start_date < 1000.1.1
+				duchy = title:d_tabaristan
 			}
-			title:d_tabaristan = {
-				promote_faith_minority_effect = {
-					FAITH = faith:imami
-				}
+			promote_faith_minority_effect = {
+				FAITH = faith:imami
 			}
 		}
 		if = {
@@ -4185,110 +3660,519 @@ setup_MENA_minorities = {
 	}
 }
 
-setup_RICE_minorities = {
-	trigger = {
-		has_global_variable = is_RICE_loaded_global_variable
-	}
+setup_Euro_minorities = {
 	effect = {
-		# Iceland
-		every_county = {
-			limit = {
-				duchy = title:d_iceland
-				game_start_date >= 850.1.1
-				game_start_date <= 930.1.1
+		### Greece ###
+		# Byzantion
+		title:c_byzantion = {
+			add_culture_minority_effect = {
+				CULTURE = culture:radhanite
+				SIZE = large
 			}
-			save_scope_as = county
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:levantine
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:circassian
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:alan
+				SIZE = small
+			}
+		}
+
+		### Spain ###
+		title:c_cordoba = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = large
+			}
+		}
+		title:c_granada = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = large
+			}
+		}
+		title:c_malaga = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = large
+			}
+		}
+		title:c_sevilla = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = large
+			}
+		}
+		title:c_toledo = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = large
+			}
+		}
+		title:c_barcelona = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_lisboa = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_cabra = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_almeria = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_cadiz = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_algeciras = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_andujar = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_almader = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_calatrava = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_niebla = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_moura = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_avila = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_leon = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_soria = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_salamanca = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_cuellar = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_burgos = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_tangiers = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_fes = {
+			add_culture_minority_effect = {
+				CULTURE = culture:sephardi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+
+		### France ###
+		if = {
+			limit = {
+				game_start_date <= 972.1.1
+				game_start_date >= 887.1.1
+			}
+			title:c_provence = {
+				add_culture_minority_effect = {
+					CULTURE = culture:andalusian
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:muwalladi
+					SIZE = small
+				}
+			}
+		}
+		#
+		title:c_carcassonne = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_troyes = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+
+		### Germany ###
+		title:c_magdeburg = {
+			add_culture_minority_effect = {
+				CULTURE = culture:saxon
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				promote_culture_minority_effect = {
+					CULTURE = culture:saxon
+				}
+			}
+		}
+		title:c_mersenburg = {
+			add_culture_minority_effect = {
+				CULTURE = culture:saxon
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				promote_culture_minority_effect = {
+					CULTURE = culture:saxon
+				}
+			}
+		}
+		title:c_stendal = {
+			add_culture_minority_effect = {
+				CULTURE = culture:saxon
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				promote_culture_minority_effect = {
+					CULTURE = culture:saxon
+				}
+			}
+		}
+		title:c_dannenberg = {
+			add_culture_minority_effect = {
+				CULTURE = culture:saxon
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				promote_culture_minority_effect = {
+					CULTURE = culture:saxon
+				}
+			}
+		}
+		title:c_wittenberg = {
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:saxon
+					SIZE = small
+				}
+			}
+		}
+		#
+		title:c_orlamunde = {
+			add_culture_minority_effect = {
+				CULTURE = culture:franconian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				promote_culture_minority_effect = {
+					CULTURE = culture:franconian
+				}
+			}
+		}
+		title:c_lobdaburg = {
+			add_culture_minority_effect = {
+				CULTURE = culture:franconian
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				promote_culture_minority_effect = {
+					CULTURE = culture:franconian
+				}
+			}
+		}
+		title:c_osterland = {
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:franconian
+					SIZE = small
+				}
+			}
+		}
+		title:c_naumburg = {
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:franconian
+					SIZE = small
+				}
+			}
+		}
+		title:c_vogtland = {
+			if = {
+				limit = { game_start_date >= 1066.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:franconian
+					SIZE = small
+				}
+			}
+		}
+		#
+		title:c_metz = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_speyer = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_worms = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_cologne = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_magdeburg = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_praha = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_trier = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+		title:c_regensburg = {
+			add_culture_minority_effect = {
+				CULTURE = culture:ashkenazi
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+		}
+
+		### Ireland ###
+		title:c_dublin = {
 			add_culture_minority_effect = {
 				CULTURE = culture:irish
 				SIZE = large
-				COUNTY = scope:county
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:insular_celtic
 				SIZE = large
-				COUNTY = scope:county
-			}
-		}
-
-		# Socotra
-		title:c_socotra = {
-			save_scope_as = county
-			promote_faith_minority_effect = { FAITH = faith:shona_pagan }
-			promote_culture_minority_effect = { CULTURE = culture:sindhi }
-			promote_culture_minority_effect = { CULTURE = culture:shona }
-			promote_culture_minority_effect = { CULTURE = culture:swahili }
-		}
-
-		# Yemen
-		# Himyarite minority setup to be reworked
-
-		# Horn of Africa
-		add_culture_minority_effect = {
-			COUNTY = title:c_gamo
-			CULTURE = culture:aari
-			SIZE = small
-		}
-		add_culture_minority_effect = {
-			COUNTY = title:c_burji
-			CULTURE = culture:aari
-			SIZE = small
-		}
-		add_faith_minority_effect = {
-			COUNTY = title:c_gamo
-			FAITH = faith:south_omotic_pagan
-			SIZE = small
-		}
-		add_faith_minority_effect = {
-			COUNTY = title:c_burji
-			FAITH = faith:south_omotic_pagan
-			SIZE = small
-		}
-
-		# Sicily
-		# gonna just rip off India's religious diversity schtick for RICE Sicily's faiths and cultures
-		every_county = {
-			limit = {
-				title_province = { geographical_region = custom_sicily }
-			}
-			every_neighboring_county = {
-				if = {
-					limit = { NOT = { faith = PREV.faith } }
-					faith = { save_scope_as = faith }
-					PREV = {
-						add_faith_minority_effect = {
-							FAITH = scope:faith
-							COUNTY = this
-							SIZE = small
-						}
-					}
-				}
-				if = {
-					limit = { NOT = { culture = PREV.culture } }
-					culture = { save_scope_as = culture }
-					PREV = {
-						add_culture_minority_effect = {
-							CULTURE = scope:culture
-							COUNTY = this
-							SIZE = small
-						}
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { faith = holder.faith } }
-				add_faith_minority_effect = {
-					FAITH = holder.faith
-					COUNTY = this
-					SIZE = small
-				}
-			}
-			if = {
-				limit = { NOT = { culture = holder.culture } }
-				add_culture_minority_effect = {
-					CULTURE = holder.culture
-					COUNTY = this
-					SIZE = small
-				}
 			}
 		}
 	}
@@ -4305,15 +4189,13 @@ setup_tondrakian_minorities = {
 				}
 			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				promote_faith_minority_effect = {
-					FAITH = faith:tondrakian
+				limit = {
+					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
 				}
-			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
@@ -4326,201 +4208,141 @@ setup_tondrakian_minorities = {
 				}
 			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				promote_faith_minority_effect = {
-					FAITH = faith:tondrakian
+				limit = {
+					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
 				}
-			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_kajberunik = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = large
 				}
 			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+			if = {
+				limit = {
+					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
+				}
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_rshtunik = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = large
 				}
 			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+			if = {
+				limit = {
+					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
+				}
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_apahunik = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
-				}
-			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
+					SIZE = large
 				}
 			}
 		}
 		title:c_tsaghkotn = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
-				}
-			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
+					SIZE = large
 				}
 			}
 		}
 		title:c_chaldoran = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = large
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
-				}
-			}
-			else_if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
+					SIZE = large
 				}
 			}
 		}
 		title:c_aghbek = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_artaz = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_bznunik = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_sghkunik = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_varaznunik = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_bagrewand = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		title:c_eriduakhi = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 968.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
-				}
-			}
-		}
-		title:c_dvin = {
-			add_faith_minority_effect = {
-				FAITH = faith:tondrakian
-				SIZE = small
-			}
-			if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
@@ -4532,12 +4354,6 @@ setup_tondrakian_minorities = {
 					SIZE = small
 				}
 			}
-			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
-				}
-			}
 		}
 		title:c_vayotsdzor = {
 			if = {
@@ -4545,12 +4361,6 @@ setup_tondrakian_minorities = {
 				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
 					SIZE = small
-				}
-			}
-			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
 				}
 			}
 		}
@@ -4562,12 +4372,6 @@ setup_tondrakian_minorities = {
 					SIZE = small
 				}
 			}
-			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
-				}
-			}
 		}
 		title:c_sisakan = {
 			if = {
@@ -4577,41 +4381,38 @@ setup_tondrakian_minorities = {
 					SIZE = small
 				}
 			}
+		}
+		title:c_dvin = {
 			if = {
-				limit = { game_start_date >= 968.1.1 }
-				demote_faith_minority_effect = {
+				limit = { game_start_date < 1100.1.1 }
+				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
+					SIZE = small
 				}
 			}
 		}
 		# Briefly during Byzantine control of Armenia in 11th century, Tondrakinaism grew popular in big armenian cities
 		title:c_ani = {
 			if = {
-				limit = { game_start_date >= 968.1.1 }
+				limit = {
+					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
+				}
 				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
 					SIZE = small
-				}
-			}
-			if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
 				}
 			}
 		}
 		title:c_shirak = {
 			if = {
-				limit = { game_start_date >= 968.1.1 }
+				limit = {
+					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
+				}
 				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
 					SIZE = small
-				}
-			}
-			if = {
-				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
-					FAITH = faith:tondrakian
 				}
 			}
 		}
@@ -4668,6 +4469,10 @@ setup_tondrakian_minorities = {
 		title:c_alexandretta = {
 			if = {
 				limit = { game_start_date >= 968.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:armenian
+					SIZE = small
+				}
 				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
 					SIZE = small
@@ -4678,6 +4483,7 @@ setup_tondrakian_minorities = {
 			if = {
 				limit = {
 					game_start_date >= 968.1.1
+					game_start_date < 1100.1.1
 				}
 				add_faith_minority_effect = {
 					FAITH = faith:tondrakian
@@ -5182,6 +4988,124 @@ setup_caucasus_south_minorities = {
 				SIZE = small
 				COUNTY = title:c_kambysene
 			}
+		}
+	}
+}
+
+setup_RICE_minorities = {
+	trigger = {
+		has_global_variable = is_RICE_loaded_global_variable
+	}
+	effect = {
+		# Iceland
+		every_county = {
+			limit = {
+				duchy = title:d_iceland
+				game_start_date >= 850.1.1
+				game_start_date <= 930.1.1
+			}
+			save_scope_as = county
+			add_culture_minority_effect = {
+				CULTURE = culture:irish
+				SIZE = large
+				COUNTY = scope:county
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:insular_celtic
+				SIZE = large
+				COUNTY = scope:county
+			}
+		}
+
+		# Socotra
+		title:c_socotra = {
+			save_scope_as = county
+			promote_faith_minority_effect = { FAITH = faith:shona_pagan }
+			promote_culture_minority_effect = { CULTURE = culture:sindhi }
+			promote_culture_minority_effect = { CULTURE = culture:shona }
+			promote_culture_minority_effect = { CULTURE = culture:swahili }
+		}
+
+		# Yemen
+		# Himyarite minority setup to be reworked
+
+		# Horn of Africa
+		add_culture_minority_effect = {
+			COUNTY = title:c_gamo
+			CULTURE = culture:aari
+			SIZE = small
+		}
+		add_culture_minority_effect = {
+			COUNTY = title:c_burji
+			CULTURE = culture:aari
+			SIZE = small
+		}
+		add_faith_minority_effect = {
+			COUNTY = title:c_gamo
+			FAITH = faith:south_omotic_pagan
+			SIZE = small
+		}
+		add_faith_minority_effect = {
+			COUNTY = title:c_burji
+			FAITH = faith:south_omotic_pagan
+			SIZE = small
+		}
+
+		# Sicily
+		# gonna just rip off India's religious diversity schtick for RICE Sicily's faiths and cultures
+		every_county = {
+			limit = {
+				title_province = { geographical_region = custom_sicily }
+			}
+			every_neighboring_county = {
+				if = {
+					limit = { NOT = { faith = PREV.faith } }
+					faith = { save_scope_as = faith }
+					PREV = {
+						add_faith_minority_effect = {
+							FAITH = scope:faith
+							COUNTY = this
+							SIZE = small
+						}
+					}
+				}
+				if = {
+					limit = { NOT = { culture = PREV.culture } }
+					culture = { save_scope_as = culture }
+					PREV = {
+						add_culture_minority_effect = {
+							CULTURE = scope:culture
+							COUNTY = this
+							SIZE = small
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { faith = holder.faith } }
+				add_faith_minority_effect = {
+					FAITH = holder.faith
+					COUNTY = this
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { NOT = { culture = holder.culture } }
+				add_culture_minority_effect = {
+					CULTURE = holder.culture
+					COUNTY = this
+					SIZE = small
+				}
+			}
+		}
+	}
+}
+
+initial_spawn_minority_courtiers = {
+	effect = {
+		every_ruler = {
+			limit = { is_landed = yes highest_held_title_tier >= tier_county }
+			trigger_event = { on_action = spawn_minority_characters }
 		}
 	}
 }
