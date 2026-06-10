@@ -400,7 +400,14 @@ jigit_riders = {
 	}
 
 	can_recruit = {
-		culture = { has_cultural_parameter = unlock_maa_jigit_riders }
+		culture = {
+			has_cultural_parameter = unlock_maa_jigit_riders
+			NOR = {
+				has_cultural_tradition = tradition_horse_lords
+				has_cultural_tradition = tradition_devoted_horsemanship
+				has_cultural_tradition = tradition_mpo_wolves_of_the_deep_steppe
+			}
+		}
 	}
 
 	buy_cost = { gold = jigit_riders_recruitment_cost }

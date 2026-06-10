@@ -1906,6 +1906,19 @@ tradition_jigit_riders = {
 		}
 		NOR = {
 			has_cultural_tradition = tradition_horse_lords
+			has_cultural_tradition = tradition_devoted_horsemanship
+			has_cultural_tradition = tradition_mpo_wolves_of_the_deep_steppe
+		}
+	}
+	can_pick = {
+		OR = {
+			has_cultural_pillar = heritage_ciscaucasian
+			has_cultural_pillar = heritage_aghvank
+		}
+		NOR = {
+			has_cultural_tradition = tradition_horse_lords
+			has_cultural_tradition = tradition_devoted_horsemanship
+			has_cultural_tradition = tradition_mpo_wolves_of_the_deep_steppe
 		}
 	}
 
