@@ -1,8 +1,13 @@
 ﻿
 k_champa = {
-	867.1.1 = { change_development_level = 26 }
-	1066.1.1 = { change_development_level = 28 }
-	1178.1.1 = { change_development_level = 30 }
+	# vanilla development setup is so trash it feels like two people worked on it without ever talking to each other
+	#867.1.1 = { change_development_level = 26 }
+	#1066.1.1 = { change_development_level = 28 }
+	#1178.1.1 = { change_development_level = 30 }
+
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 14 }
+	1178.1.1 = { change_development_level = 26 }
 
 	#Pre-867
 	192.1.1 = {
@@ -206,9 +211,9 @@ d_tribhuvanadevi = {
 	}
 }
 	c_visnupura_vn = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 5 }
-		1178.1.1 = { change_development_level = 8 }
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 10 }
 
 		#Champa
 		867.1.1 = {
@@ -237,9 +242,9 @@ d_tribhuvanadevi = {
 		}
 	}
 	c_melhi = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 5 }
-		1178.1.1 = { change_development_level = 8 }
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 10 }
 
 		#Champa
 		867.1.1 = {
@@ -268,9 +273,9 @@ d_tribhuvanadevi = {
 		}
 	}
 	c_kandarpapura = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 9 }
 
 		#867
 		854.1.1 = {
@@ -436,34 +441,48 @@ d_tribhuvanadevi = {
 			}
 		}
 	}
-	c_kon_tum = {
-		860.1.1 = {
-			holder = bahnar006
-		}
-		930.1.1 = {
-			holder = bahnar007
-		}
-		1060.1.1 = {
-			holder = bahnar008
-		}
-		1170.1.1 = {
-			holder = bahnar009
-		}
+
+c_kon_tum = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = bahnar006
 	}
-	c_bahnar = {
-		860.1.1 = {
-			holder = bahnar006
-		}
-		930.1.1 = {
-			holder = bahnar007
-		}
-		1060.1.1 = {
-			holder = bahnar008
-		}
-		1170.1.1 = {
-			holder = bahnar009
-		}
+	930.1.1 = {
+		holder = bahnar007
 	}
+	1060.1.1 = {
+		holder = bahnar008
+	}
+	1170.1.1 = {
+		holder = bahnar009
+	}
+}
+
+c_bahnar = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = bahnar006
+	}
+	#
+	930.1.1 = {
+		holder = bahnar007
+	}
+	#
+	1060.1.1 = {
+		holder = bahnar008
+	}
+	#
+	1170.1.1 = {
+		holder = bahnar009
+	}
+}
+
 	c_simhapura = {
 		867.1.1 = { change_development_level = 5 }
 		1066.1.1 = { change_development_level = 7 }
@@ -518,6 +537,8 @@ d_tribhuvanadevi = {
 			}
 		}
 	}
+
+
 d_vijaya = {
 	#867
 	867.1.1 = {
@@ -586,96 +607,106 @@ d_vijaya = {
 		holder = cham_panduranga_04	#Jaya Indravarman IV
 	}
 }
-	c_vijaya = {
-		867.1.1 = { change_development_level = 9 }
-		1066.1.1 = { change_development_level = 14 }
-		1178.1.1 = { change_development_level = 28 }
 
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = cham_vijaya_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
+c_vijaya = {
+	867.1.1 = { change_development_level = 9 }
+	1066.1.1 = { change_development_level = 14 }
+	1178.1.1 = { change_development_level = 28 }
 
-		#Champa capital at Vijaya ~980-1000
-		989.1.1 = {
-			holder = cham_champakingother_01	#Harivarman II
-			liege = k_champa
-		}
-		1007.1.1 = {
-			holder = cham_champakingother_03	#Harivarman III
-		}
-		1030.1.1 = {
-			holder = cham_champakingother_05	#Vikrantavarman IV
-		}
-		1041.1.1 = {
-			holder = cham_champakingother_06	#Jaya Simhavarman II
-		}
-		1044.1.1 = {
-			holder = cham_uroja_01	#Jaya Paramesvaravarman I
-		}
-		1060.1.1 = {
-			holder = cham_uroja_02	#Bhadravarman IV
-		}
-
-		#1066
-		1061.1.1 = {
-			holder = cham_uroja_03	#Rudravarman III
-		}
-		1074.1.1 = {
-			holder = cham_pralayeshvara_01	#Harivarman IV
-		}
-		1080.1.1 = {
-			holder = cham_pralayeshvara_02	#Jaya Indravarman II
-		}
-		1081.1.1 = {
-			holder = cham_pralayeshvara_03	#Paramabhodhisatva
-		}
-		1086.1.1 = {
-			holder = cham_pralayeshvara_02	#Jaya Indravarman II
-		}
-		1114.1.1 = {
-			holder = cham_pralayeshvara_04	#Harivarman V
-		}
-		1139.1.1 = {
-			holder = cham_pralayeshvara_05	#Jaya Indravarman III
-		}
-		1145.1.1 = {
-			holder = cham_panduranga_01	#Rudravarman IV
-		}
-		1147.1.1 = {
-			holder = cham_panduranga_02	#Jaya Harivarman I
-		}
-		1166.1.1 = {
-			holder = cham_panduranga_03	#Jaya Harivarman II
-		}
-		#1178
-		1167.1.1 = {
-			holder = cham_panduranga_04	#Jaya Indravarman IV
+	#867
+	867.1.1 = {
+		government = mandala_government
+		holder = cham_vijaya_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
 		}
 	}
-	c_ayun_pa = {
-		860.1.1 = {
-			holder = mnong008
-		}
-		930.1.1 = {
-			holder = mnong009
-		}
-		1060.1.1 = {
-			holder = mnong010
-		}
-		1170.1.1 = {
-			holder = mnong011
-		}
+
+	#Champa capital at Vijaya ~980-1000
+	989.1.1 = {
+		holder = cham_champakingother_01	#Harivarman II
+		liege = k_champa
 	}
+	1007.1.1 = {
+		holder = cham_champakingother_03	#Harivarman III
+	}
+	1030.1.1 = {
+		holder = cham_champakingother_05	#Vikrantavarman IV
+	}
+	1041.1.1 = {
+		holder = cham_champakingother_06	#Jaya Simhavarman II
+	}
+	1044.1.1 = {
+		holder = cham_uroja_01	#Jaya Paramesvaravarman I
+	}
+	1060.1.1 = {
+		holder = cham_uroja_02	#Bhadravarman IV
+	}
+
+	#1066
+	1061.1.1 = {
+		holder = cham_uroja_03	#Rudravarman III
+	}
+	1074.1.1 = {
+		holder = cham_pralayeshvara_01	#Harivarman IV
+	}
+	1080.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1081.1.1 = {
+		holder = cham_pralayeshvara_03	#Paramabhodhisatva
+	}
+	1086.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1114.1.1 = {
+		holder = cham_pralayeshvara_04	#Harivarman V
+	}
+	1139.1.1 = {
+		holder = cham_pralayeshvara_05	#Jaya Indravarman III
+	}
+	1145.1.1 = {
+		holder = cham_panduranga_01	#Rudravarman IV
+	}
+	1147.1.1 = {
+		holder = cham_panduranga_02	#Jaya Harivarman I
+	}
+	1166.1.1 = {
+		holder = cham_panduranga_03	#Jaya Harivarman II
+	}
+	#1178
+	1167.1.1 = {
+		holder = cham_panduranga_04	#Jaya Indravarman IV
+	}
+}
+
+c_ayun_pa = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = mnong008
+	}
+	#
+	930.1.1 = {
+		holder = mnong009
+	}
+	#
+	1060.1.1 = {
+		holder = mnong010
+	}
+	#
+	1170.1.1 = {
+		holder = mnong011
+	}
+}
+
 	c_aia_ru = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 3 }
-		1178.1.1 = { change_development_level = 5 }
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 10 }
 
 		#867
 		867.1.1 = {
@@ -786,10 +817,11 @@ d_panduranga = {
 		holder = cham_panduranga_04	#Jaya Indravarman IV
 	}
 }
-	c_panduranga = {
-		867.1.1 = { change_development_level = 4 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 10 }
+
+c_panduranga = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
 
 		#867
 		867.1.1 = {
@@ -857,11 +889,12 @@ d_panduranga = {
 		1167.1.1 = {
 			holder = cham_panduranga_04	#Jaya Indravarman IV
 		}
-	}
-	c_baigaur = {
-		867.1.1 = { change_development_level = 8 }
-		1066.1.1 = { change_development_level = 13 }
-		1178.1.1 = { change_development_level = 22 }
+}
+
+c_baigaur = {
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 13 }
+	1178.1.1 = { change_development_level = 22 }
 
 		867.1.1. = {
 			government = mandala_government
@@ -885,11 +918,12 @@ d_panduranga = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_kraong = {
-		867.1.1 = { change_development_level = 8 }
-		1066.1.1 = { change_development_level = 13 }
-		1178.1.1 = { change_development_level = 22 }
+}
+
+c_kraong = {
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 13 }
+	1178.1.1 = { change_development_level = 22 }
 
 		867.1.1. = {
 			government = mandala_government
@@ -913,39 +947,12 @@ d_panduranga = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_cho_ro = {
-		860.1.1 = {
-			holder = mnong004
-		}
-		930.1.1 = {
-			holder = mnong003
-		}
-		1060.1.1 = {
-			holder = mnong005
-		}
-		1170.1.1 = {
-			holder = mnong007
-		}
-	}
-	c_lach = {
-		860.1.1 = {
-			holder = mnong004
-		}
-		930.1.1 = {
-			holder = mnong003
-		}
-		1060.1.1 = {
-			holder = mnong005
-		}
-		1170.1.1 = {
-			holder = mnong007
-		}
-	}
-	c_pajai = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 3 }
-		1178.1.1 = { change_development_level = 5 }
+}
+
+c_pajai = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
 
 		#867
 		867.1.1 = {
@@ -1013,11 +1020,12 @@ d_panduranga = {
 		1167.1.1 = {
 			holder = cham_panduranga_04	#Jaya Indravarman IV
 		}
-	}
-	c_kauthara = {
-		867.1.1 = { change_development_level = 4 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 10 }
+}
+
+c_kauthara = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
 
 		#867
 		867.1.1 = {
@@ -1059,83 +1067,159 @@ d_panduranga = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-d_dagar = {
-	769.1.1 = { change_development_level = 0 }
-	1000.1.1 = { change_development_level = 2 }
-	1124.1.1 = { change_development_level = 4 }
-	1166.1.1 = { change_development_level = 8 }
-	1204.1.1 = { change_development_level = 13 }
-	1241.1.1 = { change_development_level = 17 }
-	1310.1.1 = { change_development_level = 23 }
 }
-	c_dagar = {
-		860.1.1 = {
-			holder = mnong008
-		}
-		930.1.1 = {
-			holder = mnong009
-		}
-		1060.1.1 = {
-			holder = mnong010
-		}
-		1170.1.1 = {
-			holder = mnong011
-		}
+
+
+d_dagar = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
+
+c_dagar = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = mnong008
 	}
-	c_dak_lak = {
-		860.1.1 = {
-			holder = mnong012
-		}
-		930.1.1 = {
-			holder = mnong013
-		}
-		1060.1.1 = {
-			holder = mnong014
-		}
-		1170.1.1 = {
-			holder = mnong015
-		}
+	#
+	930.1.1 = {
+		holder = mnong009
 	}
-	c_jarai = {
-		860.1.1 = {
-			holder = bahnar006
-		}
-		930.1.1 = {
-			holder = bahnar007
-		}
-		1060.1.1 = {
-			holder = bahnar008
-		}
-		1170.1.1 = {
-			holder = bahnar009
-		}
+	#
+	1060.1.1 = {
+		holder = mnong010
 	}
-	c_mnong = {
-		860.1.1 = {
-			holder = mnong012
-		}
-		930.1.1 = {
-			holder = mnong013
-		}
-		1060.1.1 = {
-			holder = mnong014
-		}
-		1170.1.1 = {
-			holder = mnong015
-		}
+	#
+	1170.1.1 = {
+		holder = mnong011
 	}
-	c_blao = {  #ngan
-		860.1.1 = {
-			holder = stieng001
-		}
-		930.1.1 = {
-			holder = stieng002
-		}
-		1060.1.1 = {
-			holder = stieng003
-		}
-		1170.1.1 = {
-			holder = stieng004
-		}
+}
+
+c_dak_lak = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = mnong012
 	}
+	#
+	930.1.1 = {
+		holder = mnong013
+	}
+	#
+	1060.1.1 = {
+		holder = mnong014
+	}
+	#
+	1170.1.1 = {
+		holder = mnong015
+	}
+}
+
+c_jarai = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = bahnar006
+	}
+	#
+	930.1.1 = {
+		holder = bahnar007
+	}
+	#
+	1060.1.1 = {
+		holder = bahnar008
+	}
+	#
+	1170.1.1 = {
+		holder = bahnar009
+	}
+}
+
+c_mnong = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = mnong012
+	}
+	#
+	930.1.1 = {
+		holder = mnong013
+	}
+	#
+	1060.1.1 = {
+		holder = mnong014
+	}
+	#
+	1170.1.1 = {
+		holder = mnong015
+	}
+}
+
+c_blao = {  #ngan
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = stieng001
+	}
+	#
+	930.1.1 = {
+		holder = stieng002
+	}
+	#
+	1060.1.1 = {
+		holder = stieng003
+	}
+	#
+	1170.1.1 = {
+		holder = stieng004
+	}
+}
+
+c_lach = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+
+	860.1.1 = {
+		holder = mnong004
+	}
+	930.1.1 = {
+		holder = mnong003
+	}
+	1060.1.1 = {
+		holder = mnong005
+	}
+	1170.1.1 = {
+		holder = mnong007
+	}
+}
+
+c_cho_ro = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 3 }
+	1178.1.1 = { change_development_level = 5 }
+
+	860.1.1 = {
+		holder = mnong004
+	}
+	930.1.1 = {
+		holder = mnong003
+	}
+	1060.1.1 = {
+		holder = mnong005
+	}
+	1170.1.1 = {
+		holder = mnong007
+	}
+}
