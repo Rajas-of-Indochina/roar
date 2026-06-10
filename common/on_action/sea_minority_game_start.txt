@@ -37,7 +37,157 @@ initialize_minorities = {
 
 set_minorities_game_start = {
 	effect = {
-		## Gilgit
+		#### India and it's religious diversity ####
+		# ===================================
+		### Kamarupa ###
+		title:c_kamarupanagara = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kachari
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:bathouism
+				SIZE = large
+			}
+		}
+		title:c_haruppeswara = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kachari
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:bathouism
+				SIZE = small
+			}
+		}
+
+		# Kochinim of Kerala
+		title:c_kerala = {
+			promote_culture_minority_effect = {
+				CULTURE = culture:kochinim
+			}
+			promote_faith_minority_effect = {
+				FAITH = faith:malabarism
+			}
+		}
+
+		### Lanka ###
+		title:c_jaffna = {
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+		}
+		title:c_phiti = {
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+		}
+		title:c_trincomalee = {
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+		}
+		#
+		title:c_kandy = {
+			add_culture_minority_effect = {
+				CULTURE = culture:vedda
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:vedda_pagan
+				SIZE = large
+			}
+		}
+		every_county = { #k_lanka
+			limit = {
+				kingdom = title:k_lanka
+				NOT = { county = title:c_kandy }
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:vedda
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:vedda_pagan
+				SIZE = small
+			}
+		}
+
+		## Parsees ##
+		title:c_daman = {
+			if = {
+				limit = { game_start_date <= 1066.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:zurvanism
+					SIZE = large
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:persian
+					SIZE = large
+				}
+			}
+		}
+
+		# zOther
+		title:c_rajrappa = {
+			add_faith_minority_effect = {
+				FAITH = faith:kalikula_shaktism
+				SIZE = small
+			}
+		}
+		every_county = { #world_india
+			limit = {
+				title_province = { geographical_region = world_india }
+				faith = {
+					has_doctrine = eastern_hostility_doctrine
+					NOT = { has_doctrine = tenet_communal_identity }
+				}
+			}
+			this = { save_temporary_scope_as = the_county_temp }
+			every_neighboring_county = {
+				if = {
+					limit = {
+						faith = {
+							has_doctrine = eastern_hostility_doctrine
+							NOT = { has_doctrine = tenet_communal_identity }
+							NOT = { this = scope:the_county_temp.faith }
+						}
+					}
+					faith = { add_to_list = neighboring_faiths }
+				}
+			}
+			every_in_list = {
+				list = neighboring_faiths
+				this = { save_temporary_scope_as = the_faith_temp }
+				scope:the_county_temp = {
+					add_to_variable_list = {
+						name = faith_minorities_small
+						target = scope:the_faith_temp
+					}
+				}
+				this = { remove_from_list = neighboring_faiths }
+			}
+			scope:the_county_temp.holder.faith = {
+				if = {
+					limit = {
+						has_doctrine = eastern_hostility_doctrine
+						NOT = { has_doctrine = tenet_communal_identity }
+						NOT = { this = scope:the_county_temp.faith }
+					}
+					add_to_variable_list = {
+						name = faith_minorities_small
+						target = scope:the_faith_temp
+					}
+				}
+			}
+		}
+		# ===================================
+
+
+		## Gilgit ##
 		title:c_gilgit = {
 			add_culture_minority_effect = {
 				CULTURE = culture:burusho
@@ -65,17 +215,8 @@ set_minorities_game_start = {
 			}
 		}
 
-		# Kochinim of Kerala
-		title:c_kerala = {
-			promote_culture_minority_effect = {
-				CULTURE = culture:kochinim
-			}
-			promote_faith_minority_effect = {
-				FAITH = faith:malabarism
-			}
-		}
 
-		### k_lhomon
+		### Lhomon ###
 		title:c_itanagar = {
 			add_faith_minority_effect = {
 				FAITH = faith:vaishnavism
@@ -83,71 +224,6 @@ set_minorities_game_start = {
 			}
 		}
 
-		### k_kamarupa
-		title:c_kamarupanagara = {
-			add_culture_minority_effect = {
-				CULTURE = culture:kachari
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:bathouism
-				SIZE = large
-			}
-		}
-		title:c_haruppeswara = {
-			add_culture_minority_effect = {
-				CULTURE = culture:kachari
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:bathouism
-				SIZE = small
-			}
-		}
-
-		### k_lanka
-		title:c_jaffna = {
-			add_faith_minority_effect = {
-				FAITH = faith:ashari
-				SIZE = small
-			}
-		}
-		title:c_phiti = {
-			add_faith_minority_effect = {
-				FAITH = faith:ashari
-				SIZE = small
-			}
-		}
-		title:c_trincomalee = {
-			add_faith_minority_effect = {
-				FAITH = faith:ashari
-				SIZE = small
-			}
-		}
-		every_county = {
-			limit = {
-				kingdom = title:k_lanka
-				NOT = { county = title:c_kandy }
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:vedda
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:vedda_pagan
-				SIZE = small
-			}
-		}
-		title:c_kandy = {
-			add_culture_minority_effect = {
-				CULTURE = culture:vedda
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:vedda_pagan
-				SIZE = large
-			}
-		}
 
 		### Silk Road ###
 		title:c_shazhou = {
@@ -195,22 +271,169 @@ set_minorities_game_start = {
 			}
 		}
 
-		# Parsees
-		title:c_daman = {
+
+		### Asia Minor (Anatolia) ###
+		# ===========================
+		title:c_ablastha = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_azysia = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_chaldia = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_cilicia = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_colonea = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_lycandus = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_pacatiana = {
 			if = {
-				limit = { game_start_date <= 1066.1.1 }
-				add_faith_minority_effect = {
-					FAITH = faith:zurvanism
-					SIZE = large
+				limit = {
+					game_start_date >= 1150.1.1
+					game_start_date <= 1337.1.1
 				}
 				add_culture_minority_effect = {
-					CULTURE = culture:persian
+					CULTURE = culture:pecheneg
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:tengri_pagan
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:maturidi
+					SIZE = small
+				}
+			}
+		}
+		title:c_satala = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_sebasteia = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+			if = {
+				limit = {
+					game_start_date >= 1150.1.1
+					game_start_date <= 1337.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:tengri_pagan
+					SIZE = small
+				}
+			}
+		}
+		title:c_seleucia = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_tall_hamid = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_tephrice = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_trebizond = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		title:c_zela = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = large
+			}
+		}
+		#
+		title:c_alexandretta = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = small
+			}
+		}
+		title:c_antiocheia = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = small
+			}
+		}
+		title:c_beirut = {
+			add_culture_minority_effect = {
+				CULTURE = culture:greek
+				SIZE = small
+			}
+		}
+		title:c_tripoli = {
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:greek
+				SIZE = small
+			}
+		}
+
+
+		#### South East-Asia - Mainland ####
+		every_county = { #k_chenla
+			if = {
+				limit = {
+					kingdom = title:k_chenla
+					culture = culture:khmer
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:theravada
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:mahayana
 					SIZE = large
 				}
 			}
 		}
 
-		# Roma
+
+		##### TO SORT AND WORK ON #####
+		## Roma ##
 		if = {
 			limit = {
 				#game_start_date >= 800.1.1
@@ -465,173 +688,6 @@ set_minorities_game_start = {
 			}
 		}
 
-		## Armenians
-		title:c_ablastha = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_azysia = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_chaldia = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_cilicia = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_colonea = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_lycandus = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_satala = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_sebasteia = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_seleucia = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_tall_hamid = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_tephrice = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_trebizond = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		title:c_zela = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = large
-			}
-		}
-		#
-		title:c_alexandretta = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = small
-			}
-		}
-		title:c_antiocheia = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = small
-			}
-		}
-		title:c_beirut = {
-			add_culture_minority_effect = {
-				CULTURE = culture:greek
-				SIZE = small
-			}
-		}
-		title:c_tripoli = {
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:greek
-				SIZE = small
-			}
-		}
-
-
-		## India and it's religious diversity
-		# ===================================
-		title:c_rajrappa = {
-			add_faith_minority_effect = {
-				FAITH = faith:kalikula_shaktism
-				SIZE = small
-			}
-		}
-		every_county = { #world_india
-			limit = {
-				title_province = { geographical_region = world_india }
-				faith = {
-					has_doctrine = eastern_hostility_doctrine
-					NOT = { has_doctrine = tenet_communal_identity }
-				}
-			}
-			this = { save_temporary_scope_as = the_county_temp }
-			every_neighboring_county = {
-				if = {
-					limit = {
-						faith = {
-							has_doctrine = eastern_hostility_doctrine
-							NOT = { has_doctrine = tenet_communal_identity }
-							NOT = { this = scope:the_county_temp.faith }
-						}
-					}
-					faith = { add_to_list = neighboring_faiths }
-				}
-			}
-			every_in_list = {
-				list = neighboring_faiths
-				this = { save_temporary_scope_as = the_faith_temp }
-				scope:the_county_temp = {
-					add_to_variable_list = {
-						name = faith_minorities_small
-						target = scope:the_faith_temp
-					}
-				}
-				this = { remove_from_list = neighboring_faiths }
-			}
-			scope:the_county_temp.holder.faith = {
-				if = {
-					limit = {
-						has_doctrine = eastern_hostility_doctrine
-						NOT = { has_doctrine = tenet_communal_identity }
-						NOT = { this = scope:the_county_temp.faith }
-					}
-					add_to_variable_list = {
-						name = faith_minorities_small
-						target = scope:the_faith_temp
-					}
-				}
-			}
-		}
-
-
-		##### TO SORT #####
 		## Other ##
 		if = {
 			limit = { game_start_date >= 1050.1.1 }
@@ -843,23 +899,6 @@ set_minorities_game_start = {
 			}
 		}
 
-		every_county = { #k_chenla
-			if = {
-				limit = {
-					kingdom = title:k_chenla
-					culture = culture:khmer
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:theravada
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:mahayana
-					SIZE = large
-				}
-			}
-		}
-
 
 		##### CAUCASUS UPDATE #####
 		# Misc
@@ -1043,38 +1082,6 @@ set_minorities_game_start = {
 
 
 		## Anatolia ##
-		title:c_pacatiana = {
-			if = {
-				limit = {
-					game_start_date >= 1150.1.1
-					game_start_date <= 1337.1.1
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:pecheneg
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:tengri_pagan
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:maturidi
-					SIZE = small
-				}
-			}
-		}
-		title:c_sebasteia = {
-			if = {
-				limit = {
-					game_start_date >= 1150.1.1
-					game_start_date <= 1337.1.1
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:tengri_pagan
-					SIZE = small
-				}
-			}
-		}
 	}
 }
 
