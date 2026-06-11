@@ -671,7 +671,7 @@ malay_lingga_20_fic = {	#fictional Lingga 1178
 malay_eastsumatra_01_fic = {	#fictional East Sumatra 867
 	name = "Panca"
 	dynasty = malay_puterapaya
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	822.4.8 = {
 		birth = yes
@@ -1065,7 +1065,7 @@ malay_tambralinga_10_fic = {	#fictional Tambralinga 1066
 malay_minangkabau_01_fic = {	#fictional Minangkabau 867
 	name = "Megat"
 	dynasty = malay_pantaisubur
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	836.5.11 = {
 		birth = yes
@@ -1078,7 +1078,7 @@ malay_minangkabau_01_fic = {	#fictional Minangkabau 867
 malay_minangkabau_10_fic = {	#fictional Minangkabau 1066
 	name = "Heri"
 	dynasty = malay_pantaisubur
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	1049.4.21 = {
 		birth = yes
@@ -1105,7 +1105,7 @@ malay_minangkabau_20_fic = {	#fictional Minangkabau 1178
 malay_bengkulu_01_fic = {	#fictional Bengkulu 867
 	name = "Budi"
 	dynasty = malay_laguhutan
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	846.9.2 = {
 		birth = yes
@@ -1118,7 +1118,7 @@ malay_bengkulu_01_fic = {	#fictional Bengkulu 867
 malay_bengkulu_10_fic = {	#fictional Bengkulu 1066
 	name = "Bongsu"
 	dynasty = malay_laguhutan
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	1029.5.8 = {
 		birth = yes
@@ -1131,7 +1131,7 @@ malay_bengkulu_10_fic = {	#fictional Bengkulu 1066
 malay_bengkulu_20_fic = {	#fictional Bengkulu 1178
 	name = "Tirta"
 	dynasty = malay_laguhutan
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	1155.12.27 = {
 		birth = yes
@@ -1145,7 +1145,7 @@ malay_bengkulu_20_fic = {	#fictional Bengkulu 1178
 malay_rnberbedur_01_fic = {	#fictional Riak Nan Berbedur 867
 	name = "Damar"
 	dynasty = malay_pitta
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	849.2.7 = {
 		birth = yes
@@ -1158,7 +1158,7 @@ malay_rnberbedur_01_fic = {	#fictional Riak Nan Berbedur 867
 malay_rnberbedur_10_fic = {	#fictional Riak Nan Berbedur 1066
 	name = "Anugrah"
 	dynasty = malay_pitta
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	1025.8.13 = {
 		birth = yes
@@ -1171,7 +1171,7 @@ malay_rnberbedur_10_fic = {	#fictional Riak Nan Berbedur 1066
 malay_rnberbedur_20_fic = {	#fictional Riak Nan Berbedur 1178
 	name = "Wahyu"
 	dynasty = malay_pitta
-	religion = hantuism
+	religion = malayic
 	culture = malay
 	1142.5.12 = {
 		birth = yes
@@ -1185,8 +1185,8 @@ malay_rnberbedur_20_fic = {	#fictional Riak Nan Berbedur 1178
 malay_nias_01_fic = {	#fictional Nias 867
 	name = "Phoro"
 	dynasty = malay_kutira
-	religion = bilikuism #Mentawai Faith
-	culture = nakkavaram #Mentawai
+	religion = nias_animism
+	culture = nias
 	844.4.22 = {
 		birth = yes
 	}
@@ -1199,8 +1199,8 @@ malay_nias_01_fic = {	#fictional Nias 867
 malay_nias_02_fic = {	#fictional Nias 1066
 	name = "Woicha"
 	dynasty = malay_kutira
-	religion = bilikuism  #Nias Faith
-	culture = nakkavaram #Nias
+	religion = nias_animism
+	culture = nias
 	1037.8.12 = {
 		birth = yes
 	}
@@ -1213,8 +1213,8 @@ malay_nias_02_fic = {	#fictional Nias 1066
 malay_nias_03_fic = {	#fictional Nias 1178
 	name = "Ingo"
 	dynasty = malay_kutira
-	religion = bilikuism  #Nias Faith
-	culture = nakkavaram #Nias
+	religion = nias_animism
+	culture = nias
 	1134.12.8 = {
 		birth = yes
 	}
@@ -1608,8 +1608,8 @@ malays_sambas_13_fic = {
 
 mentawai_1 = {
 	name = "Ballaga"
-	religion = bilikuism #Mentawai Faith
-	culture = nakkavaram #Mentawai
+	religion = mentawai_animism
+	culture = mentawai
 	850.1.1 = {
 		birth = yes
 	}
@@ -1618,11 +1618,10 @@ mentawai_1 = {
 	}
 }
 
-
 mentawai_2 = {
 	name = "Pungyar"
-	religion = bilikuism  #Mentawai Faith
-	culture = nakkavaram #Mentawai
+	religion = mentawai_animism
+	culture = mentawai
 	1040.1.1 = {
 		birth = yes
 	}
@@ -1631,11 +1630,10 @@ mentawai_2 = {
 	}
 }
 
-
 mentawai_3 = {
 	name = "Buluba"
-	religion = bilikuism  #Mentawai Faith
-	culture = nakkavaram #Mentawai
+	religion = mentawai_animism
+	culture = mentawai
 	1130.1.1 = {
 		birth = yes
 	}
@@ -1643,5 +1641,3 @@ mentawai_3 = {
 		death = yes
 	}
 }
-
-
