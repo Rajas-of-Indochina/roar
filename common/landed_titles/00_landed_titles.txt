@@ -76938,15 +76938,6 @@ e_srivijaya = {
 					color = { 120 110 60 }
 				}
 			}
-			c_enggano = {
-				color = { 70 60 10 }
-
-				b_enggano = {
-					province = 17843
-
-					color = { 70 60 10 }
-				}
-			}
 		}
 	}
 
@@ -77184,30 +77175,6 @@ e_srivijaya = {
 					province = 16777
 
 					color = { 65 145 160 }
-				}
-			}
-			c_mentawai = {
-				color = { 10 75 85 }
-
-				b_muara_siberut = {
-					province = 12824
-
-					color = { 10 75 85 }
-				}
-				b_sipura = {
-					province = 16351
-
-					color = { 20 85 95 }
-				}
-				b_bahat_monga = {
-					province = 12825
-
-					color = { 0 65 75 }
-				}
-				b_sibabau = {
-					province = 16521
-
-					color = { 30 95 105 }
 				}
 			}
 		}
@@ -77474,26 +77441,30 @@ e_srivijaya = {
 	k_samudera = {
 		color = { 33 120 55 }
 
-		capital = c_lamuri
+		capital = c_SUM_lambri
 
-		d_perlak = {
+		d_SUM_perlak = {
+			# d_perlak in old RoA
 			color = { 52 203 90 }
 
 			capital = c_perlak
 		}
 
-		d_pasai = {
+		d_SUM_pasai = {
+			# d_pasai in old RoA
 			color = { 37 142 63 }
 
 			capital = c_pasai
 		}
 
-		d_lamuri = {
+		d_SUM_aceh = {
+			# d_lamuri in old RoA
 			color = { 45 135 70 }
 
-			capital = c_lamuri
+			capital = c_SUM_lambri
 
-			c_lamuri = {
+			c_SUM_lambri = {
+				# c_lamuri in old RoA
 				color = { 55 145 80 }
 
 				b_SUM_Lamuri = {
@@ -77501,12 +77472,12 @@ e_srivijaya = {
 
 					color = { 55 145 80 }
 				}
-				b_kutaraja = {
+				b_SUM_Kutaraja = {
 					province = 11254
 
 					color = { 65 155 90 }
 				}
-				b_loknga = {
+				b_SUM_Loknga = {
 					province = 16044
 
 					color = { 45 135 70 }
@@ -77544,17 +77515,8 @@ e_srivijaya = {
 
 					color = { 75 165 100 }
 				}
-			}
-			c_daya = {
-				color = { 25 115 50 }
-
-				b_daya = {
-					province = 15877
-
-					color = { 25 115 50 }
-				}
-				b_panga = {
-					province = 15817
+				b_SUM_Samalanga = {
+					province = 11255
 
 					color = { 35 125 60 }
 				}
@@ -77566,11 +77528,6 @@ e_srivijaya = {
 					province = 11256
 
 					color = { 45 135 70 }
-				}
-				b_SUM_samalanga = {
-					province = 11255
-
-					color = { 35 125 60 }
 				}
 				b_bireuen = {
 					province = 15950
@@ -77588,14 +77545,28 @@ e_srivijaya = {
 					color = { 55 145 80 }
 				}
 			}
+			c_daya = {
+				color = { 25 115 50 }
+
+				b_daya = {
+					province = 15877
+
+					color = { 25 115 50 }
+				}
+				b_panga = {
+					province = 15817
+
+					color = { 35 125 60 }
+				}
+			}
 		}
 
-		d_SUM_Aru = {
+		d_SUM_aru = {
 			color = { 30 110 75 }
 
-			capital = c_SUM_Aru
+			capital = c_SUM_aru
 
-			c_SUM_Aru = {
+			c_SUM_aru = {
 				# in vanilla part of c_SUM_panai
 				color = { 40 120 85 }
 
@@ -77609,12 +77580,12 @@ e_srivijaya = {
 
 					color = { 50 130 95 }
 				}
-				b_SUM_deli_sea = {
+				b_SUM_Deli = {
 					province = 11261
 
 					color = { 30 110 75 }
 				}
-				b_SUM_kutambaru = {
+				b_SUM_Kutambaru = {
 					province = 11260
 
 					color = { 60 140 105 }
@@ -77671,7 +77642,7 @@ e_srivijaya = {
 
 					color = { 10 90 55 }
 				}
-				b_SUM_kualuh = {
+				b_SUM_Kualuh = {
 					province = 11263
 
 					color = { 20 100 65 }
@@ -77681,7 +77652,7 @@ e_srivijaya = {
 
 					color = { 0 80 45 }
 				}
-				b_SUM_bilah = {
+				b_SUM_Bilah = {
 					province = 11264
 
 					color = { 30 110 75 }
@@ -77730,10 +77701,10 @@ e_srivijaya = {
 					color = { 40 105 45 }
 				}
 			}
-			c_barus = {
+			c_SUM_barus = {
 				color = { 70 135 75 }
 
-				b_tapanuli_tengah = {
+				b_SUM_Barus = {
 					province = 15004
 
 					color = { 70 135 75 }
@@ -77761,25 +77732,6 @@ e_srivijaya = {
 					province = 15259
 
 					color = { 50 115 55 }
-				}
-			}
-			c_nias_mainland = {
-				color = { 20 85 25 }
-
-				b_luaha = {
-					province = 11251
-
-					color = { 20 85 25 }
-				}
-				b_batu = {
-					province = 12823
-
-					color = { 30 95 35 }
-				}
-				b_teluk_lagundri = {
-					province = 17217
-
-					color = { 10 75 15 }
 				}
 			}
 		}
@@ -77814,7 +77766,7 @@ e_srivijaya = {
 
 					color = { 15 95 45 }
 				}
-				b_SUM_seunagan = {
+				b_SUM_Seunagan = {
 					province = 11321
 
 					color = { 25 105 55 }
@@ -77825,7 +77777,7 @@ e_srivijaya = {
 					color = { 5 85 35 }
 				}
 			}
-			c_SUM_barus = {
+			c_SUM_singkil = {
 				color = { 45 125 75 }
 
 				b_SUM_Singkil = {
@@ -77844,7 +77796,33 @@ e_srivijaya = {
 					color = { 65 145 95 }
 				}
 			}
-			c_nias_island = {
+		}
+
+		d_nias = {
+			color = { 45 35 25 }
+
+			capital = c_nias
+
+			c_nias = {
+				color = { 20 85 25 }
+
+				b_NIAS_Luaha = {
+					province = 11251
+
+					color = { 20 85 25 }
+				}
+				b_NIAS_Batu = {
+					province = 12823
+
+					color = { 30 95 35 }
+				}
+				b_teluk_lagundri = {
+					province = 17217
+
+					color = { 10 75 15 }
+				}
+			}
+			c_simeulue = {
 				color = { 10 90 40 }
 
 				b_simeulue = {
@@ -77853,20 +77831,61 @@ e_srivijaya = {
 					color = { 10 90 40 }
 				}
 			}
+			c_mentawai = {
+				color = { 10 75 85 }
+
+				b_siberut = {
+					province = 12824
+
+					color = { 10 75 85 }
+				}
+				b_sibabau = {
+					province = 16521
+
+					color = { 10 75 85 }
+				}
+			}
+			c_sipura_pagai = {
+				color = { 20 85 95 }
+
+				b_sipura = {
+					province = 16351
+
+					color = { 20 85 95 }
+				}
+				b_bahat_monga = { # Pagai Islands
+					province = 12825
+
+					color = { 20 85 95 }
+				}
+			}
+			c_enggano = {
+				color = { 70 60 10 }
+
+				b_enggano = {
+					province = 17843
+
+					color = { 70 60 10 }
+				}
+			}
 		}
 
-		d_handumans = { # d_hantuman in old RoA
+		d_handumans = {
+			# d_hantuman in old RoA
 			color = { 40 140 100 }
 
-			c_andamans = { # c_hantuman in old RoA
+			c_andamans = {
+				# c_hantuman in old RoA
 				color = { 50 150 110 }
 
-				b_yerewa = { # b_marakele in vanilla
+				b_yerewa = {
+					# b_marakele in vanilla
 					province = 11248
 
 					color = { 50 150 110 }
 				}
-				b_bojigyab = { # b_diglipur in vanilla
+				b_bojigyab = {
+					# b_diglipur in vanilla
 					province = 12848
 
 					color = { 60 160 120 }

@@ -1,275 +1,331 @@
-
 # k_samudera
-	## d_lamuri
-		# c_lamuri
-			16216 = { # b_SUM_lamuri
-				culture = acehnese
-				religion = vajrayana
+## d_lamuri
+### c_lamuri
+16216 = { # Lamuri
+	culture = acehnese
+	religion = vajrayana
 
-				holding = temple_citadel_holding
-			}
-			11254 = { # b_kutaraja
-				holding = none
-			}
-			16044 = { # b_loknga
-				holding = none
-			}
-		# c_perlak
-			11257 = { # b_perlak
-				culture = acehnese
-				religion = vajrayana
+	holding = temple_citadel_holding
+}
+11254 = { # Kutaraja
+	holding = none
+}
+16044 = { # Loknga
+	holding = none
+}
 
-				1112.1.1 = {
-					religion = ashari
-				}
+### c_perlak
+11257 = { # b_perlak
+	culture = acehnese
+	religion = vajrayana
 
-				special_building = perlak_forests
-				holding = temple_citadel_holding
-			}
-			15785 = { # b_langsa
-				holding = none
-			}
-			11258 = { # b_tamiang
-				holding = none
-			}
-		# c_pedir
-			16045 = { # b_pedir
-				culture = acehnese
-				religion = vajrayana
+	holding = temple_citadel_holding
 
-				holding = temple_citadel_holding
-			}
-			15864 = { # b_tangse
-				holding = none
-			}
-		# c_daya
-			15877 = { # b_daya
-				culture = acehnese
-				religion = vajrayana
+	special_building_slot = perlak_forests
+	special_building = perlak_forests
 
-				holding = temple_citadel_holding
-			}
-			15817 = { # b_panga
-				holding = none
-			}
-		# c_pasai
-			11256 = { # b_SUM_pasai
-				culture = acehnese
-				religion = vajrayana
+	# History
+	1112.1.1 = {
+		religion = ashari
+	}
+}
+15785 = { # Langsa
+	holding = none
+}
+11258 = { # b_tamiang
+	holding = none
+}
 
-				holding = temple_citadel_holding
-			}
-			11255 = { # b_bireuen
-				holding = none
-			}
-			15950 = { # b_SUM_samalanga
-				holding = none
-			}
-			15896 = { # b_jambu_ayer
-				holding = none
-			}
-			16145 = { # b_pasangan
-				holding = none
-			}
-	## d_SUM_aru
-		# c_SUM_aru
-			11259 =  { # b_SUM_aru
-				culture = batak
-				religion = batak_animism
+### c_pedir
+16045 = { # b_pedir
+	culture = acehnese
+	religion = vajrayana
 
-				holding = tribal_holding
-			}
-			15541 =  { # b_benteng_putri_hijau
-				holding = none
-			}
-			11261 =  { # b_deli_sea
-				holding = none
-			}
-			11260 =  { # b_karo
-				holding = none
-			}
-			15483 =  { # b_kutambaru
-				holding = none
-			}
-		# c_nagur
-			15360 =  { # b_simalungun
-				culture = batak
-				religion = batak_animism
+	holding = castle_holding
+}
+15864 = { # b_tangse
+	holding = none
+}
 
-				holding = tribal_holding
-			}
-			15316 =  { # b_batubara
-				holding = none
-			}
-			15530 =  { # b_serdeng_bedagai
-				holding = none
-			}
-			11262 =  { # b_asahan
-				holding = none
-			}
-		# c_padang_lawas
-			17390 =  { # b_portibi
-				culture = batak
-				religion = batak_animism
+### c_pasai
+11256 = { # Pasai
+	culture = acehnese
+	religion = vajrayana
 
-				holding = tribal_holding
-			}
-			17251 =  { # b_sibuhuan
-				holding = none
-			}
-		# c_SUM_panai
-			11266 =  { # b_SUM_panai
-				culture = malay
-				religion = vajrayana
+	holding = temple_citadel_holding
+}
+11255 = { # b_bireuen
+	holding = none
+}
+15950 = { # Samalanga
+	holding = none
+}
+15896 = { # b_jambu_ayer
+	holding = none
+}
+16145 = { # b_pasangan
+	holding = none
+}
 
-				holding = temple_citadel_holding
-			}
-			11263 =  { # b_bilah
-				holding = none
-			}
-			17433 =  { # b_kota_pinang
-				holding = none
-			}
-			11264 =  { # b_SUM_kualuh
-				holding = none
-			}
-	## d_batak
-		# c_toba
-			15260 =  { # b_samosir
-				culture = batak
-				religion = batak_animism
+### c_daya
+15877 = { # b_daya
+	culture = acehnese
+	religion = vajrayana
 
-				holding = tribal_holding
-			}
-			17462 =  { # b_toba
-				holding = none
-			}
-			15006 =  { # b_humbang
-				holding = none
-			}
-			15007 =  { # b_silindung
-				holding = none
-			}
-		# c_mandailing
-			17141 =  { # b_mandailing
-				culture = batak
-				religion = batak_animism
-
-				holding = tribal_holding
-			}
-			17195 =  { # b_panyabungan
-				holding = none
-			}
-		# c_barus
-			15004 =  { # b_tapanuli_tengah
-				culture = batak
-				religion = batak_animism
-
-				holding = tribal_holding
-			}
-			17406 =  { # b_sibolga
-				holding = none
-			}
-			17334 =  { # b_padang_sidempuan
-				holding = none
-			}
-		# c_pakpak
-			15351 =  { # b_dairi
-				culture = batak
-				religion = batak_animism
-
-				holding = tribal_holding
-			}
-			15259 =  { # b_pakpak_bharat
-				holding = none
-			}
-		# c_nias_mainkand
-			11251 =  { # b_luaha
-				culture = nias
-				religion = nias_animism
-
-				holding = tribal_holding
-			}
-			12823 =  { # b_batu
-				holding = none
-			}
-			17217 =  { # b_teluk_lagundri
-				holding = none
-			}
-	## d_gayo
-		# c_gayo
-			15725 =  { # b_linge
-				culture = gayo
-				religion = batak_animism
-
-				holding = tribal_holding
-			}
-			15799 =  { # b_takengon
-				holding = none
-			}
-			15595 =  { # b_ketambe
-				holding = none
-			}
-		# c_pasikaram
-			15755 =  { # b_pasikaram
-				culture = gayo
-				religion = batak_animism
-
-				holding = tribal_holding
-			}
-			11321 =  { # b_seunagan
-				holding = none
-			}
-			15624 =  { # b_susoh
-				holding = none
-			}
-		# c_SUM_barus
-			11319 =  { # b_SUM_Singkil
-				culture = batak
-				religion = batak_animism
-
-				holding = tribal_holding
-			}
-			11320 =  { # b_SUM_Tapaktuan
-				holding = none
-			}
-			15003 =  { # b_raket
-				holding = none
-			}
-		# c_nias_island
-			11252 =  { # b_simeulue
-				culture = nias
-				religion = nias_animism
-
-				holding = tribal_holding
-			}
+	holding = castle_holding
+}
+15817 = { # b_panga
+	holding = none
+}
 
 
-	## d_handumans
-		### c_andamans
-			11248 = { # b_yerewa
-				culture = andaman
-				religion = senoi_pagan
+## d_SUM_aru
+### c_SUM_aru
+11259 =  { # Aru
+	culture = batak
+	religion = batak_animism
 
-				holding = tribal_holding
-			}
-			12848 = { # b_bojigyab
-				holding = none
-			}
-		### c_nakkavaram
-			12849 = { # b_nakkavaram
-				culture = nicobar
-				religion = senoi_pagan
+	holding = tribal_holding
+}
+15541 =  { # b_benteng_putri_hijau
+	holding = none
+}
+11261 =  { # b_deli_sea
+	holding = none
+}
+11260 =  { # Karo
+	holding = none
+}
+15483 =  { # Kutambaru
+	holding = none
+}
 
-				holding = tribal_holding
-			}
-		### c_jarawa
-			16053 = { # b_jarawa
-				culture = andaman
-				religion = senoi_pagan
+### c_nagur
+15360 =  { # Simalungun
+	culture = batak
+	religion = batak_animism
 
-				holding = tribal_holding
-			}
-			18323 = { # b_onge
-				holding = none
-			}
+	holding = tribal_holding
+}
+15316 =  { # b_batubara
+	holding = none
+}
+15530 =  { # Serdeng_bedagai
+	holding = none
+}
+11262 =  { # b_asahan
+	holding = none
+}
+
+### c_padang_lawas
+17390 =  { # b_portibi
+	culture = batak
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+17251 =  { # Sibuhuan
+	holding = none
+}
+
+### c_SUM_panai
+11266 =  { # SUM_panai
+	culture = malay
+	religion = vajrayana
+
+	holding = temple_citadel_holding
+}
+11263 =  { # b_bilah
+	holding = none
+}
+17433 =  { # Kota_pinang
+	holding = none
+}
+11264 =  { # SUM_kualuh
+	holding = none
+}
+
+
+## d_batak
+### c_toba
+15260 =  { # Samosir
+	culture = batak
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+17462 =  { # b_toba
+	holding = none
+}
+15006 =  { # b_humbang
+	holding = none
+}
+15007 =  { # Silindung
+	holding = none
+}
+
+### c_mandailing
+17141 =  { # b_mandailing
+	culture = batak
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+17195 =  { # b_panyabungan
+	holding = none
+}
+
+### c_SUM_barus
+15004 =  { # Barus
+	culture = batak
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+17406 =  { # Sibolga
+	holding = none
+}
+17334 =  { # b_padang_sidempuan
+	holding = none
+}
+
+### c_pakpak
+15351 =  { # b_dairi
+	culture = batak
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+15259 =  { # b_pakpak_bharat
+	holding = none
+}
+
+
+## d_gayo
+### c_gayo
+15725 =  { # Linge
+	culture = gayo
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+15799 =  { # b_takengon
+	holding = none
+}
+15595 =  { # Ketambe
+	holding = none
+}
+
+### c_pasikaram
+15755 =  { # b_pasikaram
+	culture = gayo
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+11321 =  { # Seunagan
+	holding = none
+}
+15624 =  { # Susoh
+	holding = none
+}
+
+### c_SUM_singkil
+11319 =  { # SUM_Singkil
+	culture = batak
+	religion = batak_animism
+
+	holding = tribal_holding
+}
+11320 =  { # SUM_Tapaktuan
+	holding = none
+}
+15003 =  { # b_raket
+	holding = none
+}
+
+
+## d_nias
+### c_nias
+11251 =  { # Luaha
+	culture = nias
+	religion = nias_animism
+
+	holding = tribal_holding
+}
+12823 =  { # BAtu
+	holding = none
+}
+17217 =  { # Teluk Lagundri
+	holding = none
+}
+
+### c_simeulue
+11252 =  { # Simeulue
+	culture = nias
+	religion = nias_animism
+
+	holding = tribal_holding
+}
+
+### c_mentawai
+12824 = { # Siberut
+	culture = mentawai
+	religion = mentawai_animism
+
+	holding = tribal_holding
+}
+16521 = { # Sibabu
+	holding = none
+}
+
+### c_sipura_pagai
+16351 = { # Sipura
+	culture = mentawai
+	religion = mentawai_animism
+
+	holding = tribal_holding
+}
+12825 = { # Bahat Monga
+	holding = none
+}
+
+### c_enggano
+17843 = { # Enggano
+	culture = mentawai
+	religion = mentawai_animism
+
+	holding = tribal_holding
+}
+
+
+## d_handumans
+### c_andamans
+11248 = { # b_yerewa
+	culture = andaman
+	religion = senoi_pagan
+
+	holding = tribal_holding
+}
+12848 = { # b_bojigyab
+	holding = none
+}
+
+### c_nakkavaram
+12849 = { # b_nakkavaram
+	culture = nicobar
+	religion = senoi_pagan
+
+	holding = tribal_holding
+}
+
+### c_jarawa
+16053 = { # b_jarawa
+	culture = andaman
+	religion = senoi_pagan
+
+	holding = tribal_holding
+}
+18323 = { # b_onge
+	holding = none
+}

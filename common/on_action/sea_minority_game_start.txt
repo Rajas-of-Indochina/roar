@@ -800,15 +800,29 @@ set_minorities_game_start = {
 			COUNTY = title:c_pasai
 		}
 
-		add_faith_minority_effect = {
-			FAITH = faith:ashari
-			SIZE = small
-			COUNTY = title:c_lamuri
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:bedouin
-			SIZE = small
-			COUNTY = title:c_lamuri
+		title:c_SUM_lambri = {
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:bedouin
+				SIZE = small
+			}
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = small
+				}
+			}
 		}
 
 		if = {
@@ -835,17 +849,6 @@ set_minorities_game_start = {
 			add_culture_minority_effect = {
 				CULTURE = culture:tamil
 				SIZE = small
-				COUNTY = title:c_lamuri
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-				COUNTY = title:c_lamuri
-			}
-
-			add_culture_minority_effect = {
-				CULTURE = culture:tamil
-				SIZE = small
 				COUNTY = title:c_pasai
 			}
 			add_faith_minority_effect = {
@@ -890,12 +893,12 @@ set_minorities_game_start = {
 			add_culture_minority_effect = {
 				CULTURE = culture:tamil
 				SIZE = large
-				COUNTY = title:c_barus
+				COUNTY = title:c_SUM_barus
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:shaivism
 				SIZE = large
-				COUNTY = title:c_barus
+				COUNTY = title:c_SUM_barus
 			}
 		}
 
