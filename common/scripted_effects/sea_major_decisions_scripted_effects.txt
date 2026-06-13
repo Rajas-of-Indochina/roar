@@ -1,0 +1,764 @@
+split_byzantine_empire_effect = {
+	hidden_effect = {
+		every_sub_realm_title = { # First we check for held titles in the realm
+			limit = {
+				tier = tier_kingdom
+				NOR = {
+					de_jure_liege = title:e_illyria
+					de_jure_liege = title:e_macedonia
+					de_jure_liege = title:e_anatolia
+					de_jure_liege = title:e_oriens
+					de_jure_liege = title:e_aegyptus
+					de_jure_liege = title:e_africa
+				}
+			}
+			if = {
+				limit = {
+					title:e_italy ?= { is_titular = no }
+					OR = {
+						title:k_trinacria ?= this
+						title:k_sicily ?= this
+						title:k_naples ?= this
+						title:k_venice ?= this
+						title:k_romagna ?= this
+						title:k_sardinia ?= this
+						title:k_italy ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_italy
+				title:e_italy = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+			if = {
+				limit = {
+					OR = {
+						title:k_trinacria ?= this
+						title:k_epirus ?= this
+						title:k_croatia ?= this
+						title:k_serbia ?= this
+						title:k_bosnia ?= this
+						title:k_sicily ?= this
+						title:k_venice ?= this
+						title:k_naples ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_illyria
+				title:e_illyria = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+			if = {
+				limit = {
+					OR = {
+						title:k_thessalonika ?= this
+						title:k_hellas ?= this
+						title:k_krete ?= this
+						title:k_bulgaria ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_macedonia
+				title:e_macedonia = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+			if = {
+				limit = {
+					OR = {
+						title:k_saruhan ?= this
+						title:k_tekke ?= this
+						title:k_trebizond ?= this
+						title:k_ottoman ?= this
+						title:k_rum ?= this
+						title:k_mentese ?= this
+						title:k_karaman ?= this
+						title:k_germiyan ?= this
+						title:k_eretnid ?= this
+						title:k_candar ?= this
+						title:k_nikaea ?= this
+						title:k_pontus ?= this
+						title:k_armenia ?= this
+						title:k_armenian_principality ?= this
+						title:k_old_armenia ?= this
+						# ROAR
+						title:k_ayrarat ?= this
+						title:k_vaspurakan ?= this
+						title:k_syunik ?= this
+						title:k_georgia ?= this
+						# ROAR
+						title:k_iberia ?= this
+						title:k_kakheti ?= this
+						title:k_kakheti ?= this
+						title:k_anatolia ?= this
+						title:k_aydin ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_anatolia
+				title:e_anatolia = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+			if = {
+				limit = {
+					exists = title:e_oriens
+					OR = {
+						title:k_syria ?= this
+						title:k_jerusalem ?= this
+						title:k_cyprus ?= this
+						title:k_jazira ?= this
+						title:k_mesopotamia ?= this
+						title:k_arabia ?= this
+						title:k_yemen ?= this
+						title:k_cyprus ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_oriens
+				title:e_oriens = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+			if = {
+				limit = {
+					exists = title:e_aegyptus
+					OR = {
+						title:k_egypt ?= this
+						title:k_blemmyia ?= this
+						title:k_nubia ?= this
+						title:k_abyssinia ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_aegyptus
+				title:e_aegyptus = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+			if = {
+				limit = {
+					exists = title:e_africa
+					OR = {
+						title:k_africa ?= this
+						title:k_tahert ?= this
+						title:k_maghreb ?= this
+					}
+				}
+				set_de_jure_liege_title = title:e_africa
+				title:e_africa = { set_de_jure_liege_title = title:h_roman_empire }
+			}
+		}
+		title:e_byzantium = { # Then we check for de jure titles of Byzantium
+			if = { 
+				limit = {
+					OR = {
+						NOT = { exists = holder }
+						holder ?= root
+					}
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						title:e_italy ?= { is_titular = no }
+						tier = tier_kingdom
+						OR = {
+							title:k_trinacria ?= this
+							title:k_sicily ?= this
+							title:k_naples ?= this
+							title:k_venice ?= this
+							title:k_romagna ?= this
+							title:k_sardinia ?= this
+							title:k_italy ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_italy
+					title:e_italy = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom	
+						OR = {
+							title:k_trinacria ?= this
+							title:k_epirus ?= this
+							title:k_croatia ?= this
+							title:k_serbia ?= this
+							title:k_bosnia ?= this
+							title:k_sicily ?= this
+							title:k_venice ?= this
+							title:k_naples ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_illyria
+					title:e_illyria = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom	
+						OR = {
+							title:k_thessalonika ?= this
+							title:k_hellas ?= this
+							title:k_krete ?= this
+							title:k_bulgaria ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_macedonia
+					title:e_macedonia = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom
+						OR = {
+							title:k_saruhan ?= this
+							title:k_tekke ?= this
+							title:k_trebizond ?= this
+							title:k_ottoman ?= this
+							title:k_rum ?= this
+							title:k_mentese ?= this
+							title:k_karaman ?= this
+							title:k_germiyan ?= this
+							title:k_eretnid ?= this
+							title:k_candar ?= this
+							title:k_nikaea ?= this
+							title:k_pontus ?= this
+							title:k_armenia ?= this
+							title:k_armenian_principality ?= this
+							title:k_old_armenia ?= this
+							# ROAR
+							title:k_ayrarat ?= this
+							title:k_vaspurakan ?= this
+							title:k_syunik ?= this
+							title:k_georgia ?= this
+							# ROAR
+							title:k_iberia ?= this
+							title:k_kakheti ?= this
+							title:k_kakheti ?= this
+							title:k_anatolia ?= this
+							title:k_aydin ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_anatolia
+					title:e_anatolia = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						exists = title:e_oriens
+						tier = tier_kingdom
+						OR = {
+							title:k_syria ?= this
+							title:k_jerusalem ?= this
+							title:k_jazira ?= this
+							title:k_mesopotamia ?= this
+							title:k_arabia ?= this
+							title:k_yemen ?= this
+							title:k_cyprus ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_oriens
+					title:e_oriens = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						exists = title:e_aegyptus
+						tier = tier_kingdom
+						OR = {
+							title:k_egypt ?= this
+							title:k_blemmyia ?= this
+							title:k_nubia ?= this
+							title:k_abyssinia ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_aegyptus
+					title:e_aegyptus = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						exists = title:e_africa
+						tier = tier_kingdom
+						OR = {
+							title:k_africa ?= this
+							title:k_tahert ?= this
+							title:k_maghreb ?= this
+						}
+					}
+					set_de_jure_liege_title = title:e_africa
+					title:e_africa = { set_de_jure_liege_title = title:h_roman_empire }
+				}
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_kingdom
+					}
+					if = {
+						limit = {
+							any_title_to_title_neighboring_and_across_water_empire = {
+								count >= 1
+							}
+						}
+						random_title_to_title_neighboring_and_across_water_empire = {
+							save_scope_as = new_empire_de_jure
+						}
+						set_de_jure_liege_title = scope:new_empire_de_jure
+					}
+				}
+			}
+		}
+	}
+}
+
+# Greater Armenia
+
+revive_armenian_empire_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_armenia = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+
+	# Handle de jure shifts
+	# first reset de jure of duchies in armenia proper
+	hidden_effect = {
+		# Ayrarat
+		title:d_hayk-shirak = {add_to_list = ayrarat_duchies}
+		title:d_hayk-dvin = {add_to_list = ayrarat_duchies}
+		title:d_kars = {add_to_list = ayrarat_duchies}
+		title:d_bagrevand = {add_to_list = ayrarat_duchies}
+		title:d_tashir = {add_to_list = ayrarat_duchies}
+		every_in_list = {
+			list = ayrarat_duchies
+			limit = {
+				NOR = {
+					kingdom = title:k_armenian_principality
+					kingdom = title:k_ayrarat
+				}
+			}
+			if = {
+				limit = { is_titular = title:k_armenian_principality }
+				set_de_jure_liege_title = title:k_ayrarat
+			}
+			else = { set_de_jure_liege_title = title:k_armenian_principality }
+		}
+		# Vaspurakan
+		title:d_vaspurakan = {add_to_list = vaspurakan_duchies}
+		title:d_shavarshan = {add_to_list = vaspurakan_duchies}
+		title:d_taron = {add_to_list = vaspurakan_duchies}
+		title:d_turuberan = {add_to_list = vaspurakan_duchies}
+		title:d_derzene = {add_to_list = vaspurakan_duchies}
+		title:d_mesopotamia = {add_to_list = vaspurakan_duchies}
+		every_in_list = {
+			list = vaspurakan_duchies
+			limit = {
+				NOR = {
+					kingdom = title:k_armenian_principality
+					kingdom = title:k_vaspurakan
+				}
+			}
+			if = {
+				limit = { is_titular = title:k_armenian_principality }
+				set_de_jure_liege_title = title:k_vaspurakan
+			}
+			else = { set_de_jure_liege_title = title:k_armenian_principality }
+		}
+		# Syunik
+		title:d_syunik-baghk = {add_to_list = syunik_duchies}
+		title:d_syunik-vayotsdzor = {add_to_list = syunik_duchies}
+		title:d_artsakh = {add_to_list = syunik_duchies}
+		title:d_gardman = {add_to_list = syunik_duchies}
+		title:d_nakhichevan = {add_to_list = syunik_duchies}
+		every_in_list = {
+			list = syunik_duchies
+			limit = {
+				NOR = {
+					kingdom = title:k_armenian_principality
+					kingdom = title:k_syunik
+				}
+			}
+			if = {
+				limit = { is_titular = title:k_armenian_principality }
+				set_de_jure_liege_title = title:k_syunik
+			}
+			else = { set_de_jure_liege_title = title:k_armenian_principality }
+		}
+		title:k_armenian_principality = { set_de_jure_liege_title = title:e_armenia }
+		title:k_ayrarat = { set_de_jure_liege_title = title:e_armenia }
+		title:k_vaspurakan= { set_de_jure_liege_title = title:e_armenia }
+		title:k_syunik = { set_de_jure_liege_title = title:e_armenia }
+	}
+	# Deal with Adurbadagan
+	hidden_effect = {
+		title:d_adurbadagan = {add_to_list = adurbadagan_duchies}
+		title:d_iraq-i-aram = {add_to_list = adurbadagan_duchies}
+		title:d_ardabil = {add_to_list = adurbadagan_duchies}
+		title:d_arasbaran = {add_to_list = adurbadagan_duchies}
+		title:d_persarmenia = {add_to_list = adurbadagan_duchies}
+		title:d_bazgan = {add_to_list = adurbadagan_duchies}
+		every_in_list = {
+			list = adurbadagan_duchies
+			set_de_jure_liege_title = title:k_adurbadagan
+		}
+		title:k_adurbadagan = { set_de_jure_liege_title = title:e_armenia }
+	}
+	hidden_effect = {
+		title:k_aluank = { set_de_jure_liege_title = title:e_armenia }
+	}
+	# Now the extraneous duchies
+	# Start by sucking up kingdom titles
+	hidden_effect = {
+		title:k_anatolia = { add_to_list = armenia_stretch_kingdoms }
+		title:k_daylam = { add_to_list = armenia_stretch_kingdoms }
+		title:k_jazira = { add_to_list = armenia_stretch_kingdoms }
+		title:k_jerusalem = { add_to_list = armenia_stretch_kingdoms }
+		title:k_pontus = { add_to_list = armenia_stretch_kingdoms }
+		title:k_syria = { add_to_list = armenia_stretch_kingdoms }
+		title:k_zichia = { add_to_list = armenia_stretch_kingdoms }
+		title:k_shirvan = { add_to_list = armenia_stretch_kingdoms }
+		title:k_circassia = { add_to_list = armenia_stretch_kingdoms }
+		title:k_georgia = { add_to_list = armenia_stretch_kingdoms }
+		title:k_iberia = { add_to_list = armenia_stretch_kingdoms }
+		title:k_kakheti = { add_to_list = armenia_stretch_kingdoms }
+		title:k_abkhazia = { add_to_list = armenia_stretch_kingdoms }
+		every_in_list = {
+			list = armenia_stretch_kingdoms
+			limit = {
+				save_temporary_scope_as = kingdom
+				OR = {
+					holder = ROOT
+					ROOT = { completely_controls = scope:kingdom }
+				}
+			}
+			set_de_jure_liege_title = title:e_armenia
+		}
+	}
+	# Then duchy cleanup
+	hidden_effect = {
+		# cilicia
+		if = {
+			limit = { NOT = { title:d_cilicia = { target_is_de_jure_liege_or_above = title:e_armenia } } }
+			if = {
+				limit = { is_titular = title:k_vaspurakan }
+				title:d_cilicia = { set_de_jure_liege_title = title:k_armenian_principality }
+			}
+			else = { title:d_cilicia = { set_de_jure_liege_title = title:k_vaspurakan } }
+		}
+		# antioch
+		if = {
+			limit = { NOT = { title:d_antioch = { target_is_de_jure_liege_or_above = title:e_armenia } } }
+			if = {
+				limit = { is_titular = title:k_vaspurakan }
+				title:d_antioch = { set_de_jure_liege_title = title:k_armenian_principality }
+			}
+			else = { title:d_antioch = { set_de_jure_liege_title = title:k_vaspurakan } }
+		}
+		# edessa
+		if = {
+			limit = { NOT = { title:d_edessa = { target_is_de_jure_liege_or_above = title:e_armenia } } }
+			if = {
+				limit = { is_titular = title:k_vaspurakan }
+				title:d_edessa = { set_de_jure_liege_title = title:k_armenian_principality }
+			}
+			else = { title:d_edessa = { set_de_jure_liege_title = title:k_vaspurakan } }
+		}
+		# kurdistan
+		if = {
+			limit = { NOT = { title:d_kurdistan = { target_is_de_jure_liege_or_above = title:e_armenia } } }
+			if = {
+				limit = { is_titular = title:k_vaspurakan }
+				title:d_kurdistan = { set_de_jure_liege_title = title:k_armenian_principality }
+			}
+			else = { title:d_kurdistan = { set_de_jure_liege_title = title:k_vaspurakan } }
+		}
+		# diyarbakr
+		if = {
+			limit = { NOT = { title:d_diyarbakr = { target_is_de_jure_liege_or_above = title:e_armenia } } }
+			if = {
+				limit = { is_titular = title:k_vaspurakan }
+				title:d_diyarbakr = { set_de_jure_liege_title = title:k_armenian_principality }
+			}
+			else = { title:d_diyarbakr = { set_de_jure_liege_title = title:k_vaspurakan } }
+		}
+		# arran
+		if = {
+			limit = { NOT = { title:d_arran = { target_is_de_jure_liege_or_above = title:e_armenia } } }
+			if = {
+				limit = {
+					is_titular = title:k_syunik
+				}
+				if = {
+					limit = { is_titular = title:k_vaspurakan }
+					title:d_arran = { set_de_jure_liege_title = title:k_armenian_principality }
+				}
+				else = { title:d_diyarbakr = { set_de_jure_liege_title = title:k_vaspurakan } }
+			}
+			else = {
+				else = { title:d_diyarbakr = { set_de_jure_liege_title = title:k_syunik } }
+			}
+		}
+	}
+}
+
+# Dai Viet
+form_dai_viet_empire_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_viet = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	root.dynasty = {
+		add_dynasty_prestige = major_dynasty_prestige_gain
+	}
+
+	if = {
+		limit = {
+			title:k_viet = {
+				is_title_created = yes 
+				NOT = {
+					holder = ROOT
+				}
+			}
+		}
+		create_title_and_vassal_change = {
+			type = usurped
+			save_scope_as = title_change_2
+			add_claim_on_loss = no
+		}
+		title:k_viet = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change_2
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change_2
+	}
+	else_if = {
+		limit = {
+			title:k_viet = { is_title_created = no }
+		}
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change_2
+			add_claim_on_loss = no
+		}
+		title:k_viet = {
+			change_title_holder = {
+				holder = root
+				change = scope:title_change_2
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change_2
+	}
+	#Viet controls
+	if = {	#If owned, annex Dai Viet.
+		limit = {
+			title:k_viet = { holder = root  }
+		}
+		title:k_viet = { set_de_jure_liege_title = title:e_viet }
+	}
+	if = {	#If owned, annex Champa.
+		limit = {
+			title:k_champa = { holder = root  }
+		}
+		title:k_champa = { set_de_jure_liege_title = title:e_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_kinh_bac = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_kinh_bac = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_son_tay = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_son_tay = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_muong = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_muong = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_nong = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_nong = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_lo = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_lo = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_lao_nhai = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_lao_nhai = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_cu_duc = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_cu_duc = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_cuu_chan = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_cuu_chan = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_hai_dong = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_hai_dong = { set_de_jure_liege_title = title:k_viet }
+	}
+	if = {	#If any have drifted out, then k_viet's constituent duchies are flipped back.
+		limit = {
+			title:d_muang_thaeng = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_viet }
+			}
+		}
+		title:d_muang_thaeng = { set_de_jure_liege_title = title:k_viet }
+	}
+	#Champa controls
+	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
+		limit = {
+			title:d_amaravati = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
+			}
+		}
+		title:d_amaravati = { set_de_jure_liege_title = title:k_champa }
+	}
+	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
+		limit = {
+			title:d_vijaya = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
+			}
+		}
+		title:d_vijaya = { set_de_jure_liege_title = title:k_champa }
+	}
+	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
+		limit = {
+			title:d_tribhuvanadevi = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
+			}
+		}
+		title:d_tribhuvanadevi = { set_de_jure_liege_title = title:k_champa }
+	}
+	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
+		limit = {
+			title:d_panduranga = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
+			}
+		}
+		title:d_panduranga = { set_de_jure_liege_title = title:k_champa }
+	}
+	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
+		limit = {
+			title:d_baigaur = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
+			}
+		}
+		title:d_baigaur = { set_de_jure_liege_title = title:k_champa }
+	}
+	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
+		limit = {
+			title:d_dagar = {
+				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
+			}
+		}
+		title:d_dagar = { set_de_jure_liege_title = title:k_champa }
+	}
+
+}
+
+# Majapahit
+form_majapahit_empire_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_majapahit = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	root.dynasty = {
+		add_dynasty_modifier = majapahit_empire_founding_modifier
+	}
+	title:k_yavakadvipa = { set_de_jure_liege_title = title:e_majapahit }
+	title:k_sunda = { set_de_jure_liege_title = title:e_majapahit }
+	title:k_bali_sea = { set_de_jure_liege_title = title:e_majapahit }
+	title:k_palembang = { set_de_jure_liege_title = title:e_majapahit }
+}
+
+# Brunei Kingdom - dummied out
+
+# Brunei Empire
+form_brunei_empire_decision_scripted_effect = {
+	save_scope_as = founder
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_brunei = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	dynasty = {
+		add_dynasty_prestige = monumental_dynasty_prestige_gain
+	}
+	give_nickname = nick_the_pious
+
+	hidden_effect = {
+		title:e_brunei = { save_scope_as = brunei_empire }
+		title:k_barune = { save_scope_as = brunei_kingdom }
+		title:k_tanjungnagara = { save_scope_as = tanjungnagara_kingdom }
+		title:k_sulu = { save_scope_as = sulu_kingdom }
+		title:d_tidung = { save_scope_as = tidung_duchy }
+		title:k_tarakan = { save_scope_as = tarakan_kingdom }
+
+		title:k_barune = { set_de_jure_liege_title = title:e_brunei }
+		title:k_tanjungnagara = { set_de_jure_liege_title = title:e_brunei }
+		title:k_sulu = { set_de_jure_liege_title = title:e_brunei }
+		if = {
+			limit = { completely_controls = title:k_tarakan }
+			title:k_tarakan = { set_de_jure_liege_title = title:e_brunei }
+		}
+		else = {
+			title:d_tidung = { set_de_jure_liege_title = title:k_barune }
+		}
+	}
+	custom_tooltip = form_brunei_empire_decision_effects_de_jure_tt_a
+	custom_tooltip = form_brunei_empire_decision_effects_de_jure_tt_b
+	custom_tooltip = form_brunei_empire_decision_effects_de_jure_tt_c
+}
+
+# Hindustan
+
+# United India
