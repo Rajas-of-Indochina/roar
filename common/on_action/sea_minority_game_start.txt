@@ -63,12 +63,8 @@ set_minorities_game_start = {
 
 		# Kochinim of Kerala
 		title:c_kerala = {
-			promote_culture_minority_effect = {
-				CULTURE = culture:kochinim
-			}
-			promote_faith_minority_effect = {
-				FAITH = faith:malabarism
-			}
+			promote_culture_minority_effect = { CULTURE = culture:kochinim }
+			promote_faith_minority_effect = { FAITH = faith:malabarism }
 		}
 
 		### Lanka ###
@@ -432,7 +428,334 @@ set_minorities_game_start = {
 		}
 
 
-		##### TO SORT AND WORK ON #####
+		#### South East-Asia - Maritime ####
+		# k_samudera
+		title:c_SUM_lambri = {
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:bedouin
+				SIZE = small
+			}
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = small
+				}
+			}
+		}
+		title:c_SUM_perlak = {
+			add_culture_minority_effect = {
+				CULTURE = culture:bedouin
+				SIZE = small
+			}
+			if = {
+				limit = {
+					game_start_date < 1000.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:ashari
+					SIZE = small
+				}
+			}
+			if = {
+				limit = {
+					game_start_date >= 1000.1.1
+					game_start_date < 1112.1.1
+				}
+				promote_faith_minority_effect = { FAITH = faith:ashari }
+			}
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+		}
+		title:c_pasai = {
+			add_faith_minority_effect = {
+				FAITH = faith:ashari
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:bedouin
+				SIZE = small
+			}
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+		}
+		title:c_siak = {
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+		}
+		# other
+		title:c_palembang = {
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+		}
+		title:c_SUM_barus = {
+			if = {
+				limit = {
+					game_start_date >= 1030.1.1
+					game_start_date < 1066.12.31
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:tamil
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = large
+				}
+			}
+		}
+
+		## Other ##
+		# post 1050 c_qianzhou_jiangxi_china should have large sheren minority
+		# c_changan_china should have radhanite and rabbinism + manichean and ashari minorities
+		# c_bianzhou_china should have kaifengim and rabbinism minorities
+		# c_lanzhou_longxi_china should have radhanite and rabbinism + nestorian, manichean and mazdayasna minorities
+		# c_lanzhou_longxi_china should also have ashari and levantine minorities
+		# c_zhangzhou_min_china should have ashari minorities
+		# c_zhenzhou_zhuyajun_china should have cham minorities
+
+
+		##### CAUCASUS UPDATE #####
+		# Misc
+		title:c_chernigov = { #kassogians in chernigov
+			if = {
+				limit = { game_start_date >= 1022.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:circassian
+					SIZE = small
+				}
+			}
+		}
+
+
+		## Crimea ##
+		title:c_kerch = {
+			add_culture_minority_effect = {
+				CULTURE = culture:circassian
+				SIZE = small
+			}
+		}
+		title:c_kermenchik = {
+			add_culture_minority_effect = {
+				CULTURE = culture:circassian
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:circassian_pagan
+				SIZE = large
+			}
+		}
+
+
+		### Caucasus Steppe ###
+		# Azov
+		title:c_azov = {
+			add_culture_minority_effect = {
+				CULTURE = culture:circassian
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:circassian_pagan
+				SIZE = small
+			}
+		}
+		title:c_khumar = {
+			add_culture_minority_effect = {
+				CULTURE = culture:circassian
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:circassian_pagan
+				SIZE = large
+			}
+		}
+
+		# Tmutarakan
+		title:c_tmutarakan = {
+			add_faith_minority_effect = {
+				FAITH = faith:rabbinism
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:radhanite
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:orthodox
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:greek
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:russian
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:armenian_apostolic
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:armenian
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:lezgic
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:circassian
+				SIZE = small
+			}
+		}
+
+		# Sarkel
+		title:c_sarkel = {
+			if = {
+				limit = {
+					game_start_date >= 800.1.1
+					game_start_date <= 1115.1.1
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:alanobolghar
+					SIZE = large
+				}
+			}
+			if = {
+				limit = {
+					game_start_date >= 890.1.1
+					game_start_date <= 1115.1.1
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:pecheneg
+					SIZE = large
+				}
+			}
+			if = {
+				limit = {
+					game_start_date >= 890.1.1
+					game_start_date <= 1115.1.1
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:turkish
+					SIZE = large
+				}
+			}
+		}
+
+		# Oleshye
+		title:c_oleshye = {
+			if = {
+				limit = { game_start_date >= 944.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:greek
+					SIZE = large
+				}
+			}
+		}
+
+		# Itil
+		title:c_itil = {
+			if = {
+				limit = { game_start_date >= 800.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:alanobolghar
+					SIZE = small
+				}
+			}
+			if = {
+				limit = {
+					game_start_date >= 800.1.1
+					game_start_date <= 1000.1.1
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:bolghar
+					SIZE = small
+				}
+				add_culture_minority_effect = {
+					CULTURE = culture:sabir
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:tengri_pagan
+					SIZE = large
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:khazar
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:orthodox
+					SIZE = small
+				}
+			}
+		}
+
+
+		##### Needs to be made into migration setup #####
 		## Roma ##
 		if = {
 			limit = {
@@ -687,404 +1010,6 @@ set_minorities_game_start = {
 				COUNTY = title:c_hadrianopolis
 			}
 		}
-
-		## Other ##
-		if = {
-			limit = { game_start_date >= 1050.1.1 }
-
-			add_culture_minority_effect = {
-				CULTURE = culture:sheren
-				SIZE = large
-				COUNTY = title:c_qianzhou_jiangxi_china
-			}
-		}
-
-		add_faith_minority_effect = {
-			FAITH = faith:manichean
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-		add_faith_minority_effect = {
-			FAITH = faith:ashari
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-		add_faith_minority_effect = {
-			FAITH = faith:rabbinism
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:radhanite
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:levantine
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-
-		add_faith_minority_effect = {
-			FAITH = faith:manichean
-			SIZE = small
-			COUNTY = title:c_changan_china
-		}
-		add_faith_minority_effect = {
-			FAITH = faith:ashari
-			SIZE = small
-			COUNTY = title:c_changan_china
-		}
-		add_faith_minority_effect = {
-			FAITH = faith:rabbinism
-			SIZE = small
-			COUNTY = title:c_changan_china
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:radhanite
-			SIZE = small
-			COUNTY = title:c_changan_china
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:levantine
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-
-		add_faith_minority_effect = {
-			FAITH = faith:rabbinism
-			SIZE = small
-			COUNTY = title:c_bianzhou_china
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:kaifengim
-			SIZE = small
-			COUNTY = title:c_bianzhou_china
-		}
-
-		add_faith_minority_effect = {
-			FAITH = faith:ashari
-			SIZE = small
-			COUNTY = title:c_zhangzhou_min_china
-		}
-
-		add_faith_minority_effect = {
-			FAITH = faith:ashari
-			SIZE = small
-			COUNTY = title:c_nanhai_china
-		}
-		add_faith_minority_effect = {
-			FAITH = faith:nestorian
-			SIZE = small
-			COUNTY = title:c_nanhai_china
-		}
-		add_faith_minority_effect = {
-			FAITH = faith:mazdayasna
-			SIZE = small
-			COUNTY = title:c_nanhai_china
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:bedouin
-			SIZE = small
-			COUNTY = title:c_lanzhou_longxi_china
-		}
-
-		add_faith_minority_effect = {
-			FAITH = faith:ashari
-			SIZE = small
-			COUNTY = title:c_pasai
-		}
-		add_culture_minority_effect = {
-			CULTURE = culture:bedouin
-			SIZE = small
-			COUNTY = title:c_pasai
-		}
-
-		title:c_SUM_lambri = {
-			add_faith_minority_effect = {
-				FAITH = faith:ashari
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:bedouin
-				SIZE = small
-			}
-			if = {
-				limit = {
-					game_start_date >= 1030.1.1
-					game_start_date < 1066.12.31
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:shaivism
-					SIZE = small
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:tamil
-					SIZE = small
-				}
-			}
-		}
-
-		if = {
-			limit = { game_start_date >= 986.1.1 }
-
-			add_culture_minority_effect = {
-				CULTURE = culture:cham
-				SIZE = small
-				COUNTY = title:c_zhenzhou_zhuyajun_china
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:chamic_shaivism
-				SIZE = small
-				COUNTY = title:c_zhenzhou_zhuyajun_china
-			}
-		}
-
-		if = {
-			limit = {
-				game_start_date >= 1030.1.1
-				game_start_date <= 1066.12.31
-			}
-
-			add_culture_minority_effect = {
-				CULTURE = culture:tamil
-				SIZE = small
-				COUNTY = title:c_pasai
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-				COUNTY = title:c_pasai
-			}
-
-			add_culture_minority_effect = {
-				CULTURE = culture:tamil
-				SIZE = small
-				COUNTY = title:c_perlak
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-				COUNTY = title:c_perlak
-			}
-
-			add_culture_minority_effect = {
-				CULTURE = culture:tamil
-				SIZE = small
-				COUNTY = title:c_siak
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-				COUNTY = title:c_siak
-			}
-
-			add_culture_minority_effect = {
-				CULTURE = culture:tamil
-				SIZE = small
-				COUNTY = title:c_palembang
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-				COUNTY = title:c_palembang
-			}
-
-			add_culture_minority_effect = {
-				CULTURE = culture:tamil
-				SIZE = large
-				COUNTY = title:c_SUM_barus
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = large
-				COUNTY = title:c_SUM_barus
-			}
-		}
-
-
-		##### CAUCASUS UPDATE #####
-		# Misc
-		title:c_chernigov = { #kassogians in chernigov
-			if = {
-				limit = { game_start_date >= 1022.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:circassian
-					SIZE = small
-				}
-			}
-		}
-
-
-		## Crimea ##
-		title:c_kerch = {
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = small
-			}
-		}
-		title:c_kermenchik = {
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:circassian_pagan
-				SIZE = large
-			}
-		}
-
-
-		### Caucasus Steppe ###
-		# Azov
-		title:c_azov = {
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:circassian_pagan
-				SIZE = small
-			}
-		}
-		title:c_khumar = {
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:circassian_pagan
-				SIZE = large
-			}
-		}
-
-		# Tmutarakan
-		title:c_tmutarakan = {
-			add_faith_minority_effect = {
-				FAITH = faith:rabbinism
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:radhanite
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:orthodox
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:greek
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:russian
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:armenian_apostolic
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:armenian
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:lezgic
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = small
-			}
-		}
-
-		# Sarkel
-		title:c_sarkel = {
-			if = {
-				limit = {
-					game_start_date >= 800.1.1
-					game_start_date <= 1115.1.1
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:alanobolghar
-					SIZE = large
-				}
-			}
-			if = {
-				limit = {
-					game_start_date >= 890.1.1
-					game_start_date <= 1115.1.1
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:pecheneg
-					SIZE = large
-				}
-			}
-			if = {
-				limit = {
-					game_start_date >= 890.1.1
-					game_start_date <= 1115.1.1
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:turkish
-					SIZE = large
-				}
-			}
-		}
-
-		# Oleshye
-		title:c_oleshye = {
-			if = {
-				limit = { game_start_date >= 944.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:greek
-					SIZE = large
-				}
-			}
-		}
-
-		# Itil
-		title:c_itil = {
-			if = {
-				limit = { game_start_date >= 800.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:alanobolghar
-					SIZE = small
-				}
-			}
-			if = {
-				limit = {
-					game_start_date >= 800.1.1
-					game_start_date <= 1000.1.1
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:bolghar
-					SIZE = small
-				}
-				add_culture_minority_effect = {
-					CULTURE = culture:sabir
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:tengri_pagan
-					SIZE = large
-				}
-			}
-			if = {
-				limit = { game_start_date >= 1000.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:khazar
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:orthodox
-					SIZE = small
-				}
-			}
-		}
-
-
-		## Anatolia ##
 	}
 }
 
