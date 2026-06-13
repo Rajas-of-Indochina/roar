@@ -86769,6 +86769,36 @@ e_suvarnabhumi = {
 			}
 		}
 	}
+
+	k_siam = {
+		color = { 88 137 172 }
+
+		capital = c_sukhothai
+
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				culture = { has_cultural_pillar = heritage_tai }
+			}
+		}
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:tai
+				}
+				add = @correct_culture_primary_score
+			}
+			if = {
+				limit = {
+					culture = { has_cultural_pillar = heritage_tai }
+				}
+				add = @better_than_the_alternatives_score
+			}
+		}
+	}
 }
 
 e_kambuja = {
