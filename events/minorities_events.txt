@@ -5,128 +5,7 @@
 # 01xx -> Faith Expulsion 
 # 02xx -> Culture Expulsion
 # 03xx -> Council Tasks
-
-
-# scripted_effect setup_expel_faith_minorities_effect = {
-#     every_sub_realm_county = {
-#         limit = {
-#             county_has_faith_minority = yes
-#         }
-#         every_in_list = {
-#             variable = faith_minorities_small
-#             limit = {
-#                 ROOT.faith = {
-# 					faith_hostility_level = {
-# 						target = PREV
-# 						value >= faith_hostile_level
-# 					}
-# 				}
-				
-# 				NOT = {
-# 					ROOT = {
-# 						is_target_in_variable_list = {
-# 							name = faith_options
-# 							target = PREV
-# 						}
-# 					}
-# 				}
-#             }
-#             ROOT = {
-#                 add_to_variable_list = {
-#                     name = faith_options
-#                     target = PREV
-#                 }
-#             }
-#         }
-#         every_in_list = {
-#             variable = faith_minorities_large
-#             limit = {
-#                 ROOT.faith = {
-# 					faith_hostility_level = {
-# 						target = PREV
-# 						value >= faith_hostile_level
-# 					}
-# 				}
-				
-# 				NOT = {
-# 					ROOT = {
-# 						is_target_in_variable_list = {
-# 							name = faith_options
-# 							target = PREV
-# 						}
-# 					}
-# 				}
-#             }
-#             ROOT = {
-#                 add_to_variable_list = {
-#                     name = faith_options
-#                     target = PREV
-#                 }
-#             }
-#         }
-#     }
-# }
-
-# scripted_effect expel_faith_minorities_effect = {
-# 	every_sub_realm_county = {
-# 		limit = {
-# 			county_has_specific_faith_minority_trigger = { FAITH = scope:expelled_faith }
-# 		}
-# 		save_scope_as = source_county
-# 		find_faith_migration_target_effect = {
-# 			FAITH = scope:expelled_faith
-# 		}
-# 		# replace with more refined migration algo later
-# 		# random_neighboring_county = {
-# 		# 	limit = { NOT = { holder = ROOT } }
-# 		# 	save_scope_as = target_county
-# 		# }
-# 		faith_migration_effect = {
-# 			SOURCE_COUNTY = scope:source_county
-# 			TARGET_COUNTY = scope:target_county
-# 			FAITH = scope:expelled_faith
-# 		}
-# 	}
-# }
-
-# minorities.0100 = {
-# 	type = character_event
-# 	title = minorities.0100.t
-# 	desc = minorities.0100.desc
-
-# 	left_portrait = {
-# 		character = root
-# 		animation = disapproval
-# 	}
-# 	widget = {
-# 		gui = "sea_select_faith_widget"
-# 		container = "custom_widgets_container"
-# 	}
-# 	theme = dread
-
-# 	immediate = {
-# 		remove_variable = selected_faith
-# 		clear_variable_list = faith_options
-#         setup_expel_faith_minorities_effect = yes
-# 	}
-# 	option = {
-# 		name = minorities.0300.confirm
-# 		if = {
-# 			limit = {
-# 				has_variable = selected_faith
-# 			}
-# 			var:selected_faith = { save_scope_as = expelled_faith }
-# 			expel_faith_minorities_effect = yes
-# 		}
-# 		else = {
-# 			custom_tooltip = minorities.0300.cancel
-# 			remove_variable = expelled_or_purged_peasants
-# 		}
-# 	}
-# 	after = {
-# 		remove_variable = selected_faith
-# 	}
-# }
+# 04xx -> misc events from decisions
 
 # AI random faith minority expulsion pulse event
 
@@ -246,115 +125,6 @@ minorities.0102 = {
 		}
 	}
 }
-
-# scripted_effect setup_expel_culture_minorities_effect = {
-#     every_sub_realm_county = {
-#         limit = {
-#             county_has_culture_minority = yes
-#         }
-#         every_in_list = {
-#             variable = culture_minorities_small
-#             limit = {
-# 				NOT = {
-# 					ROOT = {
-# 						is_target_in_variable_list = {
-# 							name = culture_options
-# 							target = PREV
-# 						}
-# 					}
-# 				}
-#             }
-			
-#             ROOT = {
-#                 add_to_variable_list = {
-#                     name = culture_options
-#                     target = PREV
-#                 }
-#             }
-#         }
-#         every_in_list = {
-#             variable = culture_minorities_large
-#             limit = {
-# 				NOT = {
-# 					ROOT = {
-# 						is_target_in_variable_list = {
-# 							name = culture_options
-# 							target = PREV
-# 						}
-# 					}
-# 				}
-#             }
-			
-#             ROOT = {
-#                 add_to_variable_list = {
-#                     name = culture_options
-#                     target = PREV
-#                 }
-#             }
-#         }
-#     }
-# }
-
-# scripted_effect expel_culture_minorities_effect = {
-# 	every_sub_realm_county = {
-# 		limit = {
-# 			county_has_specific_culture_minority_trigger = { CULTURE = scope:expelled_culture }
-# 		}
-# 		save_scope_as = source_county
-# 		find_culture_migration_target_effect = {
-# 			CULTURE = scope:expelled_culture
-# 		}
-# 		# replace with more refined migration algo later
-# 		# random_neighboring_county = {
-# 		# 	limit = { NOT = { holder = ROOT } }
-# 		# 	save_scope_as = target_county
-# 		# }
-# 		culture_migration_effect = {
-# 			SOURCE_COUNTY = scope:source_county
-# 			TARGET_COUNTY = scope:target_county
-# 			CULTURE = scope:expelled_culture
-# 		}
-# 	}
-# }
-
-# minorities.0200 = {
-# 	type = character_event
-# 	title = minorities.0100.t
-# 	desc = minorities.0100.desc
-
-# 	left_portrait = {
-# 		character = root
-# 		animation = disapproval
-# 	}
-# 	widget = {
-# 		gui = "sea_select_culture_widget"
-# 		container = "custom_widgets_container"
-# 	}
-# 	theme = dread
-
-# 	immediate = {
-# 		remove_variable = selected_culture
-# 		clear_variable_list = culture_options
-#         setup_expel_culture_minorities_effect = yes
-# 	}
-# 	option = {
-# 		name = minorities.0300.confirm
-# 		if = {
-# 			limit = {
-# 				has_variable = selected_culture
-# 			}
-# 			var:selected_culture = { save_scope_as = expelled_culture }
-# 			expel_culture_minorities_effect = yes
-# 		}
-# 		else = {
-# 			custom_tooltip = minorities.0300.cancel
-# 			remove_variable = expelled_or_purged_peasants
-# 		}
-# 	}
-# 	after = {
-# 		remove_variable = selected_culture
-# 	}
-# }
 
 # AI random culture minority expulsion pulse event
 
@@ -723,4 +493,191 @@ minorities.0302 = {
 		clear_variable_list = culture_options
 		remove_variable = selected_culture
 	}
+}
+
+# I am inviting Islamic settlers.
+scripted_effect fetch_islam_options = {
+	ROOT = { clear_variable_list = faith_options }
+	every_county_in_region = {
+		region = world_west_indian_ocean_region
+		add_to_list = counties
+	}
+	every_county_in_region = {
+		region = world_china
+		add_to_list = counties
+	}
+	every_in_list = {
+		list = counties
+		if = {
+			limit = {
+				religion = religion:islam_religion
+			}
+			faith = {
+				ROOT = {
+					if = {
+						limit = {
+							NOT = {
+								is_target_in_variable_list = {
+									name = faith_options
+									target = PREV
+								}
+							}
+						}
+						add_to_variable_list = {
+							name = faith_options
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		every_in_list = {
+			variable = faith_minorities_large
+			limit = { religion = religion:islam_religion }
+			ROOT = {
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_variable_list = {
+								name = faith_options
+								target = PREV
+							}
+						}
+					}
+					add_to_variable_list = {
+						name = faith_options
+						target = PREV
+					}
+				}
+			}
+		}
+		every_in_list = {
+			variable = faith_minorities_small
+			limit = { religion = religion:islam_religion }
+			ROOT = {
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_variable_list = {
+								name = faith_options
+								target = PREV
+							}
+						}
+					}
+				}
+				add_to_variable_list = {
+					name = faith_options
+					target = PREV
+				}
+			}
+		}
+	}
+}
+
+scripted_effect do_islamic_settlers_effect = {
+	hidden_effect = {
+		every_realm_county = {
+			random = {
+				chance = {
+					value = 15
+					multiply = {
+						value = development_level
+						multiply = {
+							value = 125
+							subtract = development_level
+						}
+						divide = 25
+					}
+				}
+				save_scope_as = county
+				promote_faith_minority_effect = { FAITH = $FAITH$ }
+				if = {
+					limit = {
+						any_in_list = {
+							variable = faith_minorities_small
+							THIS = $FAITH$
+						}
+					}
+					add_county_modifier = {
+						modifier = muslim_settlers_modifier_small
+						years = 5
+					}
+				}
+				else_if = {
+					limit = {
+						any_in_list = {
+							variable = faith_minorities_large
+							THIS = $FAITH$
+						}
+					}
+					add_county_modifier = {
+						modifier = muslim_settlers_modifier_large
+						years = 5
+					}
+				}
+				if = {
+					limit = {
+						faith = $FAITH$
+					}
+					add_county_modifier = {
+						modifier = muslim_settlers_modifier_majority
+						years = 5
+					}
+				}
+			}
+		}
+	}
+	custom_tooltip = invite_muslim_settler_effect_tt
+}
+
+
+minorities.0401 = {
+	type = character_event
+	title = maritime_southeast_asia.0008.t
+	desc = maritime_southeast_asia.0008.desc
+	theme = diplomacy_foreign_affairs_focus
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+
+	immediate = {
+		remove_variable = selected_faith
+		fetch_islam_options = yes
+	}
+	widget = {
+		gui = "sea_select_faith_widget"
+		container = "custom_widgets_container"
+	}
+
+	option = {
+		name = maritime_southeast_asia.0008.nevermind
+		if = {
+			limit = { has_variable = selected_faith }
+			var:selected_faith = {
+				save_scope_as = faith
+			}
+			do_islamic_settlers_effect = { FAITH = scope:faith }
+			add_piety = major_piety_loss
+			if = {
+				limit = {
+					culture = {
+						has_cultural_era_or_later = culture_era_late_medieval
+					}
+				}
+				remove_short_term_gold = major_gold_value
+			}
+			else = {
+				remove_short_term_gold = massive_gold_value
+			}
+		}
+		else = {
+			remove_decision_cooldown = invite_islamic_settlers_decision
+		}
+	}
+
+	after = {
+		clear_variable_list = faith_options
+	}
+
 }
