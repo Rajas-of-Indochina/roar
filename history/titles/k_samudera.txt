@@ -149,7 +149,7 @@ c_pedir = {
 	}
 }
 
-c_pasai = {
+c_SUM_pasai = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 18 }
@@ -196,29 +196,28 @@ c_daya = {
 	1178.1.1 = { change_development_level = 18 }
 
 	860.1.1 = {
-		holder = aceh001
+		holder = sea_aceh_daya_01_fic
 		government = mandala_government
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
+		}
 	}
-	900.1.1 = {
-		holder = aceh002
+	#
+	1060.1.1 = {
+		holder = sea_aceh_daya_02_fic
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
+		}
 	}
-	968.1.1 = {
-		holder = aceh003
-	}
-	1010.1.1 = {
-		holder = aceh004
-	}
-	1050.1.1 = {
-		holder = aceh005
-	}
-	1090.1.1 = {
-		holder = aceh006
-	}
-	1130.1.1 = {
-		holder = aceh007
-	}
+	#
 	1170.1.1 = {
-		holder = aceh008
+		holder = sea_aceh_daya_03_fic
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
+		}
 	}
 }
 
