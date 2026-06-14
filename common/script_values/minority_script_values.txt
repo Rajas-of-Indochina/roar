@@ -695,7 +695,33 @@ chancellor_invite_settlers_contextual_bonuses = {
 	}
 }
 
-
+chancellor_invite_settlers_range = {
+    value = diplomatic_range
+    if = {
+        limit = {
+            scope:county.faith = scope:councillor_liege.faith
+            scope:councillor_liege = { has_trait = crusader_king }
+        }
+        multiply = 4
+    }
+    if = {
+        limit = {
+            scope:councillor_liege = {
+                has_trait = adventurer
+                culture = { has_innovation = innovation_varangian_adventurers }
+            }
+            scope:county.culture = {
+                has_same_culture_heritage = scope:councillor_liege.culture
+            }
+            multiply = 2
+        }
+    }
+    multiply = {
+        value = 50
+        add = scope:councillor.diplomacy
+        divide = 50
+    }
+}
 
 # Bureaucrats bonus
 chancellor_invite_settlers_monthly_increase_dynasty_perk_bonus = {

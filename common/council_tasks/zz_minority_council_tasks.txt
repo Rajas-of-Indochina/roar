@@ -409,8 +409,8 @@ task_conversion = {
 		scope:county = {
 			is_landless_type_title = no
 			NOT = {
-				is_target_of_council_task_or_clone = task_promote_minority
-				is_target_of_council_task_or_clone = task_expel_religious_minority
+				is_target_of_council_task = task_promote_minority
+				is_target_of_council_task = task_expel_religious_minority
 			}
 			#China changes the faith to the Huangdi's faith
 			trigger_if = {
@@ -1252,8 +1252,8 @@ task_promote_culture = {
 		scope:county = {
 			is_landless_type_title = no
 			NOT = {
-				is_target_of_council_task_or_clone = task_promote_minority
-				is_target_of_council_task_or_clone = task_promote_culture
+				is_target_of_council_task = task_promote_minority
+				is_target_of_council_task = task_promote_culture
 			}
 			culture != scope:councillor_liege.culture
 			trigger_if = {
@@ -2761,17 +2761,17 @@ task_invite_settlers = {
 			}
 		}
 		# If you're inviting from a county that doesn't border on you hold then it's half speed
-		if = {
-			limit = {
-				NOT = {
-					scope:county = { any_neighboring_county = { holder = scope:councillor_liege } }
-				}
-			}
-			multiply = {
-				value = 0.5
-				desc = NOT_BORDERING_REALM_REASON
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		NOT = {
+		# 			scope:county = { any_neighboring_county = { holder = scope:councillor_liege } }
+		# 		}
+		# 	}
+		# 	multiply = {
+		# 		value = 0.5
+		# 		desc = NOT_BORDERING_REALM_REASON
+		# 	}
+		# }
 		# Crusader Kings get a massive bonus to doing this to offset that they're inevitably going to be pulling from distant counties
 		if = {
 			limit = { scope:councillor_liege = { has_trait = crusader_king } }
@@ -2785,6 +2785,13 @@ task_invite_settlers = {
             value = 3
             desc = MINORITIES_SYSTEM_REASON
         }
+		multiply = {
+			value = squared_distance_large
+			divide = "scope:county.title_province.squared_distance(scope:councillor_liege.capital_province)"
+			max = 1
+			min = 0.01
+			desc = MINORITIES_DISTANCE_FACTOR
+		}
 		min = {
 			value = 0.1
 			desc = minimum_conversion
@@ -2795,20 +2802,7 @@ task_invite_settlers = {
 		scope:county = {
 			is_landless_type_title = no
 			NOT = { holder = scope:councillor_liege }
-			OR = {
-				holder.top_liege = { in_diplomatic_range = scope:councillor_liege }
-				AND = {
-					# Crusader States get to ignore diplo range, but ONLY for counties that have their faith and culture
-					scope:councillor_liege = {
-						OR = {
-							has_trait = crusader_king
-							any_liege_or_above = { has_trait = crusader_king }
-						}
-					}
-					faith = scope:councillor_liege.faith
-					culture = scope:councillor_liege.culture
-				}
-			}
+			"scope:county.title_province.squared_distance(scope:councillor_liege.capital_province)" <= chancellor_invite_settlers_range
 			OR = {
 				NOT = { has_variable = inviter }
 				var:inviter = scope:councillor_liege
@@ -2826,7 +2820,7 @@ task_invite_settlers = {
 			custom_tooltip = {
 				text = invite_settlers_different_faith_culture_tt
 				any_held_title = {
-					tier = tier_county
+					title_tier = county
 					OR = {
 						faith != scope:county.faith
 						culture != scope:county.culture
@@ -2879,7 +2873,7 @@ task_invite_settlers = {
 			random_held_title = {
 				# Prefer any county within a recovering natural disaster
 				limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					any_county_situation = { situation_current_phase = recovery }
 					OR = {
@@ -2889,14 +2883,14 @@ task_invite_settlers = {
 				}
 				# failing that a county that is neither scope:county's faith or culture
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					culture != scope:county.culture
 					faith != scope:county.faith
 				}
 				# failing that a county that at least doesn't share one.
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					OR = {
 						faith != scope:county.faith
@@ -3045,13 +3039,13 @@ task_invite_settlers = {
 						county_has_type_minority_with_trigger = {
 							TYPE = culture
 							SIZE = large
-							TRIGGER = has_cultural_piller
+							TRIGGER = has_cultural_pillar
 							CHECK = heritage_central_germanic
 						}
 						county_has_type_minority_with_trigger = {
 							TYPE = culture
 							SIZE = small
-							TRIGGER = has_cultural_piller
+							TRIGGER = has_cultural_pillar
 							CHECK = heritage_central_germanic
 						}
 					}
@@ -3135,7 +3129,7 @@ task_kurultai_invite_settlers_1 = {
 					exists = scope:county
 					scope:councillor_liege = {
 						any_held_title = {
-							tier = tier_county
+							title_tier = county
 							NOT = { culture = scope:county.culture } }
 						}
 				}
@@ -3146,7 +3140,7 @@ task_kurultai_invite_settlers_1 = {
 					exists = scope:county
 					scope:councillor_liege = {
 						any_held_title = {
-							tier = tier_county
+							title_tier = county
 							NOT = { faith = scope:county.faith }
 						}
 					}
@@ -3278,7 +3272,7 @@ task_kurultai_invite_settlers_1 = {
 			custom_tooltip = {
 				text = invite_settlers_different_faith_culture_tt
 				any_held_title = {
-					tier = tier_county
+					title_tier = county
 					OR = {
 						faith != scope:county.faith
 						culture != scope:county.culture
@@ -3301,7 +3295,7 @@ task_kurultai_invite_settlers_1 = {
 			random_held_title = {
 				# Prefer any county within a recovering natural disaster
 				limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					any_county_situation = { situation_current_phase = recovery }
 					OR = {
@@ -3311,14 +3305,14 @@ task_kurultai_invite_settlers_1 = {
 				}
 				# failing that a county that is neither scope:county's faith or culture
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					culture != scope:county.culture
 					faith != scope:county.faith
 				}
 				# failing that a county that at least doesn't share one.
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					OR = {
 						faith != scope:county.faith
@@ -3548,7 +3542,7 @@ task_kurultai_invite_settlers_2 = {
 			custom_tooltip = {
 				text = invite_settlers_different_faith_culture_tt
 				any_held_title = {
-					tier = tier_county
+					title_tier = county
 					OR = {
 						faith != scope:county.faith
 						culture != scope:county.culture
@@ -3571,7 +3565,7 @@ task_kurultai_invite_settlers_2 = {
 			random_held_title = {
 				# Prefer any county within a recovering natural disaster
 				limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					any_county_situation = { situation_current_phase = recovery }
 					OR = {
@@ -3581,14 +3575,14 @@ task_kurultai_invite_settlers_2 = {
 				}
 				# failing that a county that is neither scope:county's faith or culture
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					culture != scope:county.culture
 					faith != scope:county.faith
 				}
 				# failing that a county that at least doesn't share one.
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					OR = {
 						faith != scope:county.faith
@@ -3818,7 +3812,7 @@ task_kurultai_invite_settlers_3 = {
 			custom_tooltip = {
 				text = invite_settlers_different_faith_culture_tt
 				any_held_title = {
-					tier = tier_county
+					title_tier = county
 					OR = {
 						faith != scope:county.faith
 						culture != scope:county.culture
@@ -3841,7 +3835,7 @@ task_kurultai_invite_settlers_3 = {
 			random_held_title = {
 				# Prefer any county within a recovering natural disaster
 				limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					any_county_situation = { situation_current_phase = recovery }
 					OR = {
@@ -3851,14 +3845,14 @@ task_kurultai_invite_settlers_3 = {
 				}
 				# failing that a county that is neither scope:county's faith or culture
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					culture != scope:county.culture
 					faith != scope:county.faith
 				}
 				# failing that a county that at least doesn't share one.
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					OR = {
 						faith != scope:county.faith
@@ -4088,7 +4082,7 @@ task_kurultai_invite_settlers_4 = {
 			custom_tooltip = {
 				text = invite_settlers_different_faith_culture_tt
 				any_held_title = {
-					tier = tier_county
+					title_tier = county
 					OR = {
 						faith != scope:county.faith
 						culture != scope:county.culture
@@ -4111,7 +4105,7 @@ task_kurultai_invite_settlers_4 = {
 			random_held_title = {
 				# Prefer any county within a recovering natural disaster
 				limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					any_county_situation = { situation_current_phase = recovery }
 					OR = {
@@ -4121,14 +4115,14 @@ task_kurultai_invite_settlers_4 = {
 				}
 				# failing that a county that is neither scope:county's faith or culture
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					culture != scope:county.culture
 					faith != scope:county.faith
 				}
 				# failing that a county that at least doesn't share one.
 				alternative_limit = {
-					tier = tier_county
+					title_tier = county
 					is_landless_type_title = no
 					OR = {
 						faith != scope:county.faith
