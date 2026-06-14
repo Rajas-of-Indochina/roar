@@ -33,7 +33,7 @@ county_has_specific_large_faith_minority = {
         target = $FAITH$
     }
 }
-county_has_specific_faith_minority_trigger = {
+county_has_specific_faith_minority = {
     OR = {
         county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
         county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
@@ -144,7 +144,7 @@ can_have_minority_laws_trigger = {
 # faith scope
 faith_has_minority_counties = {
 	any_county = {
-		county_has_specific_faith_minority_trigger = { FAITH = prev }
+		county_has_specific_faith_minority = { FAITH = prev }
 	}
 }
 

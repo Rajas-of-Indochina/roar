@@ -25,7 +25,7 @@ add_faith_minority_effect = {
         limit = {
             NOR = {
                 faith = $FAITH$
-                county_has_specific_faith_minority_trigger = { FAITH = $FAITH$ }
+                county_has_specific_faith_minority = { FAITH = $FAITH$ }
             }
         }
         add_to_variable_list = {
@@ -632,7 +632,7 @@ replace_culture_minority_effect = {
 expel_county_faith_minority_effect = {
     $COUNTY$ = {
         if = {
-            limit = { county_has_specific_faith_minority_trigger = { FAITH = $FAITH$ } }
+            limit = { county_has_specific_faith_minority = { FAITH = $FAITH$ } }
             $CHARACTER$ = {
                 add_gold = $COUNTY$.development_level
                 add_tyranny = {
