@@ -960,7 +960,31 @@ quick_region_migration_effect = {
     }
     random_county_in_region = {
         region = $TARGET_REGION$
+        limit = { NOT = { this = scope:source_county } } # with this we can support using this intra-regionally
         save_scope_as = target_county
+    }
+    combined_migration_effect = {
+        SOURCE_COUNTY = scope:source_county
+        TARGET_COUNTY = scope:target_county
+        FAITH = scope:faith
+        CULTURE = scope:culture
+    }
+}
+
+targeted_regional_migration_effect = {
+    random_county_in_region = {
+        region = $SOURCE_REGION$
+        save_scope_as = source_county
+        get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
+        get_random_county_faith_effect = { MAJORITY = yes } # scope:faith now saved
+    }
+    if = {
+        limit = { NOT = { exists = scope:target_county } }
+        random_held_title = {
+            title_tier = county
+            limit = { NOT = { this = scope:source_county } }
+            save_scope_as = target_county
+        }
     }
     combined_migration_effect = {
         SOURCE_COUNTY = scope:source_county

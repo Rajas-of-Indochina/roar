@@ -1,12 +1,17 @@
 ﻿RICE_india_land_grant_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_indian_temple.dds"
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_indian_temple.dds" }
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 80
+		duchy = 60
+		kingdom = 40
+		empire = 40
+		hegemony = 40
 	}
-	ai_check_interval = 40
-
+	decision_group_type = RICE_religious
 	cooldown = { days = 3650 }
 
-
+	
 	desc = RICE_india_land_grant_decision_desc
 	selection_tooltip = RICE_india_land_grant_decision_tooltip
 
@@ -41,7 +46,7 @@
 			}
 		}
 	}
-
+	
 	is_valid = {
 		OR = {
 			religion = religion:buddhism_religion

@@ -74,8 +74,14 @@
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_sanctity_of_nature
+			#doctrine = tenet_ancestor_worship
 			doctrine = tenet_communal_identity
-			doctrine = tenet_ancestor_worship
+
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_takamin
+				fallback_doctrine = tenet_ancestor_worship
+			}
 
 			holy_order_names = {
 				{ name = "holy_order_faithful_of_highgod" }
@@ -257,8 +263,14 @@
 			doctrine = unreformed_faith_doctrine
 
 			doctrine = tenet_sanctity_of_nature
+			#doctrine = tenet_ancestor_worship
 			doctrine = tenet_esotericism
-			doctrine = tenet_ancestor_worship
+
+			doctrine_selection_pair = {
+				requires_dlc_flag = all_under_heaven
+				doctrine = tenet_takamin
+				fallback_doctrine = tenet_ancestor_worship
+			}
 
 			holy_order_names = {
 				{ name = "holy_order_faithful_of_highgod" }

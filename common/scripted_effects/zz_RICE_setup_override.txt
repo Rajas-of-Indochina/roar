@@ -9,18 +9,57 @@
 	# Mark some faiths to block conversion and be hidden till specific decisions are taken.
 	faith:yazidi = {
 		add_doctrine = rice_west_iranian_yazidi_doctrine
-		set_variable = { name = block_conversion_till_nebulous_circumstances }
+		remove_doctrine = doctrine_pilgrimage_encouraged
+		add_doctrine = doctrine_pilgrimage_mandatory
 		add_doctrine = special_doctrine_is_west_iranian_faith
+		set_religious_head_title = title:d_yazidi
+		set_variable = { name = block_conversion_till_nebulous_circumstances }
 	}
 	# Yarsanism
+	if = {
+		limit = {
+			faith:meshefaresism = {
+				has_doctrine = tenet_ritual_celebrations
+				NOT = { has_doctrine = tenet_adaptive }
+			}
+		}
+		faith:meshefaresism = {
+			remove_doctrine = tenet_ritual_celebrations
+			add_doctrine = tenet_adaptive
+		}
+	}
 	faith:meshefaresism = {
 		add_doctrine = rice_west_iranian_yarsani_doctrine
-		set_variable = { name = block_conversion_till_nebulous_circumstances }
+		remove_doctrine = doctrine_pilgrimage_encouraged
+		add_doctrine = doctrine_pilgrimage_mandatory
+		remove_doctrine = doctrine_polygamy
+		add_doctrine = doctrine_monogamy
+		remove_doctrine = doctrine_temporal_head
+		add_doctrine = doctrine_no_head
 		add_doctrine = special_doctrine_is_west_iranian_faith
+		set_variable = { name = block_conversion_till_nebulous_circumstances }
 	}
 	# Kurdish Paganism
+	if = {
+		limit = {
+			faith:kitebacilweism = {
+				has_doctrine = tenet_literalism
+				has_doctrine = tenet_ritual_celebrations
+				NOT = { has_doctrine = tenet_sanctity_of_nature }
+				NOT = { has_doctrine = tenet_sun_worship }
+			}
+		}
+		faith:kitebacilweism = {
+			remove_doctrine = tenet_literalism
+			add_doctrine = tenet_sanctity_of_nature
+			remove_doctrine = tenet_ritual_celebrations
+			add_doctrine = tenet_sun_worship
+		}
+	}
 	faith:kitebacilweism = {
 		add_doctrine = rice_west_iranian_kurdish_pagan_doctrine
+		remove_doctrine = doctrine_temporal_head
+		add_doctrine = doctrine_no_head
 		add_doctrine = special_doctrine_is_west_iranian_faith
 	}
 	# Shamsi Sect
@@ -42,7 +81,55 @@
 	#
 	############################################################
 
-	# Get rid of weird Brahui - moved to Pamir
+	# Get rid of weird Brahui
+	every_county = {
+		limit = {
+			culture = culture:brahui
+			NOT = { county = title:c_bampur }
+			# title_province = {	
+			# 	NOR = {
+			# 		county = title:c_tambov
+			# 	}		
+			# }
+		}
+		set_county_culture = culture:sindhi
+	}	
+	if = {
+		limit = {
+			current_date < 900.1.1
+			current_date > 700.1.1
+		}
+		title:c_bampur = {
+			set_county_culture = culture:persian
+			holder = {			
+				every_courtier_or_guest = {
+					limit = {
+						is_lowborn = yes
+						culture = culture:brahui
+					}
+					set_culture = culture:persian
+				}
+			}
+		}
+	}
+	every_ruler = {
+		limit = {
+			culture = culture:brahui
+		}
+		set_culture = culture:sindhi
+		every_vassal = {
+			limit = {
+				culture = culture:brahui
+			}
+			set_culture = culture:sindhi
+		}
+		every_courtier_or_guest = {
+			limit = {
+				culture = culture:brahui
+			}
+			set_culture = culture:sindhi
+		}
+	}
 
 	############################################################
 	#
@@ -50,7 +137,142 @@
 	#
 	############################################################
 
-	# Kurdish paganism and other stuff
+	# Kurdish paganism
+	title:c_kurdistan = {
+		set_county_faith = faith:kitebacilweism
+		holder = {			
+			every_courtier_or_guest = {
+				limit = {
+					is_lowborn = yes
+					culture = culture:kurdish
+				}
+				random = {
+					chance = 20
+					set_character_faith = faith:kitebacilweism
+				}
+			}
+		}
+	}	
+	# title:c_hakkari = {
+	# 	set_county_faith = faith:kitebacilweism
+	# 	holder = {			
+	# 		every_courtier_or_guest = {
+	# 			limit = {
+	# 				is_lowborn = yes
+	# 				culture = culture:kurdish
+	# 			}
+	# 			random = {
+	# 				chance = 20
+	# 				set_character_faith = faith:kitebacilweism
+	# 			}
+	# 		}
+	# 	}
+	# }	
+	title:c_urmiya = {
+		set_county_faith = faith:kitebacilweism
+		holder = {			
+			every_courtier_or_guest = {
+				limit = {
+					is_lowborn = yes
+					culture = culture:kurdish
+				}
+				random = {
+					chance = 20
+					set_character_faith = faith:kitebacilweism
+				}
+			}
+		}
+	}		
+	title:c_kermanshah = {
+		set_county_faith = faith:kitebacilweism
+		holder = {			
+			every_courtier_or_guest = {
+				limit = {
+					is_lowborn = yes
+					culture = culture:kurdish
+				}
+				random = {
+					chance = 20
+					set_character_faith = faith:kitebacilweism
+				}
+			}
+		}
+	}
+	# title:c_istakhr = {
+	# 	set_county_culture = culture:persian
+	# }
+	if = {
+		limit = {
+			game_start_date <= 1000
+		}	
+		title:c_masabadhan = {
+			set_county_faith = faith:kitebacilweism
+			holder = {			
+				every_courtier_or_guest = {
+					limit = {
+						is_lowborn = yes
+						culture = culture:kurdish
+					}
+					random = {
+						chance = 20
+						set_character_faith = faith:kitebacilweism
+					}
+				}
+			}
+		}	
+		# title:c_ninive = {
+		# 	set_county_faith = faith:kitebacilweism
+		# 	holder = {			
+		# 		every_courtier_or_guest = {
+		# 			limit = {
+		# 				is_lowborn = yes
+		# 				culture = culture:kurdish
+		# 			}
+		# 			random = {
+		# 				chance = 20
+		# 				set_character_faith = faith:kitebacilweism
+		# 			}
+		# 		}
+		# 	}
+		# }	
+		title:c_bailaqan = {
+			set_county_faith = faith:kitebacilweism
+			holder = {			
+				every_courtier_or_guest = {
+					limit = {
+						is_lowborn = yes
+						culture = culture:kurdish
+					}
+					random = {
+						chance = 20
+						set_character_faith = faith:kitebacilweism
+					}
+				}
+			}
+		}
+		# title:c_dinawar = {
+		# 	set_county_faith = faith:kitebacilweism
+		# }	
+	}
+	title:c_amida = {
+		set_county_faith = faith:urartuism
+		set_county_culture = culture:armenian
+	}	
+	title:c_samosata = {
+		set_county_faith = faith:urartuism
+		set_county_culture = culture:armenian
+	}	
+	title:c_upper_khabur = {
+		set_county_faith = faith:shamsi_pagan
+		set_county_culture = culture:assyrian
+	}	
+	title:c_tall_basma = {
+		set_county_faith = faith:shamsi_pagan
+		set_county_culture = culture:assyrian
+	}	
+	# title:c_nasibin = {
+	# 	set_county_faith = faith:nestorian
+	# }	
 	if = {
 		limit = {
 			character:kurdish0001 = {
@@ -59,12 +281,36 @@
 			}
 		}
 		character:kurdish0001 = {
+			set_character_faith_with_conversion = faith:kitebacilweism
+			every_vassal = {
+				limit = {
+					culture = culture:kurdish
+				}
+				set_character_faith = faith:kitebacilweism
+			}
+			every_courtier_or_guest = {
+				limit = {
+					culture = culture:kurdish
+				}
+				set_character_faith = faith:kitebacilweism
+			}
 			hidden_effect = {
 				RICE_jizya_contract_at_start_effect = yes
 			}
 		}
 	}
 	title:c_upper_khabur.holder = {
+		every_courtier_or_guest = {
+			limit = {
+				is_lowborn = yes
+			}
+			random = {
+				chance = 30
+				set_character_faith = faith:shamsi_pagan
+			}
+		}
+	}
+	title:c_tall_basma.holder = {
 		every_courtier_or_guest = {
 			limit = {
 				is_lowborn = yes
@@ -116,7 +362,12 @@
 		}
 		# Give some territory to Tirahaye Kurds
 		character:RICE_kurdish_pagan_001 = {
-			RICE_jizya_contract_at_start_effect = yes
+			get_title = title:c_urmiya
+			get_title = title:c_bailaqan
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+			hidden_effect = {
+				RICE_jizya_contract_at_start_effect = yes
+			}
 		}
 	}
 }
@@ -126,13 +377,53 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 
 	#########################################################################
 	#
-	# BUILDING AND PROVINCE MODIFIERS
+	# BUILDING AND COUNTY/PROVINCE STUFF
 	#
 	#########################################################################
 
 	# Add Mogao Caves
+	if = {
+		limit = {
+			title:b_mogao = {
+				title_province = { has_special_building = no }
+			}
+		}
+		title:b_mogao.title_province = {
+			add_special_building = RICE_tarim_basin_mogao_caves
+		}
+	}
 	# Add Bezeklik Caves
+	if = {
+		limit = {
+			title:b_bezeklik = {
+				title_province = { has_special_building = no }
+			}
+		}
+		title:b_bezeklik.title_province = {
+			add_special_building = RICE_tarim_basin_bezeklik_caves
+		}
+	}
+	if = {
+		limit = {
+			title:b_bezeklik = {
+				NOT = { title_province = { has_holding_type = church_holding } }
+			}
+		}
+		title:b_bezeklik.title_province = {
+			set_holding_type = church_holding
+		}
+	}
 	# Add Kizil Caves
+	if = {
+		limit = {
+			title:b_kucha = {
+				title_province = { has_special_building = no }
+			}
+		}
+		title:b_kucha.title_province = {
+			add_special_building = RICE_tarim_basin_kizil_caves
+		}
+	}
 	# Add Dafo Temple
 	if = {
 		limit = {
@@ -151,11 +442,27 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		}
 	}
 	# Add Khotan Jade Mines and other holdings
+	# Jade Mines are no longer needed because vanilla has an equivalent
+	# if = {
+	# 	limit = {
+	# 		title:b_bugaiwilik = {
+	# 			title_province = { has_special_building = no }
+	# 		}
+	# 	}
+	# 	title:b_bugaiwilik.title_province = {
+	# 		add_special_building = RICE_tarim_basin_khotan_jade_deposits_01
+	# 	}
+	# }
+	title:b_domoko.title_province = { # Was an ancient monastery
+		set_holding_type = church_holding
+	}
+	title:b_bugaiwilik.title_province = {
+		set_holding_type = castle_holding
+	}
 
 	if = {
 		limit = {
-			current_date < 1000.1.1
-			has_global_variable = is_RICE_loaded_global_variable	
+			current_date < 1000.1.1			
 		}
 		title:c_kucha = {
 			add_county_modifier = {
@@ -167,7 +474,6 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 	if = {
 		limit = {
 			has_global_variable = RICE_game_started_on_TFE_start_date
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		title:c_charkliq = {
 			add_county_modifier = {
@@ -186,9 +492,6 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		}
 	}
 	else = {
-		limit = {
-			has_global_variable = is_RICE_loaded_global_variable
-		}
 		title:c_charkliq = {
 			add_county_modifier = {
 				modifier = RICE_tarim_basin_lop_nur_fluctuations
@@ -216,18 +519,96 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 	# Set Wenmo culture, centered around Liangzhou	
 	# According to Xuanzang, Tocharian city-states were Hinayanists, specifically Sarvastivada
 	# However, Sarvastivada was a major influence on Mahayana and adopted many Mahayana idea, even if Sinic Mahayanists criticized some of its stances
+	if = {
+		limit = {
+			current_date > 750.1.1
+			current_date < 1050.1.1		
+			NOT = { exists = global_var:hmi_immersion_pack_loaded }	
+			is_dharmachakra_loaded = no
+		}
+		# Set Wenmo culture, centered around Liangzhou
+		title:c_liangzhou = {
+			set_county_culture = culture:wenmo
+		}		
+		title:c_fanhe = {
+			set_county_culture = culture:wenmo
+		}		
+		title:c_tengger = {
+			set_county_culture = culture:wenmo
+			#set_county_faith = faith:lamaism
+		}
+		# title:c_baiyin = {
+		# 	set_county_culture = culture:wenmo
+		# 	#set_county_faith = faith:lamaism
+		# }
+		title:c_baishan = {
+			set_county_culture = culture:wenmo
+			#set_county_faith = faith:lamaism
+		}		
+		# title:c_zhanyin = {
+		# 	set_county_culture = culture:wenmo
+		# }
+		# title:c_guangwu = {
+		# 	set_county_culture = culture:wenmo
+		# }
+		title:c_zhenfan = {
+			set_county_culture = culture:wenmo
+		}
+		# According to Xuanzang, Tocharian city-states were Hinayanists, specifically Sarvastivada
+		# However, Sarvastivada was a major influence on Mahayana and adopted many Mahayana idea, even if Sinic Mahayanists criticized some of its stances
+		title:c_kucha = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		title:c_luntai = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		title:c_karashar = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		title:c_toksun = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		title:c_loulan = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		title:c_charkliq = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		title:c_kucha = {
+			set_county_faith = faith:mahayana # faith:theravada
+		}
+		character:166706 = {
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			every_courtier = {
+				set_character_faith = faith:mahayana # faith:theravada
+			}
+		}
+		character:166755 = {
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			every_courtier = {
+				set_character_faith = faith:mahayana # faith:theravada
+			}
+		}
+		character:166746 = {
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			every_courtier = {
+				set_character_faith = faith:mahayana # faith:theravada
+			}
+		}
+		character:166740 = {
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			every_courtier = {
+				set_character_faith = faith:mahayana # faith:theravada
+			}
+		}
+	}
 
 	culture:sogdian = {
 		remove_culture_tradition = tradition_horse_breeder
-		if = {
-			limit = {
-				has_global_variable = is_RICE_loaded_global_variable
-			}
-			add_culture_tradition = tradition_RICE_silk_road
-		}
-			remove_variable = tradition_cooldown
-	}
-
+		add_culture_tradition = tradition_RICE_silk_road
+		remove_variable = tradition_cooldown
+	}	
+		
 	culture:saka = {
 		set_culture_pillar = ethos_bureaucratic
 		if = {
@@ -236,14 +617,9 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		}
 		remove_culture_tradition = tradition_artisans
 		add_culture_tradition = tradition_language_scholars # Translators
-		if = {
-			limit = {
-				has_global_variable = is_RICE_loaded_global_variable
-			}
-			add_culture_tradition = tradition_RICE_silk_road
-		}
+		add_culture_tradition = tradition_RICE_silk_road
 		remove_variable = tradition_cooldown
-	}	
+	}		
 
 	culture:tocharian = {
 		add_culture_tradition = tradition_music_theory # Kuchean music is famous
@@ -251,33 +627,26 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 			limit = { has_cultural_tradition = tradition_philosopher_culture }
 			remove_culture_tradition = tradition_philosopher_culture
 		}
-		if = {
-			limit = {
-				has_global_variable = is_RICE_loaded_global_variable
-			}
-			remove_culture_tradition = tradition_caravaneers
-			add_culture_tradition = tradition_RICE_silk_road
-		}
+		remove_culture_tradition = tradition_caravaneers
+		add_culture_tradition = tradition_RICE_silk_road
 		remove_variable = tradition_cooldown
 	}
-
+		# tradition_RICE_image_of_china
 	culture:khitan = {
 		# Start of the Liao Dynasty
 		if = {
 			limit = {
 				game_start_date >= 916.1.1
-				has_global_variable = is_RICE_loaded_global_variable
 			}
 			add_culture_tradition = tradition_RICE_image_of_china
 			remove_variable = tradition_cooldown
 		}
 		set_culture_pillar = ethos_bureaucratic
-	}
+	}	
 
 	if = {
 		limit = {
 			exists = culture:khotanese
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		culture:khotanese = {
 			add_culture_tradition = tradition_RICE_silk_road
@@ -286,22 +655,18 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 	}
 
 	culture:radhanite = {
-		limit = {
-			has_global_variable = is_RICE_loaded_global_variable
-		}
 		add_culture_tradition = tradition_RICE_silk_road
 		remove_variable = tradition_cooldown
-	}
+	}	
 
 	if = {
 		limit = {
 			exists = culture:soissons
-			has_global_variable = is_RICE_loaded_global_variable
-		}	
+		}		
 		culture:bactrian = {
 			add_culture_tradition = tradition_RICE_silk_road
 			remove_variable = tradition_cooldown
-		}
+		}	
 	}
 
 	#########################################################################
@@ -310,32 +675,58 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 	#
 	#########################################################################
 
+	# Set up Eight Protectors modifier
+	if = {
+		limit = {
+			title:c_khotan.holder ?= {
+				religion = religion:buddhism_religion
+			}
+		}
+
+		title:c_khotan.holder = {
+			add_character_modifier = {
+				modifier = RICE_tarim_basin_khotan_eight_protectors
+			}
+		}		
+	}
+
 	# Set up Dunhuang vassals
 	if = {
 		limit = {
 			current_date > 865.1.1
 			current_date < 875.1.1	
-			NOT = { exists = global_var:hmi_immersion_pack_loaded }	
+			NOT = { exists = global_var:hmi_immersion_pack_loaded }		
 		}
-		title:k_guiyi = {
-			add_title_law = male_only_law
+
+		# For some reason the Zhai, Cao, Kang, and Murong families aren't being set as vassals of k_hexi
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
 		}
+		character:RICE_zhai_004 = {
+			change_liege = {
+				liege = title:k_hexi.holder
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
 
 		# Fix up Zhang Yichao
 		character:206811 = {
+			RICE_remove_personality_traits_effect = yes
+			#RICE_remove_education_traits_effect = yes
+			#add_trait = education_stewardship_4 	# Administrator able to balance the interests of different groups
+			add_trait = intellect_good_1 			# Seriously, took a lot of talent to be a competent leader in the situation
+			add_trait = zealous						# Stauchly Buddhist
+			add_trait = compassionate				# Said to care for the people
+			add_trait = just						# Able to balance the competing interests of different clans through marriage and official appointments
+			add_trait = diligent					# Just an overall hardworking dude with good military and administrative abilities
+			add_martial_skill = 3					# Military capabilities
+			add_stewardship_skill = 3				# Administrative capabilities
+			add_diplomacy_skill = 2					# Able to balance the competing interests of different clans
 			save_scope_as = zhang_yichao
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				add_character_modifier = {
-					modifier = RICE_tarim_basin_is_zhang_yichao
-				}
-				dynasty = {
-					add_dynasty_modifier = {
-						modifier = RICE_tarim_basin_zhang_clan
-					}
-				}
+			add_character_modifier = {
+				modifier = RICE_tarim_basin_is_zhang_yichao
 			}
 		}
 
@@ -344,25 +735,27 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 			get_title = title:c_guazhou
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			save_scope_as = cao_yijin
-			change_government = feudal_government
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				dynasty = {
-					add_dynasty_modifier = {
-						modifier = RICE_tarim_basin_cao_clan
-					}
-				}
-				set_variable = {
-					name = RICE_historical_aspiration
-					value = flag:cao_yijin
-				}
-				add_character_modifier = {
-					modifier = RICE_tarim_basin_aspiration_restore_order_guiyi
-				}
+			add_character_modifier = {
+				modifier = RICE_tarim_basin_aspiration_restore_order_guiyi
+			}
+			set_variable = {
+				name = RICE_historical_aspiration
+				value = flag:cao_yijin
 			}
 		}
+
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
+		}
+		scope:cao_yijin = {
+			change_liege = {
+				liege = title:k_hexi.holder
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+
 		character:RICE_zhai_003 = {
 			save_scope_as = zhai_farong
 		}
@@ -409,222 +802,53 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 
 		# Li Mingzhen - give him all of the stuff in Ganzhou
 		character:304192 = {
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-				dynasty = {
-					add_dynasty_modifier = {
-						modifier = RICE_tarim_basin_li_clan
-					}
-				}
-			}
+			RICE_remove_personality_traits_effect = yes
+			RICE_remove_education_traits_effect = yes
+			add_trait = education_diplomacy_3
+			add_trait = brave
+			add_trait = zealous
+			add_trait = diligent
 		}
 
-		# Suo Hanjun - give him Baichengzi
-		character:RICE_suo_006 = {
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:c_baichengzi
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				dynasty = {
-					add_dynasty_modifier = {
-						modifier = RICE_tarim_basin_suo_clan
-					}
-				}
-			}
-		}
-
-		# Li Mingda - Mingzhen's brother
-		character:RICE_li_005 = {
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:c_suzhou
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
-		}
-
-		# Li Mingcheng (fictional name) - Mingzhen's other brother
-		character:RICE_li_006 = {
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:b_jiayuguan
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
-		}
-
-		# Zhu Zaiqing - give him Subei
-
-		# Yin Wentong - give him all of the stuff in Qilin, since he helped fight off the Tibetans
-		character:RICE_yin_001 = { 
-			RICE_setup_new_granted_ruler_bonuses_effect = yes
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				dynasty = {
-					add_dynasty_modifier = {
-						modifier = RICE_tarim_basin_yin_clan
-					}
-				}
-			}
-		}
-
-		# Yin Jifeng - official under Zhang Yichao who later helped the Zhang family reclaim Guiyi
-		character:RICE_yin_003 = {
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:c_yalong
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-				change_government = feudal_government
-			}
-		}
-
-		character:RICE_suo_007 = {
-			save_scope_as = suo_xun_daughter
-			create_betrothal = scope:cao_yijin
-		}
-
-		# Suo Xun - give him all of the stuff in Liangzhou
-
-		# Yan Yingda - give him Yumenguan
-		character:RICE_dunhuang_misc_005 = {
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:b_yumenguan
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				dynasty = {
-					add_dynasty_modifier = {
-						modifier = RICE_tarim_basin_yan_clan
-					}
-				}
-			}
-		}
-
-		# Suo Zhongxin - give him Baiting
-		if = {
-			limit = {
-				NOT = { has_dlc_feature = roads_to_power }
-			}
-			character:RICE_suo_005 = {
-				get_title = title:c_baiting
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
-		}
-
-		# An Jingmin - Sogdian vice commissioner of Guiyi army
-		character:RICE_an_001 = {
-			get_title = title:c_shouchang
-			get_title = title:b_yangguan
-			RICE_setup_new_granted_ruler_bonuses_effect = yes
-			save_scope_as = an_jingmin
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				change_government = feudal_government
-			}
-		}
-
-		# Fictitious Wenmo leader
+		# Vanilla's Wamo/Wenmo leader
 		# The Wenmo would establish an independent state in Liangzhou in 884
-		character:RICE_wenmo_001 = {
-			RICE_setup_new_granted_ruler_bonuses_effect = yes
+		character:wamo_1 = {
+			# get_title = title:c_baiyin
+			# get_title = title:c_yongdeng
+			# RICE_setup_new_granted_ruler_bonuses_effect = yes
 			RICE_dunhuang_wenmo_troop_spawn_effect = yes # Have him start with some troops so he could cause trouble if he wanted
+			save_scope_as = wamo_ruler
+			set_culture = culture:wenmo
+			dynasty ?= {
+				every_dynasty_member = {
+					limit = {
+						culture = culture:bodpa
+					}
+					set_culture = culture:wenmo					
+				}
+			}
+			every_courtier = {
+				limit = {
+					culture = culture:bodpa
+				}
+				set_culture = culture:wenmo
+			}
 		}
 
 		# Gao Jinda - one of Zhang Yichao's OG commanders who was sent as his first envoy to the Tang Dynasty in 850 CE
-		character:RICE_dunhuang_misc_003 = { 
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:c_dajing
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
+		character:RICE_dunhuang_misc_003 = {
 			add_character_flag = RICE_gao_jinda
-		}
-
-		# Kang Tongxin - Sogdian magistrate Prefect of Guazhou at one point
-		character:RICE_kang_002 = { 
-			RICE_setup_new_granted_ruler_bonuses_effect = yes
-			save_scope_as = kang_master
-		}
-		
-		# Kang Shijun - Sogdian magistrate Prefect of Guazhou at one point
-		if = {
-			limit = {
-				NOT = { has_dlc_feature = roads_to_power }
-			}
-			character:RICE_kang_003 = { 
-				get_title = title:c_yulin_guiyi
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
 		}
 
 		# Zhang Wenche - official who led the Guiyi envoy group to the Tang Dynasty alongside Song Runying in 887 CE, and *may* have led the coup against Zhang Huaishen in c. 890
 		character:RICE_dunhuang_misc_006 = { 
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:c_huanzhouliangzhou
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
 			add_character_flag = RICE_zhang_wenche
 		}
 
 		# Song Runying - Official who led the Guiyi envoy group to the Tang Dynasty alongside Zhang Wenche in 887 CE
 		character:RICE_song_001 = { 
-			if = {
-				limit = {
-					NOT = { has_dlc_feature = roads_to_power }
-				}
-				get_title = title:c_tiantishan
-				change_government = feudal_government
-				RICE_setup_new_granted_ruler_bonuses_effect = yes
-			}
 			add_character_flag = RICE_song_runying
-		}
-
-		title:c_khotan.holder = {
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				add_character_modifier = {
-					modifier = RICE_tarim_basin_khotan_eight_protectors
-				}
-			}
-		}
+		}	
 
 		# Fu Murong (or whoever's supposed to be the last Tuyuhun in-game)
 		character:247407 = {
@@ -633,67 +857,13 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 
 		# Kill off fictional Dunhuang characters - RoA just makes them unlanded
 
-		title:k_guiyi.holder = {
-			every_vassal_or_below = {
-				limit = {
-					is_landed = no
-					domicile ?= {
-						is_domicile_type = estate
-					}
-				}
-				domicile ?= { move_domicile = title:b_shazhou.title_province }			
-			}
-		}
-
-		# If not running with Roads to Power, add in courtiers who would've been random Admin families
-		if = {
-			limit = {
-				NOT = { has_dlc_feature = roads_to_power }
-			}
-			if = {
-				limit = {
-					character:RICE_dunhuang_misc_001 = {
-						is_playable_character = no
-						is_ruler = no
-						NOT = { is_courtier_of = scope:zhang_yichao }
-					}
-				}
-				scope:zhang_yichao = {
-					add_courtier = character:RICE_dunhuang_misc_001
-				}
-			}
-			if = {
-				limit = {
-					character:RICE_dunhuang_misc_004 = {
-						is_playable_character = no
-						is_ruler = no
-						NOT = { is_courtier_of = scope:zhang_yichao }
-					}
-				}
-				scope:zhang_yichao = {
-					add_courtier = character:RICE_dunhuang_misc_004
-				}
-			}
-			if = {
-				limit = {
-					character:RICE_dunhuang_misc_007 = {
-						is_playable_character = no
-						is_ruler = no
-						NOT = { is_courtier_of = scope:zhang_yichao }
-					}
-				}
-				scope:zhang_yichao = {
-					add_courtier = character:RICE_dunhuang_misc_007
-				}
-			}
-		}
 	}
+	
 
 	# 1066 start date shenanigans
 	if = {
 		limit = {
 			game_start_date > 1050.1.1
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
@@ -714,10 +884,18 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		limit = {
 			game_start_date > 1050.1.1
 			game_start_date < 1100.1.1
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		character:3014 = {
 			# Not sure why he was made lustful in vanilla - couldn't find anything suggesting that in my research, though I might have missed something
+			RICE_remove_personality_traits_effect = yes
+			#RICE_remove_education_traits_effect = yes
+			#add_trait = education_stewardship_4 	
+			add_trait = administrator				# Heavy focus on managing the economy and trade, reducing hardship for common folk, screwing over bandits
+			add_trait = architect					# Also built a lot of stuff
+			add_trait = shrewd # Said to be a capable, intelligent ruler
+			add_trait = just # Praised by Muslim chroniclers for being just
+			add_trait = zealous # Also praised for being devout
+			add_trait = diligent # What a hard worker
 			dynasty = {
 				add_dynasty_modifier = {
 					modifier = RICE_tarim_basin_fake_china_dynasty
@@ -736,15 +914,10 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		character:RICE_kashgar_001 = {
 			if = {
 				limit = {
-					has_playable_adventurer_dlc_trigger = no
-					NOT = { exists = global_var:hmi_immersion_pack_loaded }
+					has_ep3_dlc_trigger = no
+					NOT = { exists = global_var:hmi_immersion_pack_loaded }	
 				}
 				get_title = title:c_terek_pass
-			}
-		}
-		character:RICE_kashgar_001 = {
-			if = {
-				has_global_variable = is_RICE_loaded_global_variable
 			}
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			add_character_modifier = {
@@ -760,7 +933,6 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 	else_if = {
 		limit = {
 			game_start_date < 1029.5.8
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		set_global_variable = {
 			name = RICE_anyone_can_write_turkic_dictionary
@@ -777,10 +949,58 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		}
 	}
 
+	# Khitan stuff
+	if = {
+		limit = {
+			game_start_date = 1066.9.15
+		}
+		character:194333 = {
+			save_scope_as = emperor_daozong
+		}
+		character:194402 = {
+			save_scope_as = xiao_guanyin
+			add_trait = lifestyle_poet # Poet
+			add_trait = beauty_good_3 # Exceedingly beautiful
+		}
+		character:194401 = {
+			set_mother = scope:xiao_guanyin
+		}		
+		# Give Yelu Yixin territory
+		# For now, might change with All Under Heaven
+		character:RICE_khitan_misc_001 = {
+			get_title = title:c_karabalgasun
+			get_title = title:c_khanjargalant
+			#get_title = title:c_mumo
+			get_title = title:d_orkhon
+			save_scope_as = yelu_yixin
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+			add_character_modifier = {
+				modifier = RICE_tarim_basin_aspiration_corrupt_liao_official
+			}
+			set_variable = {
+				name = RICE_historical_aspiration
+				value = flag:yelu_yixin
+			}
+		}
+
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = change
+		}
+		scope:yelu_yixin = {
+			change_liege = {
+				liege = scope:emperor_daozong
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+
+
 	if = {
 		limit = {
 			game_start_date = 1178.10.1
-			NOT = { exists = global_var:hmi_immersion_pack_loaded }
+			NOT = { exists = global_var:hmi_immersion_pack_loaded }	
 		}
 		# Setting up Kara-Khitan and Yelu Zhilugu
 		# Zhilugu
@@ -788,6 +1008,15 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		#character:188909 - stuff here left up to BossDanger to handle
 		#character:188910 - in RoA he is dead
 		# Setting up Wo Daochong, Tangut official + his son
+		character:RICE_xixia_wo_001 = {
+			get_title = title:c_liangzhou
+			get_title = title:d_hexi
+			#get_title = title:c_dajing
+			#get_title = title:c_baiyin
+			#get_title = title:c_yongdeng
+			get_title = title:c_fanhe
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+		}
 		if = {
 			limit = {
 				NOT = { has_dlc_feature = roads_to_power }
@@ -799,7 +1028,32 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		}
 		# Some Genghis Khan stuff because I dunno where else to put it
 		# Borte
+		character:172004 = {
+			# RICE_remove_education_traits_effect = yes
+			# RICE_remove_personality_traits_effect = yes
+			# remove_all_perk_lifestyle_traits_effect = yes
+			# add_trait = education_stewardship_4
+			# add_trait = diligent
+			# add_trait = gregarious
+			# add_trait = just
+			# add_trait = beauty_good_2
+			add_trait = intellect_good_1
+			set_relation_soulmate = {
+				reason = lover_history
+				target = scope:genghis_khan
+			}
+		}
 		# Hoelun
+		character:172003 = {
+			RICE_remove_education_traits_effect = yes
+			RICE_remove_personality_traits_effect = yes
+			remove_all_perk_lifestyle_traits_effect = yes
+			add_trait = education_stewardship_3
+			add_trait = diligent
+			add_trait = brave
+			add_trait = temperate
+			add_trait = beauty_good_2
+		}
 	}
 }
 
@@ -811,21 +1065,29 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 	#
 	#########################################################################
 
+	culture:han = { save_scope_as = han }
 	culture:sinhala = { save_scope_as = sinhala }
-
-  if = {
-	limit = {
-		has_global_variable = is_RICE_loaded_global_variable
-	}
+	culture:somali = { save_scope_as = somali }
+	culture:komi = { save_scope_as = komi }
+	culture:qiang = { save_scope_as = qiang }
+	culture:burmese = { save_scope_as = burmese }
 
 	culture:vedda = {
+		get_all_innovations_from = scope:komi
 		add_innovation = innovation_RICE_monsoon_trade_routes
-		#add_culture_tradition = tradition_RICE_cave_dwellers
+		add_culture_tradition = tradition_RICE_cave_dwellers
+		remove_variable = tradition_cooldown
 	}
 
 	culture:sinhala = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
 		add_innovation = innovation_RICE_velakkara_guards
+		remove_culture_tradition = tradition_ruling_caste
+		remove_culture_tradition = tradition_fervent_temple_builders
+		remove_culture_tradition = tradition_city_keepers
+		add_culture_tradition = tradition_religious_patronage
+		add_culture_tradition = tradition_stalwart_defenders
+		add_culture_tradition = tradition_maritime_mercantilism
 		add_culture_tradition = tradition_RICE_wewas
 		remove_variable = tradition_cooldown
 	}
@@ -859,51 +1121,52 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 		remove_variable = tradition_cooldown
 	}
 
-	# monsoon_trade_routes
-	culture:swahili = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
+	culture:pyu = {
+		get_all_innovations_from = scope:burmese
 	}
-	culture:somali = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
-	#
-	culture:persian = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
-	culture:himyarite = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
-	culture:yemeni = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
-	culture:south_arabian = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
-	#
+
 	culture:oriya = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
 	}
+
 	culture:telugu = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
 	}
+
 	culture:kannada = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
 	}
+
+	culture:persian = {
+		add_innovation = innovation_RICE_monsoon_trade_routes
+	}
+	
+	culture:somali = {
+		add_innovation = innovation_RICE_monsoon_trade_routes
+	}
+	
+	culture:himyarite = {
+		add_innovation = innovation_RICE_monsoon_trade_routes
+	}
+	
+	culture:yemeni = {
+		add_innovation = innovation_RICE_monsoon_trade_routes
+	}
+	
+	culture:south_arabian = {
+		add_innovation = innovation_RICE_monsoon_trade_routes
+	}
+	
 	culture:sindhi = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
 	}
-	culture:dhundari = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
+	
 	culture:marathi = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
 	}
+	
 	culture:bengali = {
 		add_innovation = innovation_RICE_monsoon_trade_routes
-	}
-	culture:malayali = {
-		add_innovation = innovation_RICE_monsoon_trade_routes
-		add_innovation = innovation_RICE_velakkara_guards
 	}
 
 	every_culture_global = {
@@ -921,6 +1184,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 	every_culture_global = {
 		limit = {
 			OR = {
+				has_cultural_tradition = tradition_maritime_way_of_life
 				has_cultural_pillar = heritage_malayic
 				has_cultural_pillar = heritage_chamic
 				has_cultural_pillar = heritage_sulawesi
@@ -932,7 +1196,28 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 		}
 		add_innovation = innovation_RICE_monsoon_trade_routes
 	}
-  }
+
+	every_county = {
+		limit = {
+			culture = culture:welayta
+		}
+		set_county_faith = faith:welayta_pagan
+		holder = {
+			if = {
+				limit = {
+					culture = culture:welayta
+				}
+				set_character_faith = faith:welayta_pagan
+			}
+			every_courtier_or_guest = {
+				limit = {
+					culture = culture:welayta
+				}
+				set_character_faith = faith:welayta_pagan
+			}
+		}
+	}	
+
 
 
 	#########################################################################
@@ -945,7 +1230,6 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 	if = {
 		limit = {
 			game_start_date = 867.1.1
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		# Give some territory to Udaya
 		character:189014 = {
@@ -953,24 +1237,47 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 		}
 		# Give some territory to Kutthaka
 		character:RICE_sri_lanka_001 = {
+			get_title = title:c_trincomalee
+			get_title = title:c_batticaloa
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 		# Give some territory to Mahasattana
 		character:RICE_sri_lanka_010 = {
+			get_title = title:c_jaffna
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 		# Give some territory to Utur Pandirad
 		character:RICE_sri_lanka_011 = {
+			get_title = title:c_kotte
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 		# Give some territory to Senal Madabi
 		character:RICE_sri_lanka_015 = {
+			get_title = title:c_rohana
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 		# Give some territory to Kitambava
 		character:RICE_sri_lanka_021 = {
+			get_title = title:c_dakhina_desa
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
+
+		character:RICE_sri_lanka_016 = {
+			save_scope_as = sena_waifu
+		}
+
+		character:189015 = {
+			set_mother = scope:sena_waifu
+		}
+
+		character:RICE_sri_lanka_018 = {
+			save_scope_as = kassapa_waifu
+		}
+
+		character:189019 = {
+			set_mother = scope:kassapa_waifu
+		}
+
 	}
 
 	# For 1066 bookmark
@@ -981,6 +1288,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 		}
 		# Give some territory to Budal/Buddharaja
 		character:RICE_sri_lanka_002 = {
+			get_title = title:c_dakhina_desa
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 		character:189029 = {
@@ -1013,11 +1321,19 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 				origin = province:3267
 			}
 		}
+
+		character:RICE_sri_lanka_008 = {
+			save_scope_as = lilavati
+		}
+		# Not actually true, but he was born after 1066 most likely so the timeline doesn't make sense to begin with
+		character:189030 = {
+			set_mother = scope:lilavati
+		}
+
 	}
 	if = {
 		limit = {
 			game_start_date >= 990.1.1
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		title:c_phiti = {
 			add_county_modifier = {
@@ -1037,6 +1353,277 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 	# CULTURE/RELIGION HISTORY
 	#
 	#########################################################################
+
+
+
+
+	# If there are no Pyu anywhere, meaning not using a mod that modifies Burma
+	if = {
+		limit = {
+			NOT = {
+				any_county_in_region = {
+					region = world_burma
+					culture = culture:pyu
+				}
+			}
+		}
+		if = {
+			limit = {
+				game_start_date = 867.1.1
+				is_dharmachakra_loaded = no
+			}
+			# Put Pyu everywhere
+			# For some reason every_county and every_county_in_region won't work for scoping to holders or it doesn't affect holders, so we have to do it manually
+			every_county_in_region = {
+				region = RICE_burma_minus_arakan
+				limit = {
+					culture = culture:burmese
+				}
+				set_county_culture = culture:pyu
+			}
+			title:c_pagan = {
+				set_county_culture = culture:burmese
+			}
+			character:burman010 = {
+				set_culture = culture:pyu
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:pyu
+				}
+				every_vassal = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:pyu
+				}
+			}
+			character:burman012 = {
+				set_culture = culture:pyu
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:pyu
+				}
+				every_vassal = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:pyu
+				}
+			}
+			character:burman014 = {
+				set_culture = culture:pyu
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:pyu
+				}
+				every_vassal = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:pyu
+				}
+			}
+			character:earlyburman001 = {
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+						is_lowborn = yes
+					}
+					random = {
+						chance = 50
+						set_culture = culture:pyu
+					}
+				}
+				every_vassal = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					random = {
+						chance = 50
+						set_culture = culture:pyu
+					}
+				}
+			}
+			# Change Rakhine/Arakan to Bengali (for now)
+			character:arakan001 = {
+				set_culture = culture:bengali
+			}
+			character:arakan002 = {
+				set_culture = culture:bengali
+			}
+			character:arakan003 = {
+				set_culture = culture:bengali
+			}
+			character:arakan004 = {
+				set_culture = culture:bengali
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:bengali
+				}
+				every_vassal = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:bengali
+				}
+			}
+			character:arakan005 = {
+				set_culture = culture:bengali
+			}
+			character:arakan006 = {
+				set_culture = culture:bengali
+			}
+		}		
+		else_if = {
+			limit = {
+				game_start_date = 1066.9.15
+				is_dharmachakra_loaded = no
+			}
+			title:c_takon = {
+				set_county_culture = culture:pyu
+			}
+			title:c_takon.holder = {
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+						is_lowborn = yes
+					}
+					random = {
+						chance = 33
+						set_culture = culture:pyu
+					}
+				}			
+			}
+			title:c_sriksetra = {
+				set_county_culture = culture:pyu
+			}
+			title:c_sriksetra.holder = {
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+						is_lowborn = yes
+					}
+					random = {
+						chance = 33
+						set_culture = culture:pyu
+					}
+				}			
+			}
+			character:arakan001 = {
+				set_culture = culture:bengali
+			}
+			character:arakan002 = {
+				set_culture = culture:bengali
+			}
+			character:arakan003 = {
+				set_culture = culture:bengali
+			}
+			character:arakan004 = {
+				set_culture = culture:bengali
+			}
+			character:arakan005 = {
+				set_culture = culture:bengali
+			}
+			character:arakan006 = {
+				set_culture = culture:bengali
+			}
+			character:arakan007 = {
+				set_culture = culture:bengali
+			}
+			character:arakan008 = {
+				set_culture = culture:bengali
+			}
+			character:arakan009 = {
+				set_culture = culture:bengali
+			}
+			character:arakan010 = {
+				set_culture = culture:bengali
+			}
+			character:arakan011 = {
+				set_culture = culture:bengali
+			}
+			character:arakan012 = {
+				set_culture = culture:bengali
+			}
+			character:arakan013 = {
+				set_culture = culture:bengali
+			}
+			character:arakan014 = {
+				set_culture = culture:bengali
+			}
+			character:arakan015 = {
+				set_culture = culture:bengali
+			}
+			character:arakan016 = {
+				set_culture = culture:bengali
+			}
+			character:arakan017 = {
+				set_culture = culture:bengali
+			}
+			character:arakan018 = {
+				set_culture = culture:bengali
+			}
+			character:arakan019 = {
+				set_culture = culture:bengali
+			}
+			character:arakan021 = {
+				set_culture = culture:bengali
+			}
+			character:arakan022 = {
+				set_culture = culture:bengali
+			}
+			character:arakan023 = {
+				set_culture = culture:bengali
+			}
+			character:arakan024 = {
+				set_culture = culture:bengali
+			}
+			character:arakan025 = {
+				set_culture = culture:bengali
+			}
+			character:arakan026 = {
+				set_culture = culture:bengali							
+				every_courtier_or_guest = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:bengali
+				}
+				every_vassal = {
+					limit = {
+						culture = { has_cultural_pillar = heritage_burman }
+					}
+					set_culture = culture:bengali
+				}
+			}
+		}
+
+	}
+
+
+	# Add Bengali to Arakan
+	# every_county_in_region = {
+	# 	region = RICE_arakan_region
+	# 	set_county_culture = culture:bengali
+	# }
+	if = {
+		limit = {
+			is_dharmachakra_loaded = no
+		}
+		every_county_in_region = {
+			region = RICE_arakan_region
+			set_county_culture = culture:bengali
+		}
+	}
+
 
 	# Purge Theravadins from Bengal, since Vajrayana and Mahayana were more prominent here during the CK3 period
 	if = {
@@ -1109,6 +1696,22 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 	}
 
 	# There were more Tamil Buddhists historically, but it's not possible to split the Tamils on Sri Lanka
+	title:c_jaffna = {
+		set_county_faith = faith:srikula_shaktism
+		holder = {
+			every_courtier_or_guest = {
+				limit = {
+					culture = culture:tamil
+					NOT = { religion = religion:hinduism_religion }
+					is_lowborn = yes
+				}
+				random = {
+					chance = 60
+					set_character_faith = faith:srikula_shaktism
+				}
+			}
+		}
+	}
 
 	#########################################################################
 	#
@@ -1116,6 +1719,15 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 	#
 	#########################################################################
 
+	
+	# Start the Sri Lanka struggle
+	# Won't start on any other phase but the predefined starting phase
+	# start_struggle = {
+	# 	struggle_type = RICE_sri_lanka_struggle
+	# 	start_phase = struggle_RICE_sri_lanka_phase_degeneration
+	# }
+
+	# Vedda courtier spawn at game start
 	random_ruler = {
 		limit = {
 			any_held_county = {
@@ -1123,7 +1735,6 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 					geographical_region = RICE_sri_lanka_struggle_region
 				}
 			}
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		trigger_event = sri_lanka.0018
 	}
@@ -1135,7 +1746,6 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 					geographical_region = RICE_sri_lanka_struggle_region
 				}
 			}
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		trigger_event = sri_lanka.0018
 	}
@@ -1149,23 +1759,20 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 						geographical_region = RICE_sri_lanka_struggle_region
 					}
 				}
-				has_global_variable = is_RICE_loaded_global_variable
 			}
 			trigger_event = sri_lanka.0018
 		}
 	}
 
 	# Timer for the initial Sri Lanka struggle catalysts
-  if = {
-	limit = { has_global_variable = is_RICE_loaded_global_variable }
 	set_global_variable = {
 		name = RICE_sri_lanka_initial_start_catalyst_timer
 		value = yes
 		days = 1
 	}
-  }
-}
 
+
+}
 
 RICE_setup_pamir_flavor_pack_effect = {
 
@@ -1174,34 +1781,76 @@ RICE_setup_pamir_flavor_pack_effect = {
 	# CULTURE CHANGES
 	#
 	############################################################
+	culture:afghan = { save_scope_as = afghan }
+	culture:khalaj = {
+		get_all_innovations_from = scope:afghan
+	}	
 	culture:brahui = {
 		set_name_list = name_list_brahui
-	}
-	# Remove Brahui rulers from Makran
-	every_ruler = {
-		limit = {
-			culture = culture:brahui
-		}
-		set_culture = culture:sindhi
-		every_vassal = {
-			limit = {
-				culture = culture:brahui
-			}
-			set_culture = culture:sindhi
-		}
-	}
+	}	
+	# culture:burusho = {
+	# 	get_all_innovations_from = scope:afghan
+	# }
 
 	# Below is based on Encyclopedia Iranica, citing Mahmud Kashgari who lived in the 11th century during the 1066 start date, so should be considered accurate enough for game purposes
+	if = {
+		limit = {
+			is_dharmachakra_loaded = no
+			current_date > 1000.1.1
+			current_date < 1100.1.1
+		}
+		title:c_khotan = {
+			set_county_culture = culture:saka
+		}
+		# title:c_karghalik = {
+		# 	set_county_culture = culture:saka
+		# }
+		title:c_keriya = {
+			set_county_culture = culture:saka
+		}
+		# title:c_cherchen = {
+		# 	set_county_culture = culture:saka
+		# }
+		title:c_kashgar = {
+			set_county_culture = culture:saka
+		}
 		# See https://iranicaonline.org/articles/sogdiana-iii-history-and-archeology and https://iranicaonline.org/articles/yaghnobi
-		# Latest Sogdian texts come from Talas (c_taraz), Kashgari mentions people there are bilingual in Sogdian and Turkic
-		# Per Encyclopedia Iranica, much of the area between Samarkand and Bukhara (c_dabusiya) was still Sogdian until 15th century, even if elites abandoned language
+		# Latest Sogdian texts come from Talas, Kashgari mentions people there are bilingual in Sogdian and Turkic
+		title:c_taraz = {
+			set_county_culture = culture:sogdian
+		}
+		# Per Encyclopedia Iranica, much of the area between Samarkand and Bukhara was still Sogdian until 15th century, even if elites abandoned language
+		title:c_dabusiya = {
+			set_county_culture = culture:sogdian
+		}
+		#title:c_nakhshab = {
+		#	set_county_culture = culture:sogdian
+		#}
 		# Roughly areas where Yagnobi, a descendant of Sogdian, is spoken nowadays
-		# Actual Yagnobi valley is in mountainous terrain, Encyclopedia Iranica suggests it was once spoken in a wider area (c_zarafshan), however
-		# Area (c_oshrusana) of origin for Yagnobi dialect
+		# Actual Yagnobi valley is in mountainous terrain, Encyclopedia Iranica suggests it was once spoken in a wider area, however
+		title:c_zarafshan = {
+			set_county_culture = culture:sogdian
+		}
+		if = {
+			limit = {
+				paganism_plus_is_loaded = no
+			}
+			title:c_rasht = {
+				set_county_culture = culture:pamiri
+			}
+		}
+		# Area of origin for Yagnobi dialect
+		title:c_oshrusana = {
+			set_county_culture = culture:sogdian
+		}
+	}
 
 	if = {
 		limit = {
+			is_dharmachakra_loaded = no
+			#current_date < 900.1.1
 			current_date > 700.1.1
+			paganism_plus_is_loaded = no
 			current_date < 900.1.1
 		}
 		title:c_west-tokharestan = {
@@ -1215,8 +1864,14 @@ RICE_setup_pamir_flavor_pack_effect = {
 				CULTURE = culture:turco_hephthalite
 				SIZE = large
 			}
+		}	
+		title:c_zamindawar = {
+			add_culture_minority_effect = {
+				CULTURE = culture:turco_hephthalite
+				SIZE = large
+			}
 		}
-		title:c_balkh = {
+		title:c_bost = {
 			add_culture_minority_effect = {
 				CULTURE = culture:turco_hephthalite
 				SIZE = large
@@ -1227,26 +1882,10 @@ RICE_setup_pamir_flavor_pack_effect = {
 				CULTURE = culture:turco_hephthalite
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = faith:zun_pagan
-				SIZE = large
-			}
 		}
-		title:c_rukhaj = {
+		title:c_balkh = {
 			add_culture_minority_effect = {
 				CULTURE = culture:turco_hephthalite
-				SIZE = large
-			}
-		}
-		title:c_zabulistan = {
-			add_culture_minority_effect = {
-				CULTURE = culture:turco_hephthalite
-				SIZE = large
-			}
-		}
-		title:c_zamindawar = {
-			add_culture_minority_effect = {
-				CULTURE = culture:afghan
 				SIZE = large
 			}
 		}
@@ -1255,67 +1894,86 @@ RICE_setup_pamir_flavor_pack_effect = {
 		limit = {
 			current_date >= 900.1.1
 		}
-		title:c_ghazna = {
+		title:c_west-tokharestan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:tajik
+				SIZE = large
+			}
+		}	
+		title:c_east-tokharestan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:tajik
+				SIZE = large
+			}
+		}	
+		title:c_zamindawar = {
 			add_culture_minority_effect = {
 				CULTURE = culture:khalaj
-				SIZE = small
+				SIZE = large
+			}
+		}	
+		title:c_zabulistan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:khalaj
+				SIZE = large
+			}
+		}
+		title:c_bost = {
+			add_culture_minority_effect = {
+				CULTURE = culture:khalaj
+				SIZE = large
 			}
 		}
 		title:c_rukhaj = {
 			add_culture_minority_effect = {
-				CULTURE = culture:afghan
+				CULTURE = culture:khalaj
 				SIZE = large
-			}
-		}
-		title:c_zabulistan = {
-			add_culture_minority_effect = {
-				CULTURE = culture:afghan
-				SIZE = large
-			}
-		}
-		title:c_zamindawar = {
-			add_culture_minority_effect = {
-				CULTURE = culture:afghan
-				SIZE = small
 			}
 		}
 	}
 
-	if = {
-		limit = {
-			current_date > 1000.1.1
-		}
-		title:c_sibi = {
-			add_culture_minority_effect = {
-				CULTURE = culture:brahui
-				SIZE = large
+		
+	culture:hephthalite = {
+		if = {
+			limit = {
+				exists = culture:soissons
 			}
+			set_culture_pillar = heritage_tocharian
 		}
-		title:c_turan = {
-			add_culture_minority_effect = {
-				CULTURE = culture:brahui
-				SIZE = large
+		add_culture_tradition = tradition_RICE_white_huns # White Huns
+		remove_variable = tradition_cooldown
+	}
+
+	culture:turco_hephthalite = {
+		if = {
+			limit = {
+				exists = culture:soissons
 			}
+			set_culture_pillar = heritage_tocharian
 		}
-		title:c_kalat = {
-			add_culture_minority_effect = {
-				CULTURE = culture:brahui
-				SIZE = large
-			}
-		}
+		add_culture_tradition = tradition_RICE_white_huns # White Huns
+		remove_variable = tradition_cooldown
 	}
 
 	if = {
 		limit = {
 			NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
 		}
-		culture:hephthalite = {
-			add_culture_tradition = tradition_RICE_white_huns # White Huns
-			remove_variable = tradition_cooldown
-		}
-		culture:turco_hephthalite = {
-			add_culture_tradition = tradition_RICE_white_huns # White Huns
-			remove_variable = tradition_cooldown
+	
+		title:c_badakhshan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_munjan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_wakhan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_shughnan = {
+			set_county_culture = culture:pamiri
+		}		
+		title:c_karran = {
+			set_county_culture = culture:pamiri
 		}
 	}
 
@@ -1335,125 +1993,108 @@ RICE_setup_pamir_flavor_pack_effect = {
 
 	# applied in RoA province changes
 
-	############################################################
-	#
-	# MODIFIERS
-	#
-	############################################################
-
-	## Pamir Modifiers
-	if = {
-		limit = {
-			has_global_variable = is_RICE_loaded_global_variable
-		}
-		title:c_pashai = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_kunar = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_kati = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_waygal = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_chitral = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_kunar = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_yasin = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-			}
-		}
-		title:c_hunza = {
-			add_county_modifier = {
-				modifier = RICE_pamir_land_of_the_kafirs
-				modifier = RICE_pamir_karakoram_watchposts_default
-			}
-		}
-		title:c_gilgit = {
-			add_county_modifier = {
-				modifier = RICE_pamir_karakoram_watchposts_default
-			}
-		}
-		title:c_astore = {
-			add_county_modifier = {
-				modifier = RICE_pamir_karakoram_watchposts_default
-			}
-		}
-		title:c_wakhan = {
-			add_county_modifier = {
-				modifier = RICE_pamir_wakhan_watchposts_default
-			}
-		}
-		title:c_sariq_qol = {
-			add_county_modifier = {
-				modifier = RICE_pamir_wakhan_watchposts_default
-			}
-		}
-	}
-	if = {
-		limit = {
-			current_date > 1000.1.1
-			has_global_variable = is_RICE_loaded_global_variable
-		}
-		title:c_kalat = {
-			add_county_modifier = {
-				modifier = RICE_pamir_brahui_tribes
-			}
-		}
-		title:c_sibi = {
-			add_county_modifier = {
-				modifier = RICE_pamir_brahui_tribes
-			}
-		}
-		title:c_turan = {
-			add_county_modifier = {
-				modifier = RICE_pamir_brahui_tribes
-			}
-		}
-	}
-	if = {
-		limit = {
-			has_global_variable = RICE_game_started_on_TFE_start_date
-			has_global_variable = is_RICE_loaded_global_variable
-		}
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:RICE_pamir_zun_idol_has_been_restored
-		}
-		set_global_variable = {
-			name = RICE_pamir_bibi_fatima_not_known
-			value = yes
-		}
-		title:c_zamindawar = {
-			add_county_modifier = {
-				modifier = RICE_pamir_zun_idol_is_restored
-			}
-		}
-	}
-
+	
 	############################################################
 	#
 	# HISTORICAL CHARACTERS
 	#
 	############################################################
+
+	if = {
+		limit = {
+			NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
+			is_dharmachakra_loaded = no
+		}
+		character:188700 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188701 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188702 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188703 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188628 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188705 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188706 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188707 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188708 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188709 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188710 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188711 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188712 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188713 = {
+			set_culture = culture:turco_hephthalite
+			random_secret = {
+				limit = { secret_type = secret_crypto_religionist }
+				remove_secret = yes
+			}
+			remove_character_secret_faith = yes
+		}
+		character:188714 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188715 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188716 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188717 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188718 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188719 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188720 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188721 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188722 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188723 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188724 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188565 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188566 = {
+			set_culture = culture:turco_hephthalite
+		}
+		character:188567 = {
+			set_culture = culture:turco_hephthalite
+		}
+	}
 	
 	if = {
 		limit = {
@@ -1461,15 +2102,6 @@ RICE_setup_pamir_flavor_pack_effect = {
 			current_date > 800.1.1
 		}
 		# PAMIR
-		character:163099 = { # Give titles to Pamir Chieftains
-			save_scope_as = samanid_ruler
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				trigger_event = pamir.0001
-			}
-		}
 		character:RICE_pamir_001 = {
 			save_scope_as = pamir_puteshan_king
 		}
@@ -1483,64 +2115,73 @@ RICE_setup_pamir_flavor_pack_effect = {
 			save_scope_as = pamir_shugnanshah_king_2
 		}
 		character:188712 = { # Firuz. Zunbils are pagan and independent until 870 CE, ID# 188710 is the cousin
-			add_gold = 25
-			add_piety = 100
-			add_prestige = 100
+			create_title_and_vassal_change = {
+				type = independency
+				save_scope_as = indpendence_change
+				add_claim_on_loss = no
+			}
+			becomes_independent = {
+				change = scope:indpendence_change
+			}
+			resolve_title_and_vassal_change = scope:indpendence_change
+			hidden_effect = {
+				change_government = feudal_government
+				convert_whole_realm_to_feudalism_effect = yes
+			}
+			add_courtier = character:188713
+			add_courtier = character:188714
+			random_secret = {
+				limit = { secret_type = secret_crypto_religionist }
+				remove_secret = yes
+			}
+			remove_character_secret_faith = yes
+			set_character_faith_with_conversion = faith:zun_pagan
+			every_vassal = {
+				set_character_faith_with_conversion = faith:zun_pagan
+			}
+			every_courtier = {
+				set_character_faith = faith:zun_pagan
+			}
+		}
+		character:RICE_pamir_022 = { # Give titles and bonuses to Azur Jamshid
+			save_scope_as = jataylotu_minister
 		}
 		character:RICE_pamir_013 = { # Give titles and bonuses to Azur Jamshid
 			save_scope_as = azur_jamshid
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				add_gold = 50
-				add_piety = 1000
-				add_prestige = 1000
-				dynasty = { add_dynasty_prestige = 500 }
-				add_character_modifier = {
-					modifier = RICE_pamir_is_azur_jamshid
-				}
+			add_gold = 50
+			add_piety = 1000
+			add_prestige = 1000
+			dynasty = { add_dynasty_prestige = 500 }
+			create_title_and_vassal_change = {
+				type = independency
+				save_scope_as = indpendence_change
+				add_claim_on_loss = no
 			}
+			becomes_independent = {
+				change = scope:indpendence_change
+			}
+			resolve_title_and_vassal_change = scope:indpendence_change
+			add_character_modifier = {
+				modifier = RICE_pamir_is_azur_jamshid
+			}				
+			add_courtier = scope:jataylotu_minister	
+			RICE_make_clan_effect = yes
+		}
+		character:RICE_pamir_chitral_867_002 = { # Give titles and bonuses to Chitral ruler
+			get_title = title:c_chitral
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+			add_courtier = character:RICE_pamir_chitral_867_003
 		}
 	}
-
-	if = {
-		limit = {
-			current_date < 900.1.1
-			current_date > 800.1.1
-		}
-		character:188712 = { # Firuz. Zunbils are pagan and independent until 870 CE, ID# 188710 is the cousin
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				add_gold = 25
-				add_piety = 100
-				add_prestige = 100
-				set_variable = {
-					name = RICE_historical_aspiration
-					value = flag:zunbil
-				}
-				add_character_modifier = {
-					modifier = RICE_pamir_aspiration_assert_zunbil_independence
-				}
-			}
-		}
-	}
-
+		
 	if = {
 		limit = {
 			current_date > 1000.1.1
 			current_date < 1100.1.1
 		}
 		character:persian_scholars_3 = { # Make Nasir Khusraw better
-			if = {
-				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
-				}
-				add_character_modifier = {
-					modifier = RICE_pamir_nasir_khusraw
-				}
+			add_character_modifier = {
+				modifier = RICE_pamir_nasir_khusraw
 			}
 			add_character_flag = do_not_generate_starting_family
 			save_scope_as = nasir_khusraw
@@ -1552,13 +2193,76 @@ RICE_setup_pamir_flavor_pack_effect = {
 			dynasty = { add_dynasty_prestige = 1000 }
 		}
 		# Ali ibn Asad, Nasir Khusraw's friend
-		character:badakhshanids_2 = {
+		character:badakhshanids_2 = { 
 			save_scope_as = ali_ibn_asad
-			if = {
+			set_culture = culture:pamiri
+			set_character_faith = faith:maturidi
+			every_courtier_or_guest = {
 				limit = {
-					has_global_variable = is_RICE_loaded_global_variable
+					culture = { has_cultural_pillar = heritage_iranian }
+					religion = religion:islam_religion
+					NOT = { has_character_modifier = RICE_pamir_nasir_khusraw }
 				}
-				trigger_event = pamir.0003
+				set_character_faith = faith:maturidi
+				set_culture = culture:pamiri
+			}
+			set_relation_friend = {
+				reason = RICE_friend_reason_placeholder
+				target = character:persian_scholars_3
+			}
+			# trigger_event = pamir.0003 # Moved to the Pamir modifiers file
+		}
+		character:badakhshanids_1 = {
+			set_culture = culture:pamiri
+			#set_character_faith = faith:maturidi # Leaves errors since he's dead even though it works fine for cultures on dead people???
+		}
+		character:badakhshanids_3 = {
+			set_culture = culture:pamiri
+			set_character_faith = faith:maturidi
+		}
+		# character:248023 = {
+		# 	trigger_event = pamir.0002
+		# }
+		character:darada_king_1 = {
+			set_culture = culture:nuristani
+		}
+		character:darada_king_2 = {
+			set_culture = culture:nuristani
+			set_character_faith = faith:vajrayana
+			every_courtier_or_guest = {
+				limit = {
+					religion = religion:buddhism_religion
+				}
+				set_character_faith = faith:vajrayana
+			}
+		}
+		# Kemaladdin Armanjani, count of a few places in Zabulistan, seems to be a fictitious guy though I'm not sure (?)
+		character:20690 = {
+			set_culture = culture:khalaj
+			every_courtier_or_guest = {
+				limit = {
+					culture = culture:turkish
+				}
+				set_culture = culture:khalaj
+			}
+		}
+		character:RICE_pamir_misc_002 = { # Give titles and bonuses to Chitral ruler
+			get_title = title:c_chitral
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+		}
+		character:RICE_pamir_misc_004 = { # Give titles and bonuses to Shughnanshah ruler
+			get_title = title:c_shughnan
+			get_title = title:c_karran
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+			hidden_effect = {
+				RICE_jizya_contract_at_start_effect = yes
+			}
+		}
+		character:RICE_pamir_misc_005 = { # Give titles and bonuses to Wakhanshah ruler
+			get_title = title:c_wakhan
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
+			hidden_effect = {
+				RICE_jizya_contract_at_start_effect = yes
 			}
 		}
 	}
@@ -1571,45 +2275,94 @@ RICE_setup_pamir_flavor_pack_effect = {
 		character:RICE_pamir_023 = { # Azur Jamshid's descendant
 			dynasty = { add_dynasty_prestige = 1000 }
 		}
-	}
-
-	############################################################
-	#
-	# MISC+
-	#
-	############################################################
-
-	if = {
-		limit = {
-			current_date > 870.1.1
-			has_global_variable = is_RICE_loaded_global_variable
-		}
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:RICE_pamir_shri_badat_palace_destroyed
-		}
-		set_global_variable = {
-			name = RICE_pamir_azur_jamshid_passed_away
-			value = yes
+		character:RICE_pamir_misc_003 = { # Give titles and bonuses to Chitral ruler
+			get_title = title:c_chitral
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 	}
 
+	character:170252 ?= {
+		RICE_remove_education_traits_effect = yes
+		RICE_remove_personality_traits_effect = yes
+		remove_all_perk_lifestyle_traits_effect = yes
+		add_trait = education_martial_3
+		give_random_commander_trait_effect = yes
+		add_trait = ambitious
+		add_trait = zealous
+		add_trait = brave
+		add_trait = beauty_bad_1 # Said to be ugly, though not sure if this is later Buddhist propaganda, but Wikipedia quotes a modern Muslim academic on this (?)
+		set_culture = culture:khalaj
+		every_courtier_or_guest = {
+			limit = {
+				OR = {
+					culture = culture:afghan
+					culture = culture:turkish
+				}
+			}
+			set_culture = culture:khalaj
+		}
+	}
+
+	
+	############################################################
+	#
+	# RELIGION DOCTRINE/TENET CHANGES (Move to Dunhuang/Khotan later)
+	#
+	############################################################
+	
 	if = {
 		limit = {
-			current_date < 870.1.1
-			current_date > 840.1.1
-			has_global_variable = is_RICE_loaded_global_variable
+			has_game_rule = default_gender_equality
+			is_dharmachakra_loaded = no
 		}
-		title:c_gilgit = {
-			add_county_modifier = {
-				modifier = RICE_pamir_shri_badats_palace
+		# faith:mahayana = {
+		# 	if = {
+		# 		limit = { has_doctrine = doctrine_monogamy }
+		# 		remove_doctrine = doctrine_monogamy
+		# 		add_doctrine = doctrine_concubines
+		# 	}
+		# }
+		faith:vajrayana = {
+			if = {
+				limit = { has_doctrine = doctrine_gender_equal }
+				remove_doctrine = doctrine_gender_equal
+				add_doctrine = doctrine_gender_male_dominated
+			}
+		}
+		faith:zhengyi = {
+			if = {
+				limit = { has_doctrine = doctrine_gender_equal }
+				remove_doctrine = doctrine_gender_equal
+				add_doctrine = doctrine_gender_male_dominated
+			}
+		}
+		faith:shangqing = {
+			if = {
+				limit = { has_doctrine = doctrine_gender_equal }
+				remove_doctrine = doctrine_gender_equal
+				add_doctrine = doctrine_gender_male_dominated
+			}
+		}
+		faith:quanzhen = {
+			if = {
+				limit = { has_doctrine = doctrine_gender_equal }
+				remove_doctrine = doctrine_gender_equal
+				add_doctrine = doctrine_gender_male_dominated
 			}
 		}
 	}
+
+	
+	############################################################
+	#
+	# MISC
+	#
+	############################################################	
+
+		
 	if = {
 		limit = {
 			current_date > 870.1.1
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
@@ -1630,26 +2383,93 @@ RICE_setup_pamir_flavor_pack_effect = {
 			value = yes
 		}
 	}
+	
+	#if = {
+	#	limit = {
+	#		current_date > 1000.1.1
+	#	}
+	#	set_global_variable = {
+	#		name = RICE_pamir_nasir_khusraw_born_1066_start
+	#		value = yes
+	#	}
+	#	set_global_variable = {
+	#		name = RICE_pamir_brahui_migrations_happened
+	#		value = yes
+	#	}
+	#}
 
-	if = {
+	every_ruler = {
 		limit = {
-			current_date > 1000.1.1
-			has_global_variable = is_RICE_loaded_global_variable
+			any_held_county = {
+				any_county_province = {
+					geographical_region = RICE_hephthalite_former_empire_region
+					culture = culture:turco_hephthalite
+				}
+			}
 		}
-		set_global_variable = {
-			name = RICE_pamir_nasir_khusraw_born_1066_start
-			value = yes
+		every_courtier_or_guest = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_turkic }
+					culture = { has_cultural_pillar = heritage_iranian }
+				}
+				is_lowborn = yes
+			}
+			random = {
+				chance = 33
+				set_culture = culture:turco_hephthalite
+			}
 		}
-		set_global_variable = {
-			name = RICE_pamir_brahui_migrations_happened
-			value = yes
+	}
+
+	every_ruler = {
+		limit = {
+			any_held_county = {
+				any_county_province = {
+					geographical_region = RICE_hephthalite_former_empire_region
+					culture = culture:khalaj
+				}
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_turkic }
+					culture = { has_cultural_pillar = heritage_iranian }
+				}
+				is_lowborn = yes
+			}
+			random = {
+				chance = 33
+				set_culture = culture:khalaj
+			}
+		}
+	}
+
+	every_ruler = {
+		limit = {
+			any_held_county = {
+				any_county_province = {
+					geographical_region = RICE_mini_pamir_region
+					culture = culture:nuristani
+				}
+			}
+		}
+		every_courtier_or_guest = {
+			limit = {
+				culture = { has_cultural_pillar = heritage_indo_aryan }
+				is_lowborn = yes
+			}
+			random = {
+				chance = 33
+				set_culture = culture:nuristani
+			}
 		}
 	}
 
 	if = {
 		limit = {
 			game_start_date >= 1075.1.1 # Nasir Khusraw's death IRL is uncertain but vanilla game puts it at 1075
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
@@ -1661,8 +2481,10 @@ RICE_setup_pamir_flavor_pack_effect = {
 			}
 		}
 	}
-}
 
+	RICE_modifiers_pamir_flavor_pack_effect = yes
+
+}
 
 RICE_setup_mordvin_flavor_pack_effect = {
 
@@ -1672,25 +2494,51 @@ RICE_setup_mordvin_flavor_pack_effect = {
 	#
 	#########################################################################
 
-  if = {
-	limit = { has_global_variable = is_RICE_loaded_global_variable }
+	culture:mordvin = { save_scope_as = mordvin }
+	culture:komi = { save_scope_as = komi }
 
 	culture:moksha = {
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+		get_all_innovations_from = scope:mordvin
+	}	
+
 	culture:mordvin = { # Erzya
-		add_culture_tradition = tradition_RICE_volga_apiculture
-		remove_variable = tradition_cooldown
+		#set_culture_pillar = ethos_bellicose
+		remove_culture_tradition = tradition_festivities
+		#remove_culture_tradition = tradition_music_theory
+		remove_culture_tradition = tradition_religion_blending
+		add_culture_tradition = tradition_isolationist
+		add_culture_tradition = tradition_forest_wardens
+		#add_culture_tradition = tradition_stalwart_defenders
+		#add_culture_tradition = tradition_warriors_by_merit
+		if = {
+			limit = {
+				has_fp1_dlc_trigger = yes
+			}
+			add_culture_tradition = tradition_fp1_the_right_to_prove
+		}
+		add_culture_tradition = tradition_RICE_volga_apiculture	
+		remove_variable = tradition_cooldown		
+		set_name_list = name_list_erzya
 	}
 	culture:udmurt = {
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+		get_all_innovations_from = scope:komi
+	}	
+
 	culture:komi = {
+		add_culture_tradition = tradition_caravaneers
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
+
+	# culture:khanty = {
+	# 	add_culture_tradition = tradition_RICE_volga_apiculture
+	# 	remove_variable = tradition_cooldown
+	# }	
+
 	culture:bolghar = {
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
@@ -1699,34 +2547,53 @@ RICE_setup_mordvin_flavor_pack_effect = {
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
 	}
-	culture:bashkir = {
-		add_culture_tradition = tradition_RICE_volga_apiculture
-		remove_variable = tradition_cooldown
-	}
 	culture:khazar = {
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
+
 	culture:mari = {
+		set_culture_pillar = ethos_spiritual
+		remove_culture_tradition = tradition_festivities
+		add_culture_tradition = tradition_staunch_traditionalists
+		add_culture_tradition = tradition_zealous_people
+		add_culture_tradition = tradition_sacred_groves
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
+
+	culture:bashkir = {
+		add_culture_tradition = tradition_RICE_volga_apiculture
+		remove_variable = tradition_cooldown
+	}	
+
 	culture:chuvash = {
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
+
 	culture:meshchera = {
+		set_culture_pillar = ethos_communal
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
+
 	culture:merya = {
+		set_culture_pillar = ethos_communal
+		remove_culture_tradition = tradition_storytellers
+		add_culture_tradition = tradition_caravaneers
+		add_culture_tradition = tradition_sacred_groves
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
+
 	culture:muroma = {
+		set_culture_pillar = ethos_communal
+		remove_culture_tradition = tradition_festivities
+		add_culture_tradition = tradition_artisans
 		add_culture_tradition = tradition_RICE_volga_apiculture
 		remove_variable = tradition_cooldown
-	}
+	}	
 
 	every_culture_global = {
 		limit = { has_cultural_pillar = heritage_balto_finnic }
@@ -1736,46 +2603,49 @@ RICE_setup_mordvin_flavor_pack_effect = {
 
 	### Horse Sacrifices
 	religion:mordvin_religion = {
+        every_faith = {
+			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
+        }		
+	}
+
+	religion:tengrism_religion = {
 		every_faith = {
 			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
+        }
+	}
+
+	religion:germanic_religion = {
+		every_faith = {
+			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
+        }
+	}
+
+	religion:magyar_religion = {
+		every_faith = {
+			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
+        }
 	}
 	religion:mari_religion = {
 		every_faith = {
 			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
+        }
 	}
 	religion:permic_religion = {
 		every_faith = {
 			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
+        }
 	}
-	religion:magyar_religion = {
+
+	religion:slavic_religion = {
 		every_faith = {
 			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
-	}
-	religion:tengrism_religion = {
-		every_faith = {
-			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
-	}
-	religion:germanic_religion = {
-		every_faith = {
-			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
+        }
 	}
 	religion:baltic_religion = {
 		every_faith = {
 			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
+        }
 	}
-	religion:slavic_religion = {
-		every_faith = {
-			add_doctrine = special_doctrine_rice_doctrine_horse_sacrifice
-		}
-	}
-  }
 
 	#########################################################################
 	#
@@ -1784,91 +2654,6 @@ RICE_setup_mordvin_flavor_pack_effect = {
 	#########################################################################
 
 	# all deleted since RoA has its own setup
-}
-
-
-RICE_setup_magadha_flavor_pack_effect = {
-
-	############################################################
-	#
-	# CULTURE CHANGES
-	#
-	############################################################
-
-	# Bengali/Gaudi, Oriya, and Kamarupi changes are based on suggestions/research by Soraya
-	# Gaudi/Bengali culture
-		# Soraya says Philosopher Culture and Religious Patronage can be kept, but here are Soraya's notes anyways:
-		# Philosopher Culture: Early Medieval Bengal produced many great Buddhist theologians like Atisha, and also many Hindu ones like Chaitanya particularly in later periods
-		# Religious Patronage: Palas and Chandras be funding a lot of Viharas
-		# Soraya: Bengal be trading with SEA, and rivers were used in trade through which this tradition allows sailing
-		# Soraya: Bengal be full of rainforests yo, it should have more in-game but what can you do
-		# Soraya: Kulinism began in this period, and thus Brahmins and Kayasthas began a process of creating excessively prestigious North Indian ancestries for themselves and a strict code of exogamy, the "Kulin Pratha" should really have its own system in a potential Bengal flavor pack
-	# Oriya
-	# Kamrupi/Assamese
-
-	############################################################
-	#
-	# BUDDHIST DOCTRINE
-	#
-	############################################################\
-
-	if = {
-		limit = {
-			#is_tip_trigger = yes
-			exists = faith:vibhajyavada
-		}
-		faith:vibhajyavada = {
-			add_doctrine = rice_theravada_canon_doctrine
-		}
-	}
-	if = {
-		limit = {
-			#is_tip_trigger = yes
-			exists = faith:sarvastivada
-		}
-		faith:sarvastivada = {
-			add_doctrine = rice_mahayana_canon_doctrine
-		}
-	}
-	if = {
-		limit = {
-			#is_tip_trigger = yes
-			exists = faith:chan
-		}
-		faith:chan = {
-			add_doctrine = rice_mahayana_canon_doctrine
-		}
-	}
-    # Failsafe in case other mods add in other variations of Buddhism
-    # Switched to Mahayana canon aka East Asia canon after All Under Heaven
-    # Since there's way more Mahayana faiths now than Theravada/Vajrayana
-	religion:buddhism_religion = {
-		every_faith = {
-			limit = {
-				NOR = {
-					has_doctrine = rice_mahayana_canon_doctrine
-					has_doctrine = rice_theravada_canon_doctrine
-					has_doctrine = rice_vajrayana_canon_doctrine
-					has_doctrine = rice_pudgalavada_canon_doctrine
-				}
-			}
-			add_doctrine = rice_mahayana_canon_doctrine
-		}
-	}
-
-	############################################################
-	#
-	# MISCELLANEOUS
-	#
-	############################################################
-
-	title:c_magadha = {
-		add_county_modifier = {
-			modifier = RICE_magadha_rajgir_hot_springs_buddhist
-		}
-	}
-
-	# Pala Dynasty remnant
 }
 
 
@@ -1898,9 +2683,13 @@ RICE_setup_bamian_flavor_pack_effect = {
 			current_date > 860.1.1
 			current_date < 875.1.1			
 		}
+
+		
 		# Re-arrange Banijurid Territories a bit
 		# Obscure Sa'id father and son who ruled over Andarab
 		character:RICE_bamian_said_001 = {
+			get_title = title:c_east-tokharestan
+			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			# Persian struggle traits
 			RICE_make_caliphal_supporter = yes
 		}
@@ -1915,6 +2704,19 @@ RICE_setup_bamian_flavor_pack_effect = {
 			# Persian struggle traits
 			RICE_make_caliphal_supporter = yes
 		}
+
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = going_independent
+			add_claim_on_loss = no
+		}
+		character:RICE_bamian_008 = {
+			becomes_independent = {
+				change = scope:going_independent
+			}
+		}
+		resolve_title_and_vassal_change = scope:going_independent	
+
 	}
 
 	############################################################
@@ -1923,12 +2725,21 @@ RICE_setup_bamian_flavor_pack_effect = {
 	#
 	############################################################
 
+	if = {
+		limit = {
+			title:b_balkh = {
+				title_province = { has_special_building = no }
+			}
+		}
+		title:b_balkh.title_province = {
+			add_special_building = RICE_bamian_nowbahar
+		}
+	}
 	
 	# For 1066 bookmark
 	if = {
 		limit = {
 			game_start_date = 867.1.1
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		# Siman-Tov's modifier
 		character:RICE_bamian_jewish_005 = {
@@ -1940,7 +2751,6 @@ RICE_setup_bamian_flavor_pack_effect = {
 	else_if = {
 		limit = {
 			game_start_date = 1066.9.15
-			has_global_variable = is_RICE_loaded_global_variable
 		}
 		# Siman-Tov's modifier
 		character:RICE_bamian_jewish_003 = {
@@ -2000,6 +2810,62 @@ RICE_setup_aslian_flavor_pack_effect = {
 	#
 	############################################################
 
+	if = {
+		limit = {
+			game_start_date <= 1000.1.1
+		}
+		title:c_MAL_gangganegara = {
+			set_county_culture = culture:senoi
+			set_county_faith = faith:senoi_pagan
+		}
+	}
+
+	every_ruler = {
+		limit = {
+			culture = culture:senoi
+		}
+		set_character_faith_with_conversion = faith:senoi_pagan
+		every_vassal = {
+			limit = {
+				culture = culture:senoi
+			}
+			set_character_faith_with_conversion = faith:senoi_pagan
+		}
+		every_courtier_or_guest = {
+			limit = {
+				culture = culture:senoi
+			}
+			set_character_faith = faith:senoi_pagan
+		}
+		if = {
+			limit = {
+				has_dlc_feature = all_under_heaven
+				OR = {
+					has_government = mandala_government
+					has_government = tribal_government
+				}
+			}
+			RICE_become_wanua_effect = yes
+		}
+	}
+
+	every_county_in_region = {
+		region = world_asia
+		limit = {
+			culture = culture:senoi
+		}
+		set_county_faith = faith:senoi_pagan
+		holder = {
+			every_courtier_or_guest = {
+				limit = {
+					culture = culture:senoi
+				}
+				set_character_faith = faith:senoi_pagan
+			}
+		}
+	}
+
+
 
 	############################################################
 	#
@@ -2011,7 +2877,6 @@ RICE_setup_aslian_flavor_pack_effect = {
 	character:RICE_aslian_001 ?= {
 		if = {
 			limit = {
-				has_global_variable = is_RICE_loaded_global_variable
 				is_alive = yes
 			}
 			get_title = title:c_MAL_semantan
@@ -2037,7 +2902,6 @@ RICE_setup_aslian_flavor_pack_effect = {
 
 	if = {
 		limit = {
-			has_global_variable = is_RICE_loaded_global_variable
 			title:b_MAL_Pekan = {
 				title_province = { has_special_building = no }
 			}
@@ -2051,7 +2915,6 @@ RICE_setup_aslian_flavor_pack_effect = {
 
 	if = {
 		limit = {
-			has_global_variable = is_RICE_loaded_global_variable
 			title:b_BOR_Kudat = {
 				title_province = { has_special_building = no }
 			}

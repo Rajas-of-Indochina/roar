@@ -1,17 +1,7 @@
-﻿heritage_siberian = {
-	type = heritage
+﻿
+# Now listed in Alphabetical Order for easier navigation
 
-	parameters = {
-		heritage_group_siberian = yes
-		heritage_family_eurasian = yes
-	}
-	is_shown = {
-		heritage_is_shown_trigger = {
-			HERITAGE = heritage_siberian
-		}
-	}
-	audio_parameter = european
-}
+
 
 heritage_east_bantu = {
 	type = heritage
@@ -28,16 +18,16 @@ heritage_east_bantu = {
 	audio_parameter = mena
 }
 
-heritage_south_bantu = {
+heritage_elamite = {
 	type = heritage
 
 	parameters = {
-		heritage_group_central_african = yes
-		heritage_family_african = yes
+		heritage_group_levantine = yes
+		heritage_family_middle_eastern = yes
 	}
 	is_shown = {
 		heritage_is_shown_trigger = {
-			HERITAGE = heritage_south_bantu
+			HERITAGE = heritage_elamite
 		}
 	}
 	audio_parameter = mena
@@ -58,16 +48,31 @@ heritage_guanche = {
 	audio_parameter = mena
 }
 
-heritage_elamite = {
+heritage_siberian = {
 	type = heritage
 
 	parameters = {
-		heritage_group_levantine = yes
-		heritage_family_middle_eastern = yes
+		heritage_group_siberian = yes
+		heritage_family_eurasian = yes
 	}
 	is_shown = {
 		heritage_is_shown_trigger = {
-			HERITAGE = heritage_elamite
+			HERITAGE = heritage_siberian
+		}
+	}
+	audio_parameter = european
+}
+
+heritage_south_bantu = {
+	type = heritage
+
+	parameters = {
+		heritage_group_central_african = yes
+		heritage_family_african = yes
+	}
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_south_bantu
 		}
 	}
 	audio_parameter = mena
