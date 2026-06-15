@@ -13,6 +13,31 @@
 		}
 	}
 
+	is_valid = {
+		custom_tooltip = {
+			text = available_islamic_settlers_tt
+			# need to have counties within the proper range
+			# that are either majority-Muslim or have a large Muslim minority
+			any_county = {
+				save_temporary_scope_as = county
+				"scope:county.title_province.squared_distance(root.capital_province)" <= squared_distance_monstrous
+				any_county_province = {
+					is_coastal = yes
+					NOT = { geographical_region = world_asia_southeast_islands }
+				}
+				OR = {
+					religion = religion_islam_religion
+					county_has_type_minority_with_trigger = {
+						TYPE = faith
+						SIZE = large
+						TRIGGER = religion
+						CHECK = religion:islam_religion
+					}
+				}
+			}
+		}
+	}
+
 	minimum_cost = {
 		piety = massive_piety_gain
 		gold = {
@@ -48,7 +73,87 @@
 
 	effect = {
 		custom_tooltip = invite_islamic_settlers_decision_tt_a
-		trigger_event = minorities.0401
+		if = {
+			limit = {
+				is_ai = no
+			}
+			trigger_event = minorities.0401
+		}
+		else = {
+			# simplified version
+			every_held_title = {
+				title_tier = county
+				save_scope_as = target
+				random_county = {
+					limit = {
+						save_temporary_scope_as = county
+						"scope:county.title_province.squared_distance(root.capital_province)" <= squared_distance_monstrous # This will let the western Maritime SEA reach the Horn of Africa
+						is_coastal_county = yes
+						title_province = {
+							NOT = { geographical_region = world_asia_southeast_islands }
+						}
+						OR = {
+							religion = religion:islam_religion
+							county_has_type_minority_with_trigger = {
+								TYPE = faith
+								SIZE = large
+								TRIGGER = religion
+								CHECK = religion:islam_religion
+							}
+						}
+					}
+					save_scope_as = source
+					if = {
+						limit = { religion = religion:islam_religion }
+						faith = { save_scope_as = islamic_faith }
+					}
+					else = {
+						random_in_list = {
+							variable = faith_minorities_large
+							limit = { religion = religion:islam_religion }
+							save_scope_as = islamic_faith
+						}
+					}
+					# just in case i fucked up
+					if = {
+						NOT = { exists = scope:islamic_faith }
+						faith:ashari = { save_scope_as = islamic_faith }
+					}
+				}
+				faith_migration_effect = {
+					FAITH = scope:islamic_faith
+					TARGET_COUNTY = scope:target
+					SOURCE_COUNTY = scope:source
+				}
+				if = {
+					limit = {
+						county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
+					}
+					add_county_modifier = {
+						modifier = muslim_settlers_modifier_small
+						years = 5
+					}
+				}
+				else_if = {
+					limit = {
+						county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+					}
+					add_county_modifier = {
+						modifier = muslim_settlers_modifier_large
+						years = 5
+					}
+				}
+				if = {
+					limit = {
+						faith = $FAITH$
+					}
+					add_county_modifier = {
+						modifier = muslim_settlers_modifier_majority
+						years = 5
+					}
+				}
+			}
+		}
 	}
 
 	cooldown = {
