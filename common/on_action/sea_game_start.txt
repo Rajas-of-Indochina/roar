@@ -13,10 +13,27 @@ on_game_start = {
 
 		#fix_government_types - needs rework
 		#nerf_japan - needs rework
+
+		# RICE_fake_title_cleaner
+	}
+}
+
+on_game_start_after_lobby = {
+	on_actions = {
+		RICE_fake_title_cleaner
 	}
 }
 
 ######
+
+RICE_fake_title_cleaner = {
+	effect = {
+		title:c_heihe.holder = { destroy_title = title:c_heihe }
+		title:c_lam_tay.holder = { destroy_title = title:c_lam_tay }
+		title:c_MAL_semantan.holder = { destroy_title = title:c_MAL_semantan }
+		title:d_nghe_an.holder = { destroy_title = title:d_nghe_an }
+	}
+}
 
 game_start_ROA_setup = {
 	effect = {
