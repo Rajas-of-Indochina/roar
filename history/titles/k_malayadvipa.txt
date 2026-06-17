@@ -1,6 +1,71 @@
-﻿
-## k_malayadvipa
+﻿k_malayadvipa = {
+	671.1.1 = {
+		holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
+		government = mandala_government
+		liege = e_srivijaya
+	}
+	702.1.1 = {
+		holder = malay_oldsrivijaya_02	#Sri Indravarman
+	}
+	728.1.1 = {
+		holder = malay_oldsrivijaya_03	#Rudra Vikrama
+	}
+	#742.1.1 = {
+	#	holder = unknown
+	#}
+	775.1.1 = {
+		holder = javanese_sailendra_05	#Dharanindra
+	}
+	782.1.1 = {
+		holder = javanese_sailendra_06	#Samaratungga, possibly = Samaragrawira ?
+	}
+	#Situation starting in ~835 is unclear
+	840.1.1 = {
+		holder = javanese_sanjaya_06	#Rakai Pikatan
+	}
+	842.1.1 = {
+		holder = malay_soma_02	#Devi Tara
+	}
+	856.1.1 = {
+		holder = javanese_sailendra_07	#Balaputradewa
+	}
+	#Balaputradewa is mechanically ruler in 867, which may not be historically accurate
+	#861-959 - unknown
+
+	960.1.1 = {
+		holder = javanese_sailendra_20	#Sri Udayaditya
+	}
+	980.1.1 = {
+		holder = javanese_sailendra_21	#"Haji"
+	}
+	988.1.1 = {
+		holder = javanese_sailendra_22	#Sri Cudamani Warmadewa
+	}
+	1008.1.1 = {
+		holder = javanese_sailendra_23	#Sri Maravijayottunggavarman
+	}
+	1017.1.1 = {
+		holder = javanese_sailendra_24	#Haji Sumatrabhumi
+	}
+	1025.1.1 = {
+		holder = javanese_sailendra_25	#Sangrama Vijayottunggavarman
+	}
+	1025.6.6 = {	#Post Chola attack on Srivijaya
+		liege = 0
+	}
+	1028.1.1 = {
+		holder = javanese_sailendra_26	#Sri Deva
+	}
+	1070.1.1 = {
+		holder = 0
+	}
+}
+
 d_SUM_jambi = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 13 }
+	1178.1.1 = { change_development_level = 24 }
+
 	#1025 as Melayu kingdom
 	1057.1.1 = {
 		government = mandala_government
@@ -15,10 +80,6 @@ d_SUM_jambi = {
 	}
 }
 	c_muaro_jambi = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 13 }
-		1178.1.1 = { change_development_level = 24 }
-
 		671.1.1 = {
 			government = mandala_government
 			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
@@ -113,94 +174,32 @@ d_SUM_jambi = {
 		}
 	}
 	c_tebo = {
-		671.1.1 = {
+		859.1.1 = {
 			government = mandala_government
-			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
-			liege = d_SUM_palembang
+			holder = malay_dharmasraya_01_fic	#fictional
 		}
-		702.1.1 = {
-			holder = malay_oldsrivijaya_02	#Sri Indravarman
+		1057.1.1 = {
+			holder = malay_melayu_10_fic	#fictional
+			liege = d_SUM_jambi
 		}
-		728.1.1 = {
-			holder = malay_oldsrivijaya_03	#Rudra Vikrama
-		}
-		#742.1.1 = {
-		#	holder = unknown
-		#}
-		775.1.1 = {
-			holder = javanese_sailendra_05	#Dharanindra
-		}
-		782.1.1 = {
-			holder = javanese_sailendra_06	#Samaratungga, possibly = Samaragrawira ?
-		}
-		#Situation starting in ~835 is unclear
-		840.1.1 = {
-			holder = javanese_sanjaya_06	#Rakai Pikatan
-		}
-		842.1.1 = {
-			holder = malay_soma_02	#Devi Tara
-		}
-		856.1.1 = {
-			holder = javanese_sailendra_07	#Balaputradewa
-		}
-		#Balaputradewa is mechanically ruler in 867, which may not be historically accurate
-		#861-959 - unknown
-
-		1059.1.1 = {
-			holder = malay_jambi_10_fic	#fictional
-		}
-
-		#1178
 		1167.1.1 = {
 			holder = malay_melayu_20_fic	#fictional
-			liege = d_SUM_jambi
 		}
 		1183.1.1 = {
 			holder = malay_melayu_21
 		}
 	}
 	c_tanjung_bolo = {
-		671.1.1 = {
+		859.1.1 = {
 			government = mandala_government
-			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
-			liege = d_SUM_palembang
+			holder = malay_dharmasraya_01_fic	#fictional
 		}
-		702.1.1 = {
-			holder = malay_oldsrivijaya_02	#Sri Indravarman
+		1057.1.1 = {
+			holder = malay_melayu_10_fic	#fictional
+			liege = d_SUM_jambi
 		}
-		728.1.1 = {
-			holder = malay_oldsrivijaya_03	#Rudra Vikrama
-		}
-		#742.1.1 = {
-		#	holder = unknown
-		#}
-		775.1.1 = {
-			holder = javanese_sailendra_05	#Dharanindra
-		}
-		782.1.1 = {
-			holder = javanese_sailendra_06	#Samaratungga, possibly = Samaragrawira ?
-		}
-		#Situation starting in ~835 is unclear
-		840.1.1 = {
-			holder = javanese_sanjaya_06	#Rakai Pikatan
-		}
-		842.1.1 = {
-			holder = malay_soma_02	#Devi Tara
-		}
-		856.1.1 = {
-			holder = javanese_sailendra_07	#Balaputradewa
-		}
-		#Balaputradewa is mechanically ruler in 867, which may not be historically accurate
-		#861-959 - unknown
-
-		1059.1.1 = {
-			holder = malay_jambi_10_fic	#fictional
-		}
-
-		#1178
 		1167.1.1 = {
 			holder = malay_melayu_20_fic	#fictional
-			liege = d_SUM_jambi
 		}
 		1183.1.1 = {
 			holder = malay_melayu_21
@@ -256,10 +255,15 @@ d_SUM_jambi = {
 
 # d_minangkabau
 	c_darek = {
-		859.1.1 = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 9 }
+		1178.1.1 = { change_development_level = 15 }
+
+		833.1.1 = {
 			government = mandala_government
-			holder = malay_dharmasraya_01_fic	#fictional
+			holder = malay_muaratakus_01_fic	#fictional
 		}
+
 		1057.1.1 = {
 			holder = malay_melayu_10_fic	#fictional
 			liege = d_SUM_jambi
@@ -289,20 +293,19 @@ d_SUM_jambi = {
 		}
 	}
 	c_inderapura = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 10 }
-		1178.1.1 = { change_development_level = 17 }
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 3 }
+		1178.1.1 = { change_development_level = 5 }
 
-		862.1.1 = {
+		860.1.1 = {
 			government = wanua_government
-			holder = malay_minangkabau_01_fic	#fictional
+			holder = malay_rnberbedur_01_fic	#fictional
 		}
 		1066.1.1 = {
-			holder = malay_minangkabau_10_fic	#fictional
+			holder = malay_rnberbedur_10_fic	#fictional
 		}
 		1178.1.1 = {
-			government = mandala_government
-			holder = malay_minangkabau_20_fic	#fictional
+			holder = malay_rnberbedur_20_fic	#fictional
 		}
 	}
 	c_pasaman = {
@@ -343,12 +346,12 @@ d_SUM_jambi = {
 		}
 	}
 
-# d_kerinci
+d_kerinci = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 7 }
+}
 	c_kerinci = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
-
 		671.1.1 = {
 			government = mandala_government
 			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
@@ -396,10 +399,6 @@ d_SUM_jambi = {
 		}
 	}
 	c_SUM_bungo = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
-
 		671.1.1 = {
 			government = mandala_government
 			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
@@ -447,10 +446,6 @@ d_SUM_jambi = {
 		}
 	}
 	c_merangin = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
-
 		671.1.1 = {
 			government = mandala_government
 			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
@@ -498,10 +493,6 @@ d_SUM_jambi = {
 		}
 	}
 	c_serolangun = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
-
 		671.1.1 = {
 			government = mandala_government
 			holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
@@ -549,12 +540,12 @@ d_SUM_jambi = {
 		}
 	}
 
-# d_riau
+d_riau = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
+}
 	c_SUM_lingga = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 10 }
-
 		864.1.1 = {
 			government = mandala_government
 			holder = malay_lingga_01_fic	#fictional
@@ -567,10 +558,6 @@ d_SUM_jambi = {
 		}
 	}
 	c_SUM_batam = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 10 }
-
 		864.1.1 = {
 			government = mandala_government
 			holder = malay_lingga_01_fic	#fictional
@@ -611,7 +598,7 @@ d_siak = {
 			holder = malay_kampar_20_fic	#fictional
 		}
 	}
-	c_kampar = {
+	c_SUM_muara_takus = {
 		867.1.1 = { change_development_level = 4 }
 		1066.1.1 = { change_development_level = 7 }
 		1178.1.1 = { change_development_level = 12 }
@@ -627,27 +614,6 @@ d_siak = {
 		}
 		1168.1.1 = {
 			holder = malay_kampar_20_fic	#fictional
-		}
-	}
-	c_SUM_muara_takus = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 9 }
-		1178.1.1 = { change_development_level = 15 }
-
-		833.1.1 = {
-			government = mandala_government
-			holder = malay_muaratakus_01_fic	#fictional
-		}
-
-		1057.1.1 = {
-			holder = malay_melayu_10_fic	#fictional
-			liege = d_SUM_jambi
-		}
-		1167.1.1 = {
-			holder = malay_melayu_20_fic	#fictional
-		}
-		1183.1.1 = {
-			holder = malay_melayu_21
 		}
 	}
 	c_indragiri = {
@@ -667,9 +633,9 @@ d_siak = {
 		}
 	}
 	c_rokan = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
+		867.1.1 = { change_development_level = 3 }
+		1066.1.1 = { change_development_level = 6 }
+		1178.1.1 = { change_development_level = 11 }
 
 		860.1.1 = {
 			government = wanua_government
@@ -698,5 +664,26 @@ d_siak = {
 		}
 		1168.1.1 = {
 			holder = malay_kampar_20_fic	#fictional
+		}
+	}
+	c_kampar = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 9 }
+		1178.1.1 = { change_development_level = 15 }
+
+		833.1.1 = {
+			government = mandala_government
+			holder = malay_muaratakus_01_fic	#fictional
+		}
+
+		1057.1.1 = {
+			holder = malay_melayu_10_fic	#fictional
+			liege = d_SUM_jambi
+		}
+		1167.1.1 = {
+			holder = malay_melayu_20_fic	#fictional
+		}
+		1183.1.1 = {
+			holder = malay_melayu_21
 		}
 	}

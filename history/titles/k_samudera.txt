@@ -1,950 +1,350 @@
-
-# k_samudera - basic development removed as to not overwrite d_handumans setup
-
+﻿## k_samudera
 d_SUM_aceh = {
-	860.1.1 = {
-		holder = aceh001
-		government = mandala_government
-	}
-	900.1.1 = {
-		holder = aceh002
-	}
-	968.1.1 = {
-		holder = aceh003
-	}
-	1010.1.1 = {
-		holder = aceh004
-	}
-	1050.1.1 = {
-		holder = aceh005
-	}
-	1090.1.1 = {
-		holder = aceh006
-	}
-	1130.1.1 = {
-		holder = aceh007
-	}
-	1170.1.1 = {
-		holder = aceh008
-	}
-}
-
-c_SUM_lambri = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 20 }
-
-	860.1.1 = {
-		holder = aceh001
-		government = mandala_government
-	}
-	900.1.1 = {
-		holder = aceh002
-	}
-	968.1.1 = {
-		holder = aceh003
-	}
-	1010.1.1 = {
-		holder = aceh004
-	}
-	1050.1.1 = {
-		holder = aceh005
-	}
-	1090.1.1 = {
-		holder = aceh006
-	}
-	1130.1.1 = {
-		holder = aceh007
-	}
-	1170.1.1 = {
-		holder = aceh008
-	}
-}
-
-c_SUM_perlak = {
-	867.1.1 = { change_development_level = 7 }
-	1066.1.1 = { change_development_level = 14 }
-	1178.1.1 = { change_development_level = 24 }
-
-	860.1.1 = {
-		holder = aceh009
-	}
-	890.1.1 = {
-		holder = aceh010
-	}
-	920.1.1 = {
-		holder = aceh011
-	}
-	950.1.1 = {
-		holder = aceh012
-	}
-	980.1.1 = {
-		holder = aceh013
-	}
-	1010.1.1 = {
-		holder = aceh014
-	}
-	1040.1.1 = {
-		holder = aceh015
-	}
-	1070.1.1 = {
-		holder = aceh016
-	}
-	1100.1.1 = {
-		holder = aceh017
-	}
-	1130.1.1 = {
-		holder = aceh018
-	}
-	1160.1.1 = {
-		holder = aceh019
-	}
-	# Probably when Perlak actually Islamized
-	1161.1.1 = {
-		holder = aceh031
-	}
-	1186.1.1 = {
-		holder = aceh032
-	}
-	1200.1.1 = {
-		holder = aceh033
-	}
-	1230.1.1 = {
-		holder = aceh034
-	}
-	1267.1.1 = {
-		holder = aceh035
-	}
-}
-
-c_pedir = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 18 }
-
-	860.1.1 = {
-		holder = aceh001
-		government = mandala_government
-	}
-	900.1.1 = {
-		holder = aceh002
-	}
-	968.1.1 = {
-		holder = aceh003
-	}
-	1010.1.1 = {
-		holder = aceh004
-	}
-	1050.1.1 = {
-		holder = aceh005
-	}
-	1090.1.1 = {
-		holder = aceh006
-	}
-	1130.1.1 = {
-		holder = aceh007
-	}
-	1170.1.1 = {
-		holder = aceh008
-	}
 }
-
-c_SUM_pasai = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 18 }
-
-	860.1.1 = {
-		holder = aceh020
-		government = mandala_government
-	}
-	890.1.1 = {
-		holder = aceh021
-	}
-	920.1.1 = {
-		holder = aceh022
-	}
-	950.1.1 = {
-		holder = aceh023
-	}
-	980.1.1 = {
-		holder = aceh024
-	}
-	1010.1.1 = {
-		holder = aceh025
-	}
-	1040.1.1 = {
-		holder = aceh026
-	}
-	1070.1.1 = {
-		holder = aceh027
-	}
-	1100.1.1 = {
-		holder = aceh028
-	}
-	1130.1.1 = {
-		holder = aceh029
-	}
-	1160.1.1 = {
-		holder = aceh030
-	}
-}
-
-c_daya = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 18 }
-
-	860.1.1 = {
-		holder = sea_aceh_daya_01_fic
-		government = mandala_government
-		tributary_of = {
-			suzerain = d_SUM_aceh
-			contract_group = tributary_mandala
+	c_SUM_lambri = {
+		860.1.1 = {
+			government = mandala_government
+			holder = malay_lambri_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_lambri_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_lambri_20_fic	#fictional
 		}
 	}
-	#
-	1060.1.1 = {
-		holder = sea_aceh_daya_02_fic
-		tributary_of = {
-			suzerain = d_SUM_aceh
-			contract_group = tributary_mandala
-		}
-	}
-	#
-	1170.1.1 = {
-		holder = sea_aceh_daya_03_fic
-		tributary_of = {
-			suzerain = d_SUM_aceh
-			contract_group = tributary_mandala
-		}
-	}
-}
+	c_SUM_perlak = {
+		867.1.1 = { change_development_level = 7 }
+		1066.1.1 = { change_development_level = 12 }
+		1178.1.1 = { change_development_level = 22 }
 
+		860.1.1 = {
+			government = mandala_government
+			holder = malay_perlak_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_perlak_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_perlak_20_fic	#fictional
+		}
+	}
+	c_SUM_pasai = {
+		860.1.1 = {
+			government = mandala_government
+			holder = malay_lambri_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_lambri_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_lambri_20_fic	#fictional
+		}
+	}
+	c_pedir = {
+		860.1.1 = {
+			government = mandala_government
+			holder = malay_lambri_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_lambri_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_lambri_20_fic	#fictional
+		}
+	}
+	c_daya = {
+		860.1.1 = {
+			government = mandala_government
+			holder = malay_lambri_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_lambri_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_lambri_20_fic	#fictional
+		}
+	}
 
 d_SUM_aru = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 9 }
-
-	1170.1.1 = {
-		holder = batak011
-		liege = 0
-	}
+	1178.1.1 = { change_development_level = 10 }
 }
+	c_SUM_aru = {
+		867.1.1 = { change_development_level = 7 }
+		1066.1.1 = { change_development_level = 12 }
+		1178.1.1 = { change_development_level = 22 }
 
-c_SUM_aru = {
-	860.1.1 = {
-		government = wanua_government
-		holder = batak003
+		860.1.1 = {
+			government = mandala_government
+			holder = malay_perlak_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_perlak_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_perlak_20_fic	#fictional
+		}
 	}
-	#
-	930.1.1 = {
-		holder = batak008
+	c_nagur = {
+		865.1.1 = {
+			government = mandala_government
+			holder = malay_panai_01_fic	#fictional
+		}
+		1045.1.1 = {
+			holder = malay_panai_10_fic	#fictional
+		}
+		1163.1.1 = {
+			holder = malay_panai_20_fic	#fictional
+		}
 	}
-	#
-	1060.1.1 = {
-		holder = batak006
-		liege =  e_srivijaya
+	c_padang_lawas = {
+		865.1.1 = {
+			government = mandala_government
+			holder = malay_panai_01_fic	#fictional
+		}
+		1045.1.1 = {
+			holder = malay_panai_10_fic	#fictional
+		}
+		1163.1.1 = {
+			holder = malay_panai_20_fic	#fictional
+		}
 	}
-	#
-	1170.1.1 = {
-		holder = batak011
-		liege = 0
+	c_SUM_panai = {
+		865.1.1 = {
+			government = mandala_government
+			holder = malay_panai_01_fic	#fictional
+		}
+		1045.1.1 = {
+			holder = malay_panai_10_fic	#fictional
+		}
+		1163.1.1 = {
+			holder = malay_panai_20_fic	#fictional
+		}
 	}
-}
-
-c_nagur = {
-	860.1.1 = {
-		government = wanua_government
-		holder = batak003
-	}
-	930.1.1 = {
-		holder = batak008
-	}
-	# Panai
-	1050.1.1 = {
-		holder = 1000080999 #Bagus
-	}
-	1080.1.1 = {
-		holder = 1000201000 #Basuki
-	}
-	1110.1.1 = {
-		holder = 1000201001 #Bulat
-	}
-	1140.1.1 = {
-		holder = 1000201002 #Sabtu
-	}
-	1170.1.1 = {
-		holder = batak011
-		liege = 0
-	}
-}
-
-c_padang_lawas = {
-	860.1.1 = {
-		government = wanua_government
-		holder = malay006
-	}
-	930.1.1 = {
-		holder = malay021
-	}
-	1060.1.1 = {
-		holder = malay012
-	}
-	1178.1.1 = {
-		holder = malay023
-		liege = k_malayadvipa
-	}
-}
-
-c_SUM_panai = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 7 }
-	1178.1.1 = { change_development_level = 13 }
-
-	#Panai Dynasty (placeholders)
-	750.1.1 = {
-		government = wanua_government
-		holder = 1000203951 #Bulat
-	}
-	780.1.1 = {
-		holder = 1000203952 #Perwira
-	}
-	810.1.1 = {
-		holder = 1000203953 #Rabu
-	}
-	840.1.1 = {
-		holder = 1000080992 #Budi
-	}
-	870.1.1 = {
-		holder = 1000080993 #Che
-	}
-	900.1.1 = {
-		holder = 1000080994 #Luncai
-	}
-	930.1.1 = {
-		holder = 1000080995 #Selasa
-	}
-	960.1.1 = {
-		holder = 1000080996 #Perwira
-	}
-	990.1.1 = {
-		holder = 1000080997 #Uda
-	}
-	1020.1.1 = {
-		holder = 1000080998 #Chik
-	}
-	1050.1.1 = {
-		holder = 1000080999 #Bagus
-	}
-	1080.1.1 = {
-		holder = 1000201000 #Basuki
-	}
-	1110.1.1 = {
-		holder = 1000201001 #Bulat
-	}
-	1140.1.1 = {
-		holder = 1000201002 #Sabtu
-	}
-	1170.1.1 = {
-		holder = 1000201003 #Yunos
-	}
-}
-
 
 d_batak = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
-	#Simanjuntak Dynasty (placeholders)
-	750.1.1 = {
-		government = wanua_government
-		holder = 1000203975 #Peranginangin Kacinambun
-	}
-	780.1.1 = {
-		holder = 1000203976 #Sembiring Berahmana
-	}
-	810.1.1 = {
-		holder = 1000203977 #Tarigan Jampang
-	}
-	840.1.1 = {
-		holder = 1000080956 #Peranginangin Sebayang
-	}
-	870.1.1 = {
-		holder = 1000080957 #Karokaro Jung
-	}
-	900.1.1 = {
-		holder = 1000080958 #Ginting Jadibata
-	}
-	930.1.1 = {
-		holder = 1000080959 #Peranginangin Kacinambun
-	}
-	960.1.1 = {
-		holder = 1000080960 #Sembiring Busuk
-	}
-	990.1.1 = {
-		holder = 1000080961 #Karokaro Ketaren
-	}
-	1020.1.1 = {
-		holder = 1000080962 #Tarigan Silangit
-	}
-	1050.1.1 = {
-		holder = 1000080963 #Ginting Suka
-	}
-	1080.1.1 = {
-		holder = 1000080964 #Sembiring Muham
-	}
-	1110.1.1 = {
-		holder = 1000080965 #Peranginangin Ulunjandi
-	}
-	1140.1.1 = {
-		holder = 1000080966 #Lumban Nahor
-	}
-	1170.1.1 = {
-		holder = 1000080967 #Ginting Babo
-	}
-	1200.1.1 = {
-		holder = 1000080968 #Tarigan Tua
-	}
-	1230.1.1 = {
-		holder = 1000080969 #Karokaro Sinuraya
-	}
-	1260.1.1 = {
-		holder = 1000080970 #Peranginangin Penggarus
-	}
-	1290.1.1 = {
-		holder = 1000080971 #Peranginangin Pinem
-	}
-	1320.1.1 = {
-		holder = 1000080972 #Tarigan Tambak
-	}
-	1350.1.1 = {
-		holder = 1000080973 #Sembiring Meliala
-	}
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 20 }
 }
+	c_toba = {
+		861.1.1 = {
+			government = mandala_government
+			holder = malay_barus_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_barus_10_fic	#fictional
+		}
+		1149.1.1 = {
+			holder = malay_barus_20_fic	#fictional
+		}
+	}
+	c_mandailing = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 10 }
+		1178.1.1 = { change_development_level = 17 }
 
-c_toba = {
-	860.1.1 = {
-		government = wanua_government
-		holder = batak001
+		862.1.1 = {
+			government = wanua_government
+			holder = malay_minangkabau_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_minangkabau_10_fic	#fictional
+		}
+		1178.1.1 = {
+			government = mandala_government
+			holder = malay_minangkabau_20_fic	#fictional
+		}
 	}
-	930.1.1 = {
-		holder = batak009
+	c_SUM_barus = {
+		861.1.1 = {
+			government = mandala_government
+			holder = malay_barus_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_barus_10_fic	#fictional
+		}
+		1149.1.1 = {
+			holder = malay_barus_20_fic	#fictional
+		}
 	}
-	1060.1.1 = {
-		holder = batak005
+	c_pakpak = {
+		861.1.1 = {
+			government = mandala_government
+			holder = malay_barus_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_barus_10_fic	#fictional
+		}
+		1149.1.1 = {
+			holder = malay_barus_20_fic	#fictional
+		}
 	}
-}
-
-c_mandailing = {
-	#Simanjuntak Dynasty (placeholders)
-	750.1.1 = {
-		holder = 1000203975 #Peranginangin Kacinambun
-	}
-	780.1.1 = {
-		holder = 1000203976 #Sembiring Berahmana
-	}
-	810.1.1 = {
-		holder = 1000203977 #Tarigan Jampang
-	}
-	840.1.1 = {
-		holder = 1000080956 #Peranginangin Sebayang
-	}
-	870.1.1 = {
-		holder = 1000080957 #Karokaro Jung
-	}
-	900.1.1 = {
-		holder = 1000080958 #Ginting Jadibata
-	}
-	930.1.1 = {
-		holder = 1000080959 #Peranginangin Kacinambun
-	}
-	960.1.1 = {
-		holder = 1000080960 #Sembiring Busuk
-	}
-	990.1.1 = {
-		holder = 1000080961 #Karokaro Ketaren
-	}
-	1020.1.1 = {
-		holder = 1000080962 #Tarigan Silangit
-	}
-	1050.1.1 = {
-		holder = 1000080963 #Ginting Suka
-	}
-	1080.1.1 = {
-		holder = 1000080964 #Sembiring Muham
-	}
-	1110.1.1 = {
-		holder = 1000080965 #Peranginangin Ulunjandi
-	}
-	1140.1.1 = {
-		holder = 1000080966 #Lumban Nahor
-	}
-	1170.1.1 = {
-		holder = 1000080967 #Ginting Babo
-	}
-	1200.1.1 = {
-		holder = 1000080968 #Tarigan Tua
-	}
-	1230.1.1 = {
-		holder = 1000080969 #Karokaro Sinuraya
-	}
-	1260.1.1 = {
-		holder = 1000080970 #Peranginangin Penggarus
-	}
-	1267.1.1 = {
-		liege = "k_samudera"
-	}
-	1290.1.1 = {
-		holder = 1000080971 #Peranginangin Pinem
-	}
-	1320.1.1 = {
-		holder = 1000080972 #Tarigan Tambak
-	}
-	1350.1.1 = {
-		holder = 1000080973 #Sembiring Meliala
-	}
-}
-
-c_SUM_barus = {
-	850.1.1 = { change_development_level = 4 }
-	900.1.1 = { change_development_level = 8 }
-	1000.1.1 = { change_development_level = 12 }
-
-	#Simanjuntak Dynasty (placeholders)
-	750.1.1 = {
-		government = wanua_government
-		liege = "d_gayo"
-	}
-	750.1.1 = {
-		holder = 1000203975 #Peranginangin Kacinambun
-	}
-	780.1.1 = {
-		holder = 1000203976 #Sembiring Berahmana
-	}
-	810.1.1 = {
-		holder = 1000203977 #Tarigan Jampang
-	}
-	840.1.1 = {
-		holder = 1000080956 #Peranginangin Sebayang
-	}
-	860.1.1 = {
-		liege = "d_gayo"
-	}
-	870.1.1 = {
-		holder = 1000080957 #Karokaro Jung
-	}
-	900.1.1 = {
-		holder = 1000080958 #Ginting Jadibata
-	}
-	930.1.1 = {
-		holder = 1000080959 #Peranginangin Kacinambun
-	}
-	960.1.1 = {
-		holder = 1000080960 #Sembiring Busuk
-	}
-	990.1.1 = {
-		holder = 1000080961 #Karokaro Ketaren
-	}
-	1020.1.1 = {
-		holder = 1000080962 #Tarigan Silangit
-	}
-	1050.1.1 = {
-		holder = 1000080963 #Ginting Suka
-	}
-	1080.1.1 = {
-		holder = 1000080964 #Sembiring Muham
-	}
-	1110.1.1 = {
-		holder = 1000080965 #Peranginangin Ulunjandi
-	}
-	1140.1.1 = {
-		holder = 1000080966 #Lumban Nahor
-	}
-	1170.1.1 = {
-		holder = 1000080967 #Ginting Babo
-	}
-	1200.1.1 = {
-		holder = 1000080968 #Tarigan Tua
-	}
-	1230.1.1 = {
-		holder = 1000080969 #Karokaro Sinuraya
-	}
-	1260.1.1 = {
-		holder = 1000080970 #Peranginangin Penggarus
-	}
-	1290.1.1 = {
-		holder = 1000080971 #Peranginangin Pinem
-	}
-	1320.1.1 = {
-		holder = 1000080972 #Tarigan Tambak
-	}
-	1350.1.1 = {
-		holder = 1000080973 #Sembiring Meliala
-	}
-}
-
-c_pakpak = {
-	860.1.1 = {
-		government = wanua_government
-		holder = batak002
-	}
-	930.1.1 = {
-		holder = batak010
-	}
-	1060.1.1 = {
-		holder = batak005
-	}
-}
-
 
 d_gayo = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = gayo001
-	}
-	#
-	930.1.1 = {
-		holder = gayo002
-	}
-	#
-	1025.1.1 = {
-		holder = gayo003
-	}
-	1067.1.1 = {
-		holder = gayo004
-	}
-	1090.1.1 = {
-		holder = gayo005
-	}
-	1092.1.1 = {
-		holder = gayo006
-	}
-	1094.1.1 = {
-		holder = gayo007
-	}
-	#
-	1170.1.1 = {
-		holder = gayo008
-	}
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 20 }
 }
+	c_gayo = {
+		861.1.1 = {
+			government = mandala_government
+			holder = malay_barus_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_barus_10_fic	#fictional
+		}
+		1149.1.1 = {
+			holder = malay_barus_20_fic	#fictional
+		}
+	}
+	c_pasikaram = {
+		861.1.1 = {
+			government = mandala_government
+			holder = malay_barus_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_barus_10_fic	#fictional
+		}
+		1149.1.1 = {
+			holder = malay_barus_20_fic	#fictional
+		}
+	}
+	c_SUM_singkil = {
+		861.1.1 = {
+			government = mandala_government
+			holder = malay_barus_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = malay_barus_10_fic	#fictional
+		}
+		1149.1.1 = {
+			holder = malay_barus_20_fic	#fictional
+		}
+	}
 
-c_gayo = { # Linge
-	860.1.1 = {
-		government = wanua_government
-		holder = gayo001
-	}
-	#
-	930.1.1 = {
-		holder = gayo002
-	}
-	#
-	1025.1.1 = {
-		holder = gayo003
-	}
-	1067.1.1 = {
-		holder = gayo004
-	}
-	1090.1.1 = {
-		holder = gayo005
-	}
-	1092.1.1 = {
-		holder = gayo006
-	}
-	1094.1.1 = {
-		holder = gayo007
-	}
-	#
-	1170.1.1 = {
-		holder = gayo008
-	}
-}
-
-c_pasikaram = {
-	860.1.1 = {
-		government = wanua_government
-		holder = pasikaram_gayo001
-	}
-	#
-	930.1.1 = {
-		holder = pasikaram_gayo002
-	}
-	#
-	1060.1.1 = {
-		holder = pasikaram_gayo003
-	}
-	#
-	1170.1.1 = {
-		holder = pasikaram_gayo004
-	}
-}
-
-c_SUM_singkil = {
-	860.1.1 = {
-		government = wanua_government
-		holder = kluet_batak_1
-	}
-	#
-	930.1.1 = {
-		holder = kluet_batak_2
-	}
-	#
-	1060.1.1 = {
-		holder = kluet_batak_3
-	}
-	#
-	1170.1.1 = {
-		holder = kluet_batak_4
-	}
-}
-
-
-##d_nias
-c_nias = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = nias001
-	}
-	#
-	930.1.1 = {
-		holder = nias002
-	}
-	#
-	1060.1.1 = {
-		holder = nias003
-	}
-	#
-	1170.1.1 = {
-		holder = nias004
-	}
-}
-
-c_simeulue = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = simeulue_nias001
-	}
-	#
-	930.1.1 = {
-		holder = simeulue_nias002
-	}
-	#
-	1060.1.1 = {
-		holder = simeulue_nias003
-	}
-	#
-	1170.1.1 = {
-		holder = simeulue_nias004
-	}
-}
-
-c_mentawai = {
+d_nias = {
 	867.1.1 = { change_development_level = 1 }
 	1066.1.1 = { change_development_level = 2 }
 	1178.1.1 = { change_development_level = 3 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = mentawai_1
-	}
-	#
-	1060.1.1 = {
-		holder = mentawai_2
-	}
-	#
-	1170.1.1 = {
-		holder = mentawai_3
-	}
 }
+	c_nias = {
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 4 }
+		1178.1.1 = { change_development_level = 7 }
 
-c_sipura_pagai = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 3 }
-
-	# more placeholders needed
-	860.1.1 = {
-		government = wanua_government
-		holder = mentawai_1
+		860.1.1 = {
+			government = wanua_government
+			holder = malay_nias_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_nias_02_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_nias_03_fic	#fictional
+		}
 	}
-	#
-	1060.1.1 = {
-		holder = mentawai_2
+	c_simeulue = {
+		860.1.1 = {
+			government = wanua_government
+			holder = malay_nias_01_fic	#fictional
+		}
+		1066.1.1 = {
+			holder = malay_nias_02_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = malay_nias_03_fic	#fictional
+		}
 	}
-	#
-	1170.1.1 = {
-		holder = mentawai_3
+	c_mentawai = {
+		860.1.1 = {
+			government = wanua_government
+			holder = mentawai_1
+		}
+		1066.1.1 = {
+			holder = mentawai_2
+		}
+		1178.1.1 = {
+			holder = mentawai_3
+		}
 	}
-}
-
-c_enggano = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 3 }
-
-	# history needed
-	860.1.1 = {
-		government = wanua_government
+	c_sipura_pagai = {
+		860.1.1 = {
+			government = wanua_government
+			holder = mentawai_1
+		}
+		1066.1.1 = {
+			holder = mentawai_2
+		}
+		1178.1.1 = {
+			holder = mentawai_3
+		}
 	}
-}
+	c_enggano = {
+		860.1.1 = {
+			government = wanua_government
+			holder = mentawai_1
+		}
+		1066.1.1 = {
+			holder = mentawai_2
+		}
+		1178.1.1 = {
+			holder = mentawai_3
+		}
+	}
 
-
-##d_handumans
-c_andamans  = {
+d_handumans = {
 	867.1.1 = { change_development_level = 0 }
 	1066.1.1 = { change_development_level = 1 }
 	1178.1.1 = { change_development_level = 1 }
-
-	860.1.1 = {
-		holder = sea_andaman_01_fic
-		government = tribal_government #anarchist_government
-	}
-	#
-	930.1.1 = {
-		holder = sea_andaman_02_fic
-	}
-	#
-	1060.1.1 = {
-		holder = sea_andaman_03_fic
-	}
-	#
-	1170.1.1 = {
-		holder = sea_andaman_04_fic
-	}
 }
+	c_andamans = {
+		860.1.1 = {
+			holder = andaman_1
+		}
+		1066.1.1 = {
+			holder = andaman_2
+		}
+		1178.1.1 = {
+			holder = andaman_3
+		}
+	}
+	c_jarawa = {
+		860.1.1 = {
+			holder = andaman_1
+		}
+		1066.1.1 = {
+			holder = andaman_2
+		}
+		1178.1.1 = {
+			holder = andaman_3
+		}
+	}
+	c_nakkavaram {
+		867.1.1 = { change_development_level = 3 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 9 }
 
-c_nakkavaram = {
-	867.1.1 = { change_development_level = 0 }
-	1066.1.1 = { change_development_level = 1 }
-	1178.1.1 = { change_development_level = 1 }
-
-	860.1.1 = {
-		holder = sea_nicobar_01_fic
-		government = tribal_government #anarchist_government
+		860.1.1 = {
+			holder = andaman_5
+		}
+		1066.1.1 = {
+			holder = andaman_6
+		}
+		1178.1.1 = {
+			holder = andaman_4
+		}
 	}
-	#
-	930.1.1 = {
-		holder = sea_nicobar_02_fic
-	}
-	#
-	1060.1.1 = {
-		holder = sea_nicobar_03_fic
-	}
-	#
-	1170.1.1 = {
-		holder = sea_nicobar_04_fic
-	}
-}
-
-c_jarawa = {
-	867.1.1 = { change_development_level = 0 }
-	1066.1.1 = { change_development_level = 1 }
-	1178.1.1 = { change_development_level = 1 }
-
-	860.1.1 = {
-		holder = sea_ongan_01_fic
-		government = tribal_government #anarchist_government
-	}
-	#
-	930.1.1 = {
-		holder = sea_ongan_02_fic
-	}
-	#
-	1060.1.1 = {
-		holder = sea_ongan_03_fic
-	}
-	#
-	1170.1.1 = {
-		holder = sea_ongan_04_fic
-	}
-}
-
-
-
-# titular duchies
-d_SUM_perlak = {
-	860.1.1 = {
-		holder = aceh009
-		government = mandala_government
-	}
-	890.1.1 = {
-		holder = aceh010
-	}
-	920.1.1 = {
-		holder = aceh011
-	}
-	950.1.1 = {
-		holder = aceh012
-	}
-	980.1.1 = {
-		holder = aceh013
-	}
-	1010.1.1 = {
-		holder = aceh014
-	}
-	1040.1.1 = {
-		holder = aceh015
-	}
-	1070.1.1 = {
-		holder = aceh016
-	}
-	1100.1.1 = {
-		holder = aceh017
-	}
-	1130.1.1 = {
-		holder = aceh018
-	}
-	1160.1.1 = {
-		holder = aceh019
-	}
-	# Probably when Perlak actually Islamized
-	1161.1.1 = {
-		holder = aceh031
-	}
-	1186.1.1 = {
-		holder = aceh032
-	}
-	1200.1.1 = {
-		holder = aceh033
-	}
-	1230.1.1 = {
-		holder = aceh034
-	}
-	1267.1.1 = {
-		holder = aceh035
-	}
-}
-
-d_nagur = {
-	860.1.1 = {
-		government = wanua_government
-		holder = batak003
-	}
-	#
-	930.1.1 = {
-		holder = batak008
-	}
-	#
-	1060.1.1 = {
-		holder = batak006
-	}
-	#
-	1170.1.1 = {
-		holder = batak011
-		liege = 0
-	}
-}
