@@ -1,4 +1,8 @@
 ﻿k_yavakadvipa = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
 	#as Mataram (Sanjaya dyn)
 	716.1.1 = {
 		government = mandala_government
@@ -49,7 +53,7 @@
 	927.3.7 = {
 		holder = javanese_sanjaya_15	#Dyah Wawa
 	}
-
+	
 	#as Mataram (Ishana dyn)
 	929.1.1 = {
 		holder = javanese_ishana_01	#Mpu/Dyah Sindok
@@ -63,7 +67,7 @@
 	990.1.1 = {
 		holder = javanese_ishana_04	#Dharmawangsa
 	}
-
+	
 	#as Kahuripan
 	1019.1.1 = {
 		holder = javanese_ishana_06	#Airlangga
@@ -73,7 +77,7 @@
 		holder = 0
 	}
 
-	#Unification of Kediri & Janggala
+	# Unification of Kediri & Janggala
 	1135.6.1 = {
 		holder = javanese_ishana_13	#Sri Warmmeswara
 		name = JAVA_KEDIRI
@@ -90,6 +94,96 @@
 }
 
 d_JAV_mataram = {
+	#as Mataram (Sanjaya dyn)
+	716.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+	}
+	746.1.1 = {
+		holder = javanese_sanjaya_02	#Dyah Pancapana
+	}
+	784.3.6 = {
+		holder = javanese_sanjaya_03	#Rakai Panaraban
+	}
+	803.3.3 = {
+		holder = javanese_sanjaya_04	#Dyah Manara
+	}
+	827.7.26 = {
+		holder = javanese_sanjaya_04a	#Dyah Gula
+	}
+	829.2.14 = {
+		holder = javanese_sanjaya_05	#Rakai Garung
+	}
+	847.3.6 = {
+		holder = javanese_sanjaya_06	#Dyah Saladu
+	}
+	855.4.27 = {
+		holder = javanese_sanjaya_07	#Dyah Lokapala
+	}
+	885.2.17 = {
+		holder = javanese_sanjaya_08	#Dyah Tagwas
+	}
+	885.8.25 = {
+		holder = javanese_sanjaya_09	#Dyah Dewendra
+	}
+	887.1.18 = {
+		holder = javanese_sanjaya_10	#Dyah Bhadra
+	}
+	894.11.21 = {
+		holder = javanese_sanjaya_11	#Dyah Jbang
+	}
+	898.5.10 = {
+		holder = javanese_sanjaya_12	#Dyah Balitung
+	}
+	910.12.21 = {
+		holder = javanese_sanjaya_13	#Dyah Daksottama
+	}
+	919.7.12 = {
+		holder = javanese_sanjaya_14	#Dyah Tulodong
+	}
+	927.3.7 = {
+		holder = javanese_sanjaya_15	#Dyah Wawa
+	}
+	
+	#as Mataram (Ishana dyn)
+	929.1.1 = {
+		holder = javanese_ishana_01	#Mpu/Dyah Sindok
+	}
+	947.1.1 = {
+		holder = javanese_ishana_02	#Ishana
+	}
+	985.1.1 = {
+		holder = javanese_ishana_03	#Makutawangsa
+	}
+	990.1.1 = {
+		holder = javanese_ishana_04	#Dharmawangsa
+	}
+	
+	#as Kahuripan
+	1019.1.1 = {
+		holder = javanese_ishana_06	#Airlangga
+	}
+	1042.1.1 = {
+		#Airlangga splits his kingdom in Janggala & Kediri
+		holder = 0
+	}
+	
+	# Unification of Kediri & Janggala
+	1135.6.1 = {
+		holder = javanese_ishana_13	#Sri Warmmeswara
+	}
+	1159.1.1 = {
+		holder = javanese_ishana_14	#Sri Sarweswara
+	}
+	1169.1.1 = {
+		holder = javanese_ishana_15	#Sri Aryyeswara
+	}
+	1180.1.1 = {
+		holder = javanese_ishana_16	#Sri Gandra
+	}
+}
+
+c_JAV_mataram = {
 	867.1.1 = { change_development_level = 10 }
 	1066.1.1 = { change_development_level = 15 }
 	1178.1.1 = { change_development_level = 24 }
@@ -194,413 +288,132 @@ d_JAV_mataram = {
 		holder = javanese_ishana_16	#Sri Gandra
 	}
 }
-	c_JAV_mataram = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
 
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
+c_warak = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 10 }
 
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	# WIP history
+	860.1.1 = {
+		liege = d_JAV_mataram
+		holder = sea_javanese_warak_placeholder_01
+		government = wanua_government
 	}
-	c_warak = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	#
+	928.1.1 = {
+		holder = sea_javanese_warak_placeholder_02
 	}
-	c_panunggalan = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	#
+	1019.1.1 = {
+		liege = d_panjalu
 	}
-	c_jagaraga = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	1060.1.1 = {
+		holder = sea_javanese_warak_placeholder_03
+		government = mandala_government
 	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	#
+	1170.1.1 = {
+		holder = sea_javanese_warak_placeholder_04
+	}
+}
+
+c_panunggalan = {
+	# WIP history
+	860.1.1 = {
+		liege = d_JAV_mataram
+		holder = sea_javanese_jagaraga_placeholder_01
+		government = mandala_government
+	}
+	#
+	928.1.1 = {
+		holder = sea_javanese_jagaraga_placeholder_02
+	}
+	#
+	1019.1.1 = {
+		liege = d_panjalu
+	}
+	1060.1.1 = {
+		holder = sea_javanese_jagaraga_placeholder_03		
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	#
+	1170.1.1 = {
+		holder = sea_javanese_jagaraga_placeholder_04
+	}
+}
+
+c_jagaraga = {
+	# WIP history
+	860.1.1 = {
+		liege = d_JAV_mataram
+		holder = sea_javanese_jagaraga_placeholder_01
+		government = mandala_government
+	}
+	#
+	928.1.1 = {
+		holder = sea_javanese_jagaraga_placeholder_02
+	}
+	#
+	1019.1.1 = {
+		liege = d_panjalu
+	}
+	1060.1.1 = {
+		holder = sea_javanese_jagaraga_placeholder_03		
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	#
+	1170.1.1 = {
+		holder = sea_javanese_jagaraga_placeholder_04
+	}
+}
+
 
 d_janggala = {
-	867.1.1 = { change_development_level = 11 }
+	# Kahuripan era
+	1019.1.1 = {
+		government = mandala_government
+		holder = javanese_ishana_06	#Airlangga
+		liege = k_yavakadvipa
+	}
+	# Airlangga splits his kingdom in Janggala & Kediri
+	1042.1.1 = {
+		holder = javanese_ishana_09	#Mapanji Garasakan
+		liege = 0
+	}
+	1052.1.1 = {
+		holder = javanese_ishana_09a	#Alanjung Ahyes
+	}
+	1059.1.1 = {
+		holder = javanese_ishana_10	#Samarotsaha
+	}
+	# Unknown how long he reigned
+	1072.1.1 = {
+		holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
+	}
+	1104.1.1 = {
+		holder = javanese_ishana_21_fic	#fictional
+	}
+	1120.1.1 = {
+		holder = javanese_ishana_22_fic	#fictional
+	}
+
+	# Janggala conquered by/reunited with Kediri
+	1135.6.1 = {
+		holder = 0
+	}
+}
+
+c_JAV_janggala = {
+	#AKA c_kahuripan
+	867.1.1 = { change_development_level = 10 }
 	1066.1.1 = { change_development_level = 14 }
 	1178.1.1 = { change_development_level = 16 }
 
@@ -654,7 +467,7 @@ d_janggala = {
 	927.3.7 = {
 		holder = javanese_sanjaya_15	#Dyah Wawa
 	}
-
+	
 	929.1.1 = {
 		holder = javanese_ishana_01	#Mpu/Dyah Sindok
 	}
@@ -667,7 +480,7 @@ d_janggala = {
 	990.1.1 = {
 		holder = javanese_ishana_04	#Dharmawangsa
 	}
-
+	
 	#under Kahuripan
 	1019.1.1 = {
 		holder = javanese_ishana_06	#Airlangga
@@ -676,7 +489,7 @@ d_janggala = {
 		#Airlangga splits his kingdom in Janggala & Kediri
 		liege = 0
 	}
-
+	
 	#as Janggala
 	1042.1.1 = {
 		holder = javanese_ishana_09	#Mapanji Garasakan
@@ -696,7 +509,7 @@ d_janggala = {
 	1120.1.1 = {
 		holder = javanese_ishana_22_fic	#fictional
 	}
-
+	
 	#Janggala conquered by/reunited with Kediri
 	1135.6.1 = {
 		holder = javanese_ishana_13	#Sri Warmmeswara
@@ -712,335 +525,53 @@ d_janggala = {
 		holder = javanese_ishana_16	#Sri Gandra
 	}
 }
-	c_JAV_janggala = {
-		#under Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
 
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+c_lwaram = {
+	860.1.1 = {
+		government = mandala_government
+		holder = sea_javanese_lwaram_placeholder_01
+		liege = d_JAV_mataram
 	}
-	c_lwaram = {
-		#under Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	930.1.1 = {
+		holder = sea_javanese_lwaram_placeholder_02
 	}
-	c_JAV_madura = {
-		#under Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	1019.1.1 = {
+		liege = d_janggala
 	}
+	1065.1.1 = {
+		holder = sea_javanese_lwaram_placeholder_03
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1170.1.1 = {
+		holder = sea_javanese_lwaram_placeholder_04
+	}
+}
 
-d_kalingga = {
+c_JAV_madura = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = javanese_madura_01_fic
+	}
+	930.1.1 = {
+		holder = sea_madura_01
+	}
+	1065.1.1 = {
+		holder = javanese_madura_10_fic
+	}
+	1170.1.1 = {
+		holder = javanese_madura_20_fic
+	}
+}
+
+
+# d_kalingga
+c_JAV_kalingga = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 13 }
 	1178.1.1 = { change_development_level = 20 }
@@ -1095,7 +626,7 @@ d_kalingga = {
 	927.3.7 = {
 		holder = javanese_sanjaya_15	#Dyah Wawa
 	}
-
+	
 	929.1.1 = {
 		holder = javanese_ishana_01	#Mpu/Dyah Sindok
 	}
@@ -1108,7 +639,7 @@ d_kalingga = {
 	990.1.1 = {
 		holder = javanese_ishana_04	#Dharmawangsa
 	}
-
+	
 	#under Kahuripan
 	1019.1.1 = {
 		holder = javanese_ishana_06	#Airlangga
@@ -1117,7 +648,7 @@ d_kalingga = {
 		#Airlangga splits his kingdom in Janggala & Kediri
 		liege = 0
 	}
-
+	
 	#as Kediri
 	1042.1.1 = {
 		holder = javanese_ishana_08	#Sri Samarawijaya
@@ -1144,211 +675,146 @@ d_kalingga = {
 		holder = javanese_ishana_16	#Sri Gandra
 	}
 }
-	c_JAV_kalingga = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
 
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
+c_JAV_panaraban = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
 
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	#as Mataram (Sanjaya dyn)
+	716.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
 	}
-	c_JAV_panaraban = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
+	746.1.1 = {
+		holder = javanese_sanjaya_02	#Dyah Pancapana
 	}
+	784.3.6 = {
+		holder = javanese_sanjaya_03	#Rakai Panaraban
+	}
+	803.3.3 = {
+		holder = javanese_sanjaya_04	#Dyah Manara
+	}
+	827.7.26 = {
+		holder = javanese_sanjaya_04a	#Dyah Gula
+	}
+	829.2.14 = {
+		holder = javanese_sanjaya_05	#Rakai Garung
+	}
+	847.3.6 = {
+		holder = javanese_sanjaya_06	#Dyah Saladu
+	}
+	855.4.27 = {
+		holder = javanese_sanjaya_07	#Dyah Lokapala
+	}
+	885.2.17 = {
+		holder = javanese_sanjaya_08	#Dyah Tagwas
+	}
+	885.8.25 = {
+		holder = javanese_sanjaya_09	#Dyah Dewendra
+	}
+	887.1.18 = {
+		holder = javanese_sanjaya_10	#Dyah Bhadra
+	}
+	894.11.21 = {
+		holder = javanese_sanjaya_11	#Dyah Jbang
+	}
+	898.5.10 = {
+		holder = javanese_sanjaya_12	#Dyah Balitung
+	}
+	910.12.21 = {
+		holder = javanese_sanjaya_13	#Dyah Daksottama
+	}
+	919.7.12 = {
+		holder = javanese_sanjaya_14	#Dyah Tulodong
+	}
+	927.3.7 = {
+		holder = javanese_sanjaya_15	#Dyah Wawa
+	}
+	
+	929.1.1 = {
+		holder = javanese_ishana_01	#Mpu/Dyah Sindok
+	}
+	947.1.1 = {
+		holder = javanese_ishana_02	#Ishana
+	}
+	985.1.1 = {
+		holder = javanese_ishana_03	#Makutawangsa
+	}
+	990.1.1 = {
+		holder = javanese_ishana_04	#Dharmawangsa
+	}
+	
+	#under Kahuripan
+	1019.1.1 = {
+		holder = javanese_ishana_06	#Airlangga
+	}
+	1042.1.1 = {
+		#Airlangga splits his kingdom in Janggala & Kediri
+		liege = 0
+	}
+	
+	#as Kediri
+	1042.1.1 = {
+		holder = javanese_ishana_08	#Sri Samarawijaya
+	}
+	1051.1.1 = {
+		holder = javanese_ishana_11	#Sri Jitendrakara
+	}
+	1112.1.1 = {
+		holder = javanese_ishana_12	#Sri Bameswara
+	}
+	1135.1.1 = {
+		holder = javanese_ishana_13	#Sri Warmmeswara
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1159.1.1 = {
+		holder = javanese_ishana_14	#Sri Sarweswara
+	}
+	1169.1.1 = {
+		holder = javanese_ishana_15	#Sri Aryyeswara
+	}
+	1180.1.1 = {
+		holder = javanese_ishana_16	#Sri Gandra
+	}
+}
+
 
 d_panjalu = {
-	867.1.1 = { change_development_level = 10 }
-	1066.1.1 = { change_development_level = 15 }
-	1178.1.1 = { change_development_level = 24 }
+	# Kahuripan era
+	1019.1.1 = {
+		government = mandala_government
+		holder = javanese_ishana_06	#Airlangga
+		liege = k_yavakadvipa
+	}
+	# 1042 - Airlangga splits his kingdom in Janggala & Kediri
+	
+	# as Kediri
+	1042.1.1 = {
+		holder = javanese_ishana_08	#Sri Samarawijaya
+		liege = 0
+	}
+	1051.1.1 = {
+		holder = javanese_ishana_11	#Sri Jitendrakara
+	}
+	1112.1.1 = {
+		holder = javanese_ishana_12	#Sri Bameswara
+	}
+	1135.1.1 = {
+		holder = javanese_ishana_13	#Sri Warmmeswara
+	}
+	# Unification of Kediri & Janggala
+	1135.6.1 = {
+		holder = 0
+	}
+}
+
+c_kadiri = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
 
 	#as Mataram (Sanjaya dyn)
 	716.1.1 = {
@@ -1401,7 +867,7 @@ d_panjalu = {
 	927.3.7 = {
 		holder = javanese_sanjaya_15	#Dyah Wawa
 	}
-
+	
 	929.1.1 = {
 		holder = javanese_ishana_01	#Mpu/Dyah Sindok
 	}
@@ -1414,7 +880,7 @@ d_panjalu = {
 	990.1.1 = {
 		holder = javanese_ishana_04	#Dharmawangsa
 	}
-
+	
 	#under Kahuripan
 	1019.1.1 = {
 		holder = javanese_ishana_06	#Airlangga
@@ -1423,7 +889,7 @@ d_panjalu = {
 		#Airlangga splits his kingdom in Janggala & Kediri
 		liege = 0
 	}
-
+	
 	#as Kediri
 	1042.1.1 = {
 		holder = javanese_ishana_08	#Sri Samarawijaya
@@ -1450,442 +916,192 @@ d_panjalu = {
 		holder = javanese_ishana_16	#Sri Gandra
 	}
 }
-	c_kadiri = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
 
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
-	}
-	c_tumapel = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
-	}
-	c_wwatan = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
-	}
-	c_wanagiri = {
-		#as Mataram (Sanjaya dyn)
-		716.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_mataram
-		}
-		746.1.1 = {
-			holder = javanese_sanjaya_02	#Dyah Pancapana
-		}
-		784.3.6 = {
-			holder = javanese_sanjaya_03	#Rakai Panaraban
-		}
-		803.3.3 = {
-			holder = javanese_sanjaya_04	#Dyah Manara
-		}
-		827.7.26 = {
-			holder = javanese_sanjaya_04a	#Dyah Gula
-		}
-		829.2.14 = {
-			holder = javanese_sanjaya_05	#Rakai Garung
-		}
-		847.3.6 = {
-			holder = javanese_sanjaya_06	#Dyah Saladu
-		}
-		855.4.27 = {
-			holder = javanese_sanjaya_07	#Dyah Lokapala
-		}
-		885.2.17 = {
-			holder = javanese_sanjaya_08	#Dyah Tagwas
-		}
-		885.8.25 = {
-			holder = javanese_sanjaya_09	#Dyah Dewendra
-		}
-		887.1.18 = {
-			holder = javanese_sanjaya_10	#Dyah Bhadra
-		}
-		894.11.21 = {
-			holder = javanese_sanjaya_11	#Dyah Jbang
-		}
-		898.5.10 = {
-			holder = javanese_sanjaya_12	#Dyah Balitung
-		}
-		910.12.21 = {
-			holder = javanese_sanjaya_13	#Dyah Daksottama
-		}
-		919.7.12 = {
-			holder = javanese_sanjaya_14	#Dyah Tulodong
-		}
-		927.3.7 = {
-			holder = javanese_sanjaya_15	#Dyah Wawa
-		}
-
-		929.1.1 = {
-			holder = javanese_ishana_01	#Mpu/Dyah Sindok
-		}
-		947.1.1 = {
-			holder = javanese_ishana_02	#Ishana
-		}
-		985.1.1 = {
-			holder = javanese_ishana_03	#Makutawangsa
-		}
-		990.1.1 = {
-			holder = javanese_ishana_04	#Dharmawangsa
-		}
-
-		#under Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#as Kediri
-		1042.1.1 = {
-			holder = javanese_ishana_08	#Sri Samarawijaya
-		}
-		1051.1.1 = {
-			holder = javanese_ishana_11	#Sri Jitendrakara
-		}
-		1112.1.1 = {
-			holder = javanese_ishana_12	#Sri Bameswara
-		}
-		1135.1.1 = {
-			holder = javanese_ishana_13	#Sri Warmmeswara
-		}
-		1135.6.1 = {
-			liege = d_JAV_mataram
-		}
-		1159.1.1 = {
-			holder = javanese_ishana_14	#Sri Sarweswara
-		}
-		1169.1.1 = {
-			holder = javanese_ishana_15	#Sri Aryyeswara
-		}
-		1180.1.1 = {
-			holder = javanese_ishana_16	#Sri Gandra
-		}
-	}
-
-d_lumajang = {
-	867.1.1 = { change_development_level = 7 }
-	1066.1.1 = { change_development_level = 11 }
-	1178.1.1 = { change_development_level = 17 }
-
-	#867
-	867.1.1 = {
+c_tumapel = {
+	860.1.1 = {
 		government = mandala_government
-		holder = javanese_lumajang_01_fic
+		holder = sea_javanese_tumapel_placeholder_01
+		liege = d_JAV_mataram
 	}
+	930.1.1 = {
+		holder = sea_javanese_tumapel_placeholder_02
+	}
+	1019.1.1 = {
+		liege = d_janggala
+	}
+	1065.1.1 = {
+		holder = sea_javanese_tumapel_placeholder_03
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1170.1.1 = {
+		holder = sea_javanese_tumapel_placeholder_04
+	}
+}
 
-	#Kahuripan
+c_wwatan = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	#as Mataram (Sanjaya dyn)
+	716.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = d_JAV_mataram
+	}
+	746.1.1 = {
+		holder = javanese_sanjaya_02	#Dyah Pancapana
+	}
+	784.3.6 = {
+		holder = javanese_sanjaya_03	#Rakai Panaraban
+	}
+	803.3.3 = {
+		holder = javanese_sanjaya_04	#Dyah Manara
+	}
+	827.7.26 = {
+		holder = javanese_sanjaya_04a	#Dyah Gula
+	}
+	829.2.14 = {
+		holder = javanese_sanjaya_05	#Rakai Garung
+	}
+	847.3.6 = {
+		holder = javanese_sanjaya_06	#Dyah Saladu
+	}
+	855.4.27 = {
+		holder = javanese_sanjaya_07	#Dyah Lokapala
+	}
+	885.2.17 = {
+		holder = javanese_sanjaya_08	#Dyah Tagwas
+	}
+	885.8.25 = {
+		holder = javanese_sanjaya_09	#Dyah Dewendra
+	}
+	887.1.18 = {
+		holder = javanese_sanjaya_10	#Dyah Bhadra
+	}
+	894.11.21 = {
+		holder = javanese_sanjaya_11	#Dyah Jbang
+	}
+	898.5.10 = {
+		holder = javanese_sanjaya_12	#Dyah Balitung
+	}
+	910.12.21 = {
+		holder = javanese_sanjaya_13	#Dyah Daksottama
+	}
+	919.7.12 = {
+		holder = javanese_sanjaya_14	#Dyah Tulodong
+	}
+	927.3.7 = {
+		holder = javanese_sanjaya_15	#Dyah Wawa
+	}
+	
+	929.1.1 = {
+		holder = javanese_ishana_01	#Mpu/Dyah Sindok
+	}
+	947.1.1 = {
+		holder = javanese_ishana_02	#Ishana
+	}
+	985.1.1 = {
+		holder = javanese_ishana_03	#Makutawangsa
+	}
+	990.1.1 = {
+		holder = javanese_ishana_04	#Dharmawangsa
+	}
+	
+	#under Kahuripan
 	1019.1.1 = {
 		holder = javanese_ishana_06	#Airlangga
-		liege = d_JAV_mataram
 	}
 	1042.1.1 = {
 		#Airlangga splits his kingdom in Janggala & Kediri
 		liege = 0
 	}
+	
+	#as Kediri
+	1042.1.1 = {
+		holder = javanese_ishana_08	#Sri Samarawijaya
+	}
+	1051.1.1 = {
+		holder = javanese_ishana_11	#Sri Jitendrakara
+	}
+	1112.1.1 = {
+		holder = javanese_ishana_12	#Sri Bameswara
+	}
+	1135.1.1 = {
+		holder = javanese_ishana_13	#Sri Warmmeswara
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1159.1.1 = {
+		holder = javanese_ishana_14	#Sri Sarweswara
+	}
+	1169.1.1 = {
+		holder = javanese_ishana_15	#Sri Aryyeswara
+	}
+	1180.1.1 = {
+		holder = javanese_ishana_16	#Sri Gandra
+	}
+}
 
-	#Janggala
+c_wanagiri = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 15 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = sea_javanese_wanagiri_placeholder_01
+		liege = d_JAV_mataram
+	}
+	930.1.1 = {
+		holder = sea_javanese_wanagiri_placeholder_02
+	}
+	1019.1.1 = {
+		liege = d_panjalu
+	}
+	1065.1.1 = {
+		holder = sea_javanese_wanagiri_placeholder_03
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1170.1.1 = {
+		holder = sea_javanese_wanagiri_placeholder_04
+	}
+}
+
+
+#d_lumajang
+c_JAV_lumajang = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
+
+	867.1.1 = {
+		government = mandala_government
+		holder = javanese_lumajang_01_fic
+	}
+
+	# Kahuripan
+	1019.1.1 = {
+		holder = javanese_ishana_06	#Airlangga
+		liege = d_JAV_mataram
+	}
+	# Airlangga splits his kingdom in Janggala & Kediri
 	1042.1.1 = {
 		holder = javanese_ishana_09	#Mapanji Garasakan
+		liege = 0
 	}
 	1052.1.1 = {
 		holder = javanese_ishana_09a	#Alanjung Ahyes
 	}
 	1059.1.1 = {
 		holder = javanese_ishana_10	#Samarotsaha
-	}	#Unknown how long he reigned
+	}
+	# Unknown how long he reigned
 	1072.1.1 = {
 		holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
 	}
@@ -1896,7 +1112,7 @@ d_lumajang = {
 		holder = javanese_ishana_22_fic	#fictional
 	}
 
-	#Janggala conquered by/reunited with Kediri
+	# Janggala conquered by/reunited with Kediri
 	1135.6.1 = {
 		holder = javanese_lumajang_02_fic	#fictional
 		liege = d_JAV_mataram
@@ -1908,199 +1124,106 @@ d_lumajang = {
 		holder = javanese_lumajang_04_fic	#fictional
 	}
 }
-	c_JAV_lumajang = {
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = javanese_lumajang_01_fic
-		}
 
-		#Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-			liege = d_JAV_mataram
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
+c_pamotan = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
 
-		#Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_lumajang_02_fic	#fictional
-			liege = d_JAV_mataram
-		}
-		1154.10.19 = {
-			holder = javanese_lumajang_03_fic	#fictional
-		}
-		1175.11.7 = {
-			holder = javanese_lumajang_04_fic	#fictional
-		}
+	867.1.1 = {
+		government = mandala_government
+		holder = javanese_lumajang_01_fic
 	}
-	c_pamotan = {
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = javanese_lumajang_01_fic
-		}
 
-		#Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-			liege = d_JAV_mataram
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_lumajang_02_fic	#fictional
-			liege = d_JAV_mataram
-		}
-		1154.10.19 = {
-			holder = javanese_lumajang_03_fic	#fictional
-		}
-		1175.11.7 = {
-			holder = javanese_lumajang_04_fic	#fictional
-		}
+	# Kahuripan
+	1019.1.1 = {
+		holder = javanese_ishana_06	#Airlangga
+		liege = d_JAV_mataram
 	}
-	c_wirabhumi = {
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = javanese_lumajang_01_fic
-		}
-
-		#Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-			liege = d_JAV_mataram
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_lumajang_02_fic	#fictional
-			liege = d_JAV_mataram
-		}
-		1154.10.19 = {
-			holder = javanese_lumajang_03_fic	#fictional
-		}
-		1175.11.7 = {
-			holder = javanese_lumajang_04_fic	#fictional
-		}
+	# Airlangga splits his kingdom in Janggala & Kediri
+	1042.1.1 = {
+		holder = javanese_ishana_09	#Mapanji Garasakan
+		liege = 0
 	}
-	c_pakembangan = {
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = javanese_lumajang_01_fic
-		}
-
-		#Kahuripan
-		1019.1.1 = {
-			holder = javanese_ishana_06	#Airlangga
-			liege = d_JAV_mataram
-		}
-		1042.1.1 = {
-			#Airlangga splits his kingdom in Janggala & Kediri
-			liege = 0
-		}
-
-		#Janggala
-		1042.1.1 = {
-			holder = javanese_ishana_09	#Mapanji Garasakan
-		}
-		1052.1.1 = {
-			holder = javanese_ishana_09a	#Alanjung Ahyes
-		}
-		1059.1.1 = {
-			holder = javanese_ishana_10	#Samarotsaha
-		}	#Unknown how long he reigned
-		1072.1.1 = {
-			holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
-		}
-		1104.1.1 = {
-			holder = javanese_ishana_21_fic	#fictional
-		}
-		1120.1.1 = {
-			holder = javanese_ishana_22_fic	#fictional
-		}
-
-		#Janggala conquered by/reunited with Kediri
-		1135.6.1 = {
-			holder = javanese_lumajang_02_fic	#fictional
-			liege = d_JAV_mataram
-		}
-		1154.10.19 = {
-			holder = javanese_lumajang_03_fic	#fictional
-		}
-		1175.11.7 = {
-			holder = javanese_lumajang_04_fic	#fictional
-		}
+	1052.1.1 = {
+		holder = javanese_ishana_09a	#Alanjung Ahyes
 	}
+	1059.1.1 = {
+		holder = javanese_ishana_10	#Samarotsaha
+	}
+	# Unknown how long he reigned
+	1072.1.1 = {
+		holder = javanese_ishana_20_fic	#fictional heir to Samarotsaha
+	}
+	1104.1.1 = {
+		holder = javanese_ishana_21_fic	#fictional
+	}
+	1120.1.1 = {
+		holder = javanese_ishana_22_fic	#fictional
+	}
+
+	# Janggala conquered by/reunited with Kediri
+	1135.6.1 = {
+		holder = javanese_lumajang_02_fic	#fictional
+		liege = d_JAV_mataram
+	}
+	1154.10.19 = {
+		holder = javanese_lumajang_03_fic	#fictional
+	}
+	1175.11.7 = {
+		holder = javanese_lumajang_04_fic	#fictional
+	}
+}
+
+c_wirabhumi = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 14 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = sea_javanese_wirabhumi_placeholder_01
+	}
+	930.1.1 = {
+		holder = sea_javanese_wirabhumi_placeholder_02
+	}
+	1019.1.1 = {
+		liege = d_janggala
+	}
+	1060.1.1 = {
+		holder = sea_javanese_wirabhumi_placeholder_03
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1170.1.1 = {
+		holder = sea_javanese_wirabhumi_placeholder_04
+	}
+}
+
+c_pakembangan = {
+	# surprisingly sparsely populated region
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 10 }
+
+	850.1.1 = {
+		holder = sea_madura_pakembangan_01
+		government = wanua_government
+	}
+	930.1.1 = {
+		holder = sea_madura_pakembangan_02
+	}
+	1019.1.1 = {
+		liege = d_janggala
+	}
+	1060.1.1 = {
+		holder = sea_madura_pakembangan_03
+	}
+	1135.6.1 = {
+		liege = d_JAV_mataram
+	}
+	1170.1.1 = {
+		holder = sea_madura_pakembangan_04
+	}
+}
