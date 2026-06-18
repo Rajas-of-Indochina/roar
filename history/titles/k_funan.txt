@@ -564,23 +564,30 @@ d_angkor = {
 	}
 
 d_dviradapura = {
-	867.1.1 = {
+	867.1.1. = {
 		government = mandala_government
 		holder = khmer_aninditapura_01_fic	#fictional
-		liege = d_angkor_borey
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala
+		}
 	}
-	1066.1.1 = {
+	1066.1.1. = {
 		holder = khmer_aninditapura_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_funan
+			contract_group = tributary_mandala
+		}
 	}
 	1178.1.1 = {
 		holder = khmer_aninditapura_20_fic	#fictional
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
+		}
 	}
 }
 	c_pursat = {
-		867.1.1 = { change_development_level = 4 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 11 }
-
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
@@ -605,14 +612,10 @@ d_dviradapura = {
 		}
 	}
 	c_aoral = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 18 }
-
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_aninditapura_10_fic	#fictional
@@ -622,14 +625,10 @@ d_dviradapura = {
 		}
 	}
 	c_dviradapura = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 18 }
-
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_aninditapura_10_fic	#fictional
@@ -638,6 +637,7 @@ d_dviradapura = {
 			holder = khmer_aninditapura_20_fic	#fictional
 		}
 	}
+
 d_vyadhapura = {
 	867.1.1 = {
 		government = mandala_government
@@ -686,7 +686,7 @@ d_vyadhapura = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_aninditapura_10_fic	#fictional
@@ -703,7 +703,7 @@ d_vyadhapura = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_aninditapura_10_fic	#fictional
@@ -750,15 +750,14 @@ d_vyadhapura = {
 d_can_tho = {
 	867.1.1 = {
 		government = mandala_government
-		holder = khmer_aninditapura_01_fic	#fictional
-		liege = d_angkor_borey
+		holder = 0
 	}
-	1066.1.1 = {
-		holder = khmer_aninditapura_10_fic	#fictional
-	}
-	1178.1.1 = {
-		holder = khmer_aninditapura_20_fic	#fictional
-	}
+	#1066.1.1 = {
+	#	holder = khmer_kaundinya_3 # Harshavarman III
+	#}
+	#1178.1.1 = {
+	#	holder = khmer_mahidharapura_17
+	#}
 }
 	c_ca_mau = {
 		867.1.1 = { change_development_level = 2 }
@@ -768,7 +767,7 @@ d_can_tho = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_aninditapura_10_fic	#fictional
@@ -785,7 +784,7 @@ d_can_tho = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_binhdai_01_fic	#fictional
@@ -810,7 +809,7 @@ d_can_tho = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_binhdai_01_fic	#fictional
@@ -835,7 +834,7 @@ d_can_tho = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey
+			liege = d_dviradapura # d_angkor_borey
 		}
 		1066.1.1 = {
 			holder = khmer_aninditapura_10_fic	#fictional

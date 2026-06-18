@@ -140,28 +140,28 @@ ROA_setup_tributaries_effect = {
 				game_start_date >= 867.1.1
 				game_start_date <= 867.12.31
 			}
-			# ROA_867_tributary_setup_effect = yes
+			ROA_867_tributary_setup_effect = yes
 		}
 		else_if = {
 			limit = {
 				game_start_date >= 936.1.1
 				game_start_date <= 936.12.31
 			}
-			# ROA_936_tributary_setup_effect = yes
+			ROA_936_tributary_setup_effect = yes
 		}
 		else_if = {
 			limit = {
 				game_start_date >= 1066.1.1
 				game_start_date <= 1066.12.31
 			}
-			# ROA_1066_tributary_setup_effect = yes
+			ROA_1066_tributary_setup_effect = yes
 		}
 		else_if = {
 			limit = {
 				game_start_date >= 1178.1.1
 				game_start_date <= 1178.12.31
 			}
-			# ROA_1178_tributary_setup_effect = yes
+			ROA_1178_tributary_setup_effect = yes
 		}
 	}
 }
@@ -410,7 +410,7 @@ ROA_867_tributary_setup_effect = {
 		title:d_BOR_tanjungpura.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_panai.holder = {
+		title:c_SUM_panai.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_nagur.holder = {
@@ -434,7 +434,7 @@ ROA_867_tributary_setup_effect = {
 		title:c_poronai.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_ujong_tanah.holder = {
+		title:c_MAL_johor.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_kedah.holder = {
@@ -452,13 +452,13 @@ ROA_867_tributary_setup_effect = {
 		title:d_siak.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_batam.holder = {
+		title:c_SUM_batam.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_bangka.holder = {
+		title:c_SUM_bangka-belitung.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:d_jambi.holder = {
+		title:d_SUM_jambi.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_darek.holder = {
@@ -479,36 +479,45 @@ ROA_867_tributary_setup_effect = {
 		title:c_indragiri.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
+		title:c_cengal.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_dharmasraya.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_rokan.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
 	}
 
 	### Kambuja
-	title:e_kambujadesa.holder = {
-		save_scope_as = suzerain
-		title:c_pailin.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_vyadhapura.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_can_tho.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_mondul_kiri.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_samraong.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_battambang.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_khemara_phoumin.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_koh_kong.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:e_kambujadesa.holder = {
+		#save_scope_as = suzerain
+		#title:c_pailin.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_vyadhapura.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_can_tho.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_mondul_kiri.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_samraong.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_battambang.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_khemara_phoumin.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_koh_kong.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	### Champa
 	title:k_champa.holder = {
@@ -526,59 +535,59 @@ ROA_867_tributary_setup_effect = {
 
 	### Nanzhao
 	# Lishui
-	title:k_nanzhao.holder = {
-		save_scope_as = suzerain
-		title:d_kengtung.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_meng_laa.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_phongsali.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_chiang_hung.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_mongkawng.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_mongyang.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_putao.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_luang_nam_tha.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_muang_thaeng.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_tu_long.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_bao_lac.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_ni_jiao.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:k_dali.holder = {
+		#save_scope_as = suzerain
+		#title:d_kengtung.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_meng_laa.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_phongsali.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_chiang_hung.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_mongkawng.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_mongyang.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_putao.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_luang_nam_tha.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_muang_thaeng.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_tu_long.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_bao_lac.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_ni_jiao.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	# Haripunjaya
-	title:d_haripunjaya.holder = {
-		save_scope_as = suzerain
-		title:d_tak.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_ban_yaeng.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_tak.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:d_haripunjaya.holder = {
+		#save_scope_as = suzerain
+		#title:d_tak.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_ban_yaeng.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_tak.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	# Lavapura
 	title:d_lop_buri.holder = {
@@ -1069,16 +1078,16 @@ ROA_936_tributary_setup_effect = {
 		title:c_indragiri.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:d_jambi.holder = {
+		title:d_SUM_jambi.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_lampung.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_bangka.holder = {
+		title:c_SUM_bangka-belitung.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_ujong_tanah.holder = {
+		title:c_MAL_johor.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_poronai.holder = {
@@ -1116,30 +1125,30 @@ ROA_936_tributary_setup_effect = {
 	}
 
 	#### Kambuja
-	title:e_kambujadesa.holder = {
-		save_scope_as = suzerain
-		title:d_can_tho.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_mondul_kiri.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_battambang.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_canasapura.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_nong_kong_kaeo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_shrestapura.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_sekong.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:e_kambujadesa.holder = {
+		#save_scope_as = suzerain
+		#title:d_can_tho.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_mondul_kiri.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_battambang.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_canasapura.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_nong_kong_kaeo.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_shrestapura.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_sekong.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	#### Lavo
 	title:d_lop_buri.holder = {
@@ -1197,12 +1206,12 @@ ROA_936_tributary_setup_effect = {
 	}
 
 	# Sri Gotapura
-	title:e_kambujadesa.holder = {
-		save_scope_as = suzerain
-		title:d_nakhon_phanom.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:e_kambujadesa.holder = {
+		#save_scope_as = suzerain
+		#title:d_nakhon_phanom.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	# Caucasus
 	title:k_abkhazia.holder = {
@@ -1479,30 +1488,30 @@ ROA_1066_tributary_setup_effect = {
 	}
 
 	# Kambuja
-	title:e_kambujadesa.holder = {
-		save_scope_as = suzerain
-		title:d_lop_buri.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_koh_kong.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_mondul_kiri.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_nakhon_phanom.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_nong_khai.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_mahasay.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_sekong.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:e_kambujadesa.holder = {
+		#save_scope_as = suzerain
+		#title:d_lop_buri.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_koh_kong.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_mondul_kiri.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_nakhon_phanom.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_nong_khai.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_mahasay.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_sekong.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	### Champa
 	title:k_champa.holder = {
@@ -1700,7 +1709,7 @@ ROA_1066_tributary_setup_effect = {
 		title:c_JAV_cimanuk.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_bangka.holder = {
+		title:c_SUM_bangka-belitung.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		#title:c_poronai.holder = {
@@ -1709,16 +1718,16 @@ ROA_1066_tributary_setup_effect = {
 		#title:d_pahang.holder = {
 		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		#}
-		#title:c_ujong_tanah.holder = {
+		#title:c_MAL_johor.holder = {
 		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		#}
-		#title:c_batam.holder = {
+		#title:c_SUM_batam.holder = {
 		#	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		#}
 	}
 
 	# Melayu
-	title:d_jambi.holder = {
+	title:d_SUM_jambi.holder = {
 		save_scope_as = suzerain
 		title:c_indragiri.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1740,30 +1749,30 @@ ROA_1066_tributary_setup_effect = {
 	}
 
 	# Dali
-	title:k_nanzhao.holder = {
-		save_scope_as = suzerain
-		title:d_muang_thaeng.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_van_ban.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_kengtung.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_chiang_hung.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_phongsali.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_vunsanh.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_thuy_vi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:k_dali.holder = {
+		#save_scope_as = suzerain
+		#title:d_muang_thaeng.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_van_ban.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_kengtung.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_chiang_hung.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_phongsali.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_vunsanh.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_thuy_vi.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	# Caucasus
 	title:d_kakheti.holder = {
@@ -1999,7 +2008,7 @@ ROA_1178_tributary_setup_effect = {
 	# Melayu/Dharmasraya
 	title:k_malayadvipa.holder = {
 		save_scope_as = suzerain
-		title:c_ujong_tanah.holder = {
+		title:c_MAL_johor.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:k_palembang.holder = {
@@ -2029,10 +2038,10 @@ ROA_1178_tributary_setup_effect = {
 		title:d_siak.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_bangka.holder = {
+		title:c_SUM_bangka-belitung.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_batam.holder = {
+		title:c_SUM_batam.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_pahang.holder = {
@@ -2041,18 +2050,18 @@ ROA_1178_tributary_setup_effect = {
 	}
 
 	### Kambuja
-	title:e_kambujadesa.holder = {
-		save_scope_as = suzerain
-		title:d_lop_buri.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_nong_khai.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_nakhon_phanom.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:e_kambujadesa.holder = {
+		#save_scope_as = suzerain
+		#title:d_lop_buri.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_nong_khai.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_nakhon_phanom.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	### Champa
 	title:k_champa.holder = {
@@ -2069,18 +2078,18 @@ ROA_1178_tributary_setup_effect = {
 	}
 
 	# Nanzhao
-	title:k_nanzhao.holder = {
-		save_scope_as = suzerain
-		title:d_chiang_hung.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:d_muang_thaeng.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-		title:c_vunsanh.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:k_dali.holder = {
+		#save_scope_as = suzerain
+		#title:d_chiang_hung.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:d_muang_thaeng.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+		#title:c_vunsanh.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	# Rus
 	title:d_novgorod.holder = {
