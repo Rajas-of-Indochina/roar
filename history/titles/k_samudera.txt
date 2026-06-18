@@ -4,71 +4,125 @@ d_SUM_aceh = {
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 18 }
 }
-	c_SUM_lambri = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_lambri_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_lambri_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_lambri_20_fic	#fictional
-		}
-	}
-	c_SUM_perlak = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 12 }
-		1178.1.1 = { change_development_level = 22 }
 
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_perlak_01_fic	#fictional
-			liege = 0
-		}
-		1066.1.1 = {
-			holder = malay_perlak_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_perlak_20_fic	#fictional
+c_SUM_lambri = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 20 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_lambri_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = malay_lambri_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = malay_lambri_20_fic	#fictional
+	}
+}
+
+c_SUM_perlak = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 22 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_perlak_01_fic	#fictional
+		liege = 0
+	}
+	#
+	1060.1.1 = {
+		holder = malay_perlak_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = malay_perlak_20_fic	#fictional
+	}
+}
+
+c_SUM_pasai = {
+	860.1.1 = {
+		government = mandala_government
+		holder = sea_aceh_pasai_01_fic	#fictional
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
 		}
 	}
-	c_SUM_pasai = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_lambri_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_lambri_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_lambri_20_fic	#fictional
+	#
+	930.1.1 = {
+		holder = sea_aceh_pasai_02_fic	#fictional
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
 		}
 	}
-	c_pedir = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_lambri_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_lambri_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_lambri_20_fic	#fictional
+	#
+	1060.1.1 = {
+		holder = sea_aceh_pasai_03_fic	#fictional
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
 		}
 	}
-	c_daya = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_lambri_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_lambri_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_lambri_20_fic	#fictional
+	#
+	1170.1.1 = {
+		holder = sea_aceh_pasai_04_fic	#fictional
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
 		}
 	}
+}
+
+c_pedir = {
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_lambri_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = malay_lambri_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = malay_lambri_20_fic	#fictional
+	}
+}
+
+c_daya = {
+	860.1.1 = {
+		holder = sea_aceh_daya_01_fic
+		government = mandala_government
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_aceh_daya_02_fic
+		government = mandala_government
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_aceh_daya_03_fic
+		government = mandala_government
+		tributary_of = {
+			suzerain = d_SUM_aceh
+			contract_group = tributary_mandala
+		}
+	}
+}
+
 
 d_SUM_aru = {
 	867.1.1 = { change_development_level = 3 }

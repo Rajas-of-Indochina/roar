@@ -1193,42 +1193,256 @@ javanese_ishana_22_fic = {	#fictional
 # They may not have been all related to each other
 # Moved to sea_bali
 
-# javanese_warmadewa_01
+javanese_warmadewa_01 = {
+	name = "Kesari"   # Sri Kesari Warmadewa Singhadwala (Besakih)
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "mahayana"
+	851.1.1 = {	#unknown
+		birth = yes
+	}
+	914.1.1 = {	#estimated
+		death = yes
+	}
+}
 
-# javanese_warmadewa_02
+javanese_warmadewa_02 = {
+	name = "Ugrasena"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "shaivism"
+	884.1.1 = {	#unknown
+		birth = yes
+	}
+	945.1.1 = {	#estimated
+		death = yes
+	}
+}
 
-# javanese_warmadewa_03
+javanese_warmadewa_03 = {
+	name = "Tabanendra"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "shaivism"
+	919.1.1 = {	#unknown
+		birth = yes
+	}
+	961.1.1 = {	#possible
+		death = yes
+	}
+}
 
-# javanese_warmadewa_04
+javanese_warmadewa_04 = {
+	name = "Indrajayasingha"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "shaivism"
+	924.1.1 = {	#unknown
+		birth = yes
+	}
+	975.1.1 = {	#unknown
+		death = yes
+	}
+}
 
-# javanese_warmadewa_05
+javanese_warmadewa_05 = {
+	name = "Janasadhu"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "shaivism"
+	946.1.1 = {	#unknown
+		birth = yes
+	}
+	983.1.1 = {	#possible
+		death = yes
+	}
+}
 
-# javanese_warmadewa_06
+javanese_warmadewa_06 = {
+	name = "Udayana"	#aka Dharma Udayana
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "shaivism"
+	960.1.1 = {	#unknown
+		birth = yes
+	}
+	990.1.1 = {
+		add_spouse = javanese_ishana_05
+	}
+	1011.1.1 = {	#possible
+		death = yes
+	}
+}
 
-# javanese_warmadewa_07
+javanese_warmadewa_07 = {
+	name = "Ajnadewi"
+	female = yes
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "shaivism"
+	975.1.1 = {	#unknown
+		birth = yes
+	}
+	1038.1.1 = {	#unknown
+		death = yes
+	}
+}
 
-# Airlangga, set in Ishana dynasty, bro of Marakata Pangkaja & Anak Wungsu
+#Airlangga, set in Ishana dynasty, bro of Marakata Pangkaja & Anak Wungsu
 
-# javanese_warmadewa_08
+javanese_warmadewa_08 = {
+	name = "Marakata_Pangkaja"	#aka Dharmawangsa Wardhana Marakatapangkaja
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "vaishnavism"
+	father = javanese_warmadewa_06	#Udayana
+	mother = javanese_ishana_05	#Mahendradatta Ishana
+	trait = education_stewardship_3
+	993.1.1 = { #unknown, after Airlangga
+		birth = yes
+	}
+	1025.1.1 = {	#likely
+		death = yes
+	}
+}
 
-# javanese_warmadewa_09
+javanese_warmadewa_09 = {
+	name = "Anak_Wungsu"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "vaishnavism"
+	father = javanese_warmadewa_06	#Udayana
+	mother = javanese_ishana_05	#Mahendradatta Ishana
+	trait = compassionate
+	trait = generous
+	1000.1.1 = {	#unknown
+		birth = yes
+	}
+	1025.1.1 = {
+		add_spouse = javanese_warmadewa_09a
+	}
+	1077.1.1 = {	#likely
+		death = yes
+	}
+}
 
-# javanese_warmadewa_09a
+javanese_warmadewa_09a = {	#wife of Anak Wungsu
+	name = "Batari_Mandul"
+	female = yes
+	culture = "javanese"
+	religion = "vaishnavism"
+	1005.1.1 = {	#unknown
+		birth = yes
+	}
+	1069.1.1 = {	#unknown
+		death = yes
+	}
+}
 
-# javanese_warmadewa_10
+javanese_warmadewa_10 = {
+	name = "Walaprabhu"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "vaishnavism"
+	trait = generous
+	1043.1.1 = {	#unknown
+		birth = yes
+	}
+	1088.1.1 = {	#unknown
+		death = yes
+	}
+}
 
-# javanese_warmadewa_11
+javanese_warmadewa_11 = {
+	name = "Laksmidhara"
+	#aka Sri Maharaja Sakalendujirana Laksmidhara Wijayottungadewi
+	female = yes
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "vaishnavism"
+	1056.1.1 = {	#unknown
+		birth = yes
+	}
+	1115.1.1 = {	#unknown
+		death = yes
+	}
+}
 
-# javanese_warmadewa_12
+javanese_warmadewa_12 = {
+	name = "Suradhipa"
+	dynasty = javanese_warmadewa
+	culture = bali
+	religion = "vaishnavism"
+	1071.1.1 = {	#unknown
+		birth = yes
+	}
+	1119.1.1 = {	#possibly
+		death = yes
+	}
+}
 
 ######## Jaya "dynasty", may be offshoot or different name of Warmadewa dyn, or might just be completely the same
-# javanese_warmadewa_13
+javanese_warmadewa_13 = {
+	name = "Jayasakti"
+	dynasty_house = house_warmadewa_jaya
+	culture = bali
+	religion = "vaishnavism"
+	1094.1.1 = {	#unknown
+		birth = yes
+	}
+	1150.1.1 = {	#tentative
+		death = yes
+	}
+}
 
-# javanese_warmadewa_14
+javanese_warmadewa_14 = {
+	name = "Ragajaya"
+	dynasty_house = house_warmadewa_jaya
+	culture = bali
+	religion = "vaishnavism"
+	1126.1.1 = {	#unknown
+		birth = yes
+	}
+	1178.1.1 = {	#tentative
+		death = yes
+	}
+}
 
-# javanese_warmadewa_15
+javanese_warmadewa_15 = {
+	name = "Jayapangus"
+	dynasty_house = house_warmadewa_jaya
+	culture = bali
+	religion = "vaishnavism"
+	trait = education_learning_3
+	trait = just
+	1128.1.1 = {	#unknown
+		birth = yes
+	}
+	1150.1.1 = {
+		add_spouse = sea_bali_jayapangus_spouse
+		effect = {
+			learn_language = language_min_chinese
+		}
+	}
+	1181.1.1 = {	#possible
+		death = yes
+	}
+}
 
-# javanese_warmadewa_16
+javanese_warmadewa_16 = {
+	name = "Arjayadengjayaketana"
+	female = yes
+	dynasty_house = house_warmadewa_jaya
+	culture = bali
+	religion = "vaishnavism"
+	father = javanese_warmadewa_15	#possibly
+	1151.1.1 = {	#unknown
+		birth = yes
+	}
+	1200.1.1 = {	#possibly
+		death = yes
+	}
+}
 
 #
 # END OF WARMADEWA DYNASTY
@@ -1242,7 +1456,7 @@ javanese_ishana_22_fic = {	#fictional
 
 javanese_siliwangi_0 = {
 	name = "Wulung_Gadung"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 
@@ -1259,7 +1473,7 @@ javanese_siliwangi_0 = {
 
 javanese_siliwangi_00 = {
 	name = "Brajawisesa"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_0
@@ -1275,7 +1489,7 @@ javanese_siliwangi_00 = {
 
 javanese_siliwangi_000 = {
 	name = "Dewa_Sanghyang"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_00
@@ -1290,7 +1504,7 @@ javanese_siliwangi_000 = {
 
 javanese_siliwangi_01 = {
 	name = "Sanghyang_Ageung"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_000
@@ -1305,7 +1519,7 @@ javanese_siliwangi_01 = {
 
 javanese_siliwangi_02 = {
 	name = "Jayabhupati"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_01
@@ -1320,7 +1534,7 @@ javanese_siliwangi_02 = {
 
 javanese_siliwangi_03 = {
 	name = "Darmaraja"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_02
@@ -1335,7 +1549,7 @@ javanese_siliwangi_03 = {
 
 javanese_siliwangi_04 = {
 	name = "Langlangbhumi"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_03
@@ -1367,7 +1581,7 @@ javanese_siliwangi_04w = {
 
 javanese_siliwangi_04a = {
 	name = "Darmanagara"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_03
@@ -1382,7 +1596,7 @@ javanese_siliwangi_04a = {
 
 javanese_siliwangi_04b = {
 	name = "Wirayuda"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_03
@@ -1398,7 +1612,7 @@ javanese_siliwangi_04b = {
 javanese_siliwangi_05 = {
 	name = "Jayagiri"
 	#some info say they're male, some say they're female
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_04
@@ -1414,7 +1628,7 @@ javanese_siliwangi_05 = {
 
 javanese_siliwangi_06 = {
 	name = "Darmakusuma"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_05
@@ -1429,7 +1643,7 @@ javanese_siliwangi_06 = {
 
 javanese_siliwangi_07 = {
 	name = "Darmasiksa"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_06
@@ -1467,7 +1681,7 @@ javanese_siliwangi_07a = {
 
 javanese_siliwangi_08a = {
 	name = "Purana"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_07
@@ -1497,7 +1711,7 @@ javanese_siliwangi_07b = {
 
 javanese_siliwangi_08b = {
 	name = "Ragasuci"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_07
@@ -1527,7 +1741,7 @@ javanese_siliwangi_07c = {
 
 javanese_siliwangi_08c = {
 	name = "Jayagiri"
-	dynasty = sunda_siliwangi
+	dynasty = javanese_siliwangi
 	culture = sunda
 	religion = shaivism
 	father = javanese_siliwangi_07
@@ -1556,7 +1770,7 @@ javanese_siliwangi_08c = {
 
 javanese_manisri_01 = {
 	name = "Tariwulan"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 
@@ -1570,7 +1784,7 @@ javanese_manisri_01 = {
 
 javanese_manisri_02 = {
 	name = "Welengsa"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_01
@@ -1585,7 +1799,7 @@ javanese_manisri_02 = {
 
 javanese_manisri_03 = {
 	name = "Linggabhumi"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_02
@@ -1601,7 +1815,7 @@ javanese_manisri_03 = {
 javanese_manisri_04 = {
 	name = "Wisuddha"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_03
@@ -1617,7 +1831,7 @@ javanese_manisri_04 = {
 javanese_manisri_05 = {
 	name = "Jayadrata"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 
@@ -1631,7 +1845,7 @@ javanese_manisri_05 = {
 
 javanese_manisri_06 = {
 	name = "Harimurtii"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	mother = javanese_manisri_05
@@ -1647,7 +1861,7 @@ javanese_manisri_06 = {
 javanese_manisri_07 = {
 	name = "Yuddhanagara"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_06
@@ -1663,7 +1877,7 @@ javanese_manisri_07 = {
 javanese_manisri_08 = {
 	name = "Linggasakti"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	mother = javanese_manisri_07
@@ -1678,7 +1892,7 @@ javanese_manisri_08 = {
 
 javanese_manisri_09 = {
 	name = "Darmastyadewa"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	mother = javanese_manisri_08
@@ -1693,7 +1907,7 @@ javanese_manisri_09 = {
 
 javanese_manisri_10 = {
 	name = "Arya_Tunggalningrat"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 
@@ -1708,7 +1922,7 @@ javanese_manisri_10 = {
 javanese_manisri_11 = {
 	name = "Purnawijaya"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_10
@@ -1724,7 +1938,7 @@ javanese_manisri_11 = {
 javanese_manisri_12 = {
 	name = "Janawati"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	mother = javanese_manisri_11
@@ -1740,7 +1954,7 @@ javanese_manisri_12 = {
 javanese_manisri_13 = {
 	#son of Welengsa, brother of Linggabhumi
 	name = "Darmaraksu"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_02
@@ -1758,7 +1972,7 @@ javanese_manisri_13 = {
 
 javanese_manisri_14 = {
 	name = "Dewageng"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_13
@@ -1774,7 +1988,7 @@ javanese_manisri_14 = {
 
 javanese_manisri_15 = {
 	name = "Kamuning_Gading"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_14
@@ -1789,7 +2003,7 @@ javanese_manisri_15 = {
 
 javanese_manisri_16 = {
 	name = "Jayagiri"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_14
@@ -1805,7 +2019,7 @@ javanese_manisri_16 = {
 javanese_manisri_16a = {
 	name = "Melati"	#ficitonal name
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_16
@@ -1820,7 +2034,7 @@ javanese_manisri_16a = {
 
 javanese_manisri_17 = {
 	name = "Limbur_Kancana"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_15
@@ -1836,7 +2050,7 @@ javanese_manisri_17 = {
 javanese_manisri_18 = {
 	name = "Dewi_Somya"
 	female = yes
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_17
@@ -1851,7 +2065,7 @@ javanese_manisri_18 = {
 
 javanese_manisri_19 = {
 	name = "Mundig_Ganawirya"
-	dynasty = sunda_manisri
+	dynasty = javanese_manisri
 	culture = sunda
 	religion = shaivism
 	father = javanese_manisri_17
@@ -1878,7 +2092,7 @@ javanese_manisri_19 = {
 javanese_gilingwesi_01 = {
 	# son in law of king Hulukujang
 	name = "Gilingwesi"
-	dynasty = sunda_gilingwesi
+	dynasty = javanese_gilingwesi
 	culture = sunda
 	religion = shaivism
 
@@ -1896,7 +2110,7 @@ javanese_gilingwesi_01 = {
 javanese_gilingwesi_02 = {
 	name = "Laksmidhara"	#fictional name
 	female = yes
-	dynasty = sunda_gilingwesi
+	dynasty = javanese_gilingwesi
 	culture = sunda
 	religion = shaivism
 	father = javanese_gilingwesi_01
@@ -1920,7 +2134,7 @@ javanese_gilingwesi_03 = {
 	}
 	800.1.1 = {
 		add_spouse = javanese_gilingwesi_02
-		dynasty = sunda_gilingwesi
+		dynasty = javanese_gilingwesi
 	}
 	819.1.1 = {	#end of reign
 		death = yes
@@ -1929,7 +2143,7 @@ javanese_gilingwesi_03 = {
 
 javanese_gilingwesi_04 = {
 	name = "Wuwus"
-	dynasty = sunda_gilingwesi
+	dynasty = javanese_gilingwesi
 	culture = sunda
 	religion = shaivism
 	father = javanese_gilingwesi_03
@@ -1946,7 +2160,7 @@ javanese_gilingwesi_04 = {
 javanese_gilingwesi_05 = {
 	name = "Juwita"	#fictional name
 	female = yes
-	dynasty = sunda_gilingwesi
+	dynasty = javanese_gilingwesi
 	culture = sunda
 	religion = shaivism
 	father = javanese_gilingwesi_03
@@ -1962,7 +2176,7 @@ javanese_gilingwesi_05 = {
 
 javanese_gilingwesi_06 = {
 	name = "Atmayadarma_Hariwangsa"
-	dynasty = sunda_gilingwesi
+	dynasty = javanese_gilingwesi
 	culture = sunda
 	religion = shaivism
 	father = javanese_gilingwesi_03
@@ -1987,8 +2201,19 @@ javanese_gilingwesi_06 = {
 # START OF YAVAKADVIPA PLACEHOLDER RULERS
 # {
 
-#Bali
-# javanese_bali_01_fic - fictional Bali ruler 867 - deleted for sake of RoA legendary ruler
+# Bali
+javanese_bali_01_fic = {	#fictional Bali ruler 867
+	name = "Kayuwangi"
+	dynasty = javanese_baronga
+	culture = bali
+	religion = shaivism
+	836.8.20 = {
+		birth = yes
+	}
+	887.5.12 = {
+		death = yes
+	}
+}
 
 # Lumajang
 javanese_lumajang_01_fic = {	#fictional Lumajang ruler 867
@@ -2052,7 +2277,7 @@ javanese_lumajang_04_fic = {	#fictional
 # fictional Madura rulers
 javanese_madura_01_fic = {	#fictional Madura ruler 867
 	name = "Wira"
-	dynasty = madura_wedhijo
+	dynasty = javanese_wedhijo
 	culture = "madura"
 	religion = "shaivism"
 
@@ -2067,7 +2292,7 @@ javanese_madura_01_fic = {	#fictional Madura ruler 867
 javanese_madura_10_fic = {	#fictional Madura ruler 1066
 	name = "Mahadewi"
 	female = yes
-	dynasty = madura_wedhijo
+	dynasty = javanese_wedhijo
 	culture = "madura"
 	religion = "shaivism"
 
@@ -2081,7 +2306,7 @@ javanese_madura_10_fic = {	#fictional Madura ruler 1066
 
 javanese_madura_20_fic = {	#fictional Madura ruler 1178
 	name = "Cahaya"
-	dynasty = madura_wedhijo
+	dynasty = javanese_wedhijo
 	culture = "madura"
 	religion = "shaivism"
 
@@ -2094,11 +2319,44 @@ javanese_madura_20_fic = {	#fictional Madura ruler 1178
 }
 
 # Lombok & Sumbawa (Bima/Mbojo kingdom) - all moved to sea_bali
-#javanese_mbojo_01_fic
+javanese_mbojo_01_fic = {
+	name = "Welengsa"
+	dynasty = javanese_mbojo
+	religion = vaishnavism
+	culture = bima
+	834.11.3 = {
+		birth = yes
+	}
+	879.5.16 = {
+		death = yes
+	}
+}
 
-#javanese_mbojo_10_fic
+javanese_mbojo_10_fic = {
+	name = "Gula"
+	dynasty = javanese_mbojo
+	religion = vaishnavism
+	culture = bima
+	1037.2.25 = {
+		birth = yes
+	}
+	1076.8.17 = {
+		death = yes
+	}
+}
 
-#javanese_mbojo_20_fic
+javanese_mbojo_20_fic = {
+	name = "Wawa"
+	dynasty = javanese_mbojo
+	religion = vaishnavism
+	culture = bima
+	1138.6.21 = {
+		birth = yes
+	}
+	1183.7.9 = {
+		death = yes
+	}
+}
 
 # }
 # END OF YAVAKADVIPA PLACEHOLDER RULERS

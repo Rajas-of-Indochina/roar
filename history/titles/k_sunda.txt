@@ -1,14 +1,39 @@
-﻿## k_sunda
-d_sunda = {
-	867.1.1 = { change_development_level = 8 }
-	1066.1.1 = { change_development_level = 13 }
-	1178.1.1 = { change_development_level = 20 }
+k_sunda = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 14 }
 
-	#History of Sunda uncertain, lots of contradictory info
+	723.1.1 = {	#Sunda & Galuh held by Sanjaya & Tamperan
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = 0
+	}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
+	}
+	739.1.1 = {
+		holder = 0
+	}
+	#
+	1157.1.1 = {	#Sunda & Galuh unified
+		holder = javanese_siliwangi_06	#Darmakusuma
+		name = JAVA_TARUMASUNDA
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiksa
+	}
+}
+
+d_sunda = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	# History of Sunda uncertain, lots of contradictory info
 	723.1.1 = {
 		government = mandala_government
 		holder = javanese_sanjaya_01	#Sanjaya
-		liege = d_JAV_taruma
+		liege = k_sunda
 	}
 	732.1.1 = {
 		holder = javanese_sanjaya_16	#Tamperan
@@ -50,7 +75,6 @@ d_sunda = {
 	964.1.1 = {
 		holder = javanese_manisri_19	#Munding Ganawirya
 	}
-
 	973.1.1 = {
 		holder = javanese_siliwangi_0	#Wulung Gadung
 	}
@@ -78,428 +102,386 @@ d_sunda = {
 	}
 	1157.1.1 = {
 		holder = javanese_siliwangi_06	#Darmakusuma
-		liege = d_JAV_taruma
+		liege = d_sunda
 	}
 	1175.1.1 = {
 		holder = javanese_siliwangi_07	#Darmasiksa
 	}
 }
-	c_pakuan_pajajaran = {
-		#History of Sunda uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		739.1.1 = {
-			holder = javanese_sanjaya_18	#Banga
-			liege = 0
-		}
-		766.1.1 = {
-			holder = javanese_sanjaya_19	#Hulukajang
-		}
-		783.1.1 = {
-			holder = javanese_gilingwesi_01	#Gilingwesi
-		}
-		795.1.1 = {
-			holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
-		}
-		819.1.1 = {
-			holder = javanese_gilingwesi_04	#Wuwus
-		}
-		854.1.1 = {	#reportedly should be 891 but that seems improbable
-			holder = javanese_manisri_13	#Darmaraksa
-		}
-		865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
-			holder = javanese_manisri_14	#Dewageng
-		}
-		913.1.1 = {
-			holder = javanese_manisri_15	#Kamuning Gading
-		}
-		916.1.1 = {
-			holder = javanese_manisri_16	#Jayagiri
-		}
-		942.1.1 = {
-			holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
-		}
-		954.1.1 = {
-			holder = javanese_manisri_17	#Limbur Kancana
-		}
-		964.1.1 = {
-			holder = javanese_manisri_19	#Munding Ganawirya
-		}
 
-		973.1.1 = {
-			holder = javanese_siliwangi_0	#Wulung Gadung
-		}
-		989.1.1 = {
-			holder = javanese_siliwangi_00	#Brajawisesa
-		}
-		1012.1.1 = {
-			holder = javanese_siliwangi_000	#Dewa Sanghyang
-		}
-		1019.1.1 = {
-			holder = javanese_siliwangi_01	#Sanghyang Ageung
-		}
-		1030.1.1 = {
-			holder = javanese_siliwangi_02	#Jayabhupati
-		}
-		1042.1.1 = {
-			holder = javanese_siliwangi_03	#Darmaraja
-		}
-		1064.1.1 = {
-			holder = javanese_siliwangi_04	#Langlangbhumi
-		}
-		#^ reported to have lived/reigned ~100yo, which can't be right
-		1116.1.1 = {	#officially started in 1155
-			holder = javanese_siliwangi_05	#Jayagiri
-		}
-		1157.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiksa
-		}
-	}
-	c_sunda_kalapa = {
-		#History of Sunda uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		739.1.1 = {
-			holder = javanese_sanjaya_18	#Banga
-			liege = 0
-		}
-		766.1.1 = {
-			holder = javanese_sanjaya_19	#Hulukajang
-		}
-		783.1.1 = {
-			holder = javanese_gilingwesi_01	#Gilingwesi
-		}
-		795.1.1 = {
-			holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
-		}
-		819.1.1 = {
-			holder = javanese_gilingwesi_04	#Wuwus
-		}
-		854.1.1 = {	#reportedly should be 891 but that seems improbable
-			holder = javanese_manisri_13	#Darmaraksa
-		}
-		865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
-			holder = javanese_manisri_14	#Dewageng
-		}
-		913.1.1 = {
-			holder = javanese_manisri_15	#Kamuning Gading
-		}
-		916.1.1 = {
-			holder = javanese_manisri_16	#Jayagiri
-		}
-		942.1.1 = {
-			holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
-		}
-		954.1.1 = {
-			holder = javanese_manisri_17	#Limbur Kancana
-		}
-		964.1.1 = {
-			holder = javanese_manisri_19	#Munding Ganawirya
-		}
-
-		973.1.1 = {
-			holder = javanese_siliwangi_0	#Wulung Gadung
-		}
-		989.1.1 = {
-			holder = javanese_siliwangi_00	#Brajawisesa
-		}
-		1012.1.1 = {
-			holder = javanese_siliwangi_000	#Dewa Sanghyang
-		}
-		1019.1.1 = {
-			holder = javanese_siliwangi_01	#Sanghyang Ageung
-		}
-		1030.1.1 = {
-			holder = javanese_siliwangi_02	#Jayabhupati
-		}
-		1042.1.1 = {
-			holder = javanese_siliwangi_03	#Darmaraja
-		}
-		1064.1.1 = {
-			holder = javanese_siliwangi_04	#Langlangbhumi
-		}
-		#^ reported to have lived/reigned ~100yo, which can't be right
-		1116.1.1 = {	#officially started in 1155
-			holder = javanese_siliwangi_05	#Jayagiri
-		}
-		1157.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiksa
-		}
-	}
-	c_banten = {
-		#History of Sunda uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		739.1.1 = {
-			holder = javanese_sanjaya_18	#Banga
-			liege = 0
-		}
-		766.1.1 = {
-			holder = javanese_sanjaya_19	#Hulukajang
-		}
-		783.1.1 = {
-			holder = javanese_gilingwesi_01	#Gilingwesi
-		}
-		795.1.1 = {
-			holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
-		}
-		819.1.1 = {
-			holder = javanese_gilingwesi_04	#Wuwus
-		}
-		854.1.1 = {	#reportedly should be 891 but that seems improbable
-			holder = javanese_manisri_13	#Darmaraksa
-		}
-		865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
-			holder = javanese_manisri_14	#Dewageng
-		}
-		913.1.1 = {
-			holder = javanese_manisri_15	#Kamuning Gading
-		}
-		916.1.1 = {
-			holder = javanese_manisri_16	#Jayagiri
-		}
-		942.1.1 = {
-			holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
-		}
-		954.1.1 = {
-			holder = javanese_manisri_17	#Limbur Kancana
-		}
-		964.1.1 = {
-			holder = javanese_manisri_19	#Munding Ganawirya
-		}
-
-		973.1.1 = {
-			holder = javanese_siliwangi_0	#Wulung Gadung
-		}
-		989.1.1 = {
-			holder = javanese_siliwangi_00	#Brajawisesa
-		}
-		1012.1.1 = {
-			holder = javanese_siliwangi_000	#Dewa Sanghyang
-		}
-		1019.1.1 = {
-			holder = javanese_siliwangi_01	#Sanghyang Ageung
-		}
-		1030.1.1 = {
-			holder = javanese_siliwangi_02	#Jayabhupati
-		}
-		1042.1.1 = {
-			holder = javanese_siliwangi_03	#Darmaraja
-		}
-		1064.1.1 = {
-			holder = javanese_siliwangi_04	#Langlangbhumi
-		}
-		#^ reported to have lived/reigned ~100yo, which can't be right
-		1116.1.1 = {	#officially started in 1155
-			holder = javanese_siliwangi_05	#Jayagiri
-		}
-		1157.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiksa
-		}
-	}
-	c_salakanagara = {
-		#History of Sunda uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		739.1.1 = {
-			holder = javanese_sanjaya_18	#Banga
-			liege = 0
-		}
-		766.1.1 = {
-			holder = javanese_sanjaya_19	#Hulukajang
-		}
-		783.1.1 = {
-			holder = javanese_gilingwesi_01	#Gilingwesi
-		}
-		795.1.1 = {
-			holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
-		}
-		819.1.1 = {
-			holder = javanese_gilingwesi_04	#Wuwus
-		}
-		854.1.1 = {	#reportedly should be 891 but that seems improbable
-			holder = javanese_manisri_13	#Darmaraksa
-		}
-		865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
-			holder = javanese_manisri_14	#Dewageng
-		}
-		913.1.1 = {
-			holder = javanese_manisri_15	#Kamuning Gading
-		}
-		916.1.1 = {
-			holder = javanese_manisri_16	#Jayagiri
-		}
-		942.1.1 = {
-			holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
-		}
-		954.1.1 = {
-			holder = javanese_manisri_17	#Limbur Kancana
-		}
-		964.1.1 = {
-			holder = javanese_manisri_19	#Munding Ganawirya
-		}
-
-		973.1.1 = {
-			holder = javanese_siliwangi_0	#Wulung Gadung
-		}
-		989.1.1 = {
-			holder = javanese_siliwangi_00	#Brajawisesa
-		}
-		1012.1.1 = {
-			holder = javanese_siliwangi_000	#Dewa Sanghyang
-		}
-		1019.1.1 = {
-			holder = javanese_siliwangi_01	#Sanghyang Ageung
-		}
-		1030.1.1 = {
-			holder = javanese_siliwangi_02	#Jayabhupati
-		}
-		1042.1.1 = {
-			holder = javanese_siliwangi_03	#Darmaraja
-		}
-		1064.1.1 = {
-			holder = javanese_siliwangi_04	#Langlangbhumi
-		}
-		#^ reported to have lived/reigned ~100yo, which can't be right
-		1116.1.1 = {	#officially started in 1155
-			holder = javanese_siliwangi_05	#Jayagiri
-		}
-		1157.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiksa
-		}
-	}
-	c_parahyangan = {
-		#History of Sunda uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		739.1.1 = {
-			holder = javanese_sanjaya_18	#Banga
-			liege = 0
-		}
-		766.1.1 = {
-			holder = javanese_sanjaya_19	#Hulukajang
-		}
-		783.1.1 = {
-			holder = javanese_gilingwesi_01	#Gilingwesi
-		}
-		795.1.1 = {
-			holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
-		}
-		819.1.1 = {
-			holder = javanese_gilingwesi_04	#Wuwus
-		}
-		854.1.1 = {	#reportedly should be 891 but that seems improbable
-			holder = javanese_manisri_13	#Darmaraksa
-		}
-		865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
-			holder = javanese_manisri_14	#Dewageng
-		}
-		913.1.1 = {
-			holder = javanese_manisri_15	#Kamuning Gading
-		}
-		916.1.1 = {
-			holder = javanese_manisri_16	#Jayagiri
-		}
-		942.1.1 = {
-			holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
-		}
-		954.1.1 = {
-			holder = javanese_manisri_17	#Limbur Kancana
-		}
-		964.1.1 = {
-			holder = javanese_manisri_19	#Munding Ganawirya
-		}
-
-		973.1.1 = {
-			holder = javanese_siliwangi_0	#Wulung Gadung
-		}
-		989.1.1 = {
-			holder = javanese_siliwangi_00	#Brajawisesa
-		}
-		1012.1.1 = {
-			holder = javanese_siliwangi_000	#Dewa Sanghyang
-		}
-		1019.1.1 = {
-			holder = javanese_siliwangi_01	#Sanghyang Ageung
-		}
-		1030.1.1 = {
-			holder = javanese_siliwangi_02	#Jayabhupati
-		}
-		1042.1.1 = {
-			holder = javanese_siliwangi_03	#Darmaraja
-		}
-		1064.1.1 = {
-			holder = javanese_siliwangi_04	#Langlangbhumi
-		}
-		#^ reported to have lived/reigned ~100yo, which can't be right
-		1116.1.1 = {	#officially started in 1155
-			holder = javanese_siliwangi_05	#Jayagiri
-		}
-		1157.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiksa
-		}
-	}
-
-d_galuh = {
-	867.1.1 = { change_development_level = 7 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 18 }
-
-	#History of Galuh uncertain, lots of contradictory info
+c_pakuan_pajajaran = {
+	867.1.1 = { change_development_level = 9 }
+	1066.1.1 = { change_development_level = 13 }
+	1178.1.1 = { change_development_level = 20 }
+	
+	# History of Sunda uncertain, lots of contradictory info
 	723.1.1 = {
 		government = mandala_government
 		holder = javanese_sanjaya_01	#Sanjaya
-		liege = d_JAV_taruma
+		liege = k_sunda
+	}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
+	}
+	739.1.1 = {
+		holder = javanese_sanjaya_18	#Banga
+		liege = 0
+	}
+	766.1.1 = {
+		holder = javanese_sanjaya_19	#Hulukajang
+	}
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
+	}
+	795.1.1 = {
+		holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
+	}
+	819.1.1 = {
+		holder = javanese_gilingwesi_04	#Wuwus
+	}
+	854.1.1 = {	#reportedly should be 891 but that seems improbable
+		holder = javanese_manisri_13	#Darmaraksa
+	}
+	865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
+		holder = javanese_manisri_14	#Dewageng
+	}
+	913.1.1 = {
+		holder = javanese_manisri_15	#Kamuning Gading
+	}
+	916.1.1 = {
+		holder = javanese_manisri_16	#Jayagiri
+	}
+	942.1.1 = {
+		holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
+	}
+	954.1.1 = {
+		holder = javanese_manisri_17	#Limbur Kancana
+	}
+	964.1.1 = {
+		holder = javanese_manisri_19	#Munding Ganawirya
+	}
+	973.1.1 = {
+		holder = javanese_siliwangi_0	#Wulung Gadung
+	}
+	989.1.1 = {
+		holder = javanese_siliwangi_00	#Brajawisesa
+	}
+	1012.1.1 = {
+		holder = javanese_siliwangi_000	#Dewa Sanghyang
+	}
+	1019.1.1 = {
+		holder = javanese_siliwangi_01	#Sanghyang Ageung
+	}
+	1030.1.1 = {
+		holder = javanese_siliwangi_02	#Jayabhupati
+	}
+	1042.1.1 = {
+		holder = javanese_siliwangi_03	#Darmaraja
+	}
+	1064.1.1 = {
+		holder = javanese_siliwangi_04	#Langlangbhumi
+	}
+	#^ reported to have lived/reigned ~100yo, which can't be right
+	1116.1.1 = {	#officially started in 1155
+		holder = javanese_siliwangi_05	#Jayagiri
+	}
+	1157.1.1 = {
+		holder = javanese_siliwangi_06	#Darmakusuma
+		liege = d_sunda
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiksa
+	}
+}
+
+c_sunda_kalapa = {
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 18 }
+
+	# temporary history - we used to have Salindera holders before in RoA but I need someone more familiar with thing to check that out
+
+	# History of Sunda uncertain, lots of contradictory info
+	723.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = k_sunda
+	}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
+	}
+	739.1.1 = {
+		holder = javanese_sanjaya_18	#Banga
+		liege = 0
+	}
+	766.1.1 = {
+		holder = javanese_sanjaya_19	#Hulukajang
+	}
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
+	}
+	795.1.1 = {
+		holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
+	}
+	819.1.1 = {
+		holder = javanese_gilingwesi_04	#Wuwus
+	}
+	854.1.1 = {	#reportedly should be 891 but that seems improbable
+		holder = javanese_manisri_13	#Darmaraksa
+	}
+	865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
+		holder = javanese_manisri_14	#Dewageng
+	}
+	913.1.1 = {
+		holder = javanese_manisri_15	#Kamuning Gading
+	}
+	916.1.1 = {
+		holder = javanese_manisri_16	#Jayagiri
+	}
+	942.1.1 = {
+		holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
+	}
+	954.1.1 = {
+		holder = javanese_manisri_17	#Limbur Kancana
+	}
+	964.1.1 = {
+		holder = javanese_manisri_19	#Munding Ganawirya
+	}
+	973.1.1 = {
+		holder = javanese_siliwangi_0	#Wulung Gadung
+	}
+	989.1.1 = {
+		holder = javanese_siliwangi_00	#Brajawisesa
+	}
+	1012.1.1 = {
+		holder = javanese_siliwangi_000	#Dewa Sanghyang
+	}
+	1019.1.1 = {
+		holder = javanese_siliwangi_01	#Sanghyang Ageung
+	}
+	1030.1.1 = {
+		holder = javanese_siliwangi_02	#Jayabhupati
+	}
+	1042.1.1 = {
+		holder = javanese_siliwangi_03	#Darmaraja
+	}
+	1064.1.1 = {
+		holder = javanese_siliwangi_04	#Langlangbhumi
+	}
+	#^ reported to have lived/reigned ~100yo, which can't be right
+	1116.1.1 = {	#officially started in 1155
+		holder = javanese_siliwangi_05	#Jayagiri
+	}
+	1157.1.1 = {
+		holder = javanese_siliwangi_06	#Darmakusuma
+		liege = d_sunda
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiksa
+	}
+}
+
+c_banten = {
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 18 }
+
+	# temporary history - we used to have Salindera holders before in RoA but I need someone more familiar with thing to check that out
+
+	# History of Sunda uncertain, lots of contradictory info
+	723.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = k_sunda
+	}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
+	}
+	739.1.1 = {
+		holder = javanese_sanjaya_18	#Banga
+		liege = 0
+	}
+	766.1.1 = {
+		holder = javanese_sanjaya_19	#Hulukajang
+	}
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
+	}
+	795.1.1 = {
+		holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
+	}
+	819.1.1 = {
+		holder = javanese_gilingwesi_04	#Wuwus
+	}
+	854.1.1 = {	#reportedly should be 891 but that seems improbable
+		holder = javanese_manisri_13	#Darmaraksa
+	}
+	865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
+		holder = javanese_manisri_14	#Dewageng
+	}
+	913.1.1 = {
+		holder = javanese_manisri_15	#Kamuning Gading
+	}
+	916.1.1 = {
+		holder = javanese_manisri_16	#Jayagiri
+	}
+	942.1.1 = {
+		holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
+	}
+	954.1.1 = {
+		holder = javanese_manisri_17	#Limbur Kancana
+	}
+	964.1.1 = {
+		holder = javanese_manisri_19	#Munding Ganawirya
+	}
+	973.1.1 = {
+		holder = javanese_siliwangi_0	#Wulung Gadung
+	}
+	989.1.1 = {
+		holder = javanese_siliwangi_00	#Brajawisesa
+	}
+	1012.1.1 = {
+		holder = javanese_siliwangi_000	#Dewa Sanghyang
+	}
+	1019.1.1 = {
+		holder = javanese_siliwangi_01	#Sanghyang Ageung
+	}
+	1030.1.1 = {
+		holder = javanese_siliwangi_02	#Jayabhupati
+	}
+	1042.1.1 = {
+		holder = javanese_siliwangi_03	#Darmaraja
+	}
+	1064.1.1 = {
+		holder = javanese_siliwangi_04	#Langlangbhumi
+	}
+	#^ reported to have lived/reigned ~100yo, which can't be right
+	1116.1.1 = {	#officially started in 1155
+		holder = javanese_siliwangi_05	#Jayagiri
+	}
+	1157.1.1 = {
+		holder = javanese_siliwangi_06	#Darmakusuma
+		liege = d_sunda
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiksa
+	}
+}
+
+c_salakanagara = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
+
+	# History of Sunda uncertain, lots of contradictory info
+	723.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = k_sunda
+	}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
+	}
+	739.1.1 = {
+		holder = javanese_sanjaya_18	#Banga
+		liege = 0
+	}
+	766.1.1 = {
+		holder = javanese_sanjaya_19	#Hulukajang
+	}
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
+	}
+	795.1.1 = {
+		holder = javanese_gilingwesi_03	#Pucukbumi Darmeswara
+	}
+	819.1.1 = {
+		holder = javanese_gilingwesi_04	#Wuwus
+	}
+	854.1.1 = {	#reportedly should be 891 but that seems improbable
+		holder = javanese_manisri_13	#Darmaraksa
+	}
+	865.1.1 = {	#reportedly should be 895, but it'd make the timeline for DoB/DoD odd
+		holder = javanese_manisri_14	#Dewageng
+	}
+	913.1.1 = {
+		holder = javanese_manisri_15	#Kamuning Gading
+	}
+	916.1.1 = {
+		holder = javanese_manisri_16	#Jayagiri
+	}
+	942.1.1 = {
+		holder = javanese_gilingwesi_06	#Atmayadarma Hariwangsa
+	}
+	954.1.1 = {
+		holder = javanese_manisri_17	#Limbur Kancana
+	}
+	964.1.1 = {
+		holder = javanese_manisri_19	#Munding Ganawirya
+	}
+	973.1.1 = {
+		holder = javanese_siliwangi_0	#Wulung Gadung
+	}
+	989.1.1 = {
+		holder = javanese_siliwangi_00	#Brajawisesa
+	}
+	1012.1.1 = {
+		holder = javanese_siliwangi_000	#Dewa Sanghyang
+	}
+	1019.1.1 = {
+		holder = javanese_siliwangi_01	#Sanghyang Ageung
+	}
+	1030.1.1 = {
+		holder = javanese_siliwangi_02	#Jayabhupati
+	}
+	1042.1.1 = {
+		holder = javanese_siliwangi_03	#Darmaraja
+	}
+	1064.1.1 = {
+		holder = javanese_siliwangi_04	#Langlangbhumi
+	}
+	#^ reported to have lived/reigned ~100yo, which can't be right
+	1116.1.1 = {	#officially started in 1155
+		holder = javanese_siliwangi_05	#Jayagiri
+	}
+	1157.1.1 = {
+		holder = javanese_siliwangi_06	#Darmakusuma
+		liege = d_sunda
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiksa
+	}
+}
+
+c_parahyangan = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = sunda020
+		liege = d_sunda
+	}
+	930.1.1 = {
+		holder = sunda021
+	}
+	1060.1.1 = {
+		holder = sunda022
+	}
+	1170.1.1 = {
+		holder = sunda023
+		liege = k_sunda
+	}
+}
+
+
+d_galuh = {
+	# History of Galuh has a lots of uncertain and contradictory info
+	723.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = k_sunda
 	}
 	732.1.1 = {
 		holder = javanese_sanjaya_16	#Tamperan
@@ -508,7 +490,10 @@ d_galuh = {
 		holder = javanese_sanjaya_17	#Manarah
 		liege = 0
 	}
-	#Possibly Manisri in 784-800
+	# 783 - Manarah overthrown according to Pantun Sunda
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
+	}
 	800.1.1 = {
 		holder = javanese_manisri_01	#Tariwulan
 	}
@@ -548,249 +533,196 @@ d_galuh = {
 	}
 	1152.1.1 = {
 		holder = javanese_siliwangi_06	#Darmakusuma
-		liege = d_JAV_taruma
+	}
+	1157.1.1 = {
+		liege = k_sunda
 	}
 	1175.1.1 = {
 		holder = javanese_siliwangi_07	#Darmasiska
 	}
+	# add more history later
 }
-	c_JAV_galuh = {
-		#History of Galuh uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		740.1.1 = {
-			holder = javanese_sanjaya_17	#Manarah
-			liege = 0
-		}
-		#Possibly Manisri in 784-800
-		800.1.1 = {
-			holder = javanese_manisri_01	#Tariwulan
-		}
-		806.1.1 = {
-			holder = javanese_manisri_02	#Welengsa
-		}
-		813.1.1 = {
-			holder = javanese_manisri_03	#Linggabhumi
-		}
-		852.1.1 = {
-			holder = javanese_manisri_04	#Wisuddha
-		}
-		897.1.1 = {	#supposedly 920, but it would make Wisuddha ~100yo
-			holder = javanese_manisri_05	#Jayadrata
-		}
-		949.1.1 = {
-			holder = javanese_manisri_06	#Harimurtti
-		}
-		966.1.1 = {
-			holder = javanese_manisri_07	#Yuddhanagara
-		}
-		988.1.1 = {
-			holder = javanese_manisri_08	#Linggasakti
-		}
-		1012.1.1 = {
-			holder = javanese_manisri_09	#Darmastyadewa
-		}
-		#Unsure 1027-1065
-		1065.1.1 = {
-			holder = javanese_manisri_10	#Arya Tunggalningrat
-		}
-		1091.1.1 = {
-			holder = javanese_manisri_11	#Purnawijaya
-		}
-		1111.1.1 = {
-			holder = javanese_manisri_12	#Janawati
-		}
-		1152.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiska
-		}
+
+c_JAV_galuh = {
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 18 }
+	
+	# History of Galuh has a lots of uncertain and contradictory info
+	723.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = k_sunda
 	}
-	c_JAV_cimanuk = {
-		#History of Galuh uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		740.1.1 = {
-			holder = javanese_sanjaya_17	#Manarah
-			liege = 0
-		}
-		#Possibly Manisri in 784-800
-		800.1.1 = {
-			holder = javanese_manisri_01	#Tariwulan
-		}
-		806.1.1 = {
-			holder = javanese_manisri_02	#Welengsa
-		}
-		813.1.1 = {
-			holder = javanese_manisri_03	#Linggabhumi
-		}
-		852.1.1 = {
-			holder = javanese_manisri_04	#Wisuddha
-		}
-		897.1.1 = {	#supposedly 920, but it would make Wisuddha ~100yo
-			holder = javanese_manisri_05	#Jayadrata
-		}
-		949.1.1 = {
-			holder = javanese_manisri_06	#Harimurtti
-		}
-		966.1.1 = {
-			holder = javanese_manisri_07	#Yuddhanagara
-		}
-		988.1.1 = {
-			holder = javanese_manisri_08	#Linggasakti
-		}
-		1012.1.1 = {
-			holder = javanese_manisri_09	#Darmastyadewa
-		}
-		#Unsure 1027-1065
-		1065.1.1 = {
-			holder = javanese_manisri_10	#Arya Tunggalningrat
-		}
-		1091.1.1 = {
-			holder = javanese_manisri_11	#Purnawijaya
-		}
-		1111.1.1 = {
-			holder = javanese_manisri_12	#Janawati
-		}
-		1152.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiska
-		}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
 	}
-	c_panumwangan = {
-		#History of Galuh uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		740.1.1 = {
-			holder = javanese_sanjaya_17	#Manarah
-			liege = 0
-		}
-		#Possibly Manisri in 784-800
-		800.1.1 = {
-			holder = javanese_manisri_01	#Tariwulan
-		}
-		806.1.1 = {
-			holder = javanese_manisri_02	#Welengsa
-		}
-		813.1.1 = {
-			holder = javanese_manisri_03	#Linggabhumi
-		}
-		852.1.1 = {
-			holder = javanese_manisri_04	#Wisuddha
-		}
-		897.1.1 = {	#supposedly 920, but it would make Wisuddha ~100yo
-			holder = javanese_manisri_05	#Jayadrata
-		}
-		949.1.1 = {
-			holder = javanese_manisri_06	#Harimurtti
-		}
-		966.1.1 = {
-			holder = javanese_manisri_07	#Yuddhanagara
-		}
-		988.1.1 = {
-			holder = javanese_manisri_08	#Linggasakti
-		}
-		1012.1.1 = {
-			holder = javanese_manisri_09	#Darmastyadewa
-		}
-		#Unsure 1027-1065
-		1065.1.1 = {
-			holder = javanese_manisri_10	#Arya Tunggalningrat
-		}
-		1091.1.1 = {
-			holder = javanese_manisri_11	#Purnawijaya
-		}
-		1111.1.1 = {
-			holder = javanese_manisri_12	#Janawati
-		}
-		1152.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiska
-		}
+	740.1.1 = {
+		holder = javanese_sanjaya_17	#Manarah
+		liege = 0
 	}
-	c_nusalarang = {
-		#History of Galuh uncertain, lots of contradictory info
-		723.1.1 = {
-			government = mandala_government
-			holder = javanese_sanjaya_01	#Sanjaya
-			liege = d_JAV_taruma
-		}
-		732.1.1 = {
-			holder = javanese_sanjaya_16	#Tamperan
-		}
-		740.1.1 = {
-			holder = javanese_sanjaya_17	#Manarah
-			liege = 0
-		}
-		#Possibly Manisri in 784-800
-		800.1.1 = {
-			holder = javanese_manisri_01	#Tariwulan
-		}
-		806.1.1 = {
-			holder = javanese_manisri_02	#Welengsa
-		}
-		813.1.1 = {
-			holder = javanese_manisri_03	#Linggabhumi
-		}
-		852.1.1 = {
-			holder = javanese_manisri_04	#Wisuddha
-		}
-		897.1.1 = {	#supposedly 920, but it would make Wisuddha ~100yo
-			holder = javanese_manisri_05	#Jayadrata
-		}
-		949.1.1 = {
-			holder = javanese_manisri_06	#Harimurtti
-		}
-		966.1.1 = {
-			holder = javanese_manisri_07	#Yuddhanagara
-		}
-		988.1.1 = {
-			holder = javanese_manisri_08	#Linggasakti
-		}
-		1012.1.1 = {
-			holder = javanese_manisri_09	#Darmastyadewa
-		}
-		#Unsure 1027-1065
-		1065.1.1 = {
-			holder = javanese_manisri_10	#Arya Tunggalningrat
-		}
-		1091.1.1 = {
-			holder = javanese_manisri_11	#Purnawijaya
-		}
-		1111.1.1 = {
-			holder = javanese_manisri_12	#Janawati
-		}
-		1152.1.1 = {
-			holder = javanese_siliwangi_06	#Darmakusuma
-			liege = d_JAV_taruma
-		}
-		1175.1.1 = {
-			holder = javanese_siliwangi_07	#Darmasiska
-		}
+	# 783 - Manarah overthrown according to Pantun Sunda
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
 	}
+	800.1.1 = {
+		holder = javanese_manisri_01	#Tariwulan
+	}
+	806.1.1 = {
+		holder = javanese_manisri_02	#Welengsa
+	}
+	813.1.1 = {
+		holder = javanese_manisri_03	#Linggabhumi
+	}
+	852.1.1 = {
+		holder = javanese_manisri_04	#Wisuddha
+	}
+	897.1.1 = {	#supposedly 920, but it would make Wisuddha ~100yo
+		holder = javanese_manisri_05	#Jayadrata
+	}
+	949.1.1 = {
+		holder = javanese_manisri_06	#Harimurtti
+	}
+	966.1.1 = {
+		holder = javanese_manisri_07	#Yuddhanagara
+	}
+	988.1.1 = {
+		holder = javanese_manisri_08	#Linggasakti
+	}
+	1012.1.1 = {
+		holder = javanese_manisri_09	#Darmastyadewa
+	}
+	#Unsure 1027-1065
+	1065.1.1 = {
+		holder = javanese_manisri_10	#Arya Tunggalningrat
+	}
+	1091.1.1 = {
+		holder = javanese_manisri_11	#Purnawijaya
+	}
+	1111.1.1 = {
+		holder = javanese_manisri_12	#Janawati
+	}
+	1152.1.1 = {
+		holder = javanese_siliwangi_06	#Darmakusuma
+	}
+	1157.1.1 = {
+		liege = k_sunda
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiska
+	}
+	# add more history later
+}
+
+c_JAV_cimanuk = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
+
+	# History of Galuh has a lots of uncertain and contradictory info
+	723.1.1 = {
+		government = mandala_government
+		holder = javanese_sanjaya_01	#Sanjaya
+		liege = k_sunda
+	}
+	732.1.1 = {
+		holder = javanese_sanjaya_16	#Tamperan
+	}
+	740.1.1 = {
+		holder = javanese_sanjaya_17	#Manarah
+		liege = 0
+	}
+	# 783 - Manarah overthrown according to Pantun Sunda
+	783.1.1 = {
+		holder = javanese_gilingwesi_01	#Gilingwesi
+	}
+	800.1.1 = {
+		holder = javanese_manisri_01	#Tariwulan
+	}
+	806.1.1 = {
+		holder = javanese_manisri_02	#Welengsa
+	}
+	813.1.1 = {
+		holder = javanese_manisri_03	#Linggabhumi
+	}
+	852.1.1 = {
+		holder = javanese_manisri_04	#Wisuddha
+	}
+	897.1.1 = {	#supposedly 920, but it would make Wisuddha ~100yo
+		holder = javanese_manisri_05	#Jayadrata
+	}
+	949.1.1 = {
+		holder = javanese_manisri_06	#Harimurtti
+	}
+	966.1.1 = {
+		holder = javanese_manisri_07	#Yuddhanagara
+	}
+	988.1.1 = {
+		holder = javanese_manisri_08	#Linggasakti
+	}
+	1012.1.1 = {
+		holder = javanese_manisri_09	#Darmastyadewa
+	}
+	#Unsure 1027-1065
+	1065.1.1 = {
+		holder = javanese_manisri_10	#Arya Tunggalningrat
+	}
+	1091.1.1 = {
+		holder = javanese_manisri_11	#Purnawijaya
+	}
+	1111.1.1 = {
+		holder = javanese_manisri_12	#Janawati
+	}
+	1152.1.1 = {
+		holder = javanese_siliwangi_06	#Darmakusuma
+	}
+	1157.1.1 = {
+		liege = k_sunda
+	}
+	1175.1.1 = {
+		holder = javanese_siliwangi_07	#Darmasiska
+	}
+	# add more history later
+}
+
+c_nusalarang = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	860.1.1 = {
+		government = theocracy_government
+		liege = d_galuh
+		holder = sunda010
+	}
+	930.1.1 = {
+		holder = sunda011
+	}
+	1060.1.1 = {
+		holder = sunda012
+	}
+	1170.1.1 = {
+		holder = sunda013
+	}
+}
+
+c_panumwangan = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = sunda001
+		liege = d_galuh
+	}
+	930.1.1 = {
+		holder = sunda002
+	}
+	1060.1.1 = {
+		holder = sunda003
+	}
+	1170.1.1 = {
+		holder = sunda004
+	}
+}
