@@ -1,0 +1,21 @@
+controlled_by_target_or_tributaries = {
+	save_temporary_scope_as = target
+	trigger_if = {
+		limit = { $TITLE$.tier <= tier_county }
+		OR = {
+			$TITLE$.holder = scope:target
+			$TITLE$.holder.overlord = scope:target
+		}
+	}
+	trigger_else = {
+		$TITLE$ = {
+			any_de_jure_county = {
+				count = all
+				OR = {
+					holder = scope:target
+					holder.overlord = scope:target
+				}
+			}
+		}
+	}
+}

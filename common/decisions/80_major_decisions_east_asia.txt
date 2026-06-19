@@ -157,54 +157,26 @@ form_majapahit_empire_decision = {
 		}
 		custom_tooltip = {
 			text = form_majapahit_empire_decision_requirement_1_tt
-			title:k_palembang = {
-				this = { is_title_created = yes }
-				holder = {
-					OR = {
-						is_vassal_or_below_of = ROOT
-						is_tributary_of = ROOT
-						this = ROOT
-					}
-				}
+			controlled_by_target_or_tributaries = {
+				TITLE = title:k_palembang
 			}
 		}
 		custom_tooltip = {
 			text = form_majapahit_empire_decision_requirement_2_tt
-			title:k_yavakadvipa = {
-				this = { is_title_created = yes }
-				holder = {
-					OR = {
-						is_vassal_or_below_of = ROOT
-						is_tributary_of = ROOT
-						this = ROOT
-					}
-				}
+			controlled_by_target_or_tributaries = {
+				TITLE = title:k_yavakadvipa
 			}
 		}
 		custom_tooltip = {
 			text = form_majapahit_empire_decision_requirement_3_tt
-			title:k_sunda = {
-				this = { is_title_created = yes }
-				holder = {
-					OR = {
-						is_vassal_or_below_of = ROOT
-						is_tributary_of = ROOT
-						this = ROOT
-					}
-				}
+			controlled_by_target_or_tributaries = {
+				TITLE = title:k_sunda
 			}
 		}
 		custom_tooltip = {
 			text = form_majapahit_empire_decision_requirement_4_tt
-			title:k_bali_sea = {
-				this = { is_title_created = yes }
-				holder = {
-					OR = {
-						is_vassal_or_below_of = ROOT
-						is_tributary_of = ROOT
-						this = ROOT
-					}
-				}
+			controlled_by_target_or_tributaries = {
+				TITLE = title:k_bali_sea
 			}
 		}
 		has_title = title:k_yavakadvipa
