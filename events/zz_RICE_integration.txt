@@ -3843,11 +3843,10 @@ sicily.0016 = {
 		name = sicily.0016.a
 		scope:county_to_change = {
 			set_county_culture = culture:siqilli
-		}
-		add_culture_minority_effect = {
-			CULTURE = scope:old_culture
-			SIZE = large
-			COUNTY = scope:county_to_change
+			add_culture_minority_effect = {
+				CULTURE = scope:old_culture
+				SIZE = large
+			}
 		}
 	}
 }

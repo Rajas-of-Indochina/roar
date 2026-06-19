@@ -57,17 +57,14 @@ caucasianroa.002 = {
 		add_gold = 800
 		add_prestige = 500
 		capital_county = {
-			save_scope_as = county
 			change_development_level = 1
 			add_culture_minority_effect = {
 				CULTURE = culture:cherkesogai
 				SIZE = small
-				COUNTY = scope:county
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:armenian_apostolic
 				SIZE = small
-				COUNTY = scope:county
 			}
 		}
 		random_held_county = {
@@ -76,12 +73,10 @@ caucasianroa.002 = {
 			add_culture_minority_effect = {
 				CULTURE = culture:cherkesogai
 				SIZE = small
-				COUNTY = scope:county
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:armenian_apostolic
 				SIZE = small
-				COUNTY = scope:county
 			}
 		}
 	}
@@ -207,13 +202,12 @@ caucasianroa.004 = {
 	}
 	option = {
 		name = caucasianroa.004.a
-		random_held_county = {
-			save_scope_as = county1
+		random_held_title = {
+			title_tier = county
 			change_development_level = 1
 			add_faith_minority_effect = {
 				FAITH = faith:ashari
 				SIZE = small
-				COUNTY = scope:county1
 			}
 		}
 		add_piety = -100

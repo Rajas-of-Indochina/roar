@@ -499,7 +499,7 @@ culture_migration_attraction = {
         }
     }
     else_if = {
-        limit = { holder = { has_realm_law_flag = decreased_culture_migrations } }
+        limit = { holder = { has_realm_law_flag = reduced_culture_migrations } }
         divide = {
             desc = harsh_policy_tt
             value = 1.5
@@ -542,7 +542,7 @@ faith_migration_attraction = {
         }
     }
     else_if = {
-        limit = { holder = { has_realm_law_flag = decreased_faith_migrations } }
+        limit = { holder = { has_realm_law_flag = reduced_faith_migrations } }
         divide = {
             desc = harsh_policy_tt
             value = 1.5

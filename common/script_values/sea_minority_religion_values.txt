@@ -8,48 +8,6 @@ faith_creation_cost_mult = {
 		desc = "faith_creation_cost_fervor_impact"
 		format = "[Faith.GetName]"
 	}
-	if = {
-		limit = {
-			OR ={
-				AND = {
-					scope:character = {
-						any_character_struggle = {
-							involvement = involved
-							has_struggle_phase_parameter = roman_faith_creation_cost_cheaper
-						}
-					}
-					armenian_struggle_would_be_roman_faith_trigger = yes
-				}
-			}
-			OR ={
-				AND = {
-					scope:character = {
-						any_character_struggle = {
-							involvement = involved
-							has_struggle_phase_parameter = persian_faith_creation_cost_cheaper
-						}
-					}
-					armenian_struggle_would_be_persian_faith_trigger = yes
-				}
-			}
-			OR ={
-				AND = {
-					scope:character = {
-						any_character_struggle = {
-							involvement = involved
-							has_struggle_phase_parameter = armenian_faith_creation_cost_cheaper
-						}
-					}
-					armenian_struggle_would_be_local_faith_trigger = yes
-				}
-			}
-		}
-		subtract = {
-			value = 0.25
-			desc = "faith_creation_cost_struggle_phase_impact"
-			format = "BREAKDOWN_FORMAT_PIETY_PERCENTAGE_POSITIVE_IS_BAD"
-		}
-	}
 	min = {
 		value = -0.75
 	}

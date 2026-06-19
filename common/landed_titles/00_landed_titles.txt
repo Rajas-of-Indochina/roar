@@ -1195,6 +1195,29 @@ e_carthage = {
 	}
 }
 
+e_indo_greek_kingdom = {
+
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+	# Yavanarajya, modeled after old Indo-Hellenic kingdom
+	color = { 108 27 107 }
+
+	definite_form = yes
+
+	capital = c_uch
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture = {
+					has_cultural_pillar = language_greek
+				}
+			}
+			add = @correct_culture_primary_score
+		}
+	}
+}
+
 # TITULAR KINGDOMS
 
 k_pechenegs = {
@@ -77454,7 +77477,7 @@ e_srivijaya = {
 			# d_pasai in old RoA
 			color = { 37 142 63 }
 
-			capital = c_pasai
+			capital = c_SUM_pasai
 		}
 
 		d_SUM_aceh = {
@@ -99917,7 +99940,7 @@ h_china = {
 			d_shimen = { # d_mangbu of k_shu_china in old RoA
 				color = { 50 207 176 }
 
-				capital = c_jingzhou_1
+				capital = c_jingzhou_2
 
 				c_jingzhou_2 = { # c_mangbu in old RoA
 					color = { 67 243 115 }

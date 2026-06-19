@@ -671,12 +671,12 @@ sea_historical_artifacts = {
 		if = {
 			limit = {
 				has_dlc_feature = royal_court
-				exists = title:e_kambujadesa.holder
+				exists = title:e_kambuja.holder
 			}
 
 			if = { # Emerald Buddha
 				limit = { current_date >= 1432.1.1 }
-				title:e_kambujadesa.holder = {
+				title:e_kambuja.holder = {
 					create_artifact_emerald_buddha = { OWNER = this }
 				}
 			}

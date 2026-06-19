@@ -2,7 +2,7 @@
 
 ## Chinese Buddhism ##
 taizhou = {# 天台山 - Tiantai Mountain
-	county = c_taizhou_china
+	county = c_taizhou
 
 	character_modifier = {
 		name = holy_site_taizhou_effect_name
@@ -11,8 +11,8 @@ taizhou = {# 天台山 - Tiantai Mountain
 	}
 }
 fanjingshan = {# Fanjinshan
-	county = c_pingyi_china
-	barony = b_feizhou_sinan_china
+	county = c_yizhou_3
+	# barony = b_feizhou_sinan
 
 	character_modifier = {
 		name = holy_site_fanjingshan_effect_name
@@ -21,7 +21,7 @@ fanjingshan = {# Fanjinshan
 	}
 }
 mount_wutai = {# Mount Wutai
-	county = c_luyang_china
+	county = c_luyang
 
 	character_modifier = {
 		name = holy_site_mount_wutai_effect_name
@@ -30,8 +30,8 @@ mount_wutai = {# Mount Wutai
 	}
 }
 mount_emei = {# Mount Emei
-	county = c_jiazhou_xichuan_china
-	barony = b_emeishan_china
+	county = c_jiazhou
+	# barony = b_emeishan
 
 	character_modifier = {
 		name = holy_site_mount_emei_effect_name
@@ -40,8 +40,8 @@ mount_emei = {# Mount Emei
 	}
 }
 mount_jiuhua = {# Mount Jiuhua
-	county = c_xuanzhou_china
-	barony = b_jingxian_youzhou_china
+	county = c_xuanzhou
+	# barony = b_jingxian_youzhou
 
 	character_modifier = {
 		name = holy_site_mount_jiuhua_effect_name
@@ -50,8 +50,8 @@ mount_jiuhua = {# Mount Jiuhua
 	}
 }
 mount_putuo = {# Mount Putuo
-	county = c_mingzhou_china
-	barony = b_wengshan_china
+	county = c_mingzhou_1
+	barony = b_wengshan
 
 	character_modifier = {
 		name = holy_site_mount_putuo_effect_name
@@ -62,24 +62,24 @@ mount_putuo = {# Mount Putuo
 
 ## Other Chinese Holy Sites
 daizhou = { #五台山
-	county = c_daizhou_china
+	county = c_daizhou
 
 	character_modifier = {
 		name = holy_site_daizhou_effect_name
         mountains_attrition_mult = -0.2
 	}
 }
-songshan = { #少林
-	county = c_songshan_china
+# songshan = { #少林
+# 	county = c_songshan
 
-	character_modifier = {
-		name = holy_site_songshan_effect_name
-        learning = 2
-		prowess_per_piety_level = 2
-	}
-}
+# 	character_modifier = {
+# 		name = holy_site_songshan_effect_name
+#         learning = 2
+# 		prowess_per_piety_level = 2
+# 	}
+# }
 quanzhou = { #莆田
-	county = c_quanzhou_china
+	county = c_quanzhou
 
 	character_modifier = {
 		name = holy_site_quanzhou_effect_name
@@ -110,7 +110,7 @@ wumeng = {
 }
 
 xizhou_qian = {
-	county = c_zigui_china
+	county = c_guizhou
 
 	character_modifier = {
 		name = holy_site_xizhou_qian_effect_name
@@ -119,7 +119,7 @@ xizhou_qian = {
 	}
 }
 juzhou = {
-	county = c_juzhou_china
+	county = c_juzhou_2
 
 	character_modifier = {
 		name = holy_site_juzhou_effect_name
@@ -128,7 +128,7 @@ juzhou = {
 	}
 }
 zigui = {
-	county = c_xizhou_qian_china
+	county = c_lingxi
 
 	character_modifier = {
 		name = holy_site_zigui_effect_name
@@ -139,7 +139,7 @@ zigui = {
 
 ##Tao##
 changan = {
-	county = c_changan_china
+	county = c_jingzhou
 
 	character_modifier = {
 		name = holy_site_changan_effect_name
@@ -149,7 +149,7 @@ changan = {
 }
 
 xinzhou_wu = { #龙虎山/象山
-	county = c_xinzhou_wu_china
+	county = c_xinhzou
 
 	character_modifier = {
 		name = holy_site_xinzhou_wu_effect_name
@@ -160,7 +160,7 @@ xinzhou_wu = { #龙虎山/象山
 }
 
 shezhou = {
-	county = c_shezhou_china
+	county = c_shezhou
 
 	character_modifier = {
 		name = holy_site_shezhou_effect_name
@@ -170,7 +170,7 @@ shezhou = {
 }
 
 runzhou = {
-	county = c_runzhou_china
+	county = c_runzhou
 
 	character_modifier = {
 		name = holy_site_runzhou_effect_name
@@ -180,7 +180,7 @@ runzhou = {
 }
 
 meizhou_xichuan = {
-	county = c_meizhou_xichuan_china
+	county = c_meizhou
 
 	character_modifier = {
 		name = holy_site_meizhou_xichuan_effect_name
@@ -190,7 +190,7 @@ meizhou_xichuan = {
 }
 
 bozhou_song = {
-	county = c_bozhou_song_china
+	county = c_bozhou
 
 	character_modifier = {
 		name = holy_site_bozhou_song_effect_name
@@ -199,18 +199,18 @@ bozhou_song = {
     }
 }
 
-mengzhou = {
-	county = c_mengzhou_china
+# mengzhou = {
+# 	county = c_mengzhou
 
-	character_modifier = {
-		name = holy_site_mengzhou_effect_name
-		martial = 1
-		supply_duration = 0.25
-	}
-}
+# 	character_modifier = {
+# 		name = holy_site_mengzhou_effect_name
+# 		martial = 1
+# 		supply_duration = 0.25
+# 	}
+# }
 
 yingzhou_jin = {
-	county = c_yingzhou_jin_china
+	county = c_yingzhou_5
 
 	character_modifier = {
 		name = holy_site_yingzhou_jin_effect_name
@@ -220,7 +220,7 @@ yingzhou_jin = {
 }
 
 hengshan = {
-	county = c_hengshan_china
+	county = c_hengzhou
 
 	character_modifier = {
 		name = holy_site_hengshan_effect_name
@@ -242,7 +242,7 @@ suzhou = {
 
 baiyin = {
 	county = c_huizhou_china
-	barony = b_gaolan_xia
+	# barony = b_gaolan_xia
 
 	character_modifier = {
 		name = holy_site_baiyin_effect_name
@@ -295,7 +295,7 @@ kara_khoja = {
 }
 
 junzhou = {  #武当
-	county = c_junzhou_china
+	county = c_junzhou
 
 	character_modifier = {
 		name = holy_site_junzhou_effect_name
@@ -305,7 +305,7 @@ junzhou = {  #武当
 }
 
 kongmeng = {
-	county = c_kongmeng_china
+	county = c_yanzhou
 
 	character_modifier = {
 		name = holy_site_kongmeng_effect_name
@@ -315,7 +315,7 @@ kongmeng = {
 }
 
 taishan = {
-	county = c_taishan_china
+	county = c_yanzhou
 
 	character_modifier = {
 		name = holy_site_taishan_effect_name
@@ -326,7 +326,7 @@ taishan = {
 
 
 shuzhou_huai = { #桐城
-	county = c_shuzhou_huai_china
+	county = c_shuzhou
 
 	character_modifier = {
 		name = holy_site_shuzhou_huai_effect_name
@@ -336,7 +336,7 @@ shuzhou_huai = { #桐城
 }
 
 fuzhou_jiangxi = { #临川/金溪
-	county = c_fuzhou_jiangxi_china
+	county = c_fuzhou_2
 
 	character_modifier = {
 		name = holy_site_fuzhou_jiangxi_effect_name
@@ -346,7 +346,7 @@ fuzhou_jiangxi = { #临川/金溪
 }
 
 yuezhou_chu	= { #岳阳
-	county = c_yuezhou_chu_china
+	county = c_yuezhou_1
 
 	character_modifier = {
 		name = holy_site_yuezhou_chu_effect_name
@@ -355,7 +355,7 @@ yuezhou_chu	= { #岳阳
 }
 
 bianzhou = {
-	county = c_bianzhou_china
+	county = c_bianzhou
 
 	character_modifier = {
 		name = holy_site_bianzhou_effect_name
@@ -365,7 +365,7 @@ bianzhou = {
 }
 
 jingzhou_chu = { #荆门
-	county = c_jingzhou_chu_china
+	county = c_jiangling
 
 	character_modifier = {
 		name = holy_site_jingzhou_chu_effect_name
@@ -375,7 +375,7 @@ jingzhou_chu = { #荆门
 }
 
 fengxiang = { #横渠
-	county = c_fengxiang_china
+	county = c_fengxiang
 
 	character_modifier = {
 		name = holy_site_fengxiang_effect_name
@@ -385,7 +385,7 @@ fengxiang = { #横渠
 }
 
 luoyang = {
-	county = c_luoyang_china
+	county = c_henan
 
 	character_modifier = {
 		name = holy_site_luoyang_effect_name
@@ -395,7 +395,8 @@ luoyang = {
 }
 
 yichuan = { #伊川
-	county = c_yichuan_china
+	county = c_danzhou
+	barony = b_yichuan
 
 	character_modifier = {
 		name = holy_site_yichuan_effect_name
@@ -405,7 +406,7 @@ yichuan = { #伊川
 }
 
 jiangzhou_wu = { #南康
-	county = c_jiangzhou_wu_china
+	county = c_yunyang
 
 	character_modifier = {
 		name = holy_site_jiangzhou_wu_effect_name
@@ -414,8 +415,8 @@ jiangzhou_wu = { #南康
 }
 
 
-daizhou = { #五台山
-	county = c_daizhou_china
+daizhou = { #五台山	
+	county = c_daizhou
 
 	character_modifier = {
 		name = holy_site_daizhou_effect_name
@@ -423,7 +424,7 @@ daizhou = { #五台山
 	}
 }
 songshan = { #少林
-	county = c_songshan_china
+	county = c_songshan
 
 	character_modifier = {
 		name = holy_site_songshan_effect_name
@@ -432,7 +433,7 @@ songshan = { #少林
 	}
 }
 quanzhou = { #莆田
-	county = c_quanzhou_china
+	county = c_quanzhou
 
 	character_modifier = {
 		name = holy_site_quanzhou_effect_name
@@ -441,7 +442,7 @@ quanzhou = { #莆田
 	}
 }
 taizhou = { #天台山
-	county = c_taizhou_china
+	county = c_taizhou
 
 	character_modifier = {
 		name = holy_site_taizhou_effect_name
@@ -464,8 +465,8 @@ shazhou = { #敦煌
 #kuzhu added
 
 zouxian= { #邹城
-	county = c_kongmeng_china
-	barony = b_zouxian_china
+	county = c_yanzhou
+	# barony = b_zouxian
 
 	character_modifier = {
 		name = holy_site_zouxian_effect_name
@@ -505,15 +506,15 @@ dulizhen = {
 
 ### Taoism
 longhu = {
-	county = c_fuzhou_qin_china
+	county = c_fuzhou_5
 
 	character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
 wudang_shan = {
-	county = c_junzhou_china
-	barony = b_wudangshan_china
+	county = c_junzhou
+	# barony = b_wudangshan
 
 	character_modifier = {
 		name = holy_site_wudang_shan_effect_name
@@ -521,22 +522,22 @@ wudang_shan = {
 	}
 }
 maoshan = {
-	county = c_runzhou_china
-	barony = b_maoshan_china
+	county = c_runzhou
+	# barony = b_maoshan
 
 	character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
 rencheng = {
-	county = c_yanzhou_china
+	county = c_yanzhou
 
 	character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
 enshi = {
-	county = c_enshi_china
+	county = c_shizhou_1
 
 	character_modifier = {
 		name = holy_site_enshi_effect_name
@@ -544,7 +545,7 @@ enshi = {
 	}
 }
 yuzhou = {
-	county = c_yuzhou_ba_china
+	county = c_yuzhou_2
 
 	character_modifier = {
 		name = holy_site_yuzhou_effect_name
@@ -554,7 +555,7 @@ yuzhou = {
 
 ## Wuism
 changsha = {
-	county = c_changsha_china
+	county = c_tanzhou
 
 	character_modifier = {
 		name = holy_site_changsha_effect_name
@@ -563,7 +564,7 @@ changsha = {
 }
 
 guangzhou = {
-	county = c_nanhai_china
+	county = c_guangzhou_1
 
 	character_modifier = {
 		name = holy_site_guangzhou_effect_name
@@ -572,7 +573,7 @@ guangzhou = {
 }
 
 chenzhou = {
-	county = c_chenxi_china
+	county = c_luxi
 
 	character_modifier = {
 		name = holy_site_chenxi_effect_name
@@ -581,7 +582,7 @@ chenzhou = {
 }
 
 guilin = {
-	county = c_guilin_china
+	county = c_guizhou
 
 	character_modifier = {
 		name = holy_site_guilin_effect_name
@@ -590,7 +591,7 @@ guilin = {
 }
 
 fengdu = {
-	county = c_zhongzhou_ba_china
+	county = c_zhongzhou
 
 	character_modifier = {
 		name = holy_site_fengdu_effect_name
@@ -599,7 +600,7 @@ fengdu = {
 }
 
 kuaiji = {
-	county = c_yuezhou_yue_china
+	county = c_yuezhou
 
 	character_modifier = {
 		name = holy_site_kuaiji_effect_name
@@ -610,7 +611,7 @@ kuaiji = {
 ### Taoism not in AUH ###
 zhuangzi = {
 	# Zhuangzi Temple built during Song Dynasty
-	county = c_songzhou_song_china
+	county = c_songzhou
 
 	character_modifier = {
 		monthly_piety_gain_mult = 0.1
@@ -619,8 +620,8 @@ zhuangzi = {
 
 louguantai = {
 	# Place where tradition says that Laozi composed the "Tao Te Ching"
-	county = c_changan_china
-	barony = b_chuxian_china
+	county = c_jingzhao
+	# barony = b_chuxian
 
 	character_modifier = {
 		name = holy_site_louguantai_effect_name
@@ -628,14 +629,14 @@ louguantai = {
 	}
 }
 
-wangwu_shan = {
-	# Celestial Grotto of the Small Pristine Void - one of the Ten Grotto-heavens of Taoism
-	county = c_mengzhou_china
-	barony = b_wangwu_china
+# wangwu_shan = {
+# 	# Celestial Grotto of the Small Pristine Void - one of the Ten Grotto-heavens of Taoism
+# 	county = c_mengzhou
+# 	barony = b_wangwu
 
-	character_modifier = {
-		name = holy_site_wangwu_shan_effect_name
-		monthly_piety_gain_mult = 0.2
-	}
-}
+# 	character_modifier = {
+# 		name = holy_site_wangwu_shan_effect_name
+# 		monthly_piety_gain_mult = 0.2
+# 	}
+# }
 ### ### ### ###

@@ -8,7 +8,7 @@ heritage_mon_khmer = {
 	}
 	is_shown = {
 		heritage_is_shown_trigger = {
-			HERITAGE = heritage_mon
+			HERITAGE = heritage_mon_khmer
 		}
 	}
 	audio_parameter = indian
@@ -166,6 +166,20 @@ heritage_micronesian = {
 	is_shown = {
 		heritage_is_shown_trigger = {
 			HERITAGE = heritage_micronesian
+		}
+	}
+	audio_parameter = sea
+}
+heritage_polynesian = { # Borrowed from RICE
+	type = heritage
+
+	parameters = {
+		heritage_group_austronesian = yes
+		heritage_family_southeast_asian = yes
+	}
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_polynesian
 		}
 	}
 	audio_parameter = sea

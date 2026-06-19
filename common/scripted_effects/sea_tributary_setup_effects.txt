@@ -1173,7 +1173,7 @@ ROA_936_tributary_setup_effect = {
 	# Liao
 	title:e_great_liao.holder = {
 		save_scope_as = suzerain
-		title:k_jin_china.holder = {
+		title:k_hedong.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:d_kherlen.holder = {
@@ -1197,12 +1197,12 @@ ROA_936_tributary_setup_effect = {
 	#title:e_celestia_china.holder
 	title:h_china.holder = {
 		save_scope_as = suzerain
-		title:d_liangzhou.holder = {
+		title:d_hexi.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:d_dingnan_china.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
+		# title:d_dingnan_china.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# }
 	}
 
 	# Sri Gotapura

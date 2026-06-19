@@ -514,7 +514,7 @@ set_minorities_game_start = {
 				}
 			}
 		}
-		title:c_siak = {
+		title:c_SUM_siak = {
 			if = {
 				limit = {
 					game_start_date >= 1030.1.1
@@ -762,60 +762,71 @@ set_minorities_game_start = {
 				#game_start_date >= 800.1.1
 				game_start_date <= 900.1.1
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_panjgur
+			title:c_panjgur = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_kiz
+			title:c_kiz = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_turan
+			title:c_turan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
+			title:c_bhakkar = {
 			add_culture_minority_effect = {
 				CULTURE = culture:romani
 				SIZE = small
-				COUNTY = title:c_bhakkar
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_ranikot
+			title:c_ranikot = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_siwistan
+			title:c_siwistan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_aror
+			title:c_aror = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_vijnot
+			title:c_vijnot = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_rajanpur
+			title:c_rajanpur = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_uch
+			title:c_uch = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_multan
+			title:c_multan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
 		}
 		else_if = {
@@ -823,55 +834,65 @@ set_minorities_game_start = {
 				game_start_date >= 900.1.1
 				game_start_date <= 1000.1.1
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_bailaqan
+			title:c_bailaqan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_garrus
+			title:c_garrus = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_maragha
+			title:c_maragha = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_dinawar
+			title:c_dinawar = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_hamadan
+			title:c_hamadan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_nihawand
+			title:c_nihawand = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_qom
+			title:c_qom = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_ardestan
+			title:c_ardestan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_isfahan
+			title:c_isfahan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_luristan
+			title:c_luristan = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
 		}
 		else_if = {
@@ -879,135 +900,160 @@ set_minorities_game_start = {
 				game_start_date >= 1000.1.1
 				game_start_date <= 1100.1.1
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_trebizond
+			title:c_trebizond = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_chaldia
+			title:c_chaldia = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_cerasus
+			title:c_cerasus = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_polemonium
+			title:c_polemonium = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_colonea
+			title:c_colonea = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_satala
+			title:c_satala = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_tephrice
+			title:c_tephrice = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_mesopotamia
+			title:c_mesopotamia = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_hashtyank
+			title:c_hashtyank = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_shua_speri
+			title:c_shua_speri = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_derzene
+			title:c_derzene = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_theodosiopolis
+			title:c_theodosiopolis = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_ashtishat
+			title:c_ashtishat = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_mardali
+			title:c_mardali = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_varaznunik
+				title:c_varaznunik = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
 		}
 		else_if = {
 			limit = {
 				game_start_date >= 1100.1.1
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_byzantion
+			title:c_byzantion = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_bithynia
+			title:c_bithynia = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_tarsos
+			title:c_tarsos = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_phrygia
+			title:c_phrygia = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_pacatiana
+			title:c_pacatiana = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_mysia
+			title:c_mysia = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_prusa
+			title:c_prusa = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_nikaea
+			title:c_nikaea = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_honorias
+			title:c_honorias = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
-			add_culture_minority_effect = {
-				CULTURE = culture:romani
-				SIZE = small
-				COUNTY = title:c_hadrianopolis
+			title:c_hadrianopolis = {
+				add_culture_minority_effect = {
+					CULTURE = culture:romani
+					SIZE = small
+				}
 			}
 		}
 	}
@@ -3861,12 +3907,12 @@ setup_caucasus_south_minorities = {
 				promote_faith_minority_effect = { FAITH = faith:ashari }
 			}
 		}
-		title:c_aragatson = {
-			if = {
-				limit = { game_start_date >= 1064.1.1 }
-				promote_faith_minority_effect = { FAITH = faith:ashari }
-			}
-		}
+		# title:c_aragatson = {
+		# 	if = {
+		# 		limit = { game_start_date >= 1064.1.1 }
+		# 		promote_faith_minority_effect = { FAITH = faith:ashari }
+		# 	}
+		# }
 		title:c_shirak = {
 			if = {
 				limit = { game_start_date >= 1064.1.1 }
@@ -4541,15 +4587,17 @@ setup_caucasus_northeast_minorities = {
 			}
 		}
 		title:c_shavaran = {
+			title:c_shavaran = {
 			add_culture_minority_effect = {
 				CULTURE = culture:shahdagh
 				SIZE = small
-				COUNTY = title:c_shavaran
+				}
 			}
+			title:c_shavaran = {
 			add_faith_minority_effect = {
 				FAITH = faith:armenian_apostolic
 				SIZE = small
-				COUNTY = title:c_shavaran
+				}
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
@@ -5086,7 +5134,6 @@ setup_RICE_minorities = {
 					PREV = {
 						add_faith_minority_effect = {
 							FAITH = scope:faith
-							COUNTY = this
 							SIZE = small
 						}
 					}
@@ -5097,7 +5144,6 @@ setup_RICE_minorities = {
 					PREV = {
 						add_culture_minority_effect = {
 							CULTURE = scope:culture
-							COUNTY = this
 							SIZE = small
 						}
 					}
@@ -5107,7 +5153,6 @@ setup_RICE_minorities = {
 				limit = { NOT = { faith = holder.faith } }
 				add_faith_minority_effect = {
 					FAITH = holder.faith
-					COUNTY = this
 					SIZE = small
 				}
 			}
@@ -5115,7 +5160,6 @@ setup_RICE_minorities = {
 				limit = { NOT = { culture = holder.culture } }
 				add_culture_minority_effect = {
 					CULTURE = holder.culture
-					COUNTY = this
 					SIZE = small
 				}
 			}
@@ -5123,14 +5167,14 @@ setup_RICE_minorities = {
 	}
 }
 
-initial_spawn_minority_courtiers = {
-	effect = {
-		every_ruler = {
-			limit = { is_landed = yes highest_held_title_tier >= tier_county }
-			trigger_event = { on_action = spawn_minority_characters }
-		}
-	}
-}
+# initial_spawn_minority_courtiers = {
+# 	effect = {
+# 		every_ruler = {
+# 			limit = { is_landed = yes highest_held_title_tier >= tier_county }
+# 			trigger_event = { on_action = spawn_minority_characters }
+# 		}
+# 	}
+# }
 
 
 ### Removed

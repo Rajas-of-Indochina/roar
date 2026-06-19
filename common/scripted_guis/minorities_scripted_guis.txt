@@ -151,3 +151,12 @@ minority_faiths_map_mode = {
 	}
 	is_valid = { NOT = { exists = global_var:custom_map_mode_changing } }
 }
+
+reset_custom_map_mode_effect = {
+	effect = {
+		if = {
+			limit = { exists = global_var:custom_map_mode }
+			remove_global_variable = custom_map_mode
+		}
+	}
+}
