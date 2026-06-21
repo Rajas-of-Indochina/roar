@@ -41,7 +41,7 @@ sea_stateless_title_handler = {
 	effect = {
 		# No duchies or kingdoms! You're a stateless society, you reject that kind of authority, dingus!
 		every_held_title = {
-			limit = { tier >= tier_duchy }
+			limit = { tier > tier_duchy }
 			ROOT = { destroy_title = PREV }
 		}
 		# Also no land grabbing! If you want to expand your borders you gotta reform into a state society

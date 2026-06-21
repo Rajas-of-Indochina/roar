@@ -1,0 +1,41 @@
+﻿
+on_title_gain = {
+	events = {
+		delay = { days = 1 }
+		# Get regnal name
+		sea_title_event.0001
+	}
+}
+
+# A title is transferred to a new character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Might be dead
+on_title_gain = {
+	events = {
+		sea_title_event.2000 # Create a new vassal when an anarchist gets a new title
+		sea_title_event.2002 # Auto-apply Stateless Elective
+		# sea_title_event.5000 # Choose a new dynastic name for China
+	}
+}
+
+# A title change makes the character rank up in the landed tiers (eg Duke -> King)
+# root = character ranking up
+# scope:title = old primary title
+on_rank_up = {
+	events = {
+		delay = { days = 1 }
+		sea_title_event.3000
+	}
+}
+
+# A title is transferred to a new character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Might be dead
+# on_title_gain = {
+# 	on_actions = {
+# 		usurp_nanzhao_action
+# 		establish_dali_action
+# 	}
+# }

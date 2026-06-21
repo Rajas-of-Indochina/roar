@@ -1161,15 +1161,16 @@ sea_title_event.3000 = {
 	hidden = yes
 
 	trigger = {
-		scope:title = { has_title_law = anarchist_elective_succession_law }
-		scope:title.tier = tier_duchy
+		# scope:title = { has_title_law = anarchist_elective_succession_law }
+		# scope:title.tier = tier_duchy
+		government_has_flag = government_is_stateless
 	}
 
 	immediate = {
 		if = {
 			limit = {
-				exists = scope:title.previous_holder
-				dynasty = scope:title.previous_holder.dynasty
+				exists = primary_title.previous_holder
+				dynasty = primary_title.previous_holder.dynasty
 			}
 			# Raise authority
 			if = {
