@@ -275,7 +275,7 @@
 ## d_hoewon ###################################
 ### c_cheoli
 17136 = { # b_poju
-	culture = jurchen
+	culture = mohe
 	religion = shamanism
 
 	holding = tribal_holding
@@ -283,6 +283,9 @@
 	# History
 	900.1.1 = {
 		religion = vinaya
+	}
+	1000.1.1 = {
+		culture = jurchen
 	}
 }
 17038 = { # b_deongnijin
@@ -300,10 +303,15 @@
 
 ### c_hoewon_haeju
 17076 = { # b_haeju
-	culture = jurchen
+	culture = mohe
 	religion = shamanism
 
 	holding = tribal_holding
+
+	# History
+	1000.1.1 = {
+		culture = jurchen
+	}
 }
 17052 = { # b_hoeju
 	holding = none

@@ -690,7 +690,7 @@ sea_historical_artifacts = {
 
 			if = { # Heirloom Seal of the Realm
 				limit = { current_date <= 907.1.1 }
-				# title:e_celestia_china.holder = {
+				# title:e_celestia_china.holder
 				title:h_china.holder = {
 					create_artifact_heirloom_seal = { OWNER = this }
 				}
@@ -705,7 +705,7 @@ sea_historical_artifacts = {
 
 			if = { # Wujing Zongyao / 武經總要
 				limit = { current_date > 1044.1.1 }
-				# title:e_celestia_china.holder = {
+				# title:e_celestia_china.holder
 				title:h_china.holder = {
 					create_artifact_wujing_zongyao_effect = { OWNER = this }
 				}
