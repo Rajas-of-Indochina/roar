@@ -45,7 +45,6 @@ c_SUM_perlak = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_perlak_01_fic	#fictional
-		liege = 0
 	}
 	#
 	1060.1.1 = {
@@ -151,7 +150,6 @@ c_SUM_aru = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_perlak_01_fic	#fictional
-		liege = 0
 	}
 	#
 	1060.1.1 = {
@@ -215,7 +213,6 @@ c_toba = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_barus_01_fic	#fictional
-		liege = 0
 	}
 	#
 	1060.1.1 = {
@@ -251,7 +248,6 @@ c_SUM_barus = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_barus_01_fic	#fictional
-		liege = 0
 	}
 	#
 	1060.1.1 = {
@@ -267,7 +263,6 @@ c_pakpak = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_barus_01_fic	#fictional
-		liege = 0
 	}
 	#
 	1060.1.1 = {
@@ -281,48 +276,61 @@ c_pakpak = {
 
 
 d_SUM_gayo = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 11 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
 }
 
-c_gayo = {
+c_SUM_linge = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
 	860.1.1 = {
-		government = mandala_government
-		holder = malay_barus_01_fic	#fictional
-		liege = 0
+		government = wanua_government
+		holder = sea_gayo_linge_01_fic	#fictional
+	}
+	#
+	930.1.1 = {
+		holder = sea_gayo_linge_02_fic	#fictional
 	}
 	#
 	1060.1.1 = {
-		holder = malay_barus_10_fic	#fictional
+		holder = sea_gayo_linge_03_fic	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = malay_barus_20_fic	#fictional
+		holder = sea_gayo_linge_04_fic	#fictional
 	}
 }
 
-c_pasikaram = {
+c_SUM_pasikaram = {
 	860.1.1 = {
-		government = mandala_government
-		holder = malay_barus_01_fic	#fictional
-		liege = 0
+		government = wanua_government
+		holder = sea_gayo_pasikaram_01_fic	#fictional
+	}
+	#
+	930.1.1 = {
+		holder = sea_gayo_pasikaram_02_fic	#fictional
 	}
 	#
 	1060.1.1 = {
-		holder = malay_barus_10_fic	#fictional
+		holder = sea_gayo_pasikaram_03_fic	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = malay_barus_20_fic	#fictional
+		holder = sea_gayo_pasikaram_04_fic	#fictional
 	}
 }
 
 c_SUM_singkil = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 8 }
+
 	860.1.1 = {
-		government = mandala_government
+		government = wanua_government
 		holder = malay_barus_01_fic	#fictional
-		liege = 0
 	}
 	#
 	1060.1.1 = {
