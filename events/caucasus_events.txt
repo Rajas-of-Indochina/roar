@@ -1769,7 +1769,7 @@ caucasianroa.029 = {
 		}
 		scope:sea_baghuashi_1 = {
 			add_opinion = {
-				target = scope:ROOT
+				target = ROOT
 				modifier = revoked_title
 			}
 		}
@@ -1788,7 +1788,7 @@ caucasianroa.029 = {
 		}
 		scope:sea_baghuashi_1 = {
 			add_opinion = {
-				target = scope:ROOT
+				target = ROOT
 				modifier = grateful_opinion
 				opinion = 50
 			}
@@ -1823,25 +1823,25 @@ caucasianroa.030 = {
 		hidden_effect = {
 			set_global_variable = caucasus_baghuashi_in_kidekari_global_variable
 			character:sea_baghuashi_1 = {
-				set_employer = scope:ROOT
+				set_employer = ROOT
 			}
 		}
-		scope:sea_baghuashi_1 = {
+		character:sea_baghuashi_1 = {
 			add_opinion = {
-				target = scope:ROOT
+				target = ROOT
 				modifier = grateful_opinion
 				opinion = 50
 			}
 		}
-		scope:160032 = {
+		character:160032 = {
 			add_opinion = {
-				target = scope:ROOT
+				target = ROOT
 				modifier = revoked_title
 			}
 		}
-		scope:160033 = {
+		character:160033 = {
 			set_relation_rival = {
-				target = scope:ROOT
+				target = ROOT
 				reason = rival_historical
 			}
 		}
@@ -1859,12 +1859,12 @@ caucasianroa.030 = {
 		hidden_effect = {
 			set_global_variable = caucasus_baghuashi_in_kidekari_global_variable
 			character:sea_baghuashi_1 = {
-				set_employer = scope:ROOT
+				set_employer = ROOT
 			}
 		}
 		160032 = {
 			add_opinion = {
-				target = scope:ROOT
+				target = ROOT
 				modifier = grateful_opinion
 				opinion = 50
 			}
