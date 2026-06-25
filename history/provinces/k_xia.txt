@@ -235,15 +235,33 @@
 		9507 = { # b_yijinai
 			holding = none
 		}
-		18008 = { # b_adun-kora
-			holding = none
-		}
 		9548 = { # b_sogo
 			holding = none
 			1032.1.1 = {
 				holding = city_holding
 			}
 		}
+	### c_heihe
+		18008 = { # b_weiyuanheihe
+			# Misc
+			culture = yughur
+			religion = manichean
+			
+			holding = tribal_holding
+			
+			# History
+			1032.1.1 = {
+				culture = tangut
+				religion = melieism
+			}
+			1250.1.1 = {
+				culture = mongol
+				religion = tengri_pagan
+			}#Tangut culture begins to be absorbed
+		}
+		9504 = { # b_heihe
+			holding = none
+		}				
 	### c_mazongshan
 		9489 = { # b_shira_qulusun
 			# Misc
