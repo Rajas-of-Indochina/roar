@@ -95640,25 +95640,25 @@ h_china = {
 
 						color = { 199 164 121 }
 					}
+					b_changsong = {
+						province = 9523
+
+						color = { 173 137 94 }
+					}					
 					b_jialin = {
 						province = 9516
 
 						color = { 176 140 98 }
 					}
-					b_xiutucheng = {
+					b_xiutu = {
 						province = 9517
 
 						color = { 149 113 72 }
 					}					
-					b_changsong = {
-						province = 9523
-
-						color = { 173 137 94 }
-					}
 					b_herong = {
 						province = 9512
 
-						color = { 213 123 64 }
+						color = { 195 162 96 }
 					}
 				}
 				c_fanhe = { # parts of c_liangzhou in old RoA
@@ -95667,7 +95667,7 @@ h_china = {
 					b_fanhe = {
 						province = 8542
 
-						color = { 73 72 60 }
+						color = { 176 140 98 }
 					}
 					b_dadoubagu = {
 						province = 9522
@@ -95680,10 +95680,10 @@ h_china = {
 						color = { 195 162 96 }
 					}
 				}
-				c_dajing = { # c_dajing in old RoA
+				c_baishan = { # c_dajing in old RoA
 					color = { 189 153 79 }
 
-					b_dajing = {
+					b_baishan = {
 						province = 9525
 
 						color = { 195 163 98 }
@@ -95814,37 +95814,34 @@ h_china = {
 			d_qilian = { # d_qilin in old RoA
 				color = { 240 125 47 }
 
-				c_qilian = { # c_qilian in old RoA
-					color = { 140 134 200 }
+				capital = c_qilin
 
+				c_yalong = { # c_qilian in old RoA
+					color = { 213 111 43 }
+
+					b_yalong = {
+						province = 8537
+
+						color = { 216 126 66 }
+					}					
 					b_chijin = {
 						province = 8535
 
-						color = { 140 134 200 }
-					}
-					b_yuerhong = {
-						province = 8537
-
-						color = { 140 134 200 }
+						color = { 189 99 40 }
 					}
 				}
 				c_qilin = { # c_biandukou in old RoA
-					color = { 213 111 43 }
+					color = { 240 139 70 }
 
-					b_yeniugou = {
-						province = 9497
-
-						color = { 189 99 40 }
-					}
-					b_biandukou = {
+					b_qiliancheng = {
 						province = 9511
 
 						color = { 240 151 90 }
-					}
-					b_matibiandukou = {
-						province = 9500
+					}					
+					b_yeniugou = {
+						province = 9497
 
-						color = { 184 85 98 }
+						color = { 213 123 64 }
 					}
 				}
 			}
@@ -95876,6 +95873,11 @@ h_china = {
 
 						color = { 204 92 105 }
 					}
+					b_matibiandukou = {
+						province = 9500
+
+						color = { 184 85 98 }
+					}					
 					b_linze = {
 						province = 9503
 
