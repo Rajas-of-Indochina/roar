@@ -95632,21 +95632,36 @@ h_china = {
 
 				capital = c_liangzhou
 
-				c_liangzhou = { # ???, b_liangzhou is under c_fanhe though
+				c_liangzhou = { # c_liangzhou in old RoA
 					color = { 194 154 105 }
 
+					b_guzang = {
+						province = 9521
+
+						color = { 199 164 121 }
+					}
+					b_jialin = {
+						province = 9516
+
+						color = { 176 140 98 }
+					}
+					b_xiutucheng = {
+						province = 9517
+
+						color = { 149 113 72 }
+					}					
 					b_changsong = {
 						province = 9523
 
 						color = { 173 137 94 }
 					}
-					b_semnyi = {
+					b_herong = {
 						province = 9512
 
 						color = { 213 123 64 }
 					}
 				}
-				c_fanhe = { # c_liangzhou in old RoA
+				c_fanhe = { # parts of c_liangzhou in old RoA
 					color = { 167 127 79 }
 
 					b_fanhe = {
@@ -95654,22 +95669,7 @@ h_china = {
 
 						color = { 73 72 60 }
 					}
-					b_liugubu = {
-						province = 9516
-
-						color = { 176 140 98 }
-					}
-					b_jinchang_2 = {
-						province = 9517
-
-						color = { 149 113 72 }
-					}
-					b_liangzhou = {
-						province = 9521
-
-						color = { 199 164 121 }
-					}
-					b_huangcheng = {
+					b_dadoubagu = {
 						province = 9522
 
 						color = { 195 162 96 }
@@ -95688,7 +95688,7 @@ h_china = {
 
 						color = { 195 163 98 }
 					}
-					b_nanhu = {
+					b_balibasha = {
 						province = 9532
 
 						color = { 168 136 72 }
@@ -95721,12 +95721,12 @@ h_china = {
 
 						color = { 205 174 134 }
 					}
-					b_yunjie = {
+					b_zhuoluo = {
 						province = 9526
 
 						color = { 178 146 108 }
 					}
-					b_herong = {
+					b_pipashan = {
 						province = 9524
 
 						color = { 201 172 111 }
