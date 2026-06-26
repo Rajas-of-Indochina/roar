@@ -95929,7 +95929,7 @@ h_china = {
 
 						color = { 209 109 120 }
 					}
-					b_qingshui_3 = {
+					b_fulu = {
 						province = 9498
 
 						color = { 209 109 120 }
@@ -95939,12 +95939,21 @@ h_china = {
 
 						color = { 209 109 120 }
 					}
-					b_yangchiwan = {
+				}
+				c_yumen = { # c_yulin_guiyi in old RoA
+					color = { 91 78 145 }
+
+					b_yumen = {
+						province = 9487
+
+						color = { 91 78 145 }
+					}
+					b_jinshan = {
 						province = 9492
 
 						color = { 209 109 120 }
-					}
-				}
+					}					
+				}				
 			}
 			d_guasha = { # western d_guiyi in old RoA
 				color = { 124 146 92 }
@@ -95990,29 +95999,6 @@ h_china = {
 						color = { 129 156 104 }
 					}
 				}
-				c_shouchang = { # c_shouchang in old RoA
-					color = { 149 168 124 }
-
-					b_yangguan = {
-						province = 9474
-
-						color = { 160 176 138 }
-					}
-					b_shouchang = {
-						province = 9475
-
-						color = { 139 167 117 }
-					}
-					b_genquan = {
-						province = 7997
-
-						color = { 70 200 230 }
-					}
-				}
-			}
-			d_guiyi = { #Guazhou # eastern d_guiyi in old RoA
-				color = { 90 70 175 }
-
 				c_guazhou = { # c_guazhou in old RoA
 					color = { 111 129 83 }
 
@@ -96040,25 +96026,39 @@ h_china = {
 						province = 9488
 
 						color = { 111 129 83 }
-					}
+					}										
 				}
-				c_yulin_guiyi = { # c_yulin_guiyi in old RoA
-					color = { 91 78 145 }
+				c_xincheng = {
+					color = { 114 145 86 }
 
 					b_yulin_guiyi = {
 						province = 9481
 
 						color = { 91 78 145 }
 					}
-					b_kuyu = {
-						province = 9487
-
-						color = { 91 78 145 }
-					}
-					b_yumen = {
+					b_changma = {
 						province = 9485
 
 						color = { 91 78 145 }
+					}
+				}								
+				c_shouchang = { # c_shouchang in old RoA
+					color = { 149 168 124 }
+
+					b_yangguan = {
+						province = 9474
+
+						color = { 160 176 138 }
+					}
+					b_shouchang = {
+						province = 9475
+
+						color = { 139 167 117 }
+					}
+					b_genquan = {
+						province = 7997
+
+						color = { 70 200 230 }
 					}
 				}
 			}

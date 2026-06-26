@@ -237,7 +237,7 @@
 		9494 = { # b_dongtingshan
 			holding = city_holding
 		}
-		9498 = { # b_qingshui_3
+		9498 = { # b_fulu
 			holding = church_holding
 		}
 		9502 = { # b_liaoquan
@@ -246,9 +246,23 @@
 		9499 = { # b_qilianshu
 			holding = church_holding
 		}
-		9492 = { # b_yangchiwan
+		9492 = { # b_jinshan
 			holding = none
 		}
+	###c_yumen # YUMEN
+		9487 = {	# b_yumen
+			culture = han
+			religion = sukhavati
+			holding = castle_holding
+
+			# History
+			894.1.1 = {
+				culture = yughur
+			}
+		}
+		9492 = {	# b_jinshan
+			holding = church_holding
+		}		
 ## d_guasha
 	### c_shazhou
 		9476 = { # b_shazhou
@@ -281,6 +295,50 @@
 		9486 = { # b_zincheng_2
 			holding = none
 		}
+	###c_guazhou # GUAZHOU
+		17925 = {	# b_guazhou
+			# Misc
+			culture = sogdian
+			religion = mantrayana
+			
+			holding = castle_holding
+			
+			# History
+			1038.1.1 = {
+				culture = yughur
+			}
+		}
+		9620 = {	# b_mazongshan
+			holding = none
+		}
+		9483 = {	# b_changleguazhou
+			holding = city_holding
+		}
+		8539 = {	# b_anxi_3
+			holding = church_holding
+		}
+		9488 = {	# b_shule
+			holding = church_holding
+		}				
+	###c_xincheng # XINCHENG
+		9481 = {	# b_yulin_guiyi
+			# Misc
+			culture = sogdian
+			religion = mantrayana
+			
+			holding = castle_holding
+			
+			# History
+			1000.1.1 = {
+				culture = yughur
+			}
+			1038.1.1 = {
+				religion = sukhavati
+			}
+		}
+		9485 = {	# b_changma
+			holding = none
+		}				
 	### c_shouchang
 		9474 = { # b_yangguan
 			culture = han
@@ -301,7 +359,7 @@
 		7997 = { # b_genquan
 			holding = none
 		}
-## d_guiyi
+##  
 	### c_guazhou
 		17925 = { # b_guazhou
 			culture = han
@@ -321,17 +379,17 @@
 		9488 = { # b_shule
 			holding = none
 		}
-	### c_yulin_guiyi
+	### c_yumen
 		9481 = { # b_yulin_guiyi
 			culture = han
 			religion = avatamsaka
 
 			holding = castle_holding
 		}
-		9487 = { # b_kuyu
+		9487 = { # b_yumen
 			holding = none
 		}
-		9485 = { # b_yumen
+		9485 = { # b_changma
 			holding = city_holding
 		}
 
