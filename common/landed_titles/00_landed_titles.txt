@@ -96079,43 +96079,35 @@ h_china = {
 			d_shuofang = { # d_xia in old RoA
 				color = { 69 38 35 }
 
+				capital = c_lingzhou_xia
+
 				c_lingzhou_xia = { # c_lingzhou_xia in old RoA
-					color = { 155 95 75 }
+					color = { 89 62 59 }
 
-					b_lingzhou_xia = {
-						province = 17820
-
-						color = { 155 95 75 }
-					}
-					b_qingzhou_xia = {
-						province = 17592
-
-						color = { 155 95 75 }
-					}
-					b_shenggi = {
-						province = 17710
-
-						color = { 155 95 75 }
-					}
-					b_mingsha_2 = {
-						province = 18489
-
-						color = { 155 95 75 }
-					}
 					b_xiping_2 = {
 						province = 18283
 
-						color = { 155 95 75 }
+						color = { 107 83 81 }
+					}					
+					b_baojing = {
+						province = 17820
+
+						color = { 80 56 54 }
+					}
+					b_huaiyuan = {
+						province = 17592
+
+						color = { 90 62 56 }
+					}
+					b_shengwei = {
+						province = 17710
+
+						color = { 79 57 55 }
 					}
 				}
 				c_tengger = { # c_zhongwei in old RoA
 					color = { 46 43 35 }
 
-					b_shapotou = {
-						province = 18452
-
-						color = { 46 43 35 }
-					}
 					b_xinquan = {
 						province = 9529
 
@@ -96132,8 +96124,27 @@ h_china = {
 						color = { 46 43 35 }
 					}
 				}
+				c_xiongzhou = {
+					color = { 105 81 78 }
+
+					b_mingsha = {
+						province = 18489
+
+						color = { 121 100 97 }
+					}					
+					b_yingli = {
+						province = 18481
+
+						color = { 94 72 71 }
+					}					
+					b_xiashi = {
+						province = 18452
+
+						color = { 106 80 74 }
+					}
+				}				
 				c_xingqing_shuofang = { #Yinchuan/Iryai # c_xingqing in old RoA
-					color = { 53 55 34 }
+					color = { 63 34 33 }
 
 					cultural_names = {
 						name_list_mongol = cn_iryai
@@ -96159,18 +96170,25 @@ h_china = {
 							name_list_tuyuhun = cn_iryai
 							name_list_jurchen = cn_iryai
 						}
-					}
-					b_helan_2 = {
-						province = 9540
 
-						color = { 53 55 34 }
+						color = { 84 59 58 }
 					}
-					b_dingzhou = {
+					b_lingwu = {
+						province = 17572
+
+						color = { 64 34 31 }
+					}					
+					b_dingyuan_xia = {
 						province = 17735
 
-						color = { 53 55 34 }
+						color = { 57 31 31 }
+					}					
+					b_tanliang = {
+						province = 9540
+
+						color = { 53 31 32 }
 					}
-					b_dingyuanying = { #Bayanhot
+					b_helanshan = { #Bayanhot
 						province = 17545
 
 						cultural_names = {
@@ -96178,111 +96196,101 @@ h_china = {
 							name_list_mongol = cn_bayanhot
 						}
 
-						color = { 53 55 34 }
-					}
-					b_shunzhou_xia = {
-						province = 17572
-
-						color = { 53 55 34 }
+						color = { 57 31 31 }
 					}
 				}
-				c_youzhou_xia = { # c_youzhou_xia in old RoA
-					color = { 172 105 83 }
+				c_youzhou_xia = { # c_youzhou_xia in old RoA, loc 克夷门
+					color = { 53 55 34 }
 
-					b_youzhou_xia = {
-						province = 17832
-
-						color = { 172 105 83 }
-					}
-					b_huaizhou = {
+					b_keyimen = {
 						province = 17750
 
-						color = { 172 105 83 }
+						color = { 53 55 34 }
+					}					
+					b_linhe = {
+						province = 17832
+
+						color = { 75 77 59 }
 					}
 					b_wuda = {
 						province = 9542
 
-						color = { 172 105 83 }
+						color = { 75 77 59 }
 					}
 				}
 				c_huizhou_china = { # c_huizhou_china in old RoA
-					color = { 203 109 77 }
+					color = { 55 29 27 }
 
-					b_huining_3 = {
+					b_huining = {
+						province = 17094
+
+						color = { 77 54 52 }
+					}					
+					b_roulangshan = {
 						province = 18475
 
-						color = { 203 109 77 }
-					}
-					b_weiruhe = {
-						province = 18481
-
-						color = { 203 109 77 }
+						color = { 50 27 26 }
 					}
 					b_wulan_2 = {
 						province = 18479
 
-						color = { 203 109 77 }
-					}
-					b_qinzhou_longxi = {
-						province = 17094
-
-						color = { 203 109 77 }
+						color = { 56 30 25 }
 					}
 				}
 			}
 			d_tiande = { # d_fengzhou_china in old RoA
 				color = { 70 58 34 }
 
-				capital = c_fengzhou_xia
+				capital = c_lxj_fengzhou
 
-				c_fengzhou_xia = { # c_fengzhou_xia in old RoA
-					color = { 150 114 171 }
+				c_tiande = { # c_fengzhou_xia in old RoA
+					color = { 90 80 59 }
 
-					b_fengzhou_xia = {
-						province = 17926
+					b_tiande = {
+						province = 15897
 
-						color = { 150 114 171 }
-					}
-					b_hengshui_xia = {
-						province = 17904
-
-						color = { 150 114 171 }
-					}
-					b_batoufeng_xia = {
+						color = { 108 99 81 }
+					}					
+					b_zhongshouxiang = {
 						province = 17891
 
-						color = { 150 114 171 }
+						color = { 81 71 54 }
+					}					
+					b_mounashan = {
+						province = 17904
+
+						color = { 81 71 54 }
 					}
 				}
 
 				c_lxj_fengzhou = { # c_tiande_china in old RoA
 					color = { 64 52 32 }
 
-					b_bayannur = {
-						province = 9538
-
-						color = { 64 52 32 }
-					}
-					b_tiande = {
+					b_jiuyuan = {
 						province = 18002
 
-						color = { 64 52 32 }
+						color = { 85 74 57 }
+					}					
+					b_yongfeng = {
+						province = 9538
+
+						color = { 58 47 30 }
 					}
-					b_anhe = {
+					b_yinshan = {
 						province = 18058
 
 						color = { 64 52 32 }
 					}
-					b_huzhen = {
+					b_xishouxiang = {
 						province = 9670
 
-						color = { 64 52 32 }
+						color = { 65 54 30 }
 					}
-					b_ulansu = {
-						province = 15897
+					b_kujiesha = {
+						province = 17926
 
 						color = { 64 52 32 }
-					}
+					}					
 				}
 				c_wentugaole = { # c_wengen_china in old RoA
 					color = { 60 49 51 }
