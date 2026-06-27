@@ -1441,9 +1441,9 @@ ROA_1066_tributary_setup_effect = {
 	# Pagan
 	title:k_pagan.holder = {
 		save_scope_as = suzerain
-		title:d_arakan.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
+		#title:d_arakan.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
 		title:c_hsipaw.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
@@ -1456,13 +1456,13 @@ ROA_1066_tributary_setup_effect = {
 		title:c_kale.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:c_bhamo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
+		#title:c_bhamo.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
 		title:c_nong_lu.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
-		title:d_yebyu.holder = {
+		title:c_rew.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		title:c_pashu.holder = {
@@ -1477,12 +1477,12 @@ ROA_1066_tributary_setup_effect = {
 		}
 	}
 
-	title:c_takon.holder = {
-		save_scope_as = suzerain
-		title:c_mongyang.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:c_takon.holder = {
+		#save_scope_as = suzerain
+		#title:c_mongyang.holder = {
+			#break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		#}
+	#}
 
 	# Kambuja
 	#title:e_kambujadesa.holder = {
@@ -1592,6 +1592,41 @@ ROA_1066_tributary_setup_effect = {
 		title:c_ogrash.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
+		title:c_hulan.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_yichun.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:d_ujumuchin.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_dingxiang.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_mangasiin.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_ulungu.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		title:c_qinggil.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	title:d_wuluo.holder = {
+		save_scope_as = suzerain
+		title:c_dongshi.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	title:c_suwen.holder = {
+		save_scope_as = suzerain
+		title:c_namu.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
 	}
 
 	#### e_great_liao
@@ -1666,6 +1701,13 @@ ROA_1066_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 		character:jurchen_boli_12_fic = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	character:wugu_8 = {
+		save_scope_as = suzerain
+		character:mongol_herder_11 = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
