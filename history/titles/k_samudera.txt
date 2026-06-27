@@ -45,6 +45,10 @@ c_SUM_perlak = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_perlak_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
+		}
 	}
 	#
 	1060.1.1 = {
@@ -292,6 +296,10 @@ c_SUM_pasaman = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_batak_pasaman_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	930.1.1 = {
@@ -311,6 +319,10 @@ c_SUM_mandailing = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_batak_mandailing_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	930.1.1 = {
@@ -332,8 +344,12 @@ c_SUM_barus = {
 	1178.1.1 = { change_development_level = 20 }
 
 	860.1.1 = {
-		government = mandala_government
+		government = wanua_government
 		holder = malay_barus_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
