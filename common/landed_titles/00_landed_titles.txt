@@ -96075,9 +96075,16 @@ h_china = {
 			d_shuofang = { # d_xia in old RoA
 				color = { 69 38 35 }
 
+				capital = c_lingzhou_xia
+
 				c_lingzhou_xia = { # c_lingzhou_xia in old RoA
 					color = { 155 95 75 }
 
+					b_xiping_2 = {
+						province = 18283
+
+						color = { 155 95 75 }
+					}					
 					b_lingzhou_xia = {
 						province = 17820
 
@@ -96093,25 +96100,10 @@ h_china = {
 
 						color = { 155 95 75 }
 					}
-					b_mingsha_2 = {
-						province = 18489
-
-						color = { 155 95 75 }
-					}
-					b_xiping_2 = {
-						province = 18283
-
-						color = { 155 95 75 }
-					}
 				}
 				c_tengger = { # c_zhongwei in old RoA
 					color = { 46 43 35 }
 
-					b_shapotou = {
-						province = 18452
-
-						color = { 46 43 35 }
-					}
 					b_xinquan = {
 						province = 9529
 
@@ -96128,6 +96120,25 @@ h_china = {
 						color = { 46 43 35 }
 					}
 				}
+				c_xiongzhou = {
+					color = { 46 43 35 }
+
+					b_mingsha_2 = {
+						province = 18489
+
+						color = { 155 95 75 }
+					}					
+					b_weiruhe = {
+						province = 18481
+
+						color = { 203 109 77 }
+					}					
+					b_shapotou = {
+						province = 18452
+
+						color = { 46 43 35 }
+					}
+				}				
 				c_xingqing_shuofang = { #Yinchuan/Iryai # c_xingqing in old RoA
 					color = { 53 55 34 }
 
@@ -96156,13 +96167,18 @@ h_china = {
 							name_list_jurchen = cn_iryai
 						}
 					}
-					b_helan_2 = {
-						province = 9540
+					b_shunzhou_xia = {
+						province = 17572
 
 						color = { 53 55 34 }
-					}
+					}					
 					b_dingzhou = {
 						province = 17735
+
+						color = { 53 55 34 }
+					}					
+					b_helan_2 = {
+						province = 9540
 
 						color = { 53 55 34 }
 					}
@@ -96176,22 +96192,17 @@ h_china = {
 
 						color = { 53 55 34 }
 					}
-					b_shunzhou_xia = {
-						province = 17572
-
-						color = { 53 55 34 }
-					}
 				}
 				c_youzhou_xia = { # c_youzhou_xia in old RoA
 					color = { 172 105 83 }
 
-					b_youzhou_xia = {
-						province = 17832
-
-						color = { 172 105 83 }
-					}
 					b_huaizhou = {
 						province = 17750
+
+						color = { 172 105 83 }
+					}					
+					b_youzhou_xia = {
+						province = 17832
 
 						color = { 172 105 83 }
 					}
@@ -96204,23 +96215,18 @@ h_china = {
 				c_huizhou_china = { # c_huizhou_china in old RoA
 					color = { 203 109 77 }
 
+					b_qinzhou_longxi = {
+						province = 17094
+
+						color = { 203 109 77 }
+					}					
 					b_huining_3 = {
 						province = 18475
 
 						color = { 203 109 77 }
 					}
-					b_weiruhe = {
-						province = 18481
-
-						color = { 203 109 77 }
-					}
 					b_wulan_2 = {
 						province = 18479
-
-						color = { 203 109 77 }
-					}
-					b_qinzhou_longxi = {
-						province = 17094
 
 						color = { 203 109 77 }
 					}

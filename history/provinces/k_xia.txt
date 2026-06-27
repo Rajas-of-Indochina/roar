@@ -1,32 +1,31 @@
 ﻿## d_shuofang
     ### c_lingzhou_xia
-        17820 = { # b_lingzhou_xia
+        18283 = { # b_xiping_2
             culture = tangut
             religion = melieism
 
             holding = castle_holding
         }
-        17592 = { # b_qingzhou_xia
+        17820 = { # b_lingzhou_xia
+            holding = city_holding
+        }        
+		17592 = { # b_qingzhou_xia
             holding = church_holding
         }
         17710 = { #  b_shenggi
             holding = none
-        }
-        18489 = { # b_xiping
-            holding = city_holding
-        }
-        18283 = { # b_mingsha_china
-            holding = none
+
+			# History
+			1032.1.1 = {
+			holding = city_holding
+			}			
         }
 	### c_tengger
-        18452 = { # b_shapotou
+        9529 = { # b_xinquan
 			culture = tangut
 			religion = melieism
 
             holding = castle_holding
-        }
-        9529 = { # b_xinquan
-            holding = city_holding
         }
 		9534 = { # b_shatuo
 			holding = none
@@ -34,6 +33,24 @@
 		9535 = { # b_chaogetuhure
 			holding = none
 		}
+	### c_xiongzhou
+        18489 = { # b_mingsha_2
+			culture = tangut
+			religion = melieism
+
+            holding = castle_holding
+        }
+		18481 = { # b_weiruhe
+			holding = none
+
+			# History
+			1032.1.1 = {
+			holding = city_holding
+			}			
+		}
+		18452 = { # b_shapotou
+			holding = none
+		}		
 	### c_xingqing_shuofang
         17668 = { # b_xingqing
             culture = tangut
@@ -41,46 +58,53 @@
 
             holding = castle_holding
         }
-        9540 = { #  b_Helan
-            holding = none
-        }
-        17735 = { # b_dingzhou
-            holding = city_holding
-        }
-        17545 = { # b_dingyuanying
-            holding = none
-        }
         17572 = { # b_shunzhou_xia
+            holding = city_holding
+        }        
+        17735 = { # b_dingzhou
             holding = church_holding
         }
+		9540 = { #  b_Helan
+            holding = none
+
+			# History
+			1032.1.1 = {
+			holding = city_holding
+			}			
+        }        
+		17545 = { # b_dingyuanying
+            holding = none
+        }
 	### c_youzhou_xia
-        17832 = { # b_youzhou_xia
+        17750 = { # b_huaizhou
             culture = tangut
             religion = melieism
 
             holding = castle_holding
         }
-        17750 = { # b_huaizhou
-            holding = church_holding
+        17832 = { # b_youzhou_xia
+            holding = none
+
+			# History
+			1032.1.1 = {
+			holding = church_holding
+			}			
         }
         9542 = { #  b_wuda
             holding = none
         }
     ### c_huizhou_china
-        18475 = { # b_huining_3
+        17094 = { # b_qinzhou_longxi
             culture = han
             religion = mahayana
 
             holding = castle_holding
         }
-        18481 = { #  b_weiruhe
+        18475 = { #  b_huining_3
             holding = none
         }
         18479 = { # b_wulan_2
             holding = church_holding
-        }
-        17094 = { # b_qinzhou_longxi
-            holding = city_holding
         }
 ## d_tiande
     ### c_fengzhou_xia
