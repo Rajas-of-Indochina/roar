@@ -53,21 +53,25 @@ batak = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_stalwart_defenders
-		tradition_mystical_ancestors
-		tradition_medicinal_plants
+		tradition_SEA_ade 				# msl_note: to represent their societal rules and traditions akin to many other Adat-like rules in SEA
+		tradition_stalwart_defenders 	# msl_note: to represent their fierce spirit in face of enemy as shown by Toba Bataks
+		tradition_mystical_ancestors 	# msl_note: family lineage is very important to Bataks, as those who do not know the lineage will be considered as strayed
+		tradition_medicinal_plants 		# msl_note: traditional herb based medicine was a major element of Batak societies adn practioners treated with great respect
+		# msl_note: would be nice to have something to represent their 'tendi' traditions
 	}
 
+	# msl_note: agriculture, especially that of rice, always played important part of their livelihood
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
 		fallback = tradition_agrarian
 	}
 	
-	dlc_tradition = {
-		trait = tradition_tgp_esoteric_power
-		requires_dlc_flag = all_under_heaven
-	}
+	# msl_note: unsure if this one makes sense for Bataks as it is tied moreso to mandala setup then more clan based societies
+	#dlc_tradition = {
+	#	trait = tradition_tgp_esoteric_power
+	#	requires_dlc_flag = all_under_heaven
+	#}
 
 	name_list = name_list_batak
 
@@ -102,7 +106,7 @@ gayo = {
 		tradition_tribe_unity 			# msl_note: to represent their clans and communities
 		tradition_storytellers 			# msl_note: very oral based society
 
-		# msl_note: Gayo, like many other tribal societies of the region, their livelihood depended on rice
+		# msl_note: rice plays important part of their livelihood
 		dlc_tradition = {
 			trait = tradition_tgp_rice_cultivators
 			requires_dlc_flag = all_under_heaven
