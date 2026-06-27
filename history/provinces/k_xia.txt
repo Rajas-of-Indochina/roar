@@ -17,7 +17,7 @@
 
 			# History
 			1032.1.1 = {
-			holding = city_holding
+				holding = city_holding
 			}			
         }
 	### c_tengger
@@ -45,7 +45,7 @@
 
 			# History
 			1032.1.1 = {
-			holding = city_holding
+				holding = city_holding
 			}			
 		}
 		18452 = { # b_xiashi
@@ -87,7 +87,7 @@
 
 			# History
 			1032.1.1 = {
-			holding = church_holding
+				holding = church_holding
 			}			
         }
         9542 = { #  b_wuda
@@ -108,35 +108,40 @@
         }
 ## d_tiande
     ### c_tiande
-        17926 = { # b_kujiesha
+        15897 = { # b_tiande
             culture = shatuo
             religion = manichean
 
             holding = castle_holding
         }
-        17904 = { # b_mounashan
-            holding = city_holding
-        }
         17891 = { #  b_zhongshouxiang
-            holding = church_holding
+            holding = city_holding
+        }        
+		17904 = { # b_mounashan
+            holding = none
+
+			# History
+			1032.1.1 = {
+				holding = church_holding
+			}				
         }
 	### c_lxj_fengzhou
-		9538 = { # b_yongfeng
+		18002 = { # b_jiuyuan
 			culture = shatuo
 			religion = manichean
 
 			holding = castle_holding
 		}
-		18002 = { # b_jiuyuan
-			holding = none 
+		9538 = { # b_yongfeng
+			holding = city_holding 
 		}
+		9670 = { # b_xishouxiang
+            holding = church_holding
+        }		
 		18058 = { #  b_yinshan
             holding = none
         }
-		9670 = { # b_xishouxiang
-            holding = church_holding
-        }
-		15897 = { # b_tiande
+		17926 = { # b_kujiesha
             holding = none
         }
 	### c_wentugaole
@@ -238,7 +243,7 @@
 			holding = none
 		}
 	### c_tongcheng
-		9506 = { # b_eji_nai
+		9506 = { # b_heicheng
 			# Misc
 			culture = yughur
 			religion = manichean
@@ -256,17 +261,18 @@
 				religion = tengri_pagan
 			}#Tangut culture begins to be absorbed
 		}
-		9507 = { # b_yijinai
+		9507 = { # b_khara_khoto
 			holding = none
+
+			1032.1.1 = {
+				holding = city_holding
+			}			
 		}
-		18008 = { # b_adun-kora
+		18008 = { # b_adun_kora
 			holding = none
 		}
 		9548 = { # b_sogo
 			holding = none
-			1032.1.1 = {
-				holding = city_holding
-			}
 		}
 	### c_mazongshan
 		9489 = { # b_shira_qulusun
@@ -289,7 +295,7 @@
 		9508 = { # b_saihantaolai
 			holding = none
 		}
-		9505 = { # b_juyuan
+		9505 = { # b_juyanhai
 			holding = none
 		}
 	### c_shengzhou_xia

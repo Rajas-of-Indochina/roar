@@ -24,13 +24,13 @@
 			holding = city_holding
 		}		
 		9516 = { # b_jialin
-			holding = church_holding
+			holding = city_holding
 		}
 		9517 = { # b_xiutu
 			holding = none
 		}				
 		9512 = { # b_herong
-			holding = none
+			holding = church_holding
 		}
 	### c_fanhe
 		8542 = { # b_fanhe
@@ -64,6 +64,10 @@
 		}
 		9532 = { # b_balibasha
 			holding = none
+
+			1250.1.1 = {
+				holding = city_holding
+			}			
 		}
 	### c_zhanyin
 		9531 = { # b_zhanyin
@@ -76,10 +80,10 @@
 			# History
 		}
 		9530 = { # b_aowei
-			holding = church_holding
+			holding = none
 		}
 		9527 = { # b_zhiyang
-			holding = city_holding
+			holding = church_holding
 		}
 	### c_guangwu
 		9528 = {	# b_guangwu
@@ -93,6 +97,10 @@
 		}
 		9526 = {	# b_zhuoluo
 			holding = city_holding
+
+			1032.1.1 = {
+				holding = city_holding
+			}				
 		}
 		9524 = {	# b_pipashan
 			holding = church_holding
@@ -151,10 +159,10 @@
 			}
 		}
 		9514 = { # b_shandan
-			holding = church_holding
+			holding = city_holding
 		}
 		9515 = { # b_xi'anganzhou
-			holding = city_holding
+			holding = church_holding
 		}
 		9522 = { # b_dadoubagu
 			holding = none
@@ -211,11 +219,15 @@
 				culture = yughur
 			}
 		}
-		9495 = { # baichengzi
-			holding = city_holding
-		}
-		9504 = { # weiyuanbaichengzi
+		9495 = { # b_heluochuan
 			holding = none
+		}
+		9504 = { # b_weiyuan_heihe
+			holding = none
+
+			1032.1.1 = {
+				holding = city_holding
+			}			
 		}
 	### c_jiuquan
 		9493 = { # b_suzhou
@@ -231,20 +243,14 @@
 			}
 
 		}
-		9494 = { # b_dongtingshan
-			holding = city_holding
-		}
 		9498 = { # b_fulu
-			holding = church_holding
-		}
-		9502 = { # b_liaoquan
-			holding = castle_holding
+			holding = city_holding
+		}		
+		9494 = { # b_dongtingshan
+			holding = none
 		}
 		9499 = { # b_qilianshu
 			holding = church_holding
-		}
-		9492 = { # b_jinshan
-			holding = none
 		}
 	###c_yumen # YUMEN
 		9487 = {	# b_yumenjun
@@ -358,7 +364,7 @@
 			}
 		}
 		9474 = { # b_shouchang
-			holding = church_holding
+			holding = city_holding
 		}
 		7997 = { # b_old_yumenguan
 			holding = none
