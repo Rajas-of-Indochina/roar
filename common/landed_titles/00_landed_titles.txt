@@ -96104,44 +96104,6 @@ h_china = {
 
 						color = { 79 57 55 }
 					}
-				}
-				c_tengger = { # c_zhongwei in old RoA
-					color = { 46 43 35 }
-
-					b_xinquan = {
-						province = 9529
-
-						color = { 46 43 35 }
-					}
-					b_shatuo = {
-						province = 9534
-
-						color = { 46 43 35 }
-					}
-					b_chaogetuhure = {
-						province = 9535
-
-						color = { 46 43 35 }
-					}
-				}
-				c_xiongzhou = {
-					color = { 105 81 78 }
-
-					b_mingsha = {
-						province = 18489
-
-						color = { 121 100 97 }
-					}					
-					b_yingli = {
-						province = 18481
-
-						color = { 94 72 71 }
-					}					
-					b_xiashi = {
-						province = 18452
-
-						color = { 106 80 74 }
-					}
 				}				
 				c_xingqing_shuofang = { #Yinchuan/Iryai # c_xingqing in old RoA
 					color = { 63 34 33 }
@@ -96199,25 +96161,63 @@ h_china = {
 						color = { 57 31 31 }
 					}
 				}
-				c_youzhou_xia = { # c_youzhou_xia in old RoA, loc 克夷门
-					color = { 53 55 34 }
+				c_yanzhou_shuofang = { # c_yanzhou_shuofang_china in old RoA, loc 韦州
+					color = { 198 92 57 }
 
-					b_keyimen = {
-						province = 17750
+					b_anle = {
+						province = 18483
 
-						color = { 53 55 34 }
+						color = { 198 92 57 }
 					}					
-					b_linhe = {
-						province = 17832
+					b_wenchi_2 = {
+						province = 18486
 
-						color = { 75 77 59 }
+						color = { 198 92 57 }
 					}
-					b_wuda = {
-						province = 9542
+					b_huile = {
+						province = 18337
 
-						color = { 75 77 59 }
+						color = { 198 92 57 }
 					}
 				}
+				c_tengger = { # c_zhongwei in old RoA
+					color = { 46 43 35 }
+
+					b_xinquan = {
+						province = 9529
+
+						color = { 46 43 35 }
+					}
+					b_shatuo = {
+						province = 9534
+
+						color = { 46 43 35 }
+					}
+					b_chaogetuhure = {
+						province = 9535
+
+						color = { 46 43 35 }
+					}
+				}
+				c_xiongzhou = {
+					color = { 105 81 78 }
+
+					b_mingsha = {
+						province = 18489
+
+						color = { 121 100 97 }
+					}					
+					b_yingli = {
+						province = 18481
+
+						color = { 94 72 71 }
+					}					
+					b_xiashi = {
+						province = 18452
+
+						color = { 106 80 74 }
+					}
+				}								
 				c_huizhou_china = { # c_huizhou_china in old RoA
 					color = { 55 29 27 }
 
@@ -96262,7 +96262,6 @@ h_china = {
 						color = { 81 71 54 }
 					}
 				}
-
 				c_lxj_fengzhou = { # c_tiande_china in old RoA
 					color = { 64 52 32 }
 
@@ -96292,6 +96291,29 @@ h_china = {
 						color = { 64 52 32 }
 					}					
 				}
+				c_youzhou_xia = { # c_youzhou_xia in old RoA, loc 克夷门
+					color = { 53 55 34 }
+
+					b_keyimen = {
+						province = 17750
+
+						color = { 53 55 34 }
+					}					
+					b_linhe = {
+						province = 17832
+
+						color = { 75 77 59 }
+					}
+					b_wuda = {
+						province = 9542
+
+						color = { 75 77 59 }
+					}
+				}
+			}				
+			d_langshan = {
+				color = { 58 61 36 }
+
 				c_wentugaole = { # c_wengen_china in old RoA
 					color = { 60 49 51 }
 
@@ -96449,7 +96471,7 @@ h_china = {
 					}
 				}
 				c_fuzhou = { # c_hequ_china in old RoA
-					color = { 82 71 58 }
+					color = { 30 18 8 }
 
 					b_fugu = {
 						province = 16923
@@ -96468,7 +96490,7 @@ h_china = {
 					}
 				}
 				c_linzhou_shaan = { # c_linzhou_shaan_china in old RoA
-					color = { 30 18 8 }
+					color = { 82 71 58 }
 
 					b_yincheng = {
 						province = 17765
@@ -96487,9 +96509,35 @@ h_china = {
 					}					
 				}				
 			}
-			d_dingnan = { # d_dingnan in old RoA
+			d_xiasui = { # d_dingnan in old RoA
 				color = { 144 89 69 }
 
+				capital = c_xiazhou_2
+
+				c_xiazhou_2 = { # c_xiazhou_china in old RoA
+					color = { 210 86 45 }
+
+					b_shuofang = {
+						province = 18033
+
+						color = { 210 106 45 }
+					}					
+					b_changze = {
+						province = 18469
+
+						color = { 210 86 45 }
+					}					
+					b_ningshuo = {
+						province = 18488
+
+						color = { 210 86 45 }
+					}
+					b_yanzhou = {
+						province = 18484
+
+						color = { 210 86 45 }
+					}					
+				}				
 				c_yinzhou_2 = { # c_yinzhou_china in old RoA
 					color = { 45 44 67 }
 
@@ -96532,49 +96580,6 @@ h_china = {
 
 						color = { 41 40 61 }
 					}										
-				}
-				c_xiazhou_2 = { # c_xiazhou_china in old RoA
-					color = { 210 86 45 }
-
-					b_shuofang = {
-						province = 18033
-
-						color = { 210 106 45 }
-					}					
-					b_changze = {
-						province = 18469
-
-						color = { 210 86 45 }
-					}					
-					b_ningshuo = {
-						province = 18488
-
-						color = { 210 86 45 }
-					}
-					b_yanzhou = {
-						province = 18484
-
-						color = { 210 86 45 }
-					}					
-				}
-				c_yanzhou_shuofang = { # c_yanzhou_shuofang_china in old RoA, loc 韦州
-					color = { 198 92 57 }
-
-					b_anle = {
-						province = 18483
-
-						color = { 198 92 57 }
-					}					
-					b_wenchi_2 = {
-						province = 18486
-
-						color = { 198 92 57 }
-					}
-					b_huile = {
-						province = 18337
-
-						color = { 198 92 57 }
-					}
 				}
 			}
 		}
