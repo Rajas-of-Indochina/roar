@@ -301,6 +301,7 @@
 		9505 = { # b_juyanhai
 			holding = none
 		}
+## d_xinan		
 	### c_shengzhou_xia
 		16551 = { # b_shengzhou
 			culture = sogdian
@@ -340,87 +341,89 @@
 		16728 = { # b_huoshanjun
 			holding = none
 
-			937.1.1 = {
+			936.1.1 = {
 				holding = castle_holding
-			}			
+			}
+			1006.1.1 = {
+				holding = city_holding
+			}						
 		}
-		13139 = { # b_baodejun
+		13139 = { # b_baode
 			holding = none
 
 			1032.1.1 = {
-				holding = castle_holding
+				holding = church_holding
 			}			
 		}
+	### c_linzhou_shaan
+        17765 = { # b_yincheng
+			culture = han
+			religion = avatamsaka
+
+            holding = castle_holding
+        }
+        17559 = { # b_liangu
+            holding = city_holding
+        }
+        18207 = { #  b_jinningjun
+            holding = church_holding
+        }		
 ## d_dingnan
 	### c_yinzhou_2
-        18485 = { # b_yinzhou_2
+        18199 = { # b_rulin
             culture = tangut
             religion = melieism
 
             holding = castle_holding
         }
-        18033 = { #  b_shizhou
+        17877 = { #  b_zhenxiang
             holding = city_holding
         }
-        18199 = { #  b_dabin_2
-            holding = none
-        }
-        18396 = { # b_tongwan
-            holding = church_holding
-        }
-	### c_linzhou_shaan
-        17765 = { # b_kaiguang_2
-            culture = tangut
-            religion = melieism
-
-            holding = castle_holding
-        }
-        17877 = { # b_zhenxiao
-            holding = city_holding
-        }
-        17559 = { #  b_linzhou
+        18396 = { # b_shizhou
             holding = church_holding
         }
 	### c_suizhou_xia
-        18207 = { # b_jining_2
+        18490 = { # b_shangxian
             culture = han
             religion = mahayana
 
             holding = castle_holding
         }
-        18491 = { # b_funing
+        18482 = { # b_chengping
             holding = castle_holding
         }
-        18482 = { #  b_chengping
-            holding = church_holding
-        }
-        18490 = { #  b_shangxian
+        18485 = { #  b_dabin_suizhou
             holding = city_holding
         }
-## d_yuzhou
+        18491 = { #  b_yanfu
+            holding = church_holding
+        }
 	### c_xiazhou_2
-        18469 = { # b_xiazhou
+        18033 = { # b_shuofang
             culture = tangut
             religion = melieism
 
             holding = castle_holding
         }
-        18484 = { #  b_yuzhou_xiazhou
-            holding = church_holding
-        }
-        18488 = { # b_hungzhou
+        18469 = { #  b_changze
             holding = city_holding
         }
+        18488 = { # b_ningshuo
+            holding = church_holding
+        }
+        18484 = { # b_yanzhou
+            holding = castle_holding
+        }		
 	### c_yanzhou_shuofang
-        18486 = { # b_yanzhou_shuofang
+        18483 = { # b_anle
             culture = tangut
             religion = melieism
 
             holding = castle_holding
         }
-        18337 = { #  b_lanchi
+        18486 = { #  b_wenchi_2
             holding = church_holding
         }
-        18483 = { # b_anlechuan
+        18337 = { # b_huile
             holding = none
         }
