@@ -95815,15 +95815,6 @@ h_china = {
 
 				capital = c_qilin
 
-				c_yalong = { # c_qilian in old RoA
-					color = { 213 111 43 }
-
-					b_yalong = {
-						province = 8537
-
-						color = { 216 126 66 }
-					}					
-				}
 				c_qilin = { # c_biandukou in old RoA
 					color = { 240 139 70 }
 
@@ -95837,7 +95828,26 @@ h_china = {
 
 						color = { 213 123 64 }
 					}
-				}
+				}				
+				c_yalong = { # c_qilian in old RoA
+					color = { 213 111 43 }
+
+					b_yalong = {
+						province = 8537
+
+						color = { 216 126 66 }
+					}
+					b_changma = {
+						province = 9485
+
+						color = { 129 156 104 }
+					}
+					b_mingshui = {
+						province = 8535
+
+						color = { 102 129 78 }
+					}											
+				}				
 			}
 			d_gansu = { # d_ganzhou in old RoA
 				color = { 199 72 87 }
@@ -96016,20 +96026,6 @@ h_china = {
 
 						color = { 110 122 81 }
 					}									
-				}
-				c_xincheng = {
-					color = { 114 145 86 }
-
-					b_changma = {
-						province = 9485
-
-						color = { 129 156 104 }
-					}
-					b_mingshui = {
-						province = 8535
-
-						color = { 102 129 78 }
-					}					
 				}	
 				c_hehe = {
 					color = { 123 138 90 }
@@ -98101,21 +98097,7 @@ h_china = {
 						color = { 214 88 101 }
 					}
 				}
-				c_hanyang = {
-					color = { 178 19 37 }
-
-					b_hanyang = {
-						province = 8978
-
-						color = { 185 45 61 }
-					}
-					b_hanchuan = {
-						province = 8979
-
-						color = { 159 18 35 }
-					}
-				}
-				c_fuzhou_3 = { # c_fuzhou_chu_china of d_jingxiang_china in old RoA
+			 	c_fuzhou_3 = { # c_fuzhou_chu_china of d_jingxiang_china in old RoA
 					color = { 201 13 11 }
 
 					b_jingling = {
@@ -98263,6 +98245,17 @@ h_china = {
 						province = 10401
 
 						color = { 144 81 87 }
+					}
+				}
+				c_hanyang = {
+					color = { 178 19 37 }
+					b_hanyang = {
+						province = 8978
+						color = { 185 45 61 }
+					}
+					b_hanchuan = {
+						province = 8979
+						color = { 159 18 35 }
 					}
 				}
 				c_anzhou = { # c_anzhou_china in old RoA

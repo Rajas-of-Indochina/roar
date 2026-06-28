@@ -106,21 +106,6 @@
 			holding = church_holding
 		}
 ## d_qilian
-	### c_yalong
-		8537 = { # b_yalong
-			# Misc
-			culture = tuyuhun
-			religion = tengri_pagan
-			
-			holding = tribal_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = lamaism
-			}
-		}
-
 	###c_qilin
 		9511 = { # b_qilian
 			# Misc
@@ -137,7 +122,27 @@
 		}
 		9497 = { # b_yeniugou
 			holding = none #tribal
+		}	
+### c_yalong
+		8537 = { # b_yalong
+			# Misc
+			culture = tuyuhun
+			religion = tengri_pagan
+			
+			holding = tribal_holding
+			
+			# History
+			894.1.1 = {
+				culture = yughur
+				religion = lamaism
+			}
 		}
+		9485 = { # b_changma
+			holding = none #tribal
+		}
+		8535 = { # b_mingshui
+			holding = none #tribal
+		}				
 ## d_gansu
 	### c_ganzhou
 		9513 = { # b_zhangye
@@ -316,25 +321,6 @@
 		}
 		9483 = { # b_baizhang
 			holding = none
-		}					
-	###c_xincheng # XINCHENG
-		9485 = {	# b_changma
-			# Misc
-			culture = sogdian
-			religion = mantrayana
-			
-			holding = castle_holding
-			
-			# History
-			1000.1.1 = {
-				culture = yughur
-			}
-			1038.1.1 = {
-				religion = sukhavati
-			}
-		}
-		8535 = { # b_mingshui
-			holding = none #tribal
 		}
 	### c_hehe
 		17925 = { # b_heheshu
