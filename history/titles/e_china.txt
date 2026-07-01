@@ -259,6 +259,22 @@
 	}
 }
 
+# Historical Titular titles
+k_guiyi = {
+	867.1.1 = { change_development_level = 8 }
+
+	851.1.1 = {
+		holder = 206811 # Yichao_8B70_6F6E
+		government = meritocratic_government
+	}
+	867.1.1 = {
+		holder = 244004 # Huaishen
+	}
+	1036.1.1 = {
+		holder = 0
+	}
+}
+
 # Special ministry titles
 e_minister_chancellor = { # requires give_council_position = councillor_chancellor in character history
 	867.1.1 = {
@@ -979,16 +995,12 @@ k_guannei = {
 }
 
 k_hexi = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 10 }
+	867.1.1 = { change_development_level = 8 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 14 }
 
-	851.1.1 = {
-		holder = 206811 # Yichao_8B70_6F6E
-		government = meritocratic_government
-	}
 	867.1.1 = {
-		holder = 244004 # Huaishen
+		holder = 0
 	}
 	1066.1.1 = {
 		holder = 206651
@@ -3682,7 +3694,7 @@ c_xingqing = {
 d_hexi = {
 	867.1.1 = {
 		holder = han_40026
-		liege = k_hexi
+		liege = k_guiyi
 		government = meritocratic_government
 	}
 	1066.1.1 = {
@@ -3966,7 +3978,7 @@ c_jiuquan = {
 d_guasha = {
 	867.1.1 = {
 		holder = 304191
-		liege = k_hexi
+		liege = k_guiyi
 		government = meritocratic_government
 	}
 	1066.1.1 = {

@@ -847,6 +847,17 @@ k_sakya_trizin = {
 k_guiyi = {
 	color = { 181 135 55 }
 
+	ignore_titularity_for_title_weighting = yes
+
+	ai_primary_priority = {
+		if = {
+			limit = {
+				culture ?= culture:han
+			}
+			add = @always_primary_score
+		}
+	}	
+
 	capital = c_shazhou # Shazhou/Dunhuang
 }
 
