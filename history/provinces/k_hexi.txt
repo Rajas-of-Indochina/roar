@@ -13,11 +13,11 @@
 			}
 			1032.1.1 = {
 				culture = tangut
-				religion = avatamsaka
+				religion = vajrayana
 			}
 			1250.1.1 = {
 				culture = han
-				religion = avatamsaka
+				religion = sukhavati
 			}#Tangut culture begins to be absorbed
 		}
 		9523 = { # b_changsong
@@ -51,16 +51,7 @@
 			culture = han
 			religion = sukhavati
 			
-			holding = castle_holding
-			
-			# History
-			1032.1.1 = {
-				culture = tangut
-			}
-			1250.1.1 = {
-				# Tangut culture begins to be absorbed
-				culture = han
-			}
+			holding = castle_holding			
 		}
 		9532 = { # b_balibasha
 			holding = none
@@ -94,9 +85,13 @@
 			holding = castle_holding
 			
 			# History
+			1032.1.1 = {
+				culture = tangut
+				religion = vajrayana
+			}		
 		}
 		9526 = {	# b_zhuoluo
-			holding = city_holding
+			holding = none
 
 			1032.1.1 = {
 				holding = city_holding
@@ -109,15 +104,15 @@
 	###c_qilin
 		9511 = { # b_qilian
 			# Misc
-			culture = tuyuhun
-			religion = eastern_tengri
+			culture = uighur
+			religion = mahayana
 			
 			holding = tribal_holding
 			
 			# History
 			894.1.1 = {
 				culture = yughur
-				religion = manichean
+				religion = vajrayana
 			}
 		}
 		9497 = { # b_yeniugou
@@ -126,15 +121,15 @@
 ### c_yalong
 		8537 = { # b_yalong
 			# Misc
-			culture = tuyuhun
-			religion = eastern_tengri
+			culture = uighur
+			religion = mahayana
 			
 			holding = tribal_holding
 			
 			# History
 			894.1.1 = {
 				culture = yughur
-				religion = lamaism
+				religion = vajrayana
 			}
 		}
 		9485 = { # b_changma
@@ -155,13 +150,12 @@
 			# History
 			894.1.1 = {
 				culture = yughur
-			}
-			926.1.1 = { #To reflect the new ruler's faith and ensure capital is the same
 				religion = vajrayana
 			}
-			1038.1.1 = {
-				religion = avatamsaka
-			}
+			1250.1.1 = {
+				culture = han
+				religion = sukhavati
+			}#Tangut culture begins to be absorbed
 		}
 		9514 = { # b_shandan
 			holding = city_holding
@@ -183,9 +177,7 @@
 			# History
 			894.1.1 = {
 				culture = yughur
-			}
-			1038.1.1 = {
-				religion = avatamsaka
+				religion = vajrayana
 			}
 		}
 		9503 = {	# b_helishan
@@ -202,10 +194,7 @@
 			# History
 			894.1.1 = {
 				culture = yughur
-				religion = manichean
-			}
-			1038.1.1 = {
-				religion = avatamsaka
+				religion = vajrayana
 			}
 		}
 		9500 = {	# b_sunan
@@ -214,15 +203,11 @@
 	### c_zhenwu_1
 		9496 = { # b_zhenwu
 			# Misc
-			culture = han
-			religion = sukhavati
+			culture = yughur
+			religion = vajrayana
 			
 			holding = castle_holding
 			
-			# History
-			894.1.1 = {
-				culture = yughur
-			}
 		}
 		9495 = { # b_heluochuan
 			holding = none
@@ -245,6 +230,7 @@
 			# History
 			894.1.1 = {
 				culture = yughur
+				religion = vajrayana
 			}
 
 		}
@@ -266,6 +252,7 @@
 			# History
 			894.1.1 = {
 				culture = yughur
+				religion = vajrayana
 			}
 		}
 		9492 = {	# b_jinshan
@@ -310,7 +297,8 @@
 			
 			# History
 			1038.1.1 = {
-				culture = yughur
+				culture = tangut
+				religion = vajrayana
 			}
 		}
 		9478 = { # b_changleguazhou

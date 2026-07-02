@@ -1,5 +1,23 @@
+k_hexi = {
+	867.1.1 = { change_development_level = 10 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
+
+	867.1.1 = {
+		liege = h_china
+		holder = han0005
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = 206651
+	}
+	1178.1.1 = {
+		holder = 206657
+	}
+}
+
 k_guiyi = {
-	867.1.1 = { change_development_level = 8 }
+	867.1.1 = { change_development_level = 10 }
 
 	851.1.1 = {
 		holder = 206811 # Yichao_8B70_6F6E
@@ -12,6 +30,7 @@ k_guiyi = {
 		holder = 0
 	}
 }
+
 
 d_hexi = {
 	851.1.1 = {
@@ -75,7 +94,6 @@ c_baishan = {
 c_zhanyin = {
 	867.1.1 = {
 		holder = han0005
-		liege = d_shuofang
 		government = celestial_government
 	}
 	1066.1.1 = {
@@ -90,7 +108,6 @@ c_zhanyin = {
 c_guangwu = {
 	867.1.1 = {
 		holder = han0005
-		liege = d_shuofang
 		government = celestial_government
 	}
 	1066.1.1 = {
@@ -184,14 +201,9 @@ c_hezhou_2 = {
 
 # d_qilian
 c_qilin = {
-	#Qilin commander (Guiyi) - fictional placeholders
-	861.1.1 = {
-		holder = 305950
-	}
-	#Yughurs caputre Ganzou
 	#Qilin Yughurs - fictional placeholders
-	882.1.1 = {
-		liege = 0
+	867.1.1 = {
+		liege = k_guiyi
 		holder = yughur0002
 	}
 	#Ganzhou Kingdom Established
@@ -280,15 +292,11 @@ c_qilin = {
 	}
 }
 c_yalong = {
-	#Qilin commander (Guiyi) - fictional placeholders
-	861.1.1 = {
-		holder = 305950
-	}
-	#Yughurs caputre Ganzou
+
 	#Qilin Yughurs - fictional placeholders
-	882.1.1 = {
-		liege = 0
-		holder = yughur0002
+	867.1.1 = {
+		liege = k_guiyi
+		holder = uyghur0061
 	}
 	#Ganzhou Kingdom Established
 	894.1.1 = {
@@ -500,21 +508,6 @@ d_guasha = {
 		holder = 206807
 	}
 }
-c_guazhou = {
-	867.1.1 = {
-		holder = han0012
-		liege = d_guasha
-		government = meritocratic_government
-	}
-	1066.1.1 = {
-		holder = 206725
-		liege = d_guasha
-		government = meritocratic_government
-	}
-	1178.1.1 = {
-		holder = 206807
-	}
-}
 c_shazhou = {
 	851.1.1 = {
 		holder = 206811 # Zhang Yichao
@@ -534,6 +527,36 @@ c_shazhou = {
 		holder = 206807
 	}
 }
+c_guazhou = {
+	867.1.1 = {
+		holder = 1059714
+		liege = d_guasha
+		government = meritocratic_government
+	}
+	1066.1.1 = {
+		holder = 206725
+		liege = d_guasha
+		government = meritocratic_government
+	}
+	1178.1.1 = {
+		holder = 206807
+	}
+}
+#c_xincheng = {
+#	867.1.1 = {
+#		holder = 304191
+#		liege = d_guasha
+#		government = celestial_government
+#	}
+#	1066.1.1 = {
+#		holder = 206725
+#		liege = d_guasha
+#		government = meritocratic_government
+#	}
+#	1178.1.1 = {
+#		holder = 206807
+#	}
+#}
 c_hehe = {
 	867.1.1 = {
 		holder = 244004
@@ -551,7 +574,7 @@ c_hehe = {
 }
 c_shouchang = {
 	867.1.1 = {
-		holder = 1059714
+		holder = han0012
 		liege = d_guasha
 		government = meritocratic_government
 	}
@@ -564,3 +587,18 @@ c_shouchang = {
 		holder = 206807
 	}
 }
+#c_ziting = {
+#	867.1.1 = {
+#		holder = 304191
+#		liege = d_guasha
+#		government = celestial_government
+#	}
+#	1066.1.1 = {
+#		holder = 206725
+#		liege = d_guasha
+#		government = meritocratic_government
+#	}
+#	1178.1.1 = {
+#		holder = 206807
+#	}
+#}
