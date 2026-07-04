@@ -77702,17 +77702,17 @@ e_srivijaya = {
 				b_SUM_Silindung = {
 					province = 17462
 
-					color = { 70 135 75 }
+					color = { 60 125 65 }
 				}
 				b_SUM_Humbang = {
 					province = 15006
 
-					color = { 50 115 55 }
+					color = { 60 125 65 }
 				}
 				b_SUM_Toba = {
 					province = 15007
 
-					color = { 80 145 85 }
+					color = { 60 125 65 }
 				}
 			}
 			c_SUM_pakpak = {
@@ -77727,12 +77727,12 @@ e_srivijaya = {
 				b_SUM_Pakpak_Bharat = {
 					province = 15259
 
-					color = { 50 115 55 }
+					color = { 40 105 45 }
 				}
 				b_SUM_Karo = {
 					province = 15483
 
-					color = { 20 100 65 }
+					color = { 40 105 45 }
 				}
 			}
 			c_SUM_pasaman = {
@@ -77749,11 +77749,6 @@ e_srivijaya = {
 
 					color = { 25 105 120 }
 				}
-				b_SUM_Padang_Sidempuan = {
-					province = 17334
-
-					color = { 25 105 120 }
-				}
 			}
 			c_SUM_mandailing = {
 				# c_mandailing in old RoA
@@ -77767,7 +77762,12 @@ e_srivijaya = {
 				b_SUM_Batahan = {
 					province = 17016
 
-					color = { 35 115 130 }
+					color = { 30 95 35 }
+				}
+				b_SUM_Padang_Sidempuan = {
+					province = 17334
+
+					color = { 30 95 35 }
 				}
 			}
 			c_SUM_barus = {
@@ -77782,17 +77782,17 @@ e_srivijaya = {
 				b_SUM_Singkil = {
 					province = 11319
 
-					color = { 45 125 75 }
+					color = { 70 135 75 }
 				}
 				b_SUM_Sibolga = {
 					province = 17406
 
-					color = { 80 145 85 }
+					color = { 70 135 75 }
 				}
 				b_SUM_Raket = {
 					province = 15003
 
-					color = { 45 125 75 }
+					color = { 70 135 75 }
 				}
 			}
 		}
@@ -77975,17 +77975,19 @@ e_srivijaya = {
 	k_pahang = {
 		color = { 2 79 156 }
 
-		capital = c_pekan
+		capital = c_MAL_pahang
 
-		d_pahang = {
+		d_MAL_pahang = {
+			# d_pahang in old RoA
 			color = { 11 52 135 }
 
-			capital = c_pekan
+			capital = c_MAL_pahang
 
-			c_pekan = {
+			c_MAL_pahang = {
+				# c_pekan in old RoA
 				color = { 6 55 166 }
 
-				b_pekan = {
+				b_MAL_Inderapura = { # early b_MAL_Pekan
 					province = 15506
 
 					color = { 6 55 166 }
@@ -77995,13 +77997,14 @@ e_srivijaya = {
 
 					color = { 6 55 166 }
 				}
-				b_paya_besar = {
+				b_MAL_Paya_Besar = {
 					province = 15642
 
 					color = { 6 55 166 }
 				}
 			}
-			c_jerantut = {
+			c_MAL_jerantut = {
+				# c_jerantut in old RoA
 				color = { 31 77 171 }
 
 				b_MAL_Jerantut = {
@@ -78009,27 +78012,29 @@ e_srivijaya = {
 
 					color = { 31 77 171 }
 				}
-				b_lipis = {
+				b_MAL_Lipis = {
 					province = 15719
 
 					color = { 31 77 171 }
 				}
 			}
-			c_temerloh = {
+			c_MAL_semantan = {
+				# c_temerloh in old RoA
 				color = { 6 43 122 }
 
-				b_temerloh = {
+				b_MAL_Semantan = {
 					province = 15562
 
 					color = { 6 43 122 }
 				}
-				b_maran_bera = {
+				b_MAL_Maran_Bera = {
 					province = 15474
 
 					color = { 6 43 122 }
 				}
 			}
-			c_raub = {
+			c_MAL_raub = {
+				# c_raub in old RoA
 				color = { 25 61 133 }
 
 				b_MAL_raub = {
@@ -78050,73 +78055,11 @@ e_srivijaya = {
 			}
 		}
 
-		d_ujong_tanah = {
+		d_MAL_melaka = {
+			# d_ujong_tanah in old RoA
 			color = { 20 90 125 }
 
-			c_melaka = {
-				color = { 12 75 110 }
-
-				b_MAL_Melaka = {
-					province = 11403
-
-					color = { 12 75 110 }
-				}
-				b_kuala_pilah = {
-					province = 15009
-
-					color = { 12 75 110 }
-				}
-			}
-
-			c_temasik = {
-				color = { 30 105 145 }
-
-				b_MAL_batu_berlayer = {
-					province = 11397
-
-					color = { 30 105 145 }
-				}
-				b_pancur = {
-					province = 17391
-
-					color = { 30 105 145 }
-				}
-			}
-
-			c_klang = {
-				color = { 40 120 135 }
-
-				b_kuala_selangor = {
-					province = 15593
-
-					color = { 40 120 135 }
-				}
-				b_MAL_kuala_langat = {
-					province = 11422
-
-					color = { 40 120 135 }
-				}
-				b_klang = {
-					province = 15490
-
-					color = { 40 120 135 }
-				}
-			}
-
-			c_segamat = {
-				color = { 10 65 95 }
-
-				b_segamat = {
-					province = 15010
-
-					color = { 10 65 95 }
-				}
-				b_MAL_batu_palat = {
-					province = 11401
-
-					color = { 10 65 95 }
-				}
-			}
+			capital = c_MAL_johor
 
 			c_MAL_johor = {
 				color = { 25 95 160 }
@@ -78126,20 +78069,86 @@ e_srivijaya = {
 
 					color = { 25 95 160 }
 				}
-				b_MAL_kota_tinggi = {
+				b_MAL_Kota_Tinggi = {
 					province = 11399
 
 					color = { 25 95 160 }
 				}
-				b_MAL_mersing = {
+				b_MAL_Mersing = {
 					province = 11400
 
 					color = { 25 95 160 }
 				}
 			}
+			c_MAL_gelanggi = {
+				# c_segamat in old RoA
+				color = { 10 65 95 }
+
+				b_MAL_Muar = {
+					province = 11401
+
+					color = { 10 65 95 }
+				}
+				b_MAL_Segamat = {
+					province = 15010
+
+					color = { 10 65 95 }
+				}
+			}
+			c_MAL_melaka = {
+				# c_melaka in old RoA
+				color = { 12 75 110 }
+
+				b_MAL_Melaka = {
+					province = 11403
+
+					color = { 12 75 110 }
+				}
+				b_MAL_Pilah = {
+					province = 15009
+
+					color = { 12 75 110 }
+				}
+			}
+			c_MAL_kelang = {
+				# c_klang in old RoA
+				color = { 40 120 135 }
+
+				b_MAL_Kelang = {
+					province = 15490
+
+					color = { 40 120 135 }
+				}
+				b_MAL_Selangor = {
+					province = 15593
+
+					color = { 40 120 135 }
+				}
+				b_MAL_Langat = {
+					province = 11422
+
+					color = { 40 120 135 }
+				}
+			}
+			c_MAL_tumasik = {
+				# c_temasik in old RoA
+				color = { 30 105 145 }
+
+				b_MAL_Tumasik = {
+					province = 11397
+
+					color = { 30 105 145 }
+				}
+				b_MAL_Pancur = {
+					province = 17391
+
+					color = { 30 105 145 }
+				}
+			}
 		}
 
-		d_kelantan = {
+		d_MAL_kelantan = {
+			# d_kelantan in old RoA
 			color = { 29 106 179 }
 
 			c_MAL_kelantan = {
@@ -78150,15 +78159,14 @@ e_srivijaya = {
 
 					color = { 20 95 165 }
 				}
-
 				b_MAL_Besut = {
 					province = 11412
 
 					color = { 20 95 165 }
 				}
 			}
-
-			c_terengganu = {
+			c_MAL_terengganu = {
+				# c_terengganu in old RoA
 				color = { 40 120 195 }
 
 				b_MAL_Kuala_Terengganu = {
@@ -78166,17 +78174,17 @@ e_srivijaya = {
 
 					color = { 40 120 195 }
 				}
-				b_terengganu = {
+				b_MAL_Terengganu = {
 					province = 11390
 
 					color = { 40 120 195 }
 				}
-				b_kemaman = {
+				b_MAL_Kemaman = {
 					province = 15745
 
 					color = { 40 120 195 }
 				}
-				b_kuala_dungun = {
+				b_MAL_Dungun = {
 					province = 15838
 
 					color = { 40 120 195 }
@@ -78190,7 +78198,8 @@ e_srivijaya = {
 
 		capital = c_mardelong
 
-		d_langkasuka = {
+		d_MAL_langkasuka = {
+			# d_langkasuka in old RoA
 			color = { 22 70 74 }
 
 			capital = c_mardelong
@@ -78476,7 +78485,8 @@ e_srivijaya = {
 				}
 			}
 
-			c_poronai = {
+			c_MAL_gangganegara = {
+				# c_poronai in old RoA
 				color = { 22 65 68 }
 
 				b_kuala_kangsar = {
