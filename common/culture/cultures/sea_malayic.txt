@@ -105,13 +105,13 @@ gayo = {
 		tradition_highland_warriors 	# msl_note: terrain based choice to help them defend their land
 		tradition_tribe_unity 			# msl_note: to represent their clans and communities
 		tradition_storytellers 			# msl_note: very oral based society
+	}
 
-		# msl_note: rice plays important part of their livelihood
-		dlc_tradition = {
-			trait = tradition_tgp_rice_cultivators
-			requires_dlc_flag = all_under_heaven
-			fallback = tradition_agrarian
-		}
+	# msl_note: rice plays important part of their livelihood
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_batak
