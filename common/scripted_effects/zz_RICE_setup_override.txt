@@ -2810,16 +2810,6 @@ RICE_setup_aslian_flavor_pack_effect = {
 	#
 	############################################################
 
-	if = {
-		limit = {
-			game_start_date <= 1000.1.1
-		}
-		title:c_MAL_gangganegara = {
-			set_county_culture = culture:senoi
-			set_county_faith = faith:senoi_pagan
-		}
-	}
-
 	every_ruler = {
 		limit = {
 			culture = culture:senoi
@@ -2879,16 +2869,18 @@ RICE_setup_aslian_flavor_pack_effect = {
 			limit = {
 				is_alive = yes
 			}
-			get_title = title:c_MAL_semantan
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			add_courtier = character:RICE_aslian_002
 			set_sexuality = heterosexual
-			add_character_modifier = {
-				modifier = RICE_aslian_aspiration_become_semai_hero
-			}
-			set_variable = {
-				name = RICE_historical_aspiration
-				value = flag:bah_lud
+			if = {
+				limit = { has_global_variable = is_RICE_loaded_global_variable }
+				add_character_modifier = {
+					modifier = RICE_aslian_aspiration_become_semai_hero
+				}
+				set_variable = {
+					name = RICE_historical_aspiration
+					value = flag:bah_lud
+				}
 			}
 		}
 	}	
@@ -2902,11 +2894,11 @@ RICE_setup_aslian_flavor_pack_effect = {
 
 	if = {
 		limit = {
-			title:b_MAL_Pekan = {
+			title:b_MAL_Inderapura = {
 				title_province = { has_special_building = no }
 			}
 		}
-		title:b_MAL_Pekan.title_province = {
+		title:b_MAL_Inderapura.title_province = {
 			add_special_building = RICE_aslian_pahang_gold_mines_01
 		}
 	}
@@ -2915,11 +2907,11 @@ RICE_setup_aslian_flavor_pack_effect = {
 
 	if = {
 		limit = {
-			title:b_BOR_Kudat = {
+			title:b_tomborungan = {
 				title_province = { has_special_building = no }
 			}
 		}
-		title:b_BOR_Kudat.title_province = {
+		title:b_tomborungan.title_province = {
 			add_special_building = RICE_aslian_mount_kinabalu
 		}
 	}
