@@ -121,7 +121,7 @@ d_vaspurakan = {
 	1022.1.1 = {
 		holder = sea_byzantine_vaspurakan_placeholder
 	}
-	1046.1.1 = {
+	1045.1.1 = {
 		# Grigor 'Magistros' received office as ruler of Mesopotamia, Vaspurakan, and Taron
 		holder = 41584
 	}
@@ -967,7 +967,6 @@ d_shavarshan = {
 c_artaz = {
 	430.1.1 = {
 		holder = sea_amatuni_005
-		liege = d_vaspurakan
 	}
 	453.1.1 = {
 		holder = sea_amatuni_006
@@ -977,6 +976,9 @@ c_artaz = {
 	}
 	596.1.1 = {
 		holder = sea_amatuni_008
+	}
+	611.1.1 = {
+		liege = d_vaspurakan
 	}
 	638.1.1 = {
 		holder = sea_amatuni_009
@@ -1722,7 +1724,7 @@ c_mardali = {
 	}
 	1300.1.1 = {
 		holder = 34401
-		liege = d_charsianon
+		#liege = d_charsianon
 	}
 }
 
@@ -1878,21 +1880,21 @@ c_varaznunik = {
 	1128.1.1 = {
 		holder = 93413
 	}
-	1185.1.1 = {
-		holder = 1232634
-	}
-	1193.1.1 = {
-		holder = Afsar16
-	}
-	1198.1.1 = {
-		holder = 1232636
-	}
-	1198.10.1 = {
-		holder = 1232637
-	}
-	1206.1.1 = {
-		holder = 1232638
-	}
+	# 1185.1.1 = {
+	#	holder = 1232634
+	# }
+	# 1193.1.1 = {
+	#	holder = Afsar16
+	# }
+	# 1198.1.1 = {
+	#	holder = 1232636
+	# }
+	# 1198.10.1 = {
+	#	holder = 1232637
+	# }
+	# 1206.1.1 = {
+	#	holder = 1232638
+	# }
 	1207.8.1 = {
 		holder = 34243
 	}
@@ -1902,12 +1904,12 @@ c_varaznunik = {
 	1234.1.1 = {
 		holder = 34254
 	}
-	1239.1.1 = {
-		holder = 9305332
-	}
-	1258.1.1 = {
-		holder = 9305333
-	}
+	# 1239.1.1 = {
+	# 	holder = 9305332
+	# }
+	# 1258.1.1 = {
+	# 	holder = 9305333
+	# }
 	# 1282.1.1 = {
 	#	holder = Anush1
 	# }
@@ -2114,7 +2116,7 @@ c_derzene = {
 	}
 	1300.1.1 = {
 		holder = 34401
-		liege = d_charsianon
+		#liege = d_charsianon
 	}
 }
 
@@ -2289,7 +2291,7 @@ c_theodosiopolis = {
 	}
 	1300.1.1 = {
 		holder = 34401
-		liege = d_charsianon
+		#liege = d_charsianon
 	}
 }
 
@@ -3251,10 +3253,13 @@ c_bznunik = {
 		holder = 159147
 	}
 	1054.1.1 = {
-		liege = e_persia
+		liege = k_persia
 	}
 	1061.1.1 = {
 		holder = 20738
+	}
+	1063.9.4 = {
+		liege = e_persia
 	}
 
 	# Battle of Manzikert - Turkish domination of the region

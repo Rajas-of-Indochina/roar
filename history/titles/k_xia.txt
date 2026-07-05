@@ -769,7 +769,7 @@ c_tiande = {
 	}
 }
 c_lxj_fengzhou = {
-	860.1.1={
+	867.1.1={
 		holder = han_3025
 		liege = d_tiande
 	}
@@ -794,11 +794,11 @@ c_lxj_fengzhou = {
 	1000.1.1={
 		holder = ongud0012
 	}
-	1001.1.1={
-		liege = "k_xia"
-	}
 	1020.1.1={
 		holder = ongud0013
+	}
+	1038.1.1={
+		liege = "k_xia"
 	}
 	1040.1.1={
 		holder = ongud0014
@@ -856,9 +856,9 @@ c_lxj_fengzhou = {
 	}
 }
 c_youzhou_xia = {
-	860.1.1={
+	867.1.1 = {
+		liege = "d_tiande"
 		holder = han_3025
-		liege = d_tiande
 	}
 	880.1.1={
 		holder = ongud0006
@@ -881,11 +881,12 @@ c_youzhou_xia = {
 	1000.1.1={
 		holder = ongud0012
 	}
-	1001.1.1={
-		liege = "k_xia"
-	}
 	1020.1.1={
 		holder = ongud0013
+	}
+	#Conquered by Tangut
+	1038.1.1={
+		liege = "k_xia"
 	}
 	1040.1.1={
 		holder = ongud0014
@@ -945,9 +946,9 @@ c_youzhou_xia = {
 
 d_langshan = {
 	#Chanyu Protectorate
-	630.1.1={
-		liege = "k_hexi"
-	}
+	#630.1.1={
+	#	liege = "k_hexi"
+	#}
 	#Uraqai Vassals - fictional placeholders
 	740.1.1={
 		holder = ongud0001
@@ -970,7 +971,7 @@ d_langshan = {
 		holder = ongud0006
 	}
 	900.1.1={
-		liege = k_otuken #Chanyu Protectorate ends, area absorbed into Zubu
+		#liege = k_otuken #Chanyu Protectorate ends, area absorbed into Zubu
 		holder = ongud0007
 	}
 	920.1.1={
@@ -988,12 +989,12 @@ d_langshan = {
 	1000.1.1={
 		holder = ongud0012
 	}
-	#Conquered by Tangut
-	1001.1.1={
-		liege = "k_xia"
-	}
 	1020.1.1={
 		holder = ongud0013
+	}
+	#Conquered by Tangut
+	1038.1.1={
+		liege = "k_xia"
 	}
 	1040.1.1={
 		holder = ongud0014
@@ -1054,7 +1055,6 @@ d_langshan = {
 c_wentugaole = {
 	#Uraqai Vassals - fictional placeholders
 	740.1.1={
-		liege = "d_tiande"
 		holder = ongud0001
 	}
 	800.1.1={
@@ -1068,6 +1068,9 @@ c_wentugaole = {
 	}
 	860.1.1={
 		holder = ongud0005
+	}
+	867.1.1 = {
+		liege = "d_tiande"
 	}
 	880.1.1={
 		holder = ongud0006
@@ -1148,7 +1151,6 @@ c_wentugaole = {
 c_langshan = {
 	#Uraqai Vassals - fictional placeholders
 	740.1.1={
-		liege = "d_tiande"
 		holder = ongud0001
 	}
 	800.1.1={
@@ -1162,6 +1164,9 @@ c_langshan = {
 	}
 	860.1.1={
 		holder = ongud0005
+	}
+	867.1.1 = {
+		liege = "d_tiande"
 	}
 	880.1.1={
 		holder = ongud0006
@@ -1242,9 +1247,9 @@ c_langshan = {
 
 d_xiutu = {
 	#Chanyu Protectorate
-	630.1.1={
-		liege = "k_hexi"
-	}
+	#630.1.1={
+	#	liege = "k_hexi"
+	#}
 	#Tuoba Vassals - fictional placeholders
 	740.1.1={
 		government = nomad_government
@@ -1268,7 +1273,7 @@ d_xiutu = {
 		holder = tuoba0006
 	}
 	900.1.1={
-		liege = k_otuken #Chanyu Protectorate ends, area absorbed into Zubu
+		#liege = k_otuken #Chanyu Protectorate ends, area absorbed into Zubu
 		holder = tuoba0007
 	}
 	920.1.1={
@@ -1290,7 +1295,7 @@ d_xiutu = {
 		holder = tuoba0013
 	}
 	#Conquered by Tangut
-	1030.1.1={
+	1038.1.1 = {
 		liege = "k_xia"
 	}
 	1040.1.1={
@@ -1581,8 +1586,10 @@ d_juyan = {
 	#Ganzhou conquered by Tanguts
 	#Tangut Suzhou Vassals - fictional placeholders
 	1028.1.1 = {
-		liege = "k_xia"
 		holder = tangut0049
+	}
+	1038.1.1 = {
+		liege = "k_xia"
 	}
 	1060.1.1 = {
 		holder = tangut0050
