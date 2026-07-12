@@ -1,150 +1,135 @@
-﻿# k_pahang
-## d_MAL_pahang ###################################
-### c_MAL_pahang
-15506 = { # Inderapura AKA Pekan
-	culture = malay
-	religion = mahayana
+﻿## d_pahang
+    ### c_pekan
+        15506 = { # b_pekan
+            culture = malay
+            religion = mahayana
 
-	holding = temple_citadel_holding
+            holding = temple_citadel_holding
 
-	special_building_slot = sea_gold_mines_01
-}
-11402 = { # Rompin
-	holding = none
-}
-15642 = { # Paya Besar
-	holding = none
-}
+            special_building_slot = sea_gold_mines_01
+        }
+        11402 = { # b_MAL_Rompin
+            holding = none
+        }
+        15642 = { # b_paya_besar
+            holding = none
+        }
+    ### c_temerloh
+        15562 = { # b_temerloh
+            culture = senoi
+            religion = mahayana
 
-### c_MAL_jerantut
-11407 = { # Jerantut
-	culture = senoi
-	religion = senoi_pagan
+            holding = tribal_holding
+        }
+        15474 = { # b_maran_bera
+            holding = none
+        }
+    ### c_jerantut
+        11407 = { # b_MAL_Jerantut
+            culture = senoi
+            religion = mahayana
 
-	holding = tribal_holding
-}
-11410 = { # Tinggano
-	holding = none
-}
-15719 = { # Lipis
-	holding = none
-}
+            holding = tribal_holding
+        }
+        15719 = { # b_lipis
+            holding = none
+        }
+    ### c_raub
+        11408 = { # b_MAL_raub
+            culture = senoi
+            religion = mahayana
 
-### c_MAL_semantan
-15562 = { # Semantan AKA Temerloh
-	culture = senoi
-	religion = senoi_pagan
+            holding = tribal_holding
+        }
+        11409 = { # b_MAL_Saimwang
+            holding = none
+        }
+		11410 = { # b_MAL_Tinggano
+            holding = none
+        }
+## d_ujong_tanah
+    ### c_MAL_johor
+        11398 = { # b_MAL_Johor
+            culture = malay
+            religion = mahayana
 
-	holding = tribal_holding
-}
-15474 = { # Maran Bera
-	holding = none
-}
+            holding = temple_citadel_holding
+        }
+        11400 = { # b_MAL_mersing
+            holding = none
+        }
+        11399 = { # b_MAL_kota_tinggi
+            holding = none
+        }
+    ### c_segamat
+        15010 = { # b_segamat
+            culture = malay
+            religion = mahayana
 
-### c_MAL_raub
-11408 = { # Raub
-	culture = semang
-	religion = semang_pagan
+            holding = temple_citadel_holding
+        }
+        11401 = { # b_batu_palat
+            holding = none
+        }
+    ### c_temasik
+        11397 = { # b_temasik
+            culture = seletar
+            religion = umboh
 
-	holding = tribal_holding
-}
-11409 = { # Saimwang
-	holding = none
-}
+            holding = tribal_holding
+        }
+        17391 = { # b_pancur
+            holding = none
+        }
+    ### c_melaka
+        11403 = { # b_MAL_Melaka
+            culture = malay
+            religion = mahayana
 
+            holding = temple_citadel_holding
+        }
+        15009 = { # b_kuala_pilah
+            holding = none
+        }
+    ### c_klang
+        15593 = { # b_kuala_selangor
+            culture = malay
+            religion = mahayana
 
-## d_MAL_melaka ###################################
-### c_MAL_johor
-11398 = { # Johor
-	culture = malay
-	religion = mahayana
+            holding = temple_citadel_holding
+        }
+        11422 = { # b_MAL_kuala_langat
+            holding = none
+        }
+        15490 = { # b_klang
+            holding = none
+        }
 
-	holding = temple_citadel_holding
-}
-11399 = { # Kota Tinggi
-	holding = none
-}
-11400 = { # Mersing
-	holding = none
-}
+## d_kelantan
+    ### c_MAL_kelantan
+        11413 = { # b_MAL_Kelantan
+            culture = mon
+            religion = mahayana
 
-### c_MAL_gelanggi
-11401 = { # Muar
-	# coastal town preceeding Sultanate of Malacca
-	culture = malay
-	religion = mahayana
+            holding = temple_citadel_holding
+        }
+        11412 = { # b_MAL_Besut
+            holding = none
+        }
+    ### c_terengganu
+        11411 = { # b_MAL_Kuala_Terengganu
+            culture = malay
+            religion = mahayana
 
-	holding = castle_holding
+            holding = temple_citadel_holding
+        }
+        11390 = { # b_terengganu
+            holding = none
+        }
+		15745 = { # b_kemaman
+            holding = none
+        }
+        15838 = { # b_kuala_dungun
+            holding = none
+        }
 
-	# History
-}
-15010 = { # Segamat
-	holding = none
-}
-
-### c_MAL_melaka
-11403 = { # Melaka
-	culture = malay
-	religion = mahayana
-
-	holding = temple_citadel_holding
-}
-15009 = { # Pilah
-	holding = none
-}
-
-### c_MAL_kelang
-15490 = { # Kelang
-	culture = malay
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-15593 = { # Selangor
-	# name shared with later muslim state ; only important in 14th century
-	holding = none
-}
-11422 = { # Langat
-	holding = none
-}
-
-### c_MAL_tumasik
-11397 = { # Temasik
-	culture = seletar
-	religion = umboh
-
-	holding = tribal_holding
-}
-17391 = { # Pancur
-	holding = none
-}
-
-
-## d_MAL_kelantan ###################################
-### c_MAL_kelantan
-11413 = { # Kelantan
-	culture = mon
-	religion = mahayana
-
-	holding = temple_citadel_holding
-}
-11412 = { # Besut
-	holding = none
-}
-
-### c_MAL_terengganu
-11411 = { # Kuala Terengganu
-	culture = malay
-	religion = mahayana
-
-	holding = castle_holding
-}
-11390 = { # Terengganu
-	holding = none
-}
-15745 = { # Kemaman
-	holding = none
-}
-15838 = { # Dungun
-	holding = none
-}
