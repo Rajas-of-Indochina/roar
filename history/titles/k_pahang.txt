@@ -76,7 +76,19 @@ c_raub = {
 }
 
 
-# d_ujong_tanah
+d_ujong_tanah = {
+	847.1.1 = {
+		government = mandala_government
+		holder = malay_gelanggi_01_fic	#fictional
+	}
+	1059.1.1 = {
+		holder = malay_gelanggi_10_fic	#fictional
+	}
+	1173.1.1 = {
+		holder = malay_gelanggi_20_fic	#fictional
+	}
+}
+
 c_MAL_johor = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 11 }
@@ -166,7 +178,7 @@ c_temasik = {
 		government = wanua_government
 		holder = sea_seletar_tumasik_01_fic	#fictional
 		tributary_of = {
-			suzerain = d_MAL_melaka
+			suzerain = d_ujong_tanah
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -174,7 +186,7 @@ c_temasik = {
 	1060.1.1 = {
 		holder = sea_seletar_tumasik_03_fic	#fictional
 		tributary_of = {
-			suzerain = d_MAL_melaka
+			suzerain = d_ujong_tanah
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -182,7 +194,7 @@ c_temasik = {
 	1170.1.1 = {
 		holder = sea_seletar_tumasik_04_fic	#fictional
 		tributary_of = {
-			suzerain = d_MAL_melaka
+			suzerain = d_ujong_tanah
 			contract_group = tributary_mandala_tribal
 		}
 	}
