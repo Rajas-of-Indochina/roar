@@ -1,160 +1,226 @@
 ﻿## k_pahang
 d_pahang = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
+
+c_pekan = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 9 }
 	1178.1.1 = { change_development_level = 14 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_pahang_01_fic	#ficitonal
+	}
+	1060.1.1 = {
+		holder = malay_pahang_10_fic	#fictional
+	}
+	1170.1.1 = {
+		holder = malay_pahang_20_fic	#fictional
+	}
 }
-	c_pekan = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_pahang_01_fic	#ficitonal
-		}
-		1060.1.1 = {
-			holder = malay_pahang_10_fic	#fictional
-		}
-		1170.1.1 = {
-			holder = malay_pahang_20_fic	#fictional
-		}
-	}
-	c_jerantut = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_pahang_01_fic	#ficitonal
-		}
-		1060.1.1 = {
-			holder = malay_pahang_10_fic	#fictional
-		}
-		1170.1.1 = {
-			holder = malay_pahang_20_fic	#fictional
-		}
-	}
-	c_temerloh = {
-		867.1.1 = { change_development_level = 4 }
-		1066.1.1 = { change_development_level = 8 }
-		1178.1.1 = { change_development_level = 12 }
 
-		866.1.1 = {
-			government = wanua_government
-			holder = malay_semantan_01_fic	#fictional
-		}
-		1034.1.1 = {
-			holder = malay_semantan_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_pahang_20_fic	#fictional
-		}
+c_jerantut = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_senoi_jerantut_01_fic	#ficitonal
 	}
-	c_raub = {
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_pahang_01_fic	#ficitonal
-		}
-		1060.1.1 = {
-			holder = malay_pahang_10_fic	#fictional
-		}
-		1170.1.1 = {
-			holder = malay_pahang_20_fic	#fictional
-		}
+	#
+	1060.1.1 = {
+		holder = sea_senoi_jerantut_03_fic	#fictional
 	}
+	#
+	1170.1.1 = {
+		holder = sea_senoi_jerantut_04_fic	#fictional
+	}
+}
+
+c_temerloh = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = RICE_aslian_001	# legendary
+	}
+	#
+	1060.1.1 = {
+		holder = malay_semantan_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_senoi_semantan_04_fic	#fictional
+	}
+}
+
+c_raub = {
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_semang_raub_01_fic	#ficitonal
+	}
+	#
+	1060.1.1 = {
+		holder = sea_semang_raub_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_semang_raub_04_fic	#fictional
+	}
+}
+
+
 # d_ujong_tanah
-	c_melaka = {
-		847.1.1 = {
-			government = mandala_government
-			holder = malay_gelanggi_01_fic	#fictional
-		}
-		1059.1.1 = {
-			holder = malay_gelanggi_10_fic	#fictional
-		}
-		1173.1.1 = {
-			holder = malay_gelanggi_20_fic	#fictional
-		}
-	}
-	c_temasik = {
-		847.1.1 = {
-			government = mandala_government
-			holder = malay_gelanggi_01_fic	#fictional
-		}
-		1059.1.1 = {
-			holder = malay_gelanggi_10_fic	#fictional
-		}
-		1173.1.1 = {
-			holder = malay_gelanggi_20_fic	#fictional
-		}
-	}
-	c_klang = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 9 }
-		1178.1.1 = { change_development_level = 14 }
+c_MAL_johor = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
 
-		850.1.1 = {
-			government = mandala_government
-			holder = malay_gangganera_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_kedah_10_fic
-		}
-		1178.1.1 = {
-			holder = malay_kedah_20_fic
-		}
+	847.1.1 = {
+		government = mandala_government
+		holder = malay_gelanggi_01_fic	#fictional
 	}
-	c_segamat = {
-		847.1.1 = {
-			government = mandala_government
-			holder = malay_gelanggi_01_fic	#fictional
-		}
-		1059.1.1 = {
-			holder = malay_gelanggi_10_fic	#fictional
-		}
-		1173.1.1 = {
-			holder = malay_gelanggi_20_fic	#fictional
-		}
+	1059.1.1 = {
+		holder = malay_gelanggi_10_fic	#fictional
 	}
-	c_MAL_johor = {
-		867.1.1 = { change_development_level = 6 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 17 }
+	1173.1.1 = {
+		holder = malay_gelanggi_20_fic	#fictional
+	}
+}
 
-		847.1.1 = {
-			government = mandala_government
-			holder = malay_gelanggi_01_fic	#fictional
-		}
-		1059.1.1 = {
-			holder = malay_gelanggi_10_fic	#fictional
-		}
-		1173.1.1 = {
-			holder = malay_gelanggi_20_fic	#fictional
+c_segamat = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 14 }
+
+	847.1.1 = {
+		government = mandala_government
+		holder = malay_gelanggi_01_fic	#fictional
+	}
+	1059.1.1 = {
+		holder = malay_gelanggi_10_fic	#fictional
+	}
+	1173.1.1 = {
+		holder = malay_gelanggi_20_fic	#fictional
+	}
+}
+
+c_melaka = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = sea_malay_melaka_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
 		}
 	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_melaka_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_melaka_04_fic	#fictional
+	}
+}
+
+c_klang = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 14 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = sea_malay_kelang_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_kelang_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_kelang_04_fic	#fictional
+	}
+}
+
+c_temasik = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 7 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_seletar_tumasik_01_fic	#fictional
+		tributary_of = {
+			suzerain = d_MAL_melaka
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_seletar_tumasik_03_fic	#fictional
+		tributary_of = {
+			suzerain = d_MAL_melaka
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_seletar_tumasik_04_fic	#fictional
+		tributary_of = {
+			suzerain = d_MAL_melaka
+			contract_group = tributary_mandala_tribal
+		}
+	}
+}
+
+
 d_kelantan = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
 }
-	c_MAL_kelantan = {
-		859.1.1 = {
-			government = mandala_government
-			holder = malay_langkasuka_01_fic	#fictional
-			liege = d_langkasuka
-		}
-		1062.1.1 = {
-			holder = malay_langkasuka_10_fic	#fictional
-		}
-		1157.1.1 = {
-			holder = malay_kelantan_20_fic	#fictional
-			liege = 0
-		}
+
+c_MAL_kelantan = {
+	859.1.1 = {
+		government = mandala_government
+		holder = malay_langkasuka_01_fic	#fictional
+		liege = d_langkasuka
 	}
-	c_terengganu = {
-		859.1.1 = {
-			government = mandala_government
-			holder = malay_langkasuka_01_fic	#fictional
-			liege = d_langkasuka
-		}
-		1062.1.1 = {
-			holder = malay_langkasuka_10_fic	#fictional
-		}
-		1157.1.1 = {
-			holder = malay_kelantan_20_fic	#fictional
-			liege = 0
-		}
+	1062.1.1 = {
+		holder = malay_langkasuka_10_fic	#fictional
 	}
+	1157.1.1 = {
+		holder = malay_kelantan_20_fic	#fictional
+		liege = 0
+	}
+}
+
+c_terengganu = {
+	859.1.1 = {
+		government = mandala_government
+		holder = malay_langkasuka_01_fic	#fictional
+		liege = d_langkasuka
+	}
+	1062.1.1 = {
+		holder = malay_langkasuka_10_fic	#fictional
+	}
+	1157.1.1 = {
+		holder = malay_kelantan_20_fic	#fictional
+		liege = 0
+	}
+}
