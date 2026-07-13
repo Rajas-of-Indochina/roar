@@ -17,7 +17,7 @@
 	11349=terraced_hills # b_JAV_Hujung_Galuh
 	11354=terraced_hills # b_JAV_Kahuripan
 	17042=hills # b_JAV_Tamwlang
-	17118=plains # b_watugaluh
+	17118=jungle # b_watugaluh
 	11348=farmlands # b_JAV_Walaing
 	17211=farmlands # b_JAV_Lwaram
 	17242=farmlands # b_JAV_Kambangwangi
@@ -47,7 +47,7 @@
 	16822=hills # b_wanagiri
 # d_lumajang
 	11356=mountains # b_JAV_Mahameru
-	11358=plains # b_JAV_Lumajang
+	11358=hills # b_JAV_Lumajang
 	16472=hills # b_sadeng
 	16690=mountains # b_argapura
 	16875=hills # b_JAV_Brahma
@@ -62,7 +62,7 @@
 # k_sunda
 # d_sunda
 	17389=hills # b_cibadak
-	17395=hills # b_pangrango
+	17395=mountains # b_pangrango
 	17489=terraced_hills # b_JAV_Pakuan_Pajajaran
 	17490=jungle # b_citarumhulu
 	11327=farmlands # b_JAV_Tangaram
@@ -73,17 +73,17 @@
 	17548=farmlands # b_pontang
 	11325=jungle # b_JAV_Ujung_Kulon
 	11330=jungle # b_pangguyangan
-	17502=plains # b_pulasari
+	17502=jungle # b_pulasari
 	11242=hills # b_parahyangan
-	11331=hills # b_JAV_Jampang_Kulon
-	11332=hills # b_leuweungsancang
+	11331=jungle # b_JAV_Jampang_Kulon
+	11332=jungle # b_leuweungsancang
 # d_galuh
-	11336=farmlands # b_JAV_Cirebon
+	11336=jungle # b_JAV_Cirebon
 	11337=terraced_hills # b_saunggalah
 	17227=terraced_hills # b_JAV_Kawali
 	17288=plains # b_gunatiga
 	17506=jungle # b_manuk
-	11333=farmlands # b_JAV_Batujaya
+	11333=jungle # b_JAV_Batujaya
 	11334=hills # b_JAV_Guhawpawon
 	11335=farmlands # b_JAV_Pamanukan
 	17400=hills # b_JAV_Ciremai
@@ -93,7 +93,7 @@
 	11339=hills # b_JAV_Nusalarang
 	11340=jungle # b_JAV_Sarayu
 	17027=hills # b_JAV_Pangandaran
-# k_bali_sea
+# k_bali
 # d_IDO_bali
 	18368=terraced_hills # b_gianyar
 	18379=jungle # b_IDO_Buleleng
@@ -256,7 +256,7 @@
 	16044=hills # b_SUM_Loknga
 	16216=jungle # b_SUM_Lamuri
 	11257=jungle # b_SUM_Perlak
-	11258=jungle # b_SUM_Tamiang
+	11258=wetlands # b_SUM_Tamiang
 	15785=jungle # b_SUM_Langsa
 	11256=jungle # b_SUM_Pasai
 	15896=jungle # b_SUM_Jambu_Ayer
@@ -335,22 +335,24 @@
 	11410=jungle # b_MAL_Tinggano
 # d_MAL_melaka
 	11403=jungle # b_MAL_Melaka
-	15009=jungle # b_kuala_pilah
+	15009=jungle # b_MAL_Pilah
 	11397=jungle # b_MAL_Batu_Berlayer
 	17391=hills # b_MAL_Pancur
-	11422=jungle # b_MAL_kuala_langat
-	15490=jungle # b_klang
-	15593=jungle # b_kuala_selangor
-	11401=jungle # b_MAL_batu_palat
-	15010=jungle # b_segamat
+	11422=jungle # b_MAL_Langat
+	15490=jungle # b_MAL_Kelang
+	15593=jungle # b_MAL_Selangor
+	11401=jungle # b_MAL_Muar
+	15010=jungle # b_MAL_Segamat
 	11398=jungle # b_MAL_Johor
-	11399=jungle # b_MAL_kota_tinggi
-	11400=jungle # b_MAL_mersing
+	11399=jungle # b_MAL_Kota_Tinggi
+	11400=jungle # b_MAL_Mersing
 # d_MAL_kelantan
-	11413=jungle # b_MAL_Kelantan
-	11390=jungle # b_terengganu
+	11390=jungle # b_MAL_Kenyir
 	11411=jungle # b_MAL_Kuala_Terengganu
-	15838=jungle # b_kuala_dungun
+	11412=jungle # b_MAL_Besut
+	11413=jungle # b_MAL_Kelantan
+	15745=jungle # b_MAL_Kemaman
+	15838=jungle # b_MAL_Dungun
 # k_langkasuka
 # d_MAL_langkasuka
 	11423=jungle # b_pak_payoon
@@ -380,6 +382,7 @@
 	16178=jungle # b_penang
 	16919=terraced_hills # b_kubang_pasu
 	15698=jungle # b_manjung
+	15865=jungle # b_kerian
 	15866=hills # b_kuala_kangsar
 	11416=jungle # b_MAL_Setul
 	16948=jungle # b_langkawi
@@ -1278,7 +1281,7 @@
 # d_PHI_tagalog
 	17001=jungle # b_PHI_Tangway
 	17010=wetlands # b_PHI_Sapa
-	17082=floodplains # b_PHI_Maynila
+	17082=terraced_hills # b_PHI_Maynila
 	16954=wetlands # b_PHI_Pila
 	16996=hills # b_PHI_Pangil
 	16834=jungle # b_PHI_Balayan
@@ -1316,17 +1319,17 @@
 	16624=jungle # b_PHI_Mamburao
 # k_amianan
 # d_PHI_ilocana
-	11003=plains # b_PHI_Nagparitan
-	11004=wetlands # b_PHI_Bigan
-	17646=plains # b_laoag
-	11005=plains # b_PHI_Kandong
-	15653=forest # b_narbakan
+	11003=hills # b_PHI_Nagparitan
+	11004=jungle # b_PHI_Bigan
+	17646=hills # b_laoag
+	11005=terraced_hills # b_PHI_Kandong
+	15653=jungle # b_narbakan
 	15693=mountains # b_PHI_Kalinga
-	15708=mountains # b_PHI_Tabuk
+	15708=terraced_hills # b_PHI_Tabuk
 	17614=mountains # b_bayag
 # d_pangasinan
 	17364=terraced_hills # b_PHI_Binalatongan
-	17408=farmlands # b_umingan
+	17408=terraced_hills # b_umingan
 	17417=terraced_hills # b_lingayen
 	17446=jungle # b_PHI_Bolinao
 	15157=terraced_hills # b_PHI_Benguet
@@ -1336,19 +1339,19 @@
 	15156=terraced_hills # b_balawan
 # d_PHI_cagayan
 	11007=jungle # b_malolokit
-	11009=wetlands # b_PHI_Aparri
-	17615=floodplains # b_PHI_Apayo
+	11009=floodplains # b_PHI_Aparri
+	17615=jungle # b_PHI_Apayo
 	17621=floodplains # b_nasipin
 	15162=terraced_hills # b_tuy
 	15163=terraced_hills # b_bayombong
 	15165=hills # b_kasibu
-	15166=floodplains # b_karig
-	15505=floodplains # b_gamu
+	15166=jungle # b_karig
+	15505=jungle # b_gamu
 	15815=floodplains # b_tubigarao
-	18324=floodplains # b_PHI_Bolo
+	18324=terraced_hills # b_PHI_Bolo
 	15169=jungle # b_kawayan
 	15176=mountains # b_divilikan
-	17606=mountains # b_dupaningan
+	17606=hills # b_dupaningan
 	18325=mountains # b_baggao
 	11001=hills # b_PHI_Babuyan
 	11002=hills # b_PHI_Calayan
@@ -1485,14 +1488,14 @@
 # k_sulawesi
 # d_SuMa_minahasa
 	11210=jungle # b_tilamuta
-	11211=jungle # b_SUL_Suwawa
+	11211=hills # b_SUL_Suwawa
 	17199=jungle # b_SUL_Gorontalo
 	17256=jungle # b_sumalata
-	11212=jungle # b_modayag
+	11212=hills # b_modayag
 	17147=hills # b_molibagu
-	17237=hills # b_lolak
-	11213=jungle # b_tondano
-	15371=plains # b_SUL_Wenang
+	17237=jungle # b_lolak
+	11213=hills # b_tondano
+	15371=jungle # b_SUL_Wenang
 	17272=jungle # b_tomohon
 	15612=jungle # b_karakelong
 # d_tomini
@@ -1528,7 +1531,7 @@
 	16233=jungle # b_sadan
 	11178=hills # b_SUL_Malili
 	16210=jungle # b_burau
-	11175=jungle # b_sengkang
+	11175=wetlands # b_sengkang
 	15759=hills # b_SUL_Tosora
 # d_mamuju
 	11203=jungle # b_kalukku
@@ -1544,7 +1547,7 @@
 	11173=jungle # b_parepare
 	17855=jungle # b_SUL_Makassar
 	17552=hills # b_selayar
-	17775=plains # b_jeneponto
+	17775=jungle # b_jeneponto
 	17798=jungle # b_bulukumba
 	11172=jungle # b_SUL_Boni
 	15012=jungle # b_palattae
@@ -1556,7 +1559,7 @@
 	11180=hills # b_SUL_Tamboa
 	11182=hills # b_marsaoleh
 	16252=hills # b_beteleme
-	11186=plains # b_tinanggea
+	11186=jungle # b_tinanggea
 	15590=jungle # b_konda
 	15676=jungle # b_SUL_Wowoni
 	11185=jungle # b_bombana
@@ -1607,7 +1610,7 @@
 	11227=jungle # b_weda
 	16748=jungle # b_gane
 	11228=hills # b_wasile
-	17200=hills # b_maba
+	17200=jungle # b_maba
 	17220=hills # b_binagara
 	16507=hills # b_obira
 	16832=hills # b_bajan
