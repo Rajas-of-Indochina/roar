@@ -77976,17 +77976,19 @@ e_srivijaya = {
 	k_pahang = {
 		color = { 2 79 156 }
 
-		capital = c_pekan
+		capital = c_MAL_pahang
 
-		d_pahang = {
+		d_MAL_pahang = {
+			# d_pahang in old RoA
 			color = { 11 52 135 }
 
-			capital = c_pekan
+			capital = c_MAL_pahang
 
-			c_pekan = {
+			c_MAL_pahang = {
+				# c_pekan in old RoA
 				color = { 6 55 166 }
 
-				b_pekan = {
+				b_MAL_Inderapura = {
 					province = 15506
 
 					color = { 6 55 166 }
@@ -77996,13 +77998,29 @@ e_srivijaya = {
 
 					color = { 6 55 166 }
 				}
-				b_paya_besar = {
+				b_MAL_Paya_Besar = {
 					province = 15642
 
 					color = { 6 55 166 }
 				}
 			}
-			c_jerantut = {
+			c_MAL_semantan = {
+				# c_temerloh in old RoA
+				color = { 6 43 122 }
+
+				b_MAL_Semantan = {
+					province = 15562
+
+					color = { 6 43 122 }
+				}
+				b_MAL_Maran_Bera = {
+					province = 15474
+
+					color = { 6 43 122 }
+				}
+			}
+			c_MAL_jerantut = {
+				# c_jerantut in old RoA
 				color = { 31 77 171 }
 
 				b_MAL_Jerantut = {
@@ -78015,27 +78033,14 @@ e_srivijaya = {
 
 					color = { 31 77 171 }
 				}
-				b_lipis = {
+				b_MAL_Lipis = {
 					province = 15719
 
 					color = { 31 77 171 }
 				}
 			}
-			c_temerloh = {
-				color = { 6 43 122 }
-
-				b_temerloh = {
-					province = 15562
-
-					color = { 6 43 122 }
-				}
-				b_maran_bera = {
-					province = 15474
-
-					color = { 6 43 122 }
-				}
-			}
-			c_raub = {
+			c_MAL_raub = {
+				# c_raub in old RoA
 				color = { 25 61 133 }
 
 				b_MAL_Raub = {
@@ -78051,7 +78056,8 @@ e_srivijaya = {
 			}
 		}
 
-		d_ujong_tanah = {
+		d_MAL_melaka = {
+			# d_ujong_tanah in old RoA
 			color = { 20 90 125 }
 
 			capital = c_MAL_johor
@@ -78138,7 +78144,8 @@ e_srivijaya = {
 			}
 		}
 
-		d_kelantan = {
+		d_MAL_kelantan = {
+			# d_kelantan in old RoA
 			color = { 29 106 179 }
 
 			c_MAL_kelantan = {
@@ -78189,7 +78196,8 @@ e_srivijaya = {
 
 		capital = c_mardelong
 
-		d_langkasuka = {
+		d_MAL_langkasuka = {
+			# d_langkasuka in old RoA
 			color = { 22 70 74 }
 
 			capital = c_mardelong
@@ -78475,7 +78483,8 @@ e_srivijaya = {
 				}
 			}
 
-			c_poronai = {
+			c_MAL_gangganegara = {
+				# c_poronai in old RoA
 				color = { 22 65 68 }
 
 				b_kuala_kangsar = {
