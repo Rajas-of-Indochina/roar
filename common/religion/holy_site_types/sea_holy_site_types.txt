@@ -594,6 +594,41 @@ unakoti = {
 ### ### ### ###
 
 
+### Pahan holy sites ###
+batu_caves = {
+	# caves were used as shelters by the indigenous Temuan people, a tribe of Orang Asli ; contains various Hindu shrines
+	county = c_MAL_kelang
+	barony = b_MAL_Langat
+
+	character_modifier = {
+		name = holy_site_batu_caves_effect_name
+		monthly_piety_gain_mult = 0.05
+	}
+}
+
+semang = {
+	# as the mountainous region that Semang inhabit is mostly impassable terrain, this was created to represent them
+	county = c_MAL_raub
+
+	character_modifier = {
+		name = holy_site_semang_effect_name
+		monthly_lifestyle_xp_gain_mult = 0.10
+	}
+}
+
+tahan = {
+	# refers to Tahan River, one of the main waterways in the region
+	county = c_MAL_jerantut
+	barony = b_MAL_Lipis
+
+	character_modifier = {
+		name = holy_site_tahan_effect_name
+		same_culture_opinion = 5
+	}
+}
+### ### ### ###
+
+
 ### Burmese holy sites ###
 popa = {
 	# Mount Popa
@@ -609,7 +644,7 @@ popa = {
 ### ### ### ###
 
 
-### Sulawesi hooly sites ###
+### Sulawesi holy sites ###
 buyu_kondorung = {
 	# high peak situated in central Sulawesi
 	county = c_SuMa_banggai_utara
