@@ -441,12 +441,13 @@ d_lop_buri = {
 			}
 		}
 	}
-d_kra = {
+
+## d_kra
+c_uthomporn  = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }    
-}
-	c_uthomporn  = {
+	1178.1.1 = { change_development_level = 6 }
+
 		867.1.1 = {
 			government = mandala_government
 			holder = mon_phetchaburi_01_fic	#fictional
@@ -466,52 +467,31 @@ d_kra = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_kraburi = {
-		867.1.1 = { change_development_level = 6 }
-		1066.1.1 = { change_development_level = 10 }
-		1178.1.1 = { change_development_level = 16 }
+}
 
-		863.1.1 = {
-			government = mandala_government
-			holder = malay_panpan_01_fic	#fictional
-		}
-		1055.1.1 = {
-			holder = malay_tambralinga_10_fic	#fictional
-		}
-		1157.1.1 = {
-			holder = malay_padmavamsa_01	#possibly real or fictional
-		}
-	}
-	c_zardan = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 5 }
-		1178.1.1 = { change_development_level = 9 }
+c_kraburi = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_tenasserim_01_fic	#fictional
-			liege = 0
-		}
-		1066.1.1 = {
-			holder = mon_tenasserim_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = mon_tenasserim_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_moklen_kraburi_01_fic	#fictional
 	}
-	c_pashu = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 5 }
-		1178.1.1 = { change_development_level = 9 }
+	#
+	1060.1.1 = {
+		holder = sea_moklen_kraburi_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_moklen_kraburi_04_fic	#fictional
+	}
+}
+
+c_zardan = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
 
 		867.1.1 = {
 			government = mandala_government
@@ -532,7 +512,35 @@ d_kra = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
+}
+
+c_pashu = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = mon_tenasserim_01_fic	#fictional
+			liege = 0
+		}
+		1066.1.1 = {
+			holder = mon_tenasserim_10_fic	#fictional
+			tributary_of = {
+				suzerain = k_pagan
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = mon_tenasserim_20_fic	#fictional
+			tributary_of = {
+				suzerain = k_pagan
+				contract_group = tributary_mandala
+			}
+		}
+}
+
+
 d_pribpri = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 5 }

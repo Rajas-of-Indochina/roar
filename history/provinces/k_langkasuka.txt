@@ -110,7 +110,7 @@
 }
 
 
-## d_MAL_takola ###################################
+## d_THAI_takola ###################################
 ### c_THAI_takua_pa
 11430 = { # Takola
 	culture = mon
@@ -145,7 +145,7 @@
 	}
 }
 
-### c_MAL_salang
+### c_THAI_salang
 17557 = { # Salang
 	culture = moklen
 	religion = umboh
@@ -160,7 +160,7 @@
 	}
 }
 
-### c_pantai_smor
+### c_THAI_pantai_smor
 17677 = { # Pantai Smor
 	culture = moklen
 	religion = umboh
@@ -189,9 +189,9 @@
 }
 
 
-## d_MAL_tambralinga ###################################
+## d_THAI_tambralinga ###################################
 ### c_THAI_tambralinga
-17725 = { # Tambralinga
+17725 = { # Ligor AKA Nakhon Si Thammarat
 	culture = mon
 	religion = mahayana
 
@@ -296,7 +296,7 @@
 	}
 }
 
-### c_chaiya
+### c_THAI_chaiya
 15063 = { # Chaiya
 	culture = mon
 	religion = mahayana
@@ -305,7 +305,6 @@
 
 	# History
 	659.1.1 = { # Rise of Chaiya in general
-		holding = temple_citadel_holding
 		buildings = {
 			common_tradeport_01
 		}
@@ -326,13 +325,8 @@
 17961 = { # Khiri Rat Nikhom
 	holding = church_holding
 }
-
-### c_tha_kham
 11429 = { # Tha Kham
-	culture = mon
-	religion = vaishnavism
-	
-	holding = temple_citadel_holding
+	holding = city_holding
 }
 17856 = { # Khao Phra Narai
 	holding = church_holding
@@ -407,20 +401,22 @@
 }
 
 ### c_MAL_gangganegara
-15866 = { # Kuala Kangsar
+15865 = { # Beruas
+	# regional 15th century kingdom was named after Beruas so safe to assume it was decently important
 	culture = malay
 	religion = shaivism
 
 	holding = temple_citadel_holding
 }
-15865 = { # Kerian
+15866 = { # Ipoh
+	# neither Kuala Kangsar or Ipoh were particularly important until 19th century
 	holding = none
 }
 15698 = { # Manjung
 	holding = none
 }
 
-### c_terang
+### c_MAL_terang
 17525 = { # Terang
 	culture = mon
 	religion = mahayana
@@ -442,7 +438,7 @@
 		holding = church_holding
 	}
 }
-17429 = { # b_palanda
+17429 = { # Palanda
 	holding = city_holding
 
 	# History

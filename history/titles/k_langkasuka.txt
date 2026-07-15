@@ -74,16 +74,29 @@ c_narathiwat = {
 }
 
 
-d_MAL_tambralinga = {
-	867.1.1 = { change_development_level = 7 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 19 }
+d_THAI_tambralinga = {
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_tambralinga_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = malay_tambralinga_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = malay_padmavamsa_01	#possibly real or fictional
+	}
 }
 
 c_THAI_tambralinga = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 19 }
+
 	860.1.1 = {
 		government = mandala_government
-		holder = malay_panpan_01_fic	#fictional
+		holder = malay_tambralinga_01_fic	#fictional
 	}
 	#
 	1060.1.1 = {
@@ -95,22 +108,11 @@ c_THAI_tambralinga = {
 	}
 }
 
-c_chaiya = {
-	860.1.1 = {
-		government = mandala_government
-		holder = malay_panpan_01_fic	#fictional
-	}
-	#
-	1060.1.1 = {
-		holder = malay_tambralinga_10_fic	#fictional
-	}
-	#
-	1170.1.1 = {
-		holder = malay_padmavamsa_01	#possibly real or fictional
-	}
-}
+c_THAI_chaiya = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 19 }
 
-c_tha_kham = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_panpan_01_fic	#fictional
@@ -126,6 +128,10 @@ c_tha_kham = {
 }
 
 c_wiang_sa = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
+
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_tambralinga_01_fic	#fictional
@@ -141,6 +147,10 @@ c_wiang_sa = {
 }
 
 c_mokhlan = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 17 }
+
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_tambralinga_01_fic	#fictional
@@ -176,11 +186,11 @@ c_MAL_kedah = {
 	}
 	#
 	1060.1.1 = {
-		holder = malay_kedah_10_fic	#fictional
+		holder = malay_kedah_10_fic 	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = malay_kedah_20_fic
+		holder = malay_kedah_20_fic 	#fictional
 		liege = 0
 	}
 }
@@ -200,11 +210,11 @@ c_MAL_gangganegara = {
 	}
 	#
 	1060.1.1 = {
-		holder = malay_kedah_10_fic
+		holder = malay_kedah_10_fic 	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = malay_kedah_20_fic
+		holder = malay_kedah_20_fic 	#fictional
 		liege = 0
 	}
 }
@@ -215,7 +225,7 @@ c_MAL_setul = {
 	1178.1.1 = { change_development_level = 12 }
 
 	860.1.1 = {
-		government = wanua_government
+		government = anarchist_government
 		holder = sea_moklen_setul_01_fic	#fictional
 	}
 	#
@@ -224,12 +234,13 @@ c_MAL_setul = {
 	}
 	#
 	1170.1.1 = {
-		holder = malay_kedah_20_fic
+		government = mandala_government
+		holder = malay_kedah_20_fic 	#fictional
 		liege = 0
 	}
 }
 
-c_terang = {
+c_MAL_terang = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 12 }
 	1178.1.1 = { change_development_level = 19 }
@@ -247,17 +258,17 @@ c_terang = {
 	}
 	#
 	1060.1.1 = {
-		holder = malay_kedah_10_fic	#fictional
+		holder = malay_kedah_10_fic 	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = malay_kedah_20_fic
+		holder = malay_kedah_20_fic 	#fictional
 		liege = 0
 	}
 }
 
 
-# d_MAL_takola
+# d_THAI_takola
 c_THAI_takua_pa = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 10 }
@@ -265,25 +276,37 @@ c_THAI_takua_pa = {
 
 	860.1.1 = {
 		government = mandala_government
-		holder = malay_panpan_01_fic	#fictional
+		holder = sea_mon_takua_pa_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
+		}
 	}
 	#
 	1060.1.1 = {
-		holder = malay_tambralinga_10_fic	#fictional
+		holder = sea_mon_takua_pa_03_fic	#fictional
+		tributary_of = {
+			suzerain = d_THAI_tambralinga
+			contract_group = tributary_mandala
+		}
 	}
 	#
 	1170.1.1 = {
-		holder = malay_padmavamsa_01	#possibly real or fictional
+		holder = sea_mon_takua_pa_04_fic	#fictional
+		tributary_of = {
+			suzerain = d_THAI_tambralinga
+			contract_group = tributary_mandala
+		}
 	}
 }
 
-c_pantai_smor = {
+c_THAI_pantai_smor = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 8 }
 	1178.1.1 = { change_development_level = 14 }
 
 	860.1.1 = {
-		government = wanua_government
+		government = anarchist_government
 		holder = sea_moklen_pantai_smor_01_fic	#fictional
 	}
 	#
@@ -297,13 +320,13 @@ c_pantai_smor = {
 	}
 }
 
-c_MAL_salang = {
+c_THAI_salang = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 4 }
 	1178.1.1 = { change_development_level = 6 }
 
 	860.1.1 = {
-		government = wanua_government
+		government = anarchist_government
 		holder = sea_moklen_salang_01_fic	#fictional
 	}
 	#

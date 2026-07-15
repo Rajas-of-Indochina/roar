@@ -78339,17 +78339,17 @@ e_srivijaya = {
 				# c_poronai in old RoA
 				color = { 22 65 68 }
 
-				b_kuala_kangsar = {
-					province = 15866
-
-					color = { 22 65 68 }
-				}
-				b_kerian = {
+				b_MAL_Beruas = {
 					province = 15865
 
 					color = { 22 65 68 }
 				}
-				b_manjung = {
+				b_MAL_Ipoh = {
+					province = 15866
+
+					color = { 22 65 68 }
+				}
+				b_MAL_Manjung = {
 					province = 15698
 
 					color = { 22 65 68 }
@@ -78393,20 +78393,21 @@ e_srivijaya = {
 					color = { 35 95 100 }
 				}
 			}
-			c_terang = {
+			c_MAL_terang = {
+				# c_terang in old RoA
 				color = { 18 58 62 }
 
-				b_terang = {
+				b_MAL_Terang = {
 					province = 17525
 
 					color = { 18 58 62 }
 				}
-				b_kantang = {
+				b_MAL_Kantang = {
 					province = 17483
 
 					color = { 18 58 62 }
 				}
-				b_palanda = {
+				b_MAL_Palanda = {
 					province = 17429
 
 					color = { 18 58 62 }
@@ -78414,7 +78415,7 @@ e_srivijaya = {
 			}
 		}
 
-		d_MAL_tambralinga = {
+		d_THAI_tambralinga = {
 			# d_tambralinga in old RoA
 			color = { 40 100 105 }
 
@@ -78447,7 +78448,7 @@ e_srivijaya = {
 					name_list_telugu = cn_madamalingam
 				}
 
-				b_tambralinga = {
+				b_THAI_Ligor = {
 					province = 17725
 
 					color = { 55 130 135 }
@@ -78481,11 +78482,11 @@ e_srivijaya = {
 					color = { 55 130 135 }
 				}
 			}
-
-			c_chaiya = {
+			c_THAI_chaiya = {
+				# c_chaiya in old RoA
 				color = { 35 95 100 }
 
-				b_chaiya = {
+				b_THAI_Chaiya = {
 					province = 15063
 
 					color = { 35 95 100 }
@@ -78501,23 +78502,20 @@ e_srivijaya = {
 
 					color = { 35 95 100 }
 				}
-			}
-
-			c_tha_kham = {
-				color = { 20 65 70 }
-
 				b_tha_kham = {
 					province = 11429
 
-					color = { 20 65 70 }
+					color = { 35 95 100 }
 				}
 				b_khao_phra_narai = {
 					province = 17856
 
-					color = { 20 65 70 }
+					color = { 35 95 100 }
 				}
 			}
-
+			#c_tha_kham = {
+			#	color = { 20 65 70 }
+			#}
 			c_wiang_sa = {
 				color = { 45 110 115 }
 
@@ -78543,7 +78541,6 @@ e_srivijaya = {
 					}
 				}
 			}
-
 			c_mokhlan = {
 				color = { 17 55 60 }
 
@@ -78565,7 +78562,7 @@ e_srivijaya = {
 			}
 		}
 
-		d_MAL_takola = {
+		d_THAI_takola = {
 			# d_takola in old RoA
 			color = { 38 95 100 }
 
@@ -78584,6 +78581,7 @@ e_srivijaya = {
 				}
 
 				b_THAI_Takola = {
+					# b_THAI_Takua_Pa in vanilla
 					province = 11430
 
 					cultural_names = {
@@ -78596,34 +78594,32 @@ e_srivijaya = {
 
 					color = { 55 125 130 }
 				}
-				b_THAI_tako_klang = {
+				b_THAI_Tako_Klang = {
 					province = 11428
 
 					color = { 55 125 130 }
 				}
-				b_bu_nga = {
+				b_THAI_Bu_Nga = {
 					province = 17789
 
 					color = { 55 125 130 }
 				}
 			}
-
-			c_pantai_smor = {
+			c_THAI_pantai_smor = {
 				color = { 26 72 76 }
 
-				b_pantai_smor = {
+				b_THAI_Pantai_Smor = {
 					province = 17677
 
 					color = { 26 72 76 }
 				}
-				b_THAI_klong_thom = {
+				b_THAI_Klong_Thom = {
 					province = 11427
 
 					color = { 26 72 76 }
 				}
 			}
-
-			c_MAL_salang = {
+			c_THAI_salang = {
 				# c_salang in old RoA
 				color = { 42 105 110 }
 
@@ -78634,7 +78630,7 @@ e_srivijaya = {
 					name_list_han = cn_silan
 				}
 
-				b_MAL_Salang = {
+				b_THAI_Salang = {
 					province = 17557
 
 					color = { 42 105 110 }
