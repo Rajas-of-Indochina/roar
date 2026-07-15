@@ -77,14 +77,16 @@ c_MAL_raub = {
 
 
 d_MAL_melaka = {
-	847.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = malay_gelanggi_01_fic	#fictional
 	}
-	1059.1.1 = {
+	#
+	1060.1.1 = {
 		holder = malay_gelanggi_10_fic	#fictional
 	}
-	1173.1.1 = {
+	#
+	1170.1.1 = {
 		holder = malay_gelanggi_20_fic	#fictional
 	}
 }
@@ -94,14 +96,16 @@ c_MAL_johor = {
 	1066.1.1 = { change_development_level = 11 }
 	1178.1.1 = { change_development_level = 17 }
 
-	847.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = malay_gelanggi_01_fic	#fictional
 	}
-	1059.1.1 = {
+	#
+	1060.1.1 = {
 		holder = malay_gelanggi_10_fic	#fictional
 	}
-	1173.1.1 = {
+	#
+	1170.1.1 = {
 		holder = malay_gelanggi_20_fic	#fictional
 	}
 }
@@ -111,14 +115,16 @@ c_MAL_gelanggi = {
 	1066.1.1 = { change_development_level = 9 }
 	1178.1.1 = { change_development_level = 14 }
 
-	847.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = malay_gelanggi_01_fic	#fictional
 	}
-	1059.1.1 = {
+	#
+	1060.1.1 = {
 		holder = malay_gelanggi_10_fic	#fictional
 	}
-	1173.1.1 = {
+	#
+	1170.1.1 = {
 		holder = malay_gelanggi_20_fic	#fictional
 	}
 }
@@ -183,6 +189,14 @@ c_MAL_tumasik = {
 		}
 	}
 	#
+	930.1.1 = {
+		holder = sea_seletar_tumasik_02_fic	#fictional
+		#tributary_of = {
+		#	suzerain = d_MAL_melaka
+		#	contract_group = tributary_mandala_tribal
+		#}
+	}
+	#
 	1060.1.1 = {
 		holder = sea_seletar_tumasik_03_fic	#fictional
 		tributary_of = {
@@ -208,30 +222,30 @@ d_MAL_kelantan = {
 }
 
 c_MAL_kelantan = {
-	859.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = malay_langkasuka_01_fic	#fictional
 		liege = d_langkasuka
 	}
-	1062.1.1 = {
+	1060.1.1 = {
 		holder = malay_langkasuka_10_fic	#fictional
 	}
-	1157.1.1 = {
+	1170.1.1 = {
 		holder = malay_kelantan_20_fic	#fictional
 		liege = 0
 	}
 }
 
 c_MAL_terengganu = {
-	859.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = malay_langkasuka_01_fic	#fictional
 		liege = d_langkasuka
 	}
-	1062.1.1 = {
+	1060.1.1 = {
 		holder = malay_langkasuka_10_fic	#fictional
 	}
-	1157.1.1 = {
+	1170.1.1 = {
 		holder = malay_kelantan_20_fic	#fictional
 		liege = 0
 	}

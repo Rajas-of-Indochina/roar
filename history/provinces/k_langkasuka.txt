@@ -1,7 +1,7 @@
 ﻿# k_langkasuka
 ## d_MAL_langkasuka ###################################
 ### c_MAL_patani
-11415 = { # b_MAL_Tiba
+11415 = { # Tiba
 	culture = mon
 	religion = shaivism
 
@@ -19,7 +19,7 @@
 	holding = city_holding
 
 	# History
-    867.1.1 = {
+	867.1.1 = {
 		buildings = {
 			guild_halls_01
 		}
@@ -27,460 +27,454 @@
 }
 
 ### c_mardelong
-        17517 = { # b_mardelong -> Satingpra
-            culture = mon
-            religion = mahayana
-            holding = tribal_holding
+17517 = { # Satingpra
+	culture = mon
+	religion = mahayana
+	holding = tribal_holding
 
-			220.1.1 = { # Rise of Satingpra
-				holding = temple_citadel_holding
-			}
-			600.1.1 = { # Phase I Canals
-				buildings = {
-					cereal_fields_01
-                }
-			}
-            835.1.1 = { # Start of City Wall after Pirate Attack of 835 C.E.
-				buildings = {
-                    curtain_walls_01
-                }
-            }
-			885.1.1 = { # Start of Phase II Canals
-				buildings = {
-					cereal_fields_02
-					curtain_walls_01
-					common_tradeport_01
-                }
-			}
-			1100.1.1 = { # Ceramic Kilns, but since Guilds can't be use for temple_citadel_holding
-				buildings = {
-					cereal_fields_02
-					curtain_walls_01
-					common_tradeport_02
-				}
-			}
-        }
-        17527 = { # b_khuhasawan
-            holding = none
+	holding = temple_citadel_holding
 
-			710.1.1 = { # First Record
-				holding = church_holding
-			}
-            767.1.1 = { # Subjugated to Srivijaya
-                buildings = {
-                    monastic_schools_01
-                }
-            }
-			885.1.1 = { # Effect from Phase II Canal
-				buildings = {
-					monastic_schools_01
-					cereal_fields_01
-                }
-			}
-        }
-        11423 = { # b_pak_payoon
-            holding = city_holding
-
-			885.1.1 = { # Effect from Phase II Canal
-				buildings = {
-					cereal_fields_01
-                }
-			}
-        }
-        17305 = { # b_rattaphum
-            holding = none
-        }
-    ### c_narathiwat
-        16649 = { # b_narathiwat
-            culture = mon
-            religion = shaivism
-
-            holding = temple_citadel_holding
-
-            900.1.1 = {
-            	culture = malay
-            }
-        }
-        11414 = { # b_MAL_Patani
-            holding = none
-        }
-        16506 = { # b_yala
-            holding = none
-        }
-
-
-## d_takola ###################################
-    ### c_THAI_takua_pa
-        11430 = { # b_THAI_Takola
-            culture = moklen
-            religion = umboh
-			holding = tribal_holding
-
-			50.1.1 = { # Milinda Panha Records
-				religion = vaishnavism
-				holding = temple_citadel_holding
-			}
-			170.1.1 = { # Ptolemic Records
-				buildings = {
-                    common_tradeport_01
-				}
-			}
-			530.1.1 = { # Chinese Ceramic found
-				culture = mon
-				buildings = {
-					common_tradeport_01
-                    barracks_01
-                }
-            }
-        }
-        11428 = { # b_THAI_tako_klang
-			holding = none
-			750.1.1 = { # Pallava Inscription
-				holding = church_holding
-			}
-            837.1.1 = { # Approx. Date
-                buildings = {
-                    cereal_fields_01
-                }
-            }
-        }
-        17789 = { # b_bu_nga
-            holding = none
-            1200.1.1 = { # Tambralinga Chronicles
-                holding = city_holding
-            }
-        }
-    ### c_salang
-        17557 = { # b_salang
-            culture = moklen
-            religion = umboh
-            holding = tribal_holding
-
-			1300.1.1 = { # Approx. Date
-				culture = mon
-				religion = mahayana
-				holding = temple_citadel_holding
-			}
-        }
-    ### c_pantai_smor
-        17677 = { # b_pantai_smor
-            culture = moklen
-            religion = umboh
-
-            holding = tribal_holding
-            920.1.1 = { # Approx. Date
-                culture = mon
-                religion = mahayana
-                holding = temple_citadel_holding
-            }
-        }
-        11427 = { # b_THAI_klong_thom
-            holding = none
-            950.1.1 = { # Approx. Date
-                holding = city_holding
-            }
-			1000.1.1 = { # Beads & Jewellery Trading
-				buildings = {
-                    common_tradeport_01
-				}
-			}
-        }
-
-## d_tambralinga
-    ### c_THAI_tambralinga
-        17725 = { # b_tambralinga
-			culture = mon
-            religion = shaivism
-            holding = tribal_holding
-
-			124.1.1 = { # Start of "Mollaraja" precursor site
-				holding = temple_citadel_holding
-			}
-			#518.1.1 = { # Start of "Wat Phra Mahathat" special building
-			#	##
-			#}
-			568.1.1 = { # Arrival of 300 Mahayana Monks
-				religion = mahayana
-			}
-			648.1.1 = { # First Trade Mission to China
-				buildings = {
-                    common_tradeport_01
-                }
-			}
-            767.1.1 = { # Subjugated to Srivijaya
-                buildings = {
-					common_tradeport_01
-                    curtain_walls_01
-                }
-            }
-			885.1.1 = { # Effect from Phase II Canal
-				buildings = {
-					common_tradeport_01
-					curtain_walls_01
-					cereal_fields_01
-                }
-			}
-			903.1.1 = { # New Barracks for war with Lavo & Haripunchai
-                buildings = {
-					common_tradeport_01
-					curtain_walls_01
-					cereal_fields_01
-                    barracks_01
-                }
-            }
-			1230.1.1 = { # New Wall for Sri Thammasokaraj
-				buildings = {
-					common_tradeport_01
-					curtain_walls_02
-					cereal_fields_01
-                    barracks_01
-                }
-			}
-			1453.1.1 = { # 3rd Gen Wall built by Lan Na artisans, primarily by those from Chiang Mai
-				buildings = {
-                    common_tradeport_01
-					curtain_walls_03
-					cereal_fields_01
-                    barracks_01
-                }
-			}
-        }
-        17711 = { # b_thung_yai
-			holding = none
-			667.1.1 = { # Sivakaivalya dynasty, Approx. date
-				holding = church_holding
-			}
-        }
-        11426 = { # b_THAI_thung_song
-            holding = none
-            1100.1.1 = { # Approx. Date
-                holding = temple_citadel_holding
-            }
-        }
-        11424 = { # b_THAI_sa_rieng
-			holding = none
-			693.1.1 = { # Approx. Date
-				holding = city_holding
-			}
-			885.1.1 = { # Effect from Phase II Canal
-				buildings = {
-					cereal_fields_01
-                }
-			}
-        }
-    ### c_wiang_sa
-		 17818 = { # b_wiang_sa
-            culture = mon
-            religion = mahayana
-			holding = tribal_holding
-
-			530.1.1 = { # First Contact with Liang Dynasty
-				holding = temple_citadel_holding
-			}
-            767.1.1 = {  # Subjugated to Srivijaya
-                buildings = {
-                    barracks_01
-                }
-            }
-        }
-		17917 = { # b_ban_na
-			holding = none
-
-			770.1.1 = { # According to Archaeologist
-				holding = church_holding
-			}
-            795.1.1 = { # Approx. Date
-                buildings = {
-                    cereal_fields_01
-                }
-            }
-			1005.1.1 = { # Approx. Date
-                buildings = {
-                    cereal_fields_02
-                }
-            }
-        }
-        15066 = { # b_sa_ulao
-            holding = none
-            1045.1.1 = {
-                holding = city_holding
-            }
-        }
-	### c_chaiya
-        15063 = { # b_chaiya
-            culture = mon
-            religion = mahayana
-            holding = tribal_holding
-
-			659.1.1 = { # Rise of Chaiya in general
-				holding = temple_citadel_holding
-				buildings = {
-					common_tradeport_01
-				}
-			}
-            767.1.1 = { # Subjugated to Srivijaya
-                buildings = {
-					common_tradeport_02
-                    curtain_walls_01
-                }
-            }
-			1380.1.1 = { # Rise of Chaiya again after Tambralinga influence diminishes for a while
-				buildings = {
-					common_tradeport_02
-					curtain_walls_01
-				}
-			}
-        }
-        17961 = { # b_khiri_rat_nikhom
-			holding = none
-			757.1.1 = { # Approx. Date
-				holding = church_holding
-			}
-        }
-    ### c_tha_kham
-        11429 = { # b_tha_kham
-            culture = mon
-            religion = vaishnavism
-			holding = tribal_holding
-
-			722.1.1 = { # Approx. Date
-				holding = temple_citadel_holding
-			}
-        }
-        17856 = { # b_khao_phra_narai
-            holding = none
-
-			757.1.1 = { # Approx. Date
-				holding = church_holding
-			}
-        }
-	### c_mokhlan
-        17849 = { # b_mokhlan
-            culture = mon
-            religion = shaivism
-
-            holding = tribal_holding
-
-			650.1.1 = { # Settlement of Mokhlan
-				holding = temple_citadel_holding
-			}
-            667.1.1 = { # Approx. Date
-                buildings = {
-                    cereal_fields_01
-                }
-            }
-        }
-        17774 = { # b_phrom_kiri
-            holding = none
-
-            1100.1.1 = { # Approx. Date
-                holding = city_holding
-            }
-        }
-        17977 = { # b_khao_ka
-			holding = none
-
-            752.1.1 = { # Start of Khao Ka Site
-				holding = church_holding
-			}
-            834.1.1 = { # Approx. Date
-                buildings = {
-                    monastic_schools_01
-                }
-            }
-        }
-
-## d_kedah
-    ### c_MAL_kedah
-        11417 = { # b_MAL_Kedah
-            culture = mon
-            religion = mahayana
-
-            900.1.1 = {
-            	culture = malay
-            }
-            1136.1.1 = {
-                religion = ashari
-            }
-
-            holding = temple_citadel_holding
-        }
-		11418 = { # b_MAL_merbau
-			holding = none
+	# History
+	600.1.1 = { # Phase I Canals
+		buildings = {
+			cereal_fields_01
 		}
-		16919 = { # b_kubang_pasu
-			holding = none
+	}
+	835.1.1 = { # Start of City Wall after Pirate Attack of 835 C.E.
+		buildings = {
+			curtain_walls_01
 		}
-        16178 = { # b_penang
-            holding = none
-        }
-    ### c_MAL_gangganegara
-        15866 = { # b_kuala_kangsar
-        	culture = malay
-            religion = shaivism
-
-            holding = temple_citadel_holding
-        }
-		15865 = { # b_kerian
-			holding = none
+	}
+	885.1.1 = { # Start of Phase II Canals
+		buildings = {
+			cereal_fields_02
+			curtain_walls_01
+			common_tradeport_01
 		}
-        15698 = { # b_manjung
-            holding = none
-        }
-    ### c_terang
-        17525 = { # b_terang
-			culture = moklen
-            religion = umboh
-            holding = tribal_holding
+	}
+	1100.1.1 = { # Ceramic Kilns, but since Guilds can't be use for temple_citadel_holding
+		buildings = {
+			cereal_fields_02
+			curtain_walls_01
+			common_tradeport_02
+		}
+	}
+}
+17527 = { # Khuhasawan
+	holding = church_holding
 
-			50.1.1 = { # Approx. Date
-				culture = mon
-				religion = mahayana
-				holding = temple_citadel_holding
-			}
-			700.1.1 = { # Approx. Date
-				buildings = {
-					common_tradeport_01
-				}
-			}
-        }
-        17483 = { # b_kantang
-			holding = none
+	# History
+	767.1.1 = { # Subjugated to Srivijaya
+		buildings = {
+			monastic_schools_01
+		}
+	}
+	885.1.1 = { # Effect from Phase II Canal
+		buildings = {
+			monastic_schools_01
+			cereal_fields_01
+		}
+	}
+}
+11423 = { # Pak Payoon
+	holding = city_holding
 
-			1350.1.1 = { # Approx. Date
-				holding = church_holding
-			}
-        }
-        17429 = { # b_palanda
-			holding = none
+	# History
+	885.1.1 = { # Effect from Phase II Canal
+		buildings = {
+			cereal_fields_01
+		}
+	}
+}
+17305 = { # Rattaphum
+	holding = none
+}
 
-			150.1.1 = { # Ptolemeic Records
-				holding = city_holding
-			}
-			540.1.1 = { # Approx. Date
-				buildings = {
-					common_tradeport_01
-				}
-			}
-        }
-    ### c_setul
-        11416 = { # b_MAL_Setul
-			culture = moklen
-            religion = umboh
+### c_narathiwat
+16649 = { # b_narathiwat
+	culture = mon
+	religion = shaivism
 
-            holding = tribal_holding
-            1150.1.1 = {  # Approx. Date of Relevance
-				culture = mon
-				religion = mahayana
-				holding = temple_citadel_holding
-			}
-        }
-        16948 = { # b_langkawi
-			holding = none
-			1200.1.1 = { # Approx. Date of Relevance
-				holding = city_holding
-			}
-        }
-        17026 = { # b_perlis
-            holding = none
-        }
+	holding = temple_citadel_holding
+
+	# History
+	900.1.1 = {
+		culture = malay
+	}
+}
+11414 = { # b_MAL_Patani
+	holding = none
+}
+16506 = { # b_yala
+	holding = none
+}
+
+
+## d_MAL_takola ###################################
+### c_THAI_takua_pa
+11430 = { # Takola
+	culture = mon
+	religion = vaishnavism
+
+	holding = temple_citadel_holding
+
+	# History
+	530.1.1 = { # Chinese Ceramic found
+		buildings = {
+			common_tradeport_01
+			barracks_01
+		}
+	}
+}
+11428 = { # Tako Klang
+	holding = church_holding
+
+	# History
+	837.1.1 = { # Approx. Date
+		buildings = {
+			cereal_fields_01
+		}
+	}
+}
+17789 = { # Bu Nga
+	holding = none
+
+	# History
+	1200.1.1 = { # Tambralinga Chronicles
+		holding = city_holding
+	}
+}
+
+### c_MAL_salang
+17557 = { # Salang
+	culture = moklen
+	religion = umboh
+
+	holding = tribal_holding
+
+	# History
+	1300.1.1 = { # Approx. Date
+		culture = mon
+		religion = mahayana
+		holding = temple_citadel_holding
+	}
+}
+
+### c_pantai_smor
+17677 = { # Pantai Smor
+	culture = moklen
+	religion = umboh
+
+	holding = tribal_holding
+
+	# History
+	920.1.1 = { # Approx. Date
+		culture = mon
+		religion = mahayana
+		holding = temple_citadel_holding
+	}
+}
+11427 = { # Klong Thom
+	holding = none
+
+	# History
+	950.1.1 = { # Approx. Date
+		holding = city_holding
+	}
+	1000.1.1 = { # Beads & Jewellery Trading
+		buildings = {
+			common_tradeport_01
+		}
+	}
+}
+
+
+## d_MAL_tambralinga ###################################
+### c_THAI_tambralinga
+17725 = { # Tambralinga
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	767.1.1 = { # Subjugated to Srivijaya
+		buildings = {
+			common_tradeport_01
+			curtain_walls_01
+		}
+	}
+	885.1.1 = { # Effect from Phase II Canal
+		buildings = {
+			common_tradeport_01
+			curtain_walls_01
+			cereal_fields_01
+		}
+	}
+	903.1.1 = { # New Barracks for war with Lavo & Haripunchai
+		buildings = {
+			common_tradeport_01
+			curtain_walls_01
+			cereal_fields_01
+			barracks_01
+		}
+	}
+	1230.1.1 = { # New Wall for Sri Thammasokaraj
+		buildings = {
+			common_tradeport_01
+			curtain_walls_02
+			cereal_fields_01
+			barracks_01
+		}
+	}
+	1453.1.1 = { # 3rd Gen Wall built by Lan Na artisans, primarily by those from Chiang Mai
+		buildings = {
+			common_tradeport_01
+			curtain_walls_03
+			cereal_fields_01
+			barracks_01
+		}
+	}
+}
+17711 = { # b_thung_yai
+	holding = church_holding
+}
+11426 = { # b_THAI_thung_song
+	holding = none
+
+	# History
+	1100.1.1 = { # Approx. Date
+		holding = temple_citadel_holding
+	}
+}
+11424 = { # b_THAI_sa_rieng
+	holding = city_holding
+
+	# History
+	885.1.1 = { # Effect from Phase II Canal
+		buildings = {
+			cereal_fields_01
+		}
+	}
+}
+
+### c_wiang_sa
+17818 = { # Wiang Sa
+	culture = mon
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+	767.1.1 = {  # Subjugated to Srivijaya
+		buildings = {
+			barracks_01
+		}
+	}
+}
+17917 = { # Ban Na
+	holding = church_holding
+
+	# History
+	795.1.1 = { # Approx. Date
+		buildings = {
+			cereal_fields_01
+		}
+	}
+	1005.1.1 = { # Approx. Date
+		buildings = {
+			cereal_fields_02
+		}
+	}
+}
+15066 = { # Sa Ulao
+	holding = none
+
+	# History
+	1045.1.1 = {
+		holding = city_holding
+	}
+}
+
+### c_chaiya
+15063 = { # Chaiya
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	659.1.1 = { # Rise of Chaiya in general
+		holding = temple_citadel_holding
+		buildings = {
+			common_tradeport_01
+		}
+	}
+	767.1.1 = { # Subjugated to Srivijaya
+		buildings = {
+			common_tradeport_02
+			curtain_walls_01
+		}
+	}
+	1380.1.1 = { # Rise of Chaiya again after Tambralinga influence diminishes for a while
+		buildings = {
+			common_tradeport_02
+			curtain_walls_01
+		}
+	}
+}
+17961 = { # Khiri Rat Nikhom
+	holding = church_holding
+}
+
+### c_tha_kham
+11429 = { # Tha Kham
+	culture = mon
+	religion = vaishnavism
+	
+	holding = temple_citadel_holding
+}
+17856 = { # Khao Phra Narai
+	holding = church_holding
+}
+
+### c_mokhlan
+17849 = { # Mokhlan
+	culture = mon
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+	667.1.1 = { # Approx. Date
+		buildings = {
+			cereal_fields_01
+		}
+	}
+}
+17774 = { # Phrom Kiri
+	holding = none
+
+	# History
+	1100.1.1 = { # Approx. Date
+		holding = city_holding
+	}
+}
+17977 = { # Khao Ka
+	holding = church_holding
+
+	# History
+	834.1.1 = { # Approx. Date
+		buildings = {
+			monastic_schools_01
+		}
+	}
+}
+
+
+## d_MAL_kedah ###################################
+### c_MAL_kedah
+11417 = { # Kedah
+	culture = mon
+	religion = shaivism 	# Hindu-Buddhist civilisation of Bujang Valley
+
+	holding = temple_citadel_holding
+
+	# History
+	900.1.1 = {
+		culture = malay
+	}
+	1474.1.1 = {
+        # while 'Kedah Annals' use year 1136, but more sources such as 'Malay Annals' point towards year 1474 as the time of conversion to Islam
+		religion = ashari
+	}
+}
+11418 = { # Merbau
+	holding = none
+}
+16919 = { # Kubang Pasu
+	# to represent influences of Bujang Valley civilisation on the region
+	holding = church_holding
+}
+16178 = { # Pulau Ka-Satu
+	holding = none
+
+	# History
+	1050.1.1 = {
+        # to represent influences of Bujang Valley civilisation on the region
+		holding = city_holding
+	}
+}
+
+### c_MAL_gangganegara
+15866 = { # Kuala Kangsar
+	culture = malay
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+15865 = { # Kerian
+	holding = none
+}
+15698 = { # Manjung
+	holding = none
+}
+
+### c_terang
+17525 = { # Terang
+	culture = mon
+	religion = mahayana
+	
+    holding = temple_citadel_holding
+
+	# History
+	700.1.1 = { # Approx. Date
+		buildings = {
+			common_tradeport_01
+		}
+	}
+}
+17483 = { # Kantang
+	holding = none
+
+	# History
+	1350.1.1 = { # Approx. Date
+		holding = church_holding
+	}
+}
+17429 = { # b_palanda
+	holding = city_holding
+
+	# History
+	540.1.1 = { # Approx. Date
+		buildings = {
+			common_tradeport_01
+		}
+	}
+}
+
+### c_MAL_setul
+11416 = { # Setul
+	culture = moklen
+	religion = umboh
+
+	holding = tribal_holding
+
+	# History
+	1150.1.1 = {  # Approx. Date of Relevance
+		culture = mon
+		religion = mahayana
+		holding = temple_citadel_holding
+	}
+}
+16948 = { # Langkawi
+	holding = none
+
+	# History
+	1200.1.1 = { # Approx. Date of Relevance
+		holding = city_holding
+	}
+}
+17026 = { # Perlis
+	holding = none
+}
