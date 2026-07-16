@@ -1,32 +1,6 @@
 ﻿# k_langkasuka
 ## d_MAL_langkasuka ###################################
-### c_MAL_patani
-11415 = { # Tiba
-	culture = mon
-	religion = shaivism
-
-	holding = temple_citadel_holding
-
-	# History
-	900.1.1 = {
-		culture = malay
-	}
-}
-17108 = { # Chenok
-	holding = church_holding
-}
-17172 = { # Singora
-	holding = city_holding
-
-	# History
-	867.1.1 = {
-		buildings = {
-			guild_halls_01
-		}
-	}
-}
-
-### c_mardelong
+### c_MAL_mardelong
 17517 = { # Satingpra
 	culture = mon
 	religion = mahayana
@@ -90,8 +64,10 @@
 	holding = none
 }
 
-### c_narathiwat
-16649 = { # b_narathiwat
+### c_MAL_singora
+17172 = { # Singora AKA Songkhla
+	# derives its name from a lion-shaped mountain near the city
+	# through 10th to 14th century it was a major urbanized area, and a center of international maritime trade
 	culture = mon
 	religion = shaivism
 
@@ -102,10 +78,30 @@
 		culture = malay
 	}
 }
-11414 = { # b_MAL_Patani
+17108 = { # Chenok AKA Chana
+	holding = church_holding
+}
+11415 = { # Tiba AKA Thepha
+	# name means 'arrive' in Malay
 	holding = none
 }
-16506 = { # b_yala
+
+### c_MAL_patani
+11414 = { # Patani
+	culture = mon
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+	900.1.1 = {
+		culture = malay
+	}
+}
+16649 = { # Narathiwat
+	holding = none
+}
+16506 = { # Yala
 	holding = none
 }
 

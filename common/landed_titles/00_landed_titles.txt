@@ -78196,15 +78196,16 @@ e_srivijaya = {
 	k_langkasuka = {
 		color = { 29 81 87 }
 
-		capital = c_mardelong
+		capital = c_MAL_mardelong
 
 		d_MAL_langkasuka = {
 			# d_langkasuka in old RoA
 			color = { 22 70 74 }
 
-			capital = c_mardelong
+			capital = c_MAL_mardelong
 
-			c_mardelong = {
+			c_MAL_mardelong = {
+				# c_mardelong in old RoA
 				color = { 18 60 64 }
 
 				cultural_names = {
@@ -78219,62 +78220,87 @@ e_srivijaya = {
 					color = { 18 60 64 }
 
 					cultural_names = {
-						name_list_tai = cn_phattalung
-						name_list_siamese = cn_phattalung
-						name_list_shan = cn_phattalung
+						name_list_tai = cn_sathing_phra
+						name_list_siamese = cn_sathing_phra
+						name_list_shan = cn_sathing_phra
 					}
 				}
-				b_pak_payoon = {
+				b_MAL_Pak_Payoon = {
 					province = 11423
 
 					color = { 18 60 64 }
 				}
-				b_khuhasawan = {
+				b_MAL_Khuhasawan = {
 					province = 17527
 
 					color = { 18 60 64 }
 				}
-				b_rattaphum = {
+				b_MAL_Rattaphum = {
 					province = 17305
 
 					color = { 18 60 64 }
 				}
 			}
-			c_MAL_patani = {
+			c_MAL_singora = {
+				# c_singora in old RoA
 				color = { 30 90 94 }
 
+				cultural_names = {
+					name_list_tai = cn_singkhon
+					name_list_siamese = cn_singkhon
+					name_list_shan = cn_singkhon
+				}
+
+				b_MAL_Singora = {
+					province = 17172
+
+					color = { 30 90 94 }
+
+					cultural_names = {
+						name_list_tai = cn_singkhon
+						name_list_siamese = cn_singkhon
+						name_list_shan = cn_singkhon
+					}
+				}
+				b_MAL_Chenok = {
+					province = 17108
+
+					color = { 30 90 94 }
+
+					cultural_names = {
+						name_list_tai = cn_chana
+						name_list_siamese = cn_chana
+						name_list_shan = cn_chana
+					}
+				}
 				b_MAL_Tiba = {
 					province = 11415
 
 					color = { 30 90 94 }
-				}
 
-				b_Singora = {
-					province = 17172
-
-					color = { 30 90 94 }
-				}
-				b_Chenok = {
-					province = 17108
-
-					color = { 30 90 94 }
+					cultural_names = {
+						name_list_tai = cn_thepa
+						name_list_siamese = cn_thepa
+						name_list_shan = cn_thepa
+					}
 				}
 			}
-			c_narathiwat = {
+			c_MAL_patani = {
+				# c_narathiwat in old RoA
 				color = { 14 52 56 }
 
-				b_narathiwat = {
+				b_MAL_Patani = {
+					province = 11414
+
+					color = { 14 52 56 }
+				}
+				b_MAL_Narathiwat = {
 					province = 16649
 
 					color = { 14 52 56 }
 				}
-				b_yala = {
+				b_MAL_Yala = {
 					province = 16506
-
-					color = { 14 52 56 }
-				}
-				b_MAL_Patani = {
-					province = 11414
 
 					color = { 14 52 56 }
 				}
@@ -78395,10 +78421,22 @@ e_srivijaya = {
 				# c_terang in old RoA
 				color = { 18 58 62 }
 
+				cultural_names = {
+					name_list_tai = cn_trang
+					name_list_siamese = cn_trang
+					name_list_shan = cn_trang
+				}
+
 				b_MAL_Terang = {
 					province = 17525
 
 					color = { 18 58 62 }
+
+					cultural_names = {
+						name_list_tai = cn_trang
+						name_list_siamese = cn_trang
+						name_list_shan = cn_trang
+					}
 				}
 				b_MAL_Kantang = {
 					province = 17483
@@ -78409,6 +78447,12 @@ e_srivijaya = {
 					province = 17429
 
 					color = { 18 58 62 }
+
+					cultural_names = {
+						name_list_tai = cn_palian
+						name_list_siamese = cn_palian
+						name_list_shan = cn_palian
+					}
 				}
 			}
 		}
@@ -78451,11 +78495,11 @@ e_srivijaya = {
 
 					color = { 55 130 135 }
 
-					#cultural_names = {
-					#	name_list_tai = 
-					#	name_list_siamese = 
-					#	name_list_shan = 
-					#}
+					cultural_names = {
+						name_list_tai = cn_nakhon_si_thammarat
+						name_list_siamese = cn_nakhon_si_thammarat
+						name_list_shan = cn_nakhon_si_thammarat
+					}
 				}
 				b_THAI_Sa_Rieng = {
 					province = 11424
@@ -78591,11 +78635,23 @@ e_srivijaya = {
 					province = 11428
 
 					color = { 55 125 130 }
+
+					cultural_names = {
+						name_list_tai = cn_takua_thung
+						name_list_siamese = cn_takua_thung
+						name_list_shan = cn_takua_thung
+					}
 				}
 				b_THAI_Bu_Nga = {
 					province = 17789
 
 					color = { 55 125 130 }
+
+					cultural_names = {
+						name_list_tai = cn_phu_nga
+						name_list_siamese = cn_phu_nga
+						name_list_shan = cn_phu_nga
+					}
 				}
 			}
 			c_THAI_pantai_smor = {
