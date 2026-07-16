@@ -937,6 +937,15 @@ ROA_867_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
+
+	### Misc Tributaries
+	title:d_vanga.holder = {
+		save_scope_as = suzerain
+		title:c_harikela.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			ROA_weaker_tribute_effect = yes
+		}
+	}
 }
 
 ROA_936_tributary_setup_effect = {
@@ -1350,6 +1359,15 @@ ROA_936_tributary_setup_effect = {
 		}
 		title:c_manych.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	### Misc Tributaries
+	title:d_vanga.holder = {
+		save_scope_as = suzerain
+		title:c_harikela.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			ROA_weaker_tribute_effect = yes
 		}
 	}
 }
@@ -1880,6 +1898,15 @@ ROA_1066_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 	}
+
+	### Misc Tributaries
+	title:d_vanga.holder = {
+		save_scope_as = suzerain
+		title:c_harikela.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			ROA_weaker_tribute_effect = yes
+		}
+	}
 }
 
 ROA_1178_tributary_setup_effect = {
@@ -2240,6 +2267,15 @@ ROA_1178_tributary_setup_effect = {
 		}
 		character:mohe_nimen_20_fic = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+	}
+
+	### Misc Tributaries
+	title:d_vanga.holder = {
+		save_scope_as = suzerain
+		title:c_harikela.holder = {
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+			ROA_weaker_tribute_effect = yes
 		}
 	}
 }
