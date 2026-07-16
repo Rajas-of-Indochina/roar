@@ -9,26 +9,22 @@
 	holding = temple_citadel_holding
 
 	# History
-	600.1.1 = { # Phase I Canals
-		buildings = {
-			cereal_fields_01
-		}
-	}
 	835.1.1 = { # Start of City Wall after Pirate Attack of 835 C.E.
 		buildings = {
+			paddy_fields_01
 			curtain_walls_01
 		}
 	}
 	885.1.1 = { # Start of Phase II Canals
 		buildings = {
-			cereal_fields_02
+			paddy_fields_02
 			curtain_walls_01
 			common_tradeport_01
 		}
 	}
 	1100.1.1 = { # Ceramic Kilns, but since Guilds can't be use for temple_citadel_holding
 		buildings = {
-			cereal_fields_02
+			paddy_fields_02
 			curtain_walls_01
 			common_tradeport_02
 		}
@@ -46,7 +42,7 @@
 	885.1.1 = { # Effect from Phase II Canal
 		buildings = {
 			monastic_schools_01
-			cereal_fields_01
+			paddy_fields_01
 		}
 	}
 }
@@ -56,7 +52,7 @@
 	# History
 	885.1.1 = { # Effect from Phase II Canal
 		buildings = {
-			cereal_fields_01
+			paddy_fields_01
 		}
 	}
 }
@@ -68,15 +64,13 @@
 17172 = { # Singora AKA Songkhla
 	# derives its name from a lion-shaped mountain near the city
 	# through 10th to 14th century it was a major urbanized area, and a center of international maritime trade
-	culture = mon
+	culture = malay
 	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
-	900.1.1 = {
-		culture = malay
-	}
+	# add large Mon minority
 }
 17108 = { # Chenok AKA Chana
 	holding = church_holding
@@ -88,15 +82,13 @@
 
 ### c_MAL_patani
 11414 = { # Patani
-	culture = mon
+	culture = malay
 	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
-	900.1.1 = {
-		culture = malay
-	}
+	# maybe add Mon minority for 9th century
 }
 16649 = { # Narathiwat
 	holding = none
@@ -128,7 +120,7 @@
 	# History
 	837.1.1 = { # Approx. Date
 		buildings = {
-			cereal_fields_01
+			paddy_fields_01
 		}
 	}
 }
@@ -189,37 +181,35 @@
 ### c_THAI_tambralinga
 17725 = { # Ligor AKA Nakhon Si Thammarat
 	culture = mon
-	religion = mahayana
+	religion = vaishnavism
 
 	holding = temple_citadel_holding
 
 	# History
-	767.1.1 = { # Subjugated to Srivijaya
-		buildings = {
-			common_tradeport_01
-			curtain_walls_01
-		}
-	}
 	885.1.1 = { # Effect from Phase II Canal
 		buildings = {
 			common_tradeport_01
 			curtain_walls_01
-			cereal_fields_01
+			paddy_fields_01
 		}
 	}
 	903.1.1 = { # New Barracks for war with Lavo & Haripunchai
 		buildings = {
 			common_tradeport_01
 			curtain_walls_01
-			cereal_fields_01
+			paddy_fields_01
 			barracks_01
 		}
+	}
+	1030.1.1 = {
+		# Buddhism is noted to become more dominant in the region in 11th century
+		religion = mahayana
 	}
 	1230.1.1 = { # New Wall for Sri Thammasokaraj
 		buildings = {
 			common_tradeport_01
 			curtain_walls_02
-			cereal_fields_01
+			paddy_fields_01
 			barracks_01
 		}
 	}
@@ -227,7 +217,7 @@
 		buildings = {
 			common_tradeport_01
 			curtain_walls_03
-			cereal_fields_01
+			paddy_fields_01
 			barracks_01
 		}
 	}
@@ -249,46 +239,8 @@
 	# History
 	885.1.1 = { # Effect from Phase II Canal
 		buildings = {
-			cereal_fields_01
+			paddy_fields_01
 		}
-	}
-}
-
-### c_THAI_wiang_sa
-17818 = { # Wiang Sa
-	culture = mon
-	religion = shaivism
-
-	holding = temple_citadel_holding
-
-	# History
-	767.1.1 = {  # Subjugated to Srivijaya
-		buildings = {
-			barracks_01
-		}
-	}
-}
-17917 = { # Ban Na
-	holding = church_holding
-
-	# History
-	795.1.1 = { # Approx. Date
-		buildings = {
-			cereal_fields_01
-		}
-	}
-	1005.1.1 = { # Approx. Date
-		buildings = {
-			cereal_fields_02
-		}
-	}
-}
-15066 = { # Sa Ulao
-	holding = none
-
-	# History
-	1045.1.1 = {
-		holding = city_holding
 	}
 }
 
@@ -300,11 +252,6 @@
 	holding = temple_citadel_holding
 
 	# History
-	659.1.1 = { # Rise of Chaiya in general
-		buildings = {
-			common_tradeport_01
-		}
-	}
 	767.1.1 = { # Subjugated to Srivijaya
 		buildings = {
 			common_tradeport_02
@@ -328,17 +275,55 @@
 	holding = church_holding
 }
 
+### c_THAI_wiang_sa
+17818 = { # Wiang Sa
+	culture = mon
+	religion = vaishnavism
+
+	holding = castle_holding
+
+	# History
+	767.1.1 = {  # Subjugated to Srivijaya
+		buildings = {
+			barracks_01
+		}
+	}
+}
+17917 = { # Ban Na
+	holding = church_holding
+
+	# History
+	795.1.1 = { # Approx. Date
+		buildings = {
+			paddy_fields_01
+		}
+	}
+	1005.1.1 = { # Approx. Date
+		buildings = {
+			paddy_fields_02
+		}
+	}
+}
+15066 = { # Sa Ulao
+	holding = none
+
+	# History
+	1045.1.1 = {
+		holding = city_holding
+	}
+}
+
 ### c_THAI_mokhlan
 17849 = { # Mokhlan
 	culture = mon
-	religion = shaivism
+	religion = vaishnavism
 
-	holding = temple_citadel_holding
+	holding = castle_holding
 
 	# History
 	667.1.1 = { # Approx. Date
 		buildings = {
-			cereal_fields_01
+			paddy_fields_01
 		}
 	}
 }
@@ -365,15 +350,13 @@
 ## d_MAL_kedah ###################################
 ### c_MAL_kedah
 11417 = { # Kedah
-	culture = mon
+	culture = malay
 	religion = shaivism 	# Hindu-Buddhist civilisation of Bujang Valley
 
 	holding = temple_citadel_holding
 
 	# History
-	900.1.1 = {
-		culture = malay
-	}
+	# maybe add Mon minority for 9th century
 	1474.1.1 = {
         # while 'Kedah Annals' use year 1136, but more sources such as 'Malay Annals' point towards year 1474 as the time of conversion to Islam
 		religion = ashari

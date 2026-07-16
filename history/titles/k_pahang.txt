@@ -13,6 +13,10 @@ c_MAL_pahang = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_pahang_01_fic	#ficitonal
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
+		}
 	}
 	1060.1.1 = {
 		holder = malay_pahang_10_fic	#fictional
@@ -215,20 +219,19 @@ c_MAL_tumasik = {
 }
 
 
-d_MAL_kelantan = {
+##d_MAL_kelantan
+c_MAL_kelantan = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
-}
 
-c_MAL_kelantan = {
 	860.1.1 = {
 		government = mandala_government
-		holder = malay_langkasuka_01_fic	#fictional
+		holder = sea_malay_kelantan_01_fic	#fictional
 		liege = d_langkasuka
 	}
 	1060.1.1 = {
-		holder = malay_langkasuka_10_fic	#fictional
+		holder = sea_malay_kelantan_03_fic	#fictional
 	}
 	1170.1.1 = {
 		holder = malay_kelantan_20_fic	#fictional
@@ -237,13 +240,17 @@ c_MAL_kelantan = {
 }
 
 c_MAL_terengganu = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 14 }
+
 	860.1.1 = {
 		government = mandala_government
-		holder = malay_langkasuka_01_fic	#fictional
+		holder = sea_malay_terengganu_01_fic	#fictional
 		liege = d_langkasuka
 	}
 	1060.1.1 = {
-		holder = malay_langkasuka_10_fic	#fictional
+		holder = sea_malay_terengganu_03_fic	#fictional
 	}
 	1170.1.1 = {
 		holder = malay_kelantan_20_fic	#fictional

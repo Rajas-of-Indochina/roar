@@ -499,6 +499,23 @@ sea_malay_kelang_04_fic = {
 	1202.1.1 = { death = yes }
 }
 
+sea_malay_kelantan_01_fic = {
+	name = "Putra"
+	religion = shaivism
+	culture = malay
+
+	834.1.1 = { birth = yes }
+	899.1.1 = { death = yes }
+}
+sea_malay_kelantan_03_fic = {
+	name = "Prawira"
+	religion = shaivism
+	culture = malay
+
+	1033.1.1 = { birth = yes }
+	1104.1.1 = { death = yes }
+}
+
 sea_malay_melaka_01_fic = {
 	name = "Darma"
 	religion = mahayana
@@ -557,195 +574,26 @@ sea_malay_sampit_04_fic = {
 	1208.1.1 = { death = yes }
 }
 
+sea_malay_terengganu_01_fic = {
+	name = "Sihapati"
+	religion = mahayana
+	culture = malay
+
+	832.1.1 = { birth = yes }
+	898.1.1 = { death = yes }
+}
+sea_malay_terengganu_03_fic = {
+	name = "Asa"
+	religion = mahayana
+	culture = malay
+
+	1032.1.1 = { birth = yes }
+	1101.1.1 = { death = yes }
+}
+
 
 
 ###### CLEAN UP NEEDED ######
-### Langkasuka
-
-# Fictional, subject to change
-
-langkasuka001 = {
-	name = "Manarah"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-
-	832.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
-langkasuka002 = {
-	name = "Suryajaya"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka001
-
-	865.1.1 = { birth = yes }
-	930.1.1 = { death = yes }
-}
-langkasuka003 = {
-	name = "Bhanusena"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka002
-
-	897.1.1 = { birth = yes }
-	960.1.1 = { death = yes }
-}
-langkasuka004 = {
-	name = "Darmawirya"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka003
-
-	930.1.1 = { birth = yes }
-	990.1.1 = { death = yes }
-}
-langkasuka005 = {
-	name = "Tohjaya"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka004
-
-	960.1.1 = { birth = yes }
-	1020.1.1 = { death = yes }
-}
-langkasuka006 = {
-	name = "Bunisora"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka005
-
-	990.1.1 = { birth = yes }
-	1050.1.1 = { death = yes }
-}
-langkasuka007 = {
-	name = "Jayananda"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka006
-
-	1020.1.1 = { birth = yes }
-	1080.1.1 = { death = yes }
-}
-langkasuka008 = {
-	name = "Tulodong"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka007
-
-	1050.1.1 = { birth = yes }
-	1110.1.1 = { death = yes }
-}
-langkasuka009 = {
-	name = "Candrasurya"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka008
-
-	1080.1.1 = { birth = yes }
-	1140.1.1 = { death = yes }
-}
-langkasuka010 = {
-	name = "Winduraja"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka009
-
-	1110.1.1 = { birth = yes }
-	1170.1.1 = { death = yes }
-}
-langkasuka011 = {
-	name = "Sanggrama"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka010
-
-	1140.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
-}
-langkasuka012 = {
-	name = "Harimurti"
-	religion = "mahayana"
-	culture = "malay"
-	dynasty = 4200003
-	father = langkasuka011
-
-	1170.1.1 = { birth = yes }
-	1230.1.1 = { death = yes }
-}
-
-### Tambralinga Proper
-
-tambralinga100 = {
-	name = "Parameswara" # Fictional father for Sri Thammasokaraj
-	religion = "mahayana"
-	culture = "malay" # Indian?
-	dynasty = "malay_d001"
-
-	1172.1.1 = { birth = yes }
-	1222.1.1 = { death = yes }
-}
-
-tambralinga101 = {
-	name = "Sri_Thammasokaraj" # Sri Thammasokaraj of 12th Century, First conversion to Theravada
-	religion = "theravada"
-	culture = "malay" # Indian?
-	dynasty_house = "house_Sri_Thammasokaraj"
-	father = tambralinga100
-
-	1200.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1230.1.1 = { # Real Year
-		death = yes
-	}
-}
-
-tambralinga102 = {
-	name = "Chandrabhanu" # Sri Thammasokaraj's Younger Brother
-	religion = "theravada"
-	culture = "malay"
-	dynasty_house = "house_Sri_Thammasokaraj"
-	father = tambralinga100
-
-	1213.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1262.1.1 = { # Real Year
-		death = yes
-	}
-}
-
-tambralinga103 = {
-	name = "Pongsasura" # Chandrabhanu's Younger Brother
-	religion = "theravada"
-	culture = "malay"
-	dynasty_house = "house_Sri_Thammasokaraj"
-	father = tambralinga100
-
-	1217.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1272.1.1 = { # Real Year
-		death = yes
-	}
-}
-
-
-#aceh fictional placeholder
-#change to more authentic aceh sounding name
-#possible house name lambri
-
 #Malay fictional characters
 malay002 = {
 	name = "Balu" # fictional jambi-kerinci ruler
@@ -1659,309 +1507,6 @@ melayu022 = {
 	1375.1.1 = {
 		death = "1375.1.1"
 	}
-}
-
-# Fictional rulers of Gangga Negara (Beruas)
-
-gangganegara001 = {
-	name = "Handabhuwanapadalaka"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	107.1.1 = { birth = yes }
-	# Reigned 140
-	170.1.1 = { death = yes }
-}
-gangganegara002 = {
-	name = "Ningratkencana"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	136.1.1 = { birth = yes }
-	# Reigned 170
-	200.1.1 = { death = yes }
-}
-gangganegara003 = {
-	name = "Brajawisesa"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	166.1.1 = { birth = yes }
-	# Reigned 200
-	230.1.1 = { death = yes }
-}
-gangganegara004 = {
-	name = "Sastrahetajnadewati"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	213.1.1 = { birth = yes }
-	# Reigned 230
-	260.1.1 = { death = yes }
-}
-gangganegara005 = {
-	name = "Langlangbumi"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	235.1.1 = { birth = yes }
-	# Reigned 260
-	290.1.1 = { death = yes }
-}
-gangganegara006 = {
-	name = "Dhawala"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	269.1.1 = { birth = yes }
-	# Reigned 290
-	320.1.1 = { death = yes }
-}
-gangganegara007 = {
-	name = "Bisawa"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	298.1.1 = { birth = yes }
-	# Reigned 320
-	350.1.1 = { death = yes }
-}
-gangganegara008 = {
-	name = "Dhanada"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	306.1.1 = { birth = yes }
-	# Reigned 350
-	380.1.1 = { death = yes }
-}
-gangganegara009 = {
-	name = "Murteja"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	375.1.1 = { birth = yes }
-	# Reigned 380
-	410.1.1 = { death = yes }
-}
-gangganegara010 = {
-	name = "Luhurprabawa"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	401.1.1 = { birth = yes }
-	# Reigned 410
-	440.1.1 = { death = yes }
-}
-gangganegara011 = {
-	name = "Kabayan"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	404.1.1 = { birth = yes }
-	# Reigned 440
-	470.1.1 = { death = yes }
-}
-gangganegara012 = {
-	name = "Natapura"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	465.1.1 = { birth = yes }
-	# Reigned 470
-	500.1.1 = { death = yes }
-}
-gangganegara013 = {
-	name = "Rajasa"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	472.1.1 = { birth = yes }
-	# Reigned 500
-	530.1.1 = { death = yes }
-}
-gangganegara014 = {
-	name = "Kertawijaya"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	499.1.1 = { birth = yes }
-	# Reigned 530
-	560.1.1 = { death = yes }
-}
-gangganegara015 = {
-	name = "Mapanji_Garasakan"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	531.1.1 = { birth = yes }
-	# Reigned 560
-	590.1.1 = { death = yes }
-}
-gangganegara016 = {
-	name = "Wisnuwardhana"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	568.1.1 = { birth = yes }
-	# Reigned 590
-	620.1.1 = { death = yes }
-}
-gangganegara017 = {
-	name = "Maneser"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	611.1.1 = { birth = yes }
-	# Reigned 620
-	650.1.1 = { death = yes }
-}
-gangganegara018 = {
-	name = "Sakranta"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	634.1.1 = { birth = yes }
-	# Reigned 650
-	680.1.1 = { death = yes }
-}
-gangganegara019 = {
-	name = "Mangkubumi"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	646.1.1 = { birth = yes }
-	# Reigned 680
-	710.1.1 = { death = yes }
-}
-gangganegara020 = {
-	name = "Ajnajabharitamawakana"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	686.1.1 = { birth = yes }
-	# Reigned 710
-	740.1.1 = { death = yes }
-}
-gangganegara021 = {
-	name = "Ranggawuni"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	701.1.1 = { birth = yes }
-	# Reigned 740
-	770.1.1 = { death = yes }
-}
-gangganegara022 = {
-	name = "Ranan"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	747.1.1 = { birth = yes }
-	# Reigned 770
-	800.1.1 = { death = yes }
-}
-gangganegara023 = {
-	name = "Singhawikramawardhana"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	788.1.1 = { birth = yes }
-	# Reigned 800
-	830.1.1 = { death = yes }
-}
-gangganegara024 = {
-	name = "Wijayatunggawarman"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	787.1.1 = { birth = yes }
-	# Reigned 830
-	860.1.1 = { death = yes }
-}
-gangganegara025 = {
-	name = "Mahawangsa"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	842.1.1 = { birth = yes }
-	# Reigned 860
-	890.1.1 = { death = yes }
-}
-gangganegara026 = {
-	name = "Sudirman"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	859.1.1 = { birth = yes }
-	# Reigned 890
-	920.1.1 = { death = yes }
-}
-gangganegara027 = {
-	name = "Jayasakti"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	907.1.1 = { birth = yes }
-	# Reigned 920
-	950.1.1 = { death = yes }
-}
-gangganegara028 = {
-	name = "Purnama"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	942.1.1 = { birth = yes }
-	# Reigned 950
-	980.1.1 = { death = yes }
-}
-gangganegara029 = {
-	name = "Kesari"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	952.1.1 = { birth = yes }
-	# Reigned 980
-	1010.1.1 = { death = yes }
-}
-gangganegara030 = {
-	name = "Sutawijaya"
-	culture = malay
-	religion = shaivism
-	dynasty = d_gangganegara
-
-	964.1.1 = { birth = yes }
-	# Reigned 1010
-	1025.1.1 = { death = yes }
 }
 
 #Kedaram Dynasty
