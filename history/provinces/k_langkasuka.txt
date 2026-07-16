@@ -64,13 +64,13 @@
 17172 = { # Singora AKA Songkhla
 	# derives its name from a lion-shaped mountain near the city
 	# through 10th to 14th century it was a major urbanized area, and a center of international maritime trade
-	culture = malay
+	culture = mon
 	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
-	# add large Mon minority
+	# add large Malay minority
 }
 17108 = { # Chenok AKA Chana
 	holding = church_holding
@@ -82,13 +82,16 @@
 
 ### c_MAL_patani
 11414 = { # Patani
-	culture = malay
+	culture = mon
 	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
-	# maybe add Mon minority for 9th century
+	1050.1.1 = {
+		# to showcase the slow shift towards closer cultural ties with Malay
+		culture = malay
+	}
 }
 16649 = { # Narathiwat
 	holding = none
