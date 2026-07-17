@@ -1,4 +1,67 @@
-﻿## k_palembang
+﻿k_palembang = {
+	671.1.1 = {
+		holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
+		government = mandala_government
+		liege = e_srivijaya
+	}
+	702.1.1 = {
+		holder = malay_oldsrivijaya_02	#Sri Indravarman
+	}
+	728.1.1 = {
+		holder = malay_oldsrivijaya_03	#Rudra Vikrama
+	}
+	#742.1.1 = {
+	#	holder = unknown
+	#}
+	775.1.1 = {
+		holder = javanese_sailendra_05	#Dharanindra
+	}
+	782.1.1 = {
+		holder = javanese_sailendra_06	#Samaratungga, possibly = Samaragrawira ?
+	}
+	#Situation starting in ~835 is unclear
+	840.1.1 = {
+		holder = javanese_sanjaya_06	#Rakai Pikatan
+	}
+	842.1.1 = {
+		holder = malay_soma_02	#Devi Tara
+	}
+	856.1.1 = {
+		holder = javanese_sailendra_07	#Balaputradewa
+	}
+	#Balaputradewa is mechanically ruler in 867, which may not be historically accurate
+	#861-959 - unknown
+
+	960.1.1 = {
+		holder = javanese_sailendra_20	#Sri Udayaditya
+	}
+	980.1.1 = {
+		holder = javanese_sailendra_21	#"Haji"
+	}
+	988.1.1 = {
+		holder = javanese_sailendra_22	#Sri Cudamani Warmadewa
+	}
+	1008.1.1 = {
+		holder = javanese_sailendra_23	#Sri Maravijayottunggavarman
+	}
+	1017.1.1 = {
+		holder = javanese_sailendra_24	#Haji Sumatrabhumi
+	}
+	1025.1.1 = {
+		holder = javanese_sailendra_25	#Sangrama Vijayottunggavarman
+	}
+	1025.6.6 = {	#Post Chola attack on Srivijaya
+		liege = 0
+	}
+	1028.1.1 = {
+		holder = javanese_sailendra_26	#Sri Deva
+	}
+	1070.1.1 = {
+		holder = 0
+	}
+}
+
+
 d_lampung = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 7 }
@@ -6,7 +69,7 @@ d_lampung = {
 }
 	c_tulang_bawang = {
 		863.1.1 = {
-			government = mandala_government
+			government = wanua_government
 			holder = malay_lampung_01_fic	#fictional
 		}
 		1065.1.1 = {
@@ -18,7 +81,7 @@ d_lampung = {
 	}
 	c_sekala_brak = {
 		863.1.1 = {
-			government = mandala_government
+			government = wanua_government
 			holder = malay_lampung_01_fic	#fictional
 		}
 		1065.1.1 = {
@@ -30,7 +93,7 @@ d_lampung = {
 	}
 	c_sekampung = {
 		863.1.1 = {
-			government = mandala_government
+			government = wanua_government
 			holder = malay_lampung_01_fic	#fictional
 		}
 		1065.1.1 = {
@@ -40,6 +103,7 @@ d_lampung = {
 			holder = malay_lampung_20_fic	#ficitonal
 		}
 	}
+
 
 d_SUM_palembang = {
 	671.1.1 = {
@@ -297,7 +361,7 @@ d_SUM_palembang = {
 		1178.1.1 = { change_development_level = 14 }
 
 		860.1.1 = {
-			government = wanua_government
+			government = mandala_government
 			holder = malay_eastsumatra_01_fic	#fictional
 		}
 		960.1.1 = {
@@ -328,6 +392,7 @@ d_SUM_palembang = {
 			holder = malay_palembang_20_fic #fictional
 		}
 	}
+
 
 # d_basemah
 	c_sum_pagaralam = {
@@ -476,6 +541,7 @@ d_SUM_palembang = {
 			holder = malay_lampung_20_fic	#ficitonal
 		}
 	}
+
 
 d_SUM_bangkahulu = {
 	867.1.1 = { change_development_level = 3 }
