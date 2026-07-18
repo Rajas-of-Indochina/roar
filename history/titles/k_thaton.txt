@@ -673,54 +673,50 @@ d_yebyu = {
 			holder = pagan_1
 		}
 	}
-	c_kawkareik = {
-		867.1.1 = {
-			holder = mon_thanbyuzayat_01_fic
-			liege = 0
-		}
-		1066.1.1 = {
-			holder = mon_thanbyuzayat_02_fic
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = pagan_1
-		}
+
+c_kawkareik = {
+	860.1.1 = {
+		holder = sea_karen_kawkareik_01_fic
 	}
-	c_nong_lu = {
-		867.1.1 = {
-			holder = mon_thanbyuzayat_01_fic
-			liege = 0
-		}
-		1066.1.1 = {
-			holder = mon_thanbyuzayat_02_fic
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = pagan_1
-		}
+	#
+	1060.1.1 = {
+		holder = sea_karen_kawkareik_03_fic
 	}
-	c_pho_pha = {
-		867.1.1 = {
-			holder = mon_thanbyuzayat_01_fic
-			liege = 0
-		}
-		1066.1.1 = {
-			holder = mon_thanbyuzayat_02_fic
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = pagan_1
-		}
+	#
+	1170.1.1 = {
+		holder = sea_karen_kawkareik_04_fic
 	}
+}
+
+c_nong_lu = {
+	860.1.1 = {
+		holder = sea_karen_nong_lu_01_fic
+	}
+	#
+	1060.1.1 = {
+		holder = sea_karen_nong_lu_03_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_karen_nong_lu_04_fic
+	}
+}
+
+c_pho_pha = {
+	860.1.1 = {
+		holder = sea_karen_kawkareik_01_fic
+	}
+	#
+	1060.1.1 = {
+		holder = sea_karen_kawkareik_03_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_karen_kawkareik_04_fic
+	}
+}
+
+
 d_tanintharyi = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 5 }
@@ -789,27 +785,21 @@ d_tanintharyi = {
 			}
 		}
 	}
-	c_kainggyaung = {
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_tenasserim_01_fic	#fictional
-			liege = 0
-		}
-		1066.1.1 = {
-			holder = mon_tenasserim_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = mon_tenasserim_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_pagan
-				contract_group = tributary_mandala
-			}
-		}
+
+c_kainggyaung = {
+	860.1.1 = {
+		holder = sea_karen_nong_lu_01_fic
 	}
+	#
+	1060.1.1 = {
+		holder = sea_karen_nong_lu_03_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_karen_nong_lu_04_fic
+	}
+}
+
 	c_pashu = {
 		867.1.1 = {
 			government = mandala_government
