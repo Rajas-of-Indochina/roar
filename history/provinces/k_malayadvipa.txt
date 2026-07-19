@@ -1,34 +1,57 @@
 ﻿# k_malayadvipa
 ## d_jambi
-### c_muaro_jambi
-16466 = { # Muaro Jambi
+### c_SUM_jambi
+16466 = { # Jambi
+	# regional capital and major city
 	culture = malay
 	religion = vajrayana
 
 	holding = temple_citadel_holding
+	special_building_slot = muaro_jambi_01
 
 	# History
-	800.1.1 = {
-		special_building_slot = candi_muaro_jambi_01
-		special_building = candi_muaro_jambi_01
+	660.1.1 = {
+		# earliest estimations for some of complex's temples is 7th century
+		special_building = muaro_jambi_01
 	}
 	1025.1.1 = {
-		special_building = candi_muaro_jambi_02
+		# rise of Melayu Kingdom and expansion of the complex
+		special_building = muaro_jambi_02
 	}
 }
-16526 = { # Dusun Mudo
-	holding = none
-}
-16677 = { # Rantau Rasau
+16529 = { # Dusun Mudo
+	# a village
 	holding = none
 }
 16617 = { # Simpang Jelita
+	# village at the mouth of Berbak river
 	holding = none
 }
 16545 = { # Tanjung
+	# village bordering Berbak National Park
 	holding = none
 }
-16561 = { # Sungai Cemara
+16561 = { # Air Hitam Laut
+	# named after one of local rivers
+	holding = none
+}
+
+### c_SUM_berbak
+# msl_note: basically there are no important settlements in this county and I would personally scrap it if we already didn't have barony bloat in other counties
+16610 = { # Teluk Dawan
+	# modern settlement at the bank of the river ; unsure if there is more time accurate alternative
+	culture = malay
+	religion = malayic
+
+	holding = tribal_holding
+}
+16634 = { # Muara Sabak
+	# modern settlement ; unsure if there is more time accurate alternative
+	holding = none
+}
+16677 = { # Rantau Rasau
+	# modern district at the mouth of Berbak river ; unsure if there is more time accurate alternative
+	holding = none
 }
 
 ### c_batanghari
@@ -48,20 +71,6 @@
 	holding = none
 }
 
-### c_tebo
-16566 = { # Muara Tebo
-	culture = malay
-	religion = vajrayana
-
-	holding = temple_citadel_holding
-}
-11285 = { # Teluk Kuali
-	holding = none
-}
-11289 = { # Tanah Garo
-	holding = none
-}
-
 ### c_tanjung_bolo
 16651 = { # Tanjung Bolo
 	culture = malay
@@ -78,18 +87,21 @@
 11241 = { # Lubuk Besar
 	holding = none
 }
+16656 = { # Pematang Lumut
+	holding = none
+}
 
-### c_sungai_berbak
-16634 = { # Kuala Jambi
+### c_tebo
+16566 = { # Muara Tebo
 	culture = malay
 	religion = vajrayana
 
 	holding = temple_citadel_holding
 }
-16656 = { # Pematang Lumut
+11285 = { # Teluk Kuali
 	holding = none
 }
-16610 = { # Teluk Dawan
+11289 = { # Tanah Garo
 	holding = none
 }
 
@@ -191,14 +203,17 @@
 	holding = none
 }
 
-### c_merangin
-16405 = { # Bangko
+### c_SUM_karang_brahi
+11291 = { # Karang Brahi
+	# 7th century Old Malay description was found here ; seems to have been important local power centre in early medieval period ; nowadays a village
+
 	culture = malay
 	religion = malayic
 
 	holding = tribal_holding
 }
-11291 = { # Sarolangun Merangin
+16405 = { # Bangko
+	# capital town of modern day Merangin
 	holding = none
 }
 16258 = { # Bukit Bungkul
@@ -335,7 +350,7 @@
 	culture = malay
 	religion = malayic
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 }
 17115 = { # Petapahan
 	holding = none

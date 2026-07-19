@@ -76927,7 +76927,7 @@ e_srivijaya = {
 
 					color = { 60 80 15 }
 				}
-				b_lahat = {
+				b_SUM_Lahat = {
 					province = 15666
 
 					color = { 70 90 25 }
@@ -76983,45 +76983,61 @@ e_srivijaya = {
 		# k_melayu in old RoA
 		color = { 33 120 98 }
 
-		capital = c_muaro_jambi
+		capital = c_SUM_jambi
 
 		d_SUM_jambi = {
 			color = { 43 135 110 }
 
-			capital = c_muaro_jambi
+			capital = c_SUM_jambi
 
-			c_muaro_jambi = {
+			c_SUM_jambi = {
+				# c_muaro_jambi in old RoA
 				color = { 33 115 90 }
 
-				b_muaro_jambi = {
+				b_SUM_Jambi = {
 					province = 16466
 
 					color = { 33 115 90 }
 				}
-				b_dusun_mudo = {
+				b_SUM_Dusun_Mudo = {
 					province = 16529
 
-					color = { 43 125 100 }
+					color = { 33 115 90 }
 				}
-				b_rantau_rasau = {
-					province = 16677
-
-					color = { 23 105 80 }
-				}
-				b_simpang_jelita = {
+				b_SUM_Simpang_Jelita = {
 					province = 16617
 
-					color = { 53 135 110 }
+					color = { 33 115 90 }
 				}
-				b_tanjung = {
+				b_SUM_Tanjung_Jambi = {
 					province = 16545
 
-					color = { 13 95 70 }
+					color = { 33 115 90 }
 				}
-				b_sungai_cemara = {
+				b_SUM_Air_Hitam_Laut = {
 					province = 16561
 
-					color = { 63 145 120 }
+					color = { 33 115 90 }
+				}
+			}
+			c_SUM_berbak = {
+				# c_sungai_berbak in old RoA
+				color = { 13 85 68 }
+
+				b_SUM_Teluk_Dawan = {
+					province = 16610
+
+					color = { 13 85 68 }
+				}
+				b_SUM_Muara_Sabak = {
+					province = 16634
+
+					color = { 13 85 68 }
+				}
+				b_SUM_Rantau_Rasau = {
+					province = 16677
+
+					color = { 13 85 68 }
 				}
 			}
 			c_batanghari = {
@@ -77048,6 +77064,35 @@ e_srivijaya = {
 					color = { 83 175 150 }
 				}
 			}
+			c_tanjung_bolo = {
+				color = { 53 145 115 }
+
+				b_tanjung_bolo = {
+					province = 16651
+
+					color = { 53 145 115 }
+				}
+				b_bram_itam = {
+					province = 16761
+
+					color = { 53 145 115 }
+				}
+				b_merlung = {
+					province = 16647
+
+					color = { 53 145 115 }
+				}
+				b_lubuk_besar = {
+					province = 11241
+
+					color = { 53 145 115 }
+				}
+				b_pematang_lumut = {
+					province = 16656
+
+					color = { 53 145 115 }
+				}
+			}
 			c_tebo = {
 				color = { 23 95 75 }
 
@@ -77065,49 +77110,6 @@ e_srivijaya = {
 					province = 11289
 
 					color = { 13 85 65 }
-				}
-			}
-			c_tanjung_bolo = {
-				color = { 53 145 115 }
-
-				b_tanjung_bolo = {
-					province = 16651
-
-					color = { 53 145 115 }
-				}
-				b_bram_itam = {
-					province = 16761
-
-					color = { 63 155 125 }
-				}
-				b_merlung = {
-					province = 16647
-
-					color = { 43 135 105 }
-				}
-				b_lubuk_besar = {
-					province = 11241
-
-					color = { 73 165 135 }
-				}
-			}
-			c_sungai_berbak = {
-				color = { 13 85 68 }
-
-				b_kuala_jambi = {
-					province = 16634
-
-					color = { 13 85 68 }
-				}
-				b_pematang_lumut = {
-					province = 16656
-
-					color = { 23 95 78 }
-				}
-				b_teluk_dawan = {
-					province = 16610
-
-					color = { 3 75 58 }
 				}
 			}
 		}
@@ -77244,20 +77246,21 @@ e_srivijaya = {
 					color = { 40 135 105 }
 				}
 			}
-			c_merangin = {
+			c_SUM_karang_brahi = {
+				# c_merangin in old RoA
 				color = { 20 115 85 }
 
-				b_bangko = {
-					province = 16405
-
-					color = { 20 115 85 }
-				}
-				b_sarolangun_merangin = {
+				b_SUM_Karang_Brahi = {
 					province = 11291
 
 					color = { 20 115 85 }
 				}
-				b_bukit_bungkul = {
+				b_SUM_Bangko = {
+					province = 16405
+
+					color = { 20 115 85 }
+				}
+				b_SUM_Bungkul = {
 					province = 16258
 
 					color = { 20 115 85 }
