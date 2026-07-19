@@ -317,18 +317,14 @@ cultural_minorities_law = {
     cultural_minorities_harsh = {
 
 		modifier = {
-			different_culture_opinion = 10
-			same_culture_opinion = -5
-			minority_opinion = 5
-			courtly_opinion = -10
+			different_culture_opinion = -10
+			same_culture_opinion = 5
+			minority_opinion = -10
+			courtly_opinion = 5
 		}
 
         flag = reduced_culture_migrations
         flag = disable_minority_culture_promotion
-
-        modifier = {
-            courtly_opinion = -5
-        }
 
         can_have = {
             can_have_minority_laws_trigger = yes
@@ -490,10 +486,10 @@ cultural_minorities_law = {
     cultural_minorities_welcoming = {
 
 		modifier = {
-			different_culture_opinion = -10
-			same_culture_opinion = 5
-			minority_opinion = -5
-			courtly_opinion = 5
+			different_culture_opinion = 10
+			same_culture_opinion = -5
+			minority_opinion = 10
+			courtly_opinion = -5
 		}
 
         flag = increased_culture_migrations
