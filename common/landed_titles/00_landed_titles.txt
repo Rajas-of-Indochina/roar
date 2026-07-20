@@ -77117,6 +77117,146 @@ e_srivijaya = {
 			}
 		}
 
+		d_siak = {
+			color = { 20 90 80 }
+
+			c_SUM_siak = {
+				color = { 30 100 90 }
+
+				b_siak_sri_indrapura = {
+					province = 11272
+
+					color = { 30 100 90 }
+				}
+				b_SUM_mandau = {
+					province = 11268
+
+					color = { 40 110 100 }
+				}
+				b_senapelan = {
+					province = 17099
+
+					color = { 20 90 80 }
+				}
+				b_perawang = {
+					province = 17160
+
+					color = { 10 80 70 }
+				}
+				b_SUM_bukit_batu = {
+					province = 11273
+
+					color = { 50 120 110 }
+				}
+			}
+			c_SUM_muara_takus = {
+				color = { 10 80 70 }
+
+				b_SUM_Kuntu = {
+					province = 11283
+
+					color = { 10 80 70 }
+				}
+				b_teluk_meranti = {
+					province = 11276
+
+					color = { 20 90 80 }
+				}
+				b_SUM_Kerinci_Siak = {
+					province = 11282
+
+					color = { 0 70 60 }
+				}
+			}
+			c_SUM_indragiri = {
+				# c_indragiri in old RoA
+				color = { 40 110 100 }
+
+				b_SUM_Indragiri = {
+					province = 11286
+
+					color = { 40 110 100 }
+				}
+				b_SUM_Rengat = {
+					province = 16920
+
+					color = { 30 100 90 }
+				}
+				b_SUM_Karitang = {
+					province = 11287
+
+					color = { 50 120 110 }
+				}
+				b_SUM_Tembilahan = {
+					province = 11280
+
+					color = { 60 130 120 }
+				}
+			}
+			c_rokan = {
+				color = { 15 85 75 }
+
+				b_ujung_tanjung = {
+					province = 11267
+
+					color = { 15 85 75 }
+				}
+				b_ujung_batu = {
+					province = 17149
+
+					color = { 25 95 85 }
+				}
+				b_bagan_sinembe = {
+					province = 17381
+
+					color = { 35 105 95 }
+				}
+				b_rupat = {
+					province = 17465
+
+					color = { 0 65 55 }
+				}
+			}
+			c_SUM_meranti = {
+				color = { 45 115 105 }
+
+				b_SUM_Suir = {
+					province = 11274
+
+					color = { 45 115 105 }
+				}
+				b_SUM_Selat_Panjang = {
+					province = 11275
+
+					color = { 55 125 115 }
+				}
+			}
+			c_kampar = {
+				color = { 25 95 85 }
+
+				b_SUM_Tendun = {
+					province = 11269
+
+					color = { 25 95 85 }
+				}
+				b_petapahan = {
+					province = 17115
+
+					color = { 35 105 95 }
+				}
+				b_gunung_sahilan = {
+					province = 17033
+
+					color = { 15 85 75 }
+				}
+				b_lipat_kain = {
+					province = 16970
+
+					color = { 45 115 105 }
+				}
+			}
+		}
+
 		d_minangkabau = {
 			color = { 30 110 125 }
 
@@ -77209,47 +77349,11 @@ e_srivijaya = {
 			}
 		}
 
-		d_kerinci = {
+		d_SUM_karang_brahi = {
 			color = { 50 145 115 }
 
-			c_kerinci = {
-				color = { 60 155 125 }
+			capital = c_SUM_karang_brahi
 
-				b_kerinci = {
-					province = 16356
-
-					color = { 60 155 125 }
-				}
-				b_siulak_deras = {
-					province = 16428
-
-					color = { 60 155 125 }
-				}
-				b_tanjung_dalam = {
-					province = 16247
-
-					color = { 60 155 125 }
-				}
-			}
-			c_SUM_bungo = {
-				color = { 40 135 105 }
-
-				b_tenah_sepanggal = {
-					province = 16590
-
-					color = { 40 135 105 }
-				}
-				b_senemat = {
-					province = 16498
-
-					color = { 40 135 105 }
-				}
-				b_senemat_ulu = {
-					province = 16424
-
-					color = { 40 135 105 }
-				}
-			}
 			c_SUM_karang_brahi = {
 				# c_merangin in old RoA
 				color = { 20 115 85 }
@@ -77270,15 +77374,36 @@ e_srivijaya = {
 					color = { 70 165 135 }
 				}
 			}
-			c_serolangun = {
+			c_SUM_bungo = {
+				# c_bungo in old RoA
+				color = { 40 135 105 }
+
+				b_SUM_Muara_Bungo = {
+					province = 16590
+
+					color = { 40 135 105 }
+				}
+				b_SUM_Senemat = {
+					province = 16498
+
+					color = { 40 135 105 }
+				}
+				b_SUM_Seling = {
+					province = 16424
+
+					color = { 40 135 105 }
+				}
+			}
+			c_SUM_serolangun = {
+				# c_serolangun in old RoA
 				color = { 70 165 135 }
 
-				b_serolangun = {
+				b_SUM_Serolangun = {
 					province = 16259
 
 					color = { 70 165 135 }
 				}
-				b_pemuncak = {
+				b_SUM_Pemuncak = {
 					province = 16225
 
 					color = { 70 165 135 }
@@ -77289,144 +77414,24 @@ e_srivijaya = {
 					color = { 20 115 85 }
 				}
 			}
-		}
+			c_SUM_kerinci = {
+				# c_kerinci in old RoA
+				color = { 60 155 125 }
 
-		d_siak = {
-			color = { 20 90 80 }
+				b_SUM_Kerinci = {
+					province = 16356
 
-			c_SUM_siak = {
-				color = { 30 100 90 }
-
-				b_siak_sri_indrapura = {
-					province = 11272
-
-					color = { 30 100 90 }
+					color = { 60 155 125 }
 				}
-				b_SUM_mandau = {
-					province = 11268
+				b_SUM_Siulak_Deras = {
+					province = 16428
 
-					color = { 40 110 100 }
+					color = { 60 155 125 }
 				}
-				b_senapelan = {
-					province = 17099
+				b_SUM_Tanjung_Dalam = {
+					province = 16247
 
-					color = { 20 90 80 }
-				}
-				b_perawang = {
-					province = 17160
-
-					color = { 10 80 70 }
-				}
-				b_SUM_bukit_batu = {
-					province = 11273
-
-					color = { 50 120 110 }
-				}
-			}
-			c_SUM_muara_takus = {
-				color = { 10 80 70 }
-
-				b_SUM_Kuntu = {
-					province = 11283
-
-					color = { 10 80 70 }
-				}
-				b_teluk_meranti = {
-					province = 11276
-
-					color = { 20 90 80 }
-				}
-				b_SUM_kerinci_2 = {
-					province = 11282
-
-					color = { 0 70 60 }
-				}
-			}
-			c_SUM_indragiri = {
-				# c_indragiri in old RoA
-				color = { 40 110 100 }
-
-				b_SUM_Indragiri = {
-					province = 11286
-
-					color = { 40 110 100 }
-				}
-				b_SUM_Rengat = {
-					province = 16920
-
-					color = { 30 100 90 }
-				}
-				b_SUM_Karitang = {
-					province = 11287
-
-					color = { 50 120 110 }
-				}
-				b_SUM_Tembilahan = {
-					province = 11280
-
-					color = { 60 130 120 }
-				}
-			}
-			c_rokan = {
-				color = { 15 85 75 }
-
-				b_ujung_tanjung = {
-					province = 11267
-
-					color = { 15 85 75 }
-				}
-				b_ujung_batu = {
-					province = 17149
-
-					color = { 25 95 85 }
-				}
-				b_bagan_sinembe = {
-					province = 17381
-
-					color = { 35 105 95 }
-				}
-				b_rupat = {
-					province = 17465
-
-					color = { 0 65 55 }
-				}
-			}
-			c_SUM_meranti = {
-				color = { 45 115 105 }
-
-				b_SUM_Suir = {
-					province = 11274
-
-					color = { 45 115 105 }
-				}
-				b_SUM_Selat_Panjang = {
-					province = 11275
-
-					color = { 55 125 115 }
-				}
-			}
-			c_kampar = {
-				color = { 25 95 85 }
-
-				b_SUM_Tendun = {
-					province = 11269
-
-					color = { 25 95 85 }
-				}
-				b_petapahan = {
-					province = 17115
-
-					color = { 35 105 95 }
-				}
-				b_gunung_sahilan = {
-					province = 17033
-
-					color = { 15 85 75 }
-				}
-				b_lipat_kain = {
-					province = 16970
-
-					color = { 45 115 105 }
+					color = { 60 155 125 }
 				}
 			}
 		}

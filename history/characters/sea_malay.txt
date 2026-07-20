@@ -2,8 +2,8 @@
 tanjungpura003 = {
 	name = "Krysna_Pandita"
 	dynasty_house = house_tanjungpura
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 
 	780.1.1 = { birth = yes } # Fictional date
 	# Reigned 800-? Let's say 860
@@ -12,8 +12,8 @@ tanjungpura003 = {
 tanjungpura005 = {
 	name = "Hyang-Ta"
 	dynasty_house = house_tanjungpura
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 
 	885.1.1 = { birth = yes } # Fictional date
 	# Reigned 900
@@ -22,8 +22,8 @@ tanjungpura005 = {
 tanjungpura006 = {
 	name = "Siak_Bahulun"
 	dynasty_house = house_tanjungpura
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 
 	958.1.1 = { birth = yes } # Fictional date
 	# Reigned 977
@@ -32,8 +32,8 @@ tanjungpura006 = {
 tanjungpura008 = {
 	name = "Rangga_Sentap"
 	dynasty_house = house_tanjungpura
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 
 	1250.1.1 = { birth = yes } # Fictional date
 	# Reigned 1290
@@ -46,15 +46,11 @@ tanjungpura008 = {
 brunei001 = {
 	name = "Ragam" # fictional
 	religion = "mahayana"
-	culture = "malay"
+	culture = malay
 	dynasty = malay_d012
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 brunei002 = {
 	name = "Ananggawarman"
@@ -159,17 +155,13 @@ brunei011 = {
 
 kuripan001 = {
 	name = "Surya" # fictional
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = kuripand001
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
+	849.1.1 = { birth = yes }
 	# Reigned 860
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	885.1.1 = { death = yes }
 }
 kuripan002 = {
 	name = "Jayakatwang"
@@ -508,6 +500,31 @@ sea_malay_berbak_04_fic = {
 	1204.1.1 = { death = yes }
 }
 
+sea_malay_karang_brahi_01_fic = {
+	name = "Damar"
+	religion = malayic
+	culture = malay
+
+	849.1.1 = { birth = yes }
+	903.1.1 = { death = yes }
+}
+sea_malay_karang_brahi_03_fic = {
+	name = "Andhra"
+	religion = malayic
+	culture = malay
+
+	1033.1.1 = { birth = yes }
+	1093.1.1 = { death = yes }
+}
+sea_malay_karang_brahi_04_fic = {
+	name = "Sena"
+	culture = malay
+	religion = vajrayana
+
+	1146.1.1 = { birth = yes }
+	1208.1.1 = { death = yes }
+}
+
 sea_malay_kelang_01_fic = {
 	name = "Kemas"
 	religion = shaivism
@@ -556,6 +573,31 @@ sea_malay_kelantan_03_fic = {
 
 	1033.1.1 = { birth = yes }
 	1104.1.1 = { death = yes }
+}
+
+sea_malay_kerinci_01_fic = {
+	name = "Balu"
+	religion = malayic
+	culture = malay
+
+	844.1.1 = { birth = yes }
+	898.1.1 = { death = yes }
+}
+sea_malay_kerinci_03_fic = {
+	name = "Sangkar"
+	religion = malayic
+	culture = malay
+
+	1032.1.1 = { birth = yes }
+	1096.1.1 = { death = yes }
+}
+sea_malay_kerinci_04_fic = {
+	name = "Kutawandira"
+	religion = malayic
+	culture = malay
+
+	1141.1.1 = { birth = yes }
+	1201.1.1 = { death = yes }
 }
 
 sea_malay_melaka_01_fic = {
@@ -658,7 +700,7 @@ sea_malay_tebo_03_fic = {
 	1096.1.1 = { death = yes }
 }
 sea_malay_tebo_04_fic = {
-	name = "Damar"
+	name = "Adit"
 	religion = mahayana
 	culture = malay
 
@@ -687,227 +729,126 @@ sea_malay_terengganu_03_fic = {
 
 ###### CLEAN UP NEEDED ######
 #Malay fictional characters
-malay002 = {
-	name = "Balu" # fictional jambi-kerinci ruler
-	religion = "vajrayana"
-	culture = "malay"
-	dynasty = "malay_d002"
-
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
-}
 malay003 = {
 	name = "Arya" # fictional east jambi ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d003"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
-}
-malay004 = {
-	name = "Damar" # fictional pesisir ruler
-	religion = "vajrayana"
-	culture = "malay"
-	dynasty = "malay_d004"
-
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
-}
-malay005 = {
-	name = "Guna" # fictional pesisir ruler
-	religion = "vajrayana"
-	culture = "malay"
-	dynasty = "malay_d005"
-
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	847.1.1 = { birth = yes }
+	899.1.1 = { death = yes }
 }
 malay007 = {
 	name = "Warmadewa" # fictional higland minangkabau ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d007"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 malay008 = {
 	name = "Akarendra" # fictional Barus ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d008"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 malay009 = {
 	name = "Sadhana" # fictional Barus ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d009"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 malay010 = {
 	name = "Kutak" # fictional Barus ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d010"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 malay011 = {
 	name = "Palar" # fictional Barus ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d011"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 malay013 = {
 	name = "Batara" # fictional 1066 Barus ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d011"
 
-	1030.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1090.1.1 = { # Approx. Date
-		death = yes
-	}
+	1030.1.1 = { birth = yes }
+	1090.1.1 = { death = yes }
+}
+
+malay005 = {
+	name = "Guna"
+	religion = vajrayana
+	culture = malay
+
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 malay014 = {
-	name = "Aditya" # fictional 1066 Kampar ruler
-	religion = "vajrayana"
-	culture = "malay"
-	dynasty = "malay_d005"
+	name = "Aditya"
+	religion = vajrayana
+	culture = malay
 
-	1040.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1110.1.1 = { # Approx. Date
-		death = yes
-	}
+	1040.1.1 = { birth = yes }
+	1110.1.1 = { death = yes }
 }
+
+
 malay015 = {
 	name = "Paduko" # fictional 1066 jambi ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d003"
 
-	1026.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1086.1.1 = { # Approx. Date
-		death = yes
-	}
+	1026.1.1 = { birth = yes }
+	1086.1.1 = { death = yes }
 }
-malay016 = {
-	name = "Sangkar" # fictional j1066 Kerinci ruler
-	religion = "vajrayana"
-	culture = "malay"
-	dynasty = "malay_d002"
 
-	1030.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1086.1.1 = { # Approx. Date
-		death = yes
-	}
-}
 malay017 = {
 	name = "Dharma" # fictional 1066 Indragiri ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d010"
 
-	1020.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1070.1.1 = { # Approx. Date
-		death = yes
-	}
+	1020.1.1 = { birth = yes }
+	1070.1.1 = { death = yes }
 }
 malay018 = {
 	name = "Dharma" # fictional 1066 Indragiri ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d010"
 
-	1020.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1070.1.1 = { # Approx. Date
-		death = yes
-	}
+	1020.1.1 = { birth = yes }
+	1070.1.1 = { death = yes }
 }
 malay019 = {
 	name = "Wisnuwarman" # fictional higland minangkabau ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "malay_d007"
 
-	1030.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1090.1.1 = { # Approx. Date
-		death = yes
-	}
+	1030.1.1 = { birth = yes }
+	1090.1.1 = { death = yes }
 }
-malay020 = {
-	name = "Andhra" # fictional pesisir ruler
-	religion = "vajrayana"
-	culture = "malay"
-	dynasty = "malay_d004"
 
-	1023.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1083.1.1 = { # Approx. Date
-		death = yes
-	}
-}
 malay021 = {
 	name = "Dhanada"
 	culture = malay
@@ -940,22 +881,7 @@ malay024 = {
 	1157.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
-malay025 = {
-	name = "Kutawandira"
-	culture = malay
-	religion = vajrayana
 
-	1141.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
-}
-malay026 = {
-	name = "Sena"
-	culture = malay
-	religion = vajrayana
-
-	1136.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
-}
 malay027 = {
 	name = "Kutak"
 	culture = malay
@@ -971,24 +897,16 @@ mentawai001 = {
 	religion = "mentawai_animism"
 	culture = "mentawai"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 mentawai003 = {
 	name = "Sagulu" # fictional
 	religion = "mentawai_animism"
 	culture = "mentawai"
 
-	1025.1.1 = { # Approx. Date
-		birth = yes
-	}
-	1085.1.1 = { # Approx. Date
-		death = yes
-	}
+	1025.1.1 = { birth = yes }
+	1085.1.1 = { death = yes }
 }
 mentawai005 = {
 	name = "Sajjana"
@@ -1042,55 +960,39 @@ mentawai011 = {
 # Basemah
 basemah001 = {
 	name = "Buntar" # fictional bangkahulu ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "basemah_d001"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 basemah002 = {
 	name = "Dakat" # fictional bangkahulu ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "basemah_d002"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 basemah003 = {
 	name = "Geralek" # fictional bangkahulu ruler
-	religion = "vajrayana"
+	religion = vajrayana
 	culture = "rejang"
 	dynasty = "basemah_d003"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 basemah004 = {
 	name = "Kesara" # fictional bangkahulu ruler
-	religion = "vajrayana"
+	religion = vajrayana
 	culture = "rejang"
 	dynasty = "basemah_d004"
 
-	849.1.1 = { # Approx. Date
-		birth = yes
-	}
-	885.1.1 = { # Approx. Date
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	885.1.1 = { death = yes }
 }
 
 
@@ -1098,7 +1000,7 @@ basemah004 = {
 
 rejang001 = {
 	name = "Prayanta" # fictional bangkahulu ruler
-	religion = "vajrayana"
+	religion = vajrayana
 	culture = "rejang"
 	dynasty = "rejang_d001"
 
@@ -1107,7 +1009,7 @@ rejang001 = {
 }
 rejang002 = {
 	name = "Arya" # fictional bangkahulu ruler
-	religion = "vajrayana"
+	religion = vajrayana
 	culture = "rejang"
 	dynasty = "rejang_d001"
 
@@ -1116,7 +1018,7 @@ rejang002 = {
 }
 rejang003 = {
 	name = "Indera" # fictional bangkahulu ruler
-	religion = "vajrayana"
+	religion = vajrayana
 	culture = "rejang"
 	dynasty = "rejang_d001"
 
@@ -1125,8 +1027,8 @@ rejang003 = {
 }
 rejang004 = {
 	name = "Pancapana" # fictional bangkahulu ruler
-	religion = "vajrayana"
-	culture = "malay"
+	religion = vajrayana
+	culture = malay
 	dynasty = "rejang_d001"
 
 	1032.1.1 = { birth = yes }
