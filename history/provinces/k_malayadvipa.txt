@@ -4,7 +4,7 @@
 16466 = { # Jambi
 	# regional capital and major city
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
 	holding = temple_citadel_holding
 	special_building_slot = muaro_jambi_01
@@ -44,6 +44,11 @@
 	religion = malayic
 
 	holding = tribal_holding
+
+	# History
+	1030.1.1 = {
+		religion = mahayana
+	}
 }
 16634 = { # Muara Sabak
 	# modern settlement ; unsure if there is more time accurate alternative
@@ -54,12 +59,12 @@
 	holding = none
 }
 
-### c_batanghari
+### c_SUM_batanghari
 16465 = { # Muara Bulian
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
-	holding = temple_citadel_holding
+	holding = castle_holding
 }
 11293 = { # Merangin
 	holding = none
@@ -71,32 +76,42 @@
 	holding = none
 }
 
-### c_tanjung_bolo
+### c_SUM_pengabuan
 16651 = { # Tanjung Bolo
+	# a village
 	culture = malay
-	religion = vajrayana
+	religion = malayic
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
+
+	# History
+	1150.1.1 = {
+		religion = mahayana
+	}
 }
-16761 = { # Bram Itam
+16761 = { # Kuala Tungkal
+	# modern port town built atop Bram Itam peatlands
 	holding = none
 }
 16647 = { # Merlung
-	holding = none
-}
-11241 = { # Lubuk Besar
+	# a village
 	holding = none
 }
 16656 = { # Pematang Lumut
+	# a village
+	holding = none
+}
+11241 = { # Lubuk Besar
+	# a village
 	holding = none
 }
 
-### c_tebo
+### c_SUM_tebo
 16566 = { # Muara Tebo
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 }
 11285 = { # Teluk Kuali
 	holding = none
@@ -154,10 +169,10 @@
 	holding = none
 }
 
-### c_dharmasraya
+### c_SUM_dharmasraya
 16699 = { # Dharmasraya
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
 	holding = temple_citadel_holding
 
@@ -234,29 +249,6 @@
 	holding = none
 }
 
-## d_SUM_riau
-### c_SUM_batam
-11277 = { # Batam
-	culture = seletar
-	religion = umboh
-
-	holding = tribal_holding
-}
-17255 = { # Bintan
-	holding = none
-}
-17198 = { # Karimun
-	holding = none
-}
-
-### c_SUM_lingga
-16830 = { # Lingga
-	culture = seletar
-	religion = umboh
-
-	holding = tribal_holding
-}
-
 
 ## d_siak
 ### c_siak
@@ -282,7 +274,7 @@
 ### c_SUM_muara_takus
 11283 = { # Kuntu
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
 	holding = temple_citadel_holding
 }
@@ -293,17 +285,17 @@
 	holding = none
 }
 
-### c_indragiri
-11286 = { # Pangkalan Kasai
+### c_SUM_indragiri
+11286 = { # Indragiri
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
 	holding = temple_citadel_holding
 }
-11287 = { # Keritang
+11287 = { # Karitang
 	holding = none
 }
-16920 = { # Japura
+16920 = { # Rengat
 	holding = none
 }
 11280 = { # Tembliahan
@@ -320,11 +312,11 @@
 17149 = { # Ujung Batu
 	holding = church_holding
 
-	special_building_slot = candi_muaro_takus_01
+	special_building_slot = muaro_takus_01
 
 	# History
 	1067.1.1 = {
-		special_building = candi_muaro_takus_01
+		special_building = muaro_takus_01
 	}
 }
 17281 = { # Bagan Sinemba
@@ -360,4 +352,28 @@
 }
 16970 = { # Lipat Kain
 	holding = none
+}
+
+
+## d_SUM_riau
+### c_SUM_batam
+11277 = { # Batam
+	culture = seletar
+	religion = umboh
+
+	holding = tribal_holding
+}
+17255 = { # Bintan
+	holding = none
+}
+17198 = { # Karimun
+	holding = none
+}
+
+### c_SUM_lingga
+16830 = { # Lingga
+	culture = seletar
+	religion = umboh
+
+	holding = tribal_holding
 }

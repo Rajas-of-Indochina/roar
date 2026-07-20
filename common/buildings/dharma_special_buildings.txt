@@ -2705,11 +2705,11 @@ phra_pathommachedi_03 = {
 	flag = travel_point_of_interest_religious
 }
 
-candi_muaro_takus_01 = {
-	# Candi Muaro Takus_01
+muaro_takus_01 = {
+	# Muaro Takus
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_indian.dds"
+	type_icon = "icon_structure_mauro_jambi.dds"
 
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2727,18 +2727,17 @@ candi_muaro_takus_01 = {
 	cost_gold = 1000
 
 	character_modifier = {
-		monthly_piety = 0.25
+		monthly_piety = 0.2
 		different_faith_opinion = 5
 		different_faith_county_opinion_mult = -0.15
 		monthly_county_control_growth_factor = 0.05
 	}
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.2
-		development_growth = 0.1
+		tax_mult = 0.1
+		development_growth_factor = 0.1
 	}
 	province_modifier = {
-		monthly_income = 2
+		monthly_income = 1
 	}
 
 	ai_value = {
@@ -2748,4 +2747,5 @@ candi_muaro_takus_01 = {
 	type = special
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
 }
