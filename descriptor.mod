@@ -1,6 +1,7 @@
-version="1.0.0"
+﻿version="1.0.0"
 tags={
 	"Overhaul"
+	"Map"
 }
-name="ROAR"
-supported_version="1.18.0"
+name="Rajas of Asia Reincarnated (Beta)"
+supported_version="1.19.*"
