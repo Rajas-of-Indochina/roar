@@ -60,13 +60,13 @@ centralize_stateless_confederation_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
-	decision_group_type = stateless_confederation_decisions
+	decision_group_type = major
 	ai_check_interval = 60
 
 	is_shown = {
 		is_independent_ruler = yes
 		government_has_flag = government_is_stateless
-		is_member_of_confederation = yes
+		is_confederation_member = yes
 		confederation ?= { confederation_type = confederation_type:stateless_confederation }
 	}
 

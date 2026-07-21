@@ -76,6 +76,7 @@ stateless_cohesion_monthly_change = {
 	add = {
 		value = 0
 		every_confederation_member = {
+			limit = { has_variable = fostering_chesion }
 			add = this.stateless_cohesion_court_position_task_effect
 		}
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COURT_TASK"
@@ -83,14 +84,8 @@ stateless_cohesion_monthly_change = {
 }
 
 stateless_cohesion_court_position_task_effect = {
-	value = 0
-	if = {
-		limit = { has_variable = fostering_chesion }
-		add = {
-			value = court_position:stateless_diplomacy_court_position.aptitude:stateless_diplomacy_court_position
-			multiply = 0.05
-		}
-	}
+	value = court_position:stateless_diplomacy_court_position.aptitude:stateless_diplomacy_court_position
+	multiply = 0.05
 }
 
 sent_goods_opinion_value = {

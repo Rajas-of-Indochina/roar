@@ -46,7 +46,7 @@
  anarchist_government_adjective:0 "Stateless"
  anarchist_government_with_icon:0 "@government_type_anarchist! Stateless"
  anarchist_government_desc:0 "$game_concept_stateless_desc$"
- game_concept_anarchist_icon:0 "[anarchist_i|E]"
+ anarchist_icon_concept:0 "[anarchist_i|E]"
  game_concept_anarchist_i:0 "@government_type_anarchist!"
  game_concept_anarchist_government:0 "$anarchist_government$"
  game_concept_anarchist_government_desc:0 "$anarchist_government_desc$"
@@ -119,15 +119,20 @@
  stateless_learning_court_position_desc: "The $stateless_learning_court_position$ is entrusted by the community to keep the rituals of the community and see to their spiritual well-being, as well as dealing with the spirits on the community's behalf."
  stateless_learning_court_position_task_perform_rituals: "Perform Rituals"
  stateless_learning_court_position_task_perform_rituals_desc: "You will direct your $stateless_learning_court_position$ to focus on performing religious rituals."
+ stateless_learning_court_position_task_perform_rituals_tt:0 "Eventually I'll implement monthly events to fire for this. - malonkey1"
  stateless_learning_court_position_task_learn_foreign_faiths: "Learn Foreign Faiths"
  stateless_learning_court_position_task_learn_foreign_faiths_desc: "Your $stateless_learning_court_position$ will learn about the religions of other communities, and how to respect their beliefs."
+ stateless_learning_court_position_task_learn_foreign_faiths_tt:0 "$stateless_learning_court_position_task_perform_rituals_tt$"
 
  stateless_diplomacy_court_position: "Head of the People"
  stateless_diplomacy_court_position_desc: "The $stateless_diplomacy_court_position$ sees to the people of the community, as well as serving as an envoy to those around us and helping to maintain social cohesion and cohesion with other nearby communities."
  stateless_diplomacy_court_position_task_cohesion: "Foster Cohesion"
  stateless_diplomacy_court_position_task_cohesion_desc: "Your $stateless_diplomacy_court_position$ works on fostering cohesion between members of your confederation."
+ stateless_diplomacy_court_position_task_cohesion_tt:0 "Increases the [cohesion|E] of your [stateless_confederation|E] by ['(CFixedPoint)0'|+] - ['(CFixedPoint)0.25'|+] based on [aptitude|E] ([liege.MakeScope.ScriptValue('stateless_cohesion_court_position_task_effect')|+]) each month."
+ stateless_diplomacy_court_position_task_cohesion_monthly_tt:0 "$stateless_learning_court_position_task_perform_rituals_tt$"
  stateless_diplomacy_court_position_task_harmony: "Promote Cultural Harmony"
  stateless_diplomacy_court_position_task_harmony_desc: "Your $stateless_diplomacy_court_position$ will focus on engendering social harmony between the peoples in the commune and its neighbors, trying to smooth over cultural differences."
+ stateless_diplomacy_court_position_task_harmony_tt:0 "$stateless_learning_court_position_task_perform_rituals_tt$"
 
  court_gardener_stateless:0 "Gardener"
 
@@ -148,3 +153,6 @@
 
  msg_vassal_bureaucratized:0 "Vassal has adoped Imperial Bureaucracy"
  msg_vassal_bureaucratized_desc:0 "Your vassal, [ROOT.Char.GetShortUIName], has given up [ROOT.Char.GetHerHis] primitive ways and adopted a Bureaucratic government."
+
+ centralize_stateless_confederation_decision:0 "Centralize Confederation"
+ centralize_stateless_confederation_decision_desc:0 "Our society has become more and more centralized and more and more hierarchical, through no fault of my own. With each passing day it becomes more clear that the communes of [ROOT.Char.GetConfederation.GetName] require a leader. A ruler. A king."
