@@ -95,11 +95,14 @@
 	1155.1.2 = {
 		add_spouse = 216540
 	}
-	#1178.1.1 = {
-		#effect = {
-			#add_realm_law = high_partition_succession_law
-		#}
-	#}
+	1178.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = high_partition_succession_law } }
+				add_realm_law = high_partition_succession_law
+			}
+		}
+	}
 	1184.4.6 = {
 		death = "1184.4.6"
 	}
@@ -116,9 +119,9 @@
 	learning = 4
 	religion = "georgian_orthodox"
 	culture = "georgian"
-	trait = education_martial_3  # quite skilled military leader
-	trait = brave  # leader of quite a few campaigns
-	trait = lifestyle_poet  # mentioned to enjoy poetry
+	trait = education_martial_3 	# quite skilled military leader
+	trait = brave 	# leader of quite a few campaigns
+	trait = lifestyle_poet 	# mentioned to enjoy poetry
 	father = 216517
 	mother = parisos_1
 
@@ -189,7 +192,7 @@
 	1160.1.1 = {
 		religion = "georgian_orthodox"
 		culture = "georgian"
-		dynasty = chachba
+		dynasty = sea_chachba
 	}
 	1198.1.1 = {
 		death = "1198.1.1"
@@ -198,7 +201,7 @@
 
 228069 = {
 	name = "Otago"
-	dynasty = chachba
+	dynasty = sea_chachba
 	martial = 8
 	diplomacy = 6
 	intrigue = 4
@@ -344,10 +347,10 @@
 	father = sea_gamrekeli_3
 
 	1133.1.1 = {
-		birth = "1133.1.1"
+		birth = yes
 	}
 	1191.1.1 = {
-		death = "1191.1.1"
+		death = yes
 	}
 }
 
@@ -437,13 +440,13 @@
 	father = sea_vardanisdze_dadiani_1
 
 	1154.1.1 = {
-		birth = "1154.1.1"
+		birth = yes
 	}
 	1178.1.1 = {
 		dynasty_house = house_dadiani
 	}
 	1213.1.1 = {
-		death = "1213.1.1"
+		death = yes
 	}
 }
 
@@ -714,6 +717,8 @@
 	}
 }
 
+#41582 - moved to sea_caucasus_abkhaz
+
 461922 = {
 	name = "Sultana"
 	female = yes
@@ -754,12 +759,12 @@
 	father = 466501
 	mother = 466502
 	1287.1.2 = {
-		birth = "1287.1.2"
+		birth = yes
 	}
 	1346.1.2 = {
 		give_nickname = nick_the_brilliant
 		#give_nickname = ROA_nick_brtskinvale
-		death = "1346.1.2"
+		death = yes
 	}
 }
 
@@ -1509,6 +1514,16 @@
 	}
 }
 
+#70465 - moved to sea_caucasus_abkhaz
+
+#70466 - moved to sea_caucasus_abkhaz
+
+#70467 - moved to sea_caucasus_abkhaz
+
+#70468 - moved to sea_caucasus_abkhaz
+
+#70469 - moved to sea_caucasus_abkhaz
+
 85012 = {
 	name = "Ioane"
 	#AKA: Ioane I
@@ -1900,13 +1915,13 @@
 	1200.1.1 = {
 		religion = "georgian_orthodox"
 	}
-	#1210.1.1 = {  # married to Al-Awhad Ayyub
+	#1210.1.1 = { # married to Al-Awhad Ayyub
 		#add_spouse = 
 	#}
-	1211.1.1 = {  # married to Al-Ashraf Musa ibn Adil
+	1211.1.1 = { # married to Al-Ashraf Musa ibn Adil
 		add_spouse = 144079
 	}
-	1230.4.20 = {  # married to Jalal al-Din Khwarazmshah
+	1230.4.20 = { # married to Jalal al-Din Khwarazmshah
 		add_spouse = 93053
 	}
 	# governor of Ahlat in 1244
@@ -2681,6 +2696,28 @@
 	}
 }
 
+#160021 - moved to sea_caucasus_abkhaz
+
+#160022 - moved to sea_caucasus_abkhaz
+
+#160023 - moved to sea_caucasus_abkhaz
+
+#160024 - moved to sea_caucasus_abkhaz
+
+#160025 - moved to sea_caucasus_abkhaz
+
+#160026 - moved to sea_caucasus_abkhaz
+
+#160027 - moved to sea_caucasus_abkhaz
+
+#160028 - moved to sea_caucasus_abkhaz
+
+#160029 - moved to sea_caucasus_abkhaz
+
+#160030 - moved to sea_caucasus_abkhaz
+
+#160031 - moved to sea_caucasus_abkhaz
+
 160032 = {
 	name = "Guaram" #Mampali
 	dynasty_house = house_bagrationi # Georgian Bagrationi cadets
@@ -2704,7 +2741,7 @@
 	}
 	876.1.1 = {
 		employer = 70460
-       	trait = gallivanter
+		trait = gallivanter
 	}
 	882.1.1 = {
 		death = "882.1.1"
@@ -2827,7 +2864,7 @@
 }
 
 41542 = {
-	name = "Davit" #Davit I of  Iberia-Kartli
+	name = "Davit" #Davit I of Iberia-Kartli
 	dynasty_house = house_bagrationi # Georgian Bagrationi cadets
 	martial = 6
 	diplomacy = 8
@@ -3148,538 +3185,4 @@ bagratuni_1 = {
 		trait = blind
 		death = { death_reason = death_prison }
 	}
-}
-
-# heads of faith from C&D - Georgians
-geog.001 = {
-	name = "Peter"
-	religion = georgian_orthodox
-	culture = georgian
-	400.1.1 = { birth = yes }
-	474.1.1 = { death = yes }
-}
-geog.002 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	440.1.1 = { birth = yes }
-	502.1.1 = { death = yes }
-}
-geog.003 = {
-	name = "Gabriel"
-	religion = georgian_orthodox
-	culture = georgian
-	470.1.1 = { birth = yes }
-	510.1.1 = { death = yes }
-}
-geog.004 = {
-	name = "Tavfechag"
-	religion = georgian_orthodox
-	culture = georgian
-	470.1.1 = { birth = yes }
-	516.1.1 = { death = yes }
-}
-geog.005 = {
-	name = "Chirmagi-Chigirmane"
-	religion = georgian_orthodox
-	culture = georgian
-	480.1.1 = { birth = yes }
-	523.1.1 = { death = yes }
-}
-geog.006 = {
-	name = "Saba"
-	religion = georgian_orthodox
-	culture = georgian
-	490.1.1 = { birth = yes }
-	532.1.1 = { death = yes }
-}
-geog.007 = {
-	name = "Evlavi"
-	religion = georgian_orthodox
-	culture = georgian
-	500.1.1 = { birth = yes }
-	544.1.1 = { death = yes }
-}
-geog.008 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	500.1.1 = { birth = yes }
-	553.1.1 = { death = yes }
-}
-geog.009 = {
-	name = "Makari"
-	religion = georgian_orthodox
-	culture = georgian
-	500.1.1 = { birth = yes }
-	569.1.1 = { death = yes }
-}
-geog.010 = {
-	name = "Simeon"
-	religion = georgian_orthodox
-	culture = georgian
-	510.1.1 = { birth = yes }
-	575.1.1 = { death = yes }
-}
-geog.011 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	530.1.1 = { birth = yes }
-	582.1.1 = { death = yes }
-}
-geog.012 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	540.1.1 = { birth = yes }
-	591.1.1 = { death = yes }
-}
-geog.013 = {
-	name = "Bartlome"
-	religion = georgian_orthodox
-	culture = georgian
-	560.1.1 = { birth = yes }
-	595.1.1 = { death = yes }
-}
-geog.014 = {
-	name = "Kirion"
-	religion = georgian_orthodox
-	culture = georgian
-	560.1.1 = { birth = yes }
-	610.1.1 = { death = yes }
-}
-geog.015 = {
-	name = "John"
-	religion = georgian_orthodox
-	culture = georgian
-	568.1.1 = { birth = yes }
-	619.1.1 = { death = yes }
-}
-geog.016 = {
-	name = "Babila"
-	religion = georgian_orthodox
-	culture = georgian
-	580.1.1 = { birth = yes }
-	629.1.1 = { death = yes }
-}
-geog.017 = {
-	name = "Tabor"
-	religion = georgian_orthodox
-	culture = georgian
-	585.1.1 = { birth = yes }
-	634.1.1 = { death = yes }
-}
-geog.018 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	590.1.1 = { birth = yes }
-	640.1.1 = { death = yes }
-}
-geog.019 = {
-	name = "Evnon"
-	religion = georgian_orthodox
-	culture = georgian
-	595.1.1 = { birth = yes }
-	649.1.1 = { death = yes }
-}
-geog.020 = {
-	name = "Tavfechag"
-	religion = georgian_orthodox
-	culture = georgian
-	600.1.1 = { birth = yes }
-	664.1.1 = { death = yes }
-}
-geog.021 = {
-	name = "Evlale"
-	religion = georgian_orthodox
-	culture = georgian
-	600.1.1 = { birth = yes }
-	668.1.1 = { death = yes }
-}
-geog.022 = {
-	name = "Iovel"
-	religion = georgian_orthodox
-	culture = georgian
-	605.1.1 = { birth = yes }
-	670.1.1 = { death = yes }
-}
-geog.023 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	609.1.1 = { birth = yes }
-	677.1.1 = { death = yes }
-}
-geog.024 = {
-	name = "George"
-	religion = georgian_orthodox
-	culture = georgian
-	610.1.1 = { birth = yes }
-	678.1.1 = { death = yes }
-}
-geog.025 = {
-	name = "Kirion"
-	religion = georgian_orthodox
-	culture = georgian
-	611.1.1 = { birth = yes }
-	683.1.1 = { death = yes }
-}
-geog.026 = {
-	name = "Izid-Bozidi"
-	religion = georgian_orthodox
-	culture = georgian
-	612.1.1 = { birth = yes }
-	685.1.1 = { death = yes }
-}
-geog.027 = {
-	name = "Theodore"
-	religion = georgian_orthodox
-	culture = georgian
-	613.1.1 = { birth = yes }
-	689.1.1 = { death = yes }
-}
-geog.028 = {
-	name = "Peter"
-	religion = georgian_orthodox
-	culture = georgian
-	620.1.1 = { birth = yes }
-	720.1.1 = { death = yes }
-}
-geog.029 = {
-	name = "Talale"
-	religion = georgian_orthodox
-	culture = georgian
-	650.1.1 = { birth = yes }
-	731.1.1 = { death = yes }
-}
-geog.030 = {
-	name = "Mamai"
-	religion = georgian_orthodox
-	culture = georgian
-	655.1.1 = { birth = yes }
-	744.1.1 = { death = yes }
-}
-geog.031 = {
-	name = "John"
-	religion = georgian_orthodox
-	culture = georgian
-	679.1.1 = { birth = yes }
-	760.1.1 = { death = yes }
-}
-geog.032 = {
-	name = "Grigol"
-	religion = georgian_orthodox
-	culture = georgian
-	694.1.1 = { birth = yes }
-	767.1.1 = { death = yes }
-}
-geog.033 = {
-	name = "Sarmeane"
-	religion = georgian_orthodox
-	culture = georgian
-	700.1.1 = { birth = yes }
-	774.1.1 = { death = yes }
-}
-geog.034 = {
-	name = "Michael"
-	religion = georgian_orthodox
-	culture = georgian
-	705.1.1 = { birth = yes }
-	780.1.1 = { death = yes }
-}
-geog.035 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	710.1.1 = { birth = yes }
-	790.1.1 = { death = yes }
-}
-geog.036 = {
-	name = "Kirile"
-	religion = georgian_orthodox
-	culture = georgian
-	715.1.1 = { birth = yes }
-	802.1.1 = { death = yes }
-}
-geog.037 = {
-	name = "Grigol"
-	religion = georgian_orthodox
-	culture = georgian
-	740.1.1 = { birth = yes }
-	814.1.1 = { death = yes }
-}
-geog.038 = {
-	name = "Samuel"
-	religion = georgian_orthodox
-	culture = georgian
-	745.1.1 = { birth = yes }
-	826.1.1 = { death = yes }
-}
-geog.039 = {
-	name = "George"
-	religion = georgian_orthodox
-	culture = georgian
-	750.1.1 = { birth = yes }
-	838.1.1 = { death = yes }
-}
-geog.040 = {
-	name = "Gabriel"
-	religion = georgian_orthodox
-	culture = georgian
-	780.1.1 = { birth = yes }
-	850.1.1 = { death = yes }
-}
-geog.041 = {
-	name = "Ilarion"
-	religion = georgian_orthodox
-	culture = georgian
-	796.1.1 = { birth = yes }
-	860.1.1 = { death = yes }
-}
-geog.042 = {
-	name = "Arsen"
-	religion = georgian_orthodox
-	culture = georgian
-	800.1.1 = { birth = yes }
-	887.1.1 = { death = yes }
-}
-geog.043 = {
-	name = "Evsuki"
-	religion = georgian_orthodox
-	culture = georgian
-	830.1.1 = { birth = yes }
-	900.1.1 = { death = yes }
-}
-geog.044 = {
-	name = "Clement"
-	religion = georgian_orthodox
-	culture = georgian
-	864.1.1 = { birth = yes }
-	914.1.1 = { death = yes }
-}
-geog.045 = {
-	name = "Basil"
-	religion = georgian_orthodox
-	culture = georgian
-	887.1.1 = { birth = yes }
-	930.1.1 = { death = yes }
-}
-geog.046 = {
-	name = "Michael"
-	religion = georgian_orthodox
-	culture = georgian
-	895.1.1 = { birth = yes }
-	944.1.1 = { death = yes }
-}
-geog.047 = {
-	name = "Davit"
-	religion = georgian_orthodox
-	culture = georgian
-	900.1.1 = { birth = yes }
-	955.1.1 = { death = yes }
-}
-geog.048 = {
-	name = "Arseni"
-	religion = georgian_orthodox
-	culture = georgian
-	916.1.1 = { birth = yes }
-	980.1.1 = { death = yes }
-}
-geog.049 = {
-	name = "Oqropiri"
-	religion = georgian_orthodox
-	culture = georgian
-	950.1.1 = { birth = yes }
-	1001.1.1 = { death = yes }
-}
-geog.050 = {
-	name = "Melkisedek"
-	religion = georgian_orthodox
-	culture = georgian
-	960.1.1 = { birth = yes }
-	1033.1.1 = { death = yes }
-}
-geog.051 = {
-	name = "Okropir"
-	religion = georgian_orthodox
-	culture = georgian
-	990.1.1 = { birth = yes }
-	1049.1.1 = { death = yes }
-}
-geog.052 = {
-	name = "Ekvtime"
-	religion = georgian_orthodox
-	culture = georgian
-	1000.1.1 = { birth = yes }
-	1055.1.1 = { death = yes }
-}
-geog.053 = {
-	name = "George"
-	religion = georgian_orthodox
-	culture = georgian
-	1002.1.1 = { birth = yes }
-	1065.1.1 = { death = yes }
-}
-geog.054 = {
-	name = "Gabriel"
-	religion = georgian_orthodox
-	culture = georgian
-	1030.1.1 = { birth = yes }
-	1080.1.1 = { death = yes }
-}
-geog.055 = {
-	name = "Dimitri"
-	religion = georgian_orthodox
-	culture = georgian
-	1035.1.1 = { birth = yes }
-	1090.1.1 = { death = yes }
-}
-geog.056 = {
-	name = "Basil"
-	religion = georgian_orthodox
-	culture = georgian
-	1040.1.1 = { birth = yes }
-	1100.1.1 = { death = yes }
-}
-geog.057 = {
-	name = "Ioane"
-	religion = georgian_orthodox
-	culture = georgian
-	1070.1.1 = { birth = yes }
-	1142.1.1 = { death = yes }
-}
-geog.058 = {
-	name = "Svimeon"
-	religion = georgian_orthodox
-	culture = georgian
-	1080.1.1 = { birth = yes }
-	1146.1.1 = { death = yes }
-}
-geog.059 = {
-	name = "Saba"
-	religion = georgian_orthodox
-	culture = georgian
-	1090.1.1 = { birth = yes }
-	1150.1.1 = { death = yes }
-}
-geog.060 = {
-	name = "Nikoloz"
-	religion = georgian_orthodox
-	culture = georgian
-	1100.1.1 = { birth = yes }
-	1178.1.1 = { death = yes }
-}
-geog.061 = {
-	name = "Michael"
-	religion = georgian_orthodox
-	culture = georgian
-	1110.1.1 = { birth = yes }
-	1186.1.1 = { death = yes }
-}
-geog.062 = {
-	name = "Theodore"
-	religion = georgian_orthodox
-	culture = georgian
-	1120.1.1 = { birth = yes }
-	1206.1.1 = { death = yes }
-}
-geog.063 = {
-	name = "Basil"
-	religion = georgian_orthodox
-	culture = georgian
-	1160.1.1 = { birth = yes }
-	1208.1.1 = { death = yes }
-}
-geog.064 = {
-	name = "John"
-	religion = georgian_orthodox
-	culture = georgian
-	1170.1.1 = { birth = yes }
-	1210.1.1 = { death = yes }
-}
-geog.065 = {
-	name = "Epiphane"
-	religion = georgian_orthodox
-	culture = georgian
-	1175.1.1 = { birth = yes }
-	1220.1.1 = { death = yes }
-}
-geog.066 = {
-	name = "Ekvtime"
-	religion = georgian_orthodox
-	culture = georgian
-	1179.1.1 = { birth = yes }
-	1222.1.1 = { death = yes }
-}
-geog.067 = {
-	name = "Arseni"
-	religion = georgian_orthodox
-	culture = georgian
-	1190.1.1 = { birth = yes }
-	1225.1.1 = { death = yes }
-}
-geog.068 = {
-	name = "Giorgi"
-	religion = georgian_orthodox
-	culture = georgian
-	1185.1.1 = { birth = yes }
-	1230.1.1 = { death = yes }
-}
-geog.069 = {
-	name = "Arseni"
-	religion = georgian_orthodox
-	culture = georgian
-	1186.1.1 = { birth = yes }
-	1240.1.1 = { death = yes }
-}
-geog.070 = {
-	name = "Nikoloz"
-	religion = georgian_orthodox
-	culture = georgian
-	1176.1.1 = { birth = yes }
-	1280.1.1 = { death = yes }
-}
-geog.071 = {
-	name = "Abraam"
-	religion = georgian_orthodox
-	culture = georgian
-	1243.1.1 = { birth = yes }
-	1310.1.1 = { death = yes }
-}
-geog.072 = {
-	name = "Ekvtime"
-	religion = georgian_orthodox
-	culture = georgian
-	1270.1.1 = { birth = yes }
-	1325.1.1 = { death = yes }
-}
-geog.073 = {
-	name = "Mikeli"
-	religion = georgian_orthodox
-	culture = georgian
-	1284.1.1 = { birth = yes }
-	1330.1.1 = { death = yes }
-}
-geog.074 = {
-	name = "Basil"
-	religion = georgian_orthodox
-	culture = georgian
-	1290.1.1 = { birth = yes }
-	1350.1.1 = { death = yes }
-}
-geog.075 = {
-	name = "Doroteoz"
-	religion = georgian_orthodox
-	culture = georgian
-	1292.1.1 = { birth = yes }
-	1356.1.1 = { death = yes }
-}
-geog.076 = {
-	name = "Shio"
-	religion = georgian_orthodox
-	culture = georgian
-	1320.1.1 = { birth = yes }
-	1400.1.1 = { death = yes }
 }
