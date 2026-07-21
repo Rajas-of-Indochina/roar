@@ -1,25 +1,28 @@
-﻿## k_malayadvipa
-d_SUM_jambi = {
-	# earliest mention of the kingdom by Chinese Buddhist monk Yijing
-	671.1.1 = {
-		government = mandala_government
-		holder = malay_oldsrivijaya_01	#Dapunta Hyang aka Sri Jayanasa
-		liege = d_SUM_palembang
+﻿k_malayadvipa = {
+	# 671 - earliest mention of the kingdom by Chinese Buddhist monk Yijing
+	# 692 - Melayu Kingdom annexed by Srivijaya
+	# 1025 - beginning of the new Melayu kingdom
+	# I think for earlier dates when they are weaker, they can be kept as duchy
+	1167.1.1 = {
+		holder = malay_melayu_20_fic	#fictional
 	}
-	# Melayu Kingdom annexed by Srivijaya
-	692.1.1 = {
-		holder = 0
+	1183.1.1 = {
+		holder = malay_melayu_21
 	}
+}
 
-	# 1025 as Melayu kingdom
+d_SUM_jambi = {
+	# 671 - earliest mention of the kingdom by Chinese Buddhist monk Yijing
+	# 692 - Melayu Kingdom annexed by Srivijaya
+	# 1025 - beginning of the new Melayu kingdom
 	1057.1.1 = {
 		government = mandala_government
 		holder = malay_melayu_10_fic	#fictional
+		liege = 0
 	}
 	#
 	1167.1.1 = {
 		holder = malay_melayu_20_fic	#fictional
-		name = SUMATRA_MELAYU
 	}
 	1183.1.1 = {
 		holder = malay_melayu_21
