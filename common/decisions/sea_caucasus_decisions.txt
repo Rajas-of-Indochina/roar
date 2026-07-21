@@ -2978,6 +2978,9 @@ align_circassian_church_decision = {
 	ai_check_interval = 60
 	is_shown = {
 		faith = faith:circassian_christianity
+		capital_province = {
+			geographical_region = world_north_caucasus
+		}
 		is_landed = yes
 		OR = {
 			culture = {
@@ -3009,9 +3012,6 @@ align_circassian_church_decision = {
 		custom_tooltip = {
 			text = circassian_alignment_threshold_tt
 			num_same_faith_counties >= circassian_alignment_threshold
-		}
-		capital_province = {
-			geographical_region = world_north_caucasus
 		}
 	}
 	is_valid_showing_failures_only = {

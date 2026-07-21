@@ -75,7 +75,6 @@ stateless_confederation = {
 	
 	is_valid_confederation = {
 		cohesion > 0
-		member_count >= 1
 	}
 	# on_confederation_destroyed = { on_stateless_confederation_destroyed = yes }
 
@@ -92,7 +91,7 @@ stateless_confederation = {
 	#  character - The character who can be expected to be a living ruler
 	#  house (conditional) - The house that the character belongs to which causes the character to be indirectly added.
 	is_valid_member_character = {
-		government_has_flag = government_is_stateless
+		scope:character = { government_has_flag = government_is_stateless }
 	}
 	on_member_character_joined = {
 		# Notify all other members about them joining.

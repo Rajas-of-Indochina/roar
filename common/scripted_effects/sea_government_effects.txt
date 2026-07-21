@@ -6,6 +6,7 @@ create_or_add_to_stateless_confederation_effect = {
 		confederation = { add_confederation_member_house = $TARGET$.house }
 	}
 	else = {
+		custom_tooltip = create_stateless_confederation_tt
 		#You two are in the same duchy, name it after that
 		if = {
 			limit = {
@@ -50,7 +51,7 @@ create_or_add_to_stateless_confederation_effect = {
 			leader = house
 		}
 		scope:new_confederation = {
-			confederation = { add_confederation_member_house = $TARGET$.house }
+			add_confederation_member_house = $TARGET$.house
 		}
 	}
 }

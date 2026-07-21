@@ -1314,7 +1314,7 @@ stateless_confederation_interaction = {
 					is_playable_character = yes
 				}
 			}
-			scope:actor = { create_or_add_to_stateless_confederation_effect = { TARGET = scope:recipient } }
+			scope:actor = { trigger_event = sea_gov_event.2001 }
 			if = {
 				limit = {
 					scope:actor = {

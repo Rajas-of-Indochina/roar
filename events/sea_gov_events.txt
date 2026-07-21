@@ -115,6 +115,26 @@ sea_gov_event.1001 = {
 	}
 }
 
+# apparently I need to use a fucking event for this? Confederation creation.
+sea_gov_event.2001 = {
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			is_ruler = yes
+			is_landed = yes
+		}
+		scope:recipient = {
+			is_ruler = yes
+			is_landed = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = { create_or_add_to_stateless_confederation_effect = { TARGET = scope:recipient } }
+	}
+}
+
 #Ruler picking court physician
 health.3001 = {
 	type = character_event
