@@ -593,7 +593,6 @@ reform_indo_hellenism_effect = {
 		}
 		save_scope_as = county
 		add_faith_minority_effect = {
-			COUNTY = scope:county
 			FAITH = faith:indo_hellenism
 			SIZE = small
 		}
@@ -711,7 +710,6 @@ indo_greek_culture_decision_effect = {
 				chance = 40
 				set_county_culture = culture:indo_greek
 				add_culture_minority_effect = {
-					COUNTY = scope:county
 					CULTURE = culture:indo_greek
 					SIZE = small
 				}
@@ -939,12 +937,10 @@ unite_bene_israel_effect = {
 			set_county_culture = culture:kochinim
 			set_county_faith = faith:malabarism
 			add_culture_minority_effect = {
-				COUNTY = scope:county
 				CULTURE = scope:old_culture
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				COUNTY = scope:county
 				FAITH = scope:old_faith
 				SIZE = small
 			}
