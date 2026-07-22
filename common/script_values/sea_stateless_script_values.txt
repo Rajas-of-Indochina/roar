@@ -24,7 +24,7 @@ stateless_cohesion_monthly_change = {
 		every_confederation_member = {
 			add = {
 				value = influence_level
-				multiply = 0.1
+				multiply = 0.25
 			}
 		}
 		divide = {
@@ -53,7 +53,7 @@ stateless_cohesion_monthly_change = {
 		}
 		multiply = 0.005
 		max = 1
-		min = -1
+		min = 0
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COUNTY_OPINION"
 	}
 	# and owing favors within the confederation also improves cohesion
@@ -76,10 +76,35 @@ stateless_cohesion_monthly_change = {
 	add = {
 		value = 0
 		every_confederation_member = {
-			limit = { has_variable = fostering_chesion }
+			limit = { has_variable = fostering_cohesion }
 			add = this.stateless_cohesion_court_position_task_effect
 		}
 		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COURT_TASK"
+	}
+	# Finally a small bonus of Xabze and Adat
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_tradition = tradition_xabze
+						has_cultural_tradition = tradition_adat
+					}
+				}
+			}
+			add = 1
+		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				add = 1
+			}
+		}
+		multiply = {
+			value = 0.5
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_XABZE_ADAT"
 	}
 }
 
@@ -176,7 +201,7 @@ replenishable_troops_with_barter_goods_value = {
 
 
 stateless_martial_court_position_salary = {
-	value = medium_court_position_influence_salary
+	value = minor_court_position_influence_salary
 	# Set to 0 with Dynasty Perk Inner Circle
 	if = {
 		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_martial } }
@@ -220,7 +245,7 @@ stateless_martial_court_position_salary = {
 
 
 stateless_diplomacy_court_position_salary = {
-	value = medium_court_position_influence_salary
+	value = minor_court_position_influence_salary
 	# Set to 0 with Dynasty Perk Inner Circle
 	if = {
 		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_diplomcy } }
@@ -264,7 +289,7 @@ stateless_diplomacy_court_position_salary = {
 
 
 stateless_learning_court_position_salary = {
-	value = medium_court_position_influence_salary
+	value = minor_court_position_influence_salary
 	# Set to 0 with Dynasty Perk Inner Circle
 	if = {
 		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_learning } }

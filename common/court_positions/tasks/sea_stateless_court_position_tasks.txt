@@ -189,7 +189,7 @@ stateless_diplomacy_court_position_task_cohesion = {
 	}
 
 	ai_will_do = {
-		value = 0
+		value = 100
 		if = {
 			limit = { scope:liege = { is_confederation_member = yes } }
 			add = {

@@ -673,10 +673,15 @@ stateless_martial_court_position = {
 	}
 
 	ai_candidate_score = {
-		value = 50
-		add = scope:base_value
+		value = 1000
 		add = court_position_candidate_score_base_value
 		add = court_position_candidate_aptitude_value
+		if = {
+            limit = {
+                exists = scope:firing_court_position
+            }
+            add = 2000
+		}
 		if = { # To stop petitioned positions immediately being fired by the AI
 			limit = {
 				court_position_petition_ai_weight_trigger = { ROLE = stateless_martial }
@@ -900,10 +905,15 @@ stateless_learning_court_position = {
 	}
 
 	ai_candidate_score = {
-		value = 50
-		add = scope:base_value
+		value = 1000
 		add = court_position_candidate_score_base_value
 		add = court_position_candidate_aptitude_value
+		if = {
+            limit = {
+                exists = scope:firing_court_position
+            }
+            add = 2000
+		}
 		if = { # To stop petitioned positions immediately being fired by the AI
 			limit = {
 				court_position_petition_ai_weight_trigger = { ROLE = stateless_martial }
@@ -1159,14 +1169,19 @@ stateless_diplomacy_court_position = {
 	}
 
 	ai_position_score = {
-		value = 1000
+		value = 200
 	}
 
 	ai_candidate_score = {
-		value = 50
-		add = scope:base_value
+		value = 1000
 		add = court_position_candidate_score_base_value
 		add = court_position_candidate_aptitude_value
+		if = {
+            limit = {
+                exists = scope:firing_court_position
+            }
+            add = 2000
+		}
 		if = { # To stop petitioned positions immediately being fired by the AI
 			limit = {
 				court_position_petition_ai_weight_trigger = { ROLE = stateless_martial }

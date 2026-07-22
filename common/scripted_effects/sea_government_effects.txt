@@ -161,15 +161,7 @@ centralize_stateless_confederation_effect = {
 		}
 	}
 	resolve_title_and_vassal_change = scope:counties
-	# convert former confederates into tributaries
-	every_in_list = {
-		list = future_tributaries
-		save_scope_as = new_tributary
-		start_tributary_interaction_effect = {
-			TRIBUTARY = scope:new_tributary
-			SUZERAIN = ROOT
-		}
-	}
+	confederation = { remove_confederation_member_house = ROOT.house }
 }
 
 refill_maa_with_barter_goods_effect = {

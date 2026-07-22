@@ -83,9 +83,7 @@ stateless_gift_goods_interaction = {
 				type = event_gold_neutral
 				title = gift_interaction_notification
 				right_icon = scope:recipient
-				remove_barter_goods = {
-					value = scope:actor.gift_value
-				}
+				remove_barter_goods = scope:actor.gift_value
 				stress_impact = {
 					greedy = medium_stress_impact_gain
 				}
@@ -175,7 +173,7 @@ stateless_gift_goods_interaction = {
 	ai_max_reply_days = 1
 
 	ai_will_do = {
-		base = 100
+		base = 1000
 
 		modifier = { # Do not send double-gifts
 			factor = 0
@@ -312,6 +310,11 @@ barter_favors_interaction = {
 	ai_targets = {
 		ai_recipients = neighboring_rulers
 	}
+	ai_target_quick_trigger = {
+		is_confederation_member = yes
+		confederation = scope:actor.confederation
+	}
+	ai_maybe = yes
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 12
@@ -320,8 +323,47 @@ barter_favors_interaction = {
 		empire = 0
 		hegemony = 0
 	}
+	ai_will_do = {
+		base = 100
+		modifier = {
+			add = 50 # If you're their friend or lover they're more likely to ask you for a favor hook
+			scope:recipient = {
+				OR = {
+					has_secret_relation_lover = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_friend = scope:actor
+				}
+			}
+		}
+		modifier = {
+			add = 100
+			scope:recipient = {
+				OR = {
+					has_relation_soulmate = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+		modifier = { # Confederation cohesion is on the lowish side
+			add = 50
+			confederation.cohesion <= 40
+		}
+		modifier = { # reciprocity
+			add = 200
+			scope:recipient = {
+				has_usable_hook = scope:actor
+			}
+		}
+	}
 	interface_priority = 300
 	common_interaction = yes
+
+	# is_available = {
+	# 	scope:actor = {
+	# 		is_confederation_member = yes
+	# 		government_has_flag = government_is_stateless
+	# 	}
+	# }
 
 	is_shown = {
 		scope:actor = {
@@ -333,6 +375,10 @@ barter_favors_interaction = {
 			confederation = scope:actor.confederation
 			government_has_flag = government_is_stateless
 		}
+		NOT = {
+			scope:actor = { has_hook = scope:recipient }
+			scope:actor = scope:recipient
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -341,14 +387,35 @@ barter_favors_interaction = {
 		scope:recipient = {
 			is_adult = yes
 		}
-		NOT = { scope:actor = { has_hook = scope:recipient } }
 	}
 
 	greeting = positive
 	# notification_text = BARTER_FAVORS_INTERACTION_NOTIFICIATION
 
 	ai_accept = {
-		base = -50
+		modifier = {
+			desc = strong_hook
+			trigger = {
+				scope:strong_hook = yes
+			}
+			add = -20
+		}
+
+		modifier = {
+			desc = influence_level
+			add = {
+				value = influence_level
+				multiply = 10
+			}
+		}
+
+		modifier = { # reciprocity
+			desc = reciprocity_tt
+			trigger = {
+				scope:recipient = { has_usable_hook = scope:actor }
+			}
+			add = 50
+		}
 
 		# RELATIONS MODIFIERS
 		modifier = { #Friend modifier.
@@ -718,7 +785,7 @@ barter_favors_interaction = {
 		opinion_modifier = { #Compare Opinion modifier.
 			who = scope:recipient
 			opinion_target = scope:actor
-			multiplier = 0.35
+			multiplier = 0.66
 		}
 
 		# MISC MODIFIERS
@@ -737,10 +804,10 @@ barter_favors_interaction = {
 					has_same_culture_heritage = scope:actor.culture
 				}
 			}
-			add = 5
+			add = 15
 		}
 		modifier = { # Same language
-			add = 5
+			add = 15
 			desc = speaks_same_language_interaction_reason
 			trigger = {
 				scope:actor = {
@@ -767,10 +834,7 @@ barter_favors_interaction = {
 	ai_max_reply_days = 5
 	
 	on_accept = {
-		send_interface_message = {
-			type = event_hook_good
-			title = favor_interaction_notification
-			right_icon = scope:recipient
+		scope:actor = {
 			if = {
 				limit = { scope:strong_hook = yes }
 				add_hook = {
@@ -783,6 +847,11 @@ barter_favors_interaction = {
 					type = favor_hook
 					target = scope:recipient
 				}
+			}
+			send_interface_message = {
+				type = event_hook_good
+				title = favor_interaction_notification
+				right_icon = scope:recipient
 			}
 		}
 	}
@@ -869,7 +938,7 @@ stateless_confederation_interaction = {
 				government_has_flag = government_is_stateless
 			}
 			is_playable_character = yes
-			is_landed_ruler = yes
+			is_landed = yes
 			is_alive = yes
 			NOR = {
 				has_trait = conqueror

@@ -293,7 +293,7 @@ court_physician_court_position = {
 			}
 			always = no
 		}
-		NOT = { government_has_flag = government_is_stateless }
+		# NOT = { government_has_flag = government_is_stateless }
 	}
 
 	# Is this an available position for this court? (root is court owner)
@@ -358,6 +358,7 @@ court_physician_court_position = {
 				limit = {
 					scope:liege = {
 						has_treasury = no
+						NOT = { government_has_flag = government_is_stateless }
 					}
 				}
 				add = court_physician_total_salary_value
@@ -369,6 +370,17 @@ court_physician_court_position = {
 				limit = {
 					scope:liege = {
 						has_treasury = yes
+					}
+				}
+				add = court_physician_total_salary_value
+			}
+		}
+		barter_goods = {
+			value = 0
+			if = {
+				limit = {
+					scope:liege = {
+						government_has_flag = government_is_stateless
 					}
 				}
 				add = court_physician_total_salary_value

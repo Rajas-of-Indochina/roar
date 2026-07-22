@@ -71,7 +71,7 @@ centralize_stateless_confederation_decision = {
 	}
 
 	is_valid = {
-		influence_level >= 5
+		influence_level >= 4
 		confederation ?= {
 			has_cohesion_level_parameter = confederation_can_tribalize
 			any_confederation_member = {
