@@ -2999,6 +2999,9 @@ align_circassian_church_decision = {
 				has_cultural_pillar = language_circassian
 			}
 		}
+		capital_province = {
+			geographical_region = world_north_caucasus
+		}
 		NOT = {
 			has_global_variable = align_circassian_church_decision_cooldown
 		}
@@ -3008,9 +3011,6 @@ align_circassian_church_decision = {
 		custom_tooltip = {
 			text = circassian_alignment_threshold_tt
 			num_same_faith_counties >= circassian_alignment_threshold
-		}
-		capital_province = {
-			geographical_region = world_north_caucasus
 		}
 	}
 	is_valid_showing_failures_only = {
