@@ -1,5 +1,4 @@
-﻿
-k_zhetysu = {
+﻿k_zhetysu = {
 	769.1.1 = { change_development_level = 0 }
 	1000.1.1 = { change_development_level = 0 }
 	1124.1.1 = { change_development_level = 0 }
@@ -21,9 +20,15 @@ k_zhetysu = {
 	955.1.1 = {
 		holder = 188854bis	#Musa Bughra Khan
 	}
+	958.1.1 = {
+		holder = 188854	#Suleyman-Arslan
+	}
 	# 960 - Karakhanids convert to Islam
 	# Conversion to Islam probably started before, but this year is reported as seeing mass conversions in the hundred of thousands
 	970.1.1 = {
+		holder = extra_karakhanids_10	# Hasan Bughra
+	}
+	992.8.1 = {
 		holder = 3000	#Ali Arslan Khan
 	}
 	998.1.1 = {
@@ -32,45 +37,49 @@ k_zhetysu = {
 	1017.1.1 = {
 		holder = 3004	#Mansur Arslan
 	}
-	1020.1.1 = {
-		holder = 3010	#Ali Tigin Bughra Khan, son of Mansur Arslan
+	1024.1.1 = {
+		holder = extra_karakhanids_15 # Muhammad Toghan, son of Mansur Arslan
 	}
-	1034.1.1 = {
-		holder = 144102 # Ebu Shuca
+	1026.1.1 = {
+		holder = 3008	# Yusuf Qadir
+	}
+	1033.1.1 = {
+		holder = 144102 # Sulayman II AKA Ebu Shuca
 	}
 
-	# Split of Karakhanid khanate
-	# Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
-	1042.1.2 = {
-		holder = 144102 # Sulayman II AKA Ebu Shuca
+	#Split of Karakhanid khanate
+	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
+	1042.1.1 = {
 		government = clan_government
 	}
 	1056.1.1 = {
-		holder = 144103	# Muhammad
+		holder = 144103	# Muhammad II
 	}
 	1057.1.1 = {
-		holder = 144104	# Ibrahim
+		holder = 144104	# Ibrahim I
 	}
 	1059.1.1 = {
-		holder = extra_karakhanids_20 # Mahmud
+		holder = 144107 # Madmud Togrul
 	}
 	1074.1.1 = {
 		holder = 144106 # Umar
 	}
 	1075.1.1 = {
-		holder = 144107 # Hasan
+		holder = extra_karakhanids_20 # Hasan II Bughra
 	}
 	1102.1.1 = {
-		holder = 144109 # Jibrail
+		holder = 144114 # Ahmad II
 	}
-	1103.1.1 = {
-		holder = 144114 # Ahmad
-	}
-	1130.1.1 = {
-		holder = 144115 # Ibrahim
+	1128.1.1 = {
+		holder = 144115 # Ibrahim II
 	}
 
 	# 1137 - Kara Khitai vassalizes eastern Karakhanid khanate
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+		de_jure_liege = e_kara_khitai
+	}
 	1143.1.1 = {
 		liege = e_kara_khitai
 		holder = 188906	#Tabuyan = Regent Empress Gantian
@@ -288,6 +297,10 @@ c_jambyl = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		liege = e_kara_khitai
 		holder = 188906	#Tabuyan = Regent Empress Gantian
@@ -421,6 +434,10 @@ c_muyunkum = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		liege = e_kara_khitai
 		holder = 188906	#Tabuyan = Regent Empress Gantian
@@ -615,14 +632,17 @@ c_taraz = {
 	840.1.1 = {
 		holder = 34872	#Bilge Khan
 	}
+	#
 	893.1.1 = {
 		liege = k_transoxiana
 		holder = roa_karluk002	
 	}
+	#
 	1020.1.1 = {
 		liege = k_zhetysu
 		holder = roa_karluk004
 	}
+	#
 	1103.1.1 = {
 		holder = 144114
 	}
@@ -631,6 +651,10 @@ c_taraz = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		holder = 188906	#Tabuyan = Regent Empress Gantian
 	}
@@ -787,7 +811,11 @@ c_mirki = {
 		holder = 144115 # Ibrahim
 	}
 	
-	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
+	# 1137 - Kara Khitai vassalizes eastern Karakhanid khanate
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		liege = e_kara_khitai
 		holder = 188906	#Tabuyan = Regent Empress Gantian
@@ -899,6 +927,10 @@ c_jamukat = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		holder = 188906	#Tabuyan = Regent Empress Gantian
 	}
@@ -1046,6 +1078,10 @@ d_ordukent = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		holder = 188906	#Tabuyan = Regent Empress Gantian
 	}
@@ -1312,7 +1348,11 @@ c_balashagun = {
 		holder = 144115 # Ibrahim
 	}
 	
-	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
+	# 1137 - Kara Khitai vassalizes eastern Karakhanid khanate
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		liege = e_kara_khitai
 		holder = 188906	#Tabuyan = Regent Empress Gantian
@@ -1468,6 +1508,10 @@ c_chun-illi = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		liege = e_kara_khitai
 		holder = 188906	#Tabuyan = Regent Empress Gantian
@@ -1650,6 +1694,10 @@ c_almaty = {
 	}
 
 	# Kara-Khitai
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
+	}
 	1143.1.1 = {
 		holder = 188906	#Tabuyan = Regent Empress Gantian
 	}
