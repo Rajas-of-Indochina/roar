@@ -161,273 +161,6 @@ c_SUM_pengabuan = {
 	}
 }
 
-c_SUM_tebo = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 9 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = sea_malay_tebo_01_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_dharmasraya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = sea_malay_tebo_03_fic	#fictional
-		liege = d_SUM_jambi
-	}
-	#
-	1170.1.1 = {
-		holder = sea_malay_tebo_04_fic	#fictional
-		liege = d_SUM_jambi
-	}
-}
-
-
-## d_minangkabau
-c_darek = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-
-	# History to be added
-}
-
-c_pariaman = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 17 }
-
-		862.1.1 = {
-			government = wanua_government
-			holder = malay_minangkabau_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_minangkabau_10_fic	#fictional
-		}
-		1178.1.1 = {
-			government = mandala_government
-			holder = malay_minangkabau_20_fic	#fictional
-		}
-}
-
-c_inderapura = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 3 }
-		1178.1.1 = { change_development_level = 5 }
-
-		860.1.1 = {
-			government = wanua_government
-			holder = malay_rnberbedur_01_fic	#fictional
-		}
-		1066.1.1 = {
-			holder = malay_rnberbedur_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_rnberbedur_20_fic	#fictional
-		}
-	}
-
-c_SUM_dharmasraya = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 11 }
-	1178.1.1 = { change_development_level = 20 }
-
-	859.1.1 = {
-		government = mandala_government
-		holder = malay_dharmasraya_01_fic	#fictional
-		tributary_of = {
-			suzerain = e_srivijaya
-			contract_group = tributary_mandala
-		}
-	}
-	#
-	1057.1.1 = {
-		holder = malay_melayu_10_fic	#fictional
-		liege = d_SUM_jambi
-	}
-	#
-	1167.1.1 = {
-		holder = malay_melayu_20_fic	#fictional
-	}
-	1183.1.1 = {
-		holder = malay_melayu_21
-	}
-}
-
-
-# d_SUM_karang_brahi
-c_SUM_karang_brahi = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-	1178.1.1 = { change_development_level = 8 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = sea_malay_karang_brahi_01_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_jambi
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = sea_malay_karang_brahi_03_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_jambi
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1170.1.1 = {
-		holder = sea_malay_karang_brahi_04_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_jambi
-			contract_group = tributary_mandala_tribal
-		}
-	}
-}
-
-c_SUM_kerinci = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = sea_malay_kerinci_01_fic	#fictional
-		tributary_of = {
-			suzerain = e_srivijaya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = sea_malay_kerinci_03_fic	#fictional
-	}
-	#
-	1170.1.1 = {
-		holder = sea_malay_kerinci_04_fic	#fictional
-	}
-}
-
-c_SUM_bungo = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-
-	# temporary placeholder before proper placeholder
-	860.1.1 = {
-		government = wanua_government
-		holder = sea_malay_tebo_01_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_dharmasraya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = sea_malay_tebo_03_fic	#fictional
-		liege = d_SUM_jambi
-	}
-	#
-	1170.1.1 = {
-		holder = sea_malay_tebo_04_fic	#fictional
-		liege = d_SUM_jambi
-	}
-}
-
-c_SUM_serolangun = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-
-	860.1.1 = {
-		government = wanua_government
-		holder = sea_malay_karang_brahi_01_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_jambi
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = sea_malay_karang_brahi_03_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_jambi
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1170.1.1 = {
-		holder = sea_malay_karang_brahi_04_fic	#fictional
-		tributary_of = {
-			suzerain = c_SUM_jambi
-			contract_group = tributary_mandala_tribal
-		}
-	}
-}
-
-
-d_SUM_riau_islands = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 10 }
-}
-
-c_SUM_lingga = {
-	860.1.1 = {
-		government = wanua_government
-		holder = malay_lingga_01_fic	#fictional
-		tributary_of = {
-			suzerain = e_srivijaya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = malay_lingga_10_fic	#fictional
-	}
-	#
-	1170.1.1 = {
-		holder = malay_lingga_20_fic	#fictional
-		tributary_of = {
-			suzerain = e_srivijaya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-}
-
-c_SUM_batam = {
-	860.1.1 = {
-		government = wanua_government
-		holder = sea_seletar_batam_01_fic	#fictional
-		tributary_of = {
-			suzerain = e_srivijaya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-	#
-	930.1.1 = {
-		holder = sea_seletar_batam_02_fic	#fictional
-	}
-	#
-	1060.1.1 = {
-		holder = sea_seletar_batam_03_fic	#fictional
-	}
-	#
-	1170.1.1 = {
-		holder = sea_seletar_batam_04_fic	#fictional
-		tributary_of = {
-			suzerain = e_srivijaya
-			contract_group = tributary_mandala_tribal
-		}
-	}
-}
-
 
 d_SUM_riau = {
 	1057.1.1 = {
@@ -521,36 +254,17 @@ c_SUM_indragiri = {
 }
 
 c_SUM_kampar = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 7 }
-	1178.1.1 = { change_development_level = 12 }
-
-	833.1.1 = {
-		government = mandala_government
-		holder = malay_muaratakus_01_fic	#fictional
-	}
-	#
-	1057.1.1 = {
-		holder = malay_melayu_10_fic	#fictional
-		liege = d_SUM_jambi
-	}
-	#
-	1167.1.1 = {
-		holder = malay_melayu_20_fic	#fictional
-	}
-	1183.1.1 = {
-		holder = malay_melayu_21
-	}
-}
-
-c_SUM_pekanbaru = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 11 }
 
 	860.1.1 = {
 		government = wanua_government
 		holder = malay_kampar_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
@@ -565,12 +279,43 @@ c_SUM_pekanbaru = {
 		holder = malay_kampar_20_fic	#fictional
 		tributary_of = {
 			suzerain = d_SUM_riau
+			contract_group = tributary_mandala
+		}
+	}
+}
+
+c_SUM_pekanbaru = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_malay_pekanbaru_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_pekanbaru_03_fic	#fictional
+		tributary_of = {
+			suzerain = d_SUM_riau
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_pekanbaru_04_fic
+		tributary_of = {
+			suzerain = d_SUM_riau
 			contract_group = tributary_mandala_tribal
 		}
 	}
 }
 
-c_rokan = {
+c_SUM_rokan = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 7 }
 	1178.1.1 = { change_development_level = 12 }
@@ -600,4 +345,281 @@ c_SUM_meranti = {
 	}
 	#
 	# add history
+}
+
+
+## d_minangkabau
+c_pariaman = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 17 }
+
+	862.1.1 = {
+		government = wanua_government
+		holder = malay_minangkabau_01_fic	#fictional
+	}
+	#
+	1066.1.1 = {
+		holder = malay_minangkabau_10_fic	#fictional
+	}
+	#
+	1178.1.1 = {
+		government = mandala_government
+		holder = malay_minangkabau_20_fic	#fictional
+	}
+}
+
+c_inderapura = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 3 }
+	1178.1.1 = { change_development_level = 5 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = malay_rnberbedur_01_fic	#fictional
+	}
+	#
+	1066.1.1 = {
+		holder = malay_rnberbedur_10_fic	#fictional
+	}
+	#
+	1178.1.1 = {
+		holder = malay_rnberbedur_20_fic	#fictional
+	}
+}
+
+
+## d_SUM_dharmasraya
+c_SUM_dharmasraya = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 20 }
+
+	859.1.1 = {
+		government = mandala_government
+		holder = malay_dharmasraya_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1057.1.1 = {
+		holder = malay_melayu_10_fic	#fictional
+		liege = d_SUM_jambi
+	}
+	#
+	1167.1.1 = {
+		holder = malay_melayu_20_fic	#fictional
+	}
+	1183.1.1 = {
+		holder = malay_melayu_21
+	}
+}
+
+c_SUM_tebo = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 9 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_malay_tebo_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_dharmasraya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_tebo_03_fic	#fictional
+		liege = d_SUM_jambi
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_tebo_04_fic	#fictional
+		liege = d_SUM_jambi
+	}
+}
+
+c_SUM_bungo = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	# temporary placeholder before proper placeholder
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_malay_tebo_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_dharmasraya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_tebo_03_fic	#fictional
+		liege = d_SUM_jambi
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_tebo_04_fic	#fictional
+		liege = d_SUM_jambi
+	}
+}
+
+c_darek = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	# History to be added - placeholder for now
+	862.1.1 = {
+		government = wanua_government
+		holder = malay_minangkabau_01_fic	#fictional
+	}
+}
+
+
+## d_SUM_karang_brahi
+c_SUM_karang_brahi = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 8 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_malay_karang_brahi_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_jambi
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_karang_brahi_03_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_jambi
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_karang_brahi_04_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_jambi
+			contract_group = tributary_mandala_tribal
+		}
+	}
+}
+
+c_SUM_kerinci = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_malay_kerinci_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_kerinci_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_kerinci_04_fic	#fictional
+	}
+}
+
+c_SUM_serolangun = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_malay_karang_brahi_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_jambi
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_malay_karang_brahi_03_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_jambi
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_malay_karang_brahi_04_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_jambi
+			contract_group = tributary_mandala_tribal
+		}
+	}
+}
+
+
+d_SUM_riau_islands = {
+	867.1.1 = { change_development_level = 3 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
+}
+
+c_SUM_lingga = {
+	860.1.1 = {
+		government = wanua_government
+		holder = malay_lingga_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = malay_lingga_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = malay_lingga_20_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+}
+
+c_SUM_batam = {
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_seletar_batam_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	930.1.1 = {
+		holder = sea_seletar_batam_02_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = sea_seletar_batam_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_seletar_batam_04_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
+	}
 }

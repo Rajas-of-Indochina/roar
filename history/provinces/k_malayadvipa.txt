@@ -106,6 +106,41 @@
 	holding = none
 }
 
+
+## d_SUM_dharmasraya
+### c_SUM_dharmasraya
+16699 = { # Dharmasraya
+	culture = malay
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	special_building_slot = sea_gold_mines_01
+}
+11290 = { # Sungai Pagu
+	holding = none
+}
+16582 = { # Muaro Labuh
+	holding = none
+}
+16777 = { # Sijunjung
+	holding = none
+}
+
+### c_SUM_bungo
+16590 = { # Muara Bungo
+	culture = malay
+	religion = malayic
+
+	holding = tribal_holding
+}
+16498 = { # Senemat
+	holding = none
+}
+16424 = { # Seling
+	holding = none
+}
+
 ### c_SUM_tebo
 16566 = { # Muara Tebo
 	culture = malay
@@ -120,8 +155,6 @@
 	holding = none
 }
 
-
-## d_minangkabau
 ### c_darek
 11284 = { # Pariangan
 	culture = malay
@@ -141,6 +174,8 @@
 	holding = none
 }
 
+
+## d_minangkabau
 ### c_pariaman
 16698 = { # Padang Pariaman
 	culture = malay
@@ -166,25 +201,6 @@
 	holding = none
 }
 
-### c_SUM_dharmasraya
-16699 = { # Dharmasraya
-	culture = malay
-	religion = mahayana
-
-	holding = temple_citadel_holding
-
-	special_building_slot = sea_gold_mines_01
-}
-11290 = { # Sungai Pagu
-	holding = none
-}
-16582 = { # Muaro Labuh
-	holding = none
-}
-16777 = { # Sijunjung
-	holding = none
-}
-
 
 ## d_SUM_karang_brahi
 ### c_SUM_kerinci
@@ -198,20 +214,6 @@
 	holding = none
 }
 16247 = { # Tanjung Dalam
-	holding = none
-}
-
-### c_SUM_bungo
-16590 = { # Muara Bungo
-	culture = malay
-	religion = malayic
-
-	holding = tribal_holding
-}
-16498 = { # Senemat
-	holding = none
-}
-16424 = { # Seling
 	holding = none
 }
 
@@ -303,8 +305,12 @@
 11272 = { # Siak Sri Indrapura
 	culture = malay
 	religion = vajrayana
+	holding = tribal_holding
 
-	holding = temple_citadel_holding
+	# History
+	1166.1.1 = {
+		holding = temple_citadel_holding
+	}
 }
 17160 = { # Perawang
 	holding = none
@@ -319,28 +325,28 @@
 ### c_SUM_pekanbaru
 17115 = { # Pekanbaru
 	culture = malay
-	religion = malayic
+	religion = vajrayana
 
 	holding = tribal_holding
 }
 11269 = { # Tendun
 	holding = none
 }
-17381 = { # Bagan Sinemba
+17149 = { # Ujung Batu
 	holding = none
 }
 
-### c_rokan
+### c_SUM_rokan
 11267 = { # Ujung Tanjung
 	culture = malay
 	religion = vajrayana
 
 	holding = temple_citadel_holding
 }
-17149 = { # Ujung Batu
-	holding = church_holding
-}
 17465 = { # Rupat
+	holding = none
+}
+17381 = { # Bagan Sinemba
 	holding = none
 }
 11268 = { # Mandau
