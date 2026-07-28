@@ -137,9 +137,6 @@
 16793 = { # Singkarak
 	holding = none
 }
-17074 = { # Limapuluh Koto
-	holding = none
-}
 16947 = { # Agam
 	holding = none
 }
@@ -251,37 +248,37 @@
 
 
 ## d_siak
-### c_siak
-11272 = { # Siak Sri Indrapura
-	culture = malay
-	religion = vajrayana
-
-	holding = temple_citadel_holding
-}
-11268 = { # Mandau
-	holding = none
-}
-17099 = { # Senapelan
-	holding = none
-}
-17160 = { # Perawang
-	holding = none
-}
-11273 = { # Bukit Batu
-	holding = none
-}
-
 ### c_SUM_muara_takus
-11283 = { # Kuntu
+17074 = { # Muara Takus
 	culture = malay
 	religion = mahayana
 
 	holding = temple_citadel_holding
+	special_building_slot = muaro_takus_01
+
+	# History
+	1067.1.1 = {
+		special_building = muaro_takus_01
+	}
 }
-11276 = { # Teluk Meranti
+17033 = { # Gunung Sahilan
 	holding = none
 }
+16970 = { # Lipat Kain
+	holding = none
+}
+
+### c_SUM_kuntu
+11283 = { # Kuntu
+	culture = malay
+	religion = mahayana
+
+	holding = castle_holding
+}
 11282 = { # Kerinci
+	holding = none
+}
+17099 = { # Senapelan
 	holding = none
 }
 
@@ -302,6 +299,37 @@
 	holding = none
 }
 
+### c_SUM_kampar
+11272 = { # Siak Sri Indrapura
+	culture = malay
+	religion = vajrayana
+
+	holding = temple_citadel_holding
+}
+17160 = { # Perawang
+	holding = none
+}
+11273 = { # Bukit Batu
+	holding = none
+}
+11276 = { # Teluk Meranti
+	holding = none
+}
+
+### c_SUM_pekanbaru
+17115 = { # Pekanbaru
+	culture = malay
+	religion = malayic
+
+	holding = tribal_holding
+}
+11269 = { # Tendun
+	holding = none
+}
+17381 = { # Bagan Sinemba
+	holding = none
+}
+
 ### c_rokan
 11267 = { # Ujung Tanjung
 	culture = malay
@@ -311,18 +339,11 @@
 }
 17149 = { # Ujung Batu
 	holding = church_holding
-
-	special_building_slot = muaro_takus_01
-
-	# History
-	1067.1.1 = {
-		special_building = muaro_takus_01
-	}
-}
-17281 = { # Bagan Sinemba
-	holding = none
 }
 17465 = { # Rupat
+	holding = none
+}
+11268 = { # Mandau
 	holding = none
 }
 
@@ -337,25 +358,8 @@
 	holding = none
 }
 
-### c_kampar
-11269 = { # Tendun
-	culture = malay
-	religion = malayic
 
-	holding = tribal_holding
-}
-17115 = { # Petapahan
-	holding = none
-}
-17033 = { # Gunung Sahilan
-	holding = none
-}
-16970 = { # Lipat Kain
-	holding = none
-}
-
-
-## d_SUM_riau
+## d_SUM_riau_islands
 ### c_SUM_batam
 11277 = { # Batam
 	culture = seletar

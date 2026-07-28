@@ -382,7 +382,7 @@ c_SUM_serolangun = {
 }
 
 
-d_SUM_riau = {
+d_SUM_riau_islands = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
 	1178.1.1 = { change_development_level = 10 }
@@ -453,7 +453,7 @@ d_siak = {
 	}
 }
 
-c_SUM_siak = {
+c_SUM_muara_takus = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 7 }
 	1178.1.1 = { change_development_level = 12 }
@@ -476,7 +476,7 @@ c_SUM_siak = {
 	}
 }
 
-c_SUM_muara_takus = {
+c_SUM_kuntu = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 7 }
 	1178.1.1 = { change_development_level = 12 }
@@ -530,22 +530,47 @@ c_SUM_indragiri = {
 	}
 }
 
-	c_rokan = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 12 }
+c_SUM_kampar = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 12 }
 
-		860.1.1 = {
-			government = mandala_government
-			holder = malay_rokan_01_fic	#fictional
-		}
-		1045.1.1 = {
-			holder = malay_panai_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = malay_panai_20_fic	#fictional
-		}
+	833.1.1 = {
+		government = mandala_government
+		holder = malay_muaratakus_01_fic	#fictional
 	}
+	#
+	1057.1.1 = {
+		holder = malay_melayu_10_fic	#fictional
+		liege = d_SUM_jambi
+	}
+	#
+	1167.1.1 = {
+		holder = malay_melayu_20_fic	#fictional
+	}
+	1183.1.1 = {
+		holder = malay_melayu_21
+	}
+}
+
+c_rokan = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 12 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = malay_rokan_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = malay_panai_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = malay_panai_20_fic	#fictional
+	}
+}
 
 c_SUM_meranti = {
 	867.1.1 = { change_development_level = 2 }
@@ -558,22 +583,4 @@ c_SUM_meranti = {
 	}
 	#
 	# add history
-}
-
-c_kampar = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 9 }
-	1178.1.1 = { change_development_level = 15 }
-
-	867.1.1 = {
-		government = wanua_government
-		holder = malay_kampar_01_fic	#fictional
-	}
-	1063.1.1 = {
-		holder = malay_kampar_10_fic	#fictional
-		liege = d_siak
-	}
-	1168.1.1 = {
-		holder = malay_kampar_20_fic	#fictional
-	}
 }

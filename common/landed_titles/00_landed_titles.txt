@@ -77117,55 +77117,48 @@ e_srivijaya = {
 			}
 		}
 
-		d_siak = {
+		d_SUM_riau = {
+			# d_siak in old RoA ; not to be confused with d_SUM_riau_islands
 			color = { 20 90 80 }
 
-			c_SUM_siak = {
-				color = { 30 100 90 }
+			capital = c_SUM_muara_takus
 
-				b_siak_sri_indrapura = {
-					province = 11272
+			c_SUM_muara_takus = {
+				# c_kampar in old RoA
+				color = { 25 95 85 }
 
-					color = { 30 100 90 }
+				b_SUM_Muara_Takus = {
+					province = 17074
+
+					color = { 25 95 85 }
 				}
-				b_SUM_mandau = {
-					province = 11268
+				b_gunung_sahilan = {
+					province = 17033
 
-					color = { 40 110 100 }
+					color = { 25 95 85 }
 				}
-				b_senapelan = {
-					province = 17099
+				b_lipat_kain = {
+					province = 16970
 
-					color = { 20 90 80 }
-				}
-				b_perawang = {
-					province = 17160
-
-					color = { 10 80 70 }
-				}
-				b_SUM_bukit_batu = {
-					province = 11273
-
-					color = { 50 120 110 }
+					color = { 25 95 85 }
 				}
 			}
-			c_SUM_muara_takus = {
-				color = { 10 80 70 }
-
+			c_SUM_kuntu = {
+				# c_pelalawan in old RoA
 				b_SUM_Kuntu = {
 					province = 11283
 
 					color = { 10 80 70 }
 				}
-				b_teluk_meranti = {
-					province = 11276
-
-					color = { 20 90 80 }
-				}
 				b_SUM_Kerinci_Siak = {
 					province = 11282
 
 					color = { 0 70 60 }
+				}
+				b_senapelan = {
+					province = 17099
+
+					color = { 25 95 85 }
 				}
 			}
 			c_SUM_indragiri = {
@@ -77193,6 +77186,51 @@ e_srivijaya = {
 					color = { 60 130 120 }
 				}
 			}
+			c_SUM_kampar = {
+				# c_siak in old RoA
+				color = { 30 100 90 }
+
+				b_siak_sri_indrapura = {
+					province = 11272
+
+					color = { 30 100 90 }
+				}
+				b_perawang = {
+					province = 17160
+
+					color = { 30 100 90 }
+				}
+				b_SUM_bukit_batu = {
+					province = 11273
+
+					color = { 30 100 90 }
+				}
+				b_teluk_meranti = {
+					province = 11276
+
+					color = { 20 90 80 }
+				}
+			}
+			c_SUM_pekanbaru = {
+				# c_kampar in old RoA
+				color = { 35 105 95 }
+
+				b_SUM_Pekanbaru = {
+					province = 17115
+
+					color = { 35 105 95 }
+				}
+				b_SUM_Tendun = {
+					province = 11269
+
+					color = { 35 105 95 }
+				}
+				b_bagan_sinembe = {
+					province = 17381
+
+					color = { 35 105 95 }
+				}
+			}
 			c_rokan = {
 				color = { 15 85 75 }
 
@@ -77204,17 +77242,17 @@ e_srivijaya = {
 				b_ujung_batu = {
 					province = 17149
 
-					color = { 25 95 85 }
-				}
-				b_bagan_sinembe = {
-					province = 17381
-
-					color = { 35 105 95 }
+					color = { 15 85 75 }
 				}
 				b_rupat = {
 					province = 17465
 
-					color = { 0 65 55 }
+					color = { 15 85 75 }
+				}
+				b_SUM_mandau = {
+					province = 11268
+
+					color = { 15 85 75 }
 				}
 			}
 			c_SUM_meranti = {
@@ -77227,30 +77265,6 @@ e_srivijaya = {
 				}
 				b_SUM_Selat_Panjang = {
 					province = 11275
-
-					color = { 55 125 115 }
-				}
-			}
-			c_kampar = {
-				color = { 25 95 85 }
-
-				b_SUM_Tendun = {
-					province = 11269
-
-					color = { 25 95 85 }
-				}
-				b_petapahan = {
-					province = 17115
-
-					color = { 35 105 95 }
-				}
-				b_gunung_sahilan = {
-					province = 17033
-
-					color = { 15 85 75 }
-				}
-				b_lipat_kain = {
-					province = 16970
 
 					color = { 45 115 105 }
 				}
@@ -77275,11 +77289,6 @@ e_srivijaya = {
 				}
 				b_singkarak = {
 					province = 16793
-
-					color = { 50 130 145 }
-				}
-				b_limapuluh_koto = {
-					province = 17074
 
 					color = { 50 130 145 }
 				}
@@ -77436,12 +77445,14 @@ e_srivijaya = {
 			}
 		}
 
-		d_SUM_riau = {
+		d_SUM_riau_islands = {
+			# d_riau in old RoA
 			color = { 35 155 150 }
 
 			capital = c_SUM_batam
 
 			c_SUM_batam = {
+				# c_batam in old RoA
 				color = { 45 165 160 }
 
 				b_SUM_Batam = {
@@ -77461,6 +77472,7 @@ e_srivijaya = {
 				}
 			}
 			c_SUM_lingga = {
+				# c_lingga in old RoA
 				color = { 25 145 140 }
 
 				b_SUM_Lingga = {
