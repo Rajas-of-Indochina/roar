@@ -525,31 +525,54 @@ d_SUM_palembang = {
 			holder = malay_palembang_20_fic #fictional
 		}
 	}
-	c_empat_lawang = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 7 }
 
-		867.1.1 = {
-			government = wanua_government
-			holder = malay_pasemah_01_fic	#fictional
-		}
-		1065.1.1 = {
-			government = wanua_government
-			holder = malay_lampung_10_fic	#ficitonal
-		}
-		1169.1.1 = {
-			holder = malay_lampung_20_fic	#ficitonal
-		}
+c_empat_lawang = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 7 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = sea_rejang_empat_lawang_01_fic	#fictional
 	}
+	#
+	930.1.1 = {
+		holder = sea_rejang_empat_lawang_02_fic	#ficitonal
+	}
+	#
+	1060.1.1 = {
+		holder = sea_rejang_empat_lawang_03_fic	#ficitonal
+	}
+	#
+	1170.1.1 = {
+		holder = sea_rejang_empat_lawang_04_fic	#ficitonal
+	}
+}
 
 
-d_SUM_bangkahulu = {
+## d_SUM_bangkahulu
+c_SUM_bengkulu = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
 	1178.1.1 = { change_development_level = 10 }
+
+		865.1.1 = {
+			government = wanua_government
+			holder = malay_bengkulu_01_fic	#fictional
+		}
+		1053.1.1 = {
+			holder = malay_bengkulu_10_fic	#fictional
+		}
+		1176.1.1 = {
+			holder = malay_bengkulu_20_fic	#fictional
+		}
 }
-	c_SUM_bengkulu = {
+
+c_selebar = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
+
 		865.1.1 = {
 			government = wanua_government
 			holder = malay_bengkulu_01_fic	#fictional
@@ -560,16 +583,4 @@ d_SUM_bangkahulu = {
 		1176.1.1 = {
 			holder = malay_bengkulu_20_fic	#fictional
 		}
-	}
-	c_selebar = {
-		865.1.1 = {
-			government = wanua_government
-			holder = malay_bengkulu_01_fic	#fictional
-		}
-		1053.1.1 = {
-			holder = malay_bengkulu_10_fic	#fictional
-		}
-		1176.1.1 = {
-			holder = malay_bengkulu_20_fic	#fictional
-		}
-	}
+}

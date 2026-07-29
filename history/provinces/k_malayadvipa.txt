@@ -126,6 +126,10 @@
 16777 = { # Sijunjung
 	holding = none
 }
+11283 = { # Kuntu
+	# one of the earliest settlements in Riau region ; placement might be wrong
+	holding = tribal_holding
+}
 
 ### c_SUM_bungo
 16590 = { # Muara Bungo
@@ -155,29 +159,36 @@
 	holding = none
 }
 
-### c_darek
+### c_SUM_minang_darek
 11284 = { # Pariangan
+	# oldest of all Minangkabau villages ; large ancient tomb inside it is said to belong to Tantejo Gurhano
 	culture = malay
 	religion = malayic
 
 	holding = tribal_holding
 
 	special_building_slot = sea_gold_mines_01
+
+	# History
+	# by the 13th century the region was mostly Hindu-Buddhist
 }
-16886 = { # Tanah Datar
+16886 = { # Pagaruyung
+	# capital seat of Pagaruyung Kingdom
 	holding = none
 }
 16793 = { # Singkarak
+	# shares name with Lake Singkarak
 	holding = none
 }
 16947 = { # Agam
+	# represents land of modern Agam Regency ; potentially change name to Sianok
 	holding = none
 }
 
 
-## d_minangkabau
-### c_pariaman
-16698 = { # Padang Pariaman
+## d_SUM_minangkabau
+### c_SUM_minangkabau
+16698 = { # Padang
 	culture = malay
 	religion = malayic
 
@@ -187,10 +198,11 @@
 	holding = none
 }
 16908 = { # Maninjau
+	# named after Lake Maninjau
 	holding = none
 }
 
-### c_inderapura
+### c_SUM_riak_nan_berbedur
 16352 = { # Inderapura
 	culture = malay
 	religion = malayic
@@ -249,7 +261,7 @@
 }
 
 
-## d_siak
+## d_SUM_riau
 ### c_SUM_muara_takus
 17074 = { # Muara Takus
 	culture = malay
@@ -269,18 +281,10 @@
 16970 = { # Lipat Kain
 	holding = none
 }
-
-### c_SUM_kuntu
-11283 = { # Kuntu
-	culture = malay
-	religion = mahayana
-
-	holding = castle_holding
-}
-11282 = { # Kerinci
+17099 = { # Senapelan
 	holding = none
 }
-17099 = { # Senapelan
+11282 = { # Pangkalan Kerinci
 	holding = none
 }
 
@@ -337,16 +341,21 @@
 }
 
 ### c_SUM_rokan
-11267 = { # Ujung Tanjung
+11267 = { # Rokan
 	culture = malay
 	religion = vajrayana
+	holding = tribal_holding
 
-	holding = temple_citadel_holding
+	# History
+	1166.1.1 = {
+		holding = temple_citadel_holding
+	}
 }
 17465 = { # Rupat
+	# Rupat Island
 	holding = none
 }
-17381 = { # Bagan Sinemba
+17381 = { # Bagan Batu
 	holding = none
 }
 11268 = { # Mandau

@@ -277,6 +277,7 @@ nias = {
 }
 
 rejang = {
+	# native inhabitants of South-Western Sumatra, specifically Bengkulu Province
 	color = rejang
 
 	ethos = ethos_communal
@@ -286,8 +287,26 @@ rejang = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_isolationist
-		tradition_zealous_people
+		tradition_SEA_ade 			# msl_note: to represent their common law for all customary matters
+		tradition_tribe_unity 		# msl_note: the familial and communal bonds play very important role in their society
+		tradition_isolationist 		# msl_note: Rejang people rarely ventued outside of their homeland
+		# msl_note: tradition_zealous_people removed until more info can be gathered ; perhaps it was added to represent their tight cultural-religious communities?
+		# msl_note: tradition_jungle_dwellers would be added if there was more space ; represents their deep connection to jungle and its various 'gifts'
+		# msl_note: add something to do with their bamboo agriculture
+	}
+
+	# msl_note: rice cultivation play important part of their livelihood
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
+	}
+
+ 	# msl_note: this entire tradition should be re-thought
+ 	# msl_note: Rejang people had a very complex nobility system and I just wanted them to have access to Pesilat Warriors
+	dlc_tradition = {
+		trait = tradition_tgp_esoteric_power
+		requires_dlc_flag = all_under_heaven
 	}
 
 	name_list = name_list_malay
@@ -442,12 +461,12 @@ sunda = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_equal_inheritance 	# msl_note: had both queens and kings ruling over Sundanese realms
-		tradition_culinary_art  	# msl_note: Sundanese cuisine is one of the most famous in Indonesia, characterised by its freshness
-		tradition_artisans  	# msl_note: mostly oral tradition but rich in various forms of art ; small-scale entrepreneurship is very popular
-		tradition_maritime_mercantilism  	# msl_note: Sunda cities played crucial role in spice trade of SEA
-		#tradition_storytellers  	# msl_note: rich oral tradition combined with dances and puppet shows
-		#tradition_family_entrepreneurship  	# msl_note: small-scale entrepreneurship is very popular
+		tradition_equal_inheritance 		# msl_note: had both queens and kings ruling over Sundanese realms
+		tradition_culinary_art 				# msl_note: Sundanese cuisine is one of the most famous in Indonesia, characterised by its freshness
+		tradition_artisans 					# msl_note: mostly oral tradition but rich in various forms of art ; small-scale entrepreneurship is very popular
+		tradition_maritime_mercantilism 	# msl_note: Sunda cities played crucial role in spice trade of SEA
+		#tradition_storytellers 			# msl_note: rich oral tradition combined with dances and puppet shows
+		#tradition_family_entrepreneurship 	# msl_note: small-scale entrepreneurship is very popular
 	}
 
  	# msl_note: this entire tradition should be re-thought

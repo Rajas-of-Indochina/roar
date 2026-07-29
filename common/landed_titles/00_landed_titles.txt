@@ -76941,7 +76941,7 @@ e_srivijaya = {
 			c_SUM_bengkulu = {
 				color = { 120 110 60 }
 
-				b_bengkulu = {
+				b_SUM_Bengkulu = {
 					province = 15812
 
 					color = { 120 110 60 }
@@ -76965,7 +76965,7 @@ e_srivijaya = {
 			c_selebar = {
 				color = { 130 120 70 }
 
-				b_SUM_seluma = {
+				b_SUM_Seluma = {
 					province = 11311
 
 					color = { 140 130 80 }
@@ -77112,35 +77112,26 @@ e_srivijaya = {
 
 					color = { 25 95 85 }
 				}
-				b_gunung_sahilan = {
+				b_SUM_Gunung_Sahilan = {
 					province = 17033
 
 					color = { 25 95 85 }
 				}
-				b_lipat_kain = {
+				b_SUM_Lipat_Kain = {
+					# feels like b_SUM_Kuntu should be here instead
 					province = 16970
 
 					color = { 25 95 85 }
 				}
-			}
-			c_SUM_kuntu = {
-				color = { 10 80 70 }
-
-				# c_pelalawan in old RoA
-				b_SUM_Kuntu = {
-					province = 11283
-
-					color = { 10 80 70 }
-				}
-				b_SUM_Kerinci_Siak = {
-					province = 11282
-
-					color = { 10 80 70 }
-				}
-				b_senapelan = {
+				b_SUM_Senapelan = {
 					province = 17099
 
-					color = { 10 80 70 }
+					color = { 25 95 85 }
+				}
+				b_SUM_Pangkalan_Kerinci = {
+					province = 11282
+
+					color = { 25 95 85 }
 				}
 			}
 			c_SUM_indragiri = {
@@ -77172,22 +77163,23 @@ e_srivijaya = {
 				# c_siak in old RoA
 				color = { 30 100 90 }
 
-				b_siak_sri_indrapura = {
+				b_SUM_Siak = {
+					# Siak Sri Indrapura specifically
 					province = 11272
 
 					color = { 30 100 90 }
 				}
-				b_perawang = {
+				b_SUM_Perawang = {
 					province = 17160
 
 					color = { 30 100 90 }
 				}
-				b_SUM_bukit_batu = {
+				b_SUM_Bukit_Batu = {
 					province = 11273
 
 					color = { 30 100 90 }
 				}
-				b_teluk_meranti = {
+				b_SUM_Kampar = {
 					province = 11276
 
 					color = { 30 100 90 }
@@ -77207,7 +77199,7 @@ e_srivijaya = {
 
 					color = { 35 105 95 }
 				}
-				b_ujung_batu = {
+				b_SUM_Ujung_Batu = {
 					province = 17149
 
 					color = { 35 105 95 }
@@ -77217,22 +77209,22 @@ e_srivijaya = {
 				# c_rokan in old RoA
 				color = { 15 85 75 }
 
-				b_ujung_tanjung = {
+				b_SUM_Rokan = {
 					province = 11267
 
 					color = { 15 85 75 }
 				}
-				b_rupat = {
+				b_SUM_Rupat = {
 					province = 17465
 
 					color = { 15 85 75 }
 				}
-				b_bagan_sinembe = {
+				b_SUM_Bagan_Batu = {
 					province = 17381
 
 					color = { 15 85 75 }
 				}
-				b_SUM_mandau = {
+				b_SUM_Mandau = {
 					province = 11268
 
 					color = { 15 85 75 }
@@ -77268,18 +77260,23 @@ e_srivijaya = {
 
 					color = { 45 125 140 }
 				}
-				b_SUM_sungai_pagu = {
+				b_SUM_Sungai_Pagu = {
 					province = 11290
 
 					color = { 45 125 140 }
 				}
-				b_muaro_labuh = {
+				b_SUM_Muaro_Labuh = {
 					province = 16582
 
 					color = { 45 125 140 }
 				}
-				b_sijunjung = {
+				b_SUM_Sijunjung = {
 					province = 16777
+
+					color = { 45 125 140 }
+				}
+				b_SUM_Kuntu = {
+					province = 11283
 
 					color = { 45 125 140 }
 				}
@@ -77324,25 +77321,26 @@ e_srivijaya = {
 					color = { 23 95 75 }
 				}
 			}
-			c_darek = {
+			c_SUM_minang_darek = {
+				# c_darek in old RoA ; maybe move to d_SUM_minangkabau?
 				color = { 50 130 145 }
 
-				b_SUM_pariangan = {
+				b_SUM_Pariangan = {
 					province = 11284
 
 					color = { 50 130 145 }
 				}
-				b_tanah_datar = {
+				b_SUM_Pagaruyung = {
 					province = 16886
 
 					color = { 50 130 145 }
 				}
-				b_singkarak = {
+				b_SUM_Singkarak = {
 					province = 16793
 
 					color = { 50 130 145 }
 				}
-				b_agam = {
+				b_SUM_Agam = {
 					province = 16947
 
 					color = { 50 130 145 }
@@ -77350,39 +77348,44 @@ e_srivijaya = {
 			}
 		}
 
-		d_minangkabau = {
+		d_SUM_minangkabau = {
+			# d_minangkabau in old RoA
 			color = { 30 110 125 }
 
-			capital = c_pariaman
+			capital = c_SUM_minangkabau
 
-			c_pariaman = {
+			c_SUM_minangkabau = {
+				# c_pariaman in old RoA
 				color = { 15 95 110 }
 
-				b_padang_pariaman = {
+				b_SUM_Padang = {
 					province = 16698
 
 					color = { 15 95 110 }
 				}
-				b_painan = {
+				b_SUM_Painan = {
 					province = 16523
 
 					color = { 15 95 110 }
 				}
-				b_maninjau = {
+				b_SUM_Maninjau = {
+					# b_SUM_Tiku in vanilla
 					province = 16908
 
 					color = { 15 95 110 }
 				}
 			}
-			c_inderapura = {
+			c_SUM_riak_nan_berbedur = {
+				# c_inderapura in old RoA
 				color = { 55 135 150 }
 
-				b_inderapura = {
+				b_SUM_Inderapura = {
+					# b_SUM_Inderajati in vanilla for some reason?
 					province = 16352
 
 					color = { 55 135 150 }
 				}
-				b_mukomuko = {
+				b_SUM_Muko_Muko = {
 					province = 16173
 
 					color = { 55 135 150 }
