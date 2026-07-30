@@ -1,233 +1,257 @@
 ﻿# k_palembang
 ## d_SUM_palembang
 ### c_SUM_palembang
-		16101 = { # b_palembang
-			culture = malay
-			religion = mahayana
+16101 = { # Palembang
+	# capital city of Srivijaya and other kingdoms throughout centuries
+	culture = malay
+	religion = mahayana
 
-			holding = temple_citadel_holding
+	holding = temple_citadel_holding
 
-			special_building_slot = generic_university
-			special_building = generic_university
-		}
-		16144 = { # b_sebalik
-			holding = city_holding
-		}
-		16143 = { # b_terlangu
-			holding = church_holding
-		}
-		16237 = { # b_makarti_jaya
-			holding = castle_holding
-		}
-		11303 = { # b_SUM_sungai_batang
-			holding = church_holding
-		}
-		16221 = { # b_muara_padang
-			holding = city_holding
-		}
+	special_building_slot = generic_university
 
-### c_indralaya
-		11302 = { # b_SUM_purnajaya
-			culture = lampung
-			religion = mahayana
+	# History
+	660.1.1 = { #Srivijaya Scholastic Center
+		# potentially move to different barony
+		special_building = generic_university
+	}
+}
+11302 = { # Musi
+	# shares name with Musi river
+	holding = church_holding
+}
+16144 = { # Sebalik
+	# village near Palembang
+	holding = none
+}
+16143 = { # Terlangu
+	# small village near Palembang
+	holding = none
+}
+16237 = { # Makarti Jaya
+	# village known for its agriculture ; placeholder city
+	holding = city_holding
+}
+11303 = { # Batanghari
+	# shares name with Batanghari River
+	holding = none
+}
+16221 = { # Muara Padang
+	# district which in the past mainly focused on rice fields
+	holding = none
+}
 
-			holding = castle_holding
-		}
-		15791 = { # b_mesuji_raya
-			holding = none
-		}
-		15974 = { # b_pedamaran
-			holding = none
-		}
-		15834 = { # b_tambangan
-			holding = none
-		}
+### c_SUM_banyuasin
+16345 = { # Banyuasin
+	# named after the region
+	culture = malay
+	religion = mahayana
 
-### c_banyuasin
-		16345 = { # b_banyuasin
-			culture = malay
-			religion = mahayana
+	holding = castle_holding
+}
+16362 = { # Keluang
+	# town in Banyuasin
+	holding = none
+}
+16303 = { # Lubuk Bintialo
+	# village famous for its forests and traditional honey gathering
+	holding = none
+}
+11297 = { # Merang
+	# region famed for its peat forests
+	holding = none
+}
+16147 = { # Tanah Pilih
+	# village in coastal peatlands
+	holding = none
+}
 
-			holding = castle_holding
-		}
-		11297 = { # b_muara_merang
-			holding = none
-		}
-		16147 = { # b_tanah_pilih
-			holding = none
-		}
-		16303 = { # b_lubuk_bintialo
-			holding = none
-		}
-		16362 = { # b_keluang
-			holding = none
-		}
+### c_SUM_ogan
+15791 = { # Mesuji Raya
+	culture = lampung
+	religion = malayic
+
+	holding = tribal_holding
+}
+15974 = { # Pedamaran
+	holding = none
+}
+15318 = { # Martapura
+	holding = none
+}
 
 ### c_SUM_bangka_belitung
-		11322 = { # b_SUM_pangkalpinang
-			culture = seletar
-			religion = umboh
+11322 = { # Pangkalpinang
+	# capital settlement of Bangka island
+	culture = seletar
+	religion = umboh
 
-			holding = tribal_holding
-		}
-		11323 = { # b_SUM_toboali
-			holding = none
-		}
-		11324 = { # b_SUM_belitung
-			culture = seletar
-			religion = umboh
+	holding = tribal_holding
+}
+11323 = { # Kota Kapur
+	# village where Kota Kapur inscription was found
+	holding = none
+}
+11324 = { # Belitung
+	# shares name with Belitung island
+	holding = tribal_holding
+}
 
-			holding = tribal_holding
-		}		
+### c_SUM_east_sumatra
+15899 = { # Cengal
+	culture = lampung
+	religion = malayic
 
-	# c_cengal
-		15899 = { # b_cengal
-			culture = lampung
-			religion = malayic
-
-			holding = tribal_holding
-		}
-		11305 = { # b_sungai_menang
-			holding = none
-		}
-		11304 = { # b_air_sugihan
-			holding = none
-		}
-		16043 = { # b_tulung_selapan
-			holding = none
-		}
-
-
-## d_basemah
-	# c_sum_pagaralam
-		15588 = { # b_baturaja
-			culture = lampung
-			religion = malayic
-
-			holding = tribal_holding
-		}
-		11300 = { # b_SUM_muara_dua
-			holding = none
-		}
-		15318 = { # b_martapura_2
-			holding = none
-		}
-	# c_musi_rawas
-		16177 = { # b_rupit
-			culture = malay
-			religion = malayic
-
-			holding = tribal_holding
-		}
-		16000 = { # b_muara_lakitan
-			holding = none
-		}
-		16022 = { # b_lubuklinggau
-			holding = none
-		}
-		11292 = { # b_surulangun
-			holding = none
-		}
-	# c_prabumulih
-		15973 = { # b_prabumulih
-			culture = malay
-			religion = malayic
-
-			holding = tribal_holding
-		}
-		16150 = { # b_sanga_desa
-			holding = none
-		}
-		11298 = { # b_pagarkaja
-			holding = none
-		}
-		11301 = { # b_muara_enim
-			holding = none
-		}
-	# c_empat_lawang
-		11299 = { # b_empat_lawang
-			culture = rejang
-			religion = malayic
-
-			holding = tribal_holding
-		}
-		15666 = { # Lahat
-			holding = none
-		}
+	holding = tribal_holding
+}
+11305 = { # Sungai Menang
+	holding = none
+}
+11304 = { # Air Sugihan
+	holding = none
+}
+16043 = { # Tulung Selapan
+	holding = none
+}
 
 
-## d_lampung
-	# c_tulang_bawang
-		11306 = { # b_tulang_bawang
-			culture = lampung
-			religion = malayic
+## d_SUM_basemah
+### c_SUM_pasemah
+15666 = { # Pagaralam
+	# settlement notable for ancient stone megaliths which surround it on all sides
+	culture = malay
+	religion = malayic
 
-			holding = tribal_holding
-		}
-		15257 = { # b_menggala
-			holding = none
-		}
-		15002 = { # b_bumi_nabung
-			holding = none
-		}
-		15615 = { # b_mesuji
-			holding = none
-		}
-	# c_sekala_brak
-		15001 = { # b_pekon_bakhu
-			culture = lampung
-			religion = malayic
+	holding = tribal_holding
+}
+15588 = { # Baturaja
+	holding = none
+}
+11301 = { # Muara Enim
+	holding = none
+}
 
-			holding = tribal_holding
-		}
-		17759 = { # b_tanggamus
-			holding = none
-		}
-		11307 = { # b_batu_brak
-			holding = none
-		}
-		11310 = { # b_krui
-			holding = none
-		}
-	# c_sekampung
-		17864 = { # b_sekampung
-			culture = lampung
-			religion = malayic
+### c_SUM_musi
+16022 = { # Lubuklinggau
+	culture = malay
+	religion = malayic
 
-			holding = tribal_holding
-		}
-		11308 = { # b_SUM_Palas_Pasemah
-			holding = none
-		}
-		11309 = { # b_natar
-			holding = none
-		}
+	holding = tribal_holding
+}
+16150 = { # Kemang
+	holding = none
+}
+16000 = { # Sungai Musi
+	holding = none
+}
+
+### c_SUM_prabumulih
+15973 = { # Prabumulih
+	culture = malay
+	religion = malayic
+
+	holding = tribal_holding
+
+	# History
+	1150.1.1 = {
+		religion = mahayana
+	}
+}
+11298 = { # Tanah Abang
+	holding = none
+}
+15834 = { # Tambangan
+	holding = none
+}
+
+
+## d_SUM_lampung
+### c_SUM_lampung
+11306 = { # Tulangbawang
+	# capital city of early kingdoms in Lampung territories
+	culture = lampung
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# msl_note: I tweaked them to be mandala akin to vanilla as they
+}
+15257 = { # Mengala
+	holding = church_holding
+}
+15002 = { # Bumi Nabung
+	holding = none
+}
+15615 = { # Mesuji
+	holding = none
+}
+
+### c_SUM_sekala_brak
+11307 = { # Batu Brak
+	culture = lampung
+	religion = malayic
+
+	holding = tribal_holding
+}
+15001 = { # Pekon Bakhu
+	holding = none
+}
+11300 = { # Muara Dua
+	holding = none
+}
+17759 = { # Tanggamus
+	holding = none
+}
+11310 = { # Krui
+	holding = none
+}
+
+### c_SUM_kabupaten_lampung
+11308 = { # Palas Pasemah
+	culture = lampung
+	religion = malayic
+
+	holding = tribal_holding
+
+	special_building_slot = krakatoa_01
+	special_building = krakatoa_01
+}
+17864 = { # Sekampung
+	holding = none
+}
+11309 = { # Batu Betil
+	holding = none
+}
 
 
 ## d_SUM_bangkahulu
-	# c_bengkulu
-		15812 = { # b_SUM_Bengkulu
-			culture = rejang
-			religion = malayic
+### c_SUM_bengkulu
+15812 = { # Bengkulu
+	culture = rejang
+	religion = malayic
 
-			holding = tribal_holding
-		}
-		16021 = { # b_lebong
-			holding = none
-		}
-		16065 = { # b_tanek_redjang
-			holding = none
-		}
-		15999 = { # b_ketaun
-			holding = none
-		}
-	# c_SUM_bengkulu
-		11311 = { # Seluma
-			culture = rejang
-			religion = malayic
+	holding = tribal_holding
+}
+16021 = { # Lebong
+	holding = none
+}
+16065 = { # Tanek Redjang
+	holding = none
+}
+15999 = { # Ketaun
+	holding = none
+}
 
-			holding = tribal_holding
-		}
-		15000 = { # b_bintuhan
-			holding = none
-		}
+### c_SUM_selebar
+11311 = { # Seluma
+	culture = rejang
+	religion = malayic
+
+	holding = tribal_holding
+}
+15000 = { # Bintuhan
+	holding = none
+}
+11299 = { # Empat Lawang
+	holding = none
+}

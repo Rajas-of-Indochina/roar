@@ -132,6 +132,7 @@ gayo = {
 }
 
 lampung = {
+	# indigenous inhabitants of Southern Sumatra 
 	color = lampung
 
 	ethos = ethos_communal
@@ -141,20 +142,27 @@ lampung = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_hard_working
-		tradition_poetry
+		tradition_poetry 					# msl_note: they are notable for their 'adi-adi' poems which are used to express their way of life
+		tradition_artisans 					# msl_note: Lampung textile culture is quite amazing with various pieces surviving to modern day
+		tradition_tribe_unity 				# msl_note: Lampung people put great emphasis on communal bonds
+		tradition_maritime_mercantilism 	# msl_note: their coastal settlements played important role in pepper trade
+		# msl_note: tradition_hard_working is weird and does not quite fit the philosophy of communal work that Lampung pracitce
+		# msl_note: unsure how important rice farming was to them so for now I did not add 'tradition_tgp_rice_cultivators'
 	}
 
-	dlc_tradition = {
-		trait = tradition_maritime_way_of_life
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_seafaring
-	}
-	
+	# msl_note: represents the coastal Lampung societies which put bige emphasis on nobility
 	dlc_tradition = {
 		trait = tradition_tgp_esoteric_power
 		requires_dlc_flag = all_under_heaven
+		fallback = tradition_hereditary_hierarchy
 	}
+
+	# msl_note: while Lampung were important members of pepper trade, they did not travel much outside of their land
+	#dlc_tradition = {
+	#	trait = tradition_maritime_way_of_life
+	#	requires_dlc_flag = all_under_heaven
+	#	fallback = tradition_seafaring
+	#}
 
 	name_list = name_list_malay
 

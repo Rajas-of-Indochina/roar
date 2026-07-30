@@ -123,25 +123,7 @@
 16582 = { # Muaro Labuh
 	holding = none
 }
-16777 = { # Sijunjung
-	holding = none
-}
-11283 = { # Kuntu
-	# one of the earliest settlements in Riau region ; placement might be wrong
-	holding = tribal_holding
-}
-
-### c_SUM_bungo
 16590 = { # Muara Bungo
-	culture = malay
-	religion = malayic
-
-	holding = tribal_holding
-}
-16498 = { # Senemat
-	holding = none
-}
-16424 = { # Seling
 	holding = none
 }
 
@@ -156,6 +138,9 @@
 	holding = none
 }
 11289 = { # Tanah Garo
+	holding = none
+}
+16498 = { # Senemat
 	holding = none
 }
 
@@ -193,6 +178,11 @@
 	religion = malayic
 
 	holding = tribal_holding
+
+	# History
+	1078.1.1 = {
+		holding = temple_citadel_holding
+	}
 }
 16523 = { # Painan
 	holding = none
@@ -242,7 +232,13 @@
 	# capital town of modern day Merangin
 	holding = none
 }
-16258 = { # Bukit Bungkul
+16344 = { # Air Hitam
+	holding = none
+}
+16258 = { # Bungkul
+	holding = none
+}
+16424 = { # Seling
 	holding = none
 }
 
@@ -253,10 +249,13 @@
 
 	holding = tribal_holding
 }
-16344 = { # Air Hitam
+16225 = { # Pemuncak
 	holding = none
 }
-16225 = { # Pemuncak
+16177 = { # Rupit
+	holding = none
+}
+11292 = { # Surulangun
 	holding = none
 }
 
@@ -271,7 +270,7 @@
 	special_building_slot = muaro_takus_01
 
 	# History
-	1067.1.1 = {
+	1070.1.1 = {
 		special_building = muaro_takus_01
 	}
 }
@@ -285,6 +284,18 @@
 	holding = none
 }
 11282 = { # Pangkalan Kerinci
+	holding = none
+}
+
+### c_SUM_kuntu
+11283 = { # Kuntu
+	# one of the earliest settlements in Riau region ; placement might be wrong
+	culture = malay
+	religion = malayic
+
+	holding = tribal_holding
+}
+16777 = { # Sijunjung
 	holding = none
 }
 
