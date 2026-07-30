@@ -4542,7 +4542,7 @@ setup_caucasus_northeast_minorities = {
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				promote_faith_minority_effect = { FAITH = faith:mazdayasna }
+				promote_faith_minority_effect = { FAITH = faith:urartuism }
 			}
 		}
 		# d_shavaran
@@ -4767,6 +4767,15 @@ setup_caucasus_northwest_minorities = {
 				add_faith_minority_effect = {
 					FAITH = faith:nakh_pagan
 					SIZE = large
+				}
+			}
+		}
+		title:c_maghas = {
+			if = {
+				limit = { game_start_date <= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:urartuism
+					SIZE = small
 				}
 			}
 		}
