@@ -37,6 +37,11 @@ matano_mines_01 = {
 
 	next_building = matano_mines_02
 
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -44,6 +49,7 @@ matano_mines_01 = {
 	type = special
 
 	flag = travel_point_of_interest_economic
+	flag = special_mine
 }
 
 matano_mines_02 = {
@@ -83,6 +89,11 @@ matano_mines_02 = {
 
 	next_building = matano_mines_03
 
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -90,6 +101,7 @@ matano_mines_02 = {
 	type = special
 
 	flag = travel_point_of_interest_economic
+	flag = special_mine
 }
 
 matano_mines_03 = {
@@ -129,6 +141,11 @@ matano_mines_03 = {
 
 	next_building = matano_mines_04
 
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -136,6 +153,7 @@ matano_mines_03 = {
 	type = special
 
 	flag = travel_point_of_interest_economic
+	flag = special_mine
 }
 
 matano_mines_04 = {
@@ -173,6 +191,11 @@ matano_mines_04 = {
 		development_growth_factor = 0.2
 	}
 
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -180,170 +203,17 @@ matano_mines_04 = {
 	type = special
 
 	flag = travel_point_of_interest_economic
+	flag = special_mine
 }
 
 ############ ############ ############ ############
-
-############
-# Gold Mines
-############
-
-sea_gold_mines_01 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct_potential = {
-		culture = {
-			has_innovation = innovation_crop_rotation
-		}
-	}
-
-	cost_gold = expensive_building_tier_3_cost
-
-	province_modifier = {
-		monthly_income = special_mine_building_tax_tier_1
-	}
-	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.05
-	}
-
-	next_building = sea_gold_mines_02
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
-
-sea_gold_mines_02 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct_potential = {
-	}
-	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 02 }
-		culture = {
-			has_innovation = innovation_manorialism
-		}
-	}
-
-	cost_gold = expensive_building_tier_4_cost
-
-	province_modifier = {
-		monthly_income = special_mine_building_tax_tier_2
-	}
-	county_modifier = {
-		tax_mult = 0.25
-		development_growth_factor = 0.1
-	}
-
-	next_building = sea_gold_mines_03
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
-
-sea_gold_mines_03 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct_potential = {
-	}
-	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 03 }
-		culture = {
-			has_innovation = innovation_windmills
-		}
-	}
-
-	cost_gold = expensive_building_tier_5_cost
-
-	province_modifier = {
-		monthly_income = special_mine_building_tax_tier_3
-	}
-	county_modifier = {
-		tax_mult = 0.3
-		development_growth_factor = 0.15
-	}
-
-	next_building = sea_gold_mines_04
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
-
-sea_gold_mines_04 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct_potential = {
-	}
-	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 04 }
-		culture = {
-			has_innovation = innovation_cranes
-		}
-	}
-
-	cost_gold = expensive_building_tier_6_cost
-
-	province_modifier = {
-		monthly_income = special_mine_building_tax_tier_4
-	}
-	county_modifier = {
-		tax_mult = 0.35
-		development_growth_factor = 0.2
-	}
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
 
 ############
 # Salt Mines
 ############
 
 sea_salt_mines_01 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -355,7 +225,6 @@ sea_salt_mines_01 = {
 	type_icon = "icon_structure_mines.dds"
 
 	can_construct_potential = {
-
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		culture = {
 			has_innovation = innovation_crop_rotation
@@ -366,23 +235,36 @@ sea_salt_mines_01 = {
 
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_1
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_1
 	}
 	county_modifier = {
 		tax_mult = 0.05
-		levy_size = 0.1
 		development_growth_factor = 0.05
+	}
+	character_modifier = {
+		levy_maintenance = -0.04
+		supply_limit_mult = 0.05
 	}
 
 	next_building = sea_salt_mines_02
+
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
 
 	ai_value = {
 		base = 100
 	}
 
 	type = special
+
+	flag = travel_point_of_interest_economic
+	flag = special_mine_salt
 }
 
 sea_salt_mines_02 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -404,23 +286,36 @@ sea_salt_mines_02 = {
 
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_2
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_2
 	}
 	county_modifier = {
 		tax_mult = 0.1
-		levy_size = 0.2
 		development_growth_factor = 0.1
+	}
+	character_modifier = {
+		levy_maintenance = -0.08
+		supply_limit_mult = 0.1
 	}
 
 	next_building = sea_salt_mines_03
+
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
 
 	ai_value = {
 		base = 100
 	}
 
 	type = special
+
+	flag = travel_point_of_interest_economic
+	flag = special_mine_salt
 }
 
 sea_salt_mines_03 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -442,23 +337,36 @@ sea_salt_mines_03 = {
 
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_3
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_3
 	}
 	county_modifier = {
 		tax_mult = 0.15
-		levy_size = 0.3
 		development_growth_factor = 0.15
+	}
+	character_modifier = {
+		levy_maintenance = -0.12
+		supply_limit_mult = 0.15
 	}
 
 	next_building = sea_salt_mines_04
+
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
 
 	ai_value = {
 		base = 100
 	}
 
 	type = special
+
+	flag = travel_point_of_interest_economic
+	flag = special_mine_salt
 }
 
 sea_salt_mines_04 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -480,157 +388,20 @@ sea_salt_mines_04 = {
 
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_4
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_4
 	}
 	county_modifier = {
 		tax_mult = 0.20
-		levy_size = 0.4
 		development_growth_factor = 0.2
 	}
-
-	ai_value = {
-		base = 100
+	character_modifier = {
+		levy_maintenance = -0.16
+		supply_limit_mult = 0.2
 	}
 
-	type = special
-}
-
-##############
-# Silver Mines
-##############
-
-sea_silver_mines_01 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct_potential = {
-		building_requirement_castle_city_church = { LEVEL = 01 }
-		culture = {
-			has_innovation = innovation_crop_rotation
-		}
-	}
-
-	cost_gold = expensive_building_tier_3_cost
-
-	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_1
-	}
-	county_modifier = {
-		development_growth_factor = 0.05
-	}
-
-	next_building = sea_silver_mines_02
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
-
-sea_silver_mines_02 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 02 }
-		culture = {
-			has_innovation = innovation_manorialism
-		}
-	}
-
-	cost_gold = expensive_building_tier_4_cost
-
-	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_2
-	}
-	county_modifier = {
-		development_growth_factor = 0.1
-	}
-
-	next_building = sea_silver_mines_03
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
-
-sea_silver_mines_03 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 03 }
-		culture = {
-			has_innovation = innovation_windmills
-		}
-	}
-
-	cost_gold = expensive_building_tier_5_cost
-
-	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_3
-	}
-	county_modifier = {
-		development_growth_factor = 0.15
-	}
-
-	next_building = sea_silver_mines_04
-
-	ai_value = {
-		base = 100
-	}
-
-	type = special
-}
-
-sea_silver_mines_04 = {
-
-	asset = {
-		type = pdxmesh
-		name = "building_special_mines_mesh"
-	}
-
-	construction_time = slow_construction_time
-
-	type_icon = "icon_structure_mines.dds"
-
-	can_construct = {
-		building_requirement_castle_city_church = { LEVEL = 04 }
-		culture = {
-			has_innovation = innovation_cranes
-		}
-	}
-
-	cost_gold = expensive_building_tier_6_cost
-
-	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_4
-	}
-	county_modifier = {
-		development_growth_factor = 0.2
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
 	}
 
 	ai_value = {
@@ -638,4 +409,7 @@ sea_silver_mines_04 = {
 	}
 
 	type = special
+
+	flag = travel_point_of_interest_economic
+	flag = special_mine_salt
 }
