@@ -15,8 +15,10 @@ matano_mines_01 = {
 	type_icon = "icon_structure_mines.dds"
 
 	can_construct_potential = {
-
 		building_requirement_tribal = no
+	}
+
+	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		culture = {
 			has_innovation = innovation_crop_rotation
@@ -65,9 +67,9 @@ matano_mines_02 = {
 	type_icon = "icon_structure_mines.dds"
 
 	can_construct_potential = {
-
 		building_requirement_tribal = no
 	}
+
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
 		culture = {
@@ -117,9 +119,9 @@ matano_mines_03 = {
 	type_icon = "icon_structure_mines.dds"
 
 	can_construct_potential = {
-
 		building_requirement_tribal = no
 	}
+
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 03 }
 		culture = {
@@ -169,9 +171,9 @@ matano_mines_04 = {
 	type_icon = "icon_structure_mines.dds"
 
 	can_construct_potential = {
-
 		building_requirement_tribal = no
 	}
+
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 04 }
 		culture = {
@@ -225,6 +227,10 @@ sea_salt_mines_01 = {
 	type_icon = "icon_structure_mines.dds"
 
 	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		culture = {
 			has_innovation = innovation_crop_rotation
@@ -274,6 +280,10 @@ sea_salt_mines_02 = {
 	construction_time = slow_construction_time
 
 	type_icon = "icon_structure_mines.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
 
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 02 }
@@ -326,6 +336,10 @@ sea_salt_mines_03 = {
 
 	type_icon = "icon_structure_mines.dds"
 
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 03 }
 		culture = {
@@ -376,6 +390,10 @@ sea_salt_mines_04 = {
 	construction_time = slow_construction_time
 
 	type_icon = "icon_structure_mines.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
 
 	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 04 }
