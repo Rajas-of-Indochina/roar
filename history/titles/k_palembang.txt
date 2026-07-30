@@ -261,14 +261,26 @@ c_SUM_ogan = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_lampung_ogan_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_palembang
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
 		holder = sea_lampung_ogan_03_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_palembang
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1170.1.1 = {
 		holder = sea_lampung_ogan_04_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_palembang
+			contract_group = tributary_mandala_tribal
+		}
 	}
 }
 
@@ -280,10 +292,18 @@ c_SUM_bangka-belitung = {
 	860.1.1 = {
 		government = wanua_government
 		holder = malay_bangkabelitung_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_palembang
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
 		holder = malay_bangkabelitung_10_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_palembang
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1170.1.1 = {
@@ -406,6 +426,10 @@ d_SUM_lampung = {
 	860.1.1 = {
 		government = wanua_government
 		holder = malay_lampung_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
@@ -445,14 +469,26 @@ c_SUM_sekala_brak = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_lampung_sekala_brak_01_fic	#fictional
+		tributary_of = {
+			suzerain = c_SUM_lampung
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
 		holder = sea_lampung_sekala_brak_03_fic	#ficitonal
+		tributary_of = {
+			suzerain = c_SUM_lampung
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1170.1.1 = {
 		holder = sea_lampung_sekala_brak_04_fic	#ficitonal
+		tributary_of = {
+			suzerain = c_SUM_lampung
+			contract_group = tributary_mandala_tribal
+		}
 	}
 }
 
@@ -464,31 +500,38 @@ c_SUM_kabupaten_lampung = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_lampung_krakatoa_01_fic	#fictional
+		liege = d_SUM_lampung
+	}
+	#
+	1060.1.1 = {
+		holder = sea_lampung_krakatoa_03_fic	#ficitonal
+	}
+	#
+	1170.1.1 = {
+		holder = sea_lampung_krakatoa_04_fic	#ficitonal
+	}
+}
+
+
+d_SUM_bangkahulu = {
+	860.1.1 = {
+		government = wanua_government
+		holder = malay_bengkulu_01_fic	#fictional
 		tributary_of = {
-			suzerain = c_SUM_lampung
+			suzerain = e_srivijaya
 			contract_group = tributary_mandala_tribal
 		}
 	}
 	#
 	1060.1.1 = {
-		holder = sea_lampung_krakatoa_03_fic	#ficitonal
-		tributary_of = {
-			suzerain = c_SUM_lampung
-			contract_group = tributary_mandala_tribal
-		}
+		holder = malay_bengkulu_10_fic	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = sea_lampung_krakatoa_04_fic	#ficitonal
-		tributary_of = {
-			suzerain = c_SUM_lampung
-			contract_group = tributary_mandala_tribal
-		}
+		holder = malay_bengkulu_20_fic	#fictional
 	}
 }
 
-
-## d_SUM_bangkahulu
 c_SUM_bengkulu = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
@@ -497,6 +540,10 @@ c_SUM_bengkulu = {
 	860.1.1 = {
 		government = wanua_government
 		holder = malay_bengkulu_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
@@ -516,6 +563,7 @@ c_SUM_selebar = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_rejang_selebar_01_fic	#fictional
+		liege = d_SUM_bangkahulu
 	}
 	#
 	930.1.1 = {
