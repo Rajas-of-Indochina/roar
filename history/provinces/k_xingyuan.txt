@@ -1,30 +1,6 @@
 ##d_xingyuan ###################################
-	###c_bizhou # BIZHOU
-		9753 = {	# TONGJIANG
-			culture = han
-			religion = zhengyi
-			holding = castle_holding
-		}
-		9751 = {	# BAISHI
-			holding = city_holding
-		}
-		9752 = {	# DONGBA
-			holding = church_holding
-		}
-		12954 = {	# FUYANG 2
-			holding = none
-		}
-	###c_jizhou_2 # JIZHOU 2
-		9771 = {	# NANJIANG
-			culture = han
-			religion = zhengyi
-			holding = castle_holding
-		}
-		9772 = {	# JAICHUAN
-			holding = city_holding
-		}
 	###c_xingyuan # XINGYUAN
-		9767 = {	# NANZHENG
+		9767 = {	# b_nanzheng
 			culture = han
 			religion = jingxue
 			holding = castle_holding
@@ -33,30 +9,88 @@
 				religion = daoxue
 			}
 		}
-		9768 = {	# XI
+		9768 = {	# b_xixian
 			holding = city_holding
 		}
-		9769 = {	# SANQUAN
+		9769 = {	# b_sanquan
 			holding = church_holding
 		}
-		13064 = {	# CHENGGU
+		13064 = {	# b_chenggu
 			holding = none
 		}
 	###c_yangzhou_1 # YANGZHOU 1
-		9766 = {	# XINGDAO
+		9766 = {	# b_xingdao
 			culture = han
 			religion = dhyana
 			holding = castle_holding
 		}
-		9765 = {	# XIXIANG
+		9765 = {	# b_xixiang
 			holding = city_holding
 		}
-		13066 = {	# ZHENFU
+		13066 = {	# b_zhenfu
 			holding = church_holding
 		}
+	###c_bizhou # BIZHOU
+		9753 = {	# b_tongjiang
+			culture = han
+			religion = zhengyi
+			holding = castle_holding
+		}
+		9751 = {	# b_baishi
+			holding = city_holding
+		}
+		9752 = {	# b_dongba
+			holding = church_holding
+		}
+		12954 = {	# b_fuyang_2
+			holding = none
+		}
+	###c_jizhou_2 # JIZHOU 2
+		9771 = {	# b_nanjiang
+			culture = han
+			religion = zhengyi
+			holding = castle_holding
+		}
+		9772 = {	# b_jiachuan
+			holding = city_holding
+		}
+
 ##d_lilang ###################################
+		###c_lizhou_2 # LIZHOU 2
+		13107 = {	# b_miangu
+			culture = qiang
+			religion = zhengyi
+			holding = castle_holding
+		}
+		9774 = {	# b_jinggu
+			holding = city_holding
+		}
+		9773 = {	# b_jiameng
+			holding = church_holding
+		}		
+	###c_langzhou_1 # LANGZHOU 1
+		9740 = {	# b_langzhong
+			culture = han
+			religion = vinaya
+			holding = castle_holding
+		}
+		9741 = {	# b_cangxi
+			holding = city_holding
+		}
+		10406 = {	# b_nanbu
+			holding = church_holding
+		}
+	###c_wenzhou # WENZHOU
+		13073 = {	# b_qushui
+			culture = qiang
+			religion = zhengyi
+			holding = castle_holding
+		}
+		13136 = {	# b_tongchang
+			holding = city_holding
+		}
 	###c_guozhou_1 # GUOZHOU 1
-		9739 = {	# NANCHONG
+		9739 = {	# b_nanchong
 			culture = han
 			religion = zhengyi
 			holding = castle_holding
@@ -65,79 +99,34 @@
 				religion = mantrayana
 			}
 		}
-		9738 = {	# XIANGRU
+		9738 = {	# b_xiangru
 			holding = city_holding
-		}		
-	###c_langzhou_1 # LANGZHOU 1
-		9740 = {	# LANGZHONG
-			culture = han
-			religion = vinaya
-			holding = castle_holding
-		}
-		9741 = {	# CANGXI
-			holding = city_holding
-		}
-		10406 = {	# NANBU
-			holding = church_holding
-		}
-	###c_lizhou_2 # LIZHOU 2
-		13107 = {	# MIANGU
-			culture = qiang
-			religion = zhengyi
-			holding = castle_holding
-		}
-		9774 = {	# JINGGU
-			holding = city_holding
-		}
-		9773 = {	# JIAMENG
-			holding = church_holding
 		}
 	###c_pengzhou_2 # PENGZHOU 2
-		9742 = {	# PENGCHI
+		9742 = {	# b_pengchi
 			culture = han
 			religion = zhengyi
 			holding = castle_holding
 		}
-		9743 = {	# FYU
+		9743 = {	# b_fuyu
 			holding = city_holding
-		}
-	###c_wenzhou # WENZHOU
-		13073 = {	# QUSHUI
-			culture = qiang
-			religion = zhengyi
-			holding = castle_holding
-		}
-		13136 = {	# TONGCHANG
-			holding = city_holding
-		}
+		}		
+
 ##d_baqu ###################################
 	###c_bazhou # BAZHOU
-		9770 = {	# HUACHENG
+		9770 = {	# b_huacheng
 			culture = han
 			religion = zhengyi
 			holding = castle_holding
 		}
-		13106 = {	# ZENGKOU
+		13106 = {	# b_qizhang, ZENGKOU
 			holding = city_holding
 		}
-		9547 = {	# GUIREN 1
+		9547 = {	# b_guiren
 			holding = church_holding
 		}
-	###c_kaizhou # KAIZHOU
-		9750 = {	# KAIJIANG
-			culture = han
-			religion = jingxue
-			holding = castle_holding
-			# History
-			1000.1.1 = {
-				religion = daoxue
-			}
-		}
-		9749 = {	# XINPU
-			holding = city_holding
-		}
 	###c_quzhou # QUZHOU
-		9746 = {	# LIUJIANG
+		9746 = {	# b_liujiang
 			culture = han
 			religion = sukhavati
 			holding = castle_holding
@@ -146,24 +135,37 @@
 				religion = dhyana
 			}
 		}
-		9745 = {	# LINSHUI
+		9745 = {	# b_linshui
 			holding = city_holding
 		}
-		9744 = {	# QUJIANG
+		9744 = {	# b_qujiang
 			holding = church_holding
 		}
 	###c_tongzhou_1 # TONGZHOU 1
-		9747 = {	# TONGCHUAN 1
+		9747 = {	# b_tongchuan_1
 			culture = han
 			religion = zhengyi
 			holding = castle_holding
 		}
-		9748 = {	# BAQU
+		9748 = {	# b_baqu
 			holding = city_holding
 		}
-		13048 = {	# DONGXIANG
+		13048 = {	# b_dongxiang
 			holding = church_holding
 		}
-		13049 = {	# YONGMU
+		13049 = {	# b_yongmu
 			holding = none
 		}
+	###c_kaizhou # KAIZHOU
+		9750 = {	# b_kaijiang
+			culture = han
+			religion = jingxue
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = daoxue
+			}
+		}
+		9749 = {	# b_xinpu
+			holding = city_holding
+		}		
