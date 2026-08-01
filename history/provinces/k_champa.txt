@@ -141,10 +141,17 @@
 ## d_panduranga ###################################
 ### c_panduranga
 16136 = { # b_bal_sri_banay
-	holding = temple_citadel_holding
 	culture = cham
-
 	religion = chamic_shaivism
+
+	holding = temple_citadel_holding
+
+	special_building_slot = po_klong_garai_01
+
+	# History
+	1210.1.1 = {
+		special_building = po_klong_garai_01 # Exact date is uncertain
+	}
 }
 16056 = { # b_virapura
 	holding = church_holding
@@ -153,7 +160,7 @@
 	holding = none
 }
 15980 = { # b_parik
-	holding = temple_citadel_holding
+	holding = city_holding
 }
 16162 = { # b_bal_hangao
 	holding = none
@@ -173,9 +180,10 @@
 	holding = city_holding
 }
 16451 = { # b_po_nagar
+	holding = church_holding
+
 	special_building_slot = po_nagar_01
 	special_building = po_nagar_01
-	holding = church_holding
 }
 16360 = { # b_irahani
 	holding = none
@@ -203,53 +211,12 @@
 	culture = cham
 	religion = chamic_shaivism
 
-	holding = temple_citadel_holding
+	holding = castle_holding
 }
 15823 = { # b_malithit
 	holding = church_holding
 }
 15690 = { # b_bal_ula
-	holding = none
-}
-
-
-## d_mnong ###################################
-### c_dagar
-16661 = { # b_yang_prong
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16759 = { # b_ploi_me
-	holding = none
-}
-
-### c_dak_lak
-16580 = { # b_krong_buk
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16503 = { # b_krong_ana
-	holding = none
-}
-16398 = { # b_krong_kma
-	holding = none
-}
-
-### c_ayun_pa
-16654 = { # b_drang_lai
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16715 = { # b_yang_mum
-	holding = none
-}
-16572 = { # b_bang_keng
 	holding = none
 }
 
@@ -292,17 +259,6 @@
 	holding = none
 }
 
-### c_prey_rodum
-15952 = { # b_prey_rodum
-	culture = khmer
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-16051 = { # b_ba_ra
-	holding = none
-}
-
 ### c_kraong
 15617 = { # b_kraong
 	culture = cham
@@ -318,7 +274,38 @@
 }
 
 
-## d_ma_vn ###################################
+## d_mnong ###################################
+### c_mnong
+16359 = { # b_gar
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16327 = { # b_si_to
+	holding = none
+}
+16503 = { # b_krong_ana
+	holding = none
+}
+16398 = { # b_krong_kma
+	holding = none
+}
+
+### c_dagar
+16661 = { # b_yang_prong
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16759 = { # b_ploi_me
+	holding = none
+}
+16580 = { # b_krong_buk
+	holding = none
+}
+
 ### c_cho_ro
 15989 = { # b_da_gui
 	culture = mnong
@@ -333,17 +320,6 @@
 	holding = none
 }
 
-### c_mnong
-16359 = { # b_gar
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16327 = { # b_si_to
-	holding = none
-}
-
 ### c_blao
 16069 = { # b_ngan
 	culture = stieng
@@ -355,6 +331,20 @@
 	holding = none
 }
 16160 = { # b_bao_lam
+	holding = none
+}
+
+### c_ayun_pa
+16654 = { # b_drang_lai
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16715 = { # b_yang_mum
+	holding = none
+}
+16572 = { # b_bang_keng
 	holding = none
 }
 
