@@ -87857,6 +87857,8 @@ e_kambuja = {
 	k_champa = {
 		color = { 104 63 176 }
 
+		capital = c_indrapura
+
 		d_amaravati = {
 			color = { 74 60 148 }
 
@@ -87864,13 +87866,23 @@ e_kambuja = {
 				name_list_vietnamese = cn_dong_duong
 			}
 
+			capital = c_indrapura
+
 			c_indrapura = {
 				color = { 56 41 163 }
+
+				cultural_names = {
+					name_list_vietnamese = cn_dong_duong
+				}
 
 				b_indrapura = {
 					province = 17353
 
 					color = { 56 41 163 }
+
+					cultural_names = {
+						name_list_vietnamese = cn_dong_duong
+					}
 				}
 				b_yan_kaksmindra = {
 					province = 17304
@@ -87939,34 +87951,6 @@ e_kambuja = {
 					province = 17196
 
 					color = { 67 80 117 }
-				}
-			}
-			c_kon_tum = {
-				color = { 87 100 137 }
-
-				b_kon_tum = {
-					province = 17019
-
-					color = { 87 100 137 }
-				}
-				b_ro_ngao = {
-					province = 17135
-
-					color = { 87 100 137 }
-				}
-			}
-			c_bahnar = {
-				color = { 107 120 157 }
-
-				b_bahnar = {
-					province = 17025
-
-					color = { 107 120 157 }
-				}
-				b_hayav = {
-					province = 16885
-
-					color = { 107 120 157 }
 				}
 			}
 		}
@@ -88293,21 +88277,6 @@ e_kambuja = {
 					color = { 98 73 201 }
 				}
 			}
-			c_jarai = {
-				# part of c_pleiku in vanilla
-				color = { 108 83 211 }
-
-				b_ia_krai = {
-					province = 16939
-
-					color = { 108 83 211 }
-				}
-				b_ploi_kodur = {
-					province = 16913
-
-					color = { 108 83 211 }
-				}
-			}
 			c_mnong = {
 				color = { 118 93 221 }
 
@@ -88380,6 +88349,56 @@ e_kambuja = {
 					province = 15894
 
 					color = { 178 93 179 }
+				}
+			}
+		}
+
+		d_bahnar = {
+			color = { 100 120 160 }
+
+			capital = c_bahnar
+
+			c_bahnar = {
+				color = { 107 120 157 }
+
+				b_bahnar = {
+					province = 17025
+
+					color = { 107 120 157 }
+				}
+				b_hayav = {
+					province = 16885
+
+					color = { 107 120 157 }
+				}
+			}
+			c_kon_tum = {
+				color = { 87 100 137 }
+
+				b_kon_tum = {
+					province = 17019
+
+					color = { 87 100 137 }
+				}
+				b_ro_ngao = {
+					province = 17135
+
+					color = { 87 100 137 }
+				}
+			}
+			c_jarai = {
+				# part of c_pleiku in vanilla
+				color = { 108 83 211 }
+
+				b_ia_krai = {
+					province = 16939
+
+					color = { 108 83 211 }
+				}
+				b_ploi_kodur = {
+					province = 16913
+
+					color = { 108 83 211 }
 				}
 			}
 		}
