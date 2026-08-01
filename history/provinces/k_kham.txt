@@ -750,10 +750,8 @@
 	} #The Eternal Bon School begins to take hold
 }
 
-# 9314 - Markam
-9314 = {	# 9314 - Markam
-
-	# Misc
+### c_markam
+9314 = {	# Markam
 	culture = nakhi
 	religion = dongba
 
@@ -765,63 +763,22 @@
 		religion = old_bon
 	}
 	1050.1.1 = {
+		# The Eternal Bon School begins to take hold
 		religion = bon #Yungdrung
-	} #The Eternal Bon School begins to take hold
+	}
 	1100.1.1 = {
+		# Tibetan culture continues to spread in Kham and Amdo
 		religion = lamaism
-	} #Tibetan culture continues to spread in Kham and Amdo
-}
-
-# 9315 - Jangpa
-9315 = {	# 9315 - Jangpa
-
-	# Misc
-	culture = nakhi
-	religion = dongba
-
-	holding = city_holding
-
-	# History
-}
-
-# 9316 - Deqen
-9316 = {	# 9316 - Deqen
-
-	# Misc
-	culture = nakhi
-	religion = dongba
-
-	holding = castle_holding
-
-	# History
-	900.1.1 = {
-		culture = bodpa
-		religion = old_bon
 	}
-	1050.1.1 = {
-		religion = bon #Yungdrung
-	} #The Eternal Bon School begins to take hold
-	1300.1.1 = {
-		religion = lamaism
-	} #Tibetan culture continues to spread in Kham and Amdo
 }
-
-# 9317 - Balung
-9317 = {	# 9317 - Balung
-
-	# Misc
-	culture = nakhi
-	religion = dongba
-
+9315 = {	# Jangpa
 	holding = city_holding
 
 	# History
 }
 
-# 9318 - Gyaitang
-9318 = {	# 9318 - Gyaitang
-
-	# Misc
+### c_deqen
+9316 = {	# Deqen
 	culture = nakhi
 	religion = dongba
 
@@ -829,19 +786,42 @@
 
 	# History
 	1050.1.1 = {
-		culture = bodpa
+		# The Eternal Bon School begins to take hold
+		religion = bon #Yungdrung
+	}
+	1300.1.1 = {
+		# Tibetan culture continues to spread in Kham and Amdo
 		religion = lamaism
-	} #Tibetan culture continues to spread in Kham and Amdo
+		culture = bodpa
+	}
+}
+9317 = {	# Balung
+	holding = city_holding
+
+	# History
 }
 
-# 9319 - Derong
-9319 = {	# 9319 - Derong
+### c_gyaitang
+9318 = {	# Gyaitang
+	culture = nakhi
+	religion = dongba
 
-	# Misc
-	culture = qiang #Pumi
-	religion = rrmeaism #Dingba
+	holding = castle_holding
 
+	# History
+	1050.1.1 = {
+		# Tibetan culture continues to spread in Kham and Amdo
+		culture = bodpa
+		religion = lamaism
+	}
+}
+9319 = {	# Derong
 	holding = city_holding
+
+	# History
+}
+9322 = {	# Takchongrong
+	holding = church_holding
 
 	# History
 }
@@ -868,18 +848,6 @@
 	# Misc
 	culture = qiang #Pumi
 	religion = rrmeaism #Dingba
-
-	holding = church_holding
-
-	# History
-}
-
-# 9322 - Takchongrong
-9322 = {	# 9322 - Takchongrong
-
-	# Misc
-	culture = nakhi
-	religion = dongba
 
 	holding = church_holding
 
