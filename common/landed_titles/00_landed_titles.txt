@@ -87859,14 +87859,15 @@ e_kambuja = {
 
 		capital = c_indrapura
 
-		d_amaravati = {
+		d_indrapura = {
+			# d_amaravati in old RoA
 			color = { 74 60 148 }
+
+			capital = c_indrapura
 
 			cultural_names = {
 				name_list_vietnamese = cn_dong_duong
 			}
-
-			capital = c_indrapura
 
 			c_indrapura = {
 				color = { 56 41 163 }
@@ -87876,6 +87877,7 @@ e_kambuja = {
 				}
 
 				b_indrapura = {
+					# in vanilla b_dong_duong for some reason ???
 					province = 17353
 
 					color = { 56 41 163 }
@@ -87884,22 +87886,26 @@ e_kambuja = {
 						name_list_vietnamese = cn_dong_duong
 					}
 				}
-				b_yan_kaksmindra = {
+				b_my_son = {
+					# b_yan_kaksmindra in old RoA
 					province = 17304
 
 					color = { 56 41 163 }
 				}
 				b_ma_cek = {
+					# new RoA
 					province = 17206
 
 					color = { 56 41 163 }
 				}
 				b_khang = {
+					# new RoA
 					province = 17267
 
 					color = { 56 41 163 }
 				}
 				b_haripura = {
+					# new RoA
 					province = 17295
 
 					color = { 56 41 163 }
@@ -87999,26 +88005,6 @@ e_kambuja = {
 					color = { 142 38 189 }
 				}
 			}
-			c_ayun_pa = {
-				# part of c_pleiku in vanilla
-				color = { 152 48 199 }
-
-				b_drang_lai = {
-					province = 16654
-
-					color = { 152 48 199 }
-				}
-				b_yang_mum = {
-					province = 16715
-
-					color = { 152 48 199 }
-				}
-				b_bang_keng = {
-					province = 16572
-
-					color = { 152 48 199 }
-				}
-			}
 			c_aia_ru = {
 				color = { 162 58 209 }
 
@@ -88036,6 +88022,35 @@ e_kambuja = {
 					province = 16783
 
 					color = { 162 58 209 }
+				}
+			}
+			c_kauthara = {
+				color = { 112 64 174 }
+
+				b_madahura = {
+					province = 16450
+
+					color = { 112 64 174 }
+				}
+				b_aia_trang = {
+					province = 16413
+
+					color = { 112 64 174 }
+				}
+				b_po_nagar = {
+					province = 16451
+
+					color = { 112 64 174 }
+				}
+				b_irahani = {
+					province = 16360
+
+					color = { 112 64 174 }
+				}
+				b_kam_ranh = {
+					province = 16244
+
+					color = { 112 64 174 }
 				}
 			}
 		}
@@ -88139,35 +88154,6 @@ e_kambuja = {
 					color = { 148 63 149 }
 				}
 			}
-			c_kauthara = {
-				color = { 112 64 174 }
-
-				b_madahura = {
-					province = 16450
-
-					color = { 112 64 174 }
-				}
-				b_aia_trang = {
-					province = 16413
-
-					color = { 112 64 174 }
-				}
-				b_po_nagar = {
-					province = 16451
-
-					color = { 112 64 174 }
-				}
-				b_irahani = {
-					province = 16360
-
-					color = { 112 64 174 }
-				}
-				b_kam_ranh = {
-					province = 16244
-
-					color = { 112 64 174 }
-				}
-			}
 			c_pajai = {
 				color = { 132 84 194 }
 
@@ -88240,7 +88226,8 @@ e_kambuja = {
 			}
 		}
 
-		d_dagar = {
+		d_mnong = {
+			# d_dagar in old RoA
 			color = { 78 53 181 }
 
 			c_dagar = {
@@ -88349,6 +88336,26 @@ e_kambuja = {
 					province = 15894
 
 					color = { 178 93 179 }
+				}
+			}
+			c_ayun_pa = {
+				# part of c_pleiku in vanilla
+				color = { 152 48 199 }
+
+				b_drang_lai = {
+					province = 16654
+
+					color = { 152 48 199 }
+				}
+				b_yang_mum = {
+					province = 16715
+
+					color = { 152 48 199 }
+				}
+				b_bang_keng = {
+					province = 16572
+
+					color = { 152 48 199 }
 				}
 			}
 		}

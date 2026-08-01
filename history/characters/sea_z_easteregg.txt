@@ -1,17 +1,13 @@
-﻿
-cham103 = { # FionaDanger
+﻿### Easter Egg characters
+
+egg_fionadanger = { # FionaDanger
 	name = "Anarawati"
 	female = yes
-	dynasty = cham_d103
+	dynasty = degg_fionadanger
 	religion = "chamic_shaivism"
 	culture = cham
 
-	843.1.1 = {
-		birth = yes
-        effect = {
-            add_character_flag = has_regnal_name
-        }
-	}
+	843.1.1 = { birth = yes }
 	898.1.1 = { death = yes }
 }
 
@@ -27,9 +23,9 @@ egg_malonkey = { # Malonkey1
 	trait = education_learning_3
 
 	1038.1.1 = { birth = yes }
-	#1066.1.1 = {
-		#employer
-	#}
+	# 1066.1.1 = {
+		# employer
+	# }
 	1107.1.1 = { death = yes }
 }
 
@@ -74,14 +70,14 @@ egg_patlichan = { # Patlichan
 	trait = education_learning_3
 
 	847.1.1 = { birth = yes }
-		847.1.1 = {
-			effect = {
-				learn_language = language_oghuz
-			}
-			effect = {
-				learn_language = language_anglic
-			}
+	850.1.1 = {
+		effect = {
+			learn_language = language_oghuz
 		}
+		effect = {
+			learn_language = language_anglic
+		}
+	}
 	866.1.1 = {
 		employer = 34014 # Abbasid
 	}
@@ -108,14 +104,12 @@ egg_aia = {
 	trait = lifestyle_traveler
 	trait = lifestyle_wayfarer
 
-	1035.1.7 = {
-		birth = yes
-	}
+	1035.1.7 = { birth = yes }
 	1066.1.1 = {
 		learn_language = language_iberian # Português
 		employer = bisayan_tandaya_10_fic
 	}
-	1097.1.1 = {
+	1097.5.5 = {
 		# May 5, 2026
 		# Rest in peace
 		death = yes

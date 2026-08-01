@@ -640,11 +640,11 @@ form_dai_viet_empire_decision_scripted_effect = {
 	#Champa controls
 	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
 		limit = {
-			title:d_amaravati = {
+			title:d_indrapura = {
 				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
 			}
 		}
-		title:d_amaravati = { set_de_jure_liege_title = title:k_champa }
+		title:d_indrapura = { set_de_jure_liege_title = title:k_champa }
 	}
 	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
 		limit = {
@@ -680,11 +680,11 @@ form_dai_viet_empire_decision_scripted_effect = {
 	}
 	if = {	#If any have drifted out, then k_champa's constituent duchies are flipped back.
 		limit = {
-			title:d_dagar = {
+			title:d_mnong = {
 				NOT = { target_is_de_jure_liege_or_above = title:k_champa }
 			}
 		}
-		title:d_dagar = { set_de_jure_liege_title = title:k_champa }
+		title:d_mnong = { set_de_jure_liege_title = title:k_champa }
 	}
 
 }

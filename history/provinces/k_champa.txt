@@ -1,22 +1,25 @@
 ﻿# k_champa
-## d_amaravati ###################################
+## d_indrapura ###################################
 ### c_indrapura
-17353 = { # b_indrapura
+17353 = { # Indrapura AKA Dong Duong
+	# capital city of the kingdom of Champa from 875 AD until probably 12th century, as 982 AD possible conquest is not seen as highly improbable and possibly a story made up in later centuries
 	culture = cham
 	religion = chamic_shaivism
 
 	holding = temple_citadel_holding
 }
-17304 = { # b_yan_kaksmindra
+17304 = { # My Son
+	# Shaiva Hindu temples constructed between the 4th and the 13th century by the Kings of Champa
+	# location is not fully accurate but better than random province
 	holding = church_holding
 }
-17206 = { # b_ma_cek
+17206 = { # Ma Cek
 	holding = none
 }
-17267 = { # b_khang
+17267 = { # Khang
 	holding = none
 }
-17295 = { # b_haripura
+17295 = { # Haripura
 	holding = city_holding
 }
 
@@ -31,28 +34,6 @@
 	holding = none
 }
 17196 = { # b_dravapura
-	holding = none
-}
-
-### c_kon_tum
-17019 = { # b_kon_tum
-	culture = bahnar
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-17135 = { # b_ro_ngao
-	holding = none
-}
-
-### c_bahnar
-17025 = { # b_bahnar
-	culture = bahnar
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16885 = { # b_hayav
 	holding = none
 }
 
@@ -232,7 +213,7 @@
 }
 
 
-## d_dagar ###################################
+## d_mnong ###################################
 ### c_dagar
 16661 = { # b_yang_prong
 	culture = mnong
@@ -255,17 +236,6 @@
 	holding = none
 }
 16398 = { # b_krong_kma
-	holding = none
-}
-
-### c_jarai
-16939 = { # b_ia_krai
-	culture = bahnar
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16913 = { # b_ploi_kodur
 	holding = none
 }
 
@@ -301,10 +271,16 @@
 
 ### c_baigaur
 15752 = { # b_baigaur
-	culture = cham
+	culture = bnam
 	religion = chamic_shaivism
 
 	holding = temple_citadel_holding
+
+	# History
+	1000.1.1 = {
+		# Baigaur established in the 11th century by Champa
+		culture = cham
+	}
 }
 15942 = { # b_balau
 	holding = none
@@ -379,5 +355,40 @@
 	holding = none
 }
 16160 = { # b_bao_lam
+	holding = none
+}
+
+
+## d_bahnar
+### c_bahnar
+17025 = { # Bahnar
+	culture = bahnar
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16885 = { # Hayav
+	holding = none
+}
+
+### c_kon_tum
+17019 = { # Kon Tum
+	culture = bahnar
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+17135 = { # Ro Ngao
+	holding = none
+}
+
+### c_jarai
+16939 = { # Ia Krai
+	culture = bahnar
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16913 = { # Ploi Kodur
 	holding = none
 }

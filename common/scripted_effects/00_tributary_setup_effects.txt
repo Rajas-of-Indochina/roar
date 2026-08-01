@@ -1265,12 +1265,10 @@ tgp_1066_tributary_setup_effect = {
 		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		# }
 	}
-	title:k_viet.holder = {
-		save_scope_as = suzerain
-		title:k_champa.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-		}
-	}
+	#title:k_viet.holder = {
+	#	save_scope_as = suzerain
+	#	title:k_champa.holder - already covered in history files
+	#}
 	#Srivijaya 1066
 	# title:k_malayadvipa.holder = {
 	#	save_scope_as = suzerain
