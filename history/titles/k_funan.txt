@@ -207,71 +207,6 @@ d_isanapura = {
 		}
 	}
 
-d_ban_lung = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 3 }
-	1178.1.1 = { change_development_level = 5 }
-}
-	c_mondul_kiri = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_tributary_01 #fictional Sangrama
-			tributary_of = {
-				suzerain = d_angkor
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = khmer_tributary_02
-		}
-		1178.1.1 = {
-			holder = khmer_tributary_03
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
-	c_senmonorom = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_tributary_01 #fictional Sangrama
-			tributary_of = {
-				suzerain = d_angkor
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = khmer_tributary_02
-		}
-		1178.1.1 = {
-			holder = khmer_tributary_03
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
-	c_ta_veang = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_tributary_01 #fictional Sangrama
-			tributary_of = {
-				suzerain = d_angkor
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = khmer_tributary_02
-		}
-		1178.1.1 = {
-			holder = khmer_tributary_03
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
 
 d_angkor = {
 	657.1.1 = {
@@ -934,24 +869,34 @@ d_sambhupura = {
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
 }
-	c_sambhupura = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
-		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+
+c_sambhupura = {
+	860.1.1 = {
+		government = mandala_government
+		holder = khmer_tributary_01 #fictional Sangrama
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala
 		}
 	}
+	#
+	1060.1.1 = {
+		holder = khmer_tributary_02
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = khmer_tributary_03
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
+		}
+	}
+}
+
 	c_phnom_preah_theat = {
 		867.1.1 = {
 			government = mandala_government
@@ -1097,3 +1042,79 @@ d_chan_kabui = {
 			}
 		}
 	}
+
+
+d_ban_lung = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 3 }
+	1178.1.1 = { change_development_level = 5 }
+}
+
+c_ta_veang = {
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_mnong_ta_veang_01_fic #fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_mnong_ta_veang_03_fic #fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_mnong_ta_veang_04_fic #fictional
+	}
+}
+
+c_mondul_kiri = {
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_mnong_mondul_kiri_01_fic #fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_mnong_mondul_kiri_03_fic #fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_mnong_mondul_kiri_04_fic #fictional
+	}
+}
+
+c_senmonorom = {
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_stieng_senmonorom_01_fic #fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = sea_stieng_senmonorom_03_fic #fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = sea_stieng_senmonorom_04_fic #fictional
+	}
+}
