@@ -417,14 +417,26 @@
 	holding = castle_holding
 	buildings = { castle_04 }
 
-	special_building_slot = temple_of_literature
+#	special_building_slot = temple_of_literature
+#
+#	# History
+#	1011.1.1 = {
+#		duchy_capital_building = thang_long_citadel_01
+#	}
+#	1070.1.1 = {
+#		special_building = temple_of_literature
+#	}
+
+	# Make Temple of Literature a duchy building?
+
+	special_building_slot = citadel_thang_long_01
 
 	# History
-	1011.1.1 = {
-		duchy_capital_building = thang_long_citadel_01
+	866.1.1 = {
+		special_building = citadel_thang_long_01
 	}
-	1070.1.1 = {
-		special_building = temple_of_literature
+	1011.1.1 = {
+		special_building = citadel_thang_long_02
 	}
 }
 18068 = { # b_thach_that
@@ -435,6 +447,12 @@
 }
 18395 = { # b_luy_lau
 	holding = church_holding
+
+	special_building_slot = dau_temple_01
+	# History
+	187.1.1 = {
+		special_building = dau_temple_01
+	}
 }
 18078 = { # b_do_dong_giang
 	holding = castle_holding
