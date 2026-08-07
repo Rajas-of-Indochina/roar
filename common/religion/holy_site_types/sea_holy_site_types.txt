@@ -1167,6 +1167,37 @@ krakatoa = {
 ### ### ### ###
 
 
+### Other SEA ###
+bahnar = {
+	county = c_bahnar
+
+	character_modifier = {
+		name = holy_site_bahnar_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+mnong = {
+	county = c_mnong
+
+	character_modifier = {
+		name = holy_site_mnong_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+
+stieng = {
+	county = c_senmonorom
+
+	character_modifier = {
+		name = holy_site_stieng_effect_name
+		same_faith_opinion = 5
+		enemy_hostile_scheme_success_chance_add = -5
+	}
+}
+### ### ### ###
+
+
 ### RICE Holy Sites ###
 kataragama = {
 	county = c_rohana
