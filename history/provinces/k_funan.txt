@@ -1,7 +1,8 @@
 ﻿# k_funan AKA Angkor
-## d_aninditapura
+## d_angkor
 ### c_angkor
-16789 = { # b_hariharalaya
+16789 = { # Hariharalaya
+	# oen of the main Khamer cities and capital of Khmer states throughout history
 	culture = khmer
 	religion = shaivism
 
@@ -9,68 +10,109 @@
 
 	special_building_slot = temples_angkor_01
 
+	# History
 	1150.1.1 = {
 		special_building = temples_angkor_01
 	}
 }
-16856 = { # b_kbal_spean
+16815 = { # Tribhuvanamaheshvara AKA Banteay Srei
+	# location of Banteay Srei temple complex (not fully accurate on map)
 	holding = church_holding
 }
-16738 = { # b_phnom_krom
-	holding = church_holding
-}
-16825 = { # b_nokor_pheas
+16856 = { # Mahendraparvata
+	# ancient city of the Khmer Empire era ; sacred mountain of Phnom Kulen is situated nearby
 	holding = city_holding
 }
-11460 = { # b_isvarapura
-	holding = none
+16825 = { # Nokor Pheas
+	# site of ancient brick temple with modern monastery built atop of it ; moat survived to this day
+	holding = city_holding	# to represent a wider spread of Angkor
 }
-16688 = { # b_bakong
-	holding = church_holding
+16738 = { # Phnom Krom
+	# location of 10th century Prasat Phnom Krom temple
+	holding = none
+
+	# History
+	900.1.1 = {
+		# built around 900 AD by king Yasovarman I
+		holding = church_holding
+	}
+}
+16688 = { # Phnom Bakong
+	# temple dedicated to Shiva built at the end of the 9th century ; used to be main temple before Angkor Wat was built
+	holding = none
+
+	# History
+	895.1.1 = {
+		# built at the end of the 9th century by king Yasovarman I
+		holding = church_holding
+	}
 }
 
 ### c_lingapura
-16882 = { # b_lingapura
-	culture = chong
-	religion = samre_pagan
+16882 = { # Lingapura AKA Koh Ker
+	# Served as capital for Jayavarman IV and was generally an important city despite region's sparse population
+	culture = khmer
+	religion = shaivism
 
-	holding = tribal_holding
+	holding = temple_citadel_holding
+}
+16867 = { # Prasat Khna
+	# pre-Angkorian temple site dedicated to Vishnu
+	holding = church_holding
+}
+16775 = { # Beng Mealea AKA Boeng Mealea
+	# sandstone Hindu temple with some carvings depicting Buddhist motifs
+	holding = none
 
-	900.1.1 = {
-		holding = temple_citadel_holding
-		culture = khmer
-		religion = shaivism
+	# History
+	1150.1.1 = {
+		# dated around early 12th century.
+		holding = church_holding
 	}
 }
-16849 = { # b_tbaeng_meanchey
+16765 = { # Khvav
+	# location unsure ; need to ask other devs
 	holding = none
+}
 
-	900.1.1 = {
-		holding = city_holding
+### c_prea_vihear
+16979 = { # Prea Vihear
+	# Hindu temple turned Buddhist temple, that served as key edifice of the Khmer Empire's spiritual life
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	special_building_slot = preah_vihear_temple_01
+
+	# History
+	1024.1.1 = {
+		special_building = preah_vihear_temple_01
 	}
 }
-16765 = { # b_khvav
+16957 = { # Choam Khsant
+	# modern day district
 	holding = none
 }
-16775 = { # b_beng_mealea
-	holding = none
+16952 = { # Neak Buos
+	# pre-Angkorian temple complex that experienced various new additions throughout history of Khmer Empire
+	holding = church_holding
 }
-16867 = { # b_khna
+16849 = { # Tbaeng Meanchey
+	# modern day district
 	holding = none
 }
 
 ### c_samraong
-16995 = { # b_samraong
-	culture = chong
-	religion = samre_pagan
+16995 = { # Samraong
+	# capital town of Oddar Meanchey ; unsure of its historical importance
+	culture = sambor
+	religion = shaivism
 
 	holding = tribal_holding
-
-	900.1.1 = {
-		religion = shaivism
-	}
 }
-16951 = { # b_ampil
+16951 = { # Banteay Ampil
+	# village
 	holding = none
 }
 16944 = { # b_varin
@@ -78,34 +120,6 @@
 }
 16971 = { # b_trapeang
 	holding = none
-}
-
-### c_prea_vihear
-16957 = { # b_choam_ksant
-	culture = sambor
-	religion = shaivism
-
-	holding = tribal_holding
-
-	900.1.1 = {
-		culture = khmer
-		religion = shaivism
-		holding = temple_citadel_holding
-	}
-}
-16952 = { # b_neak_buos
-	holding = none
-}
-16979 = { # b_prea_vihear
-	holding = none
-
-	special_building_slot = preah_vihear_temple_01
-
-	# History
-	1024.1.1 = {
-		holding = church_holding
-		special_building = preah_vihear_temple_01
-	}
 }
 
 
@@ -197,16 +211,12 @@
 
 ### c_chum_kiri
 15848 = { # b_chum_kiri
-	culture = bnam
-	religion = chamic_shaivism
+	culture = khmer
+	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
-	1000.1.1 = {
-		culture = khmer
-		religion = shaivism
-	}
 }
 15771 = { # b_angkor_chey
 	holding = city_holding
@@ -402,9 +412,14 @@
 ### c_ca_mau
 15376 = { # b_kottinagara
 	culture = bnam
-	religion = chamic_shaivism
+	religion = shaivism
 
 	holding = temple_citadel_holding
+
+	# History
+	1050.1.1 = {
+		culture = khmer
+	}
 }
 15334 = { # b_prey_kin
 	holding = city_holding
@@ -422,14 +437,13 @@
 ### c_binh_dai
 15323 = { # b_trah_pung
 	culture = bnam
-	religion = chamic_shaivism
+	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
 	1050.1.1 = {
 		culture = khmer
-		religion = shaivism
 	}
 }
 15455 = { # b_vung_gou
@@ -442,7 +456,7 @@
 ### c_sadek
 15585 = { # b_sadek
 	culture = bnam
-	religion = chamic_shaivism
+	religion = shaivism
 
 	holding = temple_citadel_holding
 }
@@ -456,7 +470,7 @@
 ### c_prey_rusey
 15074 = { # b_soc_trang
 	culture = bnam
-	religion = chamic_shaivism
+	religion = shaivism
 
 	holding = temple_citadel_holding
 }

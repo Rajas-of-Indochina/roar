@@ -1,92 +1,6 @@
-﻿
-#e_kambujadesa = {
-#	# Only so Jayavarman will be Jayavarman II
-#	657.1.1 = {
-#		holder = 420008
-#	}
-#
-#	# Founding of Khmer Empire
-#	802.1.1 = {
-#		holder = 420010
-#	}
-#	835.1.1 = {
-#		holder = 420011
-#	}
-#	877.1.1 = {
-#		holder = 420012
-#	}
-#	889.1.1 = {
-#		holder = 420013
-#	}
-#	910.1.1 = {
-#		holder = 420014
-#	}
-#	925.1.1 = {
-#		holder = 420015
-#	}
-#	928.1.1 = {
-#		holder = 420016
-#	}
-#	941.1.1 = {
-#		holder = 420017
-#	}
-#	944.1.1 = {
-#		holder = 420018
-#	}
-#	968.1.1 = {
-#		holder = 420019 # Jayavarman V
-#	}
-#	1001.1.1 = {
-#		holder = 420020
-#	}
-#	1002.1.1 = {
-#		holder = 420021
-#	}
-#	1011.1.1 = {
-#		holder = 420022
-#	}
-#	1050.1.1 = {
-#		holder = 420024
-#	}
-#	1066.1.1 = {
-#		holder = 420025
-#	}
-#	1080.1.1 = {
-#		holder = 420023
-#	}
-#	1107.1.1 = {
-#		holder = 420028
-#	}
-#
-#	1113.1.1 = {
-#		holder = 420030
-#	}
-#	1150.1.1 = {
-#		holder = 420031
-#	}
-#	1156.1.1 = {
-#		holder = 420032
-#	}
-#	1165.1.1 = {
-#		holder = 420033
-#	}
-#	1177.1.1 = { # Officially, not until 1181, but someone needs to hold the title
-#		holder = 420034
-#	}
-#	1218.1.1 = {
-#		holder = 420035
-#	}
-#	1243.1.1 = {
-#		holder = 420036
-#	}
-#}
-
-k_funan = {
-	867.1.1 = {
-		government = mandala_government
-		holder = 0
-	}
+﻿k_funan = {
 	889.1.1 = {
+		government = mandala_government
 		holder = khmer_varman_7 # Yasovarman I
 		name = NAME_ANGKOR
 	}
@@ -118,8 +32,6 @@ k_funan = {
 	1050.1.1 = {
 		holder = khmer_kaundinya_2 # Udayadityavarman II
 	}
-
-	#1066
 	1066.1.1 = {
 		holder = khmer_kaundinya_3 # Harshavarman III
 		name = NAME_ANGKOR
@@ -147,66 +59,6 @@ k_funan = {
 	}
 }
 
-d_isanapura = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 16 }
-}
-	c_sambor_prei_kuk = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
-		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
-	c_amarendrapura = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
-		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
-	c_kampong_kdei = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
-		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
-
 
 d_angkor = {
 	657.1.1 = {
@@ -216,6 +68,7 @@ d_angkor = {
 	681.1.1 = {
 		holder = 0
 	}
+	#
 	802.1.1 = {
 		holder = khmer_varman_10
 		government = mandala_government
@@ -256,12 +109,9 @@ d_angkor = {
 	1050.1.1 = {
 		holder = khmer_kaundinya_2 # Udayadityavarman II
 	}
-
-	#1066
 	1066.1.1 = {
 		holder = khmer_kaundinya_3 # Harshavarman III
 	}
-
 	1080.1.1 = {
 		holder = khmer_mahidharapura_10 # Jayavarman VI
 	}
@@ -281,23 +131,167 @@ d_angkor = {
 		holder = khmer_tribhuvanaditya_01 # Tribhuvanaditya (overthrows Yasovarman II)
 	}
 
-	#1177 - Interregnum 1177-1181
-	#Angkor invaded and sacked by Champa, the usurper Tribhuvanaditya killed in 1177
-	#Jayavarman (VII) somehow takes the power, becomes ruler in around 1181, and counter-attacks Champa
-	#1177-1181 is hazy, with inaccurate data, and we don't exactly know *when* everything happens
-	#For gameplay purposes, we're putting Jayavarman VII as ruler of c_angkor and a very weakened Khmer Empire in 1178
+	# 1177 - Interregnum 1177-1181
+	# Angkor invaded and sacked by Champa, the usurper Tribhuvanaditya killed in 1177
+	# Jayavarman (VII) somehow takes the power, becomes ruler in around 1181, and counter-attacks Champa
+	# 1177-1181 is hazy, with inaccurate data, and we don't exactly know *when* everything happens
+	# For gameplay purposes, we're putting Jayavarman VII as ruler of c_angkor and a very weakened Khmer Empire in 1178
 
 	1177.1.1 = {
 		holder = khmer_mahidharapura_17 # Jayavarman VII
 	}
-	#1181.1.1 = {
-	#	holder = khmer_mahidharapura_17 # Jayavarman VII
-	#}
 }
-	c_angkor = {
-		867.1.1 = { change_development_level = 13 }
-		1066.1.1 = { change_development_level = 27 }
-		1178.1.1 = { change_development_level = 54 }
+
+c_angkor = {
+	867.1.1 = { change_development_level = 13 }
+	1066.1.1 = { change_development_level = 27 }
+	1178.1.1 = { change_development_level = 54 }
+
+	657.1.1 = {
+		holder = khmer_jayavarman_1
+		government = mandala_government
+	}
+	#
+	802.1.1 = {
+		holder = khmer_varman_10
+		government = mandala_government
+	}
+	850.1.1 = {
+		holder = khmer_varman_9 # Jayavarman III
+	}
+	877.1.1 = {
+		holder = khmer_varman_8 # Indravarman I
+	}
+	889.1.1 = {
+		holder = khmer_varman_7 # Yasovarman I
+	}
+	910.1.1 = {
+		holder = khmer_varman_6 # Harshavarman I
+	}
+	923.1.1 = {
+		holder = khmer_varman_5 # Ishanavarman II
+	}
+	928.1.1 = {
+		holder = khmer_varman_4 # Jayavarman IV
+	}
+	941.1.1 = {
+		holder = khmer_varman_3 # Harshavarman II
+	}
+	944.1.1 = {
+		holder = khmer_varman_2 # Rajendravarman II
+	}
+	968.1.1 = {
+		holder = khmer_varman_1 # Jayavarman V
+	}
+	1006.1.1 = {
+		holder = khmer_kaundinya_1 # Suryavarman I
+	}
+	1050.1.1 = {
+		holder = khmer_kaundinya_2 # Udayadityavarman II
+	}
+	1066.1.1 = {
+		holder = khmer_kaundinya_3 # Harshavarman III
+	}
+	1080.1.1 = {
+		holder = khmer_mahidharapura_10 # Jayavarman VI
+	}
+	1107.1.1 = {
+		holder = khmer_mahidharapura_13 # Dharanindravarman I
+	}
+	1113.1.1 = {
+		holder = khmer_mahidharapura_15 # Suryavarman II
+	}
+	1150.1.1 = {
+		holder = khmer_mahidharapura_8 # Dharanindravarman II
+	}
+	1160.1.1 = {
+		holder = khmer_mahidharapura_16 # Yasovarman II
+	}
+	1167.1.1 = {
+		holder = khmer_tribhuvanaditya_01 # Tribhuvanaditya (overthrows Yasovarman II)
+	}
+	1177.1.1 = {
+		holder = khmer_mahidharapura_17 # Jayavarman VII
+	}
+}
+
+c_lingapura = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 16 }
+
+	657.1.1 = {
+		holder = khmer_jayavarman_1
+		government = mandala_government
+	}
+	#
+	802.1.1 = {
+		holder = khmer_varman_10
+		government = mandala_government
+	}
+	850.1.1 = {
+		holder = khmer_varman_9 # Jayavarman III
+	}
+	877.1.1 = {
+		holder = khmer_varman_8 # Indravarman I
+	}
+	889.1.1 = {
+		holder = khmer_varman_7 # Yasovarman I
+	}
+	910.1.1 = {
+		holder = khmer_varman_6 # Harshavarman I
+	}
+	923.1.1 = {
+		holder = khmer_varman_5 # Ishanavarman II
+	}
+	928.1.1 = {
+		holder = khmer_varman_4 # Jayavarman IV
+	}
+	941.1.1 = {
+		holder = khmer_varman_3 # Harshavarman II
+	}
+	944.1.1 = {
+		holder = khmer_varman_2 # Rajendravarman II
+	}
+	968.1.1 = {
+		holder = khmer_varman_1 # Jayavarman V
+	}
+	1006.1.1 = {
+		holder = khmer_kaundinya_1 # Suryavarman I
+	}
+	1050.1.1 = {
+		holder = khmer_kaundinya_2 # Udayadityavarman II
+	}
+	1066.1.1 = {
+		holder = khmer_kaundinya_3 # Harshavarman III
+	}
+	1080.1.1 = {
+		holder = khmer_mahidharapura_10 # Jayavarman VI
+	}
+	1107.1.1 = {
+		holder = khmer_mahidharapura_13 # Dharanindravarman I
+	}
+	1113.1.1 = {
+		holder = khmer_mahidharapura_15 # Suryavarman II
+	}
+	1150.1.1 = {
+		holder = khmer_mahidharapura_8 # Dharanindravarman II
+	}
+	1160.1.1 = {
+		holder = khmer_mahidharapura_16 # Yasovarman II
+	}
+	1167.1.1 = {
+		holder = khmer_tribhuvanaditya_01 # Tribhuvanaditya (overthrows Yasovarman II)
+	}
+	1177.1.1 = {
+		holder = khmer_mahidharapura_17 # Jayavarman VII
+	}
+}
+
+c_samraong = {
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
 
 		802.1.1 = {
 			holder = khmer_varman_10
@@ -320,57 +314,9 @@ d_angkor = {
 		1177.1.1 = {
 			holder = khmer_mahidharapura_17 # Jayavarman VII
 		}
-	}
-	c_samraong = {
-		867.1.1 = { change_development_level = 13 }
-		1066.1.1 = { change_development_level = 27 }
-		1178.1.1 = { change_development_level = 54 }
+}
 
-		802.1.1 = {
-			holder = khmer_varman_10
-		}
-		850.1.1 = {
-			holder = khmer_varman_9
-			liege = d_angkor
-		}
-		889.1.1 = {
-			effect = {
-				title:b_hariharalaya = { set_title_name = b_yasodharapura }
-			}
-		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1167.1.1 = {
-			holder = khmer_tribhuvanaditya_01	# Tribhuvanaditya, the usurper
-		}
-		1177.1.1 = {
-			holder = khmer_mahidharapura_17 # Jayavarman VII
-		}
-	}
-	c_lingapura = {
-		867.1.1 = { change_development_level = 8 }
-		1066.1.1 = { change_development_level = 10 }
-		1178.1.1 = { change_development_level = 9 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
-		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_kohker_01_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-	}
-	c_prea_vihear = {
+c_prea_vihear = {
 		867.1.1 = { change_development_level = 4 }
 		1066.1.1 = { change_development_level = 7 }
 		1178.1.1 = { change_development_level = 11 }
@@ -391,10 +337,75 @@ d_angkor = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
+}
+
+
+d_isanapura = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+}
+
+c_sambor_prei_kuk = {
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_bhavapura_01_fic	#fictional
+			liege = d_angkor
+		}
+		1066.1.1 = {
+			holder = khmer_kaundinya_3
+		}
+		1177.1.1 = {
+			liege = 0
+			holder = khmer_bhavapura_10_fic	#fictional
+			tributary_of = {
+				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+				contract_group = tributary_mandala
+			}
+		}
+}
+
+c_amarendrapura = {
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_bhavapura_01_fic	#fictional
+			liege = d_angkor
+		}
+		1066.1.1 = {
+			holder = khmer_kaundinya_3
+		}
+		1177.1.1 = {
+			liege = 0
+			holder = khmer_bhavapura_10_fic	#fictional
+			tributary_of = {
+				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+				contract_group = tributary_mandala
+			}
+		}
+}
+
+c_kampong_kdei = {
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_bhavapura_01_fic	#fictional
+			liege = d_angkor
+		}
+		1066.1.1 = {
+			holder = khmer_kaundinya_3
+		}
+		1177.1.1 = {
+			liege = 0
+			holder = khmer_bhavapura_10_fic	#fictional
+			tributary_of = {
+				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+				contract_group = tributary_mandala
+			}
+		}
+}
+
 
 ## d_battambang
-	c_bakan = {
+c_bakan = {
 		867.1.1 = { change_development_level = 4 }
 		1066.1.1 = { change_development_level = 7 }
 		1178.1.1 = { change_development_level = 11 }
@@ -421,8 +432,13 @@ d_angkor = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_pailin = {
+}
+
+c_pailin = {
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 11 }
+
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
@@ -445,8 +461,13 @@ d_angkor = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_neang = {
+}
+
+c_neang = {
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 11 }
+
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
@@ -469,11 +490,12 @@ d_angkor = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_chhmar = {
-		867.1.1 = { change_development_level = 13 }
-		1066.1.1 = { change_development_level = 27 }
-		1178.1.1 = { change_development_level = 54 }
+}
+
+c_chhmar = {
+		867.1.1 = { change_development_level = 4 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 11 }
 
 		802.1.1 = {
 			holder = khmer_varman_10
@@ -496,7 +518,8 @@ d_angkor = {
 		1177.1.1 = {
 			holder = khmer_mahidharapura_17 # Jayavarman VII
 		}
-	}
+}
+
 
 d_dviradapura = {
 	867.1.1. = {
@@ -522,7 +545,24 @@ d_dviradapura = {
 		}
 	}
 }
-	c_pursat = {
+
+c_dviradapura = {
+	867.1.1 = {
+		government = mandala_government
+		holder = khmer_aninditapura_01_fic	#fictional
+		liege = d_dviradapura # d_angkor_borey
+	}
+	#
+	1066.1.1 = {
+		holder = khmer_aninditapura_10_fic	#fictional
+	}
+	#
+	1178.1.1 = {
+		holder = khmer_aninditapura_20_fic	#fictional
+	}
+}
+
+c_pursat = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
@@ -545,8 +585,9 @@ d_dviradapura = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_aoral = {
+}
+
+c_aoral = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_aninditapura_01_fic	#fictional
@@ -558,20 +599,7 @@ d_dviradapura = {
 		1178.1.1 = {
 			holder = khmer_aninditapura_20_fic	#fictional
 		}
-	}
-	c_dviradapura = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_dviradapura # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_aninditapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_aninditapura_20_fic	#fictional
-		}
-	}
+}
 
 
 d_vyadhapura = {
@@ -701,7 +729,8 @@ d_can_tho = {
 	#	holder = khmer_mahidharapura_17
 	#}
 }
-	c_ca_mau = {
+
+c_ca_mau = {
 		867.1.1 = { change_development_level = 2 }
 		1066.1.1 = { change_development_level = 4 }
 		1178.1.1 = { change_development_level = 6 }
@@ -717,8 +746,9 @@ d_can_tho = {
 		1178.1.1 = {
 			holder = khmer_aninditapura_20_fic	#fictional
 		}
-	}
-	c_binh_dai = {
+}
+
+c_binh_dai = {
 		867.1.1 = { change_development_level = 3 }
 		1066.1.1 = { change_development_level = 5 }
 		1178.1.1 = { change_development_level = 9 }
@@ -742,8 +772,9 @@ d_can_tho = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_sadek = {
+}
+
+c_sadek = {
 		867.1.1 = { change_development_level = 3 }
 		1066.1.1 = { change_development_level = 5 }
 		1178.1.1 = { change_development_level = 9 }
@@ -767,8 +798,9 @@ d_can_tho = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_prey_rusey = {
+}
+
+c_prey_rusey = {
 		867.1.1 = { change_development_level = 2 }
 		1066.1.1 = { change_development_level = 4 }
 		1178.1.1 = { change_development_level = 6 }
@@ -784,14 +816,16 @@ d_can_tho = {
 		1178.1.1 = {
 			holder = khmer_aninditapura_20_fic	#fictional
 		}
-	}
+}
+
 
 d_koh_kong = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 5 }
 	1178.1.1 = { change_development_level = 9 }
 }
-	c_koh_kong = {
+
+c_koh_kong = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_botumsakor_01_fic	#fictional
@@ -814,8 +848,9 @@ d_koh_kong = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_khemara_phoumin = {
+}
+
+c_khemara_phoumin = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_botumsakor_01_fic	#fictional
@@ -838,8 +873,9 @@ d_koh_kong = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_ream = {
+}
+
+c_ream = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_botumsakor_01_fic	#fictional
@@ -862,7 +898,8 @@ d_koh_kong = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
+}
+
 
 d_sambhupura = {
 	867.1.1 = { change_development_level = 6 }
@@ -897,7 +934,7 @@ c_sambhupura = {
 	}
 }
 
-	c_phnom_preah_theat = {
+c_phnom_preah_theat = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_sambhupura_01_fic	#fictional
@@ -918,8 +955,9 @@ c_sambhupura = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_thala_borivat = {
+}
+
+c_thala_borivat = {
 		867.1.1 = { change_development_level = 8 }
 		1066.1.1 = { change_development_level = 10 }
 		1178.1.1 = { change_development_level = 9 }
@@ -940,13 +978,16 @@ c_sambhupura = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
+}
+
+
 d_chan_kabui = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 7 }
 	1178.1.1 = { change_development_level = 12 }
 }
-	c_chan_kabui = {
+
+c_chan_kabui = {
 		867.1.1 = {
 			government = mandala_government
 			holder = mon_mueangphrarot_01_fic	#fictional
@@ -969,8 +1010,9 @@ d_chan_kabui = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_prachinburi = {
+}
+
+c_prachinburi = {
 		867.1.1 = {
 			government = mandala_government
 			holder = mon_mueangphrarot_01_fic	#fictional
@@ -993,8 +1035,9 @@ d_chan_kabui = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_kabin_buri = {
+}
+
+c_kabin_buri = {
 		867.1.1 = {
 			government = mandala_government
 			holder = mon_mueangphrarot_01_fic	#fictional
@@ -1017,8 +1060,9 @@ d_chan_kabui = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
-	c_mueang_phra_rot = {
+}
+
+c_mueang_phra_rot = {
 		867.1.1 = {
 			government = mandala_government
 			holder = mon_mueangphrarot_01_fic	#fictional
@@ -1041,7 +1085,7 @@ d_chan_kabui = {
 				contract_group = tributary_mandala
 			}
 		}
-	}
+}
 
 
 d_ban_lung = {
