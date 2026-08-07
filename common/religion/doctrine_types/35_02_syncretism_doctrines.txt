@@ -1,5 +1,5 @@
 ### Syncreticisim, taken from Africa Plus
-syncretism_christian = {
+tenet_christian_syncretism = {
 	icon = "tenet_christian_syncretism"
 		piety_cost = {
 		if = {
@@ -17,7 +17,7 @@ syncretism_christian = {
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = syncretism_christian }
+			limit = { has_doctrine = tenet_christian_syncretism }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
@@ -42,7 +42,7 @@ syncretism_christian = {
 	}
 }
 
-syncretism_islamic = {
+tenet_islamic_syncretism = {
 	icon = "tenet_islamic_syncretism"
 	piety_cost = {
 		if = {
@@ -60,7 +60,7 @@ syncretism_islamic = {
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = syncretism_islamic }
+			limit = { has_doctrine = tenet_islamic_syncretism }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
@@ -83,7 +83,7 @@ syncretism_islamic = {
 	}
 }
 
-syncretism_jewish = {
+tenet_jewish_syncretism = {
 	icon = "tenet_jewish_syncretism"
 	piety_cost = {
 		if = {
@@ -102,7 +102,7 @@ syncretism_jewish = {
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = syncretism_jewish }
+			limit = { has_doctrine = tenet_jewish_syncretism }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}

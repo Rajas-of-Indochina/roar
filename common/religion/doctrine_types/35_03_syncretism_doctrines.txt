@@ -1,0 +1,26 @@
+### Syncreticisim, taken from Africa Plus
+tenet_mz_no_syncretism = {
+	icon = "doctrine_mz_no_syncretism"
+	visible = no
+	piety_cost = {
+		value = 0
+		if = {
+			limit = { has_doctrine = tenet_mz_syncretism_no }
+			value = 0
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_doctrine = tenet_sinitic_syncretism
+					has_doctrine = tenet_eastern_syncretism
+					has_doctrine = tenet_unreformed_syncretism
+					has_doctrine = tenet_christian_syncretism
+					has_doctrine = tenet_islamic_syncretism
+					has_doctrine = tenet_jewish_syncretism
+				}
+			}
+			value = faith_tenet_cost_high
+		}
+	}
+}
+

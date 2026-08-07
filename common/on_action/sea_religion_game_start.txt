@@ -11,12 +11,12 @@ sea_update_syncretic_faiths_on_start = {
 				if = {
 					limit = {
 						OR = {
-							has_doctrine = syncretism_eastern
-							has_doctrine = syncretism_sinitic
-							has_doctrine = syncretism_unreformed
-							has_doctrine = syncretism_christian
-							has_doctrine = syncretism_islamic
-							has_doctrine = syncretism_jewish
+							has_doctrine = tenet_eastern_syncretism
+							has_doctrine = tenet_sinitic_syncretism
+							has_doctrine = tenet_unreformed_syncretism
+							has_doctrine = tenet_christian_syncretism
+							has_doctrine = tenet_islamic_syncretism
+							has_doctrine = tenet_jewish_syncretism
 						}
 						NOT = {
 							this = faith:alan_pagan
@@ -61,7 +61,7 @@ sea_update_syncretic_faiths_on_start = {
 					}
 				}
 				else = {
-					add_doctrine = syncretism_mz_no
+					add_doctrine = tenet_mz_no_syncretism
 				}
 			}
 		}

@@ -1,5 +1,5 @@
 ### Syncreticisim, taken from Africa Plus
-syncretism_sinitic = {
+tenet_sinitic_syncretism = {
 	icon = "tenet_sinitic_syncretism"
 		piety_cost = {
 		if = {
@@ -23,7 +23,7 @@ syncretism_sinitic = {
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = syncretism_sinitic }
+			limit = { has_doctrine = tenet_sinitic_syncretism }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
@@ -58,7 +58,7 @@ syncretism_sinitic = {
 	}
 }
 
-syncretism_eastern = {
+tenet_eastern_syncretism = {
 	icon = "tenet_eastern_syncretism"
 	piety_cost = {
 		if = {
@@ -82,7 +82,7 @@ syncretism_eastern = {
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = syncretism_eastern }
+			limit = { has_doctrine = tenet_eastern_syncretism }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
@@ -117,7 +117,7 @@ syncretism_eastern = {
 	}
 }
 
-syncretism_unreformed = {
+tenet_unreformed_syncretism = {
 	icon = "tenet_unreformed_syncretism"
 	piety_cost = {
 		if = {
@@ -134,7 +134,7 @@ syncretism_unreformed = {
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = syncretism_unreformed }
+			limit = { has_doctrine = tenet_unreformed_syncretism }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
