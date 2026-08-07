@@ -1,0 +1,90 @@
+### 00_hostility_doctrines.txt
+### This file should define all the special doctrines that adjust faiths to see other faiths as **Righteous**
+
+
+### Orthodox Christianity Doctrine
+orthodox_roa_doctrine = {
+	piety_cost = {
+		value = faith_doctrine_cost_low
+		if = {
+			limit = { has_doctrine = orthodox_roa_doctrine }
+			multiply = 0
+		}
+	}
+	parameters = {
+		hostility_override_orthodox_roa_doctrine = 0
+		same_hof_hostility_override = 0
+	}
+}
+
+## Three Teachings
+special_doctrine_three_teachings = {
+	parameters = {
+		hostility_override_special_doctrine_three_teachings = 0
+		hostility_override_rice_mahayana_canon_doctrine = 0
+	}
+}
+
+
+### Caucasus special doctrines
+northwest_caucasian_doctrine = {
+	icon = "northwest_caucasian_doctrine"
+
+	piety_cost = {
+		value = faith_doctrine_cost_low
+		if = {
+			limit = { has_doctrine = northwest_caucasian_doctrine }
+			multiply = 0
+		}
+	}
+
+	parameters = {
+		hostility_override_northwest_caucasian_doctrine = 0
+	}
+}
+northeast_caucasian_doctrine = {
+	icon = "northeast_caucasian_doctrine"
+
+	piety_cost = {
+		value = faith_doctrine_cost_low
+		if = {
+			limit = { has_doctrine = northeast_caucasian_doctrine }
+			multiply = 0
+		}
+	}
+
+	parameters = {
+		hostility_override_northeast_caucasian_doctrine = 0
+	}
+}
+kartvelist_caucasian_doctrine = {
+	icon = "kartvelist_caucasian_doctrine"
+
+	piety_cost = {
+		value = faith_doctrine_cost_low
+		if = {
+			limit = { has_doctrine = kartvelist_caucasian_doctrine }
+			multiply = 0
+		}
+	}
+
+	parameters = {
+		hostility_override_kartvelist_caucasian_doctrine = 0
+	}
+}
+alan_caucasian_doctrine = {
+	icon = "alan_caucasian_doctrine"
+
+	piety_cost = {
+		value = faith_doctrine_cost_low
+		if = {
+			limit = { has_doctrine = alan_caucasian_doctrine }
+			multiply = 0
+		}
+	}
+
+	parameters = {
+		hostility_override_northwest_caucasian_doctrine = 1
+		hostility_override_northeast_caucasian_doctrine = 1
+	}
+}
