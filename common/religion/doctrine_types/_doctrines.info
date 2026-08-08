@@ -77,10 +77,12 @@ You can also compare to see which faith you're most hostile to. E.G., faith_host
 
 NOTE: for hostility doctrines to not overwrite each other in ways that feel like they shouldn't (i.e. One Tenet makes something Righteous, but another makes it Astray; it should probably remain righteous in all cases) then they should be defined in a specific order to one another.
 
-The convention I will use is to move all special doctrines that adjust hostility into their own files to the "end" by having a prefix of:
-- "z00" for Righteous
-- "z01" for Astray
-- "z02" for Hostile
+The convention I will use is to move all special doctrines that adjust hostility into their own files with a prefix of:
+- "25_00" for Righteous
+- "25_01" for Astray
+- "25_02" for Hostile
+
+The general religious syncretism ones will be prefixed by "35_" so that the order of precedence works well.
 
 This includes the syncretism doctrines with have their own doctrine type now. These Prefixes will ensure that we never have a case where a general syncetism doctrine like Christian Syncretism overrides doctrines like NorthWest/NorthEast Caucasian.
 If for some reason there exists a core tenet to increase hostility (i.e. Extinction of Dharma) then because they are defined BEFORE the special doctrines that tweak hostility, then they will still take precedence.
