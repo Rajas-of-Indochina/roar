@@ -359,11 +359,11 @@ reform_nanyue_decision_effect = {
 		title:k_champa = { set_de_jure_liege_title = title:e_nanyue }
 	}
 	else = {
-		title:d_vijaya = { set_de_jure_liege_title = title:k_annam }
-		title:d_indrapura = { set_de_jure_liege_title = title:k_annam }
-		title:d_tribhuvanadevi = { set_de_jure_liege_title = title:k_annam }
+		title:d_vijaya = { set_de_jure_liege_title = title:k_viet }
+		title:d_indrapura = { set_de_jure_liege_title = title:k_viet }
+		title:d_tribhuvanadevi = { set_de_jure_liege_title = title:k_viet }
 	}
-	title:k_annam = { set_de_jure_liege_title = title:e_nanyue }
+	title:k_viet = { set_de_jure_liege_title = title:e_nanyue }
 	title:k_nanyue_china = { set_de_jure_liege_title = title:e_nanyue }
 
 	if = {
@@ -1218,7 +1218,7 @@ rename_china_title_effect = {
 	    }
 	}
 	else_if = {
-	    limit = { any_held_title = { this = title:k_nanzhao } }
+	    limit = { any_held_title = { this = title:k_dali } }
 	    title:e_celestia_china = {
 	    	set_title_name = k_dali
 	    	##set_coa = e_min
