@@ -1944,25 +1944,25 @@ circassian_decision_zeikwebze = {
 	ai_check_interval = 5
 	decision_group_type = major
 	is_shown = {
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
+			culture = {
+				has_cultural_pillar = language_circassian
+			}
+			culture = {
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
+			}
+		}
+
 		NOT = {
 			has_trait = werqibze
 			has_trait = chakobsa
 			has_trait = zeikwebze
-		}
-		OR = {
-			culture = {
-				this = culture:circassian
-			}
-			culture = {
-				this = culture:ubykh
-			}
-		}
-		knows_language = language_circassian
-		OR = {
-			OR = {
-				has_lifestyle = martial_lifestyle
-				martial >= 35
-			}
 		}
 	}
 	is_valid = {
@@ -2070,25 +2070,25 @@ circassian_decision_zeikwebze_ai = {
 	decision_group_type = major
 	is_shown = {
 		is_ai = yes
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
+			culture = {
+				has_cultural_pillar = language_circassian
+			}
+			culture = {
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
+			}
+		}
+
 		NOT = {
 			has_trait = werqibze
 			has_trait = chakobsa
 			has_trait = zeikwebze
-		}
-		OR = {
-			culture = {
-				this = culture:circassian
-			}
-			culture = {
-				this = culture:ubykh
-			}
-		}
-		knows_language = language_circassian
-		OR = {
-			OR = {
-				has_lifestyle = martial_lifestyle
-				martial >= 20
-			}
 		}
 	}
 	is_valid = {
@@ -2168,18 +2168,25 @@ circassian_decision_chakobsa = {
 	ai_check_interval = 5
 	decision_group_type = major
 	is_shown = {
-		OR = {
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
 			culture = {
-				this = culture:circassian
+				has_cultural_pillar = language_circassian
 			}
 			culture = {
-				this = culture:ubykh
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
 			}
 		}
-		knows_language = language_circassian
-		has_trait = lifestyle_hunter
+
 		NOT = {
+			has_trait = werqibze
 			has_trait = chakobsa
+			has_trait = zeikwebze
 		}
 	}
 	is_valid = {
@@ -2224,18 +2231,25 @@ circassian_decision_chakobsa_ai = {
 	decision_group_type = major
 	is_shown = {
 		is_ai = yes
-		OR = {
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
 			culture = {
-				this = culture:circassian
+				has_cultural_pillar = language_circassian
 			}
 			culture = {
-				this = culture:ubykh
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
 			}
 		}
-		knows_language = language_circassian
-		has_trait = lifestyle_hunter
+
 		NOT = {
+			has_trait = werqibze
 			has_trait = chakobsa
+			has_trait = zeikwebze
 		}
 	}
 	is_valid = {
@@ -2289,18 +2303,25 @@ circassian_decision_werqibze = {
 	ai_check_interval = 5
 	decision_group_type = major
 	is_shown = {
-		OR = {
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
 			culture = {
-				this = culture:circassian
+				has_cultural_pillar = language_circassian
 			}
 			culture = {
-				this = culture:ubykh
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
 			}
 		}
-		knows_language = language_circassian
-		has_lifestyle = diplomacy_lifestyle
+
 		NOT = {
 			has_trait = werqibze
+			has_trait = chakobsa
+			has_trait = zeikwebze
 		}
 	}
 	is_valid = {
@@ -2335,14 +2356,6 @@ circassian_decision_werqibze = {
 			has_trait = chakobsa
 			has_trait = zeikwebze
 		}
-		OR = {
-			culture = {
-				this = culture:circassian
-			}
-			culture = {
-				this = culture:ubykh
-			}
-		}
 		knows_language = language_circassian
 		has_lifestyle = diplomacy_lifestyle
 		learning >= 15
@@ -2353,6 +2366,77 @@ circassian_decision_werqibze = {
 			has_trait = shy
 			has_trait = arbitrary
 			has_trait = gluttonous
+		}
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+
+circassian_decision_werqibze_ai = {
+	# Decision - Ask to be taught Werqibze
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_caucasus_sikowschir.dds"
+	}
+	desc = circassian_decision_werqibze_desc
+	selection_tooltip = circassian_decision_werqibze_tooltip
+	ai_check_interval = 5
+	decision_group_type = major
+	is_shown = {
+		is_ai = yes
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
+			culture = {
+				has_cultural_pillar = language_circassian
+			}
+			culture = {
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
+			}
+		}
+
+		NOT = {
+			has_trait = werqibze
+			has_trait = chakobsa
+			has_trait = zeikwebze
+		}
+	}
+	is_valid = {
+		knows_language = language_circassian
+		has_lifestyle = diplomacy_lifestyle
+		NOT = {
+			has_trait = werqibze
+			has_trait = chakobsa
+			has_trait = zeikwebze
+		}
+		learning >= 12
+		diplomacy >= 20
+		NOT = {
+			has_trait = shy
+		}
+	}
+	effect = {
+		add_trait = werqibze
+	}
+	cost = {
+	}
+	ai_check_interval = 5
+	ai_potential = {
+		NOT = {
+			has_trait = werqibze
+			has_trait = chakobsa
+			has_trait = zeikwebze
+		}
+		knows_language = language_circassian
+		has_lifestyle = diplomacy_lifestyle
+		learning >= 12
+		diplomacy >= 20
+		NOT = {
+			has_trait = shy
 		}
 	}
 	ai_will_do = {
