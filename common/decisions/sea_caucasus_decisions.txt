@@ -1934,6 +1934,251 @@ circassian_decision_aghvank = {
 	}
 }
 
+#Combined Speaker Traits decisions
+
+ROA_caucasus_speakertrait_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_caucasus_farschipse.dds" }
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 16
+		kingdom = 10
+		empire = 10
+		hegemony = 10
+	}
+
+	desc = ROA_caucasus_speakertrait_decision_desc
+
+	is_shown = {
+		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
+			culture = {
+				has_cultural_pillar = language_circassian
+			}
+			culture = {
+				has_cultural_pillar = language_ubykh
+			}
+			AND = {
+				any_liege_or_above ?= {
+					culture = { has_cultural_pillar = language_circassian}
+				}
+				knows_language = language_circassian
+			}
+		}
+
+		NOT = {
+			has_trait = werqibze
+			has_trait = chakobsa
+			has_trait = zeikwebze
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	widget = {
+		gui = "ROA_caucasus_decision_speakertrait"
+		controller = decision_option_list_controller
+
+		decision_to_second_step_button = "ROA_caucasus_pick_a_speakertrait_type"
+
+		# Zeikwebze (Martial)
+
+		item = {
+			value = ROA_caucasus_speakertrait_zeikwebze_option
+			is_valid = {
+				knows_language = language_circassian
+				NOT = {
+					has_trait = werqibze
+					has_trait = chakobsa
+					has_trait = zeikwebze
+				}
+				OR = {
+					has_lifestyle = martial_lifestyle
+					martial >= 35
+				}
+				OR = {
+					AND = {
+						learning >= 15
+						martial >= 20
+					}
+					AND = {
+						learning >= 20
+						martial >= 15
+					}
+					AND = {
+						learning >= 10
+						martial >= 10
+						OR = {
+							has_trait = ambitious
+							has_trait = diligent
+							has_trait = patient
+							has_trait = fickle
+						}
+						NOT = {
+							has_trait = lazy
+							has_trait = impatient
+							has_trait = shy
+						}
+					}
+				}
+			}
+
+			current_description = ROA_caucasus_speakertrait_zeikwebze_option_desc
+			localization = ROA_caucasus_speakertrait_zeikwebze_option
+			icon = "gfx/interface/icons/traits/zeikwebze.dds"
+			# TODO: Incorporate old decision art
+			# picture = {reference = "gfx/interface/illustrations/decisions/decision_caucasus_farschipse.dds"}
+
+			ai_chance = {
+				value = 2
+			}
+		}
+
+		# Chakobsa (Hunter)
+		item = {
+			value = ROA_caucasus_speakertrait_chakobsa_option
+			is_valid = {
+				knows_language = language_circassian
+				NOT = {
+					has_trait = werqibze
+					has_trait = chakobsa
+					has_trait = zeikwebze
+				}
+				has_trait = lifestyle_hunter
+				OR = {
+					AND = {
+						learning >= 15
+						prowess >= 15
+						NOT = {
+							has_trait = lazy
+							has_trait = impatient
+							has_trait = cynical
+						}
+					}
+					AND = {
+						learning >= 22
+						prowess  >= 18
+					}
+					AND = {
+						learning >= 18
+						prowess  >= 22
+					}
+				}
+			}
+
+			current_description = ROA_caucasus_speakertrait_chakobsa_option_desc
+			localization = ROA_caucasus_speakertrait_chakobsa_option
+			icon = "gfx/interface/icons/traits/chakobsa.dds"
+			#TODO: This is the picture for the old decision, try to incorporate somehow
+			#picture = {reference = "gfx/interface/illustrations/decisions/decision_caucasus_chakobsa.dds"}
+
+			ai_chance = {
+				value = 2
+			}
+		}
+
+		# Werqibze (Diplomacy)
+		item = {
+			value = ROA_caucasus_speakertrait_werqibze_option
+			is_valid = {
+				knows_language = language_circassian
+				NOT = {
+					has_trait = werqibze
+					has_trait = chakobsa
+					has_trait = zeikwebze
+				}
+				OR = {
+					has_lifestyle = diplomacy_lifestyle
+					diplomacy >= 35
+				}
+				OR = {
+					AND = {
+						learning >= 15
+						diplomacy >= 25
+						NOT = {
+							has_trait = lazy
+							has_trait = impatient
+							has_trait = shy
+							has_trait = arbitrary
+							has_trait = gluttonous
+						}
+					}
+					AND = {
+						learning >= 20
+						diplomacy >= 30
+					}
+				}
+			}
+
+			current_description = ROA_caucasus_speakertrait_werqibze_option_desc
+			localization = ROA_caucasus_speakertrait_werqibze_option
+			icon = "gfx/interface/icons/traits/werqibze.dds"
+			# TODO: Incorporate old decision art
+			#picture = {reference = "gfx/interface/illustrations/decisions/decision_caucasus_sikowschir.dds"}
+
+			ai_chance = {
+				value = 2
+			}
+		}
+	}
+
+
+	effect = {
+		custom_tooltip = ROA_caucasus_speakertrait_decision_tooltip_1
+	}
+	hidden_effect = {
+		# Zeikwebze (Martial)
+		if = {
+			limit = { scope:ROA_caucasus_speakertrait_zeikwebze_option = yes }
+			add_trait = zeikwebze
+		}
+		# Chakobsa (Hunter)
+		else_if = {
+			limit = { scope:ROA_caucasus_speakertrait_chakobsa_option = yes }
+			add_trait = chakobsa
+		}
+		# Werqibze (Diplomacy)
+		else_if = {
+			limit = { scope:ROA_caucasus_speakertrait_werqibze_option = yes }
+			add_trait = werqibze
+		}
+	}
+	cost = {
+		prestige = 100
+		gold = 20
+	}
+	
+	ai_potential = {
+		short_term_gold > 60
+	}
+
+	ai_will_do = {
+		base = 80
+		modifier = {
+			add = -8
+			has_trait = cynical
+		}
+		modifier = {
+			add = 8
+			has_trait = zealous
+		}
+		modifier = {
+			add = -8
+			has_trait = lazy
+		}
+		modifier = {
+			add = 8
+			has_trait = diligent
+		}
+	}
+}
+
+####
+
+
+
 circassian_decision_zeikwebze = {
 	# Decision - Practice Zeik'webze
 	picture = {
