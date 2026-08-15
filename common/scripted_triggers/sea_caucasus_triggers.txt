@@ -54,3 +54,17 @@ valid_xabze_adat_confederation_member_trigger = {
 	is_confederation_member = no
 	culture = { has_cultural_parameter = $TRADITION$ }
 }
+
+valid_language_speaker_trait_trigger = {
+	OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
+		culture = {
+			has_cultural_pillar = $language$
+		}
+		AND = {
+			any_liege_or_above ?= {
+				culture = { has_cultural_pillar = $language$ }
+			}
+			knows_language = $language$
+		}
+	}
+}

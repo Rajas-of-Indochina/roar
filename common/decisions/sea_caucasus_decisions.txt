@@ -1935,7 +1935,6 @@ circassian_decision_aghvank = {
 }
 
 #Combined Speaker Traits decisions
-
 ROA_caucasus_speakertrait_decision = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_caucasus_farschipse.dds" }
 	decision_group_type = major
@@ -1947,79 +1946,80 @@ ROA_caucasus_speakertrait_decision = {
 		empire = 10
 		hegemony = 10
 	}
+	character = root
 
 	desc = ROA_caucasus_speakertrait_decision_desc
 
 	is_shown = {
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
+		valid_language_speaker_trait_trigger = { language = language_circassian }
 		NOT = {
 			has_trait = werqibze
 			has_trait = chakobsa
 			has_trait = zeikwebze
 		}
 	}
-	
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
+
+	is_valid = {	
+		valid_language_speaker_trait_trigger = { language = language_circassian }
+		NOT = {
+			has_trait = werqibze
+			has_trait = chakobsa
+			has_trait = zeikwebze
+		}
 	}
 
 	widget = {
 		gui = "ROA_caucasus_decision_speakertrait"
 		controller = decision_option_list_controller
 
-		decision_to_second_step_button = "ROA_caucasus_pick_a_speakertrait_type"
+		decision_to_second_step_button = "ROA_caucasus_pick_a_speakertrait_type_gui"
 
 		# Zeikwebze (Martial)
-
 		item = {
 			value = ROA_caucasus_speakertrait_zeikwebze_option
 			is_valid = {
 				knows_language = language_circassian
-				NOT = {
-					has_trait = werqibze
-					has_trait = chakobsa
-					has_trait = zeikwebze
-				}
-				OR = {
-					has_lifestyle = martial_lifestyle
-					martial >= 35
-				}
-				OR = {
-					AND = {
-						learning >= 15
-						martial >= 20
+				
+				custom_description = {
+					text = ROA_caucasus_has_not_learned_dialect_tt
+					NOT = {
+						has_trait = werqibze
+						has_trait = chakobsa
+						has_trait = zeikwebze
 					}
-					AND = {
-						learning >= 20
-						martial >= 15
+				}
+				custom_description = {
+					text = ROA_caucasus_speakertrait_zeikwebze_condition_1
+					OR = {
+						has_lifestyle = martial_lifestyle
+						martial >= 35
 					}
-					AND = {
-						learning >= 10
-						martial >= 10
-						OR = {
-							has_trait = ambitious
-							has_trait = diligent
-							has_trait = patient
-							has_trait = fickle
+				}
+				custom_description = {
+					text = ROA_caucasus_speakertrait_zeikwebze_condition_2
+					OR = {
+						AND = {
+							learning >= 15
+							martial >= 20
 						}
-						NOT = {
-							has_trait = lazy
-							has_trait = impatient
-							has_trait = shy
+						AND = {
+							learning >= 20
+							martial >= 15
+						}
+						AND = {
+							learning >= 10
+							martial >= 10
+							OR = {
+								has_trait = ambitious
+								has_trait = diligent
+								has_trait = patient
+								has_trait = fickle
+							}
+							NOT = {
+								has_trait = lazy
+								has_trait = impatient
+								has_trait = shy
+							}
 						}
 					}
 				}
@@ -2127,24 +2127,26 @@ ROA_caucasus_speakertrait_decision = {
 
 	effect = {
 		custom_tooltip = ROA_caucasus_speakertrait_decision_tooltip_1
+
+		#hidden_effect = {
+			# Zeikwebze (Martial)
+			if = {
+				limit = { scope:ROA_caucasus_speakertrait_zeikwebze_option = yes }
+				add_trait = zeikwebze
+			}
+			# Chakobsa (Hunter)
+			else_if = {
+				limit = { scope:ROA_caucasus_speakertrait_chakobsa_option = yes }
+				add_trait = chakobsa
+			}
+			# Werqibze (Diplomacy)
+			else_if = {
+				limit = { scope:ROA_caucasus_speakertrait_werqibze_option = yes }
+				add_trait = werqibze
+			}
+		#}
 	}
-	hidden_effect = {
-		# Zeikwebze (Martial)
-		if = {
-			limit = { scope:ROA_caucasus_speakertrait_zeikwebze_option = yes }
-			add_trait = zeikwebze
-		}
-		# Chakobsa (Hunter)
-		else_if = {
-			limit = { scope:ROA_caucasus_speakertrait_chakobsa_option = yes }
-			add_trait = chakobsa
-		}
-		# Werqibze (Diplomacy)
-		else_if = {
-			limit = { scope:ROA_caucasus_speakertrait_werqibze_option = yes }
-			add_trait = werqibze
-		}
-	}
+
 	cost = {
 		prestige = 100
 		gold = 20
@@ -2176,518 +2178,6 @@ ROA_caucasus_speakertrait_decision = {
 }
 
 ####
-
-
-
-circassian_decision_zeikwebze = {
-	# Decision - Practice Zeik'webze
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_caucasus_farschipse.dds"
-	}
-	desc = circassian_decision_zeikwebze_desc
-	selection_tooltip = circassian_decision_zeikwebze_tooltip
-	ai_check_interval = 5
-	decision_group_type = major
-	is_shown = {
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-	}
-	is_valid = {
-		knows_language = language_circassian
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		OR = {
-			has_lifestyle = martial_lifestyle
-			martial >= 35
-		}
-		OR = {
-			AND = {
-				learning >= 15
-				martial >= 20
-			}
-			AND = {
-				learning >= 20
-				martial >= 15
-			}
-			AND = {
-				learning >= 10
-				martial >= 10
-				OR = {
-					has_trait = ambitious
-					has_trait = diligent
-					has_trait = patient
-					has_trait = fickle
-				}
-			}
-		}
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = shy
-		}
-	}
-	effect = {
-		add_trait = zeikwebze
-	}
-	cost = {
-		prestige = 100
-		gold = 20
-	}
-	ai_check_interval = 5
-	ai_potential = {
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		OR = {
-			culture = {
-				this = culture:circassian
-			}
-			culture = {
-				this = culture:ubykh
-			}
-		}
-		knows_language = language_circassian
-		OR = {
-			has_lifestyle = martial_lifestyle
-			martial >= 35
-		}
-		OR = {
-			AND = {
-				learning >= 15
-				martial >= 20
-			}
-			AND = {
-				learning >= 20
-				martial >= 15
-			}
-			AND = {
-				learning >= 15
-				martial >= 15
-				OR = {
-					has_trait = ambitious
-					has_trait = diligent
-					has_trait = patient
-					has_trait = fickle
-				}
-			}
-		}
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = shy
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
-
-circassian_decision_zeikwebze_ai = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_caucasus_farschipse.dds"
-	}
-	desc = circassian_decision_zeikwebze_desc
-	selection_tooltip = circassian_decision_zeikwebze_tooltip
-	ai_check_interval = 5
-	decision_group_type = major
-	is_shown = {
-		is_ai = yes
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-	}
-	is_valid = {
-		is_ai = yes
-		knows_language = language_circassian
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		OR = {
-			has_lifestyle = martial_lifestyle
-			martial >= 20
-		}
-		OR = {
-			AND = {
-				learning >= 10
-				martial >= 15
-			}
-			AND = {
-				learning >= 15
-				martial >= 10
-			}
-		}
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = shy
-		}
-	}
-	effect = {
-		add_trait = zeikwebze
-	}
-	cost = {
-	}
-	ai_check_interval = 1
-	ai_potential = {
-		is_ai = yes
-		knows_language = language_circassian
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		OR = {
-			has_lifestyle = martial_lifestyle
-			martial >= 20
-		}
-		OR = {
-			AND = {
-				learning >= 10
-				martial >= 15
-			}
-			AND = {
-				learning >= 15
-				martial >= 12
-			}
-		}
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = shy
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
-
-circassian_decision_chakobsa = {
-	# Decision - Learn Schak'webze
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_caucasus_chakobsa.dds"
-	}
-	desc = circassian_decision_chakobsa_desc
-	selection_tooltip = circassian_decision_chakobsa_tooltip
-	ai_check_interval = 5
-	decision_group_type = major
-	is_shown = {
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-	}
-	is_valid = {
-		knows_language = language_circassian
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		has_trait = lifestyle_hunter
-		learning >= 15
-		prowess >= 15
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = cynical
-		}
-	}
-	effect = {
-		add_trait = chakobsa
-	}
-	cost = {
-		prestige = 80
-		gold = 10
-	}
-	ai_check_interval = 50
-	ai_potential = {
-		always = no
-	}
-	ai_will_do = {
-		base = 0
-	}
-}
-
-circassian_decision_chakobsa_ai = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_caucasus_chakobsa.dds"
-	}
-	desc = circassian_decision_chakobsa_desc
-	selection_tooltip = circassian_decision_chakobsa_tooltip
-	ai_check_interval = 5
-	decision_group_type = major
-	is_shown = {
-		is_ai = yes
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-	}
-	is_valid = {
-		is_ai = yes
-		knows_language = language_circassian
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		has_trait = lifestyle_hunter
-		learning >= 12
-		prowess >= 15
-		NOT = {
-			has_trait = cynical
-		}
-	}
-	effect = {
-		add_trait = chakobsa
-	}
-	cost = {
-	}
-	ai_check_interval = 1
-	ai_potential = {
-		is_ai = yes
-		knows_language = language_circassian
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		has_trait = lifestyle_hunter
-		learning >= 10
-		prowess >= 10
-		NOT = {
-			has_trait = cynical
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
-
-circassian_decision_werqibze = {
-	# Decision - Ask to be taught Werqibze
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_caucasus_sikowschir.dds"
-	}
-	desc = circassian_decision_werqibze_desc
-	selection_tooltip = circassian_decision_werqibze_tooltip
-	ai_check_interval = 5
-	decision_group_type = major
-	is_shown = {
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-	}
-	is_valid = {
-		knows_language = language_circassian
-		has_lifestyle = diplomacy_lifestyle
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		learning >= 15
-		diplomacy >= 25
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = shy
-			has_trait = arbitrary
-			has_trait = gluttonous
-		}
-	}
-	effect = {
-		add_trait = werqibze
-	}
-	cost = {
-		prestige = 100
-		gold = 20
-	}
-	ai_check_interval = 5
-	ai_potential = {
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		knows_language = language_circassian
-		has_lifestyle = diplomacy_lifestyle
-		learning >= 15
-		diplomacy >= 25
-		NOT = {
-			has_trait = lazy
-			has_trait = impatient
-			has_trait = shy
-			has_trait = arbitrary
-			has_trait = gluttonous
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
-
-circassian_decision_werqibze_ai = {
-	# Decision - Ask to be taught Werqibze
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_caucasus_sikowschir.dds"
-	}
-	desc = circassian_decision_werqibze_desc
-	selection_tooltip = circassian_decision_werqibze_tooltip
-	ai_check_interval = 5
-	decision_group_type = major
-	is_shown = {
-		is_ai = yes
-		OR = { #Either their culture speaks a relevant language, or a liege does and they speak it as well
-			culture = {
-				has_cultural_pillar = language_circassian
-			}
-			culture = {
-				has_cultural_pillar = language_ubykh
-			}
-			AND = {
-				any_liege_or_above ?= {
-					culture = { has_cultural_pillar = language_circassian}
-				}
-				knows_language = language_circassian
-			}
-		}
-
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-	}
-	is_valid = {
-		knows_language = language_circassian
-		has_lifestyle = diplomacy_lifestyle
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		learning >= 12
-		diplomacy >= 20
-		NOT = {
-			has_trait = shy
-		}
-	}
-	effect = {
-		add_trait = werqibze
-	}
-	cost = {
-	}
-	ai_check_interval = 5
-	ai_potential = {
-		NOT = {
-			has_trait = werqibze
-			has_trait = chakobsa
-			has_trait = zeikwebze
-		}
-		knows_language = language_circassian
-		has_lifestyle = diplomacy_lifestyle
-		learning >= 12
-		diplomacy >= 20
-		NOT = {
-			has_trait = shy
-		}
-	}
-	ai_will_do = {
-		base = 100
-	}
-}
 
 form_georgia_decision = {
 	# Decision - Unite Sakartvelo
