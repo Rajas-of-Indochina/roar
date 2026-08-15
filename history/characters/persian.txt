@@ -4611,26 +4611,6 @@ hunas_5 = {
 	}
 }
 
-248022 = {
-	name = "Nasir_Khusraw"
-	#dynasty = 0
-	religion = ismaili
-	culture = persian
-	##trait = physician
-	#trait = lifestyle_poet
-	trait = gregarious
-	trait = education_learning_2
-	1004.1.1 = {
-		birth = yes
-	}
-	1053.1.1 = {
-		#employer = 248007
-	}
-	1088.1.1 = {
-		death = yes
-	}
-}
-
 248044 = {
 	name = "Danush" # fictional local ruler
 	dynasty = 1059008
@@ -5052,10 +5032,57 @@ hunas_5 = {
 }
 
 ### Banijurids - removed for FP3 due to a more thurough implementation of their dynasty tree and titles; see sogdian.txt 
-# 248306
-# 248307
-# 248308
-# 248309
+#248306 = {
+#	name="Hasim"
+#	dynasty=1059103
+#	religion=ashari
+#	culture=persian
+#	800.1.1={
+#		birth=yes
+#	}
+#	857.1.1={
+#		death=yes
+#	}
+#}
+#248307 = {
+#	name="Dawud_ibn_al-Abbas"
+#	dynasty=1059103
+#	religion=ashari
+#	culture=persian
+#	father=248306
+#	822.1.1={
+#		birth=yes
+#	}
+#	873.1.1={
+#		death=yes
+#	}
+#}
+#248308 = {
+#	name="Muhammad_ibn_Ahmad"
+#	dynasty=1059103
+#	religion=ashari
+#	culture=persian
+#	father=248307
+#	853.1.1={
+#		birth=yes
+#	}
+#	899.1.1={
+#		death=yes
+#	}
+#}
+#248309 = {
+#	name="Ahmad_ibn_Muhammad"
+#	dynasty=1059103
+#	religion=ashari
+#	culture=persian
+#	father=248308
+#	870.1.1={
+#		birth=yes
+#	}
+#	908.1.1={
+#		death=yes
+#	}
+#}
 
 1059970 = {
 	name = "Vandad" # fictional son of Farrukhan
@@ -6832,6 +6859,29 @@ zartosht_4 = {
 		birth = yes
 	}
 	1163.1.1 = {
+		death = yes
+	}
+}
+
+sulayman_al_tajir_1 = { # Landless Wanderer adventurer
+	name = "Sulayman_al_Tajir"
+	dynasty = hchar_sirafi
+	religion = ashari
+	culture = persian
+	trait = education_stewardship_3
+	trait = gregarious
+	trait = shrewd
+	trait = temperate
+	trait = lifestyle_traveler
+	trait = journaller
+	836.1.1 = {
+		birth = yes
+		effect = {
+			set_culture = culture:persian
+			add_character_flag = do_not_generate_starting_family
+		}
+	}
+	898.1.1 = {
 		death = yes
 	}
 }

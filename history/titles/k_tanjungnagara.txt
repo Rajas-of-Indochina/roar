@@ -186,15 +186,26 @@ c_BOR_waringin = {
 	860.1.1 = {
 		government = wanua_government
 		holder = sea_bidayuh_waringin_01
-		liege = d_BOR_tanjungpura
+		tributary_of = {
+			suzerain = d_BOR_tanjungpura
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
 		holder = sea_bidayuh_waringin_02
+		tributary_of = {
+			suzerain = d_BOR_tanjungpura
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1170.1.1 = {
 		holder = sea_bidayuh_waringin_03
+		tributary_of = {
+			suzerain = d_BOR_tanjungpura
+			contract_group = tributary_mandala_tribal
+		}
 	}
 }
 
@@ -303,7 +314,7 @@ c_pinyuh = {
 		government = wanua_government
 		holder = sea_bidayuh_wijayapura_01
 		tributary_of = {
-			suzerain = d_BOR_tanjungpura
+			suzerain = d_wijayapura
 			contract_group = tributary_mandala_tribal
 		}
 	}

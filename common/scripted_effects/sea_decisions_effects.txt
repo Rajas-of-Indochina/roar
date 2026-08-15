@@ -359,11 +359,11 @@ reform_nanyue_decision_effect = {
 		title:k_champa = { set_de_jure_liege_title = title:e_nanyue }
 	}
 	else = {
-		title:d_vijaya = { set_de_jure_liege_title = title:k_annam }
-		title:d_amaravati = { set_de_jure_liege_title = title:k_annam }
-		title:d_tribhuvanadevi = { set_de_jure_liege_title = title:k_annam }
+		title:d_vijaya = { set_de_jure_liege_title = title:k_viet }
+		title:d_indrapura = { set_de_jure_liege_title = title:k_viet }
+		title:d_tribhuvanadevi = { set_de_jure_liege_title = title:k_viet }
 	}
-	title:k_annam = { set_de_jure_liege_title = title:e_nanyue }
+	title:k_viet = { set_de_jure_liege_title = title:e_nanyue }
 	title:k_nanyue_china = { set_de_jure_liege_title = title:e_nanyue }
 
 	if = {
@@ -593,7 +593,6 @@ reform_indo_hellenism_effect = {
 		}
 		save_scope_as = county
 		add_faith_minority_effect = {
-			COUNTY = scope:county
 			FAITH = faith:indo_hellenism
 			SIZE = small
 		}
@@ -711,7 +710,6 @@ indo_greek_culture_decision_effect = {
 				chance = 40
 				set_county_culture = culture:indo_greek
 				add_culture_minority_effect = {
-					COUNTY = scope:county
 					CULTURE = culture:indo_greek
 					SIZE = small
 				}
@@ -939,12 +937,10 @@ unite_bene_israel_effect = {
 			set_county_culture = culture:kochinim
 			set_county_faith = faith:malabarism
 			add_culture_minority_effect = {
-				COUNTY = scope:county
 				CULTURE = scope:old_culture
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				COUNTY = scope:county
 				FAITH = scope:old_faith
 				SIZE = small
 			}
@@ -1222,7 +1218,7 @@ rename_china_title_effect = {
 	    }
 	}
 	else_if = {
-	    limit = { any_held_title = { this = title:k_nanzhao } }
+	    limit = { any_held_title = { this = title:k_dali } }
 	    title:e_celestia_china = {
 	    	set_title_name = k_dali
 	    	##set_coa = e_min

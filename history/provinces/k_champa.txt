@@ -1,22 +1,25 @@
 ﻿# k_champa
-## d_amaravati ###################################
+## d_indrapura ###################################
 ### c_indrapura
-17353 = { # b_indrapura
+17353 = { # Indrapura AKA Dong Duong
+	# capital city of the kingdom of Champa from 875 AD until probably 12th century, as 982 AD possible conquest is not seen as highly improbable and possibly a story made up in later centuries
 	culture = cham
 	religion = chamic_shaivism
 
 	holding = temple_citadel_holding
 }
-17304 = { # b_yan_kaksmindra
+17304 = { # My Son
+	# Shaiva Hindu temples constructed between the 4th and the 13th century by the Kings of Champa
+	# location is not fully accurate but better than random province
 	holding = church_holding
 }
-17206 = { # b_ma_cek
+17206 = { # Ma Cek
 	holding = none
 }
-17267 = { # b_khang
+17267 = { # Khang
 	holding = none
 }
-17295 = { # b_haripura
+17295 = { # Haripura
 	holding = city_holding
 }
 
@@ -31,28 +34,6 @@
 	holding = none
 }
 17196 = { # b_dravapura
-	holding = none
-}
-
-### c_kon_tum
-17019 = { # b_kon_tum
-	culture = bahnar
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-17135 = { # b_ro_ngao
-	holding = none
-}
-
-### c_bahnar
-17025 = { # b_bahnar
-	culture = bahnar
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16885 = { # b_hayav
 	holding = none
 }
 
@@ -114,8 +95,8 @@
 
 
 ## d_tribhuvanadevi ###################################
-### c_visnupura_vn
-15145 = { # b_visnupura_vn
+### c_visnupura
+15145 = { # b_visnupura_champa
 	culture = cham
 	religion = chamic_shaivism
 
@@ -160,10 +141,17 @@
 ## d_panduranga ###################################
 ### c_panduranga
 16136 = { # b_bal_sri_banay
-	holding = temple_citadel_holding
 	culture = cham
-
 	religion = chamic_shaivism
+
+	holding = temple_citadel_holding
+
+	special_building_slot = po_klong_garai_01
+
+	# History
+	1210.1.1 = {
+		special_building = po_klong_garai_01 # Exact date is uncertain
+	}
 }
 16056 = { # b_virapura
 	holding = church_holding
@@ -172,7 +160,7 @@
 	holding = none
 }
 15980 = { # b_parik
-	holding = temple_citadel_holding
+	holding = city_holding
 }
 16162 = { # b_bal_hangao
 	holding = none
@@ -192,28 +180,15 @@
 	holding = city_holding
 }
 16451 = { # b_po_nagar
+	holding = church_holding
+
 	special_building_slot = po_nagar_01
 	special_building = po_nagar_01
-	holding = church_holding
 }
 16360 = { # b_irahani
 	holding = none
 }
 16244 = { # b_kam_ranh
-	holding = none
-}
-
-### c_lach
-16129 = { # b_k_ho
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16192 = { # b_sre
-	holding = none
-}
-16202 = { # b_da_don
 	holding = none
 }
 
@@ -232,79 +207,20 @@
 }
 
 
-## d_dagar ###################################
-### c_dagar
-16661 = { # b_yang_prong
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16759 = { # b_ploi_me
-	holding = none
-}
-
-### c_dak_lak
-16580 = { # b_krong_buk
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16503 = { # b_krong_ana
-	holding = none
-}
-16398 = { # b_krong_kma
-	holding = none
-}
-
-### c_jarai
-16939 = { # b_ia_krai
-	culture = bahnar
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16913 = { # b_ploi_kodur
-	holding = none
-}
-
-### c_ayun_pa
-16654 = { # b_drang_lai
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16715 = { # b_yang_mum
-	holding = none
-}
-16572 = { # b_bang_keng
-	holding = none
-}
-
-
-## d_sap ###################################
-### c_binh_dai
-15323 = { # b_trah_pung
+## d_baigaur ###################################
+### c_baigaur
+15752 = { # Baigaur
 	culture = bnam
 	religion = chamic_shaivism
 
-	holding = none
-}
-15455 = { # b_vung_gou
-	holding = city_holding
-}
-15419 = { # b_phsar_dek
-	holding = none
-}
+	holding = tribal_holding
 
-### c_baigaur
-15752 = { # b_baigaur
-	culture = cham
-	religion = chamic_shaivism
-
-	holding = temple_citadel_holding
+	# History
+	1020.1.1 = {
+		# Baigaur established in the 11th century by Champa
+		culture = cham
+		holding = temple_citadel_holding
+	}
 }
 15942 = { # b_balau
 	holding = none
@@ -313,17 +229,6 @@
 	holding = none
 }
 15830 = { # b_cay_gao
-	holding = none
-}
-
-### c_prey_rodum
-15952 = { # b_prey_rodum
-	culture = khmer
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-16051 = { # b_ba_ra
 	holding = none
 }
 
@@ -342,7 +247,35 @@
 }
 
 
-## d_ma_vn ###################################
+## d_mnong ###################################
+### c_mnong
+16359 = { # b_gar
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16503 = { # b_krong_ana
+	holding = none
+}
+16398 = { # b_krong_kma
+	holding = none
+}
+
+### c_dagar
+16661 = { # b_yang_prong
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16759 = { # b_ploi_me
+	holding = none
+}
+16580 = { # b_krong_buk
+	holding = none
+}
+
 ### c_cho_ro
 15989 = { # b_da_gui
 	culture = mnong
@@ -357,17 +290,6 @@
 	holding = none
 }
 
-### c_mnong
-16359 = { # b_gar
-	culture = mnong
-	religion = bahnar_pagan
-
-	holding = tribal_holding
-}
-16327 = { # b_si_to
-	holding = none
-}
-
 ### c_blao
 16069 = { # b_ngan
 	culture = stieng
@@ -379,5 +301,68 @@
 	holding = none
 }
 16160 = { # b_bao_lam
+	holding = none
+}
+
+### c_ayun_pa
+16654 = { # b_drang_lai
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16715 = { # b_yang_mum
+	holding = none
+}
+16572 = { # b_bang_keng
+	holding = none
+}
+
+### c_lach
+16129 = { # b_k_ho
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16192 = { # b_sre
+	holding = none
+}
+16202 = { # b_da_don
+	holding = none
+}
+
+
+## d_bahnar
+### c_bahnar
+17025 = { # Bahnar
+	culture = bahnar
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16885 = { # Hayav
+	holding = none
+}
+
+### c_kon_tum
+17019 = { # Kon Tum
+	culture = bahnar
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+17135 = { # Ro Ngao
+	holding = none
+}
+
+### c_jarai
+16939 = { # Ia Krai
+	culture = bahnar
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16913 = { # Ploi Kodur
 	holding = none
 }

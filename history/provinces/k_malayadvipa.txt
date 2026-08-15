@@ -64,7 +64,7 @@
 	culture = malay
 	religion = mahayana
 
-	holding = castle_holding
+	holding = temple_citadel_holding
 }
 11293 = { # Merangin
 	holding = none
@@ -106,6 +106,27 @@
 	holding = none
 }
 
+
+## d_SUM_dharmasraya
+### c_SUM_dharmasraya
+16699 = { # Dharmasraya
+	culture = malay
+	religion = mahayana
+
+	holding = temple_citadel_holding
+}
+11290 = { # Sungai Pagu
+	holding = none
+}
+16582 = { # Muaro Labuh
+	holding = none
+
+	special_building_slot = generic_gold_mines_01
+}
+16590 = { # Muara Bungo
+	holding = none
+}
+
 ### c_SUM_tebo
 16566 = { # Muara Tebo
 	culture = malay
@@ -119,46 +140,59 @@
 11289 = { # Tanah Garo
 	holding = none
 }
+16498 = { # Senemat
+	holding = none
+}
 
-
-## d_minangkabau
-### c_darek
+### c_SUM_minang_darek
 11284 = { # Pariangan
+	# oldest of all Minangkabau villages ; large ancient tomb inside it is said to belong to Tantejo Gurhano
 	culture = malay
 	religion = malayic
 
 	holding = tribal_holding
 
-	special_building_slot = sea_gold_mines_01
+	special_building_slot = generic_gold_mines_01
+
+	# History
+	# by the 13th century the region was mostly Hindu-Buddhist
 }
-16886 = { # Tanah Datar
+16886 = { # Pagaruyung
+	# capital seat of Pagaruyung Kingdom
 	holding = none
 }
 16793 = { # Singkarak
-	holding = none
-}
-17074 = { # Limapuluh Koto
+	# shares name with Lake Singkarak
 	holding = none
 }
 16947 = { # Agam
+	# represents land of modern Agam Regency ; potentially change name to Sianok
 	holding = none
 }
 
-### c_pariaman
-16698 = { # Padang Pariaman
+
+## d_SUM_minangkabau
+### c_SUM_minangkabau
+16698 = { # Padang
 	culture = malay
 	religion = malayic
 
 	holding = tribal_holding
+
+	# History
+	1078.1.1 = {
+		holding = temple_citadel_holding
+	}
 }
 16523 = { # Painan
 	holding = none
 }
 16908 = { # Maninjau
+	# named after Lake Maninjau
 	holding = none
 }
 
-### c_inderapura
+### c_SUM_riak_nan_berbedur
 16352 = { # Inderapura
 	culture = malay
 	religion = malayic
@@ -166,25 +200,6 @@
 	holding = tribal_holding
 }
 16173 = { # Mukomuko
-	holding = none
-}
-
-### c_SUM_dharmasraya
-16699 = { # Dharmasraya
-	culture = malay
-	religion = mahayana
-
-	holding = temple_citadel_holding
-
-	special_building_slot = sea_gold_mines_01
-}
-11290 = { # Sungai Pagu
-	holding = none
-}
-16582 = { # Muaro Labuh
-	holding = none
-}
-16777 = { # Sijunjung
 	holding = none
 }
 
@@ -204,20 +219,6 @@
 	holding = none
 }
 
-### c_SUM_bungo
-16590 = { # Muara Bungo
-	culture = malay
-	religion = malayic
-
-	holding = tribal_holding
-}
-16498 = { # Senemat
-	holding = none
-}
-16424 = { # Seling
-	holding = none
-}
-
 ### c_SUM_karang_brahi
 11291 = { # Karang Brahi
 	# 7th century Old Malay description was found here ; seems to have been important local power centre in early medieval period ; nowadays a village
@@ -231,7 +232,13 @@
 	# capital town of modern day Merangin
 	holding = none
 }
-16258 = { # Bukit Bungkul
+16344 = { # Air Hitam
+	holding = none
+}
+16258 = { # Bungkul
+	holding = none
+}
+16424 = { # Seling
 	holding = none
 }
 
@@ -242,46 +249,53 @@
 
 	holding = tribal_holding
 }
-16344 = { # Air Hitam
-	holding = none
-}
 16225 = { # Pemuncak
 	holding = none
 }
+16177 = { # Rupit
+	holding = none
+}
+11292 = { # Surulangun
+	holding = none
+}
 
 
-## d_siak
-### c_siak
-11272 = { # Siak Sri Indrapura
+## d_SUM_riau
+### c_SUM_muara_takus
+17074 = { # Muara Takus
 	culture = malay
-	religion = vajrayana
+	religion = mahayana
 
 	holding = temple_citadel_holding
+	special_building_slot = muaro_takus_01
+
+	# History
+	1070.1.1 = {
+		special_building = muaro_takus_01
+	}
 }
-11268 = { # Mandau
+17033 = { # Gunung Sahilan
+	holding = none
+}
+16970 = { # Lipat Kain
 	holding = none
 }
 17099 = { # Senapelan
 	holding = none
 }
-17160 = { # Perawang
-	holding = none
-}
-11273 = { # Bukit Batu
+11282 = { # Pangkalan Kerinci
 	holding = none
 }
 
-### c_SUM_muara_takus
+### c_SUM_kuntu
 11283 = { # Kuntu
+	# one of the earliest settlements in Riau region ; placement might be wrong
 	culture = malay
-	religion = mahayana
+	religion = malayic
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 }
-11276 = { # Teluk Meranti
-	holding = none
-}
-11282 = { # Kerinci
+16777 = { # Sijunjung
 	holding = none
 }
 
@@ -302,27 +316,60 @@
 	holding = none
 }
 
-### c_rokan
-11267 = { # Ujung Tanjung
+### c_SUM_kampar
+11272 = { # Siak Sri Indrapura
+	culture = malay
+	religion = vajrayana
+	holding = tribal_holding
+
+	# History
+	1166.1.1 = {
+		holding = temple_citadel_holding
+	}
+}
+17160 = { # Perawang
+	holding = none
+}
+11273 = { # Bukit Batu
+	holding = none
+}
+11276 = { # Teluk Meranti
+	holding = none
+}
+
+### c_SUM_pekanbaru
+17115 = { # Pekanbaru
 	culture = malay
 	religion = vajrayana
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 }
-17149 = { # Ujung Batu
-	holding = church_holding
-
-	special_building_slot = muaro_takus_01
-
-	# History
-	1067.1.1 = {
-		special_building = muaro_takus_01
-	}
-}
-17281 = { # Bagan Sinemba
+11269 = { # Tendun
 	holding = none
 }
+17149 = { # Ujung Batu
+	holding = none
+}
+
+### c_SUM_rokan
+11267 = { # Rokan
+	culture = malay
+	religion = vajrayana
+	holding = tribal_holding
+
+	# History
+	1166.1.1 = {
+		holding = temple_citadel_holding
+	}
+}
 17465 = { # Rupat
+	# Rupat Island
+	holding = none
+}
+17381 = { # Bagan Batu
+	holding = none
+}
+11268 = { # Mandau
 	holding = none
 }
 
@@ -337,25 +384,8 @@
 	holding = none
 }
 
-### c_kampar
-11269 = { # Tendun
-	culture = malay
-	religion = malayic
 
-	holding = tribal_holding
-}
-17115 = { # Petapahan
-	holding = none
-}
-17033 = { # Gunung Sahilan
-	holding = none
-}
-16970 = { # Lipat Kain
-	holding = none
-}
-
-
-## d_SUM_riau
+## d_SUM_riau_islands
 ### c_SUM_batam
 11277 = { # Batam
 	culture = seletar

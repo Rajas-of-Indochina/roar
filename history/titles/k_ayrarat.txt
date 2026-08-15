@@ -1667,6 +1667,17 @@ c_basiani = {
 	1064.1.1 = {
 		holder = pakourianos_2
 		liege = d_iberia_byzantine 
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					NOT = { has_dlc_feature = roads_to_power }
+				}
+				holder = {
+					change_government = feudal_government
+				}
+			}
+		}
 	}
 
 	# Battle of Manzikert - Turkish domination of the region

@@ -776,8 +776,8 @@ batuwara = {
 
 	character_modifier = {
 		name = holy_site_batuwara_effect_name
-		knight_effectiveness_mult = 0.2
-		prowess_per_piety_level = 1
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.1
 	}
 }
 lake_ranau = {
@@ -1145,6 +1145,54 @@ toba = {
 		name = holy_site_toba_effect_name
 		development_growth_factor = 0.05
 		domain_tax_mult = 0.02
+	}
+}
+
+#dempo = {
+	# Mount Dempo is a high stratovolcano with seven craters ; located near Pagar Alam
+#}
+
+krakatoa = {
+	# Mount Krakatoa is a powerful volcano surrounded by myth and legend, known for its destructive power
+	county = c_SUM_kabupaten_lampung
+	barony = b_SUM_Palas_Pasemah
+
+	character_modifier = {
+		name = holy_site_krakatoa_effect_name
+		prowess_per_piety_level = 1
+		knight_effectiveness_mult = 0.1
+		stress_loss_mult = -0.05
+	}
+}
+### ### ### ###
+
+
+### Other SEA ###
+bahnar = {
+	county = c_bahnar
+
+	character_modifier = {
+		name = holy_site_bahnar_effect_name
+		monthly_piety_gain_mult = 0.1
+	}
+}
+
+mnong = {
+	county = c_mnong
+
+	character_modifier = {
+		name = holy_site_mnong_effect_name
+		monthly_prestige_gain_mult = 0.1
+	}
+}
+
+stieng = {
+	county = c_senmonorom
+
+	character_modifier = {
+		name = holy_site_stieng_effect_name
+		same_faith_opinion = 5
+		enemy_hostile_scheme_success_chance_add = -5
 	}
 }
 ### ### ### ###

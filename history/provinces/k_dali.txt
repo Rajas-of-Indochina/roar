@@ -49,10 +49,16 @@
 			}
 		}
 		16844 = { # b_bi_ge
-			holding = church_holding
+			holding = castle_holding
 		}
 		16976 = { # b_ji_zu
-			holding = castle_holding
+			holding = church_holding
+
+			special_building_slot = jizu_shan_temples_01
+			# History
+			860.1.1 = {
+				special_building = jizu_shan_temples_01
+			}
 		}
 		16604 = { # b_shang_cheng
 			holding = church_holding
@@ -439,32 +445,6 @@
 		16261 = { # b_yi_hai
 			holding = none
 		}
-	# c_xuhen
-		18067 = { # b_qingxiguan
-            culture = qiang
-            religion = rrmeaism
-
-			holding = castle_holding
-       	}
-        18125 = { # shawan
-            holding = none
-       	}
-        18429 = { # b_qiongdongzhou
-            holding = none
-       	}
-	# c_yanjin
-        17790 = { # b_yanjin_2
-            culture = sichuan
-            religion = zhengyi
-
-            holding = castle_holding
-       	}
-        18013 = { # b_qianwei_2
-            #
-       	}
-        17842 = { # b_yibin_2
-            #
-       	}
 ## d_tuodong
 	### c_tuodong
 		16241 = { # b_si_cein

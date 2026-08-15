@@ -851,7 +851,7 @@
 
 144099 = {
 	name = "Qutb_al-Din_Muhammad"
-	dynasty = 101866
+	dynasty = 101866 # Khwarezmid
 	religion = "maturidi"
 	culture = "turkish"
 	father = 20713
@@ -865,7 +865,7 @@
 
 144100 = {
 	name = "Atsiz"
-	dynasty = 101866
+	dynasty = 101866 # Khwarezmid
 	religion = "maturidi"
 	culture = "turkish"
 	father = 144099
@@ -879,7 +879,7 @@
 
 144101 = {
 	name = "Il-Arslan"
-	dynasty = 101866
+	dynasty = 101866 # Khwarezmid
 	religion = "maturidi"
 	culture = "turkish"
 	father = 144100
@@ -1161,7 +1161,7 @@
 
 20713 = {
 	name = "Anushtigin"
-	dynasty = 101866
+	dynasty = 101866 # Khwarezmid
 	martial = 10
 	diplomacy = 8
 	intrigue = 4
@@ -1172,13 +1172,13 @@
 	trait = ambitious 
 	trait = desert_warrior
 	1041.1.1 = {
-		birth = "1041.1.1"
+		birth = yes
 	}
 	1065.1.1 = {
 		learn_language_of_culture = culture:khwarezmian
 	}
-	1096.1.1 = {
-		death = "1096.1.1"
+	1097.1.1 = {
+		death = yes
 	}
 }
 
@@ -1258,15 +1258,94 @@
 
 		effect = { #so they dont get rekt instantly by byzantium as they always do. Vanilla has it so its 13k vs 4k soldiers!!
 			add_gold = 100
-			spawn_army = { 
+			spawn_army = {
 				name = event_troop_default_name
-		        levies = 2000
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
 				men_at_arms = {
 					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
 					stacks = 2
 				}
-				location = root.capital_province
-				origin = root.capital_province
+				location = province:759
+				origin = province:759
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
+			}
+			
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
 			}
 		}
 	}
@@ -2043,7 +2122,7 @@
 230000 = {
 	name = "Tekish"
 	# AKA: Aladdin Tekis
-	dynasty = 101866
+	dynasty = 101866 # Khwarezmid
 	martial = 5
 	diplomacy = 6
 	intrigue = 4
@@ -2417,48 +2496,7 @@
 				location = province:4859
 				origin = province:4333
 			}
-			spawn_army = {
-				name = event_troop_default_name
-				levies = 500
-				men_at_arms = {
-					type = pikemen_unit
-					stacks = 5
-				}
-				men_at_arms = {
-					type = mangonel
-					stacks = 2
-				}
-				location = province:4859
-				origin = province:4333
-			}
-			spawn_army = {
-				name = event_troop_default_name
-				levies = 500
-				men_at_arms = {
-					type = pikemen_unit
-					stacks = 5
-				}
-				men_at_arms = {
-					type = mangonel
-					stacks = 2
-				}
-				location = province:4859
-				origin = province:4333
-			}
-			spawn_army = {
-				name = event_troop_default_name
-				levies = 500
-				men_at_arms = {
-					type = pikemen_unit
-					stacks = 5
-				}
-				men_at_arms = {
-					type = mangonel
-					stacks = 2
-				}
-				location = province:4859
-				origin = province:4333
-			}
+			add_prestige = 3000
 		}
 	}
 	1072.11.1 = {
@@ -5728,12 +5766,15 @@
 
 93050 = {
 	name = "Mahmud_Soltan"
-	dynasty = 101866
-	religion = "ashari"
+	dynasty = 101866 # Khwarezmid
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144101
 	1153.1.1 = {
 		birth = "1153.1.1"
+	}
+	1178.1.1 = {
+		employer = 188912 # Yelu Zhilugu
 	}
 	1193.1.1 = {
 		death = "1193.1.1"
@@ -5743,7 +5784,7 @@
 93052 = {
 	name = "Mohammed"  # Mohammed II Ala ed-Din of Khwarezmian Empire
 	dynasty = 101866 # Khwarezmid
-	religion = "ashari"
+	religion = "maturidi"
 	culture = "turkish"
 	father = 230000
 	1170.1.1 = {
@@ -5759,8 +5800,8 @@
 
 93053 = {
 	name = "Mingburnu Jalal ad-Din"
-	dynasty = 101866
-	religion = "ashari"
+	dynasty = 101866 # Khwarezmid
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93052
 	1190.1.1 = {
@@ -5769,7 +5810,7 @@
 	# TODO:
 	#1221.1.1 = {
 	#	effect = {add_rival = 125501 } #Hates Genghis
-		#}
+	#}
 	1231.1.1 = {
 		death = "1231.1.1"
 	}
@@ -5777,8 +5818,8 @@
 
 93054 = {
 	name = "Tiz_Shah"
-	dynasty = 101866
-	religion = "ashari"
+	dynasty = 101866 # Khwarezmid
+	religion = "maturidi"
 	culture = "turkish"
 	father = 93052
 	1192.1.1 = {
@@ -6652,8 +6693,8 @@
 
 93283 = {
 	name = "I_nal-Tegin"
-	dynasty = 101866
-	religion = "ashari"
+	dynasty = 101866 # Khwarezmid
+	religion = "maturidi"
 	culture = "turkish"
 	father = 144099
 	1100.1.1 = {
@@ -11016,10 +11057,10 @@ fictional_khwarezmian_turks_7 = {
 		birth = yes
 	}
 	936.1.1 = {
-	dynasty_house = house_seljuk
+		dynasty_house = house_seljuk
 	}
 	937.1.1 = {
-	dynasty_house = house_qiniq
+		dynasty_house = house_qiniq
 		death = yes
 	}
 }
@@ -11738,8 +11779,8 @@ fictional_khwarezmian_turks_7 = {
 }
 1229944 = {
 	name = "Atligh" #son of Atsiz, executed by Sanjar in 1139
-	dynasty = 101866
-	religion = ashari
+	dynasty = 101866 # Khwarezmid
+	religion = "maturidi"
 	culture = turkish #turkmen
 	father = 144100
 	1120.1.1 = {
@@ -12925,7 +12966,7 @@ ildeguzid_3 = {
 khwarezmid_1 = {
 	name = "Alishah"
 	dynasty = 101866 # Khwarezmid
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 230000
 	1166.1.1 = {
@@ -12939,7 +12980,7 @@ khwarezmid_1 = {
 khwarezmid_2 = {
 	name = "Malikshah"
 	dynasty = 101866 # Khwarezmid
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 230000
 	1167.1.1 = {
@@ -12953,7 +12994,7 @@ khwarezmid_2 = {
 khwarezmid_3 = {
 	name = "Toghan-Toghdi"
 	dynasty = 101866 # Khwarezmid
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 230000
 	1168.1.1 = {
@@ -12967,7 +13008,7 @@ khwarezmid_3 = {
 khwarezmid_4 = {
 	name = "Yunus"
 	dynasty = 101866 # Khwarezmid
-	religion = ashari
+	religion = "maturidi"
 	culture = turkish
 	father = 230000
 	1169.1.1 = {
@@ -13011,8 +13052,8 @@ danishmendid_1 = {
 		birth = yes
 	}
 	1052.1.1 = { #according to the stories he became a muslim after a legendary adventure to seek the truth
-	religion = "maturidi"
-	culture = "turkish"
+		religion = "maturidi"
+		culture = "turkish"
 	}
 	1066.6.1 = {
 		give_nickname = nick_danishmend
@@ -13372,7 +13413,7 @@ fictional_turkish_20 = {	#Oghuz in Cumania 1066
 	}
 }
 
-fictional_turkish_21 = {	#Herder 1178
+fictional_turkish_21 = {	#Chuvash 936
 	name = "Iprakhim"
 	religion = tengri_pagan
 	culture = chuvash

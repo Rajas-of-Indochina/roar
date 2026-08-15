@@ -20,7 +20,7 @@ on_game_start = {
 
 on_game_start_after_lobby = {
 	on_actions = {
-		RICE_fake_title_cleaner
+		# RICE_fake_title_cleaner
 	}
 }
 
@@ -179,7 +179,7 @@ acculturate_steppelads = {
 # 			limit = {
 # 				current_date < 902.1.1
 # 			}
-# 			title:k_nanzhao = {
+# 			title:k_dali = {
 # 				set_variable = nanzhao
 # 			}
 # 		}
@@ -188,7 +188,7 @@ acculturate_steppelads = {
 # 				current_date >= 902.1.1
 # 				current_date < 928.1.1
 # 			}
-# 			title:k_nanzhao = {
+# 			title:k_dali = {
 # 				set_variable = dachanghe
 # 			}
 # 		}
@@ -197,7 +197,7 @@ acculturate_steppelads = {
 # 				current_date >= 928.1.1
 # 				current_date < 929.1.1
 # 			}
-# 			title:k_nanzhao = {
+# 			title:k_dali = {
 # 				set_variable = datianxing
 # 			}
 # 		}
@@ -206,7 +206,7 @@ acculturate_steppelads = {
 # 				current_date >= 929.1.1
 # 				current_date < 937.1.1
 # 			}
-# 			title:k_nanzhao = {
+# 			title:k_dali = {
 # 				set_variable = dayining
 # 			}
 # 		}
@@ -242,12 +242,12 @@ set_court_languages = {
 		# 	title:e_nanzhao.holder = { set_court_language = language_chinese }
 		# }
 		# if = {
-		# 	limit = { exists = title:k_nanzhao.holder }
-		# 	title:k_nanzhao.holder = { set_court_language = language_chinese }
+		# 	limit = { exists = title:k_dali.holder }
+		# 	title:k_dali.holder = { set_court_language = language_chinese }
 		# }
 		# if = {
-		# 	limit = { exists = title:k_annam.holder }
-		# 	title:k_annam.holder = { set_court_language = language_chinese }
+		# 	limit = { exists = title:k_viet.holder }
+		# 	title:k_viet.holder = { set_court_language = language_chinese }
 		# }
 		if = {
 			limit = { exists = title:k_abkhazia.holder }

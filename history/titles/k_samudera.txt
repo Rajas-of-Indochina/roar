@@ -7,6 +7,10 @@ d_SUM_aceh = {
 	860.1.1 = {
 		government = mandala_government
 		holder = malay_lambri_01_fic	#fictional
+		tributary_of = {
+			suzerain = e_srivijaya
+			contract_group = tributary_mandala
+		}
 	}
 	#
 	1060.1.1 = {
@@ -176,10 +180,10 @@ c_SUM_aru = {
 
 c_SUM_nagur = {
 	860.1.1 = {
-		government = mandala_government
+		government = wanua_government
 		holder = sea_batak_nagur_01_fic	#fictional
 		tributary_of = {
-			suzerain = e_srivijaya
+			suzerain = c_SUM_aru
 			contract_group = tributary_mandala_tribal
 		}
 	}

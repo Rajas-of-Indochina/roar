@@ -1,0 +1,26 @@
+﻿@elephant = "gfx/interface/icons/culture_innovations/innovation_elephant.dds"
+@special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
+
+innovation_ballista_elephant = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_early_medieval
+	region = world_mainland_southeast_asia
+	icon = @elephant
+
+	unlock_maa = ballista_elephant
+
+	flag = global_maa
+}
+
+innovation_highland_horse_breeding = {
+	skill = martial
+	group = culture_group_military
+	culture_era = culture_era_tribal
+	region = world_innovation_highland_horse_breeding
+	icon = @special_maa_01
+
+	unlock_maa = nangchen_cavalry
+
+	flag = global_maa
+}

@@ -1,10 +1,5 @@
-﻿
-k_champa = {
+﻿k_champa = {
 	# vanilla development setup is so trash it feels like two people worked on it without ever talking to each other
-	#867.1.1 = { change_development_level = 26 }
-	#1066.1.1 = { change_development_level = 28 }
-	#1178.1.1 = { change_development_level = 30 }
-
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 14 }
 	1178.1.1 = { change_development_level = 26 }
@@ -13,7 +8,7 @@ k_champa = {
 	192.1.1 = {
 		holder = cham_antekings_01	#Sri Mara
 	}
-
+	#
 	380.1.1 = {
 		holder = cham_antekings_02	#Bhadravarman I
 	}
@@ -23,18 +18,16 @@ k_champa = {
 	417.1.1 = {
 		holder = cham_antekings_04	#Manorathavarman
 	}
-
+	#
 	510.1.1 = {
 		holder = cham_antekings_05	#Devavarman
 	}
 	526.1.1 = {
 		holder = cham_antekings_06	#Vijayavarman
 	}
-
 	529.1.1 = {
 		holder = cham_antekings_07	#Rudravarman I
 	}
-
 	572.1.1 = {
 		holder = cham_antekings_08	#Sambhuvarman
 	}
@@ -62,7 +55,6 @@ k_champa = {
 	731.1.1 = {
 		holder = cham_antekings_16	#Rudravarman II
 	}
-
 	757.1.1 = {
 		holder = cham_antekings_17	#Prithindravarman
 	}
@@ -82,8 +74,6 @@ k_champa = {
 		holder = cham_bhrgu_00	#Bhadravarman II
 		#sort of, it should still Vikrantavarman III, but we want to setup regnal number for Bhadravarman name
 	}
-
-	#867
 	854.1.1 = {
 		government = mandala_government
 		holder = cham_bhrgu_01	#Indravarman II
@@ -120,9 +110,7 @@ k_champa = {
 		holder = cham_bhrgu_08	#Indravarman IV
 	}
 	#
-	986.1.1 = {
-		holder = 0
-	}
+	# 983-986 events surrounding Liu Jizong are not seen as very historically viable
 	#
 	989.1.1 = {
 		holder = cham_champakingother_01	#Harivarman II
@@ -156,8 +144,6 @@ k_champa = {
 			contract_group = tributary_mandala
 		}
 	}
-
-	#1066
 	1061.1.1 = {
 		holder = cham_uroja_03	#Rudravarman III
 		tributary_of = {
@@ -198,300 +184,135 @@ k_champa = {
 	1166.1.1 = {
 		holder = cham_panduranga_03	#Jaya Harivarman II
 	}
-	#1178
 	1167.1.1 = {
 		holder = cham_panduranga_04	#Jaya Indravarman IV
 	}
 }
 
-d_tribhuvanadevi = {
-	867.1.1 = {
+
+## d_indrapura
+c_indrapura = {
+	867.1.1 = { change_development_level = 10 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 18 }
+
+	830.1.1 = {
 		government = mandala_government
-		holder = 0
+		holder = cham_bhrgu_00	#Bhadravarman II
+		liege = k_champa
 	}
-}
-	c_visnupura_vn = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 10 }
-
-		#Champa
-		867.1.1 = {
-			government = mandala_government
-			holder = cham_malinh_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = cham_malinh_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#Viet
-		1069.4.1 = {
-			holder = viet_ly_10
-			liege = k_viet
-		}
-		1178.1.1 = {
-			holder = viet_ly_25
-		}
+	854.1.1 = {
+		holder = cham_bhrgu_01	#Indravarman II
 	}
-	c_melhi = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 10 }
-
-		#Champa
-		867.1.1 = {
-			government = mandala_government
-			holder = cham_malinh_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = cham_malinh_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#Viet
-		1069.4.1 = {
-			holder = viet_ly_10
-			liege = k_viet
-		}
-		1178.1.1 = {
-			holder = viet_ly_25
-		}
+	898.1.1 = {
+		holder = cham_bhrgu_02	#Jaya Simhavarman I
 	}
-	c_kandarpapura = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 9 }
-
-		#867
-		854.1.1 = {
-			government = mandala_government
-			holder = cham_bhrgu_01	#Indravarman II
-			liege = k_champa
-		}
-		898.1.1 = {
-			holder = cham_bhrgu_02	#Jaya Simhavarman I
-		}
-		904.1.1 = {
-			holder = cham_bhrgu_03	#Saktivarman
-		}
-		905.1.1 = {
-			holder = cham_bhrgu_04	#Bhadravarman III
-		}
-		918.1.1 = {
-			holder = cham_bhrgu_05	#Indravarman III
-		}
-		959.1.1 = {
-			holder = cham_bhrgu_06	#Jaya Indravarman I
-		}
-		965.1.1 = {
-			holder = cham_bhrgu_07	#Paramesvaravarman I
-		}
-		982.1.1 = {
-			holder = cham_bhrgu_08	#Indravarman IV
-		}
-		986.1.1 = {
-			liege = 0
-		}
-
-		#1066
-		1066.1.1 = {
-			holder = cham_simhapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#1178
-		1178.1.1 = {
-			holder = cham_simhapura_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
+	904.1.1 = {
+		holder = cham_bhrgu_03	#Saktivarman
 	}
-# d_amaravati
-	c_indrapura = {
-		867.1.1 = { change_development_level = 10 }
-		1066.1.1 = { change_development_level = 12 }
-		1178.1.1 = { change_development_level = 18 }
-
-		#867
-		830.1.1 = {
-			government = mandala_government
-			holder = cham_bhrgu_00	#Bhadravarman II
-			liege = k_champa
-		}
-		854.1.1 = {
-			holder = cham_bhrgu_01	#Indravarman II
-		}
-		898.1.1 = {
-			holder = cham_bhrgu_02	#Jaya Simhavarman I
-		}
-		904.1.1 = {
-			holder = cham_bhrgu_03	#Saktivarman
-		}
-		905.1.1 = {
-			holder = cham_bhrgu_04	#Bhadravarman III
-		}
-		918.1.1 = {
-			holder = cham_bhrgu_05	#Indravarman III
-		}
-		959.1.1 = {
-			holder = cham_bhrgu_06	#Jaya Indravarman I
-		}
-		965.1.1 = {
-			holder = cham_bhrgu_07	#Paramesvaravarman I
-		}
-		982.1.1 = {
-			holder = cham_bhrgu_08	#Indravarman IV
-		}
-		986.1.1 = {
-			liege = 0
-		}
-
-		#1066
-		1066.1.1 = {
-			holder = cham_indrapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#1178
-		1178.1.1 = {
-			holder = cham_indrapura_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
+	905.1.1 = {
+		holder = cham_bhrgu_04	#Bhadravarman III
 	}
-	c_mahaparvata = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 9 }
-
-		#867
-		830.1.1 = {
-			government = mandala_government
-			holder = cham_bhrgu_00	#Bhadravarman II
-			liege = k_champa
-		}
-		854.1.1 = {
-			holder = cham_bhrgu_01	#Indravarman II
-		}
-		898.1.1 = {
-			holder = cham_bhrgu_02	#Jaya Simhavarman I
-		}
-		904.1.1 = {
-			holder = cham_bhrgu_03	#Saktivarman
-		}
-		905.1.1 = {
-			holder = cham_bhrgu_04	#Bhadravarman III
-		}
-		918.1.1 = {
-			holder = cham_bhrgu_05	#Indravarman III
-		}
-		959.1.1 = {
-			holder = cham_bhrgu_06	#Jaya Indravarman I
-		}
-		965.1.1 = {
-			holder = cham_bhrgu_07	#Paramesvaravarman I
-		}
-		982.1.1 = {
-			holder = cham_bhrgu_08	#Indravarman IV
-		}
-		986.1.1 = {
-			liege = 0
-		}
-
-		#1066
-		1066.1.1 = {
-			holder = cham_indrapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#1178
-		1178.1.1 = {
-			holder = cham_indrapura_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
+	918.1.1 = {
+		holder = cham_bhrgu_05	#Indravarman III
 	}
-	c_kon_tum = {
-		867.1.1 = { change_development_level = 1 }
-		1066.1.1 = { change_development_level = 2 }
-		1178.1.1 = { change_development_level = 4 }
-		860.1.1 = {
-			holder = bahnar006
-			government = anarchist_government
-		}
-		930.1.1 = {
-			holder = bahnar007
-		}
-		1060.1.1 = {
-			holder = bahnar008
-		}
-		1170.1.1 = {
-			holder = bahnar009
-		}
+	959.1.1 = {
+		holder = cham_bhrgu_06	#Jaya Indravarman I
 	}
-
-c_bahnar = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
-	860.1.1 = {
-		holder = bahnar006
+	965.1.1 = {
+		holder = cham_bhrgu_07	#Paramesvaravarman I
 	}
-	#
-	930.1.1 = {
-		holder = bahnar007
+	982.1.1 = {
+		holder = cham_bhrgu_08	#Indravarman IV
+	}
+	# 986 events have dubious historicity
+	986.1.1 = {
+		liege = 0
 	}
 	#
 	1060.1.1 = {
-		holder = bahnar008
+		holder = cham_indrapura_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
 	}
 	#
 	1170.1.1 = {
-		holder = bahnar009
+		holder = cham_indrapura_20_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
 	}
 }
 
-	c_simhapura = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 13 }
+c_simhapura = {
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 15 }
+
+	854.1.1 = {
+		government = mandala_government
+		holder = cham_bhrgu_01	#Indravarman II
+		liege = k_champa
+	}
+	898.1.1 = {
+		holder = cham_bhrgu_02	#Jaya Simhavarman I
+	}
+	904.1.1 = {
+		holder = cham_bhrgu_03	#Saktivarman
+	}
+	905.1.1 = {
+		holder = cham_bhrgu_04	#Bhadravarman III
+	}
+	918.1.1 = {
+		holder = cham_bhrgu_05	#Indravarman III
+	}
+	959.1.1 = {
+		holder = cham_bhrgu_06	#Jaya Indravarman I
+	}
+	965.1.1 = {
+		holder = cham_bhrgu_07	#Paramesvaravarman I
+	}
+	982.1.1 = {
+		holder = cham_bhrgu_08	#Indravarman IV
+	}
+	# 986 events have dubious historicity
+	986.1.1 = {
+		liege = 0
+	}
+	#
+	1060.1.1 = {
+		holder = cham_simhapura_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = cham_simhapura_20_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+}
+
+c_mahaparvata = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 9 }
 
 		#867
-		854.1.1 = {
+		830.1.1 = {
 			government = mandala_government
-			holder = cham_bhrgu_01	#Indravarman II
+			holder = cham_bhrgu_00	#Bhadravarman II
 			liege = k_champa
+		}
+		854.1.1 = {
+			holder = cham_bhrgu_01	#Indravarman II
 		}
 		898.1.1 = {
 			holder = cham_bhrgu_02	#Jaya Simhavarman I
@@ -514,32 +335,30 @@ c_bahnar = {
 		982.1.1 = {
 			holder = cham_bhrgu_08	#Indravarman IV
 		}
-		986.1.1 = {
-			liege = 0
-		}
-
-		#1066
-		1066.1.1 = {
-			holder = cham_simhapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#1178
-		1178.1.1 = {
-			holder = cham_simhapura_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
+	# 986 events have dubious historicity
+	986.1.1 = {
+		liege = 0
+	}
+	#
+	1060.1.1 = {
+		holder = cham_indrapura_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
 		}
 	}
+	#
+	1170.1.1 = {
+		holder = cham_indrapura_20_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+}
 
 
 d_vijaya = {
-	#867
 	867.1.1 = {
 		government = mandala_government
 		holder = cham_vijaya_01_fic	#fictional
@@ -548,62 +367,9 @@ d_vijaya = {
 			contract_group = tributary_mandala
 		}
 	}
-
-	#Champa capital at Vijaya ~980-1000
-	989.1.1 = {
-		holder = cham_champakingother_01	#Harivarman II
-		liege = k_champa
-	}
-	1007.1.1 = {
-		holder = cham_champakingother_03	#Harivarman III
-	}
-	1030.1.1 = {
-		holder = cham_champakingother_05	#Vikrantavarman IV
-	}
-	1041.1.1 = {
-		holder = cham_champakingother_06	#Jaya Simhavarman II
-	}
-	1044.1.1 = {
-		holder = cham_uroja_01	#Jaya Paramesvaravarman I
-	}
-	1060.1.1 = {
-		holder = cham_uroja_02	#Bhadravarman IV
-	}
-
-	#1066
-	1061.1.1 = {
-		holder = cham_uroja_03	#Rudravarman III
-	}
-	1074.1.1 = {
-		holder = cham_pralayeshvara_01	#Harivarman IV
-	}
-	1080.1.1 = {
-		holder = cham_pralayeshvara_02	#Jaya Indravarman II
-	}
-	1081.1.1 = {
-		holder = cham_pralayeshvara_03	#Paramabhodhisatva
-	}
-	1086.1.1 = {
-		holder = cham_pralayeshvara_02	#Jaya Indravarman II
-	}
-	1114.1.1 = {
-		holder = cham_pralayeshvara_04	#Harivarman V
-	}
-	1139.1.1 = {
-		holder = cham_pralayeshvara_05	#Jaya Indravarman III
-	}
-	1145.1.1 = {
-		holder = cham_panduranga_01	#Rudravarman IV
-	}
-	1147.1.1 = {
-		holder = cham_panduranga_02	#Jaya Harivarman I
-	}
-	1166.1.1 = {
-		holder = cham_panduranga_03	#Jaya Harivarman II
-	}
-	#1178
-	1167.1.1 = {
-		holder = cham_panduranga_04	#Jaya Indravarman IV
+	# Champa capital at Vijaya ~980-1000
+	930.1.1 = {
+		holder = 0
 	}
 }
 
@@ -612,7 +378,6 @@ c_vijaya = {
 	1066.1.1 = { change_development_level = 14 }
 	1178.1.1 = { change_development_level = 28 }
 
-	#867
 	867.1.1 = {
 		government = mandala_government
 		holder = cham_vijaya_01_fic	#fictional
@@ -622,7 +387,7 @@ c_vijaya = {
 		}
 	}
 
-	#Champa capital at Vijaya ~980-1000
+	# Champa capital at Vijaya ~980-1000
 	989.1.1 = {
 		holder = cham_champakingother_01	#Harivarman II
 		liege = k_champa
@@ -642,8 +407,6 @@ c_vijaya = {
 	1060.1.1 = {
 		holder = cham_uroja_02	#Bhadravarman IV
 	}
-
-	#1066
 	1061.1.1 = {
 		holder = cham_uroja_03	#Rudravarman III
 	}
@@ -674,97 +437,25 @@ c_vijaya = {
 	1166.1.1 = {
 		holder = cham_panduranga_03	#Jaya Harivarman II
 	}
-	#1178
 	1167.1.1 = {
 		holder = cham_panduranga_04	#Jaya Indravarman IV
 	}
 }
 
-c_ayun_pa = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
+c_aia_ru = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 10 }
 
-	860.1.1 = {
-		holder = mnong008
-		government = anarchist_government
-	}
-	#
-	930.1.1 = {
-		holder = mnong009
-	}
-	#
-	1060.1.1 = {
-		holder = mnong010
-	}
-	#
-	1170.1.1 = {
-		holder = mnong011
-	}
-}
-
-	c_aia_ru = {
-		867.1.1 = { change_development_level = 5 }
-		1066.1.1 = { change_development_level = 7 }
-		1178.1.1 = { change_development_level = 10 }
-
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = cham_kauthara_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#
-		1007.1.1 = {
-			holder = cham_champakingother_03	#Harivarman III
-		}
-		1030.1.1 = {
-			holder = cham_champakingother_05	#Vikrantavarman IV
-		}
-		1041.1.1 = {
-			holder = cham_champakingother_06	#Jaya Simhavarman II
-		}
-		1044.1.1 = {
-			holder = cham_uroja_01	#Jaya Paramesvaravarman I
-		}
-		1060.1.1 = {
-			holder = cham_uroja_02	#Bhadravarman IV
-		}
-
-		#1066
-		1061.1.1 = {
-			holder = cham_uroja_03	#Rudravarman III
-		}
-
-		#1178
-		1178.1.1 = {
-			holder = cham_kauthara_20_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-	}
-d_panduranga = {
-	#867
 	867.1.1 = {
 		government = mandala_government
-		holder = cham_panduranga_01_fic	#fictional
+		holder = cham_vijaya_01_fic	#fictional
 		tributary_of = {
 			suzerain = k_champa
 			contract_group = tributary_mandala
 		}
 	}
-
-	#Champa capital at Vijaya ~980-1000
-	989.1.1 = {
-		holder = cham_champakingother_01	#Harivarman II
-		liege = k_champa
-	}
+	#
 	1007.1.1 = {
 		holder = cham_champakingother_03	#Harivarman III
 	}
@@ -780,246 +471,17 @@ d_panduranga = {
 	1060.1.1 = {
 		holder = cham_uroja_02	#Bhadravarman IV
 	}
-
-	#1066
 	1061.1.1 = {
 		holder = cham_uroja_03	#Rudravarman III
 	}
-	1074.1.1 = {
-		holder = cham_pralayeshvara_01	#Harivarman IV
+	#
+	1178.1.1 = {
+		holder = cham_kauthara_20_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
 	}
-	1080.1.1 = {
-		holder = cham_pralayeshvara_02	#Jaya Indravarman II
-	}
-	1081.1.1 = {
-		holder = cham_pralayeshvara_03	#Paramabhodhisatva
-	}
-	1086.1.1 = {
-		holder = cham_pralayeshvara_02	#Jaya Indravarman II
-	}
-	1114.1.1 = {
-		holder = cham_pralayeshvara_04	#Harivarman V
-	}
-	1139.1.1 = {
-		holder = cham_pralayeshvara_05	#Jaya Indravarman III
-	}
-	1145.1.1 = {
-		holder = cham_panduranga_01	#Rudravarman IV
-	}
-	1147.1.1 = {
-		holder = cham_panduranga_02	#Jaya Harivarman I
-	}
-	1166.1.1 = {
-		holder = cham_panduranga_03	#Jaya Harivarman II
-	}
-	#1178
-	1167.1.1 = {
-		holder = cham_panduranga_04	#Jaya Indravarman IV
-	}
-}
-
-c_panduranga = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 7 }
-	1178.1.1 = { change_development_level = 11 }
-
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = cham_panduranga_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#Champa capital at Vijaya ~980-1000
-		989.1.1 = {
-			holder = cham_champakingother_01	#Harivarman II
-			liege = k_champa
-		}
-		1007.1.1 = {
-			holder = cham_champakingother_03	#Harivarman III
-		}
-		1030.1.1 = {
-			holder = cham_champakingother_05	#Vikrantavarman IV
-		}
-		1041.1.1 = {
-			holder = cham_champakingother_06	#Jaya Simhavarman II
-		}
-		1044.1.1 = {
-			holder = cham_uroja_01	#Jaya Paramesvaravarman I
-		}
-		1060.1.1 = {
-			holder = cham_uroja_02	#Bhadravarman IV
-		}
-
-		#1066
-		1061.1.1 = {
-			holder = cham_uroja_03	#Rudravarman III
-		}
-		1074.1.1 = {
-			holder = cham_pralayeshvara_01	#Harivarman IV
-		}
-		1080.1.1 = {
-			holder = cham_pralayeshvara_02	#Jaya Indravarman II
-		}
-		1081.1.1 = {
-			holder = cham_pralayeshvara_03	#Paramabhodhisatva
-		}
-		1086.1.1 = {
-			holder = cham_pralayeshvara_02	#Jaya Indravarman II
-		}
-		1114.1.1 = {
-			holder = cham_pralayeshvara_04	#Harivarman V
-		}
-		1139.1.1 = {
-			holder = cham_pralayeshvara_05	#Jaya Indravarman III
-		}
-		1145.1.1 = {
-			holder = cham_panduranga_01	#Rudravarman IV
-		}
-		1147.1.1 = {
-			holder = cham_panduranga_02	#Jaya Harivarman I
-		}
-		1166.1.1 = {
-			holder = cham_panduranga_03	#Jaya Harivarman II
-		}
-		#1178
-		1167.1.1 = {
-			holder = cham_panduranga_04	#Jaya Indravarman IV
-		}
-}
-
-c_baigaur = {
-	867.1.1 = { change_development_level = 8 }
-	1066.1.1 = { change_development_level = 13 }
-	1178.1.1 = { change_development_level = 22 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_baigaur_01_fic	#fictional
-			tributary_of = {
-				suzerain = d_angkor
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = khmer_baigaur_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_funan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = khmer_baigaur_20_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-}
-
-c_kraong = {
-	867.1.1 = { change_development_level = 8 }
-	1066.1.1 = { change_development_level = 13 }
-	1178.1.1 = { change_development_level = 22 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_baigaur_01_fic	#fictional
-			tributary_of = {
-				suzerain = d_angkor
-				contract_group = tributary_mandala
-			}
-		}
-		1066.1.1 = {
-			holder = khmer_baigaur_10_fic	#fictional
-			tributary_of = {
-				suzerain = k_funan
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = khmer_baigaur_20_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
-}
-
-c_pajai = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 10 }
-
-		#867
-		867.1.1 = {
-			government = mandala_government
-			holder = cham_panduranga_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_champa
-				contract_group = tributary_mandala
-			}
-		}
-
-		#Champa capital at Vijaya ~980-1000
-		989.1.1 = {
-			holder = cham_champakingother_01	#Harivarman II
-			liege = k_champa
-		}
-		1007.1.1 = {
-			holder = cham_champakingother_03	#Harivarman III
-		}
-		1030.1.1 = {
-			holder = cham_champakingother_05	#Vikrantavarman IV
-		}
-		1041.1.1 = {
-			holder = cham_champakingother_06	#Jaya Simhavarman II
-		}
-		1044.1.1 = {
-			holder = cham_uroja_01	#Jaya Paramesvaravarman I
-		}
-		1060.1.1 = {
-			holder = cham_uroja_02	#Bhadravarman IV
-		}
-
-		#1066
-		1061.1.1 = {
-			holder = cham_uroja_03	#Rudravarman III
-		}
-		1074.1.1 = {
-			holder = cham_pralayeshvara_01	#Harivarman IV
-		}
-		1080.1.1 = {
-			holder = cham_pralayeshvara_02	#Jaya Indravarman II
-		}
-		1081.1.1 = {
-			holder = cham_pralayeshvara_03	#Paramabhodhisatva
-		}
-		1086.1.1 = {
-			holder = cham_pralayeshvara_02	#Jaya Indravarman II
-		}
-		1114.1.1 = {
-			holder = cham_pralayeshvara_04	#Harivarman V
-		}
-		1139.1.1 = {
-			holder = cham_pralayeshvara_05	#Jaya Indravarman III
-		}
-		1145.1.1 = {
-			holder = cham_panduranga_01	#Rudravarman IV
-		}
-		1147.1.1 = {
-			holder = cham_panduranga_02	#Jaya Harivarman I
-		}
-		1166.1.1 = {
-			holder = cham_panduranga_03	#Jaya Harivarman II
-		}
-		#1178
-		1167.1.1 = {
-			holder = cham_panduranga_04	#Jaya Indravarman IV
-		}
 }
 
 c_kauthara = {
@@ -1070,119 +532,419 @@ c_kauthara = {
 }
 
 
-d_dagar = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
+## d_tribhuvanadevi
+c_visnupura = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 10 }
+
+		#Champa
+		867.1.1 = {
+			government = mandala_government
+			holder = cham_malinh_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_champa
+				contract_group = tributary_mandala
+			}
+		}
+		1066.1.1 = {
+			holder = cham_malinh_10_fic	#fictional
+			tributary_of = {
+				suzerain = k_champa
+				contract_group = tributary_mandala
+			}
+		}
+
+		#Viet
+		1069.4.1 = {
+			holder = viet_ly_10
+			liege = k_viet
+		}
+		1178.1.1 = {
+			holder = viet_ly_25
+		}
+}
+	
+c_melhi = {
+		867.1.1 = { change_development_level = 5 }
+		1066.1.1 = { change_development_level = 7 }
+		1178.1.1 = { change_development_level = 10 }
+
+		#Champa
+		867.1.1 = {
+			government = mandala_government
+			holder = cham_malinh_01_fic	#fictional
+			tributary_of = {
+				suzerain = k_champa
+				contract_group = tributary_mandala
+			}
+		}
+		1066.1.1 = {
+			holder = cham_malinh_10_fic	#fictional
+			tributary_of = {
+				suzerain = k_champa
+				contract_group = tributary_mandala
+			}
+		}
+
+		#Viet
+		1069.4.1 = {
+			holder = viet_ly_10
+			liege = k_viet
+		}
+		1178.1.1 = {
+			holder = viet_ly_25
+		}
 }
 
-c_dagar = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
+c_kandarpapura = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 12 }
 
 	860.1.1 = {
-		holder = mnong008
+		government = mandala_government
+		holder = sea_cham_kandarpapura_01_fic
+		liege = k_champa
 	}
 	#
-	930.1.1 = {
-		holder = mnong009
+	1066.1.1 = {
+		holder = cham_simhapura_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1178.1.1 = {
+		holder = cham_simhapura_20_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+}
+
+
+d_panduranga = {
+	860.1.1 = {
+		government = mandala_government
+		holder = cham_panduranga_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+	# Champa capital at Vijaya ~980-1000
+	980.1.1 = {
+		holder = 0
+	}
+}
+
+c_panduranga = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = cham_panduranga_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+
+	# Champa capital at Vijaya ~980-1000
+	989.1.1 = {
+		holder = cham_champakingother_01	#Harivarman II
+		liege = k_champa
+	}
+	1007.1.1 = {
+		holder = cham_champakingother_03	#Harivarman III
+	}
+	1030.1.1 = {
+		holder = cham_champakingother_05	#Vikrantavarman IV
+	}
+	1041.1.1 = {
+		holder = cham_champakingother_06	#Jaya Simhavarman II
+	}
+	1044.1.1 = {
+		holder = cham_uroja_01	#Jaya Paramesvaravarman I
+	}
+	1060.1.1 = {
+		holder = cham_uroja_02	#Bhadravarman IV
+	}
+	1061.1.1 = {
+		holder = cham_uroja_03	#Rudravarman III
+	}
+	1074.1.1 = {
+		holder = cham_pralayeshvara_01	#Harivarman IV
+	}
+	1080.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1081.1.1 = {
+		holder = cham_pralayeshvara_03	#Paramabhodhisatva
+	}
+	1086.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1114.1.1 = {
+		holder = cham_pralayeshvara_04	#Harivarman V
+	}
+	1139.1.1 = {
+		holder = cham_pralayeshvara_05	#Jaya Indravarman III
+	}
+	1145.1.1 = {
+		holder = cham_panduranga_01	#Rudravarman IV
+	}
+	1147.1.1 = {
+		holder = cham_panduranga_02	#Jaya Harivarman I
+	}
+	1166.1.1 = {
+		holder = cham_panduranga_03	#Jaya Harivarman II
+	}
+	1167.1.1 = {
+		holder = cham_panduranga_04	#Jaya Indravarman IV
+	}
+}
+
+c_pajai = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = cham_panduranga_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
+	}
+
+	# Champa capital at Vijaya ~980-1000
+	989.1.1 = {
+		holder = cham_champakingother_01	#Harivarman II
+		liege = k_champa
+	}
+	1007.1.1 = {
+		holder = cham_champakingother_03	#Harivarman III
+	}
+	1030.1.1 = {
+		holder = cham_champakingother_05	#Vikrantavarman IV
+	}
+	1041.1.1 = {
+		holder = cham_champakingother_06	#Jaya Simhavarman II
+	}
+	1044.1.1 = {
+		holder = cham_uroja_01	#Jaya Paramesvaravarman I
+	}
+	1060.1.1 = {
+		holder = cham_uroja_02	#Bhadravarman IV
+	}
+	1061.1.1 = {
+		holder = cham_uroja_03	#Rudravarman III
+	}
+	1074.1.1 = {
+		holder = cham_pralayeshvara_01	#Harivarman IV
+	}
+	1080.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1081.1.1 = {
+		holder = cham_pralayeshvara_03	#Paramabhodhisatva
+	}
+	1086.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1114.1.1 = {
+		holder = cham_pralayeshvara_04	#Harivarman V
+	}
+	1139.1.1 = {
+		holder = cham_pralayeshvara_05	#Jaya Indravarman III
+	}
+	1145.1.1 = {
+		holder = cham_panduranga_01	#Rudravarman IV
+	}
+	1147.1.1 = {
+		holder = cham_panduranga_02	#Jaya Harivarman I
+	}
+	1166.1.1 = {
+		holder = cham_panduranga_03	#Jaya Harivarman II
+	}
+	1167.1.1 = {
+		holder = cham_panduranga_04	#Jaya Indravarman IV
+	}
+}
+
+
+## d_baigaur
+c_baigaur = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 21 }
+
+	860.1.1 = {
+		government = wanua_government
+		holder = khmer_baigaur_01_fic	#fictional
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	#
 	1060.1.1 = {
-		holder = mnong010
+		government = mandala_government
+		holder = khmer_baigaur_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_funan
+			contract_group = tributary_mandala
+		}
 	}
 	#
 	1170.1.1 = {
-		holder = mnong011
+		holder = khmer_baigaur_20_fic	#fictional
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
+		}
 	}
 }
 
-c_dak_lak = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
+c_kraong = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
 
 	860.1.1 = {
-		holder = mnong012
+		government = mandala_government
+		holder = sea_cham_kraong_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_champa
+			contract_group = tributary_mandala
+		}
 	}
-	#
-	930.1.1 = {
-		holder = mnong013
+	# Champa capital at Vijaya ~980-1000
+	989.1.1 = {
+		holder = cham_champakingother_01	#Harivarman II
+		liege = k_champa
 	}
-	#
+	1007.1.1 = {
+		holder = cham_champakingother_03	#Harivarman III
+	}
+	1030.1.1 = {
+		holder = cham_champakingother_05	#Vikrantavarman IV
+	}
+	1041.1.1 = {
+		holder = cham_champakingother_06	#Jaya Simhavarman II
+	}
+	1044.1.1 = {
+		holder = cham_uroja_01	#Jaya Paramesvaravarman I
+	}
 	1060.1.1 = {
-		holder = mnong014
+		holder = cham_uroja_02	#Bhadravarman IV
 	}
-	#
-	1170.1.1 = {
-		holder = mnong015
+	1061.1.1 = {
+		holder = cham_uroja_03	#Rudravarman III
+	}
+	1074.1.1 = {
+		holder = cham_pralayeshvara_01	#Harivarman IV
+	}
+	1080.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1081.1.1 = {
+		holder = cham_pralayeshvara_03	#Paramabhodhisatva
+	}
+	1086.1.1 = {
+		holder = cham_pralayeshvara_02	#Jaya Indravarman II
+	}
+	1114.1.1 = {
+		holder = cham_pralayeshvara_04	#Harivarman V
+	}
+	1139.1.1 = {
+		holder = cham_pralayeshvara_05	#Jaya Indravarman III
+	}
+	1145.1.1 = {
+		holder = cham_panduranga_01	#Rudravarman IV
+	}
+	1147.1.1 = {
+		holder = cham_panduranga_02	#Jaya Harivarman I
+	}
+	1166.1.1 = {
+		holder = cham_panduranga_03	#Jaya Harivarman II
+	}
+	1167.1.1 = {
+		holder = cham_panduranga_04	#Jaya Indravarman IV
 	}
 }
 
-c_jarai = {
+
+d_mnong = {
 	867.1.1 = { change_development_level = 1 }
 	1066.1.1 = { change_development_level = 2 }
 	1178.1.1 = { change_development_level = 4 }
-
-	860.1.1 = {
-		holder = bahnar006
-	}
-	#
-	930.1.1 = {
-		holder = bahnar007
-	}
-	#
-	1060.1.1 = {
-		holder = bahnar008
-	}
-	#
-	1170.1.1 = {
-		holder = bahnar009
-	}
 }
 
 c_mnong = {
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
 	860.1.1 = {
-		holder = mnong012
-	}
-	#
-	930.1.1 = {
-		holder = mnong013
+		government = anarchist_government
+		holder = sea_mnong_mnong_01_fic	#fictional
 	}
 	#
 	1060.1.1 = {
-		holder = mnong014
+		holder = sea_mnong_mnong_03_fic	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = mnong015
+		holder = sea_mnong_mnong_04_fic	#fictional
 	}
 }
 
-c_blao = {  #ngan
-	867.1.1 = { change_development_level = 1 }
-	1066.1.1 = { change_development_level = 2 }
-	1178.1.1 = { change_development_level = 4 }
-
+c_dagar = {
 	860.1.1 = {
-		holder = stieng001
-	}
-	#
-	930.1.1 = {
-		holder = stieng002
+		government = anarchist_government
+		holder = sea_mnong_dagar_01_fic	#fictional
 	}
 	#
 	1060.1.1 = {
-		holder = stieng003
+		holder = sea_mnong_dagar_03_fic	#fictional
 	}
 	#
 	1170.1.1 = {
-		holder = stieng004
+		holder = sea_mnong_dagar_04_fic	#fictional
+	}
+}
+
+c_ayun_pa = {
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_mnong_ayun_pa_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = sea_mnong_ayun_pa_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_mnong_ayun_pa_04_fic	#fictional
+	}
+}
+
+c_blao = {
+	860.1.1 = {
+		government = anarchist_government
+		holder = sea_stieng_blao_01_fic	#fictional
+	}
+	#
+	1060.1.1 = {
+		holder = sea_stieng_blao_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_stieng_blao_04_fic	#fictional
 	}
 }
 
@@ -1192,34 +954,80 @@ c_lach = {
 	1178.1.1 = { change_development_level = 4 }
 
 	860.1.1 = {
-		holder = mnong004
-	}
-	930.1.1 = {
-		holder = mnong003
+		government = anarchist_government
+		holder = sea_mnong_lach_01_fic	#fictional
 	}
 	1060.1.1 = {
-		holder = mnong005
+		holder = sea_mnong_lach_03_fic	#fictional
 	}
 	1170.1.1 = {
-		holder = mnong007
+		holder = sea_mnong_lach_04_fic	#fictional
 	}
 }
 
 c_cho_ro = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 3 }
-	1178.1.1 = { change_development_level = 5 }
-
 	860.1.1 = {
-		holder = mnong004
+		government = anarchist_government
+		holder = sea_mnong_cho_ro_01_fic	#fictional
 	}
-	930.1.1 = {
-		holder = mnong003
-	}
+	#
 	1060.1.1 = {
-		holder = mnong005
+		holder = sea_mnong_cho_ro_03_fic	#fictional
 	}
+	#
 	1170.1.1 = {
-		holder = mnong007
+		holder = sea_mnong_cho_ro_04_fic	#fictional
+	}
+}
+
+
+d_bahnar = {
+	867.1.1 = { change_development_level = 1 }
+	1066.1.1 = { change_development_level = 2 }
+	1178.1.1 = { change_development_level = 4 }
+}
+
+c_bahnar = {
+	860.1.1 = {
+		holder = sea_bahnar_bahnar_01_fic
+		government = anarchist_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_bahnar_bahnar_03_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_bahnar_bahnar_04_fic
+	}
+}
+
+c_kon_tum = {
+	860.1.1 = {
+		holder = sea_bahnar_kon_tum_01_fic
+		government = anarchist_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_bahnar_kon_tum_03_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_bahnar_kon_tum_04_fic
+	}
+}
+
+c_jarai = {
+	860.1.1 = {
+		holder = sea_bahnar_jarai_01_fic
+		government = anarchist_government
+	}
+	#
+	1060.1.1 = {
+		holder = sea_bahnar_jarai_03_fic
+	}
+	#
+	1170.1.1 = {
+		holder = sea_bahnar_jarai_04_fic
 	}
 }

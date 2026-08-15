@@ -1,648 +1,728 @@
-﻿## d_aninditapura
-    ### c_angkor
-        16789 = { # b_hariharalaya
-            culture = khmer
-            religion = shaivism
+﻿# k_funan AKA Angkor
+## d_angkor
+### c_angkor
+16789 = { # Hariharalaya
+	# oen of the main Khamer cities and capital of Khmer states throughout history
+	culture = khmer
+	religion = shaivism
 
-            holding = temple_citadel_holding
-            special_building_slot = temples_angkor_01
+	holding = temple_citadel_holding
 
-            1150.1.1 = {
-                special_building = temples_angkor_01
-            }
-        }
-        16856 = { # b_kbal_spean
-            holding = church_holding
-        }
-        16738 = { # b_phnom_krom
-            holding = church_holding
-        }
-        16825 = { # b_nokor_pheas
-            holding = city_holding
-        }
-        11460 = { # b_isvarapura
-            holding = none
-        }
-        16688 = { # b_bakong
-            holding = church_holding
-        }
-    ### c_lingapura
-        16882 = { # b_lingapura
-            culture = chong
-            religion = samre_pagan
+	special_building_slot = temples_angkor_01
 
-            holding = tribal_holding
+	# History
+	1150.1.1 = {
+		special_building = temples_angkor_01
+	}
+}
+16815 = { # Tribhuvanamaheshvara AKA Banteay Srei
+	# location of Banteay Srei temple complex (not fully accurate on map)
+	holding = church_holding
+}
+16856 = { # Mahendraparvata
+	# ancient city of the Khmer Empire era ; sacred mountain of Phnom Kulen is situated nearby
+	holding = city_holding
+}
+16825 = { # Nokor Pheas
+	# site of ancient brick temple with modern monastery built atop of it ; moat survived to this day
+	holding = city_holding	# to represent a wider spread of Angkor
+}
+16738 = { # Phnom Krom
+	# location of 10th century Prasat Phnom Krom temple
+	holding = none
 
-            900.1.1 = {
-                holding = temple_citadel_holding
-                culture = khmer
-                religion = shaivism
-            }
-        }
-        16849 = { # b_tbaeng_meanchey
-            holding = none
+	# History
+	900.1.1 = {
+		# built around 900 AD by king Yasovarman I
+		holding = church_holding
+	}
+}
+16688 = { # Phnom Bakong
+	# temple dedicated to Shiva built at the end of the 9th century ; used to be main temple before Angkor Wat was built
+	holding = none
 
-            900.1.1 = {
-                holding = city_holding
-            }
-        }
-        16765 = { # b_khvav
-            holding = none
-        }
-        16775 = { # b_beng_mealea
-            holding = none
-        }
-        16867 = { # b_khna
-            holding = none
-        }
-    ### c_samraong
-        16995 = { # b_samraong
-            culture = chong
-            religion = samre_pagan
+	# History
+	895.1.1 = {
+		# built at the end of the 9th century by king Yasovarman I
+		holding = church_holding
+	}
+}
 
-            holding = tribal_holding
+### c_lingapura
+16882 = { # Lingapura AKA Koh Ker
+	# Served as capital for Jayavarman IV and was generally an important city despite region's sparse population
+	culture = khmer
+	religion = shaivism
 
-            900.1.1 = {
-                religion = shaivism
-            }
-        }
-        16951 = { # b_ampil
-            holding = none
-        }
-        16944 = { # b_varin
-            holding = none
-        }
-        16971 = { # b_trapeang
-            holding = none
-        }
-    ### c_prea_vihear
-        16957 = { # b_choam_ksant
-            culture = sambor
-            religion = shaivism
+	holding = temple_citadel_holding
+}
+16867 = { # Prasat Khna
+	# pre-Angkorian temple site dedicated to Vishnu
+	holding = church_holding
+}
+16775 = { # Beng Mealea AKA Boeng Mealea
+	# sandstone Hindu temple with some carvings depicting Buddhist motifs
+	holding = none
 
-            holding = tribal_holding
+	# History
+	1150.1.1 = {
+		# dated around early 12th century.
+		holding = church_holding
+	}
+}
+16765 = { # Khvav
+	# location unsure ; need to ask other devs
+	holding = none
+}
 
-            900.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        16952 = { # b_neak_buos
-            holding = none
-        }
-        16979 = { # b_prea_vihear
-            holding = none
+### c_prea_vihear
+16979 = { # Prea Vihear
+	# Hindu temple turned Buddhist temple, that served as key edifice of the Khmer Empire's spiritual life
+	culture = khmer
+	religion = shaivism
 
-            special_building_slot = preah_vihear_temple_01
+	holding = temple_citadel_holding
 
-            # History
-            1024.1.1 = {
-                holding = church_holding
-                special_building = preah_vihear_temple_01
-            }
-        }
+	special_building_slot = preah_vihear_temple_01
+
+	# History
+	1024.1.1 = {
+		special_building = preah_vihear_temple_01
+	}
+}
+16957 = { # Choam Khsant
+	# modern day district
+	holding = none
+}
+16952 = { # Neak Buos
+	# pre-Angkorian temple complex that experienced various new additions throughout history of Khmer Empire
+	holding = church_holding
+}
+16849 = { # Tbaeng Meanchey
+	# modern day district
+	holding = none
+}
+
+### c_samraong
+16995 = { # Samraong
+	# capital town of Oddar Meanchey ; unsure of its historical importance
+	culture = chong
+	religion = samre_pagan
+
+	holding = tribal_holding
+}
+16951 = { # Banteay Ampil
+	# village
+	holding = none
+}
+16944 = { # b_varin
+	holding = none
+}
+16971 = { # b_trapeang
+	holding = none
+}
+
+
 ## d_isanapura
-    ### c_sambor_prei_kuk
-        16568 = { # b_sambor_prei_kuk
-            culture = khmer
-            religion = shaivism
+### c_sambor_prei_kuk
+16568 = { # b_sambor_prei_kuk
+	culture = khmer
+	religion = shaivism
 
-            holding = temple_citadel_holding
-        }
-        16695 = { # b_preah_khan
-            holding = church_holding
-        }
-        16621 = { # b_phnom_yong
-            holding = none
-        }
-        16614 = { # b_balangk
-            holding = none
-        }
-        16509 = { # b_phnom_santouk
-            holding = none
-        }
-    ### c_amarendrapura
-        16171 = { # b_amarendrapura
-            culture = khmer
-            religion = shaivism
+	holding = temple_citadel_holding
+}
+16695 = { # b_preah_khan
+	holding = church_holding
 
-            holding = temple_citadel_holding
-        }
-        16389 = { # b_kampong_thma
-            holding = city_holding
-        }
-        16336 = { # b_han_cei
-            holding = none
-        }
-    ### c_kampong_kdei
-        16591 = { # b_kampong_kdei
-            culture = khmer
-            religion = shaivism
+	860.1.1 = {
+		special_building_slot = phnom_dek_mines_01
+	}
+	1178 = {
+		special_building = phnom_dek_mines_01
+	}
+}
+16621 = { # b_phnom_yong
+	holding = none
+}
+16614 = { # b_balangk
+	holding = none
+}
+16509 = { # b_phnom_santouk
+	holding = none
+}
 
-            holding = temple_citadel_holding
-        }
-        16517 = { # b_andet
-            holding = church_holding
-        }
-        16644 = { # b_pongro_leu
-            holding = none
-        }
-        16423 = { # b_srey
-            holding = none
-        }
+### c_amarendrapura
+16171 = { # b_amarendrapura
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+16389 = { # b_kampong_thma
+	holding = city_holding
+}
+16336 = { # b_han_cei
+	holding = none
+}
+
+### c_kampong_kdei
+16591 = { # b_kampong_kdei
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+16517 = { # b_andet
+	holding = church_holding
+}
+16644 = { # b_pongro_leu
+	holding = none
+}
+16423 = { # b_srey
+	holding = none
+}
+
+
 ## d_vyadhapura
-    ### c_angkor_borey
-        15829 = { # b_angkor_borey
-            culture = khmer
-            religion = shaivism
+### c_angkor_borey
+15829 = { # b_angkor_borey
+	culture = khmer
+	religion = shaivism
 
-            holding = temple_citadel_holding
-        }
-        15643 = { # b_phnom_bayong
-            holding = church_holding
-        }
-        15928 = { # b_neang_khmao
-            holding = church_holding
-        }
-    ### c_prey_rodum
-        15952 = { # b_prey_rodum
-            culture = khmer
-            religion = shaivism
+	holding = temple_citadel_holding
+}
+15643 = { # b_phnom_bayong
+	holding = church_holding
+}
+15928 = { # b_neang_khmao
+	holding = church_holding
+}
 
-            holding = temple_citadel_holding
-        }
-        16051 = { # b_ba_ra
-			holding = none
-        }
-    ### c_chum_kiri
-        15848 = { # b_chum_kiri
-            culture = bnam
-            religion = chamic_shaivism
+### c_prey_rodum
+15952 = { # b_prey_rodum
+	culture = khmer
+	religion = shaivism
 
-            holding = temple_citadel_holding
+	holding = temple_citadel_holding
+}
+16051 = { # b_ba_ra
+	holding = none
+}
 
-            # History
-            1000.1.1 = {
-                culture = khmer
-                religion = shaivism
-            }
-        }
-        15771 = { # b_angkor_chey
-            holding = city_holding
-        }
-        15712 = { # b_phnom_chhngok
-            holding = church_holding
-        }
-        15656 = { # b_banteay_meas
-            holding = temple_citadel_holding
-        }
-    ### c_kracheh_nokor
-        16224 = { # b_tbong_khmum
-            culture = khmer
-            religion = shaivism
+### c_chum_kiri
+15848 = { # b_chum_kiri
+	culture = khmer
+	religion = shaivism
 
-            holding = temple_citadel_holding
-        }
-        16181 = { # b_memot
-            holding = none
-        }
-        16287 = { # b_chhloung
-            holding = none
-        }
-    ### c_vyadhapura
-        15856 = { # b_kiri_vong
-            culture = khmer
-            religion = shaivism
+	holding = temple_citadel_holding
 
-            holding = temple_citadel_holding
+	# History
+}
+15771 = { # b_angkor_chey
+	holding = city_holding
+}
+15712 = { # b_phnom_chhngok
+	holding = church_holding
+}
+15656 = { # b_banteay_meas
+	holding = temple_citadel_holding
+}
 
-            # History
-		}
-        16128 = { # b_preah_theat_baray
-			holding = none
-        }
-        16014 = { # b_prasat_sang
-            holding = church_holding
-        }
-        15911 = { # b_popel
-            holding = none
-        }
-        16086 = { # b_ou_reang_ov
-            holding = none
-        }
+### c_kracheh_nokor
+16224 = { # b_tbong_khmum
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+16181 = { # b_memot
+	holding = none
+}
+16287 = { # b_chhloung
+	holding = none
+}
+ 
+### c_vyadhapura
+15856 = { # b_kiri_vong
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+}
+16128 = { # b_preah_theat_baray
+	holding = none
+}
+16014 = { # b_prasat_sang
+	holding = church_holding
+}
+15911 = { # b_popel
+	holding = none
+}
+16086 = { # b_ou_reang_ov
+	holding = none
+}
+
+### c_prey_rodum
+15952 = { # b_prey_rodum
+	culture = khmer
+	religion = shaivism
+
+	holding = castle_holding
+}
+16051 = { # b_ba_ra
+	holding = none
+}
+
+
 ## d_battambang
-    ### c_bakan
-        16455 = { # b_bakan
-            culture = chong
-            religion = samre_pagan
+### c_bakan
+16455 = { # b_bakan
+	culture = chong
+	religion = samre_pagan
 
-            holding = tribal_holding
+	holding = tribal_holding
 
-            # History
-            900.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        16643 = { # b_baset
-            holding = none
-        }
-        16486 = { # b_banan
-            holding = none
-        }
-    ### c_pailin
-        16577 = { # b_pailin
-            culture = chong
-            religion = samre_pagan
+	# History
+	900.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+16643 = { # b_baset
+	holding = none
+}
+16486 = { # b_banan
+	holding = none
+}
 
-            holding = tribal_holding
+### c_pailin
+16577 = { # b_pailin
+	culture = chong
+	religion = samre_pagan
 
-            # History
-            900.1.1 = {
-                religion = shaivism
-            }
-        }
-        16579 = { # b_sneung
-            holding = none
-        }
-        16485 = { # b_samlout
-            holding = none
-        }
-    ### c_neang
-        16788 = { # b_neang
-            culture = chong
-            religion = samre_pagan
+	holding = tribal_holding
 
-            holding = temple_citadel_holding
+	# History
+	900.1.1 = {
+		religion = shaivism
+	}
+}
+16579 = { # b_sneung
+	holding = none
+}
+16485 = { # b_samlout
+	holding = none
+}
 
-            # History
-            900.1.1 = {
-                religion = shaivism
-            }
-        }
-        16665 = { # b_sampav
-            holding = none
-        }
-        16694 = { # b_ek_phnom
-            holding = church_holding
-        }
-        16692 = { # b_phnom_proek
-            holding = none
-        }
-    ### c_chhmar
-        16842 = { # b_chhmar
-            culture = chong
-            religion = samre_pagan
+### c_neang
+16788 = { # b_neang
+	culture = chong
+	religion = samre_pagan
 
-            holding = tribal_holding
+	holding = temple_citadel_holding
 
-            # History
-            900.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        16821 = { # b_phnom_srok
-            holding = none
-        }
-        16845 = { # b_baos_sbov
-            holding = none
-        }
+	# History
+	900.1.1 = {
+		religion = shaivism
+	}
+}
+16665 = { # b_sampav
+	holding = none
+}
+16694 = { # b_ek_phnom
+	holding = church_holding
+}
+16692 = { # b_phnom_proek
+	holding = none
+}
+
+### c_chhmar
+16842 = { # b_chhmar
+	culture = chong
+	religion = samre_pagan
+
+	holding = tribal_holding
+
+	# History
+	900.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+16821 = { # b_phnom_srok
+	holding = none
+}
+16845 = { # b_baos_sbov
+	holding = none
+}
+
+
 ## d_dviradapura
-	### c_dviradapura
-		16019 = { # b_dviradapura
-			culture = khmer
-			religion = shaivism
+### c_dviradapura
+16019 = { # b_dviradapura
+	culture = khmer
+	religion = shaivism
 
-			holding = temple_citadel_holding
-		}
-		16153 = { # b_longvek
-            holding = city_holding
-        }
-		16368 = { # b_kampong_chhnang
-            holding = city_holding
-        }
-	### c_pursat
-        16384 = { # b_pursat
-            culture = khmer
-            religion = shaivism
+	holding = temple_citadel_holding
+}
+16153 = { # b_longvek
+	holding = city_holding
+}
+16368 = { # b_kampong_chhnang
+	holding = city_holding
+}
 
-            holding = temple_citadel_holding
-        }
-        16309 = { # b_phnom_kravanh
-            holding = church_holding
-        }
-        16463 = { # b_banteay_dei
-            holding = temple_citadel_holding
-        }
-        16250 = { # b_phumi_rovieng
-            holding = none
-        }
-    ### c_aoral
-        16117 = { # b_phnom_aoral
-            culture = khmer
-            religion = shaivism
+### c_pursat
+16384 = { # b_pursat
+	culture = khmer
+	religion = shaivism
 
-            holding = temple_citadel_holding
-        }
-        15961 = { # b_phnom_sruoch
-            holding = none
-        }
-        16023 = { # b_chbar_mon
-            holding = none
-        }
+	holding = temple_citadel_holding
+}
+16309 = { # b_phnom_kravanh
+	holding = church_holding
+}
+16463 = { # b_banteay_dei
+	holding = temple_citadel_holding
+}
+16250 = { # b_phumi_rovieng
+	holding = none
+}
+
+### c_aoral
+16117 = { # b_phnom_aoral
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+15961 = { # b_phnom_sruoch
+	holding = none
+}
+16023 = { # b_chbar_mon
+	holding = none
+}
+
+
 ## d_can_tho
-    ### c_ca_mau
-        15376 = { # b_kottinagara
-            culture = bnam
-            religion = chamic_shaivism
+### c_ca_mau
+15376 = { # b_kottinagara
+	culture = bnam
+	religion = shaivism
 
-            holding = temple_citadel_holding
-        }
-        15334 = { # b_prey_kin
-            holding = city_holding
-        }
-        15584 = { # b_an_giang
-            holding = church_holding
-        }
-        15439 = { # b_kien_giang
-            holding = temple_citadel_holding
-        }
-        15072 = { # b_ke_mot
-            holding = none
-        }
-    ### c_binh_dai
-		15323 = { # b_trah_pung
-            culture = bnam
-            religion = chamic_shaivism
+	holding = temple_citadel_holding
 
-            holding = temple_citadel_holding
+	# History
+	1050.1.1 = {
+		culture = khmer
+	}
+}
+15334 = { # b_prey_kin
+	holding = city_holding
+}
+15584 = { # b_an_giang
+	holding = church_holding
+}
+15439 = { # b_kien_giang
+	holding = temple_citadel_holding
+}
+15072 = { # b_ke_mot
+	holding = none
+}
 
-            # History
-            1050.1.1 = {
-                culture = khmer
-                religion = shaivism
-            }
-        }
-		15455 = { # b_vung_gou
-            holding = temple_citadel_holding
-        }
-        15419 = { # b_phsar_dek
-            holding = none
-        }
-    ### c_sadek
-        15585 = { # b_sadek
-            culture = bnam
-            religion = chamic_shaivism
+### c_binh_dai
+15323 = { # b_trah_pung
+	culture = bnam
+	religion = shaivism
 
-            holding = temple_citadel_holding
-        }
-        15713 = { # b_mot_chrouk
-            holding = church_holding
-        }
-        15751 = { # b_cho_lon
-            holding = none
-        }
-    ### c_prey_rusey
-        15074 = { # b_soc_trang
-            culture = bnam
-            religion = chamic_shaivism
+	holding = temple_citadel_holding
 
-            holding = temple_citadel_holding
-        }
-        17809 = { # b_ca_mau
-            holding = none
-        }
-        15073 = { # b_bac_lieu
-            holding = none
-        }
+	# History
+	1050.1.1 = {
+		culture = khmer
+	}
+}
+15455 = { # b_vung_gou
+	holding = city_holding
+}
+15419 = { # b_phsar_dek
+	holding = none
+}
+
+### c_sadek
+15585 = { # b_sadek
+	culture = bnam
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+15713 = { # b_mot_chrouk
+	holding = church_holding
+}
+15751 = { # b_cho_lon
+	holding = none
+}
+
+### c_prey_rusey
+15074 = { # b_soc_trang
+	culture = bnam
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+17809 = { # b_ca_mau
+	holding = none
+}
+15073 = { # b_bac_lieu
+	holding = none
+}
+
+
 ## d_ban_lung
-    ### c_mondul_kiri
-        16549 = { # b_mondul_kiri
-            culture = mnong
-            religion = bahnar_pagan
+### c_mondul_kiri
+16549 = { # b_mondul_kiri
+	culture = mnong
+	religion = bahnar_pagan
 
-            holding = tribal_holding
-        }
-        16628 = { # b_kaoh_nheaek
-            holding = none
-        }
-        16571 = { # b_dei_ey
-            holding = none
-        }
-    ### c_senmonorom
-        16346 = { # b_senmonorom
-            culture = stieng
-            religion = bahnar_pagan
+	holding = tribal_holding
+}
+16628 = { # b_kaoh_nheaek
+	holding = none
+}
+16571 = { # b_dei_ey
+	holding = none
+}
 
-            holding = tribal_holding
-        }
-        16469 = { # b_pechr_chenda
-            holding = none
-        }
-    ### c_ta_veang
-        16918 = { # b_ta_veang
-            culture = mnong
-            religion = bahnar_pagan
+### c_senmonorom
+16346 = { # b_senmonorom
+	culture = stieng
+	religion = bahnar_pagan
 
-            holding = tribal_holding
-        }
-        16753 = { # b_ban_lung
-            holding = none
-        }
-        16757 = { # b_koun_mom
-            holding = none
-        }
+	holding = tribal_holding
+}
+16469 = { # b_pechr_chenda
+	holding = none
+}
+16327 = { # b_si_to
+	holding = none
+}
+
+### c_ta_veang
+16918 = { # b_ta_veang
+	culture = mnong
+	religion = bahnar_pagan
+
+	holding = tribal_holding
+}
+16753 = { # b_ban_lung
+	holding = none
+}
+16757 = { # b_koun_mom
+	holding = none
+}
+
+
 ## d_koh_kong
-    ### c_koh_kong
-        15878 = { # b_koh_kong
-            culture = chong
-            religion = samre_pagan
+### c_koh_kong
+15878 = { # b_koh_kong
+	culture = chong
+	religion = samre_pagan
 
-            holding = tribal_holding
+	holding = tribal_holding
 
-            # History
-            1000.1.1 = {
-                holding = temple_citadel_holding
-            }
-        }
-        15960 = { # b_srae_ambel
-            holding = none
-        }
-    ### c_khemara_phoumin
-        16076 = { # b_khemara_phoumin
-            culture = chong
-            religion = samre_pagan
+	# History
+	1000.1.1 = {
+		holding = temple_citadel_holding
+	}
+}
+15960 = { # b_srae_ambel
+	holding = none
+}
 
-            holding = tribal_holding
+### c_khemara_phoumin
+16076 = { # b_khemara_phoumin
+	culture = chong
+	religion = samre_pagan
 
-            # History
-            900.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        16116 = { # b_thma_bang
-            holding = none
-        }
-        16281 = { # b_veal_veaeng
-            holding = none
-        }
-    ### c_ream
-        15473 = { # b_ream
-            culture = chong
-            religion = samre_pagan
+	holding = tribal_holding
 
-            holding = tribal_holding
+	# History
+	900.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+16116 = { # b_thma_bang
+	holding = none
+}
+16281 = { # b_veal_veaeng
+	holding = none
+}
 
-            # History
-            900.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        15871 = { # b_kampong_seila
-            holding = none
-        }
+### c_ream
+15473 = { # b_ream
+	culture = chong
+	religion = samre_pagan
+
+	holding = tribal_holding
+
+	# History
+	900.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+15871 = { # b_kampong_seila
+	holding = none
+}
+
+
 ## d_sambhupura
-    ### c_sambhupura
-        16564 = { # b_sambhupura
-            culture = sambor
-            religion = shaivism
+### c_sambhupura
+16564 = { # b_sambhupura
+	culture = sambor
+	religion = shaivism
 
-            holding = temple_citadel_holding
+	holding = temple_citadel_holding
 
-            # History
-            900.1.1 = {
-                culture = khmer
-            }
-        }
-        16670 = { # b_koh_krieng
-            holding = none
-        }
-        16459 = { # b_kracheh_nokor
-            holding = city_holding
-        }
-        16426 = { # b_preaek_prasab
-            holding = church_holding
-        }
-        16539 = { # b_banteay_chrouy
-            holding = temple_citadel_holding
-        }
-    ### c_phnom_preah_theat
-        16766 = { # b_phnom_preah_theat
-            culture = sambor
-            religion = shaivism
-            holding = tribal_holding
+	# History
+	900.1.1 = {
+		culture = khmer
+	}
+}
+16670 = { # b_koh_krieng
+	holding = none
+}
+16459 = { # b_kracheh_nokor
+	holding = city_holding
+}
+16426 = { # b_preaek_prasab
+	holding = church_holding
+}
+16539 = { # b_banteay_chrouy
+	holding = temple_citadel_holding
+}
 
-            # History
-            900.1.1 = {
-                culture = khmer
-            }
-            1000.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        16938 = { # b_sandepheap
-            holding = none
-        }
-        16846 = { # b_preak_meas
-            holding = none
-        }
-    ### c_thala_borivat
-        16739 = { # b_thala_borivat
-            culture = sambor
-            religion = shaivism
+### c_phnom_preah_theat
+16766 = { # b_phnom_preah_theat
+	culture = sambor
+	religion = shaivism
+	holding = tribal_holding
 
-            holding = tribal_holding
+	# History
+	900.1.1 = {
+		culture = khmer
+	}
+	1000.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+16938 = { # b_sandepheap
+	holding = none
+}
+16846 = { # b_preak_meas
+	holding = none
+}
 
-            # History
-            1050.1.1 = {
-                culture = khmer
-                religion = shaivism
-                holding = temple_citadel_holding
-            }
-        }
-        16922 = { # b_chheab
-            holding = none
-        }
-        16828 = { # b_mlu_prey
-            holding = none
-        }
+### c_thala_borivat
+16739 = { # b_thala_borivat
+	culture = sambor
+	religion = shaivism
+
+	holding = tribal_holding
+
+	# History
+	1050.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+16922 = { # b_chheab
+	holding = none
+}
+16828 = { # b_mlu_prey
+	holding = none
+}
+
+
 ## d_chan_kabui
-	### c_chan_kabui
-		16484 = { # b_chan_kabui
-			culture = chong
-			religion = samre_pagan
+### c_chan_kabui
+16484 = { # b_chan_kabui
+	culture = chong
+	religion = samre_pagan
 
-			holding = tribal_holding
+	holding = tribal_holding
 
-			# History
-			900.1.1 = {
-				culture = khmer
-				religion = shaivism
+	# History
+	900.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+16208 = { # b_trat
+	holding = none
+}
+16432 = { # b_bo_rai
+	holding = none
+}
 
-				holding = temple_citadel_holding
-			}
-		}
-		16208 = { # b_trat
-			holding = none
-		}
-		16432 = { # b_bo_rai
-			holding = none
-		}
-	### c_prachinburi
-		16901 = { # b_sri_mahosot
-			culture = mon
-			religion = theravada
+### c_prachinburi
+16901 = { # b_sri_mahosot
+	culture = mon
+	religion = theravada
 
-			holding = temple_citadel_holding
-		}
-        16963 = { # b_lablae
-            holding = none
-        }
-		16787 = { # b_stoeng_chraw
-			holding = none
-		}
-        16814 = { # b_paet_riu
-            holding = none
-        }
-	### c_kabin_buri
-		16902 = { # b_kabin_buri
-			culture = mon
-			religion = theravada
+	holding = temple_citadel_holding
+}
+16963 = { # b_lablae
+	holding = none
+}
+16787 = { # b_stoeng_chraw
+	holding = none
+}
+16814 = { # b_paet_riu
+	holding = none
+}
 
-			holding = temple_citadel_holding
-		}
-		16782 = { # b_sanam_chai_khet
-			holding = none
-		}
-		16687 = { # b_phra_stoeng
-			holding = none
-		}
-		16848 = { # b_phrom_hod
-			holding = none
-		}
-	### c_mueang_phra_rot
-		16627 = { # b_mueang_phra_rot
-			culture = mon
-			religion = theravada
+### c_kabin_buri
+16902 = { # b_kabin_buri
+	culture = mon
+	religion = theravada
 
-			holding = temple_citadel_holding
-		}
-		16538 = { # b_rayong
-			holding = none
-		}
-		16708 = { # b_phya_re
-			holding = none
-		}
-        16633 = { # b_klong_phlu
-            holding = none
-        }
+	holding = temple_citadel_holding
+}
+16782 = { # b_sanam_chai_khet
+	holding = none
+}
+16687 = { # b_phra_stoeng
+	holding = none
+}
+16848 = { # b_phrom_hod
+	holding = none
+}
+
+### c_mueang_phra_rot
+16627 = { # b_mueang_phra_rot
+	culture = mon
+	religion = theravada
+
+	holding = temple_citadel_holding
+}
+16538 = { # b_rayong
+	holding = none
+}
+16708 = { # b_phya_re
+	holding = none
+}
+16633 = { # b_klong_phlu
+	holding = none
+}

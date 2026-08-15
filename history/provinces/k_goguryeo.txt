@@ -150,19 +150,19 @@
 	holding = castle_holding
 }
 17781 = { # b_LIAO_shicheng
-
+	holding = none
 }
 11794 = { # b_zhuanghe
-
+	holding = none
 }
 11791 = { # b_dandong
-
+	holding = none
 }
 11792 = { # b_dulizhen
-
+	holding = none
 }
 11793 = { # b_beisha
-
+	holding = none
 }
 
 ### c_shenzhou_jilin
@@ -177,16 +177,16 @@
 	holding = castle_holding
 }
 18173 = { # b_nansu
-
+	holding = none
 }
 11771 = { # b_Liao_Shuangzhou
-
+	holding = none
 }
 11785 = { # b_Liao_Shenyang
-
+	holding = none
 }
 11784 = { # b_Liao_Tangzhou
-
+	holding = none
 }
 
 ### c_LIAO_shenyang
@@ -197,10 +197,10 @@
 	holding = castle_holding
 }
 11787 = { # b_Liao_Haizhou
-
+	holding = none
 }
 18040 = { # b_gaimou
-
+	holding = none
 }
 
 ### c_LIAO_zhenzhou
@@ -211,10 +211,10 @@
 	holding = castle_holding
 }
 11788 = { # b_Liao_Yaozhou
-
+	holding = none
 }
 11789 = { # b_Liao_Tongzhou
-
+	holding = none
 }
 
 ### c_LIAO_diezhou
@@ -225,10 +225,10 @@
 	holding = castle_holding
 }
 17885 = { # b_bakjak
-
+	holding = none
 }
 17862 = { # b_wugu
-
+	holding = none
 }
 
 ### c_LIAO_guidezhou
@@ -239,13 +239,20 @@
 	holding = castle_holding
 }
 11798 = { # b_Liao_Xiyuan
+	holding = city_holding
 
+	special_building_slot = xiuyan_mines_01
+
+	# History
+	867.1.1 = {
+		special_building = xiuyan_mines_01
+	}
 }
 11800 = { # b_Liao_Fengcheng
-
+	holding = none
 }
 11797 = { # b_FIC_Liao_Shaozijiang
-
+	holding = none
 }
 
 
@@ -263,16 +270,16 @@
 	}
 }
 15366 = { # b_jinshan_3
-
+	holding = none
 }
 15238 = { # b_nansuzhou
-
+	holding = none
 }
 16075 = { # b_hou
-
+	holding = none
 }
 15901 = { # b_fuohan
-
+	holding = none
 }
 
 ### c_LIAO_yinzhou
@@ -288,13 +295,13 @@
 	}
 }
 15885 = { # b_zuochi_TEMP
-
+	holding = none
 }
 15241 = { # b_jangnyeong
-
+	holding = none
 }
 15244 = { # b_gewu
-
+	holding = none
 }
 
 ## d_amnok
@@ -306,16 +313,16 @@
 	holding = castle_holding
 }
 18151 = { # b_luotongshan
-
+	holding = none
 }
 18087 = { # b_gungnae
-
+	holding = none
 }
 18104 = { # b_gaemo
-
+	holding = none
 }
 18029 = { # b_changam
-
+	holding = none
 }
 
 ### c_anshiju
@@ -326,13 +333,13 @@
 	holding = castle_holding
 }
 17951 = { # b_zuoyan_TEMP
-
+	holding = none
 }
 17945 = { # b_kanggye
-
+	holding = none
 }
 17906 = { # b_yongbyon
-
+	holding = none
 }
 
 ### c_seongyeong
@@ -350,16 +357,18 @@
     holding = castle_holding
 }
 15249 = { # b_qingjin_TEMP
-
+	holding = none
 }
 18077 = { # b_sinju
-
+	holding = none
 }
 18083 = { # b_guowu_TEMP
-
+	holding = church_holding
+	special_building_slot = mount_baekdu_01
+	special_building = mount_baekdu_01
 }
 17982 = { # b_punju
-
+	holding = none
 }
 
 
@@ -376,10 +385,10 @@
 	holding = castle_holding
 }
 17894 = { # b_jeongju_okjeo
-
+	holding = none
 }
 17836 = { # b_omae-ri
-
+	holding = none
 }
 
 ### c_chonghae
@@ -390,8 +399,8 @@
 	holding = castle_holding
 }
 17968 = { # b_gaesimsa
-
+	holding = none
 }
 17886 = { # b_choju
-
+	holding = none
 }

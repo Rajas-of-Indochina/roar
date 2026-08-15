@@ -314,7 +314,7 @@ world_asia_vietnam = {
 		# k_viet
 		d_kinh_bac d_son_tay d_muong d_nong d_lo d_lao_nhai d_cu_duc d_cuu_chan d_hai_dong d_muang_thaeng
 		# k_champa
-		d_amaravati d_vijaya d_tribhuvanadevi d_panduranga d_baigaur d_dagar
+		d_indrapura d_vijaya d_tribhuvanadevi d_panduranga d_baigaur d_mnong d_bahnar
 	}
 }
 world_asia_cambodia = {
@@ -399,9 +399,9 @@ world_asia_indonesia = { # Sumatra, Java, Bali
 		# k_samudera
 		d_SUM_perlak d_SUM_pasai d_SUM_aceh d_SUM_aru d_SUM_batak d_SUM_gayo d_handumans
 		# k_palembang
-		d_lampung d_SUM_palembang d_basemah d_SUM_bangkahulu
+		d_SUM_palembang d_SUM_basemah d_SUM_lampung d_SUM_bangkahulu
 		# k_malayadvipa
-		d_SUM_jambi d_minangkabau d_SUM_karang_brahi d_SUM_riau d_siak
+		d_SUM_jambi d_SUM_minangkabau d_SUM_karang_brahi d_SUM_riau_islands d_SUM_riau
 		# k_yavakadvipa
 		d_JAV_mataram d_janggala d_kalingga d_panjalu d_lumajang
 		# k_sunda
@@ -428,5 +428,134 @@ world_asia_oceania = {
 world_kabulistan = { #k_kabulistan
 	duchies = {
 		d_kabul d_zabulistan d_chitral d_nuristan
+	}
+}
+
+# Updated Caucasus
+
+world_ayrarat = {
+	duchies = {
+	    #k_ayrarat
+	    d_hayk-shirak d_hayk-dvin d_kars d_bagrevand d_tashir
+	}
+}
+world_syunik = {
+	duchies = {
+	    #k_syunik
+	    d_syunik-baghk d_syunik-vayotsdzor d_nakhichevan d_artsakh d_gardman
+	}
+}
+world_vaspurakan = {
+	duchies = {
+	    #k_vaspurakan
+	    d_vaspurakan d_shavarshan d_taron d_derzene d_mesopotamia d_turuberan
+	}
+}
+world_azerbaijan = { # That is, Iranian Azerbaijan
+	duchies = {
+	    #k_adurbadagan
+	    d_azerbaijan d_persarmenia d_iraq-i-aram d_bazgan d_arasbaran d_ardabil
+	}
+}
+world_caucasian_iberia = {
+	duchies = {
+	    #k_iberia
+	    d_tbilisi d_kartli d_tao d_kidekari d_samtskhe d_klarjeti d_speri
+	}
+}
+world_abkhazia = {
+	duchies = {
+	    #k_abkhazia
+	    d_imereti d_abkhazia d_samagrelo d_svaneti d_lazeti
+	}
+}
+world_kakheti = {
+	duchies = {
+	    #k_kakheti
+	    d_kakheti d_pkhovi d_hereti d_shaki
+	}
+}
+world_sarir = {
+	duchies = {
+	    #k_sarir_roa
+	    d_khundzeti d_didoeti d_kaitag d_kumukh d_shavaran d_tsuketi d_lezgia d_derbent d_khunia d_djindan
+	}
+}
+world_zichia = {
+	duchies = {
+	    #k_zichia
+	    d_eudusia d_papagia d_khegayk d_zichia
+	}
+}
+world_alania = {
+	duchies = {
+	    #k_caucasus
+	    d_kassogia d_alania d_karabulakia d_osseti d_chechnya d_chetqal
+	}
+}
+world_armenia = {
+	regions = {
+		world_ayrarat world_syunik world_vaspurakan
+	}
+}
+world_shirvan = {
+	duchies = {
+	    #k_shirvan
+	    d_shirvan d_layzan d_arran
+	}
+}
+world_georgia = {
+	regions = {
+		world_caucasian_iberia world_abkhazia world_kakheti
+	}
+}
+world_north_caucasus = {
+	regions = {
+		world_sarir world_zichia world_alania
+	}
+}
+custom_lesser_armenia = {
+	duchies = {
+		d_chaldia d_colonea d_sebasteia
+	}
+}
+custom_armenian_cilicia = {
+	duchies = {
+		d_antioch d_cilicia d_edessa
+	}
+}
+
+custom_caucasian_albania_proper = {
+	duchies = {
+		# k_shirvan
+		d_arran
+		d_layzan
+		# k_syunik
+		d_artsakh
+		d_gardman
+		# k_kakheti
+		d_hereti
+		d_shaki
+	}
+}
+
+custom_caucasian_albania = {
+	duchies = {
+		# k_shirvan
+		d_shirvan
+		# k_sarir_roa
+		d_shavaran
+		d_derbent
+		d_lezgia
+		# k_syunik
+		d_syunik-baghk
+		d_syunik-vayotsdzor
+		d_nakhichevan
+		# k_kakheti
+		d_kakheti
+		d_pkhovi
+	}
+	regions = {
+		custom_caucasian_albania_proper
 	}
 }
