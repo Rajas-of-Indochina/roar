@@ -15,6 +15,12 @@
  sponsor_wait_customtooltip:0 "We will wait for a few weeks and then hold another feast to throw the bone again"
  
 
+ MY_CULTURE_OR_LIEGE_CULTURE_SPEAKS_LANGUAGE:0 "[CHARACTER.GetCulture.GetName|U] [culture|E] speaks the relevant language, or a liege's does"
+ MY_CULTURE_OR_LIEGE_CULTURE_SPEAKS_LANGUAGE_NOT:0 "[CHARACTER.GetCulture.GetName|U] [culture|E] does not speak the relevant language, or a liege does not"
+ ROA_caucasus_has_not_learned_dialect_tt:0 "You have not learned a dialect of Circassian"
+ ROA_caucasus_speakertrait_zeikwebze_condition_1:0 "You have a very high level of [Martial|E] OR a martial [Lifestyle Focus|E]"
+ ROA_caucasus_speakertrait_zeikwebze_condition_2:0 "You have a sufficient level of [Martial|E] and [Learning|E]"
+
  circassian_decision_thamade_desc:0 "Ancient custom among Northern Caucasians dictates that there must always be wise elders to guide the people. These elders, whom we call $trait_thamade$s, are individuals who have led decent lives and reached a certain age, and their wisdom is highly respected: one word from their mouths can end entire wars. It seems that now, people are looking to me to fulfill this role. It is a great honor, and I believe it's time for me to accept this responsibility and fulfill my duties for the betterment of the community."
  circassian_decision_thamade_tooltip:0 "Become a $trait_thamade$"
  circassian_decision.6.t:0 "Become a $trait_thamade$"
@@ -97,23 +103,30 @@
  circassian_decision_armenians_confirm:0 "To further cooperation!"
  cherkesogai_customtooltip:0 "You will try to strike a deal with Armenian merchants"
 
- circassian_decision_zeikwebze_desc:0 "Zeik'webze is a Circassian military code that has been utilised by many legendary warriors in the past, and it has played a large role in the outcome of many wars. In Zeik'webze, regular Circassian sentences are encrypted by reordering words, changing phonemes, removing certain letters and adding meaningless suffixes and prefixes. This is not done randomly, but based on a code that only a few people know, and if it is discovered, the code is modified. Thus, enemy armies and spies, even if they speak Circassian as their native tongue, would have no way of understanding our intentions. Though very difficult, If I regularly practice this code with my soldiers, we may be able to utilise it in battle."
- circassian_decision_zeikwebze_tooltip:0 "Practice Zeik'webze"
+ ROA_caucasus_speakertrait_zeikwebze_option_tooltip:0 "Zeik'webze is a Circassian military code that has been utilised by many legendary warriors in the past, and it has played a large role in the outcome of many wars. In Zeik'webze, regular Circassian sentences are encrypted by reordering words, changing phonemes, removing certain letters and adding meaningless suffixes and prefixes. This is not done randomly, but based on a code that only a few people know, and if it is discovered, the code is modified. Thus, enemy armies and spies, even if they speak Circassian as their native tongue, would have no way of understanding our intentions. Though very difficult, If I regularly practice this code with my soldiers, we may be able to utilise it in battle."
+ ROA_caucasus_speakertrait_zeikwebze_option:0 "Practice Zeik'webze"
  circassian_decision_zeikwebze.t:0 "Practice Zeik'webze"
  circassian_decision_zeikwebze:0 "Practice Zeik'webze"
  circassian_decision_zeikwebze_confirm:0 "This will take a lot of time and effort."
 
- circassian_decision_chakobsa_desc:0 "Schak'webze or Chakobsa is a secret Circassian language invented by hunters and spoken by very few people. The grammar is basically Circassian, but the vocabulary seeks to emulate the original language by imitating sounds of nature. It is an ancient hunters' tradition to use Schak'webze during a hunt. Now that I go hunting, I should probably learn Schak'webze."
- circassian_decision_chakobsa_tooltip:0 "Learn Schak'webze"
+ ROA_caucasus_speakertrait_chakobsa_option_tooltip:0 "Schak'webze or Chakobsa is a secret Circassian language invented by hunters and spoken by very few people. The grammar is basically Circassian, but the vocabulary seeks to emulate the original language by imitating sounds of nature. It is an ancient hunters' tradition to use Schak'webze during a hunt. Now that I go hunting, I should probably learn Schak'webze."
+ ROA_caucasus_speakertrait_chakobsa_option:0 "Learn Schak'webze"
  circassian_decision_chakobsa.t:0 "Learn Schak'webze"
  circassian_decision_chakobsa:0 "Learn Schak'webze"
  circassian_decision_chakobsa_confirm:0 "I shall respect this tradition."
 
- circassian_decision_werqibze_desc:0 "Werqibze is the name some give to the secret Circassian dialect spoken by only the best of nobles. It is proper speech, elegant and elite, unlike the common vulgar tongue. Not everyone is allowed to learn Werqibze, but only the most well-behawed of nobles. Giving a speech in this language is probably one of the greatest honours for a person."
- circassian_decision_werqibze_tooltip:0 "Ask to be taught Werqibze"
+ ROA_caucasus_speakertrait_werqibze_option_tooltip:0 "Werqibze is the name some give to the secret Circassian dialect spoken by only the best of nobles. It is proper speech, elegant and elite, unlike the common vulgar tongue. Not everyone is allowed to learn Werqibze, but only the most well-behawed of nobles. Giving a speech in this language is probably one of the greatest honours for a person."
+ ROA_caucasus_speakertrait_werqibze_option:0 "Ask to be taught Werqibze"
  circassian_decision_werqibze.t:0 "Ask to be taught Werqibze"
  circassian_decision_werqibze:0 "Ask to be taught Werqibze"
  circassian_decision_werqibze_confirm:0 "Respect."
+
+ ROA_caucasus_speakertrait_decision:0 "Practice a Circassian Dialect"
+ ROA_caucasus_speakertrait_decision_desc:0 "The language of the Circassians has many dialects that are vastly distinct to the point of being incomprehensible from one another.  Such dialects are typically used by some classes or professions.  Perhaps it is time to pick up one of these dialects..."
+ ROA_caucasus_pick_a_speakertrait_type_gui:0 "Choose a dialect of Circassian to learn"
+ ROA_caucasus_speakertrait_pick_gui:0 "Choose a dialect"
+ ROA_caucasus_speakertrait_decision_tooltip_1:0 "You will have the choice between either the [GetTrait('zeikwebze').GetName( GetNullCharacter )], [GetTrait('chakobsa').GetName( GetNullCharacter )], and [GetTrait('werqibze').GetName( GetNullCharacter )] [traits|E] so long as you meet their individual requirements."
+ ROA_caucasus_speakertrait_decision_confirm:0 "This will take a lot of time and effort..."
 
  circassian_decision_unify_desc:0 "Circassians are organized into a strict tribal structure, with every individual being a member of a family, clan, and tribe. They are also short-tempered, however: two people bumping into each other can trigger a feud between the two families, which could then trigger a conflict between two tribes that may last decades if not centuries. And so Circassians have been fighting each other endlessly for as long as they have existed; only bonding together when they have a common enemy. The medieval historian Al-Masudi famously said that the Circassians could conquer the world if only they had a king to unite them. Not like anyone could ever accomplish that..."
  circassian_decision_unify_tooltip:0 "Unite the Circassians"
