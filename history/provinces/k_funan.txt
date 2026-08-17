@@ -408,9 +408,10 @@
 }
 
 
-## d_can_tho
-### c_ca_mau
-15376 = { # b_kottinagara
+## d_kottinagara
+### c_kottinagara
+15376 = { # Kottinagara AKA Óc Eo
+	# port city of Funan alognside Mekong River ; mentioned by Ptolemy in his 'Geography' ; active at least until 12th century AD
 	culture = bnam
 	religion = shaivism
 
@@ -421,63 +422,80 @@
 		culture = khmer
 	}
 }
-15334 = { # b_prey_kin
-	holding = city_holding
+15334 = { # Prey Kin
+	# more info needed ; 'Prey' means forest/jungle in Khmer
+	holding = none
 }
-15584 = { # b_an_giang
+15584 = { # An Giang
+	# site of many historic Theravada pagodas
 	holding = church_holding
 }
-15439 = { # b_kien_giang
-	holding = temple_citadel_holding
+15439 = { # Kien Giang
+	# site of Khmer era temple
+	holding = city_holding #placeholder
 }
-15072 = { # b_ke_mot
+
+### c_sa_dec
+15585 = { # Sa Dec
+	# river port settlement ; agriculture and trade focused one
+	culture = bnam
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+	1050.1.1 = {
+		culture = khmer
+	}
+}
+15713 = { # Moat Chruk
+	# one of historical provinces of Kampuchea Krom (Lower Cambodia) region ; means 'Pig's Mouth'
+	holding = city_holding
+}
+15751 = { # Cho Lon
+	# modern day it is important distribution centre ; unsure about historical importance
+	holding = none
+}
+
+### c_ca_mau
+15074 = { # b_soc_trang
+	# Khmer settlement in Mekong's Delta ; its name means 'Place to store silver'
+	culture = bnam
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+}
+17809 = { # Ca Mau
+	# region which name translates to 'murky water'
+	holding = none
+}
+15073 = { # Bac Lieu
+	# region known for its historic Theravada Buddhist temples
+	holding = none
+}
+15072 = { # Ke Mot
+	# more info needed
 	holding = none
 }
 
 ### c_binh_dai
-15323 = { # b_trah_pung
+15455 = { # Binh Dai
+	# provincial capital
 	culture = bnam
 	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
-	1050.1.1 = {
-		culture = khmer
-	}
 }
-15455 = { # b_vung_gou
+15323 = { # Thanh Phu
+	# modern day agricultural site
 	holding = city_holding
 }
-15419 = { # b_phsar_dek
-	holding = none
-}
-
-### c_sadek
-15585 = { # b_sadek
-	culture = bnam
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-15713 = { # b_mot_chrouk
-	holding = church_holding
-}
-15751 = { # b_cho_lon
-	holding = none
-}
-
-### c_prey_rusey
-15074 = { # b_soc_trang
-	culture = bnam
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-17809 = { # b_ca_mau
-	holding = none
-}
-15073 = { # b_bac_lieu
+15419 = { # Phsar Dek
+	# modern day monastery site
 	holding = none
 }
 
