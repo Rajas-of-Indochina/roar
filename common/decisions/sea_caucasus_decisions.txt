@@ -1979,24 +1979,23 @@ ROA_caucasus_speakertrait_decision = {
 			value = ROA_caucasus_speakertrait_zeikwebze_option
 			is_valid = {
 				knows_language = language_circassian
-				
-				custom_description = {
-					text = ROA_caucasus_has_not_learned_dialect_tt
+				custom_tooltip = {
+					text = "ROA_caucasus_has_not_learned_dialect"
 					NOT = {
 						has_trait = werqibze
 						has_trait = chakobsa
 						has_trait = zeikwebze
 					}
 				}
-				custom_description = {
-					text = ROA_caucasus_speakertrait_zeikwebze_condition_1
+				custom_tooltip = {
+					text = "ROA_caucasus_speakertrait_zeikwebze_condition_1"
 					OR = {
 						has_lifestyle = martial_lifestyle
 						martial >= 35
 					}
 				}
-				custom_description = {
-					text = ROA_caucasus_speakertrait_zeikwebze_condition_2
+				custom_tooltip = {
+					text = "ROA_caucasus_speakertrait_zeikwebze_condition_2"
 					OR = {
 						AND = {
 							learning >= 15
@@ -2041,29 +2040,35 @@ ROA_caucasus_speakertrait_decision = {
 			value = ROA_caucasus_speakertrait_chakobsa_option
 			is_valid = {
 				knows_language = language_circassian
-				NOT = {
-					has_trait = werqibze
-					has_trait = chakobsa
-					has_trait = zeikwebze
+				custom_tooltip = {
+					text = "ROA_caucasus_has_not_learned_dialect"
+					NOT = {
+						has_trait = werqibze
+						has_trait = chakobsa
+						has_trait = zeikwebze
+					}
 				}
 				has_trait = lifestyle_hunter
-				OR = {
-					AND = {
-						learning >= 15
-						prowess >= 15
-						NOT = {
-							has_trait = lazy
-							has_trait = impatient
-							has_trait = cynical
+				custom_tooltip = {
+					text = "ROA_caucasus_speakertrait_chakobsa_condition_1"
+					OR = {
+						AND = {
+							learning >= 22
+							prowess  >= 18
 						}
-					}
-					AND = {
-						learning >= 22
-						prowess  >= 18
-					}
-					AND = {
-						learning >= 18
-						prowess  >= 22
+						AND = {
+							learning >= 18
+							prowess  >= 22
+						}
+						AND = {
+							learning >= 15
+							prowess >= 15
+							NOT = {
+								has_trait = lazy
+								has_trait = impatient
+								has_trait = cynical
+							}
+						}
 					}
 				}
 			}
@@ -2084,30 +2089,39 @@ ROA_caucasus_speakertrait_decision = {
 			value = ROA_caucasus_speakertrait_werqibze_option
 			is_valid = {
 				knows_language = language_circassian
-				NOT = {
-					has_trait = werqibze
-					has_trait = chakobsa
-					has_trait = zeikwebze
-				}
-				OR = {
-					has_lifestyle = diplomacy_lifestyle
-					diplomacy >= 35
-				}
-				OR = {
-					AND = {
-						learning >= 15
-						diplomacy >= 25
-						NOT = {
-							has_trait = lazy
-							has_trait = impatient
-							has_trait = shy
-							has_trait = arbitrary
-							has_trait = gluttonous
-						}
+				custom_tooltip = {
+					text = "ROA_caucasus_has_not_learned_dialect"
+					NOT = {
+						has_trait = werqibze
+						has_trait = chakobsa
+						has_trait = zeikwebze
 					}
-					AND = {
-						learning >= 20
-						diplomacy >= 30
+				}
+				custom_tooltip = {
+					text = "ROA_caucasus_speakertrait_werqibze_condition_1"
+					OR = {
+						has_lifestyle = diplomacy_lifestyle
+						diplomacy >= 35
+					}
+				}
+				custom_tooltip = {
+					text = "ROA_caucasus_speakertrait_werqibze_condition_2"
+					OR = {
+						AND = {
+							learning >= 20
+							diplomacy >= 30
+						}
+						AND = {
+							learning >= 15
+							diplomacy >= 25
+							NOT = {
+								has_trait = lazy
+								has_trait = impatient
+								has_trait = shy
+								has_trait = arbitrary
+								has_trait = gluttonous
+							}
+						}
 					}
 				}
 			}
