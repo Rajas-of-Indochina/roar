@@ -712,49 +712,17 @@ c_kracheh_nokor = {
 }
 
 
-## d_kottinagara
-c_kottinagara = {
-		867.1.1 = { change_development_level = 2 }
-		1066.1.1 = { change_development_level = 4 }
-		1178.1.1 = { change_development_level = 6 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_dviradapura # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_aninditapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_aninditapura_20_fic	#fictional
-		}
-}
-
-c_sa_dec = {
-		867.1.1 = { change_development_level = 3 }
-		1066.1.1 = { change_development_level = 5 }
-		1178.1.1 = { change_development_level = 9 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_dviradapura # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_binhdai_01_fic	#fictional
-			tributary_of = {
-				suzerain = d_angkor
-				contract_group = tributary_mandala
-			}
-		}
-		1178.1.1 = {
-			holder = khmer_binhdai_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
+d_can_tho = {
+	867.1.1 = {
+		government = mandala_government
+		holder = 0
+	}
+	#1066.1.1 = {
+	#	holder = khmer_kaundinya_3 # Harshavarman III
+	#}
+	#1178.1.1 = {
+	#	holder = khmer_mahidharapura_17
+	#}
 }
 
 c_ca_mau = {
@@ -798,6 +766,50 @@ c_binh_dai = {
 				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
 				contract_group = tributary_mandala
 			}
+		}
+}
+
+c_sadek = {
+		867.1.1 = { change_development_level = 3 }
+		1066.1.1 = { change_development_level = 5 }
+		1178.1.1 = { change_development_level = 9 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_aninditapura_01_fic	#fictional
+			liege = d_dviradapura # d_angkor_borey
+		}
+		1066.1.1 = {
+			holder = khmer_binhdai_01_fic	#fictional
+			tributary_of = {
+				suzerain = d_angkor
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = khmer_binhdai_10_fic	#fictional
+			tributary_of = {
+				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+				contract_group = tributary_mandala
+			}
+		}
+}
+
+c_prey_rusey = {
+		867.1.1 = { change_development_level = 2 }
+		1066.1.1 = { change_development_level = 4 }
+		1178.1.1 = { change_development_level = 6 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_aninditapura_01_fic	#fictional
+			liege = d_dviradapura # d_angkor_borey
+		}
+		1066.1.1 = {
+			holder = khmer_aninditapura_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = khmer_aninditapura_20_fic	#fictional
 		}
 }
 

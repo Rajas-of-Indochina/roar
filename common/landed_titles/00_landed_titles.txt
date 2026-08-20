@@ -87438,18 +87438,16 @@ e_kambuja = {
 			}
 		}
 
-		d_kottinagara = {
-			# d_can_tho in old RoA
+		d_can_tho = { #Kottinagara
 			color = { 0 90 110 }
 
-			capital = c_kottinagara
+			capital = c_ca_mau
 
-			c_kottinagara = {
+			c_ca_mau = { #Kottinagara
 				# c_can_tho in old RoA
 				color = { 10 100 125 }
 
 				b_kottinagara = {
-					# b_oc_eo in vanilla
 					province = 15376
 
 					color = { 10 100 125 }
@@ -87469,12 +87467,37 @@ e_kambuja = {
 
 					color = { 10 100 125 }
 				}
+				b_ke_mot = {
+					province = 15072
+
+					color = { 10 100 125 }
+				}
 			}
-			c_sa_dec = {
-				# c_sadek in old RoA
+			c_binh_dai = {
+				# c_sap in old RoA
+				color = { 20 110 140 }
+
+				b_trah_pung = {
+					province = 15323
+
+					color = { 20 110 140 }
+				}
+				b_vung_gou = {
+					province = 15455
+
+					color = { 20 110 140 }
+				}
+				b_phsar_dek = {
+					province = 15419
+
+					color = { 20 110 140 }
+				}
+			}
+			c_sadek = {
+				# part of c_vyadhapura in vanilla
 				color = { 30 120 155 }
 
-				b_sa_dec = {
+				b_sadek = {
 					province = 15585
 
 					color = { 30 120 155 }
@@ -87490,8 +87513,8 @@ e_kambuja = {
 					color = { 30 120 155 }
 				}
 			}
-			c_ca_mau = {
-				# c_prey_rusey in old RoA
+			c_prey_rusey = {
+				# part of c_ca_mau in vanilla
 				color = { 40 130 170 }
 
 				b_soc_trang = {
@@ -87508,32 +87531,6 @@ e_kambuja = {
 					province = 15073
 
 					color = { 40 130 170 }
-				}
-				b_ke_mot = {
-					province = 15072
-
-					color = { 40 130 170 }
-				}
-			}
-			c_binh_dai = {
-				# c_sap in old RoA
-				color = { 20 110 140 }
-
-				b_binh_dai = {
-					province = 15455
-
-					color = { 20 110 140 }
-				}
-				b_thanh_phu = {
-					province = 15323
-
-					color = { 20 110 140 }
-				}
-				b_phsar_dek = {
-					# b_ba_tri in vanilla (?)
-					province = 15419
-
-					color = { 20 110 140 }
 				}
 			}
 		}
