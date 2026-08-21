@@ -2066,8 +2066,486 @@ caucasianroa.034 = {
 	}
 }
 
-caucasianroa.035 = {
-	# Sponsor Pirate Raid event p1
+# caucasianroa.035 = {
+# 	# Sponsor Pirate Raid event p1
+# 	type = character_event
+# 	title = caucasianroa.035.t
+# 	desc = caucasianroa.035.d
+# 	theme = feast_activity
+# 	immediate = {
+# 		any_neighboring_and_across_water_top_liege_realm_owner = {
+# 			#BROKEN, NEEDS TO BE FIXED !!!!
+# 			limit = {	
+# 				alive = yes
+# 				is_landed = yes
+# 				NOR = {
+# 					is_allied_to = scope:circassian_raider
+# 					is_vassal_of = scope:circassian_raider
+# 				}
+# 			}
+# 			save_scope_as = raid_victim_circassian
+# 		}
+# 	}
+# 	right_portrait = {
+# 		character = ROOT
+# 		animation = drink_goblet
+# 	}
+# 	left_portrait = {
+# 		character = scope:pirate_thamade
+# 		animation = war_attacker
+# 	}
+# 	option = {
+# 		name = caucasianroa.035.a
+# 		custom_tooltip = {
+# 			text = sponsor_commence_customtooltip
+# 			random_list = {
+# 				30 = {
+# 					trigger_event = {
+# 						id = caucasianroa.036
+# 						days = 40
+# 					}
+# 				}
+# 				# success
+# 				30 = {
+# 					trigger_event = {
+# 						id = caucasianroa.039
+# 						days = 40
+# 					}
+# 				}
+# 				# success
+# 				30 = {
+# 					trigger_event = {
+# 						id = caucasianroa.037
+# 						days = 50
+# 					}
+# 				}
+# 				# fail
+# 				10 = {
+# 					trigger_event = {
+# 						id = caucasianroa.040
+# 						days = 1
+# 					}
+# 				}
+# 				# fail
+# 			}
+# 		}
+# 	}
+# }
+
+# caucasianroa.038 = {
+# 	# Sponsor Pirate Raid event p1.2
+# 	type = character_event
+# 	title = caucasianroa.038.t
+# 	desc = caucasianroa.038.d
+# 	theme = feast_activity
+# 	immediate = {
+# 		any_neighboring_and_across_water_top_liege_realm_owner = {
+# 			#BROKEN, NEEDS TO BE FIXED !!!!
+# 			limit = {				
+# 				alive = yes
+# 				is_landed = yes
+# 				NOR = {
+# 					is_allied_to = scope:circassian_raider
+# 					is_vassal_of = scope:circassian_raider
+# 				}
+# 			}
+# 			save_scope_as = raid_victim_circassian
+# 		}
+# 	}
+# 	right_portrait = {
+# 		character = ROOT
+# 		animation = drink_goblet
+# 	}
+# 	left_portrait = {
+# 		character = scope:pirate_thamade
+# 		animation = war_attacker
+# 	}
+# 	option = {
+# 		name = caucasianroa.038.a
+# 		custom_tooltip = {
+# 			text = sponsor_commence_risks_customtooltip
+#			root = {
+#				save_scope_as = circassian_raider
+#			}
+#			random_list = {
+#				15 = {
+#					trigger_event = {
+#						id = caucasianroa.036
+#						days = 40
+#					}
+#				}
+#				# success
+#				15 = {
+#					trigger_event = {
+#						id = caucasianroa.039
+#						days = 40
+#					}
+#				}
+#				# success
+#				40 = {
+#					trigger_event = {
+#						id = caucasianroa.037
+#						days = 50
+#					}
+#				}
+#				# fail
+#				30 = {
+#					trigger_event = {
+#						id = caucasianroa.040
+#						days = 1
+#					}
+#				}
+#				# fail
+#			}
+#		}
+#	}
+#	option = {
+#		name = caucasianroa.038.b
+#		custom_tooltip = {
+#			text = sponsor_wait_customtooltip
+#			random_list = {
+#				70 = {
+#					trigger_event = {
+#						id = caucasianroa.035
+#						days = 30
+#					}
+#				}
+#				# success
+#				30 = {
+#					trigger_event = {
+#						id = caucasianroa.038
+#						days = 30
+#					}
+#				}
+#				# fail
+#			}
+# 		}
+# 	}
+# }
+
+# caucasianroa.036 = {
+# 	# Sponsor Pirate Raid event succeed 1
+# 	type = character_event
+# 	title = caucasianroa.036.t
+# 	desc = caucasianroa.036.d
+# 	theme = travel_sea
+# 	right_portrait = {
+# 		character = ROOT
+# 		animation = ecstasy
+# 	}
+# 	left_portrait = {
+# 		character = scope:pirate_thamade
+# 		animation = celebrate_dagger
+# 	}
+# 	option = {
+# 		name = caucasianroa.036.a
+# 		# Rewards
+# 		random_list = {
+# 			10 = {
+# 				add_gold = 100
+# 			}
+# 			69 = {
+# 				add_gold = 150
+# 			}
+# 			15 = {
+# 				add_gold = 100
+# 			}
+# 			5 = {
+# 				add_gold = 250
+# 			}
+# 			1 = {
+# 				add_gold = 300
+# 			}
+# 		}
+# 		add_prestige = 50
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					religion = {
+# 						is_in_family = rf_pagan
+# 					}
+# 				}
+# 			}
+# 			add_piety = -25
+# 		}
+# 	}
+# }
+
+# caucasianroa.037 = {
+# 	# Sponsor Pirate Raid event fail 1
+# 	type = character_event
+# 	title = caucasianroa.037.t
+# 	desc = caucasianroa.037.d
+# 	theme = war
+# 	right_portrait = {
+# 		character = ROOT
+# 		animation = shame
+# 	}
+# 	option = {
+# 		name = caucasianroa.037.a
+# 		add_prestige = -50
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					religion = {
+# 						is_in_family = rf_pagan
+# 					}
+# 				}
+# 			}
+# 			add_piety = -25
+# 		}
+# 	}
+# }
+
+# caucasianroa.039 = {
+# 	# Sponsor Pirate Raid event succeed 2
+# 	type = character_event
+# 	title = caucasianroa.039.t
+# 	desc = caucasianroa.039.d
+# 	theme = travel_sea
+# 	right_portrait = {
+# 		character = ROOT
+# 		animation = ecstasy
+# 	}
+# 	left_portrait = {
+# 		character = scope:pirate_thamade
+# 		animation = celebrate_dagger
+# 	}
+# 	option = {
+# 		name = caucasianroa.039.a
+# 		# Rewards
+# 		scope:raid_victim_circassian = {
+# 			trigger_event = {
+# 				id = caucasianroa.042
+# 				days = 2
+# 			}
+# 		}
+# 		random_list = {
+# 			10 = {
+# 				add_gold = 200
+# 			}
+# 			69 = {
+# 				add_gold = 250
+# 			}
+# 			15 = {
+# 				add_gold = 300
+# 			}
+# 			5 = {
+# 				add_gold = 350
+# 			}
+# 			1 = {
+# 				add_gold = 400
+# 			}
+# 		}
+# 		add_prestige = 50
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					religion = {
+# 						is_in_family = rf_pagan
+# 					}
+# 				}
+# 			}
+# 			add_piety = -25
+# 		}
+# 	}
+# }
+
+# caucasianroa.040 = {
+# 	# Sponsor Pirate Raid event fail 2 - argument
+# 	type = character_event
+# 	title = caucasianroa.040.t
+# 	desc = caucasianroa.040.d
+# 	theme = war
+# 	right_portrait = {
+# 		character = scope:pirate_thamade
+# 		animation = aggressive_dagger
+# 	}
+# 	left_portrait = {
+# 		character = ROOT
+# 		animation = shock
+# 	}
+# 	option = {
+# 		name = caucasianroa.040.a
+# 		add_prestige = -200
+# 		add_piety = -200
+# 	}
+# }
+
+caucasianroa.100 = {
+	# Sponsor Pirate Raid event
+	hidden = yes
+	immediate = {
+		root = { save_scope_as = raid_sponsor }
+		# Generate out Pirate Thamade TODO: Isolate this into an effect/script and pass in a $TEMPLATE$ as a parameter, this seems to be worth re-using in other similar events
+		# Default in "Equal Martial"
+		set_local_variable = {
+			name = male_chance
+			value = 50
+		}
+
+		#Check which way the martial law is favored, if any
+		if = { #Male-Only Martial
+			limit = { ROA_martial_gender_is_male = yes }
+			if = {
+				limit = { ROA_can_have_martial_gender_exception = yes }
+				change_local_variable = {
+					name = male_chance
+					add = 40
+				}
+			}
+			else = { # No Exceptions to consider
+				change_local_variable = {
+					name = male_chance
+					add = 50
+				}		
+			}
+		}
+		else_if = { #Female-Only Martial
+			limit = { ROA_martial_gender_is_female = yes }
+			if = {
+				limit = { ROA_can_have_martial_gender_exception = yes }
+				change_local_variable = {
+					name = male_chance
+					subtract = 40
+				}
+			}
+			else = { # No Exceptions to consider
+				change_local_variable = {
+					name = male_chance
+					subtract = 50
+				}
+			}
+		}
+
+		#Generate character based on gender chance
+		random_list = {
+			# Male Pirate
+			0 = {
+				modifier = { add = local_var:male_chance }
+				create_character = {
+					location = root.location
+					template = pirate_thamade
+					gender = male
+					random_traits = no
+					save_scope_as = pirate_thamade
+				}
+			}
+			# Female Pirate
+			0 = {
+				modifier = {
+					add = 100
+					subtract = local_var:male_chance
+				}	
+				create_character = {
+					location = root.location
+					template = pirate_thamade
+					gender = female
+					random_traits = no
+					save_scope_as = pirate_thamade
+				}
+			}
+		}
+
+		#Make a list of 3 valid realms
+		#########
+
+		clear_variable_list = roa_caucasus_pirate_target_realms_list
+
+		# Loop until we have 3 unique realms in our list
+		while = {
+			limit = {
+				variable_list_size = {
+					name = roa_caucasus_pirate_target_realms_list
+					value < 3
+				}
+				# SAFETY! Atleast one must exist, otherwise loop will never end
+				any_neighboring_and_across_water_top_liege_realm_owner = {
+					limit = {
+						alive = yes
+						is_landed = yes
+						NOT = {
+							is_in_list = {
+								target = root
+								variable_name = roa_caucasus_pirate_target_realms_list
+							}
+						}
+					}
+				}
+			}
+
+			random_neighboring_and_across_water_top_liege_realm_owner = {
+				limit = {
+					alive = yes
+					is_landed = yes
+					NOT = {
+						is_in_list = {
+							target = root
+							variable_name = roa_caucasus_pirate_target_realms_list
+						}
+					}
+				}
+
+				weight = {
+					base = 10
+
+					modifier = {
+						add = 50
+						capital_province = {
+							is_in_region = black_sea_coast_region
+							#TODO: Caspian Sea
+							#TODO: Byzantion and Greece (lower rate?)
+						}
+					}
+
+					# Weight modifier: Boost if ANY county in their realm is in region
+					modifier = {
+						add = 30
+						any_sub_realm_county = {
+							title_province = {
+								is_in_region = black_sea_coast_region
+								#TODO: Caspian Sea
+								#TODO: Byzantion and Greece (lower rate?)
+							}
+						}
+					}
+				}
+				save_scope_as = chosen_realm
+			}
+
+			#Save realm to list
+			if = {
+				limit = { exists = scope:chosen_realm }
+				root = {
+					add_to_variable_list = {
+						name = roa_caucasus_pirate_target_realms_list
+						target = scope:chosen_realm
+					}
+				}
+			}
+		}
+		########
+
+		#Fire Following Events
+		#random_list = {
+		#	60 = {
+		#		trigger_event = {
+		#			id = caucasianroa.101
+		#			days = 10
+		#		}
+		#	}
+		#	# success bone
+		#	0 = {
+		#		trigger_event = {
+		#			id = caucasianroa.103
+		#			days = 10
+		#		}
+		#	}
+		#}
+	}
+}
+
+caucasianroa.101 = {
 	type = character_event
 	title = caucasianroa.035.t
 	desc = caucasianroa.035.d
@@ -2094,377 +2572,11 @@ caucasianroa.035 = {
 		character = scope:pirate_thamade
 		animation = war_attacker
 	}
-	option = {
-		name = caucasianroa.035.a
-		custom_tooltip = {
-			text = sponsor_commence_customtooltip
-			random_list = {
-				30 = {
-					trigger_event = {
-						id = caucasianroa.036
-						days = 40
-					}
-				}
-				# success
-				30 = {
-					trigger_event = {
-						id = caucasianroa.039
-						days = 40
-					}
-				}
-				# success
-				30 = {
-					trigger_event = {
-						id = caucasianroa.037
-						days = 50
-					}
-				}
-				# fail
-				10 = {
-					trigger_event = {
-						id = caucasianroa.040
-						days = 1
-					}
-				}
-				# fail
-			}
-		}
-	}
+	
 }
 
-caucasianroa.038 = {
-	# Sponsor Pirate Raid event p1.2
-	type = character_event
-	title = caucasianroa.038.t
-	desc = caucasianroa.038.d
-	theme = feast_activity
-	immediate = {
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			#BROKEN, NEEDS TO BE FIXED !!!!
-			limit = {				
-				alive = yes
-				is_landed = yes
-				NOR = {
-					is_allied_to = scope:circassian_raider
-					is_vassal_of = scope:circassian_raider
-				}
-			}
-			save_scope_as = raid_victim_circassian
-		}
-	}
-	right_portrait = {
-		character = ROOT
-		animation = drink_goblet
-	}
-	left_portrait = {
-		character = scope:pirate_thamade
-		animation = war_attacker
-	}
-	option = {
-		name = caucasianroa.038.a
-		custom_tooltip = {
-			text = sponsor_commence_risks_customtooltip
-			root = {
-				save_scope_as = circassian_raider
-			}
-			random_list = {
-				15 = {
-					trigger_event = {
-						id = caucasianroa.036
-						days = 40
-					}
-				}
-				# success
-				15 = {
-					trigger_event = {
-						id = caucasianroa.039
-						days = 40
-					}
-				}
-				# success
-				40 = {
-					trigger_event = {
-						id = caucasianroa.037
-						days = 50
-					}
-				}
-				# fail
-				30 = {
-					trigger_event = {
-						id = caucasianroa.040
-						days = 1
-					}
-				}
-				# fail
-			}
-		}
-	}
-	option = {
-		name = caucasianroa.038.b
-		custom_tooltip = {
-			text = sponsor_wait_customtooltip
-			random_list = {
-				70 = {
-					trigger_event = {
-						id = caucasianroa.035
-						days = 30
-					}
-				}
-				# success
-				30 = {
-					trigger_event = {
-						id = caucasianroa.038
-						days = 30
-					}
-				}
-				# fail
-			}
-		}
-	}
-}
 
-caucasianroa.036 = {
-	# Sponsor Pirate Raid event succeed 1
-	type = character_event
-	title = caucasianroa.036.t
-	desc = caucasianroa.036.d
-	theme = travel_sea
-	right_portrait = {
-		character = ROOT
-		animation = ecstasy
-	}
-	left_portrait = {
-		character = scope:pirate_thamade
-		animation = celebrate_dagger
-	}
-	option = {
-		name = caucasianroa.036.a
-		# Rewards
-		random_list = {
-			10 = {
-				add_gold = 100
-			}
-			69 = {
-				add_gold = 150
-			}
-			15 = {
-				add_gold = 100
-			}
-			5 = {
-				add_gold = 250
-			}
-			1 = {
-				add_gold = 300
-			}
-		}
-		add_prestige = 50
-		if = {
-			limit = {
-				NOT = {
-					religion = {
-						is_in_family = rf_pagan
-					}
-				}
-			}
-			add_piety = -25
-		}
-	}
-}
 
-caucasianroa.037 = {
-	# Sponsor Pirate Raid event fail 1
-	type = character_event
-	title = caucasianroa.037.t
-	desc = caucasianroa.037.d
-	theme = war
-	right_portrait = {
-		character = ROOT
-		animation = shame
-	}
-	option = {
-		name = caucasianroa.037.a
-		add_prestige = -50
-		if = {
-			limit = {
-				NOT = {
-					religion = {
-						is_in_family = rf_pagan
-					}
-				}
-			}
-			add_piety = -25
-		}
-	}
-}
-
-caucasianroa.039 = {
-	# Sponsor Pirate Raid event succeed 2
-	type = character_event
-	title = caucasianroa.039.t
-	desc = caucasianroa.039.d
-	theme = travel_sea
-	right_portrait = {
-		character = ROOT
-		animation = ecstasy
-	}
-	left_portrait = {
-		character = scope:pirate_thamade
-		animation = celebrate_dagger
-	}
-	option = {
-		name = caucasianroa.039.a
-		# Rewards
-		scope:raid_victim_circassian = {
-			trigger_event = {
-				id = caucasianroa.042
-				days = 2
-			}
-		}
-		random_list = {
-			10 = {
-				add_gold = 200
-			}
-			69 = {
-				add_gold = 250
-			}
-			15 = {
-				add_gold = 300
-			}
-			5 = {
-				add_gold = 350
-			}
-			1 = {
-				add_gold = 400
-			}
-		}
-		add_prestige = 50
-		if = {
-			limit = {
-				NOT = {
-					religion = {
-						is_in_family = rf_pagan
-					}
-				}
-			}
-			add_piety = -25
-		}
-	}
-}
-
-caucasianroa.040 = {
-	# Sponsor Pirate Raid event fail 2 - argument
-	type = character_event
-	title = caucasianroa.040.t
-	desc = caucasianroa.040.d
-	theme = war
-	right_portrait = {
-		character = scope:pirate_thamade
-		animation = aggressive_dagger
-	}
-	left_portrait = {
-		character = ROOT
-		animation = shock
-	}
-	option = {
-		name = caucasianroa.040.a
-		add_prestige = -200
-		add_piety = -200
-	}
-}
-
-caucasianroa.041 = {
-	# Sponsor Pirate Raid event
-	#hidden = yes
-	immediate = {
-		# Generate out Pirate Thamade TODO: Isolate this into an effect/script and pass in a $TEMPLATE$ as a parameter, this seems to be worth re-using in other similar events
-		# Default in "Equal Martial"
-		set_variable = {
-			name = male_chance
-			value = 50
-		}
-
-		#Check which way the martial law is favored, if any
-		if = { #Male-Only Martial
-			limit = { ROA_martial_gender_is_male = yes }
-			if = {
-				limit = { ROA_can_have_martial_gender_exception = yes }
-				change_variable = {
-					name = male_chance
-					add = 40
-				}
-			}
-			else = { # No Exceptions to consider
-				change_variable = {
-					name = male_chance
-					add = 50
-				}		
-			}
-		}
-		else_if = { #Female-Only Martial
-			limit = { ROA_martial_gender_is_female = yes }
-			if = {
-				limit = { ROA_can_have_martial_gender_exception = yes }
-				change_variable = {
-					name = male_chance
-					subtract = 40
-				}
-			}
-			else = { # No Exceptions to consider
-				change_variable = {
-					name = male_chance
-					subtract = 50
-				}
-			}
-		}
-
-		#Generate character based on gender chance
-		random_list = {
-			# Male Pirate
-			0 = {
-				modifier = { add = var:male_chance }
-				create_character = {
-					location = root.location
-					template = pirate_thamade
-					gender = male
-					random_traits = no
-					save_scope_as = pirate_thamade
-				}
-			}
-			# Female Pirate
-			0 = {
-				modifier = {
-					add = 100
-					subtract = var:male_chance
-				}	
-				create_character = {
-					location = root.location
-					template = pirate_thamade
-					gender = female
-					random_traits = no
-					save_scope_as = pirate_thamade
-				}
-			}
-		}
-
-		#Fire Following Events
-		random_list = {
-			60 = {
-				trigger_event = {
-					id = caucasianroa.035
-					days = 10
-				}
-			}
-			# success bone
-			0 = {
-				trigger_event = {
-					id = caucasianroa.038
-					days = 10
-				}
-			}
-			# fail bone
-		}
-	}
-}
 
 caucasianroa.042 = {
 	# victim POV
