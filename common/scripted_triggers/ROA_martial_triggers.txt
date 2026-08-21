@@ -1,0 +1,71 @@
+#Helper to simplify checking if a character is able to become a shieldmaiden,
+#To be used immediately after creating a character (Preferably in the template 'after_creation' block)
+ROA_character_can_be_shieldperson = {
+	culture = {
+		has_cultural_parameter = has_access_to_shieldmaidens
+	}
+	trigger_if = { # Determined by Cultural Pillars
+		limit = { has_dlc_feature = diverge_culture }
+		OR = {
+			AND = {
+				is_female = yes
+				culture = { has_cultural_parameter = martial_custom_male_only_combatant }
+			}
+			AND = {
+				is_male = yes
+				culture = { has_cultural_parameter = martial_custom_female_only_combatant }
+			}
+		}
+	}
+	trigger_else = {
+		OR = { # Does not have the Royal Court and thus combatant is governed by faith
+			AND = {
+				is_female = yes
+				faith = { has_doctrine_parameter = combatant_must_be_male_if_no_roco }
+			}
+			AND = {
+				is_male = yes
+				faith = { has_doctrine_parameter = combatant_must_be_female_if_no_roco }
+			}
+		}
+	}
+}
+
+#To be used BEFORE a character is generated to find out if there should be a small chance to generate as the non-dominant gender
+#Call it from the scope of the character that the event is firing from
+ROA_can_have_martial_gender_exception = {
+	#Exceptions are either shieldmaidens, or exceptional prowess TODO: Consider clergy, or make seperate check for it
+	culture = { 
+		OR = {
+			has_cultural_parameter = has_access_to_shieldmaidens
+			has_cultural_parameter = high_prowess_ignores_knight_restrictions
+		}
+	}
+	trigger_if = { # Determined by Cultural Pillars (CAN'T BE EQUAL)
+		limit = { has_dlc_feature = diverge_culture }
+		culture = { NOT = { has_cultural_parameter = martial_custom_equal_combatant } }
+	}
+	trigger_else = { # Determined by Faith (CAN'T BE EQUAL)
+		faith = { has_doctrine_parameter = combatant_can_be_either_gender_if_no_roco }
+	}
+}
+
+#Combines checks for dlc/no-dlc to just one check
+ROA_martial_gender_is_male = {
+	trigger_if = { # Determined by Cultural Pillars
+		limit = { has_dlc_feature = diverge_culture }
+		culture = { has_cultural_parameter = martial_custom_male_only_combatant }
+	}
+	trigger_else = { # Determined by Faith
+		faith = { has_doctrine_parameter = combatant_must_be_male_if_no_roco }
+	}
+}
+ROA_martial_gender_is_female = {
+	trigger_if = { # Determined by Cultural Pillars
+		limit = { has_dlc_feature = diverge_culture }
+		culture = { has_cultural_parameter = martial_custom_female_only_combatant }
+	}
+	trigger_else = { # Determined by Faith
+		faith = { has_doctrine_parameter = combatant_must_be_female_if_no_roco }
+	}
+}
