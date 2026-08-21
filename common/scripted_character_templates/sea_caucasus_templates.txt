@@ -1,0 +1,185 @@
+pirate_thamade = {
+	age = { 25 40 }
+	# Martial background
+	random_traits_list = {
+		count = 1
+		education_martial_2 = {
+			weight = { base = 35 }
+		}
+		education_martial_3 = {
+			weight = { base = 55 }
+		}
+		education_martial_4 = {
+			weight = { base = 10 }
+		}
+	}
+	# Strong, whether innately or from their life
+	random_traits_list = {
+		count = 1
+		strong = {
+			weight = { base = 50 }
+		}
+		physique_good_1 = {
+			weight = { base = 30 }
+		}
+		physique_good_2 = {
+			weight = { base = 15 }
+		}
+		physique_good_3 = {
+			weight = { base = 5 }
+		}
+	}
+	# Scarred, "pirate-y"
+	random_traits_list = {
+		count = 1
+		scarred = {
+			weight = { base = 50 }
+		}
+		one_eyed = {
+			weight = { base = 35 }
+		}
+		one_legged = {
+			weight = { base = 15 }
+		}
+	}
+	# Raiding background
+	trait = viking
+	random_traits_list = {
+		count = 1
+		reaver = {
+			weight = { base = 35 }
+		}
+		forder = {
+			weight = { base = 20 }
+		}
+		holy_warrior = {
+			weight = { base = 15 }
+		}
+		aggressive_attacker = {
+			weight = { base = 15 }
+		}
+		flexible_leader = {
+			weight = { base = 10 }
+		}
+		reckless = {
+			weight = { base = 5 }
+		}
+	}
+	
+	# Additional Flavor/Boons
+	random_traits_list = {
+		count = {0 1}
+		lifestyle_poet = {}
+		lifestyle_blademaster = {}
+		giant = {}
+		athletic = {}
+		shrewd = {}
+		beauty_good_1 = {}
+		beauty_good_2 = {}
+	}
+	trait = lifestyle_traveler
+	# Personality
+	random_traits_list = {
+		count = 3
+		brave = {
+			weight = { base = 12 }
+		}
+		zealous = {
+			weight = { base = 9 }
+		}
+		wrathful = {
+			weight = { base = 9 }
+		}
+		vengeful = {
+			weight = { base = 9 }
+		}
+		ambitious = {
+			weight = { base = 9 }
+		}
+		diligent = {
+			weight = { base = 9 }
+		}
+		gregarious = {
+			weight = { base = 6 }
+		}
+		arrogant = {
+			weight = { base = 6 }
+		}
+		trusting = {
+			weight = { base = 6 }
+		}
+		honest = {
+			weight = { base = 6 }
+		}
+		lustful = {
+			weight = { base = 6 }
+		}
+		deceitful = {
+			weight = { base = 6 }
+		}
+		calm = {
+			weight = { base = 4 }
+		}
+		callous = {
+			weight = { base = 3 }
+		}
+		greedy = {
+			weight = { base = 3 }
+		}
+		impatient = {
+			weight = { base = 3 }
+		}
+		sadistic = {
+			weight = { base = 2 }
+		}
+	}
+	dynasty = none
+	random_traits = no
+	culture = root.culture
+	faith = root.faith
+	# NOTE: ASSIGN GENDER WHEN CALLING THIS TEMPLATE, EASIER TO ACCOUNT FOR SHIELDMAIDENS WHICH CIRCASSIANS HAVE FROM THE XBAZE TRADITION
+	#gender_female_chance = root_soldier_female_chance
+	stewardship = {
+		min_template_average_skill
+		max_template_decent_skill
+	}
+	martial = {
+		min_template_decent_skill
+		max_template_high_skill
+	}
+	prowess = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+
+	after_creation = {
+		#Give random experience to the tiered traits
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_blademaster
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = scarred
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_traveler
+			TRACK = danger
+			LEVEL_1 = yes
+			LEVEL_3 = yes
+		}
+		add_random_tiered_trait_xp_effect = {
+			TRAIT = lifestyle_traveler
+			TRACK = travel
+			LEVEL_1 = yes
+			LEVEL_3 = no
+		}
+		#Shieldperson check
+		if = {
+			limit = { ROA_character_can_be_shieldperson = yes }
+			add_trait = shieldmaiden
+		}
+	}
+}

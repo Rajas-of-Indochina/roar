@@ -2374,14 +2374,79 @@ caucasianroa.040 = {
 
 caucasianroa.041 = {
 	# Sponsor Pirate Raid event
-	hidden = yes
+	#hidden = yes
 	immediate = {
-		create_character = {
-			location = root.location
-			template = pirate_thamade_character
-			random_traits = yes
-			save_scope_as = pirate_thamade
+		# Generate out Pirate Thamade TODO: Isolate this into an effect/script and pass in a $TEMPLATE$ as a parameter, this seems to be worth re-using in other similar events
+		# Default in "Equal Martial"
+		set_variable = {
+			name = male_chance
+			value = 50
 		}
+
+		#Check which way the martial law is favored, if any
+		if = { #Male-Only Martial
+			limit = { ROA_martial_gender_is_male = yes }
+			if = {
+				limit = { ROA_can_have_martial_gender_exception = yes }
+				change_variable = {
+					name = male_chance
+					add = 40
+				}
+			}
+			else = { # No Exceptions to consider
+				change_variable = {
+					name = male_chance
+					add = 50
+				}		
+			}
+		}
+		else_if = { #Female-Only Martial
+			limit = { ROA_martial_gender_is_female = yes }
+			if = {
+				limit = { ROA_can_have_martial_gender_exception = yes }
+				change_variable = {
+					name = male_chance
+					subtract = 40
+				}
+			}
+			else = { # No Exceptions to consider
+				change_variable = {
+					name = male_chance
+					subtract = 50
+				}
+			}
+		}
+
+		#Generate character based on gender chance
+		random_list = {
+			# Male Pirate
+			0 = {
+				modifier = { add = var:male_chance }
+				create_character = {
+					location = root.location
+					template = pirate_thamade
+					gender = male
+					random_traits = no
+					save_scope_as = pirate_thamade
+				}
+			}
+			# Female Pirate
+			0 = {
+				modifier = {
+					add = 100
+					subtract = var:male_chance
+				}	
+				create_character = {
+					location = root.location
+					template = pirate_thamade
+					gender = female
+					random_traits = no
+					save_scope_as = pirate_thamade
+				}
+			}
+		}
+
+		#Fire Following Events
 		random_list = {
 			60 = {
 				trigger_event = {
@@ -2390,7 +2455,7 @@ caucasianroa.041 = {
 				}
 			}
 			# success bone
-			40 = {
+			0 = {
 				trigger_event = {
 					id = caucasianroa.038
 					days = 10
