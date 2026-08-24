@@ -3,8 +3,8 @@
 	name = "Dharanindradevi"
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 4200114
 
@@ -14,6 +14,38 @@
 
 
 #### Fictional Placeholders
+sea_khmer_kottinagara_01_fic = {
+	name = "Rathana"
+	culture = khmer
+	religion = shaivism
+
+	839.1.1 = { birth = yes }
+	901.1.1 = { death = yes }
+}
+sea_khmer_kottinagara_02_fic = {
+	name = "Bourey"
+	culture = khmer
+	religion = shaivism
+
+	906.1.1 = { birth = yes }
+	960.1.1 = { death = yes }
+}
+sea_khmer_kottinagara_03_fic = {
+	name = "Monivong"
+	culture = khmer
+	religion = shaivism
+
+	1042.1.1 = { birth = yes }
+	1102.1.1 = { death = yes }
+}
+sea_khmer_kottinagara_04_fic = {
+	name = "Sarangrith"
+	culture = khmer
+	religion = shaivism
+
+	1152.1.1 = { birth = yes }
+	1212.1.1 = { death = yes }
+}
 
 
 #### ALL TO SORT ####
@@ -22,555 +54,419 @@
 420000 = {
 	name = "Shrutavarman"
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	520.1.1 = {
-		birth = yes
-	}
+	520.1.1 = { birth = yes }
 	# began reign in 550
-	555.1.1 = {
-		death = yes
-	}
+	555.1.1 = { death = yes }
 }
 420001 = {
 	name = "Shreshtavarman"  # Shreshtavarman II
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	525.1.1 = {
-		birth = yes
-	}
+	525.1.1 = { birth = yes }
 	# began reign in 555
-	560.1.1 = {
-		death = yes
-	}
+	560.1.1 = { death = yes }
 }
 420002 = {
 	name = "Viravarman"
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	530.1.1 = {
-		birth = yes
-	}
+	530.1.1 = { birth = yes }
 	563.1.1 = {
 		add_spouse = 420003
 	}
 	# began reign in 560
-	575.1.1 = {
-		death = yes
-	}
+	575.1.1 = { death = yes }
 }
 420003 = {
 	name = "Rakshmi"
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	545.1.1 = {
-		birth = yes
-	}
+	545.1.1 = { birth = yes }
 	# began reign in 575
-	580.1.1 = {
-		death = yes
-	}
+	580.1.1 = { death = yes }
 }
 420004 = {
 	name = "Bhavavarman"  # Bhavavarman I
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	father = 420002
 
-	550.1.1 = {
-		birth = yes
-	}
+	550.1.1 = { birth = yes }
 	# began reign in 580
-	600.1.1 = {
-		death = yes
-	}
+	600.1.1 = { death = yes }
 }
 420005 = {
 	name = "Mahendravarman" # Mahendravarman I
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	father = 420002
 	mother = 420003
 
-	570.1.1 = {
-		birth = yes
-	}
+	570.1.1 = { birth = yes }
 	# began reign in 600
-	616.1.1 = {
-		death = yes
-	}
+	616.1.1 = { death = yes }
 }
 420006 = {
 	name = "Isanavarman"  # Isanavarman I
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	father = 420005
 
-	586.1.1 = {
-		birth = yes
-	}
+	586.1.1 = { birth = yes }
 	# began reign in 616
-	635.1.1 = {
-		death = yes
-	}
+	635.1.1 = { death = yes }
 }
 420007 = {
 	name = "Bhavavarman" # Bhavavarman II
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	father = 420006
 
-	605.1.1 = {
-		birth = yes
-	}
+	605.1.1 = { birth = yes }
 	# began reign in 635
-	657.1.1 = {
-		death = yes
-	}
+	657.1.1 = { death = yes }
 }
 420008 = {
 	name = "Jayavarman" # Jayavarman I
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	father = 420006
 
-	627.1.1 = {
-		birth = yes
-	}
+	627.1.1 = { birth = yes }
 	669.1.1 = {
 		add_spouse = 420009
 	}
 	# began reign in 657
-	681.1.1 = {
-		death = yes
-	}
+	681.1.1 = { death = yes }
 }
 420009 = {
 	name = "Jayadevi"
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	651.1.1 = {
-		birth = yes
-	}
+	651.1.1 = { birth = yes }
 	# began reign in 681
-	713.1.1 = {
-		death = yes
-	}
+	713.1.1 = { death = yes }
 }
 
 4200100 = {
 	name = "Rudravarman" # Father of the next 4 siblings, and great-uncle and father-in-law of Jayavarman II
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200111
 	mother = 4200111a
 
-	770.1.1 = {
-		birth = yes
-	}
+	770.1.1 = { birth = yes }
 	793.1.1 = {
 		add_spouse = 4200105
 	}
-	833.1.1 = {
-		death = yes
-	}
+	833.1.1 = { death = yes }
 }
 
 4200103 = {
 	name = "Sivakaivalya"  # General and Purohit of Jayavarman II
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200100
 
-	795.1.1 = {
-		birth = yes
-	}
-	829.1.1 = {
-		death = yes
-	}
+	795.1.1 = { birth = yes }
+	829.1.1 = { death = yes }
 }
 4200104 = {
 	name = "Sivavinduka" # General, Marshal
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200100
 
-	797.1.1 = {
-		birth = yes
-	}
-	852.1.1 = {
-		death = yes
-	}
+	797.1.1 = { birth = yes }
+	852.1.1 = { death = yes }
 }
 42001041 = {
 	name = "Sivavinduka" # Fictional son of Sivavinduka to carry on holding d_dviradapura
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200104
 
-	832.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	832.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 4200102 = {
 	name = "Prthivindradevi" # Mother of Indravarman I
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200100
 	mother = 4200105
 
-	794.1.1 = {
-		birth = yes
-	}
-	857.1.1 = {
-		death = yes
-	}
+	794.1.1 = { birth = yes }
+	857.1.1 = { death = yes }
 }
 4200101 = {
 	name = "Nripendradevi" # Born Hyang Amrita, first wife of Jayavarman II
 	female = yes
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200100
 	mother = 4200105
 
-	799.1.1 = {
-		birth = yes
-	}
-	878.1.1 = {
-		death = yes
-	}
+	799.1.1 = { birth = yes }
+	878.1.1 = { death = yes }
 }
 
 4200105 = {
 	name = "Narendradevi" # Narendradevi II, Wife of Rudravarman
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200106
 	mother = 4200107a
 
-	774.1.1 = {
-		birth = yes
-	}
-	834.1.1 = {
-		death = yes
-	}
+	774.1.1 = { birth = yes }
+	834.1.1 = { death = yes }
 }
 4200106 = {
 	name = "Nrpathindravarman" # Nrpathindravarman II
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200107
 
-	732.1.1 = {
-		birth = yes
-	}
+	732.1.1 = { birth = yes }
 	760.1.1 = {
 		add_spouse = 4200107a
 	}
 	774.1.1 = {
 		add_spouse = 4200106a
 	}
-	800.1.1 = {
-		death = yes
-	}
+	800.1.1 = { death = yes }
 }
 4200106a = {
 	name = "Nrpathindradevi" # Nrpathindradevi, mother of Narendradevi II, wife of Nrpathindravarman II and sister of Rudravarman
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200111
 	mother = 4200111a
 
-	758.1.1 = {
-		birth = yes
-	}
-	838.1.1 = {
-		death = yes
-	}
+	758.1.1 = { birth = yes }
+	838.1.1 = { death = yes }
 }
 
 4200107 = {
 	name = "Nrpathindravarman" # Fictional Nrpathindravarman I
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	702.1.1 = {
-		birth = yes
-	}
-	770.1.1 = {
-		death = yes
-	}
+	702.1.1 = { birth = yes }
+	770.1.1 = { death = yes }
 }
 
 4200107a = {
 	name = "Narendradevi" # Narendradevi I
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	742.1.1 = {
-		birth = yes
-	}
-	810.1.1 = {
-		death = yes
-	}
+	742.1.1 = { birth = yes }
+	810.1.1 = { death = yes }
 }
 
 4200108 = {
 	name = "Nandavarman" # Fictional father of Jayavarman II
 	dynasty_house = house_Vyadha
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 4200110
 
-	725.1.1 = {
-		birth = yes
-	}
-	790.1.1 = {
-		death = yes
-	}
+	725.1.1 = { birth = yes }
+	790.1.1 = { death = yes }
 }
 4200109 = {
 	name = "Nandadevi" # Fictional mother of Jayavarman II
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 42001090
 
-	732.1.1 = {
-		birth = yes
-	}
-	799.1.1 = {
-		death = yes
-	}
+	732.1.1 = { birth = yes }
+	799.1.1 = { death = yes }
 }
 
 42001090 = {
 	name = "Kamadevi" # Mother of the mother of Jayavarman II
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 42001092
 
-	712.1.1 = {
-		birth = yes
-	}
-	779.1.1 = {
-		death = yes
-	}
+	712.1.1 = { birth = yes }
+	779.1.1 = { death = yes }
 }
 
 42001091 = {
 	name = "Jayendradhipativarman" # Uncle of Jayavarman II
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 42001090
 
-	730.1.1 = {
-		birth = yes
-	}
-	794.1.1 = {
-		death = yes
-	}
+	730.1.1 = { birth = yes }
+	794.1.1 = { death = yes }
 }
 
 42001092 = {
 	name = "Prabhavati" # Mother of the mother of the mother of Jayavarman II (fic)
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001093
 
-	692.1.1 = {
-		birth = yes
-	}
-	759.1.1 = {
-		death = yes
-	}
+	692.1.1 = { birth = yes }
+	759.1.1 = { death = yes }
 }
 
 42001093 = {
 	name = "Nripatindravarman" # Father of the mother of the mother of the mother of Jayavarman II
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	672.1.1 = {
-		birth = yes
-	}
-	739.1.1 = {
-		death = yes
-	}
+	672.1.1 = { birth = yes }
+	739.1.1 = { death = yes }
 }
 
 42001094 = {
 	# Also called Indraloka
 	name = "Puskarakusa" # Maternal uncle of the maternal uncle of the mother of Jayavarman II
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001093
 
-	694.1.1 = {
-		birth = yes
-	}
-	766.1.1 = {
-		death = yes
-	}
+	694.1.1 = { birth = yes }
+	766.1.1 = { death = yes }
 }
 
 42001095 = {
 	name = "Balavarman" # For linking families
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001094
 
-	724.1.1 = {
-		birth = yes
-	}
-	787.1.1 = {
-		death = yes
-	}
+	724.1.1 = { birth = yes }
+	787.1.1 = { death = yes }
 }
 4200109501 = {
 	name = "Anantavarman" # For linking families
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001095
 
-	744.1.1 = {
-		birth = yes
-	}
-	834.1.1 = {
-		death = yes
-	}
+	744.1.1 = { birth = yes }
+	834.1.1 = { death = yes }
 }
 
 42001096 = {
 	name = "Rajendravarman" # Grandfather of Indradevi
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200109501
 
-	764.1.1 = {
-		birth = yes
-	}
+	764.1.1 = { birth = yes }
 	772.1.1 = {
 		add_spouse = 42001097
 	}
-	844.1.1 = {
-		death = yes
-	}
+	844.1.1 = { death = yes }
 }
 42001097 = {
 	name = "Nrpatindradevi" # Mother of Mahipativarman
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	754.1.1 = {
-		birth = yes
-	}
-	833.1.1 = {
-		death = yes
-	}
+	754.1.1 = { birth = yes }
+	833.1.1 = { death = yes }
 }
 42001098 = {
 	name = "Mahipativarman"
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001096
 	mother = 42001097
 
-	789.1.1 = {
-		birth = yes
-	}
+	789.1.1 = { birth = yes }
 	827.1.1 = {
 		add_spouse = 42001099
 	}
-	859.1.1 = {
-		death = yes
-	}
+	859.1.1 = { death = yes }
 }
 42001099 = {
 	name = "Rajendradevi" # Mother of Indradevi
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	809.1.1 = {
-		birth = yes
-	}
-	889.1.1 = {
-		death = yes
-	}
+	809.1.1 = { birth = yes }
+	889.1.1 = { death = yes }
 }
 42001100 = {
 	name = "Indradevi" # Mother of Yasovarman
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001098
 	mother = 42001099
@@ -581,46 +477,36 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	904.1.1 = {
-		death = yes
-	}
+	904.1.1 = { death = yes }
 }
 
 42001101 = {
 	name = "Mandandeva" # Brother of Indradevi, uncle of Yasovarman
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001098
 	mother = 42001099
 
-	827.1.1 = {
-		birth = yes
-	}
-	886.1.1 = {
-		death = yes
-	}
+	827.1.1 = { birth = yes }
+	886.1.1 = { death = yes }
 }
 42001102 = {
 	name = "Yasodevi" # Daughter of Indradevi's brother, wife of Yasovarman I
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 42001101
 
-	872.1.1 = {
-		birth = yes
-	}
-	957.1.1 = {
-		death = yes
-	}
+	872.1.1 = { birth = yes }
+	957.1.1 = { death = yes }
 }
 42001103 = {
 	name = "Mahendradevi" # Daughter of Indravarman, older sister of Yasovarman
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420012
 	mother = 42001100
@@ -631,15 +517,13 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	933.1.1 = {
-		death = yes
-	}
+	933.1.1 = { death = yes }
 }
 42001104 = {
 	name = "Jayadevi" # Younger? sister of Yasovarman
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420012
 	mother = 42001100
@@ -650,99 +534,77 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	942.1.1 = {
-		death = yes
-	}
+	942.1.1 = { death = yes }
 }
 
 4200111 = {
 	name = "Kamarnava" # Fictional great grandfather of Jayavarman II / father of Rudravarman
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	687.1.1 = {
-		birth = yes
-	}
+	687.1.1 = { birth = yes }
 	722.1.1 = {
 		add_matrilineal_spouse = 4200111a
 	}
-	774.1.1 = {
-		death = yes
-	}
+	774.1.1 = { death = yes }
 }
 
 4200111a = {
 	name = "Indrani" # Queen regnant of Sambhupura, mother of Rudravarman
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	740.1.1 = {
-		birth = yes
-	}
-	808.1.1 = {
-		death = yes
-	}
+	740.1.1 = { birth = yes }
+	808.1.1 = { death = yes }
 }
 
 4200110 = {
 	name = "Rachana" # Fictional grandmother of Jayavarman II
 	female = yes
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200111
 
-	705.1.1 = {
-		birth = yes
-	}
-	780.1.1 = {
-		death = yes
-	}
+	705.1.1 = { birth = yes }
+	780.1.1 = { death = yes }
 }
 4200112 = {
 	name = "Sambavati" # Fictional sister of Rudravarman / mother of Prthivindravarman
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200111
 
-	740.1.1 = {
-		birth = yes
-	}
-	816.1.1 = {
-		death = yes
-	}
+	740.1.1 = { birth = yes }
+	816.1.1 = { death = yes }
 }
 4200113 = {
 	name = "Prthivindravarman"
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 4200112
 
-	777.1.1 = {
-		birth = yes
-	}
+	777.1.1 = { birth = yes }
 	793.1.1 = {
 		add_spouse = 4200102
 	}
-	860.1.1 = {
-		death = yes
-	}
+	860.1.1 = { death = yes }
 }
 4200114 = {
 	name = "Dandimahadevi" # Older sister of Rudravarman, mother of Dharanindradevi
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200111
 
@@ -752,16 +614,14 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	832.1.1 = {
-		death = yes
-	}
+	832.1.1 = { death = yes }
 }
 
 4200116 = {
 	name = "Mahendravarman" # Father of Rajendravarman II, brother of Dharaindradevi
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 4200114
 
@@ -774,17 +634,15 @@
 	887.1.1 = {
 		add_spouse = 42001103
 	}
-	944.1.1 = {
-		death = yes
-	}
+	944.1.1 = { death = yes }
 }
 
 4200117 = {
 	name = "Sukshmavindu" # Purohit of Jayavarman II and later Jayavarman III, brother of Indravarman I
 	# Could have been on good terms with his brother and helped him murder Jayavarman III and claim the throne
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200113
 	mother = 4200102
@@ -795,17 +653,15 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	924.1.1 = {
-		death = yes
-	}
+	924.1.1 = { death = yes }
 }
 
 420010a = {
 	name = "Jayendrabha" # Daughter of Nrpendradevi, queen regnant of Sambhupura
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 4200106a
 	father = 4200106
@@ -816,17 +672,15 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	803.1.1 = {
-		death = yes
-	}
+	803.1.1 = { death = yes }
 }
 
 420010b = {
 	name = "Jyestharya" # Daughter of Jayendrabha and Jayavarman II, queen regnant of Sambhupura
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 420010a
 	father = 420010
@@ -837,9 +691,7 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	849.1.1 = {
-		death = yes
-	}
+	849.1.1 = { death = yes }
 }
 
 420010 = {
@@ -847,8 +699,8 @@
 
 	name = "Jayavarman" # Jayavarman II
 	dynasty_house = house_Vyadha
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200108
 	mother = 4200109
@@ -886,17 +738,15 @@
 	820.1.1 = {
 		add_spouse = 4200115
 	}
-	835.1.1 = {
-		death = yes
-	}
+	835.1.1 = { death = yes }
 }
 
 420026 = {
 	name = "Jayadevi" # Fictional wife for Jayavarman III
 	female = yes
 	dynasty = sea_baladitya
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	830.1.1 = {
 		birth = yes
@@ -904,9 +754,7 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	912.1.1 = {
-		death = yes
-	}
+	912.1.1 = { death = yes }
 }
 
 420011 = {
@@ -914,8 +762,8 @@
 	name = "Jayavarman" # Jayavarman III
 	#dna = 420011_jayavarman_iii
 	dynasty_house = house_Vyadha
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	father = 420010
 	mother = 4200115
 
@@ -933,17 +781,15 @@
 	848.1.1 = {
 		add_spouse = 420026
 	}
-	877.1.1 = {
-		death = yes
-	}
+	877.1.1 = { death = yes }
 }
 
 420012 = {
 	name = "Indravarman" # Indravarman I
 	dynasty_house = house_Sambhu
 
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200113
 	mother = 4200102
@@ -962,15 +808,13 @@
 		add_spouse = 42001100 # Indradevi
 	}
 	# began reign in 877
-	889.1.1 = {
-		death = yes
-	}
+	889.1.1 = { death = yes }
 }
 420013 = {
 	name = "Yasovarman" # Yasovarman I, The Leper King
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420012 # Indravarman I
 	mother = 42001100 # Indradevi
@@ -989,15 +833,13 @@
 	890.1.1 = {
 		add_spouse = 42001102
 	}
-	910.1.1 = {
-		death = yes
-	}
+	910.1.1 = { death = yes }
 }
 420014 = { # Rudraloka
 	name = "Harshavarman" # Harshavarman I
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420013
 	mother = 42001102
@@ -1009,15 +851,13 @@
 		}
 	}
 	# began reign in 910
-	923.1.1 = {
-		death = yes
-	}
+	923.1.1 = { death = yes }
 }
 420015 = {
 	name = "Ishanavarman" # Ishanavarman II
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420013
 	mother = 42001102
@@ -1029,15 +869,13 @@
 		}
 	}
 	# began reign in 923
-	928.1.1 = {
-		death = yes
-	}
+	928.1.1 = { death = yes }
 }
 420016 = {
 	name = "Jayavarman" # Jayavarman IV
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	mother = 42001103
 
@@ -1051,15 +889,13 @@
 	916.1.1 = {
 		add_spouse = 42001104
 	}
-	941.1.1 = {
-		death = yes
-	}
+	941.1.1 = { death = yes }
 }
 420017 = {
 	name = "Harshavarman" # Harshavarman II
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420016
 	mother = 42001104
@@ -1071,15 +907,13 @@
 		}
 	}
 	# began reign in 941
-	944.1.1 = {
-		death = yes
-	}
+	944.1.1 = { death = yes }
 }
 420018 = {
 	name = "Rajendravarman" # Rajendravarman II
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200116
 	mother = 42001103
@@ -1094,16 +928,14 @@
 	953.1.1 = {
 		add_spouse = 4200191
 	}
-	968.1.1 = {
-		death = yes
-	}
+	968.1.1 = { death = yes }
 }
 420019 = {
 	name = "Jayavarman" # Jayavarman V
 	# Sympathetic to buddhism
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420018
 	mother = 4200191
@@ -1115,16 +947,14 @@
 		}
 	}
 	# began reign in 968 at the age of 10
-	1001.1.1 = {
-		death = yes
-	}
+	1001.1.1 = { death = yes }
 }
 4200190 = {
 	name = "Indralakshmi" # Sister of Jayavarman V
 	female = yes
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420018
 	mother = 4200191
@@ -1135,16 +965,14 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	1001.1.1 = {
-		death = yes
-	}
+	1001.1.1 = { death = yes }
 }
 
 4200191 = {
 	name = "Rajendradevi" # Mother of Jayavarman V
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200192
 
@@ -1154,44 +982,34 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	982.1.1 = {
-		death = yes
-	}
+	982.1.1 = { death = yes }
 }
 4200192 = {
 	name = "Rathanak" # (fic) Father of Rajendradevi
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	906.1.1 = {
-		birth = yes
-	}
-	957.1.1 = {
-		death = yes
-	}
+	906.1.1 = { birth = yes }
+	957.1.1 = { death = yes }
 }
 4200193 = {
 	name = "Rithisak" # (fic) Brother of Rajendradevi, father of the next two
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200192
 
-	932.1.1 = {
-		birth = yes
-	}
-	988.1.1 = {
-		death = yes
-	}
+	932.1.1 = { birth = yes }
+	988.1.1 = { death = yes }
 }
 
 420020 = {
 	name = "Udayadityavarman" # Udayadityavarman I
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200193
 
@@ -1209,8 +1027,8 @@
 420021 = {
 	name = "Jayavirahvarman" # Jayavirahvarman I
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 4200193
 
@@ -1222,15 +1040,13 @@
 	}
 	# began reign in 1002
 	# title usurped by Suryavarman I
-	1011.1.1 = {
-		death = yes
-	}
+	1011.1.1 = { death = yes }
 }
 420022 = {
 	name = "Suryavarman" # Suryavarman I
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	972.1.1 = {
 		birth = yes
@@ -1239,15 +1055,13 @@
 		}
 	}
 	# began reign in 1011, usurped
-	1050.1.1 = {
-		death = yes
-	}
+	1050.1.1 = { death = yes }
 }
 420024 = {
 	name = "Udayadityavarman" # Udayadityavarman II
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420022
 
@@ -1258,16 +1072,14 @@
 		}
 	}
 	# began reign in 1050
-	1066.1.1 = {
-		death = yes
-	}
+	1066.1.1 = { death = yes }
 }
 420025 = {
 	# Sadasivapada
 	name = "Harshavarman" # Harshavarman III
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420022
 
@@ -1288,9 +1100,7 @@
 		#	 }
 		# }
 	}
-	1080.1.1 = {
-		death = yes
-	}
+	1080.1.1 = { death = yes }
 }
 	42002501 = {
 		name = "Kambujarajalakshmi"
@@ -1310,23 +1120,19 @@
 420027 = {
 	name = "Puthyrith" # fictional father of Jayarvarman VI
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	1028.1.1 = {
-		birth = yes
-	}
-	1085.1.1 = {
-		death = yes
-	}
+	1028.1.1 = { birth = yes }
+	1085.1.1 = { death = yes }
 }
 
 420023 = {
 	# Paramakaivalyapada
 	name = "Jayavarman" # Jayarvarman VI
 	dynasty = 4200001 # New dynasty
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	# Should show up to claim the empire upon the death of Harshavarman III
 
@@ -1342,16 +1148,14 @@
 	1090.1.1 = {
 		add_spouse = 420029
 	}
-	1107.1.1 = {
-		death = yes
-	}
+	1107.1.1 = { death = yes }
 }
 420028 = {
 	# Elder brother of Jayavarman VI
 	name = "Dharanindravarman" # Dharanindravarman I
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	father = 420027
 
@@ -1375,8 +1179,8 @@
 	# Wife of Jayavarman VI and then Dharanindravarman I
 	name = "Vijayendralakshmi"
 	female = yes
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1072.1.1 = {
 		birth = yes
@@ -1384,16 +1188,14 @@
 			add_character_flag = has_regnal_name
 		}
 	}
-	1133.1.1 = {
-		death = yes
-	}
+	1133.1.1 = { death = yes }
 }
 
 420030 = {
 	name = "Suryavarman" # Suryavarman II
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1095.1.1 = { # fictional date
 		birth = yes
@@ -1402,16 +1204,14 @@
 		}
 	}
 	# reigned from 1113
-	1150.1.1 = {
-		death = yes
-	}
+	1150.1.1 = { death = yes }
 }
 
 420031 = {
 	name = "Dharanindravarman" # Dharanindravarman II
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1105.1.1 = { # fictional date
 		birth = yes
@@ -1423,9 +1223,7 @@
 	1125.1.1 = {
 		add_spouse = 42003101
 	}
-	1156.1.1 = {
-		death = yes
-	}
+	1156.1.1 = { death = yes }
 }
 42003101 = {
 	name = "Sri_Jayarajacudamani"
@@ -1433,8 +1231,8 @@
 	dynasty_house = house_Sambhu
 	father = 420025
 
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1110.1.1 = { # Fictional date
 		birth = yes
@@ -1447,8 +1245,8 @@
 420032 = {
 	name = "Yasovarman" # Yasovarman II
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1110.1.1 = { # fictional date
 		birth = yes
@@ -1457,16 +1255,14 @@
 		}
 	}
 	# reigned from 1156
-	1165.1.1 = {
-		death = yes
-	}
+	1165.1.1 = { death = yes }
 }
 
 420033 = {
 	name = "Tribhuvanadityavarman" # Tribhuvanadityavarman I
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1122.1.1 = { # fictional date
 		birth = yes
@@ -1475,9 +1271,7 @@
 		}
 	}
 	# reigned from 1165
-	1177.1.1 = {
-		death = yes
-	}
+	1177.1.1 = { death = yes }
 }
 
 420034 = {
@@ -1505,9 +1299,7 @@
 	1185.1.1 = {
 		add_spouse = 42003402 # Indradevi, Jayarajadevi's elder sister
 	}
-	1218.1.1 = {
-		death = yes
-	}
+	1218.1.1 = { death = yes }
 }
 42003401 = {
 	name = "Jayarajadevi" # Jayarajadevi, first consort of Jayavarman VII
@@ -1550,8 +1342,8 @@
 	# Father of the preceding two sisters
 	name = "Jayaraja" # Named "Ja ..."
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1100.1.1 = { # Fictional date
 		birth = yes
@@ -1564,8 +1356,8 @@
 420035 = {
 	name = "Indravarman" # Indravarman II
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1153.1.1 = { # fictional date
 		birth = yes
@@ -1574,16 +1366,14 @@
 		}
 	}
 	# reigned from 1218
-	1243.1.1 = {
-		death = yes
-	}
+	1243.1.1 = { death = yes }
 }
 
 420036 = {
 	name = "Jayavarman" # Jayavarman VIII
 	dynasty = 4200001
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1225.1.1 = { # fictional date
 		birth = yes
@@ -1602,36 +1392,24 @@ chong001 = {
 	culture = "chong"
 	religion = shaivism
 
-	841.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	841.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 chong002 = {
 	name = "Ranavong"
 	culture = "chong"
 	religion = shaivism
 
-	823.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	823.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 chong003 = {
 	name = "Narith"
 	culture = "chong"
 	religion = shaivism
 
-	848.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	848.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 chong004 = {
 	name = "Sopheap"
@@ -1639,12 +1417,8 @@ chong004 = {
 	religion = "kuy_animism"
 	dynasty = kuyd2008
 
-	821.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	821.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 
 khmer001 = {
@@ -1652,48 +1426,25 @@ khmer001 = {
 	culture = khmer
 	religion = shaivism
 
-	849.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
-khmer002 = {
-	name = "Rathana"
-	culture = khmer
-	religion = shaivism
 
-	826.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
-}
 khmer003 = {
 	name = "Sokhem"
 	culture = khmer
 	religion = shaivism
 
-	839.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	839.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 khmer004 = {
 	name = "Veasna"
 	culture = khmer
 	religion = shaivism
 
-	812.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	812.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 
 khmerv001 = {
@@ -1784,14 +1535,7 @@ khmerv011 = {
 	1042.1.1 = { birth = yes }
 	1100.1.1 = { death = yes }
 }
-khmerv012 = {
-	name = "Monivong"
-	culture = khmer
-	religion = shaivism
 
-	1045.1.1 = { birth = yes }
-	1100.1.1 = { death = yes }
-}
 khmerv013 = {
 	name = "Vichet"
 	culture = khmer
@@ -1830,58 +1574,44 @@ khmerv016 = {
 khmerv017 = {
 	name = "Damkhat_Sukonthor"
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	894.1.1 = {
-		birth = yes
-	}
-	960.1.1 = {
-		death = yes
-	}
+	894.1.1 = { birth = yes }
+	960.1.1 = { death = yes }
 }
 khmerv018 = {
 	name = "Entaravong"
 	dynasty_house = house_Sambhu
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
-	918.1.1 = {
-		birth = yes
-	}
-	960.1.1 = {
-		death = yes
-	}
+	918.1.1 = { birth = yes }
+	960.1.1 = { death = yes }
 }
 khmerv019 = {
 	name = "Sovannamongkhol"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	911.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
-khmerv020 = {
-	name = "Bourey"
-	religion = "shaivism"
-	culture = "khmer"
 
-	906.1.1 = { birth = yes }
-	960.1.1 = { death = yes }
-}
+
 khmerv021 = {
 	name = "Rothmoni"
 	dynasty_house = house_Vyadha
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	894.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
 khmerv022 = {
 	name = "Sovann"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	895.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
@@ -1889,48 +1619,48 @@ khmerv022 = {
 khmerv023 = {
 	name = "Chey_Soryavong"
 	dynasty_house = house_Dvirada
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1027.1.1 = { birth = yes }
 	1100.1.1 = { death = yes }
 }
 khmerv024 = {
 	name = "Narithipong"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	911.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
 khmerv025 = {
 	name = "Samrin"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	917.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
 khmerv026 = {
 	name = "Sokpheng"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	914.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
 khmerv027 = {
 	name = "Sourkeat"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	900.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
 khmerv028 = {
 	name = "Chanchhaya"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1134.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
@@ -1938,8 +1668,8 @@ khmerv028 = {
 
 khmerv030 = {
 	name = "Namhong"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	dynasty_house = house_Dvirada
 
 	1139.1.1 = { birth = yes }
@@ -1947,25 +1677,18 @@ khmerv030 = {
 }
 khmerv031 = {
 	name = "Ranariddh"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	dynasty_house = house_Vyadha
 
 	1140.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
-khmerv032 = {
-	name = "Sarangrith"
-	religion = "shaivism"
-	culture = "khmer"
 
-	1157.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
-}
 khmerv033 = {
 	name = "Neakrin"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	dynasty_house = house_Sambhu
 
 	1155.1.1 = { birth = yes }
@@ -1973,8 +1696,8 @@ khmerv033 = {
 }
 khmerv034 = {
 	name = "Leap"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 	# isana?
 
 	1138.1.1 = { birth = yes }
@@ -1982,48 +1705,48 @@ khmerv034 = {
 }
 khmerv035 = {
 	name = "Keo_Ban_On"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1150.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
 khmerv036 = {
 	name = "Sothavarin"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1156.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
 khmerv037 = {
 	name = "Akra"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1153.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
 khmerv038 = {
 	name = "Narasoryavong"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1156.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
 khmerv039 = {
 	name = "Daravong"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1148.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
 khmerv040 = {
 	name = "Reasmey"
-	religion = "shaivism"
-	culture = "khmer"
+	culture = khmer
+	religion = shaivism
 
 	1142.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }

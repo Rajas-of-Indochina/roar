@@ -442,6 +442,11 @@
 	religion = shaivism
 
 	holding = temple_citadel_holding
+
+	# History
+	1150.1.1 = {
+		culture = khmer
+	}
 }
 15713 = { # Moat Chruk
 	# one of historical provinces of Kampuchea Krom (Lower Cambodia) region ; means 'Pig's Mouth'
@@ -458,9 +463,12 @@
 	culture = bnam
 	religion = shaivism
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 
 	# History
+	1178.1.1 = {
+		holding = temple_citadel_holding
+	}
 }
 17809 = { # Ca Mau
 	# region which name translates to 'murky water'
@@ -481,13 +489,21 @@
 	culture = bnam
 	religion = shaivism
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 
 	# History
+	1050.1.1 = {
+		holding = temple_citadel_holding
+	}
 }
 15323  = {  # Thanh Phu
 	# modern day agricultural site
-	holding = city_holding
+	holding = none
+
+	# History
+	1050.1.1 = {
+		holding = city_holding
+	}
 }
 15419 = { # Phsar Dek
 	# modern day monastery site
