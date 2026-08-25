@@ -2377,74 +2377,13 @@ caucasianroa.100 = {
 	hidden = yes
 	immediate = {
 		root = { save_scope_as = raid_sponsor }
-		# Generate out Pirate Thamade TODO: Isolate this into an effect/script and pass in a $TEMPLATE$ as a parameter, this seems to be worth re-using in other similar events
-		# Default in "Equal Martial"
-		set_local_variable = {
-			name = male_chance
-			value = 50
-		}
-
-		#Check which way the martial law is favored, if any
-		if = { #Male-Only Martial
-			limit = { ROA_martial_gender_is_male = yes }
-			if = {
-				limit = { ROA_can_have_martial_gender_exception = yes }
-				change_local_variable = {
-					name = male_chance
-					add = 40
-				}
-			}
-			else = { # No Exceptions to consider
-				change_local_variable = {
-					name = male_chance
-					add = 50
-				}		
-			}
-		}
-		else_if = { #Female-Only Martial
-			limit = { ROA_martial_gender_is_female = yes }
-			if = {
-				limit = { ROA_can_have_martial_gender_exception = yes }
-				change_local_variable = {
-					name = male_chance
-					subtract = 40
-				}
-			}
-			else = { # No Exceptions to consider
-				change_local_variable = {
-					name = male_chance
-					subtract = 50
-				}
-			}
-		}
-
-		#Generate character based on gender chance
-		random_list = {
-			# Male Pirate
-			0 = {
-				modifier = { add = local_var:male_chance }
-				create_character = {
-					location = root.location
-					template = pirate_thamade
-					gender = male
-					random_traits = no
-					save_scope_as = pirate_thamade
-				}
-			}
-			# Female Pirate
-			0 = {
-				modifier = {
-					add = 100
-					subtract = local_var:male_chance
-				}	
-				create_character = {
-					location = root.location
-					template = pirate_thamade
-					gender = female
-					random_traits = no
-					save_scope_as = pirate_thamade
-				}
-			}
+		
+		# Generate our Pirate Thamade
+		ROA_create_martial_character_from_template = {
+			TEMPLATE_SRC= pirate_thamade 
+			SCOPE_DEST=   pirate_thamade
+			CULTURE_SRC=  scope:raid_sponsor.culture
+			FAITH_SRC=    scope:raid_sponsor.faith
 		}
 
 		#Make a list of 3 valid realms

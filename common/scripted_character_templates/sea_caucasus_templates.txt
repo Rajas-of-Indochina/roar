@@ -135,10 +135,11 @@ pirate_thamade = {
 	}
 	dynasty = none
 	random_traits = no
-	culture = root.culture
-	faith = root.faith
-	# NOTE: ASSIGN GENDER WHEN CALLING THIS TEMPLATE, EASIER TO ACCOUNT FOR SHIELDMAIDENS WHICH CIRCASSIANS HAVE FROM THE XBAZE TRADITION
-	#gender_female_chance = root_soldier_female_chance
+	#Default to Pagan Circassian, you can *and should* overwrite this when using the template
+	culture = culture:circassian
+	faith = faith:circassian_pagan
+	#NOTE: ASSIGN GENDER WHEN CALLING THIS TEMPLATE, EASIER TO ACCOUNT FOR SHIELDMAIDENS WHICH CIRCASSIANS HAVE FROM THE XBAZE TRADITION
+	gender_female_chance = root_soldier_female_chance
 	stewardship = {
 		min_template_average_skill
 		max_template_decent_skill
@@ -148,8 +149,8 @@ pirate_thamade = {
 		max_template_high_skill
 	}
 	prowess = {
-		min_template_high_skill
-		max_template_high_skill
+		min_template_decent_skill
+		max_template_decent_skill
 	}
 
 	after_creation = {

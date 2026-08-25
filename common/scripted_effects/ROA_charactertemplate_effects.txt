@@ -1,0 +1,102 @@
+# Intended to create a martial-type/soldier/knight character.  Gender follows martial custom, with consideration of shieldmaidens or other gender exceptions
+#
+# Takes in the parameters:
+# - "TEMPLATE_SRC" - The template defined within "common/scripted_character_templates/*.txt"
+# - "SCOPE_DEST" - The scope where the generated character can be retrieved from to use in the event that calls this effect
+# - "CULTURE_SRC" - The culture the character will be, and what the martial custom would be considered from
+# - "FAITH_SRC" - The faith the character will be
+ROA_create_martial_character_from_template = {
+	
+	# Default in "Equal Martial"
+	set_local_variable = {
+		name = male_chance
+		value = 50
+	}
+
+	#Check which way the martial law is favored, if any
+	if = { #Male-Only Martial
+		limit = {
+			ROA_martial_gender_is_male_PARAM = {
+				CULTURE= $CULTURE_SRC$
+				FAITH=   $FAITH_SRC$
+			}
+		}
+		if = {
+			limit = {
+				ROA_can_have_martial_gender_exception_PARAM = {
+					CULTURE= $CULTURE_SRC$
+					FAITH=   $FAITH_SRC$
+				}
+			}
+			change_local_variable = {
+				name = male_chance
+				add = 40
+			}
+		}
+		else = { # No Exceptions to consider
+			change_local_variable = {
+				name = male_chance
+				add = 50
+			}
+		}
+	}
+	else_if = { #Female-Only Martial
+		limit = {
+			ROA_martial_gender_is_female_PARAM = {
+				CULTURE= $CULTURE_SRC$
+				FAITH=   $FAITH_SRC$
+			}
+		}
+		if = {
+			limit = {
+				ROA_can_have_martial_gender_exception_PARAM = {
+					CULTURE= $CULTURE_SRC$
+					FAITH=   $FAITH_SRC$
+				}
+			}
+			change_local_variable = {
+				name = male_chance
+				subtract = 40
+			}
+		}
+		else = { # No Exceptions to consider
+			change_local_variable = {
+				name = male_chance
+				subtract = 50
+			}
+		}
+	}
+
+	#Generate character based on gender chance
+	random_list = {
+		# Male Pirate
+		0 = {
+			modifier = { add = local_var:male_chance }
+			create_character = {
+				location = root.location
+				template = $TEMPLATE_SRC$
+				gender = male
+				culture = $CULTURE_SRC$
+				faith = $FAITH_SRC$
+				random_traits = no
+				save_scope_as = $SCOPE_DEST$
+			}
+		}
+		# Female Pirate
+		0 = {
+			modifier = {
+				add = 100
+				subtract = local_var:male_chance
+			}	
+			create_character = {
+				location = root.location
+				template = $TEMPLATE_SRC$
+				gender = female
+				culture = $CULTURE_SRC$
+				faith = $FAITH_SRC$
+				random_traits = no
+				save_scope_as = $SCOPE_DEST$
+			}
+		}
+	}
+}
