@@ -232,16 +232,20 @@
 
 }
 
-# 1421 - Sravasti
-1421 = {	# 1421 - Sravasti
-
-	# Misc
+### c_sravasti
+1421 = {	# Sravasti
 	culture = kaushali
-	religion = vajrayana
+	religion = mahasanghika
+
+	holding = castle_holding
+
 	special_building_slot = sravasti_01
 	special_building = sravasti_01
-	# History
 
+	# History
+	1000.1.1 = {
+		religion = vajrayana
+	}
 }
 
 # 1422 - Naimisa
