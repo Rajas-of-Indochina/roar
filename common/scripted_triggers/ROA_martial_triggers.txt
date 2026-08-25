@@ -31,11 +31,18 @@ ROA_character_can_be_shieldperson = {
 	}
 }
 
-#To be used BEFORE a character is generated to find out if there should be a small chance to generate as the non-dominant gender
-#Call it from the scope of the character that the event is firing from
+#Just a wrapper for the below, to avoid code duplication
+#Safe to fire from character scope of Event POV
 ROA_can_have_martial_gender_exception = {
+	ROA_can_have_martial_gender_exception_PARAM = {
+		CULTURE = culture
+		FAITH = faith
+	}
+}
+#MUST FEED IN PARAMETERS, works as "hypothetical faith/culture combo"
+ROA_can_have_martial_gender_exception_PARAM = {
 	#Exceptions are either shieldmaidens, or exceptional prowess TODO: Consider clergy, or make seperate check for it
-	culture = { 
+	$CULTURE$ = { 
 		OR = {
 			has_cultural_parameter = has_access_to_shieldmaidens
 			has_cultural_parameter = high_prowess_ignores_knight_restrictions
@@ -43,29 +50,46 @@ ROA_can_have_martial_gender_exception = {
 	}
 	trigger_if = { # Determined by Cultural Pillars (CAN'T BE EQUAL)
 		limit = { has_dlc_feature = diverge_culture }
-		culture = { NOT = { has_cultural_parameter = martial_custom_equal_combatant } }
+		$CULTURE$ = { NOT = { has_cultural_parameter = martial_custom_equal_combatant } }
 	}
 	trigger_else = { # Determined by Faith (CAN'T BE EQUAL)
-		faith = { has_doctrine_parameter = combatant_can_be_either_gender_if_no_roco }
+		$FAITH$ = { has_doctrine_parameter = combatant_can_be_either_gender_if_no_roco }
 	}
 }
 
 #Combines checks for dlc/no-dlc to just one check
+#Just a wrapper for the below, to avoid code duplication
+#Safe to fire from character scope of Event POV
 ROA_martial_gender_is_male = {
-	trigger_if = { # Determined by Cultural Pillars
-		limit = { has_dlc_feature = diverge_culture }
-		culture = { has_cultural_parameter = martial_custom_male_only_combatant }
-	}
-	trigger_else = { # Determined by Faith
-		faith = { has_doctrine_parameter = combatant_must_be_male_if_no_roco }
+	ROA_martial_gender_is_male_PARAM = {
+		CULTURE = culture
+		FAITH = faith
 	}
 }
 ROA_martial_gender_is_female = {
+	ROA_martial_gender_is_female_PARAM = {
+		CULTURE = culture
+		FAITH = faith
+	}
+}
+
+#Combine checks for dlc/no-dlc to just one check
+#MUST FEED IN PARAMETERS, works as "hypothetical faith/culture combo"
+ROA_martial_gender_is_male_PARAM = {
 	trigger_if = { # Determined by Cultural Pillars
 		limit = { has_dlc_feature = diverge_culture }
-		culture = { has_cultural_parameter = martial_custom_female_only_combatant }
+		$CULTURE$ = { has_cultural_parameter = martial_custom_male_only_combatant }
 	}
 	trigger_else = { # Determined by Faith
-		faith = { has_doctrine_parameter = combatant_must_be_female_if_no_roco }
+		$FAITH$ = { has_doctrine_parameter = combatant_must_be_male_if_no_roco }
+	}
+}
+ROA_martial_gender_is_female_PARAM = {
+	trigger_if = { # Determined by Cultural Pillars
+		limit = { has_dlc_feature = diverge_culture }
+		$CULTURE$ = { has_cultural_parameter = martial_custom_female_only_combatant }
+	}
+	trigger_else = { # Determined by Faith
+		$FAITH$ = { has_doctrine_parameter = combatant_must_be_female_if_no_roco }
 	}
 }
