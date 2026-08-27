@@ -2376,6 +2376,8 @@ caucasianroa.100 = {
 	# Sponsor Pirate Raid event
 	hidden = yes
 	immediate = {
+		debug_log = "=== EVENT 100 STARTED ==="
+
 		root = { save_scope_as = raid_sponsor }
 		
 		# Generate our Pirate Thamade
@@ -2389,77 +2391,105 @@ caucasianroa.100 = {
 		#Make a list of 3 valid realms
 		#########
 
-		clear_variable_list = roa_caucasus_pirate_target_realms_list
-
-		# Loop until we have 3 unique realms in our list
+		# Loop until we have 3 unique realms in our temporary list
 		while = {
 			limit = {
-				variable_list_size = {
-					name = roa_caucasus_pirate_target_realms_list
-					value < 3
+				OR = {# List doesnt exist (empty) OR list has less than 3
+					#Check if list exists
+					list_size:possible_target_list < 3
 				}
-				# SAFETY! Atleast one must exist, otherwise loop will never end
-				any_neighboring_and_across_water_top_liege_realm_owner = {
-					limit = {
-						alive = yes
-						is_landed = yes
-						NOT = {
-							is_in_list = {
-								target = root
-								variable_name = roa_caucasus_pirate_target_realms_list
-							}
-						}
+
+				# Safety check: Ensure at least 1 valid un-selected realm exists
+				any_neighboring_and_across_water_realm_owner = {
+					alive = yes
+					is_landed = yes
+					NOT = { is_in_list = possible_target_list }
+					NOR = {
+						any_liege_or_above = { this = scope:raid_sponsor }
+						has_truce_with = scope:raid_sponsor
+						has_alliance_with = scope:raid_sponsor
+						this = scope:raid_sponsor
 					}
 				}
 			}
 
-			random_neighboring_and_across_water_top_liege_realm_owner = {
+			#Target realms even if not the top one specifically
+			random_neighboring_and_across_water_realm_owner = {
 				limit = {
 					alive = yes
 					is_landed = yes
-					NOT = {
-						is_in_list = {
-							target = root
-							variable_name = roa_caucasus_pirate_target_realms_list
-						}
+					NOT = { is_in_list = possible_target_list }
+					NOR = {
+						any_liege_or_above = { this = scope:raid_sponsor }
+						has_truce_with = scope:raid_sponsor
+						has_alliance_with = scope:raid_sponsor
+						this = scope:raid_sponsor
 					}
 				}
 
 				weight = {
 					base = 10
 
+					#Rivals with the raid sponsor is massive target, or maybe raid sponsor has grudge
 					modifier = {
-						add = 50
-						capital_province = {
-							is_in_region = black_sea_coast_region
-							#TODO: Caspian Sea
-							#TODO: Byzantion and Greece (lower rate?)
+						add = 80
+						OR = {
+							has_relation_rival = scope:raid_sponsor
+							has_relation_nemesis = scope:raid_sponsor
+							scope:raid_sponsor = { has_relation_grudge = prev }
 						}
 					}
 
-					# Weight modifier: Boost if ANY county in their realm is in region
+					#Greatly aimed at these regions
 					modifier = {
-						add = 30
+						add = 40
+						capital_province = {
+							is_in_region = black_sea_coast_region
+						}
+					}
+					modifier = {
+						add = 20
 						any_sub_realm_county = {
 							title_province = {
 								is_in_region = black_sea_coast_region
-								#TODO: Caspian Sea
-								#TODO: Byzantion and Greece (lower rate?)
 							}
 						}
 					}
-				}
-				save_scope_as = chosen_realm
-			}
 
-			#Save realm to list
-			if = {
-				limit = { exists = scope:chosen_realm }
-				root = {
-					add_to_variable_list = {
-						name = roa_caucasus_pirate_target_realms_list
-						target = scope:chosen_realm
+					#Minimize chance against landlocked rulers
+					modifier = {
+						factor = 0.25
+						NOT = {
+							any_sub_realm_county = {
+								title_province = {
+									is_coastal = yes
+								}
+							}
+						}
 					}
+					#Reduce chance against nomadic realms
+					modifier = {
+						factor = 0.5
+						government_has_flag = government_is_nomadic
+					}
+					#Increase chance against administrative realms
+					modifier = {
+						factor = 1.5
+						government_has_flag = government_is_administrative
+					}
+				}
+
+				add_to_list = possible_target_list
+			}
+		}
+
+		every_in_list = {
+			list = possible_target_list
+			save_scope_as = current_target
+			root = {
+				send_interface_toast = {
+					title = "Pirate Target Found"
+					left_icon = scope:current_target
 				}
 			}
 		}
