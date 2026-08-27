@@ -415,9 +415,9 @@
 	17311=wetlands # b_BOR_Sedu
 	17410=plains # b_tanamerah
 	18463=wetlands # b_BOR_Santubong
-	17434=jungle # b_kalka
-	18460=jungle # b_simanggang
-	18462=jungle # b_saribas
+	17434=wetlands # b_kalka
+	18460=wetlands # b_simanggang
+	18462=wetlands # b_saribas
 	18326=wetlands # b_tanga_sirik
 	18327=wetlands # b_BOR_Kanowit
 	18332=wetlands # b_BOR_Melano
@@ -428,11 +428,11 @@
 	15447=jungle # b_baram
 	15484=hills # b_pa_dali
 	18346=wetlands # b_BOR_Miri
-	15014=jungle # b_belaga
-	15015=jungle # b_long_murum
+	15014=jungle # b_belaga  # jungle_hills
+	15015=jungle # b_long_murum  # jungle_hills
 	17411=jungle # b_BOR_Long
-	18328=jungle # b_nanga_merit
-	18465=jungle # b_BOR_Rajang_Atas
+	18328=jungle # b_nanga_merit  # jungle_hills
+	18465=hills # b_BOR_Rajang_Atas  # jungle_hills
 # k_banjar
 # d_BOR_nan_sarunai
 	15887=wetlands # b_BOR_Banjar
@@ -455,8 +455,8 @@
 	16072=wetlands # b_katingan_kuala
 	18420=wetlands # b_puluang_pisau
 # d_barito
-	16632=wetlands # b_malawaken
-	16804=wetlands # b_lahei
+	16632=hills # b_malawaken
+	16804=hills # b_lahei
 	18428=wetlands # b_bangkuang
 	16659=wetlands # b_muara_teweh
 	18424=wetlands # b_karau_kuala
@@ -467,10 +467,10 @@
 	16871=jungle # b_takajung
 	17005=hills # b_batupau
 	16658=jungle # b_tumbang_marak
-	16771=hills # b_sebaung
-	16877=hills # b_ambalau_serawai
+	16771=jungle # b_sebaung  # jungle_hills
+	16877=jungle # b_ambalau_serawai  # jungle_hills
 	16583=jungle # b_kuala_kurun
-	16631=wetlands # b_dandang
+	16631=jungle # b_dandang
 	16887=hills # b_sumbur_barito
 	16983=hills # b_tumbang_olong
 # k_tarakan
@@ -548,26 +548,26 @@
 	15460=jungle # b_siantan
 	15639=jungle # b_natuna
 # d_sintang
-	17050=wetlands # b_BOR_Sanggau
+	17050=jungle # b_BOR_Sanggau
 	17121=jungle # b_ngabang
 	17142=jungle # b_tayan_hulu
 	17177=jungle # b_jasa
-	17191=wetlands # b_ketungau
-	16746=wetlands # b_simpang_hulu
-	16940=wetlands # b_meliau
-	18444=wetlands # b_BOR_Sekadao
+	17191=jungle # b_ketungau
+	16746=jungle # b_simpang_hulu
+	16940=jungle # b_meliau
+	18444=jungle # b_BOR_Sekadao
 	16784=jungle # b_kayan_sintang
 	16803=jungle # b_nanga_pinoh
 	18438=jungle # b_belimbing
-	18445=wetlands # b_BOR_Sintang
+	18445=jungle # b_BOR_Sintang
 # d_selimbau
-	17161=wetlands # b_badau
+	17161=jungle # b_badau
 	17283=jungle # b_embaloh
-	18459=wetlands # b_putussibau
-	17093=wetlands # b_seberuang
-	17109=jungle # b_mentebah
-	17163=jungle # b_medamin
-	18455=wetlands # b_bunut
+	18459=hills # b_putussibau  # jungle_hills
+	17093=jungle # b_seberuang
+	17109=jungle # b_mentebah  # jungle_hills
+	17163=jungle # b_medamin  # jungle_hills
+	18455=jungle # b_bunut
 # e_suvarnabhumi
 # k_pagan
 # d_pagan
@@ -985,6 +985,7 @@
 	16637=hills # b_nong_ya_plong
 	16686=wetlands # b_khu_bua
 	16764=wetlands # b_ratchaburi
+	18397=jungle # b_kuiburi
 # e_kambuja
 # k_funan
 # d_angkor
@@ -1041,11 +1042,11 @@
 	16455=terraced_hills # b_bakan
 	16486=terraced_hills # b_banan
 	16643=terraced_hills # b_baset
-	16485=terraced_hills # b_samlout
-	16577=terraced_hills # b_pailin
+	16485=hills # b_samlout
+	16577=jungle # b_pailin
 	16579=terraced_hills # b_sneung
 	16665=terraced_hills # b_sampav
-	16692=terraced_hills # b_phnom_proek
+	16692=jungle # b_phnom_proek
 	16694=terraced_hills # b_ek_phnom
 	16788=terraced_hills # b_neang
 	16821=farmlands # b_phnom_srok
@@ -1056,27 +1057,27 @@
 	16019=terraced_hills # b_dviradapura
 	16153=terraced_hills # b_longvek
 	16368=terraced_hills # b_kampong_chhnang
-	16250=terraced_hills # b_phumi_rovieng
+	16250=mountains # b_phumi_rovieng
 	16309=terraced_hills # b_phnom_kravanh
 	16384=terraced_hills # b_pursat
 	16463=terraced_hills # b_banteay_dei
 	15961=jungle # b_phnom_sruoch
 	16023=jungle # b_chbar_mon
 	16117=hills # b_phnom_aoral
-# d_can_tho
+# d_kottinagara
 	15072=wetlands # b_ke_mot
-	15334=wetlands # b_prey_kin
+	15334=jungle # b_prey_kin
 	15376=wetlands # b_kottinagara
 	15439=wetlands # b_kien_giang
 	15584=wetlands # b_an_giang
-	15323=wetlands # b_trah_pung
+	15323=wetlands # b_thanh_phu
 	15419=wetlands # b_phsar_dek
-	15455=wetlands # b_vung_gou
-	15585=wetlands # b_sadek
+	15455=wetlands # b_binh_dai
+	15585=wetlands # b_sa_dec
 	15713=wetlands # b_mot_chrouk
-	15751=wetlands # b_cho_lon
+	15751=jungle # b_cho_lon
 	15073=wetlands # b_bac_lieu
-	15074=wetlands # b_soc_trang
+	15074=jungle # b_soc_trang
 	17809=wetlands # b_ca_mau
 # d_ban_lung
 	16549=jungle # b_mondul_kiri
@@ -1090,7 +1091,7 @@
 # d_koh_kong
 	15878=jungle # b_koh_kong
 	15960=hills # b_srae_ambel
-	16076=jungle # b_khemara_phoumin
+	16076=hills # b_khemara_phoumin
 	16116=hills # b_thma_bang
 	16281=hills # b_veal_veaeng
 	15473=hills # b_ream
@@ -1108,18 +1109,21 @@
 	16828=jungle # b_mlu_prey
 	16922=jungle # b_chheab
 # d_chan_kabui
-	16208=jungle # b_trat
+	16208=hills # b_trat
 	16432=jungle # b_bo_rai
 	16484=hills # b_chan_kabui
-	16787=wetlands # b_stoeng_chraw
-	16814=hills # b_paet_riu
-	16901=farmlands # b_sri_mahosot
-	16687=plains # b_phra_stoeng
-	16848=farmlands # b_phrom_hod
-	16902=farmlands # b_kabin_buri
 	16538=jungle # b_rayong
+	16627=wetlands # b_mueang_phra_rot
 	16633=hills # b_khlong_phlu
-	16708=jungle # b_phya_re
+	16687=jungle # b_phra_stoeng
+	16708=wetlands # b_phya_re
+	16782=wetlands # b_sanam_chai_khet
+	16787=wetlands # b_stoeng_chraw
+	16814=wetlands # b_paet_riu
+	16848=terraced_hills # b_phrom_hod
+	16901=wetlands # b_sri_mahosot
+	16902=wetlands # b_kabin_buri
+	16963=wetlands # b_lablae
 # k_champa
 # d_indrapura
 	17206=hills # b_ma_cek
@@ -1143,7 +1147,7 @@
 	17031=terraced_hills # b_vidyanapura
 	16607=jungle # b_aia_ru
 	16689=hills # b_koh_meng
-	16783=jungle # b_harek_kah
+	16783=hills # b_harek_kah
 # d_tribhuvanadevi
 	15145=terraced_hills # b_visnupura_champa
 	15357=terraced_hills # b_navap
@@ -1365,15 +1369,15 @@
 	15156=terraced_hills # b_balawan
 # d_PHI_cagayan
 	11007=jungle # b_malolokit
-	11009=floodplains # b_PHI_Aparri
+	11009=terraced_hills # b_PHI_Aparri  # maybe floodplains
 	17615=jungle # b_PHI_Apayo
-	17621=floodplains # b_nasipin
+	17621=terraced_hills # b_nasipin  # maybe floodplains
 	15162=terraced_hills # b_tuy
 	15163=terraced_hills # b_bayombong
 	15165=hills # b_kasibu
 	15166=jungle # b_karig
 	15505=jungle # b_gamu
-	15815=floodplains # b_tubigarao
+	15815=terraced_hills # b_tubigarao  # maybe floodplains
 	18324=terraced_hills # b_PHI_Bolo
 	15169=jungle # b_kawayan
 	15176=mountains # b_divilikan
@@ -1425,11 +1429,11 @@
 # d_PHI_butuan
 	15090=hills # b_PHI_Surigao
 	15337=jungle # b_PHI_Dinagat
-	17931=floodplains # b_PHI_Butuan
+	17931=terraced_hills # b_PHI_Butuan  # maybe floodplains
 	17588=jungle # b_lianga
 	17850=hills # b_PHI_Tandag
-	17660=floodplains # b_linao
-	17691=floodplains # b_PHI_Agusan
+	17660=jungle # b_linao  # maybe floodplains
+	17691=terraced_hills # b_PHI_Agusan  # maybe floodplains
 	17810=jungle # b_kulilay
 # d_dabaw
 	17332=jungle # b_dabaw
@@ -1437,7 +1441,7 @@
 	17509=jungle # b_bisaya
 	17030=hills # b_sigaboy
 	17314=hills # b_PHI_Baganga
-	17510=floodplains # b_mansaka
+	17510=terraced_hills # b_mansaka  # maybe floodplains
 # d_himologan
 	17703=hills # b_kabangalasan
 	17761=hills # b_himologan
@@ -1446,14 +1450,14 @@
 	17564=hills # b_ag_ramag
 # k_maguinadao
 # d_PHI_maguindanao
-	17249=floodplains # b_buayan
-	17284=floodplains # b_kotabatu
+	17249=jungle # b_buayan  # maybe floodplains
+	17284=terraced_hills # b_kotabatu  # maybe floodplains
 	17290=hills # b_kidapawan
-	17453=floodplains # b_kalalaw
+	17453=hills # b_kalalaw  # maybe floodplains
 	16744=hills # b_flomlok
 	16930=hills # b_PHI_Lebak
-	16931=wetlands # b_marb_el
-	17029=floodplains # b_buluan
+	16931=hills # b_marb_el
+	17029=hills # b_buluan
 	16402=hills # b_PHI_Lais
 	16652=jungle # b_dinadasan
 # d_lanao

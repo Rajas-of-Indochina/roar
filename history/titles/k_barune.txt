@@ -221,8 +221,11 @@ c_simanggang = {
 		government = wanua_government
 	}
 	860.1.1 = {
-		liege = d_BOR_santubong	# make tributary
 		holder = dayak_santubong_01_fic	#fictional
+		tributary_of = {
+			suzerain = d_BOR_santubong
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	889.1.22 = {
 		holder = dayak_santubong_02_fic	#fictional
@@ -242,6 +245,12 @@ c_simanggang = {
 	1061.11.8 = {
 		holder = dayak_santubong_07_fic	#fictional
 	}
+	1062.1.1 = {
+		tributary_of = {
+			suzerain = d_BOR_santubong
+			contract_group = tributary_mandala_tribal
+		}
+	}
 	1099.6.4 = {
 		holder = dayak_santubong_08_fic	#fictional
 	}
@@ -250,6 +259,12 @@ c_simanggang = {
 	}
 	1145.12.15 = {
 		holder = dayak_santubong_10_fic	#fictional
+	}
+	1170.1.1 = {
+		tributary_of = {
+			suzerain = d_BOR_santubong
+			contract_group = tributary_mandala_tribal
+		}
 	}
 	1190.6.24 = {
 		holder = dayak_santubong_11_fic	#fictional

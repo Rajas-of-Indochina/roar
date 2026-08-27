@@ -830,24 +830,144 @@
 			doctrine = rice_vajrayana_canon_doctrine
 		}
 
-		# RoA Buddhist faiths
+		### New RoA additions ###
+
+		# Originally from cybrxkhan's work in The Fallen Eagle 
+		# Partially adapted from Dharmacakra, thanks to Herkles
 		pudgalavada = {
 			color = { 255 94 14 }
-			icon = buddhism_custom_3
+			icon = pudgalavada
 
 			holy_site = kusinagara
 			holy_site = bodh_gaya
 			holy_site = sarnath
+			#holy_site = udabhanda
 			holy_site = mathura
 			holy_site = palitana
 
+			# Old RoA tenets
+			#doctrine = tenet_religious_legal_pronouncements
+			#doctrine = tenet_dhammavicaya
+
+			# New RICE tenets
 			doctrine = tenet_dharmic_pacifism
-			doctrine = tenet_religious_legal_pronouncements
-			doctrine = tenet_dhammavicaya
+			doctrine = tenet_rice_meritorious_merchant_donors
+			doctrine = tenet_rice_personalism
+
+			#doctrine = tenet_literalism
+			#doctrine = tenet_religious_legal_pronouncements
 
 			# Special
 			doctrine = special_doctrine_immaterial_harmony
 			doctrine = rice_pudgalavada_canon_doctrine
+		}
+
+		# Vatsiputriya, precursors of the Sammitiya
+		vatsiputriya = {
+			color = { 242 148 108 }
+			icon = vatsiputriya
+
+			holy_site = kusinagara
+			holy_site = bodh_gaya
+			holy_site = sarnath
+			#holy_site = udabhanda
+			holy_site = mathura
+			holy_site = palitana
+
+			doctrine = tenet_dharmic_pacifism
+			doctrine = tenet_aniconism
+			doctrine = tenet_rice_personalism
+
+			#doctrine = tenet_literalism
+			#doctrine = tenet_religious_legal_pronouncements
+
+			# Special
+			doctrine = special_doctrine_immaterial_harmony
+			doctrine = rice_pudgalavada_canon_doctrine
+		}
+
+		# Originally from cybrxkhan's work in The Fallen Eagle 
+		# Mainly in Gandhara
+		dharmaguptaka = {
+			color = { 44 22 11 } # Described as wearing black robes so I picked a dark color (or red robes, historical sources contradict each other on this)
+			icon = dharmaguptaka
+
+			holy_site = kusinagara
+			holy_site = bodh_gaya
+			holy_site = sarnath
+			holy_site = khotan
+			holy_site = purang
+
+			doctrine = tenet_dharmic_pacifism
+			doctrine = tenet_monasticism
+			doctrine = tenet_mendicant_preachers
+
+			# Special
+			doctrine = special_doctrine_immaterial_harmony
+			doctrine = rice_mahayana_canon_doctrine  #temporary
+		}
+
+		# Originally from cybrxkhan's work in The Fallen Eagle 
+		# Flourished in Kashmir and Central Asia
+		sarvastivada = {
+			color = { 128 25 8 } # Described as wearing either red robes or black robes
+			icon = sarvastivada
+
+			holy_site = kusinagara
+			holy_site = bodh_gaya
+			holy_site = sarnath
+			holy_site = khotan
+			holy_site = amaravati
+
+			doctrine = tenet_rice_flawed_arhats
+			doctrine = tenet_rice_all_dharmas_exist  # Important Abhidharma school, Buddhist scholasticism
+			doctrine = tenet_mendicant_preachers
+
+			# Special
+			doctrine = special_doctrine_immaterial_harmony
+			doctrine = rice_theravada_canon_doctrine
+		}
+
+		# Originally from cybrxkhan's work in The Fallen Eagle 
+		# Throughout various pockets in South and Central Asia, from where Theravada came from
+		vibhajjavada = {
+			color = { 188 108 88 }
+			icon = vibhajjavada
+
+			holy_site = kusinagara
+			holy_site = bodh_gaya
+			holy_site = sarnath
+			holy_site = atamasthana
+			holy_site = amaravati
+
+			doctrine = tenet_dharmic_pacifism
+			doctrine = tenet_literalism
+			doctrine = tenet_asceticism  # Stricter I guess or something, I dunno, had to put something
+
+			# Special
+			doctrine = special_doctrine_immaterial_harmony
+			doctrine = rice_theravada_canon_doctrine
+		}
+
+		# Originally from cybrxkhan's work in The Fallen Eagle 
+		# Throughout various pockets in South and Central Asia, some branches started to lean towards Mahayana but were probably distinct
+		mahasanghika = {
+			color = { 185 150 2 } # Wore yellow robes
+			icon = mahasanghika
+
+			holy_site = kusinagara
+			holy_site = bodh_gaya
+			holy_site = sarnath
+			holy_site = ajanta
+			holy_site = sanchi
+
+			doctrine = tenet_dharmic_pacifism
+			doctrine = tenet_esotericism
+			doctrine = tenet_rice_flawed_arhats
+
+			# Special
+			doctrine = special_doctrine_immaterial_harmony
+			doctrine = rice_mahayana_canon_doctrine
 		}
 	}
 }

@@ -1,0 +1,123 @@
+﻿
+# Personalism/Pudgala Thesis
+tenet_rice_personalism = {
+	icon = tenet_rice_personalism
+
+	name = tenet_rice_personalism_name
+
+	piety_cost = {
+		if = {
+			limit = {
+				always = no
+			}
+			value = faith_tenet_cost_low
+		}
+		else = {
+			value = faith_tenet_cost_massive
+		}
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { has_doctrine = tenet_rice_personalism }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+	
+	is_shown = {
+		religion_tag = buddhism_religion
+	}
+
+	parameters = {
+		hostility_same_religion = 1
+		#unlock_rice_pudgalavada_mechanics = yes
+	}
+
+	character_modifier = {
+		learning_per_piety_level = 1
+		stress_loss_per_piety_level = 0.05
+	}
+}
+
+# Flawed Arhats
+tenet_rice_flawed_arhats = {
+	icon = tenet_rice_flawed_arhats
+
+	name = tenet_rice_flawed_arhats_name
+
+	piety_cost = faith_tenet_cost_mid
+
+	is_shown = {
+		religion_tag = buddhism_religion
+	}
+
+	character_modifier = {
+		monthly_lifestyle_xp_gain_mult = 0.05
+		monthly_piety_gain_per_court_position_add = 0.05
+	}
+
+	traits = {
+		virtues = { diligent }
+		sins = { lazy }
+	}
+}
+
+# Meritorious Merchant Donors
+tenet_rice_meritorious_merchant_donors = {
+	icon = tenet_rice_meritorious_merchant_donors
+
+	name = tenet_rice_meritorious_merchant_donors_name
+
+	piety_cost = {
+		if = {
+			limit = {
+				religion_tag = buddhism_religion
+			}
+			value = faith_tenet_cost_low
+		}
+		else_if = {
+			limit = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+			value = faith_tenet_cost_high
+		}
+		else = {
+			value = faith_tenet_cost_mid
+		}
+	}
+	
+	is_shown = {
+	}
+
+	character_modifier = {
+		stewardship_per_piety_level = 1
+		theocracy_government_tax_contribution_mult = 0.1
+	}
+
+	traits = {
+		virtues = { generous }
+		sins = { greedy }
+	}
+}
+
+
+# All Dharmas Exist
+tenet_rice_all_dharmas_exist = {
+	icon = tenet_rice_all_dharmas_exist
+
+	name = tenet_rice_all_dharmas_exist_name
+
+	piety_cost = faith_tenet_cost_mid
+
+	is_shown = {
+		religion_tag = buddhism_religion
+	}
+
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.10
+		negate_learning_penalty_add = 2
+	}
+
+	traits = {
+		virtues = { scholar }
+	}
+}

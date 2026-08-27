@@ -63708,7 +63708,6 @@ e_rajastan = {
 
 					color = { 240 100 50 }
 				}
-
 			}
 			c_valabhi = {
 				color = { 200 100 60 }
@@ -78128,7 +78127,7 @@ e_srivijaya = {
 
 					color = { 25 95 160 }
 				}
-				b_MAL_mersing = {
+				b_MAL_Mersing = {
 					province = 11400
 
 					color = { 25 95 160 }
@@ -86881,10 +86880,12 @@ e_suvarnabhumi = {
 
 				b_pranburi = {
 					province = 16308
+
 					color = { 235 145 35 }
 				}
 				b_kuiburi = {
 					province = 18397
+
 					color = { 235 145 35 }
 				}
 			}
@@ -86893,10 +86894,12 @@ e_suvarnabhumi = {
 
 				b_khu_bua = {
 					province = 16686
+
 					color = { 200 115 15 }
 				}
 				b_ratchaburi = {
 					province = 16764
+
 					color = { 200 115 15 }
 				}
 				b_nong_ya_plong = {
@@ -86945,6 +86948,7 @@ e_kambuja = {
 	capital = c_angkor
 
 	k_funan = { #Kingdom of Angkor
+		# k_chenla in old RoA
 		color = { 0 50 150 }
 
 		capital = c_angkor
@@ -87434,12 +87438,13 @@ e_kambuja = {
 			}
 		}
 
-		d_can_tho = { #Kottinagara
+		d_kottinagara = {
+			# d_can_tho in old RoA
 			color = { 0 90 110 }
 
-			capital = c_ca_mau
+			capital = c_kottinagara
 
-			c_ca_mau = { #Kottinagara
+			c_kottinagara = {
 				# c_can_tho in old RoA
 				color = { 10 100 125 }
 
@@ -87463,37 +87468,12 @@ e_kambuja = {
 
 					color = { 10 100 125 }
 				}
-				b_ke_mot = {
-					province = 15072
-
-					color = { 10 100 125 }
-				}
 			}
-			c_binh_dai = {
-				# c_sap in old RoA
-				color = { 20 110 140 }
-
-				b_trah_pung = {
-					province = 15323
-
-					color = { 20 110 140 }
-				}
-				b_vung_gou = {
-					province = 15455
-
-					color = { 20 110 140 }
-				}
-				b_phsar_dek = {
-					province = 15419
-
-					color = { 20 110 140 }
-				}
-			}
-			c_sadek = {
-				# part of c_vyadhapura in vanilla
+			c_sa_dec = {
+				# c_sadek in old RoA
 				color = { 30 120 155 }
 
-				b_sadek = {
+				b_sa_dec = {
 					province = 15585
 
 					color = { 30 120 155 }
@@ -87509,8 +87489,8 @@ e_kambuja = {
 					color = { 30 120 155 }
 				}
 			}
-			c_prey_rusey = {
-				# part of c_ca_mau in vanilla
+			c_ca_mau = {
+				# c_prey_rusey in old RoA
 				color = { 40 130 170 }
 
 				b_soc_trang = {
@@ -87527,6 +87507,32 @@ e_kambuja = {
 					province = 15073
 
 					color = { 40 130 170 }
+				}
+				b_ke_mot = {
+					province = 15072
+
+					color = { 40 130 170 }
+				}
+			}
+			c_binh_dai = {
+				# c_sap in old RoA
+				color = { 20 110 140 }
+
+				b_binh_dai = {
+					province = 15455
+
+					color = { 20 110 140 }
+				}
+				b_thanh_phu = {
+					province = 15323
+
+					color = { 20 110 140 }
+				}
+				b_phsar_dek = {
+					# b_ba_tri in vanilla
+					province = 15419
+
+					color = { 20 110 140 }
 				}
 			}
 		}
@@ -87737,23 +87743,25 @@ e_kambuja = {
 		d_chan_kabui = {
 			color = { 148 113 4 }
 
+			capital = c_prachinburi #placeholder
+
 			c_chan_kabui = {
-				color = { 148 113 4 }
+				color = { 152 116 8 }
 
 				b_chan_kabui = {
 					province = 16484
 
-					color = { 148 113 4 }
+					color = { 152 116 8 }
 				}
 				b_trat = {
 					province = 16208
 
-					color = { 148 113 4 }
+					color = { 152 116 8 }
 				}
 				b_bo_rai = {
 					province = 16432
 
-					color = { 148 113 4 }
+					color = { 152 116 8 }
 				}
 			}
 			c_prachinburi = {
@@ -88385,6 +88393,7 @@ e_kambuja = {
 	}
 
 	k_chenla = {
+		# k_isana in old RoA
 		color = { 30 70 60 }
 
 		d_nakhon_phanom = {

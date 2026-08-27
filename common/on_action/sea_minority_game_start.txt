@@ -39,6 +39,151 @@ set_minorities_game_start = {
 	effect = {
 		#### India and it's religious diversity ####
 		# ===================================
+		### Andhara ###
+		title:c_palakka = {
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:mahasanghika
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:svetambara
+					SIZE = large
+				}
+			}
+		}
+		title:c_nallamala = {
+			add_faith_minority_effect = {
+				FAITH = faith:svetambara
+				SIZE = large
+			}
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = large
+				}
+			}
+		}
+		title:c_cumbum = {
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = large
+			}
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:svetambara
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = small
+				}
+			}
+		}
+
+		### Delhi ###
+		title:c_sthanisvara = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+
+		### Gujarat ###
+		title:c_sarasvata_mandala = {
+			add_faith_minority_effect = {
+				FAITH = faith:pudgalavada
+				SIZE = small
+			}
+		}
+		title:c_khetaka = {
+			add_faith_minority_effect = {
+				FAITH = faith:pudgalavada
+				SIZE = large
+			}
+		}
+		title:c_vardhamana = {
+			add_faith_minority_effect = {
+				FAITH = faith:vatsiputriya
+				SIZE = small
+			}
+		}
+		title:c_valabhi = {
+			if = {
+				limit = { game_start_date >= 1100.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = large
+				}
+			}
+		}
+		title:c_dhamalpur = {
+			add_faith_minority_effect = {
+				FAITH = faith:vatsiputriya
+				SIZE = small
+			}
+		}
+
+		### Kabulistan ###
+		title:c_bamian = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = small
+				}
+			}
+		}
+
 		### Kamarupa ###
 		title:c_kamarupanagara = {
 			add_culture_minority_effect = {
@@ -58,6 +203,24 @@ set_minorities_game_start = {
 			add_faith_minority_effect = {
 				FAITH = faith:bathouism
 				SIZE = small
+			}
+		}
+
+		### Karnata ###
+		title:c_kalyani = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = small
+				}
 			}
 		}
 
@@ -112,6 +275,33 @@ set_minorities_game_start = {
 			}
 		}
 
+		### Malwa ###
+		title:c_vidisa = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:svetambara
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					# to represent the Bhojeshwar temple dedicated to Shiva
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+		}
+
 		## Parsees ##
 		title:c_daman = {
 			if = {
@@ -123,6 +313,62 @@ set_minorities_game_start = {
 				add_culture_minority_effect = {
 					CULTURE = culture:persian
 					SIZE = large
+				}
+			}
+		}
+
+		### Punjab ###
+		title:c_udabhanda = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:dharmaguptaka
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:dharmaguptaka
+					SIZE = small
+				}
+			}
+		}
+		title:c_purushapura = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:dharmaguptaka
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:dharmaguptaka
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:ashari
+					SIZE = small
+				}
+			}
+		}
+
+		### Tamilakam ###
+		title:c_nellore = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = large
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:mahasanghika
+					SIZE = small
 				}
 			}
 		}
@@ -410,10 +656,10 @@ set_minorities_game_start = {
 
 
 		#### South East-Asia - Mainland ####
-		every_county = { #k_chenla
+		every_county = { #k_funan
 			if = {
 				limit = {
-					kingdom = title:k_chenla
+					kingdom = title:k_funan
 					culture = culture:khmer
 				}
 				add_faith_minority_effect = {
@@ -1298,6 +1544,50 @@ setup_MENA_minorities = {
 			}
 			promote_faith_minority_effect = {
 				FAITH = faith:imami
+			}
+		}
+
+		## Makran ##
+		title:c_panjgur = {
+			if = {
+				limit = { game_start_date <= 1130.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+		title:c_kiz = {
+			if = {
+				limit = { game_start_date <= 1130.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+		title:c_khawr = {
+			if = {
+				limit = {
+					game_start_date >= 930.1.1
+					game_start_date <= 1130.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+		title:c_turan = {
+			if = {
+				limit = {
+					game_start_date >= 930.1.1
+					game_start_date <= 1130.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
 			}
 		}
 

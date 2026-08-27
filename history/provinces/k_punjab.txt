@@ -1,3 +1,328 @@
+# k_punjab
+## d_multan ###################################
+### c_multan
+1338 = {	# Multan
+	culture = multani
+	religion = saura
+
+	holding = castle_holding
+
+	special_building_slot = multan_sun_temple_01
+	special_building = multan_sun_temple_01
+
+	# History
+	1000.1.1 = {
+		religion = ismaili
+	}
+	1180.1.1 = {
+		religion = ashari
+	}
+}
+3413 = {	# Kabirwala
+	#holding = 
+
+	# History
+}
+3412 = {	# Tulamba
+	#holding = 
+
+	# History
+}
+3414 = {	# Alipur
+	#holding = 
+
+	# History
+}
+
+### c_kafirkot
+
+### c_uch
+
+### c_karur
+
+### c_karor
+
+### c_kalat - needs to get revised
+4517 = {	# Loralai
+	culture = afghan
+	religion = mahayana
+
+	holding = castle_holding
+
+	# History
+}
+4518 = {	# Kohlu
+	#holding = 
+
+	# History
+}
+4519 = {	# Mekhtar
+	#holding = 
+
+	# History
+}
+4520 = {	# Zhob
+	#holding = 
+
+	# History
+}
+
+
+## d_lahore ###################################
+### c_lahur
+1362 = {	# Lahur
+	culture = punjabi
+	religion = vaishnavism
+
+	holding = castle_holding
+
+	effect = {
+		if = {
+			limit = {
+				has_tgp_dlc_trigger = yes
+			}
+			add_special_building_slot = lahur_bazaar_01
+			add_special_building = lahur_bazaar_01
+		}
+	}
+
+	# History
+	867.1.1 = {
+		buildings = { castle_02 }
+	}
+	1066.1.1 = {
+		buildings = { castle_04 }
+	}
+}
+3418 = {	# Kasur
+	#holding = 
+
+	# History
+}
+3420 = {	# Sangla
+	#holding = 
+
+	# History
+}
+3419 = {	# Chunian
+	#holding = 
+
+	# History
+}
+
+### c_dipalpur
+
+### c_bhera
+
+### c_shorkot
+
+### c_sakala
+1179 = {	# Sakala
+	culture = punjabi
+	religion = sarvastivada
+
+	# History
+	1000.1.1 = {
+		religion = mahayana
+	}
+}
+3430 = {	# Jammu
+	#holding = 
+
+	# History
+}
+3429 = {	# Bhuttar
+	#holding = 
+
+	# History
+}
+
+### c_trigarta
+1193 = {	# Jalandhar
+	culture = punjabi
+	religion = pudgalavada
+
+	holding = castle_holding
+
+	# History
+	900.1.1 = {
+		religion = mahayana
+	}
+}
+3431 = {	# Rahon
+	#holding = 
+
+	# History
+}
+3432 = {	# Pathankot
+	#holding = 
+	# History
+}
+3433 = {	# Kahlur
+	#holding = 
+
+	# History
+}
+
+### c_kangra
+
+### c_gurjaratra
+1190 = {	# Gurjaratra
+	culture = punjabi
+	religion = sarvastivada
+
+	holding = castle_holding
+
+	# History
+	1000.1.1 = {
+		religion = mahayana
+	}
+}
+3435 = {	# Jhelum
+	#holding = 
+
+	special_building_slot = RICE_pamir_khewra_salt_mines_01
+	special_building = RICE_pamir_khewra_salt_mines_01
+
+	# History
+}
+3436 = {	# Kunjah
+	#holding = 
+
+	# History
+}
+
+
+## d_gandhara ###################################
+### c_udabhanda
+1180 = {	# Udabhanda
+	culture = gandhari
+	religion = shaivism
+
+	holding = castle_holding
+
+	# History
+}
+3437 = {	# Attak
+	#holding = 
+
+	# History
+}
+3438 = {	# Oddiyana
+	#holding = 
+
+	# History
+}
+3439 = {	# Mankiala
+	#holding = 
+
+	# History
+}
+
+### c_purushapura
+1342 = {	# Purushapura AKA Peshawar
+	# central city of the Peshawar Valley region with history dating back to 6th century BC ; said to be one of most inportant cities of the ancient Gandhara
+	culture = gandhari
+	religion = shaivism
+
+	holding = castle_holding
+
+	# History
+}
+3441 = {	# Nowshera
+	# town situated on the Kabul River, in the Valley of Peshawar, ; name literally means 'New City' in Pashto
+	holding = none
+
+	# History
+	# Nowshera was developed during the Afghan Durrani Empire (18th century)
+}
+3440 = {	# Shergarh
+	# Takht-i-Bahi was a buddhist monastery founded in the 1st century CE
+	holding = church_holding
+
+	special_building_slot = takht_i_bahi_01
+	special_building = takht_i_bahi_01
+
+	# History
+}
+
+### c_nandana
+1341 = {	# Nandana
+	culture = multani
+	religion = dharmaguptaka
+
+	holding = castle_holding
+
+	# History
+	900.1.1 = {
+		religion = shaivism
+	}
+}
+3442 = {	# Lund Nandana
+	#holding = 
+
+	# History
+}
+
+### c_bannu
+1191 = {	# Bannu
+	# ancient city located on the Kurram River with long history of various empires ruling over it
+	culture = multani
+	religion = dharmaguptaka
+
+	# History
+	900.1.1 = {
+		religion = shaivism
+	}
+}
+3443 = {	# Kalabagh
+	# settlement known for its red hills of the Salt Range
+	#holding = 
+
+	# History
+}
+3444 = {	# Hangu
+	# settlement which name may have originated from Chinese travelers
+	#holding = 
+
+	# History
+}
+
+### c_urgun
+
+### c_swat
+17867 = {	# Swat
+	culture = gandhari
+	religion = shaivism
+
+	holding = castle_holding
+
+	# History
+}
+7953 = {	# Golaghmuli
+	holding = none
+}
+
+### c_allai
+
+### c_dir
+17766 = {	# Dir
+	culture = gandhari
+	religion = shaivism
+
+	holding = castle_holding
+
+	# History
+}
+17911 = {	# Tamargarha
+	holding = church_holding
+}
+18051 = {	# Bajaur
+	holding = none
+}
+
+
+
 # 1178 - Karur
 1178 = {	# 1178 - Karur
 
@@ -17,65 +342,12 @@
 	}
 }
 
-# 1179 - Sakala
-1179 = {	# 1179 - Sakala
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-}
-
-# 1180 - Udabhanda
-1180 = {	# 1180 - Udabhanda
-
-	# Misc
-	culture = gandhari
-	religion = shaivism
-
-	# History
-}
-
-# 1190 - Gurjaratra
-1190 = {	# 1190 - Gurjaratra
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 1191 - Bannu
-1191 = {	# 1191 - Bannu
-
-	# Misc
-	culture = multani
-	religion = shaivism
-
-	# History
-
-}
-
 # 1192 - Bhera
 1192 = {	# 1192 - Bhera
 
 	# Misc
 	culture = punjabi
 	religion = vaishnavism
-
-	# History
-
-}
-
-# 1193 - Jalandhar
-1193 = {	# 1193 - Jalandhar
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
 
 	# History
 
@@ -98,29 +370,6 @@
 	1180.1.1 = {
 		religion = ashari
 	}
-
-}
-
-# 1338 - Multan
-1338 = {	# 1338 - Multan
-
-	# Misc
-	culture = multani
-	religion = saura
-
-	# History
-	800.1.1 = {
-		religion = saura
-		special_building_slot = multan_sun_temple_01
-		special_building = multan_sun_temple_01
-	}
-	1000.1.1 = {
-		religion = ismaili
-	}
-	1180.1.1 = {
-		religion = ashari
-	}
-
 }
 
 # 1340 - Karor
@@ -188,28 +437,6 @@
 
 }
 
-# 1341 - Nandana
-1341 = {	# 1341 - Nandana
-
-	# Misc
-	culture = multani
-	religion = shaivism
-
-	# History
-
-}
-
-# 1342 - Purushapura
-1342 = {	# 1342 - Purushapura
-
-	# Misc
-	culture = gandhari
-	religion = shaivism
-
-	# History
-
-}
-
 # 1361 - Shorkot
 1361 = {	# 1361 - Shorkot
 
@@ -218,32 +445,6 @@
 	religion = vaishnavism
 
 	# History
-
-}
-
-# 1362 - Lahur
-1362 = {	# 1362 - Lahur
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	holding = castle_holding
-
-	effect = {
-		if = {
-			limit = {
-				has_tgp_dlc_trigger = yes
-			}
-			add_special_building_slot = lahur_bazaar_01
-			add_special_building = lahur_bazaar_01
-		}
-	}
-
-	# History
-	1066.1.1 = {
-		buildings = { castle_04 }
-	}
 
 }
 
@@ -378,66 +579,6 @@
 
 }
 
-# 3412 - Tulamba
-3412 = {	# 3412 - Tulamba
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
-	800.1.1 = {
-		religion = ashari
-	}
-	1000.1.1 = {
-		religion = ismaili
-	}
-	1180.1.1 = {
-		religion = ashari
-	}
-
-}
-
-# 3413 - Kabirwala
-3413 = {	# 3413 - Kabirwala
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
-	800.1.1 = {
-		religion = ashari
-	}
-	1000.1.1 = {
-		religion = ismaili
-	}
-	1180.1.1 = {
-		religion = ashari
-	}
-
-}
-
-# 3414 - Alipur
-3414 = {	# 3414 - Alipur
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
-	800.1.1 = {
-		religion = ashari
-	}
-	1000.1.1 = {
-		religion = ismaili
-	}
-	1180.1.1 = {
-		religion = ashari
-	}
-
-}
-
 # 3415 - Mankera
 3415 = {	# 3415 - Mankera
 
@@ -495,39 +636,6 @@
 	1180.1.1 = {
 		religion = ashari
 	}
-
-}
-
-# 3418 - Kasur
-3418 = {	# 3418 - Kasur
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
-
-}
-
-# 3419 - Chunian
-3419 = {	# 3419 - Chunian
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
-
-}
-
-# 3420 - Sangla
-3420 = {	# 3420 - Sangla
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
 
 }
 
@@ -622,179 +730,8 @@
 	}
 }
 
-# 3429 - Bhuttar
-3429 = {	# 3429 - Bhuttar
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3430 - Jammu
-3430 = {	# 3430 - Jammu
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3431 - Rahon
-3431 = {	# 3431 - Rahon
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3432 - Pathankot
-3432 = {	# 3432 - Pathankot
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3433 - Kahlur
-3433 = {	# 3433 - Kahlur
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
 # 3434 - Kangra
 3434 = {	# 3434 - Kangra
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3435 - Jhelum
-3435 = {	# 3435 - Jhelum
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-	1.1.1 = {
-		special_building = RICE_pamir_khewra_salt_mines_01
-	}
-}
-
-# 3436 - Kunjah
-3436 = {	# 3436 - Kunjah
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3437 - Attak
-3437 = {	# 3437 - Attak
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3438 - Oddiyana
-3438 = {	# 3438 - Oddiyana
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3439 - Mankiala
-3439 = {	# 3439 - Mankiala
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3440 - Shergarh
-3440 = {	# 3440 - Shergarh
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-	800.1.1 = {
-		special_building_slot = takht_i_bahi_01
-		special_building = takht_i_bahi_01
-	}
-
-}
-
-# 3441 - Nowshera
-3441 = {	# 3441 - Nowshera
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3442 - Lund_Nandana
-3442 = {	# 3442 - Lund_Nandana
-
-	# Misc
-	culture = punjabi
-	religion = vaishnavism
-
-	# History
-
-}
-
-# 3443 - Kalabagh
-3443 = {	# 3443 - Kalabagh
-
-	# Misc
-	culture = punjabi
-	religion = mahayana
-
-	# History
-
-}
-
-# 3444 - Hangu
-3444 = {	# 3444 - Hangu
 
 	# Misc
 	culture = punjabi
@@ -836,61 +773,3 @@
 7949 = {	# 7949 - Kaghan
 	holding = none
 }
-
-### c_swat
-17867 = {	# Swat
-	culture = gandhari
-	religion = shaivism
-
-	holding = castle_holding
-
-	# History
-}
-7953 = {	# Golaghmuli
-	holding = none
-}
-
-### c_dir
-17766 = {	# Dir
-	culture = gandhari
-	religion = shaivism
-
-	holding = castle_holding
-
-	# History
-}
-17911 = {	# Tamargarha
-	holding = church_holding
-}
-18051 = {	# Bajaur
-	holding = none
-}
-
-### c_kalat - needs to get revised
-4517 = {	# Loralai
-	culture = afghan
-	religion = mahayana
-
-	holding = castle_holding
-
-	# History
-}
-4518 = {	# Kohlu
-	culture = afghan
-	religion = mahayana
-
-	# History
-}
-4519 = {	# Mekhtar
-	culture = afghan
-	religion = mahayana
-
-	# History
-}
-4520 = {	# Zhob
-	culture = afghan
-	religion = mahayana
-
-	# History
-}
-
