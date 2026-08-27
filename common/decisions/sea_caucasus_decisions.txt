@@ -3035,12 +3035,8 @@ circassian_sponsor_pirate_raid_decision = {
 			culture = {
 				any_parent_culture_or_above = {
 					OR = {
-						culture = {
-							this = culture:circassian
-						}
-						culture = {
-							this = culture:ubykh
-						}
+						this = culture:circassian
+						this = culture:ubykh
 					}
 				}
 			}
@@ -3063,12 +3059,8 @@ circassian_sponsor_pirate_raid_decision = {
 			culture = {
 				any_parent_culture_or_above = {
 					OR = {
-						culture = {
-							this = culture:circassian
-						}
-						culture = {
-							this = culture:ubykh
-						}
+						this = culture:circassian
+						this = culture:ubykh
 					}
 				}
 			}
@@ -3086,7 +3078,7 @@ circassian_sponsor_pirate_raid_decision = {
 			text = sponsor_raid_customtooltip
 			trigger_event = {
 				id = caucasianroa.100
-				days = 35
+				days = {25 35}
 			}
 		}
 	}
