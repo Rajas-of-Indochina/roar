@@ -2372,9 +2372,32 @@ caucasianroa.034 = {
 # 	}
 # }
 
+# Sponsor Pirate Raid Event Chain (100-104)
 caucasianroa.100 = {
-	# Sponsor Pirate Raid event
-	hidden = yes
+	type = character_event
+	theme = war
+	title = caucasianroa.100.t
+	desc  = caucasianroa.100.d
+
+	left_portrait = {
+		character = root
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:pirate_thamade
+		animation = celebrate_axe
+	}
+
+	lower_left_portrait = {
+		character = scope:pirate_target_1
+	}
+	lower_center_portrait = {
+		character = scope:pirate_target_2
+	}
+	lower_right_portrait = {
+		character = scope:pirate_target_3
+	}
+	
 	immediate = {
 		root = { save_scope_as = raid_sponsor }
 		
@@ -2392,10 +2415,7 @@ caucasianroa.100 = {
 		# Loop until we have 3 unique realms in our temporary list
 		while = {
 			limit = {
-				OR = {# List doesnt exist (empty) OR list has less than 3
-					#Check if list exists
-					list_size:possible_target_list < 3
-				}
+				list_size:possible_target_list < 3
 
 				# Safety check: Ensure at least 1 valid un-selected realm exists
 				any_neighboring_and_across_water_realm_owner = {
@@ -2403,10 +2423,13 @@ caucasianroa.100 = {
 					is_landed = yes
 					NOT = { is_in_list = possible_target_list }
 					NOR = {
-						any_liege_or_above = { this = scope:raid_sponsor }
+						is_vassal_or_below_of = scope:raid_sponsor
+						is_liege_or_above_of = scope:raid_sponsor
 						has_truce_with = scope:raid_sponsor
 						has_alliance_with = scope:raid_sponsor
 						this = scope:raid_sponsor
+						#Friend/BestFriend/Lover/Soulmate
+						has_any_good_relationship_with_character_trigger = { CHARACTER= scope:raid_sponsor }
 					}
 				}
 			}
@@ -2418,10 +2441,13 @@ caucasianroa.100 = {
 					is_landed = yes
 					NOT = { is_in_list = possible_target_list }
 					NOR = {
-						any_liege_or_above = { this = scope:raid_sponsor }
+						is_vassal_or_below_of = scope:raid_sponsor
+						is_liege_or_above_of = scope:raid_sponsor
 						has_truce_with = scope:raid_sponsor
 						has_alliance_with = scope:raid_sponsor
 						this = scope:raid_sponsor
+						#Friend/BestFriend/Lover/Soulmate
+						has_any_good_relationship_with_character_trigger = { CHARACTER= scope:raid_sponsor }
 					}
 				}
 
@@ -2520,25 +2546,75 @@ caucasianroa.100 = {
 				}
 			}
 		}
-		########
 
-		#Fire Following Events
-		#random_list = {
-		#	60 = {
-		#		trigger_event = {
-		#			id = caucasianroa.101
-		#			days = 10
-		#		}
-		#	}
-		#	# success bone
-		#	0 = {
-		#		trigger_event = {
-		#			id = caucasianroa.103
-		#			days = 10
-		#		}
-		#	}
+		# Save the entries as their own scopes for ease of referencing them in the options:
+		ordered_in_list = {
+			list = possible_target_list
+			order_by = { value = 0 }
+			position = 0
+			save_scope_as = pirate_target_1
+		}
+		ordered_in_list = {
+			list = possible_target_list
+			order_by = { value = 0 }
+			position = 1
+			save_scope_as = pirate_target_2
+		}
+		ordered_in_list = {
+			list = possible_target_list
+			order_by = { value = 0 }
+			position = 2
+			save_scope_as = pirate_target_3
+		}
+	}
+	option = {
+		name = caucasianroa.100.a
+
+		trigger = { exists = scope:pirate_target_1 }
+
+		scope:pirate_target_1 = { save_scope_as = raid_victim }
+		#trigger_event = {
+		#	id = my_raid_events.0002
+		#	days = {2 5}
 		#}
 	}
+	option = {
+		name = caucasianroa.100.b
+
+		trigger = { exists = scope:pirate_target_2 }
+
+		scope:pirate_target_2 = { save_scope_as = raid_victim }
+		#trigger_event = {
+		#	id = my_raid_events.0002
+		#	days = {2 5}
+		#}
+	}
+	option = {
+		name = caucasianroa.100.c
+
+		trigger = { exists = scope:pirate_target_3 }
+
+		scope:pirate_target_3 = { save_scope_as = raid_victim }
+		#trigger_event = {
+		#	id = my_raid_events.0002
+		#	days = {2 5}
+		#}
+	}
+	# ERROR CASE: SHOULD BASICALLY NEVER SEE THIS
+	option = {
+		name = caucasianroa.100.d
+
+		trigger = {
+			NOR = {
+				exists = scope:pirate_target_1
+				exists = scope:pirate_target_2
+				exists = scope:pirate_target_3
+			}
+		}
+		#add_gold = 100
+		#remove_variable = raid_decision_cooldown
+	}
+	
 }
 
 caucasianroa.101 = {
@@ -2547,18 +2623,6 @@ caucasianroa.101 = {
 	desc = caucasianroa.035.d
 	theme = feast_activity
 	immediate = {
-		any_neighboring_and_across_water_top_liege_realm_owner = {
-			#BROKEN, NEEDS TO BE FIXED !!!!
-			limit = {	
-				alive = yes
-				is_landed = yes
-				NOR = {
-					is_allied_to = scope:circassian_raider
-					is_vassal_of = scope:circassian_raider
-				}
-			}
-			save_scope_as = raid_victim_circassian
-		}
 	}
 	right_portrait = {
 		character = ROOT
