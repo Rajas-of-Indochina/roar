@@ -2377,7 +2377,6 @@ caucasianroa.100 = {
 	type = character_event
 	theme = war
 	title = caucasianroa.100.t
-	desc  = caucasianroa.100.d
 
 	left_portrait = {
 		character = root
@@ -2409,10 +2408,7 @@ caucasianroa.100 = {
 			FAITH_SRC=    scope:raid_sponsor.faith
 		}
 
-		#Make a list of 3 valid realms
-		#########
-
-		# Loop until we have 3 unique realms in our temporary list
+		# Retrieve 3 unique realms
 		while = {
 			limit = {
 				list_size:possible_target_list < 3
@@ -2536,17 +2532,6 @@ caucasianroa.100 = {
 			}
 		}
 
-		every_in_list = {
-			list = possible_target_list
-			save_scope_as = current_target
-			root = {
-				send_interface_toast = {
-					title = "Pirate Target Found"
-					left_icon = scope:current_target
-				}
-			}
-		}
-
 		# Save the entries as their own scopes for ease of referencing them in the options:
 		ordered_in_list = {
 			list = possible_target_list
@@ -2566,7 +2551,85 @@ caucasianroa.100 = {
 			position = 2
 			save_scope_as = pirate_target_3
 		}
+
+		# Conduct the bone ritual
+		set_local_variable = {
+			name = bone_bonus
+			value = {
+				value = piety_level
+				multiply = 5
+			}
+		}
+		random_list = {
+			40 = {
+				add = local_var:bone_bonus
+
+				save_scope_value_as = {
+					name = bone_blessing
+					value = yes
+				}
+			}
+			60 = {
+				subtract = local_var:bone_bonus
+
+				save_scope_value_as = {
+					name = bone_blessing
+					value = no
+				}
+			}
+		}
 	}
+
+	desc = {
+		desc = caucasianroa.100.d
+		#Explain Bone Ritual (Pagan vs NotPagan)
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:raid_sponsor.faith.religion = { is_in_family = rf_pagan } }
+				desc = caucasianroa.100.d.pagan
+			}
+			desc = caucasianroa.100.d.not_pagan
+		}
+		#Bone Result
+		first_valid = {
+			#Bone Success
+			triggered_desc = {
+				trigger = { scope:bone_blessing = yes }
+				desc = {
+					desc = caucasianroa.100.d.bless
+					first_valid = {
+						triggered_desc = {
+							trigger = { scope:raid_sponsor = { has_trait = zealous } }
+							desc = caucasianroa.100.d.bless.zealous
+						}
+						#Fallback
+						desc =  caucasianroa.100.d.bless.default
+					}
+				}
+			}
+			#Bone Fail
+			desc = {
+				desc = caucasianroa.100.d.omen
+				first_valid = {
+					triggered_desc = {
+						trigger = { scope:raid_sponsor =  { has_trait = zealous } }
+						desc = caucasianroa.100.d.omen.zealous
+					}
+					triggered_desc = {
+						trigger = { scope:raid_sponsor =  { has_trait = cynical } }
+						desc = caucasianroa.100.d.omen.cyncial
+					}
+					triggered_desc = {
+						trigger = { scope:raid_sponsor =  { has_trait = stubborn } }
+						desc = caucasianroa.100.d.omen.stubborn
+					}
+					#Fallback
+					desc = caucasianroa.100.d.omen.default
+				}
+			}
+		}
+	}
+
 	option = {
 		name = caucasianroa.100.a
 
@@ -2611,10 +2674,14 @@ caucasianroa.100 = {
 				exists = scope:pirate_target_3
 			}
 		}
-		#add_gold = 100
-		#remove_variable = raid_decision_cooldown
+
+		if = {
+			limit = { government_has_flag = government_has_treasury }
+			add_treasury = minor_gold_value
+		}
+		else = { add_gold = minor_gold_value }
+		remove_decision_cooldown = circassian_sponsor_pirate_raid_decision
 	}
-	
 }
 
 caucasianroa.101 = {
