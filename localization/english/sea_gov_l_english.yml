@@ -41,6 +41,7 @@
  game_concept_stateless:0 "Stateless"
  game_concept_stateless_desc:0 "A stateless society lacks the formal hierarchies of other forms of governance. Each "ruler" is a representative of their lands whose actions are held to account by the people. Succession within a commune is elective, with each representative having a say. Stateless communes can band together into a [stateless_confederation|E], and over time as the confedation becomes more tightly knit it can centralize into a [tribal_government|E]"
  game_concept_stateless_government:0 "Statelessness"
+ is_stateless_tt: "Has a [stateless|E] government"
 
  anarchist_government:0 "Stateless"
  anarchist_government_adjective:0 "Stateless"
@@ -92,6 +93,11 @@
  barter_favors_interaction_same_culture_heritage_tt: "$ACCEPTANCE_BASELINE_HERITAGE$: $VALUE|+=0$"
  favor_interaction_notification: "Favor Granted"
  favor_interaction_rejected: "Favor Refused"
+
+ strong_hook_tt: "Asking for [strong_hook|E]: $VALUE|=+0$"
+ influence_level_tt: "Your [influence_level|E]: $VALUE|=+0$"
+ reciprocity_tt: "They have a [hook|E] on you"
+ 
 
  stateless_confederation_interaction: "Invite to [stateless_confederation|E]"
  stateless_confederation_interaction_influence_level_tt:0 "[influence_level|E]: $VALUE|=+0$"

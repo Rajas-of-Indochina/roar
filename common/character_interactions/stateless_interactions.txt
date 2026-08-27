@@ -394,7 +394,7 @@ barter_favors_interaction = {
 
 	ai_accept = {
 		modifier = {
-			desc = strong_hook
+			desc = strong_hook_tt
 			trigger = {
 				scope:strong_hook = yes
 			}
@@ -402,7 +402,7 @@ barter_favors_interaction = {
 		}
 
 		modifier = {
-			desc = influence_level
+			desc = influence_level_tt
 			add = {
 				value = influence_level
 				multiply = 10
