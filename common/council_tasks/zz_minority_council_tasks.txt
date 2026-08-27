@@ -408,10 +408,10 @@
 	potential_county = {
 		scope:county = {
 			is_landless_type_title = no
-			NOT = {
-				is_target_of_council_task = task_promote_minority
-				is_target_of_council_task = task_expel_religious_minority
-			}
+			# NOT = {
+			# 	is_target_of_council_task = task_promote_minority
+			# 	is_target_of_council_task = task_expel_religious_minority
+			# }
 			#China changes the faith to the Huangdi's faith
 			trigger_if = {
 				limit = {
@@ -1251,10 +1251,10 @@ task_promote_culture = {
 	potential_county = {
 		scope:county = {
 			is_landless_type_title = no
-			NOT = {
-				is_target_of_council_task = task_promote_minority
-				is_target_of_council_task = task_promote_culture
-			}
+			# NOT = {
+			# 	is_target_of_council_task = task_promote_minority
+			# 	is_target_of_council_task = task_promote_culture
+			# }
 			culture != scope:councillor_liege.culture
 			trigger_if = {
 				limit = {
@@ -1977,12 +1977,12 @@ task_promote_minority = {
 		# NOT = { has_game_rule = no_culture_conversion }
 		scope:county = {
 			### Minority stuff ###
-			NOT = {
-				is_target_of_council_task_or_clone = task_promote_culture
-				is_target_of_council_task_or_clone = task_conversion
-				is_target_of_council_task_or_clone = task_expel_religious_minority
-				is_target_of_council_task_or_clone = task_expel_cultural_minority
-			}
+			# NOT = {
+			# 	is_target_of_council_task_or_clone = task_promote_culture
+			# 	is_target_of_council_task_or_clone = task_conversion
+			# 	is_target_of_council_task_or_clone = task_expel_religious_minority
+			# 	is_target_of_council_task_or_clone = task_expel_cultural_minority
+			# }
 			scope:councillor_liege = {
 				NAND = {
 					has_realm_law_flag = disable_minority_faith_promotion
@@ -2375,10 +2375,10 @@ task_expel_religious_minority = {
 		}
 		scope:county = {
 			is_landless_type_title = no
-			NOT = {
-				is_target_of_council_task_or_clone = task_conversion
-				is_target_of_council_task_or_clone = task_promote_minority
-			}
+			# NOT = {
+			# 	is_target_of_council_task_or_clone = task_conversion
+			# 	is_target_of_council_task_or_clone = task_promote_minority
+			# }
 			development_level > 0
 			county_has_faith_minority = yes
 			trigger_if = {
@@ -2589,10 +2589,10 @@ task_expel_cultural_minority = {
 		}
 		scope:county = {
 			is_landless_type_title = no
-			NOT = {
-				is_target_of_council_task_or_clone = task_promote_culture
-				is_target_of_council_task_or_clone = task_promote_minority
-			}
+			# NOT = {
+			# 	is_target_of_council_task_or_clone = task_promote_culture
+			# 	is_target_of_council_task_or_clone = task_promote_minority
+			# }
 			culture = scope:councillor_liege.culture
 			development_level > 0
 			county_has_culture_minority = yes
