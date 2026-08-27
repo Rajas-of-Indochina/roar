@@ -656,6 +656,69 @@ set_minorities_game_start = {
 
 
 		#### South East-Asia - Mainland ####
+		every_county = { #k_champa
+			if = {
+				limit = {
+					kingdom = title:k_champa
+					culture = culture:cham
+					faith = faith:chamic_shaivism
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:mahayana
+					SIZE = small
+				}
+			}
+			if = {
+				limit = {
+					kingdom = title:k_champa
+					culture = culture:cham
+					faith = faith:chamic_shaivism
+					game_start_date < 1000.1.1
+				}
+				promote_faith_minority_effect = { FAITH = faith:mahayana }
+			}
+		}
+		title:every_county = { #d_indrapura
+			if = {
+				limit = {
+					duchy = title:d_indrapura
+					faith = faith:chamic_shaivism
+					game_start_date < 1000.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = large
+				}
+			}
+			if = {
+				limit = {
+					duchy = title:d_indrapura
+					faith = faith:chamic_shaivism
+					game_start_date >= 1000.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+		title:c_vijaya = {
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = large
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+
 		every_county = { #k_funan
 			if = {
 				limit = {
