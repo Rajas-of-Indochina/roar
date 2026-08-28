@@ -15,30 +15,42 @@ RICE_pamir_ruby_mines_01 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
+	}
+
+	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		culture = {
 			has_innovation = innovation_crop_rotation
 		}
 	}
-	
+
 	cost_gold = expensive_building_tier_3_cost
-	
+
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_1
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_1
 	}
 	county_modifier = {
+		tax_mult = 0.05
 		development_growth_factor = 0.05
 	}
-	
+
 	next_building = RICE_pamir_ruby_mines_02
-	
+
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
-	
+
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 RICE_pamir_ruby_mines_02 = {
@@ -66,20 +78,29 @@ RICE_pamir_ruby_mines_02 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_2
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_2
 	}
 	county_modifier = {
 		development_growth_factor = 0.1
+		tax_mult = 0.1
 	}
 	
 	next_building = RICE_pamir_ruby_mines_03
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
 	
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 RICE_pamir_ruby_mines_03 = {
@@ -107,20 +128,29 @@ RICE_pamir_ruby_mines_03 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_3
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_3
 	}
 	county_modifier = {
+		tax_mult = 0.15
 		development_growth_factor = 0.15
 	}
 	
 	next_building = RICE_pamir_ruby_mines_04
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
 	
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 RICE_pamir_ruby_mines_04 = {
@@ -148,9 +178,16 @@ RICE_pamir_ruby_mines_04 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_4
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_4
 	}
 	county_modifier = {
+		tax_mult = 0.2
 		development_growth_factor = 0.2
+	}
+	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
 	}
 	
 	ai_value = {
@@ -158,8 +195,10 @@ RICE_pamir_ruby_mines_04 = {
 	}
 	
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 
@@ -168,6 +207,7 @@ RICE_pamir_ruby_mines_04 = {
 ##############################
 
 RICE_pamir_khewra_salt_mines_01 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -180,6 +220,9 @@ RICE_pamir_khewra_salt_mines_01 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
+	}
+
+	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		culture = {
 			has_innovation = innovation_crop_rotation
@@ -190,14 +233,24 @@ RICE_pamir_khewra_salt_mines_01 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_1
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_1
 	}
 	county_modifier = {
+		tax_mult = 0.05
 		development_growth_factor = 0.05
-		tax_mult = 0.15
+	}
+	character_modifier = {
+		levy_maintenance = -0.04
+		supply_limit_mult = 0.05
 	}
 	
 	next_building = RICE_pamir_khewra_salt_mines_02
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -205,9 +258,12 @@ RICE_pamir_khewra_salt_mines_01 = {
 	type = special
 	
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_salt
 }
 
 RICE_pamir_khewra_salt_mines_02 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -232,14 +288,24 @@ RICE_pamir_khewra_salt_mines_02 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_2
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_2
 	}
 	county_modifier = {
+		tax_mult = 0.1
 		development_growth_factor = 0.1
-		tax_mult = 0.2
+	}
+	character_modifier = {
+		levy_maintenance = -0.08
+		supply_limit_mult = 0.1
 	}
 	
 	next_building = RICE_pamir_khewra_salt_mines_03
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -247,9 +313,12 @@ RICE_pamir_khewra_salt_mines_02 = {
 	type = special
 	
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_salt
 }
 
 RICE_pamir_khewra_salt_mines_03 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -274,14 +343,24 @@ RICE_pamir_khewra_salt_mines_03 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_3
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_3
 	}
 	county_modifier = {
+		tax_mult = 0.15
 		development_growth_factor = 0.15
-		tax_mult = 0.25
+	}
+	character_modifier = {
+		levy_maintenance = -0.12
+		supply_limit_mult = 0.15
 	}
 	
 	next_building = RICE_pamir_khewra_salt_mines_04
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
@@ -289,9 +368,12 @@ RICE_pamir_khewra_salt_mines_03 = {
 	type = special
 	
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_salt
 }
 
 RICE_pamir_khewra_salt_mines_04 = {
+	effect_desc = mines_effect_desc
 
 	asset = {
 		type = pdxmesh
@@ -316,10 +398,20 @@ RICE_pamir_khewra_salt_mines_04 = {
 	
 	province_modifier = {
 		monthly_income = copper_mine_building_tax_tier_4
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_4
 	}
 	county_modifier = {
+		tax_mult = 0.20
 		development_growth_factor = 0.2
-		tax_mult = 0.3
+	}
+	character_modifier = {
+		levy_maintenance = -0.16
+		supply_limit_mult = 0.2
+	}
+	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
 	}
 	
 	ai_value = {
@@ -329,5 +421,6 @@ RICE_pamir_khewra_salt_mines_04 = {
 	type = special
 	
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_salt
 }
-

@@ -875,3 +875,103 @@ tenet_exaltation_of_pain = {
 		}
 	}
 }
+
+tenet_sacred_destruction = {
+	icon = core_tenet_sacred_destruction
+
+	piety_cost = {
+		if = {
+			limit = { has_doctrine = tenet_warmonger }
+			value = faith_tenet_cost_mid
+		}
+		else = {
+			value = faith_tenet_cost_high
+		}
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { has_doctrine = tenet_sacred_destruction }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	is_shown = {
+		religion_tag = hinduism_religion
+	}
+
+	can_pick = {
+		custom_description = {
+			text = incompatible_tenet_pacifism_trigger
+			NOT = { doctrine:tenet_pacifism = { is_in_list = selected_doctrines } }
+		}
+		custom_description = {
+			text = incompatible_tenet_dharmic_pacifism_trigger
+			NOT = { doctrine:tenet_dharmic_pacifism = { is_in_list = selected_doctrines } }
+		}
+		custom_description = {
+			text = incompatible_tenet_tenet_preservation_trigger
+			NOT = { doctrine:tenet_preservation = { is_in_list = selected_doctrines } }
+		}
+	}
+
+	character_modifier = {
+		prowess_per_piety_level = 1
+		maa_damage_mult = 0.1
+	}
+	
+	parameters = {
+		successful_sieges_give_piety = yes
+	}
+	
+	traits = {
+		virtues = { wrathful }
+	}
+}
+
+tenet_preservation = {
+	icon = core_tenet_preservation
+
+	piety_cost = {
+		if = {
+			limit = { has_doctrine = tenet_sanctity_of_nature }
+			value = faith_tenet_cost_massive
+		}
+		else = {
+			value = faith_tenet_cost_high
+		}
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { has_doctrine = tenet_preservation }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	is_shown = {
+		religion_tag = hinduism_religion
+	}
+
+	can_pick = {
+		custom_description = {
+			text = incompatible_tenet_tenet_sacred_destruction_trigger
+			NOT = { doctrine:tenet_sacred_destruction = { is_in_list = selected_doctrines } }
+		}
+	}
+
+	character_modifier = {
+		church_holding_build_gold_cost = -0.15
+		church_holding_holding_build_speed = -0.15
+		temple_citadel_holding_build_gold_cost = -0.15
+		temple_citadel_holding_holding_build_speed = -0.15
+	}
+	
+	parameters = {
+		building_temples_gives_development = yes
+		take_vows_active = yes
+		monastic_schools_allowed_in_every_holding_type = yes
+	}
+	
+	traits = {
+		virtues = { architect }
+	}
+}

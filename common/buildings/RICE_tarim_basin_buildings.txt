@@ -152,31 +152,42 @@ RICE_tarim_basin_khotan_jade_deposits_01 = {
 
 	can_construct_potential = {
 		building_requirement_tribal = no
+	}
+
+	can_construct = {
 		building_requirement_castle_city_church = { LEVEL = 01 }
 		culture = {
 			has_innovation = innovation_crop_rotation
 		}
 	}
-	
+
 	cost_gold = expensive_building_tier_3_cost
-	
+
 	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_1
+		monthly_income = copper_mine_building_tax_tier_1
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_1
 	}
 	county_modifier = {
-		development_growth_factor = 0.05
 		tax_mult = 0.05
+		development_growth_factor = 0.05
 	}
 	
 	next_building = RICE_tarim_basin_khotan_jade_deposits_02
-	
+
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
-	
+
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 RICE_tarim_basin_khotan_jade_deposits_02 = {
@@ -212,13 +223,20 @@ RICE_tarim_basin_khotan_jade_deposits_02 = {
 	
 	next_building = RICE_tarim_basin_khotan_jade_deposits_03
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
 	
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 RICE_tarim_basin_khotan_jade_deposits_03 = {
@@ -245,22 +263,30 @@ RICE_tarim_basin_khotan_jade_deposits_03 = {
 	cost_gold = expensive_building_tier_5_cost
 	
 	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_3
+		monthly_income = copper_mine_building_tax_tier_3
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_3
 	}
 	county_modifier = {
-		development_growth_factor = 0.15
 		tax_mult = 0.15
+		development_growth_factor = 0.15
 	}
 	
 	next_building = RICE_tarim_basin_khotan_jade_deposits_04
 	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
+	}
+
 	ai_value = {
 		base = 100
 	}
 	
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 RICE_tarim_basin_khotan_jade_deposits_04 = {
@@ -287,11 +313,17 @@ RICE_tarim_basin_khotan_jade_deposits_04 = {
 	cost_gold = expensive_building_tier_6_cost
 	
 	province_modifier = {
-		monthly_income = silver_mine_building_tax_tier_4
+		monthly_income = copper_mine_building_tax_tier_4
+		stationed_siege_weapon_siege_value_mult = high_maa_siege_value_tier_4
 	}
 	county_modifier = {
-		development_growth_factor = 0.2
 		tax_mult = 0.2
+		development_growth_factor = 0.2
+	}
+	
+	province_culture_modifier = {
+		parameter = cupellation_mine_building_bonuses
+		tax_mult = innovation_cupellation_mine_tax_bonus_value
 	}
 	
 	ai_value = {
@@ -299,8 +331,10 @@ RICE_tarim_basin_khotan_jade_deposits_04 = {
 	}
 	
 	type = special
-	
+
 	flag = travel_point_of_interest_economic
+	flag = special_mine
+	flag = special_mine_gems
 }
 
 
