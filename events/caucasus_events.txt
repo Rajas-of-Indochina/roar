@@ -2372,6 +2372,10 @@ caucasianroa.034 = {
 # 	}
 # }
 
+
+# Duel Effect (Run this after selecting a target)
+
+
 # Sponsor Pirate Raid Event Chain (100-104)
 caucasianroa.100 = {
 	type = character_event
@@ -2636,10 +2640,8 @@ caucasianroa.100 = {
 		trigger = { exists = scope:pirate_target_1 }
 
 		scope:pirate_target_1 = { save_scope_as = raid_victim }
-		#trigger_event = {
-		#	id = my_raid_events.0002
-		#	days = {2 5}
-		#}
+		# Roll for Success (effect will call event)
+		duel_pirate_thamade_raid = yes
 	}
 	option = {
 		name = caucasianroa.100.b
@@ -2647,10 +2649,8 @@ caucasianroa.100 = {
 		trigger = { exists = scope:pirate_target_2 }
 
 		scope:pirate_target_2 = { save_scope_as = raid_victim }
-		#trigger_event = {
-		#	id = my_raid_events.0002
-		#	days = {2 5}
-		#}
+		# Roll for Success (effect will call event)
+		duel_pirate_thamade_raid = yes
 	}
 	option = {
 		name = caucasianroa.100.c
@@ -2658,14 +2658,12 @@ caucasianroa.100 = {
 		trigger = { exists = scope:pirate_target_3 }
 
 		scope:pirate_target_3 = { save_scope_as = raid_victim }
-		#trigger_event = {
-		#	id = my_raid_events.0002
-		#	days = {2 5}
-		#}
+		# Roll for Success (effect will call event)
+		duel_pirate_thamade_raid = yes
 	}
 	# ERROR CASE: SHOULD BASICALLY NEVER SEE THIS
 	option = {
-		name = caucasianroa.100.d
+		name = caucasianroa.100.z
 
 		trigger = {
 			NOR = {
@@ -2684,25 +2682,121 @@ caucasianroa.100 = {
 	}
 }
 
+# SUCCESS - Sponsor POV
 caucasianroa.101 = {
 	type = character_event
-	title = caucasianroa.035.t
-	desc = caucasianroa.035.d
+	title = caucasianroa.101.t
+	desc = caucasianroa.101.d
 	theme = feast_activity
 	immediate = {
 	}
 	right_portrait = {
-		character = ROOT
-		animation = drink_goblet
+		character = scope:raid_victim
+		animation = shock
 	}
 	left_portrait = {
 		character = scope:pirate_thamade
-		animation = war_attacker
+		animation = drink_goblet
+	}
+
+
+	option = {
+		name = caucasianroa.101.a
 	}
 	
 }
 
+# SUCCESS - Victim POV
+caucasianroa.102 = {
+	type = character_event
+	title = caucasianroa.102.t
+	desc = caucasianroa.102.d
+	theme = feast_activity
+	immediate = {
+	}
+	#TODO: FIGURE OUT CONDITIONAL PORTRAITS OR SPLIT UP EVENT
+	right_portrait = {
+		trigger = { scope:raid_detected = yes }
+		character = scope:raid_sponsor
+		animation = drink_goblet
+	}
+	right_portrait = {
+		trigger = { scope:raid_detected = no}
+			character = scope:pirate_thamade
+			animation = drink_goblet
+		}
+	}
+	lower_right_portrait = {
+		trigger = { scope:raid_detected = yes }
+		character = scope:pirate_thamade
+	}
+	left_portrait = {
+		character = scope:raid_victim
+		animation = shocked
+	}
 
+	option = {
+		name = caucasianroa.101.a
+	}
+	
+}
+# FAILURE - Sponsor POV
+caucasianroa.103 = {
+	type = character_event
+	title = caucasianroa.103.t
+	desc = caucasianroa.103.d
+	theme = feast_activity
+	immediate = {
+	}
+	right_portrait = {
+		character = scope:raid_victim
+		animation = anger
+	}
+	left_portrait = {
+		character = scope:pirate_thamade
+		animation = shame
+	}
+
+
+	option = {
+		name = caucasianroa.103.a
+	}
+}
+# FAILURE - Victim POV
+caucasianroa.104 = {
+	type = character_event
+	title = caucasianroa.104.t
+	desc = caucasianroa.104.d
+	theme = feast_activity
+	immediate = {
+	}
+	right_portrait = {
+		if = {
+			limit = { scope:raid_detected = yes }
+			character = scope:raid_sponsor
+			animation = worry
+		}
+		else = { #Victim doesn't know the sponsor
+			character = scope:pirate_thamade
+			animation = shame
+		}
+	}
+	lower_right_portrait = {
+		if = {
+			limit = { scope:raid_detected = yes }
+			character = scope:pirate_thamade
+		}
+		#else, empty
+	}
+	left_portrait = {
+		character = scope:raid_victim
+		animation = shocked
+	}
+
+	option = {
+		name = caucasianroa.104.a
+	}
+}
 
 
 caucasianroa.042 = {

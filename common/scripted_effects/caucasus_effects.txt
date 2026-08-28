@@ -396,3 +396,182 @@ create_circassian_patriarchate_effect = {
 		resolve_title_and_vassal_change = scope:change
 	}
 }
+
+
+
+#Pirate Thamade Duel Effect (Meant for usage in event "caucasianroa.100")
+# Requires scopes defined:
+# - scope:raid_sponsor
+# - scope:pirate_thamade
+# - scope:raid_victim
+# - scope:bone_blessing
+# Usage:
+# duel_pirate_thamade_raid = yes
+duel_pirate_thamade_raid = {
+
+	#Do the duel to see if detected BEFORE so the variable is set when the event is called
+	duel_pirate_thamade_raid_detected = yes
+
+	#Determine if duel should be against ruler, or their marshal
+	if = {
+		limit = {
+			exists = scope:raid_victim.cp:councillor_marshal
+			scope:raid_victim.cp:councillor_marshal.martial > scope:raid_victim.martial
+		}
+		scope:raid_victim.cp:councillor_marshal = { save_scope_as = duel_target }
+	}
+	else = {
+		scope:raid_victim = { save_scope_as = duel_target }
+	}
+
+	scope:pirate_thamade = {
+		duel = {
+			skill = martial
+			target = scope:duel_target
+
+			# SUCCESS
+			50 = {
+				desc = caucasianroa.100.duel.success.d
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.25
+					min = -35
+				}
+
+				# Bone Blessing
+				modifier = {
+					limit = { scope:bone_blessing = yes }
+					add = 10
+				}
+
+				# Effects:
+				show_as_tooltip = { custom_tooltip = caucasianroa.100.duel.success.t }
+				# Trigger Event
+				scope:raid_sponsor = {
+					trigger_event = {
+						id = caucasianroa.101
+						days = 7
+					}
+				}
+				scope:raid_victim = {
+					trigger_event = {
+						id = caucasianroa.102
+						days = 7
+					}
+				}
+			}
+
+			# FAILURE
+			50 = {
+				desc = caucasianroa.100.duel.failure.d
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.25
+					min = -35
+				}
+
+				# Bone Blessing
+				modifier = {
+					limit = { scope:bone_blessing = no }
+					add = 10
+				}
+
+				# Effects
+				show_as_tooltip = { custom_tooltip = caucasianroa.100.duel.failure.t }
+				scope:raid_sponsor = {
+					trigger_event = {
+						id = caucasianroa.103
+						days = 7
+					}
+				}
+				scope:raid_victim = {
+					trigger_event = {
+						id = caucasianroa.104
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}
+
+# Intended to be called by the previous duel ONLY
+duel_pirate_thamade_raid_detected = {
+
+	#Determine if duel should be against ruler, or their marshal
+	if = {
+		limit = {
+			exists = scope:raid_victim.cp:councillor_spymaster
+			scope:raid_victim.cp:councillor_spymaster.intrigue > scope:raid_victim.intrigue
+		}
+		scope:raid_victim.cp:councillor_spymaster = { save_scope_as = duel_target }
+	}
+	else = {
+		scope:raid_victim = { save_scope_as = duel_target }
+	}
+
+	scope:raid_sponsor = {
+		duel = {
+			skill = intrigue
+			target = scope:duel_target
+
+			# SUCCESS
+			50 = {
+				desc = caucasianroa.100.detection.success.d
+				custom_tooltip = caucasianroa.100.detection.success.t
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1.25
+					min = -25
+				}
+
+				#Consider Pirate Thamade (guaranteed to exist)
+				modifier = {
+					min = -15
+
+					add = {
+						value = scope:pirate_thamade.intrigue
+						subtract = scope:raid_victim.intrigue
+						multiply = 1.25
+					}
+				}
+
+				hidden_effect = {
+					save_scope_value_as = {
+						name = raid_detected
+						value = no
+					}
+				}
+			}
+
+			# FAILURE
+			50 = {
+				desc = caucasianroa.100.detection.failure.d
+				custom_tooltip = caucasianroa.100.detection.failure.t
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.25
+					min = -35
+				}
+
+				#Consider Raidsponsor (guaranteed to exist)
+				modifier = {
+					min = -15
+
+					add = {
+						value = scope:pirate_thamade.intrigue
+						subtract = scope:raid_victim.intrigue
+						multiply = -1.25
+					}
+				}
+
+				hidden_effect = {
+					save_scope_value_as = {
+						name = raid_detected
+						value = yes
+					}
+				}
+			}
+		}
+	}
+}
