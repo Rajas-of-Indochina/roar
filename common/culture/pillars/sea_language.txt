@@ -62,11 +62,11 @@ language_bahnaric = {
 	color = mnong
 }
 
-language_chong = {
+language_samre = {
 	type = language
 	is_shown = {
 		language_is_shown_trigger = {
-			LANGUAGE = language_chong
+			LANGUAGE = language_samre
 		}
 	}
 	parameters = {
@@ -76,7 +76,7 @@ language_chong = {
 	ai_will_do = {
 		value = 10
 		if = {
-			limit = { has_cultural_pillar = language_chong }
+			limit = { has_cultural_pillar = language_samre }
 			multiply = same_language_choice_factor
 		}
 		else_if = {
@@ -89,7 +89,7 @@ language_chong = {
 		}
 	}
 
-	color = chong
+	color = samre
 }
 
 language_katuic = {

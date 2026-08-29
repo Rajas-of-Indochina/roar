@@ -87154,118 +87154,81 @@ e_kambuja = {
 			}
 		}
 
-		d_vyadhapura = {
-			color = { 0 55 107 }
+		d_sambhupura = {
+			color = { 0 56 151 }
 
-			capital = c_angkor_borey #placeholder
+			capital = c_sambhupura
 
-			c_angkor_borey = {
-				color = { 0 49 80 }
+			c_sambhupura = {
+				# absorbed part of vanilla c_stung_treng
+				# also absorbed vanilla c_koh_ker
+				color = { 0 37 179 }
 
-				b_angkor_borey = {
-					province = 15829
+				b_sambhupura = {
+					# 10804 in vanilla
+					province = 16564
 
-					color = { 0 49 80 }
+					color = { 0 37 179 }
 				}
-				b_phnom_bayong = {
-					province = 15643
+				b_koh_krieng = {
+					province = 16670
 
-					color = { 0 49 80 }
+					color = { 0 37 179 }
 				}
-				b_neang_khmao = {
-					province = 15928
+				b_kracheh_nokor = {
+					province = 16459
 
-					color = { 0 49 80 }
+					color = { 0 37 179 }
 				}
-			}
-			c_prey_rodum = {
-				# part of c_kracheh_nokor in vanilla
-				color = { 0 59 90 }
+				b_preaek_prasab = {
+					province = 16426
 
-				b_prey_rodum = {
-					province = 15952
-
-					color = { 0 59 90 }
+					color = { 0 37 179 }
 				}
-				b_ba_ra = {
-					province = 16051
+				b_banteay_chrouy = {
+					province = 16539
 
-					color = { 0 59 90 }
+					color = { 0 37 179 }
 				}
 			}
-			c_chum_kiri = {
-				# part of c_angkor_borey in vanilla
-				color = { 0 69 100 }
+			c_phnom_preah_theat = {
+				# part of vanilla c_stung_treng
+				color = { 0 39 125 }
 
-				b_chum_kiri = {
-					province = 15848
+				b_phnom_preah_theat = {
+					province = 16766
 
-					color = { 0 69 100 }
+					color = { 0 39 125 }
 				}
-				b_angkor_chey = {
-					province = 15771
+				b_sandepheap = {
+					province = 16938
 
-					color = { 0 69 100 }
+					color = { 0 39 125 }
 				}
-				b_phnom_chhngok = {
-					province = 15712
+				b_preak_meas = {
+					province = 16846
 
-					color = { 0 69 100 }
-				}
-				b_banteay_meas = {
-					province = 15656
-
-					color = { 0 69 100 }
+					color = { 0 39 125 }
 				}
 			}
-			c_kracheh_nokor = {
-				# c_tbong_khmum in old RoA
-				color = { 0 79 110 }
+			c_thala_borivat = {
+				# part of c_koh_ker in vanilla
+				color = { 0 74 98 }
 
-				b_tbong_khmum = {
-					province = 16224
+				b_thala_borivat = {
+					province = 16739
 
-					color = { 0 79 110 }
+					color = { 0 74 98 }
 				}
-				b_memot = {
-					province = 16181
+				b_chheab = {
+					province = 16922
 
-					color = { 0 79 110 }
+					color = { 0 74 98 }
 				}
-				b_chhloung = {
-					province = 16287
+				b_mlu_prey = {
+					province = 16828
 
-					color = { 0 79 110 }
-				}
-			}
-			c_vyadhapura = {
-				# c_kiri_vong in old RoA
-				color = { 0 89 120 }
-
-				b_vyadhapura = {
-					province = 15856
-
-					color = { 0 89 120 }
-				}
-				b_preah_theat_baray = {
-					province = 16128
-
-					color = { 0 89 120 }
-				}
-				b_prasat_sang = {
-					province = 16014
-
-					color = { 0 89 120 }
-				}
-				b_popel = {
-					province = 15911
-
-					color = { 0 89 120 }
-				}
-				b_ou_reang_ov = {
-					province = 16086
-
-					color = { 0 89 120 }
+					color = { 0 74 98 }
 				}
 			}
 		}
@@ -87410,11 +87373,6 @@ e_kambuja = {
 
 					color = { 0 57 158 }
 				}
-				b_phumi_rovieng = {
-					province = 16250
-
-					color = { 0 57 158 }
-				}
 			}
 			c_aoral = {
 				# part of c_angkor_borey in vanilla
@@ -87434,6 +87392,122 @@ e_kambuja = {
 					province = 16023
 
 					color = { 0 67 168 }
+				}
+			}
+		}
+
+		d_vyadhapura = {
+			color = { 0 55 107 }
+
+			capital = c_angkor_borey #placeholder
+
+			c_angkor_borey = {
+				color = { 0 49 80 }
+
+				b_angkor_borey = {
+					province = 15829
+
+					color = { 0 49 80 }
+				}
+				b_phnom_bayong = {
+					province = 15643
+
+					color = { 0 49 80 }
+				}
+				b_neang_khmao = {
+					province = 15928
+
+					color = { 0 49 80 }
+				}
+			}
+			c_prey_rodum = {
+				# part of c_kracheh_nokor in vanilla
+				color = { 0 59 90 }
+
+				b_prey_rodum = {
+					province = 15952
+
+					color = { 0 59 90 }
+				}
+				b_ba_ra = {
+					province = 16051
+
+					color = { 0 59 90 }
+				}
+			}
+			c_chum_kiri = {
+				# part of c_angkor_borey in vanilla
+				color = { 0 69 100 }
+
+				b_chum_kiri = {
+					province = 15848
+
+					color = { 0 69 100 }
+				}
+				b_angkor_chey = {
+					province = 15771
+
+					color = { 0 69 100 }
+				}
+				b_phnom_chhngok = {
+					province = 15712
+
+					color = { 0 69 100 }
+				}
+				b_banteay_meas = {
+					province = 15656
+
+					color = { 0 69 100 }
+				}
+			}
+			c_kracheh_nokor = {
+				# c_tbong_khmum in old RoA
+				color = { 0 79 110 }
+
+				b_tbong_khmum = {
+					province = 16224
+
+					color = { 0 79 110 }
+				}
+				b_memot = {
+					province = 16181
+
+					color = { 0 79 110 }
+				}
+				b_chhloung = {
+					province = 16287
+
+					color = { 0 79 110 }
+				}
+			}
+			c_vyadhapura = {
+				# c_kiri_vong in old RoA
+				color = { 0 89 120 }
+
+				b_vyadhapura = {
+					province = 15856
+
+					color = { 0 89 120 }
+				}
+				b_preah_theat_baray = {
+					province = 16128
+
+					color = { 0 89 120 }
+				}
+				b_prasat_sang = {
+					province = 16014
+
+					color = { 0 89 120 }
+				}
+				b_popel = {
+					province = 15911
+
+					color = { 0 89 120 }
+				}
+				b_ou_reang_ov = {
+					province = 16086
+
+					color = { 0 89 120 }
 				}
 			}
 		}
@@ -87537,99 +87611,28 @@ e_kambuja = {
 			}
 		}
 
-		d_ban_lung = {
-			color = { 0 60 130 }
-
-			capital = c_mondul_kiri
-
-			c_mondul_kiri = {
-				# part of c_ratanakiri in vanilla
-				color = { 10 70 145 }
-
-				b_mondul_kiri = {
-					province = 16549
-
-					color = { 10 70 145 }
-				}
-				b_kaoh_nheaek = {
-					province = 16628
-
-					color = { 10 70 145 }
-				}
-				b_dei_ey = {
-					province = 16571
-
-					color = { 10 70 145 }
-				}
-			}
-			c_senmonorom = {
-				# part of c_ratanakiri in vanilla
-				color = { 20 80 155 }
-
-				b_senmonorom = {
-					province = 16346
-
-					color = { 20 80 155 }
-				}
-				b_pechr_chenda = {
-					province = 16469
-
-					color = { 20 80 155 }
-				}
-				b_si_to = {
-					province = 16327
-
-					color = { 118 93 221 }
-				}
-			}
-			c_ta_veang = {
-				# part of c_ratanakiri in vanilla
-				color = { 30 90 165 }
-
-				b_ta_veang = {
-					province = 16918
-
-					color = { 30 90 165 }
-				}
-				b_ban_lung = {
-					province = 16753
-
-					color = { 30 90 165 }
-				}
-				b_koun_mom = {
-					province = 16757
-
-					color = { 30 90 165 }
-				}
-			}
-		}
-
 		d_koh_kong = {
 			color = { 15 45 100 }
 
 			capital = c_koh_kong
 
 			c_koh_kong = {
-				# part of c_botum_sakor in vanilla
+				# part of c_botum_sakor in vanilla ; c_khemara_phoumin in old RoA
 				color = { 25 55 115 }
 
 				b_koh_kong = {
-					province = 15878
-
-					color = { 25 55 115 }
-				}
-				b_srae_ambel = {
-					province = 15960
+					# roughly around vanilla b_kum_pak_khlang
+					province = 16076
 
 					color = { 25 55 115 }
 				}
 			}
-			c_khemara_phoumin = {
-				# part of c_botum_sakor in vanilla
+			c_phnom_kravanh = {
+				# new RoA county
 				color = { 35 65 125 }
 
-				b_khemara_phoumin = {
-					province = 16076
+				b_veal_veaeng = {
+					province = 16281
 
 					color = { 35 65 125 }
 				}
@@ -87638,17 +87641,17 @@ e_kambuja = {
 
 					color = { 35 65 125 }
 				}
-				b_veal_veaeng = {
-					province = 16281
+				b_phumi_rovieng = {
+					province = 16250
 
 					color = { 35 65 125 }
 				}
 			}
-			c_ream = {
-				# part of c_botum_sakor in vanilla
+			c_botum_sakor = {
+				# c_ream in old RoA
 				color = { 45 75 135 }
 
-				b_ream = {
+				b_kompong_saom = {
 					province = 15473
 
 					color = { 45 75 135 }
@@ -87658,84 +87661,15 @@ e_kambuja = {
 
 					color = { 45 75 135 }
 				}
-			}
-		}
+				b_srae_ambel = {
+					province = 15960
 
-		d_sambhupura = {
-			color = { 0 56 151 }
-
-			capital = c_sambhupura
-
-			c_sambhupura = {
-				# absorbed part of vanilla c_stung_treng
-				# also absorbed vanilla c_koh_ker
-				color = { 0 37 179 }
-
-				b_sambhupura = {
-					# 10804 in vanilla
-					province = 16564
-
-					color = { 0 37 179 }
+					color = { 45 75 135 }
 				}
-				b_koh_krieng = {
-					province = 16670
+				b_botum_sakor = {
+					province = 15878
 
-					color = { 0 37 179 }
-				}
-				b_kracheh_nokor = {
-					province = 16459
-
-					color = { 0 37 179 }
-				}
-				b_preaek_prasab = {
-					province = 16426
-
-					color = { 0 37 179 }
-				}
-				b_banteay_chrouy = {
-					province = 16539
-
-					color = { 0 37 179 }
-				}
-			}
-			c_phnom_preah_theat = {
-				# part of vanilla c_stung_treng
-				color = { 0 39 125 }
-
-				b_phnom_preah_theat = {
-					province = 16766
-
-					color = { 0 39 125 }
-				}
-				b_sandepheap = {
-					province = 16938
-
-					color = { 0 39 125 }
-				}
-				b_preak_meas = {
-					province = 16846
-
-					color = { 0 39 125 }
-				}
-			}
-			c_thala_borivat = {
-				# part of c_koh_ker in vanilla
-				color = { 0 74 98 }
-
-				b_thala_borivat = {
-					province = 16739
-
-					color = { 0 74 98 }
-				}
-				b_chheab = {
-					province = 16922
-
-					color = { 0 74 98 }
-				}
-				b_mlu_prey = {
-					province = 16828
-
-					color = { 0 74 98 }
+					color = { 35 65 125 }
 				}
 			}
 		}
@@ -87834,6 +87768,73 @@ e_kambuja = {
 					province = 16633
 
 					color = { 140 105 5 }
+				}
+			}
+		}
+
+		d_ban_lung = {
+			color = { 0 60 130 }
+
+			capital = c_mondul_kiri
+
+			c_mondul_kiri = {
+				# part of c_ratanakiri in vanilla
+				color = { 10 70 145 }
+
+				b_mondul_kiri = {
+					province = 16549
+
+					color = { 10 70 145 }
+				}
+				b_kaoh_nheaek = {
+					province = 16628
+
+					color = { 10 70 145 }
+				}
+				b_dei_ey = {
+					province = 16571
+
+					color = { 10 70 145 }
+				}
+			}
+			c_senmonorom = {
+				# part of c_ratanakiri in vanilla
+				color = { 20 80 155 }
+
+				b_senmonorom = {
+					province = 16346
+
+					color = { 20 80 155 }
+				}
+				b_pechr_chenda = {
+					province = 16469
+
+					color = { 20 80 155 }
+				}
+				b_si_to = {
+					province = 16327
+
+					color = { 118 93 221 }
+				}
+			}
+			c_ta_veang = {
+				# part of c_ratanakiri in vanilla
+				color = { 30 90 165 }
+
+				b_ta_veang = {
+					province = 16918
+
+					color = { 30 90 165 }
+				}
+				b_ban_lung = {
+					province = 16753
+
+					color = { 30 90 165 }
+				}
+				b_koun_mom = {
+					province = 16757
+
+					color = { 30 90 165 }
 				}
 			}
 		}

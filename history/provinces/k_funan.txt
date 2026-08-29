@@ -106,7 +106,7 @@
 ### c_samraong
 16995 = { # Samraong
 	# capital town of Oddar Meanchey ; unsure of its historical importance
-	culture = chong
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
@@ -279,7 +279,7 @@
 ## d_battambang
 ### c_bakan
 16455 = { # b_bakan
-	culture = chong
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
@@ -300,7 +300,7 @@
 
 ### c_pailin
 16577 = { # b_pailin
-	culture = chong
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
@@ -319,7 +319,7 @@
 
 ### c_neang
 16788 = { # b_neang
-	culture = chong
+	culture = samre
 	religion = samre_pagan
 
 	holding = temple_citadel_holding
@@ -341,7 +341,7 @@
 
 ### c_chhmar
 16842 = { # b_chhmar
-	culture = chong
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
@@ -388,9 +388,6 @@
 }
 16463 = { # b_banteay_dei
 	holding = temple_citadel_holding
-}
-16250 = { # b_phumi_rovieng
-	holding = none
 }
 
 ### c_aoral
@@ -555,59 +552,57 @@
 }
 
 
-## d_koh_kong
+## d_koh_kong ###################################
 ### c_koh_kong
-15878 = { # b_koh_kong
-	culture = chong
+16076 = { # Khemarak Phoumin AKA Koh Kong
+	# frontier settlement and a trade hub ; potentially site of Bai Tou kingdom mentioned by Song dynasty 'lesihu'?
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+}
+
+### c_phnom_kravanh
+16281 = { # Veal Veaeng
+	# district of Pursat province, Cambodia, located in Phnom Kravanh Mountains
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
 
 	# History
-	1000.1.1 = {
-		holding = temple_citadel_holding
-	}
 }
-15960 = { # b_srae_ambel
+16116 = { # Thma Bang
+	# sparsely inhabited district of Koh Kong province
+	holding = none
+}
+16250 = { # Phumi Rovieng
+	# gathering of villages in sparsely populated part of Pursat province
 	holding = none
 }
 
-### c_khemara_phoumin
-16076 = { # b_khemara_phoumin
-	culture = chong
+### c_botum_sakor
+15473 = { # Kampong Saom AKA Preah Sihanouk AKA Sihanoukville
+	# small port settlement through its early history ; grew quite a bit in later centuries
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
 
 	# History
-	900.1.1 = {
-		culture = khmer
-		religion = shaivism
-		holding = temple_citadel_holding
-	}
 }
-16116 = { # b_thma_bang
+15871 = { # Kampong Seila
+	# district of Preah Sihanouk province containing various protected natural areas
 	holding = none
 }
-16281 = { # b_veal_veaeng
+15960 = { # Srae Ambel
+	# district of Koh Kong province
 	holding = none
 }
-
-### c_ream
-15473 = { # b_ream
-	culture = chong
-	religion = samre_pagan
-
-	holding = tribal_holding
-
-	# History
-	900.1.1 = {
-		culture = khmer
-		religion = shaivism
-		holding = temple_citadel_holding
-	}
-}
-15871 = { # b_kampong_seila
+15878 = { # Botum Sakor
+	# area of modern day national park with well preserved evergreen woods and mangrove forests
 	holding = none
 }
 
@@ -686,7 +681,7 @@
 ## d_chan_kabui
 ### c_chan_kabui
 16484 = { # b_chan_kabui
-	culture = chong
+	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
