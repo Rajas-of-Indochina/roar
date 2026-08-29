@@ -21,6 +21,7 @@ ROA_create_martial_character_from_template = {
 				FAITH=   $FAITH_SRC$
 			}
 		}
+		error_log = "Male Martial"
 		if = {
 			limit = {
 				ROA_can_have_martial_gender_exception_PARAM = {
@@ -28,12 +29,14 @@ ROA_create_martial_character_from_template = {
 					FAITH=   $FAITH_SRC$
 				}
 			}
+			error_log = "Exceptions"
 			change_local_variable = {
 				name = male_chance
 				add = 40
 			}
 		}
 		else = { # No Exceptions to consider
+			error_log = "No Exceptions"
 			change_local_variable = {
 				name = male_chance
 				add = 50
@@ -47,6 +50,7 @@ ROA_create_martial_character_from_template = {
 				FAITH=   $FAITH_SRC$
 			}
 		}
+		error_log = "Female Martial"
 		if = {
 			limit = {
 				ROA_can_have_martial_gender_exception_PARAM = {
@@ -54,12 +58,14 @@ ROA_create_martial_character_from_template = {
 					FAITH=   $FAITH_SRC$
 				}
 			}
+			error_log = "Yes Exceptions"
 			change_local_variable = {
 				name = male_chance
 				subtract = 40
 			}
 		}
 		else = { # No Exceptions to consider
+			error_log = "No Exceptions"
 			change_local_variable = {
 				name = male_chance
 				subtract = 50
@@ -71,7 +77,8 @@ ROA_create_martial_character_from_template = {
 	random_list = {
 		# Male Pirate
 		0 = {
-			modifier = { add = local_var:male_chance }
+			modifier = { add = { value = local_var:male_chance } }
+			error_log = "PTXXX DEBUG random list first"
 			create_character = {
 				location = root.location
 				template = $TEMPLATE_SRC$
@@ -86,8 +93,9 @@ ROA_create_martial_character_from_template = {
 		0 = {
 			modifier = {
 				add = 100
-				subtract = local_var:male_chance
-			}	
+				subtract = { value = local_var:male_chance }
+			}
+			error_log = "PTXXX DEBUG random list second"
 			create_character = {
 				location = root.location
 				template = $TEMPLATE_SRC$
