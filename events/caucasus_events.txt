@@ -2508,7 +2508,7 @@ caucasianroa.100 = {
 						scope:raid_sponsor.faith = {
 							faith_hostility_level = {
 								target = prev.faith
-								value = faith_hostility_righteous
+								value = faith_fully_accepted_level
 							}
 						}
 					}
@@ -2517,7 +2517,7 @@ caucasianroa.100 = {
 						scope:raid_sponsor.faith = {
 							faith_hostility_level = {
 								target = prev.faith
-								value = faith_hostility_astray
+								value = faith_astray_level
 							}
 						}
 					}
@@ -2526,7 +2526,7 @@ caucasianroa.100 = {
 						scope:raid_sponsor.faith = {
 							faith_hostility_level = {
 								target = prev.faith
-								value = faith_hostility_evil
+								value = faith_evil_level
 							}
 						}
 					}
@@ -2712,23 +2712,15 @@ caucasianroa.102 = {
 	title = caucasianroa.102.t
 	desc = caucasianroa.102.d
 	theme = feast_activity
-	immediate = {
-	}
-	#TODO: FIGURE OUT CONDITIONAL PORTRAITS OR SPLIT UP EVENT
+	immediate = {}
+	#This scope is empty and thus doesn't show up unless its set by the detection effect
 	right_portrait = {
-		trigger = { scope:raid_detected = yes }
-		character = scope:raid_sponsor
+		character = scope:sponsor_to_reveal
 		animation = drink_goblet
 	}
-	right_portrait = {
-		trigger = { scope:raid_detected = no}
-			character = scope:pirate_thamade
-			animation = drink_goblet
-		}
-	}
-	lower_right_portrait = {
-		trigger = { scope:raid_detected = yes }
+	center_portrait = {
 		character = scope:pirate_thamade
+		animation = celebrate_axe
 	}
 	left_portrait = {
 		character = scope:raid_victim
@@ -2736,7 +2728,7 @@ caucasianroa.102 = {
 	}
 
 	option = {
-		name = caucasianroa.101.a
+		name = caucasianroa.102.a
 	}
 	
 }
@@ -2768,29 +2760,19 @@ caucasianroa.104 = {
 	title = caucasianroa.104.t
 	desc = caucasianroa.104.d
 	theme = feast_activity
-	immediate = {
-	}
+	immediate = {}
+	#This scope is empty and thus doesn't show up unless its set by the detection effect
 	right_portrait = {
-		if = {
-			limit = { scope:raid_detected = yes }
-			character = scope:raid_sponsor
-			animation = worry
-		}
-		else = { #Victim doesn't know the sponsor
-			character = scope:pirate_thamade
-			animation = shame
-		}
+		character = scope:sponsor_to_reveal
+		animation = worry
 	}
-	lower_right_portrait = {
-		if = {
-			limit = { scope:raid_detected = yes }
-			character = scope:pirate_thamade
-		}
-		#else, empty
+	center_portrait = {
+		character = scope:pirate_thamade
+		animation = shame
 	}
 	left_portrait = {
 		character = scope:raid_victim
-		animation = shocked
+		animation = anger
 	}
 
 	option = {
