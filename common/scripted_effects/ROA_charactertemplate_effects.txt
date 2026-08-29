@@ -74,37 +74,16 @@ ROA_create_martial_character_from_template = {
 	}
 
 	#Generate character based on gender chance
-	random_list = {
-		# Male Pirate
-		0 = {
-			modifier = { add = { value = local_var:male_chance } }
-			error_log = "PTXXX DEBUG random list first"
-			create_character = {
-				location = root.location
-				template = $TEMPLATE_SRC$
-				gender = male
-				culture = $CULTURE_SRC$
-				faith = $FAITH_SRC$
-				random_traits = no
-				save_scope_as = $SCOPE_DEST$
-			}
+	create_character = {
+		location = root.location
+		template = $TEMPLATE_SRC$
+		gender_female_chance = {
+			add = 100
+			subtract = local_var:male_chance
 		}
-		# Female Pirate
-		0 = {
-			modifier = {
-				add = 100
-				subtract = { value = local_var:male_chance }
-			}
-			error_log = "PTXXX DEBUG random list second"
-			create_character = {
-				location = root.location
-				template = $TEMPLATE_SRC$
-				gender = female
-				culture = $CULTURE_SRC$
-				faith = $FAITH_SRC$
-				random_traits = no
-				save_scope_as = $SCOPE_DEST$
-			}
-		}
+		culture = $CULTURE_SRC$
+		faith = $FAITH_SRC$
+		random_traits = no
+		save_scope_as = $SCOPE_DEST$
 	}
 }
