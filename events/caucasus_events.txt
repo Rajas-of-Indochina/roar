@@ -2686,12 +2686,13 @@ caucasianroa.100 = {
 caucasianroa.101 = {
 	type = character_event
 	title = caucasianroa.101.t
-	desc = caucasianroa.101.d
 	theme = feast_activity
-	immediate = {
-	}
 	right_portrait = {
 		character = scope:raid_victim
+		triggered_animation = {
+			trigger = { scope:raid_detected = yes }
+			animation = anger
+		}
 		animation = shock
 	}
 	left_portrait = {
@@ -2699,20 +2700,83 @@ caucasianroa.101 = {
 		animation = drink_goblet
 	}
 
+	desc = {
+		desc = caucasianroa.101.d
+
+		#Random Wording of unloading ship
+		random_valid = {
+			desc = caucasianroa.101.d.1.a
+			desc = caucasianroa.101.d.1.b
+		}
+		desc = caucasianroa.101.d.2
+		#Talk about omen if applicable
+		triggered_desc = {
+			trigger = { scope:bone_blessing = yes }
+			desc = {
+				desc = caucasianroa.101.d.omen_but_won
+				first_valid = {
+					triggered_desc = {
+						trigger = { has_trait = cynical }
+						desc = caucasianroa.101.d.omen_but_won.cynical
+					}
+					triggered_desc = {
+						trigger = { has_trait = zealous }
+						desc = caucasianroa.101.d.omen_but_won.zealous
+					}
+					#Fallback
+					desc = caucasianroa.101.d.omen_but_won.end
+				}
+			}
+		}
+		#Pirate Thamade tells us about raid, and if the victim knows of our involvement
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:raid_detected = yes}
+				desc = caucasianroa.101.d.detected
+			}
+			#Not detected
+			desc = caucasianroa.101.d.undetected
+		}
+	}
 
 	option = {
-		name = caucasianroa.101.a
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = {
+							scope:raid_detected = yes
+							has_trait = arrogant
+						}
+						desc = caucasianroa.101.a.detected.arrogant
+					}
+					triggered_desc = {
+						trigger = {
+							scope:raid_detected = yes
+							has_trait = zealous
+						}
+						desc = caucasianroa.101.a.detected.zealous
+					}
+					triggered_desc = {
+						trigger = {
+							scope:raid_detected = no
+							has_trait = zealous
+						}
+						desc = caucasianroa.101.a.undetected.zealous
+					}
+					#Fallback
+					desc = caucasianroa.101.a
+				}
+			}
+		}
 	}
-	
 }
 
 # SUCCESS - Victim POV
 caucasianroa.102 = {
 	type = character_event
 	title = caucasianroa.102.t
-	desc = caucasianroa.102.d
 	theme = feast_activity
-	immediate = {}
 	#This scope is empty and thus doesn't show up unless its set by the detection effect
 	right_portrait = {
 		character = scope:sponsor_to_reveal
@@ -2727,16 +2791,68 @@ caucasianroa.102 = {
 		animation = shocked
 	}
 
-	option = {
-		name = caucasianroa.102.a
+	desc = {
+		#Report arrives
+		desc = caucasianroa.102.d
+		#Beginning of Report
+		random_valid = {
+			desc = caucasianroa.102.d.1.a
+			desc = caucasianroa.102.d.1.b
+			desc = caucasianroa.102.d.1.c
+		}
+		#Skips Ahead
+		desc = caucasianroa.102.d.2
+		#Conclusion of Report
+		random_valid = {
+			desc = caucasianroa.102.d.3.a
+			desc = caucasianroa.102.d.3.b
+		}
+		#Recourse or forced to withstand? (Has access to this circassian pirates?)
+		first_valid = {
+			triggered_desc = {
+				trigger = { culture = { has_cultural_tradition = tradition_xabze } }
+				desc = caucasianroa.102.d.can_retaliate
+			}
+			desc = caucasianroa.102.d.cannot_retaliate
+		}
+		#Culprit found?
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:raid_detected = yes }
+				desc = caucasianroa.102.d.detected
+			}
+			desc = caucasianroa.102.d.undetected
+		}
 	}
-	
+
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { scope:raid_detected = yes }
+						desc = caucasianroa.102.a.detected
+					}
+					#Fallback - No Culprit
+					desc = caucasianroa.102.a
+				}
+			}
+		}
+	}
+	#Culprit known, can retaliate, send counter-raid?
+	#option = {
+	#	trigger = {
+	#		culture = { has_tradition = tradition_xabze }
+	#		scope:raid_detected = yes
+	#	}
+	#	name = caucasianroa.102.b
+	#}
 }
+
 # FAILURE - Sponsor POV
 caucasianroa.103 = {
 	type = character_event
 	title = caucasianroa.103.t
-	desc = caucasianroa.103.d
 	theme = feast_activity
 	immediate = {
 	}
@@ -2749,16 +2865,80 @@ caucasianroa.103 = {
 		animation = shame
 	}
 
+	desc = {
+		desc = caucasianroa.103.d
+		desc = caucasianroa.103.d.2
+		#Talk about omen/blessing if applicable
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:bone_blessing = yes }
+				desc = {
+					desc = caucasianroa.103.d.omen_and_lost
+					first_valid = {
+						triggered_desc = {
+							trigger = { has_trait = cynical }
+							desc = caucasianroa.103.d.omen_and_lost.cynical
+						}
+						triggered_desc = {
+							trigger = { has_trait = zealous }
+							desc = caucasianroa.103.d.omen_and_lost.zealous
+						}
+						#Fallback
+						desc = caucasianroa.103.d.omen_and_lost.end
+					}
+				}
+			}
+			#Blessing
+			desc = {
+				desc = caucasianroa.103.d.blessing_but_lost
+				first_valid = {
+					triggered_desc = {
+						trigger = { has_trait = cynical }
+						desc = caucasianroa.103.d.blessing_but_lost.cynical
+					}
+					triggered_desc = {
+						trigger = { has_trait = zealous }
+						desc = caucasianroa.103.d.blessing_but_lost.zealous
+					}
+					#Fallback
+					desc = caucasianroa.103.d.blessing_but_lost.end
+				}
+			}
+		}
+		#Pirate Thamade tells us about raid, and if the victim knows of our involvement
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:raid_detected = yes}
+				desc = caucasianroa.103.d.detected
+			}
+			#Not detected
+			desc = caucasianroa.103.d.undetected
+		}
+	}
 
 	option = {
-		name = caucasianroa.103.a
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = {
+							scope:raid_detected = yes
+							has_trait = zealous
+						}
+						desc = caucasianroa.103.a.detected.zealous
+					}
+					#Fallback
+					desc = caucasianroa.103.a
+				}
+			}
+		}
 	}
 }
+
 # FAILURE - Victim POV
 caucasianroa.104 = {
 	type = character_event
 	title = caucasianroa.104.t
-	desc = caucasianroa.104.d
 	theme = feast_activity
 	immediate = {}
 	#This scope is empty and thus doesn't show up unless its set by the detection effect
@@ -2775,9 +2955,62 @@ caucasianroa.104 = {
 		animation = anger
 	}
 
-	option = {
-		name = caucasianroa.104.a
+	desc = {
+		#Report arrives
+		desc = caucasianroa.104.d
+		#Beginning of Report
+		random_valid = {
+			desc = caucasianroa.104.d.1.a
+			desc = caucasianroa.104.d.1.b
+			desc = caucasianroa.104.d.1.c
+		}
+		#Skips Ahead
+		desc = caucasianroa.104.d.2
+		#Conclusion of Report
+		random_valid = {
+			desc = caucasianroa.104.d.3.a
+			desc = caucasianroa.104.d.3.b
+		}
+		#Recourse or forced to withstand? (Has access to this circassian pirates?)
+		first_valid = {
+			triggered_desc = {
+				trigger = { culture = { has_cultural_tradition = tradition_xabze } }
+				desc = caucasianroa.104.d.can_retaliate
+			}
+			desc = caucasianroa.104.d.cannot_retaliate
+		}
+		#Culprit found?
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:raid_detected = yes }
+				desc = caucasianroa.104.d.detected
+			}
+			desc = caucasianroa.104.d.undetected
+		}
 	}
+
+	option = {
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { scope:raid_detected = yes }
+						desc = caucasianroa.104.a.detected
+					}
+					#Fallback - No Culprit
+					desc = caucasianroa.104.a
+				}
+			}
+		}
+	}
+	#Culprit known, can retaliate, send counter-raid?
+	#option = {
+	#	trigger = {
+	#		culture = { has_tradition = tradition_xabze }
+	#		scope:raid_detected = yes
+	#	}
+	#	name = caucasianroa.104.b
+	#}
 }
 
 
