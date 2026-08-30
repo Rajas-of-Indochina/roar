@@ -49,21 +49,38 @@ sea_zheng = {
 		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 }  }
 	}
 }
-1055006 = { # Zhang, Guiyi Circuit
-	pattern = "pattern_solid.dds"
-	color1 = "red"
-	color2 = "white"
-	colored_emblem = {
-		texture = "ce_tamgha_roundel_frame.dds"
-		color1 = "red"
-		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 0.8 0.8 }  }
+
+1055006={ # Zhang, Guiyi Circuit
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=red
+	color3=white
+	colored_emblem={
+		color1=white
+		texture="ce_seal_name_zhang_5f35.dds"
+		instance={
+			position={ 0.330000 0.500000 }
+			scale={ -0.490000 0.620000 }
+			depth=1.010000
+		}
 	}
-	colored_emblem = {
-		texture = "ce_chuhan_zhang.dds"
-		color1 = "yellow"
-		color2 = "black"
-		instance = { position = { 0.5 0.5 } scale = { 0.6 0.6 }  }
+
+	colored_emblem={
+		color1=red
+		texture="ce_seal_pictorial_vertical_pig.dds"
+		instance={
+			position={ 0.660000 0.500000 }
+			scale={ 0.650000 0.650000 }
+		}
+	}
+
+	colored_emblem={
+		color1=red
+		texture="ce_seal_frame_divided.dds"
+		instance={
+			scale={ 0.700000 0.700000 }
+			depth=2.010000
+		}
 	}
 }
 
