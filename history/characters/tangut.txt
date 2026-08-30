@@ -669,9 +669,10 @@
 	dynasty_house = house_Tuoba_Li
 	religion="avatamsaka"
 	culture="tangut"
-	trait=education_martial_2
-	trait=deceitful
+	trait=education_martial_4
+	trait=diligent
 	trait=ambitious
+	trait=fickle
 	father=206642
 	963.1.1={
 		birth=yes
@@ -685,6 +686,10 @@
 	dynasty_house = house_Tuoba_Li
 	religion="avatamsaka"
 	culture="tangut"
+	trait=calm
+	trait=ambitious
+	trait=gregarious
+	trait=education_martial_3
 	father=206643
 	mother=206675
 	981.1.1={
@@ -770,10 +775,12 @@
 	father=206644
 	mother=206709
 	trait=ambitious
+	trait=callous
+	trait=wrathful
+	trait=arbitrary	
 	trait=physique_good_2
-	trait=just
 	trait=intellect_good_1
-	trait=education_martial_3
+	trait=education_martial_4
 	1003.6.7={
 		birth=yes
 	}
@@ -790,23 +797,29 @@
 	dynasty_house = house_Tuoba_Weiming
 	religion="avatamsaka"
 	culture="tangut"
-	trait=intellect_good_2
-	trait=education_stewardship_3
+	trait=gregarious
+	trait=temperate
+	trait=vengeful
+	trait=intellect_good_1
+	trait=education_intrigue_3
 	father=206650
 	mother=206784
-	1044.3.5 = {
+	1047.3.5 = {
 		birth = yes
 	}
 	1059.1.1 = {
 		add_spouse = tangut_mozang_1 # Emei 
+		effect = {
+			set_relation_lover = { reason = lover_history target = character:tangut_liang_1 }
+		}	
 	}
-	1062.1.1 = {
+	1061.1.1 = {
 		add_spouse = tangut_liang_1 # Luoyao_843D_7464
 	}
 	1066.1.1 = {
 		add_trait = wounded_1
 	}
-	1067.1.1={
+	1068.1.1={
 		name = "Yizong_6BC5_5B97"
 		death=yes
 	}
@@ -830,15 +843,21 @@
 	dynasty_house = house_Tuoba_Weiming
 	religion="avatamsaka"
 	culture="tangut"
+	trait=craven
+	trait=trusting
+	trait=just
 	father=206651
 	mother = tangut_liang_1 # Luoyao_843D_7464
-	1060.1.1={
+	1061.1.1={
 		birth=yes
 	}
 	1077.1.1={
 		trait=depressed_1
 	}
-	1086.1.1={
+	1082.1.1 = {
+		add_spouse = tangut_liang_4
+	}
+	1086.8.21={
 		name = "Huizong_60E0_5B97"
 		death=yes
 	}
@@ -848,12 +867,17 @@
 	dynasty_house = house_Tuoba_Weiming
 	religion="avatamsaka"
 	culture="tangut"
+	trait=just
+	trait=generous
+	trait=diligent
+	trait=education_diplomacy_4
 	father=206653
+	mother=tangut_liang_4
 	1083.3.5={
 		birth=yes
 	}
 	1139.7.8={
-		name = "Shengwen_8056_6587"
+		name = "XiaChongZong"
 		death=yes
 	}
 }
@@ -891,12 +915,12 @@
 206657 = { # King Renzong_4EC1_5B97
 	dna = bookmark_dna_li_renxiao
 	name = "Renxiao_4EC1_5B5D"
-	dynasty = house_Tuoba_Weiming #Ngwemi/Weiming
+	dynasty_house = house_Tuoba_Weiming #Ngwemi/Weiming
 	religion = "vajrayana"
 	culture = "tangut"
 	father = 206654
-	diplomacy = 4
-	martial = 3
+	diplomacy = 3
+	martial = 2
 	stewardship = 4
 	intrigue = 4
 	learning = 5
@@ -908,7 +932,7 @@
 	1124.1.1 = {
 		birth=yes
 	}
-	1176.1.1 = {
+	1167.1.1 = {
 		add_spouse = tangut_luo_1 # Empress Luo
 	}
 	1193.1.1 = {
@@ -932,7 +956,7 @@
 }
 206659 =  {
 	name = "Chunyou_7D14_7950"
-	dynasty = house_Tuoba_Weiming #Ngwemi/Weiming
+	dynasty_house =  house_Tuoba_Weiming #Ngwemi/Weiming
 	religion = "vajrayana"
 	culture = "tangut"
 	father = 206657 # King Renzong_4EC1_5B97
@@ -940,7 +964,7 @@
 	1177.1.1 = {
 		birth = yes
 	}
-	1206.1.1 = {
+	1206.3.1 = {
 		death = yes
 	}
 }
@@ -2727,7 +2751,7 @@
 		birth = yes
 	}
 	1061.1.1 = {
-		death = { death_reason = death_execution killer = tangut_liang_1 } # Luoyao_843D_7464
+		death = { death_reason = death_execution killer = 206651 } # Liangcha, XiaYiZong
 	}
 }
 206784 = {
@@ -4601,7 +4625,7 @@ tangut_liang_4 =  { # 梁皇后 (西夏惠宗)
 		birth = yes
 	}
 	1099.1.1 = {
-		death = yes
+		death = { death_reason = death_poison } # poisoned by envoys of LiaoDaoZong 194333
 	}
 }
 
@@ -4615,7 +4639,7 @@ tangut_liang_5 = {
 		birth = yes
 	}
 	1094.1.1 = {
-		death = yes
+		death = { death_reason = death_execution killer = tangut_liang_4 }
 	}
 }
 
@@ -4676,7 +4700,7 @@ tangut_yeli_1 = { # wife of King Jingzong
 
 tangut_weiming_1 = {
 	name = "Ming_660E"
-	dynasty = house_Tuoba_Weiming # Weiming
+	dynasty_house = house_Tuoba_Weiming # Weiming
 	religion = avatamsaka
 	culture = tangut
 	father = 206650 # King Jingzong_666F_5B97
@@ -4691,7 +4715,7 @@ tangut_weiming_1 = {
 
 tangut_weiming_2 = {
 	name = "Ge_54E5"
-	dynasty = house_Tuoba_Weiming # Weiming
+	dynasty_house = house_Tuoba_Weiming # Weiming
 	religion = avatamsaka
 	culture = tangut
 	father = 206650 # King Jingzong_666F_5B97
@@ -4706,7 +4730,7 @@ tangut_weiming_2 = {
 
 tangut_weiming_3 = {
 	name = "Xili_9521_72F8"
-	dynasty = house_Tuoba_Weiming # Weiming
+	dynasty_house = house_Tuoba_Weiming # Weiming
 	religion = avatamsaka
 	culture = tangut
 	father = 206650 # King Jingzong_666F_5B97
@@ -4732,22 +4756,23 @@ tangut_mozang_1 = { # 没藏皇后 (西夏毅宗)
 		birth = yes
 	}
 	1061.1.1 = {
-		death = { death_reason = death_execution killer = tangut_liang_1 } # Luoyao_843D_7464
+		death = { death_reason = death_execution killer = 206651 } # Liangcha, XiaYiZong
 	}
 }
 
 # Luo - 罗
 
 tangut_luo_1 = {
-	name = "Zhangxianqinci"
+	name = "Wang" # fictional name
 	female = yes
 	dynasty = luo_7F57
 	religion = "avatamsaka"
 	culture = "han"
 	trait = beauty_good_2
 	trait = zealous
-	trait = honest
-	trait = just
+	trait = humble
+	trait = callous
+	trait = education_intrigue_3
 	1157.1.1 = {
 		birth = yes
 	}
