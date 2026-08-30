@@ -1,345 +1,395 @@
-##d_hexi
-	###c_liangzhou (Wuwei)
-		9521 = { # b_guzang
-			culture = han
-			religion = avatamsaka
-			
-			holding = castle_holding
-			
-			# History
-			900.1.1 = {
+﻿#### k_hexi	####
+	### d_hexi
+		## c_liangzhou (Wuwei)
+			9521 = { # b_guzang
+				culture = han
+				religion = yogacara
+				
+				holding = castle_holding
+				
+				# History
+				900.1.1 = {
+					culture = wenmo
+				}
+				1032.1.1 = {
+					culture = tangut
+				}
+				1250.1.1 = {
+					culture = han
+					religion = avatamsaka
+				}#Tangut culture begins to be absorbed
+			}
+			9523 = { # b_changsong
+				holding = city_holding
+			}		
+			9516 = { # b_jialin
+				holding = city_holding
+			}
+			9517 = { # b_xiutu
+				holding = none
+			}				
+			9512 = { # b_herong
+				holding = church_holding
+			}
+		## c_fanhe
+			8542 = { # b_fanhe
+				# Misc
+				culture = wenmo
+				religion = avatamsaka
+				
+				holding = castle_holding
+				
+				# History
+			}
+			9509 = { # b_alxa
+				holding = none
+			}		
+		## c_baishan
+			9525 = { # b_baishan
+				# Misc
+				culture = wenmo
+				religion = avatamsaka
+				
+				holding = castle_holding			
+			}
+			9532 = { # b_balibasha
+				holding = none
+
+				1250.1.1 = {
+					holding = city_holding
+				}			
+			}
+		## c_zhanyin
+			9531 = { # b_zhanyin
+				# Misc
+				culture = wenmo
+				religion = avatamsaka
+				
+				holding = castle_holding
+				
+				# History
+			}
+			9530 = { # b_aowei
+				holding = none
+			}
+			9527 = { # b_zhiyang
+				holding = church_holding
+			}
+		## c_guangwu
+			9528 = {	# b_guangwu
+				# Misc
+				culture = wenmo
+				religion = avatamsaka
+				
+				holding = castle_holding					
+			}
+			9526 = {	# b_zhuoluo
+				holding = none
+
+				1032.1.1 = {
+					holding = city_holding
+				}				
+			}
+			9524 = {	# b_pipashan
+				holding = church_holding
+			}
+	### d_longyou ###
+		## c_xiningzhou # SHANZHOU 1
+			9418 = {	# b_huangshui Shanzhou/Zongge (Ping'an)
+				# Misc
 				culture = bodpa
 				religion = lamaism
+				
+				holding = castle_holding
+				
 			}
-			1032.1.1 = {
-				culture = tangut
-				religion = vajrayana
-			}
-			1250.1.1 = {
-				culture = han
-				religion = sukhavati
-			}#Tangut culture begins to be absorbed
-		}
-		9523 = { # b_changsong
-			holding = city_holding
-		}		
-		9516 = { # b_jialin
-			holding = city_holding
-		}
-		9517 = { # b_xiutu
-			holding = none
-		}				
-		9512 = { # b_herong
-			holding = church_holding
-		}
-	### c_fanhe
-		8542 = { # b_fanhe
-			# Misc
-			culture = han
-			religion = sukhavati
-			
-			holding = castle_holding
-			
-			# History
-		}
-		9509 = { # b_alxa
-			holding = none
-		}		
-	### c_baishan
-		9525 = { # b_baishan
-			# Misc
-			culture = han
-			religion = sukhavati
-			
-			holding = castle_holding			
-		}
-		9532 = { # b_balibasha
-			holding = none
-
-			1250.1.1 = {
+			9417 = {	# b_longzhi
 				holding = city_holding
-			}			
-		}
-	### c_zhanyin
-		9531 = { # b_zhanyin
-			# Misc
-			culture = han
-			religion = sukhavati
-			
-			holding = castle_holding
-			
-			# History
-		}
-		9530 = { # b_aowei
-			holding = none
-		}
-		9527 = { # b_zhiyang
-			holding = church_holding
-		}
-	### c_guangwu
-		9528 = {	# b_guangwu
-			# Misc
-			culture = han
-			religion = sukhavati
-			
-			holding = castle_holding
-			
-			# History
-			1032.1.1 = {
-				culture = tangut
-				religion = vajrayana
+			}
+			9416 = {	# b_miaochuan
+				holding = church_holding
+			}
+			9415 = {	# b_gemen
+				holding = none
+			}
+		## c_kuozhou # KUOZHOU
+			9419 = {	# b_guangwei
+				# Misc
+				culture = bodpa
+				religion = lamaism
+				
+				holding = castle_holding
+			}
+			9420 = {	# b_michuan
+				holding = city_holding
+			}
+		###c_lanzhou_1 # LANZHOU 1
+			12368 = {	# b_jincheng_1
+				culture = han
+				religion = avatamsaka
+				holding = castle_holding
+			}
+			12360 = {	# b_didao
+				holding = city_holding
+			}
+		###c_hezhou_2 # HEZHOU 2
+			12367 = {	# b_fuhan
+				culture = bodpa
+				religion = lamaism
+				holding = castle_holding
+
+				# History
+				1080.1.1 = {
+					culture = han
+					religion = avatamsaka
+				}			
+			}
+			12366 = {	# b_daxia, NINGHE
+				holding = city_holding
+			}
+			12365 = {	# b_kangle DINGQIANG
+				holding = church_holding
 			}		
-		}
-		9526 = {	# b_zhuoluo
-			holding = none
-
-			1032.1.1 = {
-				holding = city_holding
-			}				
-		}
-		9524 = {	# b_pipashan
-			holding = church_holding
-		}
-## d_qilian
-	###c_qilin
-		9511 = { # b_qilian
-			# Misc
-			culture = uigur
-			religion = mahayana
-			
-			holding = tribal_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-		}
-		9497 = { # b_yeniugou
-			holding = none #tribal
-		}	
-### c_yalong
-		8537 = { # b_yalong
-			# Misc
-			culture = uigur
-			religion = mahayana
-			
-			holding = tribal_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-		}
-		9485 = { # b_changma
-			holding = none #tribal
-		}
-		8535 = { # b_mingshui
-			holding = none #tribal
-		}				
-## d_gansu
-	### c_ganzhou
-		9513 = { # b_zhangye
-			# Misc
-			culture = sogdian
-			religion = khurmazta
-			
-			holding = castle_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-			1250.1.1 = {
-				culture = han
-				religion = sukhavati
-			}#Tangut culture begins to be absorbed
-		}
-		9514 = { # b_shandan
-			holding = city_holding
-		}
-		9515 = { # b_xi'an_ganzhou
-			holding = church_holding
-		}
-		9522 = { # b_dadoubagu
-			holding = none
-		}
-	###c_liaoquan # LIAOQUAN
-		9502 = {	# b_liaoquan
-			# Misc
-			culture = han
-			religion = sukhavati
-			
-			holding = castle_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-		}
-		9503 = {	# b_helishan
-			holding = none
-		}	
-	###c_jiankang # JIANKANG
-		9501 = {	# b_jiankang
-			# Misc
-			culture = han
-			religion = sukhavati
-			
-			holding = castle_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-		}
-		9500 = {	# b_sunan
-			holding = none
-		}	
-	### c_zhenwu_1
-		9496 = { # b_zhenwu
-			# Misc
-			culture = yughur
-			religion = vajrayana
-			
-			holding = castle_holding
-			
-		}
-		9495 = { # b_heluochuan
-			holding = none
-		}
-		9504 = { # b_weiyuan_heihe
-			holding = none
-
-			1032.1.1 = {
-				holding = city_holding
-			}			
-		}
-	### c_jiuquan
-		9493 = { # b_suzhou
-			# Misc
-			culture = han
-			religion = avatamsaka
-			
-			holding = castle_holding
-			
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-
-		}
-		9498 = { # b_fulu
-			holding = city_holding
-		}		
-		9494 = { # b_dongtingshan
-			holding = none
-		}
-		9499 = { # b_qilianshu
-			holding = church_holding
-		}
-	###c_yumen # YUMEN
-		9487 = {	# b_yumenjun
-			culture = tuyuhun
-			religion = lamaism
-			holding = castle_holding
-
-			# History
-			894.1.1 = {
-				culture = yughur
-				religion = vajrayana
-			}
-		}
-		9492 = {	# b_jinshan
-			holding = church_holding
-		}
-		9488 = {	# b_daze
-			holding = none
-		}				
-## d_guasha
-	### c_shazhou
-		9476 = { # b_shazhou
-			# Misc
-			culture = han
-			religion = yogacara
-			
-			holding = castle_holding
-			
-			# History
-			1050.1.1 = {
-				culture = tangut
-			}
-		}
-		9477 = { # b_mogao
-			holding = church_holding
-		}
-		17723 = { # b_longleshan
-			holding = none
-		}
-		9484 = { # b_xinghu
-			holding = city_holding
-		}
-		17975 = { # b_yumenguan
-			holding = castle_holding
-		}
-	###c_guazhou # GUAZHOU
-		9481 = {	# b_jinchang
-			# Misc
-			culture = han
-			religion = avatamsaka
-			
-			holding = castle_holding
-			
-			# History
-			1038.1.1 = {
-				culture = tangut
-				religion = vajrayana
-			}
-		}
-		9478 = { # b_changleguazhou
-			holding = city_holding
-		}		
-		9486 = {	# b_yonggui
-			holding = church_holding
-		}
-		9483 = { # b_baizhang
-			holding = none
-		}
-	### c_hehe
-		17925 = { # b_heheshu
-			culture = han
-			religion = sukhavati
-
-			holding = castle_holding
-		}
-		9620 = { # b_mazongshan
-			holding = none
-		}
-		8539 = { # b_baowenshan
-			holding = none
-		}							
-	### c_shouchang
-		9475 = { # b_yangguan
-			culture = han
-			religion = avatamsaka
-
-			holding = castle_holding
-
-			1066.1.1 = {
-				buildings = {
-					outposts_02
-					watchtowers_01
+	### d_qilian
+		## c_qilin
+			9511 = { # b_qilian
+				# Misc
+				culture = uigur
+				religion = sarvastivada
+				
+				holding = tribal_holding
+				
+				# History
+				894.1.1 = {
+					culture = yughur
+					religion = vajrayana
 				}
 			}
-		}
-		9474 = { # b_shouchang
-			holding = city_holding
-		}
-		7997 = { # b_old_yumenguan
-			holding = none
-		}
+			9497 = { # b_yeniugou
+				holding = none #tribal
+			}	
+		## c_yalong
+			8537 = { # b_yalong
+				# Misc
+				culture = uigur
+				religion = sarvastivada
+				
+				holding = tribal_holding
+				
+				# History
+				894.1.1 = {
+					culture = yughur
+					religion = vajrayana
+				}
+			}
+			9485 = { # b_changma
+				holding = none #tribal
+			}
+			8535 = { # b_mingshui
+				holding = none #tribal
+			}				
+	### d_gansu
+		## c_ganzhou
+			9513 = { # b_zhangye
+				# Misc
+				culture = sogdian
+				religion = khurmazta
+				
+				holding = castle_holding
+				
+				# History
+				894.1.1 = {
+					culture = yughur
+					religion = vajrayana
+				}
+				1050.1.1 = {
+					culture = tangut
+				}			
+				1250.1.1 = {
+					culture = han
+					religion = avatamsaka
+				}#Tangut culture begins to be absorbed
+			}
+			9514 = { # b_shandan
+				holding = city_holding
+			}
+			9515 = { # b_xi'an_ganzhou
+				holding = church_holding
+			}
+			9522 = { # b_dadoubagu
+				holding = none
+			}
+		## c_liaoquan # LIAOQUAN
+			9502 = {	# b_liaoquan
+				# Misc
+				culture = han
+				religion = avatamsaka
+				
+				holding = castle_holding
+				
+				# History
+				894.1.1 = {
+					culture = yughur
+					religion = vajrayana
+				}
+			}
+			9503 = {	# b_helishan
+				holding = none
+			}	
+		## c_jiankang # JIANKANG
+			9501 = {	# b_jiankang
+				# Misc
+				culture = han
+				religion = avatamsaka
+				
+				holding = castle_holding
+				
+				# History
+				894.1.1 = {
+					culture = yughur
+					religion = vajrayana
+				}
+			}
+			9500 = {	# b_sunan
+				holding = none
+			}	
+		## c_zhenwu_1
+			9496 = { # b_zhenwu
+				# Misc
+				culture = yughur
+				religion = vajrayana
+				
+				holding = castle_holding
+				
+			}
+			9495 = { # b_heluochuan
+				holding = none
+			}
+			9504 = { # b_weiyuan_heihe
+				holding = none
+
+				1032.1.1 = {
+					holding = city_holding
+				}			
+			}
+		## c_jiuquan
+			9493 = { # b_suzhou
+				# Misc
+				culture = han
+				religion = yogacara
+				
+				holding = castle_holding
+				
+				# History
+				1050.1.1 = {
+					culture = tangut
+				}
+				1250.1.1 = {
+					culture = han
+					religion = avatamsaka
+				}#Tangut culture begins to be absorbed			
+			}
+			9498 = { # b_fulu
+				holding = city_holding
+			}		
+			9494 = { # b_dongtingshan
+				holding = none
+			}
+			9499 = { # b_qilianshu
+				holding = church_holding
+			}
+		## c_yumen # YUMEN
+			9487 = {	# b_yumenjun
+				culture = tuyuhun
+				religion = lamaism
+				holding = castle_holding
+
+				# History
+				894.1.1 = {
+					culture = yughur
+					religion = vajrayana
+				}
+			}
+			9492 = {	# b_jinshan
+				holding = church_holding
+			}
+			9488 = {	# b_daze
+				holding = none
+			}				
+	### d_guasha
+		## c_shazhou
+			9476 = { # b_shazhou
+				# Misc
+				culture = han
+				religion = yogacara
+				
+				holding = castle_holding
+				
+			}
+			9477 = { # b_mogao
+				holding = church_holding
+			}
+			17723 = { # b_longleshan
+				holding = none
+			}
+			9484 = { # b_xinghu
+				holding = city_holding
+			}
+			17975 = { # b_yumenguan
+				holding = castle_holding
+			}
+		## c_guazhou # GUAZHOU
+			9481 = {	# b_jinchang
+				# Misc
+				culture = han
+				religion = yogacara
+				
+				holding = castle_holding
+				
+				# History
+				1038.1.1 = {
+					culture = tangut
+				}
+			}
+			9478 = { # b_changleguazhou
+				holding = city_holding
+			}		
+			9486 = {	# b_yonggui
+				holding = church_holding
+			}
+			9483 = { # b_baizhang
+				holding = none
+			}
+		## c_hehe
+			17925 = { # b_heheshu
+				culture = han
+				religion = avatamsaka
+
+				holding = castle_holding
+			}
+			9620 = { # b_mazongshan
+				holding = none
+			}
+			8539 = { # b_baowenshan
+				holding = none
+			}							
+		## c_shouchang
+			9475 = { # b_yangguan
+				culture = han
+				religion = avatamsaka
+
+				holding = castle_holding
+
+				1066.1.1 = {
+					buildings = {
+						outposts_02
+						watchtowers_01
+					}
+				}
+			}
+			9474 = { # b_shouchang
+				holding = city_holding
+			}
+			7997 = { # b_old_yumenguan
+				holding = none
+			}
