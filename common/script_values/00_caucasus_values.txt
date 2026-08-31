@@ -35,6 +35,8 @@ roa_pirate_target_reward_value = {
 		limit = {
 			has_treasury = yes
 		}
+		#Make slightly less impact on personal gold because there's a second pot to grab from which is potentially very big
+		multiply = 0.7 # Reduces 0.3 -> 0.21
 		add = {
 			value = this.treasury
 			multiply = 0.20

@@ -440,7 +440,7 @@ duel_pirate_thamade_raid = {
 
 				# Bone Blessing
 				modifier = {
-					limit = { scope:bone_blessing = yes }
+					scope:bone_blessing = yes
 					add = 10
 				}
 
@@ -472,7 +472,7 @@ duel_pirate_thamade_raid = {
 
 				# Bone Blessing
 				modifier = {
-					limit = { scope:bone_blessing = no }
+					scope:bone_blessing = no
 					add = 10
 				}
 
@@ -526,15 +526,21 @@ duel_pirate_thamade_raid_detected = {
 				}
 
 				#Consider Pirate Thamade (guaranteed to exist)
-				modifier = {
-					min = -15
-
-					add = {
-						value = scope:pirate_thamade.intrigue
-						subtract = scope:raid_victim.intrigue
-						multiply = 1.25
-					}
-				}
+				#WARNING: I commented this out because every frame the UI was printing to the Error Log
+				#I thinks the line with "scope:duel_target.intrigue" is a comparison and is confused to find a value...
+				#...Yeah idk
+				#modifier = {
+				#	exists = scope:pirate_thamade
+				#	exists = scope:duel_target
+				#	add = {
+				#		value = {
+				#			value = scope:pirate_thamade.intrigue
+				#			subtract = scope:duel_target.intrigue
+				#		}
+				#		multiply = 1.25
+				#		min = -15
+				#	}
+				#}
 
 				hidden_effect = {
 					save_scope_value_as = {
@@ -554,16 +560,22 @@ duel_pirate_thamade_raid_detected = {
 					min = -35
 				}
 
-				#Consider Raidsponsor (guaranteed to exist)
-				modifier = {
-					min = -15
-
-					add = {
-						value = scope:pirate_thamade.intrigue
-						subtract = scope:raid_victim.intrigue
-						multiply = -1.25
-					}
-				}
+				#Consider Pirate Thamade (guaranteed to exist)
+				#WARNING: I commented this out because every frame the UI was printing to the Error Log
+				#I thinks the line with "scope:duel_target.intrigue" is a comparison and is confused to find a value...
+				#...Yeah idk
+				#modifier = {
+				#	exists = scope:pirate_thamade
+				#	exists = scope:duel_target
+				#	add = {
+				#		value = {
+				#			value = scope:pirate_thamade.intrigue
+				#			subtract = scope:duel_target.intrigue
+				#		}
+				#		multiply = -1.25
+				#		min = -15
+				#	}
+				#}
 
 				scope:raid_victim = {
 					add_opinion = {
