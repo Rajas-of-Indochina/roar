@@ -2502,6 +2502,47 @@ caucasianroa.100 = {
 						government_has_flag = government_is_administrative
 					}
 
+					#Lessen the chance for targets much smaller or much larger than you
+					modifier = {
+						multiply = 0.75
+						OR = {
+							tier_difference = {
+								target = scope:raid_sponsor
+								value = 1
+							}
+							tier_difference = {
+								target = scope:raid_sponsor
+								value = -1
+							}
+						}
+					}
+					modifier = {
+						multiply = 0.5
+						OR = {
+							tier_difference = {
+								target = scope:raid_sponsor
+								value = 2
+							}
+							tier_difference = {
+								target = scope:raid_sponsor
+								value = -2
+							}
+						}
+					}
+					modifier = {
+						multiply = 0.2
+						OR = {
+							tier_difference = {
+								target = scope:raid_sponsor
+								value > 3
+							}
+							tier_difference = {
+								target = scope:raid_sponsor
+								value < -3
+							}
+						}
+					}
+
 					#Reduce raids on rulers with righteous or astray faiths, increase on evil
 					modifier = {
 						factor = 0.5
@@ -2554,6 +2595,20 @@ caucasianroa.100 = {
 			order_by = { value = 0 }
 			position = 2
 			save_scope_as = pirate_target_3
+		}
+
+		# Calculate potential rewards
+		save_scope_value_as = {
+			name = pirate_target_1_reward
+			value = { scope:pirate_target_1 = { value = roa_pirate_target_reward_value } }
+		}
+		save_scope_value_as = {
+			name = pirate_target_2_reward
+			value = { scope:pirate_target_2 = { value = roa_pirate_target_reward_value } }
+		}
+		save_scope_value_as = {
+			name = pirate_target_3_reward
+			value = { scope:pirate_target_3 = { value = roa_pirate_target_reward_value } }
 		}
 
 		# Conduct the bone ritual
@@ -2640,6 +2695,8 @@ caucasianroa.100 = {
 		trigger = { exists = scope:pirate_target_1 }
 
 		scope:pirate_target_1 = { save_scope_as = raid_victim }
+		scope:pirate_target_1_reward = { save_scope_as = raid_victim_reward }
+
 		# Roll for Success (effect will call event)
 		duel_pirate_thamade_raid = yes
 	}
@@ -2649,6 +2706,8 @@ caucasianroa.100 = {
 		trigger = { exists = scope:pirate_target_2 }
 
 		scope:pirate_target_2 = { save_scope_as = raid_victim }
+		scope:pirate_target_2_reward = { save_scope_as = raid_victim_reward }
+
 		# Roll for Success (effect will call event)
 		duel_pirate_thamade_raid = yes
 	}
@@ -2658,6 +2717,8 @@ caucasianroa.100 = {
 		trigger = { exists = scope:pirate_target_3 }
 
 		scope:pirate_target_3 = { save_scope_as = raid_victim }
+		scope:pirate_target_3_reward = { save_scope_as = raid_victim_reward }
+
 		# Roll for Success (effect will call event)
 		duel_pirate_thamade_raid = yes
 	}
