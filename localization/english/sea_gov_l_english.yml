@@ -159,8 +159,18 @@
  reduce_imperial_authority_faction_desc:0 "The Particularist [faction|E] only seeks to lower Imperial Authority, but members are otherwise loyal to the [realm|E]."
  reduce_imperial_authority_faction_short_effect_desc:0 "Wants lower Imperial Authority"
 
- msg_vassal_bureaucratized:0 "Vassal has adoped Imperial Bureaucracy"
+ msg_vassal_bureaucratized:0 "Vassal has adopted Imperial Bureaucracy"
  msg_vassal_bureaucratized_desc:0 "Your vassal, [ROOT.Char.GetShortUIName], has given up [ROOT.Char.GetHerHis] primitive ways and adopted a Bureaucratic government."
 
  centralize_stateless_confederation_decision:0 "Centralize Confederation"
  centralize_stateless_confederation_decision_desc:0 "Our society has become more and more centralized and more and more hierarchical, through no fault of my own. With each passing day it becomes more clear that the communes of [ROOT.Char.GetConfederation.GetName] require a leader. A ruler. A king."
+
+ harmonious_living: "Harmonious Living"
+ STATELESS_DUCAL_CONQUEST_EFFECT: "Monthly [stateless_confederation|E] Cohesion: #P +0.05#!"
+ forced_vassalage_perk_stateless_name: "Exogamy"
+ EXOGAMY_EFFECT: "#P +[EmptyScope.ScriptValue('promising_prospects_self_value')|0]#! [marriage|E] Acceptance with other cultures"
+ accomplished_forger_perk_stateless_name: "Well-Connected"
+ inspiring_rule_perk_stateless_name:0 "Inspiring Leadership"
+ stateless_inspiring_rule_effect: "[court_position|E] tasks cost half as much [influence|E]"
+ STATELESS_HONOR_GUARD_EFFECT: "#P +15#! Head of the Warriors Aptitude"
+ true_ruler_perk_stateless_name: "True Leader"
