@@ -2808,7 +2808,7 @@ caucasianroa.101 = {
 		desc = caucasianroa.101.d.2
 		#Talk about omen if applicable
 		triggered_desc = {
-			trigger = { scope:bone_blessing = yes }
+			trigger = { scope:bone_blessing = no }
 			desc = {
 				desc = caucasianroa.101.d.omen_but_won
 				first_valid = {
@@ -3013,7 +3013,7 @@ caucasianroa.103 = {
 		#Talk about omen/blessing if applicable
 		first_valid = {
 			triggered_desc = {
-				trigger = { scope:bone_blessing = yes }
+				trigger = { scope:bone_blessing = no }
 				desc = {
 					desc = caucasianroa.103.d.omen_and_lost
 					first_valid = {
