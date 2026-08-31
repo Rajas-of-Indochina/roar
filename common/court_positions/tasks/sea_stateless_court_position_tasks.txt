@@ -86,6 +86,11 @@ stateless_learning_court_position_task_perform_rituals = {
 		# TODO: "perform rituals" events
 		# Will probably need a good number of them
 		# and they'll need to be filtered by religion/tenet/doctrine to make sense for everyone
+		# also there's an event to try and convert your county to your faith if they don't match
+		random_list = {
+			100 = {}
+			10 = { trigger_event = sea_stateless.0001 }
+		}
 	}
 
 	ai_will_do = {
@@ -101,6 +106,7 @@ stateless_learning_court_position_task_learn_foreign_faiths = {
 		round = no
 		piety = {
 			add = monthly_court_position_task_cost
+			multiply = 10
 		}
 		influence = {
 			add = monthly_court_position_task_cost
@@ -140,7 +146,10 @@ stateless_learning_court_position_task_learn_foreign_faiths = {
 
 	on_monthly = {
 		# you can get events to convert to other faiths in your area on the cheap
-		# also this is the only way you can convert your county if your faiths don't match
+		random_list = {
+			100 = {}
+			10 = { trigger_event = sea_stateless.0026 }
+		}
 	}
 
 	ai_will_do = {

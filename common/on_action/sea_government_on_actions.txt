@@ -36,22 +36,15 @@ on_game_start = {
 	}
 }
 
-# Make sure that Stateless rulers can't gain titles.
-# They already can't inherit them from dynastic govs
-# this is to make sure that if they manage to seize any then they get handed out to confederate or destroyed
-# if you see a stateless character with a title tier higher than count then something's gone hinky, amiss or perhaps even pear-shaped
+# Having a rigid "no higher tier titles" rule is prone to bugs.
+# Just gonna make stateless vassals have a catastrophically high desire to do dissolution factions
 sea_stateless_title_handler = {
 	effect = {
 		if = {
 			limit = {
 				government_has_flag = government_is_stateless
 			}
-			# No duchies, no kingdoms
-			if = {
-				limit = { scope:title.tier >= tier_duchy }
-				destroy_title = scope:title
-			}
-			# Also no holding land outside your capital
+			# No holding land outside your capital
 			else_if = {
 				limit = {
 					NOT = { scope:title = ROOT.capital_county }

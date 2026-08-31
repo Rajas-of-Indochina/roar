@@ -1,0 +1,190 @@
+namespace = sea_stateless
+
+# 0001-0100: Court Position Tasks
+
+# 0001: Attempt to convince your commune to adopt your religion
+sea_stateless.0001 = {
+	type = character_event
+	title = sea_stateless.0001.title
+	desc = sea_stateless.0001.desc
+
+	theme = faith
+
+	left_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:ritualist
+		animation = personality_zealous
+	}
+
+	trigger = {
+		any_held_county = { NOT = { faith = root.faith } }
+	}
+
+	immediate = {
+		court_position:stateless_learning_court_position = { save_scope_as = ritualist }
+		faith = { save_scope_as = my_faith }
+		random_held_county = {
+			limit = { NOT { faith = root.faith } }
+			save_scope_as = the_county
+		}
+	}
+
+	option = {
+		name = sea_stateless.0001.a
+		# Spend Influence and Piety, attempt to convert part of the commune.
+		# Outcome randomized, weighted by your Learning and popular opinion in the commune
+		change_influence = major_influence_loss
+		duel = {
+			skill = learning
+			value = high_skill_rating
+			10 = {
+				# They're unconvinced.
+				compare_modifier = {
+					value = scope:duel_value
+					add = scope:the_county.county_opinion
+					multiplier = -1.5
+				}
+				desc = county_unconvinced_desc
+			}
+			10 = {
+				# they're convinced, promote a minority faith of your faith
+				compare_modifier = {
+					value = scope:duel_value
+					add = scope:the_county.county_opinion
+					multiplier = 1.5
+				}
+				scope:the_county = {
+					promote_faith_minority_effect = { FAITH = root.faith }
+				}
+			}
+			0 = {
+				# they're EXTREMELY convinced, upgrade minority TWICE
+				compare_modifier = {
+					value = scope:duel_value
+					add = scope:the_county.county_opinion
+					multiplier = 0.1
+				}
+				scope:the_county = {
+					promote_faith_minority_effect = { FAITH = root.faith }
+				}
+			}
+		}
+	}
+
+	option = {
+		# nah I'm good
+		name = sea_stateless.0001.b
+	}
+}
+
+# 0026: consider converting to a nearby faith
+sea_stateless.0026 = {
+	type = character_event
+	title = sea_stateless.0026.title
+	desc = sea_stateless.0026.desc
+
+	theme = faith
+
+	left_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:ritualist
+		animation = personality_zealous
+	}
+
+	trigger = {
+		OR = {
+			# Check if you have different-faith local minorities
+			any_held_county = {
+				faith = ROOT.faith
+				OR = {
+					county_has_minority_with_trigger_not = {
+						TYPE = faith
+						SIZE = small
+						TRIGGER = THIS
+						CHECK = ROOT.faith
+					}
+					county_has_minority_with_trigger_not = {
+						TYPE = faith
+						SIZE = large
+						TRIGGER = THIS
+						CHECK = ROOT.faith
+					}
+				}
+			}
+			# Failing that any neighboring counties with majorities that aren't your faith
+			any_held_county = {
+				any_neighboring_county = { NOT = { faith = ROOT.faith } }
+			}
+			# then we throw it to the confederation
+			AND = {
+				exists = root.confederation
+				any_confederation_member = {
+					any_held_county = { NOT = { faith = ROOT.faith } }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_held_county = {
+			limit = {
+				faith = ROOT.faith
+				OR = {
+					county_has_minority_with_trigger_not = {
+						TYPE = faith
+						SIZE = small
+						TRIGGER = THIS
+						CHECK = ROOT.faith
+					}
+					county_has_minority_with_trigger_not = {
+						TYPE = faith
+						SIZE = large
+						TRIGGER = THIS
+						CHECK = ROOT.faith
+					}
+				}
+			}
+			get_random_county_faith_effect = {
+				MAJORITY = no
+			} # scope faith saved
+		}
+		if = {
+			limit = { NOT = { exists = scope:faith } }
+			random_held_county = {
+				limit = { NOT = { faith = ROOT.faith } }
+				faith = { save_scope_as = faith }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:faith }
+				exists = root.confederation
+			}
+			random_confederation_member = {
+				limit = { any_held_county = { NOT = { faith = ROOT.faith } } }
+				faith = { save_scope_as = faith }
+			}
+		}
+	}
+
+	option = {
+		name = sea_stateless.0026.a
+		# convert to the new faith for cheap
+		add_piety = major_piety_loss
+		convert_family_to_faith_effect = {
+			FALSE_CONVERSION = no
+			FORCED = no
+		}
+	}
+
+	option = {
+		name = sea_stateless.0026.b
+		# nah we're good
+	}
+}
