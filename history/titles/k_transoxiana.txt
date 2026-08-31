@@ -1413,9 +1413,9 @@ c_oshrusana = {
 		government = clan_government
 	}
 
-	#768.1.1 = {
+	# 768.1.1 = {
 	#	holder = 188684
-	#}
+	# }
 	767.1.1 = {
 		holder = 217325 # Kharakhurugh Afshin
 	}
@@ -1533,9 +1533,11 @@ c_zarafshan = {
 		holder = 217327
 		government = clan_government
 	}
+	#
 	936.1.1 = {
 		holder = 261045
 	}
+	#
 	1041.1.1 = {
 		liege = "k_transoxiana"
 	}
@@ -1616,8 +1618,9 @@ d_ferghana = {
 	}
 	#
 	1178.1.1 = {
-		holder = karakhanid_1 # Nasr b. Husayn
-		liege = e_kara_khitai
+		holder = karakhanid_4 # Nasr b. Husayn
+		liege = 0 # moved to tributary
+		#liege = e_kara_khitai
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug (de facto)
@@ -1697,7 +1700,7 @@ c_ferghana = {
 		liege = d_ferghana # Kara Khitan conquest
 	}
 	1178.1.1 = {
-		holder = karakhanid_1 # Nasr b. Husayn
+		holder = karakhanid_4 # Nasr b. Husayn
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug (de facto)
@@ -1771,7 +1774,7 @@ c_khojand = {
 		liege = d_ferghana
 		holder = 1231633 # Malik b. S.k.r.tegin
 	}
-
+	#
 	1052.1.1 = {
 		holder = 3014
 	}
@@ -1781,8 +1784,9 @@ c_khojand = {
 	1137.1.1 = {
 		liege = d_ferghana # Kara Khitan conquest
 	}
-	1178.1.1 = {
-		holder = karakhanid_1 # Nasr b. Husayn
+	1177.1.1 = {
+		holder = karakhanid_2 # Usman
+		liege = k_syr_darya
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug (de facto)
@@ -1868,7 +1872,7 @@ c_isfara = {
 		liege = d_ferghana # Kara Khitan conquest
 	}
 	1178.1.1 = {
-		holder = karakhanid_1 # Nasr b. Husayn
+		holder = karakhanid_4 # Muhammad
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug (de facto)
@@ -1989,7 +1993,6 @@ c_nasaiya = {
 	}
 }
 
-
 c_uzgend = {
 	718.1.1 =  {
 		liege = d_ferghana
@@ -2031,7 +2034,7 @@ c_uzgend = {
 		liege = d_ferghana # Kara Khitan conquest
 	}
 	1178.1.1 = {
-		holder = karakhanid_4 # Muhammad
+		holder = 217242 # Rustam (fictional)
 		liege = d_ferghana
 	}
 	1211.1.1 = {
@@ -2066,77 +2069,7 @@ c_uzgend = {
 }
 
 #c_nasrabad = {
-#	718.1.1 = {
-#		liege = d_ferghana
-#		holder = 248312
-#		government = clan_government
-#	}
-#	751.1.1 = {
-#		holder = 248313
-#	}
-#	769.1.1 = {
-#		holder = 188640 # Salim of Ferghana (fictitious holding assignment)
-#	}
-#	782.1.1 = {
-#		holder = 248314
-#	}
-#
-#	819.1.1 = {
-#		holder = 163154 # Ahmad Samanid
-#	}
-#	864.1.1 = {
-#		holder = fictional_karluks_1 #his dynasty was present in the area however, as it would seem
-#		liege = k_transoxiana
-#	}
-#
-#	1052.1.1 = {
-#		holder = 3014
-#	}
-#	1060.1.1 = {
-#		holder = 144108
-#		liege = k_zhetysu
-#		#Ferghana goes back and forth between Western & Eastern Karakhanids
-#	}
-#	1068.1.1 = {
-#		holder = 3016
-#		liege = k_transoxiana
-#		#Ferghana goes back and forth between Western & Eastern Karakhanids
-#	}
-#	1137.1.1 = {
-#		liege = d_ferghana # Kara Khitan conquest
-#	}
-#	1178.1.1 = {
-#		holder = karakhanid_1 # Nasr b. Husayn
-#	}
-#	1211.1.1 = {
-#		holder = 188914 # Kuchlug (de facto)
-#	}
-#	1218.1.1 = {
-#		liege = k_transoxiana # back to Khwarezm?
-#		holder = 93053
-#	}
-#	1220.2.1 = {
-#		liege = "e_mongol_empire"
-#		holder = 125501
-#	}
-#	1221.1.1 = {
-#		holder = 248165
-#	}
-#	1228.1.1 = {
-#		liege = e_chagatai
-#	}
-#	1240.1.1 = {
-#		holder = 248166
-#	}
-#	1290.1.1 = {
-#		holder = 248167
-#	}
-#	1298.1.1 = {
-#		holder = 248168
-#	}
-#	1303.1.1 = {
-#		holder = 248169
-#	}
+	# removed
 #}
 
 
@@ -2234,6 +2167,9 @@ d_khorezm = {
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 		liege = e_persia	#Seljuk
+	}
+	1077.1.1 = {
+		holder = 20713 # Anushtegin
 	}
 	1097.1.1 = {
 		holder = 144099	#Qutb al-Din Muhammad Anushteginid
@@ -2354,6 +2290,11 @@ c_gurganj = {
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 	}
+	1077.1.1 = {
+		holder = 20713 # Anushtegin
+		liege = e_persia # Seljuk
+	}
+	#
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
 	}
