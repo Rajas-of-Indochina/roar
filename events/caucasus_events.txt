@@ -2431,6 +2431,8 @@ caucasianroa.100 = {
 						#Friend/BestFriend/Lover/Soulmate
 						has_any_good_relationship_with_character_trigger = { CHARACTER= scope:raid_sponsor }
 					}
+					#Recent victims have a 2-5 year protection from these events
+					NOT = { has_character_flag = ROA_recently_raided_by_pirate_sponsor_decision }
 				}
 			}
 
@@ -2449,6 +2451,8 @@ caucasianroa.100 = {
 						#Friend/BestFriend/Lover/Soulmate
 						has_any_good_relationship_with_character_trigger = { CHARACTER= scope:raid_sponsor }
 					}
+					#Recent victims have a 2-5 year protection from these events
+					NOT = { has_character_flag = ROA_recently_raided_by_pirate_sponsor_decision }
 				}
 
 				weight = {
@@ -2534,11 +2538,11 @@ caucasianroa.100 = {
 						OR = {
 							tier_difference = {
 								target = scope:raid_sponsor
-								value > 3
+								value >= 3
 							}
 							tier_difference = {
 								target = scope:raid_sponsor
-								value < -3
+								value <= -3
 							}
 						}
 					}
@@ -2597,18 +2601,21 @@ caucasianroa.100 = {
 			save_scope_as = pirate_target_3
 		}
 
-		# Calculate potential rewards
-		save_scope_value_as = {
-			name = pirate_target_1_reward
-			value = { scope:pirate_target_1 = { value = roa_pirate_target_reward_value } }
-		}
-		save_scope_value_as = {
-			name = pirate_target_2_reward
-			value = { scope:pirate_target_2 = { value = roa_pirate_target_reward_value } }
-		}
-		save_scope_value_as = {
-			name = pirate_target_3_reward
-			value = { scope:pirate_target_3 = { value = roa_pirate_target_reward_value } }
+		#Suppress errors (hidden_effect_new_obj seems to crash...)
+		hidden_effect = {
+			# Calculate potential rewards
+			save_scope_value_as = {
+				name = pirate_target_1_reward
+				value = { scope:pirate_target_1 = { value = roa_pirate_target_reward_value } }
+			}
+			save_scope_value_as = {
+				name = pirate_target_2_reward
+				value = { scope:pirate_target_2 = { value = roa_pirate_target_reward_value } }
+			}
+			save_scope_value_as = {
+				name = pirate_target_3_reward
+				value = { scope:pirate_target_3 = { value = roa_pirate_target_reward_value } }
+			}
 		}
 
 		# Conduct the bone ritual
@@ -2697,6 +2704,12 @@ caucasianroa.100 = {
 		scope:pirate_target_1 = { save_scope_as = raid_victim }
 		scope:pirate_target_1_reward = { save_scope_as = raid_victim_reward }
 
+		# Committed to a raid, strip protection from these events:
+		if = {
+			limit = { has_character_flag = ROA_recently_raided_by_pirate_sponsor_decision }
+			remove_character_flag = ROA_recently_raided_by_pirate_sponsor_decision
+		}
+
 		# Roll for Success (effect will call event)
 		duel_pirate_thamade_raid = yes
 	}
@@ -2708,6 +2721,12 @@ caucasianroa.100 = {
 		scope:pirate_target_2 = { save_scope_as = raid_victim }
 		scope:pirate_target_2_reward = { save_scope_as = raid_victim_reward }
 
+		# Committed to a raid, strip protection from these events:
+		if = {
+			limit = { has_character_flag = ROA_recently_raided_by_pirate_sponsor_decision }
+			remove_character_flag = ROA_recently_raided_by_pirate_sponsor_decision
+		}
+
 		# Roll for Success (effect will call event)
 		duel_pirate_thamade_raid = yes
 	}
@@ -2718,6 +2737,12 @@ caucasianroa.100 = {
 
 		scope:pirate_target_3 = { save_scope_as = raid_victim }
 		scope:pirate_target_3_reward = { save_scope_as = raid_victim_reward }
+
+		# Committed to a raid, strip protection from these events:
+		if = {
+			limit = { has_character_flag = ROA_recently_raided_by_pirate_sponsor_decision }
+			remove_character_flag = ROA_recently_raided_by_pirate_sponsor_decision
+		}
 
 		# Roll for Success (effect will call event)
 		duel_pirate_thamade_raid = yes
@@ -2748,6 +2773,17 @@ caucasianroa.101 = {
 	type = character_event
 	title = caucasianroa.101.t
 	theme = feast_activity
+	immediate = {
+		add_gold = scope:raid_victim_reward
+		if = {
+			limit = {scope:bone_blessing = yes}
+			add_piety = medium_piety_gain
+		}
+		else = {
+			add_piety = minor_piety_gain
+		}
+		#Duel effect handles the opinion modifier
+	}
 	right_portrait = {
 		character = scope:raid_victim
 		triggered_animation = {
@@ -2838,6 +2874,46 @@ caucasianroa.102 = {
 	type = character_event
 	title = caucasianroa.102.t
 	theme = feast_activity
+	immediate = {
+		if = { #Split the impact between gold and treasury
+			limit = { has_treasury = yes }
+			remove_treasury = {
+				value = scope:raid_victim_reward
+				divide = 2
+				round = yes
+			}
+			remove_short_term_gold = {
+				value = scope:raid_victim_reward
+				divide = 2
+				round = yes
+			}
+		}
+		else = { #No treasury, do straight impact to gold
+			remove_short_term_gold = scope:raid_victim_reward
+		}
+		#Give character flag to protect this person from getting raids (Big targets get less protection)
+		#Note that this goes away if you take this decision
+		if = {
+			limit = { highest_held_title_tier >= tier_empire }
+			add_character_flag = {
+				flag = ROA_recently_raided_by_pirate_sponsor_decision
+				years = 2
+			}
+		}
+		else_if = {
+			limit = { highest_held_title_tier = tier_kingdom }
+			add_character_flag = {
+				flag = ROA_recently_raided_by_pirate_sponsor_decision
+				years = 3
+			}
+		}
+		else = { #Dukes + Counts
+			add_character_flag = {
+				flag = ROA_recently_raided_by_pirate_sponsor_decision
+				years = 5
+			}
+		}
+	}
 	#This scope is empty and thus doesn't show up unless its set by the detection effect
 	right_portrait = {
 		character = scope:sponsor_to_reveal
@@ -2916,6 +2992,11 @@ caucasianroa.103 = {
 	title = caucasianroa.103.t
 	theme = feast_activity
 	immediate = {
+		if = {
+			limit = {scope:bone_blessing = no}
+			add_piety = medium_piety_loss
+		}
+		#Duel effect handles the opinion modifier
 	}
 	right_portrait = {
 		character = scope:raid_victim
@@ -3001,7 +3082,9 @@ caucasianroa.104 = {
 	type = character_event
 	title = caucasianroa.104.t
 	theme = feast_activity
-	immediate = {}
+	immediate = {
+		#Thwarted, so don't give the victim protection flag
+	}
 	#This scope is empty and thus doesn't show up unless its set by the detection effect
 	right_portrait = {
 		character = scope:sponsor_to_reveal
