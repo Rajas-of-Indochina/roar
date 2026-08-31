@@ -163,10 +163,8 @@ d_shuofang = {
 }
 c_lingzhou_xia = {
 	867.1.1 = {
-		holder = han_3269
-	}
-	881.1.1={
 		holder=206630
+		liege=d_shuofang
 	}
 	886.1.1={
 		holder=206633
@@ -1468,7 +1466,6 @@ d_juyan = {
 	#Tangut Suzhou Vassals - fictional placeholders
 	1038.1.1 = {
 		holder = tangut0049
-		government = meritocratic_government
 		liege = "k_xia"
 	}
 	1060.1.1 = {
@@ -1488,6 +1485,7 @@ d_juyan = {
 	}
 	1160.1.1 = {
 		holder = tangut0055
+		government = meritocratic_government
 	}
 	1180.1.1 = {
 		holder = tangut0056
@@ -1783,6 +1781,59 @@ d_xiasui = {
 		liege = h_china
 		government = celestial_government
 	}
+
+	#Tangut Dingnan Jiedushi
+	881.1.1={
+		holder=206630
+	}
+	886.1.1={
+		holder=206633
+	}
+	908.1.1={
+		holder=206639
+	}
+	910.1.1={
+		holder=206637
+	}
+	933.3.10={
+		holder=206646
+	}
+	935.1.1={
+		holder=206645
+	}
+	967.10.20={
+		holder=206647
+	}
+	978.1.1={
+		holder=206648
+	}
+	980.1.1={
+		holder=206649
+	}
+	#Li Jiqian rebels against Song, foundations of Western Xia (Minyak) 982-122
+	982.1.1={
+		holder=206643
+	}
+	988.1.1={
+		holder=206649
+	}
+	994.1.1={
+		holder=206643
+	}
+	1004.1.1={
+		holder=206644
+	}
+	1031.1.1={
+		holder=206650
+	}
+	1038.1.1={
+		liege=k_xia
+		holder=206650 # Yuanhao becomes emperor
+	}
+	1048.1.19={
+		holder=206651	
+	}
+		
 	1066.1.1 = {
 		holder = 206671
 		liege = k_xia
