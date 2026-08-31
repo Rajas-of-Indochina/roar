@@ -565,6 +565,13 @@ duel_pirate_thamade_raid_detected = {
 					}
 				}
 
+				scope:raid_victim = {
+					add_opinion = {
+						target = scope:raid_sponsor
+						modifier = ROA_sponsored_pirate_raid_against_me_opinion
+					}
+				}
+
 				hidden_effect = {
 					save_scope_value_as = {
 						name = raid_detected
