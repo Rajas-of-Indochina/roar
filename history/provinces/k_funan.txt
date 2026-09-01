@@ -1,5 +1,5 @@
 ﻿# k_funan AKA Angkor
-## d_angkor
+## d_angkor ###################################
 ### c_angkor
 16789 = { # Hariharalaya
 	# oen of the main Khamer cities and capital of Khmer states throughout history
@@ -115,75 +115,93 @@
 	# village
 	holding = none
 }
-16944 = { # b_varin
+16944 = { # Varin
 	holding = none
 }
-16971 = { # b_trapeang
+16971 = { # Trapeang
 	holding = none
 }
 
 
-## d_isanapura
-### c_sambor_prei_kuk
-16568 = { # b_sambor_prei_kuk
+## d_isanapura ###################################
+### c_isanapura
+16568 = { # Isanapura AKA Sambor Prei Kuk
+	# temple complex dating to Chenla Kingdom from around 7th century ; most probably established by Isanavarman I
 	culture = khmer
 	religion = shaivism
 
 	holding = temple_citadel_holding
-}
-16695 = { # b_preah_khan
-	holding = church_holding
 
-	860.1.1 = {
-		special_building_slot = phnom_dek_mines_01
-	}
-	1178 = {
+	# History
+}
+16695 = { # Phnom Dek AKA Preah Khan Kampong Svay
+	# Preah Khan Kampong Svay is an 11th century temple complex
+	# Phnom Dek Mountain, translated to 'Iron Mountain', is a significant mining region famed for its high-grade iron ore deposits
+	holding = church_holding  # should be temple_citadel_holding but that only makes sense if we make a new county
+
+	special_building_slot = phnom_dek_mines_01
+
+	# History
+	# the temple complex should only exist after early 11th century but eh
+	1178.1.1 = {
 		special_building = phnom_dek_mines_01
 	}
 }
-16621 = { # b_phnom_yong
+16621 = { # Phnom Yong
+	# mountainous area in Rovieng District with various spiritual sites of inidgenous population
 	holding = none
 }
-16614 = { # b_balangk
+16614 = { # Balangk
+	# roughly where modern Prasat Balangk district is
 	holding = none
 }
-16509 = { # b_phnom_santouk
+16509 = { # Phnom Santuk
+	# hill and cultural site, one of the most sacred mountains in the province of Kampong Thom ; many shrines to Buddha adore the site
+	# tied to legend of Baksei Chamkrong ; also said to be home of deity Neak ta Kraham Ka
 	holding = none
 }
 
 ### c_amarendrapura
-16171 = { # b_amarendrapura
+16171 = { # Amarendrapura
+	# 
 	culture = khmer
 	religion = shaivism
 
 	holding = temple_citadel_holding
 }
-16389 = { # b_kampong_thma
+16389 = { # Kampong Thma
+	# 
 	holding = city_holding
 }
-16336 = { # b_han_cei
-	holding = none
+16336 = { # Han Chey AKA Ugrapura
+	# 7th or 8th century temples with a more modern monastery nearby
+	# potentially also site of Ugrapura, ancient temple-city mentioned in inscriptions found in the area
+	holding = church_holding
 }
 
 ### c_kampong_kdei
-16591 = { # b_kampong_kdei
+16591 = { # Kampong Kdei
+	# 
 	culture = khmer
 	religion = shaivism
 
 	holding = temple_citadel_holding
 }
-16517 = { # b_andet
+16517 = { # Andet
+	# 
 	holding = church_holding
 }
-16644 = { # b_pongro_leu
+16644 = { # Pongro Leu
+	# 
 	holding = none
 }
-16423 = { # b_srey
+16423 = { # Srey
+	# 
 	holding = none
 }
 
 
-## d_vyadhapura
+## d_vyadhapura ###################################
 ### c_angkor_borey
 15829 = { # b_angkor_borey
 	culture = khmer
@@ -276,7 +294,7 @@
 }
 
 
-## d_battambang
+## d_battambang ###################################
 ### c_bakan
 16455 = { # b_bakan
 	culture = samre
@@ -361,7 +379,7 @@
 }
 
 
-## d_dviradapura
+## d_dviradapura ###################################
 ### c_dviradapura
 16019 = { # b_dviradapura
 	culture = khmer
@@ -405,7 +423,7 @@
 }
 
 
-## d_kottinagara
+## d_kottinagara ###################################
 ### c_kottinagara
 15376 = { # Kottinagara AKA Óc Eo
 	# port city of Funan alognside Mekong River ; mentioned by Ptolemy in his 'Geography' ; active at least until 12th century AD
@@ -508,7 +526,7 @@
 }
 
 
-## d_ban_lung
+## d_ban_lung ###################################
 ### c_mondul_kiri
 16549 = { # b_mondul_kiri
 	culture = mnong
@@ -607,7 +625,7 @@
 }
 
 
-## d_sambhupura
+## d_sambhupura ###################################
 ### c_sambhupura
 16564 = { # b_sambhupura
 	culture = sambor
@@ -678,7 +696,7 @@
 }
 
 
-## d_chan_kabui
+## d_chan_kabui ###################################
 ### c_chan_kabui
 16484 = { # b_chan_kabui
 	culture = samre

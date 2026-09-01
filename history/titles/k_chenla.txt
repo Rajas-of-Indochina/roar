@@ -341,17 +341,20 @@ c_salavan = {
 
 		867.1.1 = {
 			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
+			holder = khmer_ubonratcha_01_fic	#fictional
+			liege = 0
 		}
 		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_preavihear_01_fic	#fictional
+			holder = khmer_ubonratcha_10_fic	#fictional
 			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+				suzerain = k_funan
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = khmer_ubonratcha_20_fic	#fictional
+			tributary_of = {
+				suzerain = c_angkor
 				contract_group = tributary_mandala
 			}
 		}
@@ -758,17 +761,20 @@ d_kok_khan = {
 	c_lamduan = {
 		867.1.1 = {
 			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
+			holder = khmer_ubonratcha_01_fic	#fictional
+			liege = 0
 		}
 		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_preavihear_01_fic	#fictional
+			holder = khmer_ubonratcha_10_fic	#fictional
 			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+				suzerain = k_funan
+				contract_group = tributary_mandala
+			}
+		}
+		1178.1.1 = {
+			holder = khmer_ubonratcha_20_fic	#fictional
+			tributary_of = {
+				suzerain = c_angkor
 				contract_group = tributary_mandala
 			}
 		}
