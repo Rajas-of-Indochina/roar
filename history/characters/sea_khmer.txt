@@ -1,19 +1,63 @@
 ﻿### Historical
-4200115 = {
-	name = "Dharanindradevi"
+sea_khmer_jayavarman_2 = {
+	# 420009 in old RoA
+	# daughter of Jayavarman I
+	name = "Jayadevi" # Jayadevi I
 	female = yes
 	dynasty = sea_baladitya
 	culture = khmer
 	religion = shaivism
+	father = khmer_jayavarman_1
 
-	mother = 4200114
+	651.1.1 = { birth = yes }
+	# began reign in 681 AD
+	713.1.1 = { death = yes }
+}
 
-	780.1.1 = { birth = yes }
-	854.1.1 = { death = yes }
+sea_khmer_varman_10_wife_01 = {
+	# 4200101 and also 4200115 in old RoA
+	# first wife of Jayavarman II ; mother of Jayavarman III
+	# seems to be the same person as mysterious "Dharanindradevi" ?
+	name = "Hyang_Amrita"
+	female = yes
+	dynasty_house = house_Dvirada
+	culture = khmer
+	religion = shaivism
+
+	father = 4200100
+	mother = 4200105
+
+	788.1.1 = { birth = yes }
+	818.1.1 = {
+		name = "Dharanindradevi"
+	}
+	858.1.1 = { death = yes }
+}
+
+
+### Fictional Angkor Wives
+sea_khmer_varman_9_wife_fic = {
+	name = "Jayadevi" # Fictional wife for Jayavarman III
+	female = yes
+	culture = khmer
+	religion = shaivism
+
+	830.1.1 = { birth = yes }
+	898.1.1 = { death = yes }
 }
 
 
 #### Fictional Placeholders
+sea_khmer_isanapura_04_fic = {
+	# fictional placeholder to represent weakened Angkor state
+	name = "Makara"
+	culture = khmer
+	religion = shaivism
+
+	1138.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+
 sea_khmer_kottinagara_01_fic = {
 	name = "Rathana"
 	culture = khmer
@@ -140,31 +184,6 @@ sea_khmer_kottinagara_04_fic = {
 	# began reign in 635
 	657.1.1 = { death = yes }
 }
-420008 = {
-	name = "Jayavarman" # Jayavarman I
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-	father = 420006
-
-	627.1.1 = { birth = yes }
-	669.1.1 = {
-		add_spouse = 420009
-	}
-	# began reign in 657
-	681.1.1 = { death = yes }
-}
-420009 = {
-	name = "Jayadevi"
-	female = yes
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-
-	651.1.1 = { birth = yes }
-	# began reign in 681
-	713.1.1 = { death = yes }
-}
 
 4200100 = {
 	name = "Rudravarman" # Father of the next 4 siblings, and great-uncle and father-in-law of Jayavarman II
@@ -227,19 +246,6 @@ sea_khmer_kottinagara_04_fic = {
 
 	794.1.1 = { birth = yes }
 	857.1.1 = { death = yes }
-}
-4200101 = {
-	name = "Nripendradevi" # Born Hyang Amrita, first wife of Jayavarman II
-	female = yes
-	dynasty_house = house_Dvirada
-	culture = khmer
-	religion = shaivism
-
-	father = 4200100
-	mother = 4200105
-
-	799.1.1 = { birth = yes }
-	878.1.1 = { death = yes }
 }
 
 4200105 = {
@@ -739,49 +745,6 @@ sea_khmer_kottinagara_04_fic = {
 		add_spouse = 4200115
 	}
 	835.1.1 = { death = yes }
-}
-
-420026 = {
-	name = "Jayadevi" # Fictional wife for Jayavarman III
-	female = yes
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-
-	830.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
-	912.1.1 = { death = yes }
-}
-
-420011 = {
-	# Posthumous Visnuloka
-	name = "Jayavarman" # Jayavarman III
-	#dna = 420011_jayavarman_iii
-	dynasty_house = house_Vyadha
-	culture = khmer
-	religion = shaivism
-	father = 420010
-	mother = 4200115
-
-	trait = education_martial_3
-	trait = content
-	fertility = 0.1
-
-	821.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
-	# began reign in 835
-	848.1.1 = {
-		add_spouse = 420026
-	}
-	877.1.1 = { death = yes }
 }
 
 420012 = {
@@ -1521,9 +1484,9 @@ khmerv014 = {
 }
 khmerv015 = {
 	name = "Nan"
+	dynasty_house = house_Sambhu
 	culture = khmer
 	religion = shaivism
-	dynasty_house = house_Sambhu
 
 	1039.1.1 = { birth = yes }
 	1100.1.1 = { death = yes }
@@ -1653,20 +1616,11 @@ khmerv031 = {
 
 khmerv033 = {
 	name = "Neakrin"
+	dynasty_house = house_Sambhu
 	culture = khmer
 	religion = shaivism
-	dynasty_house = house_Sambhu
 
 	1155.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
-}
-khmerv034 = {
-	name = "Leap"
-	culture = khmer
-	religion = shaivism
-	# isana?
-
-	1138.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
 }
 khmerv035 = {

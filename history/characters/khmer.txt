@@ -960,11 +960,11 @@ khmer_varman_8 = {
 }
 
 khmer_varman_9 = {
+	# 420011 in old RoA
 	dna = bookmark_dna_jayavarman
 	name = "Jayavarman" # Jayavarman III
 	dynasty = khmer_varman
 	culture = "khmer"
-	father = khmer_varman_10
 	religion = "vaishnavism"	#"one of the few Vishnuite kings of Cambodia"
 	diplomacy = 1
 	martial = 3
@@ -977,11 +977,24 @@ khmer_varman_9 = {
 	trait = zealous
 	trait = lifestyle_hunter
 	sexuality = heterosexual
+	father = khmer_varman_10
+	mother = sea_khmer_varman_10_wife_01
+
+	# History
 	820.1.1 = {
 		birth = yes
 	}
+	850.1.1 = {
+		add_spouse = sea_khmer_varman_9_wife_fic #fictional, to prevent him having random kids spawned
+	}
+	867.1.1 = {
+		effect = { set_designated_heir = character:khmer_varman_8 }
+	}
 	877.1.1 = {
-		death = yes
+		# said to have died when hunting wild elephant
+		death = {
+			death_reason = death_elephant
+		}
 	}
 }
 
@@ -995,8 +1008,12 @@ khmer_varman_10 = {
 	trait = brave
 	trait = architect
 
+	# History
 	770.1.1 = {
 		birth = yes
+	}
+	818.1.1 = {
+		add_spouse = sea_khmer_varman_10_wife_01
 	}
 	850.1.1 = {
 		death = yes
@@ -1004,12 +1021,17 @@ khmer_varman_10 = {
 }
 
 khmer_jayavarman_1 = {
+	# 420008 in old RoA
 	name = "Jayavarman" # Jayavarman I
+	dynasty = sea_baladitya
 	culture = "khmer"
 	religion = "shaivism"
+	#father = 420006
+
 	627.1.1 = {
 		birth = yes
 	}
+	# began reign in 657
 	681.1.1 = {
 		death = yes
 	}

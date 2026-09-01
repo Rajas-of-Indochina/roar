@@ -1,6 +1,30 @@
 ﻿k_funan = {
-	889.1.1 = {
+	657.1.1 = {
+		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
+	}
+	681.1.1 = {
+		holder = sea_khmer_jayavarman_2 # Jayadevi I
+	}
+	# 707 AD - Kingdom of Chenla divided into Land and Water Chenla Kingdoms
+	# 713 AD - last mention of Jayadevi I as queen of Chenla
+	713.1.1 = {
+		# temporary until history gets filled
+		holder = 0
+	}
+	#
+	# Jayavarman II declares himself King of Khmer Empire ; before that he titled himslef as King of Lower Chenla
+	802.1.1 = {
+		holder = khmer_varman_10 # Jayavarman II
+		government = mandala_government
+	}
+	850.1.1 = {
+		holder = khmer_varman_9 # Jayavarman III
+	}
+	877.1.1 = {
+		holder = khmer_varman_8 # Indravarman I
+	}
+	889.1.1 = {
 		holder = khmer_varman_7 # Yasovarman I
 		name = NAME_ANGKOR
 	}
@@ -54,23 +78,38 @@
 	1167.1.1 = {
 		holder = khmer_tribhuvanaditya_01 # Tribhuvanaditya (overthrows Yasovarman II)
 	}
+
+	# 1177 - Interregnum 1177-1181
+	# Angkor invaded and sacked by Champa, the usurper Tribhuvanaditya killed in 1177
+	# Jayavarman (VII) somehow takes the power, becomes ruler in around 1181, and counter-attacks Champa
+	# 1177-1181 is hazy, with inaccurate data, and we don't exactly know *when* everything happens
+	# For gameplay purposes, we're putting Jayavarman VII as ruler of c_angkor and a very weakened Khmer Empire in 1178
 	1177.1.1 = {
 		holder = 0
 	}
+
+	# 1177.1.1 = {
+	#	holder = khmer_mahidharapura_17 # Jayavarman VII
+	# }
 }
 
 
 d_angkor = {
 	657.1.1 = {
-		holder = khmer_jayavarman_1
+		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
 	}
 	681.1.1 = {
+		holder = sea_khmer_jayavarman_2 # Jayadevi I
+	}
+	# 707 AD - Kingdom of Chenla divided into Land and Water Chenla Kingdoms
+	713.1.1 = {
+		# temporary until history gets filled
 		holder = 0
 	}
 	#
 	802.1.1 = {
-		holder = khmer_varman_10
+		holder = khmer_varman_10 # Jayavarman II
 		government = mandala_government
 	}
 	850.1.1 = {
@@ -148,12 +187,20 @@ c_angkor = {
 	1178.1.1 = { change_development_level = 54 }
 
 	657.1.1 = {
-		holder = khmer_jayavarman_1
+		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
+	}
+	681.1.1 = {
+		holder = sea_khmer_jayavarman_2 # Jayadevi I
+	}
+	# 707 AD - Kingdom of Chenla divided into Land and Water Chenla Kingdoms
+	713.1.1 = {
+		# temporary until history gets filled
+		holder = 0
 	}
 	#
 	802.1.1 = {
-		holder = khmer_varman_10
+		holder = khmer_varman_10 # Jayavarman II
 		government = mandala_government
 	}
 	850.1.1 = {
@@ -221,12 +268,20 @@ c_lingapura = {
 	1178.1.1 = { change_development_level = 16 }
 
 	657.1.1 = {
-		holder = khmer_jayavarman_1
+		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
+	}
+	681.1.1 = {
+		holder = sea_khmer_jayavarman_2 # Jayadevi I
+	}
+	# 707 AD - Kingdom of Chenla divided into Land and Water Chenla Kingdoms
+	713.1.1 = {
+		# temporary until history gets filled
+		holder = 0
 	}
 	#
 	802.1.1 = {
-		holder = khmer_varman_10
+		holder = khmer_varman_10 # Jayavarman II
 		government = mandala_government
 	}
 	850.1.1 = {
@@ -293,6 +348,7 @@ c_prea_vihear = {
 	1066.1.1 = { change_development_level = 9 }
 	1178.1.1 = { change_development_level = 16 }
 
+	# needs history tweaks
 	867.1.1 = {
 		government = mandala_government
 		holder = khmer_bhavapura_01_fic	#fictional
@@ -318,7 +374,6 @@ c_samraong = {
 	1066.1.1 = { change_development_level = 5 }
 	1178.1.1 = { change_development_level = 9 }
 
-	# History tweaks needed
 	860.1.1 = {
 		government = tribal_government
 		holder = sea_samre_samrong_01_fic	#fictional
@@ -336,66 +391,101 @@ c_samraong = {
 
 
 d_isanapura = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 16 }
+	# 1177-1181 AD - Khmer empire in shambles
+	1177.1.1 = {
+		holder = sea_khmer_isanapura_04_fic	#fictional
+		tributary_of = {
+			suzerain = c_angkor
+			contract_group = tributary_mandala
+		}
+	}
 }
 
 c_isanapura = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	# needs history tweaks
+	867.1.1 = {
+		government = mandala_government
+		holder = khmer_bhavapura_01_fic	#fictional
+		liege = d_angkor
+	}
+	#
+	1066.1.1 = {
+		holder = khmer_kaundinya_3
+	}
+	#
+	1170.1.1 = {
+		holder = sea_khmer_isanapura_04_fic	#fictional
+	}
+	# 1177-1181 AD - Khmer empire in shambles
+	1177.1.1 = {
+		liege = 0
+		tributary_of = {
+			suzerain = c_angkor
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
+	}
 }
 
 c_amarendrapura = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 16 }
+
+	# needs history tweaks
+	867.1.1 = {
+		government = mandala_government
+		holder = khmer_bhavapura_01_fic	#fictional
+		liege = d_angkor
+	}
+	#
+	1066.1.1 = {
+		holder = khmer_kaundinya_3
+	}
+	#
+	1170.1.1 = {
+		holder = sea_khmer_isanapura_04_fic	#fictional
+	}
+	# 1177-1181 AD - Khmer empire in shambles
+	1177.1.1 = {
+		liege = 0
+		tributary_of = {
+			suzerain = c_angkor
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
+	}
 }
 
 c_kampong_kdei = {
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 15 }
+
+	# needs history tweaks
+	867.1.1 = {
+		government = mandala_government
+		holder = khmer_bhavapura_01_fic	#fictional
+		liege = d_angkor
+	}
+	#
+	1066.1.1 = {
+		holder = khmer_kaundinya_3
+	}
+	#
+	1170.1.1 = {
+		holder = sea_khmer_isanapura_04_fic	#fictional
+	}
+	# 1177-1181 AD - Khmer empire in shambles
+	1177.1.1 = {
+		liege = 0
+		tributary_of = {
+			suzerain = c_angkor
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = khmer_kaundinya_3
-		}
-		1177.1.1 = {
-			liege = 0
-			holder = khmer_bhavapura_10_fic	#fictional
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
-		}
+	}
 }
 
 
@@ -493,10 +583,10 @@ c_chhmar = {
 		1178.1.1 = { change_development_level = 11 }
 
 		802.1.1 = {
-			holder = khmer_varman_10
+			holder = khmer_varman_10 # Jayavarman II
 		}
 		850.1.1 = {
-			holder = khmer_varman_9
+			holder = khmer_varman_9 # Jayavarman III
 			liege = d_angkor
 		}
 		889.1.1 = {

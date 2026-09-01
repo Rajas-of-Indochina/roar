@@ -726,14 +726,28 @@ set_minorities_game_start = {
 					culture = culture:khmer
 				}
 				add_faith_minority_effect = {
-					FAITH = faith:theravada
-					SIZE = small
+					FAITH = faith:vaishnavism
+					SIZE = large
 				}
+				# Angkorian period characterised itself with growth of Buddhism in the region
 				add_faith_minority_effect = {
 					FAITH = faith:mahayana
 					SIZE = large
 				}
 			}
+			# Theravada buddhism should only start to pop up by 11th century
+			if = {
+				limit = {
+					kingdom = title:k_funan
+					culture = culture:khmer
+					game_start_date >= 1000.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:theravada
+					SIZE = small
+				}
+			}
+			# possibly add Islam minority in southern Khmer counties in 12th century
 		}
 
 
