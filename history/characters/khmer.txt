@@ -983,9 +983,12 @@ khmer_varman_9 = {
 	# History
 	820.1.1 = {
 		birth = yes
+		effect = {
+			add_character_flag = do_not_generate_starting_family
+		}
 	}
 	850.1.1 = {
-		add_spouse = sea_khmer_varman_9_wife_fic #fictional, to prevent him having random kids spawned
+		add_spouse = sea_khmer_varman_9_wife_fic #fictional
 	}
 	867.1.1 = {
 		effect = { set_designated_heir = character:khmer_varman_8 }
@@ -1028,10 +1031,11 @@ khmer_jayavarman_1 = {
 	religion = "shaivism"
 	#father = 420006
 
+	# History
 	627.1.1 = {
 		birth = yes
 	}
-	# began reign in 657
+	# began reign in 657 AD
 	681.1.1 = {
 		death = yes
 	}

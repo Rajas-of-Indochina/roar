@@ -1084,7 +1084,7 @@
 		birth = "1195.1.1"
 	}
 	1234.1.1 = {
-		set_designated_heir = character:466519
+		effect = { set_designated_heir = character:466519 }
 	}
 	1247.1.1 = {
 		death = "1247.1.1"
@@ -1506,8 +1506,10 @@
 		add_spouse = sea_achba_01
 	}
 	867.1.1 = {
-		set_primary_title_to = title:d_klarjeti
-		set_designated_heir = character:sea_bagrationi_klarjeti_2
+		effect = {
+			set_primary_title_to = title:d_klarjeti
+			set_designated_heir = character:sea_bagrationi_klarjeti_2
+		}
 	}
 	872.1.1 = {
 		death = "872.1.1"
