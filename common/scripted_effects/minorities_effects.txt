@@ -33,6 +33,7 @@ add_faith_minority_effect = {
             target = $FAITH$
         }
     }
+    update_minority_majority_modifiers_effect = yes
 }
 
 delete_faith_minority_effect = {
@@ -40,6 +41,7 @@ delete_faith_minority_effect = {
         name = faith_minorities_$SIZE$
         target = $FAITH$
     }
+    update_minority_majority_modifiers_effect = yes
 }
 
 promote_faith_minority_effect = {
@@ -1021,4 +1023,42 @@ notify_characters_of_fake_migration_effect = {
 			right_icon = scope:county
 		}
 	}
+}
+
+# don't use this directly, this is just used to handle minority-majority modifiers
+# scope is the county it's run in.
+# holder = THIS.holder
+update_minority_majority_modifiers_effect = {
+    hidden_effect = {
+        remove_county_modifier = majority_minority_small_faith
+        remove_county_modifier = majority_minority_large_faith
+        remove_county_modifier = majority_minority_small_culture
+        remove_county_modifier = majority_minority_large_culture
+        # Check for faith minority
+        if = {
+            limit = { county_has_specific_small_faith_minority = { FAITH = holder.faith } }
+            add_county_modifier = {
+                modifier = majority_minority_small_faith
+            }
+        }
+        else_if = {
+            limit = { county_has_specific_large_faith_minority = { FAITH = holder.faith } }
+            add_county_modifier = {
+                modifier = majority_minority_large_faith
+            }
+        }
+        # and culture minority
+        if = {
+            limit = { county_has_specific_small_culture_minority = { CULTURE = holder.culture } }
+            add_county_modifier = {
+                modifier = majority_minority_small_culture
+            }
+        }
+        else_if = {
+            limit = { county_has_specific_large_culture_minority = { CULTURE = holder.culture } }
+            add_county_modifier = {
+                modifier = majority_minority_large_culture
+            }
+        }
+    }
 }
