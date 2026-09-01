@@ -2,10 +2,13 @@
 	# 671 - earliest mention of the kingdom by Chinese Buddhist monk Yijing
 	# 692 - Melayu Kingdom annexed by Srivijaya
 	# 1025 - beginning of the new Melayu kingdom
-	1057.1.1 = {
+	1025.1.1 = {
 		government = mandala_government
-		holder = malay_melayu_10_fic	#fictional
+		holder = sea_malay_melayu_01_fic	#fictional
 		liege = 0
+	}
+	1057.1.1 = {
+		holder = malay_melayu_10_fic	#fictional
 	}
 	1167.1.1 = {
 		holder = malay_melayu_20_fic	#fictional
@@ -19,10 +22,13 @@ d_SUM_jambi = {
 	# 671 - earliest mention of the kingdom by Chinese Buddhist monk Yijing
 	# 692 - Melayu Kingdom annexed by Srivijaya
 	# 1025 - beginning of the new Melayu kingdom
-	1057.1.1 = {
+	1025.1.1 = {
 		government = mandala_government
-		holder = malay_melayu_10_fic	#fictional
+		holder = sea_malay_melayu_01_fic	#fictional
 		liege = 0
+	}
+	1057.1.1 = {
+		holder = malay_melayu_10_fic	#fictional
 	}
 	#
 	1167.1.1 = {
@@ -166,20 +172,7 @@ c_SUM_pengabuan = {
 }
 
 
-d_SUM_riau = {
-	1057.1.1 = {
-		holder = malay_melayu_10_fic	#fictional
-		liege = k_malayadvipa
-	}
-	#
-	1167.1.1 = {
-		holder = malay_melayu_20_fic	#fictional
-	}
-	1183.1.1 = {
-		holder = malay_melayu_21
-	}
-}
-
+## d_SUM_riau
 c_SUM_muara_takus = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 7 }
@@ -190,9 +183,13 @@ c_SUM_muara_takus = {
 		holder = malay_muaratakus_01_fic	#fictional
 	}
 	#
+	1025.1.1 = {
+		government = mandala_government
+		holder = sea_malay_melayu_01_fic	#fictional
+		liege = d_SUM_jambi
+	}
 	1057.1.1 = {
 		holder = malay_melayu_10_fic	#fictional
-		liege = d_SUM_jambi
 	}
 	#
 	1167.1.1 = {
@@ -282,7 +279,7 @@ c_SUM_kampar = {
 	1060.1.1 = {
 		holder = malay_kampar_10_fic	#fictional
 		tributary_of = {
-			suzerain = d_SUM_riau
+			suzerain = d_SUM_jambi
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -290,7 +287,7 @@ c_SUM_kampar = {
 	1170.1.1 = {
 		holder = malay_kampar_20_fic	#fictional
 		tributary_of = {
-			suzerain = d_SUM_riau
+			suzerain = d_SUM_jambi
 			contract_group = tributary_mandala
 		}
 	}
@@ -313,7 +310,7 @@ c_SUM_pekanbaru = {
 	1060.1.1 = {
 		holder = sea_malay_pekanbaru_03_fic	#fictional
 		tributary_of = {
-			suzerain = d_SUM_riau
+			suzerain = d_SUM_jambi
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -321,7 +318,7 @@ c_SUM_pekanbaru = {
 	1170.1.1 = {
 		holder = sea_malay_pekanbaru_04_fic
 		tributary_of = {
-			suzerain = d_SUM_riau
+			suzerain = d_SUM_jambi
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -395,9 +392,13 @@ c_SUM_dharmasraya = {
 		}
 	}
 	#
+	1025.1.1 = {
+		government = mandala_government
+		holder = sea_malay_melayu_01_fic	#fictional
+		liege = d_SUM_jambi
+	}
 	1057.1.1 = {
 		holder = malay_melayu_10_fic	#fictional
-		liege = d_SUM_jambi
 	}
 	#
 	1167.1.1 = {
