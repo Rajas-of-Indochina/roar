@@ -2,7 +2,11 @@
 	# 671 - earliest mention of the kingdom by Chinese Buddhist monk Yijing
 	# 692 - Melayu Kingdom annexed by Srivijaya
 	# 1025 - beginning of the new Melayu kingdom
-	# I think for earlier dates when they are weaker, they can be kept as duchy
+	1057.1.1 = {
+		government = mandala_government
+		holder = malay_melayu_10_fic	#fictional
+		liege = 0
+	}
 	1167.1.1 = {
 		holder = malay_melayu_20_fic	#fictional
 	}
@@ -165,7 +169,7 @@ c_SUM_pengabuan = {
 d_SUM_riau = {
 	1057.1.1 = {
 		holder = malay_melayu_10_fic	#fictional
-		liege = d_SUM_jambi
+		liege = k_malayadvipa
 	}
 	#
 	1167.1.1 = {
