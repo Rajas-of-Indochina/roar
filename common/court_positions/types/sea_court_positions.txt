@@ -552,6 +552,25 @@ stateless_martial_court_position = {
 			}
 		}
 
+		if = {
+			limit = {
+				has_perk = praetorian_guard_perk
+			}
+			add = {
+				value = 15
+				desc = court_position_bodyguard_modifier
+			}
+		}
+		if = {
+			limit = {
+				liege ?= { has_perk = praetorian_guard_perk }
+			}
+			add = {
+				value = 15
+				desc = court_position_bodyguard_liege_modifier
+			}
+		}
+
 		add = court_position_aptitude_high_penalty_value
 		add = general_aptitude_bonus
 	}
@@ -795,6 +814,25 @@ stateless_learning_court_position = {
 					value = 5
 					desc = court_position_mystic_1_trait
 				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_perk = zealous_proselytizer_perk
+			}
+			add = {
+				value = 15
+				desc = court_position_bodyguard_modifier
+			}
+		}
+		if = {
+			limit = {
+				liege ?= { has_perk = zealous_proselytizer_perk }
+			}
+			add = {
+				value = 15
+				desc = court_position_bodyguard_liege_modifier
 			}
 		}
 

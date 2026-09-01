@@ -77,13 +77,18 @@ centralize_stateless_confederation_decision = {
 			any_confederation_member = {
 				count = all
 				OR = {
-					ROOT = { has_strong_usable_hook = PREV }
+					custom_description = {
+						text = "You have an available [strong_hook|E]"
+						ROOT = { has_strong_usable_hook = PREV }
+					}
 					opinion = {
 						target = ROOT
 						value >= very_high_positive_opinion
 					}
 					NOT = { capital_county.duchy = ROOT.capital_county.duchy }
-					THIS = ROOT
+					hidden_trigger = {
+						THIS = ROOT
+					}
 				}
 			}
 		}

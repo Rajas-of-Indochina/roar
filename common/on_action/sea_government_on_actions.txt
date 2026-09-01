@@ -39,11 +39,12 @@ on_game_start = {
 # Having a rigid "no higher tier titles" rule is prone to bugs.
 # Just gonna make stateless vassals have a catastrophically high desire to do dissolution factions
 sea_stateless_title_handler = {
+	trigger = {
+		scope:title = { tier = tier_county }
+		government_has_flag = government_is_stateless
+	}
 	effect = {
 		if = {
-			limit = {
-				government_has_flag = government_is_stateless
-			}
 			# No holding land outside your capital
 			else_if = {
 				limit = {

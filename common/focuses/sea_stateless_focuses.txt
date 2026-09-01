@@ -78,6 +78,21 @@ intrigue_stateless_focus = {
 		owned_scheme_secrecy_add = 20
 		hostile_scheme_phase_duration_add = -15
 	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_intrigue_trigger = yes
+			}
+			add = 50000
+		}
+	}
+
+	desc = {
+		desc = intrigue_stateless_focus_desc
+		desc = line_break
+	}
 }
 
 stewardship_stateless_focus = {
@@ -126,6 +141,21 @@ learning_stateless_focus = {
 		learning = 3
 		monthly_piety = 0.5
 		health = 0.25
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_learning_trigger = yes
+			}
+			add = 50000
+		}
+	}
+
+	desc = {
+		desc = learning_stateless_focus_desc
+		desc = line_break
 	}
 
 }

@@ -114,7 +114,10 @@ centralize_stateless_confederation_effect = {
 		# get the list if counties in your shiny new duchy
 		duchy = {
 			every_in_de_jure_hierarchy = {
-				limit = { tier = tier_county }
+				limit = {
+					tier = tier_county
+					holder.house.house_confederation = ROOT.house.house_confederation
+				}
 				add_to_list = duchy_counties
 			}
 		}

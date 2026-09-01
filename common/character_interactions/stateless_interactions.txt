@@ -136,6 +136,18 @@ stateless_gift_goods_interaction = {
 						opinion = sent_goods_opinion_value
 					}
 				}
+				# Ties That Bind Perk Cohesion Bonus
+				if = {
+					limit = {
+						exists = scope:recipient.house.house_confederation
+						scope:recipient.house.house_confederation = scope:actor.house.house_confederation
+						scope:actor = {
+							government_has_flag = government_is_stateless
+							has_perk = it_is_my_domain_perk
+						}
+					}
+					scope:actor.house.house_confederation = { change_cohesion = cohesion_gain_minor }
+				}
 			}
 		}
 	}
@@ -215,8 +227,8 @@ stateless_gift_goods_interaction = {
 		modifier = {
 			add = 100
 			scope:recipient = {
-				is_confederation_member = yes
-				confederation = scope:actor.confederation
+				exists = house.house_confederation
+				house.house_confederation = scope:actor.house.house_confederation
 			}
 		}
 
