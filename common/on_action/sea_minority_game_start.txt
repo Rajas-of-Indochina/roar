@@ -661,7 +661,7 @@ set_minorities_game_start = {
 				limit = {
 					kingdom = title:k_champa
 					culture = culture:cham
-					faith = faith:chamic_shaivism
+					NOT = { faith = faith:mahayana }
 				}
 				add_faith_minority_effect = {
 					FAITH = faith:mahayana
@@ -670,15 +670,17 @@ set_minorities_game_start = {
 			}
 			if = {
 				limit = {
-					kingdom = title:k_champa
+					OR = {
+						duchy = title:d_indrapura
+						duchy = title:d_vijaya
+					}
 					culture = culture:cham
-					faith = faith:chamic_shaivism
 					game_start_date < 1000.1.1
 				}
 				promote_faith_minority_effect = { FAITH = faith:mahayana }
 			}
 		}
-		title:every_county = { #d_indrapura
+		every_county = { #d_indrapura
 			if = {
 				limit = {
 					duchy = title:d_indrapura
@@ -748,6 +750,58 @@ set_minorities_game_start = {
 				}
 			}
 			# possibly add Islam minority in southern Khmer counties in 12th century
+		}
+
+		## Kuy minorities ##
+		title:c_samraong = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+		title:c_prea_vihear = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+		title:c_lingapura = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+		title:c_koh_ker = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+		title:c_isanapura = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
 		}
 
 
@@ -891,7 +945,7 @@ set_minorities_game_start = {
 
 		##### CAUCASUS UPDATE #####
 		# Misc
-		title:c_chernigov = { #kassogians in chernigov
+		title:c_chernigov = { # Kassogians in chernigov
 			if = {
 				limit = { game_start_date >= 1022.1.1 }
 				add_culture_minority_effect = {
@@ -3999,9 +4053,7 @@ setup_tondrakian_minorities = {
 			}
 		}
 		if = {
-			limit = {
-				game_start_date <= 870.1.1
-			}
+			limit = { game_start_date <= 870.1.1 }
 			faith:tondrakian = { deactivate_holy_site = babylon_tondrakian }
 		}
 	}
@@ -4266,12 +4318,6 @@ setup_caucasus_south_minorities = {
 				promote_faith_minority_effect = { FAITH = faith:ashari }
 			}
 		}
-		# title:c_aragatson = {
-		# 	if = {
-		# 		limit = { game_start_date >= 1064.1.1 }
-		# 		promote_faith_minority_effect = { FAITH = faith:ashari }
-		# 	}
-		# }
 		title:c_shirak = {
 			if = {
 				limit = { game_start_date >= 1064.1.1 }
@@ -5543,29 +5589,3 @@ setup_RICE_minorities = {
 # 		}
 # 	}
 # }
-
-
-### Removed
-		#title:c_nasrabad = {
-		#	if = {
-		#		limit = {
-		#			game_start_date >= 960.1.1
-		#			game_start_date < 1100.1.1
-		#		}
-		#		add_faith_minority_effect = {
-		#			FAITH = faith:khurmazta
-		#			SIZE = small
-		#		}
-		#		add_culture_minority_effect = {
-		#			CULTURE = culture:sogdian
-		#			SIZE = large
-		#		}
-		#	}
-		#	if = {
-		#		limit = { game_start_date >= 1100.1.1 }
-		#		add_culture_minority_effect = {
-		#			CULTURE = culture:sogdian
-		#			SIZE = small
-		#		}
-		#	}
-		#}

@@ -113,10 +113,9 @@
 	1177.1.1 = {
 		holder = 0
 	}
-
-	# 1177.1.1 = {
-	#	holder = khmer_mahidharapura_17 # Jayavarman VII
-	# }
+	1181.1.1 = {
+		holder = khmer_mahidharapura_17 # Jayavarman VII
+	}
 }
 
 
@@ -124,6 +123,7 @@ d_angkor = {
 	657.1.1 = {
 		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
+		liege = k_funan
 	}
 	681.1.1 = {
 		holder = sea_khmer_jayavarman_2 # Jayadevi I
@@ -215,6 +215,7 @@ c_angkor = {
 	657.1.1 = {
 		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
+		liege = k_funan
 	}
 	681.1.1 = {
 		holder = sea_khmer_jayavarman_2 # Jayadevi I
@@ -296,6 +297,7 @@ c_lingapura = {
 	657.1.1 = {
 		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
+		liege = k_funan
 	}
 	681.1.1 = {
 		holder = sea_khmer_jayavarman_2 # Jayadevi I
@@ -378,7 +380,7 @@ c_prea_vihear = {
 	867.1.1 = {
 		government = mandala_government
 		holder = khmer_bhavapura_01_fic	#fictional
-		liege = d_angkor
+		liege = k_funan
 	}
 	#
 	1066.1.1 = {
@@ -434,6 +436,7 @@ d_isanapura = {
 	}
 	713.1.1 = {
 		# to represent split of Chenla realm
+		liege = 0
 		holder = 0
 	}
 	#
@@ -468,14 +471,64 @@ c_isanapura = {
 		holder = sea_khmer_jayavarman_2 # Jayadevi I
 	}
 	#
-	# needs history fixed
-	867.1.1 = {
-		holder = khmer_bhavapura_01_fic	#fictional
-		liege = d_angkor
+	# tweak history
+	802.1.1 = {
+		holder = khmer_varman_10 # Jayavarman II
+		government = mandala_government
 	}
-	#
+	850.1.1 = {
+		holder = khmer_varman_9 # Jayavarman III
+	}
+	877.1.1 = {
+		holder = khmer_varman_8 # Indravarman I
+	}
+	889.1.1 = {
+		holder = khmer_varman_7 # Yasovarman I
+	}
+	910.1.1 = {
+		holder = khmer_varman_6 # Harshavarman I
+	}
+	923.1.1 = {
+		holder = khmer_varman_5 # Ishanavarman II
+	}
+	928.1.1 = {
+		holder = khmer_varman_4 # Jayavarman IV
+	}
+	941.1.1 = {
+		holder = khmer_varman_3 # Harshavarman II
+	}
+	944.1.1 = {
+		holder = khmer_varman_2 # Rajendravarman II
+	}
+	968.1.1 = {
+		holder = khmer_varman_1 # Jayavarman V
+	}
+	1006.1.1 = {
+		holder = khmer_kaundinya_1 # Suryavarman I
+	}
+	1050.1.1 = {
+		holder = khmer_kaundinya_2 # Udayadityavarman II
+	}
 	1066.1.1 = {
-		holder = khmer_kaundinya_3
+		holder = khmer_kaundinya_3 # Harshavarman III
+	}
+	1080.1.1 = {
+		holder = khmer_mahidharapura_10 # Jayavarman VI
+	}
+	1107.1.1 = {
+		holder = khmer_mahidharapura_13 # Dharanindravarman I
+	}
+	1113.1.1 = {
+		holder = khmer_mahidharapura_15 # Suryavarman II
+	}
+	1150.1.1 = {
+		holder = khmer_mahidharapura_8 # Dharanindravarman II
+	}
+	1160.1.1 = {
+		holder = khmer_mahidharapura_16 # Yasovarman II
+	}
+	1167.1.1 = {
+		holder = khmer_tribhuvanaditya_01 # Tribhuvanaditya (overthrows Yasovarman II)
 	}
 	#
 	1170.1.1 = {
@@ -496,15 +549,66 @@ c_amarendrapura = {
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
 
-	# needs history tweaks
-	867.1.1 = {
+	# tweak history
+	# 781 AD - made first capital of Jayavarman II
+	781.1.1 = {
+		holder = khmer_varman_10 # Jayavarman II
 		government = mandala_government
-		holder = khmer_bhavapura_01_fic	#fictional
-		liege = d_angkor
+		liege = k_funan
 	}
-	#
+	850.1.1 = {
+		holder = khmer_varman_9 # Jayavarman III
+	}
+	877.1.1 = {
+		holder = khmer_varman_8 # Indravarman I
+	}
+	889.1.1 = {
+		holder = khmer_varman_7 # Yasovarman I
+	}
+	910.1.1 = {
+		holder = khmer_varman_6 # Harshavarman I
+	}
+	923.1.1 = {
+		holder = khmer_varman_5 # Ishanavarman II
+	}
+	928.1.1 = {
+		holder = khmer_varman_4 # Jayavarman IV
+	}
+	941.1.1 = {
+		holder = khmer_varman_3 # Harshavarman II
+	}
+	944.1.1 = {
+		holder = khmer_varman_2 # Rajendravarman II
+	}
+	968.1.1 = {
+		holder = khmer_varman_1 # Jayavarman V
+	}
+	1006.1.1 = {
+		holder = khmer_kaundinya_1 # Suryavarman I
+	}
+	1050.1.1 = {
+		holder = khmer_kaundinya_2 # Udayadityavarman II
+	}
 	1066.1.1 = {
-		holder = khmer_kaundinya_3
+		holder = khmer_kaundinya_3 # Harshavarman III
+	}
+	1080.1.1 = {
+		holder = khmer_mahidharapura_10 # Jayavarman VI
+	}
+	1107.1.1 = {
+		holder = khmer_mahidharapura_13 # Dharanindravarman I
+	}
+	1113.1.1 = {
+		holder = khmer_mahidharapura_15 # Suryavarman II
+	}
+	1150.1.1 = {
+		holder = khmer_mahidharapura_8 # Dharanindravarman II
+	}
+	1160.1.1 = {
+		holder = khmer_mahidharapura_16 # Yasovarman II
+	}
+	1167.1.1 = {
+		holder = khmer_tribhuvanaditya_01 # Tribhuvanaditya (overthrows Yasovarman II)
 	}
 	#
 	1170.1.1 = {
@@ -529,7 +633,7 @@ c_kampong_kdei = {
 	860.1.1 = {
 		government = mandala_government
 		holder = khmer_tributary_01 #fictional
-		liege = d_angkor
+		liege = k_funan
 	}
 	#
 	1066.1.1 = {
@@ -560,7 +664,7 @@ c_bakan = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
 			tributary_of = {
-				suzerain = d_angkor
+				suzerain = k_funan
 				contract_group = tributary_mandala
 			}
 		}
@@ -589,7 +693,7 @@ c_pailin = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
 			tributary_of = {
-				suzerain = d_angkor
+				suzerain = k_funan
 				contract_group = tributary_mandala
 			}
 		}
@@ -618,7 +722,7 @@ c_neang = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
 			tributary_of = {
-				suzerain = d_angkor
+				suzerain = k_funan
 				contract_group = tributary_mandala
 			}
 		}
@@ -648,7 +752,7 @@ c_chhmar = {
 		}
 		850.1.1 = {
 			holder = khmer_varman_9 # Jayavarman III
-			liege = d_angkor
+			liege = k_funan
 		}
 		889.1.1 = {
 			effect = {
@@ -672,7 +776,7 @@ d_dviradapura = {
 		government = mandala_government
 		holder = khmer_aninditapura_01_fic	#fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -713,7 +817,7 @@ c_pursat = {
 			government = mandala_government
 			holder = khmer_malyang_01_fic	#fictional
 			tributary_of = {
-				suzerain = d_angkor
+				suzerain = k_funan
 				contract_group = tributary_mandala
 			}
 		}
@@ -752,9 +856,9 @@ d_vyadhapura = {
 	867.1.1 = {
 		government = mandala_government
 		holder = khmer_vyadhapura_01_fic	#fictional
-		#liege = d_angkor
+		#liege = k_funan
 		tributary_of = {
-			suzerain = d_angkor	#Khmer empire in shambles from 1177-1181
+			suzerain = k_funan	#Khmer empire in shambles from 1177-1181
 			contract_group = tributary_mandala
 		}
 	}
@@ -868,7 +972,7 @@ d_kottinagara = {
 		government = mandala_government
 		holder = sea_khmer_kottinagara_01_fic	#fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -900,7 +1004,7 @@ c_kottinagara = {
 		government = mandala_government
 		holder = sea_khmer_kottinagara_01_fic	#fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -932,7 +1036,7 @@ c_sa_dec = {
 		government = mandala_government
 		holder = sea_khmer_kottinagara_01_fic	#fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -1030,7 +1134,7 @@ c_koh_kong = {
 		government = mandala_government
 		holder = khmer_botumsakor_01_fic	#fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -1132,7 +1236,7 @@ d_sambhupura = {
 	}
 	850.1.1 = {
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -1154,7 +1258,7 @@ c_sambhupura = {
 	}
 	850.1.1 = {
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
@@ -1183,7 +1287,7 @@ c_phnom_preah_theat = {
 			government = mandala_government
 			holder = khmer_sambhupura_01_fic	#fictional
 			tributary_of = {
-				suzerain = d_angkor
+				suzerain = k_funan
 				contract_group = tributary_mandala
 			}
 		}
@@ -1201,7 +1305,7 @@ c_phnom_preah_theat = {
 		}
 }
 
-c_thala_borivat = {
+c_koh_ker = {
 		867.1.1 = { change_development_level = 8 }
 		1066.1.1 = { change_development_level = 10 }
 		1178.1.1 = { change_development_level = 9 }
@@ -1209,7 +1313,7 @@ c_thala_borivat = {
 		867.1.1 = {
 			government = mandala_government
 			holder = khmer_bhavapura_01_fic	#fictional
-			liege = d_angkor
+			liege = k_funan
 		}
 		1066.1.1 = {
 			holder = khmer_kaundinya_3
@@ -1343,7 +1447,7 @@ c_ta_veang = {
 		government = anarchist_government
 		holder = sea_mnong_ta_veang_01_fic #fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -1351,7 +1455,7 @@ c_ta_veang = {
 	1060.1.1 = {
 		holder = sea_mnong_ta_veang_03_fic #fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -1366,7 +1470,7 @@ c_mondul_kiri = {
 		government = anarchist_government
 		holder = sea_mnong_mondul_kiri_01_fic #fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -1374,7 +1478,7 @@ c_mondul_kiri = {
 	1060.1.1 = {
 		holder = sea_mnong_mondul_kiri_03_fic #fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -1389,7 +1493,7 @@ c_senmonorom = {
 		government = anarchist_government
 		holder = sea_stieng_senmonorom_01_fic #fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala_tribal
 		}
 	}
@@ -1397,7 +1501,7 @@ c_senmonorom = {
 	1060.1.1 = {
 		holder = sea_stieng_senmonorom_03_fic #fictional
 		tributary_of = {
-			suzerain = d_angkor
+			suzerain = k_funan
 			contract_group = tributary_mandala_tribal
 		}
 	}
