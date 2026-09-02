@@ -1,0 +1,11 @@
+macro = {
+	description = "Is the Confederation Stateless"
+	definition = "IsStatelessConfederation(Confederation)"
+	replace_with = "ObjectsEqual(Confederation.GetType, GetConfederationType('stateless_confederation'))"
+}
+
+macro = {
+	description = "Is the character Stateless?"
+	definition = "IsStateless(TargetCharacter)"
+	replace_with = "TargetCharacter.GetGovernment.IsType( 'anarchist_government' )"
+}

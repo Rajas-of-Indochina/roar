@@ -94,3 +94,12 @@ any_parent_culture = {
 sanchi_trigger = {
 	global_not = NOT_SANCHI_ENABLED
 }
+
+barter_goods_greater_or_equal = {
+	global = HAS_BARTER_GOODS_TRIGGER
+	global_not = NOT_HAS_BARTER_GOODS_TRIGGER
+	first = I_HAVE_BARTER_GOODS_TRIGGER
+	first_not = NOT_I_HAVE_BARTER_GOODS_TRIGGER
+	third = THEY_HAVE_BARTER_GOODS_TRIGGER
+	third_not = NOT_THEY_HAVE_BARTER_GOODS_TRIGGER
+}

@@ -1,4 +1,52 @@
-﻿# Anarchist converts to tribalism
+namespace = sea_gov_event
+
+sea_gov_event.0001 = {
+	type = letter_event
+	opening = {
+		desc = char_interaction.0030.opening # Positive greeting
+	}
+	desc = mpo_interactions_events.0020.desc
+		
+	sender = scope:actor
+
+	option = {
+		name = mpo_interactions_events.0020.a
+
+		show_as_tooltip = {
+			scope:actor = {
+				remove_barter_goods = {
+					value = scope:actor.gift_value
+				}
+			}
+			scope:recipient = {
+				if = {
+					limit = { government_allows = barter }
+					add_barter_goods = {
+						value = scope:actor.gift_value
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = sent_goods_opinion
+						opinion = 20
+					}
+				}
+				else = {
+					add_gold = {
+						value = scope:actor.gift_value
+						multiply = 0.5
+					}
+					add_opinion = {
+						target = scope:actor
+						modifier = sent_goods_opinion
+						opinion = 20
+					}
+				}
+			}
+		}
+	}
+}
+
+# Anarchist converts to tribalism
 sea_gov_event.1000 = {
     type = character_event
 	title = sea_gov_event.1000.t
@@ -28,61 +76,14 @@ sea_gov_event.1000 = {
 				years = 5
 			}
 
-	    	# Remove title succession law
-	    	primary_title = {
-	    		remove_title_law = anarchist_elective_succession_law
-	    	}
-
         	# Update authority
-			if = {
-				limit = { has_realm_law = stateless_authority_0 }
-				remove_realm_law = stateless_authority_0
-			}
-			if = {
-				limit = { has_realm_law = stateless_authority_1 }
-				remove_realm_law = stateless_authority_1
-			}
-			if = {
-				limit = { has_realm_law = stateless_authority_2 }
-				remove_realm_law = stateless_authority_2
-			}
-			if = {
-				limit = { has_realm_law = stateless_authority_3 }
-				remove_realm_law = stateless_authority_3
-			}
-			if = {
-				limit = {
-					NOT = { has_realm_law = tribal_authority_0 }
-				}
-				add_realm_law_skip_effects = tribal_authority_0
-			}
+			add_realm_law_skip_effects = tribal_authority_0
 
 			# Convert vassals
 			every_vassal_or_below = {
 				limit = { has_government = anarchist_government }
 				change_government = tribal_government
-				if = {
-					limit = { has_realm_law = stateless_authority_0 }
-					remove_realm_law = stateless_authority_0
-				}
-				if = {
-					limit = { has_realm_law = stateless_authority_1 }
-					remove_realm_law = stateless_authority_1
-				}
-				if = {
-					limit = { has_realm_law = stateless_authority_2 }
-					remove_realm_law = stateless_authority_2
-				}
-				if = {
-					limit = { has_realm_law = stateless_authority_3 }
-					remove_realm_law = stateless_authority_3
-				}
-				if = {
-					limit = {
-						NOT = { has_realm_law = tribal_authority_0 }
-					}
-					add_realm_law_skip_effects = tribal_authority_0
-				}
+				add_realm_law_skip_effects = tribal_authority_0
 			}
 		}
 	}
@@ -112,3 +113,24 @@ sea_gov_event.1001 = {
 		name = sea_gov_event.1001.a
 	}
 }
+
+# apparently I need to use a fucking event for this? Confederation creation.
+sea_gov_event.2001 = {
+	hidden = yes
+
+	trigger = {
+		scope:actor = {
+			is_ruler = yes
+			is_landed = yes
+		}
+		scope:recipient = {
+			is_ruler = yes
+			is_landed = yes
+		}
+	}
+
+	immediate = {
+		scope:actor = { create_or_add_to_stateless_confederation_effect = { TARGET = scope:recipient } }
+	}
+}
+

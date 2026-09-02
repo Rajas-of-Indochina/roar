@@ -169,7 +169,7 @@ window = {
 					button_tab = {
 						onclick = "[MyRealmWindow.ResetMapMode]"
 						shortcut = "tab_2"
-						visible = "[Not( IsLandlessAdventurer( GetPlayer ) )]"
+						visible = "[Not( Or( IsLandlessAdventurer( GetPlayer ), IsStateless( GetPlayer ) ) )]"
 
 						onclick = "[GetVariableSystem.Set( 'bookmark', 'subjects' )]"
 						onclick = "[MyRealmWindow.SetActiveTab( 'bookmark_subjects' )]"

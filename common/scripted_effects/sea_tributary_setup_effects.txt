@@ -1,6 +1,7 @@
 ﻿
 ROA_setup_confederation_effect = {
 	title:c_abzakhia.holder = {
+		save_scope_as = confederator
 		title:c_temir.holder = { add_to_list = circassia_confederates }
 		title:c_uerp.holder = { add_to_list = circassia_confederates }
 		title:c_labeshkhua.holder = { add_to_list = circassia_confederates }
@@ -19,22 +20,60 @@ ROA_setup_confederation_effect = {
 		title:c_tuahy.holder = { add_to_list = circassia_confederates }
 		title:c_brijeqo.holder = { add_to_list = circassia_confederates }
 
-		add_character_flag = {
-			flag = forming_confederation
-			years = 5
-		}
-		create_confederation = {
-			name = CIRCASSIA_CONFEDERATION_NAME
-		}
 
-		every_in_list = {
-			list = circassia_confederates
-
-			scope:new_confederation = {
-				add_confederation_member = prev
+		if = {
+			limit = { game_start_date <= 1070.1.1 }
+			every_in_list = {
+				list = circassia_confederates
+				limit = {
+					# is_independent_ruler = yes
+					government_has_flag = government_is_stateless
+				}
+				save_scope_as = member
+				scope:confederator = {
+					create_or_add_to_stateless_confederation_effect = { TARGET = scope:member }
+				}
+			}
+			confederation = {
+				set_confederation_name = CIRCASSIA_CONFEDERATION_NAME
+				every_confederation_member = {
+					if = {
+						limit = { NOT = { is_in_list = circassia_confederates } }
+						add_to_list = circassia_confederates
+					}
+					every_in_list = {
+						list = circassia_confederates
+						limit = { NOT = { THIS = PREV } }
+						add_hook_no_toast = {
+							type = favor_hook
+							target = PREV
+						}
+					}
+				}
 			}
 		}
-		remove_character_flag = forming_confederation
+		else = {
+			add_character_flag = {
+				flag = forming_confederation
+				years = 5
+			}
+			create_confederation = {
+				name = CIRCASSIA_CONFEDERATION_NAME
+			}
+
+			every_in_list = {
+				list = circassia_confederates
+				limit = {
+					is_independent_ruler = yes
+					NOT = { government_has_flag = government_is_stateless }
+				}
+
+				scope:new_confederation = {
+					add_confederation_member = prev
+				}
+			}
+			remove_character_flag = forming_confederation
+		}
 	}
 
 	if = {
@@ -752,10 +791,10 @@ ROA_867_tributary_setup_effect = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 			ROA_nominal_tributary_effect = yes
 		}
-		title:c_khegayk.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
+		# title:c_khegayk.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
 	}
 	title:e_arabia.holder = {
 		save_scope_as = suzerain
@@ -777,46 +816,46 @@ ROA_867_tributary_setup_effect = {
 	}	
 	title:e_caspian-pontic_steppe.holder = {
 		save_scope_as = suzerain
-		title:c_abzakhia.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_boletuqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_brijeqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_hatuqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_janeqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_labezhi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_miyequap.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_papagi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_sapakhi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
-		title:c_siba.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect = yes
-		}
+		# title:c_abzakhia.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_boletuqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_brijeqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_hatuqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_janeqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_labezhi.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_miyequap.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_papagi.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_sapakhi.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_siba.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
 		title:d_chechnya.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 			ROA_nominal_tributary_effect = yes
@@ -1135,33 +1174,33 @@ ROA_936_tributary_setup_effect = {
 		save_scope_as = suzerain
 		title:c_mdamuaa.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_zemo_svaneti.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_misimianeti.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_kvemo_svaneti.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 	}
 	title:d_kakheti.holder = {
 		save_scope_as = suzerain
 		title:c_pkhoeti.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 	}
 	title:k_arran.holder = {
 		save_scope_as = suzerain
 		title:c_elni = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_kapalak = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1172,7 +1211,7 @@ ROA_936_tributary_setup_effect = {
 		save_scope_as = suzerain
 		title:c_shahdagh.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_kuba.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
@@ -1191,69 +1230,69 @@ ROA_936_tributary_setup_effect = {
 	}
 	title:e_caspian-pontic_steppe.holder = {
 		save_scope_as = suzerain
-		title:c_abzakhia.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_boletuqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_brijeqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_hatuqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_janeqo.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_labezhi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_miyequap.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_papagi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_sapakhi.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
-		title:c_siba.holder = {
-			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
-		}
+		# title:c_abzakhia.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_boletuqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_brijeqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_hatuqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_janeqo.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_labezhi.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_miyequap.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_papagi.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_sapakhi.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
+		# title:c_siba.holder = {
+		# 	break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		# 	ROA_nominal_tributary_effect = yes
+		# }
 		title:d_chechnya.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:d_khundzeti.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_dargia.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_kara-kaitag.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_gazi-kumukh.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:k_caucasus.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		# Khazar Other
 		title:c_voronezh.holder = {
@@ -1721,7 +1760,7 @@ ROA_1066_tributary_setup_effect = {
 		save_scope_as = suzerain
 		title:c_pkhoeti.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 	}
 	title:e_persia.holder = {
@@ -1731,7 +1770,7 @@ ROA_1066_tributary_setup_effect = {
 		}
 		title:c_shahdagh.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			ROA_nominal_tributary_effect
+			ROA_nominal_tributary_effect = yes
 		}
 		title:c_kuba.holder = {
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }

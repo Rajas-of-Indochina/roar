@@ -1,0 +1,3136 @@
+# OVERRIDE VANILLA
+disburse_feast_activity_rewards = {
+	# for the loc
+	save_scope_as = root_scope
+
+	# Rewards based on Activity Options
+
+	# Number of courses
+	if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_courses
+					option = feast_courses_good
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = courses_good_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					# Host Rewards
+
+
+					#Max Food Option will make Courtly Vassals more happy than other guests.
+					#Court Amenities can increase this further.
+
+					every_vassal_or_below = {
+						vassal_stance = courtly
+						limit = {
+							is_participant_in_activity = scope:activity
+						}
+						custom = every_courtly_vassal
+						add_opinion = {
+							modifier = hosted_feast_opinion
+							target = root
+							opinion = feast_opinion_max_food_value
+						}
+					}
+					# Vassal Opinion
+					scope:activity = {
+						every_attending_character = {
+							limit = {
+								this != root
+								trigger_if = {
+									limit = {
+										is_vassal_of = root
+									}
+									NOT = { has_vassal_stance = courtly }
+								}
+							}
+							custom = custom.every_attending_character_but_courtly
+							add_opinion = {
+								target = root
+								modifier = impressed_opinion
+								opinion = feast_opinion_max_food_value
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_courses
+					option = feast_courses_normal
+				}
+			}
+		}
+		#With Middle Food Option
+		scope:activity = {
+			add_activity_log_entry = {
+				key = courses_normal_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					# Host Rewards
+
+					#With Middle Food Option Courtly vassals have slightly higher opinion gain than others
+					#Very High Court Amenities can increase it slightly.
+
+					# Courtly Vassal Opinion
+					every_vassal_or_below = {
+						vassal_stance = courtly
+						limit = {
+							is_participant_in_activity = scope:activity
+						}
+						custom = every_courtly_vassal
+						add_opinion = {
+							modifier = hosted_feast_opinion
+							target = root
+							opinion = feast_opinion_medium_food_value
+						}
+					}
+					# Vassal Opinion
+					scope:activity = {
+						every_attending_character = {
+							limit = {
+								this != root
+								trigger_if = {
+									limit = {
+										is_vassal_of = root
+									}
+									NOT = { has_vassal_stance = courtly }
+								}
+							}
+							custom = custom.every_attending_character_but_courtly
+							add_opinion = {
+								target = root
+								modifier = impressed_opinion
+								opinion = feast_opinion_medium_food_value
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else = {
+		scope:activity = {
+			add_activity_log_entry = {
+				key = courses_bad_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					# Host Rewards
+
+					#With Low food option the opinion gain with Courtly vassals is always lower than for normal guests. Even if you have very high court amenities (though they do mitigate it a bit).
+					every_vassal_or_below = {
+						vassal_stance = courtly
+						limit = {
+							is_participant_in_activity = scope:activity
+						}
+						custom = every_courtly_vassal
+						add_opinion = {
+							modifier = hosted_mediocre_feast_opinion
+							target = root
+							opinion = feast_opinion_mediocre_food_value
+						}
+					}
+
+					# Vassal Opinion
+					scope:activity = {
+						#Other guests
+						every_attending_character = {
+							limit = {
+								this != root
+								trigger_if = {
+									limit = {
+										is_vassal_of = root
+									}
+									NOT = { has_vassal_stance = courtly }
+								}
+							}
+							custom = custom.every_attending_character_but_courtly
+							add_opinion = {
+								target = root
+								modifier = impressed_opinion
+								opinion = feast_opinion_mediocre_food_value
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# If you have an Estate, with the relevant upgrade, you get additional opinion
+	# This does create a duplicate opinion entry in the list of effects, but is easier for script maintenance
+	if = {
+		limit = {
+			scope:host = {
+				domicile ?= {
+					has_domicile_parameter = estate_improved_feast_opinion
+					domicile_location = scope:activity_location
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = feast_estate_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				root = {
+					scope:activity = {
+						every_attending_character = {
+							limit = {
+								this != root
+							}
+							custom = custom.every_attending_character
+							add_opinion = {
+								target = root
+								modifier = impressed_opinion
+								opinion = 5
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Dish complexity
+	if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_food
+					option = feast_food_good
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = food_good_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					# Stateless rulers receive mostly influence instead of prestige
+					if = {
+						limit = {
+							government_has_flag = government_is_stateless
+						}
+						change_influence = {
+							value = 225
+							scope:host = {
+								if = {
+									limit = {
+										has_royal_court = yes
+										has_dlc_feature = royal_court
+										amenity_level = { target = court_food_quality value >= 5 }
+									}
+									multiply = 1.5
+								}
+								multiply = court_brewmaster_multiplier
+							}
+							if = {
+								limit = {
+									culture = {
+										has_cultural_parameter = refined_feasts
+									}
+								}
+								add = major_influence_gain
+							}
+							if = {
+								limit = {
+									confederation ?= { has_cohesion_level_parameter = any_member_increased_feast_rewards }
+								}
+								multiply = 1.1
+							}
+						}
+					}
+					else = {
+						add_prestige = {
+							value = 225
+							scope:host = {
+								if = {
+									limit = {
+										has_royal_court = yes
+										has_dlc_feature = royal_court
+										amenity_level = { target = court_food_quality value >= 5 }
+									}
+									multiply = 1.5
+								}
+								multiply = court_brewmaster_multiplier
+							}
+							if = {
+								limit = {
+									culture = {
+										has_cultural_parameter = refined_feasts
+									}
+								}
+								add = major_prestige_gain
+							}
+							if = {
+								limit = {
+									any_character_struggle = {
+										involvement = involved
+										has_struggle_phase_parameter = struggle_prestige_from_feast
+									}
+								}
+								add = medium_prestige_gain
+							}
+							if = {
+								limit = {
+									confederation ?= { has_cohesion_level_parameter = any_member_increased_feast_rewards }
+								}
+								multiply = 1.1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_food
+					option = feast_food_normal
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = food_normal_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = {
+							value = 115
+							scope:host = {
+								if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 5 }
+										}
+									}
+									multiply = 2
+								}
+								else_if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 3 }
+										}
+									}
+									multiply = 1.5
+								}
+								multiply = court_brewmaster_multiplier
+							}
+
+
+							if = {
+								limit = {
+									culture = {
+										has_cultural_parameter = refined_feasts
+									}
+								}
+								add = major_influence_gain
+							}
+							if = {
+								limit = {
+									confederation ?= { has_cohesion_level_parameter = any_member_increased_feast_rewards }
+								}
+								multiply = 1.1
+							}
+						}
+					}
+					else = {
+						add_prestige = {
+							value = 115
+							scope:host = {
+								if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 5 }
+										}
+									}
+									multiply = 2
+								}
+								else_if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 3 }
+										}
+									}
+									multiply = 1.5
+								}
+								multiply = court_brewmaster_multiplier
+							}
+
+
+							if = {
+								limit = {
+									culture = {
+										has_cultural_parameter = refined_feasts
+									}
+								}
+								add = major_prestige_gain
+							}
+							if = {
+								limit = {
+									any_character_struggle = {
+										involvement = involved
+										has_struggle_phase_parameter = struggle_prestige_from_feast
+									}
+								}
+								add = medium_prestige_gain
+							}
+							if = {
+								limit = {
+									confederation ?= { has_cohesion_level_parameter = any_member_increased_feast_rewards }
+								}
+								multiply = 1.1
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+	else = {
+		scope:activity = {
+			add_activity_log_entry = {
+				key = food_bad_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = {
+							value = 35
+							scope:host = {
+								if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 5 }
+										}
+									}
+									multiply = 2
+								}
+								else_if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 3 }
+										}
+									}
+									multiply = 1.5
+								}
+								multiply = court_brewmaster_multiplier
+							}
+
+							if = {
+								limit = {
+									culture = {
+										has_cultural_parameter = refined_feasts
+									}
+								}
+								add = major_influence_gain
+							}
+							if = {
+								limit = {
+									confederation ?= { has_cohesion_level_parameter = any_member_increased_feast_rewards }
+								}
+								multiply = 1.1
+							}
+						}
+					}
+					else = {
+						add_prestige = {
+							value = 35
+							scope:host = {
+								if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 5 }
+										}
+									}
+									multiply = 2
+								}
+								else_if = {
+									limit = {
+										scope:host = {
+											has_royal_court = yes
+											has_dlc_feature = royal_court
+											amenity_level = { target = court_food_quality value >= 3 }
+										}
+									}
+									multiply = 1.5
+								}
+								multiply = court_brewmaster_multiplier
+							}
+
+							if = {
+								limit = {
+									culture = {
+										has_cultural_parameter = refined_feasts
+									}
+								}
+								add = major_prestige_gain
+							}
+							if = {
+								limit = {
+									any_character_struggle = {
+										involvement = involved
+										has_struggle_phase_parameter = struggle_prestige_from_feast
+									}
+								}
+								add = medium_prestige_gain
+							}
+							if = {
+								limit = {
+									confederation ?= { has_cohesion_level_parameter = any_member_increased_feast_rewards }
+								}
+								multiply = 1.1
+							}
+						}
+						
+					}
+				}
+			}
+		}
+	}
+
+	# Estate Unlock: Wine Selection
+	if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_wine
+					option = feast_wine_extensive
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = wine_extensive_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					change_influence = {
+						value = 15
+
+						scope:activity = {
+							every_attending_character = {
+								limit = {
+									NOR = {
+										this = root
+										is_courtier_of = root # Guest shouldn't originate from you own court
+									}
+								}
+								add = 15
+							}
+						}
+						scope:host = { multiply = court_brewmaster_multiplier }
+						if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_3 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_3_value
+							}
+						}
+						else_if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_2 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_2_value
+							}
+						}
+						else_if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_1 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_1_value
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_wine
+					option = feast_wine_normal
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = wine_normal_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					change_influence = {
+						value = 10
+
+						scope:activity = {
+							every_attending_character = {
+								limit = {
+									NOR = {
+										this = root
+										is_courtier_of = root # Guest shouldn't originate from you own court
+									}
+								}
+								add = 10
+							}
+						}
+						scope:host = { multiply = court_brewmaster_multiplier }
+						if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_3 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_3_value
+							}
+						}
+						else_if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_2 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_2_value
+							}
+						}
+						else_if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_1 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_1_value
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = {
+					category = feast_option_wine
+					option = feast_wine_limited
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = wine_limited_reward_tt
+				tags = { completed }
+				character = scope:root_scope
+				show_in_conclusion = yes
+				score = 50
+
+				# Effects
+				root = {
+					change_influence = {
+						value = 5
+
+						scope:activity = {
+							every_attending_character = {
+								limit = {
+									NOR = {
+										this = root
+										is_courtier_of = root # Guest shouldn't originate from you own court
+									}
+								}
+								add = 5
+							}
+						}
+						scope:host = { multiply = court_brewmaster_multiplier }
+						if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_3 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_3_value
+							}
+						}
+						else_if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_2 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_2_value
+							}
+						}
+						else_if = {
+							limit = {
+								domicile ?= { has_domicile_parameter = estate_improved_wine_cellar_1 }
+							}
+							multiply = {
+								value = 1
+								add = estate_improved_wine_cellar_1_value
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# We give you the regular rewards
+	hosted_successful_feast_new_effect = yes
+	# We give out the Reveler trait/xp
+	disburse_feast_reveler_rewards = yes
+	#Accolade glory gain
+	hidden_effect = {
+		accolades_activity_complete_feast_glory_effect = yes
+	}
+	#Stress loss
+	if = {
+		limit = {
+			OR = {
+				has_trait = shy
+				has_trait = reclusive
+			}
+		}
+		custom_tooltip = host_feast_decision_desc_shy
+	}
+	else = {
+		if = {
+			limit = {
+				has_royal_court = yes
+				has_dlc_feature = royal_court
+					amenity_level = { target = court_food_quality value >= 5 }
+			}
+			stress_impact = {
+				base = exotic_feast_stress_loss_value
+				gluttonous = feast_stress_loss_value
+				gregarious = feast_stress_loss_value
+				lifestyle_reveler = feast_stress_loss_value
+				drunkard = feast_stress_loss_value
+				comfort_eater = feast_stress_loss_value
+				generous = feast_stress_loss_value
+				greedy = activity_stress_gain_impact
+			}
+		}
+		else_if = {
+			limit = {
+				has_royal_court = yes
+				has_dlc_feature = royal_court
+				amenity_level = { target = court_food_quality value >= 4 }
+			}
+			stress_impact = {
+				base = lavish_feast_stress_loss_value
+				gluttonous = feast_stress_loss_value
+				gregarious = feast_stress_loss_value
+				lifestyle_reveler = feast_stress_loss_value
+				drunkard = feast_stress_loss_value
+				comfort_eater = feast_stress_loss_value
+				generous = feast_stress_loss_value
+				greedy = activity_stress_gain_impact
+			}
+		}
+	    else_if = {
+			limit = {
+				has_royal_court = yes
+				has_dlc_feature = royal_court
+				amenity_level = { target = court_food_quality value >= 3 }
+			}
+			stress_impact = {
+				base = medium_feast_stress_loss_value
+				gluttonous = feast_stress_loss_value
+				gregarious = feast_stress_loss_value
+				lifestyle_reveler = feast_stress_loss_value
+				drunkard = feast_stress_loss_value
+				comfort_eater = feast_stress_loss_value
+				generous = feast_stress_loss_value
+				greedy = activity_stress_gain_impact
+			}
+		}
+		else_if = {
+			limit = {
+				has_royal_court = yes
+				has_dlc_feature = royal_court
+				amenity_level = { target = court_food_quality value <= 1 }
+			}
+			stress_impact = {
+				base = meager_feast_stress_loss_value
+				gluttonous = feast_stress_loss_value
+				gregarious = feast_stress_loss_value
+				lifestyle_reveler = feast_stress_loss_value
+				drunkard = feast_stress_loss_value
+				comfort_eater = feast_stress_loss_value
+				generous = feast_stress_loss_value
+				greedy = activity_stress_gain_impact
+			}
+		}
+		else = {
+			stress_impact = {
+				base = feast_stress_loss_value
+				gluttonous = activity_stress_loss_impact
+				gregarious = activity_stress_loss_impact
+				lifestyle_reveler = feast_stress_loss_value
+				drunkard = activity_stress_loss_impact
+				comfort_eater = activity_stress_loss_impact
+				generous = activity_stress_loss_impact
+				greedy = activity_stress_gain_impact
+			}
+		}
+	}
+
+	# Remove strife if relevant.
+	remove_strife_per_invited_powerful_vassal_effect = yes
+}
+
+hunt_individual_guest_awards_effect = {
+	# If character had the reduce stress intent, give them stress loss
+	if = { # Hosts
+		limit = { this = scope:host }
+		if = { # To hide hunter tooltip for guests
+			limit = { has_character_flag = host_existing_hunter }
+			if = {
+				limit = { scope:activity.var:hunt_success ?= flag:yes }
+				stress_impact = {
+					base = major_stress_loss
+					lazy = medium_stress_impact_loss
+					gregarious = medium_stress_impact_loss
+					lifestyle_hunter = major_stress_loss
+					shy = medium_stress_impact_gain
+				}
+			}
+			else = {
+				stress_impact = {
+					base = medium_stress_impact_loss
+					lazy = minor_stress_impact_loss
+					gregarious = minor_stress_impact_loss
+					lifestyle_hunter = medium_stress_impact_loss
+					shy = medium_stress_impact_gain
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { scope:activity.var:hunt_success ?= flag:yes }
+				stress_impact = {
+					base = major_stress_loss
+					lazy = medium_stress_impact_loss
+					gregarious = medium_stress_impact_loss
+					shy = medium_stress_impact_gain
+				}
+			}
+			else = {
+				stress_impact = {
+					base = medium_stress_impact_loss
+					lazy = minor_stress_impact_loss
+					gregarious = minor_stress_impact_loss
+					shy = medium_stress_impact_gain
+				}
+			}
+		}
+	}
+	else = { # Guests
+		if = {
+			limit = { scope:activity.var:hunt_success ?= flag:yes }
+			stress_impact = {
+				base = medium_stress_impact_loss
+				lazy = minor_stress_impact_loss
+				gregarious = minor_stress_impact_loss
+				lifestyle_hunter = medium_stress_impact_loss
+				shy = minor_stress_impact_gain
+			}
+		}
+		else = {
+			stress_impact = {
+				base = minor_stress_impact_loss
+				lazy = miniscule_stress_impact_loss
+				gregarious = miniscule_stress_impact_loss
+				lifestyle_hunter = minor_stress_impact_loss
+				shy = minor_stress_impact_gain
+			}
+		}
+	}
+	# Prestige/piety/influence
+	if = {
+		limit = {
+			this != scope:host
+			is_adult = yes
+			trigger_if = {
+				limit = {
+					scope:activity = {
+						NOT = {
+							has_activity_option = { category = special_type option = hunt_type_falconry }
+						}
+					}
+				}
+				can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:host }
+			}
+			trigger_if = {
+				limit = { is_clergy = yes }
+				OR = {
+					faith = { has_doctrine_parameter = clergy_can_fight }
+					culture = { has_cultural_parameter = culture_clergy_can_fight }
+				}
+			}
+		}
+		if = {
+			limit = {
+				culture = { has_cultural_parameter = sacred_hunts }
+			}
+			if = {
+				limit = { government_has_flag = government_is_stateless }
+				change_influence = hunt_prestige_with_piety_guest_gain_value
+				add_piety = hunt_piety_guest_gain_value
+			}
+			else = {
+				add_prestige = hunt_prestige_with_piety_guest_gain_value
+				add_piety = hunt_piety_guest_gain_value
+			}
+		}
+		else = {
+			if = {
+				limit = { government_has_flag = government_is_stateless }
+				change_influence = hunt_prestige_guest_gain_value
+			}
+			else = { add_prestige = hunt_prestige_guest_gain_value }
+		}
+	}
+	# Nomads gain prowess from dangerous animal kills
+	if = {
+		limit = {
+			NOT = { this = scope:host }
+			government_has_flag = government_is_nomadic
+			scope:activity = {
+				var:hunt_success ?= flag:yes
+				NOT = { exists = var:animal_spared }
+				hunt_animal_type_dangerous_trigger = { VAR = var:animal_type }
+			}
+		}
+		add_prowess_skill = 1
+	}
+	# Trait XP
+	# Only called on the end of a *successful* hunt. Hunts which are interrupted due to death, imprisonment, etc., don't get this, so put critical clean-up stuff in the activity itself.
+	if = {
+		limit = {
+			scope:activity = {
+				has_activity_option = { category = special_type option = hunt_type_falconry }
+			}
+		}
+		hunter_lifestyle_rank_up_check_effect = { FALCONRY = yes }
+	}
+	else = {
+		hunter_lifestyle_rank_up_check_effect = { FALCONRY = no }
+	}
+	# Tourney
+	if = {
+		limit = { has_trait = tourney_participant }
+		if = {
+			limit = {
+				scope:activity = {
+					NOT = {
+						has_activity_option = { category = special_type option = hunt_type_falconry }
+					}
+					NOT = {
+						hunt_story_trigger = { STORY = chase }
+					}
+				}
+			}
+			add_trait_xp = {
+				trait = tourney_participant
+				track = horse
+				value = { 1 3 }
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					hunt_story_trigger = { STORY = ambush }
+					hunt_story_trigger = { STORY = stealth }
+				}
+			}
+			add_trait_xp = {
+				trait = tourney_participant
+				track = bow
+				value = { 1 3 }
+			}
+		}
+	}
+	# LEGITIMACY GAIN FOR ACTIVITY PARTICIPATION - HUNT
+	if = {
+		limit = {
+			scope:activity = { # Special gain for Legendary Hunt
+				has_activity_option = { category = special_type option = hunt_type_legendary }
+			}
+		}
+		legendary_hunt_participation_legitimacy_effect = yes
+	}
+	else = {
+		standard_activity_participation_legitimacy_effect = yes
+	}
+	# Memories
+	if = {
+		limit = {
+			save_temporary_scope_as = hunter_temp
+			NOT = {
+				any_memory = {
+					has_memory_type = hunt_animal_slayer_memory
+					memory_participant:animal_slayer = scope:hunter_temp
+					memory_participant:host = scope:host
+					memory_age_years < 1
+				}
+			}
+			exists = scope:activity.var:kill_animal_type
+		}
+		create_character_memory = {
+			type = hunt_success_memory
+			participants = {
+				host = scope:host
+			}
+		}
+		ordered_memory = {
+			limit = { has_memory_type = hunt_success_memory }
+			order_by = memory_creation_date
+			save_scope_as = new_memory
+			set_variable = {
+				name = animal_type
+				value = scope:activity.var:kill_animal_type
+			}
+			set_variable = {
+				name = location
+				value = scope:activity.activity_location
+			}
+		}
+	}
+}
+
+hunt_animal_melee_kill_effect = {
+	save_scope_as = melee_kill
+	play_sound_effect = "event:/DLC/EP2/SFX/Events/Grand_Activities/Hunts/ConstructionKits/ep2_event_grand_hunt_ck_spear_impact"
+	hunt_animal_kill_effect = { DEATH = $DEATH$ VAR = $VAR$ }
+	hunter_progress_point_gain_effect = { CHANGE = 3 RANDOM_CHANGE = 1 } #Gives Hunter Lifestyle XP
+	# Determine who could be wounded
+	scope:activity ?= {
+		random_attending_character = {
+			limit = { is_alive = yes }
+			save_scope_as = injury_target
+			hunt_wound_select_effect = yes
+		}
+	}
+	save_scope_as = injury_target
+	hunt_wound_select_effect = yes
+	duel = {
+		skill = prowess
+		value = hunt_melee_kill_prowess_value
+		50 = {
+			desc = hunt_kill_success_melee
+			hunt_kill_melee_modifiers = yes # SPEAR
+			hunt_kill_hunter_modifiers = yes # HUNTER
+			if = { #chance_to_gain_prowess_during_bear_hunts parameter check
+				limit = {
+					faith = { has_doctrine_parameter = chance_to_gain_prowess_during_bear_hunts }
+					scope:activity.var:animal_type = flag:bear
+				}
+				add_prowess_skill = 1
+				add_martial_skill = 1
+			}
+			send_interface_toast = {
+				title = {
+					first_valid = {
+						triggered_desc = {
+							trigger = { scope:animal_slayer ?= root }
+							desc = hunt_kill_success_melee_root
+						}
+						desc = hunt_kill_success_melee_guest
+					}
+				}
+				left_icon = scope:animal_slayer
+				scope:activity ?= {
+					add_activity_log_entry = {
+						key = hunt_melee_log
+						tags = { kill }
+						score = 100
+
+						character = scope:animal_slayer
+
+						#Effect
+						scope:animal_slayer ?= {
+							if = {
+								limit = {government_has_flag = government_is_stateless}
+								change_influence = hunt_prestige_melee_value
+							}
+							else = { add_prestige = hunt_prestige_melee_value }
+							# Complete activity intent if relevant
+							if = {
+								limit = {
+									AND = {
+										scope:hunt_kill_death_chance = flag:yes
+										NOT = {
+											hunt_small_game_trigger = { VAR = $VAR$ }
+										}
+									}
+								}
+								hunt_animal_slayer_memory_effect = yes
+							}
+						}
+					}
+				}
+			}
+			save_scope_as = melee_success
+		}
+		1 = { # Injury
+			desc = hunt_kill_failure_melee
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = -3.5
+				min = 5
+			}
+			modifier = {
+				hunt_small_game_trigger = { VAR = $VAR$ }
+				factor = 0.05
+			}
+			modifier = { add = hunt_melee_danger_value }
+			# Effect
+			hidden_effect = {
+				scope:injury_target = {
+					if = {
+						limit = {
+							hunt_animal_type_dangerous_trigger = { VAR = $VAR$ }
+						}
+						hunt_wound_apply_effect = { SEVERE = yes }
+					}
+					else = {
+						hunt_wound_apply_effect = { SEVERE = no }
+					}
+				}
+			}
+			scope:activity ?= {
+				add_activity_log_entry = {
+					key = hunt_melee_log
+					tags = { kill }
+					score = 100
+
+					character = scope:animal_slayer
+
+					#Effects
+					scope:animal_slayer ?= {
+							if = {
+								limit = {government_has_flag = government_is_stateless}
+								change_influence = hunt_prestige_melee_wound_value
+							}
+							else = { add_prestige = hunt_prestige_melee_wound_value }
+						# Complete activity intent if relevant
+						if = {
+							limit = {
+								AND = {
+									scope:hunt_kill_death_chance = flag:yes
+									NOT = {
+										hunt_small_game_trigger = { VAR = $VAR$ }
+									}
+								}
+							}
+							hunt_animal_slayer_memory_effect = yes
+						}
+					}
+				}
+				hidden_effect = {
+					add_activity_log_entry = {
+						key = hunt_melee_wounded_log
+						score = 75
+						tags = { kill }
+						character = scope:injury_target
+						scope:injury_target = { hunt_wound_tooltip_effect = yes }
+					}
+				}
+			}
+			if = {
+				limit = { scope:severe ?= yes }
+				custom_tooltip = hunt_character_wound_tt
+			}
+			else = {
+				show_as_tooltip = {
+					increase_wounds_no_death_effect = { REASON = fight }
+				}
+			}
+			save_scope_as = melee_failure
+		}
+		1 = { # Death
+			desc = hunt_kill_critical_failure_melee
+			trigger = {
+				scope:hunt_kill_death_chance = flag:yes
+				NOT = {
+					hunt_small_game_trigger = { VAR = $VAR$ }
+				}
+			}
+			compare_modifier = {
+				value = scope:duel_value
+				multiplier = -3.5
+				min = 5
+			}
+			modifier = { add = hunt_melee_kill_prowess_value }
+			scope:activity ?= {
+				add_activity_log_entry = {
+					key = hunt_melee_killed_log
+					score = 75
+					tags = { kill }
+					character = scope:animal_slayer
+
+					# Effect
+					scope:animal_slayer = {
+						hunt_animal_death_effect = { VAR = $VAR$ }
+					}
+				}
+			}
+			save_scope_as = melee_critical
+		}
+	}
+	# Outcome
+	scope:animal_slayer ?= {
+		if = {
+			limit = { has_activity_intent = slay_beast_intent }
+			show_as_tooltip = { complete_activity_intent = yes }
+		}
+		hunt_complete_slay_beast_intent_effect = yes # Complete activity intent if relevant
+	}
+	scope:activity ?= {
+		every_attending_character = {
+			limit = { is_ai = no }
+			trigger_event = hunt.1201
+		}
+	}
+}
+
+hunt_animal_melee_kill_group_effect = {
+	save_scope_as = group_kill
+	hunt_animal_kill_effect = { DEATH = $DEATH$ VAR = $VAR$ }
+	scope:activity ?=  {
+		# Determine who is slaying
+		every_attending_character = {
+			limit = {
+				is_alive = yes
+				NOT = { has_character_flag = not_slaying }
+				can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = scope:host }
+				trigger_if = {
+					limit = { exists = scope:group_craven }
+					this != scope:host
+				}
+			}
+			custom = hunt_every_hunter_tt
+			add_to_list = animal_slayers
+			hunter_progress_point_gain_effect = { CHANGE = 1 RANDOM_CHANGE = 1 } #Gives Hunter Lifestyle XP
+		}
+	}
+	# Determine who could be wounded
+	random_in_list = {
+		list = animal_slayers
+		weight = {
+			base = 20
+			hunt_likely_injured_modifiers = yes
+		}
+		save_scope_as = injury_target
+		hunt_wound_select_effect = yes
+	}
+	# Outcome
+	random_list = {
+		50 = { # Animal is captured
+			trigger = { exists = scope:group_capture }
+			desc = hunt_kill_success_capture
+			scope:activity ?= {
+				add_activity_log_entry = {
+					key = hunt_melee_capture_log
+					score = 75
+					tags = { kill }
+					character = scope:animal_slayer
+
+					# Effect
+					every_in_list = {
+						list = animal_slayers
+						custom = hunt_every_hunter_tt
+						if = {
+							limit = { government_has_flag = government_is_stateless }
+							change_influence = hunt_prestige_melee_group_value
+						}
+						else = {add_prestige = hunt_prestige_melee_group_value}
+					}
+				}
+			}
+			save_scope_as = group_success
+		}
+		50 = { # Animal is slain
+			trigger = {
+				NOT = { exists = scope:group_capture }
+			}
+			desc = hunt_kill_success_melee
+			scope:activity ?= {
+				add_activity_log_entry = {
+					key = hunt_melee_group_log
+					score = 75
+					tags = { kill }
+					character = scope:animal_slayer
+
+					# Effect
+					every_in_list = {
+						list = animal_slayers
+						custom = hunt_every_hunter_tt
+						if = {
+							limit = { government_has_flag = government_is_stateless }
+							change_influence = hunt_prestige_melee_group_value
+						}
+						else = {add_prestige = hunt_prestige_melee_group_value}
+					}
+				}
+			}
+			save_scope_as = group_success
+		}
+		25 = { # ...but someone is injured
+			desc = hunt_kill_failure_melee_group
+			modifier = { add = hunt_melee_kill_prowess_value }
+			modifier = {
+				hunt_small_game_trigger = { VAR = $VAR$ }
+				factor = 0.1
+			}
+			modifier = { add = hunt_melee_danger_value }
+			# Effect
+			hidden_effect = {
+				scope:injury_target = {
+					if = { # Big animal injure big
+						limit = {
+							hunt_animal_type_dangerous_trigger = { VAR = $VAR$ }
+						}
+						hunt_wound_apply_effect = { SEVERE = yes }
+					}
+					else = { # Smol animal injure smol
+						hunt_wound_apply_effect = { SEVERE = no }
+					}
+				}
+			}
+			scope:activity ?= {
+				add_activity_log_entry = {
+					key = hunt_melee_group_log
+					score = 75
+					tags = { kill }
+					character = scope:animal_slayer
+
+					# Effect
+					every_in_list = {
+						list = animal_slayers
+						custom = hunt_every_hunter_tt
+						if = {
+							limit = { government_has_flag = government_is_stateless }
+							change_influence = hunt_prestige_melee_wound_group_value
+						}
+						else = {add_prestige = hunt_prestige_melee_wound_group_value}
+					}
+				}
+				hidden_effect = {
+					add_activity_log_entry = {
+						key = hunt_melee_group_wounded_log
+						score = 75
+						tags = { kill }
+						character = scope:injury_target
+						scope:injury_target = { hunt_wound_tooltip_effect = yes }
+					}
+				}
+			}
+			custom_tooltip = hunt_random_attendee_injured_tt
+			save_scope_as = group_failure
+		}
+		10 = { # ...but someone is killed
+			desc = hunt_kill_critical_failure_melee_group
+			trigger = {
+				scope:hunt_kill_death_chance = flag:yes
+				NOT = {
+					hunt_small_game_trigger = { VAR = $VAR$ }
+				}
+			}
+			modifier = { add = hunt_melee_kill_prowess_value }
+			custom_tooltip = hunt_random_attendee_killed_tt
+			scope:activity ?= {
+				add_activity_log_entry = {
+					key = hunt_melee_group_log
+					score = 75
+					tags = { kill }
+					character = scope:animal_slayer
+				}
+				hidden_effect = {
+					add_activity_log_entry = {
+						key = hunt_melee_group_killed_log
+						score = 75
+						tags = { kill }
+						character = scope:injury_target
+
+						# Effect
+						scope:injury_target = {
+							hunt_animal_death_effect = { VAR = $VAR$ }
+						}
+					}
+				}
+			}
+			save_scope_as = group_critical
+		}
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:group_capture }
+		}
+		hidden_effect = {
+			every_in_list = {
+				list = animal_slayers
+				custom = hunt_every_slay_beast_hunter_tt
+				# Complete activity intent if relevant
+				hunt_complete_slay_beast_intent_effect = yes
+			}
+		}
+	}
+	scope:activity ?= {
+		every_attending_character = {
+			limit = { is_ai = no }
+			trigger_event = hunt.1202
+		}
+	}
+}
+
+hunt_animal_bow_kill_effect = {
+	save_scope_as = bow_kill
+	hunt_animal_kill_effect = { DEATH = $DEATH$ VAR = $VAR$ }
+	if = {
+		limit = { has_trait = tourney_participant }
+		add_trait_xp = {
+			trait = tourney_participant
+			track = bow
+			value = { 1 3 }
+		}
+		hunter_progress_point_gain_effect = { CHANGE = 1 RANDOM_CHANGE = 1 } #Gives Hunter Lifestyle XP
+	}
+	else = {
+		hunter_progress_point_gain_effect = { CHANGE = 2 RANDOM_CHANGE = 1 } #Gives Hunter Lifestyle XP
+	}
+	# Determine who could be wounded
+	scope:activity ?= {
+		random_attending_character = {
+			limit = { is_alive = yes }
+			save_scope_as = injury_target
+			hunt_wound_select_effect = yes
+		}
+	}
+	if = { # Separate win option to avoid Duel tooltips if very easy
+		limit = {
+			scope:hunt_kill_death_chance = flag:no
+			exists = scope:hunt_ending
+			scope:activity = {
+				hunt_story_trigger = { STORY = chase }
+			}
+		}
+		scope:activity ?= {
+			add_activity_log_entry = {
+				key = hunt_bow_log
+				score = 75
+				tags = { kill }
+				character = scope:animal_slayer
+
+				# Effect
+				scope:animal_slayer = {
+					# Complete activity intent if relevant
+					if = {
+						limit = { has_activity_intent = slay_beast_intent }
+						show_as_tooltip = { complete_activity_intent = yes }
+					}
+					hunt_complete_slay_beast_intent_effect = yes
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = hunt_prestige_bow_value
+					}
+					else = { add_prestige = hunt_prestige_bow_value }
+				}
+			}
+		}
+		save_scope_as = bow_success
+		play_sound_effect = "event:/DLC/EP2/SFX/Events/Grand_Activities/Hunts/ConstructionKits/ep2_event_grand_hunt_ck_arrow_shoot"
+	}
+	else = {
+		duel = {
+			skill = prowess
+			value = hunt_melee_kill_prowess_value
+			50 = { # Success
+				desc = hunt_kill_success_bow_tt
+				hunt_kill_bow_modifiers = yes # BOW
+				hunt_kill_hunter_modifiers = yes # HUNTER
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -25
+				}
+				scope:activity ?= {
+					add_activity_log_entry = {
+						key = hunt_bow_log
+						score = 75
+						tags = { kill }
+						character = scope:animal_slayer
+
+						# Effect
+						scope:animal_slayer = {
+							if = {
+								limit = { government_has_flag = government_is_stateless }
+								change_influence = hunt_prestige_bow_value
+							}
+							else = { add_prestige = hunt_prestige_bow_value }
+							# Complete activity intent if relevant
+							if = {
+								limit = { has_activity_intent = slay_beast_intent }
+								show_as_tooltip = { complete_activity_intent = yes }
+							}
+							hunt_complete_slay_beast_intent_effect = yes
+							if = {
+								limit = {
+									has_activity_intent = impose_obedience_intent
+									scope:host.intent_target = {
+										NOT = { is_obedient_to = scope:host }
+									}
+								}
+								scope:host.intent_target = {
+									add_opinion = {
+										target = scope:host
+										modifier = obedience_opinion
+									}
+								}
+							}
+							hunt_animal_slayer_memory_effect = yes
+							if = { #chance_to_gain_prowess_during_bear_hunts parameter check
+								limit = {
+									faith = { has_doctrine_parameter = chance_to_gain_prowess_during_bear_hunts }
+									scope:activity.var:animal_type = flag:bear
+								}
+								random = {
+									chance = 10
+									add_prowess_skill = 1
+								}
+							}
+						}
+					}
+				}
+				save_scope_as = bow_success
+				play_sound_effect = "event:/DLC/EP2/SFX/Events/Grand_Activities/Hunts/ConstructionKits/ep2_event_grand_hunt_ck_arrow_impact_hit"
+			}
+			5 = { # Failure
+				desc = hunt_kill_failure_melee_group
+				trigger = {	scope:hunt_kill_death_chance = flag:yes }
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1.5
+					min = 1
+				}
+				modifier = {
+					hunt_small_game_trigger = { VAR = $VAR$ }
+					factor = 0.1
+				}
+				modifier = { add = hunt_bow_danger_value }
+				custom_tooltip = hunt_random_attendee_injured_tt
+				hidden_effect = {
+					scope:host ?= {
+						send_interface_toast = {
+							title = hunt_kill_failure_melee_group
+							left_icon = scope:animal_slayer
+							right_icon = scope:injury_target
+							scope:activity = {
+								add_activity_log_entry = {
+									key = hunt_bow_log
+									score = 75
+									tags = { kill }
+									character = scope:animal_slayer
+									target = scope:injury_target
+
+									# Effect
+									scope:animal_slayer = {
+										custom_tooltip = hunt_kill_failure_bow
+										# Complete activity intent if relevant
+										hunt_complete_slay_beast_intent_effect = yes
+									}
+									scope:injury_target ?= {
+										hunt_wound_apply_effect = { SEVERE = yes }
+										hunt_wound_tooltip_effect = yes
+									}
+								}
+							}
+						}
+					}
+				}
+				save_scope_as = bow_failure
+				play_sound_effect = "event:/DLC/EP2/SFX/Events/Grand_Activities/Hunts/ConstructionKits/ep2_event_grand_hunt_ck_arrow_impact_miss"
+			}
+			50 = { # Critical Failure
+				desc = hunt_kill_critical_failure_bow_tt
+				trigger = {
+					NAND = {
+						exists = scope:hunt_ending
+						scope:activity ?= {
+							hunt_story_trigger = { STORY = chase }
+						}
+					}
+				}
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 5
+				}
+				send_interface_toast = {
+					title = hunt_kill_miss_bow_tt
+					left_icon = scope:animal_slayer
+					scope:activity ?= {
+						add_activity_log_entry = {
+							key = hunt_bow_miss_log
+							score = 75
+							tags = { kill }
+							character = scope:animal_slayer
+						}
+					}
+				}
+				save_scope_as = bow_critical
+				play_sound_effect = "event:/DLC/EP2/SFX/Events/Grand_Activities/Hunts/ConstructionKits/ep2_event_grand_hunt_ck_arrow_impact_miss"
+			}
+		}
+	}
+	scope:activity = {
+		every_attending_character = {
+			limit = { is_ai = no }
+			trigger_event = hunt.1200
+		}
+	}
+}
+
+disburse_wedding_activity_rewards = {
+	# for the loc
+	save_scope_as = root_scope
+
+	scope:activity = {
+		### Rewards based on Options
+		# Entertainment
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_good
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_entertainment_good
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				root = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = 900
+					}
+					else = { add_prestige = 900 }
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = major_influence_gain
+					}
+					else = { add_prestige = major_prestige_gain }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_normal
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_entertainment_normal
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				root = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = 900
+					}
+					else = { add_prestige = 900 }
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = medium_influence_gain
+					}
+					else = { add_prestige = medium_prestige_gain }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_bad
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_entertainment_bad
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				root = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = 300
+					}
+					else = { add_prestige = 300 }
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = minor_influence_gain
+					}
+					else = { add_prestige = minor_prestige_gain }
+				}
+			}
+		}
+
+		# Food
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_good
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_food_good
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				every_attending_character = {
+					limit = { this != root }
+					custom = custom.every_activity_guest
+					add_opinion = {
+						target = root
+						modifier = impressed_opinion
+						opinion = 30
+					}
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					# Guest opinion from host and spouses
+					if = {
+						limit = {
+							scope:host = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_host_high
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:host
+								modifier = came_to_my_wedding_opinion
+								opinion = 15
+							}
+						}
+					}
+					if = {
+						limit = {
+							scope:spouse_1 = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_spouse_1_high
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:spouse_1
+								modifier = came_to_my_wedding_opinion
+								opinion = 15
+							}
+						}
+					}
+					if = {
+						limit = {
+							scope:spouse_2 = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_spouse_2_high
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:spouse_2
+								modifier = came_to_my_wedding_opinion
+								opinion = 15
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_normal
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_food_normal
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				every_attending_character = {
+					limit = { this != root }
+					custom = custom.every_activity_guest
+					add_opinion = {
+						target = root
+						modifier = impressed_opinion
+						opinion = 20
+					}
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					# Opinion from host and spouses
+					if = {
+						limit = {
+							scope:host = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_host_medium
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:host
+								modifier = came_to_my_wedding_opinion
+								opinion = 10
+							}
+						}
+					}
+					if = {
+						limit = {
+							scope:spouse_1 = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_spouse_1_medium
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:spouse_1
+								modifier = came_to_my_wedding_opinion
+								opinion = 10
+							}
+						}
+					}
+					if = {
+						limit = {
+							scope:spouse_2 = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_spouse_2_medium
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:spouse_2
+								modifier = came_to_my_wedding_opinion
+								opinion = 10
+							}
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_bad
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_food_bad
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				every_attending_character = {
+					limit = { this != root }
+					custom = custom.every_activity_guest
+					add_opinion = {
+						target = root
+						modifier = impressed_opinion
+						opinion = 5
+					}
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					# Opinion from host and spouses
+					if = {
+						limit = {
+							scope:host = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_host_low
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:host
+								modifier = came_to_my_wedding_opinion
+								opinion = 5
+							}
+						}
+					}
+					if = {
+						limit = {
+							scope:spouse_1 = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_spouse_1_low
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:spouse_1
+								modifier = came_to_my_wedding_opinion
+								opinion = 5
+							}
+						}
+					}
+					if = {
+						limit = {
+							scope:spouse_2 = { is_ai = yes }
+						}
+						custom_tooltip = came_to_my_wedding_opinion_spouse_2_low
+						hidden_effect = {
+							reverse_add_opinion = {
+								target = scope:spouse_2
+								modifier = came_to_my_wedding_opinion
+								opinion = 5
+							}
+						}
+					}
+				}
+			}
+		}
+
+		# Decoration
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_good
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_decoration_good
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				root = {
+					add_character_modifier = {
+						modifier = gwedding_magnificent_host_modifier
+						years = 20
+					}
+					if = {
+						limit = {
+							any_vassal_or_below = {
+								vassal_stance = courtly
+							}
+						}
+						every_vassal_or_below = {
+							vassal_stance = courtly
+							custom = every_courtly_vassal
+							add_opinion = {
+								modifier = hosted_wedding_opinion
+								target = root
+								opinion = 30
+							}
+						}
+					}
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+					}
+					custom = custom.every_activity_guest
+					add_character_modifier = {
+						modifier = wedding_of_the_century_modifier
+						years = 20
+					}
+					if = {
+						limit = {
+							has_trait = lifestyle_reveler
+						}
+						add_trait_xp = {
+							trait = lifestyle_reveler
+							value = 10
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_normal
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_decoration_normal
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				root = {
+					add_character_modifier = {
+						modifier = gwedding_gracious_host_modifier
+						years = 20
+					}
+					if = {
+						limit = {
+							any_vassal_or_below = {
+								vassal_stance = courtly
+							}
+						}
+						every_vassal_or_below = {
+							vassal_stance = courtly
+							custom = every_courtly_vassal
+							add_opinion = {
+								modifier = hosted_wedding_opinion
+								target = root
+								opinion = 20
+							}
+						}
+					}
+				}
+				every_attending_character = {
+					limit = {
+						NOR = {
+							this = scope:host
+							this = scope:spouse_1
+							this = scope:spouse_2
+						}
+						has_trait = lifestyle_reveler
+					}
+					custom = custom.every_activity_guest
+					add_trait_xp = {
+						trait = lifestyle_reveler
+						value = 5
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_bad
+				}
+			}
+			add_activity_log_entry = {
+				key = host_wedding_decoration_bad
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				root = {
+					if = {
+						limit = {
+							has_trait = lifestyle_reveler
+						}
+						add_trait_xp = {
+							trait = lifestyle_reveler
+							value = 10
+						}
+					}
+					else = {
+						add_trait = lifestyle_reveler
+					}
+					if = {
+						limit = {
+							any_vassal_or_below = {
+								vassal_stance = courtly
+							}
+						}
+						every_vassal_or_below = {
+							vassal_stance = courtly
+							custom = every_courtly_vassal
+							add_opinion = {
+								modifier = hosted_wedding_opinion
+								target = root
+								opinion = 5
+							}
+						}
+					}
+				}
+				scope:activity = {
+					every_attending_character = {
+						limit = {
+							NOR = {
+								this = scope:host
+								this = scope:spouse_1
+								this = scope:spouse_2
+							}
+							has_trait = lifestyle_reveler
+						}
+						custom = custom.every_activity_guest
+						add_trait_xp = {
+							trait = lifestyle_reveler
+							value = 3
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Bonuses for location
+	if = {
+		limit = {
+			scope:wedding_venue = {
+				OR = {
+					has_building_or_higher = royal_garden_01
+					has_building_or_higher = leisure_palace_01
+					has_building_with_flag = wedding_bonus
+					barony = { is_holy_site_of = scope:host.faith }
+					barony = { is_holy_site_of = scope:spouse_1.faith }
+					barony = { is_holy_site_of = scope:spouse_2.faith }
+					this = scope:host.capital_province
+				}
+			}
+		}
+		scope:activity = {
+			add_activity_log_entry = {
+				key = host_wedding_venue
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+
+				if = {
+					limit = {
+						OR = {
+							scope:wedding_venue = { has_building_or_higher = royal_garden_03 }
+							scope:wedding_venue = { has_building_or_higher = leisure_palace_03 }
+						}
+					}
+					root = {
+						stress_impact = {
+							base = massive_stress_impact_loss
+						}
+						dynasty ?= { add_dynasty_prestige = minor_dynasty_prestige_gain }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							scope:wedding_venue = { has_building_or_higher = royal_garden_02 }
+							scope:wedding_venue = { has_building_or_higher = leisure_palace_02 }
+						}
+					}
+					root = {
+						stress_impact = {
+							base = major_stress_impact_loss
+						}
+						dynasty ?= { add_dynasty_prestige = miniscule_dynasty_prestige_gain }
+					}
+				}
+				else_if = {
+					limit = {
+						OR = {
+							scope:wedding_venue = { has_building_or_higher = royal_garden_01 }
+							scope:wedding_venue = { has_building_or_higher = leisure_palace_01 }
+						}
+					}
+					root = {
+						stress_impact = {
+							base = medium_stress_impact_loss
+						}
+						dynasty ?= { add_dynasty_prestige = 10 }
+					}
+				}
+				if = {
+					limit = {
+						scope:wedding_venue = { has_building_with_flag = wedding_bonus }
+					}
+					root = {
+						stress_impact = {
+							base = medium_stress_impact_loss
+						}
+						dynasty ?= { add_dynasty_prestige = 10 }
+					}
+				}
+				if = {
+					limit = {
+						scope:wedding_venue = {
+							barony = { is_holy_site_of = scope:host.faith }
+						}
+					}
+					root = {
+						add_piety = major_piety_gain
+					}
+				}
+				if = {
+					limit = {
+						scope:wedding_venue = {
+							this = root.capital_province
+						}
+					}
+					# Replace marriage_effect.2001
+					root = {
+						add_gold = minor_gold_value
+					}
+				}
+				if = {
+					limit = {
+						scope:wedding_venue.barony = { is_holy_site_of = scope:spouse_1.faith }
+					}
+					scope:spouse_1 = { add_piety = massive_piety_gain }
+				}
+				if = {
+					limit = {
+						scope:wedding_venue.barony = { is_holy_site_of = scope:spouse_2.faith }
+					}
+					scope:spouse_2 = { add_piety = massive_piety_gain }
+				}
+			}
+		}
+	}
+
+	# If character had the reduce stress intent, give them stress loss
+	root = { disburse_activity_stress_loss = yes }
+	scope:activity = {
+		every_attending_character = {
+			limit = {
+				NOR = {
+					this = scope:host
+					this = scope:spouse_1
+					this = scope:spouse_2
+				}
+			}
+			custom = custom.every_activity_guest
+			disburse_activity_stress_loss = yes
+		}
+	}
+
+	# Accolade glory gain
+	hidden_effect = {
+		accolades_activity_complete_wedding_glory_effect = yes
+	}
+}
+
+disburse_wedding_spouse_activity_rewards = {
+	# for the loc
+	save_scope_as = root_scope
+	if = {
+		limit = {
+			this = scope:spouse_1
+		}
+		scope:spouse_2 = { save_scope_as = other_spouse }
+	}
+	else_if = {
+		limit = {
+			this = scope:spouse_2
+		}
+		scope:spouse_1 = { save_scope_as = other_spouse }
+	}
+
+	scope:activity = {
+		### Rewards based on Options
+		# Entertainment
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_good
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_entertainment_good
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:root_scope = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = 800
+					}
+					else = { add_prestige = 800 }
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_normal
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_entertainment_normal
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = 600
+				}
+				else = { add_prestige = 600 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_bad
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_entertainment_bad
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:root_scope = {
+					if = {
+						limit = { government_has_flag = government_is_stateless }
+						change_influence = 400
+					}
+					else = { add_prestige = 400 }
+				}
+			}
+		}
+
+		# Food
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_good
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_food_good
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:activity = {
+					every_attending_character = {
+						limit = {
+							NOR = {
+								this = scope:root_scope
+								this = scope:host
+								this = scope:other_spouse
+							}
+						}
+						custom = custom.every_activity_guest
+						add_opinion = {
+							target = scope:root_scope
+							modifier = impressed_opinion
+							opinion = 25
+						}
+					}
+				}
+				scope:root_scope = {
+					if = {
+						limit = {
+							has_trait = lifestyle_reveler
+						}
+						add_trait_xp = {
+							trait = lifestyle_reveler
+							value = 15
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_normal
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_food_normal
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:activity = {
+					every_attending_character = {
+						limit = {
+							NOR = {
+								this = scope:root_scope
+								this = scope:host
+								this = scope:other_spouse
+							}
+						}
+						custom = custom.every_activity_guest
+						add_opinion = {
+							target = scope:root_scope
+							modifier = impressed_opinion
+							opinion = 15
+						}
+					}
+				}
+				scope:root_scope = {
+					if = {
+						limit = {
+							has_trait = lifestyle_reveler
+						}
+						add_trait_xp = {
+							trait = lifestyle_reveler
+							value = 7
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_bad
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_food_bad
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:activity = {
+					every_attending_character = {
+						limit = {
+							NOR = {
+								this = scope:root_scope
+								this = scope:host
+								this = scope:other_spouse
+							}
+						}
+						custom = custom.every_activity_guest
+						add_opinion = {
+							target = scope:root_scope
+							modifier = impressed_opinion
+							opinion = 5
+						}
+					}
+				}
+				scope:root_scope = {
+					if = {
+						limit = {
+							has_trait = lifestyle_reveler
+						}
+						add_trait_xp = {
+							trait = lifestyle_reveler
+							value = 3
+						}
+					}
+				}
+			}
+		}
+
+		# Decoration
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_good
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_decoration_good
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:root_scope = {
+					add_character_modifier = {
+						modifier = gwedding_magnificent_wedding_modifier
+						years = 20
+					}
+					dynasty ?= {
+						add_dynasty_prestige = medium_dynasty_prestige_gain
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_normal
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_decoration_normal
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:root_scope = {
+					add_character_modifier = {
+						modifier = gwedding_grandiose_wedding_modifier
+						years = 20
+					}
+					dynasty ?= {
+						add_dynasty_prestige = minor_dynasty_prestige_gain
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_bad
+				}
+			}
+			add_activity_log_entry = {
+				key = spouse_wedding_decoration_bad
+				tags = { completed }
+				score = 100
+				# this line below adds the entry to the Effects section of the conclusion UI
+				show_in_conclusion = yes
+				character = scope:root_scope
+				target = scope:other_spouse
+
+				scope:root_scope = {
+					add_character_modifier = {
+						modifier = gwedding_grand_wedding_modifier
+						years = 20
+					}
+					dynasty ?= {
+						add_dynasty_prestige = miniscule_dynasty_prestige_gain
+					}
+				}
+			}
+		}
+	}
+
+	# If character had the reduce stress intent, give them stress loss
+	disburse_activity_stress_loss = yes
+
+	# LEGITIMACY GAIN FOR GRAND ACTIVITY PARTICIPATION - WEDDING
+	grand_activity_participation_legitimacy_effect = yes
+}
+
+tooltip_disburse_wedding_host_activity_rewards = {
+	scope:activity = {
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_good
+				}
+			}
+			root = {
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = 1200
+				}
+				else = { add_prestige = 1200 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_normal
+				}
+			}
+			root = {
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = 800
+				}
+				else = { add_prestige = 800 }
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_bad
+				}
+			}
+			root = {
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = 400
+				}
+				else = { add_prestige = 400 }
+			}
+		}
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_good
+				}
+			}
+			every_attending_character = {
+				limit = { this != root }
+				custom = custom.every_activity_guest
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 30
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_normal
+				}
+			}
+			every_attending_character = {
+				limit = { this != root }
+				custom = custom.every_activity_guest
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_bad
+				}
+			}
+			every_attending_character = {
+				limit = { this != root }
+				custom = custom.every_activity_guest
+				add_opinion = {
+					target = root
+					modifier = impressed_opinion
+					opinion = 5
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_good
+				}
+			}
+			root = {
+				add_character_modifier = {
+					modifier = gwedding_magnificent_host_modifier
+					years = 20
+				}
+				if = {
+					limit = {
+						any_vassal_or_below = {
+							vassal_stance = courtly
+						}
+					}
+					every_vassal_or_below = {
+						vassal_stance = courtly
+						custom = every_courtly_vassal
+						add_opinion = {
+							modifier = hosted_wedding_opinion
+							target = root
+							opinion = 30
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_normal
+				}
+			}
+			root = {
+				add_character_modifier = {
+					modifier = gwedding_gracious_host_modifier
+					years = 20
+				}
+				if = {
+					limit = {
+						any_vassal_or_below = {
+							vassal_stance = courtly
+						}
+					}
+					every_vassal_or_below = {
+						vassal_stance = courtly
+						custom = every_courtly_vassal
+						add_opinion = {
+							modifier = hosted_wedding_opinion
+							target = root
+							opinion = 20
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_bad
+				}
+			}
+			root = {
+				if = {
+					limit = {
+						has_trait = lifestyle_reveler
+					}
+					add_trait_xp = {
+						trait = lifestyle_reveler
+						value = 10
+					}
+				}
+				else = {
+					add_trait = lifestyle_reveler
+				}
+				if = {
+					limit = {
+						any_vassal_or_below = {
+							vassal_stance = courtly
+						}
+					}
+					every_vassal_or_below = {
+						vassal_stance = courtly
+						custom = every_courtly_vassal
+						add_opinion = {
+							modifier = hosted_wedding_opinion
+							target = root
+							opinion = 5
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:wedding_venue = { has_building_or_higher = royal_garden_03 }
+					scope:wedding_venue = { has_building_or_higher = leisure_palace_03 }
+				}
+			}
+			root = {
+				stress_impact = {
+					base = massive_stress_impact_loss
+				}
+				dynasty ?= { add_dynasty_prestige = minor_dynasty_prestige_gain }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:wedding_venue = { has_building_or_higher = royal_garden_02 }
+					scope:wedding_venue = { has_building_or_higher = leisure_palace_02 }
+				}
+			}
+			root = {
+				stress_impact = {
+					base = major_stress_impact_loss
+				}
+				dynasty ?= { add_dynasty_prestige = miniscule_dynasty_prestige_gain }
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:wedding_venue = { has_building_or_higher = royal_garden_01 }
+					scope:wedding_venue = { has_building_or_higher = leisure_palace_01 }
+				}
+			}
+			root = {
+				stress_impact = {
+					base = medium_stress_impact_loss
+				}
+				dynasty ?= { add_dynasty_prestige = 10 }
+			}
+		}
+		if = {
+			limit = {
+				scope:wedding_venue = {
+					barony = { is_holy_site_of = scope:host.faith }
+				}
+			}
+			root = {
+				add_piety = major_piety_gain
+			}
+		}
+		if = {
+			limit = {
+				scope:wedding_venue = {
+					this = root.capital_province
+				}
+			}
+			# Replace marriage_effect.2001
+			root = {
+				add_gold = minor_gold_value
+			}
+		}
+	}
+	# If character had the reduce stress intent, give them stress loss
+	root = { disburse_activity_stress_loss = yes }
+
+	# Accolade glory gain
+	hidden_effect = {
+		accolades_activity_complete_wedding_glory_effect = yes
+	}
+	# LEGITIMACY GAIN FOR GRAND ACTIVITY PARTICIPATION - WEDDING
+	grand_activity_participation_legitimacy_effect = yes
+}
+
+tooltip_disburse_wedding_guest_activity_rewards = {
+	scope:activity = {
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_good
+				}
+			}
+			root = {
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = major_influence_gain
+				}
+				else = { add_prestige = major_prestige_gain }
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_normal
+				}
+			}
+			root = {
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = medium_influence_gain
+				}
+				else = { add_prestige = medium_prestige_gain }
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_entertainment
+					option = wedding_entertainment_bad
+				}
+			}
+			root = {
+				if = {
+					limit = { government_has_flag = government_is_stateless }
+					change_influence = minor_influence_gain
+				}
+				else = { add_prestige = minor_prestige_gain }
+			}
+		}
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_good
+				}
+			}
+			if = {
+				limit = {
+					scope:host = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_host_high
+			}
+			if = {
+				limit = {
+					scope:spouse_1 = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_spouse_1_high
+			}
+			if = {
+				limit = {
+					scope:spouse_2 = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_spouse_2_high
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_normal
+				}
+			}
+			if = {
+				limit = {
+					scope:host = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_host_medium
+			}
+			if = {
+				limit = {
+					scope:spouse_1 = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_spouse_1_medium
+			}
+			if = {
+				limit = {
+					scope:spouse_2 = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_spouse_2_medium
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_food
+					option = wedding_food_bad
+				}
+			}
+			if = {
+				limit = {
+					scope:host = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_host_low
+			}
+			if = {
+				limit = {
+					scope:spouse_1 = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_spouse_1_low
+			}
+			if = {
+				limit = {
+					scope:spouse_2 = { is_ai = yes }
+				}
+				custom_tooltip = came_to_my_wedding_opinion_spouse_2_low
+			}
+		}
+		if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_good
+				}
+			}
+			root = {
+				add_character_modifier = {
+					modifier = wedding_of_the_century_modifier
+					years = 20
+				}
+				if = {
+					limit = {
+						has_trait = lifestyle_reveler
+					}
+					add_trait_xp = {
+						trait = lifestyle_reveler
+						value = 10
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_normal
+				}
+			}
+			root = {
+				if = {
+					limit = {
+						has_trait = lifestyle_reveler
+					}
+					add_trait_xp = {
+						trait = lifestyle_reveler
+						value = 5
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_activity_option = {
+					category = wedding_option_decoration
+					option = wedding_decoration_bad
+				}
+			}
+			root = {
+				if = {
+					limit = {
+						has_trait = lifestyle_reveler
+					}
+					add_trait_xp = {
+						trait = lifestyle_reveler
+						value = 3
+					}
+				}
+			}
+		}
+	}
+	disburse_activity_stress_loss = yes
+
+	# Accolade glory gain
+	hidden_effect = {
+		accolades_activity_complete_wedding_glory_effect = yes
+	}
+	# LEGITIMACY GAIN FOR GRAND ACTIVITY PARTICIPATION - WEDDING
+	grand_activity_participation_legitimacy_effect = yes
+}

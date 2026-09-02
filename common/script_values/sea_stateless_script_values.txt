@@ -1,0 +1,415 @@
+stateless_cohesion_monthly_change = {
+	value = 0
+	# Bigger Confederations take longer to gain cohesion
+	add = {
+		value = {
+			every_confederation_member = { add = -0.05 }
+			max = 0
+			desc = "STATELESS_CONFEDERATION_COHESION_FROM_SIZE"
+		}
+	}
+	# Also Stateless Confederations don't like multi-county realms
+	add = {
+		every_confederation_member = {
+			add = {
+				value = realm_size
+				subtract = 1
+				multiply = -0.1
+			}
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_REALM_SIZES"
+	}
+	# Confederations where the representatives build up a lot of influence are more cohesive
+	add = {
+		every_confederation_member = {
+			add = {
+				value = influence_level
+				multiply = 0.25
+			}
+		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				add = 1
+			}
+		}
+		# min = 0
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_AVERAGE_INFLUENCE_LEVEL"
+	}
+	# And the Popular Opinion in each representative's county also affects cohesion
+	add = {
+		every_confederation_member = {
+			every_realm_county = {
+				add = {
+					value = county_opinion
+					if = {
+						limit = {
+							county_opinion < 0
+							holder = { has_perk = toe_the_line_perk }
+						}
+						multiply = 0.5
+					}
+				}
+			}
+		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				every_realm_county = { add = 1 }
+			}
+		}
+		multiply = 0.005
+		max = 1
+		min = -1
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COUNTY_OPINION"
+	}
+	# and owing favors within the confederation also improves cohesion
+	add = {
+		every_confederation_member = {
+			every_hooked_character = {
+				limit = { is_member_of_confederation = ROOT }
+				add = 0.1
+			}
+			if = {
+				limit = { has_perk = honored_to_serve_perk }
+				multiply = 0.5
+			}
+		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				add = 1
+			}
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_HOOKS"
+	}
+	# as does actively working to improve cohesion
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = { has_variable = fostering_cohesion }
+			add = this.stateless_cohesion_court_position_task_effect
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_FROM_COURT_TASK"
+	}
+	# Finally a small bonus of Xabze and Adat
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				culture = {
+					OR = {
+						has_cultural_tradition = tradition_xabze
+						has_cultural_tradition = tradition_adat
+					}
+				}
+			}
+			add = 1
+		}
+		divide = {
+			value = 0
+			every_confederation_member = {
+				add = 1
+			}
+		}
+		multiply = {
+			value = 0.5
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_XABZE_ADAT"
+	}
+	# Also Lifestyle Perks
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				has_perk = ducal_conquest_perk
+			}
+			add = 0.05
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_HARMONIOUS_LIVING"
+	}
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				has_perk = absolute_control_perk
+			}
+			add = 0.05
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_ABSOLUTE_CONTROL"
+	}
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				has_perk = peacemaker_perk
+			}
+			add = 0.05
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_PEACEMAKER"
+	}
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				has_perk = centralization_perk
+			}
+			add = 0.05
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_CENTRALIZATION"
+	}
+	add = {
+		value = 0
+		every_confederation_member = {
+			limit = {
+				has_perk = learn_on_the_job_perk
+			}
+			add = 0.05
+		}
+		desc = "STATELESS_CONFEDERATION_COHESION_HISTORIAN"
+	}
+}
+
+stateless_cohesion_court_position_task_effect = {
+	value = court_position:stateless_diplomacy_court_position.aptitude:stateless_diplomacy_court_position
+	multiply = 0.05
+}
+
+sent_goods_opinion_value = {
+	value = 5
+	add = {
+		if = {
+			limit = {
+				scope:actor.diplomacy > 0
+			}
+			add = {
+				value = scope:actor.diplomacy
+				multiply = 3
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient.ai_greed > 0
+			}
+			add = {
+				value = scope:recipient.ai_greed
+				divide = 3
+			}
+		}
+		if = {
+			limit = {
+				scope:recipient.liege = scope:actor
+			}
+			divide = 1.5
+		}
+		if = {
+			limit = {
+				scope:recipient = scope:actor.faith.religious_head
+			}
+			divide = 3
+		}
+		if = {
+			limit = {
+				scope:actor.culture ?= {
+					has_innovation = fp3_innovation_fritware
+				}
+			}
+			multiply = 1.2
+		}
+		max = 100
+	}
+	if = {
+		limit = {
+			scope:actor.culture = { has_cultural_parameter = more_gift_opinion }
+		}
+		multiply = 1.2
+	}
+	if = {
+		limit = {
+			scope:actor = { has_perk = thoughtful_perk }
+		}
+		multiply = 2
+	}
+	if = {
+		limit = { scope:recipient = { NOT = { government_allows = barter } } }
+	}
+}
+
+favor_influence_value = {
+	value = major_influence_value
+	if = {
+		# cheaper if you're already close to them
+		limit = {
+			scope:actor = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_soulmate = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+		multiply = 0.75
+	}
+}
+
+replenishable_troops_with_barter_goods_value = {
+	value = replenishable_troops_value
+	max = {
+		add = scope:current_barter_goods_max_value_scope
+		multiply = gold_refill_value
+	}
+}
+
+
+stateless_martial_court_position_salary = {
+	value = minor_court_position_influence_salary
+	# Set to 0 with Dynasty Perk Inner Circle
+	if = {
+		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_martial } }
+		multiply = {
+			value = 0
+			desc = inner_circle_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	if = {
+		limit = {
+			court_position_obligation_hook_salary_trigger = {
+				POS = stateless_martial
+				LIEGE = scope:liege
+			}
+		}
+		multiply = {
+			value = 0.5
+			desc = obligation_hook_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Halved salary
+	if = {
+		limit = {
+			court_position_halved_salary_trigger = { POS = stateless_martial }
+		}
+		multiply = {
+			value = 0.5
+			desc = court_position_halved_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Inspiring Rule Perk
+	if = {
+		limit = {
+			scope:liege = { has_perk = inspiring_rule_perk }
+		}
+		multiply = 0.5
+	}
+	# influence cost break
+	divide = {
+		value = scope:liege.influence_level
+		add = 1
+		min = 1
+	}
+}
+
+
+stateless_diplomacy_court_position_salary = {
+	value = minor_court_position_influence_salary
+	# Set to 0 with Dynasty Perk Inner Circle
+	if = {
+		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_diplomacy } }
+		multiply = {
+			value = 0
+			desc = inner_circle_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	if = {
+		limit = {
+			court_position_obligation_hook_salary_trigger = {
+				POS = stateless_diplomacy
+				LIEGE = scope:liege
+			}
+		}
+		multiply = {
+			value = 0.5
+			desc = obligation_hook_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Halved salary
+	if = {
+		limit = {
+			court_position_halved_salary_trigger = { POS = stateless_diplomacy }
+		}
+		multiply = {
+			value = 0.5
+			desc = court_position_halved_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Inspiring Rule Perk
+	if = {
+		limit = {
+			scope:liege = { has_perk = inspiring_rule_perk }
+		}
+		multiply = 0.5
+	}
+	# influence cost break
+	divide = {
+		value = scope:liege.influence_level
+		add = 1
+		min = 1
+	}
+}
+
+
+stateless_learning_court_position_salary = {
+	value = minor_court_position_influence_salary
+	# Set to 0 with Dynasty Perk Inner Circle
+	if = {
+		limit = { court_position_inner_circle_salary_trigger = { POS = stateless_learning } }
+		multiply = {
+			value = 0
+			desc = inner_circle_salary_mod
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	if = {
+		limit = {
+			court_position_obligation_hook_salary_trigger = {
+				POS = stateless_learning
+				LIEGE = scope:liege
+			}
+		}
+		multiply = {
+			value = 0.5
+			desc = obligation_hook_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Halved salary
+	if = {
+		limit = {
+			court_position_halved_salary_trigger = { POS = stateless_learning }
+		}
+		multiply = {
+			value = 0.5
+			desc = court_position_halved_salary
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	# Inspiring Rule Perk
+	if = {
+		limit = {
+			scope:liege = { has_perk = inspiring_rule_perk }
+		}
+		multiply = 0.5
+	}
+	# influence cost break
+	divide = {
+		value = scope:liege.influence_level
+		add = 1
+		min = 1
+	}
+}

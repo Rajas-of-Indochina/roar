@@ -7,7 +7,36 @@
 			highest_held_title_tier = tier_hegemony
 		}
 		government_has_flag = government_is_mandala
-		government_has_flag = government_is_tribal
-		government_has_flag = government_is_mandala
-	}	
+		government_has_flag = sea_mandala_government
+		government_has_flag = tribal_government
+		#government_has_flag = administrative_government
+	}
+}
+
+can_use_befriend_scheme_trigger = {
+	OR = {
+		AND = {
+			house ?= { has_house_head_parameter = unlock_befriend_scheme }
+			is_house_head = yes
+		}
+		has_perk = befriend_perk
+		AND = {
+			dynasty ?= {
+				has_dynasty_perk = fp1_adventure_legacy_5
+			}
+			target_is_vassal_or_below = $TARGET$
+		}
+		culture = { has_cultural_parameter = automatic_befriend_access }
+		any_character_struggle = {
+			involvement = involved
+			has_struggle_phase_parameter = struggle_unlocks_befriend_schemes_for_everyone
+		}
+		AND = {
+			government_has_flag = government_is_clan
+			is_in_same_clan_as_trigger = { CHARACTER = $TARGET$ }
+			house = { has_house_unity_stage = harmonious }	
+		}
+		government_has_flag = government_is_nomadic	
+		government_has_flag = government_is_stateless
+	}
 }

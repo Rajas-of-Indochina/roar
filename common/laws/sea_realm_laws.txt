@@ -1,59 +1,13 @@
-﻿stateless_authority = {
-	default = stateless_authority_1
+stateless_authority = {
+	default = stateless_authority_0
 	cumulative = yes
 	flag = realm_law
 
 	stateless_authority_0 = {
+		flag = diarchs_want_to_subsidise_without_this_flag
+		flag = can_designate_heirs
 		modifier = {
 			direct_vassal_opinion = 10
-		}
-
-		can_have = { realm_law_use_stateless_authority = yes }
-		can_keep = { realm_law_use_stateless_authority = yes }
-
-		can_pass = {
-			custom_tooltip = {
-				text = stateless_law_tt
-				always = no
-			}
-		}
-	}
-
-	stateless_authority_1 = {
-		modifier = {
-			direct_vassal_opinion = -10
-		}
-
-		can_have = { realm_law_use_stateless_authority = yes }
-		can_keep = { realm_law_use_stateless_authority = yes }
-
-		can_pass = {
-			custom_tooltip = {
-				text = stateless_law_tt
-				always = no
-			}
-		}
-	}
-
-	stateless_authority_2 = {
-		modifier = {
-			direct_vassal_opinion = -10
-		}
-
-		can_have = { realm_law_use_stateless_authority = yes }
-		can_keep = { realm_law_use_stateless_authority = yes }
-
-		can_pass = {
-			custom_tooltip = {
-				text = stateless_law_tt
-				always = no
-			}
-		}
-	}
-
-	stateless_authority_3 = {
-		modifier = {
-			direct_vassal_opinion = -10
 		}
 
 		can_have = { realm_law_use_stateless_authority = yes }

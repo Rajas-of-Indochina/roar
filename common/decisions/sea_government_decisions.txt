@@ -1,101 +1,110 @@
-﻿reform_anarchy_to_tribalism_decision = {
+# reform_anarchy_to_tribalism_decision = {
+# 	picture = {
+# 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+# 	}
+# 	decision_group_type = major
+# 	desc = reform_anarchy_to_tribalism_decision_desc
+# 	ai_check_interval = 36
+
+# 	is_shown = {
+# 		is_independent_ruler = yes
+# 		has_government = anarchist_government
+# 	}
+
+# 	is_valid = {
+# 		is_adult = yes
+# 		has_realm_law = stateless_authority_3
+# 		prestige_level >= 2
+# 		custom_description = {
+# 			text = "no_powerful_vassal_with_negative_opinion"
+# 			NOT = {
+# 				any_vassal = {
+# 					is_powerful_vassal = yes
+# 					opposes_succession_law_change_trigger = yes
+# 				}
+# 			}
+# 		}
+# 		custom_description = {
+# 			text = "no_active_factions"
+# 			NOT = {
+# 				any_targeting_faction = {
+# 					exists = yes
+# 					OR = {
+# 						faction_is_type = populist_faction
+# 						faction_is_type = independence_faction
+# 					}
+# 				}
+# 			}
+# 		}
+
+# 		# Alternate decision if you are a vassal
+# 	}
+
+# 	effect = {
+# 		# Trigger a populist faction war
+# 		# May choose to back down or fight
+
+# 		trigger_event = sea_gov_event.1000
+# 		show_as_tooltip = {
+# 			change_government = tribal_government
+# 			add_prestige = major_prestige_value
+# 		}
+# 	}
+
+# 	ai_potential = {
+# 		always = no
+# 	}
+# }
+
+centralize_stateless_confederation_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	}
 	decision_group_type = major
-	desc = reform_anarchy_to_tribalism_decision_desc
-	ai_check_interval = 36
+	ai_check_interval = 60
 
 	is_shown = {
 		is_independent_ruler = yes
-		has_government = anarchist_government
+		government_has_flag = government_is_stateless
+		is_confederation_member = yes
+		confederation ?= { confederation_type = confederation_type:stateless_confederation }
 	}
 
 	is_valid = {
-		is_adult = yes
-		has_realm_law = stateless_authority_3
-		prestige_level >= 2
-		custom_description = {
-			text = "no_powerful_vassal_with_negative_opinion"
-			NOT = {
-				any_vassal = {
-					is_powerful_vassal = yes
-					opposes_succession_law_change_trigger = yes
-				}
-			}
-		}
-		custom_description = {
-			text = "no_active_factions"
-			NOT = {
-				any_targeting_faction = {
-					exists = yes
-					OR = {
-						faction_is_type = populist_faction
-						faction_is_type = independence_faction
+		influence_level >= 4
+		confederation ?= {
+			has_cohesion_level_parameter = confederation_can_tribalize
+			any_confederation_member = {
+				count = all
+				OR = {
+					custom_description = {
+						text = "You have an available [strong_hook|E]"
+						ROOT = { has_strong_usable_hook = PREV }
+					}
+					opinion = {
+						target = ROOT
+						value >= very_high_positive_opinion
+					}
+					NOT = { capital_county.duchy = ROOT.capital_county.duchy }
+					hidden_trigger = {
+						THIS = ROOT
 					}
 				}
 			}
 		}
+		NOT = { is_title_created = capital_county.duchy }
+	}
 
-		# Alternate decision if you are a vassal
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		is_at_war = no
 	}
 
 	effect = {
-		# Trigger a populist faction war
-		# May choose to back down or fight
-
-		trigger_event = sea_gov_event.1000
-		show_as_tooltip = {
-			change_government = tribal_government
-			add_prestige = major_prestige_value
-		}
+		centralize_stateless_confederation_effect = yes
 	}
 
 	ai_potential = {
 		always = no
-	}
-}
-
-stateless_confederation_decision = {
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	}
-	decision_group_type = major
-	desc = stateless_confederation_decision_desc
-	ai_check_interval = 36
-
-	is_shown = {
-		has_government = anarchist_government
-		highest_held_title_tier < tier_duchy
-	}
-
-	is_valid = {
-		is_at_war = no
-		prestige_level >= 2
-		# OR = {
-		# 	realm_size >= 5
-		# 	custom_tooltip = {
-		# 		text = controls_capital_duchy_tt
-		# 		completely_controls = capital_county.duchy
-		# 	}
-		# }
-	}
-
-	is_valid_showing_failures_only = {
-		is_capable_adult = yes
-	}
-
-	effect = {
-		show_as_tooltip = {
-			form_stateless_confederation_duchy_effect = yes
-		}
-		hidden_effect = {
-			trigger_event = sea_gov_event.1001
-		}
-	}
-
-	cost = {
-		prestige = major_prestige_value
-		gold = major_gold_value
 	}
 }

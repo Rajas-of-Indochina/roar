@@ -1,0 +1,123 @@
+stateless_confederation = {
+
+	house_based_confederation = yes
+
+	## The base monthly change for the cohesion value
+	# Scope:
+	#  root - The confederation
+	#  bloc - The bloc being evaluated
+	cohesion_base_change_monthly = stateless_cohesion_monthly_change
+
+	## At what point do cohesion growth start slowing down?
+	#
+	# Soft limit for bloc cohesion which, once gone over, will reduce gained additional monthly cohesion
+	# causing diminishing returns.
+	#
+	# Every time coheion is gained a fraction of the whatever is above soft cap is deducted from the total cohesion.
+	# The fraction of reduction is  a number between 0 and 0 defined by `COHESION_SOFT_CAP_TAX`.
+	#
+	# Scope:
+	#  root - The confederation
+	#
+	# Example:
+	# Given current cohesion is 40,  soft cap is 50, and fraction is 25%.
+	# When bloc gains 20 it will would 50 over by 10 if unhindered.
+	# Then the actual all gain becomes only 17.5, and cohesion stops 57.5.
+	# This is because 2.5 (=10 o.25) of the 10 gained that went over soft cap are not aded to cohesion.
+	#
+	# Think of it like a rubber band. While still loose it applies no force, but once it starts to stretch
+	# it will apply force in the opposite direction relative to how long it has been stretched.
+	# A high tax (close to 1) gives a sharp slope of d returns, while a low value gives a slow turn down.
+	# None of them will however make the value go back under the soft cap (except for values >1.0).
+	#
+	cohesion_soft_cap = 75
+
+	cohesion_level = {
+		cohesion_threshold = 90
+		parameters = {
+			confederation_can_tribalize = yes
+		}
+
+		any_member_house_member = {
+			monthly_influence = 1.0
+		}
+	}
+
+	cohesion_level = {
+		cohesion_threshold = 60
+		parameters = {
+			confederates_can_hold_multiple_counties = yes
+		}
+
+		any_member_house_member = {
+			monthly_influence = 0.8
+		}
+	}
+
+	cohesion_level = {
+		cohesion_threshold = 30
+		parameters = {
+			confederates_can_barter_favors = yes
+		}
+
+		any_member_house_member = {
+			monthly_influence = 0.5
+		}
+	}
+
+	## Is this confederation still valid, or should it dissolve?
+	#
+	# When a confederation fails the following check - we destroy the Confederation.
+	# There is also an effect when this is being done
+	#
+	# Scope:
+	#  root - The confederation
+	
+	is_valid_confederation = {
+		cohesion > 0
+	}
+	# on_confederation_destroyed = { on_stateless_confederation_destroyed = yes }
+
+	## Member character
+	#
+	# Determine if a character is a valid member.
+	# Fire effects when they when they join or leave the confederation.
+	#
+	# Characters can either be individually added to the confederation or be added indirectly by being a member of a house.
+	# these triggers and scripts manage both cases.
+	#
+	# Scope:
+	#  root - The confederation
+	#  character - The character who can be expected to be a living ruler
+	#  house (conditional) - The house that the character belongs to which causes the character to be indirectly added.
+	is_valid_member_character = {
+		scope:character = { government_has_flag = government_is_stateless }
+	}
+	on_member_character_joined = {
+		# Notify all other members about them joining.
+		every_player = {
+			limit = { confederation = scope:confederation }
+			send_interface_message = {
+				type = msg_joined_confederation
+				title = msg_joined_confederation
+				desc = msg_joined_confederation_desc
+				left_icon = scope:character
+			}
+		}
+	}
+	on_member_character_left = {
+		# Notify all members about them leaving.
+		every_player = {
+			limit = {
+				confederation = scope:confederation
+				this != scope:left_confederation
+			}
+			send_interface_message = {
+				type = msg_joined_confederation
+				title = msg_joined_confederation
+				desc = msg_joined_confederation_desc
+				left_icon = scope:left_confederation
+			}
+		}
+	}
+}

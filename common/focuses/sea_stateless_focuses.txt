@@ -1,0 +1,161 @@
+diplomacy_stateless_focus = {
+	lifestyle = diplomacy_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+	}
+	is_valid = {
+		government_has_flag = government_is_stateless
+	}
+
+	modifier = {
+		general_opinion = 10
+		diplomacy = 3
+		monthly_influence = 0.5
+	}
+
+	desc = {
+		desc = diplomacy_stateless_focus_desc
+		desc = line_break
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_diplomacy_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
+
+martial_stateless_focus = {
+	lifestyle = martial_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+	}
+	is_valid = {
+		government_has_flag = government_is_stateless
+	}
+
+	modifier = {
+		advantage = 5
+		maa_toughness_mult = 0.15
+		martial = 3
+	}
+
+	desc = {
+		desc = martial_stateless_focus_desc
+		desc = line_break
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_martial_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
+
+intrigue_stateless_focus = {
+	lifestyle = intrigue_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+	}
+
+	is_valid = {
+		government_has_flag = government_is_stateless
+	}
+
+	modifier = {
+		intrigue = 3
+		owned_scheme_secrecy_add = 20
+		hostile_scheme_phase_duration_add = -15
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_intrigue_trigger = yes
+			}
+			add = 50000
+		}
+	}
+
+	desc = {
+		desc = intrigue_stateless_focus_desc
+		desc = line_break
+	}
+}
+
+stewardship_stateless_focus = {
+	lifestyle = stewardship_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+	}
+	is_valid = {
+		government_has_flag = government_is_stateless
+	}
+
+	modifier = {
+		stewardship = 3
+		monthly_barter_goods_mult = 0.1
+		holding_build_barter_goods_cost = -0.05
+	}
+
+	desc = {
+		desc = stewardship_stateless_focus_desc
+		desc = line_break
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_stewardship_trigger = yes
+			}
+			add = 50000
+		}
+	}
+}
+
+learning_stateless_focus = {
+	lifestyle = learning_lifestyle
+
+	is_shown = {
+		government_has_flag = government_is_stateless
+	}
+	is_valid = {
+		government_has_flag = government_is_stateless
+	}
+
+	modifier = {
+		learning = 3
+		monthly_piety = 0.5
+		health = 0.25
+	}
+
+	auto_selection_weight = {
+		value = 5000
+		if = {
+			limit = {
+				has_education_learning_trigger = yes
+			}
+			add = 50000
+		}
+	}
+
+	desc = {
+		desc = learning_stateless_focus_desc
+		desc = line_break
+	}
+
+}
