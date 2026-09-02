@@ -1,0 +1,428 @@
+﻿##d_yongxing ###################################
+	###c_jingzhao # JINGZHAO
+		10430 = {	# b_changan
+			culture = han
+			religion = jingxue
+			holding = castle_holding
+			special_building_slot = giant_wild_goose_pagoda_01
+			
+			# History
+			652.1.1 = {
+				special_building = giant_wild_goose_pagoda_01
+			}
+			1000.1.1 = {
+				religion = daoxue
+			}
+		}
+		10150 = {	# b_jingyang
+			holding = city_holding
+		}
+		10149 = {	# b_lantian
+			holding = church_holding
+			special_building_slot = lantian_mines_01
+			
+			# History
+			867.1.1 = {
+				special_building = lantian_mines_01
+			}
+		}
+		10148 = {	# b_zhouzhi
+			holding = castle_holding
+			
+			effect = {
+				if = {
+					limit = {
+						has_tgp_dlc_trigger = yes
+					}
+					add_special_building_slot = changan_market_01
+					add_special_building = changan_market_01
+				}
+			}
+		}
+		10151 = {	# b_liquan
+			holding = castle_holding
+			special_building_slot = qianling_mausoleum_01
+			
+			# History
+			684.1.1 = { # When emperor Gaozong's tomb was completed
+				special_building = qianling_mausoleum_01
+			}
+		}
+	###c_huayin # HUAZHOU 1
+		13038 = {	# b_zheng
+			culture = han
+			religion = jingxue
+			holding = castle_holding
+		}
+		10418 = {	# b_huayin
+			holding = city_holding
+		}
+		10419 = {	# b_xiagui
+			holding = castle_holding
+		}	
+	###c_tongzhou # TONGZHOU
+		10153 = {	# b_pingyi
+			culture = han
+			religion = jingxue
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = daoxue
+			}
+		}
+		13039 = {	# b_heyang_1
+			culture = han
+			religion = jingxue
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = daoxue
+			}
+		}
+		10139 = {	# b_fucheng
+			holding = church_holding
+		}
+	###c_yaozhou # YAOZHOU
+		10146 = {	# b_huayuan
+			culture = han
+			religion = jingxue
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = daoxue
+			}
+		}
+		10145 = {	# b_fuping
+			holding = city_holding
+		}
+		10147 = {	# b_yunyang
+			holding = church_holding
+		}
+
+##d_fengxiang ###################################
+	###c_fengxiang # FENGXIANG
+		10132 = {	# b_tianxing
+			culture = han
+			religion = yogacara
+			holding = castle_holding
+		}
+		10133 = {	# PURb_purunUN
+			holding = city_holding
+		}
+		10134 = {	# b_mei
+			holding = church_holding
+		}
+	###c_longzhou_2 # LONGZHOU 2
+		10129 = {	# b_qianyuan
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			special_building = kaibao_mines_01
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
+		}
+		10130 = {	# b_qianyang
+			holding = city_holding
+		}
+		10131 = {	# b_wushan
+			holding = church_holding
+		}
+
+##d_jinshang ###################################
+	###c_jinzhou_1 # JINZHOU 1
+		13065 = {	# b_xicheng
+			culture = han
+			religion = zhengyi
+			holding = castle_holding
+
+			# History
+			1150.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10049 = {	# b_ankang
+			holding = city_holding
+		}
+		10050 = {	# b_shiquan
+			holding = church_holding
+		}
+		13063 = {	# b_xunyang_2
+			holding = none
+		}
+	###c_shangzhou # SHANGZHOU
+		10051 = {	# b_shangluo
+			culture = han
+			religion = zhengyi
+			holding = castle_holding
+			# History
+			1150.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10054 = {	# b_shangjin
+			holding = city_holding
+		}
+		10052 = {	# b_shanglo
+			holding = church_holding
+		}
+		10053 = {	# b_anye
+			holding = none
+		}
+
+##d_binning ###################################
+	###c_binzhou # BINZHOU
+		10124 = {	# b_xinping
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}	
+		}
+		10125 = {	# b_sanshui
+			holding = city_holding
+		}
+		13084 = {	# b_yilu
+			holding = church_holding
+		}
+	###c_jinzhou # JINZHOU
+		13085 = {	# b_dingan
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
+		}
+		13085 = {	# b_pengyuan
+			holding = castle_holding
+			# History
+		}
+		10122 = {	# b_xiangle
+			holding = church_holding
+		}
+	###c_qingyang # QINGZHOU 1
+		10119 = {	# b_anhua
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10120 = {	# b_tongchuan
+			holding = city_holding
+		}
+		10121 = {	# b_huachi
+			holding = church_holding
+		}
+	###c_huanzhou # HUANZHOU
+		10116 = {	# b_fangqu
+			culture = tangut
+			religion = melieism
+			holding = castle_holding
+		}
+		10118 = {	# b_luoyuan
+			holding = city_holding
+		}
+		10117 = {	# b_huaian_2
+			holding = church_holding
+		}		
+
+##d_fufang ###################################
+	###c_fuzhou_5 # FUZHOU 5
+		10135 = {	# b_luojiao
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10136 = {	# b_luochuan
+			holding = city_holding
+		}
+		10137 = {	# b_zhiluo
+			holding = church_holding
+		}
+	###c_yan_an # YANZHOU 1
+		10141 = {	# b_fushi
+			culture = tangut
+			religion = melieism
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				culture = han
+				religion = sukhavati
+			}
+		}
+		10143 = {	# b_fuzheng
+			holding = city_holding
+		}
+		10144 = {	# b_jinming
+			holding = church_holding
+		}
+		10142 = {	# b_yanchuan
+			holding = none
+		}
+		13124 = {	# b_baoan
+			holding = none
+		}	
+	###c_danzhou # DANZHOU
+		10154 = {	# b_yichuan
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10155 = {	# b_yunyan
+			holding = city_holding
+		}
+	###c_fangzhou # FANGZHOU
+		10138 = {	# ZHONGBU
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			960.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10139 = {	# FUCHENG
+			holding = city_holding
+		}
+		10140 = {	# SHENGPING
+			holding = church_holding
+		}
+
+##d_jingyuan ###################################
+	###c_jingzhou # JINGZHOU
+		10126 = {	# b_baoding
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}
+		}
+		10127 = {	# b_linjing
+			holding = city_holding
+		}
+		10128 = {	# b_liangyuan
+			holding = church_holding
+		}
+	###c_yuanzhou_2 # YUANZHOU 2
+		10113 = {	# b_pinggao
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+
+		}
+		10115 = {	# b_baiquan
+			holding = city_holding
+		}
+		10114 = {	# b_pingliang
+			holding = church_holding
+		}	
+	###c_xiaoguan # XIAOGUAN
+		10111 = {	# b_xiaoguan
+			culture = tangut
+			religion = melieism
+			holding = castle_holding
+		}
+		10112 = {	# b_huaide
+			holding = city_holding
+		}
+
+##d_qincheng ###################################
+		###c_qinzhou_1 # QINZHOU 1
+		12357 = {	# b_chengji
+			culture = han
+			religion = yogacara
+			holding = castle_holding
+		}
+		12356 = {	# b_qingshui
+			holding = city_holding
+		}
+		12358 = {	# b_shanggui
+			holding = church_holding
+		}
+		12355 = {	# b_longcheng_2
+			holding = none
+		}
+	###c_weizhou_2 # WEIZHOU 2
+		12359 = {	# b_longxi
+			culture = han
+			religion = mantrayana
+			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
+		}
+		12354 = {	# b_weiyuan_2
+			holding = city_holding
+		}
+	###c_chengzhou # CHENGZHOU
+		10265 = {	# b_tonggu
+			culture = qiang
+			religion = rrmeaism
+			holding = castle_holding
+		}
+		12361 = {	# SHANGLU
+			holding = city_holding
+		}
+		10266 = {	# CHANGDAO
+			holding = church_holding
+		}
+	###c_jiezhou # JIEZHOU
+		10264 = {	# JIANGLI
+			culture = qiang
+			religion = rrmeaism
+			holding = castle_holding
+		}
+		9775 = {	# FUJIN
+			holding = city_holding
+		}
+	###c_minzhou # MINZHOU
+		12362 = {	# HEZHENG
+			culture = qiang
+			religion = rrmeaism
+			holding = castle_holding
+		}
+		12363 = {	# YOUCHUAN
+			holding = city_holding
+		}
+		12364 = {	# HUAIDAO
+			holding = church_holding
+		}
+
+##d_xingfeng ###################################
+	###c_fengzhou # FENGZHOU
+		10267 = {	# b_liangquan
+			culture = han
+			religion = zhengyi
+			holding = castle_holding
+		}
+		10268 = {	# b_hechi
+			holding = city_holding
+		}
+	###c_xingqing # XINGZHOU 2
+		10269 = {	# b_shunzheng
+			culture = han
+			religion = zhengyi
+			holding = castle_holding
+		}
+		12339 = {	# b_changju
+			holding = city_holding
+		}
