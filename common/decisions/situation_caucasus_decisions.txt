@@ -2,9 +2,9 @@
 situation_caucasus_choose_alignment_decision = {
 	ai_check_interval_by_tier = {
 		barony = 0
-		county = 36
-		duchy = 12
-		kingdom = 12
+		county = 120
+		duchy = 36
+		kingdom = 36
 		empire = 12
 		hegemony = 12
 	}
@@ -192,21 +192,42 @@ situation_caucasus_align_culture_decision = {
 				culture = { has_variable = sway_culture_cooldown }
 			}
 		}
-		culture = {
-			culture_head = ROOT
+		custom_tooltip = {
+			text = you_are_the_culture_head
+			culture = {
+				culture_head = ROOT
+			}
 		}
 
 		trigger_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
-			culture = { culture_is_pro_roman_trigger = no }
+			culture = {
+				custom_tooltip = {
+					text = not_culture_is_pro_roman_trigger_tt
+					subject = THIS
+					culture_is_pro_roman_trigger = no
+				}
+			}
 		}
 		trigger_else_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
-			culture = { culture_is_pro_perso_arabic_trigger = no }
+			culture = {
+				custom_tooltip = {
+					text = not_culture_is_pro_perso_arabic_trigger_tt
+					subject = THIS
+					culture_is_pro_perso_arabic_trigger = no
+				}
+			}
 		}
 		trigger_else_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
-			culture = { culture_is_pro_roman_trigger = no }
+			culture = {
+				custom_tooltip = {
+					text = not_culture_is_autonomist_trigger_tt
+					subject = THIS
+					culture_is_autonomist_trigger = no
+				}
+			}
 		}
 	}
 
@@ -215,25 +236,27 @@ situation_caucasus_align_culture_decision = {
 	}
 
 	effect = {
-		if = {
-			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
-			align_culture_culture_effect = {
-				TARGET = ROOT.culture
-				FLAG = pro_roman
+		culture = {
+			if = {
+				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } } }
+				align_culture_effect = {
+					TARGET = THIS
+					FLAG = pro_roman
+				}
 			}
-		}
-		else_if = {
-			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
-			align_culture_culture_effect = {
-				TARGET = ROOT.culture
-				FLAG = pro_perso_arabic
+			else_if = {
+				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } } }
+				align_culture_effect = {
+					TARGET = THIS
+					FLAG = pro_perso_arabic
+				}
 			}
-		}
-		else_if = {
-			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
-			align_culture_culture_effect = {
-				TARGET = ROOT.culture
-				FLAG = autonomist
+			else_if = {
+				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = autonomist } } }
+				align_culture_effect = {
+					TARGET = THIS
+					FLAG = autonomist
+				}
 			}
 		}
 	}
@@ -278,6 +301,13 @@ situation_caucasus_align_faith_decision = {
 			OR = {
 				faith = { religious_head = ROOT }
 				has_strong_usable_hook = faith.religious_head
+				faith.religious_head ?= {
+					NOT = {
+						has_title = title:e_persia
+						has_title = title:e_arabia
+						has_title = title:h_dar_al_islam
+					}
+				}
 			}
 			piety_level >= very_high_piety_level
 		}
@@ -287,15 +317,33 @@ situation_caucasus_align_faith_decision = {
 
 		trigger_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
-			faith = { faith_is_pro_roman_trigger = no }
+			faith = {
+				custom_tooltip = {
+					text = not_faith_is_pro_roman_trigger_tt
+					subject = THIS
+					faith_is_pro_roman_trigger = no
+				}
+			}
 		}
 		trigger_else_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
-			faith = { faith_is_pro_perso_arabic_trigger = no }
+			faith = {
+				custom_tooltip = {
+					text = not_faith_is_pro_perso_arabic_trigger_tt
+					subject = THIS
+					faith_is_pro_perso_arabic_trigger = no
+				}
+			}
 		}
 		trigger_else_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
-			faith = { faith_is_pro_roman_trigger = no }
+			faith = {
+				custom_tooltip = {
+					text = not_faith_is_autonomist_trigger_tt
+					subject = THIS
+					faith_is_pro_roman_trigger = no
+				}
+			}
 		}
 	}
 
@@ -311,25 +359,27 @@ situation_caucasus_align_faith_decision = {
 			}
 			use_hook = faith.religious_head
 		}
-		if = {
-			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
-			align_culture_faith_effect = {
-				TARGET = ROOT.faith
-				FLAG = pro_roman
+		faith = {
+			if = {
+				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } } }
+				align_faith_effect = {
+					TARGET = THIS
+					FLAG = pro_roman
+				}
 			}
-		}
-		else_if = {
-			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
-			align_culture_faith_effect = {
-				TARGET = ROOT.faith
-				FLAG = pro_perso_arabic
+			else_if = {
+				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } } }
+				align_faith_effect = {
+					TARGET = THIS
+					FLAG = pro_perso_arabic
+				}
 			}
-		}
-		else_if = {
-			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
-			align_culture_faith_effect = {
-				TARGET = ROOT.faith
-				FLAG = autonomist
+			else_if = {
+				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = autonomist } } }
+				align_faith_effect = {
+					TARGET = THIS
+					FLAG = autonomist
+				}
 			}
 		}
 	}

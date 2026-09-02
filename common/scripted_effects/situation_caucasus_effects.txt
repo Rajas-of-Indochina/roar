@@ -76,7 +76,7 @@ set_caucasus_alignment = {
 }
 
 # since assigning a forced alignment only requires a flag in a var, we don't need to worry about scope types!
-align_culture_faith_effect = {
+align_culture_effect = {
 	$TARGET$ = {
 		set_variable = {
 			name = caucasus_alignment
@@ -84,7 +84,24 @@ align_culture_faith_effect = {
 		}
 	}
 
-	custom_tooltip = setting_$FLAG$_alignment_tt
+	custom_tooltip = {
+		text = culture_setting_$FLAG$_alignment_tt
+		subject = $TARGET$
+	}
+}
+
+align_faith_effect = {
+	$TARGET$ = {
+		set_variable = {
+			name = caucasus_alignment
+			value = flag:$FLAG$
+		}
+	}
+
+	custom_tooltip = {
+		text = faith_setting_$FLAG$_alignment_tt
+		subject = $TARGET$
+	}
 }
 
 form_aluank_decision_effect = {

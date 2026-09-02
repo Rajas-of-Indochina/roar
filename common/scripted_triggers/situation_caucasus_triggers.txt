@@ -2,6 +2,7 @@
 faith_is_pro_roman_trigger = {
 	custom_tooltip = {
 		text = faith_is_pro_roman_trigger_tt
+		subject = THIS
 		trigger_if = {
 			limit = {
 				OR = {
@@ -35,6 +36,7 @@ faith_is_pro_roman_trigger = {
 faith_is_pro_perso_arabic_trigger = {
 	custom_tooltip = {
 		text = faith_is_pro_perso_arabic_trigger_tt
+		subject = THIS
 		trigger_if = {
 			limit = {
 				OR = {
@@ -48,13 +50,15 @@ faith_is_pro_perso_arabic_trigger = {
 		trigger_else = {
 			OR = {
 				# Zoroastrians (with exceptions)
-				religion = religion:zoroastrianism_religion
-				NOT = {
-					# Certain Zoroastrian sects
-					this = faith:barhailism
-					this = faith:urartuism
-					this = faith:mazdakism
-					this = faith:khurramism
+				AND = {
+					religion = religion:zoroastrianism_religion
+					NOT = {
+						# Certain Zoroastrian sects
+						this = faith:barhailism
+						this = faith:urartuism
+						this = faith:mazdakism
+						this = faith:khurramism
+					}
 				}
 				# Nestorians - this will be handled by flag
 				# religious_head_title = faith:nestorian.religious_head_title
@@ -70,6 +74,7 @@ faith_is_pro_perso_arabic_trigger = {
 faith_is_autonomist_trigger = {
 	custom_tooltip = {
 		text = faith_is_autonomist_trigger_tt
+		subject = THIS
 		trigger_if = {
 			limit = {
 				OR = {
@@ -85,6 +90,9 @@ faith_is_autonomist_trigger = {
 				# Armenian Apostolic and Tondrakian
 				this = faith:armenian_apostolic
 				this = faith:tondrakian
+				# Georgian Church
+				# this = faith:georgian_orthodox
+				# religious_head_title = faith:georgian_orthodox.religious_head_title
 				# Certain Zoroastrian sects
 				this = faith:barhailism
 				this = faith:urartuism
@@ -103,6 +111,7 @@ faith_is_autonomist_trigger = {
 faith_is_interloper_trigger = {
 	custom_tooltip = {
 		text = faith_is_interloper_trigger_tt
+		subject = THIS
 		faith_is_pro_roman_trigger = no
 		faith_is_pro_perso_arabic_trigger = no
 		faith_is_autonomist_trigger = no
@@ -113,6 +122,7 @@ faith_is_interloper_trigger = {
 culture_is_pro_roman_trigger = {
 	custom_tooltip = {
 		text = culture_is_pro_roman_trigger_tt
+		subject = THIS
 		trigger_if = {
 			limit = {
 				OR = {
@@ -140,6 +150,7 @@ culture_is_pro_roman_trigger = {
 culture_is_pro_perso_arabic_trigger = {
 	custom_tooltip = {
 		text = culture_is_pro_perso_arabic_trigger_tt
+		subject = THIS
 		trigger_if = {
 			limit = {
 				OR = {
@@ -169,6 +180,7 @@ culture_is_pro_perso_arabic_trigger = {
 culture_is_autonomist_trigger = {
 	custom_tooltip = {
 		text = culture_is_autonomist_trigger_tt
+		subject = THIS
 		trigger_if = {
 			limit = {
 				OR = {
@@ -193,6 +205,7 @@ culture_is_autonomist_trigger = {
 culture_is_interloper_trigger = {
 	custom_tooltip = {
 		text = culture_is_interloper_trigger
+		subject = THIS
 		culture_is_pro_roman_trigger = no
 		culture_is_pro_perso_arabic_trigger = no
 		culture_is_autonomist_trigger = no
