@@ -219,7 +219,7 @@ window = {
 		datacontext = "[SituationParticipantCharacterList.AccessCharacterList]"
 		visible = "[SituationParticipantCharacterList.IsVisible]"
 
-		datacontext = "[SituationWindow.GetSelectedSubRegion]"
+		datacontext = "[GetSituation('situation_caucasus').GetSubRegionByKey('big_group')]"
 		blockoverride "header_text"
 		{
 			text = "[SituationWindow.GetParticipationWindowHeader]"
@@ -379,15 +379,21 @@ types CaucasusSituationTypes
 											# layoutpolicy_vertical = expanding
 											background = {
 												texture = "gfx/interface/window_struggle/current_phase_time_based_phase.dds"
-												margin = { 5 5 }
+												margin = { 10 15 }
 												# margin_bottom = -10
 											}
 											
 											datacontext = "[FutureSituationPhase.GetType]"
+											icon = {
+												texture = "[FutureSituationPhase.GetType.GetIcon]"
+												size = { 50 50 }
+												parentanchor = top|left
+												margin_bottom = 20
+											}
 												
 											progressbar_standard = {
 												# parentanchor = center
-												size = { 45 10 }
+												size = { 50 15 }
 												# position = { 0 -20 }
 												value = "[FutureSituationPhase.GetRelativeProgressPercent]"
 												progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
@@ -398,12 +404,6 @@ types CaucasusSituationTypes
 													fontsize = 12
 													size = { 0 23 }
 												}
-											}
-											icon = {
-												texture = "[FutureSituationPhase.GetType.GetIcon]"
-												size = { 45 45 }
-												parentanchor = top|left
-												margin_bottom = 20
 											}
 											tooltipwidget = {
 												using = situation_phase_type_tooltip

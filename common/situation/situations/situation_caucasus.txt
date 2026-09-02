@@ -5,9 +5,9 @@ situation_caucasus = {
 
 	gui_window_name = window_situation_caucasus
 
-	gui_tooltip_group_focues = yes
+	gui_tooltip_group_focused = yes
 
-	map_mode = sub_regions
+	map_mode = participant_groups
 	
 	situation_group_type = major
 
@@ -78,6 +78,7 @@ situation_caucasus = {
 				}
 				var:caucasus_alignment ?= flag:pro_roman
 			}
+			map_color = hsv{ 0.9 1 0.3 }
 		}
 		pro_perso_arabic = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_perso_arabic.dds"
@@ -100,6 +101,7 @@ situation_caucasus = {
 				}
 				var:caucasus_alignment ?= flag:pro_perso_arabic
 			}
+			map_color = { 30 240 230 }
 		}
 		autonomist = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_autonomist.dds"
@@ -121,9 +123,11 @@ situation_caucasus = {
 				}
 			}
 			var:caucasus_alignment ?= flag:autonomist
+			map_color = { 203 76 76 }
 		}
 		interloper = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_interloper.dds"
+			map_color = { 10 10 10 }
 		}
 	}
 
