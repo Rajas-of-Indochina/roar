@@ -1,4 +1,30 @@
 ﻿k_funan = {
+	# 550 AD - establishment of kingdom of Chenla by Shrutavarman I
+	550.1.1 = {
+		holder = sea_khmer_kambuj_01 # Shrutavarman
+		government = mandala_government
+	}
+	555.1.1 = {
+		holder = sea_khmer_kambuj_02 # Shreshtavarman
+	}
+	560.1.1 = {
+		holder = sea_khmer_bhavapura_01 # Viravarman I
+	}
+	575.1.1 = {
+		holder = sea_khmer_kambuj_03 # Kambujarajalakshmi
+	}
+	576.1.1 = {
+		holder = sea_khmer_bhavapura_02 # Bhavavarman I
+	}
+	600.1.1 = {
+		holder = sea_khmer_bhavapura_03 # Mahendravarman I
+	}
+	616.1.1 = {
+		holder = sea_khmer_vyadhapura_01 # Isanavarman I
+	}
+	639.1.1 = {
+		holder = sea_khmer_vyadhapura_02 # Bhavavarman II
+	}
 	657.1.1 = {
 		holder = khmer_jayavarman_1 # Jayavarman I
 		government = mandala_government
@@ -391,6 +417,26 @@ c_samraong = {
 
 
 d_isanapura = {
+	# 616 AD - Isanavarman I establishes capital in Isanapura
+	616.1.1 = {
+		government = mandala_government
+		holder = sea_khmer_vyadhapura_01 # Isanavarman I
+		liege = k_funan
+	}
+	639.1.1 = {
+		holder = sea_khmer_vyadhapura_02 # Bhavavarman II
+	}
+	657.1.1 = {
+		holder = khmer_jayavarman_1 # Jayavarman I
+	}
+	681.1.1 = {
+		holder = sea_khmer_jayavarman_2 # Jayadevi I
+	}
+	713.1.1 = {
+		# to represent split of Chenla realm
+		holder = 0
+	}
+	#
 	# 1177-1181 AD - Khmer empire in shambles
 	1177.1.1 = {
 		holder = sea_khmer_isanapura_04_fic	#fictional
@@ -406,9 +452,24 @@ c_isanapura = {
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
 
-	# needs history tweaks
-	867.1.1 = {
+	# 616 AD - Isanavarman I establishes capital in Isanapura
+	616.1.1 = {
 		government = mandala_government
+		holder = sea_khmer_vyadhapura_01 # Isanavarman I
+		liege = k_funan
+	}
+	639.1.1 = {
+		holder = sea_khmer_vyadhapura_02 # Bhavavarman II
+	}
+	657.1.1 = {
+		holder = khmer_jayavarman_1 # Jayavarman I
+	}
+	681.1.1 = {
+		holder = sea_khmer_jayavarman_2 # Jayadevi I
+	}
+	#
+	# needs history fixed
+	867.1.1 = {
 		holder = khmer_bhavapura_01_fic	#fictional
 		liege = d_angkor
 	}
@@ -465,9 +526,9 @@ c_kampong_kdei = {
 	1178.1.1 = { change_development_level = 15 }
 
 	# needs history tweaks
-	867.1.1 = {
+	860.1.1 = {
 		government = mandala_government
-		holder = khmer_bhavapura_01_fic	#fictional
+		holder = khmer_tributary_01 #fictional
 		liege = d_angkor
 	}
 	#
@@ -1060,12 +1121,38 @@ d_sambhupura = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 10 }
 	1178.1.1 = { change_development_level = 16 }
+
+	780.1.1 = {
+		government = mandala_government
+		holder = sea_khmer_sambhupura_01 # Jayendrabha
+	}
+	803.1.1 = {
+		holder = sea_khmer_sambhupura_02 # Jyestharya
+		#liege = k_funan
+	}
+	850.1.1 = {
+		tributary_of = {
+			suzerain = d_angkor
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	890.1.1 = {
+		holder = 0
+	}
 }
 
 c_sambhupura = {
-	860.1.1 = {
+	# more history needs to be done
+	780.1.1 = {
 		government = mandala_government
-		holder = khmer_tributary_01 #fictional Sangrama
+		holder = sea_khmer_sambhupura_01 # Jayendrabha
+	}
+	803.1.1 = {
+		holder = sea_khmer_sambhupura_02 # Jyestharya
+		#liege = k_funan
+	}
+	850.1.1 = {
 		tributary_of = {
 			suzerain = d_angkor
 			contract_group = tributary_mandala

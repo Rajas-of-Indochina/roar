@@ -848,7 +848,7 @@ khmer_courtier_4 = {
 
 khmer_varman_1 = {
 	name = "Jayavarman" # Jayavarman V
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	958.1.1 = {
@@ -861,7 +861,7 @@ khmer_varman_1 = {
 
 khmer_varman_2 = {
 	name = "Rajendravarman" # Rajendravarman II
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	908.1.1 = {
@@ -874,7 +874,7 @@ khmer_varman_2 = {
 
 khmer_varman_3 = {
 	name = "Harshavarman" # Harshavarman II
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	924.1.1 = {
@@ -887,7 +887,7 @@ khmer_varman_3 = {
 
 khmer_varman_4 = {
 	name = "Jayavarman" # Jayavarman IV
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	891.1.1 = {
@@ -900,7 +900,7 @@ khmer_varman_4 = {
 
 khmer_varman_5 = {
 	name = "Ishanavarman" # Ishanavarman II
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	father = khmer_varman_7
@@ -914,7 +914,7 @@ khmer_varman_5 = {
 
 khmer_varman_6 = {
 	name = "Harshavarman" # Harshavarman I
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	father = khmer_varman_7
@@ -928,7 +928,7 @@ khmer_varman_6 = {
 
 khmer_varman_7 = {
 	name = "Yasovarman" # Yasovarman I
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	trait = education_learning_4
@@ -948,7 +948,7 @@ khmer_varman_7 = {
 
 khmer_varman_8 = {
 	name = "Indravarman" # Indravarman I
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "shaivism"
 	833.1.1 = {
@@ -963,7 +963,7 @@ khmer_varman_9 = {
 	# 420011 in old RoA
 	dna = bookmark_dna_jayavarman
 	name = "Jayavarman" # Jayavarman III
-	dynasty = khmer_varman
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
 	culture = "khmer"
 	religion = "vaishnavism"	#"one of the few Vishnuite kings of Cambodia"
 	diplomacy = 1
@@ -978,7 +978,7 @@ khmer_varman_9 = {
 	trait = lifestyle_hunter
 	sexuality = heterosexual
 	father = khmer_varman_10
-	mother = sea_khmer_varman_10_wife_01
+	mother = sea_khmer_varman_10_wife_02
 
 	# History
 	820.1.1 = {
@@ -1002,21 +1002,38 @@ khmer_varman_9 = {
 }
 
 khmer_varman_10 = {
+	# 420010 in old RoA
 	name = "Jayavarman" # Jayavarman II
-	dynasty = khmer_varman
-	culture = "khmer"
+	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	culture = "sambor"
 	religion = "shaivism"	#hindu, potentially different from Jayavarman III who was "vishnuite"
+	martial = 10
+	diplomacy = 10
+	intrigue = 10
+	stewardship = 10
+	learning = 10
 	trait = education_diplomacy_4
 	trait = ambitious
 	trait = brave
+	trait = just
 	trait = architect
+	trait = lifestyle_mystic
 
 	# History
 	770.1.1 = {
 		birth = yes
 	}
+	# 781 AD - roughly time when Jayavarman became ruler of Amarendrapura
+	# 790 AD - becomes king of Vyadhapura through marriage with Jayendrabha
+	790.1.1 = {
+		add_spouse = sea_khmer_sambhupura_01
+	}
+	# 802 AD - declares himself king of united Chenla
+	802.1.1 = {
+		culture = khmer
+	}
 	818.1.1 = {
-		add_spouse = sea_khmer_varman_10_wife_01
+		add_spouse = sea_khmer_varman_10_wife_02
 	}
 	850.1.1 = {
 		death = yes
@@ -1025,17 +1042,21 @@ khmer_varman_10 = {
 
 khmer_jayavarman_1 = {
 	# 420008 in old RoA
+	# last king of united Chenla ; expanded Chenla's control over Funan lands ; his reign has been connected with a reported persecution of Buddhists
 	name = "Jayavarman" # Jayavarman I
-	dynasty = sea_baladitya
-	culture = "khmer"
+	dynasty = khmer_varman
+	culture = "sambor"
 	religion = "shaivism"
-	#father = 420006
+	#father = Candravarman
 
 	# History
 	627.1.1 = {
 		birth = yes
 	}
 	# began reign in 657 AD
+	657.1.1 = {
+		dynasty_house = sea_house_isanapura
+	}
 	681.1.1 = {
 		death = yes
 	}

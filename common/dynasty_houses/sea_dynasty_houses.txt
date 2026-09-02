@@ -1,19 +1,21 @@
 ﻿house_Vyadha = {
 	name = "dynn_Vyadha"
-	dynasty = sea_baladitya
+	dynasty = sea_baladitya # khmer_varman
 }
 house_Dvirada = {
 	name = "dynn_Dvirada"
-	dynasty = sea_baladitya
+	dynasty = sea_baladitya # khmer_varman
 }
-house_Sambhu = {
-    name = "dynn_Sambhu"
-    dynasty = sea_baladitya
+sea_house_sambhu = {
+	# house_Sambhu in old RoA
+	# kept as backup until I can clear up the image of dynn_Sambhu
+	name = "dynn_Sambhupura"
+	dynasty = sea_baladitya # khmer_varman
 }
 
 house_Jamadevi = {
-    name = "dynn_Jamadevi"
-    dynasty = mon_d101
+	name = "dynn_Jamadevi"
+	dynasty = mon_d101
 }
 
 house_Ratta = {
@@ -23,7 +25,7 @@ house_Ratta = {
 
 house_rajasa = {
 	name = "dynn_Rajasa"
-    motto = dynn_rajasa_motto
+	motto = dynn_rajasa_motto
 	dynasty = dynn_rajasa
 }
 
@@ -51,25 +53,42 @@ house_singhanavati = {
 }
 
 d_ngoenyang = {
-    name = "dynn_Laochong"
+	name = "dynn_Laochong"
 	dynasty = taid021
 }
 d_chianghung = {
-    name = "dynn_Lavachakaraj"
+	name = "dynn_Lavachakaraj"
 	dynasty = taid021
 }
 
 # Other - need assignment
 house_nong = {
-    name = "dynn_Nong"
-    dynasty = taiviet_d002
+	name = "dynn_Nong"
+	dynasty = taiviet_d002
 }
 
 
 ##### Clered up below #####
+# Khmer
+sea_house_baladitya = {
+	# Chenla rulers based in Baladityapura/Aninditapura
+	name = "dynn_Baladitya"
+	dynasty = khmer_varman
+}
+sea_house_bhavapura = {
+	# Chenla rulers based in Bhavapura
+	name = "dynn_Bhavapura"
+	dynasty = khmer_varman
+}
+sea_house_isanapura = {
+	# Chenla rulers based in Isanapura
+	name = "dynn_Isanapura"
+	dynasty = khmer_varman
+}
+
 # Malay
 house_tanjungpura = {
-    name = "dynn_Tanjungpura"
+	name = "dynn_Tanjungpura"
 	dynasty = dayak_bakula
 }
 

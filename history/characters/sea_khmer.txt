@@ -1,36 +1,201 @@
 ﻿### Historical
+sea_khmer_kambuj_01 = {
+	# first king of Chenla ; fought against domination of Funan over his lands
+	name = "Shrutavarman"
+	dynasty = khmer_varman
+	culture = sambor
+	religion = shaivism
+
+	# History
+	510.1.1 = { birth = yes }
+	# 550 AD - becomes king of Chenla
+	555.1.1 = { death = yes }
+}
+sea_khmer_kambuj_02 = {
+	# second king of Chenla ; founder of the capital, Sreshthapura
+	name = "Shreshtavarman"  # Shreshtavarman II
+	dynasty = khmer_varman
+	culture = sambor
+	religion = shaivism
+	father = sea_khmer_kambuj_01
+
+	# History
+	530.1.1 = { birth = yes }
+	# 555 AD - becomes king of Chenla
+	560.1.1 = { death = yes }
+}
+sea_khmer_kambuj_03 = {
+	# semi-legendary queen regent of Chenla
+	name = "Kambujarajalakshmi"
+	female = yes
+	dynasty = khmer_varman
+	culture = sambor
+	religion = shaivism
+	father = sea_khmer_kambuj_02
+
+	# History
+	555.1.1 = { birth = yes }
+	# 575 AD - becomes queen regnan of Chenla
+	580.1.1 = { death = yes }
+}
+sea_khmer_bhavapura_01 = {
+	# king of Chenla, ruling from Bhavapura
+	name = "Viravarman" # Viravarman I
+	dynasty = sea_chenla_kaundinya   # comes initially from different dynasty
+	culture = sambor
+	religion = shaivism
+
+	# History
+	530.1.1 = { birth = yes }
+	# 560 AD - becomes king of Chenla
+	560.1.1 = {
+		# becomes part of ruling Varman dynasty due to his rise to rulership
+		dynasty_house = sea_house_bhavapura
+	} 
+	563.1.1 = { add_spouse = sea_khmer_bhavapura_01_wife }
+	575.1.1 = { death = yes }
+}
+sea_khmer_bhavapura_01_wife = {
+	# msl_note: unsure who this is
+	name = "Rakshmi"
+	female = yes
+	culture = sambor
+	religion = shaivism
+
+	# History
+	545.1.1 = { birth = yes }
+	580.1.1 = { death = yes }
+}
+sea_khmer_bhavapura_02 = {
+	# king of Chenla ; expanded his kingdom realm wars with Funan kingdom ; thought to be 'wicked king' by Chinese records as he was not buddhist lol
+	name = "Bhavavarman"  # Bhavavarman I
+	dynasty_house = sea_house_bhavapura
+	culture = sambor
+	religion = shaivism
+	father = sea_khmer_bhavapura_01
+
+	# History
+	550.1.1 = { birth = yes }
+	# 575 AD - becomes king of Chenla
+	575.1.1 = { add_spouse = sea_khmer_kambuj_03 }
+	600.1.1 = { death = yes }
+}
+sea_khmer_bhavapura_03 = {
+	# king of Chenla ; conquered Funan kingdom ; thought to be 'wicked king' by Chinese records as he was not buddhist lol
+	name = "Chitrasena" # Mahendravarman I
+	# AKA: Mahendravarman I
+	dynasty_house = sea_house_bhavapura
+	culture = sambor
+	religion = shaivism
+	father = sea_khmer_bhavapura_01
+	mother = sea_khmer_bhavapura_01_wife
+
+	# History
+	570.1.1 = { birth = yes }
+	# 600 AD - becomes king of Chenla
+	600.1.1 = { name = "Mahendravarman" }
+	616.1.1 = { death = yes }
+}
+sea_khmer_vyadhapura_01 = {
+	# king of Chenla ; took Isanapura as his capital ; his rule marks first expnasion of Chenla rulers past Dangrek Mountains
+	# he also seems to have ahd connections to Champa rulers with his daughter marrying one of its princes
+	name = "Isanavarman"  # Isanavarman I
+	dynasty_house = sea_house_bhavapura
+	culture = sambor
+	religion = shaivism
+	father = sea_khmer_bhavapura_03
+
+	# History
+	586.1.1 = { birth = yes }
+	# 616 AD - becomes king of Chenla
+	616.1.1 = {
+		# moves his capital to Isanapura
+		dynasty_house = sea_house_isanapura
+	}
+	635.1.1 = { death = yes }
+}
+sea_khmer_vyadhapura_02 = {
+	# king of Chenla ; allied with realm of Dvaravati to war against Tou Yuan
+	name = "Bhavavarman" # Bhavavarman II
+	dynasty_house = sea_house_isanapura
+	culture = sambor
+	religion = shaivism
+	father = sea_khmer_vyadhapura_01
+
+	# History
+	605.1.1 = { birth = yes }
+	# 635 AD - becomes king of Chenla
+	657.1.1 = { death = yes }
+}
+# khmer_jayavarman_1 - Jayavarman I
 sea_khmer_jayavarman_2 = {
-	# 420009 in old RoA
-	# daughter of Jayavarman I
+	# queen of 'Land Chenla' ; due to her controversial ascension to the throne, kingdom split apart
 	name = "Jayadevi" # Jayadevi I
 	female = yes
-	dynasty = sea_baladitya
-	culture = khmer
+	dynasty_house = sea_house_isanapura
+	culture = sambor
 	religion = shaivism
 	father = khmer_jayavarman_1
 
-	651.1.1 = { birth = yes }
-	# began reign in 681 AD
+	# History
+	657.1.1 = { birth = yes }
+	# 681 AD - becomes queen of Chenla, realm soon splits
 	713.1.1 = { death = yes }
 }
 
-sea_khmer_varman_10_wife_01 = {
+sea_khmer_sambhupura_01 = {
+	# daughter of Nrpendradevi ; queen regnant of Sambhupura ; wife of Jayavarman II
+	name = "Jayendrabha"
+	female = yes
+	dynasty = sea_khmer_sambhu
+	culture = sambor
+	religion = shaivism
+
+	mother = 4200106a
+	father = 4200106
+
+	760.1.1 = { birth = yes }
+	# 780-803 AD - her rule as queen regnant of Sambhupura
+	803.1.1 = { death = yes }
+}
+
+sea_khmer_sambhupura_02 = {
+	# 420010b in old RoA
+	# daughter of Jayendrabha and Jayavarman II ; queen regnant of Sambhupura
+	name = "Jyestharya"
+	female = yes
+	dynasty = sea_khmer_sambhu
+	culture = sambor
+	religion = shaivism
+
+	mother = sea_khmer_sambhupura_01
+	father = khmer_varman_10
+
+	796.1.1 = { birth = yes }
+	802.1.1 = { culture = khmer }
+	# 803 AD - ruler of Sambhupura
+	# should still be alive during the rule of her step-brother, Jayavarman III
+	872.1.1 = { death = yes } # exact date of death unkown
+	# 895 AD - last mention of her
+	# probably not alive by then though as there are no mentions of female rulers by the time of Yasovarman I
+}
+
+sea_khmer_varman_10_wife_02 = {
 	# 4200101 and also 4200115 in old RoA
-	# first wife of Jayavarman II ; mother of Jayavarman III
+	# wife of Jayavarman II ; mother of Jayavarman III
 	# seems to be the same person as mysterious "Dharanindradevi" ?
 	name = "Hyang_Amrita"
 	female = yes
 	dynasty_house = house_Dvirada
-	culture = khmer
+	culture = sambor
 	religion = shaivism
 
 	father = 4200100
 	mother = 4200105
 
 	788.1.1 = { birth = yes }
-	818.1.1 = {
-		name = "Dharanindradevi"
-	}
+	802.1.1 = { culture = khmer }
+	818.1.1 = { name = "Dharanindradevi" }
 	858.1.1 = { death = yes }
 }
 
@@ -92,103 +257,14 @@ sea_khmer_kottinagara_04_fic = {
 }
 
 
+
 #### ALL TO SORT ####
 # http://www7.plala.or.jp/seareview/newpage2Chapter4Angkor.html
-
-420000 = {
-	name = "Shrutavarman"
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-
-	520.1.1 = { birth = yes }
-	# began reign in 550
-	555.1.1 = { death = yes }
-}
-420001 = {
-	name = "Shreshtavarman"  # Shreshtavarman II
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-
-	525.1.1 = { birth = yes }
-	# began reign in 555
-	560.1.1 = { death = yes }
-}
-420002 = {
-	name = "Viravarman"
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-
-	530.1.1 = { birth = yes }
-	563.1.1 = {
-		add_spouse = 420003
-	}
-	# began reign in 560
-	575.1.1 = { death = yes }
-}
-420003 = {
-	name = "Rakshmi"
-	female = yes
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-
-	545.1.1 = { birth = yes }
-	# began reign in 575
-	580.1.1 = { death = yes }
-}
-420004 = {
-	name = "Bhavavarman"  # Bhavavarman I
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-	father = 420002
-
-	550.1.1 = { birth = yes }
-	# began reign in 580
-	600.1.1 = { death = yes }
-}
-420005 = {
-	name = "Mahendravarman" # Mahendravarman I
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-	father = 420002
-	mother = 420003
-
-	570.1.1 = { birth = yes }
-	# began reign in 600
-	616.1.1 = { death = yes }
-}
-420006 = {
-	name = "Isanavarman"  # Isanavarman I
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-	father = 420005
-
-	586.1.1 = { birth = yes }
-	# began reign in 616
-	635.1.1 = { death = yes }
-}
-420007 = {
-	name = "Bhavavarman" # Bhavavarman II
-	dynasty = sea_baladitya
-	culture = khmer
-	religion = shaivism
-	father = 420006
-
-	605.1.1 = { birth = yes }
-	# began reign in 635
-	657.1.1 = { death = yes }
-}
 
 4200100 = {
 	name = "Rudravarman" # Father of the next 4 siblings, and great-uncle and father-in-law of Jayavarman II
 	dynasty_house = house_Dvirada
-	culture = khmer
+	culture = sambor
 	religion = shaivism
 
 	father = 4200111
@@ -237,7 +313,7 @@ sea_khmer_kottinagara_04_fic = {
 4200102 = {
 	name = "Prthivindradevi" # Mother of Indravarman I
 	female = yes
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -251,7 +327,7 @@ sea_khmer_kottinagara_04_fic = {
 4200105 = {
 	name = "Narendradevi" # Narendradevi II, Wife of Rudravarman
 	female = yes
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -281,7 +357,7 @@ sea_khmer_kottinagara_04_fic = {
 4200106a = {
 	name = "Nrpathindradevi" # Nrpathindradevi, mother of Narendradevi II, wife of Nrpathindravarman II and sister of Rudravarman
 	female = yes
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -377,7 +453,7 @@ sea_khmer_kottinagara_04_fic = {
 
 42001093 = {
 	name = "Nripatindravarman" # Father of the mother of the mother of the mother of Jayavarman II
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -388,7 +464,7 @@ sea_khmer_kottinagara_04_fic = {
 42001094 = {
 	# Also called Indraloka
 	name = "Puskarakusa" # Maternal uncle of the maternal uncle of the mother of Jayavarman II
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -400,7 +476,7 @@ sea_khmer_kottinagara_04_fic = {
 
 42001095 = {
 	name = "Balavarman" # For linking families
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -477,12 +553,7 @@ sea_khmer_kottinagara_04_fic = {
 	father = 42001098
 	mother = 42001099
 
-	829.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	829.1.1 = { birth = yes }
 	904.1.1 = { death = yes }
 }
 
@@ -517,12 +588,7 @@ sea_khmer_kottinagara_04_fic = {
 	father = 420012
 	mother = 42001100
 
-	851.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	851.1.1 = { birth = yes }
 	933.1.1 = { death = yes }
 }
 42001104 = {
@@ -534,12 +600,7 @@ sea_khmer_kottinagara_04_fic = {
 	father = 420012
 	mother = 42001100
 
-	885.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	885.1.1 = { birth = yes }
 	942.1.1 = { death = yes }
 }
 
@@ -559,7 +620,7 @@ sea_khmer_kottinagara_04_fic = {
 4200111a = {
 	name = "Indrani" # Queen regnant of Sambhupura, mother of Rudravarman
 	female = yes
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -614,12 +675,7 @@ sea_khmer_kottinagara_04_fic = {
 
 	father = 4200111
 
-	745.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	745.1.1 = { birth = yes }
 	832.1.1 = { death = yes }
 }
 
@@ -631,12 +687,7 @@ sea_khmer_kottinagara_04_fic = {
 
 	mother = 4200114
 
-	869.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	869.1.1 = { birth = yes }
 	887.1.1 = {
 		add_spouse = 42001103
 	}
@@ -653,56 +704,12 @@ sea_khmer_kottinagara_04_fic = {
 	father = 4200113
 	mother = 4200102
 
-	819.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	819.1.1 = { birth = yes }
 	924.1.1 = { death = yes }
-}
-
-420010a = {
-	name = "Jayendrabha" # Daughter of Nrpendradevi, queen regnant of Sambhupura
-	female = yes
-	dynasty_house = house_Sambhu
-	culture = khmer
-	religion = shaivism
-
-	mother = 4200106a
-	father = 4200106
-
-	776.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
-	803.1.1 = { death = yes }
-}
-
-420010b = {
-	name = "Jyestharya" # Daughter of Jayendrabha and Jayavarman II, queen regnant of Sambhupura
-	female = yes
-	dynasty_house = house_Sambhu
-	culture = khmer
-	religion = shaivism
-
-	mother = 420010a
-	father = 420010
-
-	794.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
-	849.1.1 = { death = yes }
 }
 
 420010 = {
 	# posthumous Paramesvara
-
 	name = "Jayavarman" # Jayavarman II
 	dynasty_house = house_Vyadha
 	culture = khmer
@@ -726,12 +733,7 @@ sea_khmer_kottinagara_04_fic = {
 	trait = just
 	trait = lifestyle_mystic
 
-	750.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	750.1.1 = { birth = yes }
 	# became king of vyadhapura in 790
 	# became chakravartin in 802
 
@@ -749,7 +751,7 @@ sea_khmer_kottinagara_04_fic = {
 
 420012 = {
 	name = "Indravarman" # Indravarman I
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 
 	culture = khmer
 	religion = shaivism
@@ -761,12 +763,7 @@ sea_khmer_kottinagara_04_fic = {
 	trait = patient
 	trait = ambitious
 
-	824.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	824.1.1 = { birth = yes }
 	847.1.1 = {
 		add_spouse = 42001100 # Indradevi
 	}
@@ -775,19 +772,14 @@ sea_khmer_kottinagara_04_fic = {
 }
 420013 = {
 	name = "Yasovarman" # Yasovarman I, The Leper King
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420012 # Indravarman I
 	mother = 42001100 # Indradevi
 
-	859.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	859.1.1 = { birth = yes }
 	# began reign in 889
 	889.1.1 = {
 		give_nickname = nick_the_leper_king
@@ -800,54 +792,39 @@ sea_khmer_kottinagara_04_fic = {
 }
 420014 = { # Rudraloka
 	name = "Harshavarman" # Harshavarman I
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420013
 	mother = 42001102
 
-	880.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	880.1.1 = { birth = yes }
 	# began reign in 910
 	923.1.1 = { death = yes }
 }
 420015 = {
 	name = "Ishanavarman" # Ishanavarman II
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420013
 	mother = 42001102
 
-	893.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	893.1.1 = { birth = yes }
 	# began reign in 923
 	928.1.1 = { death = yes }
 }
 420016 = {
 	name = "Jayavarman" # Jayavarman IV
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	mother = 42001103
 
-	898.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	898.1.1 = { birth = yes }
 	# began reign in 928
 	916.1.1 = {
 		add_spouse = 42001104
@@ -856,37 +833,27 @@ sea_khmer_kottinagara_04_fic = {
 }
 420017 = {
 	name = "Harshavarman" # Harshavarman II
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420016
 	mother = 42001104
 
-	917.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	917.1.1 = { birth = yes }
 	# began reign in 941
 	944.1.1 = { death = yes }
 }
 420018 = {
 	name = "Rajendravarman" # Rajendravarman II
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 4200116
 	mother = 42001103
 
-	914.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	914.1.1 = { birth = yes }
 	# began reign in 944
 	953.1.1 = {
 		add_spouse = 4200191
@@ -896,38 +863,28 @@ sea_khmer_kottinagara_04_fic = {
 420019 = {
 	name = "Jayavarman" # Jayavarman V
 	# Sympathetic to buddhism
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420018
 	mother = 4200191
 
-	958.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	958.1.1 = { birth = yes }
 	# began reign in 968 at the age of 10
 	1001.1.1 = { death = yes }
 }
 4200190 = {
 	name = "Indralakshmi" # Sister of Jayavarman V
 	female = yes
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420018
 	mother = 4200191
 
-	955.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	955.1.1 = { birth = yes }
 	1001.1.1 = { death = yes }
 }
 
@@ -939,17 +896,12 @@ sea_khmer_kottinagara_04_fic = {
 
 	father = 4200192
 
-	928.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	928.1.1 = { birth = yes }
 	982.1.1 = { death = yes }
 }
 4200192 = {
 	name = "Rathanak" # (fic) Father of Rajendradevi
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -958,7 +910,7 @@ sea_khmer_kottinagara_04_fic = {
 }
 4200193 = {
 	name = "Rithisak" # (fic) Brother of Rajendradevi, father of the next two
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -970,18 +922,13 @@ sea_khmer_kottinagara_04_fic = {
 
 420020 = {
 	name = "Udayadityavarman" # Udayadityavarman I
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 4200193
 
-	971.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	971.1.1 = { birth = yes }
 	# began reign in 1001
 	1002.1.1 = { # Triggered a 9-year civil war
 		death = yes
@@ -989,69 +936,49 @@ sea_khmer_kottinagara_04_fic = {
 }
 420021 = {
 	name = "Jayavirahvarman" # Jayavirahvarman I
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 4200193
 
-	972.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	972.1.1 = { birth = yes }
 	# began reign in 1002
 	# title usurped by Suryavarman I
 	1011.1.1 = { death = yes }
 }
 420022 = {
 	name = "Suryavarman" # Suryavarman I
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
-	972.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	972.1.1 = { birth = yes }
 	# began reign in 1011, usurped
 	1050.1.1 = { death = yes }
 }
 420024 = {
 	name = "Udayadityavarman" # Udayadityavarman II
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420022
 
-	1020.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	1020.1.1 = { birth = yes }
 	# began reign in 1050
 	1066.1.1 = { death = yes }
 }
 420025 = {
 	# Sadasivapada
 	name = "Harshavarman" # Harshavarman III
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
 	father = 420022
 
-	1036.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	1036.1.1 = { birth = yes }
 	# began reign in 1066
 	1066.1.1 = {
 		add_spouse = 42002501
@@ -1068,7 +995,7 @@ sea_khmer_kottinagara_04_fic = {
 	42002501 = {
 		name = "Kambujarajalakshmi"
 		female = yes
-		dynasty_house = house_Sambhu
+		dynasty = sea_khmer_sambhu
 		religion = "shaivism"
 		culture = "khmer"
 
@@ -1101,12 +1028,7 @@ sea_khmer_kottinagara_04_fic = {
 
 	father = 420027
 
-	1059.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	1059.1.1 = { birth = yes }
 	# began reign in 1080
 	1090.1.1 = {
 		add_spouse = 420029
@@ -1122,12 +1044,7 @@ sea_khmer_kottinagara_04_fic = {
 
 	father = 420027
 
-	1054.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	1054.1.1 = { birth = yes }
 	# began reign in 1107
 	1108.1.1 = {
 		add_spouse = 420029
@@ -1145,12 +1062,7 @@ sea_khmer_kottinagara_04_fic = {
 	culture = khmer
 	religion = shaivism
 
-	1072.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_regnal_name
-		}
-	}
+	1072.1.1 = { birth = yes }
 	1133.1.1 = { death = yes }
 }
 
@@ -1191,7 +1103,7 @@ sea_khmer_kottinagara_04_fic = {
 42003101 = {
 	name = "Sri_Jayarajacudamani"
 	female = yes
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	father = 420025
 
 	culture = khmer
@@ -1475,7 +1387,7 @@ khmerv013 = {
 }
 khmerv014 = {
 	name = "Ney_Khan"
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -1484,7 +1396,7 @@ khmerv014 = {
 }
 khmerv015 = {
 	name = "Nan"
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -1511,7 +1423,7 @@ khmerv017 = {
 }
 khmerv018 = {
 	name = "Entaravong"
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
@@ -1616,7 +1528,7 @@ khmerv031 = {
 
 khmerv033 = {
 	name = "Neakrin"
-	dynasty_house = house_Sambhu
+	dynasty = sea_khmer_sambhu
 	culture = khmer
 	religion = shaivism
 
