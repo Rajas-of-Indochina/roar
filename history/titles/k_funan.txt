@@ -3,6 +3,7 @@
 	550.1.1 = {
 		holder = sea_khmer_kambuj_01 # Shrutavarman
 		government = mandala_government
+		name = NAME_CHENLA
 	}
 	555.1.1 = {
 		holder = sea_khmer_kambuj_02 # Shreshtavarman
@@ -35,14 +36,26 @@
 	# 707 AD - Kingdom of Chenla divided into Land and Water Chenla Kingdoms
 	# 713 AD - last mention of Jayadevi I as queen of Chenla
 	713.1.1 = {
-		# temporary until history gets filled
 		holder = 0
 	}
-	#
+	716.1.1 = {
+		holder = sea_chenla_dvirada_00 # Pushkaraksha / Indraloka
+	}
+	730.1.1 = {
+		holder = sea_chenla_dvirada_01 # Rudravarman / Shambhuvarman II
+	}
+	760.1.1 = {
+		holder = sea_chenla_dvirada_02 # Rajendravarman I
+	}
+	790.1.1 = {
+		holder = sea_chenla_dvirada_03 # Mahipativarman
+	}
+	# 800 AD - Java attacks Khmer and installs Jayavarman II as a puppet ruler ; he soon declares independence
 	# Jayavarman II declares himself King of Khmer Empire ; before that he titled himslef as King of Lower Chenla
 	802.1.1 = {
 		holder = khmer_varman_10 # Jayavarman II
 		government = mandala_government
+		name = NAME_KHMER
 	}
 	850.1.1 = {
 		holder = khmer_varman_9 # Jayavarman III
@@ -1228,10 +1241,10 @@ d_sambhupura = {
 
 	780.1.1 = {
 		government = mandala_government
-		holder = sea_khmer_sambhupura_01 # Jayendrabha
+		holder = sea_chenla_sambhupura_02 # Jayendrabha
 	}
 	803.1.1 = {
-		holder = sea_khmer_sambhupura_02 # Jyestharya
+		holder = sea_khmer_sambhupura_03 # Jyestharya
 		#liege = k_funan
 	}
 	850.1.1 = {
@@ -1250,10 +1263,10 @@ c_sambhupura = {
 	# more history needs to be done
 	780.1.1 = {
 		government = mandala_government
-		holder = sea_khmer_sambhupura_01 # Jayendrabha
+		holder = sea_chenla_sambhupura_02 # Jayendrabha
 	}
 	803.1.1 = {
-		holder = sea_khmer_sambhupura_02 # Jyestharya
+		holder = sea_khmer_sambhupura_03 # Jyestharya
 		#liege = k_funan
 	}
 	850.1.1 = {

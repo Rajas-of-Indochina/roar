@@ -848,12 +848,17 @@ khmer_courtier_4 = {
 
 khmer_varman_1 = {
 	name = "Jayavarman" # Jayavarman V
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
+	# said to have been very tolerant to Buddhism
+	father = khmer_varman_2
+
+	# History
 	958.1.1 = {
 		birth = yes
 	}
+	# 968 AD - becomes king of Khmer
 	1001.1.1 = {
 		death = yes
 	}
@@ -861,12 +866,20 @@ khmer_varman_1 = {
 
 khmer_varman_2 = {
 	name = "Rajendravarman" # Rajendravarman II
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
-	908.1.1 = {
+	trait = education_martial_3 	# said to be a great warrior
+	trait = physique_good_3 	# body as hard as a diamond
+	trait = just 	# punisher of guilty with compassion for the innocent
+	father = sea_khmer_varman_2_father
+	mother = sea_khmer_sambhupura_07
+
+	# History
+	898.1.1 = {
 		birth = yes
 	}
+	# 944 AD - becomes king of Khmer
 	968.1.1 = {
 		death = yes
 	}
@@ -874,12 +887,17 @@ khmer_varman_2 = {
 
 khmer_varman_3 = {
 	name = "Harshavarman" # Harshavarman II
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
+	father = khmer_varman_4
+	mother = sea_khmer_sambhupura_08
+
+	# History
 	924.1.1 = {
 		birth = yes
 	}
+	# 941 AD - becomes king of Khmer
 	944.1.1 = {
 		death = yes
 	}
@@ -887,12 +905,20 @@ khmer_varman_3 = {
 
 khmer_varman_4 = {
 	name = "Jayavarman" # Jayavarman IV
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
-	891.1.1 = {
+	father = sea_khmer_indradevi_02
+	mother = sea_khmer_sambhupura_07
+
+	# History
+	892.1.1 = {
 		birth = yes
 	}
+	920.1.1 = {
+		add_spouse = sea_khmer_sambhupura_08
+	}
+	# 928 AD - becomes king of Khmer
 	941.1.1 = {
 		death = yes
 	}
@@ -900,13 +926,17 @@ khmer_varman_4 = {
 
 khmer_varman_5 = {
 	name = "Ishanavarman" # Ishanavarman II
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
 	father = khmer_varman_7
-	888.1.1 = {
+	mother = sea_khmer_indradevi_03
+
+	# History
+	891.1.1 = {
 		birth = yes
 	}
+	# 923 AD - becomes king of Khmer
 	928.1.1 = {
 		death = yes
 	}
@@ -914,13 +944,18 @@ khmer_varman_5 = {
 
 khmer_varman_6 = {
 	name = "Harshavarman" # Harshavarman I
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	# AKA: Rudraloka
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
 	father = khmer_varman_7
-	883.1.1 = {
+	mother = sea_khmer_indradevi_03
+
+	# History
+	890.1.1 = {
 		birth = yes
 	}
+	# 910 AD - becomes king of Khmer
 	923.1.1 = {
 		death = yes
 	}
@@ -928,18 +963,25 @@ khmer_varman_6 = {
 
 khmer_varman_7 = {
 	name = "Yasovarman" # Yasovarman I
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
 	trait = education_learning_4
 	trait = leper
-	trait = physique_good_3
+	trait = physique_good_3  # wrestler of great strength
+	trait = strong
 	trait = architect
+	father = khmer_varman_8
+	mother = sea_khmer_indradevi_01
+
+	# History
 	853.1.1 = {
 		birth = yes
 	}
+	# 889 AD - becomes king of Khmer
 	889.1.1 = {
 		give_nickname = nick_the_leper
+		add_spouse = sea_khmer_indradevi_03
 	}
 	910.1.1 = {
 		death = yes
@@ -948,22 +990,32 @@ khmer_varman_7 = {
 
 khmer_varman_8 = {
 	name = "Indravarman" # Indravarman I
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = sea_khmer_sambhupura
 	culture = "khmer"
 	religion = "shaivism"
+	trait = education_stewardship_3
+	trait = patient
+	trait = ambitious
+	father = sea_chenla_dvirada_branch_01
+	mother = sea_khmer_sambhupura_05
+
+	# History
 	833.1.1 = {
 		birth = yes
 	}
+	851.1.1 = {
+		add_spouse = sea_khmer_indradevi_01
+	}
+	# 877 AD - becomes king of Khmer
 	889.1.1 = {
 		death = yes
 	}
 }
 
 khmer_varman_9 = {
-	# 420011 in old RoA
 	dna = bookmark_dna_jayavarman
 	name = "Jayavarman" # Jayavarman III
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = khmer_varman
 	culture = "khmer"
 	religion = "vaishnavism"	#"one of the few Vishnuite kings of Cambodia"
 	diplomacy = 1
@@ -978,7 +1030,7 @@ khmer_varman_9 = {
 	trait = lifestyle_hunter
 	sexuality = heterosexual
 	father = khmer_varman_10
-	mother = sea_khmer_varman_10_wife_02
+	mother = sea_chenla_dvirada_04
 
 	# History
 	820.1.1 = {
@@ -1002,9 +1054,8 @@ khmer_varman_9 = {
 }
 
 khmer_varman_10 = {
-	# 420010 in old RoA
 	name = "Jayavarman" # Jayavarman II
-	dynasty = khmer_varman   # dynasty_house = house_Vyadha
+	dynasty = khmer_varman
 	culture = "sambor"
 	religion = "shaivism"	#hindu, potentially different from Jayavarman III who was "vishnuite"
 	martial = 10
@@ -1013,6 +1064,7 @@ khmer_varman_10 = {
 	stewardship = 10
 	learning = 10
 	trait = education_diplomacy_4
+	trait = strong
 	trait = ambitious
 	trait = brave
 	trait = just
@@ -1026,14 +1078,14 @@ khmer_varman_10 = {
 	# 781 AD - roughly time when Jayavarman became ruler of Amarendrapura
 	# 790 AD - becomes king of Vyadhapura through marriage with Jayendrabha
 	790.1.1 = {
-		add_spouse = sea_khmer_sambhupura_01
+		add_matrilineal_spouse = sea_chenla_sambhupura_02
 	}
 	# 802 AD - declares himself king of united Chenla
 	802.1.1 = {
 		culture = khmer
 	}
 	818.1.1 = {
-		add_spouse = sea_khmer_varman_10_wife_02
+		add_spouse = sea_chenla_dvirada_04
 	}
 	850.1.1 = {
 		death = yes
@@ -1041,10 +1093,9 @@ khmer_varman_10 = {
 }
 
 khmer_jayavarman_1 = {
-	# 420008 in old RoA
 	# last king of united Chenla ; expanded Chenla's control over Funan lands ; his reign has been connected with a reported persecution of Buddhists
 	name = "Jayavarman" # Jayavarman I
-	dynasty = khmer_varman
+	dynasty = sea_chenla_jayavarman
 	culture = "sambor"
 	religion = "shaivism"
 	#father = Candravarman
@@ -1053,10 +1104,7 @@ khmer_jayavarman_1 = {
 	627.1.1 = {
 		birth = yes
 	}
-	# began reign in 657 AD
-	657.1.1 = {
-		dynasty_house = sea_house_isanapura
-	}
+	# 657 AD - began reign as king of Chenla
 	681.1.1 = {
 		death = yes
 	}
