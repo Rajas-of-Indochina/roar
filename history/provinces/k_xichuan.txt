@@ -14,8 +14,12 @@
 	###c_pengzhou # PENGZHOU
 		10219 = {	# b_jiulong
 			culture = han
-			religion = dhyana
+			religion = mantrayana
 			holding = castle_holding
+			# History
+			960.1.1 = {
+				religion = dhyana
+			}			
 		}
 		10318 = {	# b_daojiang
 			holding = city_holding
@@ -25,6 +29,10 @@
 			culture = han
 			religion = mantrayana
 			holding = castle_holding
+			# History
+			960.1.1 = {
+				religion = dhyana
+			}			
 		}
 		9714 = {	# b_mianzhu
 			holding = city_holding
@@ -35,24 +43,20 @@
 	###c_jianyang # JIANZHOU 2
 		12958 = {	# b_yangan
 			culture = han
-			religion = dhyana
+			religion = vinaya
 			holding = castle_holding
-			# History
-			1150.1.1 = {
-				religion = yogacara
-			}
 		}
 		9721 = {	# b_jinshui
-			holding = city_holding
+			holding = church_holding
 		}
 	###c_lingzhou_1 # LINGZHOU 1
 		9726 = {	# b_renshou
 			culture = han
-			religion = sukhavati
+			religion = mantrayana
 			holding = castle_holding
 			# History
-			1150.1.1 = {
-				religion = dhyana
+			1000.1.1 = {
+				religion = sukhavati
 			}
 		}
 		9727 = {	# b_jingyan
@@ -75,7 +79,7 @@
 	###c_qiongzhou # QIONGZHOU
 		10220 = {	# b_linqiong
 			culture = han
-			religion = sukhavati
+			religion = mantrayana
 			holding = castle_holding
 			# History
 			1000.1.1 = {
@@ -90,8 +94,8 @@
 		}
 	###c_yazhou_2 # YAZHOU
 		10214 = {	# b_yandao
-			culture = han
-			religion = mantrayana
+			culture = qiang
+			religion = rrmeaism
 			holding = castle_holding
 		}
 		10215 = {	# b_rongjing
@@ -106,15 +110,12 @@
 	###c_meizhou # MEIZHOU
 		10319 = {	# b_tongyi
 			culture = han
-			religion = vinaya
+			religion = mantrayana
 			holding = castle_holding
 			# History
-			960.1.1 = {
-				religion = dhyana
-			}
-			1050.1.1 = {
-				religion = daoxue
-			}
+			1000.1.1 = {
+				religion = sukhavati
+			}			
 		}
 		10224 = {	# b_danling
 			holding = city_holding
@@ -145,13 +146,9 @@
        	}		
 	###c_hanyuan # LIZHOU 1
 		10212 = {	# b_hanyuan
-			culture = han
-			religion = zhengyi
+			culture = qiang
+			religion = rrmeaism
 			holding = castle_holding
-			# History
-			1000.1.1 = {
-				religion = mantrayana
-			}
 		}
 		10213 = {	# b_tongwang
 			holding = city_holding

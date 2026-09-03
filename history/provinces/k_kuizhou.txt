@@ -1,9 +1,13 @@
 ##d_kuizhong ###################################
 	###c_kuizhou # KUIZHOU
 		9763 = {	# b_fengjie
-			culture = yi
-			religion = bimoism
+			culture = han
+			religion = vinaya
 			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = dhyana
+			}			
 		}
 		13023 = {	# b_dachang
 			holding = city_holding
@@ -17,8 +21,12 @@
 	###c_zhongzhou # ZHONGZHOU
 		9759 = {	# b_linjiang
 			culture = han
-			religion = shangqing
+			religion = mantrayana
 			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
 		}
 		9760 = {	# b_dianjiang
 			holding = city_holding
@@ -29,7 +37,7 @@
 	###c_wanzhou # WANZHOU
 		9755 = {	# b_nanpu
 			culture = han
-			religion = shangqing
+			religion = sukhavati
 			holding = castle_holding
 		}
 		9754 = {	# b_wuning_1
@@ -44,8 +52,12 @@
 ###c_fuzhou_4 # FUZHOU 4
 		10006 = {	# b_fuling
 			culture = han
-			religion = dhyana
+			religion = mantrayana
 			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
 		}
 		10008 = {	# b_lewen
 			holding = city_holding
@@ -75,8 +87,8 @@
 		}
 	###c_shizhou_1 # SHIZHOU 1
 		9826 = {	# b_qingjiang_1
-			culture = yi
-			religion = bimoism
+			culture = hmong
+			religion = dab_qhuas
 			holding = castle_holding
 		}
 		10440 = {	# b_jianshi

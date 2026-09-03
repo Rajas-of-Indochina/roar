@@ -2,11 +2,11 @@
 	###c_xingyuan # XINGYUAN
 		9767 = {	# b_nanzheng
 			culture = han
-			religion = jingxue
+			religion = vinaya
 			holding = castle_holding
 			# History
 			1000.1.1 = {
-				religion = daoxue
+				religion = dhyana
 			}
 		}
 		9768 = {	# b_xixian
@@ -21,7 +21,7 @@
 	###c_yangzhou_1 # YANGZHOU 1
 		9766 = {	# b_xingdao
 			culture = han
-			religion = dhyana
+			religion = zhengyi
 			holding = castle_holding
 		}
 		9765 = {	# b_xixiang
@@ -58,8 +58,8 @@
 ##d_lilang ###################################
 		###c_lizhou_2 # LIZHOU 2
 		13107 = {	# b_miangu
-			culture = qiang
-			religion = zhengyi
+			culture = han
+			religion = mantrayana
 			holding = castle_holding
 		}
 		9774 = {	# b_jinggu
@@ -71,8 +71,12 @@
 	###c_langzhou_1 # LANGZHOU 1
 		9740 = {	# b_langzhong
 			culture = han
-			religion = vinaya
+			religion = mantrayana
 			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
 		}
 		9741 = {	# b_cangxi
 			holding = city_holding
@@ -83,7 +87,7 @@
 	###c_wenzhou # WENZHOU
 		13073 = {	# b_qushui
 			culture = qiang
-			religion = zhengyi
+			religion = rrmeaism
 			holding = castle_holding
 		}
 		13136 = {	# b_tongchang
@@ -92,11 +96,11 @@
 	###c_guozhou_1 # GUOZHOU 1
 		9739 = {	# b_nanchong
 			culture = han
-			religion = zhengyi
+			religion = mantrayana
 			holding = castle_holding
 			# History
 			1000.1.1 = {
-				religion = mantrayana
+				religion = sukhavati
 			}
 		}
 		9738 = {	# b_xiangru
@@ -105,8 +109,12 @@
 	###c_pengzhou_2 # PENGZHOU 2
 		9742 = {	# b_pengchi
 			culture = han
-			religion = zhengyi
+			religion = mantrayana
 			holding = castle_holding
+			# History
+			1000.1.1 = {
+				religion = sukhavati
+			}			
 		}
 		9743 = {	# b_fuyu
 			holding = city_holding
@@ -116,7 +124,7 @@
 	###c_bazhou # BAZHOU
 		9770 = {	# b_huacheng
 			culture = han
-			religion = zhengyi
+			religion = mantrayana
 			holding = castle_holding
 		}
 		13106 = {	# b_qizhang, ZENGKOU
@@ -130,10 +138,6 @@
 			culture = han
 			religion = sukhavati
 			holding = castle_holding
-			# History
-			1000.1.1 = {
-				religion = dhyana
-			}
 		}
 		9745 = {	# b_linshui
 			holding = city_holding
@@ -159,12 +163,8 @@
 	###c_kaizhou # KAIZHOU
 		9750 = {	# b_kaijiang
 			culture = han
-			religion = jingxue
+			religion = sukhavati
 			holding = castle_holding
-			# History
-			1000.1.1 = {
-				religion = daoxue
-			}
 		}
 		9749 = {	# b_xinpu
 			holding = city_holding
