@@ -8,7 +8,7 @@ auto_assign_caucasus_stance = {
 				has_title = title:h_roman_empire
 			}
 		}
-		set_caucasus_alignment = { FLAG = pro_roman }
+		set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
@@ -18,48 +18,48 @@ auto_assign_caucasus_stance = {
 				has_title = title:h_dar_al_islam
 			}
 		}
-		set_caucasus_alignment = { FLAG = pro_perso_arabic }
+		set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = no }
 	}
 	# Go by faith first
 	else_if = {
 		limit = {
 			faith = { faith_is_pro_roman_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = pro_roman }
+		set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
 			faith = { faith_is_pro_perso_arabic_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = pro_perso_arabic }
+		set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
 			faith = { faith_is_autonomist_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = autonomist }
+		set_caucasus_alignment = { FLAG = autonomist COOLDOWN = no }
 	}
 	# Then by culture if faith doesn't do it
 	else_if = {
 		limit = {
 			culture = { culture_is_pro_roman_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = pro_roman }
+		set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
 			culture = { culture_is_pro_perso_arabic_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = pro_perso_arabic }
+		set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
 			culture = { culture_is_autonomist_trigger = yes }
 		}
-		set_caucasus_alignment = { FLAG = autonomist }
+		set_caucasus_alignment = { FLAG = autonomist COOLDOWN = no }
 	}
 	else = {
-		set_caucasus_alignment = { FLAG = interloper }
+		set_caucasus_alignment = { FLAG = interloper COOLDOWN = no }
 	}
 }
 
@@ -71,6 +71,13 @@ set_caucasus_alignment = {
 		value = flag:$FLAG$
 	}
 	hidden_effect = { recalculate_participant_group = situation:situation_caucasus }
+	if = {
+		limit = { always = $COOLDOWN$ }
+		set_variable = {
+			name = situation_caucasus_recently_changed_alignment
+			years = 5
+		}
+	}
 
 	custom_tooltip = setting_$FLAG$_alignment_tt
 }
