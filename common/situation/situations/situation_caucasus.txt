@@ -156,7 +156,95 @@ situation_caucasus = {
 	phases = {
 		situation_caucasus_disputed_control = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_interloper.dds"
-			parameters = {}
+			parameters = {
+				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
+				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
+				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
+				claims_fabricated_for_prestige_not_gold = yes # Claim Fabrication uses Prestige instead of Gold
+			}
+			modifier_sets = {
+				situation_caucasus_military_effects = {
+					all = {
+						parameters = {
+						}
+						character_modifier = {
+							ai_war_chance = 5
+							ai_war_cooldown = -0.25
+						}
+					}
+					interloper = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+							unlocks_expand_borders_casus_belli = yes # Expand Borders CB Unlocked
+						}
+					}
+					pro_roman = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+							unlocks_imperial_support_interaction = yes # Seek Imperial Support Interaction
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					pro_perso_arabic = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					autonomist = {
+						parameters = {
+						}
+						county_modifier = {
+							defender_holding_advantage = 2
+							fort_level = 1
+							levy_size = 0.1
+						}
+					}
+				}
+				situation_caucasus_diplomatic_effects = {
+					interloper = {
+						parameters = {
+							unlocks_invite_incursion_interaction = yes # Invite Incursion Interaction
+						}
+					}
+				}
+				situation_caucasus_domestic_effects = {
+					all = {
+						parameters = {
+							slowed_county_conversion = yes # faith and county conversion slowed
+							revolt_more_common = yes # Increased likelihood of counties joining Populist, Peasant or Communalist Factions
+						}
+						county_modifier = {
+							monthly_county_control_decline_factor = 0.1
+							development_decline_factor = 0.1
+							county_opinion_add = -10
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					autonomist = {
+						county_modifier = {
+							holding_build_gold_cost = -0.05
+							holding_build_piety_cost = -0.05
+							holding_build_prestige_cost = -0.05
+							build_gold_cost = -0.05
+							build_piety_cost = -0.05
+							build_prestige_cost = -0.05
+							domicile_build_gold_cost = -0.05
+						}
+					}
+				}
+			}
 			on_start = {}
 			on_end = {}
 			max_duration = { years = 5 }
@@ -182,7 +270,104 @@ situation_caucasus = {
 		}
 		situation_caucasus_roman_control = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_roman.dds"
-			parameters = {}
+			parameters = {
+				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
+				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
+				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
+			}
+			modifier_sets = {
+				situation_caucasus_military_effects = {
+					all = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes
+						}
+						character_modifier = {
+							ai_war_chance = 5
+							ai_war_cooldown = -0.25
+						}
+					}
+					interloper = {
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					pro_roman = {
+						parameters = {
+							unlocks_consolidate_roman_territory_casus_belli = yes
+						}
+						county_modifier = {
+							defender_holding_advantage = 2
+							fort_level = 1
+							levy_size = 0.1
+						}
+					}
+					pro_perso_arabic = {
+						parameters = {
+							unlocks_join_war_against_pro_romans = yes # Can join offensive wars against pro-Roman characters
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					autonomist = {
+						parameters = {
+							unlocks_join_war_against_pro_romans = yes # Can join offensive wars against pro-Roman characters
+						}
+					}
+				}
+				situation_caucasus_domestic_effects = {
+					interloper = {
+						parameters = {
+							unlock_claim_throne_against_pro_roman = yes # unlocks Claim Throne scheme against a pro-Roman liege
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					pro_roman = {
+						parameters = {
+							county_conversion_faster_in_subregion = yes
+							revolt_more_common = yes # Increased likelihood of counties joining Populist, Peasant or Communalist Factions
+						}
+						county_modifier = {
+							monthly_county_control_growth_factor = 0.1
+							development_growth_factor = 0.1
+						}
+					}
+					pro_perso_arabic = {
+						parameters = {
+							unlock_claim_throne_against_pro_roman = yes # unlocks Claim Throne scheme against a pro-Roman liege
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					autonomist = {
+						parameters = {
+							unlock_claim_throne_against_pro_roman = yes # unlocks Claim Throne scheme against a pro-Roman liege
+						}
+						county_modifier = {
+							holding_build_gold_cost = -0.05
+							holding_build_piety_cost = -0.05
+							holding_build_prestige_cost = -0.05
+							build_gold_cost = -0.05
+							build_piety_cost = -0.05
+							build_prestige_cost = -0.05
+							domicile_build_gold_cost = -0.05
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+				}
+			}
 			on_start = {}
 			on_end = {}
 			max_duration = { years = 5 }
@@ -208,7 +393,110 @@ situation_caucasus = {
 		}
 		situation_caucasus_perso_arabic_control = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_perso_arabic.dds"
-			parameters = {}
+			parameters = {
+				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
+				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
+				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
+			}
+			modifier_sets = {
+				situation_caucasus_military_effects = {
+					all = {
+						parameters = {
+						}
+						character_modifier = {
+							ai_war_chance = 5
+							ai_war_cooldown = -0.25
+						}
+					}
+					interloper = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					pro_roman = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+							unlocks_join_war_against_pro_perso_arabs = yes # Can join offensive wars against pro-Perso-Arabic characters
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					pro_perso_arabic = {
+						county_modifier = {
+							defender_holding_advantage = 2
+							fort_level = 1
+							levy_size = 0.1
+						}
+					}
+					autonomist = {
+						parameters = {
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+							unlocks_join_war_against_pro_perso_arabs = yes # Can join offensive wars against pro-Perso-Arabic characters
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+				}
+				situation_caucasus_domestic_effects = {
+					interloper = {
+						parameters = {
+							unlock_claim_throne_against_pro_perso_arabic = yes
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					pro_roman = {
+						parameters = {
+							unlock_claim_throne_against_pro_perso_arabic = yes
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					pro_perso_arabic = {
+						parameters = {
+							county_conversion_faster_in_subregion = yes
+							revolt_more_common = yes # Increased likelihood of counties joining Populist, Peasant or Communalist Factions
+						}
+						county_modifier = {
+							monthly_county_control_growth_factor = 0.1
+							development_growth_factor = 0.1
+						}
+					}
+					autonomist = {
+						parameters = {
+							unlock_claim_throne_against_pro_perso_arabic = yes
+						}
+						county_modifier = {
+							holding_build_gold_cost = -0.05
+							holding_build_piety_cost = -0.05
+							holding_build_prestige_cost = -0.05
+							build_gold_cost = -0.05
+							build_piety_cost = -0.05
+							build_prestige_cost = -0.05
+							domicile_build_gold_cost = -0.05
+						}
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+				}
+			}
 			on_start = {}
 			on_end = {}
 			max_duration = { years = 5 }
@@ -234,7 +522,105 @@ situation_caucasus = {
 		}
 		situation_caucasus_local_control = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_autonomist.dds"
-			parameters = {}
+			parameters = {
+				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
+				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
+			}
+			modifier_sets = {
+				situation_caucasus_military_effects = {
+					all = {
+						parameters = {
+							unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
+							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
+						}
+						character_modifier = {
+							ai_war_chance = 5
+							ai_war_cooldown = -0.25
+						}
+					}
+					interloper = {
+						parameters = {
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					pro_roman = {
+						parameters = {
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					pro_perso_arabic = {
+						parameters = {
+						}
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
+						}
+					}
+					autonomist = {
+						parameters = {
+							unlock_county_conquest_cb = yes
+							can_join_autonomist_uprisings = yes
+						}
+						county_modifier = {
+							defender_holding_advantage = 2
+							fort_level = 1
+							levy_size = 0.1
+						}
+					}
+				}
+				situation_caucasus_diplomatic_effects = {
+					autonomist = {
+						parameters = {
+							unlock_autonomist_confederations = yes
+						}
+					}
+				}
+				situation_caucasus_domestic_effects = {
+					interloper = {
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					pro_roman = {
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					pro_perso_arabic = {
+						character_modifier = {
+							strife_opinion_gain_mult = 0.25
+							tyranny_gain_mult = 0.25
+						}
+					}
+					autonomist = {
+						parameters = {
+							county_conversion_faster_in_subregion = yes
+						}
+						county_modifier = {
+							monthly_county_control_growth_factor = 0.1
+							development_growth_factor = 0.1
+							holding_build_gold_cost = -0.05
+							holding_build_piety_cost = -0.05
+							holding_build_prestige_cost = -0.05
+							build_gold_cost = -0.05
+							build_piety_cost = -0.05
+							build_prestige_cost = -0.05
+							domicile_build_gold_cost = -0.05
+						}
+					}
+				}
+			}
 			on_start = {}
 			on_end = {}
 			max_duration = { years = 5 }

@@ -148,13 +148,13 @@ situation_caucasus_choose_alignment_decision = {
 		switch = {
 			trigger = yes
 			scope:pro_roman = {
-				set_caucasus_alignment = { FLAG = pro_roman }
+				set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = yes }
 			}
 			scope:pro_perso_arabic = {
-				set_caucasus_alignment = { FLAG = pro_perso_arabic }
+				set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = yes }
 			}
 			scope:autonomist = {
-				set_caucasus_alignment = { FLAG = autonomist }
+				set_caucasus_alignment = { FLAG = autonomist COOLDOWN = yes }
 			}
 		}
 	}
