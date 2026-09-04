@@ -205,8 +205,8 @@
 
 ## d_sambhupura ###################################
 ### c_sambhupura
-16564 = { # b_sambhupura
-	# 
+16564 = { # Sambhupura
+	# ancient capital of pre-Angkorian kingdom with its nobility having many ties to early Khmer monarchs
 	culture = sambor
 	religion = shaivism
 
@@ -217,71 +217,69 @@
 		culture = khmer
 	}
 }
-16670 = { # b_koh_krieng
-	# 
-	holding = none
-}
-16459 = { # b_kracheh_nokor
-	# 
-	holding = city_holding
-}
-16426 = { # b_preaek_prasab
-	# 
+16670 = { # Koh Kring
+	# 8th century temple
 	holding = church_holding
 }
-16539 = { # b_banteay_chrouy
-	# 
-	holding = temple_citadel_holding
+16459 = { # Kracheh Nokor
+	# modern day capital of the Kracheh province ; made a city_holding to represent dense inhabitance of the region
+	holding = city_holding
+}
+16426 = { # Preaek Prasab
+	# small commune alongside Mekong river
+	holding = none
+}
+16539 = { # Banteay Chrouy
+	# rural commune famed for its natural beauty
+	holding = none
 }
 
-### c_phnom_preah_theat
-16766 = { # b_phnom_preah_theat
-	# 
+### c_stung_treng
+16766 = { # Stung Treng
+	# port settlement long Mekong ; means 'river of reeds'
+	# nearby ancient mountain temple Phnom Preah Theat isa a sacred mountainous site with many dense forests nearby
 	culture = sambor
 	religion = shaivism
 	holding = tribal_holding
 
 	# History
-	900.1.1 = {
+	# Phnom Preah Theat would make for a fun special building
+	1000.1.1 = {
 		culture = khmer
+		holding = temple_citadel_holding
 	}
+}
+16938 = { # Tonle Kong
+	# named after nearby river
+	holding = none
+}
+16846 = { # Preak Meas AKA Preaek Meas
+	# rural commune
+	holding = none
+}
+
+### c_koh_ker
+16739 = { # Thala Borivat
+	# historic region with various ancient temple sites, albeit mostly ruined
+	culture = sambor
+	religion = shaivism
+
+	holding = tribal_holding
+
+	# History
 	1000.1.1 = {
 		culture = khmer
 		religion = shaivism
 		holding = temple_citadel_holding
 	}
 }
-16938 = { # b_sandepheap
-	# 
+16922 = { # Chheab
+	# rural commune rich in nature
 	holding = none
 }
-16846 = { # b_preak_meas
-	# 
-	holding = none
-}
-
-### c_koh_ker
-16739 = { # b_thala_borivat
-	# 
-	culture = sambor
-	religion = shaivism
-
-	holding = tribal_holding
-
-	# History
-	1050.1.1 = {
-		culture = khmer
-		religion = shaivism
-		holding = temple_citadel_holding
-	}
-}
-16922 = { # b_chheab
-	# 
-	holding = none
-}
-16828 = { # b_mlu_prey
-	# 
-	holding = none
+16828 = { # Prei Kuk
+	# ancient pre-Angkorian tmeple near Mlu Prey commune
+	holding = church_holding
 }
 
 

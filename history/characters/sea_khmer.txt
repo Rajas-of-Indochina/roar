@@ -568,7 +568,7 @@ sea_chenla_dvirada_09_fic = {
 	dynasty_house = sea_house_dvirada
 	culture = khmer
 	religion = shaivism
-	father = 4200104
+	father = sea_chenla_dvirada_08
 
 	832.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
@@ -598,6 +598,7 @@ sea_chenla_dvirada_branch_01 = {
 	832.1.1 = { add_spouse = sea_khmer_sambhupura_05 }
 	860.1.1 = { death = yes }
 }
+
 
 sea_chenla_nrpathindra_00_fic = {
 	# fictional addition so that name of Nrpathindravarman II makes sense
@@ -662,14 +663,42 @@ sea_khmer_varman_2_father = {
 
 
 #### Fictional Placeholders
-sea_khmer_isanapura_04_fic = {
-	# fictional placeholder to represent weakened Angkor state
+sea_khmer_sambhupura_fic_01 = {
+	# fictional placeholder member of Sambhupura dynasty
+	name = "Ney_Khan"
+	dynasty = sea_khmer_sambhupura
+	culture = khmer
+	religion = shaivism
+
+	1036.1.1 = { birth = yes }
+	1100.1.1 = { death = yes }
+}
+sea_khmer_sambhupura_fic_02 = {
+	# fictional placeholder member of Sambhupura dynasty
 	name = "Makara"
+	dynasty = sea_khmer_sambhupura
 	culture = khmer
 	religion = shaivism
 
 	1138.1.1 = { birth = yes }
 	1200.1.1 = { death = yes }
+}
+
+sea_khmer_kampong_kdei_03_fic = {
+	name = "Entaravong"
+	culture = khmer
+	religion = shaivism
+
+	1038.1.1 = { birth = yes }
+	1100.1.1 = { death = yes }
+}
+sea_khmer_kampong_kdei_04_fic = {
+	name = "Chanchhaya"
+	culture = khmer
+	religion = shaivism
+
+	1144.1.1 = { birth = yes }
+	1206.1.1 = { death = yes }
 }
 
 sea_khmer_kottinagara_01_fic = {
@@ -831,24 +860,6 @@ khmerv013 = {
 	1038.1.1 = { birth = yes }
 	1100.1.1 = { death = yes }
 }
-khmerv014 = {
-	name = "Ney_Khan"
-	#dynasty = sea_khmer_sambhupura
-	culture = khmer
-	religion = shaivism
-
-	1036.1.1 = { birth = yes }
-	1100.1.1 = { death = yes }
-}
-khmerv015 = {
-	name = "Nan"
-	#dynasty = sea_khmer_sambhupura
-	culture = khmer
-	religion = shaivism
-
-	1039.1.1 = { birth = yes }
-	1100.1.1 = { death = yes }
-}
 khmerv016 = {
 	name = "Chan"
 	culture = khmer
@@ -865,15 +876,6 @@ khmerv017 = {
 	religion = shaivism
 
 	894.1.1 = { birth = yes }
-	960.1.1 = { death = yes }
-}
-khmerv018 = {
-	name = "Entaravong"
-	#dynasty = sea_khmer_sambhupura
-	culture = khmer
-	religion = shaivism
-
-	918.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
 khmerv019 = {
@@ -944,14 +946,6 @@ khmerv027 = {
 	900.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
-khmerv028 = {
-	name = "Chanchhaya"
-	culture = khmer
-	religion = shaivism
-
-	1134.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
-}
 
 khmerv030 = {
 	name = "Namhong"
@@ -972,15 +966,15 @@ khmerv031 = {
 	1200.1.1 = { death = yes }
 }
 
-khmerv033 = {
-	name = "Neakrin"
-	#dynasty = sea_khmer_sambhupura
+khmerv015 = {
+	name = "Nan"
 	culture = khmer
 	religion = shaivism
 
-	1155.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
+	1039.1.1 = { birth = yes }
+	1100.1.1 = { death = yes }
 }
+
 khmerv035 = {
 	name = "Keo_Ban_On"
 	culture = khmer
