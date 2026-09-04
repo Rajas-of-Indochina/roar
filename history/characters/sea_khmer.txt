@@ -482,7 +482,7 @@ sea_chenla_dvirada_02 = {
 	790.1.1 = { death = yes }
 }
 sea_chenla_dvirada_03 = {
-	# king of Chenla ; executed at orders of Javanese king of Zabag ; Jayavarman II suceeded him
+	# king of Chenla ; executed at orders of Javanese king of 'Zabag' ; Jayavarman II suceeded him
 	name = "Mahipativarman"
 	dynasty_house = sea_house_dvirada
 	culture = sambor
@@ -491,7 +491,13 @@ sea_chenla_dvirada_03 = {
 	mother = sea_chenla_sambhupura_01
 
 	760.1.1 = { birth = yes }
-	800.1.1 = { death = yes }
+	800.1.1 = {
+		death = {
+			# executed at orders of Javanese king
+			death_reason = death_execution
+			killer = javanese_sanjaya_03
+		}
+	}
 }
 sea_chenla_dvirada_04 = {
 	# wife of Jayavarman II ; mother of Jayavarman III
