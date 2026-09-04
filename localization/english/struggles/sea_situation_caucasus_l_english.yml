@@ -18,6 +18,32 @@
  situation_caucasus_disputed_control_desc: "The region is in disarray, either under no clear control or controlled by foreign interlopers."
  situation_caucasus_situation_caucasus_disputed_control_situation_phase: "$situation_caucasus_disputed_control$"
 
+ situation_caucasus_military_effects: "Military"
+ situation_caucasus_diplomatic_effects: "Diplomatic"
+ situation_caucasus_domestic_effects: "Domestic"
+
+ situation_parameter_caucasus_foment_revolt_unlock: "Unlocks the [incite_revolts_interaction|E] [interaction|E] against [rulers|E] from opposing factions"
+ situation_parameter_unlocks_contract_assistance_interaction: "$struggle_parameter_unlocks_contract_assistance_interaction$"
+ situation_parameter_unlocks_border_raid_casus_belli: "$struggle_parameter_unlocks_border_raid_casus_belli$"
+ situation_parameter_caucasus_holy_wars_disabled: "Cannot declare [holy_wars|E] in the [situation_sub_region|E]"
+ situation_parameter_unlocks_expand_borders_casus_belli: "Interlopers can use the Expand Borders casus belli within the [situation_sub_region|E]"
+ situation_parameter_claims_fabricated_for_prestige_not_gold: "[fabricating_claims|E] in the [situation_sub_region|E] costs [prestige_i][prestige|E] instead of [gold_i][gold|E]"
+ situation_parameter_unlocks_imperial_support_interaction: "Unlocks the Seek Imperial Support [interaction|E] against [rulers|E] from opposing factions"
+ situation_parameter_unlocks_invite_incursion_interaction: "Unlocks the Invite Incursion interaction"
+ # keep working below
+ situation_parameter_unlocks_consolidate_roman_territory_casus_belli: "Unlocks the Consolidate Roman Territory casus belli"
+ situation_parameter_unlocks_join_war_against_pro_romans: "Can join offensive wars against Pro-Roman characters"
+ situation_parameter_unlocks_join_war_against_pro_perso_arabs: "Can join offensive wars against Pro-Perso-Arabic characters"
+ situation_parameter_county_conversion_faster_in_subregion: "Increased conversion speed of counties to cultures and faiths of this faction within the [situation_sub_region|E]"
+ situation_parameter_slowed_county_conversion: "Slower conversion speed of counties within the [situation_sub_region|E]"
+ situation_parameter_revolt_more_common: "Communalist, Populist and Peasant factions more common within the [situation_sub_region|E]"
+ situation_parameter_unlock_claim_throne_against_pro_roman: "Unlocks the Unlocks the [GetScheme('claim_throne').GetTypeName] [scheme|E] for anti-Roman [vassals|E] of pro-Roman lieges"
+ situation_parameter_unlock_claim_throne_against_pro_perso_arabic: "Unlocks the Unlocks the [GetScheme('claim_throne').GetTypeName] [scheme|E] for anti-Perso-Arabic [vassals|E] of pro-Perso-Arabic lieges"
+ situation_parameter_county_holy_wars_only: "County-tier Holy Wars unlocked"
+ situation_parameter_unlock_county_conquest_cb: "County Conquest casus belli unlocked"
+ situation_parameter_can_join_autonomist_uprisings: "Can join Autonomist-aligned Populist, Peasant and Communalist factions regardless of faith or culture"
+ situation_parameter_unlock_autonomist_confederation: "Can form Autonomist Confederations"
+
  situation_caucasus_participant_group_pro_roman: "Pro-Roman"
  situation_caucasus_participant_group_pro_roman_desc: "Those in the Southern Caucasus that have chosen to align their interests with those of the Basileus in Byzantion."
  situation_caucasus_participant_group_pro_perso_arabic: "Pro-Perso-Arabic"
@@ -29,7 +55,7 @@
 
  SITUATION_CAUCASUS_WINDOW_HEADER: "$situation_type_situation_caucasus$"
  SITUATION_CAUCASUS_HEARTLAND_REGIONS: "South Caucasian Heartlands"
- SITUATION_CAUCASUS_OUTER_REGIONS: "Outer Southern Caucasus"
+ SITUATION_CAUCASUS_OUTER_REGIONS: "Caucasian Frontier"
 
  situation_caucasus_region: "South Caucasus"
  situation_caucasus_sub_region_big_group: "$situation_situation_caucasus$"

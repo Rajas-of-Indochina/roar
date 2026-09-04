@@ -1,0 +1,1573 @@
+situation_caucasus_imperial_support_interaction = {
+	category = interaction_category_diplomacy
+	icon = religious_claim
+	interface_priority = 35
+
+	desc = situation_caucasus_imperial_support_interaction_desc
+	target_type = title
+	target_filter = secondary_recipient_domain_titles
+	redirect = {
+		if = {
+			limit = {
+				exists = title:e_byzantium.holder
+			}
+			scope:recipient = {
+				save_scope_as = secondary_recipient
+			}
+			title:e_byzantium.holder = {
+				save_scope_as = recipient
+			}
+		}
+		else_if = {
+			limit = {
+				exists = title:h_eastern_roman_empire.holder
+			}
+			scope:recipient = {
+				save_scope_as = secondary_recipient
+			}
+			title:h_eastern_roman_empire.holder = {
+				save_scope_as = recipient
+			}
+		}
+		else_if = {
+			limit = {
+				exists = title:h_roman_empire.holder
+			}
+			scope:recipient = {
+				save_scope_as = secondary_recipient
+			}
+			title:h_roman_empire.holder = {
+				save_scope_as = recipient
+			}
+		}
+	}
+
+	has_valid_target_showing_failures_only = {
+		# Must be a county or duchy that falls at least partly inside a sub-region where this interaction is allowed
+		scope:target = {
+			tier >= tier_county
+			tier <= tier_duchy
+			is_noble_family_title = no
+			any_in_de_jure_hierarchy = {
+				continue = { tier > tier_county }
+				any_county_situation_sub_region = {
+					any_situation_sub_region_participant_group = {
+						has_participant_group_parameter = unlocks_imperial_support_interaction
+					}
+				}
+			}
+		}
+	}
+
+	is_shown = {
+		# Emperor must exist
+		OR = {
+			exists = title:e_byzantium.holder
+			exists = title:h_eastern_roman_empire.holder
+			exists = title:h_roman_empire.holder
+		}
+		# Requester must be Pro-Roman
+		scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
+		# Target must NOT be Pro-Roman
+		scope:secondary_recipient = {
+			NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
+			is_landed_or_landless_administrative = yes
+			primary_title = { tier >= tier_county }
+		}
+		# this is just here to catch super bizarre edge cases
+		NOR = {
+			scope:actor = scope:secondary_recipient
+			scope:secondary_recipient = scope:recipient
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		trigger_if = { # Can't request on titles you already have a pressed claim on
+			limit = {
+				exists = scope:target
+				scope:actor = {
+					has_strong_claim_on = scope:target
+				}
+			}
+			custom_description = {
+				text = "hof_ask_for_claim_has_pressed_claim_already"
+				always = no
+			}
+		}
+		trigger_if = { # Can't request claims on baronies
+			limit = {
+				OR = {
+					scope:recipient.highest_held_title_tier = tier_barony
+					AND = {
+						exists = scope:target
+						scope:target = {
+							tier = tier_barony
+						}
+					}
+				}
+			}
+			custom_description = {
+				text = "hof_ask_for_claim_no_baronies"
+				always = no
+			}
+		}
+		scope:actor = { # Variable pretige/influence cost depending on tier
+			trigger_if = {
+				limit = {
+					exists = scope:target
+				}
+				OR = {
+					AND = {
+						government_has_flag = government_has_influence
+						influence >= claim_piety_value
+					}
+					prestige >= claim_piety_value
+				}
+				
+			}
+			NOT = {
+				is_at_war_with = scope:recipient
+			}
+		}
+		scope:secondary_recipient = { NOT = { has_strong_hook = scope:actor } }
+	}
+
+	cost = {
+		influence = {
+			value = 0
+			if = {
+				limit = { scope:actor = { government_has_flag = government_has_influence } }
+				add = claim_piety_value
+			}
+		}
+		prestige = {
+			value = 0
+			if = {
+				limit = { NOT = { scope:actor = { government_has_flag = government_has_influence } } }
+				add = claim_piety_value
+			}
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		ai_recipients = liege
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 108
+		duchy = 36
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+
+	ai_potential = {
+		is_playable_character = yes
+		OR = {
+			ai_greed >= 50
+			ai_has_warlike_personality = yes
+		}
+		OR = {
+			AND = {
+				government_has_flag = government_has_influence
+				influence >= major_piety_value
+			}
+			prestige >= major_piety_value
+		}
+		OR = {
+			exists = title:e_byzantium.holder
+			exists = title:h_eastern_roman_empire.holder
+			exists = title:h_roman_empire.holder
+		}
+	}
+
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = scope:actor.ai_greed
+		}
+
+		modifier = {
+			add = scope:target.tier
+		}
+
+		modifier = {
+			add = 500
+			has_variable = conqueror
+			NOR = {
+				has_relation_friend = scope:secondary_recipient
+				has_relation_lover = scope:secondary_recipient
+			}
+		}
+
+		modifier = {
+			add = -100
+			scope:actor = {
+				OR = {
+					has_relation_friend = scope:secondary_recipient
+					has_relation_lover = scope:secondary_recipient
+					opinion = {
+						target = scope:secondary_recipient
+						value >= high_positive_opinion
+					}
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0
+			NOT = {
+				scope:target = {
+					is_neighbor_to_realm = scope:actor
+				}
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 0 # Should be 0 for all interactions
+
+		modifier = {
+			scope:claim_hook ?= yes
+			add = 100
+			desc = SCHEME_WEAK_HOOK_USED
+		}
+
+		modifier = {
+			add = -100
+			desc = BASE_RELUCTANCE
+		}
+
+		opinion_modifier = { # More likely if Recipient likes Actor
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = 0.5
+			desc = AI_OPINION_REASON
+		}
+
+		modifier = { # Same language
+			add = 5
+			desc = speaks_same_language_interaction_reason
+			trigger = {
+				scope:actor = {
+					knows_language_of_culture = scope:recipient.culture
+				}
+			}
+		}
+		modifier = { # Unlikely if recipient likes Secondary Recipient
+			desc = AI_OPINION_RECIPIENT_REASON
+			add = {
+				if = {
+					limit = {
+						scope:recipient != scope:secondary_recipient
+					}
+					subtract = "scope:recipient.opinion(scope:secondary_recipient)"
+				}
+			}
+		}
+
+		modifier = { # Penalty for asking claims on your own vassals
+			add = -50
+			desc = THEY_ARE_YOUR_VASSAL
+			scope:actor = {
+				any_vassal_or_below = {
+					this = scope:secondary_recipient
+				}
+			}
+		}
+
+		modifier = { # Bonus for adults to ask on children
+			add = 25
+			desc = THEY_ARE_A_CHILD
+			scope:secondary_recipient = {
+				is_adult = no
+			}
+			scope:actor = {
+				is_adult = yes
+			}
+		}
+
+		modifier = { # Penalty for children to ask on adults
+			add = -25
+			desc = I_AM_A_CHILD
+			scope:secondary_recipient = {
+				is_adult = yes
+			}
+			scope:actor = {
+				is_adult = no
+			}
+		}
+
+		modifier = { # They are of the same dynasty as the Emperor
+			add = -50
+			desc = THEY_ARE_MY_DYNASTY_MEMBER
+			scope:recipient = {
+				is_lowborn = no
+				dynasty = scope:secondary_recipient.dynasty
+				NOR = {
+					house = scope:secondary_recipient.house
+					is_close_or_extended_family_of = scope:actor
+					is_cousin_of = scope:actor
+					is_child_of = scope:actor
+					scope:recipient.dynasty = scope:actor.dynasty
+				}
+			}
+		}
+
+		modifier = { # You are of the same dynasty as the Emperor
+			add = 10
+			desc = YOU_ARE_MY_DYNASTY_MEMBER
+			scope:recipient = {
+				is_lowborn = no
+				dynasty = scope:actor.dynasty
+				NOR = {
+					is_close_or_extended_family_of = scope:actor
+					is_cousin_of = scope:actor
+					is_child_of = scope:actor
+					scope:recipient.dynasty = scope:secondary_recipient.dynasty
+				}
+			}
+		}
+
+		modifier = { # They are of the same house as the Emperor
+			add = -50
+			desc = THEY_ARE_MY_HOUSE_MEMBER
+			scope:recipient = {
+				is_lowborn = no
+				house = scope:secondary_recipient.house
+				NOR = {
+					house = scope:actor.house
+					is_close_or_extended_family_of = scope:actor
+					is_cousin_of = scope:actor
+					is_child_of = scope:actor
+					scope:recipient.house = scope:actor.house
+				}
+			}
+		}
+
+		modifier = { # You are of the same house as the Emperor
+			add = 10
+			desc = YOU_ARE_MY_HOUSE_MEMBER
+			scope:recipient = {
+				is_lowborn = no
+				house = scope:actor.house
+				NOR = {
+					is_close_or_extended_family_of = scope:actor
+					is_cousin_of = scope:actor
+					is_child_of = scope:actor
+					scope:recipient.house = scope:secondary_recipient.house
+				}
+			}
+		}
+
+		modifier = { # Related to the Emperor
+			add = 25
+			desc = YOU_ARE_MY_RELATIVE
+			scope:recipient = {
+				OR = {
+					is_close_or_extended_family_of = scope:actor
+					is_cousin_of = scope:actor
+				}
+				NOT = { is_child_of = scope:actor }
+			}
+		}
+
+		modifier = { # Parent of the Emperor
+			add = 50
+			desc = YOU_ARE_MY_PARENT
+			scope:recipient = {
+				is_child_of = scope:actor
+			}
+		}
+
+		modifier = { # Friend of the Emperor
+			add = 15
+			desc = WE_ARE_FRIENDS
+			scope:recipient = {
+				has_relation_friend = scope:actor
+			}
+		}
+
+		modifier = { # Best Friend of the Emperor
+			add = 20
+			desc = WE_ARE_BEST_FRIENDS
+			scope:recipient = {
+				has_relation_best_friend = scope:actor
+			}
+		}
+
+		modifier = { # Lover of the Emperor
+			add = 10
+			desc = WE_ARE_LOVERS
+			scope:recipient = {
+				has_relation_lover = scope:actor
+			}
+		}
+
+		modifier = { # Rival of the Emperor
+			add = -100
+			desc = WE_ARE_RIVALS
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+
+		modifier = { # Nemesis of the Emperor
+			add = -500
+			desc = WE_ARE_NEMESES
+			scope:recipient = {
+				has_relation_nemesis = scope:actor
+			}
+		}
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:claim_hook = yes
+			scope:actor = { has_strong_hook = scope:recipient }
+		}
+	}
+	send_option = {
+		is_shown = {
+			scope:actor != scope:recipient
+		}
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		flag = claim_hook
+		localization = GENERIC_SPEND_A_HOOK
+	}
+	should_use_extra_icon = {
+		scope:actor = { has_usable_hook = scope:recipient }
+	}
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+
+	send_options_exclusive = no
+
+	ai_min_reply_days = 1
+	ai_max_reply_days = 5
+
+	on_accept = {
+		hof_ask_for_claim_interaction_effect = yes
+		scope:secondary_recipient = {
+			trigger_event = religious_interaction.5
+		}
+		scope:actor = {
+			trigger_event = religious_interaction.4
+		}
+
+		# If we're a clan this interaction affects unity
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:secondary_recipient
+			VALUE = minor_unity_loss
+			DESC = clan_unity_granted_claim.desc
+			REVERSE_NON_HOUSE_TARGET = no
+		}
+	}
+}
+
+situation_caucasus_sway_alignment_interaction = {
+	interface_priority = 30
+	category = interaction_category_diplomacy
+	common_interaction = yes
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				# Pro-Roman
+				trigger = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } }
+				desc = situation_caucasus_sway_alignment_interaction_desc_pro_roman
+			}
+			triggered_desc = {
+				# Pro-Perso-Arabic
+				trigger = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } }
+				desc = situation_caucasus_sway_alignment_interaction_desc_pro_perso_arabic
+			}
+			triggered_desc = {
+				# Autonomist
+				trigger = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = autonomist } } }
+				desc = situation_caucasus_sway_alignment_interaction_desc_pro_autonomist
+			}
+			desc = situation_caucasus_sway_alignment_interaction_desc_fallback
+		}
+	}
+	icon = change_allegiance
+
+	greeting = positive
+
+	should_use_extra_icon = { scope:actor = { has_usable_hook = scope:recipient } }
+	extra_icon = "gfx/interface/icons/character_interactions/hook_icon.dds"
+
+	send_options_exclusive = no
+
+	ai_maybe = yes
+
+	is_shown = {
+		# Both characters must be participants in the Caucasus Situation
+		scope:actor = { any_character_situation = { situation_type = situation_caucasus } }
+		scope:recipient = { any_character_situation = { situation_type = situation_caucasus } }
+		# And they need to not be the same factions
+		trigger_if = {
+			limit = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } }
+			NOT = { scope:recipient = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } }
+		}
+		trigger_if = {
+			limit = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } }
+			NOT = { scope:recipient = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } }
+		}
+		trigger_if = {
+			limit = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = autonomist } } }
+			NOT = { scope:recipient = { top_participant_group:situation_caucasus ?= { participant_group_type = autonomist } } }
+		}
+		# not allowed for interlopers
+		NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = interloper } } }
+		# Also not allowed for any of the faction-locked participants:
+		scope:recipient = {
+			NOR = {
+				has_title = title:e_arabia
+				has_title = title:e_persia
+				has_title = title:h_dar_al_islam
+				has_title = title:e_byzantium
+				has_title = title:h_roman_empire
+				has_title = title:h_eastern_roman_empire
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		# We want to avoid the Emperor, Caliph or Shah's allies getting swayed away
+		scope:recipient = {
+			trigger_if = {
+				limit = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
+				NOT = {
+					is_allied_to = title:e_byzantium.holder
+					is_allied_to = title:h_eastern_roman_empire.holder
+					is_allied_to = title:h_roman_empire.holder
+				}
+			}
+			trigger_if = {
+				limit = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } }
+				NOT = {
+					is_allied_to = title:e_arabia.holder
+					is_allied_to = title:h_dar_al_islam.holder
+					is_allied_to = title:e_persia.holder
+				}
+			}
+			# general triggers
+			is_at_war = no
+			# Cooldown
+			custom_tooltip = {
+				text = fp3_change_allegiance.tt.recently_changed_mind
+				NOT = { has_character_flag = situation_caucasus_recently_changed_alignment }
+			}
+			custom_tooltip = {
+				text = fp3_change_allegiance.tt.recently_refused
+				NOT = { has_character_flag = situation_caucasus_recently_refused_alignment_change }
+			}
+		}
+		scope:actor = { is_available_adult = yes }
+	}
+
+	auto_accept = {
+		custom_description = {
+			text = "spending_hook"
+			subject = scope:actor
+			object = scope:recipient
+			scope:hook = yes
+		}
+	}
+
+	ai_accept = {
+		base = 0
+
+		# Those who already have a stance are more set in their ways.
+		modifier = {
+			add = -25
+			scope:actor = { NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = interloper } } }
+			scope:recipient = { has_trait = fp3_struggle_detractor }
+			desc = I_HAVE_FACTION
+		}
+
+		# Opinions
+		## Opinion of you
+		opinion_modifier = {
+			who = scope:recipient
+			opinion_target = scope:actor
+			multiplier = {
+				value = 1
+				# Despawn this if you're not the caliph.
+				if = {
+					limit = { scope:actor = title:d_sunni.holder }
+					multiply = 0
+				}
+			}
+		}
+		# Opinion of the Roman Emperor. Positive if swaying toward Rome, otherwise negative
+		opinion_modifier = {
+			who = scope:recipient
+			opinion = title:e_byzantium.holder
+			multiplier = {
+				value = 0.5
+				if = {
+					limit = { NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } } }
+					multiply = -1
+				}
+			}
+		}
+		opinion_modifier = {
+			who = scope:recipient
+			opinion = title:h_eastern_roman_empire.holder
+			multiplier = {
+				value = 0.5
+				if = {
+					limit = { NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } } }
+					multiply = -1
+				}
+			}
+		}
+		opinion_modifier = {
+			who = scope:recipient
+			opinion = title:h_roman_empire.holder
+			multiplier = {
+				value = 0.5
+				if = {
+					limit = { NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } } }
+					multiply = -1
+				}
+			}
+		}
+		# Opinion of the Caliph and the Shah. If swaying to Perso-Arabic, positive, otherwise, negative
+		opinion_modifier = {
+			who = scope:recipient
+			opinion = title:e_arabia.holder
+			multiplier = {
+				value = 0.5
+				if = {
+					limit = { NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } } }
+					multiply = -1
+				}
+			}
+		}
+		opinion_modifier = {
+			who = scope:recipient
+			opinion = title:h_dar_al_islam.holder
+			multiplier = {
+				value = 0.5
+				if = {
+					limit = { NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } } }
+					multiply = -1
+				}
+			}
+		}
+		opinion_modifier = {
+			who = scope:recipient
+			opinion = title:e_persia.holder
+			multiplier = {
+				value = 0.5
+				if = {
+					limit = { NOT = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } } }
+					multiply = -1
+				}
+			}
+		}
+		# Traits.
+		## Traits that make you timid or content make it harder to sway you
+		### Craven, Content, Lazy, Honest, Humble, Just, Paranoid, Stubborn, Loyal
+		modifier = {
+			add = -25
+			desc = HAS_CRAVEN_TRAIT
+			scope:recipient = { has_trait = craven }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_CONTENT_TRAIT
+			scope:recipient = { has_trait = content }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_LAZY_TRAIT
+			scope:recipient = { has_trait = lazy }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_HONEST_TRAIT
+			scope:recipient = { has_trait = honest }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_HUMBLE_TRAIT
+			scope:recipient = { has_trait = humble }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_JUST_TRAIT
+			scope:recipient = { has_trait = just }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_PARANOID_TRAIT
+			scope:recipient = { has_trait = paranoid }
+		}
+		modifier = {
+			add = -25
+			desc = HAS_STUBBORN_TRAIT
+			scope:recipient = { has_trait = stubborn }
+		}
+		modifier = {
+			add = -15
+			desc = HAS_LOYAL_TRAIT
+			scope:recipient = { has_trait = loyal }
+		}
+		## Traits that make you greedy, ambitious, or sneaky make it easier
+		### Brave, Ambitious, Greedy, Deceitful, Arrogant, Arbitrary, Fickle, Disloyal
+		modifier = {
+			add = 25
+			desc = HAS_BRAVE_TRAIT
+			scope:recipient = { has_trait = brave }
+		}
+		modifier = {
+			add = 25
+			desc = HAS_AMBITIOUS_TRAIT
+			scope:recipient = { has_trait = ambitious }
+		}
+		modifier = {
+			add = 25
+			desc = HAS_GREEDY_TRAIT
+			scope:recipient = { has_trait = greedy }
+		}
+		modifier = {
+			add = 25
+			desc = HAS_DECEITFUL_TRAIT
+			scope:recipient = { has_trait = deceitful }
+		}
+		modifier = {
+			add = 25
+			desc = HAS_ARROGANT_TRAIT
+			scope:recipient = { has_trait = arrogant }
+		}
+		modifier = {
+			add = 25
+			desc = HAS_ARBITRARY_TRAIT
+			scope:recipient = { has_trait = arbitrary }
+		}
+		modifier = {
+			add = 25
+			desc = HAS_FICKLE_TRAIT
+			scope:recipient = { has_trait = fickle }
+		}
+		modifier = {
+			add = 15
+			desc = HAS_DISLOYAL_TRAIT
+			scope:recipient = { has_trait = disloyal }
+		}
+		## Misc
+		# Diplomacy
+		## Scope:actor's for convincing
+		modifier = {
+			add = {
+				value = scope:actor.diplomacy
+				multiply = 5
+			}
+			desc = INTERACTION_DIPLOMACY_ACTOR
+		}
+		## Scope:recipient's for resisting
+		modifier = {
+			add = {
+				value = scope:recipient.diplomacy
+				multiply = -3
+			}
+			desc = INTERACTION_DIPLOMACY_RECIPIENT
+		}
+	}
+
+	cost = {
+		prestige = medium_prestige_value
+	}
+
+	# Use hook
+	send_option = {
+		flag = hook
+		is_valid = {
+			scope:actor = {
+				has_usable_hook = scope:recipient
+			}
+		}
+		localization = GENERIC_SPEND_A_HOOK
+	}
+
+	on_accept = {
+		# Use our hook if we have to.
+		if = {
+			limit = { always = scope:hook }
+			scope:actor = {
+				use_hook = scope:recipient
+			}
+		}
+		# If we're a clan this interaction affects unity
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = medium_unity_gain
+			DESC = clan_unity_changed_alignment.desc
+			REVERSE_NON_HOUSE_TARGET = no
+		}
+		# Run the actual effects.
+		# Flag to prevent re-swaying is already set in the effect
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = recipient_joined_your_side_title
+				left_icon = scope:recipient
+
+				scope:recipient = {
+					if = {
+						limit = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } } }
+						scope:recipient = { set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = yes } }
+					}
+					else_if = {
+						limit = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } } }
+						scope:recipient = { set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = yes } }
+					}
+					else_if = {
+						limit = { scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = autonomist } } }
+						scope:recipient = { set_caucasus_alignment = { FLAG = autonomist COOLDOWN = yes } }
+					}
+				}
+			}
+		}
+	}
+
+	on_decline = {
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = medium_unity_loss
+			DESC = clan_unity_refused_alignment.desc
+			REVERSE_NON_HOUSE_TARGET = no
+		}
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_bad
+				title = recipient_refused_to_join_your_side_title
+				left_icon = scope:recipient
+				progress_towards_rival_effect = {
+					REASON = rival_rejected_switching_to_struggle_detractor
+					CHARACTER = scope:recipient
+					OPINION = default_rival_opinion
+				}
+			}
+		}
+		scope:recipient = {
+			set_variable = {
+				name = situation_caucasus_recently_refused_alignment_change
+				years = 10
+			}
+		}
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 120
+		kingdom = 120
+		empire = 120
+		hegemony = 120
+	}
+
+	ai_targets = {
+		ai_recipients = liege
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		ai_recipients = vassals
+		ai_recipients = top_realm_domicile_owners
+		max = 10
+	}
+
+	ai_will_do = {
+		base = -50 # Let's limit it to specific character to avoid pure chaos
+
+		###############
+		## BASE
+		###############
+
+		# AI Values
+		modifier = {
+			add = {
+				value = ai_zeal
+				multiply = 2
+			}
+			ai_zeal >= 1
+		}
+
+		# The caliph, shah and emperor want to use this all the time.
+		modifier = {
+			OR = {
+				has_title = title:e_arabia
+				has_title = title:h_dar_al_islam
+				has_title = title:e_persia
+				has_title = title:e_byzantium
+				has_title = title:h_eastern_roman_empire
+				has_title = title:h_roman_empire
+			}
+			add = 200
+		}
+		
+		###############
+		## TRAITS
+		###############
+
+		# schemer
+		modifier = {
+			add = 15
+			has_trait = schemer
+		}
+
+		# theologian
+		modifier = {
+			add = 25
+			has_trait = diplomat
+		}
+
+		# intrigue education
+		modifier = {
+			add = 15
+			has_trait = education_intrigue
+		}
+
+		# learning education
+		modifier = {
+			add = 25
+			has_trait = education_diplomacy
+		}
+
+		################
+		## RELATIONSHIP
+		################
+
+		# more likely to do it against friend and lover
+		modifier = {
+			add = 50
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					has_relation_soulmate = scope:actor
+					has_relation_best_friend = scope:actor
+				}
+			}
+		}
+
+		# boost against liege for Ambitious
+		modifier = {
+			add = 50
+			scope:actor = {
+				has_trait = ambitious
+				is_vassal_of = scope:recipient
+			}
+		}
+
+		# never target your rivals
+		modifier = {
+			add = -1000
+			scope:recipient = {
+				OR = {
+					has_relation_rival = scope:actor
+					has_relation_nemesis = scope:actor
+				}
+			}
+		}
+	}
+
+}
+
+situation_caucasus_request_incursion_interaction = {
+	interface_priority = 100
+	common_interaction = yes
+	category = interaction_category_hostile
+	cooldown_against_recipient = { years = 2 }
+
+	icon = request_mercenary
+	desc = situation_caucasus_request_incursion_interaction_desc
+
+	is_shown = {
+		scope:actor = {
+			# must be an Interloper in the Caucasus Situation
+			top_participant_group:situation_caucasus ?= { participant_group_type = interloper }
+		}
+		scope:recipient = {
+			is_playable_character = yes
+			# Recipient must have realm in the caucasus situation
+			any_realm_county = {
+				any_county_situation_sub_region = {
+					# in a region where incursions are allowed
+					any_situation_sub_region_participant_group = {
+						has_participant_group_parameter = unlocks_invite_incursion_interaction
+					}
+				}
+			}
+		}
+	}
+
+	populate_recipient_list = {
+		every_independent_ruler = {
+			limit = {
+				is_ai = yes
+				is_landed = yes
+				is_physically_able = yes
+				has_raised_armies = no
+				is_at_war = no
+				in_diplomatic_range = scope:actor
+				highest_held_title_tier >= tier_county
+				NOR = {
+					is_allied_to = scope:recipient
+					has_truce = scope:recipient
+					this = scope:actor
+					this = scope:recipient
+					is_tributary_of = scope:recipient.top_liege
+				}
+				OR = {
+					culture = scope:actor.culture
+					faith = scope:actor.faith
+					dynasty = scope:actor.dynasty
+				}
+			}
+			add_to_list = characters
+		}
+	}
+
+	send_options_exclusive = no
+
+	send_option = {
+		flag = war_support
+		localization = fp3_request_turkic_invasion_interaction_option_join_war
+		current_description = fp3_request_turkic_invasion_interaction_option_join_war_desc
+		is_shown = { exists = scope:secondary_recipient }
+		is_valid = {
+			scope:actor = {
+				NOR = {
+					is_at_war_with = scope:recipient
+					is_allied_to = scope:recipient
+					has_truce = scope:recipient
+				}		
+			}
+		}
+	}
+
+	send_option = {
+		flag = financial_support
+		localization = fp3_request_turkic_invasion_interaction_option_more_gold
+		current_description = fp3_request_turkic_invasion_interaction_option_more_gold_desc
+		is_shown = { exists = scope:secondary_recipient }
+		is_valid = {
+			custom_description = {
+				text = fp3_please_dont_give_me_negative_gold
+				fp3_request_invasion_troop_value_estimate > 0
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			value = {
+				value = scope:secondary_recipient.max_military_strength
+				divide = 20
+				round = yes
+			}
+			add = {
+				if = {
+					limit = { scope:financial_support = yes }
+					add = fp3_request_invasion_troop_value_estimate
+				}
+			}
+		}
+	}
+
+	on_accept = {
+		if = {
+			limit = { exists = scope:secondary_recipient }
+			scope:recipient = {
+				if = {
+					limit = {
+						any_realm_county = {
+							this != scope:recipient.capital_county
+							any_neighboring_county = { holder.top_liege = scope:secondary_recipient.top_liege }
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+						}
+					}
+					random_realm_county = {
+						limit = {
+							this != scope:recipient.capital_county
+							any_neighboring_county = { holder.top_liege = scope:secondary_recipient.top_liege }
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+						}
+						save_scope_as = invasion_target_title
+					}
+				}
+				else_if = {
+					limit = {
+						any_realm_county = {
+							this != scope:recipient.capital_county
+							any_neighboring_county = {
+								any_county_situation_sub_region = {
+									any_situation_sub_region_participant_group = {
+										has_participant_group_parameter = unlocks_invite_incursion_interaction
+									}
+								}
+								holder.top_liege != prev.holder.top_liege
+							}
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+						}
+					}
+					random_realm_county = {
+						limit = {
+							this != scope:recipient.capital_county
+							any_neighboring_county = {
+								any_county_situation_sub_region = {
+									any_situation_sub_region_participant_group = {
+										has_participant_group_parameter = unlocks_invite_incursion_interaction
+									}
+								}
+								holder.top_liege != prev.holder.top_liege
+							}
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+						}
+						save_scope_as = invasion_target_title
+					}
+				}
+				else_if = {
+					limit = {
+						any_realm_county = {
+							this != scope:recipient.capital_county
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+						}
+					}
+					random_realm_county = {
+						limit = {
+							this != scope:recipient.capital_county
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+						}
+						save_scope_as = invasion_target_title
+					}
+				}
+				else_if = {
+					limit = {
+						any_realm_county = {
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+						}
+					}
+					random_realm_county = {
+						limit = {
+							NOR = {
+								holder = scope:actor
+								holder = { is_vassal_or_below_of = scope:actor }
+							}
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+						}
+						save_scope_as = invasion_target_title
+					}
+				}
+				else = {
+					random_realm_county = {
+						limit = {
+							any_county_situation_sub_region = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_invite_incursion_interaction
+								}
+							}
+						}
+						save_scope_as = invasion_target_title
+					}
+				}
+				scope:invasion_target_title.duchy = { save_scope_as = text_title }
+
+				hidden_effect = { # Not worth cluttering the UI with
+					add_opinion = {
+						modifier = fp3_incited_conflict
+						target = scope:actor
+					}
+					add_opinion = {
+						modifier = declared_war
+						target = scope:secondary_recipient
+					}
+				}
+			}
+
+			scope:secondary_recipient = {
+				add_gold = {
+					value = {
+						value = scope:secondary_recipient.max_military_strength
+						divide = 20
+						round = yes
+					}
+					add = {
+						if = {
+							limit = { scope:financial_support = yes }
+							add = fp3_request_invasion_troop_value_estimate
+						}
+					}
+					if = {
+						limit = {
+							scope:recipient = { has_title = title:d_sunni }
+							struggle:persian_struggle = { has_struggle_phase_parameter = cheaper_incursions_vs_caliph }
+						}
+						divide = 2
+					}
+				}
+				start_war = {
+					casus_belli = fp3_turkic_invasion_cb
+					target = scope:recipient
+					target_title = scope:invasion_target_title.duchy
+				}
+				custom_tooltip = fp3_turkic_invasion_cb_result_tt
+				if = {
+					limit = {
+						scope:financial_support = yes
+					}
+					trigger_event = fp3_misc_decisions.0006
+					if = {
+						limit = {
+							has_mpo_dlc_trigger = yes
+						}
+						show_as_tooltip = {
+							spawn_army = {
+								men_at_arms = {
+									type = horse_archers
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = steppe_raiders
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = light_horsemen
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = nomadic_riders
+									stacks = fp3_request_invasion_troop_value_bonus_levy_nomads
+								}
+								location = capital_province
+								uses_supply = yes
+								inheritable = no
+								name = turkic_tribal_event_troops
+							}
+						}
+					}
+					else = {
+						show_as_tooltip = {
+							spawn_army = {
+								men_at_arms = {
+									type = horse_archers
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								men_at_arms = {
+									type = light_horsemen
+									stacks = fp3_request_invasion_troop_value_bonus_troops
+								}
+								levies = fp3_request_invasion_troop_value_bonus_levy_troops
+								location = capital_province
+								uses_supply = yes
+								inheritable = no
+								name = turkic_tribal_event_troops
+							}
+						}
+					}
+				}
+				if = {
+					limit = { scope:war_support = yes }
+					custom_tooltip = fp3_request_turkic_invasion_interaction_option_join_war_outcome_tooltip
+					trigger_event = fp3_misc_decisions.0005 
+				}
+			}
+			
+			scope:recipient = {
+				add_character_flag = {
+					flag = incursion_ai_pacing
+					years = 5
+				}
+				hidden_effect = {
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						title = fp3_request_turkic_invasion_interaction_accept_notification.t
+						left_icon = scope:secondary_recipient
+						right_icon = scope:actor
+	
+						show_as_tooltip = {
+							custom_tooltip = fp3_request_turkic_invasion_interaction_accept_target_notification.desc
+						}
+					}
+				}
+			}
+		}
+	}
+
+	use_diplomatic_range = yes
+
+	ai_accept = {
+		base = 0
+
+		# Relationships: actor -> recipient / We avoid more relationship checks for balance reasons (and because important decisions tend to care little for relationships)
+		modifier = { # Rivalry modifier.
+			desc = offer_vassalization_interaction_aibehavior_rival_tt_2
+			trigger = {
+				scope:secondary_recipient = {
+					has_relation_rival = scope:actor
+					NOT = { has_relation_nemesis = scope:actor }
+				}
+			}
+			add = -10
+		}
+		modifier = { # Nemesis modifier.
+			desc = offer_vassalization_interaction_aibehavior_nemesis_tt_2
+			trigger = {
+				scope:secondary_recipient = {
+					has_relation_nemesis = scope:actor
+				}
+			}
+			add = -100
+		}
+		modifier = { # Same Dynasty modifier.
+			desc = offer_vassalization_interaction_aibehavior_dynasty_tt_2
+			trigger = {
+				scope:secondary_recipient = {
+					dynasty = scope:actor.dynasty
+				}
+			}
+			add = 10
+		}
+
+		# Compare Opinion modifier
+		opinion_modifier = {
+			who = scope:secondary_recipient
+			opinion_target = scope:actor
+			multiplier = 0.25
+		}
+
+		# Pledged to help in invasion
+		modifier = {
+			add = {
+				value = scope:actor.max_military_strength
+				divide = 70
+				round = yes
+			}
+			desc = HAS_YOUR_SUPPORT_REASON
+			scope:war_support = yes
+		}
+
+		# Relative power (taken from PT interaction)
+		modifier = { # A lot less levies than scope:secondary_recipient
+			add = -100
+			scope:secondary_recipient.max_military_strength <= scope:recipient.purchase_truce_interaction_recipient_far_weaker_value
+			desc = fp3_RTI_AI_RECIPIENT_IS_MUCH_WEAKER
+		}
+		modifier = { # Few less levies than scope:secondary_recipient
+			add = -75
+			scope:secondary_recipient.max_military_strength > scope:recipient.purchase_truce_interaction_recipient_far_weaker_value
+			scope:secondary_recipient.max_military_strength <= scope:recipient.purchase_truce_interaction_recipient_somewhat_weaker_value
+			desc = fp3_RTI_AI_RECIPIENT_IS_SOMEWHAT_WEAKER
+		}
+		modifier = { # Roughly equal levies with scope:secondary_recipient
+			add = 10
+			scope:secondary_recipient.max_military_strength > scope:recipient.purchase_truce_interaction_recipient_somewhat_weaker_value
+			scope:secondary_recipient.max_military_strength <= scope:recipient.purchase_truce_interaction_recipient_somewhat_stronger_value
+			desc = fp3_RTI_AI_RECIPIENT_IS_ROUGHLY_EQUAL
+		}
+		modifier = { # More levies than scope:secondary_recipient
+			add = 50
+			scope:secondary_recipient.max_military_strength > scope:recipient.purchase_truce_interaction_recipient_somewhat_stronger_value
+			scope:secondary_recipient.max_military_strength <= scope:recipient.purchase_truce_interaction_recipient_far_stronger_value
+			desc = fp3_RTI_AI_RECIPIENT_IS_SOMEWHAT_STRONGER
+		}
+		modifier = { # Many more levies than scope:secondary_recipient
+			add = 75
+			scope:secondary_recipient.max_military_strength > scope:recipient.purchase_truce_interaction_recipient_far_stronger_value
+			desc = fp3_RTI_AI_RECIPIENT_IS_MUCH_STRONGER
+		}
+
+		# AI who are in debt will take whatever windfalls they can.
+		modifier = {
+			add = {
+				value = scope:secondary_recipient.debt_level
+				add = 1 # Our first level is 0, so we add one to always get a positive number.
+				multiply = 10
+			}
+			debt_level >= 0
+			desc = PT_AI_IS_IN_DEBT
+		}
+
+		# Pacifist AI don't like raiding
+		modifier = {
+			add = -25
+			scope:secondary_recipient.faith = { has_doctrine_parameter = pacifist_opinion_active }
+			desc = PT_AI_IS_PACIFIST_FAITH_2
+		}
+		modifier = {
+			add = -25
+			scope:secondary_recipient.culture = { has_cultural_parameter = reduced_cost_for_conversion_to_pacifist_faith }
+			desc = PT_AI_IS_PACIFIST_CULTURE_2
+		}
+		# Distance
+		modifier = {
+			add = -25
+			"scope:secondary_recipient.capital_province.squared_distance(scope:recipient.capital_province)" >= squared_distance_medium
+			"scope:secondary_recipient.capital_province.squared_distance(scope:recipient.capital_province)" < squared_distance_almost_massive
+			desc = PT_AI_IS_FAR_AWAY
+		}
+		modifier = {
+			add = -75
+			"scope:secondary_recipient.capital_province.squared_distance(scope:recipient.capital_province)" >= squared_distance_almost_massive
+			desc = PT_AI_IS_VERY_FAR_AWAY
+		}
+		modifier = {
+			add = 20
+			exists = scope:actor.var:movement_power
+			scope:actor.var:movement_power >= very_high_movement_power_value
+			desc = ACTOR_HIGH_MOVEMENT_POWER
+		}
+
+		# Offered proportional gold
+		modifier = {
+			add = 85
+			scope:financial_support = yes
+			desc = GOLD_REASON
+		}
+
+		# AI value mod
+		ai_value_modifier = {
+			ai_greed = 0.5
+			ai_boldness = 0.25
+			min = 0
+			max = 25
+		}
+	}
+	can_send_despite_rejection = no
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 72
+		duchy = 72
+		kingdom = 36
+		empire = 24
+		hegemony = 24
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = liege
+	}
+	ai_potential = {
+		top_participant_group:situation_caucasus ?= {
+			participant_group_type = interloper
+		}
+		is_at_war = no
+		ai_has_builder_or_pious_builder_personality = no
+		ai_greed <= 25
+	}
+	ai_will_do = {
+		base = 0
+
+		modifier = {
+			add = 100
+			scope:recipient = {
+				has_relation_rival = scope:actor
+			}
+		}
+
+		modifier = {
+			factor = 0.1
+			scope:actor.liege ?= scope:recipient
+		}
+
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				has_character_flag = incursion_ai_pacing
+			}
+		}
+
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				is_at_war = yes
+				is_ai = no
+			}
+		}
+
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				is_ai = no
+				is_liege_or_above_of = scope:actor
+			}
+		}
+
+		modifier = {
+			factor = 0
+			scope:recipient = {
+				OR = {
+					has_relation_friend = scope:actor
+					has_relation_lover = scope:actor
+					opinion = {
+						target = scope:actor
+						value >= 45
+					}
+				}
+			}
+		}
+	}
+}
