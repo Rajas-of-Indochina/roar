@@ -205,10 +205,18 @@ sea_khmer_sambhupura_03 = {
 	mother = sea_chenla_sambhupura_02
 	father = khmer_varman_10
 
-	796.1.1 = { birth = yes }
+	796.1.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = do_not_generate_starting_family
+		}
+	}
 	802.1.1 = { culture = khmer }
 	# 803 AD - ruler of Sambhupura
 	# should still be alive during the rule of her step-brother, Jayavarman III
+	867.1.1 = {
+		effect = { set_designated_heir = character:khmer_varman_8 }
+	}
 	872.1.1 = { death = yes } # exact date of death unkown
 	# 895 AD - last mention of her
 	# probably not alive by then though as there are no mentions of female rulers by the time of Yasovarman I
@@ -645,18 +653,6 @@ sea_khmer_varman_2_father = {
 	928.1.1 = { death = yes }
 }
 
-
-
-## Fictional Angkor Wives
-sea_khmer_varman_9_wife_fic = {
-	name = "Jayadevi" # Fictional wife for Jayavarman III
-	female = yes
-	culture = khmer
-	religion = shaivism
-
-	830.1.1 = { birth = yes }
-	898.1.1 = { death = yes }
-}
 
 
 #### Fictional Placeholders
