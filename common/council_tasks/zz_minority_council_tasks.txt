@@ -307,6 +307,48 @@
 				desc = fp3_struggle_ending_conversion_modifier_desc
 			}
 		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = { has_sub_region_phase_parameter = slowed_county_conversion }
+				}
+			}
+			divide = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = situation_caucasus_slowed_conversion_desc
+			}
+		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = county_conversion_faster_in_subregion
+							participant_group_has_character = scope:councillor_liege
+						}
+					}
+				}
+				OR = {
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= pro_roman
+						faith = { faith_is_pro_roman_trigger = yes }
+					}
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= pro_perso_arabic
+						faith = { faith_is_pro_perso_arabic_trigger = yes }
+					}
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= autonomist
+						faith = { faith_is_autonomist_trigger = yes }
+					}
+				}
+			}
+			multiply = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = dominant_faction_in_subregion_conversion_desc
+			}
+		}
+
 		# Court events
 		if = {	#court.6010
 			limit = {
@@ -1246,6 +1288,47 @@ task_promote_culture = {
 				desc = improve_promote_culture_modifier
 			}
 		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = { has_sub_region_phase_parameter = slowed_county_conversion }
+				}
+			}
+			divide = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = situation_caucasus_slowed_conversion_desc
+			}
+		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = county_conversion_faster_in_subregion
+							participant_group_has_character = scope:councillor_liege
+						}
+					}
+				}
+				OR = {
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= pro_roman
+						culture = { culture_is_pro_roman_trigger = yes }
+					}
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= pro_perso_arabic
+						culture = { culture_is_pro_perso_arabic_trigger = yes }
+					}
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= autonomist
+						culture = { culture_is_autonomist_trigger = yes }
+					}
+				}
+			}
+			multiply = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = dominant_faction_in_subregion_conversion_desc
+			}
+		}
 	}
 
 	potential_county = {
@@ -1968,9 +2051,59 @@ task_promote_minority = {
 				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
 			}
 		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = county_conversion_faster_in_subregion
+							participant_group_has_character = scope:councillor_liege
+						}
+					}
+				}
+				OR = {
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= pro_roman
+						OR = {
+							scope:county.var:faith_to_convert ?= { faith_is_pro_roman_trigger = yes }
+							scope:county.var:culture_to_convert ?= { culture_is_pro_roman_trigger = yes }
+						}
+					}
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= pro_perso_arabic
+						OR = {
+							scope:county.var:faith_to_convert ?= { faith_is_pro_perso_arabic_trigger = yes }
+							scope:county.var:culture_to_convert ?= { culture_is_pro_perso_arabic_trigger = yes }
+						}
+					}
+					scope:councillor_liege = {
+						top_participant_group:situation_caucasus ?= autonomist
+						OR = {
+							scope:county.var:faith_to_convert ?= { faith_is_autonomist_trigger = yes }
+							scope:county.var:culture_to_convert ?= { culture_is_autonomist_trigger = yes }
+						}
+					}
+				}
+			}
+			multiply = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = dominant_faction_in_subregion_conversion_desc
+			}
+		}
 
 		# Because the task needs to complete 3 times with the minority system
 		multiply = 3
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = { has_sub_region_phase_parameter = slowed_county_conversion }
+				}
+			}
+			divide = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = situation_caucasus_slowed_conversion_desc
+			}
+		}
 	}
 
 	potential_county = {
@@ -2302,6 +2435,17 @@ task_expel_religious_minority = {
 				desc = fp3_struggle_ending_conversion_modifier_desc
 			}
 		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = { has_sub_region_phase_parameter = slowed_county_conversion }
+				}
+			}
+			divide = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = situation_caucasus_slowed_conversion_desc
+			}
+		}
 		# Court events
 		if = {	#court.6010
 			limit = {
@@ -2579,6 +2723,17 @@ task_expel_cultural_minority = {
 			multiply = {
 				value = 1.25
 				desc = bp2_devoted_to_tradition_modifier_conversion_task_desc
+			}
+		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = { has_sub_region_phase_parameter = slowed_county_conversion }
+				}
+			}
+			divide = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = situation_caucasus_slowed_conversion_desc
 			}
 		}
 	}
@@ -3251,6 +3406,17 @@ task_kurultai_invite_settlers_1 = {
 				desc = NOT_BORDERING_REALM_REASON
 			}
 		}
+		if = {
+			limit = {
+				scope:county = {
+					any_county_situation_sub_region = { has_sub_region_phase_parameter = slowed_county_conversion }
+				}
+			}
+			divide = {
+				value = fp3_struggle_ending_conversion_modifier_value
+				desc = situation_caucasus_slowed_conversion_desc
+			}
+		}
         # Minorities: Three stages, triple speed, evens out to the same amount
         multiply = {
             value = 3
@@ -3363,6 +3529,7 @@ task_kurultai_invite_settlers_1 = {
 		}
 	}
 }
+
 
 task_kurultai_invite_settlers_2 = {
 	position = councillor_kurultai_2
