@@ -75,6 +75,10 @@ situation_caucasus = {
 					has_title = title:e_persia
 					has_title = title:e_arabia
 					has_title = title:h_dar_al_islam
+					# var:caucasus_alignment ?= flag:pro_roman
+					var:caucasus_alignment ?= flag:pro_perso_arabic
+					var:caucasus_alignment ?= flag:autonomist
+					var:caucasus_alignment ?= flag:interloper
 				}
 				var:caucasus_alignment ?= flag:pro_roman
 			}
@@ -98,6 +102,10 @@ situation_caucasus = {
 					has_title = title:e_byzantium
 					has_title = title:h_eastern_roman_empire
 					has_title = title:h_roman_empire
+					var:caucasus_alignment ?= flag:pro_roman
+					# var:caucasus_alignment ?= flag:pro_perso_arabic
+					var:caucasus_alignment ?= flag:autonomist
+					var:caucasus_alignment ?= flag:interloper
 				}
 				var:caucasus_alignment ?= flag:pro_perso_arabic
 			}
@@ -105,13 +113,13 @@ situation_caucasus = {
 		}
 		autonomist = {
 			icon = "gfx/interface/icons/situations/situation_caucasus_autonomist.dds"
+			is_character_valid = {
 				OR = {
 					# Must have a capital in the region
 					capital_county = { title_province = { geographical_region = situation_caucasus_region } }
 					# or else maintain a domicile there
 					domicile.domicle_location = { geographical_region = situation_caucasus_region }
 				}
-			is_character_valid = {
 				NOT = {
 					# But never the literal actual Roman Emperor nor the emperor of Persia, or Arabia, nor a Caliph of a unified Islam
 					has_title = title:e_byzantium
@@ -120,9 +128,13 @@ situation_caucasus = {
 					has_title = title:e_persia
 					has_title = title:e_arabia
 					has_title = title:h_dar_al_islam
+					var:caucasus_alignment ?= flag:pro_roman
+					var:caucasus_alignment ?= flag:pro_perso_arabic
+					# var:caucasus_alignment ?= flag:autonomist
+					var:caucasus_alignment ?= flag:interloper
 				}
+				var:caucasus_alignment ?= flag:autonomist
 			}
-			var:caucasus_alignment ?= flag:autonomist
 			map_color = { 203 76 76 }
 		}
 		interloper = {
@@ -161,6 +173,7 @@ situation_caucasus = {
 				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
 				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
 				claims_fabricated_for_prestige_not_gold = yes # Claim Fabrication uses Prestige instead of Gold
+				slowed_county_conversion = yes # faith and county conversion slowed
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -219,7 +232,6 @@ situation_caucasus = {
 				situation_caucasus_domestic_effects = {
 					all = {
 						parameters = {
-							slowed_county_conversion = yes # faith and county conversion slowed
 							revolt_more_common = yes # Increased likelihood of counties joining Populist, Peasant or Communalist Factions
 						}
 						county_modifier = {
@@ -274,6 +286,7 @@ situation_caucasus = {
 				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
 				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
 				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
+				unlocks_join_war_against_pro_romans = yes # Can join offensive wars against pro-Roman characters
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -304,9 +317,6 @@ situation_caucasus = {
 						}
 					}
 					pro_perso_arabic = {
-						parameters = {
-							unlocks_join_war_against_pro_romans = yes # Can join offensive wars against pro-Roman characters
-						}
 						county_modifier = {
 							defender_holding_advantage = -2
 							fort_level = -1
@@ -314,16 +324,15 @@ situation_caucasus = {
 						}
 					}
 					autonomist = {
-						parameters = {
-							unlocks_join_war_against_pro_romans = yes # Can join offensive wars against pro-Roman characters
+						county_modifier = {
+							defender_holding_advantage = -2
+							fort_level = -1
+							levy_size = -0.1
 						}
 					}
 				}
 				situation_caucasus_domestic_effects = {
 					interloper = {
-						parameters = {
-							unlock_claim_throne_against_pro_roman = yes # unlocks Claim Throne scheme against a pro-Roman liege
-						}
 						character_modifier = {
 							strife_opinion_gain_mult = 0.25
 							tyranny_gain_mult = 0.25
@@ -340,18 +349,12 @@ situation_caucasus = {
 						}
 					}
 					pro_perso_arabic = {
-						parameters = {
-							unlock_claim_throne_against_pro_roman = yes # unlocks Claim Throne scheme against a pro-Roman liege
-						}
 						character_modifier = {
 							strife_opinion_gain_mult = 0.25
 							tyranny_gain_mult = 0.25
 						}
 					}
 					autonomist = {
-						parameters = {
-							unlock_claim_throne_against_pro_roman = yes # unlocks Claim Throne scheme against a pro-Roman liege
-						}
 						county_modifier = {
 							holding_build_gold_cost = -0.05
 							holding_build_piety_cost = -0.05
@@ -397,6 +400,7 @@ situation_caucasus = {
 				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
 				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
 				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
+				unlocks_join_war_against_pro_perso_arabs = yes # Can join offensive wars against pro-Perso-Arabic characters
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -421,7 +425,6 @@ situation_caucasus = {
 					pro_roman = {
 						parameters = {
 							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
-							unlocks_join_war_against_pro_perso_arabs = yes # Can join offensive wars against pro-Perso-Arabic characters
 						}
 						county_modifier = {
 							defender_holding_advantage = -2
@@ -439,7 +442,6 @@ situation_caucasus = {
 					autonomist = {
 						parameters = {
 							caucasus_holy_wars_disabled = yes # Holy Wars Disabled
-							unlocks_join_war_against_pro_perso_arabs = yes # Can join offensive wars against pro-Perso-Arabic characters
 						}
 						county_modifier = {
 							defender_holding_advantage = -2
@@ -450,18 +452,12 @@ situation_caucasus = {
 				}
 				situation_caucasus_domestic_effects = {
 					interloper = {
-						parameters = {
-							unlock_claim_throne_against_pro_perso_arabic = yes
-						}
 						character_modifier = {
 							strife_opinion_gain_mult = 0.25
 							tyranny_gain_mult = 0.25
 						}
 					}
 					pro_roman = {
-						parameters = {
-							unlock_claim_throne_against_pro_perso_arabic = yes
-						}
 						character_modifier = {
 							strife_opinion_gain_mult = 0.25
 							tyranny_gain_mult = 0.25
@@ -478,9 +474,6 @@ situation_caucasus = {
 						}
 					}
 					autonomist = {
-						parameters = {
-							unlock_claim_throne_against_pro_perso_arabic = yes
-						}
 						county_modifier = {
 							holding_build_gold_cost = -0.05
 							holding_build_piety_cost = -0.05
@@ -567,7 +560,6 @@ situation_caucasus = {
 					}
 					autonomist = {
 						parameters = {
-							unlock_county_conquest_cb = yes
 							can_join_autonomist_uprisings = yes
 						}
 						county_modifier = {
