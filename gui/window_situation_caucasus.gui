@@ -68,15 +68,7 @@ window = {
 					text = "SITUATION_WINDOW_VIEW_PARTICIPANT_GROUPS"
 				}
 
-				vbox = {
-					layoutpolicy_vertical = growing
-					layoutpolicy_horizontal = expanding
-
-					background = {
-						using = Background_Area_Dark
-					}
-
-				}
+				player_card = {}
 
 				scrollbox = {
 					name = "sub_region_scrollarea"
@@ -198,12 +190,6 @@ window = {
 						}
 					}
 				}
-
-				# vbox_season_contents = {
-				# 	datacontext = "[SteppeWindow.GetSelectedSubRegion]"
-				# }
-
-				# vbox_nomads_of_situation = {}
 
 				expand = {}
 
@@ -483,6 +469,118 @@ types CaucasusSituationTypes
 				layoutpolicy_horizontal = expanding
 			}
 		}
+
+		button_decision_entry = {
+			name = "situation_caucasus_align_culture_decision"
+			datacontext = "[GetDecisionWithKey('situation_caucasus_align_culture_decision')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+
+		button_decision_entry = {
+			name = "situation_caucasus_align_faith_decision"
+			datacontext = "[GetDecisionWithKey('situation_caucasus_align_faith_decision')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+
+		button_decision_entry = {
+			name = "unify_armenian_principalities_decision"
+			datacontext = "[GetDecisionWithKey('unify_armenian_principalities_decision')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+
+		button_decision_entry = {
+			name = "form_georgia_decision"
+			datacontext = "[GetDecisionWithKey('form_georgia_decision')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+
+		button_decision_entry = {
+			name = "form_aluank_decision"
+			datacontext = "[GetDecisionWithKey('form_aluank_decision')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+
+		button_decision_entry = {
+			name = "decision_form_armenian_cilicia"
+			datacontext = "[GetDecisionWithKey('decision_form_armenian_cilicia')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
+
+		button_decision_entry = {
+			name = "decision_form_cappadocia"
+			datacontext = "[GetDecisionWithKey('decision_form_cappadocia')]"
+			visible = "[Decision.IsShownForPlayer]"
+			size = { 560 45 }
+
+			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+			using = tooltip_se
+
+			blockoverride "button_size"
+			{
+				layoutpolicy_horizontal = expanding
+			}
+		}
 	}
 
 	type window_situation_caucasus_participants = window  {
@@ -688,6 +786,122 @@ types CaucasusSituationTypes
 
 		tooltipwidget = {
 			using = situation_participant_group_type_phase_effects_tooltip
+		}
+	}
+
+	type player_card = vbox {
+		datacontext = "[GetPlayer]"
+		# visible = "[SituationWindow.IsParticipant]"
+		layoutpolicy_horizontal = expanding
+
+		hbox = {
+			datacontext = "[Situation.GetTopSubRegion]"
+			layoutpolicy_horizontal = expanding
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+
+				### PORTRAIT ###
+				hbox = {
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					background =  {
+						texture = "gfx/interface/illustrations/event_scenes/ep2_feast_steppe.dds"
+						fittype = centercrop
+						using = Mask_Rough_Edges
+						alpha = 0.3
+					}
+
+					portrait_button = {
+						# parentanchor = center
+						size = { 200 200 }
+
+						portrait_texture = "[Character.GetAnimatedPortrait('environment_hud', 'camera_torso', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						# portrait_texture = "[Character.GetAnimatedPortrait(Illustration.GetEnvironment(Character.Self), 'camera_body', 'idle', PdxGetWidgetScreenSize(PdxGuiWidget.Self))]"
+						mask = "gfx/portraits/portrait_mask_council.dds"
+						effectname = "NoHighlight"
+						using = portrait_base
+					}
+
+					expand = {}
+
+					vbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+
+						background = {
+							using = Background_Area_Dark
+							# margin = { 10 10 }
+						}
+
+						vbox = {
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							datamodel = "[SituationSubRegion.GetSituation.GetType.GetParticipantGroupTypes]"
+							visible = "[SituationWindow.IsParticipant]"
+							item = {
+								vbox = {
+									layoutpolicy_horizontal = expanding
+									layoutpolicy_vertical = expanding
+									header_text = {
+										blockoverride "header_text"
+										{
+											text = "Your Alignment: [SituationParticipantGroupType.GetNameNoTooltip]"
+										}
+									}
+									visible = "[ObjectsEqual( SituationSubRegion.GetCharacterParticipantGroup( Character.Self ).GetName, SituationParticipantGroupType.GetName)]"
+									icon = {
+										# visible = "[Not( Situation.GetType.UseSituationPhaseFlatIcons )]"
+										size = { 100 100 }
+										# parentanchor = right
+
+										texture = "[SituationParticipantGroupType.GetIcon]"
+									}
+									expand = {}
+									text_multi = {
+										autoresize = yes
+										max_width = 280
+										align = center|nobaseline
+										text = "[SituationParticipantGroupType.GetDescription]"
+									}
+									expand = {}
+								}
+							}
+						}
+						vbox = {
+							visible = "[Not(SituationWindow.IsParticipant)]"
+							layoutpolicy_horizontal = expanding
+							layoutpolicy_vertical = expanding
+							vbox = {
+								layoutpolicy_horizontal = expanding
+								layoutpolicy_vertical = expanding
+								header_text = {
+									blockoverride "header_text"
+									{
+										text = "Your Alignment: Non-Participant"
+									}
+								}
+								icon = {
+									size = { 100 100 }
+
+									texture = "gfx/interface/icons/character_interactions/_missing_interaction.dds"
+								}
+								expand = {}
+								text_multi = {
+									autoresize = yes
+									max_width = 280
+									text = situation_caucasus_not_participating
+									align = center|nobaseline
+									autoresize = no
+								}
+								expand = {}
+							}							
+						}
+					}
+				}
+			}
 		}
 	}
 }

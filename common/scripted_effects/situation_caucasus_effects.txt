@@ -79,7 +79,10 @@ set_caucasus_alignment = {
 		}
 	}
 
-	custom_tooltip = setting_$FLAG$_alignment_tt
+	custom_tooltip = {
+		text = setting_$FLAG$_alignment_tt
+		subject = THIS
+	}
 }
 
 # since assigning a forced alignment only requires a flag in a var, we don't need to worry about scope types!

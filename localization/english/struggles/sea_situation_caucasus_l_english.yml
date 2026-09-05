@@ -22,6 +22,8 @@
  situation_caucasus_diplomatic_effects: "Diplomatic"
  situation_caucasus_domestic_effects: "Domestic"
 
+ situation_caucasus_not_participating: "You are not a participant in $situation_type_situation_caucasus$."
+
  situation_parameter_caucasus_foment_revolt_unlock: "Unlocks the [incite_revolts_interaction|E] [interaction|E] against [rulers|E] from opposing factions"
  situation_parameter_unlocks_contract_assistance_interaction: "$struggle_parameter_unlocks_contract_assistance_interaction$"
  situation_parameter_unlocks_border_raid_casus_belli: "$struggle_parameter_unlocks_border_raid_casus_belli$"
@@ -30,17 +32,12 @@
  situation_parameter_claims_fabricated_for_prestige_not_gold: "[fabricating_claims|E] in the [situation_sub_region|E] costs [prestige_i][prestige|E] instead of [gold_i][gold|E]"
  situation_parameter_unlocks_imperial_support_interaction: "Unlocks the Seek Imperial Support [interaction|E] against [rulers|E] from opposing factions"
  situation_parameter_unlocks_invite_incursion_interaction: "Unlocks the Invite Incursion interaction"
- # keep working below
  situation_parameter_unlocks_consolidate_roman_territory_casus_belli: "Unlocks the Consolidate Roman Territory casus belli"
  situation_parameter_unlocks_join_war_against_pro_romans: "Can join offensive wars against Pro-Roman characters"
  situation_parameter_unlocks_join_war_against_pro_perso_arabs: "Can join offensive wars against Pro-Perso-Arabic characters"
  situation_parameter_county_conversion_faster_in_subregion: "Increased conversion speed of counties to cultures and faiths of this faction within the [situation_sub_region|E]"
  situation_parameter_slowed_county_conversion: "Slower conversion speed of counties within the [situation_sub_region|E]"
  situation_parameter_revolt_more_common: "Communalist, Populist and Peasant factions more common within the [situation_sub_region|E]"
- situation_parameter_unlock_claim_throne_against_pro_roman: "Unlocks the Unlocks the [GetScheme('claim_throne').GetTypeName] [scheme|E] for anti-Roman [vassals|E] of pro-Roman lieges"
- situation_parameter_unlock_claim_throne_against_pro_perso_arabic: "Unlocks the Unlocks the [GetScheme('claim_throne').GetTypeName] [scheme|E] for anti-Perso-Arabic [vassals|E] of pro-Perso-Arabic lieges"
- situation_parameter_county_holy_wars_only: "County-tier Holy Wars unlocked"
- situation_parameter_unlock_county_conquest_cb: "County Conquest casus belli unlocked"
  situation_parameter_can_join_autonomist_uprisings: "Can join Autonomist-aligned Populist, Peasant and Communalist factions regardless of faith or culture"
  situation_parameter_unlock_autonomist_confederation: "Can form Autonomist Confederations"
 
@@ -73,6 +70,8 @@
  situation_caucasus_sub_region_syria: "$custom_syria$"
  custom_jazira: "Jazira"
  situation_caucasus_sub_region_jazira: "$custom_jazira$"
+ custom_armenian_cilicia: "Cilicia"
+ situation_caucasus_sub_region_cilicia: "$custom_armenian_cilicia$"
 
  custom_aluank: "Aghvan Heartlands"
 
@@ -81,13 +80,13 @@
  situation_caucasus_choose_alignment_decision_confirm: "Confirm"
  choose_pro_roman_name: "$situation_caucasus_participant_group_pro_roman$"
  pro_roman_tooltip: "$choose_pro_roman_name$"
- setting_pro_roman_alignment_tt: "You switch to $situation_caucasus_participant_group_pro_roman$ Alignment"
+ setting_pro_roman_alignment_tt: "[THIS.Char.GetName] switches to $situation_caucasus_participant_group_pro_roman$ Alignment"
  choose_pro_perso_arabic_name: "$situation_caucasus_participant_group_pro_perso_arabic$"
  pro_perso_arabic_tooltip: "$choose_pro_perso_arabic_name$"
- setting_pro_perso_arabic_alignment_tt: "You switch to $situation_caucasus_participant_group_pro_perso_arabic$ Alignment"
+ setting_pro_perso_arabic_alignment_tt: "[THIS.Char.GetName] switches to $situation_caucasus_participant_group_pro_perso_arabic$ Alignment"
  choose_autonomist_name: "$situation_caucasus_participant_group_autonomist$"
  autonomist_tooltip: "$choose_autonomist_name$"
- setting_autonomist_alignment_tt: "You switch to $situation_caucasus_participant_group_autonomist$ Alignment"
+ setting_autonomist_alignment_tt: "[THIS.Char.GetName] switches to $situation_caucasus_participant_group_autonomist$ Alignment"
 
  culture_setting_pro_roman_alignment_tt: "[THIS.Culture.GetName] switches to $situation_caucasus_participant_group_pro_roman$ Alignment"
  culture_setting_pro_perso_arabic_alignment_tt: "[THIS.Culture.GetName] switches to $situation_caucasus_participant_group_pro_perso_arabic$ Alignment"

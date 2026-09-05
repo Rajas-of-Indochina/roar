@@ -1669,3 +1669,1048 @@ request_contract_assistance_interaction = {
 		}
 	}
 }
+
+join_war_interaction = {
+	category = interaction_category_diplomacy
+	interface = interfere_in_war
+	special_interaction = interfere_in_war_interaction
+	popup_on_receive = yes
+	desc = join_war_interaction_desc
+	icon = alliance
+	interface_priority = 29
+
+	greeting = positive
+	notification_text = join_war_interaction_notification
+
+	is_shown = {
+		scope:recipient = {
+			is_at_war = yes
+			NOR = {
+				this = scope:actor
+				is_at_war_with = scope:actor
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+
+		# recipient is not in (any) war against your liege(s) or suzerain(s)
+		trigger_if = {
+			limit = { exists = scope:actor.liege }
+			custom_description = {
+				text = join_war_interaction_recipient_warring_with_my_liege
+				subject = scope:recipient
+				scope:actor = {
+					NOT = {
+						any_liege_or_above = {
+							is_at_war_with = scope:recipient
+						}
+					}
+				}
+			}
+		}
+
+		# special exception for liege trying to put down his vassal's peasant revolt
+		trigger_if = {
+			limit = {
+				scope:actor = {
+					target_is_vassal_or_below = scope:recipient
+				}
+			}
+			custom_description = {
+				text = join_war_interaction_recipient_not_fighting_peasant_faction
+				subject = scope:recipient
+				scope:recipient = {
+					any_war_enemy = {
+						is_leading_faction_type = peasant_faction
+					}
+				}
+			}
+		}
+		# if the target is neither a vassal-or-below, nor a liege-or-above, the recipient must either be an ally or defending against a qualifying holy war - unless the character is an adventurer in which case other rules apply
+		trigger_else_if = {
+			limit = {
+				scope:actor = {
+					NOT = { target_is_liege_or_above = scope:recipient }
+				}
+			}
+			trigger_if = {
+				limit = {
+					scope:actor = { has_government = landless_adventurer_government }
+				}
+				# bypass the requirements, unless you were invloved in a war and decided to leave it
+				scope:recipient = {
+					trigger_if = {
+						limit = {
+							any_character_war = {
+								has_variable_list = left_voluntarily
+							}
+						}
+						custom_tooltip = {
+							text = laamp_war_change_sides_interaction.left_voluntarily
+							is_target_in_variable_list = {
+								name = left_voluntarily
+								target = scope:actor
+							}
+						}
+					}
+				}
+			}
+			trigger_else_if = {
+				limit = {
+					scope:recipient = {
+						any_character_war = {
+							OR = {
+								#Must be either the same faith as the character being holy warred...
+								scope:recipient.faith = scope:actor.faith
+								#... Or, same religion, *and* you couldn't holy war them yourself.
+								AND = {
+									scope:recipient.faith.religion = scope:actor.faith.religion
+									scope:actor.faith = {
+										faith_hostility_level = {
+											target = scope:recipient.faith
+											value < religious_cb_enabled_hostility_level
+										}
+									}
+								}
+								#... Or, the target is your liege and they are being attacked for your held title.
+								AND = {
+									scope:recipient = { target_is_liege_or_above = scope:actor }
+									casus_belli = {
+										any_target_title = {
+											holder = {
+												OR = {
+													this = scope:actor
+													is_vassal_or_below_of = scope:actor
+												}
+											}
+										}
+
+									}
+								}
+							}
+							any_war_defender = { this = scope:recipient }
+						}
+					}
+				}
+				# Deliberately blank; we've passed the trigger and making a desc out of this doesn't make sense
+			}
+			# Special case for Iberians helping each other after FP2 Conciliation ending after FP2 Conciliation ending
+			trigger_else_if = {
+				limit = {
+					fp2_struggle_conciliation_recipient_actor_involved_trigger = yes
+					scope:recipient = {
+						any_character_war = {
+							primary_defender = scope:recipient
+							primary_attacker = { save_temporary_scope_as = attacker_temp }
+							fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:attacker_temp }
+						}
+					}
+				}
+				# Deliberately blank; we've passed the trigger and making a desc out of this doesn't make sense
+			}
+
+			# if the actor and recipient is in the same confederation, they can always come to each others' aid
+			trigger_else_if = {
+				limit = {
+					exists = scope:recipient.confederation
+					scope:actor = { is_member_of_confederation = scope:recipient.confederation }
+				}
+				scope:actor = { is_member_of_confederation = scope:recipient.confederation } # for localization only
+			}
+
+			# suzerains can always join their tributaries' defensive wars
+			trigger_else_if = {
+				limit = {
+					scope:recipient = { 
+						is_tributary_of_suzerain_or_above = scope:actor
+					}
+				}
+				custom_tooltip = {
+					text = join_war_interaction_recipient_tributary_no_defensive_war
+					scope:recipient = {
+						any_character_war = {
+							primary_defender = scope:recipient
+						}
+					}
+				}
+			}
+			# tributaries can always offer to join their direct suzerains' defensive wars
+			trigger_else_if = {
+				limit = {
+					scope:actor = { 
+						is_tributary_of = scope:recipient
+					}
+				}
+				custom_tooltip = {
+					text = join_war_interaction_recipient_tributary_no_defensive_war
+					scope:recipient = {
+						any_character_war = {
+							primary_defender = scope:recipient
+						}
+					}
+				}
+			}
+
+			# Joining offensive wars out of pure pettiness in the Southern Caucasus
+			# Anti-Roman
+			trigger_else_if = {
+				limit = {
+					scope:actor = {
+						any_character_situation = { situation_type = situation_caucasus }
+						NOT = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+					}
+					scope:recipient = {
+						NOT = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+						any_character_war = {
+							primary_attacker = scope:recipient
+							primary_defender = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+							OR = {
+								primary_defender.capital_county = { any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_romans } }
+								any_target_title = {
+									any_in_de_jure_hierarchy = {
+										tier = tier_county
+										any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_romans }
+									}
+								}
+							}
+						} 
+					}
+				}
+			}
+			
+			# Anti-Perso-Arabic
+			trigger_else_if = {
+				limit = {
+					scope:actor = {
+						any_character_situation = { situation_type = situation_caucasus }
+						NOT = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
+					}
+					scope:recipient = {
+						NOT = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
+						any_character_war = {
+							primary_attacker = scope:recipient
+							primary_defender = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
+							OR = {
+								primary_defender.capital_county = { any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_perso_arabs } }
+								any_target_title = {
+									any_in_de_jure_hierarchy = {
+										tier = tier_county
+										any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_perso_arabs }
+									}
+								}
+							}
+						} 
+					}
+				}
+			}
+
+
+			# if we haven't already passed any of the qualified conditions above, then we need to be allies
+			trigger_else = {
+				custom_description = {
+					text = join_war_interaction_recipient_not_ally
+					subject = scope:recipient
+					scope:recipient = {
+						is_allied_to = scope:actor
+					}
+				}
+			}
+		}
+
+		# recipient is liege
+		trigger_else = {
+			custom_description = {
+				text = join_war_interaction_recipient_not_liege
+				subject = scope:recipient
+				scope:actor = {
+					target_is_liege_or_above = scope:recipient
+				}
+			}
+		}
+
+		scope:actor = {
+			trigger_if = {
+				limit = {
+					has_government = landless_adventurer_government
+				}
+				custom_tooltip = {
+					text = reinforce_soldiers_any_regiment_tt
+					maa_regiments_count >= 1
+				}
+			}
+		}
+
+		# Adventurers can't join wars in places they're exiled from.
+		custom_tooltip = {
+			text = the_wake_1
+			NOT = {
+				is_laamp_exiled_from_province_trigger = {
+					PROVINCE = scope:recipient.capital_province
+					LAAMP = scope:actor
+				}
+			}
+		}
+	}
+
+	can_be_picked = {
+		scope:target ?= {
+
+			# recipient is war leader
+			is_war_leader = scope:recipient
+			
+			# special exception for tributaries and suzerains to fight for one another
+			trigger_if = {
+				limit = {
+					OR = {
+						scope:actor = {
+							is_tributary_of_suzerain_or_above = scope:recipient
+						}
+						scope:recipient = {
+							is_tributary_of = scope:actor
+						}
+					}
+				}
+				# if this is directed at a tributary, make sure they're the primary defender
+				trigger_if = {
+					limit = {
+						scope:recipient = { is_tributary_of = scope:actor }
+					}
+					custom_tooltip = {
+						text = join_war_interaction_recipient_tributary_not_primary_defender
+						primary_defender = scope:recipient
+					}
+				}
+				trigger_else = { always = yes }
+			}
+
+			#allow targets of a Grand Campaign to bypass the requirements
+			trigger_else_if = {
+				limit = {
+					var:grand_campaign_project ?= {
+						save_temporary_scope_as = great_project
+	        			any_in_list = {
+	            			variable = grand_campaign_titles
+	            			any_in_de_jure_hierarchy = {
+	            				exists = holder
+								holder.top_overlord = {
+									OR = {
+										this = scope:recipient
+										this = scope:actor
+	            					}
+	            				}
+	            			}
+						}
+					}
+				}
+			}
+
+			#allow laamp_join_war_contract to bypass the requirements
+			trigger_else_if = {
+				limit = {
+					scope:actor = {
+						has_government = landless_adventurer_government
+					}
+				}
+			}
+
+			# if holy war, recipient is defender of same faith
+			# and not too far away
+			trigger_else_if = {
+				limit = { is_religious_war = yes }
+				trigger_if = { #Only if you're not allies
+					limit = {
+						NOT = { scope:actor = { is_allied_to = scope:recipient } }
+						NOR = {
+							scope:recipient = { target_is_liege_or_above = scope:actor }
+							casus_belli = {
+								any_target_title = {
+									holder ?= {
+										OR = {
+											this = scope:actor
+											is_vassal_or_below_of = scope:actor
+										}
+									}
+								}
+							}
+						}
+						# Special case for Iberians helping each other after FP2 Conciliation ending
+						AND = {
+							fp2_struggle_conciliation_recipient_actor_involved_trigger = no
+							NOT = {
+								fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:target.primary_attacker }
+							}
+						}
+					}
+					custom_description = {
+						text = join_war_interaction_recipient_not_def_GHW
+						subject = scope:recipient
+						scope:recipient.faith.religion = scope:actor.faith.religion
+						any_war_defender = { this = scope:recipient }
+					}
+				}
+				casus_belli = {
+					any_target_title = { save_temporary_scope_as = war_target }
+				}
+				custom_description = {
+					text = join_war_interaction_recipient_too_distant
+					subject = scope:war_target
+					object = scope:war_target
+					scope:actor = {
+						realm_to_title_distance_squared = {
+							target = scope:war_target
+							value <= squared_distance_almost_massive # Approximately 1.5 HREs in distance away. Any further and does it really make sense for you to join what is essentially a regional power struggle?
+						}
+					}
+				}
+			}
+			# If not holy war, special exception for liege trying to put down his vassal's peasant revolt.
+			trigger_else_if = {
+				limit = {
+					is_religious_war = no
+					scope:actor = { target_is_vassal_or_below = scope:recipient }
+					primary_defender = scope:recipient
+					primary_attacker = {
+						is_leading_faction_type = peasant_faction
+					}
+					# Special case for Iberians helping each other after FP2 Conciliation ending
+					AND = {
+						fp2_struggle_conciliation_recipient_actor_involved_trigger = no
+						NOT = {
+							fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:target.primary_attacker }
+						}
+					}
+				}
+				always = yes
+			}
+			#Confederation members can choose to join each others' offensive wars
+			trigger_else_if = {
+				limit = {
+					scope:actor = { NOT = { is_allied_to = scope:recipient } }
+					exists = scope:recipient.confederation
+					primary_attacker = scope:recipient
+				}
+				scope:actor = {
+					is_member_of_confederation = scope:recipient.confederation
+				}
+			}
+			# ...otherwise, recipient must be an ally...
+			trigger_else_if = {
+				limit = {
+					is_religious_war = no
+					scope:actor = { NOT = { target_is_liege_or_above = scope:recipient } }
+					# Special case for Iberians helping each other after FP2 Conciliation ending
+					AND = {
+						fp2_struggle_conciliation_recipient_actor_involved_trigger = no
+						NOT = {
+							fp2_struggle_conciliation_scope_uninvolved_trigger = { SCOPE = scope:target.primary_attacker }
+						}
+					}
+				}
+				custom_description = {
+					text = join_war_interaction_recipient_not_ally
+					subject = scope:recipient
+					scope:actor = {
+						is_allied_to = scope:recipient
+					}
+				}
+				trigger_if = {
+					limit = {
+						scope:actor = {
+							target_is_vassal_or_below = scope:recipient
+							NOT = { is_allied_to = scope:recipient }
+						}
+					}
+					# If they are an unallied vassal, inform the player that we could have aided them if this was a peasant revolt.
+					custom_description = {
+						text = join_war_interaction_recipient_not_fighting_peasant_faction
+						subject = scope:recipient
+						primary_defender = scope:recipient
+						primary_attacker = {
+							is_leading_faction_type = peasant_faction
+						}
+					}
+				}
+			}
+
+			# ...or our liege.
+			trigger_else_if = {
+				limit = {
+					is_religious_war = no
+					scope:actor = { NOT = { is_allied_to = scope:recipient } }
+				}
+				# recipient is liege
+				custom_description = {
+					text = join_war_interaction_recipient_not_liege
+					subject = scope:recipient
+					scope:actor = {
+						target_is_liege_or_above = scope:recipient
+					}
+				}
+			}
+
+			# caucasus situation
+			# anti roman
+			trigger_else_if = {
+				limit = {
+					primary_defender = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+					OR = {
+						primary_defender.capital_county = { any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_romans } }
+						any_target_title = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_romans }
+							}
+						}
+					}
+				}
+			}
+			# anti perso_arabic
+			trigger_else_if = {
+				limit = {
+					primary_defender = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
+					OR = {
+						primary_defender.capital_county = { any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_perso_arabs } }
+						any_target_title = {
+							any_in_de_jure_hierarchy = {
+								tier = tier_county
+								any_county_situation_sub_region = { has_sub_region_phase_parameter = unlocks_join_war_against_pro_perso_arabs }
+							}
+						}
+					}
+				}
+			}
+
+			# making the default behavior explicit if no other trigger_(else_)ifs are valid
+			trigger_else = {
+				always = yes
+			}
+		}
+
+		joiner_not_already_in_another_war_with_any_target_war_participants_trigger = {
+			WARRIOR = scope:recipient
+			JOINER = scope:actor
+		}
+
+		can_join_war_liege_vassal_check_trigger = { WARRIOR = scope:recipient JOINER = scope:actor }
+	}
+
+	is_highlighted = {
+		scope:actor = {
+			any_character_task_contract = {
+				has_task_contract_type = laamp_join_war_contract
+				task_contract_employer = scope:recipient
+			}
+		}
+	}
+
+	on_accept = {
+		scope:target ?= {
+			hidden_effect = {
+				set_called_to = scope:actor
+			}
+			if = {
+				limit = { is_attacker = scope:recipient }
+				add_attacker = scope:actor
+				if = {
+					limit = {
+						OR = {
+							scope:actor = {
+								any_home_court_hostage = {
+									warden ?= { is_defender_in_war = scope:target }
+								}
+							}
+							scope:target = {
+								any_war_defender = {
+									any_warden_hostage = { home_court ?= scope:actor }
+								}
+							}
+						}
+					}
+					custom_tooltip = hostage_execution_warning_tt
+				}
+			}
+			else = {
+				add_defender = scope:actor
+				if = {
+					limit = {
+						OR = {
+							scope:actor = {
+								any_home_court_hostage = {
+									warden ?= { is_attacker_in_war = scope:target }
+								}
+							}
+							scope:target = {
+								any_war_attacker = {
+									any_warden_hostage = { home_court ?= scope:actor }
+								}
+							}
+						}
+					}
+					custom_tooltip = hostage_execution_warning_tt
+				}
+			}
+			if = {
+				limit = {
+					is_religious_war = yes
+					scope:actor = {
+						any_active_accolade = {
+							accolade_parameter = acclaimed_knight_piety_from_battle
+						}
+					}
+				}
+				scope:actor = {
+					add_piety = medium_piety_gain
+				}
+			}
+			if = {
+				limit = {
+					is_religious_war = yes
+					scope:actor = {
+						any_active_accolade = {
+							accolade_parameter = acclaimed_knight_piety_from_battle_high
+						}
+					}
+				}
+				scope:actor = {
+					add_piety = major_piety_gain
+				}
+			}
+		}
+		scope:actor = {
+			stress_impact = {
+				craven = medium_stress_impact_gain
+			}
+			add_to_variable_list = {
+				name = joined_as_ally
+				target = scope:target
+			}
+		}
+		scope:recipient = {
+			show_as_tooltip = {
+				if = { # if war leader is AI, will directly increase friendship for contributing
+					limit = {
+						is_ai = yes
+					}
+					progress_towards_friend_effect = {
+						CHARACTER = scope:actor
+						OPINION = 0
+						REASON = friend_alliance
+					}
+				}
+				else = { # otherwise will create potential  friendship
+					hidden_effect = { #To nudge friendship
+						if = {
+							limit = {
+								NOR = {
+									has_relation_friend = scope:actor
+									has_relation_potential_friend = scope:actor
+								}
+							}
+							set_relation_potential_friend = scope:actor
+						}
+					}
+				}
+			}
+		}
+
+		# If we're a clan this interaction affects unity - but only when we attemp to aid a house member against a non-house member
+		if = {
+			limit = {
+				exists = scope:target
+				scope:target = {
+					OR = {
+						AND = {
+							primary_attacker = scope:recipient
+							scope:recipient.house = scope:actor.house
+							primary_defender = {
+								house != scope:actor.house
+							}
+						}
+						AND = {
+							primary_defender = scope:recipient
+							scope:recipient.house = scope:actor.house
+							primary_attacker = {
+								house != scope:actor.house
+							}
+						}
+					}
+				}
+			}
+			add_clan_unity_interaction_effect = {
+				CHARACTER = scope:actor
+				TARGET = scope:recipient
+				VALUE = medium_unity_gain
+				DESC = clan_unity_join_war.desc
+				REVERSE_NON_HOUSE_TARGET = no
+			}
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			trigger_event = char_interaction.0236
+		}
+	}
+
+	auto_accept = yes
+
+	ai_accept = {
+		base = 100 # everyone wants help
+	}
+}
+
+###################
+# Claim Throne
+# by Petter Vilberg
+###################
+claim_throne_interaction = {
+	icon = icon_scheme_claim_throne
+	category = interaction_category_vassal
+	interface_priority = 268 # after Start Claimant Faction
+
+	ai_targets = {
+		ai_recipients = liege
+	}
+	
+	auto_accept = yes
+	use_diplomatic_range = no
+	ignores_pending_interaction_block = yes
+
+
+	scheme = claim_throne
+
+	desc = claim_throne_interaction_desc
+	
+	is_shown = {
+		exists = scope:actor.liege
+		scope:recipient = scope:actor.liege
+		scope:actor = {
+			is_landless_adventurer = no
+			highest_held_title_tier > tier_barony
+			OR = {
+				has_perk = meritocracy_perk
+				AND = {
+					is_diarch_of_target = scope:recipient
+					scope:recipient = {
+						NOT = { has_diarchy_parameter = can_be_instantly_dismissed }
+					}
+				}
+				AND = {
+					is_powerful_vassal_of = scope:recipient
+					any_character_struggle = {
+						involvement = involved
+						has_struggle_phase_parameter = unlocks_claim_throne_for_powerful_vassals
+						is_secondary_character_involvement_involved_trigger = {
+							CHAR = scope:recipient
+						}
+					}
+				}
+				AND = {
+					any_character_struggle = {
+						involvement = involved
+						has_struggle_phase_parameter = unlocks_claim_throne_for_all
+						is_secondary_character_involvement_involved_trigger = {
+							CHAR = scope:recipient
+						}
+					}
+				}
+				AND = {
+					exists = title:d_sunni.holder
+					is_vassal_of = title:d_sunni.holder
+					any_character_struggle = {
+						involvement = involved
+						has_struggle_phase_parameter = unlocks_claim_throne_for_caliph_vassals
+					}
+				}
+				has_character_flag = confederation_claim_throne
+				AND = {
+					government_allows = merit
+					situation:dynastic_cycle ?= { situation_current_phase = situation_dynastic_cycle_phase_chaos }
+					exists = top_participant_group:dynastic_cycle
+				}
+			}
+			OR = {
+				NOT = { government_allows = merit }
+				government_has_flag = government_is_meritocratic
+				government_has_flag = government_is_steppe_admin
+				AND = {
+					government_allows = merit
+					situation:dynastic_cycle ?= { situation_current_phase = situation_dynastic_cycle_phase_chaos }
+					exists = top_participant_group:dynastic_cycle
+				}
+			}
+		}
+		scope:recipient != scope:actor	
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			is_physically_able_adult = yes
+			can_start_scheme = {
+				target_character = scope:recipient
+				type = claim_throne
+			}
+		}
+	}
+
+	# Scheme Starter Packages
+	options_heading = schemes.t.agent_packages
+	send_options_exclusive = yes
+	## Balanced agents.
+	send_option = {
+		flag = agent_focus_balance
+		current_description = claim_throne_interaction.tt.agent_focus_balance
+	}
+	## Focused on Success Chance.
+	send_option = {
+		flag = agent_focus_success
+		current_description = claim_throne_interaction.tt.agent_focus_success
+	}
+	## Focused on Speed.
+	send_option = {
+		flag = agent_focus_speed
+		current_description = claim_throne_interaction.tt.agent_focus_speed
+	}
+	## Focused on Secrecy.
+	send_option = {
+		flag = agent_focus_secrecy
+		current_description = claim_throne_interaction.tt.agent_focus_secrecy
+	}
+
+	on_accept = {
+		scope:actor = {
+			stress_impact = {
+				content = medium_stress_impact_gain
+				just = medium_stress_impact_gain
+			}
+			send_interface_toast = {
+				type = event_toast_effect_good
+				title = claim_throne_interaction_toast
+				left_icon = scope:actor
+				right_icon = scope:recipient
+
+				# Success.
+				if = {
+					limit = { scope:agent_focus_success ?= yes }
+					begin_scheme_with_agents_effect = {
+						SCHEME_TYPE = claim_throne
+						TARGET_TYPE = target_character
+						TARGET_SCOPE = scope:recipient
+						# Success.
+						AGENT_1 = agent_diplomat
+						AGENT_2 = agent_diplomat
+						AGENT_3 = agent_scribe
+						# Speed.
+						AGENT_4 = agent_cleric
+						# Secrecy.
+						AGENT_5 = agent_justiciar
+					}
+				}
+				# Speed.
+				else_if = {
+					limit = { scope:agent_focus_speed ?= yes }
+					begin_scheme_with_agents_effect = {
+						SCHEME_TYPE = claim_throne
+						TARGET_TYPE = target_character
+						TARGET_SCOPE = scope:recipient
+						# Speed.
+						AGENT_1 = agent_cleric
+						AGENT_2 = agent_socialite
+						AGENT_3 = agent_gabbler
+						# Success.
+						AGENT_4 = agent_diplomat
+						# Secrecy.
+						AGENT_5 = agent_justiciar
+					}
+				}
+				# Secrecy.
+				else_if = {
+					limit = { scope:agent_focus_secrecy ?= yes }
+					begin_scheme_with_agents_effect = {
+						SCHEME_TYPE = claim_throne
+						TARGET_TYPE = target_character
+						TARGET_SCOPE = scope:recipient
+						# Secrecy.
+						AGENT_1 = agent_justiciar
+						AGENT_2 = agent_justiciar
+						AGENT_3 = agent_decoy
+						# Success.
+						AGENT_4 = agent_diplomat
+						# Speed.
+						AGENT_5 = agent_cleric
+					}
+				}
+				# Balanced.
+				else = {
+					begin_scheme_with_agents_effect = {
+						SCHEME_TYPE = claim_throne
+						TARGET_TYPE = target_character
+						TARGET_SCOPE = scope:recipient
+						# Success.
+						AGENT_1 = agent_diplomat
+						AGENT_2 = agent_scribe
+						# Speed.
+						AGENT_3 = agent_cleric
+						AGENT_4 = agent_socialite
+						# Secrecy.
+						AGENT_5 = agent_decoy
+					}
+				}
+
+				show_as_tooltip = {
+					stress_impact = {
+						content = medium_stress_impact_gain
+						just = medium_stress_impact_gain
+					}
+				}
+			}
+		}
+
+		# If we're a clan this interaction affects unity
+		add_clan_unity_interaction_effect = {
+			CHARACTER = scope:actor
+			TARGET = scope:recipient
+			VALUE = minor_unity_loss
+			DESC = clan_unity_throne_claim.desc
+			REVERSE_NON_HOUSE_TARGET = no
+		}
+	}
+	
+	ai_potential = {
+		is_adult = yes
+		ai_greed >= medium_positive_ai_value
+		learning >= medium_skill_rating
+		intrigue >= mediocre_skill_rating
+		trigger_if = {
+			limit = {
+				liege = { save_temporary_scope_as = struggle_liege }
+				any_character_struggle = {
+					involvement = involved
+					has_struggle_phase_parameter = unlocks_claim_throne_for_all
+					is_secondary_character_involvement_involved_trigger = {
+						CHAR = scope:struggle_liege
+					}
+				}
+			}
+			is_powerful_vassal = yes
+		}
+		NOR = {
+			has_trait = content
+			opinion = {
+				target = liege
+				value >= high_positive_opinion
+			}
+			any_scheme = {
+				OR = {
+					scheme_type = murder
+					scheme_type = abduct
+					scheme_type = claim_throne
+					scheme_type = fabricate_hook
+					scheme_type = steal_back_artifact
+				}
+			}
+		}
+	}
+
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 48
+		duchy = 36
+		kingdom = 36
+		empire = 0
+		hegemony = 0
+	}
+
+	ai_will_do = {
+		base = 100
+
+		# Agenda impact
+		modifier = {
+			scope:actor = {
+				any_character_struggle = {
+					involvement = involved
+					is_struggle_type = iberian_struggle
+				}
+			}
+			add = {
+				value = 0
+				if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title_fp2
+							}
+							has_character_flag = agenda_towards_escalation
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title_fp2
+							}
+						}
+					}
+					add = -100
+				}
+			}
+		}
+
+		modifier = {
+			scope:actor = {
+				any_character_struggle = {
+					involvement = involved
+					is_struggle_type = persian_struggle
+				}
+			}
+			add = {
+				value = 0
+				if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title_fp3
+							}
+							has_trait = fp3_struggle_detractor
+						}
+					}
+					add = 200
+				}
+				else_if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title_fp3
+							}
+							has_trait = fp3_struggle_supporter
+						}
+						scope:recipient = {
+							has_trait = fp3_struggle_detractor
+						}
+					}
+					add = 100
+				}
+				else_if = {
+					limit = {
+						scope:actor = {
+							any_character_struggle = {
+								phase_has_catalyst = catalyst_gain_claim_on_title_fp3
+							}
+						}
+					}
+					add = -100
+				}
+			}
+		}
+
+		# Unity modifiers
+		evaluate_action_decreasing_house_unity = {
+			VALUE = 100
+		}
+
+		start_hostile_scheme_ai_base_modifiers = yes # At the end so Cowed can block it completely
+	}
+}
