@@ -1,0 +1,23 @@
+### 25_01_hostility_doctrines.txt
+### This file should define all the special doctrines that adjust faiths to see other faiths as **Astray**
+
+#Dharma Doctrines
+special_doctrine_monarchianist = {
+	parameters = {
+		hostility_override_special_doctrine_monarchianist = 1
+	}
+}
+
+### Khorasani Legacy
+khorasani_legacy_doctrine = {
+	piety_cost = {
+		value = faith_doctrine_cost_low
+		if = {
+			limit = { has_doctrine = khorasani_legacy_doctrine }
+			multiply = 0
+		}
+	}
+	parameters = {
+		hostility_override_khorasani_legacy_doctrine = 1
+	}
+}
