@@ -87070,6 +87070,31 @@ e_kambuja = {
 					color = { 0 59 180 }
 				}
 			}
+			c_chhmar = {
+				# part of c_pursat in vanilla
+				color = { 0 100 200 }
+
+				b_chhmar = {
+					province = 16842
+
+					color = { 0 100 200 }
+				}
+				b_phnom_srok = {
+					province = 16821
+
+					color = { 0 100 200 }
+				}
+				b_baos_sbov = {
+					province = 16845
+
+					color = { 0 100 200 }
+				}
+				b_khao_lon = {
+					province = 16903
+
+					color = { 0 100 200 }
+				}
+			}
 		}
 
 		d_isanapura = {
@@ -87238,8 +87263,35 @@ e_kambuja = {
 		d_battambang = {
 			color = { 35 60 140 }
 
-			capital = c_neang #placeholder
+			capital = c_battambang
 
+			c_battambang = {
+				# c_neang in old RoA
+				color = { 65 90 185 }
+
+				b_battambang = {
+					# not geographically accurate but our current setup does not make sense tbh
+					province = 16694
+
+					color = { 65 90 185 }
+				}
+				b_ek_phnom = {
+					# not geographically accurate but our current setup does not make sense tbh
+					province = 16788
+
+					color = { 65 90 185 }
+				}
+				b_sampav = {
+					province = 16665
+
+					color = { 65 90 185 }
+				}
+				b_phnom_proek = {
+					province = 16692
+
+					color = { 65 90 185 }
+				}
+			}
 			c_bakan = {
 				# part of c_pursat in vanilla
 				color = { 45 70 155 }
@@ -87278,56 +87330,6 @@ e_kambuja = {
 					province = 16485
 
 					color = { 55 80 170 }
-				}
-			}
-			c_neang = {
-				# part of c_pursat in vanilla
-				color = { 65 90 185 }
-
-				b_neang = {
-					province = 16788
-
-					color = { 65 90 185 }
-				}
-				b_sampav = {
-					province = 16665
-
-					color = { 65 90 185 }
-				}
-				b_ek_phnom = {
-					province = 16694
-
-					color = { 65 90 185 }
-				}
-				b_phnom_proek = {
-					province = 16692
-
-					color = { 65 90 185 }
-				}
-			}
-			c_chhmar = {
-				# part of c_pursat in vanilla
-				color = { 75 100 200 }
-
-				b_chhmar = {
-					province = 16842
-
-					color = { 75 100 200 }
-				}
-				b_phnom_srok = {
-					province = 16821
-
-					color = { 75 100 200 }
-				}
-				b_baos_sbov = {
-					province = 16845
-
-					color = { 75 100 200 }
-				}
-				b_khao_lon = {
-					province = 16903
-
-					color = { 75 100 200 }
 				}
 			}
 		}
@@ -87677,99 +87679,99 @@ e_kambuja = {
 		}
 
 		d_chan_kabui = {
-			color = { 148 113 4 }
+			color = { 0 29 169 }
 
 			capital = c_prachinburi #placeholder
 
 			c_chan_kabui = {
-				color = { 152 116 8 }
+				color = { 0 22 152 }
 
 				b_chan_kabui = {
 					province = 16484
 
-					color = { 152 116 8 }
+					color = { 0 22 152 }
 				}
 				b_trat = {
 					province = 16208
 
-					color = { 152 116 8 }
+					color = { 0 22 152 }
 				}
 				b_bo_rai = {
 					province = 16432
 
-					color = { 152 116 8 }
+					color = { 0 22 152 }
 				}
 			}
 			c_prachinburi = {
-				color = { 165 125 15 }
+				color = { 0 25 165 }
 
 				b_sri_mahosot = {
 					province = 16901
 
-					color = { 165 125 15 }
+					color = { 0 25 165 }
 				}
 				b_lablae = {
 					province = 16963
 
-					color = { 165 125 15 }
+					color = { 0 25 165 }
 				}
 				b_stoeng_chraw = {
 					province = 16787
 
-					color = { 165 125 15 }
+					color = { 0 25 165 }
 				}
 				b_paet_riu = {
 					province = 16814
 
-					color = { 165 125 15 }
+					color = { 0 25 165 }
 				}
 			}
 			c_kabin_buri = {
-				color = { 175 135 25 }
+				color = { 0 35 175 }
 
 				b_kabin_buri = {
 					province = 16902
 
-					color = { 175 135 25 }
+					color = { 0 35 175 }
 				}
 				b_sanam_chai_khet = {
 					province = 16782
 
-					color = { 175 135 25 }
+					color = { 0 35 175 }
 				}
 				b_phra_stoeng = {
 					province = 16687
 
-					color = { 175 135 25 }
+					color = { 0 35 175 }
 				}
 				b_phrom_hod = {
 					province = 16848
 
-					color = { 175 135 25 }
+					color = { 0 35 175 }
 				}
 			}
 			c_mueang_phra_rot = {
-				color = { 140 105 5 }
+				color = { 0 28 140 }
 
 				b_mueang_phra_rot = {
 					province = 16627
 
-					color = { 140 105 5 }
+					color = { 0 28 140 }
 				}
 				b_rayong = {
 					province = 16538
 
-					color = { 140 105 5 }
+					color = { 0 28 140 }
 				}
 				b_phya_re = {
 					province = 16708
 
-					color = { 140 105 5 }
+					color = { 0 28 140 }
 				}
 				b_khlong_phlu = {
 					province = 16633
 
-					color = { 140 105 5 }
+					color = { 0 28 140 }
 				}
 			}
 		}

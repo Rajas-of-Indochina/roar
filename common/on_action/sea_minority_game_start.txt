@@ -763,24 +763,42 @@ set_minorities_game_start = {
 			# possibly add Islam minority in southern Khmer counties in 12th century
 		}
 
-		## Kuy minorities ##
-		title:c_samraong = {
+		## Kuy + Samre minorities ##
+		title:c_chhmar = {
 			add_culture_minority_effect = {
-				CULTURE = culture:kuy
+				CULTURE = culture:samre
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:kuy_animism
+				FAITH = faith:samre_pagan
 				SIZE = small
+			}
+		}
+		title:c_samraong = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = large
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = large
 			}
 		}
 		title:c_prea_vihear = {
 			add_culture_minority_effect = {
 				CULTURE = culture:kuy
-				SIZE = small
+				SIZE = large
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:kuy_animism
+				SIZE = large
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
 				SIZE = small
 			}
 		}
@@ -791,6 +809,14 @@ set_minorities_game_start = {
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
 				SIZE = small
 			}
 		}

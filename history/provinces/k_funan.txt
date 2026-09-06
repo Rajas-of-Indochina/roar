@@ -116,10 +116,41 @@
 	holding = none
 }
 16944 = { # Varin
+	# idk
 	holding = none
 }
 16971 = { # Trapeang
+	# idk
 	holding = none
+}
+
+### c_chhmar
+16842 = { # Chhmar AKA Banteay Chhmar
+	# Angkorain period temple developed by Jayavarman VII
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+
+	# History
+	# Khmer influence over these lands started under rule of Jayavarman II who encouraged migrations into these areas
+}
+16821 = { # Phnom Srok
+	# isolated town/district which encompasses significant wetlands
+	holding = none
+}
+16845 = { # Baos Sbov
+	# a commune
+	holding = none
+}
+16903 = { # Khao Lon
+	# 11th century Khmer sanctuary atop a small hill
+	holding = none
+
+	# History
+	1050.1.1 = {
+		holding = church_holding
+	}
 }
 
 
@@ -240,6 +271,7 @@
 	# nearby ancient mountain temple Phnom Preah Theat isa a sacred mountainous site with many dense forests nearby
 	culture = sambor
 	religion = shaivism
+
 	holding = tribal_holding
 
 	# History
@@ -269,7 +301,6 @@
 	# History
 	1000.1.1 = {
 		culture = khmer
-		religion = shaivism
 		holding = temple_citadel_holding
 	}
 }
@@ -284,8 +315,41 @@
 
 
 ## d_battambang ###################################
+### c_battambang
+16694 = { # Battambang
+	# fishing/port settlement that grew in importance throughout centuries ; also known for its food, art and cultural scene
+	culture = samre		# I question if they should be amjority though
+	religion = shaivism
+
+	holding = temple_citadel_holding	# should be city_holding if it wasn't county capital
+
+	# History
+	# funded in 11th century by the Khmer Empire
+	1140.1.1 = {
+		culture = khmer
+	}
+}
+16788 = { # Ek Phnom AKA Wat Ek Phnom
+	# 11th century Angkorian Hindu temple, dedicated mostly to Krishna
+	holding = none
+
+	# History
+	1020.1.1 = {
+		# built in the 11th century under the rule of King Suryavarman I
+		holding = church_holding
+	}
+}
+16665 = { # Sampav
+	# possibly the sacred mountainous site of Phnom Sampov?
+	holding = none
+}
+16692 = { # Phnom Proek
+	# hilly borderland between Khmer and Mon zones of influence
+	holding = none
+}
+
 ### c_bakan
-16455 = { # b_bakan
+16455 = { # Bakan
 	# 
 	culture = samre
 	religion = samre_pagan
@@ -299,17 +363,17 @@
 		holding = temple_citadel_holding
 	}
 }
-16643 = { # b_baset
+16643 = { # Baset
 	# 
 	holding = none
 }
-16486 = { # b_banan
+16486 = { # Banan
 	# 
 	holding = none
 }
 
 ### c_pailin
-16577 = { # b_pailin
+16577 = { # Pailin
 	# 
 	culture = samre
 	religion = samre_pagan
@@ -321,61 +385,11 @@
 		religion = shaivism
 	}
 }
-16579 = { # b_sneung
+16579 = { # Sneung
 	# 
 	holding = none
 }
-16485 = { # b_samlout
-	# 
-	holding = none
-}
-
-### c_neang
-16788 = { # b_neang
-	# 
-	culture = samre
-	religion = samre_pagan
-
-	holding = temple_citadel_holding
-
-	# History
-	900.1.1 = {
-		religion = shaivism
-	}
-}
-16665 = { # b_sampav
-	# 
-	holding = none
-}
-16694 = { # b_ek_phnom
-	# 
-	holding = church_holding
-}
-16692 = { # b_phnom_proek
-	# 
-	holding = none
-}
-
-### c_chhmar
-16842 = { # b_chhmar
-	# 
-	culture = samre
-	religion = samre_pagan
-
-	holding = tribal_holding
-
-	# History
-	900.1.1 = {
-		culture = khmer
-		religion = shaivism
-		holding = temple_citadel_holding
-	}
-}
-16821 = { # b_phnom_srok
-	# 
-	holding = none
-}
-16845 = { # b_baos_sbov
+16485 = { # Samlout
 	# 
 	holding = none
 }
@@ -758,11 +772,7 @@
 	holding = tribal_holding
 
 	# History
-	900.1.1 = {
-		culture = khmer
-		religion = shaivism
-		holding = temple_citadel_holding
-	}
+	# shift to Khmer deleted until more info can be gathered
 }
 16208 = { # b_trat
 	# 
@@ -801,6 +811,8 @@
 	religion = theravada
 
 	holding = temple_citadel_holding
+
+	# History
 }
 16782 = { # b_sanam_chai_khet
 	# 
