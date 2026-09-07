@@ -2759,3 +2759,127 @@ tradition_sapphic_romance = {
 		}
 	}
 }
+
+
+
+###
+# Crimean Goth Unique Tradition
+#
+# Context: After the Byzantines fell, Crimea was the last remaining image of the Eastern Roman Empire and had many ties to the Royals of the Byzantines
+# Additionally they served as basically a buffer state against nomads from the north, and held onto their Gothic language for a few more centuries
+#
+# Idea was to have a tradition that synergizes with Adminstrative government, is militaristic, and gives some bonuses related to castles and maybe mountains
+# Started with Imperial Tagmata with no focus on Heavy Cav, Threw in City Keepers with bigger debuff, and part of Loyal Subjects
+#
+# Unique MAA Idea:
+# "Tauric Foederati" - https://en.wikipedia.org/wiki/Foederati
+# - The Crimean Penisula was called "Taurica" by the Byzantines (What the Goths called it is unknown apparently)
+# - "Foederati" was a Roman term used for foreign states/barbarian tribes that were subsidized in exchange for military aid--including the visigoths.  After a while it began to just mean a military unit with a large amount of "foreigners" at first but later became a professional army.
+#
+# Heavy Infantry is probably the most over-saturated MAA and Palatani are given by the Roman Empire decision which is a natural goal for this start,
+# Spearmen probably make the most sense gameplay-wise and historically--The only thing is the Skoutatai are similar, so we should probably start with that and make it specialized to defend against Steppe Nomads specifically
+#
+# Weak Damage (18), Lots of Toughness (36), no pursuit, High screen for Spearman (20)
+# Definitely counter Heavy/Light Cav as normal
+# Archer Cav counter would be helpful for the nearby nomads, but only at half. (Screen Advantage in Steppe will be the main strength against them)
+#
+# Mountain/Hill advantage (+8 Dmg/+2 Toughness) is expected as the mountains of Crimea were where they held out, but if we leave it at that then it'll feel too similar to other MAA, including the unique spearman the neighboring Greeks have access to.
+# Plain/Steppe advantage of would give it a unique advantage and would be strong and relevant because the direct threats are Steppe Nomads (including on the same peninsula as you, which also has both of those terrains),
+# but I'm worried that if it's straight damage or toughness that they will spread too much out into the Steppe which isn't accurate, so Plain/Steppe advantage should be strictly something like +5 Screen on Plains and +10 Screen on Steppe to counter Archer Cav's Pursuit
+# (Archer Cav gets a crazy strength bonus in steppe so you will prob lose hard but you will keep more troops to go retreat to a terrain you'd actually fare well in)
+#
+# Harsh/Normal Winter advantage (+4 Toughness / +8 Screen)
+# Winter actually does turn Harsh on the mountains the culture is in/around
+#
+#
+tradition_bastion_of_crimea = { #Could also reference the Theodoro instead of Crimea, or even Taurica (though that's specificially the Greek name afaik)
+	category = regional
+
+	#TODO: This is currently just the same art as Imperial Tagmata
+	layers = {
+		0 = martial
+		1 = mediterranean
+		4 = imperial_tagmata.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:crimean_gothic
+			any_parent_culture_or_above = {
+				this = culture:crimean_gothic
+			}
+			has_cultural_pillar = heritage_east_germanic
+		}
+	}
+	can_pick = {
+	}
+
+	parameters = {
+		#Castle keepers
+		castle_fortifications_increase = yes
+		castle_grant_prestige = yes
+		architect_trait_prestige = yes
+		#Admin Synergy
+		frontier_themes_borrow_neighbor_troops = yes
+
+		#AI Behavior (Castle Keepers)
+		ai_more_likely_to_castle = yes
+		ai_more_likely_to_fortify = yes
+		#AI Behavior (Loyal Subjects)
+		doesnt_care_about_culture_faith_in_factions = yes
+		more_hostage_acceptance_for_vassals = yes
+	}
+	character_modifier = {
+		#Admin Synergy
+		counter_efficiency = 0.1
+		knight_effectiveness_mult = 0.25
+		men_at_arms_title_limit = 1
+		#Castle Keepers Debuff + 5%
+		castle_holding_holding_build_speed = 0.15
+		castle_holding_holding_build_gold_cost = 0.25
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_bureaucratic = { is_in_list = traits }
+						culture_pillar:ethos_bellicose = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_or_bureaucratic_desc
+				}
+			}
+
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+	ai_will_do = {
+		value = 400
+		if = {
+			limit = { # Admin should be more into this
+				scope:character = {
+					government_allows = administrative
+				}
+			}
+			multiply = 2
+		}
+		else_if = {
+			limit = {
+				scope:character ?= {
+					ai_has_warlike_personality = yes
+				}
+			}
+			multiply = 4
+		}
+	}
+}
