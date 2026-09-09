@@ -900,6 +900,37 @@ c_bakan = {
 	}
 }
 
+c_pursat = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
+
+	860.1.1 = {
+		government = mandala_government
+		holder = khmer_malyang_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_funan
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1060.1.1 = {
+		holder = khmer_malyang_10_fic	#fictional
+		tributary_of = {
+			suzerain = k_funan
+			contract_group = tributary_mandala
+		}
+	}
+	#
+	1170.1.1 = {
+		holder = khmer_malyang_20_fic	#fictional
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
+		}
+	}
+}
+
 c_pailin = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 4 }
@@ -932,7 +963,7 @@ c_pailin = {
 }
 
 
-d_dviradapura = {
+d_angkor_borey = {
 	867.1.1. = {
 		government = mandala_government
 		holder = khmer_aninditapura_01_fic	#fictional
@@ -965,7 +996,7 @@ c_dviradapura = {
 	867.1.1 = {
 		government = mandala_government
 		holder = khmer_aninditapura_01_fic	#fictional
-		liege = d_dviradapura # d_angkor_borey
+		liege = d_angkor_borey # d_angkor_borey
 	}
 	#
 	1066.1.1 = {
@@ -974,37 +1005,6 @@ c_dviradapura = {
 	#
 	1178.1.1 = {
 		holder = khmer_aninditapura_20_fic	#fictional
-	}
-}
-
-c_pursat = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 7 }
-	1178.1.1 = { change_development_level = 11 }
-
-	860.1.1 = {
-		government = mandala_government
-		holder = khmer_malyang_01_fic	#fictional
-		tributary_of = {
-			suzerain = k_funan
-			contract_group = tributary_mandala
-		}
-	}
-	#
-	1060.1.1 = {
-		holder = khmer_malyang_10_fic	#fictional
-		tributary_of = {
-			suzerain = k_funan
-			contract_group = tributary_mandala
-		}
-	}
-	#
-	1170.1.1 = {
-		holder = khmer_malyang_20_fic	#fictional
-		tributary_of = {
-			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-			contract_group = tributary_mandala
-		}
 	}
 }
 
@@ -1016,7 +1016,7 @@ c_aoral = {
 	867.1.1 = {
 		government = mandala_government
 		holder = khmer_aninditapura_01_fic	#fictional
-		liege = d_dviradapura # d_angkor_borey
+		liege = d_angkor_borey # d_angkor_borey
 	}
 	1066.1.1 = {
 		holder = khmer_aninditapura_10_fic	#fictional
@@ -1024,6 +1024,42 @@ c_aoral = {
 	1178.1.1 = {
 		holder = khmer_aninditapura_20_fic	#fictional
 	}
+}
+
+c_angkor_borey = {
+		867.1.1 = { change_development_level = 7 }
+		1066.1.1 = { change_development_level = 11 }
+		1178.1.1 = { change_development_level = 18 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_aninditapura_01_fic	#fictional
+			liege = d_angkor_borey # d_angkor_borey
+		}
+		1066.1.1 = {
+			holder = khmer_aninditapura_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = khmer_aninditapura_20_fic	#fictional
+		}
+}
+	
+c_chum_kiri = {
+		867.1.1 = { change_development_level = 7 }
+		1066.1.1 = { change_development_level = 11 }
+		1178.1.1 = { change_development_level = 18 }
+
+		867.1.1 = {
+			government = mandala_government
+			holder = khmer_aninditapura_01_fic	#fictional
+			liege = d_angkor_borey # d_angkor_borey
+		}
+		1066.1.1 = {
+			holder = khmer_aninditapura_10_fic	#fictional
+		}
+		1178.1.1 = {
+			holder = khmer_aninditapura_20_fic	#fictional
+		}
 }
 
 
@@ -1066,42 +1102,6 @@ c_vyadhapura = {
 		}
 		1178.1.1 = {
 			holder = khmer_vyadhapura_20_fic	#fictional
-		}
-}
-
-c_angkor_borey = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 18 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_dviradapura # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_aninditapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_aninditapura_20_fic	#fictional
-		}
-}
-	
-c_chum_kiri = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 18 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_dviradapura # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_aninditapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_aninditapura_20_fic	#fictional
 		}
 }
 	

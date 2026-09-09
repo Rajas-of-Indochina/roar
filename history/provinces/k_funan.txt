@@ -387,6 +387,23 @@
 	}
 }
 
+### c_pursat
+16384 = { # Pursat
+	# capital settlement of Pursat region ; name derived from a tree and shares it with a nearby river
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+16309 = { # Phnom Kravanh
+	# sparsely populated forested region ; nowadays also home to dislocated Samre communities
+	holding = none
+}
+16463 = { # Banteay Dei
+	# commune in Pursat province
+	holding = none
+}
+
 ### c_pailin
 16577 = { # Pailin
 	# trading centre funded at one point by Khmer Empire ; region rich in gems and timber
@@ -409,7 +426,7 @@
 }
 
 
-## d_dviradapura ###################################
+## d_angkor_borey ###################################
 ### c_dviradapura
 16019 = { # b_dviradapura
 	# 
@@ -425,23 +442,6 @@
 16368 = { # b_kampong_chhnang
 	# 
 	holding = city_holding
-}
-
-### c_pursat
-16384 = { # b_pursat
-	# 
-	culture = khmer
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-16309 = { # b_phnom_kravanh
-	# 
-	holding = church_holding
-}
-16463 = { # b_banteay_dei
-	# 
-	holding = temple_citadel_holding
 }
 
 ### c_aoral
@@ -461,8 +461,6 @@
 	holding = none
 }
 
-
-## d_vyadhapura ###################################
 ### c_angkor_borey
 15829 = { # b_angkor_borey
 	# 
@@ -478,19 +476,6 @@
 15928 = { # b_neang_khmao
 	# 
 	holding = church_holding
-}
-
-### c_prey_rodum
-15952 = { # b_prey_rodum
-	# 
-	culture = khmer
-	religion = shaivism
-
-	holding = temple_citadel_holding
-}
-16051 = { # b_ba_ra
-	# 
-	holding = none
 }
 
 ### c_chum_kiri
@@ -516,23 +501,8 @@
 	holding = temple_citadel_holding
 }
 
-### c_kracheh_nokor
-16224 = { # b_tbong_khmum
-	# 
-	culture = khmer
-	religion = shaivism
 
-	holding = temple_citadel_holding
-}
-16181 = { # b_memot
-	# 
-	holding = none
-}
-16287 = { # b_chhloung
-	# 
-	holding = none
-}
- 
+## d_vyadhapura ###################################
 ### c_vyadhapura
 15856 = { # b_kiri_vong
 	# 
@@ -560,13 +530,30 @@
 	holding = none
 }
 
+### c_kracheh_nokor
+16224 = { # b_tbong_khmum
+	# 
+	culture = khmer
+	religion = shaivism
+
+	holding = temple_citadel_holding
+}
+16181 = { # b_memot
+	# 
+	holding = none
+}
+16287 = { # b_chhloung
+	# 
+	holding = none
+}
+
 ### c_prey_rodum
 15952 = { # b_prey_rodum
 	# 
 	culture = khmer
 	religion = shaivism
 
-	holding = castle_holding
+	holding = temple_citadel_holding
 }
 16051 = { # b_ba_ra
 	# 
