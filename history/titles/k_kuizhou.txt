@@ -1,0 +1,388 @@
+﻿k_kuizhou = {
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 10 }
+
+	867.1.1 = {
+		holder = han_3206
+		liege = h_china
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_90011 # Zhang Shen
+		liege = h_china
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11512
+		liege = h_china
+		government = celestial_government
+	}
+}
+##################################################
+d_kuizhong = {
+	867.1.1 = {
+		holder = han_3206
+		liege = k_kuizhou
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_90011
+		liege = k_kuizhou
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11512
+		liege = k_kuizhou
+		government = celestial_government
+	}
+}
+
+c_kuizhou = {
+	867.1.1 = { change_development_level = 10 }
+	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 18 }
+
+	867.1.1 = {
+		holder = han_3206
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_90011
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11512
+		liege = d_kuizhong
+		government = celestial_government
+	}
+}
+
+c_zhongzhou = {
+	867.1.1 = { change_development_level = 12 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
+
+	867.1.1 = {
+		holder = han_3323
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_6953
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_12288
+		liege = d_kuizhong
+		government = celestial_government
+	}
+}
+
+c_wanzhou = {
+	867.1.1 = { change_development_level = 12 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
+
+	867.1.1 = {
+		holder = han_3206
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_90011
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11512
+		liege = d_kuizhong
+		government = celestial_government
+	}
+}
+
+c_fuzhou_4 = {
+	867.1.1 = { change_development_level = 12 }
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
+
+	867.1.1 = {
+		holder = han_3322
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_7029
+		liege = d_kuizhong
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_12283
+		liege = d_kuizhong
+		government = celestial_government
+	}
+}
+
+#########################################################
+
+d_qianzhong = {
+	867.1.1 = {
+		holder = han_2665
+		liege = k_kuizhou
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_6730
+		liege = k_kuizhou
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11371
+		liege = k_kuizhou
+		government = celestial_government
+	}
+}
+
+c_qianzhou_1 = {
+	867.1.1 = {
+		holder = han_2665
+		liege = d_qianzhong
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_6730
+		liege = d_qianzhong
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11371
+		liege = d_qianzhong
+		government = celestial_government
+	}
+}
+
+c_shizhou_1 = {
+	867.1.1 = {
+		holder = han_3404
+		liege = d_qianzhong
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_7109
+		liege = d_qianzhong
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11073
+		liege = d_qianzhong
+		government = celestial_government
+	}
+}
+
+c_zhenxi = {
+	867.1.1 = {
+		holder = tribal_zhenxi
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_nanping_li_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_nanping_li_2
+		government = tribal_government
+	}
+}
+
+c_nanzhou = {
+	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
+
+	867.1.1 = {
+		holder = tribal_nanzhou
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_nanping_li_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_nanping_li_2
+		government = tribal_government
+	}
+}
+
+c_sizhou = {
+	867.1.1 = {
+		holder = tribal_sizhou
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_sijin_tian_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_sijin_tian_2
+		government = tribal_government
+	}
+}
+
+c_bochuan = {
+	867.1.1 = {
+		holder = tribal_bozhou
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_bozhou_yang_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_bozhou_yang_2
+		government = tribal_government
+	}
+}
+
+c_yizhou_3 = {
+	867.1.1 = {
+		holder = tribal_yizhou
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_yizhou_ren_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_yizhou_ren_2
+		government = tribal_government
+	}
+}
+
+#########################################################
+
+d_wuxi = {
+	867.1.1 = {
+		holder = han_2702
+		liege = k_hunan
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_6744
+		liege = k_hunan
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11363
+		liege = k_hunan
+		government = celestial_government
+	}
+}
+
+c_luxi = {
+	867.1.1 = {
+		holder = han_2702
+		liege = d_wuxi
+		government = celestial_government
+	}
+	1066.1.1 = {
+		holder = han_6744
+		liege = d_wuxi
+		government = celestial_government
+	}
+	1178.1.1 = {
+		holder = han_11363
+		liege = d_wuxi
+		government = celestial_government
+	}
+}
+
+c_lingxi = {
+	867.1.1 = {
+		holder = tribal_lingxi 
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_beijiang_peng_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_beijiang_peng_2
+		government = tribal_government
+	}
+}
+
+c_shangxi = {
+	867.1.1 = {
+		holder = tribal_shangxi
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_beijiang_peng_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_beijiang_peng_2
+		government = tribal_government
+	}
+}
+
+c_tanyang = {
+	867.1.1 = {
+		holder = tribal_tanyang
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_xuzhou_shu_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_xuzhou_shu_2
+		government = tribal_government
+	}
+}
+
+c_luyang = {
+	867.1.1 = {
+		holder = tribal_luyang
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_sijin_tian_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_sijin_tian_2
+		government = tribal_government
+	}
+}
+
+c_yezhou = {
+	867.1.1 = {
+		holder = tribal_yezhou
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_sijin_tian_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_sijin_tian_2
+		government = tribal_government
+	}
+}
+c_huangzhou_1 = {
+	867.1.1 = {
+		holder = tribal_zangying_xie_1
+		government = tribal_government
+	}
+	1066.1.1 = {
+		holder = tribal_sijin_tian_1
+		government = tribal_government
+	}
+	1178.1.1 = {
+		holder = tribal_sijin_tian_2
+		government = tribal_government
+	}
+}
