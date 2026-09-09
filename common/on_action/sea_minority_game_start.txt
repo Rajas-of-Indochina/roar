@@ -733,29 +733,42 @@ set_minorities_game_start = {
 		}
 
 		every_county = { #k_funan
-			if = {
+			if = { 
 				limit = {
 					kingdom = title:k_funan
-					culture = culture:khmer
+					OR = {
+						culture = culture:khmer
+						culture = culture:sambor
+					}
+					faith = faith:vaishnavism
 				}
 				add_faith_minority_effect = {
-					FAITH = faith:vaishnavism
-					SIZE = large
-				}
-				# Angkorian period characterised itself with growth of Buddhism in the region
-				add_faith_minority_effect = {
-					FAITH = faith:mahayana
+					FAITH = faith:shaivism
 					SIZE = large
 				}
 			}
 			if = { 
 				limit = {
 					kingdom = title:k_funan
-					culture = culture:khmer
-					faith = faith:vaishnavism
+					OR = {
+						culture = culture:khmer
+						culture = culture:sambor
+					}
+					faith = faith:shaivism
 				}
 				add_faith_minority_effect = {
-					FAITH = faith:shaivism
+					FAITH = faith:vaishnavism
+					SIZE = large
+				}
+			}
+			# Angkorian period characterised itself with growth of Buddhism in the region
+			if = {
+				limit = {
+					kingdom = title:k_funan
+					culture = culture:khmer
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:mahayana
 					SIZE = large
 				}
 			}

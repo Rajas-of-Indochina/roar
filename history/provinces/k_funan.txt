@@ -343,51 +343,68 @@
 	# possibly the sacred mountainous site of Phnom Sampov?
 	holding = none
 }
-16692 = { # Phnom Proek
-	# hilly borderland between Khmer and Mon zones of influence
+16579 = { # Sneung AKA Prasat Sneung
+	# 10th century temple ; also known as 'Temple of the Clasping Monkeys' due to its monkey depictions 
 	holding = none
+
+	# History
+	930.1.1 = {
+		holding = church_holding
+	}
 }
 
 ### c_bakan
-16455 = { # Bakan
-	# 
-	culture = samre
-	religion = samre_pagan
+16455 = { # Bakan AKA Wat Bakan
+	# name of modern day district in Pursat province ; there is a 12th century pagoda nearby
+	# made capital of county cause there were no better picks really
+	culture = sambor
+	religion = vaishnavism
 
 	holding = tribal_holding
 
 	# History
-	900.1.1 = {
+	1020.1.1 = {
 		culture = khmer
-		religion = vaishnavism
 		holding = temple_citadel_holding
 	}
 }
-16643 = { # Baset
-	# 
+16643 = { # Baset AKA Prasat Baset
+	# site of an 11th century temple complex believed to be built during teign of Suryavarman I
 	holding = none
+
+	# History
+	1020.1.1 = {
+		holding = church_holding
+	}
 }
-16486 = { # Banan
-	# 
+16486 = { # Banan AKA Wat Banan
+	# 11th century temple complex believed to be built during reign of Udayadityavarman II
 	holding = none
+
+	# History
+	1060.1.1 = {
+		holding = church_holding
+	}
 }
 
 ### c_pailin
 16577 = { # Pailin
-	# 
+	# trading centre funded at one point by Khmer Empire ; region rich in gems and timber
 	culture = samre
 	religion = samre_pagan
 
 	holding = tribal_holding
 
+	# could have generic_gem_mine_building
+
 	# History
 }
-16579 = { # Sneung
-	# 
+16692 = { # Phnom Proek
+	# hilly borderland between Khmer and Mon zones of influence
 	holding = none
 }
 16485 = { # Samlout
-	# 
+	# modern day district known for its wildlife
 	holding = none
 }
 
@@ -708,12 +725,22 @@
 ### c_koh_kong
 16076 = { # Khemarak Phoumin AKA Koh Kong
 	# frontier settlement and a trade hub ; potentially site of Bai Tou kingdom mentioned by Song dynasty 'lesihu'?
-	culture = khmer
-	religion = shaivism
+	culture = samre
+	religion = samre_pagan
 
-	holding = temple_citadel_holding
+	holding = tribal_holding
 
 	# History
+	# Bai Tou kingdom mentioned in Song chronicles but it also is implied to not be a Khmer realm
+	1100.1.1 = {
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
+}
+15878 = { # Botum Sakor
+	# area of modern day national park with well preserved evergreen woods and mangrove forests
+	holding = none
 }
 
 ### c_phnom_kravanh
@@ -751,10 +778,6 @@
 }
 15960 = { # Srae Ambel
 	# district of Koh Kong province
-	holding = none
-}
-15878 = { # Botum Sakor
-	# area of modern day national park with well preserved evergreen woods and mangrove forests
 	holding = none
 }
 
