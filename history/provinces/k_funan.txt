@@ -435,8 +435,8 @@
 
 ## d_angkor_borey ###################################
 ### c_dviradapura
-16019 = { # b_dviradapura
-	# 
+16019 = { # Dviradapura
+	# ancient pre-Angkorian temple-city ; roughly site of modern day Phnom Penh
 	culture = khmer
 	religion = shaivism
 
@@ -444,37 +444,26 @@
 
 	# History
 }
-16153 = { # b_longvek
-	# 
-	holding = city_holding
+16153 = { # Longvek AKA Lavek
+	# second capital after Angkor era and sacking of Angkor ; famed for its military and scholarship usage
+	holding = city_holding	# or castle_holding
 }
-16368 = { # b_kampong_chhnang
-	# 
-	holding = city_holding
+16368 = { # Kampong Chhnang
+	# small port settlement with rice focused economy
+	holding = city_holding	# placeholder to represent rice production
 }
-
-### c_aoral
-16117 = { # b_phnom_aoral
-	# 
-	culture = khmer
-	religion = shaivism
-
-	holding = temple_citadel_holding
-
-	# History
-}
-15961 = { # b_phnom_sruoch
-	# 
+16023 = { # Chbar Mon
+	# capital town of Kampong Speu province
 	holding = none
 }
-16023 = { # b_chbar_mon
-	# 
-	holding = none
+16117 = { # Phnom Aoral
+	# tallest mountain in Cambodia with a wildlife preserve nearby
+	holding = church_holding	# placeholder ; should be empty but I wanted to put a temple somewhere
 }
 
 ### c_angkor_borey
-15829 = { # b_angkor_borey
-	# 
+15829 = { # Angkor Borey and Phnom Da AKA Baladityapura AKA Aninditapura
+	# ancient pre-Angkorian city-temple and former capital of Funan Kingdom ; said to be funded by Baladitya
 	culture = khmer
 	religion = shaivism
 
@@ -482,36 +471,50 @@
 
 	# History
 }
-15643 = { # b_phnom_bayong
-	# 
+15643 = { # Phnom Bayang
+	# large 7th century temple complex with various inscriptions and artworks adoring this structure
 	holding = church_holding
 }
-15928 = { # b_neang_khmao
-	# 
-	holding = church_holding
+15928 = { # Neang Khmao
+	# group of 10th century three brick temples surrounded by moat ; originally dedicated to Vishnu
+	holding = none
+
+	# History
+	934.1.1 = {
+		# said to be built during reign of Jayavarman IV
+		holding = church_holding
+	}
+}
+15771 = { # Angkor Chey
+	# district of Kampot province
+	holding = none
 }
 
 ### c_chum_kiri
-15848 = { # b_chum_kiri
-	# 
-	culture = khmer
+15848 = { # Chum Kiri
+	# picturesque hilly district of Kampot region
+	# not much of a proper county capital but no better picks
+	culture = bnam
 	religion = shaivism
 
 	holding = temple_citadel_holding
 
 	# History
+	900.1.1 = {
+		culture = khmer
+	}
 }
-15771 = { # b_angkor_chey
-	# 
-	holding = city_holding
-}
-15712 = { # b_phnom_chhngok
-	# 
+15712 = { # Phnom Chhngok
+	# 7th century cave temple dedicated to Shiva ; sitauted nearby modern Kampot
 	holding = church_holding
 }
-15656 = { # b_banteay_meas
-	# 
-	holding = temple_citadel_holding
+15656 = { # Phnom Totoeng
+	# ancient pre-Angkorian era cave temple
+	holding = church_holding
+}
+15961 = { # Phnom Sruoch
+	# district in Kampong Speu province ; famed for nearby Kirirom National PArk
+	holding = none
 }
 
 

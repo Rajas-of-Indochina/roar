@@ -403,7 +403,7 @@ sea_khmer_indradevi_03 = {
 
 
 sea_chenla_baladityapura_00 = {
-	# Chenla noble who established Baladitya under rule of Isanavarman I in the early 7th century AD
+	# Chenla noble who established Baladityapura under rule of Isanavarman I in the early 7th century AD
 	name = "Baladitya"
 	dynasty = sea_chenla_baladityapura
 	religion = shaivism
@@ -540,15 +540,29 @@ sea_chenla_dvirada_06 = {
 	782.1.1 = { death = yes }
 }
 
+sea_chenla_dvirada_01_fic = {
+	# fictional character to connect members of sea_house_dvirada
+	name = "Sivakaivalya"
+	dynasty_house = sea_house_dvirada
+	religion = shaivism
+	culture = sambor
+	father = sea_chenla_dvirada_01
+	mother = sea_chenla_nrpathindra_02
+
+	750.1.1 = { birth = yes }
+	802.1.1 = { culture = khmer }
+	810.1.1 = { death = yes }
+}
 sea_chenla_dvirada_07 = {
 	# general and 'purohit' of Jayavarman II
 	name = "Sivakaivalya"
 	dynasty_house = sea_house_dvirada
 	religion = shaivism
-	culture = khmer
-	#father = sea_chenla_dvirada_01
+	culture = sambor
+	father = sea_chenla_dvirada_01_fic
 
 	795.1.1 = { birth = yes }
+	802.1.1 = { culture = khmer }
 	829.1.1 = { death = yes }
 }
 sea_chenla_dvirada_08 = {
@@ -556,13 +570,14 @@ sea_chenla_dvirada_08 = {
 	name = "Sivavinduka"
 	dynasty_house = sea_house_dvirada
 	religion = shaivism
-	culture = khmer
-	#father = sea_chenla_dvirada_01
+	culture = sambor
+	father = sea_chenla_dvirada_01_fic
 
 	797.1.1 = { birth = yes }
+	802.1.1 = { culture = khmer }
 	852.1.1 = { death = yes }
 }
-sea_chenla_dvirada_09_fic = {
+sea_chenla_dvirada_02_fic = {
 	# fictional son of Sivavinduka ; created so that someone holds d_angkor_borey
 	name = "Sivavinduka"
 	dynasty_house = sea_house_dvirada
@@ -572,6 +587,34 @@ sea_chenla_dvirada_09_fic = {
 
 	832.1.1 = { birth = yes }
 	900.1.1 = { death = yes }
+}
+sea_chenla_dvirada_05_fic = {
+	name = "Damkhat_Sukonthor"
+	dynasty_house = sea_house_dvirada
+	religion = shaivism
+	culture = khmer
+	father = sea_chenla_dvirada_02_fic
+
+	894.1.1 = { birth = yes }
+	960.1.1 = { death = yes }
+}
+sea_chenla_dvirada_03_fic = {
+	name = "Chey_Soryavong"
+	dynasty_house = sea_house_dvirada
+	religion = shaivism
+	culture = khmer
+
+	1027.1.1 = { birth = yes }
+	1100.1.1 = { death = yes }
+}
+sea_chenla_dvirada_04_fic = {
+	name = "Namhong"
+	dynasty_house = sea_house_dvirada
+	religion = shaivism
+	culture = khmer
+
+	1139.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
 }
 
 sea_chenla_dvirada_branch_00_fic = {
@@ -892,15 +935,6 @@ khmerv013 = {
 	1038.1.1 = { birth = yes }
 	1100.1.1 = { death = yes }
 }
-khmerv017 = {
-	name = "Damkhat_Sukonthor"
-	#dynasty_house = house_Dvirada
-	religion = shaivism
-	culture = khmer
-
-	894.1.1 = { birth = yes }
-	960.1.1 = { death = yes }
-}
 khmerv019 = {
 	name = "Sovannamongkhol"
 	religion = shaivism
@@ -926,15 +960,6 @@ khmerv022 = {
 	895.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
 }
-khmerv023 = {
-	name = "Chey_Soryavong"
-	#dynasty_house = house_Dvirada
-	religion = shaivism
-	culture = khmer
-
-	1027.1.1 = { birth = yes }
-	1100.1.1 = { death = yes }
-}
 khmerv024 = {
 	name = "Narithipong"
 	religion = shaivism
@@ -958,15 +983,6 @@ khmerv027 = {
 
 	900.1.1 = { birth = yes }
 	960.1.1 = { death = yes }
-}
-khmerv030 = {
-	name = "Namhong"
-	#dynasty_house = house_Dvirada
-	religion = shaivism
-	culture = khmer
-
-	1139.1.1 = { birth = yes }
-	1200.1.1 = { death = yes }
 }
 khmerv031 = {
 	name = "Ranariddh"

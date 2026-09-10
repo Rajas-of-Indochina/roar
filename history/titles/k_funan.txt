@@ -964,23 +964,61 @@ c_pailin = {
 
 
 d_angkor_borey = {
-	867.1.1. = {
+	716.1.1 = {
 		government = mandala_government
-		holder = khmer_aninditapura_01_fic	#fictional
+		holder = sea_chenla_dvirada_00 # Pushkaraksha / Indraloka
+		liege = k_funan
+	}
+	730.1.1 = {
+		holder = sea_chenla_dvirada_01 # Rudravarman / Shambhuvarman
+	}
+	760.1.1 = {
+		holder = sea_chenla_dvirada_02 # Rajendravarman I
+	}
+	790.1.1 = {
+		holder = sea_chenla_dvirada_03 # Mahipativarman
+	}
+	800.1.1 = {
+		holder = sea_chenla_dvirada_01_fic #fictional
+		liege = 0
+	}
+	802.1.1 = {
 		tributary_of = {
 			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
+	}
+	810.1.1 = {
+		holder = sea_chenla_dvirada_07 # Sivakaivalya
+	}
+	829.1.1 = {
+		holder = sea_chenla_dvirada_08 # Sivavinduka
+	}
+	852.1.1 = {
+		holder = sea_chenla_dvirada_02_fic #fictional
+		tributary_of = {
+			suzerain = k_funan
+			contract_group = tributary_mandala
+		}
+	}
+	900.1.1 = {
+		holder = sea_chenla_dvirada_05_fic #fictional
+	}
+	#
+	1060.1.1 = {
+		holder = sea_chenla_dvirada_03_fic	#fictional
 	}
 	1066.1.1. = {
-		holder = khmer_aninditapura_10_fic	#fictional
 		tributary_of = {
 			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
-	1178.1.1 = {
-		holder = khmer_aninditapura_20_fic	#fictional
+	#
+	1170.1.1 = {
+		holder = sea_chenla_dvirada_04_fic	#fictional
+	}
+	1177.1.1 = {
 		tributary_of = {
 			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
 			contract_group = tributary_mandala
@@ -993,73 +1031,122 @@ c_dviradapura = {
 	1066.1.1 = { change_development_level = 11 }
 	1178.1.1 = { change_development_level = 18 }
 
-	867.1.1 = {
+	716.1.1 = {
 		government = mandala_government
-		holder = khmer_aninditapura_01_fic	#fictional
-		liege = d_angkor_borey # d_angkor_borey
+		holder = sea_chenla_dvirada_00 # Pushkaraksha / Indraloka
+		liege = k_funan
+	}
+	730.1.1 = {
+		holder = sea_chenla_dvirada_01 # Rudravarman / Shambhuvarman
+	}
+	760.1.1 = {
+		holder = sea_chenla_dvirada_02 # Rajendravarman I
+	}
+	790.1.1 = {
+		holder = sea_chenla_dvirada_03 # Mahipativarman
+	}
+	800.1.1 = {
+		holder = sea_chenla_dvirada_01_fic #fictional
+		liege = d_angkor_borey
+	}
+	810.1.1 = {
+		holder = sea_chenla_dvirada_07 # Sivakaivalya
+	}
+	829.1.1 = {
+		holder = sea_chenla_dvirada_08 # Sivavinduka
+	}
+	852.1.1 = {
+		holder = sea_chenla_dvirada_02_fic #fictional
+	}
+	900.1.1 = {
+		holder = sea_chenla_dvirada_05_fic #fictional
 	}
 	#
-	1066.1.1 = {
-		holder = khmer_aninditapura_10_fic	#fictional
+	1060.1.1 = {
+		holder = sea_chenla_dvirada_03_fic	#fictional
 	}
 	#
-	1178.1.1 = {
-		holder = khmer_aninditapura_20_fic	#fictional
-	}
-}
-
-c_aoral = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 9 }
-	1178.1.1 = { change_development_level = 16 }
-
-	867.1.1 = {
-		government = mandala_government
-		holder = khmer_aninditapura_01_fic	#fictional
-		liege = d_angkor_borey # d_angkor_borey
-	}
-	1066.1.1 = {
-		holder = khmer_aninditapura_10_fic	#fictional
-	}
-	1178.1.1 = {
-		holder = khmer_aninditapura_20_fic	#fictional
+	1170.1.1 = {
+		holder = sea_chenla_dvirada_04_fic	#fictional
 	}
 }
 
 c_angkor_borey = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 18 }
+	867.1.1 = { change_development_level = 7 }
+	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 18 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_aninditapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_aninditapura_20_fic	#fictional
-		}
+	# early 7th century - Baladityapura established by Baladityap, under rule of Isanavarman I
+	634.1.1 = {
+		government = mandala_government
+		holder = sea_chenla_baladityapura_00 # Baladitya
+		liege = k_funan
+	}
+	656.1.1 = {
+		holder = sea_chenla_baladityapura_01 # Visvarupa
+	}
+	690.1.1 = {
+		holder = sea_chenla_baladityapura_02 # Nripatindravarman
+	}
+	690.1.1 = {
+		holder = sea_chenla_baladityapura_02 # Nripatindravarman
+	}
+	716.1.1 = {
+		holder = sea_chenla_dvirada_00 # Pushkaraksha / Indraloka
+	}
+	730.1.1 = {
+		holder = sea_chenla_dvirada_01 # Rudravarman / Shambhuvarman
+	}
+	760.1.1 = {
+		holder = sea_chenla_dvirada_02 # Rajendravarman I
+	}
+	790.1.1 = {
+		holder = sea_chenla_dvirada_03 # Mahipativarman
+	}
+	800.1.1 = {
+		holder = sea_chenla_dvirada_01_fic #fictional
+		liege = d_angkor_borey
+	}
+	810.1.1 = {
+		holder = sea_chenla_dvirada_07 # Sivakaivalya
+	}
+	829.1.1 = {
+		holder = sea_chenla_dvirada_08 # Sivavinduka
+	}
+	852.1.1 = {
+		holder = sea_chenla_dvirada_02_fic #fictional
+	}
+	900.1.1 = {
+		holder = sea_chenla_dvirada_05_fic #fictional
+	}
+	#
+	1060.1.1 = {
+		holder = sea_chenla_dvirada_03_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = sea_chenla_dvirada_04_fic	#fictional
+	}
 }
 	
 c_chum_kiri = {
-		867.1.1 = { change_development_level = 7 }
-		1066.1.1 = { change_development_level = 11 }
-		1178.1.1 = { change_development_level = 18 }
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 16 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_aninditapura_01_fic	#fictional
-			liege = d_angkor_borey # d_angkor_borey
-		}
-		1066.1.1 = {
-			holder = khmer_aninditapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_aninditapura_20_fic	#fictional
-		}
+	862.1.1 = {
+		government = mandala_government
+		holder = khmer_aninditapura_01_fic	#fictional
+		liege = d_angkor_borey
+	}
+	#
+	1062.1.1 = {
+		holder = khmer_aninditapura_10_fic	#fictional
+	}
+	#
+	1174.1.1 = {
+		holder = khmer_aninditapura_20_fic	#fictional
+	}
 }
 
 
