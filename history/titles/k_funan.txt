@@ -1151,20 +1151,21 @@ c_chum_kiri = {
 
 
 d_vyadhapura = {
-	867.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = khmer_vyadhapura_01_fic	#fictional
-		#liege = k_funan
 		tributary_of = {
 			suzerain = k_funan	#Khmer empire in shambles from 1177-1181
 			contract_group = tributary_mandala
 		}
 	}
-	1066.1.1 = {
+	#
+	1060.1.1 = {
 		holder = khmer_vyadhapura_10_fic	#fictional
 		liege = k_funan
 	}
-	1178.1.1 = {
+	#
+	1177.1.1 = {
 		holder = khmer_vyadhapura_20_fic	#fictional
 		liege = 0
 		tributary_of = {
@@ -1175,57 +1176,76 @@ d_vyadhapura = {
 }
 
 c_vyadhapura = {
-		867.1.1 = { change_development_level = 6 }
-		1066.1.1 = { change_development_level = 9 }
-		1178.1.1 = { change_development_level = 14 }
+	867.1.1 = { change_development_level = 6 }
+	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 14 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_vyadhapura_01_fic	#fictional
-			liege = d_vyadhapura
-		}
-		1066.1.1 = {
-			holder = khmer_vyadhapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_vyadhapura_20_fic	#fictional
-		}
+	860.1.1 = {
+		government = mandala_government
+		holder = khmer_vyadhapura_01_fic	#fictional
+		liege = d_vyadhapura
+	}
+	#
+	1060.1.1 = {
+		holder = khmer_vyadhapura_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = khmer_vyadhapura_20_fic	#fictional
+	}
 }
 	
 c_prey_rodum = {
-		867.1.1 = { change_development_level = 4 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 10 }
+	867.1.1 = { change_development_level = 4 }
+	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 10 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_vyadhapura_01_fic	#fictional
-			liege = d_vyadhapura
-		}
-		1066.1.1 = {
-			holder = khmer_vyadhapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_vyadhapura_20_fic	#fictional
-		}
+	860.1.1 = {
+		government = mandala_government
+		holder = khmer_vyadhapura_01_fic	#fictional
+		liege = d_vyadhapura
+	}
+	#
+	1060.1.1 = {
+		holder = khmer_vyadhapura_10_fic	#fictional
+	}
+	#
+	1170.1.1 = {
+		holder = khmer_vyadhapura_20_fic	#fictional
+	}
 }
 	
 c_kracheh_nokor = {
-		867.1.1 = { change_development_level = 4 }
-		1066.1.1 = { change_development_level = 6 }
-		1178.1.1 = { change_development_level = 10 }
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 11 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = khmer_vyadhapura_01_fic	#fictional
-			liege = d_vyadhapura
-		}
-		1066.1.1 = {
-			holder = khmer_vyadhapura_10_fic	#fictional
-		}
-		1178.1.1 = {
-			holder = khmer_vyadhapura_20_fic	#fictional
-		}
+	720.1.1 = {
+		government = mandala_government
+		holder = sea_chenla_sambhupura_00 # Indrani
+	}
+	754.1.1 = {
+		holder = sea_chenla_sambhupura_01 # Nrpendradevi
+	}
+	780.1.1 = {
+		holder = sea_chenla_sambhupura_02 # Jayendrabha
+	}
+	803.1.1 = {
+		holder = sea_khmer_sambhupura_03 # Jyestharya
+	}
+	860.1.1 = {
+		holder = khmer_varman_8 # Indravarman I
+		liege = d_sambhupura
+	}
+	#
+	1060.1.1 = {
+		holder = khmer_vyadhapura_10_fic	#fictional
+		liege = d_vyadhapura
+	}
+	#
+	1170.1.1 = {
+		holder = khmer_vyadhapura_20_fic	#fictional
+	}
 }
 
 
