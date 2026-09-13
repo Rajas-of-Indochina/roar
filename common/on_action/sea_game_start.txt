@@ -14,45 +14,14 @@ on_game_start = {
 		#fix_government_types - needs rework
 		#nerf_japan - needs rework
 
-		# RICE_fake_title_cleaner
+		# RICE_fake_title_cleaner		
 	}
-#	effect = {
-		### GREAT WALL OF CHINA ###
-
-#		title:b_wulan.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_mingsha.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_xiping_2.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_xingqing.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_keyimen.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_helan.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_shunhua.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_jiuyuan.title_province = { add_great_building = the_great_wall_01 }
-#		title:b_tiande.title_province = { add_great_building = the_great_wall_01 }
-
-#		title:b_hezheng.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_weiyuan_2.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_chengji.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_pinggao.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_linjing.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_tongchuan.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_huaian_2.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_ningshuo.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_rulin.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_yincheng.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_fugu.title_province = { add_great_building = the_great_wall_02 }
-#		title:b_shengzhou.title_province = { add_great_building = the_great_wall_02 }
-
-#		title:b_shanyang.title_province = { add_great_building = the_great_wall_03 }
-#		title:b_yunzhong.title_province = { add_great_building = the_great_wall_03 }
-#		title:b_yongning.title_province = { add_great_building = the_great_wall_03 }
-#		title:b_huaian.title_province = { add_great_building = the_great_wall_03 }
-#		title:b_longmen.title_province = { add_great_building = the_great_wall_03 }
-#	}
 }
 
 on_game_start_after_lobby = {
 	on_actions = {
 		# RICE_fake_title_cleaner
+		roa_on_game_start_greatwall_china		
 	}
 }
 
@@ -202,6 +171,96 @@ acculturate_steppelads = {
 				}
 			}
 		}
+	}
+}
+
+roa_on_game_start_greatwall_china = {
+	effect = {
+		### Removing base game GREAT WALL OF CHINA ###
+
+		title:b_wulan.title_province = { set_great_building = none }
+		title:b_fengan.title_province = { set_great_building = none }
+		title:b_mingsha.title_province = { set_great_building = none }
+		title:b_yaode.title_province = { set_great_building = none }
+		title:b_huile.title_province = { set_great_building = none }
+		title:b_baojing.title_province = { set_great_building = none }
+		title:b_huaiyuan.title_province = { set_great_building = none }
+		title:b_shengwei.title_province = { set_great_building = none }
+		title:b_hequ.title_province = { set_great_building = none }
+		title:b_helan.title_province = { set_great_building = none }
+		title:b_dengkou.title_province = { set_great_building = none }
+		title:b_wuluhai.title_province = { set_great_building = none }
+		title:b_yongfeng.title_province = { set_great_building = none }
+		title:b_jiuyuan.title_province = { set_great_building = none }
+		title:b_tiande.title_province = { set_great_building = none }
+
+		title:b_jincheng.title_province = { set_great_building = none }
+		title:b_huichuan.title_province = { set_great_building = none }
+		title:b_huairong_2.title_province = { set_great_building = none }
+		title:b_pinggao.title_province = { set_great_building = none }
+		title:b_huaide.title_province = { set_great_building = none }
+		title:b_fangqu.title_province = { set_great_building = none }
+		title:b_huaian_2.title_province = { set_great_building = none }
+		title:b_luoyuan.title_province = { set_great_building = none }
+		title:b_hengshan_3.title_province = { set_great_building = none }
+		title:b_wuyan.title_province = { set_great_building = none }
+		title:b_ningshuo.title_province = { set_great_building = none }
+		title:b_longquan.title_province = { set_great_building = none }
+		title:b_rulin.title_province = { set_great_building = none }
+		title:b_kaiguang.title_province = { set_great_building = none }
+		title:b_linzhou_yincheng.title_province = { set_great_building = none }
+		title:b_xiazhou_dejing_east.title_province = { set_great_building = none }
+
+		title:b_xuande.title_province = { set_great_building = none }
+		title:b_baishui.title_province = { set_great_building = none }
+		title:b_rouxuan.title_province = { set_great_building = none }
+		title:b_cirlxj_yangcheng.title_province = { set_great_building = none }
+
+		### Adding RoA GREAT WALL OF CHINA ###
+
+		title:b_wulan.title_province = { add_great_building = the_great_wall_01 }
+		title:b_yingli.title_province = { add_great_building = the_great_wall_01 }		
+		title:b_mingsha.title_province = { add_great_building = the_great_wall_01 }
+		title:b_xiping_2.title_province = { add_great_building = the_great_wall_01 }
+		title:b_lingwu.title_province = { add_great_building = the_great_wall_01 }		
+		title:b_xingqing.title_province = { add_great_building = the_great_wall_01 }
+		title:b_dingyuan_xia.title_province = { add_great_building = the_great_wall_01 }		
+		title:b_wuda.title_province = { add_great_building = the_great_wall_01 }
+		title:b_linhe.title_province = { add_great_building = the_great_wall_01 }
+		title:b_shunhua.title_province = { add_great_building = the_great_wall_01 }
+		title:b_yongfeng.title_province = { add_great_building = the_great_wall_01 }		
+		title:b_jiuyuan.title_province = { add_great_building = the_great_wall_01 }
+		title:b_tiande.title_province = { add_great_building = the_great_wall_01 }
+
+		title:b_hezheng.title_province = { add_great_building = the_great_wall_02 }
+		title:b_weiyuan_2.title_province = { add_great_building = the_great_wall_02 }
+		title:b_longxi.title_province = { add_great_building = the_great_wall_02 }		
+		title:b_chengji.title_province = { add_great_building = the_great_wall_02 }
+		title:b_baiquan.title_province = { add_great_building = the_great_wall_02 }
+		title:b_pinggao.title_province = { add_great_building = the_great_wall_02 }
+		title:b_linjing.title_province = { add_great_building = the_great_wall_02 }
+		title:b_tongchuan.title_province = { add_great_building = the_great_wall_02 }
+		title:b_huaian_2.title_province = { add_great_building = the_great_wall_02 }
+		title:b_luoyuan.title_province = { add_great_building = the_great_wall_02 }		
+		title:b_ningshuo.title_province = { add_great_building = the_great_wall_02 }
+		title:b_shizhou.title_province = { add_great_building = the_great_wall_02 }		
+		title:b_rulin.title_province = { add_great_building = the_great_wall_02 }
+		title:b_zhenxiang.title_province = { add_great_building = the_great_wall_02 }		
+		title:b_yincheng.title_province = { add_great_building = the_great_wall_02 }
+		title:b_liangu.title_province = { add_great_building = the_great_wall_02 }		
+		title:b_fugu.title_province = { add_great_building = the_great_wall_02 }
+		title:b_shengzhou.title_province = { add_great_building = the_great_wall_02 }
+
+		title:b_ningyuan_2.title_province = { add_great_building = the_great_wall_03 }		
+		title:b_shenwu_2.title_province = { add_great_building = the_great_wall_03 }		
+		title:b_shanyang.title_province = { add_great_building = the_great_wall_03 }
+		title:b_heyin.title_province = { add_great_building = the_great_wall_03 }
+		title:b_huairen_2.title_province = { add_great_building = the_great_wall_03 }		
+		title:b_yunzhong.title_province = { add_great_building = the_great_wall_03 }
+		title:b_yongning.title_province = { add_great_building = the_great_wall_03 }
+		title:b_shunsheng.title_province = { add_great_building = the_great_wall_03 }	
+		title:b_huaian.title_province = { add_great_building = the_great_wall_03 }
+		title:b_longmen.title_province = { add_great_building = the_great_wall_03 }
 	}
 }
 
