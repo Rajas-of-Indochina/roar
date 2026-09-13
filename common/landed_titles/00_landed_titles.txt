@@ -87777,16 +87777,38 @@ e_kambuja = {
 			}
 		}
 
-		d_ban_lung = {
+		d_ratanakiri = {
+			# d_ban_lung in old RoA
 			color = { 0 60 130 }
 
-			capital = c_mondul_kiri
+			capital = c_ratanakiri
 
-			c_mondul_kiri = {
+			c_ratanakiri = {
+				# c_ta_veang in old RoA
+				color = { 30 90 165 }
+
+				b_ban_lung = {
+					# roughly site of b_ratanakiri in vanilla
+					province = 16753
+
+					color = { 30 90 165 }
+				}
+				b_ta_veang = {
+					province = 16918
+
+					color = { 30 90 165 }
+				}
+				b_koun_mom = {
+					province = 16757
+
+					color = { 30 90 165 }
+				}
+			}
+			c_mondulkiri = {
 				# part of c_ratanakiri in vanilla
 				color = { 10 70 145 }
 
-				b_mondul_kiri = {
+				b_mondulkiri = {
 					province = 16549
 
 					color = { 10 70 145 }
@@ -87820,26 +87842,6 @@ e_kambuja = {
 					province = 16327
 
 					color = { 118 93 221 }
-				}
-			}
-			c_ta_veang = {
-				# part of c_ratanakiri in vanilla
-				color = { 30 90 165 }
-
-				b_ta_veang = {
-					province = 16918
-
-					color = { 30 90 165 }
-				}
-				b_ban_lung = {
-					province = 16753
-
-					color = { 30 90 165 }
-				}
-				b_koun_mom = {
-					province = 16757
-
-					color = { 30 90 165 }
 				}
 			}
 		}
@@ -88380,16 +88382,18 @@ e_kambuja = {
 					color = { 87 100 137 }
 				}
 			}
-			c_jarai = {
-				# part of c_pleiku in vanilla
+			c_pleiku = {
+				# c_jarai in old RoA
 				color = { 108 83 211 }
 
 				b_ia_krai = {
+					# b_plei_doch in vanilla
 					province = 16939
 
 					color = { 108 83 211 }
 				}
 				b_ploi_kodur = {
+					# b_pleiku in vanilla
 					province = 16913
 
 					color = { 108 83 211 }
