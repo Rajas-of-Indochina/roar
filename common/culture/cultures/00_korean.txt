@@ -122,9 +122,9 @@ baekje = {
 
 	traditions = {
 		tradition_astute_diplomats
-		tradition_maritime_mercantilism
 		tradition_religious_patronage
 
+		#tradition_maritime_mercantilism - for now crossed out so that they have access to Korean MAA
 		#tradition_family_entrepreneurship - RoA
 		#tradition_mystical_ancestors - RoA
 		#tradition_fishermen - RoA
@@ -139,6 +139,12 @@ baekje = {
 	dlc_tradition = {
 		trait = tradition_sinophilic
 		requires_dlc_flag = all_under_heaven
+	}
+
+	dlc_tradition = {
+		trait = tradition_fortress_mastery
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_castle_keepers
 	}
 
 	name_list = name_list_korean
