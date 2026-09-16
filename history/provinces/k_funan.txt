@@ -754,8 +754,8 @@
 
 ## d_mueang_phra_rot ###################################
 ### c_mueang_phra_rot
-16627 = { # Mueang Phra Rot
-	# 
+16627 = { # Mueang Phra Rot AKA Phanat Nikhom
+	# Dvaravati-era city-temple dating back to 7th century
 	culture = mon
 	religion = mahayana
 
@@ -764,17 +764,16 @@
 	# History
 	# 11th/12th century - possibly make it Theravada majority
 }
-16538 = { # b_rayong
-	# 
+16538 = { # Rayong
+	# settlement that was given to general Phaya Tak after his fight againts Burmese invasion of Ayutthaya Kingdom in 18th century
+	# name comes from Samre word for paduk plant
 	holding = none
+
+	# History
 }
-16708 = { # b_phya_re
-	# 
-	holding = none
-}
-16633 = { # b_klong_phlu
-	# 
-	holding = none
+16708 = { # Phya Re AKA Muang Phya Re
+	# ancient moated settlement located near Mueang Phra Rot
+	holding = church_holding   # placeholder
 }
 
 ### c_prachinburi
@@ -787,43 +786,48 @@
 	holding = temple_citadel_holding
 
 	# History
-	# add Hinduist minority
 	# 11th/12th century - possibly make it Theravada majority
 }
-16963 = { # b_lablae
-	# 
+16787 = { # Stoeng Chraw
+	# idk ; info not found
 	holding = none
 }
-16787 = { # b_stoeng_chraw
-	# 
+16902 = { # Kabin Buri AKA Mueang Kabin Buri
+	# city of the Ayutthaya kingdom from 14th century
 	holding = none
-}
-16814 = { # b_paet_riu
-	# 
-	holding = none
-}
-
-### c_kabin_buri
-16902 = { # Kabin Buri
-	# 
-	culture = mon
-	religion = mahayana
-
-	holding = temple_citadel_holding
 
 	# History
-	# 11th/12th century - possibly make it Theravada majority
+	1000.1.1 = {
+		holding = city_holding
+	}
 }
-16782 = { # b_sanam_chai_khet
-	# 
+16782 = { # Sanam Chai Khet AKA Mueang Sanam Chai Khet
+	# city of the Ayutthaya kingdom from 14th century
+	holding = none
+
+	# History
+	1100.1.1 = {
+		# made temple holding for balance
+		holding = church_holding
+	}
+}
+
+### c_phrom_hod
+16848 = { # Phrom Hod
+	# river that served as natural border between Mon/Thai and Khmer influence spheres
+	culture = samre
+	religion = samre_pagan
+
+	holding = tribal_holding
+
+	# History
+}
+16687 = { # Phra Stoeng
+	# idk ; info not found
 	holding = none
 }
-16687 = { # b_phra_stoeng
-	# 
-	holding = none
-}
-16848 = { # b_phrom_hod
-	# 
+16633 = { # Klong Phlu AKA Khlong Phlu
+	# famous waterfall in the middle of a jungle
 	holding = none
 }
 

@@ -656,6 +656,7 @@ set_minorities_game_start = {
 
 
 		#### South East-Asia - Mainland ####
+		## Champa ##
 		every_county = { #k_champa
 			if = {
 				limit = {
@@ -691,30 +692,6 @@ set_minorities_game_start = {
 				promote_faith_minority_effect = { FAITH = faith:mahayana }
 			}
 		}
-		every_county = { #d_indrapura
-			if = {
-				limit = {
-					duchy = title:d_indrapura
-					faith = faith:chamic_shaivism
-					game_start_date < 1000.1.1
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:pudgalavada
-					SIZE = large
-				}
-			}
-			if = {
-				limit = {
-					duchy = title:d_indrapura
-					faith = faith:chamic_shaivism
-					game_start_date >= 1000.1.1
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:pudgalavada
-					SIZE = small
-				}
-			}
-		}
 		title:c_vijaya = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
@@ -732,6 +709,7 @@ set_minorities_game_start = {
 			}
 		}
 
+		## Angkor/Funan/Chenla ##
 		every_county = { #k_funan
 			if = { 
 				limit = {
@@ -786,8 +764,65 @@ set_minorities_game_start = {
 			}
 			# possibly add Islam minority in southern Khmer counties in 12th century
 		}
+		every_county = { #d_indrapura
+			if = {
+				limit = {
+					duchy = title:d_indrapura
+					faith = faith:chamic_shaivism
+					game_start_date < 1000.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = large
+				}
+			}
+			if = {
+				limit = {
+					duchy = title:d_indrapura
+					faith = faith:chamic_shaivism
+					game_start_date >= 1000.1.1
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:pudgalavada
+					SIZE = small
+				}
+			}
+		}
+
+		## Mon kingdoms ##
+		title:c_prachinburi = {
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:vaishnavism
+				SIZE = small
+			}
+		}
 
 		## Kuy + Samre minorities ##
+		title:c_mueang_phra_rot = {
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
+				SIZE = small
+			}
+		}
+		title:c_prachinburi = {
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
+				SIZE = small
+			}
+		}
+		#
 		title:c_battambang = {
 			add_culture_minority_effect = {
 				CULTURE = culture:samre

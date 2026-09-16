@@ -1507,34 +1507,35 @@ c_ream = {
 
 
 ## d_mueang_phra_rot
+c_mueang_phra_rot = {
+	867.1.1 = { change_development_level = 5 }
+	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 13 }
 
-c_chankabui = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_mueangphrarot_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+	867.1.1 = {
+		government = mandala_government
+		holder = mon_mueangphrarot_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_dvaravati
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = mon_mueangphrarot_10_fic
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1066.1.1 = {
+		holder = mon_mueangphrarot_10_fic
+		tributary_of = {
+			suzerain = d_lop_buri
+			contract_group = tributary_mandala
 		}
-		1178.1.1 = {
-			holder = mon_mueangphrarot_20_fic
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1178.1.1 = {
+		holder = mon_mueangphrarot_20_fic
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
 		}
+	}
 }
 
 c_prachinburi = {
@@ -1542,86 +1543,92 @@ c_prachinburi = {
 	1066.1.1 = { change_development_level = 7 }
 	1178.1.1 = { change_development_level = 12 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_mueangphrarot_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+	867.1.1 = {
+		government = mandala_government
+		holder = mon_mueangphrarot_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_dvaravati
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = mon_mueangphrarot_10_fic
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1066.1.1 = {
+		holder = mon_mueangphrarot_10_fic
+		tributary_of = {
+			suzerain = d_lop_buri
+			contract_group = tributary_mandala
 		}
-		1178.1.1 = {
-			holder = mon_mueangphrarot_20_fic
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1178.1.1 = {
+		holder = mon_mueangphrarot_20_fic
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
 		}
+	}
 }
 
-c_kabin_buri = {
-	867.1.1 = { change_development_level = 4 }
-	1066.1.1 = { change_development_level = 7 }
-	1178.1.1 = { change_development_level = 12 }
+c_phrom_hod = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_mueangphrarot_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+	867.1.1 = {
+		government = mandala_government
+		holder = mon_mueangphrarot_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_dvaravati
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = mon_mueangphrarot_10_fic
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1066.1.1 = {
+		holder = mon_mueangphrarot_10_fic
+		tributary_of = {
+			suzerain = d_lop_buri
+			contract_group = tributary_mandala
 		}
-		1178.1.1 = {
-			holder = mon_mueangphrarot_20_fic
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1178.1.1 = {
+		holder = mon_mueangphrarot_20_fic
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
 		}
+	}
 }
 
-c_mueang_phra_rot = {
-	867.1.1 = { change_development_level = 4 }
-	1066.1.1 = { change_development_level = 7 }
-	1178.1.1 = { change_development_level = 12 }
+c_chankabui = {
+	867.1.1 = { change_development_level = 2 }
+	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
 
-		867.1.1 = {
-			government = mandala_government
-			holder = mon_mueangphrarot_01_fic	#fictional
-			tributary_of = {
-				suzerain = k_dvaravati
-				contract_group = tributary_mandala
-			}
+	867.1.1 = {
+		government = mandala_government
+		holder = mon_mueangphrarot_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_dvaravati
+			contract_group = tributary_mandala
 		}
-		1066.1.1 = {
-			holder = mon_mueangphrarot_10_fic
-			tributary_of = {
-				suzerain = d_lop_buri
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1066.1.1 = {
+		holder = mon_mueangphrarot_10_fic
+		tributary_of = {
+			suzerain = d_lop_buri
+			contract_group = tributary_mandala
 		}
-		1178.1.1 = {
-			holder = mon_mueangphrarot_20_fic
-			tributary_of = {
-				suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
-				contract_group = tributary_mandala
-			}
+	}
+	#
+	1178.1.1 = {
+		holder = mon_mueangphrarot_20_fic
+		tributary_of = {
+			suzerain = c_angkor	#Khmer empire in shambles from 1177-1181
+			contract_group = tributary_mandala
 		}
+	}
 }
 
 
