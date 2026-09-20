@@ -10,10 +10,16 @@
 	name_order_convention = dynasty_always_first
 
 	traditions = {
-		tradition_hill_dwellers  	# for centuries inhabited hilly and mountianous regions
-		tradition_agrarian  	# Yao people cultivated rice for centuries through plowing
+		tradition_hill_dwellers  	# msl_note: for centuries inhabited hilly and mountianous regions
 		tradition_medicinal_plants
 		tradition_mystical_ancestors
+	}
+
+	# msl_note: Yao people cultivated rice for centuries through plowing
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	dlc_tradition = {
