@@ -106,17 +106,21 @@ tujia = {
 	color = tujia
 
 	name_order_convention = dynasty_always_first
-	ethos = ethos_bellicose
+	ethos = ethos_egalitarian
 	heritage = heritage_loloish
 	language = language_tujia
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_music_theory
-		tradition_warrior_culture
-		tradition_highland_warriors
+		tradition_hill_dwellers
+		tradition_mystical_ancestors
 	}
+	dlc_tradition = {
+		trait = tradition_fp2_malleable_subjects
+		requires_dlc_flag = the_fate_of_iberia
+		fallback = tradition_xenophilic
+	}	
 
 	name_list = name_list_han
 

@@ -97,15 +97,33 @@ d_luoshi = {
 			government = tribal_government
 		}
 		1066.1.1 = {
-			holder = tribal_lunan_dou_2
-			government = tribal_government
+			holder = han_7124
+			liege = d_wuxin
+			government = celestial_government
 		}
 		1178.1.1 = {
-			holder = tribal_lunan_dou_3
-			government = tribal_government
+			holder = han_11036
+			liege = d_wuxin
+			government = celestial_government
 		}
 	}		
 	c_shunzhou = {
+		867.1.1 = {
+			holder = tribal_lunan_dou_1
+			government = tribal_government
+		}
+		1066.1.1 = {
+			holder = han_7124
+			liege = d_wuxin
+			government = celestial_government
+		}
+		1178.1.1 = {
+			holder = han_11036
+			liege = d_wuxin
+			government = celestial_government
+		}
+	}	
+	c_xizhou_luoshi = {
 		867.1.1 = {
 			holder = tribal_lunan_dou_1
 			government = tribal_government
@@ -116,20 +134,6 @@ d_luoshi = {
 		}
 		1178.1.1 = {
 			holder = tribal_lunan_dou_3
-			government = tribal_government
-		}
-	}	
-	c_xizhou_luoshi = {
-		867.1.1 = {
-			holder = tribal_kunmingyi_lulu
-			government = tribal_government
-		}
-		1066.1.1 = {
-			holder = tribal_luoshi_degai_1
-			government = tribal_government
-		}
-		1178.1.1 = {
-			holder = tribal_luoshi_degai_2
 			government = tribal_government
 		}
 	}
@@ -152,12 +156,12 @@ d_luoshi = {
 
 d_shimen = {
 	867.1.1 = {
-		holder = tribal_kunmingyi_lulu
-		government = tribal_government
+		holder = 0
 	}
 	1066.1.1 = {
 		holder = tribal_shimen_wumeng_1
 		government = tribal_government
+		liege = 0
 	}
 	1178.1.1 = {
 		holder = tribal_shimen_wumeng_2
@@ -166,12 +170,14 @@ d_shimen = {
 }
 	c_jingzhou_2 = {
 		867.1.1 = {
-			holder = tribal_kunmingyi_lulu
+			holder = zangke001
 			government = tribal_government
+			liege = d_tuodong
 		}
 		1066.1.1 = {
 			holder = tribal_shimen_wumeng_1
 			government = tribal_government
+			liege = 0			
 		}
 		1178.1.1 = {
 			holder = tribal_shimen_wumeng_2
@@ -182,10 +188,12 @@ d_shimen = {
 		867.1.1 = {
 			holder = tribal_rongnan_rongnan
 			government = tribal_government
+			liege = d_tuodong
 		}
 		1066.1.1 = {
 			holder = tribal_mahu_dong_1
 			government = tribal_government
+			liege = 0			
 		}
 		1178.1.1 = {
 			holder = tribal_mahu_dong_2
