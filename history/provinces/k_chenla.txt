@@ -13,7 +13,7 @@
 	# History
 	900.1.1 = {
 		culture = tai
-		religion = theravada
+		religion = mahayana
 	}
 	950.1.1 = { # Approx. for the construction of 1st Phrathat Phanom
 		special_building = phrathat_phanom_01
@@ -38,7 +38,7 @@
 ### c_phang_phrao
 15635 = { # b_phang_phrao
 	culture = mon
-	religion = theravada
+	religion = mahayana
 
 	holding = temple_citadel_holding
 
@@ -57,7 +57,7 @@
 ### c_chai_buri
 17641 = { # b_chai_buri
 	culture = khmu
-	religion = theravada
+	religion = mahayana
 
 	holding = temple_citadel_holding
 
@@ -147,6 +147,102 @@
 	holding = none
 }
 15524 = { # b_soum_lo
+	holding = none
+}
+
+
+## d_nong_khai ###################################
+### c_nong_khai
+17613 = { # b_phon_phaeng
+	culture = khmu
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	900.1.1 = {
+		culture = tai
+	}
+}
+15861 = { # b_phue
+	holding = none
+}
+17605 = { # b_tha_bo
+	holding = none
+}
+15853 = { # b_phen
+	holding = none
+}
+
+### c_loei
+15788 = { # b_loei
+	religion = khmu_pagan
+	culture = khmu
+
+	holding = temple_citadel_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+		religion = satsana_phi
+	}
+}
+17609 = { # b_na_sao
+	holding = none
+}
+
+### c_wang_saphung
+15535 = { # b_wang_saphung
+	culture = wa
+	religion = wa_animism
+
+	holding = tribal_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+		religion = satsana_phi
+		# add wa minority
+	}
+}
+15411 = { # b_nam_nao
+	holding = none
+}
+
+### c_udon_thani
+15609 = { # b_udon_thani
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	1050.1.1 = {
+		culture = tai
+	}
+}
+15520 = { # b_kumphawapi
+	holding = none
+}
+15652 = { # b_nong_han
+	holding = none
+}
+
+### c_nong_bua_lam_phu
+15471 = { # b_nong_bua_lam_phu
+	culture = wa
+	religion = wa_animism
+
+	holding = tribal_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+		religion = satsana_phi
+		# add wa minority
+	}
+}
+15651 = { # b_na_klang
 	holding = none
 }
 
@@ -313,7 +409,7 @@
 
 	# History
 	900.1.1 = {
-		religion = theravada
+		religion = mahayana
                 holding = temple_citadel_holding
 	}
 	1050.1.1 = {
@@ -321,305 +417,6 @@
 	}
 }
 17329 = { # b_khong_sedon
-	holding = none
-}
-
-
-## d_nong_khai ###################################
-### c_nong_khai
-17613 = { # b_phon_phaeng
-	culture = khmu
-	religion = theravada
-
-	holding = temple_citadel_holding
-
-	# History
-	900.1.1 = {
-		culture = tai
-	}
-}
-15861 = { # b_phue
-	holding = none
-}
-17605 = { # b_tha_bo
-	holding = none
-}
-15853 = { # b_phen
-	holding = none
-}
-
-### c_loei
-15788 = { # b_loei
-	religion = khmu_pagan
-	culture = khmu
-
-	holding = temple_citadel_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-		religion = satsana_phi
-	}
-}
-17609 = { # b_na_sao
-	holding = none
-}
-
-### c_wang_saphung
-15535 = { # b_wang_saphung
-	culture = wa
-	religion = wa_animism
-
-	holding = tribal_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-		religion = satsana_phi
-		# add wa minority
-	}
-}
-15411 = { # b_nam_nao
-	holding = none
-}
-
-### c_udon_thani
-15609 = { # b_udon_thani
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-
-	# History
-	1050.1.1 = {
-		culture = tai
-	}
-}
-15520 = { # b_kumphawapi
-	holding = none
-}
-15652 = { # b_nong_han
-	holding = none
-}
-
-### c_nong_bua_lam_phu
-15471 = { # b_nong_bua_lam_phu
-	culture = wa
-	religion = wa_animism
-
-	holding = tribal_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-		religion = satsana_phi
-		# add wa minority
-	}
-}
-15651 = { # b_na_klang
-	holding = none
-}
-
-
-## d_mae_si ###################################
-### c_fa_daet
-15135 = { # b_fa_daet
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-	}
-}
-15387 = { # b_sahatsakhan
-	holding = none
-}
-15482 = { # b_kut_bak
-	holding = none
-}
-15137 = { # b_kuchinarai
-	holding = none
-}
-15134 = { # b_kanthan
-	holding = none
-}
-
-### c_ka_long
-15130 = { # b_ka_long
-	culture = wa
-	religion = wa_animism
-
-	holding = tribal_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-		religion = satsana_phi
-		# add wa minority
-	}
-}
-15128 = { # b_khaset_sombun
-	holding = none
-}
-15263 = { # b_chum_phae
-	holding = none
-}
-
-### c_nong_kong_kaeo
-17403 = { # b_nong_kong_kaeo
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-	}
-}
-17393 = { # b_phra_yuen
-	holding = none
-}
-17404 = { # b_patchim_sarakham
-	holding = none
-}
-
-### c_singh_tha
-17298 = { # b_singh_tha
-	culture = kuy
-	religion = kuy_animism
-
-	holding = temple_citadel_holding
-}
-17451 = { # b_loeng_nok_tha
-	holding = none
-}
-
-### c_phra_lap
-15132 = { # b_phra_lap
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-	}
-}
-15133 = { # b_tha_wa
-	holding = none
-}
-
-### c_roi_et
-17405 = { # b_roi_et
-	culture = kuy
-	religion = kuy_animism
-
-	holding = temple_citadel_holding
-}
-15136 = { # b_khao_din_bueng_don
-	holding = none
-}
-17351 = { # b_suang
-	holding = none
-}
-17323 = { # b_nong_waeng
-	holding = none
-}
-17394 = { # b_wapi_pathum
-	holding = none
-}
-
-
-## d_canasapura ###################################
-### c_canasapura
-17159 = { # b_canasapura
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-}
-17252 = { # b_pho_chumphon
-	holding = city_holding
-}
-17185 = { # b_khorakhapura
-	holding = none
-}
-17078 = { # b_dan_chapo
-	holding = none
-}
-
-### c_chaiyaphum
-17378 = { # b_chaiyaphum
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-	}
-}
-17321 = { # b_dan_chuan
-	holding = none
-}
-17445 = { # b_nong_bua_daeng
-	holding = none
-}
-
-### c_khon_buri
-17008 = { # b_khon_buri
-	culture = kuy
-	religion = kuy_animism
-
-	holding = tribal_holding
-
-	# History
-	1000.1.1 = {
-		culture = khmer
-		religion = shaivism
-	}
-}
-17168 = { # b_tha_chang
-	holding = none
-}
-17114 = { # b_nang_rong
-	holding = none
-}
-
-### c_vimayapura
-17238 = { # b_vimayapura
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-}
-17322 = { # b_prathai
-	holding = none
-}
-17265 = { # b_san_thia
-	holding = none
-}
-
-### c_raeng_khoi
-17095 = { # b_raeng_khoi
-	culture = mon
-	religion = theravada
-
-	holding = temple_citadel_holding
-}
-17140 = { # b_chan_thuek
-	holding = none
-}
-17054 = { # b_nong_sarai
-	holding = none
-}
-17236 = { # b_chai_badan
 	holding = none
 }
 
@@ -679,5 +476,218 @@
 	holding = none
 }
 17328 = { # b_phuttaisong
+	holding = none
+}
+
+
+## d_mae_si ###################################
+### c_fa_daet
+15135 = { # b_fa_daet
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+	}
+}
+15387 = { # b_sahatsakhan
+	holding = none
+}
+15482 = { # b_kut_bak
+	holding = none
+}
+15137 = { # b_kuchinarai
+	holding = none
+}
+15134 = { # b_kanthan
+	holding = none
+}
+
+15263 = { # b_chum_phae
+	holding = none
+}
+
+### c_nong_kong_kaeo
+17403 = { # b_nong_kong_kaeo
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+	}
+}
+17393 = { # b_phra_yuen
+	holding = none
+}
+17404 = { # b_patchim_sarakham
+	holding = none
+}
+
+### c_singh_tha
+17298 = { # b_singh_tha
+	culture = kuy
+	religion = kuy_animism
+
+	holding = temple_citadel_holding
+}
+17451 = { # b_loeng_nok_tha
+	holding = none
+}
+
+### c_phra_lap
+15132 = { # b_phra_lap
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+	}
+}
+15133 = { # b_tha_wa
+	holding = none
+}
+
+### c_roi_et
+17405 = { # b_roi_et
+	culture = kuy
+	religion = kuy_animism
+
+	holding = temple_citadel_holding
+}
+15136 = { # b_khao_din_bueng_don
+	holding = none
+}
+17351 = { # b_suang
+	holding = none
+}
+17323 = { # b_nong_waeng
+	holding = none
+}
+17394 = { # b_wapi_pathum
+	holding = none
+}
+
+
+## d_canasapura ###################################
+### c_canasha
+17159 = { # Canasapura AKA Kalasapura
+	# capital of ancient kingdom known from two inscriptions and one Chinese inscription
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+	
+	# History
+	# 11th/12th century - possibly make it mahayana majority
+	# add hindu minorities
+}
+17252 = { # Pho Chumphon AKA Pratu Chumphon
+	# part of Khorat city ; known for its surviving historical city-gate
+	holding = none
+}
+17185 = { # Khorat AKA Khorakapura & Sema AKA Nakhon Ratchasima
+	# two ancient cities that combined into modern day Khorat ; less important settlment in game timeframe
+	holding = church_holding
+
+	# History
+	# maybe turn into city for later startdate to represent its growing importance?
+}
+17078 = { # Mueang Pak AKA Dan Chapo AKA Pak Thong Chai
+	# important frontier city of Khmer Era
+	holding = none
+
+	# History
+	# exact timeframe of importance unknown
+	1150.1.1 = {
+		holding = city_holding
+	}
+}
+
+### c_vimayapura
+17238 = { # Vimayapura AKA Vimaya AKA Phimai
+	# important city-temple and part of Ancient Khmer Highway ; most preserved buildings are from 12th century
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	# 11th/12th century - possibly make it mahayana majority
+}
+17322 = { # Prathai
+	# district of Nakhon Ratchasima province ; name means 'camp' ; sparsely populated in game timeframe
+	holding = none
+}
+17265 = { # Khwaeng San Thia AKA Non Thai
+	# district of Nakhon Ratchasima province ; name means 'a place to gather salt'
+	# should be in different spot but whatever
+	holding = none
+} 
+
+### c_chaiyaphum
+17378 = { # Chaiyaphum
+	# name of both province and its capital town ; name means 'land of victory' ; province rich in wildlife
+	# city is said to date back to 12th century, being a minor settlement in Khmer Empire
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+
+	# History
+	1150.1.1 = {
+		culture = tai
+	}
+}
+17321 = { # Dan Chuan AKA Bamnet Narong
+	# district of Chaiyaphum province ; named after strategically located frontier town
+	holding = none
+}
+17445 = { # Nong Bua Daeng
+	# district of Chaiyaphum province
+	holding = none
+}
+15128 = { # Khaset Sombun
+	# district of Chaiyaphum province ; two inscribed buddhist 'sema' stones were found here
+	holding = none
+}
+15130 = { # Ka Long
+	# unsure ; might be refering to Nakhon Kalong, 5th century Dvaravati era settlement ?
+	culture = wa
+	religion = wa_animism
+
+	holding = none
+
+	# History
+	# add Wa minority to the region
+}
+
+### c_khon_buri
+17008 = { # Khon Buri
+	# district of Nakhon Ratchasima province ; name means 'origin of the river'
+	culture = kuy
+	religion = kuy_animism
+
+	holding = tribal_holding
+
+	# History
+	# maybe have it shift to be more 'Khmer' in later dates?
+	# don't think it should be really in earlier dates due to its sparse population
+}
+17168 = { # Tha Chang
+	# part of Chaloem Phra Kiat district in Nakhon Ratchasima province ; name means 'elephant pier'
+	# legend says a herd of elephants comes down to drink water at the Mun river that runs through the area
+	holding = none
+}
+17114 = { # Nang Rong
+	# town and district of the same name in Buriram province 
 	holding = none
 }

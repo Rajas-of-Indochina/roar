@@ -86642,6 +86642,25 @@ e_suvarnabhumi = {
 					color = { 235 130 50 }
 				}
 			}
+			c_phayuha_khiri = {
+				color = { 190 85 20 }
+
+				b_phayuha_khiri = {
+					province = 17340
+
+					color = { 190 85 20 }
+				}
+				b_chum_saeng = {
+					province = 17402
+
+					color = { 190 85 20 }
+				}
+				b_samrong_chai = {
+					province = 17320
+
+					color = { 190 85 20 }
+				}
+			}
 			c_samut_prakan = {
 				color = { 215 105 35 }
 
@@ -86661,23 +86680,28 @@ e_suvarnabhumi = {
 					color = { 215 105 35 }
 				}
 			}
-			c_phayuha_khiri = {
-				color = { 190 85 20 }
+			c_raeng_khoi = {
+				color = { 197 82 42 }
 
-				b_phayuha_khiri = {
-					province = 17340
+				b_raeng_khoi = {
+					province = 17095
 
-					color = { 190 85 20 }
+					color = { 197 82 42 }
 				}
-				b_chum_saeng = {
-					province = 17402
+				b_chan_thuek = {
+					province = 17140
 
-					color = { 190 85 20 }
+					color = { 197 82 42 }
 				}
-				b_samrong_chai = {
-					province = 17320
+				b_nong_sarai = {
+					province = 17054
 
-					color = { 190 85 20 }
+					color = { 197 82 42 }
+				}
+				b_chai_badan = {
+					province = 17236
+
+					color = { 197 82 42 }
 				}
 			}
 		}
@@ -87714,7 +87738,8 @@ e_kambuja = {
 					color = { 0 28 140 }
 				}
 			}
-			c_prachinburi = {
+			c_dong_si_mahosot = {
+				# c_prachinburi in old RoA
 				color = { 0 25 165 }
 
 				b_sri_mahosot = {
@@ -88416,6 +88441,8 @@ e_kambuja = {
 		# k_isana in old RoA
 		color = { 30 70 60 }
 
+		capital = c_nakhon_phanom   # placeholder
+
 		d_nakhon_phanom = {
 			color = { 20 95 85 }
 
@@ -88567,6 +88594,98 @@ e_kambuja = {
 					province = 15524
 
 					color = { 18 93 83 }
+				}
+			}
+		}
+
+		d_nong_khai = {
+			color = { 35 115 55 }
+
+			capital = c_nong_khai
+
+			c_nong_khai = {
+				color = { 38 118 58 }
+
+				b_phon_phaeng = {
+					province = 17613
+
+					color = { 38 118 58 }
+				}
+				b_phue = {
+					province = 15861
+
+					color = { 38 118 58 }
+				}
+				b_tha_bo = {
+					province = 17605
+
+					color = { 38 118 58 }
+				}
+				b_phen = {
+					province = 15853
+
+					color = { 38 118 58 }
+				}
+			}
+			c_loei = {
+				color = { 32 112 52 }
+
+				b_loei = {
+					province = 15788
+
+					color = { 32 112 52 }
+				}
+				b_na_sao = {
+					province = 17609
+
+					color = { 32 112 52 }
+				}
+			}
+			c_wang_saphung = {
+				color = { 40 120 60 }
+
+				b_wang_saphung = {
+					province = 15535
+
+					color = { 40 120 60 }
+				}
+				b_nam_nao = {
+					province = 15411
+
+					color = { 40 120 60 }
+				}
+			}
+			c_udon_thani = {
+				color = { 30 110 50 }
+
+				b_udon_thani = {
+					province = 15609
+
+					color = { 30 110 50 }
+				}
+				b_kumphawapi = {
+					province = 15520
+
+					color = { 30 110 50 }
+				}
+				b_nong_han = {
+					province = 15652
+
+					color = { 30 110 50 }
+				}
+			}
+			c_nong_bua_lam_phu = {
+				color = { 42 122 62 }
+
+				b_nong_bua_lam_phu = {
+					province = 15471
+
+					color = { 42 122 62 }
+				}
+				b_na_klang = {
+					province = 15651
+
+					color = { 42 122 62 }
 				}
 			}
 		}
@@ -88971,104 +89090,13 @@ e_kambuja = {
 			}
 		}
 
-		d_nong_khai = {
-			color = { 35 115 55 }
-
-			capital = c_nong_khai
-
-			c_nong_khai = {
-				color = { 38 118 58 }
-
-				b_phon_phaeng = {
-					province = 17613
-
-					color = { 38 118 58 }
-				}
-				b_phue = {
-					province = 15861
-
-					color = { 38 118 58 }
-				}
-				b_tha_bo = {
-					province = 17605
-
-					color = { 38 118 58 }
-				}
-				b_phen = {
-					province = 15853
-
-					color = { 38 118 58 }
-				}
-			}
-			c_loei = {
-				color = { 32 112 52 }
-
-				b_loei = {
-					province = 15788
-
-					color = { 32 112 52 }
-				}
-				b_na_sao = {
-					province = 17609
-
-					color = { 32 112 52 }
-				}
-			}
-			c_wang_saphung = {
-				color = { 40 120 60 }
-
-				b_wang_saphung = {
-					province = 15535
-
-					color = { 40 120 60 }
-				}
-				b_nam_nao = {
-					province = 15411
-
-					color = { 40 120 60 }
-				}
-			}
-			c_udon_thani = {
-				color = { 30 110 50 }
-
-				b_udon_thani = {
-					province = 15609
-
-					color = { 30 110 50 }
-				}
-				b_kumphawapi = {
-					province = 15520
-
-					color = { 30 110 50 }
-				}
-				b_nong_han = {
-					province = 15652
-
-					color = { 30 110 50 }
-				}
-			}
-			c_nong_bua_lam_phu = {
-				color = { 42 122 62 }
-
-				b_nong_bua_lam_phu = {
-					province = 15471
-
-					color = { 42 122 62 }
-				}
-				b_na_klang = {
-					province = 15651
-
-					color = { 42 122 62 }
-				}
-			}
-		}
-
 		d_canasapura = {
 			color = { 40 75 75 }
 
-			capital = c_canasapura
+			capital = c_canasha
 
-			c_canasapura = {
+			c_canasha = {
+				# c_canasapura in old RoA ; has parts of vanilla's c_dong_si_mahosot
 				color = { 43 78 78 }
 
 				b_canasapura = {
@@ -89081,15 +89109,40 @@ e_kambuja = {
 
 					color = { 43 78 78 }
 				}
-				b_khorakhapura = {
+				b_khorat = { #AKA later Nakhon Ratschasima
 					province = 17185
 
 					color = { 43 78 78 }
+
+					cultural_names = {
+						name_list_khmer = cn_khorakapura
+					}
 				}
-				b_dan_chapo = {
+				b_mueang_pak = {
 					province = 17078
 
 					color = { 43 78 78 }
+				}
+			}
+			c_vimayapura = {
+				# part of c_canasha in vanilla
+				color = { 35 70 70 }
+
+				b_vimayapura = {
+					# b_phimai in vanilla
+					province = 17238
+
+					color = { 35 70 70 }
+				}
+				b_prathai = {
+					province = 17322
+
+					color = { 35 70 70 }
+				}
+				b_san_thia = {
+					province = 17265
+
+					color = { 35 70 70 }
 				}
 			}
 			c_chaiyaphum = {
@@ -89122,7 +89175,7 @@ e_kambuja = {
 				}
 			}
 			c_khon_buri = {
-				# c_dong_si_mahosot in vanilla
+				# part of c_dong_si_mahosot in vanilla
 				color = { 45 83 83 }
 
 				b_khon_buri = {
@@ -89139,49 +89192,6 @@ e_kambuja = {
 					province = 17114
 
 					color = { 45 83 83 }
-				}
-			}
-			c_vimayapura = {
-				color = { 35 70 70 }
-
-				b_vimayapura = {
-					province = 17238
-
-					color = { 35 70 70 }
-				}
-				b_prathai = {
-					province = 17322
-
-					color = { 35 70 70 }
-				}
-				b_san_thia = {
-					province = 17265
-
-					color = { 35 70 70 }
-				}
-			}
-			c_raeng_khoi = {
-				color = { 47 82 82 }
-
-				b_raeng_khoi = {
-					province = 17095
-
-					color = { 47 82 82 }
-				}
-				b_chan_thuek = {
-					province = 17140
-
-					color = { 47 82 82 }
-				}
-				b_nong_sarai = {
-					province = 17054
-
-					color = { 47 82 82 }
-				}
-				b_chai_badan = {
-					province = 17236
-
-					color = { 47 82 82 }
 				}
 			}
 		}
