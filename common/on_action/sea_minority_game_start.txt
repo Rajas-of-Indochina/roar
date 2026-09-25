@@ -834,6 +834,17 @@ set_minorities_game_start = {
 				SIZE = small
 			}
 			if = {
+				limit = { game_start_date < 1130.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:khmer
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+			if = {
 				limit = { game_start_date >= 1130.1.1 }
 				add_culture_minority_effect = {
 					CULTURE = culture:kuy
@@ -853,6 +864,17 @@ set_minorities_game_start = {
 			add_faith_minority_effect = {
 				FAITH = faith:samre_pagan
 				SIZE = small
+			}
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:khmer
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = large
+				}
 			}
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
