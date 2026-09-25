@@ -11,27 +11,30 @@
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_angkorian_architecture  	# replaces tradition_fervent_temple_builders
-		tradition_warrior_caste
-		tradition_hereditary_hierarchy
-
-		#tradition_mystical_ancestors - vanilla
+		tradition_angkorian_architecture  	# msl_note: to represent the unique architecture of temple-cities in Khmer realm
+		tradition_warrior_caste 			# msl_note: Chenla/Khmer unique MAA tradition
+		tradition_mystical_ancestors 		# msl_note: Khmer kings put great importance on legends of their ancestors to legitimise their own rule
 	}
 
+	# msl_note: rice cultivation sustained Khmeric realms since the very beginning of their existance
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
 		fallback = tradition_agrarian
 	}
-	
+
+	# msl_note: hydraulic architecture of Khmer people is highly impressive, especially their 'baray'
 	dlc_tradition = {
+		# we need to mesh it with tradition_angkorian_architecture
 		trait = tradition_tgp_hydraulic_builders
 		requires_dlc_flag = all_under_heaven
 	}
 
+	# msl_note: like many other 'mandala' realms, Khmeric nobles and kings enggaed in various rituals to showcase their power 
 	dlc_tradition = {
 		trait = tradition_tgp_esoteric_power
 		requires_dlc_flag = all_under_heaven
+		fallback = tradition_hereditary_hierarchy
 	}
 
 	name_list = name_list_khmer

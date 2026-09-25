@@ -86097,14 +86097,10 @@ e_suvarnabhumi = {
 
 					color = { 40 77 189 }
 				}
-				b_long = {
-					province = 17618
-
-					color = { 40 77 189 }
-				}
 			}
 			c_phrae = {
 				color = { 66 103 215 }
+
 				b_phrae = {
 					province = 17627
 
@@ -86112,6 +86108,11 @@ e_suvarnabhumi = {
 				}
 				b_song_th = {
 					province = 17672
+
+					color = { 66 103 215 }
+				}
+				b_long = {
+					province = 17618
 
 					color = { 66 103 215 }
 				}
@@ -88654,6 +88655,11 @@ e_kambuja = {
 
 					color = { 40 120 60 }
 				}
+				b_chum_phae = {
+					province = 15263
+
+					color = { 40 120 60 }
+				}
 			}
 			c_udon_thani = {
 				color = { 30 110 50 }
@@ -88933,11 +88939,6 @@ e_kambuja = {
 
 					color = { 68 98 48 }
 				}
-				b_kanthan = {
-					province = 15134
-
-					color = { 68 98 48 }
-				}
 			}
 			c_nong_kong_kaeo = {
 				color = { 62 92 42 }
@@ -88976,6 +88977,11 @@ e_kambuja = {
 
 					color = { 70 100 52 }
 				}
+				b_khao_din_bueng_don = {
+					province = 15136
+
+					color = { 70 100 52 }
+				}
 			}
 			c_phra_lap = {
 				color = { 60 90 40 }
@@ -88990,8 +88996,8 @@ e_kambuja = {
 
 					color = { 60 90 40 }
 				}
-				b_chum_phae = {
-					province = 15263
+				b_kanthan = {
+					province = 15134
 
 					color = { 60 90 40 }
 				}
@@ -89001,11 +89007,6 @@ e_kambuja = {
 
 				b_roi_et = {
 					province = 17405
-
-					color = { 72 102 55 }
-				}
-				b_khao_din_bueng_don = {
-					province = 15136
 
 					color = { 72 102 55 }
 				}
@@ -89030,50 +89031,14 @@ e_kambuja = {
 		d_kok_khan = {
 			color = { 10 75 50 }
 
-			capital = c_lamduan
+			capital = c_buriram
 
-			c_lamduan = {
-				# c_dong_si_mahosot in vanilla
-				color = { 13 78 53 }
-
-				b_lamduan = {
-					province = 17079
-
-					color = { 13 78 53 }
-				}
-				b_si_sa_ket = {
-					# 10942 in vanilla
-					province = 17205
-
-					color = { 13 78 53 }
-				}
-				b_sikhoraphum = {
-					province = 17102
-
-					color = { 13 78 53 }
-				}
-				b_khantaralak = {
-					province = 17096
-
-					color = { 13 78 53 }
-				}
-				b_tha_tum = {
-					province = 17266
-
-					color = { 13 78 53 }
-				}
-			}
 			c_buriram = {
-				# c_dong_si_mahosot in vanilla
+				# part of c_dong_si_mahosot in vanilla
 				color = { 7 72 47 }
 
 				b_buriram = {
 					province = 17182
-
-					color = { 7 72 47 }
-				}
-				b_kuupatai = {
-					province = 17101
 
 					color = { 7 72 47 }
 				}
@@ -89086,6 +89051,46 @@ e_kambuja = {
 					province = 17070
 
 					color = { 7 72 47 }
+				}
+			}
+			c_sikhoraphum = {
+				color = { 12 76 46 }
+
+				b_sikhoraphum = {
+					province = 17102
+
+					color = { 12 76 46 }
+				}
+				b_surin = {
+					province = 17101
+
+					color = { 12 76 46 }
+				}
+				b_tha_tum = {
+					province = 17266
+
+					color = { 12 76 46 }
+				}
+			}
+			c_nakorn_lamduan = {
+				# c_lamduan in old RoA ; part of c_prea_vihear in vanilla
+				color = { 13 78 53 }
+
+				b_khukhan = {
+					province = 17079
+
+					color = { 13 78 53 }
+				}
+				b_si_sa_ket = {
+					# 10942 in vanilla
+					province = 17205
+
+					color = { 13 78 53 }
+				}
+				b_khantaralak = {
+					province = 17096
+
+					color = { 13 78 53 }
 				}
 			}
 		}

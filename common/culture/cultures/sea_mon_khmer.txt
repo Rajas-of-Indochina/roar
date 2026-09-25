@@ -1,8 +1,7 @@
 ﻿## In Alphabetical Order ##
 
 bnam = {
-	# AKA: Bnom
-	# early Chenla/Funan Khmeric inhabitants ; so called 'Water Chenla'
+	# AKA: Bnom ; early Chenla/Funan Khmeric inhabitants ; so called 'Water Chenla'
 	color = bnam
 
 	ethos = ethos_bureaucratic
@@ -12,10 +11,22 @@ bnam = {
 	head_determination = head_determination_domain
 
 	traditions = {
+		tradition_warrior_caste 			# msl_note: Chenla/Khmer unique MAA tradition
 		tradition_wetlanders 				# msl_note: terrain based choice
 		tradition_maritime_mercantilism 	# msl_note: represents their role in maritime trade of the wider region
-		tradition_hereditary_hierarchy 		# msl_note: 
-		tradition_religion_blending 		# msl_note: 
+	}
+
+	# msl_note: represents the complex hydraulic architecture of Funan kingdom
+	dlc_tradition = {
+		trait = tradition_tgp_hydraulic_builders
+		requires_dlc_flag = all_under_heaven
+	}
+
+	# msl_note: like many other 'mandala' realms, Khmeric nobles and kings enggaed in various rituals to showcase their power 
+	dlc_tradition = {
+		trait = tradition_tgp_esoteric_power
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_hereditary_hierarchy
 	}
 
 	name_list = name_list_khmer
@@ -36,6 +47,7 @@ bnam = {
 
 samre = {
 	# AKA: Pear, Chong, Samray, Suoy or Sa'och
+	# indigenous inhabitans of jungles and mountains of Cambodia-Thailand border regions
 	color = samre
 
 	ethos = ethos_communal
@@ -45,17 +57,18 @@ samre = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_medicinal_plants  		# Samre people are quite familiar with the plantlife of their region
-		tradition_storytellers  			# much of their past was preserved through oral tradition
-		tradition_hunters  					# hunting used to be important part of Samre lifestyle before contact with Khmer people
-		tradition_RICE_tropical_purveyors 	# provided by CybrxKhan
+		tradition_medicinal_plants  		# Cybrxkhan: Samre people are quite familiar with the plantlife of their region
+		tradition_storytellers  			# Cybrxkhan: much of their past was preserved through oral tradition
+		tradition_hunters  					# Cybrxkhan: hunting used to be important part of Samre lifestyle before contact with Khmer people
+		tradition_RICE_tropical_purveyors 	# provided by CybrxKhan ; msl_note: they played important role in cultivation of cardamon ; replaced tradition_jungle_dwellers
 	}
 
-	dlc_tradition = {
-		trait = tradition_tgp_rice_cultivators
-		requires_dlc_flag = all_under_heaven
-		fallback = tradition_agrarian
-	}
+	# msl_note: disabled as Pearic people did not cultivate land until much later in their history
+	#dlc_tradition = {
+	#	trait = tradition_tgp_rice_cultivators
+	#	requires_dlc_flag = all_under_heaven
+	#	fallback = tradition_agrarian
+	#}
 
 	name_list = name_list_khmer
 
@@ -84,15 +97,23 @@ sambor = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_religious_patronage 		# msl_note: 
-		tradition_hereditary_hierarchy 		# msl_note: 
-		tradition_religion_blending 		# msl_note: 
+		tradition_warrior_caste 			# msl_note: Chenla/Khmer unique MAA tradition
+		tradition_religious_patronage 		# msl_note: built a lot of temples these guys yhup
+		tradition_religion_blending 		# msl_note: to represent the conversion of Chenla realms to hinduism and their general blend of dharmic religions
 	}
 
+	# msl_note: rice cultivation sustained Chenla realms since the very beginning of their existance
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
 		fallback = tradition_agrarian
+	}
+
+	# msl_note: like many other 'mandala' realms, Khmeric nobles and kings enggaed in various rituals to showcase their power 
+	dlc_tradition = {
+		trait = tradition_tgp_esoteric_power
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_hereditary_hierarchy
 	}
 
 	name_list = name_list_khmer

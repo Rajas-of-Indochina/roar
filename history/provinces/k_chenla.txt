@@ -208,6 +208,9 @@
 15411 = { # b_nam_nao
 	holding = none
 }
+15263 = { # b_chum_phae
+	holding = none
+}
 
 ### c_udon_thani
 15609 = { # b_udon_thani
@@ -338,7 +341,7 @@
 	holding = temple_citadel_holding
 
 	# History
-	1050.1.1 = {
+	1000.1.1 = {
 		culture = khmer
 		religion = shaivism
 	}
@@ -382,16 +385,12 @@
 
 ### c_det_udomw
 17144 = { # b_det_udom
-	culture = sambor
-	religion = shaivism
+	culture = kuy
+	religion = kuy_animism
 
 	holding = tribal_holding
 
 	# History
-	1050.1.1 = {
-		culture = khmer
-		holding = temple_citadel_holding
-	}
 }
 17071 = { # b_chanla_na_dom
 	holding = none
@@ -443,13 +442,6 @@
 15137 = { # b_kuchinarai
 	holding = none
 }
-15134 = { # b_kanthan
-	holding = none
-}
-
-15263 = { # b_chum_phae
-	holding = none
-}
 
 ### c_nong_kong_kaeo
 17403 = { # b_nong_kong_kaeo
@@ -469,6 +461,10 @@
 17404 = { # b_patchim_sarakham
 	holding = none
 }
+17328 = { # b_phuttaisong
+	# 
+	holding = none
+}
 
 ### c_singh_tha
 17298 = { # b_singh_tha
@@ -478,6 +474,9 @@
 	holding = temple_citadel_holding
 }
 17451 = { # b_loeng_nok_tha
+	holding = none
+}
+15136 = { # b_khao_din_bueng_don
 	holding = none
 }
 
@@ -496,6 +495,9 @@
 15133 = { # b_tha_wa
 	holding = none
 }
+15134 = { # b_kanthan
+	holding = none
+}
 
 ### c_roi_et
 17405 = { # b_roi_et
@@ -503,9 +505,6 @@
 	religion = kuy_animism
 
 	holding = temple_citadel_holding
-}
-15136 = { # b_khao_din_bueng_don
-	holding = none
 }
 17351 = { # b_suang
 	holding = none
@@ -519,60 +518,82 @@
 
 
 ## d_kok_khan ###################################
-### c_lamduan
-17079 = { # b_lamduan
+### c_buriram
+17182 = { # Buriram
+	# name of city and province, both which played an important part in Khmer Empire's frontier
 	culture = kuy
 	religion = kuy_animism
 
-	holding = tribal_holding
-
-	# History
-	900.1.1 = {
-		culture = khmer
-		religion = shaivism
-	}
-}
-17205 = { # b_si_sa_ket
-	holding = none
-}
-17102 = { # b_sikhoraphum
-	holding = none
-}
-17096 = { # b_khantaralak
-	holding = none
-}
-
-### c_kuupatai
-17101 = { # b_kuupatai
-	culture = samre
-	religion = samre_pagan
-
-	holding = tribal_holding
+	holding = temple_citadel_holding
 
 	# History
 	1000.1.1 = {
+		# by the 11th century, Khmer presence in the region was solidified ; Khmer people to this day make up part of region's population
 		culture = khmer
 		religion = shaivism
 	}
 }
-17009 = { # b_phanom_rung
+17009 = { # Phanom Rung AKA Prasat Phanom Rung
+	# 10th/11th century Hindu temple complex located on the rim of an extinct volcano ; later turned into Buddhsit worship site
 	holding = none
+
+	# History
+	1000.1.1 = {
+		holding = church_holding
+	}
 }
-17070 = { # b_talung
-	holding = none
+17070 = { # Talung
+	# Dvaravati era settlement that later also served as Khmer military outpost ; located in Prakhon Chai district of Buriram province
+	holding = city_holding
 }
 
-### c_buriram
-17182 = { # b_buriram
+### c_sikhoraphum
+17079 = { # Sikhoraphum AKA Prasat Sikhoraphum
+	# 12th century temple-city built by king Suryavarman II
 	culture = kuy
 	religion = kuy_animism
 
 	holding = tribal_holding
+
+	# History
+	1130.1.1 = {
+		# 12th century seems to be the time when Khmer influence over the region flourished, albeit even then it was sparsely populated
+		culture = khmer
+		religion = shaivism
+		holding = temple_citadel_holding
+	}
 }
-17266 = { # b_tha_tum
+17101 = { # Surin
+	# capital town of Surin province ; famed for its annual Surin Elephant Round-up
+	# Prasat Ta Muen Thom, an 11th century hindu temple is located within borders of the barony ; name means 'Castle of Grandfather Chicken'
+	holding = none
+
+	# History
+	1150.1.1 = {
+		holding = city_holding
+	}
+}
+17266 = { # Tha Tum
+	# district of Surin province
 	holding = none
 }
-17328 = { # b_phuttaisong
+
+### c_nakorn_lamduan
+17102 = { # Nakorn Lamduan
+	# traditional local name of Sisaket region from Khmer Era
+	culture = kuy
+	religion = kuy_animism
+
+	holding = tribal_holding
+
+	# History
+}
+17205 = { # Si Sa Ket AKA Sisaket AKA Khu Khan
+	# capital settlement of Sisaket province
+	holding = none
+}
+17096 = { # Khantaralak
+	# district of Sisaket province ; name means 'countless ravines' ; Khao Phra Wihan national park is located here
 	holding = none
 }
 
@@ -587,8 +608,7 @@
 	holding = temple_citadel_holding
 	
 	# History
-	# 11th/12th century - possibly make it mahayana majority
-	# add hindu minorities
+	# 11th/12th century - possibly make it theravada majority
 }
 17252 = { # Pho Chumphon AKA Pratu Chumphon
 	# part of Khorat city ; known for its surviving historical city-gate
@@ -621,7 +641,7 @@
 	holding = temple_citadel_holding
 
 	# History
-	# 11th/12th century - possibly make it mahayana majority
+	# 11th/12th century - possibly make it theravada majority
 }
 17322 = { # Prathai
 	# district of Nakhon Ratchasima province ; name means 'camp' ; sparsely populated in game timeframe
@@ -661,13 +681,7 @@
 }
 15130 = { # Ka Long
 	# unsure ; might be refering to Nakhon Kalong, 5th century Dvaravati era settlement ?
-	culture = wa
-	religion = wa_animism
-
 	holding = none
-
-	# History
-	# add Wa minority to the region
 }
 
 ### c_khon_buri

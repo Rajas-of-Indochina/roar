@@ -40,7 +40,7 @@ luojuzi = {
 	}
 
 	can_recruit = {
-		culture = { has_cultural_parameter = unlock_maa_luojuzi }
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_luojuzi }
 	}
 
 	buy_cost = { gold = luojuzi_recruitment_cost }
@@ -61,19 +61,20 @@ artamat = {
 	pursuit = 14
 	screen = 14
 
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_tai }
+	}
+
 	terrain_bonus = {
-		forest = { damage = 6 toughness = 8 }
-		jungle = { damage = 6 toughness = 8 }
+		jungle = { toughness = 6 screen = 8 }
+		terraced_hills = { damage = 8 toughness = 8 }
+		wetlands = { toughness = 6 screen = 5 }
 	}
 
 	counters = {
 		skirmishers = 1
 		heavy_infantry = 1
 		light_cavalry = 1
-	}
-
-	can_recruit = {
-		culture = { has_cultural_parameter = unlock_maa_tai }
 	}
 
 	buy_cost = { gold = artamat_recruitment_cost }
@@ -94,17 +95,18 @@ bokator = {
 	pursuit = 16
 	screen = 10
 
+	can_recruit = {
+		valid_for_maa_trigger = { PARAMETER = unlock_maa_khmer }
+	}
+
 	terrain_bonus = {
-		forest = { damage = 6 toughness = 8 }
-		jungle = { damage = 6 toughness = 8 }
+		jungle = { toughness = 6 screen = 8 }
+		terraced_hills = { damage = 8 toughness = 8 }
+		wetlands = { toughness = 6 screen = 5 }
 	}
 
 	counters = {
 		pikemen = 1
-	}
-
-	can_recruit = {
-		culture = { has_cultural_parameter = unlock_maa_khmer }
 	}
 
 	buy_cost = { gold = bokator_recruitment_cost }
