@@ -88655,11 +88655,6 @@ e_kambuja = {
 
 					color = { 40 120 60 }
 				}
-				b_chum_phae = {
-					province = 15263
-
-					color = { 40 120 60 }
-				}
 			}
 			c_udon_thani = {
 				color = { 30 110 50 }
@@ -88848,7 +88843,8 @@ e_kambuja = {
 					color = { 13 53 48 }
 				}
 			}
-			c_khemarat = {
+			c_ubon_ratchathani = {
+				# c_khemarat in old roA
 				color = { 8 48 43 }
 
 				b_khemarat = {
@@ -88866,7 +88862,7 @@ e_kambuja = {
 
 					color = { 8 48 43 }
 				}
-				b_buphupala_nikhom = {
+				b_ubon_ratchathani = {
 					province = 17285
 
 					color = { 8 48 43 }
@@ -88908,18 +88904,20 @@ e_kambuja = {
 		}
 
 		d_mae_si = {
+			# Thai name of Chi river
 			color = { 65 95 45 }
 
-			capital = c_fa_daet
+			capital = c_muang_fa_daet
 
 			cultural_names = {
 				name_list_mon = cn_fa_daet
 			}
 
-			c_fa_daet = {
+			c_muang_fa_daet = {
+				# c_fa_daet in old RoA
 				color = { 68 98 48 }
 
-				b_fa_daet = {
+				b_muang_fa_daet = {
 					province = 15135
 
 					color = { 68 98 48 }
@@ -88940,11 +88938,37 @@ e_kambuja = {
 					color = { 68 98 48 }
 				}
 			}
-			c_nong_kong_kaeo = {
-				color = { 62 92 42 }
+			c_khon_kaen = {
+				# c_phra_lap in old RoA
+				color = { 60 90 40 }
 
+				b_khon_kaen = {
+					province = 15132
+
+					color = { 60 90 40 }
+				}
+				b_dong_mueang_aem = {
+					province = 15133
+
+					color = { 60 90 40 }
+				}
+				b_non_mueang = {
+					province = 15263
+
+					color = { 40 120 60 }
+				}
 				b_nong_kong_kaeo = {
 					province = 17403
+
+					color = { 40 120 60 }
+				}
+			}
+			c_maha_sarakham = {
+				# c_nong_kong_kaeo in old RoA
+				color = { 62 92 42 }
+
+				b_maha_sarakham = {
+					province = 17404
 
 					color = { 62 92 42 }
 				}
@@ -88953,10 +88977,34 @@ e_kambuja = {
 
 					color = { 62 92 42 }
 				}
-				b_patchim_sarakham = {
-					province = 17404
+				b_kanthan = {
+					province = 15134
 
-					color = { 62 92 42 }
+					color = { 60 90 40 }
+				}
+				b_champasri = {
+					province = 17394
+
+					color = { 72 102 55 }
+				}
+			}
+			c_roi_et = {
+				color = { 72 102 55 }
+
+				b_roi_et = {
+					province = 17405
+
+					color = { 72 102 55 }
+				}
+				b_suang = {
+					province = 17351
+
+					color = { 72 102 55 }
+				}
+				b_nong_waeng = {
+					province = 17323
+
+					color = { 72 102 55 }
 				}
 				b_phuttaisong = {
 					province = 17328
@@ -88981,49 +89029,6 @@ e_kambuja = {
 					province = 15136
 
 					color = { 70 100 52 }
-				}
-			}
-			c_phra_lap = {
-				color = { 60 90 40 }
-
-				b_phra_lap = {
-					province = 15132
-
-					color = { 60 90 40 }
-				}
-				b_tha_wa = {
-					province = 15133
-
-					color = { 60 90 40 }
-				}
-				b_kanthan = {
-					province = 15134
-
-					color = { 60 90 40 }
-				}
-			}
-			c_roi_et = {
-				color = { 72 102 55 }
-
-				b_roi_et = {
-					province = 17405
-
-					color = { 72 102 55 }
-				}
-				b_suang = {
-					province = 17351
-
-					color = { 72 102 55 }
-				}
-				b_nong_waeng = {
-					province = 17323
-
-					color = { 72 102 55 }
-				}
-				b_wapi_pathum = {
-					province = 17394
-
-					color = { 72 102 55 }
 				}
 			}
 		}

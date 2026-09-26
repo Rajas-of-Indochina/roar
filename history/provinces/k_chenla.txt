@@ -208,9 +208,6 @@
 15411 = { # b_nam_nao
 	holding = none
 }
-15263 = { # b_chum_phae
-	holding = none
-}
 
 ### c_udon_thani
 15609 = { # b_udon_thani
@@ -360,7 +357,7 @@
 	holding = none
 }
 
-### c_khemarat
+### c_ubon_ratchathani
 17362 = { # b_khemarat
 	culture = kuy
 	religion = kuy_animism
@@ -379,7 +376,7 @@
 17383 = { # b_chanuman
 	holding = none
 }
-17285 = { # b_buphupala_nikhom
+17285 = { # b_ubon_ratchathani
 	holding = none
 }
 
@@ -409,7 +406,7 @@
 	# History
 	900.1.1 = {
 		religion = mahayana
-                holding = temple_citadel_holding
+		holding = temple_citadel_holding
 	}
 	1050.1.1 = {
 		culture = tai
@@ -421,98 +418,126 @@
 
 
 ## d_mae_si ###################################
-### c_fa_daet
-15135 = { # b_fa_daet
+### c_muang_fa_daet
+15135 = { # Muang Fa Daet
+	# regional center of the Buddhist Dvaravati civilization with excellent location for trade
+	# highly agricultural zone too - possbily tweak terrain to better represent that
+	culture = mon
+	religion = mahayana
+
+	holding = temple_citadel_holding
+	# Phra That Yakhu is the most famous part of this ancient temple-city and could be special building
+
+	# History
+	# Lao-Thai people only started to become main part of population after 13th century
+	# add Thai minorities for 12th century and onward though
+}
+15387 = { # Sahatsakhan
+	# district in Kalasin province
+	holding = none
+
+	# History
+	1050.1.1 = {
+		# to represent the agricultural character of this district
+		holding = city_holding
+	}
+}
+15482 = { # Kut Bak
+	# district of Sakon Nakhon province
+	holding = none
+}
+15137 = { # Kuchinarai
+	# district in Kalasin province ; famous for its sugar cane products, such as 'sugarcane cake'
+	holding = none
+}
+
+### c_khon_kaen
+15132 = { # Khon Kaen
+	# name of province and its capital city ; Khon Kaen has been part of Dvaravati civilisation since at least 8th century
+	# region came under Khmer influence in 10th-11th century and onward
 	culture = mon
 	religion = mahayana
 
 	holding = temple_citadel_holding
 
 	# History
-	1150.1.1 = {
-		culture = tai
-	}
+	# Lao-Thai people only started to become main part of population after 13th century
+	# add Thai minorities for 12th century and onward though
 }
-15387 = { # b_sahatsakhan
-	holding = none
+15133 = { # Dong Mueang Aem AKA Nam Phong
+	# Dvaravati era settlement settled between Songkhram River adn Chi–Mun basins, established to control trade in the region
+	holding = city_holding
 }
-15482 = { # b_kut_bak
-	holding = none
+15263 = { # Non Mueang AKA Chum Phae
+	# Dvaravati era settlement abandoned after 12th century 
+	holding = church_holding
 }
-15137 = { # b_kuchinarai
+17403 = { # Nong Kong Kaeo
+	# named after a lake and nearby village (?) ; could be merged with Phra Yuen
 	holding = none
 }
 
-### c_nong_kong_kaeo
-17403 = { # b_nong_kong_kaeo
+### c_maha_sarakham
+17404 = { # Maha Sarakham
+	# name of both province and its capital settlement
 	culture = mon
 	religion = mahayana
 
 	holding = temple_citadel_holding
 
 	# History
-	1150.1.1 = {
-		culture = tai
-	}
+	# Lao-Thai people only started to become main part of population after 13th century
+	# add Thai minorities for 12th century and onward though
 }
-17393 = { # b_phra_yuen
+17393 = { # Phra Yuen
+	# district of Khon Kaen province
 	holding = none
 }
-17404 = { # b_patchim_sarakham
+15134 = { # Kanthan AKA Mueang Kanthang AKA Kantharawichai
+	# district of Maha Sarakham province
 	holding = none
 }
-17328 = { # b_phuttaisong
-	# 
-	holding = none
-}
-
-### c_singh_tha
-17298 = { # b_singh_tha
-	culture = kuy
-	religion = kuy_animism
-
-	holding = temple_citadel_holding
-}
-17451 = { # b_loeng_nok_tha
-	holding = none
-}
-15136 = { # b_khao_din_bueng_don
-	holding = none
-}
-
-### c_phra_lap
-15132 = { # b_phra_lap
-	culture = mon
-	religion = mahayana
-
-	holding = temple_citadel_holding
-
-	# History
-	1150.1.1 = {
-		culture = tai
-	}
-}
-15133 = { # b_tha_wa
-	holding = none
-}
-15134 = { # b_kanthan
-	holding = none
+17394 = { # Champasri
+	# Dvaravati era settlement, further developed in Angkorian era
+	holding = church_holding
 }
 
 ### c_roi_et
-17405 = { # b_roi_et
+17405 = { # Roi Et
+	# 
 	culture = kuy
 	religion = kuy_animism
 
 	holding = temple_citadel_holding
 }
 17351 = { # b_suang
+	# 
 	holding = none
 }
 17323 = { # b_nong_waeng
+	# 
 	holding = none
 }
-17394 = { # b_wapi_pathum
+17328 = { # Phuttaisong
+	# district of Buriram province
+	# their motto is "Ancient moat, worship Big buddha image, beautiful silk, Sra Bau lake so Shady."
+	holding = none
+}
+
+### c_singh_tha
+17298 = { # b_singh_tha
+	# 
+	culture = kuy
+	religion = kuy_animism
+
+	holding = temple_citadel_holding
+}
+17451 = { # b_loeng_nok_tha
+	# 
+	holding = none
+}
+15136 = { # b_khao_din_bueng_don
+	# 
 	holding = none
 }
 
@@ -663,9 +688,7 @@
 	holding = temple_citadel_holding
 
 	# History
-	1150.1.1 = {
-		culture = tai
-	}
+	# Nyah Kur people reside in this province to this very day, being descended from Mon people
 }
 17321 = { # Dan Chuan AKA Bamnet Narong
 	# district of Chaiyaphum province ; named after strategically located frontier town
