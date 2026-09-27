@@ -1,6 +1,7 @@
 ﻿## In alphabetical order ##
 
 bruso = {
+	# AKA Bru AKA Bruu ; indigenous inhabitants of eastern Laos and western Vietnam
 	color = bruso
 
 	ethos = ethos_egalitarian
@@ -10,17 +11,30 @@ bruso = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_lords_of_the_elephant
-		tradition_collective_lands
-		tradition_storytellers
-		tradition_equal_inheritance
+		tradition_lords_of_the_elephant 	# msl_note: akin to other Katuic people, elephants play important role in their culture
+		tradition_tribe_unity 				# msl_note: settlements of Bru people are usually rather independent and governed by a 'headman' who also serves as a spiritual advisor
+		tradition_storytellers 				# msl_note: Bru people have rich oral traditions, with various stories and legends being an important part of their cultural heritage
+		tradition_music_theory 				# msl_note: music and dancing makes up important part of Bru social interactions, with various instruments being adopted into it through centuries
+		# msl_note: traditionally they built their settlements along waterways, their houses on stilts
+		# msl_note: in their stories hares are seen as very inteligent animals, while tigers often play the role of main heroes
+
+		# old RoA traditions
+		#tradition_collective_lands 	# msl_note: I guess like many other people in the area, they do have tendency to share land
+		#tradition_equal_inheritance 	# msl_note: Does not make much sense much sense for Bru people as they have rather patriarchal society
+	}
+
+	# msl_note: rice cultivation plays important role in everyday lives of Katuic people
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_khmer
 
 	coa_gfx = { burman_group_coa_gfx }
 	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
+	clothing_gfx = { tai_clothing_gfx southeast_asian_clothing_gfx }
 	unit_gfx = { southeast_asian_unit_gfx indian_unit_gfx }
 
 	house_coa_frame = house_frame_26
@@ -33,6 +47,7 @@ bruso = {
 }
 
 katang = {
+	# indigenous inhabitants of southern Laos
 	color = katang
 
 	ethos = ethos_communal
@@ -42,10 +57,22 @@ katang = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_lords_of_the_elephant
-		tradition_collective_lands
-		tradition_sacred_groves
-		tradition_equal_inheritance
+		tradition_lords_of_the_elephant 	# msl_note: akin to other Katuic people, elephants play important role in their culture
+		tradition_sacred_groves 			# msl_note: forests are sacred areas teaming with life and spirits, thus respected by Katang people
+		tradition_family_entrepreneurship 	# msl_note: both close and extended family tends to hold close ties in Katang society, often living together in large wooden longhouses
+		tradition_RICE_fear_of_spirits 		# msl_note: there are many taboos meant to avoid disturbing forest spirits
+		# msl_note: both men and women have tradition of piercing their ears and putting a bamboo tube in the hole to stretch out the lobes
+
+		# old RoA traditions
+		#tradition_collective_lands 	# msl_note: I guess like many other people in the area, they do have tendency to share land
+		#tradition_equal_inheritance 	# msl_note: Unsure why they were given this one
+	}
+
+	# msl_note: rice cultivation plays important role in everyday lives of Katuic people
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_khmer
@@ -65,6 +92,7 @@ katang = {
 }
 
 kuy = {
+	# indigenous inhabitants of southern Khorat Plateau, banks of the Mekong River in southern Laos and south to north central Cambodia around Cardamom Mountains
 	color = kuy
 
 	ethos = ethos_egalitarian
@@ -74,10 +102,10 @@ kuy = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_metal_craftsmanship 	# Cybr: In later centuries, the Kuy were famous ironworkers, which may have went as far back as the Angkorian period.
-		tradition_jungle_dwellers 		# Cybr: They lived in the upland jungles in the Cambodia/Thailand/Laos border region.
-		tradition_warrior_culture 		# Cybr: In later Cambodian sources, Kuay militia were renowned as fierce warriors.
-		tradition_lords_of_the_elephant # Cybr: Wikipedia mentions them being known as skilled elephant trainers, but I couldn't find any scholarly sources corroborating this.
+		tradition_metal_craftsmanship 		# Cybr: In later centuries, the Kuy were famous ironworkers, which may have went as far back as the Angkorian period.
+		tradition_jungle_dwellers 			# Cybr: They lived in the upland jungles in the Cambodia/Thailand/Laos border region.
+		tradition_warrior_culture 			# Cybr: In later Cambodian sources, Kuay militia were renowned as fierce warriors.
+		tradition_lords_of_the_elephant 	# Cybr: Wikipedia mentions them being known as skilled elephant trainers, but I couldn't find any scholarly sources corroborating this.
 
 		# old RoA traditions
 		#tradition_collective_lands
@@ -85,6 +113,7 @@ kuy = {
 		#tradition_equal_inheritance
 	}
 
+	# msl_note: rice cultivation plays important role in everyday lives of Katuic people
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
