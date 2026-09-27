@@ -463,23 +463,28 @@ c_ubon_ratchathani = {
 	1066.1.1 = { change_development_level = 6 }
 	1178.1.1 = { change_development_level = 10 }
 
-	867.1.1 = {
-		government = mandala_government
+	860.1.1 = {
+		government = tribal_government
 		holder = khmer_ubonratcha_01_fic	#fictional
-		liege = 0
+		#tributary_of = {
+		#	suzerain = c_roi_et
+		#	contract_group = tributary_mandala_tribal
+		#}
 	}
-	1066.1.1 = {
+	#
+	1060.1.1 = {
 		holder = khmer_ubonratcha_10_fic	#fictional
 		tributary_of = {
-			suzerain = k_funan
-			contract_group = tributary_mandala
+			suzerain = c_roi_et
+			contract_group = tributary_mandala_tribal
 		}
 	}
-	1178.1.1 = {
+	#
+	1177.1.1 = {
 		holder = khmer_ubonratcha_20_fic	#fictional
 		tributary_of = {
-			suzerain = c_angkor
-			contract_group = tributary_mandala
+			suzerain = c_roi_et
+			contract_group = tributary_mandala_tribal
 		}
 	}
 }
@@ -578,14 +583,15 @@ c_khon_kaen = {
 	1066.1.1 = { change_development_level = 8 }
 	1178.1.1 = { change_development_level = 14 }
 
-	867.1.1 = {
+	860.1.1 = {
 		government = mandala_government
-		holder = mon_muangfadaet_01_fic	#fictional
+		holder = sea_mon_khon_kaen_01_fic	#fictional
 		tributary_of = {
 			suzerain = k_dvaravati
 			contract_group = tributary_mandala
 		}
 	}
+	#
 	1066.1.1 = {
 		holder = khmer_muangfadaet_01_fic	#fictional
 		tributary_of = {
@@ -593,7 +599,8 @@ c_khon_kaen = {
 			contract_group = tributary_mandala
 		}
 	}
-	1178.1.1 = {
+	#
+	1177.1.1 = {
 		holder = khmer_muangfadaet_10_fic	#fictional
 		tributary_of = {
 			suzerain = c_angkor
@@ -607,7 +614,7 @@ c_maha_sarakham = {
 	1066.1.1 = { change_development_level = 8 }
 	1178.1.1 = { change_development_level = 14 }
 
-	867.1.1 = {
+	860.1.1 = {
 		government = mandala_government
 		holder = mon_muangfadaet_01_fic	#fictional
 		tributary_of = {
@@ -615,6 +622,7 @@ c_maha_sarakham = {
 			contract_group = tributary_mandala
 		}
 	}
+	#
 	1066.1.1 = {
 		holder = khmer_muangfadaet_01_fic	#fictional
 		tributary_of = {
@@ -622,7 +630,8 @@ c_maha_sarakham = {
 			contract_group = tributary_mandala
 		}
 	}
-	1178.1.1 = {
+	#
+	1177.1.1 = {
 		holder = khmer_muangfadaet_10_fic	#fictional
 		tributary_of = {
 			suzerain = c_angkor
@@ -636,23 +645,25 @@ c_roi_et = {
 	1066.1.1 = { change_development_level = 9 }
 	1178.1.1 = { change_development_level = 15 }
 
-	867.1.1 = {
+	860.1.1 = {
 		government = mandala_government
-		holder = mon_muangfadaet_01_fic	#fictional
+		holder = sea_mon_roi_et_01_fic	#fictional
 		tributary_of = {
 			suzerain = k_dvaravati
 			contract_group = tributary_mandala
 		}
 	}
+	#
 	1066.1.1 = {
-		holder = khmer_muangfadaet_01_fic	#fictional
+		holder = sea_khmer_roi_et_03_fic	#fictional
 		tributary_of = {
 			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
-	1178.1.1 = {
-		holder = khmer_muangfadaet_10_fic	#fictional
+	#
+	1177.1.1 = {
+		holder = sea_khmer_roi_et_04_fic	#fictional
 		tributary_of = {
 			suzerain = c_angkor
 			contract_group = tributary_mandala
@@ -665,20 +676,25 @@ c_sankhapura = {
 	1066.1.1 = { change_development_level = 6 }
 	1178.1.1 = { change_development_level = 10 }
 
-	867.1.1 = {
+	860.1.1 = {
 		government = mandala_government
-		holder = khmer_ubonratcha_01_fic	#fictional
-		liege = 0
+		holder = sea_mon_roi_et_01_fic	#fictional
+		tributary_of = {
+			suzerain = k_dvaravati
+			contract_group = tributary_mandala
+		}
 	}
+	#
 	1066.1.1 = {
-		holder = khmer_ubonratcha_10_fic	#fictional
+		holder = sea_khmer_roi_et_03_fic	#fictional
 		tributary_of = {
 			suzerain = k_funan
 			contract_group = tributary_mandala
 		}
 	}
-	1178.1.1 = {
-		holder = khmer_ubonratcha_20_fic	#fictional
+	#
+	1177.1.1 = {
+		holder = sea_khmer_roi_et_04_fic	#fictional
 		tributary_of = {
 			suzerain = c_angkor
 			contract_group = tributary_mandala
