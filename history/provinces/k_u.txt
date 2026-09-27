@@ -107,16 +107,6 @@
 
 	holding = castle_holding
 
-	effect = {
-		if = {
-			limit = {
-				has_tgp_dlc_trigger = yes
-			}
-			add_special_building_slot = lhasa_market_01
-			add_special_building = lhasa_market_01
-		}
-	}
-
 	# History
 	598.1.1 = {
 		# The Sumpa are pushed out of the Lhasa region by Namri Songtsen
@@ -137,13 +127,26 @@
 
 	# History
 	652.1.1 = {
-		# Songtsen Gampo promotes Buddhism
-		special_building_slot = jokhang_monastery_01
-		special_building = jokhang_monastery_01
+		effect = {
+			if = {
+				limit = {
+					has_tgp_dlc_trigger = yes
+				}
+				add_special_building_slot = lhasa_market_01
+				add_special_building = lhasa_market_01
+			}
+		}
 	}
 }
 9228 = {	# Samye
 	holding = church_holding
+
+	# History
+	652.1.1 = {
+		# Songtsen Gampo promotes Buddhism
+		special_building_slot = jokhang_monastery_01
+		special_building = jokhang_monastery_01
+	}
 }
 9246 = {	# Doilungdeqen
 	holding = church_holding
