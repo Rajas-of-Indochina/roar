@@ -88955,12 +88955,17 @@ e_kambuja = {
 				b_non_mueang = {
 					province = 15263
 
-					color = { 40 120 60 }
+					color = { 60 90 40 }
 				}
 				b_nong_kong_kaeo = {
 					province = 17403
 
-					color = { 40 120 60 }
+					color = { 60 90 40 }
+				}
+				b_phra_yuen = {
+					province = 17393
+
+					color = { 60 90 40 }
 				}
 			}
 			c_maha_sarakham = {
@@ -88972,39 +88977,15 @@ e_kambuja = {
 
 					color = { 62 92 42 }
 				}
-				b_phra_yuen = {
-					province = 17393
-
-					color = { 62 92 42 }
-				}
 				b_kanthan = {
 					province = 15134
 
-					color = { 60 90 40 }
+					color = { 62 92 42 }
 				}
 				b_champasri = {
 					province = 17394
 
-					color = { 72 102 55 }
-				}
-			}
-			c_roi_et = {
-				color = { 72 102 55 }
-
-				b_roi_et = {
-					province = 17405
-
-					color = { 72 102 55 }
-				}
-				b_suang = {
-					province = 17351
-
-					color = { 72 102 55 }
-				}
-				b_nong_waeng = {
-					province = 17323
-
-					color = { 72 102 55 }
+					color = { 62 92 42 }
 				}
 				b_phuttaisong = {
 					province = 17328
@@ -89012,21 +88993,62 @@ e_kambuja = {
 					color = { 62 92 42 }
 				}
 			}
-			c_singh_tha = {
+			c_roi_et = {
+				color = { 72 102 55 }
+
+				cultural_names = {
+					name_list_khmer = cn_saket_nakhon
+				}
+
+				b_roi_et = {
+					province = 17405
+
+					color = { 72 102 55 }
+
+					cultural_names = {
+						name_list_khmer = cn_saket_nakhon
+					}
+				}
+				b_don_khum_ngoen = {
+					province = 17351
+
+					color = { 72 102 55 }
+				}
+				b_suwannaphum = {
+					province = 17323
+
+					color = { 72 102 55 }
+				}
+				b_bueng_don = {
+					province = 15136
+
+					color = { 70 100 52 }
+				}
+			}
+			c_sankhapura = {
+				# c_singh_tha in old RoA
 				color = { 70 100 52 }
 
-				b_singh_tha = {
+				cultural_names = {
+					name_list_tai cn_ban_singh_tha
+					name_list_siamese = cn_ban_singh_tha
+					name_list_shan = cn_ban_singh_tha
+				}
+
+				b_sankhapura = {
+					# b_dong_mueang_toei
 					province = 17298
 
 					color = { 70 100 52 }
+
+					cultural_names = {
+						name_list_tai cn_ban_singh_tha
+						name_list_siamese = cn_ban_singh_tha
+						name_list_shan = cn_ban_singh_tha
+					}
 				}
 				b_loeng_nok_tha = {
 					province = 17451
-
-					color = { 70 100 52 }
-				}
-				b_khao_din_bueng_don = {
-					province = 15136
 
 					color = { 70 100 52 }
 				}

@@ -788,137 +788,6 @@ set_minorities_game_start = {
 				}
 			}
 		}
-
-		## Kambuja/Chenla ##
-		title:c_canasha = {
-			add_faith_minority_effect = {
-				FAITH = faith:vaishnavism
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-			}
-		}
-		title:c_chaiyaphum = {
-			add_culture_minority_effect = {
-				CULTURE = culture:wa
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:wa_animism
-				SIZE = small
-			}
-		}
-
-		## Mon kingdoms ##
-		title:c_dong_si_mahosot = {
-			add_faith_minority_effect = {
-				FAITH = faith:shaivism
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:vaishnavism
-				SIZE = small
-			}
-		}
-
-		## Kuy + Samre minorities ##
-		title:c_sikhoraphum = {
-			add_culture_minority_effect = {
-				CULTURE = culture:samre
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:samre_pagan
-				SIZE = small
-			}
-			if = {
-				limit = { game_start_date < 1130.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:khmer
-					SIZE = small
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:shaivism
-					SIZE = small
-				}
-			}
-			if = {
-				limit = { game_start_date >= 1130.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:kuy
-					SIZE = large
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:kuy_animism
-					SIZE = large
-				}
-			}
-		}
-		title:c_buriram = {
-			add_culture_minority_effect = {
-				CULTURE = culture:samre
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:samre_pagan
-				SIZE = small
-			}
-			if = {
-				limit = { game_start_date < 1000.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:khmer
-					SIZE = large
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:shaivism
-					SIZE = large
-				}
-			}
-			if = {
-				limit = { game_start_date >= 1000.1.1 }
-				add_culture_minority_effect = {
-					CULTURE = culture:kuy
-					SIZE = large
-				}
-				add_faith_minority_effect = {
-					FAITH = faith:kuy_animism
-					SIZE = large
-				}
-			}
-		}
-		title:c_nakorn_lamduan = {
-			add_culture_minority_effect = {
-				CULTURE = culture:samre
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:samre_pagan
-				SIZE = small
-			}
-		}
-		#
-		title:c_mueang_phra_rot = {
-			add_culture_minority_effect = {
-				CULTURE = culture:samre
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:samre_pagan
-				SIZE = small
-			}
-		}
-		title:c_dong_si_mahosot = {
-			add_culture_minority_effect = {
-				CULTURE = culture:samre
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = faith:samre_pagan
-				SIZE = small
-			}
-		}
 		#
 		title:c_battambang = {
 			add_culture_minority_effect = {
@@ -1005,6 +874,227 @@ set_minorities_game_start = {
 			}
 			add_faith_minority_effect = {
 				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+
+		## Kambuja/Chenla ##
+		title:c_canasha = {
+			add_faith_minority_effect = {
+				FAITH = faith:vaishnavism
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = small
+			}
+			#
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+		title:c_chaiyaphum = {
+			add_culture_minority_effect = {
+				CULTURE = culture:wa
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:wa_animism
+				SIZE = small
+			}
+		}
+		title:c_vimayapura = {
+			add_culture_minority_effect = {
+				CULTURE = culture:kuy
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:kuy_animism
+				SIZE = small
+			}
+		}
+		#
+		title:c_sikhoraphum = {
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date < 1130.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:khmer
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1130.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:kuy
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:kuy_animism
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = small
+				}
+			}
+		}
+		title:c_buriram = {
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:khmer
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_culture_minority_effect = {
+					CULTURE = culture:kuy
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:kuy_animism
+					SIZE = large
+				}
+				add_faith_minority_effect = {
+					FAITH = faith:vaishnavism
+					SIZE = small
+				}
+			}
+		}
+		title:c_nakorn_lamduan = {
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
+				SIZE = small
+			}
+		}
+		#
+		title:c_roi_et = {
+			add_culture_minority_effect = {
+				CULTURE = culture:mon
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:mahayana
+				SIZE = small
+			}
+			#
+			add_culture_minority_effect = {
+				CULTURE = culture:khmer
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:vaishnavism
+				SIZE = small
+			}
+		}
+		title:c_sankhapura = {
+			add_culture_minority_effect = {
+				CULTURE = culture:khmer
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:vaishnavism
+				SIZE = small
+			}
+		}
+
+		## Mon kingdoms ##
+		title:c_chankabui = {
+			add_culture_minority_effect = {
+				CULTURE = culture:khmer
+				SIZE = small
+			}
+			if = {
+				limit = { game_start_date < 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:shaivism
+					SIZE = small
+				}
+			}
+			if = {
+				limit = { game_start_date >= 1000.1.1 }
+				add_faith_minority_effect = {
+					FAITH = faith:samre_pagan
+					SIZE = large
+				}
+			}
+		}
+		title:c_dong_si_mahosot = {
+			add_faith_minority_effect = {
+				FAITH = faith:shaivism
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:vaishnavism
+				SIZE = small
+			}
+			#
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
+				SIZE = small
+			}
+		}
+		title:c_mueang_phra_rot = {
+			add_culture_minority_effect = {
+				CULTURE = culture:samre
+				SIZE = small
+			}
+			add_faith_minority_effect = {
+				FAITH = faith:samre_pagan
 				SIZE = small
 			}
 		}

@@ -476,6 +476,10 @@
 	# named after a lake and nearby village (?) ; could be merged with Phra Yuen
 	holding = none
 }
+17393 = { # Phra Yuen
+	# district of Khon Kaen province
+	holding = none
+}
 
 ### c_maha_sarakham
 17404 = { # Maha Sarakham
@@ -489,10 +493,6 @@
 	# Lao-Thai people only started to become main part of population after 13th century
 	# add Thai minorities for 12th century and onward though
 }
-17393 = { # Phra Yuen
-	# district of Khon Kaen province
-	holding = none
-}
 15134 = { # Kanthan AKA Mueang Kanthang AKA Kantharawichai
 	# district of Maha Sarakham province
 	holding = none
@@ -501,43 +501,47 @@
 	# Dvaravati era settlement, further developed in Angkorian era
 	holding = church_holding
 }
-
-### c_roi_et
-17405 = { # Roi Et
-	# 
-	culture = kuy
-	religion = kuy_animism
-
-	holding = temple_citadel_holding
-}
-17351 = { # b_suang
-	# 
-	holding = none
-}
-17323 = { # b_nong_waeng
-	# 
-	holding = none
-}
 17328 = { # Phuttaisong
 	# district of Buriram province
 	# their motto is "Ancient moat, worship Big buddha image, beautiful silk, Sra Bau lake so Shady."
 	holding = none
 }
 
-### c_singh_tha
-17298 = { # b_singh_tha
-	# 
+### c_roi_et
+17405 = { # Roi Et AKA Saket Nakhon
+	# ancient temple-city and provincial capital through both Dvaravati and Angkorian period ; eventuall abandoned in 13th century
+	culture = kuy
+	religion = kuy_animism
+
+	holding = temple_citadel_holding
+
+	# History
+	# possibly turn into Khmer majority for late start dates? unsure
+}
+17351 = { # Don Khum Ngoen
+	# 6th-7th century brick shrine
+	holding = church_holding
+}
+17323 = { # Suwannaphum
+	# geographically it fits more with Kaset Wisai/Nong Waeng district, but we needed previous Suwannaphum province for Don Khum Ngoen
+	holding = none
+}
+15136 = { # Bueng Don
+	# name of the large swamp area in Selaphum district, Roi Et province
+	holding = none
+}
+
+### c_sankhapura
+17298 = { # Sankhapura AKA Dong Mueang Toei AKA Ban Sing Tha AKA Yasothon
+	# Dong Mueang Toei is a moated settlement where reference to Sankhapura was found
+	# nearby city of Ban Sing Tha/Yasothon became centre of Thai population of the area, after game's timeframe
 	culture = kuy
 	religion = kuy_animism
 
 	holding = temple_citadel_holding
 }
-17451 = { # b_loeng_nok_tha
-	# 
-	holding = none
-}
-15136 = { # b_khao_din_bueng_don
-	# 
+17451 = { # Loeng Nok Tha
+	# town and district in Yasothon province ; name refers to 'painted fowl'
 	holding = none
 }
 
