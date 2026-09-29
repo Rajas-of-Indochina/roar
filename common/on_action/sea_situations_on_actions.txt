@@ -1,0 +1,1031 @@
+on_death = {
+	on_actions = {
+		situation_caucasus_on_death
+	}
+}
+
+situation_caucasus_on_death = {
+	effect = {
+		if = {
+			limit = {
+				# if ROOT was a landed ruler or adventurer participating in the South Caucasus Situation
+				exists = scope:killer
+				ROOT = {
+					OR = {
+						is_landed_or_landless_administrative = yes
+						is_landless_adventurer = yes
+					}
+					any_character_situation = { situation_type = situation_caucasus }
+				}
+			}
+			# Trigger the "character murdered" in subregion(s) based on de jure of primary title
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = ROOT.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = participant_murdered
+				}
+			}
+		}
+	}
+}
+
+# Called when a raid action finishes
+# root is the raid army
+# scope:raider is the person owning the raid army
+# scope:barony is the barony title that got raided
+# scope:county is the county title for the barony
+on_raid_action_completion = {
+	on_actions = {
+		situation_caucasus_raid_action_completed
+	}
+}
+
+situation_caucasus_raid_action_completed = {
+	trigger = {
+		scope:county = { any_county_situation = { situation_type = situation_caucasus } } # Gotta be a county in the situation
+	}
+	effect = {
+		situation:situation_caucasus = {
+			trigger_caucasus_catalyst_in_title = {
+				TITLE = scope:title
+				CATALYST = holding_raided
+			}
+		}
+	}
+}
+
+# called for when a casus belli resolves in one of the following ways.
+# same scopes are available in these events as in the CBs themselves, this just fires for all CBs instead of a specific CB.
+# note that any events/effects fired here WILL NOT show up in the war summary tooltip; they fire at the same time as the war resolution, but are not actually part of the war resolution itself.
+on_war_won_attacker = {
+	on_actions = {
+		situation_caucasus_war_won_attacker
+	}
+}
+
+situation_caucasus_war_won_attacker = {
+	effect = {
+		# Trigger disarray catalyst if involved character loses a border raid war
+		if = {
+			limit = {
+				scope:war = { using_cb = fp2_border_raid }
+				scope:defender = { any_character_situation = { situation_type = situation_caucasus } }
+			}
+			scope:war.casus_belli = {
+				every_in_list = {
+					list = target_titles
+					limit = { tier = tier_county }
+					save_scope_as = the_title
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:the_title
+							CATALYST = raid_cb_enforced
+						}
+					}
+				}
+			}
+		}
+		# Victorious peasant rabble
+		if = {
+			limit = {
+				scope:war = { using_cb = peasant_war }
+				scope:defender = { any_character_situation = { situation_type = situation_caucasus } }
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:defender.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = successful_peasant_revolt
+				}
+			}
+		}
+		# Victorious pro-Roman Populists
+		if = {
+			limit = {
+				scope:war = { using_cb = populist_war }
+				trigger_if = {
+					limit = { scope:defender.faith = { faith_is_pro_roman_trigger = no } }
+					scope:attacker.faith = { faith_is_pro_roman_trigger = yes }
+				}
+				trigger_else_if = {
+					limit = { scope:defender.faith = { faith_is_pro_roman_trigger = yes } }
+					scope:attacker.faith = { faith_is_pro_roman_trigger = yes }
+					scope:attacker.culture = { culture_is_pro_roman_trigger = yes }
+				}
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:defender.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = successful_pro_roman_revolt
+				}
+			}
+		}
+		# Victorious pro-Perso-Arabic Populists
+		if = {
+			limit = {
+				scope:war = { using_cb = populist_war }
+				trigger_if = {
+					limit = { scope:defender.faith = { faith_is_pro_perso_arabic_trigger = no } }
+					scope:attacker.faith = { faith_is_pro_perso_arabic_trigger = yes }
+				}
+				trigger_else_if = {
+					limit = { scope:defender.faith = { faith_is_pro_perso_arabic_trigger = yes } }
+					scope:attacker.faith = { faith_is_pro_perso_arabic_trigger = yes }
+					scope:attacker.culture = { culture_is_pro_perso_arabic_trigger = yes }
+				}
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:defender.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = successful_pro_perso_arabic_revolt
+				}
+			}
+		}
+		# Victorious Autonomist Populists
+		if = {
+			limit = {
+				scope:war = { using_cb = populist_war }
+				trigger_if = {
+					limit = { scope:defender.faith = { faith_is_autonomist_trigger = no } }
+					scope:attacker.faith = { faith_is_autonomist_trigger = yes }
+				}
+				trigger_else_if = {
+					limit = { scope:defender.faith = { faith_is_autonomist_trigger = yes } }
+					scope:attacker.faith = { faith_is_autonomist_trigger = yes }
+					scope:attacker.culture = { culture_is_autonomist_trigger = yes }
+				}
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:defender.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = successful_autonomist_revolt
+				}
+			}
+		}
+	}
+}
+
+on_war_won_defender = {
+	on_actions = {
+		situation_caucasus_on_war_won_defender
+	}
+}
+
+situation_caucasus_on_war_won_defender = {
+	effect = {
+		if = {
+			limit = {
+				scope:defender.top_participant_group:situation_caucasus = { participant_group_type = interloper }
+				scope:war = {
+					OR = {
+						using_cb = independence_faction_war
+						using_cb = liberty_faction_war
+						using_cb = claimant_faction_war
+						using_cb = nation_fracturing_faction_war
+						using_cb = nomadic_war
+						using_cb = peasant_war
+						using_cb = populist_war
+						# using_cb = communalist_war - TODO
+					}
+				}
+			}
+			situation:situation_caucasus = {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:defender.primary_title
+					CATALYST = faction_against_interloper_failed
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:defender.top_participant_group:situation_caucasus = { participant_group_type = autonomist }
+				NOT = { scope:attacker.top_participant_group:situation_caucasus = { participant_group_type = autonomist } }
+			}
+			situation:situation_caucasus = {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:defender.primary_title
+					CATALYST = autonomist_repelled_invasion
+				}
+			}
+		}
+	}
+}
+
+on_war_white_peace = {
+	on_actions = {
+		situation_caucaus_on_war_white_peace
+	}
+}
+
+# Only applies if scope:attacker and scope:defender are both involved somehow
+situation_caucaus_on_war_white_peace = {
+	trigger = {
+		AND = {
+			scope:attacker = { any_character_situation = { situation_type = situation_caucasus } }
+			scope:defender = { any_character_situation = { situation_type = situation_caucasus } }
+		}
+	}
+	effect = {
+		situation:situation_caucasus = {
+			trigger_caucasus_catalyst_in_title = {
+				TITLE = scope:defender.primary_title
+				CATALYST = war_white_peace
+			}
+		}
+	}
+}
+
+# A title is transferred to a new character
+# root = the new holder
+# scope:title = the title that changes hands
+# scope:previous_holder = previous holder. Might be dead
+on_title_gain = {
+	on_actions = {
+		situation_caucasus_on_title_gain_interloper
+		situation_caucasus_on_title_gain_pro_roman
+		situation_caucasus_on_title_gain_pro_perso_arabic
+		situation_caucasus_on_title_gain_autonomist
+	}
+}
+
+situation_caucasus_on_title_gain_interloper = {
+	effect = {
+		# Interloper seizes a title from a non-interloper (tiered)
+		if = {
+			limit = {
+				scope:title.tier > tier_barony
+				scope:title = {
+					trigger_if = {
+						limit = {tier = county }
+						any_county_situation = { situation_type = situation_caucasus }
+					}
+					trigger_else = {
+						any_de_jure_county = {
+							any_county_situation = { situation_type = situation_caucasus }
+						}
+					}
+				}
+				scope:previous_holder = {
+					any_character_situation = { situation_type = situation_caucasus }
+					NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = interloper } }
+				}
+				ROOT = {
+					OR = {
+						top_participant_group:situation_caucasus ?= { participant_group_type = interloper }
+						NOT = { any_character_situation = { situation_type = situation_caucasus } }
+					}
+				}
+				OR = {
+					scope:transfer_type = flag:conquest
+					scope:transfer_type = flag:conquest_holy_war
+					scope:transfer_type = flag:conquest_claim
+					scope:transfer_type = flag:conquest_populist
+					scope:transfer_type = flag:usurped
+					scope:transfer_type = flag:revoked
+					scope:transfer_type = flag:faction_demand
+				}
+			}
+			switch = {
+				trigger = scope:title.tier
+				tier_county = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = interloper_seized_title_county
+						}
+					}
+				}
+				tier_duchy = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = interloper_seized_title_duchy
+						}
+					}
+				}
+				# treat anything bigger than a duchy as a kingdom
+				fallback = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = interloper_seized_title_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+situation_caucasus_on_title_gain_pro_roman = {
+	effect = {
+		# pro-roman seizes a title from anti-roman (tiered)
+		if = {
+			limit = {
+				scope:title.tier > tier_barony
+				scope:title = {
+					trigger_if = {
+						limit = {tier = county }
+						any_county_situation = { situation_type = situation_caucasus }
+					}
+					trigger_else = {
+						any_de_jure_county = {
+							any_county_situation = { situation_type = situation_caucasus }
+						}
+					}
+				}
+				scope:previous_holder = {
+					any_character_situation = { situation_type = situation_caucasus }
+					NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
+				}
+				ROOT = {
+					top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+				}
+				OR = {
+					scope:transfer_type = flag:conquest
+					scope:transfer_type = flag:conquest_holy_war
+					scope:transfer_type = flag:conquest_claim
+					scope:transfer_type = flag:conquest_populist
+					scope:transfer_type = flag:usurped
+					scope:transfer_type = flag:revoked
+					scope:transfer_type = flag:faction_demand
+				}
+			}
+			switch = {
+				trigger = scope:title.tier
+				tier_county = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = pro_roman_seized_title_county
+						}
+					}
+				}
+				tier_duchy = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = pro_roman_seized_title_duchy
+						}
+					}
+				}
+				# treat anything bigger than a duchy as a kingdom
+				fallback = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = pro_roman_seized_title_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+situation_caucasus_on_title_gain_pro_perso_arabic = {
+	effect = {
+		# pro-perso-arabic seizes a title from anti-perso-arabic (tiered)
+		if = {
+			limit = {
+				scope:title.tier > tier_barony
+				scope:title = {
+					trigger_if = {
+						limit = {tier = county }
+						any_county_situation = { situation_type = situation_caucasus }
+					}
+					trigger_else = {
+						any_de_jure_county = {
+							any_county_situation = { situation_type = situation_caucasus }
+						}
+					}
+				}
+				scope:previous_holder = {
+					any_character_situation = { situation_type = situation_caucasus }
+					NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic } }
+				}
+				ROOT = {
+					top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
+				}
+				OR = {
+					scope:transfer_type = flag:conquest
+					scope:transfer_type = flag:conquest_holy_war
+					scope:transfer_type = flag:conquest_claim
+					scope:transfer_type = flag:conquest_populist
+					scope:transfer_type = flag:usurped
+					scope:transfer_type = flag:revoked
+					scope:transfer_type = flag:faction_demand
+				}
+			}
+			switch = {
+				trigger = scope:title.tier
+				tier_county = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = pro_perso_arabic_seized_title_county
+						}
+					}
+				}
+				tier_duchy = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = pro_perso_arabic_seized_title_duchy
+						}
+					}
+				}
+				# treat anything bigger than a duchy as a kingdom
+				fallback = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = pro_perso_arabic_seized_title_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+situation_caucasus_on_title_gain_autonomist = {
+	effect = {
+		# autonomist seizes a title from anti-autonomist (tiered)
+		if = {
+			limit = {
+				scope:title.tier > tier_barony
+				scope:title = {
+					trigger_if = {
+						limit = {tier = county }
+						any_county_situation = { situation_type = situation_caucasus }
+					}
+					trigger_else = {
+						any_de_jure_county = {
+							any_county_situation = { situation_type = situation_caucasus }
+						}
+					}
+				}
+				scope:previous_holder = {
+					any_character_situation = { situation_type = situation_caucasus }
+					NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = autonomist } }
+				}
+				ROOT = {
+					top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
+				}
+				OR = {
+					scope:transfer_type = flag:conquest
+					scope:transfer_type = flag:conquest_holy_war
+					scope:transfer_type = flag:conquest_claim
+					scope:transfer_type = flag:conquest_populist
+					scope:transfer_type = flag:usurped
+					scope:transfer_type = flag:revoked
+					scope:transfer_type = flag:faction_demand
+				}
+			}
+			switch = {
+				trigger = scope:title.tier
+				tier_county = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = autonomist_seized_title_county
+						}
+					}
+				}
+				tier_duchy = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = autonomist_seized_title_duchy
+						}
+					}
+				}
+				# treat anything bigger than a duchy as a kingdom
+				fallback = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:title
+							CATALYST = autonomist_seized_title_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# scope:owner = SCHEME owner, artifact thief
+# scope:target = ARTIFACT owner, scheme target
+steal_back_artifact_success = {
+	on_actions = {
+		situation_caucasus_artifact_theft
+	}
+}
+
+situation_caucasus_artifact_theft = {
+	trigger = {
+		scope:target = { any_character_situation = { situation_type = situation_caucasus } }
+	}
+	effect = {
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:target.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = artifact_stolen
+				}
+			}
+	}
+}
+
+# ROOT = situation
+on_yearly_situation_caucasus = {
+	effect = {
+		every_situation_sub_region = {
+			save_scope_as = subregion
+			every_situation_sub_region_participant = {
+				limit = { top_participant_group:situation_caucasus = { participant_group_type = interloper } }
+				every_held_title = {
+					limit = {
+						tier > tier_barony
+						OR = {
+							any_county_situation_sub_region = { THIS = scope:subregion }
+							any_de_jure_county = { THIS = scope:subregion }
+						}
+					}
+					switch = {
+						trigger = tier
+						tier_county = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_interloper_tick_county }
+						}
+						tier_duchy = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_interloper_tick_duchy }
+						}
+						fallback = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_interloper_tick_kingdom }
+						}
+					}
+				}
+			}
+			every_situation_sub_region_participant = {
+				limit = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+				every_held_title = {
+					limit = {
+						tier > tier_barony
+						OR = {
+							any_county_situation_sub_region = { THIS = scope:subregion }
+							any_de_jure_county = { THIS = scope:subregion }
+						}
+					}
+					switch = {
+						trigger = tier
+						tier_county = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_roman_tick_county }
+						}
+						tier_duchy = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_roman_tick_duchy }
+						}
+						fallback = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_roman_tick_kingdom }
+						}
+					}
+				}
+			}
+			every_situation_sub_region_participant = {
+				limit = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
+				every_held_title = {
+					limit = {
+						tier > tier_barony
+						OR = {
+							any_county_situation_sub_region = { THIS = scope:subregion }
+							any_de_jure_county = { THIS = scope:subregion }
+						}
+					}
+					switch = {
+						trigger = tier
+						tier_county = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_perso_arabic_tick_county }
+						}
+						tier_duchy = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_perso_arabic_tick_duchy }
+						}
+						fallback = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_perso_arabic_tick_kingdom }
+						}
+					}
+				}
+			}
+			every_situation_sub_region_participant = {
+				limit = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } }
+				every_held_title = {
+					limit = {
+						tier > tier_barony
+						OR = {
+							any_county_situation_sub_region = { THIS = scope:subregion }
+							any_de_jure_county = { THIS = scope:subregion }
+						}
+					}
+					switch = {
+						trigger = tier
+						tier_county = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_autonomist_tick_county }
+						}
+						tier_duchy = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_autonomist_tick_duchy }
+						}
+						fallback = {
+							scope:subregion = { trigger_sub_region_catalyst = title_held_by_autonomist_tick_kingdom }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Code on-action: character changes faith. Not called when a character gets a faith on birth, creation, and similar
+# Root is the character
+# scope:old_faith is the faith they used to have
+on_character_faith_change = {
+	on_actions = {
+		situation_caucasus_on_character_faith_change
+	}
+}
+situation_caucasus_on_character_faith_change = {
+	trigger = {
+		any_character_situation = { situation_type = situation_caucasus }
+	}
+	effect = {
+		if = {
+			limit = {
+				faith = { faith_is_pro_roman_trigger = yes }
+				scope:old_faith = { faith_is_pro_roman_trigger = no }
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = ROOT.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = converted_character_to_pro_roman_faith
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = { faith_is_pro_perso_arabic_trigger = yes }
+				scope:old_faith = { faith_is_pro_perso_arabic_trigger = no }
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = ROOT.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = converted_character_to_pro_perso_arabic_faith
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = { faith_is_autonomist_trigger = yes }
+				scope:old_faith = { faith_is_autonomist_trigger = no }
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = ROOT.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = converted_character_to_local_faith
+				}
+			}
+		}
+	}
+}
+
+# County changes faith.
+# Root is the county title
+# scope:old_faith is the faith it used to have
+on_county_faith_change = {
+	on_actions = {
+		situation_caucasus_on_county_faith_change
+	}
+}
+situation_caucasus_on_county_faith_change = {
+	trigger = {
+		any_county_situation = { situation_type = situation_caucasus }
+	}
+	effect = {
+		save_scope_as = county
+		if = {
+			limit = {
+				faith = { faith_is_pro_roman_trigger = yes }
+				scope:old_faith = { faith_is_pro_roman_trigger = no }
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:title
+					CATALYST = converted_county_to_pro_roman_faith
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = { faith_is_pro_perso_arabic_trigger = yes }
+				scope:old_faith = { faith_is_pro_perso_arabic_trigger = no }
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:title
+					CATALYST = converted_county_to_pro_perso_arabic_faith
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				faith = { faith_is_autonomist_trigger = yes }
+				scope:old_faith = { faith_is_autonomist_trigger = no }
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:title
+					CATALYST = converted_county_to_local_faith
+				}
+			}
+		}
+	}
+}
+
+# Root = County title
+# scope:old_culture = old cultur
+on_county_culture_change = {
+	on_actions = {
+		situation_caucasus_on_county_culture_change
+	}
+}
+
+situation_caucasus_on_county_culture_change = {
+	trigger = {
+		any_county_situation = { situation_type = situation_caucasus }
+	}
+	effect = {
+		save_scope_as = county
+		if = {
+			limit = {
+				culture = { culture_is_pro_roman_trigger = yes }
+				scope:old_culture = { culture_is_pro_roman_trigger = no }
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:title
+					CATALYST = converted_county_to_pro_roman_culture
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				culture = { culture_is_pro_perso_arabic_trigger = yes }
+				scope:old_culture = { culture_is_pro_perso_arabic_trigger = no }
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:title
+					CATALYST = converted_county_to_pro_perso_arabic_culture
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				culture = { culture_is_autonomist_trigger = yes }
+				scope:old_culture = { culture_is_autonomist_trigger = no }
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:title
+					CATALYST = converted_county_to_local_culture
+				}
+			}
+		}
+	}
+}
+
+# Fired when a character's court grandeur level changes
+# root = character observing the change
+# scope:target_character = character changing language
+on_court_language_changed = {
+	on_actions = {
+		situation_caucasus_on_court_language_changed
+	}
+}
+situation_caucasus_on_court_language_changed = {
+	trigger = {
+		scope:target_character = { any_character_situation = { situation_type = situation_caucasus } }
+	}
+	effect = {
+		if = {
+			limit = {
+				scope:target_character = {
+					OR = {
+						has_court_language = language_greek
+						has_court_language = language_latin
+						has_court_language = language_italian
+					}
+				}
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:target_character.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = greek_or_latin_court_language_adopted
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target_character = {
+					OR = {
+						has_court_language = language_arabic
+						has_court_language = language_iranian
+					}
+				}
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:target_character.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = arabic_or_persian_court_language_adopted
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				scope:target_character = {
+					OR = {
+						has_court_language = language_armenian
+						has_court_language = language_georgian
+						has_court_language = language_circassian
+						has_court_language = language_nakh
+						has_court_language = language_batsbi
+						has_court_language = language_dagestani
+						has_court_language = language_lak
+						has_court_language = language_dargin
+						has_court_language = language_tsez
+						has_court_language = language_abkhaz
+						has_court_language = language_ubykh
+						has_court_language = language_avaric
+						has_court_language = language_lezgic
+						has_court_language = language_archi
+						has_court_language = language_andic
+						has_court_language = language_tsakhur
+						has_court_language = language_aghul
+						has_court_language = language_khinalug
+						has_court_language = language_tabassaran
+						has_court_language = language_aghvan
+						has_court_language = language_protokartvelian
+						has_court_language = language_svan
+						has_court_language = language_zan
+					}
+				}
+			}
+			situation:situation_caucasus = {
+				every_situation_sub_region = {
+					limit = {
+						any_situation_sub_region_county = {
+							target_is_de_jure_liege_or_above = scope:target_character.primary_title
+						}
+					}
+					trigger_sub_region_catalyst = caucasian_court_language_adopted
+				}
+			}
+		}
+	}
+}
+
+# root: The province in which the building was completed
+# scope:character: The character that paid for the construction, if available
+on_building_completed = {
+	on_actions = {
+		situation_caucasus_on_building_completed
+	}
+}
+
+situation_caucasus_on_building_completed = {
+	trigger = {
+		county = { any_county_situation = { situation_type = situation_caucasus } }
+		exists = scope:character
+		scope:character = { any_character_situation = { situation_type = situation_caucasus } }
+	}
+	effect = {
+		county = { save_scope_as = county }
+		if = {
+			limit = { scope:character.top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+			situation:situation_caucasus = {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:county
+					CATALYST = pro_roman_built_building
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:character.top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
+			situation:situation_caucasus = {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:county
+					CATALYST = pro_perso_arabic_built_building
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:character.top_participant_group:situation_caucasus = { participant_group_type = autonomist } }
+			situation:situation_caucasus = {
+				trigger_caucasus_catalyst_in_title = {
+					TITLE = scope:county
+					CATALYST = autonomist_built_building
+				}
+			}
+		}
+	}
+}
+
+# root - Character who changed government
+# scope:old_government - Character's old government type
+on_government_change = {
+	on_actions = {
+		situation_caucasus_on_government_change
+	}
+}
+situation_caucasus_on_government_change = {
+	trigger = {
+		any_character_situation = { situation_type = situation_caucasus }
+	}
+	effect = {
+		switch = {
+			trigger = government_has_flag
+			government_is_feudal = {
+				situation:situation_caucasus = {
+					every_situation_sub_region = {
+						limit = {
+							any_situation_sub_region_county = {
+								target_is_de_jure_liege_or_above = ROOT.primary_title
+							}
+						}
+						trigger_sub_region_catalyst = feudal_gov_adopted
+					}
+				}
+			}
+			government_is_stateless = {
+				situation:situation_caucasus = {
+					every_situation_sub_region = {
+						limit = {
+							any_situation_sub_region_county = {
+								target_is_de_jure_liege_or_above = ROOT.primary_title
+							}
+						}
+						trigger_sub_region_catalyst = stateless_gov_adopted
+					}
+				}
+			}
+			government_is_clan = {
+				situation:situation_caucasus = {
+					every_situation_sub_region = {
+						limit = {
+							any_situation_sub_region_county = {
+								target_is_de_jure_liege_or_above = ROOT.primary_title
+							}
+						}
+						trigger_sub_region_catalyst = clan_gov_adopted
+					}
+				}
+			}
+		}
+	}
+}

@@ -66,9 +66,7 @@ situation_caucasus = {
 					# or else maintain a domicile there
 					domicile.domicle_location = { geographical_region = situation_caucasus_region }
 					# or be the literal actual Roman Emperor
-					has_title = title:e_byzantium
-					has_title = title:h_eastern_roman_empire
-					has_title = title:h_roman_empire
+					is_roman_emperor_trigger = yes
 				}
 				NOT = {
 					# But never the emperor of Persia, or Arabia, nor a Caliph of a unified Islam
@@ -149,7 +147,11 @@ situation_caucasus = {
 
 	on_monthly = {}
 
-	on_yearly = {}
+	on_yearly = {
+		# trigger_event = {
+		# 	on_action = on_yearly_situation_caucasus
+		# }
+	}
 
 	on_join = {
 		auto_assign_caucasus_stance = yes
@@ -265,18 +267,104 @@ situation_caucasus = {
 				situation_caucasus_disputed_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						participant_murdered = 5
+						artifact_stolen = 5
+						holding_raided = 2
+						raid_cb_enforced = 2
+						successful_peasant_revolt = 10
+						interloper_seized_title_county = 5
+						interloper_seized_title_duchy = 10
+						interloper_seized_title_kingdom = 15
+						title_held_by_interloper_tick_county = 1
+						title_held_by_interloper_tick_duchy = 2
+						title_held_by_interloper_tick_kingdom = 5
+						faction_against_interloper_failed = 10
+						ejection_war_failed = 10
+						war_white_peace = 5
+					}
 				}
 				situation_caucasus_roman_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_rome = 5
+						became_roman_tributary_county = 2
+						became_roman_tributary_duchy = 5
+						became_roman_tributary_kingdom = 10
+						title_held_by_pro_roman_tick_county = 1
+						title_held_by_pro_roman_tick_duchy = 2
+						title_held_by_pro_roman_tick_kingdom = 5
+						pro_roman_seized_title_county = 5
+						pro_roman_seized_title_duchy = 10
+						pro_roman_seized_title_kingdom = 15
+						gift_to_emperor = 5
+						successful_pro_roman_revolt = 10
+						converted_character_to_pro_roman_faith = 5
+						converted_county_to_pro_roman_culture = 2
+						converted_county_to_pro_roman_faith = 2
+						greek_or_latin_court_language_adopted = 10
+						pro_roman_built_building = 5
+						character_became_pro_roman = 5
+						formed_cappadocia_pro_roman = 100
+						formed_armenian_cilicia_pro_roman = 100
+					}
 				}
 				situation_caucasus_perso_arabic_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_caliph_shah = 5
+						became_perso_arabic_tributary_county = 2
+						became_perso_arabic_tributary_duchy = 5
+						became_perso_arabic_tributary_kingdom = 10
+						title_held_by_pro_perso_arabic_tick_county = 1
+						title_held_by_pro_perso_arabic_tick_duchy = 2
+						title_held_by_pro_perso_arabic_tick_kingdom = 5
+						pro_perso_arabic_seized_title_county = 5
+						pro_perso_arabic_seized_title_duchy = 10
+						pro_perso_arabic_seized_title_kingdom = 15
+						gift_to_caliph_shah = 5
+						successful_pro_perso_arabic_revolt = 10
+						converted_character_to_pro_perso_arabic_faith = 5
+						converted_county_to_pro_perso_arabic_culture = 2
+						converted_county_to_pro_perso_arabic_faith = 2
+						clan_gov_adopted = 5
+						arabic_or_persian_court_language_adopted = 10
+						pro_perso_arabic_built_building = 5
+						character_became_pro_perso_arabic = 5
+						formed_cappadocia_pro_perso_arabic = 100
+						formed_armenian_cilicia_pro_perso_arabic = 100
+					}
 				}
 				situation_caucasus_local_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						autonomist_repelled_invasion = 10
+						autonomist_seized_title_county = 5
+						autonomist_seized_title_duchy = 10
+						autonomist_seized_title_kingdom = 15
+						title_held_by_autonomist_tick_county = 1
+						title_held_by_autonomist_tick_duchy = 2
+						title_held_by_autonomist_tick_kingdom = 5
+						successful_autonomist_revolt = 10
+						successful_communalist_revolt = 10
+						converted_character_to_local_faith = 5
+						converted_county_to_local_faith = 2
+						converted_county_to_local_culture = 2
+						feudal_gov_adopted = 5
+						stateless_gov_adopted = 5
+						caucasian_court_language_adopted = 10
+						autonomist_built_building = 5
+						character_became_autonomist = 5
+						formed_cappadocia_autonomist = 100
+						formed_armenian_cilicia_autonomist = 100
+						unified_armenian_principalities = 100
+						united_georgia = 100
+						unified_aluank = 100
+						ani_cathedral_restored = 100
+					}
 				}
 			}
 		}
@@ -379,18 +467,104 @@ situation_caucasus = {
 				situation_caucasus_disputed_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						participant_murdered = 5
+						artifact_stolen = 5
+						holding_raided = 2
+						raid_cb_enforced = 2
+						successful_peasant_revolt = 10
+						interloper_seized_title_county = 5
+						interloper_seized_title_duchy = 10
+						interloper_seized_title_kingdom = 15
+						title_held_by_interloper_tick_county = 1
+						title_held_by_interloper_tick_duchy = 2
+						title_held_by_interloper_tick_kingdom = 5
+						faction_against_interloper_failed = 10
+						ejection_war_failed = 10
+						war_white_peace = 5
+					}
 				}
 				situation_caucasus_roman_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_rome = 5
+						became_roman_tributary_county = 2
+						became_roman_tributary_duchy = 5
+						became_roman_tributary_kingdom = 10
+						title_held_by_pro_roman_tick_county = 1
+						title_held_by_pro_roman_tick_duchy = 2
+						title_held_by_pro_roman_tick_kingdom = 5
+						pro_roman_seized_title_county = 5
+						pro_roman_seized_title_duchy = 10
+						pro_roman_seized_title_kingdom = 15
+						gift_to_emperor = 5
+						successful_pro_roman_revolt = 10
+						converted_character_to_pro_roman_faith = 5
+						converted_county_to_pro_roman_culture = 2
+						converted_county_to_pro_roman_faith = 2
+						greek_or_latin_court_language_adopted = 10
+						pro_roman_built_building = 5
+						character_became_pro_roman = 5
+						formed_cappadocia_pro_roman = 100
+						formed_armenian_cilicia_pro_roman = 100
+					}
 				}
 				situation_caucasus_perso_arabic_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_caliph_shah = 5
+						became_perso_arabic_tributary_county = 2
+						became_perso_arabic_tributary_duchy = 5
+						became_perso_arabic_tributary_kingdom = 10
+						title_held_by_pro_perso_arabic_tick_county = 1
+						title_held_by_pro_perso_arabic_tick_duchy = 2
+						title_held_by_pro_perso_arabic_tick_kingdom = 5
+						pro_perso_arabic_seized_title_county = 5
+						pro_perso_arabic_seized_title_duchy = 10
+						pro_perso_arabic_seized_title_kingdom = 15
+						gift_to_caliph_shah = 5
+						successful_pro_perso_arabic_revolt = 10
+						converted_character_to_pro_perso_arabic_faith = 5
+						converted_county_to_pro_perso_arabic_culture = 2
+						converted_county_to_pro_perso_arabic_faith = 2
+						clan_gov_adopted = 5
+						arabic_or_persian_court_language_adopted = 10
+						pro_perso_arabic_built_building = 5
+						character_became_pro_perso_arabic = 5
+						formed_cappadocia_pro_perso_arabic = 100
+						formed_armenian_cilicia_pro_perso_arabic = 100
+					}
 				}
 				situation_caucasus_local_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						autonomist_repelled_invasion = 10
+						autonomist_seized_title_county = 5
+						autonomist_seized_title_duchy = 10
+						autonomist_seized_title_kingdom = 15
+						title_held_by_autonomist_tick_county = 1
+						title_held_by_autonomist_tick_duchy = 2
+						title_held_by_autonomist_tick_kingdom = 5
+						successful_autonomist_revolt = 10
+						successful_communalist_revolt = 10
+						converted_character_to_local_faith = 5
+						converted_county_to_local_faith = 2
+						converted_county_to_local_culture = 2
+						feudal_gov_adopted = 5
+						stateless_gov_adopted = 5
+						caucasian_court_language_adopted = 10
+						autonomist_built_building = 5
+						character_became_autonomist = 5
+						formed_cappadocia_autonomist = 100
+						formed_armenian_cilicia_autonomist = 100
+						unified_armenian_principalities = 100
+						united_georgia = 100
+						unified_aluank = 100
+						ani_cathedral_restored = 25
+					}
 				}
 			}
 		}
@@ -498,18 +672,104 @@ situation_caucasus = {
 				situation_caucasus_disputed_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						participant_murdered = 5
+						artifact_stolen = 5
+						holding_raided = 2
+						raid_cb_enforced = 2
+						successful_peasant_revolt = 10
+						interloper_seized_title_county = 5
+						interloper_seized_title_duchy = 10
+						interloper_seized_title_kingdom = 15
+						title_held_by_interloper_tick_county = 1
+						title_held_by_interloper_tick_duchy = 2
+						title_held_by_interloper_tick_kingdom = 5
+						faction_against_interloper_failed = 10
+						ejection_war_failed = 10
+						war_white_peace = 5
+					}
 				}
 				situation_caucasus_roman_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_rome = 5
+						became_roman_tributary_county = 2
+						became_roman_tributary_duchy = 5
+						became_roman_tributary_kingdom = 10
+						title_held_by_pro_roman_tick_county = 1
+						title_held_by_pro_roman_tick_duchy = 2
+						title_held_by_pro_roman_tick_kingdom = 5
+						pro_roman_seized_title_county = 5
+						pro_roman_seized_title_duchy = 10
+						pro_roman_seized_title_kingdom = 15
+						gift_to_emperor = 5
+						successful_pro_roman_revolt = 10
+						converted_character_to_pro_roman_faith = 5
+						converted_county_to_pro_roman_culture = 2
+						converted_county_to_pro_roman_faith = 2
+						greek_or_latin_court_language_adopted = 10
+						pro_roman_built_building = 5
+						character_became_pro_roman = 5
+						formed_cappadocia_pro_roman = 100
+						formed_armenian_cilicia_pro_roman = 100
+					}
 				}
 				situation_caucasus_perso_arabic_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_caliph_shah = 5
+						became_perso_arabic_tributary_county = 2
+						became_perso_arabic_tributary_duchy = 5
+						became_perso_arabic_tributary_kingdom = 10
+						title_held_by_pro_perso_arabic_tick_county = 1
+						title_held_by_pro_perso_arabic_tick_duchy = 2
+						title_held_by_pro_perso_arabic_tick_kingdom = 5
+						pro_perso_arabic_seized_title_county = 5
+						pro_perso_arabic_seized_title_duchy = 10
+						pro_perso_arabic_seized_title_kingdom = 15
+						gift_to_caliph_shah = 5
+						successful_pro_perso_arabic_revolt = 10
+						converted_character_to_pro_perso_arabic_faith = 5
+						converted_county_to_pro_perso_arabic_culture = 2
+						converted_county_to_pro_perso_arabic_faith = 2
+						clan_gov_adopted = 5
+						arabic_or_persian_court_language_adopted = 10
+						pro_perso_arabic_built_building = 5
+						character_became_pro_perso_arabic = 5
+						formed_cappadocia_pro_perso_arabic = 100
+						formed_armenian_cilicia_pro_perso_arabic = 100
+					}
 				}
 				situation_caucasus_local_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						autonomist_repelled_invasion = 10
+						autonomist_seized_title_county = 5
+						autonomist_seized_title_duchy = 10
+						autonomist_seized_title_kingdom = 15
+						title_held_by_autonomist_tick_county = 1
+						title_held_by_autonomist_tick_duchy = 2
+						title_held_by_autonomist_tick_kingdom = 5
+						successful_autonomist_revolt = 10
+						successful_communalist_revolt = 10
+						converted_character_to_local_faith = 5
+						converted_county_to_local_faith = 2
+						converted_county_to_local_culture = 2
+						feudal_gov_adopted = 5
+						stateless_gov_adopted = 5
+						caucasian_court_language_adopted = 10
+						autonomist_built_building = 5
+						character_became_autonomist = 5
+						formed_cappadocia_autonomist = 100
+						formed_armenian_cilicia_autonomist = 100
+						unified_armenian_principalities = 100
+						united_georgia = 100
+						unified_aluank = 100
+						ani_cathedral_restored = 25
+					}
 				}
 			}
 		}
@@ -621,18 +881,104 @@ situation_caucasus = {
 				situation_caucasus_disputed_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						participant_murdered = 5
+						artifact_stolen = 5
+						holding_raided = 2
+						raid_cb_enforced = 2
+						successful_peasant_revolt = 10
+						interloper_seized_title_county = 5
+						interloper_seized_title_duchy = 10
+						interloper_seized_title_kingdom = 15
+						title_held_by_interloper_tick_county = 1
+						title_held_by_interloper_tick_duchy = 2
+						title_held_by_interloper_tick_kingdom = 5
+						faction_against_interloper_failed = 10
+						ejection_war_failed = 10
+						war_white_peace = 5
+					}
 				}
 				situation_caucasus_roman_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_rome = 5
+						became_roman_tributary_county = 2
+						became_roman_tributary_duchy = 5
+						became_roman_tributary_kingdom = 10
+						title_held_by_pro_roman_tick_county = 1
+						title_held_by_pro_roman_tick_duchy = 2
+						title_held_by_pro_roman_tick_kingdom = 5
+						pro_roman_seized_title_county = 5
+						pro_roman_seized_title_duchy = 10
+						pro_roman_seized_title_kingdom = 15
+						gift_to_emperor = 5
+						successful_pro_roman_revolt = 10
+						converted_character_to_pro_roman_faith = 5
+						converted_county_to_pro_roman_culture = 2
+						converted_county_to_pro_roman_faith = 2
+						greek_or_latin_court_language_adopted = 10
+						pro_roman_built_building = 5
+						character_became_pro_roman = 5
+						formed_cappadocia_pro_roman = 100
+						formed_armenian_cilicia_pro_roman = 100
+					}
 				}
 				situation_caucasus_perso_arabic_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						bought_peace_with_caliph_shah = 5
+						became_perso_arabic_tributary_county = 2
+						became_perso_arabic_tributary_duchy = 5
+						became_perso_arabic_tributary_kingdom = 10
+						title_held_by_pro_perso_arabic_tick_county = 1
+						title_held_by_pro_perso_arabic_tick_duchy = 2
+						title_held_by_pro_perso_arabic_tick_kingdom = 5
+						pro_perso_arabic_seized_title_county = 5
+						pro_perso_arabic_seized_title_duchy = 10
+						pro_perso_arabic_seized_title_kingdom = 15
+						gift_to_caliph_shah = 5
+						successful_pro_perso_arabic_revolt = 10
+						converted_character_to_pro_perso_arabic_faith = 5
+						converted_county_to_pro_perso_arabic_culture = 2
+						converted_county_to_pro_perso_arabic_faith = 2
+						clan_gov_adopted = 5
+						arabic_or_persian_court_language_adopted = 10
+						pro_perso_arabic_built_building = 5
+						character_became_pro_perso_arabic = 5
+						formed_cappadocia_pro_perso_arabic = 100
+						formed_armenian_cilicia_pro_perso_arabic = 100
+					}
 				}
 				situation_caucasus_local_control = {
 					takeover_type = points
 					takeover_points = 1000
+					catalysts = {
+						autonomist_repelled_invasion = 10
+						autonomist_seized_title_county = 5
+						autonomist_seized_title_duchy = 10
+						autonomist_seized_title_kingdom = 15
+						title_held_by_autonomist_tick_county = 1
+						title_held_by_autonomist_tick_duchy = 2
+						title_held_by_autonomist_tick_kingdom = 5
+						successful_autonomist_revolt = 10
+						successful_communalist_revolt = 10
+						converted_character_to_local_faith = 5
+						converted_county_to_local_faith = 2
+						converted_county_to_local_culture = 2
+						feudal_gov_adopted = 5
+						stateless_gov_adopted = 5
+						caucasian_court_language_adopted = 10
+						autonomist_built_building = 5
+						character_became_autonomist = 5
+						formed_cappadocia_autonomist = 100
+						formed_armenian_cilicia_autonomist = 100
+						unified_armenian_principalities = 100
+						united_georgia = 100
+						unified_aluank = 100
+						ani_cathedral_restored = 25
+					}
 				}
 			}
 		}

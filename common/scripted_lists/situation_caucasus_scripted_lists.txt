@@ -1,0 +1,12 @@
+﻿caucasus_heartland_county = {
+	base = county
+	conditions = {
+		title_province = {
+			OR = {
+				geographical_region = custom_armenia_proper
+				geographical_region = custom_caucasian_albania
+				geographical_region = custom_caucasian_iberia
+			}
+		}
+	}
+}

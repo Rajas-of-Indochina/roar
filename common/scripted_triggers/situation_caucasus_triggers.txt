@@ -138,9 +138,10 @@ culture_is_pro_roman_trigger = {
 				this = culture:greek
 				this = culture:roman
 				this = culture:cappadocian
-				# This is where Europeans get dumped for lack of a better place
-				# Might add a separate group for Crusaders or treat them as Interlopers by default?
-				has_cultural_parameter = heritage_family_european
+				# This should probably cover any crusaders. I hope.
+				has_cultural_parameter = heritage_group_latin
+				has_cultural_parameter = heritage_group_germanic
+				has_cultural_parameter = heritage_group_slavic
 				var:caucasus_alignment ?= flag:pro_roman
 			}
 		}
@@ -215,4 +216,37 @@ culture_is_interloper_trigger = {
 # expected values are same as setting alignment: pro_roman pro_perso_arabic autonomist interloper
 check_caucasus_alignment_trigger = {
 	top_participant_group:situation_caucasus = { participant_group_type = $ALIGN$ }
+}
+
+# Does the Basileus exists?
+does_roman_emperor_exist = {
+	OR = {
+		title:e_byzantium = { is_title_created = yes }
+		title:h_eastern_roman_empire = { is_title_created = yes }
+		title:h_roman_empire = { is_title_created = yes }
+	}
+}
+
+does_caliph_or_shah_exist = {
+	OR = {
+		title:e_persia = { is_title_created = yes }
+		title:e_arabia = { is_title_created = yes }
+		title:h_dar_al_islam = { is_title_created = yes }
+	}
+}
+
+title_overlaps_geographical_region = {
+	trigger_if = {
+		limit = { $TITLE$ = { is_titular = yes } }
+		$TITLE$.title_capital_county.title_province = { geographical_region = $REGION$ }
+	}
+	trigger_else_if = {
+		limit = { $TITLE$.tier <= tier_county }
+		$TITLE$.title_province = { geographical_region = $REGION$ }
+	}
+	trigger_else = {
+		any_de_jure_county = {
+			title_province = { geographical_region = $REGION$ }
+		}
+	}
 }

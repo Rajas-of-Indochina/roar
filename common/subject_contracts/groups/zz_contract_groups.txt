@@ -49,6 +49,67 @@ anarchist_vassal = {
 	}
 }
 
+caucasian_confederate = {
+	is_tributary = yes
+	suzerain_line_type = line_suzerain
+	tributary_line_type = line_tributary
+	should_show_as_suzerain_realm_color = yes
+	should_show_as_suzerain_realm_name = yes
+	tributary_heir_succession = yes
+	suzerain_heir_succession = yes
+
+	contracts = {
+		feudal_government_taxes
+		feudal_government_levies
+		suzerain_war_participation_guarantee
+		tributary_war_participation_obligation
+	}
+
+	is_valid_tributary_contract = {
+		scope:suzerain = {
+			highest_held_title_tier >= tier_kingdom
+		}
+	}
+
+	tributary_can_break_free = {
+		OR = {
+			# You're allowed to break away if you're not rightfully part of the Transcaucasus region
+			NOT = { primary_title = { any_de_jure_county = { title_province = { geographical_region = situation_caucasus_region } } } }
+			# Or, if you're part of it but you are neither scared of, nor the subject of a hook by, nor allied to, nor friends, lovers, or soulmates with the suzerain
+			NOT = {
+				has_dread_level_towards = {
+					target = scope:suzerain
+					level = 2
+				}
+				scope:suzerain = { has_hook = ROOT }
+				is_allied_to = scope:suzerain
+				has_relation_friend = scope:suzerain
+				has_relation_best_friend = scope:suzerain
+				has_relation_lover = scope:suzerain
+				has_relation_soulmate = scope:suzerain
+			}
+		}
+	}
+}
+
+roman_exarchate = {
+	is_tributary = yes
+	suzerain_line_type = line_suzerain
+	tributary_line_type = line_tributary
+	should_show_as_suzerain_realm_color = yes
+	should_show_as_suzerain_realm_name = no
+	tributary_heir_succession = yes
+	suzerain_heir_succession = yes
+
+	contracts = {
+		administrative_obligations
+		administrative_themes
+	}
+	modify_contract_layout = admin
+
+	# There will also be special CBs tied to having this contract group in order to consolidate the Southern Caucasus
+}
+
 # chinese_vassal = {
 # 	contracts = {
 # 		chinese_government_obligations

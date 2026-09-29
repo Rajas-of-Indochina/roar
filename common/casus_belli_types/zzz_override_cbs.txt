@@ -1142,7 +1142,7 @@ religious_war = {
 		}
 		# Caucasus situation
 		trigger_if = {
-			limit = = {
+			limit = {
 				any_in_de_jure_hierarchy = {
 					continue = { tier > tier_county }
 					count = all
@@ -1761,7 +1761,7 @@ major_religious_war = {
 		}
 		# Caucasus situation
 		trigger_if = {
-			limit = = {
+			limit = {
 				any_in_de_jure_hierarchy = {
 					continue = { tier > tier_county }
 					count = all

@@ -330,15 +330,15 @@
 				}
 				OR = {
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= pro_roman
+						top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
 						faith = { faith_is_pro_roman_trigger = yes }
 					}
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= pro_perso_arabic
+						top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
 						faith = { faith_is_pro_perso_arabic_trigger = yes }
 					}
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= autonomist
+						top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
 						faith = { faith_is_autonomist_trigger = yes }
 					}
 				}
@@ -1311,15 +1311,15 @@ task_promote_culture = {
 				}
 				OR = {
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= pro_roman
+						top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
 						culture = { culture_is_pro_roman_trigger = yes }
 					}
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= pro_perso_arabic
+						top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
 						culture = { culture_is_pro_perso_arabic_trigger = yes }
 					}
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= autonomist
+						top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
 						culture = { culture_is_autonomist_trigger = yes }
 					}
 				}
@@ -2063,21 +2063,21 @@ task_promote_minority = {
 				}
 				OR = {
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= pro_roman
+						top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
 						OR = {
 							scope:county.var:faith_to_convert ?= { faith_is_pro_roman_trigger = yes }
 							scope:county.var:culture_to_convert ?= { culture_is_pro_roman_trigger = yes }
 						}
 					}
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= pro_perso_arabic
+						top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
 						OR = {
 							scope:county.var:faith_to_convert ?= { faith_is_pro_perso_arabic_trigger = yes }
 							scope:county.var:culture_to_convert ?= { culture_is_pro_perso_arabic_trigger = yes }
 						}
 					}
 					scope:councillor_liege = {
-						top_participant_group:situation_caucasus ?= autonomist
+						top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
 						OR = {
 							scope:county.var:faith_to_convert ?= { faith_is_autonomist_trigger = yes }
 							scope:county.var:culture_to_convert ?= { culture_is_autonomist_trigger = yes }

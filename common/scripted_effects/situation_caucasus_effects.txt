@@ -2,11 +2,7 @@ auto_assign_caucasus_stance = {
 	# hard rules for specific titles
 	if = {
 		limit = {
-			OR = {
-				has_title = title:e_byzantium
-				has_title = title:h_eastern_roman_empire
-				has_title = title:h_roman_empire
-			}
+			is_roman_emperor_trigger = yes
 		}
 		set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = no }
 	}
@@ -63,6 +59,73 @@ auto_assign_caucasus_stance = {
 	}
 }
 
+# Fetches a list of situation_caucasus subregions that a given title's dejure overlaps, then triggers the given catalyst in each.
+# $TITLE$
+# $CATALYST$
+trigger_caucasus_catalyst_in_title = {
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_armenia_proper } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:armenia_proper = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_caucasian_albania } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:iberia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_caucasian_iberia } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:albania = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_persarmenia } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:persarmenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_lesser_armenia } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:lesser_armenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_armenian_cilicia } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_syria } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:syria = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+	if = {
+		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_jazira } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:jazira = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+	}
+}
+
+save_roman_empire_title = {
+	if = {
+		limit = { title:h_eastern_roman_empire = { is_titular = no } } 
+		title:h_eastern_roman_empire = { save_scope_as = roman_empire }
+	}
+	else_if = {
+		limit = { title:h_roman_empire = { is_titular = no } } 
+		title:h_roman_empire = { save_scope_as = roman_empire }
+	}
+	else = {
+		title:e_byzantium = { save_scope_as = roman_empire }
+	}
+}
 # just a shortcut
 # FLAG options: pro_roman pro_perso_arabic autonomist interloper
 set_caucasus_alignment = {
@@ -76,6 +139,29 @@ set_caucasus_alignment = {
 		set_variable = {
 			name = situation_caucasus_recently_changed_alignment
 			years = 5
+		}
+		situation:situation_caucasus ?= {
+			switch = {
+				trigger = ROOT.var:caucasus_alignment
+				flag:pro_roman = {
+					trigger_caucasus_catalyst_in_title = {
+						TITLE = primary_title
+						CATALYST = character_became_pro_roman
+					}
+				}
+				flag:pro_perso_arabic = {
+					trigger_caucasus_catalyst_in_title = {
+						TITLE = primary_title
+						CATALYST = character_became_pro_perso_arabic
+					}
+				}
+				flag:autonomist = {
+					trigger_caucasus_catalyst_in_title = {
+						TITLE = primary_title
+						CATALYST = character_became_autonomist
+					}
+				}
+			}
 		}
 	}
 
@@ -150,6 +236,11 @@ form_aluank_decision_effect = {
 		}
 	}
 	custom_tooltip = aluank_de_jure_extra_tt
+	situation:situation_caucasus = {
+		situation_sub_region:albania = {
+			trigger_sub_region_catalyst = unified_aluank
+		}
+	}
 }
 
 decision_form_armenian_cilicia_effect = {
@@ -190,6 +281,30 @@ decision_form_armenian_cilicia_effect = {
 	}
 	resolve_title_and_vassal_change = scope:title_change
 	set_primary_title_to = title:k_armenian_cilicia
+	if = {
+		limit = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = {
+				trigger_sub_region_catalyst = formed_armenian_cilicia_pro_roman
+			}
+		}
+	}
+	else_if = {
+		limit = { top_participant_group:situation_caucasus ?= { participant_group_type = properso_arabicn } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = {
+				trigger_sub_region_catalyst = formed_armenian_cilicia_pro_perso_arabic
+			}
+		}
+	}
+	else_if = {
+		limit = { top_participant_group:situation_caucasus ?= { participant_group_type = autonomist } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = {
+				trigger_sub_region_catalyst = formed_armenian_cilicia_autonomist
+			}
+		}
+	}
 }
 
 form_georgia_decision_effect = {
@@ -249,6 +364,11 @@ form_georgia_decision_effect = {
 			}
 		}
 
+	}
+	situation:situation_caucasus ?= {
+		situation_sub_region:iberia = {
+			trigger_sub_region_catalyst = united_georgia
+		}
 	}
 }
 
@@ -313,6 +433,12 @@ unify_armenian_principalities_decision_effect = {
 			PREV = { destroy_title = title:k_syunik }
 		}
 	}
+
+	situation:situation_caucasus ?= {
+		situation_sub_region:armenia_proper = {
+			trigger_sub_region_catalyst = unified_armenian_principalities
+		}
+	}
 }
 
 decision_form_cappadocia_effect = {
@@ -363,4 +489,1452 @@ decision_form_cappadocia_effect = {
 		}
 	}
 	custom_tooltip = cappadocia_de_jure_extra_tt
+}
+
+### ending decision effects
+
+situation_caucasus_caucasian_empire_decision_effect = {
+	situation:situation_caucasus ?= { end_situation = yes }
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_caucasia = {
+		change_title_holder = {
+			holder = ROOT
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_caucasia
+	title:k_cappadocia = { add_to_list = possible_de_jure_drifts }
+	title:k_armenian_cilicia = { add_to_list = possible_de_jure_drifts }
+	title:k_syria = { add_to_list = possible_de_jure_drifts }
+	title:k_jazira = { add_to_list = possible_de_jure_drifts }
+	title:k_adurbadagan = { add_to_list = possible_de_jure_drifts }
+	every_in_list = {
+		list = possible_de_jure_drifts
+		if = {
+			limit = {
+				ROOT = { completely_controls = PREV }
+				is_titular = no
+			}
+			set_de_jure_liege_title = title:e_caucasia
+		}
+	}
+}
+
+situation_caucasus_armenian_empire_decision_effect = {
+	situation:situation_caucasus ?= { end_situation = yes }
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_armenia = {
+		change_title_holder = {
+			holder = ROOT
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_armenia
+	# Kingdom-tier drifts:
+	# First, we absorb any unintegrated Armenian kingdoms into k_armenian_principality
+	custom_tooltip = {
+		text = armenia_proper_consolidation_tt
+		title:d_hayk-shirak = { add_to_list = armenia_proper_duchies }
+		title:d_hayk-dvin = { add_to_list = armenia_proper_duchies }
+		title:d_kars = { add_to_list = armenia_proper_duchies }
+		title:d_bagrevand = { add_to_list = armenia_proper_duchies }
+		title:d_tashir = { add_to_list = armenia_proper_duchies }
+		title:d_vaspurakan = { add_to_list = armenia_proper_duchies }
+		title:d_shavarshan = { add_to_list = armenia_proper_duchies }
+		title:d_taron = { add_to_list = armenia_proper_duchies }
+		title:d_turuberan = { add_to_list = armenia_proper_duchies }
+		title:d_derzene = { add_to_list = armenia_proper_duchies }
+		title:d_mesopotamia = { add_to_list = armenia_proper_duchies }
+		title:d_syunik-baghk = { add_to_list = armenia_proper_duchies }
+		title:d_syunik-vayotsdzor = { add_to_list = armenia_proper_duchies }
+		title:d_artsakh = { add_to_list = armenia_proper_duchies }
+		title:d_gardman = { add_to_list = armenia_proper_duchies }
+		title:d_nakhichevan = { add_to_list = armenia_proper_duchies }
+		every_in_list = {
+			list = armenia_proper_duchies
+			if = {
+				limit = { not = { kingdom = title:k_armenian_principality } }
+				set_de_jure_liege_title = title:k_armenian_principality
+			}
+		}
+	}
+	#Next we have to decide what to do with the frontiers.
+	#Adurbadagan is easy.
+	title:k_adurbadagan = { set_de_jure_liege_title = title:e_armenia }
+	# Make sure that all the duchies are properly de jure
+	custom_tooltip = {
+		text = adurbadagan_consolidation_tt
+		title:d_azerbaijan = { add_to_list = persarmenia_duchies }
+		title:d_iraq-i-aram = { add_to_list = persarmenia_duchies }
+		title:d_ardabil = { add_to_list = persarmenia_duchies }
+		title:d_arasbaran = { add_to_list = persarmenia_duchies }
+		title:d_persarmenia = { add_to_list = persarmenia_duchies }
+		title:d_bazgan = { add_to_list = persarmenia_duchies }
+		every_in_list = {
+			list = persarmenia_duchies
+			if = {
+				limit = { NOT = { kingdom = title:k_adurbadagan } }
+				set_de_jure_liege_title = title:k_adurbadagan
+			}
+		}
+	}
+	# Okay now we need to worry about some sorting
+	custom_tooltip = {
+		text = armenian_frontier_consolidation_kingdom_tt
+		# First, Armenian Cilicia and Lesser Armenia become de jure part of Greater Armenia, formed or no.
+		title:k_armenian_cilicia = { set_de_jure_liege_title = title:e_armenia }
+		title:k_cappadocia = { set_de_jure_liege_title = title:e_armenia }
+		# If you own or completely control any of these kingdoms, transfer them immediately no caveat:
+		title:k_pontus = { add_to_list = armenian_vassals }
+		title:k_anatolia = { add_to_list = armenian_vassals }
+		title:k_syria = { add_to_list = armenian_vassals }
+		title:k_jazira = { add_to_list = armenian_vassals }
+		title:k_shirvan = { add_to_list = armenian_vassals }
+		title:k_aluank = { add_to_list = armenian_vassals }
+		title:k_kakheti = { add_to_list = armenian_vassals }
+		title:k_iberia = { add_to_list = armenian_vassals }
+		title:k_abkhazia = { add_to_list = armenian_vassals }
+		title:k_georgia = { add_to_list = armenian_vassals }
+		every_in_list = {
+			list = armenian_vassals
+			# We do need to do checks for titularity because some of these titles can be erased by others
+			if = {
+				limit = {
+					is_titular = no
+					OR = {
+						ROOT = { completely_controls = PREV }
+						holder = ROOT
+					}
+				}
+				set_de_jure_liege_title = title:e_armenia
+			}
+		}
+		# and in the odd case that there's some titularity weirdness, we just adjust things as needed for Georgia:
+		# First, if this kingdom is titular AND Georgia isn't titular and is dejure Armenian, then the titular Georgian kingdoms also move
+		title:k_kakheti = {
+			if = {
+				limit = {
+					is_titular = yes
+					title:k_georgia = {
+						is_titular = no
+						empire = title:e_armenia
+					}
+				}
+			}
+			set_de_jure_liege_title = title:e_armenia
+		}
+		title:k_iberia = {
+			if = {
+				limit = {
+					is_titular = yes
+					title:k_georgia = {
+						is_titular = no
+						empire = title:e_armenia
+					}
+				}
+			}
+			set_de_jure_liege_title = title:e_armenia
+		}
+		title:k_abkhazia = {
+			if = {
+				limit = {
+					is_titular = yes
+					title:k_georgia = {
+						is_titular = no
+						empire = title:e_armenia
+					}
+				}
+			}
+			set_de_jure_liege_title = title:e_armenia
+		}
+		# Second, if Georgia is titular, but all three Georgian kingdoms aren't and are dejure part of Armenia, shuffle it over.
+		if = {
+			limit = {
+				title:k_kakheti = {
+					is_titular = no
+					empire = title:e_armenia
+				}
+				title:k_abkhazia = {
+					is_titular = no
+					empire = title:e_armenia
+				}
+				title:k_iberia = {
+					is_titular = no
+					empire = title:e_armenia
+				}
+			}
+			title:k_georgia = { set_de_jure_liege_title = title:e_armenia }
+		}
+	}
+	custom_tooltip = {
+		text = armenian_frontier_consolidation_duchy_tt
+		# NEXT we handle edge case duchies. If they haven't already scooched over, then we move them manually
+		# Armenian Cilicia: These won't be moved if they're already a part of k_armenian_cilicia
+		title:d_cilicia = {
+			if = {
+				limit = { NOT = { empire = title:e_armenia } }
+				set_de_jure_liege_title = title:k_armenian_principality
+			}
+		}
+		title:d_edessa = {
+			if = {
+				limit = { NOT = { empire = title:e_armenia } }
+				set_de_jure_liege_title = title:k_armenian_principality
+			}
+		}
+		title:d_antioch = {
+			if = {
+				limit = { NOT = { empire = title:e_armenia } }
+				set_de_jure_liege_title = title:k_armenian_principality
+			}
+		}
+		# Diyarbakr: move into k_armenian_principality
+		title:d_diyarbakr = {
+			if = {
+				limit = { NOT = { empire = title:e_armenia } }
+				set_de_jure_liege_title = title:k_armenian_principality
+			}
+		}
+		# Kurdistan: move into k_adurbadagan since that's a guaranteed dejure and geographically closer
+		title:d_kurdistan = {
+			if = {
+				limit = { NOT = { empire = title:e_armenia } }
+				set_de_jure_liege_title = title:k_adurbadagan
+			}
+		}
+		# Arran: Goes to k_armenian_principality since that's the closest kingdom
+		title:d_arran = {
+			if = {
+				limit = { NOT = { empire = title:e_armenia } }
+				set_de_jure_liege_title = title:k_armenian_principality
+			}
+		}
+	}
+}
+
+situation_caucasus_roman_armenia_decision_effect = {
+	# First, flip all the heartland kingdoms to de jure Rome
+	title:k_georgia = { add_to_list = roman_kingdoms }
+	title:k_abkhazia = { add_to_list = roman_kingdoms }
+	title:k_iberia = { add_to_list = roman_kingdoms }
+	title:k_kakheti = { add_to_list = roman_kingdoms }
+	title:k_ayrarat = { add_to_list = roman_kingdoms }
+	title:k_vaspurakan = { add_to_list = roman_kingdoms }
+	title:k_syunik = { add_to_list = roman_kingdoms }
+	title:k_armenian_principality = { add_to_list = roman_kingdoms }
+	title:k_shirvan = { add_to_list = roman_kingdoms }
+	title:k_aluank = { add_to_list = roman_kingdoms }
+	# And also add in any kingdoms from frontier regions that are roman-controlled
+	# Persarmenia
+	if = {
+		limit = { situation:situation_caucasus = { situation_sub_region:persarmenia = { sub_region_current_phase = situation_caucasus_roman_control } } }
+		title:k_adurbadagan = { add_to_list = roman_kingdoms }
+	}
+	# lesser armenia/cappadocia
+	if = {
+		limit = { situation:situation_caucasus = { situation_sub_region:lesser_armenia = { sub_region_current_phase = situation_caucasus_roman_control } } }
+		title:k_pontus = { add_to_list = roman_kingdoms }
+		title:k_cappadocia = { add_to_list = roman_kingdoms }
+	}
+	# cilicia
+	if = {
+		limit = { situation:situation_caucasus = { situation_sub_region:cilicia = { sub_region_current_phase = situation_caucasus_roman_control } } }
+		title:k_armenian_cilicia = { add_to_list = roman_kingdoms }
+		title:k_anatolia = { add_to_list = roman_kingdoms }
+	}
+	# syria
+	if = {
+		limit = { situation:situation_caucasus = { situation_sub_region:syria = { sub_region_current_phase = situation_caucasus_roman_control } } }
+		title:k_syria = { add_to_list = roman_kingdoms }
+	}
+	# Jazira
+	if = {
+		limit = { situation:situation_caucasus = { situation_sub_region:jazira = { sub_region_current_phase = situation_caucasus_roman_control } } }
+		title:k_jazira = { add_to_list = roman_kingdoms }
+	}
+	every_in_list = {
+		list = roman_kingdoms
+		# So this is a little funky, if h_roman_empire or h_eastern_roman_empire exist then we create e_armenia and put it under them
+		if = {
+			limit = {
+				OR = {
+					title:h_eastern_roman_empire = { is_titular = no }
+					title:h_roman_empire = { is_titular = no }
+				}
+			}
+			set_de_jure_liege_title = title:e_armenia
+		}
+		else = {
+			set_de_jure_liege_title = title:e_byzantium
+		}
+	}
+	title:e_armenia = {
+		if = {
+			limit = {
+				title:h_eastern_roman_empire = { is_titular = no }
+			}
+			set_de_jure_liege_title = title:h_eastern_roman_empire
+		}
+		else_if = {
+			limit = {
+				title:h_roman_empire = { is_titular = no }
+			}
+			set_de_jure_liege_title = title:h_roman_empire
+		}
+	}
+	# If you're the Roman Emperor already, then fiddle-de-dee, we're done, otherwise you get to be a big shot
+	# This is only doable in a scenario where the Emperor himself hasn't managed to do the decision
+	# and the Roman Empire is already a Hegemony
+	# If you want to be an independent Pro-Roman then you take Roman Exarch
+	if = {
+		limit = {
+			highest_held_title_tier <= tier_kingdom
+			title:e_armenia = { is_titular = no }
+		}
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = title_change
+		}
+		title:e_armenia = {
+			change_title_holder = {
+				holder = ROOT
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+	}
+}
+
+situation_caucasus_transcaucasian_confederation_decision_effect = {
+	situation:situation_caucasus ?= { end_situation = yes }
+	# next get the confederation as a save scope
+	confederation ?= { save_scope_as = confederation }
+	scope:confederation = {
+		every_confederation_member = {
+			limit = { NOT = { THIS = ROOT } }
+			add_to_list = former_confederates
+		}
+		# delete the confederation, we don't need it anymore
+		scope:confederation = { disband_confederation = yes }
+	}
+	# First we wanna have dejure vassals become de facto vassals
+	create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = fealty_change
+	}
+	every_in_list = {
+		list = former_confederates
+		if = {
+			limit = {
+				highest_held_title_tier < ROOT.primary_title.tier
+				primary_title = { target_is_de_jure_liege_or_above = ROOT.primary_title }
+			}
+			change_liege = {
+				liege = ROOT
+				change = scope:fealty_change
+			}
+			remove_from_list = former_confederates
+		}
+	}
+	resolve_title_and_vassal_change = scope:fealty_change
+	# Next for characters that are not de jure vassals, we make them tributaries
+	every_in_list = {
+		list = former_confederates
+		start_tributary = {
+			contract_group = caucasian_confederate
+			suzerain = ROOT
+		}
+		remove_from_list = former_confederates
+	}
+	# then grant a titular Armenian Empire
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_armenia = {
+		change_title_holder = {
+			holder = ROOT
+			change = scope:title_change
+		}
+		# And we rename it appropriately
+		set_title_name = E_ARMENIAN_CONFEDERATION
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_armenia
+}
+
+situation_caucasus_roman_exarchate_decision_effect = {
+	# get appropriate kingdom base
+	if = {
+		limit = { highest_held_title_tier >= tier_kingdom }
+		primary_title = {
+			save_scope_as = the_title
+		}
+	}
+	else = {
+		primary_title.kingdom = {
+			save_scope_as = the_title
+		}
+	}
+	# First, we make you the Empire-Tier exarch of Armenia
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_armenia = {
+		change_title_holder = {
+			holder = ROOT
+			change = scope:title_change
+		}
+		# And we recolor and rearm it appropriately
+		set_color_from_title = scope:the_title
+		set_coa = scope:the_title
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_armenia
+	scope:the_title = {
+		move_title_name_to = root.primary_title
+		reset_title_name = yes
+	}
+	# Next we make every Pro-Roman ruler in any Roman-controlled subregion your vassal
+	create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = fealty_change
+	}
+	every_independent_ruler = {
+		limit = {
+			highest_held_title_tier <= tier_kingdom
+			top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+			primary_title = {
+				any_de_jure_county = {
+					any_county_situation_sub_region = {
+						sub_region_current_phase = situation_caucasus_roman_control
+					}
+				}
+			}
+		}
+		change_liege = {
+			liege = ROOT
+			change = scope:fealty_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:fealty_change
+	# Get Our Roman Emperor
+	if = {
+		limit = { exists = title:h_eastern_roman_empire.holder }
+		title:h_eastern_roman_empire.holder = { save_scope_as = emperor }
+	}
+	else_if = {
+		limit = { exists = title:h_roman_empire.holder }
+		title:h_roman_empire.holder = { save_scope_as = emperor }
+	}
+	else_if = {
+		limit = { exists = title:e_byzantium.holder }
+		title:e_byzantium.holder = { save_scope_as = emperor }
+	}
+	# And make him Suzerain
+	if = {
+		limit = { exists = scope:emperor }
+		start_tributary = {
+			contract_group = roman_exarchate
+			suzerain = scope:emperor
+		}
+	}
+	situation:situation_caucasus ?= { end_situation = yes }
+}
+
+situation_caucasus_roman_exile_decision_effect = {
+	# First, if the Roman Empire doesn't exist, create it and give it to ROOT.
+	if = {
+		limit = {
+			NOT = {
+				exists = title:e_byzantium.holder
+				exists = title:h_eastern_roman_empire.holder
+				exists = title:h_roman_empire.holder
+			}
+		}
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+		title:e_byzantium = {
+			change_title_holder = {
+				holder = ROOT
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+	}
+	# Next, move all the Heartland Kingdoms into e_byzantium
+	title:k_georgia = { add_to_list = roman_kingdoms }
+	title:k_abkhazia = { add_to_list = roman_kingdoms }
+	title:k_iberia = { add_to_list = roman_kingdoms }
+	title:k_kakheti = { add_to_list = roman_kingdoms }
+	title:k_ayrarat = { add_to_list = roman_kingdoms }
+	title:k_vaspurakan = { add_to_list = roman_kingdoms }
+	title:k_syunik = { add_to_list = roman_kingdoms }
+	title:k_armenian_principality = { add_to_list = roman_kingdoms }
+	title:k_shirvan = { add_to_list = roman_kingdoms }
+	title:k_aluank = { add_to_list = roman_kingdoms }
+	every_in_list = {
+		list = roman_kingdoms
+		set_de_jure_liege_title = title:e_byzantium
+	}
+	# Finally, Vassalize every pro-roman character in any subregion under Roman control and end the situation
+	create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = fealty_change
+	}
+	every_independent_ruler = {
+		limit = {
+			highest_held_title_tier <= tier_kingdom # just in case there's an emperor here with dejure somehow
+			top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+			primary_title = {
+				any_de_jure_county = {
+					OR = {
+						title_province = { geographical_region = custom_armenia_proper }
+						title_province = { geographical_region = custom_caucasian_albania }
+						title_province = { geographical_region = custom_caucasian_iberia }
+					}
+				}
+			}
+		}
+		change_liege = {
+			liege = ROOT
+			change = scope:fealty_change
+		}
+	}
+	every_independent_ruler = {
+		limit = {
+			highest_held_title_tier <= tier_kingdom
+			top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+			primary_title = {
+				any_de_jure_county = {
+					any_county_situation_sub_region = {
+						sub_region_current_phase = situation_caucasus_local_control
+					}
+				}
+			}
+		}
+		change_liege = {
+			liege = ROOT
+			change = scope:fealty_change
+		}
+	}
+	situation:situation_caucasus ?= { end_situation = yes }
+}
+
+situation_caucasus_armenian_baghdad_decision_effect = {
+	# First, we create and hand over the Caucasia title
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:e_caucasia = {
+		change_title_holder = {
+			holder = ROOT
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:e_caucasia
+	# Next, we vassalize any and all independent pro-Perso-Arabic rulers in Perso-Arab controlled regions
+	create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = fealty_change
+	}
+	every_independent_ruler = {
+		limit = {
+			highest_held_title_tier <= tier_kingdom
+			top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
+			primary_title = {
+				any_de_jure_county = {
+					any_county_situation_sub_region = {
+						sub_region_current_phase = situation_caucasus_perso_arabic_control
+					}
+				}
+			}
+		}
+		change_liege = {
+			liege = ROOT
+			change = scope:fealty_change
+		}
+	}
+	custom_tooltip = armenian_baghdad_faith_culture_promote_boost_tt
+	custom_tooltip = armenian_baghdad_faith_culture_promote_dev_tt
+	situation:situation_caucasus ?= { end_situation = yes }
+}
+
+situation_caucasus_persarmenia_decision_effect = {
+	# First we need to determine which kingdoms get sent over to where.
+	if = {
+		limit = {
+			OR = {
+				has_title = title:h_dar_al_islam
+				AND = {
+					has_title = title:e_arabia
+					has_title = title:e_persia
+				}
+			}
+		}
+		# If we either have Dar Al-Islam title or we have both empires, then things get split between them
+		title:e_arabia = { save_scope_as = arabia }
+		title:e_persia = { save_scope_as = persia }
+	}
+	else_if = {
+		# if we only have e_arabia, it eats all the kingdoms yum yum
+		limit = { has_title = title:e_arabia }
+		title:e_arabia = {
+			save_scope_as = arabia
+			save_scope_as = persia
+		}
+	}
+	else = {
+		# likewise for e_persia
+		title:e_persia = {
+			save_scope_as = arabia
+			save_scope_as = persia
+		}
+	}
+	# Now to sort!
+	# First the kingdoms that go to Arabia
+	if = {
+		limit = { situation_sub_region:syria = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_syria = { add_to_list = arabian_kingdoms }
+	}
+	if = {
+		limit = { situation_sub_region:cilicia = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_armenian_cilicia = { add_to_list = arabian_kingdoms }
+		title:k_anatolia = { add_to_list = arabian_kingdoms }
+	}
+	if = {
+		limit = { situation_sub_region:lesser_armenia = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_cappadocia = { add_to_list = arabian_kingdoms }
+		title:k_pontus = { add_to_list = arabian_kingdoms }
+	}
+	# then the kingdoms that go to Persia
+	if = {
+		limit = { situation_sub_region:jazira = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_jazira = { add_to_list = persian_kingdoms }
+	}
+	if = {
+		limit = { situation_sub_region:persarmenia = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_adurbadagan = { add_to_list = persian_kingdoms }
+	}
+	if = {
+		limit = { situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_armenian_principality = { add_to_list = persian_kingdoms }
+		title:k_ayrarat = { add_to_list = persian_kingdoms }
+		title:k_vaspurakan = { add_to_list = persian_kingdoms }
+	}
+	if = {
+		limit = { situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_syunik = { add_to_list = persian_kingdoms }
+		title:k_shirvan = { add_to_list = persian_kingdoms }
+		title:k_kakheti = { add_to_list = persian_kingdoms }
+		title:k_aluank = { add_to_list = persian_kingdoms }
+	}
+	if = {
+		limit = { situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_perso_arabic_control } }
+		title:k_georgia = { add_to_list = persian_kingdoms }
+		title:k_iberia = { add_to_list = persian_kingdoms }
+		title:k_abkhazia = { add_to_list = persian_kingdoms }
+	}
+	# Then we move them
+	every_in_list = {
+		list = arabian_kingdoms
+		set_de_jure_liege_title = scope:arabia
+	}
+	every_in_list = {
+		list = persian_kingdoms
+		set_de_jure_liege_title = scope:persia
+	}
+	situation:situation_caucasus ?= { end_situation = yes }
+}
+
+###
+# Vanilla override
+###
+
+@starting_subject_standing_value = 10
+
+# Effect to start a tributary relationship, can be called directly without a war or from start_tributary_from_war_effect
+# $TRIBUTARY$ = the new tributary
+# $SUZERAIN$ = their suzerain
+start_tributary_interaction_effect = {
+	# Setup truces depending on how the tributary relationship was created
+	$TRIBUTARY$ = { save_scope_as = tributary_loc }
+	$SUZERAIN$ = { save_scope_as = suzerain_loc }
+
+	#Mandala Tributaries
+	if = {
+		limit = {
+			should_be_mandala_tributary_trigger = { 
+				SUZERAIN = $SUZERAIN$ 
+				TRIBUTARY = $TRIBUTARY$ 
+			}
+			trigger_if = {
+				limit = { exists = scope:tributary_war }
+				$SUZERAIN$ = {
+					AND = {
+						house = { has_house_head_parameter = can_make_mandala_tributaries_via_war }
+						is_house_head = yes
+					}
+				}
+			}
+		}
+		$TRIBUTARY$ = {
+			if = {
+				limit = { government_has_flag = government_is_tribal }
+				start_tributary = {
+					contract_group = tributary_mandala_tribal
+					suzerain = $SUZERAIN$
+				}
+				if = {
+					limit = {
+						OR = {
+							scope:high_obligations ?= yes
+							exists = scope:tributary_war
+						}
+					}
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_taxes
+								level = 3
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_prestige
+								level = 2
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_levies
+								level = 3
+							}
+						}
+					}
+					custom_tooltip = high_mandala_tribute_taxes
+					custom_tooltip = high_mandala_tribute_prestige
+					custom_tooltip = high_mandala_tribute_levies
+				}
+				else_if = {
+					limit = { scope:low_obligations ?= yes }
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_taxes
+								level = 0
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_prestige
+								level = 0
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_levies
+								level = 0
+							}
+						}
+					}
+					custom_tooltip = exempt_mandala_tribute_taxes
+					custom_tooltip = low_mandala_tribute_prestige
+					custom_tooltip = exempt_mandala_tribute_levies
+				}
+				else = {
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_taxes
+								level = 2
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_prestige
+								level = 2
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_levies
+								level = 1
+							}
+						}
+					}
+					custom_tooltip = normal_mandala_tribute_taxes
+					custom_tooltip = normal_mandala_tribute_prestige
+					custom_tooltip = low_mandala_tribute_levies
+				}
+
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					tributary_contract_set_obligation_level = {
+						type = mandala_suzerain_war_participation_guarantee
+						level = 1
+					}
+				}
+			}
+			else = {
+				start_tributary = {
+					contract_group = tributary_mandala
+					suzerain = $SUZERAIN$
+				}
+				if = {
+					limit = {
+						OR = {
+							scope:high_obligations ?= yes
+							exists = scope:tributary_war
+						}
+					}
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_taxes
+								level = 3
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_piety
+								level = 2
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_levies
+								level = 3
+							}
+						}
+					}
+					custom_tooltip = high_mandala_tribute_taxes
+					custom_tooltip = high_mandala_tribute_piety
+					custom_tooltip = high_mandala_tribute_levies
+				}
+				else_if = {
+					limit = { scope:low_obligations ?= yes }
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_taxes
+								level = 0
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_piety
+								level = 0
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_levies
+								level = 0
+							}
+						}
+					}
+					custom_tooltip = exempt_mandala_tribute_taxes
+					custom_tooltip = low_mandala_tribute_piety
+					custom_tooltip = exempt_mandala_tribute_levies
+				}
+				else = {
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_taxes
+								level = 2
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_piety
+								level = 2
+							}
+							tributary_contract_set_obligation_level = {
+								type = mandala_government_levies
+								level = 1
+							}
+						}
+					}
+					custom_tooltip = normal_mandala_tribute_taxes
+					custom_tooltip = normal_mandala_tribute_piety
+					custom_tooltip = low_mandala_tribute_levies
+				}
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					tributary_contract_set_obligation_level = {
+						type = mandala_suzerain_war_participation_guarantee
+						level = 1
+					}
+				}
+			}
+		}
+	}
+	# Wanua Tributaries
+	else_if = {
+		limit = {
+			should_be_wanua_tributary_trigger = { 
+				SUZERAIN = $SUZERAIN$ 
+				TRIBUTARY = $TRIBUTARY$ 
+			}
+		}
+		$TRIBUTARY$ = {
+			start_tributary = {
+				contract_group = tributary_wanua
+				suzerain = $SUZERAIN$
+			}
+			if = {
+				limit = {
+					OR = {
+						scope:high_obligations ?= yes
+						exists = scope:tributary_war
+					}
+				}
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = {
+							type = barter_goods_obligations
+							level = 3
+						}
+						tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 2 }
+						tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 1 }
+					}
+				}
+				custom_tooltip = high_wanua_tribute_barter_goods
+				custom_tooltip = high_subjugated_tribute_taxes
+				custom_tooltip = normal_subjugated_tribute_prestige
+			}
+			else_if = {
+				limit = { scope:low_obligations ?= yes }
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = {
+							type = barter_goods_obligations
+							level = 1
+						}
+						tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 1 }
+						tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 1 }
+					}
+				}
+				custom_tooltip = low_wanua_tribute_barter_goods
+				custom_tooltip = low_subjugated_tribute_taxes
+				custom_tooltip = none_subjugated_tribute_prestige
+			}
+			else = {
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = {
+							type = barter_goods_obligations
+							level = 2
+						}
+						tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 1 }
+						tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 1 }
+					}
+				}
+				custom_tooltip = medium_wanua_tribute_barter_goods
+				custom_tooltip = low_subjugated_tribute_taxes
+			}
+		}
+	}
+	# Nomadic Tributaries
+	else_if = {
+		limit = {
+			$SUZERAIN$ = { has_government = nomad_government }
+		}
+		$TRIBUTARY$ = {
+			if = {
+				limit = {
+					OR = {
+						has_government = nomad_government
+						has_government = herder_government
+					}
+				}
+				start_tributary = {
+					contract_group = tributary_nomadic
+					suzerain = $SUZERAIN$
+				}
+			}
+			else = {
+				start_tributary = {
+					contract_group = tributary_settled
+					suzerain = $SUZERAIN$
+				}
+			}
+
+			# Special terms depending on which options were set
+			if = { # settled tributary
+				limit = {
+					NOR = {
+						has_government = nomad_government
+						has_government = herder_government
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							scope:high_obligations ?= yes
+							exists = scope:tributary_war
+						}
+					}
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 2 }
+							tributary_contract_set_obligation_level = { type = default_tributary_levies level = 2 }
+							tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 2 }
+						}
+					}
+					custom_tooltip = high_feudal_tribute_taxes
+					custom_tooltip = high_feudal_tribute_levies
+					custom_tooltip = high_nomad_tribute_prestige
+				}
+				else_if = {
+					limit = { scope:low_obligations ?= yes }
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 0 }
+							tributary_contract_set_obligation_level = { type = default_tributary_levies level = 0 }
+							tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 0 }
+						}
+					}
+					custom_tooltip = low_feudal_tribute_taxes
+					custom_tooltip = low_feudal_tribute_levies
+					custom_tooltip = none_nomad_tribute_prestige
+				}
+				else = {
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 1 }
+							tributary_contract_set_obligation_level = { type = default_tributary_levies level = 1 }
+							tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 1 }
+						}
+					}
+					custom_tooltip = normal_feudal_tribute_taxes
+					custom_tooltip = normal_feudal_tribute_levies
+					custom_tooltip = normal_nomad_tribute_prestige
+				}
+			}
+			else = { # nomadic tributary
+				if = {
+					limit = {
+						OR = {
+							scope:high_obligations ?= yes
+							exists = scope:tributary_war
+						}
+					}
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = nomad_government_herd level = 3 } #herd_tax_high
+							tributary_contract_set_obligation_level = { type = nomad_government_prestige level = 2 }
+						}
+					}
+					custom_tooltip = high_nomad_tribute_herd
+					custom_tooltip = high_nomad_tribute_prestige
+				}
+				else_if = {
+					limit = { scope:low_obligations ?= yes }
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = nomad_government_herd level = 1 } #herd_tax_low
+							tributary_contract_set_obligation_level = { type = nomad_government_prestige level = 0 }
+						}
+					}
+					custom_tooltip = low_nomad_tribute_herd
+					custom_tooltip = none_nomad_tribute_prestige
+				}
+				else = {
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = nomad_government_herd level = 2 } #herd_tax_normal
+							tributary_contract_set_obligation_level = { type = nomad_government_prestige level = 1 }
+						}
+					}
+					custom_tooltip = normal_nomad_tribute_herd
+					custom_tooltip = normal_nomad_tribute_prestige
+				}
+			}
+			if = {
+				limit = { is_tributary = yes } # suppress error logging
+				tributary_contract_set_obligation_level = { type = suzerain_war_participation_guarantee level = 0 }
+				tributary_contract_set_obligation_level = { type = tributary_war_participation_obligation level = 0 }
+				custom_tooltip = no_tributary_war_obligations
+				custom_tooltip = no_suzerain_guarantee
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			$SUZERAIN$ = { has_government = steppe_admin_government }
+		}
+		$TRIBUTARY$ = {
+			if = {
+				limit = {
+					OR = {
+						has_government = nomad_government
+						has_government = herder_government
+					}
+				}
+				start_tributary = {
+					contract_group = tributary_steppe
+					suzerain = $SUZERAIN$
+				}
+			}
+			else = {
+				start_tributary = {
+					contract_group = tributary_settled
+					suzerain = $SUZERAIN$
+				}
+			}
+
+			# Special terms depending on which options were set
+			if = { # settled tributary
+				limit = {
+					NOR = {
+						has_government = nomad_government
+						has_government = herder_government
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							scope:high_obligations ?= yes
+							exists = scope:tributary_war
+						}
+					}
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 2 }
+							tributary_contract_set_obligation_level = { type = default_tributary_levies level = 2 }
+							tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 2 }
+						}
+					}
+					custom_tooltip = high_feudal_tribute_taxes
+					custom_tooltip = high_feudal_tribute_levies
+					custom_tooltip = high_nomad_tribute_prestige
+				}
+				else_if = {
+					limit = { scope:low_obligations ?= yes }
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 0 }
+							tributary_contract_set_obligation_level = { type = default_tributary_levies level = 0 }
+							tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 0 }
+						}
+					}
+					custom_tooltip = low_feudal_tribute_taxes
+					custom_tooltip = low_feudal_tribute_levies
+					custom_tooltip = none_nomad_tribute_prestige
+				}
+				else = {
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 1 }
+							tributary_contract_set_obligation_level = { type = default_tributary_levies level = 1 }
+							tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 1 }
+						}
+					}
+					custom_tooltip = normal_feudal_tribute_taxes
+					custom_tooltip = normal_feudal_tribute_levies
+					custom_tooltip = normal_nomad_tribute_prestige
+				}
+			}
+			else = { # steppe tributary
+				if = {
+					limit = {
+						OR = {
+							scope:high_obligations ?= yes
+							exists = scope:tributary_war
+						}
+					}
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 2 }
+							tributary_contract_set_obligation_level = { type = nomad_government_prestige level = 2 }
+						}
+					}
+					custom_tooltip = high_nomad_tribute_herd
+					custom_tooltip = high_nomad_tribute_prestige
+				}
+				else_if = {
+					limit = { scope:low_obligations ?= yes }
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 1 }
+							tributary_contract_set_obligation_level = { type = nomad_government_prestige level = 0 }
+						}
+					}
+					custom_tooltip = low_nomad_tribute_herd
+					custom_tooltip = none_nomad_tribute_prestige
+				}
+				else = {
+					if = {
+						limit = { is_tributary = yes } # suppress error logging
+						hidden_effect = {
+							tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 2 }
+							tributary_contract_set_obligation_level = { type = nomad_government_prestige level = 1 }
+						}
+					}
+					custom_tooltip = normal_nomad_tribute_herd
+					custom_tooltip = normal_nomad_tribute_prestige
+				}
+			}
+			if = {
+				limit = { 
+					is_tributary = yes # suppress error logging
+					government_has_flag = government_is_nomadic
+					NOT = { government_has_flag = government_is_herder }
+				}
+				tributary_contract_set_obligation_level = { type = suzerain_war_participation_guarantee level = 0 }
+				tributary_contract_set_obligation_level = { type = tributary_war_participation_obligation level = 1 }
+				custom_tooltip = tributary_war_obligations
+				custom_tooltip = no_suzerain_guarantee
+			}
+			else_if = {
+				limit = { 
+					is_tributary = yes # suppress error logging
+				}
+				tributary_contract_set_obligation_level = { type = suzerain_war_participation_guarantee level = 0 }
+				tributary_contract_set_obligation_level = { type = tributary_war_participation_obligation level = 0 }
+				custom_tooltip = no_tributary_war_obligations
+				custom_tooltip = no_suzerain_guarantee
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			$SUZERAIN$ = {
+				has_government = celestial_government
+				highest_held_title_tier >= tier_hegemony
+			}
+		}
+		$TRIBUTARY$ = {
+			start_tributary = {
+				contract_group = tributary_celestial
+				suzerain = $SUZERAIN$
+			}
+
+			if = {
+				limit = {
+					OR = {
+						scope:high_obligations ?= yes
+						exists = scope:tributary_war
+					}
+				}
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = celestial_tribute_gold level = 2 }
+						tributary_contract_set_obligation_level = { type = celestial_tribute_prestige level = 2 }
+					}
+				}
+				custom_tooltip = normal_celestial_tribute_taxes
+				custom_tooltip = normal_celestial_tribute_prestige
+			}
+			else_if = {
+				limit = { scope:low_obligations ?= yes }
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = celestial_tribute_gold level = 0 }
+						tributary_contract_set_obligation_level = { type = celestial_tribute_prestige level = 0 }
+					}
+				}
+				custom_tooltip = no_celestial_tribute_taxes
+				custom_tooltip = no_celestial_tribute_prestige
+			}
+			else = {
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = celestial_tribute_gold level = 1 }
+						tributary_contract_set_obligation_level = { type = celestial_tribute_prestige level = 1 }
+					}
+				}
+				custom_tooltip = low_celestial_tribute_taxes
+				custom_tooltip = low_celestial_tribute_prestige
+			}
+
+			add_subject_standing = @starting_subject_standing_value
+			custom_tooltip = expected_to_pay_tribute
+		}
+	}
+	else_if = {
+		limit = {
+			$SUZERAIN$ = { highest_held_title_tier = tier_hegemony }
+		}
+		$TRIBUTARY$ = {
+			start_tributary = {
+				contract_group = tributary_hegemonic
+				suzerain = $SUZERAIN$
+			}
+
+			if = {
+				limit = {
+					OR = {
+						scope:high_obligations ?= yes
+						exists = scope:tributary_war
+					}
+				}
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = hegemonic_tribute_gold level = 2 }
+						tributary_contract_set_obligation_level = { type = hegemonic_tribute_prestige level = 2 }
+					}
+				}
+				custom_tooltip = normal_hegemonic_tribute_taxes
+				custom_tooltip = normal_hegemonic_tribute_prestige
+			}
+			else_if = {
+				limit = { scope:low_obligations ?= yes }
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = hegemonic_tribute_gold level = 0 }
+						tributary_contract_set_obligation_level = { type = hegemonic_tribute_prestige level = 0 }
+					}
+				}
+				custom_tooltip = no_hegemonic_tribute_taxes
+				custom_tooltip = no_hegemonic_tribute_prestige
+			}
+			else = {
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = hegemonic_tribute_gold level = 1 }
+						tributary_contract_set_obligation_level = { type = hegemonic_tribute_prestige level = 1 }
+					}
+				}
+				custom_tooltip = low_hegemonic_tribute_taxes
+				custom_tooltip = low_hegemonic_tribute_prestige
+			}
+
+			add_subject_standing = @starting_subject_standing_value
+			custom_tooltip = expected_to_pay_tribute
+		}
+	}
+	else = { # subjugated tributary
+		$TRIBUTARY$ = {
+			start_tributary = {
+				contract_group = tributary_subjugated
+				suzerain = $SUZERAIN$
+			}
+			if = {
+				limit = { scope:low_obligations ?= yes }
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 1 }
+						tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 0 }
+					}
+				}
+				custom_tooltip = low_subjugated_tribute_taxes
+				custom_tooltip = none_subjugated_tribute_prestige
+			}
+			else = {
+				if = {
+					limit = { is_tributary = yes } # suppress error logging
+					hidden_effect = {
+						tributary_contract_set_obligation_level = { type = default_tributary_taxes level = 2 }
+						tributary_contract_set_obligation_level = { type = default_tributary_prestige level = 1 }
+						tributary_contract_set_obligation_level = { type = suzerain_war_participation_guarantee level = 1 }
+						tributary_contract_set_obligation_level = { type = tributary_war_participation_obligation level = 0 }
+					}
+				}
+				custom_tooltip = high_subjugated_tribute_taxes
+				custom_tooltip = normal_subjugated_tribute_prestige
+			}
+			custom_tooltip = suzerain_guarantee
+			custom_tooltip = no_tributary_war_obligations
+		}
+	}
+	setup_tributary_truces_effect = { SUZERAIN = $SUZERAIN$ TRIBUTARY = $TRIBUTARY$ }
+	if = {
+		limit = { $TRIBUTARY$ = { any_character_situation = { situation_type = situation_caucasus } } }
+		if = {
+			limit = { $SUZERAIN$ = { is_roman_emperor_trigger = yes } }
+			switch = {
+				trigger = $TRIBUTARY$.primary_title.tier
+				tier_county = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = $TRIBUTARY$.primary_title
+							CATALYST = became_roman_tributary_county
+						}
+					}
+				}
+				tier_duchy = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = $TRIBUTARY$.primary_title
+							CATALYST = became_roman_tributary_duchy
+						}
+					}
+				}
+				fallback = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = $TRIBUTARY$.primary_title
+							CATALYST = became_roman_tributary_kingdom
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				$SUZERAIN$ = {
+					OR = {
+						has_title = title:e_arabia
+						has_title = title:e_persia
+						has_title = title:h_dar_al_islam
+					}
+				}
+			}
+			switch = {
+				trigger = $TRIBUTARY$.primary_title.tier
+				tier_county = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = $TRIBUTARY$.primary_title
+							CATALYST = became_perso_arabic_tributary_county
+						}
+					}
+				}
+				tier_duchy = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = $TRIBUTARY$.primary_title
+							CATALYST = became_perso_arabic_tributary_duchy
+						}
+					}
+				}
+				fallback = {
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = $TRIBUTARY$.primary_title
+							CATALYST = became_perso_arabic_tributary_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
 }
