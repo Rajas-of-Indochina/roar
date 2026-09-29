@@ -1,4 +1,4 @@
-﻿### SITUATION MECHANICS DECISIONS
+### SITUATION MECHANICS DECISIONS
 situation_caucasus_choose_alignment_decision = {
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -408,15 +408,9 @@ unify_armenian_principalities_decision = {
 			capital_county.title_province = {
 				geographical_region = custom_armenia_proper
 			}
-			OR = {
-				culture = {
-					this = culture:armenian
-				}
-				culture = {
-					any_parent_culture_or_above = {
-						this = culture:armenian
-					}
-				}
+			culture = {
+				has_cultural_pillar = heritage_caucasian
+				has_cultural_pillar = language_armenian
 			}
 		}
 		title:k_armenian_principality = {
@@ -742,7 +736,7 @@ decision_form_armenian_cilicia = {
 			title_province = { geographical_region = custom_armenian_cilicia }
 		}
 		highest_held_title_tier <= tier_duchy
-		is_titular = title:k_armenian_cilicia
+		title:k_armenian_cilicia = { is_titular = yes }
 
 	}
 
@@ -795,11 +789,37 @@ decision_form_armenian_cilicia = {
 }
 
 decision_form_cappadocia = {
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { culture = { has_cultural_pillar = language_armenian } }
+				desc = decision_form_lesser_armenia
+			}
+			desc = decision_form_cappadocia
+		}
+	}
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
 	}
 	decision_group_type = major
-	desc = decision_form_cappadocia_desc
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { culture = { has_cultural_pillar = language_armenian } }
+				desc = decision_form_lesser_armenia_desc
+			}
+			desc = decision_form_cappadocia_desc	
+		}
+	}
+	selection_tooltip = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { culture = { has_cultural_pillar = language_armenian } }
+				desc = decision_form_lesser_armenia_tooltip
+			}
+			desc = decision_form_cappadocia_tooltip
+		}
+	}
 	ai_check_interval_by_tier = {
 		barony = 0
 		county = 0
@@ -815,12 +835,13 @@ decision_form_cappadocia = {
 				any_parent_culture_or_above = { this = culture:cappadocian }
 				has_cultural_pillar = language_greek
 			}
+			culture = { has_cultural_pillar = language_armenian }
 		}
 		capital_county = {
 			title_province = { geographical_region = custom_lesser_armenia }
 		}
 		highest_held_title_tier <= tier_duchy
-		is_titular = title:k_cappadocia
+		title:k_cappadocia = { is_titular = yes }
 	}
 	is_valid = {
 		OR = {
@@ -835,6 +856,7 @@ decision_form_cappadocia = {
 			culture = culture:cappadocian
 			culture = { has_cultural_pillar = language_greek }
 			culture = { has_cultural_pillar = heritage_iranian }
+			culture = { has_cultural_pillar = language_armenian }
 		}
 		trigger_if = {
 			limit = {
@@ -848,6 +870,11 @@ decision_form_cappadocia = {
 		}
 		trigger_else = {
 			prestige_level >= 3
+		}
+		any_county_in_region = {
+			region = custom_cappadocia
+			count = all
+			culture = ROOT.culture
 		}
 	}
 
@@ -871,6 +898,638 @@ decision_form_cappadocia = {
 	}
 
 }
+
+### ENDING DECISIONS
+
+## Caucasian Empire
+## The least althist althist ending
+## If Genghis had kept out of the Caucasus then Georgia might have achieved this
+situation_caucasus_caucasian_empire_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 12
+		empire = 0
+		hegemony = 0
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+	
+	is_shown = {
+		any_character_situation = {
+			situation_type = situation_caucasus
+		}
+		is_landed = yes
+		any_realm_county = {
+			empire = title:e_caucasia
+		}
+	}
+
+	is_valid = {
+		top_liege = this
+		top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
+		# Must control  at least 75% of counties in the South Caucasian Heartlands
+		any_caucasus_heartland_county = {
+			percent >= 0.75
+			holder.top_liege = ROOT
+		}
+		# South Caucasian Heartlands must be all Autonomist-dominant
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_local_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_local_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_local_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_local_control }
+			}
+		}
+		# Roman Emperor must either not exist, have a truce with you, or be subject of a hook from you
+		OR = {
+			custom_tooltip = {
+				text = roman_empire_gone_tt
+				does_roman_emperor_exist = no
+			}
+			any_ruler = {
+				custom_tooltip = {
+					text = is_roman_emperor_tt
+					is_roman_emperor_trigger = yes
+				}
+				has_truce = ROOT
+			}
+		}
+		OR = {
+			custom_tooltip = {
+				text = no_caliph_no_shah_tt
+				does_caliph_or_shah_exist = no
+			}
+			any_ruler = {
+				custom_tooltip = {
+					text = is_caliph_or_shah
+					OR = {
+						has_title = title:e_persia
+						has_title = title:e_arabia
+						has_title = title:h_dar_al_islam
+					}
+				}
+				has_truce = ROOT
+			}
+		}
+		prestige_level >= very_high_prestige_level
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			situation_caucasus_caucasian_empire_decision_effect = yes
+		}
+	}
+
+	cost = {
+		prestige = {
+			value = monumental_prestige_value
+		}
+	}
+}
+
+## Armenian Empire
+## Forming the Armenian Empire
+situation_caucasus_armenian_empire_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 12
+		empire = 6
+		hegemony = 6
+	}
+
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+
+	is_shown = {
+		# Must be an Armenian-speaking Transcaucasian culture
+		culture = {
+			has_cultural_pillar = heritage_caucasian
+			has_cultural_pillar = language_armenian
+		}
+		# And in the situation
+		any_character_situation = {
+			situation_type = situation_caucasus
+		}
+		# and Autonomist
+		top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
+		# and landed
+		is_landed = yes
+	}
+
+	is_valid = {
+		top_liege = this
+		completely_controls_region = custom_greater_armenia
+		title:k_armenian_principality = {
+			holder = ROOT
+			is_titular = no
+		}
+		top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
+		# South Caucasian Heartlands must be all Autonomist-dominant
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_local_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_local_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_local_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_local_control }
+			}
+		}
+		prestige_level >= very_high_prestige_level
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = { 
+			situation_caucasus_armenian_empire_decision_effect = yes
+		}
+	}
+}
+
+#Refound the long-lapsed & short-lived Armenian Empire - by Ewan Cowhig Croft
+### Revive Greater Armenia ###
+### Vanilla version being overridden
+create_armenian_empire_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = create_armenian_empire_decision_desc
+	selection_tooltip = create_armenian_empire_decision_tooltip
+	decision_group_type = major
+
+	ai_check_interval = 0
+
+	is_shown = {
+		is_playable_character = yes # Normally this will always be true, but if in DEBUG mode and playing as an unlanded ruler this will cause error spam without it.
+		highest_held_title_tier <= tier_kingdom
+		capital_province = { geographical_region = custom_greater_armenia }
+		OR = {
+			faith = faith:armenian_apostolic
+			culture = culture:armenian
+		}
+		NOT = {  #Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_armenian_empire
+			}
+		}
+		OR = {
+			government_has_flag = government_is_feudal
+			government_has_flag = government_is_republic
+			government_has_flag = government_is_clan
+			government_allows = administrative
+			government_has_flag = government_is_landless_adventurer
+		}
+		always = no
+	}
+
+	is_valid = {
+		top_liege = this
+		highest_held_title_tier = tier_kingdom
+		completely_controls_region = custom_greater_armenia
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_available_adult = yes
+	}
+
+	cost = {
+		prestige = 2000
+		piety = 1000
+	}
+
+	effect = {
+		show_as_tooltip = {
+			revive_armenian_empire_decision_scripted_effect = yes
+		}
+		save_scope_as = founder
+		trigger_event = {
+			id = middle_east_decisions.1001
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				this != root
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = middle_east_decisions.1002
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_created_armenian_empire
+			}
+			set_global_variable = {
+				name = flag_created_armenian_empire
+				value = scope:founder
+			}
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+## Transcaucasian Federation
+## Creating a massive, permanent Confederation in the South Caucasus
+## and granting all members the ability to conquer any land in the South Caucasus to hand over to a local noble
+## effectively turns you into a Pseudo-Mandala ruler
+situation_caucasus_transcaucasian_confederation_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = situation_caucasus_transcaucasian_confederation_decision_desc
+	selection_tooltip = situation_caucasus_transcaucasian_confederation_decision_tooltip
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 12
+		empire = 12
+		hegemony = 6
+	}
+
+	is_shown = {
+		top_participant_group:situation_caucasus ?= { participant_group_type = autonomist }
+	}
+
+	is_valid = {
+		is_confederation_member = yes
+		confederation ?= {
+			confederation_type = confederation_type:autonomist_confederation
+			calc_true_if = {
+				amount >= 2
+				confederation_completely_controls_region = { REGION = custom_armenia_proper }
+				confederation_completely_controls_region = { REGION = custom_caucasian_albania }
+				confederation_completely_controls_region = { REGION = custom_caucasian_iberia }
+			}
+		}
+		# South Caucasian Heartlands must be all Autonomist-dominant
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_local_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_local_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_local_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_local_control }
+			}
+		}
+		highest_held_title_tier >= tier_kingdom
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			situation_caucasus_transcaucasian_confederation_decision_effect = yes
+		}
+	}
+}
+
+## Roman Province
+## Make the South Caucasus permanently Roman. Can be taken as a Roman Emperor or as a local Despot.
+situation_caucasus_roman_armenia_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = situation_caucasus_roman_armenia_decision_desc
+	selection_tooltip = situation_caucasus_roman_armenia_decision_tooltip
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 12
+		empire = 12
+		hegemony = 6
+	}
+	is_shown = {
+		top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+	}
+	is_valid = {
+		OR = {
+			is_roman_emperor_trigger = yes
+			AND = {
+				highest_held_title_tier <= tier_kingdom
+				government_allows = administrative
+				OR = {
+					top_liege = { has_title = title:h_roman_empire }
+					top_liege = { has_title = title:h_eastern_roman_empire }
+				}
+			}
+		}
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_roman_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_roman_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_roman_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_roman_control }
+			}
+		}
+		legitimacy_level >= 4
+		any_caucasus_heartland_county = {
+			percent >= 0.75
+			holder = {
+				any_liege_or_above = { THIS = ROOT }
+			}
+		}
+		any_ally = {
+			is_roman_emperor_trigger = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+	effect = {
+		show_as_tooltip = {
+			situation_caucasus_roman_armenia_decision_effect = yes
+		}
+	}
+}
+
+## Roman Exarchate
+## Become an Exarch of Rome
+## As long as you stay a Roman tributary you get lots of perks, provided the Romans don't implode
+situation_caucasus_roman_exarchate_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	desc = situation_caucasus_roman_exarchate_desc
+	selection_tooltip = situation_caucasus_roman_exarchate_tooltip
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 24
+		kingdom = 12
+		empire = 0
+		hegemony = 0
+	}
+	is_shown = {
+		top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+	}
+	is_valid = {
+		# Must be Kingdom or below. If you're an emperor this would make no sense
+		highest_held_title_tier <= tier_kingdom
+		# Must be tributary to the Romans. Which means the Romans need to exist.
+		trigger_if = {
+			limit = { exists = title:h_eastern_roman_empire.holder }
+			is_tributary_of = title:h_eastern_roman_empire.holder
+		}
+		trigger_else_if = {
+			limit = { exists = title:h_roman_empire.holder }
+			is_tributary_of = title:h_roman_empire.holder
+		}
+		trigger_else_if = {
+			limit = { exists = title:e_byzantium.holder }
+			is_tributary_of = title:e_byzantium.holder
+		}
+		trigger_else = {
+			always = no
+		}
+		# Need to completely control at least one Heartland Region directly
+		OR = {
+			completely_controls_region = custom_caucasian_iberia
+			completely_controls_region = custom_armenia_proper
+			completely_controls_region = custom_caucasian_albania
+		}
+		# And all three Heartland Regions must be under Roman Control phase
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_roman_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_roman_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_roman_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_roman_control }
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = { 
+			situation_caucasus_roman_exarchate_decision_effect = yes
+			
+		}
+	}
+}
+
+## Roman Exile
+## Somehow you've been exiled to the South Caucasus, either as a Roman Emperor or as a pro-Roman Admin ruler after the empire's shattering
+## If e_byzantium doesn't exist, create it
+## Then get military bonuses to try and reclaim the empire
+situation_caucasus_roman_exile_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 12
+		empire = 12
+		hegemony = 0
+	}
+	is_shown = {
+		top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+		is_landed = yes
+	}
+	is_valid = {
+		trigger_if = {
+			limit = {
+				OR = {
+					exists = title:e_byzantium.holder
+					exists = title:h_eastern_roman_empire.holder
+					exists = title:h_roman_empire.holder
+				}
+			}
+			is_roman_emperor_trigger = yes
+		}
+		trigger_else = {
+			government_allows = admin
+			highest_held_title_tier = tier_kingdom
+		}
+		# Also you need to have been well and truly ejected from the Byzantine heartlands
+		any_realm_county = {
+			count = 0
+			title_province = {
+				OR = {
+					geographical_region = ghw_region_greece
+					geographical_region = ghw_region_thessalonika
+					geographical_region = ghw_region_anatolia
+				}
+			}
+		}
+		# And you need to base your comeback from the South Caucasian Heartlands
+		capital_province = {
+			OR = {
+				geographical_region = custom_armenia_proper
+				geographical_region = custom_caucasian_albania
+				geographical_region = custom_caucasian_iberia
+			}
+		}
+		# ...Which must all be Pro-Roman
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_roman_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_roman_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_roman_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_roman_control }
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+	effect = {
+		show_as_tooltip = {
+			situation_caucasus_roman_exile_decision_effect = yes
+		}
+	}
+}
+
+## The Armenian Baghdad
+## Pro-Perso-Arabic independent victory
+## create the Caucasian Empire
+## From now on, counties in the South Caucasus are easier to convert to pro-Perso-Arabic faiths and cultures
+## and promoting a minority of one of those also adds a dev bonus
+situation_caucasus_armenian_baghdad_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 12
+		empire = 12
+		hegemony = 0
+	}
+	is_shown = {
+		top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
+		is_landed = yes
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+	is_valid = {
+		# Perso-Arabic control of the Heartlands
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_perso_arabic_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+			}
+		}
+		# Must personally control at least 75% of counties in the South Caucasian Heartlands
+		any_caucasus_heartland_county = {
+			percent >= 0.75
+			holder.top_liege = ROOT
+		}
+		# Must be IMMENSELY famous and pious and legitimate
+		# You're basically declaring yourself equal to Arabia and Persia within the Islamic world
+		piety_level >= max_piety_level
+		prestige_level >= max_prestige_level
+		legitimacy_level >= 5
+	}
+	effect = {
+		show_as_tooltip = {
+			situation_caucasus_armenian_baghdad_decision_effect = yes
+		}
+	}
+}
+
+## Persarmenia
+## Can be taken by either the Arab or Persian Emperor
+## Makes the South Caucasian heartland and any pro-Perso-Arabic Frontier sub-regions flip to the decision taker's primary title
+## Or they get split between Persia and Arabia if the ruler has Dar Al-Islam title
+situation_caucasus_persarmenia_decision = {
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 12
+		hegemony = 12
+	}
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/fp3/fp3_decision_foundation.dds"
+	}
+	decision_group_type = major
+
+	is_shown = {
+		top_participant_group:situation_caucasus ?= { participant_group_type = pro_perso_arabic }
+		is_landed = yes
+	}
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+	is_valid = {
+		# Perso-Arabic control of the Heartlands
+		situation:situation_caucasus = {
+			custom_tooltip = {
+				text = heartlands_perso_arabic_control_tt
+				situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+				situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+				situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+			}
+		}
+		# Must personally control OR HAVE TRIBUTARIZED 75% of counties in the South Caucasian Heartlands
+		any_caucasus_heartland_county = {
+			percent >= 0.75
+			holder.top_liege = {
+				OR = {
+					THIS = ROOT
+					is_tributary_of = ROOT
+				}
+			}
+		}
+		# Must be the Shah or Caliph
+		OR = {
+			has_title = title:e_arabia
+			has_title = title:e_persia
+			has_title = title:h_dar_al_islam
+		}
+		is_at_war = no
+		legitimacy_level >= 4
+		prestige_level >= very_high_prestige_level
+	}
+	effect = {
+		show_as_tooltip = {
+			situation_caucasus_persarmenia_decision_effect = yes
+		}
+	}
+}
+
+
 
 ### MISC
 

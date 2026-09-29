@@ -536,9 +536,7 @@ situation_caucasus_sway_alignment_interaction = {
 				has_title = title:e_arabia
 				has_title = title:e_persia
 				has_title = title:h_dar_al_islam
-				has_title = title:e_byzantium
-				has_title = title:h_roman_empire
-				has_title = title:h_eastern_roman_empire
+				is_roman_emperor_trigger = yes
 			}
 		}
 	}
@@ -598,7 +596,7 @@ situation_caucasus_sway_alignment_interaction = {
 		# Opinion of the Roman Emperor. Positive if swaying toward Rome, otherwise negative
 		opinion_modifier = {
 			who = scope:recipient
-			opinion = title:e_byzantium.holder
+			opinion_target = title:e_byzantium.holder
 			multiplier = {
 				value = 0.5
 				if = {
@@ -609,7 +607,7 @@ situation_caucasus_sway_alignment_interaction = {
 		}
 		opinion_modifier = {
 			who = scope:recipient
-			opinion = title:h_eastern_roman_empire.holder
+			opinion_target = title:h_eastern_roman_empire.holder
 			multiplier = {
 				value = 0.5
 				if = {
@@ -620,7 +618,7 @@ situation_caucasus_sway_alignment_interaction = {
 		}
 		opinion_modifier = {
 			who = scope:recipient
-			opinion = title:h_roman_empire.holder
+			opinion_target = title:h_roman_empire.holder
 			multiplier = {
 				value = 0.5
 				if = {
@@ -632,7 +630,7 @@ situation_caucasus_sway_alignment_interaction = {
 		# Opinion of the Caliph and the Shah. If swaying to Perso-Arabic, positive, otherwise, negative
 		opinion_modifier = {
 			who = scope:recipient
-			opinion = title:e_arabia.holder
+			opinion_target = title:e_arabia.holder
 			multiplier = {
 				value = 0.5
 				if = {
@@ -643,7 +641,7 @@ situation_caucasus_sway_alignment_interaction = {
 		}
 		opinion_modifier = {
 			who = scope:recipient
-			opinion = title:h_dar_al_islam.holder
+			opinion_target = title:h_dar_al_islam.holder
 			multiplier = {
 				value = 0.5
 				if = {
@@ -654,7 +652,7 @@ situation_caucasus_sway_alignment_interaction = {
 		}
 		opinion_modifier = {
 			who = scope:recipient
-			opinion = title:e_persia.holder
+			opinion_target = title:e_persia.holder
 			multiplier = {
 				value = 0.5
 				if = {
@@ -897,9 +895,7 @@ situation_caucasus_sway_alignment_interaction = {
 				has_title = title:e_arabia
 				has_title = title:h_dar_al_islam
 				has_title = title:e_persia
-				has_title = title:e_byzantium
-				has_title = title:h_eastern_roman_empire
-				has_title = title:h_roman_empire
+				is_roman_emperor_trigger = yes
 			}
 			add = 200
 		}

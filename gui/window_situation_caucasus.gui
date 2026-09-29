@@ -17,6 +17,8 @@ window = {
 		using = Animation_FadeIn_Quick
 		using = Sound_WindowShow_Standard
 		using = Window_Position_MainTab
+		on_start = "[SituationWindow.SetSelectedSubRegion(Situation.GetSubRegionByKey('armenia_proper'))]"
+		on_start = "[SituationWindow.SetSelectedFuturePhaseType(Situation.GetPhaseType('situation_caucasus_disputed_control'))]"
 	}
 
 	state = {
@@ -211,6 +213,13 @@ window = {
 			text = "[SituationWindow.GetParticipationWindowHeader]"
 		}
 	}
+
+	window_sitation_caucasus_catalysts = {
+		datacontext = "[SituationWindow.AccessParticipantCharacterList]"
+		datacontext = "[SituationParticipantCharacterList.AccessCharacterList]"
+		datacontext = "[SituationWindow.GetSelectedSubRegion]"
+		visible = "[Not(SituationParticipantCharacterList.IsVisible)]"
+	}
 }
 
 types CaucasusSituationTypes
@@ -310,142 +319,218 @@ types CaucasusSituationTypes
 			visible = "[PdxGuiFoldOut.IsUnfolded]"
 			layoutpolicy_horizontal = expanding
 
-			vbox = {
-				name = "current_phase_widget"
-				datacontext = "[SituationSubRegion.GetCurrentPhase]"
+			hbox = {
 				layoutpolicy_horizontal = expanding
-				margin_top = -10
+				button_standard_hover = {	
+					layoutpolicy_vertical = expanding				
+					datacontext = "[SituationSubRegion.GetCurrentPhase]"
+					datacontext = "[SituationWindow.AccessParticipantCharacterList]"
+					datacontext = "[SituationParticipantCharacterList.AccessCharacterList]"
+					onclick = "[SituationWindow.SetSelectedSubRegion( SituationSubRegion.Self )]"
+					# minimumsize = { -1 100 }
+					size = { 40 20 }
 
-				vbox = {
-					layoutpolicy_horizontal = expanding
-					spacing = 5
+					using = tooltip_ws
 
-					background = {
-						using = Background_Area
-					}
+					vbox = {
+						# resizeparent = yes
+						margin = { 3 3 }
+						margin_right = 7
 
-					background = {
-						using = Background_Frame
+						expand = {}
 
-						modify_texture = {
-							texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
-							blend_mode = alphamultiply
-							mirror = vertical
+						button_select_arrow = {
+							size = { 20 20 }
+							alwaystransparent = yes
+							mirror = horizontal
 						}
+
+						expand = {}
 					}
+				}
+				vbox = {
+					name = "current_phase_widget"
+					datacontext = "[SituationSubRegion.GetCurrentPhase]"
+					layoutpolicy_horizontal = expanding
+					margin_top = -10
 
 					vbox = {
 						layoutpolicy_horizontal = expanding
+						spacing = 5
+
 						background = {
 							using = Background_Area
-							margin = { -2 0 }
-							margin_top = -5
-							margin_bottom = -2
 						}
 
-						### PHASE EFFECTS
+						background = {
+							using = Background_Frame
+
+							modify_texture = {
+								texture = "gfx/interface/component_masks/mask_fade_vertical.dds"
+								blend_mode = alphamultiply
+								mirror = vertical
+							}
+						}
+
 						vbox = {
 							layoutpolicy_horizontal = expanding
-							margin = { 10 5 }
-							spacing = 5
+							background = {
+								using = Background_Area
+								margin = { -2 0 }
+								margin_top = -5
+								margin_bottom = -2
+							}
 
-							hbox = {
-								margin_top = 20
+							### PHASE EFFECTS
+							vbox = {
 								layoutpolicy_horizontal = expanding
-								# margin = { 4 2 }
+								margin = { 10 5 }
+								spacing = 5
 
 								hbox = {
-									layoutpolicy_vertical = expanding
+									margin_top = 20
 									layoutpolicy_horizontal = expanding
-									# spacing = 10
-									name = "phases"
-									datamodel = "[SituationPhase.GetFuturePhases]"
-									item = {
-										vbox = {
-											# layoutpolicy_vertical = expanding
-											background = {
-												texture = "gfx/interface/window_struggle/current_phase_time_based_phase.dds"
-												margin = { 10 15 }
-												# margin_bottom = -10
-											}
-											
-											datacontext = "[FutureSituationPhase.GetType]"
-											icon = {
-												texture = "[FutureSituationPhase.GetType.GetIcon]"
-												size = { 50 50 }
-												parentanchor = top|left
-												margin_bottom = 20
-											}
-												
-											progressbar_standard = {
-												# parentanchor = center
-												size = { 50 15 }
-												# position = { 0 -20 }
-												value = "[FutureSituationPhase.GetRelativeProgressPercent]"
-												progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
-												text_single = {
-													parentanchor = center
-													align = nobaseline
-													text = "SITUATION_PHASE_POINT_TAKEOVER_VALUE"
-													fontsize = 12
-													size = { 0 23 }
-												}
-											}
-											tooltipwidget = {
-												using = situation_phase_type_tooltip
-											}
-										}
-										# icon = {
-										# 	texture = "gfx/interface/window_struggle/current_phase_point_based_phase.dds"
-										# 	size = { 75 75 }
-										# }
-									}
-								}
-
-								expand = {}
-
-								vbox = {
-									layoutpolicy_vertical = expanding
-									spacing = 10
-									margin_bottom = 10
+									# margin = { 4 2 }
 
 									hbox = {
+										layoutpolicy_vertical = expanding
 										layoutpolicy_horizontal = expanding
-
-										text_single = {
-											text = "SITUATION_PHASE_TYPE_MODIFIERS_LABEL"
-											default_format = "#bold;italic"
-											align = nobaseline
-
-											margin_left = 5
-											max_width = 220
-										}
-									}
-
-									fixedgridbox = {
-										name = "effects"
-										datacontext = "[SituationSubRegion.GetCurrentPhase.GetType]"
-										datamodel = "[SituationSubRegion.GetSituation.GetType.GetParticipantGroupTypes]"
-
-										addcolumn = 54
-										addrow = 48
-										setitemsizefromcell = yes
-										datamodel_wrap = 10
-										maxhorizontalslots = 10
-										maxverticalslots = 2
-										flipdirection = yes
-										layoutanchor = topleft
-
+										# spacing = 10
+										name = "phases"
+										datamodel = "[SituationPhase.GetFuturePhases]"
 										item = {
-											icon_situation_phase_effect_participant_group_item_nonflat = {}
+											vbox = {
+												# layoutpolicy_vertical = expanding
+												background = {
+													texture = "gfx/interface/window_struggle/current_phase_time_based_phase.dds"
+													margin = { 10 15 }
+													# margin_bottom = -10
+												}
+												
+												datacontext = "[FutureSituationPhase.GetType]"
+												icon = {
+													texture = "[FutureSituationPhase.GetType.GetIcon]"
+													size = { 50 50 }
+													parentanchor = top|left
+													margin_bottom = 20
+												}
+													
+												progressbar_standard = {
+													# parentanchor = center
+													size = { 50 15 }
+													# position = { 0 -20 }
+													value = "[FutureSituationPhase.GetRelativeProgressPercent]"
+													progresstexture = "gfx/interface/progressbars/progress_grandeur_increase.dds"
+													text_single = {
+														parentanchor = center
+														align = nobaseline
+														text = "SITUATION_PHASE_POINT_TAKEOVER_VALUE"
+														fontsize = 12
+														size = { 0 23 }
+													}
+												}
+												tooltipwidget = {
+													using = situation_phase_type_tooltip
+												}
+											}
+											# icon = {
+											# 	texture = "gfx/interface/window_struggle/current_phase_point_based_phase.dds"
+											# 	size = { 75 75 }
+											# }
 										}
 									}
 
+									expand = {}
+
+									vbox = {
+										layoutpolicy_vertical = expanding
+										spacing = 10
+										margin_bottom = 10
+
+										hbox = {
+											layoutpolicy_horizontal = expanding
+
+											text_single = {
+												text = "SITUATION_PHASE_TYPE_MODIFIERS_LABEL"
+												default_format = "#bold;italic"
+												align = nobaseline
+
+												margin_left = 5
+												max_width = 220
+											}
+										}
+
+										fixedgridbox = {
+											name = "effects"
+											datacontext = "[SituationSubRegion.GetCurrentPhase.GetType]"
+											datamodel = "[SituationSubRegion.GetSituation.GetType.GetParticipantGroupTypes]"
+
+											addcolumn = 54
+											addrow = 48
+											setitemsizefromcell = yes
+											datamodel_wrap = 10
+											maxhorizontalslots = 10
+											maxverticalslots = 2
+											flipdirection = yes
+											layoutanchor = topleft
+
+											item = {
+												icon_situation_phase_effect_participant_group_item_nonflat = {}
+											}
+										}
+
+									}
+									
 								}
-								
 							}
 						}
 					}
+				}
+
+			}
+		}
+	}
+
+	type vbox_caucasus_decision_group_foldout = vbox {
+		spacing = 5
+		layoutpolicy_horizontal = expanding
+
+		oncreate = "[BindFoldOutContext]"
+		# oncreate = "[PdxGuiFoldOut.Unfold]"
+
+		vbox = {
+			visible = "[PdxGuiFoldOut.IsUnfolded]"
+
+			layoutpolicy_horizontal = expanding
+			block "contents" {}
+		}
+
+		button_tertiary = {
+			layoutpolicy_horizontal = expanding
+
+			block "onclick"
+			{
+				onclick = "[PdxGuiFoldOut.Toggle]"
+			}
+
+			hbox = {
+				margin = { 10 0 }
+				layoutpolicy_horizontal = expanding
+
+				spacing = 5
+
+				button_expand_fold_out = {
+					block "foldout_button" {}
+				}
+
+				text_single = {
+					layoutpolicy_horizontal = expanding
+					align = nobaseline
+					alwaystransparent = yes
+					autoresize = no
+
+
+					block "text" {}
 				}
 			}
 		}
@@ -453,132 +538,194 @@ types CaucasusSituationTypes
 
 	type vbox_situation_caucasus_decisions = vbox {
 		spacing = 5
+		layoutpolicy_horizontal = expanding
 
-		button_decision_entry = {
-			name = "situation_caucasus_choose_alignment_decision"
-			datacontext = "[GetDecisionWithKey('situation_caucasus_choose_alignment_decision')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
+		vbox_caucasus_decision_group_foldout = {
+			blockoverride "text" { text = SITUATION_CAUCASUS_GENERIC_DECISIONS }
+			blockoverride "contents" {
+				button_decision_entry = {
+					name = "situation_caucasus_choose_alignment_decision"
+					datacontext = "[GetDecisionWithKey('situation_caucasus_choose_alignment_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
 
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 
-			using = tooltip_se
+					using = tooltip_se
 
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+
+				button_decision_entry = {
+					name = "situation_caucasus_align_culture_decision"
+					datacontext = "[GetDecisionWithKey('situation_caucasus_align_culture_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
+
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+					using = tooltip_se
+
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+
+				button_decision_entry = {
+					name = "situation_caucasus_align_faith_decision"
+					datacontext = "[GetDecisionWithKey('situation_caucasus_align_faith_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
+
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+					using = tooltip_se
+
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
 			}
 		}
 
-		button_decision_entry = {
-			name = "situation_caucasus_align_culture_decision"
-			datacontext = "[GetDecisionWithKey('situation_caucasus_align_culture_decision')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
+		vbox_caucasus_decision_group_foldout = {
+			blockoverride "text" { text = SITUATION_CAUCASUS_FORMABLES_DECISIONS }
+			blockoverride "contents" {
+				button_decision_entry = {
+					name = "unify_armenian_principalities_decision"
+					datacontext = "[GetDecisionWithKey('unify_armenian_principalities_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
 
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 
-			using = tooltip_se
+					using = tooltip_se
 
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+
+				button_decision_entry = {
+					name = "form_georgia_decision"
+					datacontext = "[GetDecisionWithKey('form_georgia_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
+
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+					using = tooltip_se
+
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+
+				button_decision_entry = {
+					name = "form_aluank_decision"
+					datacontext = "[GetDecisionWithKey('form_aluank_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
+
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+					using = tooltip_se
+
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+
+				button_decision_entry = {
+					name = "decision_form_armenian_cilicia"
+					datacontext = "[GetDecisionWithKey('decision_form_armenian_cilicia')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
+
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+					using = tooltip_se
+
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+
+				button_decision_entry = {
+					name = "decision_form_cappadocia"
+					datacontext = "[GetDecisionWithKey('decision_form_cappadocia')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
+
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+
+					using = tooltip_se
+
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
 			}
 		}
 
-		button_decision_entry = {
-			name = "situation_caucasus_align_faith_decision"
-			datacontext = "[GetDecisionWithKey('situation_caucasus_align_faith_decision')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
+		vbox_caucasus_decision_group_foldout = {
+			blockoverride "text" { text = SITUATION_CAUCASUS_ENDING_DECISIONS }
+			blockoverride "contents" {
+				button_decision_entry = {
+					name = "situation_caucasus_caucasian_empire_decision"
+					datacontext = "[GetDecisionWithKey('situation_caucasus_caucasian_empire_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
 
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 
-			using = tooltip_se
+					using = tooltip_se
 
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
-			}
-		}
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+				button_decision_entry = {
+					name = "situation_caucasus_armenian_empire_decision"
+					datacontext = "[GetDecisionWithKey('situation_caucasus_armenian_empire_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
 
-		button_decision_entry = {
-			name = "unify_armenian_principalities_decision"
-			datacontext = "[GetDecisionWithKey('unify_armenian_principalities_decision')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
+					using = tooltip_se
 
-			using = tooltip_se
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
+				button_decision_entry = {
+					name = "situation_caucasus_transcaucasian_confederation_decision"
+					datacontext = "[GetDecisionWithKey('situation_caucasus_transcaucasian_confederation_decision')]"
+					visible = "[Decision.IsShownForPlayer]"
+					size = { 560 45 }
 
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
-			}
-		}
+					onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 
-		button_decision_entry = {
-			name = "form_georgia_decision"
-			datacontext = "[GetDecisionWithKey('form_georgia_decision')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
+					using = tooltip_se
 
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
-
-			using = tooltip_se
-
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
-			}
-		}
-
-		button_decision_entry = {
-			name = "form_aluank_decision"
-			datacontext = "[GetDecisionWithKey('form_aluank_decision')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
-
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
-
-			using = tooltip_se
-
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
-			}
-		}
-
-		button_decision_entry = {
-			name = "decision_form_armenian_cilicia"
-			datacontext = "[GetDecisionWithKey('decision_form_armenian_cilicia')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
-
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
-
-			using = tooltip_se
-
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
-			}
-		}
-
-		button_decision_entry = {
-			name = "decision_form_cappadocia"
-			datacontext = "[GetDecisionWithKey('decision_form_cappadocia')]"
-			visible = "[Decision.IsShownForPlayer]"
-			size = { 560 45 }
-
-			onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
-
-			using = tooltip_se
-
-			blockoverride "button_size"
-			{
-				layoutpolicy_horizontal = expanding
+					blockoverride "button_size"
+					{
+						layoutpolicy_horizontal = expanding
+					}
+				}
 			}
 		}
 	}
@@ -748,6 +895,232 @@ types CaucasusSituationTypes
 		}
 	}
 
+	type window_sitation_caucasus_catalysts = window = {
+		name = "window_situation_participant_groups"
+		widgetanchor = right
+		position = { 30 100 }
+		size = { 740 82% }
+
+		layer = middle
+		movable = yes
+
+		using = Window_Background
+		using = Window_Decoration_Spike
+		using = Window_Size_CharacterList
+
+		state = {
+			name = _show
+			using = Animation_FadeIn_Quick
+		}
+
+		state = {
+			name = _hide
+			using = Animation_FadeOut_Quick
+		}
+
+		vbox = {
+			using = Window_Margins
+			datacontext = "[SituationWindow.GetSelectedSubRegion.GetCurrentPhase]"
+
+			header_pattern = {
+				layoutpolicy_horizontal = expanding
+
+				blockoverride "button_close"
+				{
+					visible = no
+				}
+
+				blockoverride "header_text" {
+					text = "SILK_ROAD_CATALYSTS_WINDOW_HEADER"
+				}
+			}
+
+			hbox = {
+				layoutpolicy_horizontal = expanding
+				expand = {}
+				hbox = {
+					layoutpolicy_horizontal = growing
+					# layoutpolicy_vertical = expanding
+					datamodel = "[SituationPhase.GetFuturePhases]"
+					item = {
+						button = {
+							size = { 64 64 }
+
+							icon_round_button_base = {
+								parentanchor = center
+								size = { 110% 110% }
+								enabled = "[Not( SituationParticipantCharacterList.IsParticipantGroupSelected( SituationParticipantGroup.Self ) )]"
+							}
+
+							icon = {
+								parentanchor = center
+								size = { 90% 90% }
+
+								texture = "[FutureSituationPhase.GetType.GetIcon]"
+							}
+
+							onclick = "[SituationWindow.SetSelectedFuturePhaseType( FutureSituationPhase.GetType.Self )]"
+						}
+					}
+				}
+				expand = {}
+			}
+
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				layoutpolicy_vertical = expanding
+				margin_top = 10
+
+				datacontext = "[SituationWindow.GetSelectedFuturePhaseType]"
+				vbox = {
+					name = "catalyst_information_area"
+
+					background = {
+						using = Background_Area_Dark
+						alpha = 0.5
+					}
+
+					layoutpolicy_horizontal = expanding
+					layoutpolicy_vertical = expanding
+
+					margin_left = 5
+
+					text_label_center = {
+						text = "SILK_ROAD_CATALYST_PER_PHASE"
+						max_width = 560
+						fontsize = 18
+					}
+
+
+					spacer = {
+						size = { 0 15 }
+					}
+					scrollbox = {
+						size = { 0 270 }
+						layoutpolicy_vertical = expanding
+						layoutpolicy_horizontal = expanding
+
+						blockoverride "scrollbox_background" {}
+						blockoverride "scrollbox_background_fade" {}
+						blockoverride "scrollbox_margins" {}
+
+						blockoverride "scrollbox_content"
+						{
+							vbox = {
+								name = "catalyst_entries"
+								datamodel = "[SituationWindow.GetCatalystsForSelectedPhase]"
+
+								datacontext = "[SituationWindow.GetSelectedSubRegion.GetCurrentPhase]"
+
+								layoutpolicy_vertical = expanding
+								layoutpolicy_horizontal = expanding
+
+								margin_left = 10
+								margin_right = 15
+								maximumsize = { 1000 50 }
+
+
+								item = {
+									hbox = {
+										layoutpolicy_vertical = expanding
+										layoutpolicy_horizontal = expanding
+
+										widget = {
+											size = { 60 55}
+
+											background = {
+												using = Background_Area_Dark
+												using = Color_Green
+												alpha = 0.1
+												margin_left = 4
+												margin_right = 6
+
+											}
+
+											background = {
+												using = Background_Frame
+												using = Color_Green
+												alpha = 0.3
+												margin_left = 4
+												margin_right = 6
+
+											}
+
+											hbox = {
+												layoutpolicy_horizontal = expanding
+												icon = {
+													size = { 25 25 }
+													texture = "[SituationWindow.GetSelectedPhase.GetIcon]"
+												}
+												text_single = {
+													text = "[SituationCatalystEntry.GetPoints|+=]"
+													align = nobaseline
+												}
+											}
+										}
+
+										text_multi = {
+											layoutpolicy_horizontal = expanding
+											layoutpolicy_vertical = expanding
+											text = "[SituationCatalystEntry.GetCatalystDescription]"
+											autoresize = no
+											align = left|nobaseline
+											max_width = 520
+											margin = { 10 5 }
+										}
+
+										background = {
+											using = Background_Area_Dark
+										}
+
+										widget = {
+											size = { 50 60 }
+
+											background = {
+												visible = "[GreaterThan_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+												using = Background_Frame
+												color = { 0.4 0.603 0.298 1 }
+												alpha = 0.6
+											}
+
+											background = {
+												visible = "[GreaterThan_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+												using = Background_Area
+												color = { 0.4 0.603 0.298 1 }
+												alpha = 0.1
+											}
+
+											background = {
+												visible = "[EqualTo_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+												using = Background_Frame
+												using = Color_Grey
+												alpha = 0.4
+											}
+
+											background = {
+												visible = "[EqualTo_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0' )]"
+												using = Background_Area
+												using = Color_Grey
+												alpha = 0.1
+											}
+
+											text_single = {
+												parentanchor = center
+												align = nobaseline
+												raw_text = "[Select_CString(GreaterThan_int32( SituationPhase.GetNumCompletionsOfCatalystForPhase( SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst ), '(int32)0'), '#COLOR_GREEN ', '#COLOR_GRAY ')]x[SituationPhase.GetNumCompletionsOfCatalystForPhase(SituationWindow.GetSelectedFuturePhaseType, SituationCatalystEntry.GetCatalyst)]#!"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			expand = {}
+		}
+	}
 	type icon_situation_phase_effect_participant_group_item_nonflat = icon {
 		datacontext = "[GetPlayer]"
 

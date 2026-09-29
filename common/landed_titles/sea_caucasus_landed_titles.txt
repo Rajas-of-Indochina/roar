@@ -20,6 +20,13 @@ d_kabardia = {
 e_caucasia = {
 	color = { 99 46 11 }
 
+	can_create = {
+		NOT = {
+			exists = situation:situation_caucasus # only allowed after Lion, Eagle and Mountain is resolved
+		}
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
+
 	k_armenia = {
 		color = { 223 96 96 }
 

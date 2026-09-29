@@ -445,11 +445,11 @@ invite_religious_exiles_decision = {
 				OR = {
 					AND = {
 						county_has_small_faith_minority = yes
-						county_has_expellable_faith_trigger = { SIZE = small }
+						county_has_expellable_faith_trigger = { FAITH = faith SIZE = small }
 					}
 					AND = {
 						county_has_large_faith_minority = yes
-						county_has_expellable_faith_trigger = { SIZE = large }
+						county_has_expellable_faith_trigger = { FAITH = faith SIZE = large }
 					}
 				}
 				save_temporary_scope_as = county_scope
@@ -492,11 +492,11 @@ invite_religious_exiles_decision = {
 						OR = {
 							AND = {
 								county_has_small_faith_minority = yes
-								county_has_expellable_faith_trigger = { SIZE = small }
+								county_has_expellable_faith_trigger = { FAITH = faith SIZE = small }
 							}
 							AND = {
 								county_has_large_faith_minority = yes
-								county_has_expellable_faith_trigger = { SIZE = large }
+								county_has_expellable_faith_trigger = { FAITH = faith SIZE = large }
 							}
 						}
 						NOT = { holder = ROOT }

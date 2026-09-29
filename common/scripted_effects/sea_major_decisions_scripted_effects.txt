@@ -323,7 +323,7 @@ revive_armenian_empire_decision_scripted_effect = {
 				}
 			}
 			if = {
-				limit = { is_titular = title:k_armenian_principality }
+				limit = { title:k_armenian_principality = { is_titular = yes } }
 				set_de_jure_liege_title = title:k_ayrarat
 			}
 			else = { set_de_jure_liege_title = title:k_armenian_principality }
@@ -344,7 +344,7 @@ revive_armenian_empire_decision_scripted_effect = {
 				}
 			}
 			if = {
-				limit = { is_titular = title:k_armenian_principality }
+				limit = { title:k_armenian_principality = { is_titular = yes } }
 				set_de_jure_liege_title = title:k_vaspurakan
 			}
 			else = { set_de_jure_liege_title = title:k_armenian_principality }
@@ -364,7 +364,7 @@ revive_armenian_empire_decision_scripted_effect = {
 				}
 			}
 			if = {
-				limit = { is_titular = title:k_armenian_principality }
+				limit = { title:k_armenian_principality = { is_titular = yes } }
 				set_de_jure_liege_title = title:k_syunik
 			}
 			else = { set_de_jure_liege_title = title:k_armenian_principality }
@@ -425,7 +425,7 @@ revive_armenian_empire_decision_scripted_effect = {
 		if = {
 			limit = { NOT = { title:d_cilicia = { target_is_de_jure_liege_or_above = title:e_armenia } } }
 			if = {
-				limit = { is_titular = title:k_vaspurakan }
+				limit = { title:k_vaspurakan = { is_titular = yes } }
 				title:d_cilicia = { set_de_jure_liege_title = title:k_armenian_principality }
 			}
 			else = { title:d_cilicia = { set_de_jure_liege_title = title:k_vaspurakan } }
@@ -434,7 +434,7 @@ revive_armenian_empire_decision_scripted_effect = {
 		if = {
 			limit = { NOT = { title:d_antioch = { target_is_de_jure_liege_or_above = title:e_armenia } } }
 			if = {
-				limit = { is_titular = title:k_vaspurakan }
+				limit = { title:k_vaspurakan = { is_titular = yes } }
 				title:d_antioch = { set_de_jure_liege_title = title:k_armenian_principality }
 			}
 			else = { title:d_antioch = { set_de_jure_liege_title = title:k_vaspurakan } }
@@ -443,7 +443,7 @@ revive_armenian_empire_decision_scripted_effect = {
 		if = {
 			limit = { NOT = { title:d_edessa = { target_is_de_jure_liege_or_above = title:e_armenia } } }
 			if = {
-				limit = { is_titular = title:k_vaspurakan }
+				limit = { title:k_vaspurakan = { is_titular = yes } }
 				title:d_edessa = { set_de_jure_liege_title = title:k_armenian_principality }
 			}
 			else = { title:d_edessa = { set_de_jure_liege_title = title:k_vaspurakan } }
@@ -452,7 +452,7 @@ revive_armenian_empire_decision_scripted_effect = {
 		if = {
 			limit = { NOT = { title:d_kurdistan = { target_is_de_jure_liege_or_above = title:e_armenia } } }
 			if = {
-				limit = { is_titular = title:k_vaspurakan }
+				limit = { title:k_vaspurakan = { is_titular = yes } }
 				title:d_kurdistan = { set_de_jure_liege_title = title:k_armenian_principality }
 			}
 			else = { title:d_kurdistan = { set_de_jure_liege_title = title:k_vaspurakan } }
@@ -461,7 +461,7 @@ revive_armenian_empire_decision_scripted_effect = {
 		if = {
 			limit = { NOT = { title:d_diyarbakr = { target_is_de_jure_liege_or_above = title:e_armenia } } }
 			if = {
-				limit = { is_titular = title:k_vaspurakan }
+				limit = { title:k_vaspurakan = { is_titular = yes } }
 				title:d_diyarbakr = { set_de_jure_liege_title = title:k_armenian_principality }
 			}
 			else = { title:d_diyarbakr = { set_de_jure_liege_title = title:k_vaspurakan } }
@@ -471,10 +471,10 @@ revive_armenian_empire_decision_scripted_effect = {
 			limit = { NOT = { title:d_arran = { target_is_de_jure_liege_or_above = title:e_armenia } } }
 			if = {
 				limit = {
-					is_titular = title:k_syunik
+					title:k_syunik = { is_titular = yes }
 				}
 				if = {
-					limit = { is_titular = title:k_vaspurakan }
+					limit = { title:k_vaspurakan = { is_titular = yes } }
 					title:d_arran = { set_de_jure_liege_title = title:k_armenian_principality }
 				}
 				else = { title:d_diyarbakr = { set_de_jure_liege_title = title:k_vaspurakan } }
