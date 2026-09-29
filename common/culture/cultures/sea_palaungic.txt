@@ -67,6 +67,8 @@ khasi = {
 }
 
 khmu = {
+	# AKA: Kmhmu, Kemu, Kơbru
+	# indigenous inhabitants of northern Laos
 	#color = { 0.2 0.6 0.4 } - vanilla
 	color = khmu
 
@@ -77,13 +79,16 @@ khmu = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_hill_dwellers
-		tradition_collective_lands
-		tradition_storytellers
-		tradition_isolationist
-		tradition_RICE_fear_of_spirits
+		tradition_hill_dwellers 		# msl_note: Khmu lived in hills and muntains of northern Laos long before arival of Lao-Tai people
+		tradition_collective_lands 		# msl_note: agricultural work is done communally, thus making it more efficient
+		tradition_isolationist 			# msl_note: Khmu people settlemtns tended to be rather isolated from other nearby groups
+		tradition_RICE_fear_of_spirits 	# provided by CybrxKhan ; msl_note: spirits are believed to inhabit every part of the world with many superstitions guiding their everyday lives
+		# tradition_storytellers incorporated into tradition_RICE_fear_of_spirits to save space
+		# msl_note: recital of stories around evening fires is important part of maintaining their traditions
+		# msl_note: tradition_tribe_unity if we had space ; Khmu tribes put great importance on maintaining good relationship with each other
 	}
 
+	# they practiced mostly swidden agriculture, agriculture being important part of their livelihood
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven

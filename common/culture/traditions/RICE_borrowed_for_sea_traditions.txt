@@ -475,23 +475,25 @@ tradition_RICE_fear_of_spirits = {
 	category = regional
 
 	layers = {
-		0 = diplo
+		0 = learning
 		1 = indian
 		4 = RICE_shamanism.dds
 	}
 	
 	is_shown = {
-
 	}
 	can_pick = {
-
+		custom_tooltip = {
+			text = cannot_have_tradition_fp1_northern_stories
+			NOT = { culture_tradition:tradition_fp1_northern_stories = { is_in_list = traits } }
+		}
 	}
 	
 	character_modifier = {
-		#intrigue_per_piety_level = 1
 		capital_additional_fort_level = 1
 		enemy_hostile_scheme_success_chance_add = -10
 		character_travel_safety_mult = 0.1
+ 		owned_legend_spread_mult = 0.05
 	}
 
 	county_modifier = {
@@ -501,6 +503,11 @@ tradition_RICE_fear_of_spirits = {
 	province_modifier = {
 		stationed_maa_toughness_mult_per_piety_level = 0.03
 		stationed_maa_damage_mult_per_piety_level = 0.03
+	}
+
+	parameters = {
+		better_ward_education = yes
+		tells_stories = yes
 	}
 
 	cost = {
@@ -524,7 +531,7 @@ tradition_RICE_fear_of_spirits = {
 					desc = not_communal_spiritual_or_stoic_desc
 				}
 			}
-			
+
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
