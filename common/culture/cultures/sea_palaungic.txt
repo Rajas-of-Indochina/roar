@@ -1,18 +1,28 @@
 ﻿## In alphabetical order ##
 
 bugan = {
+	# AKA: Bugan, Bogan, Pakan, or Bugeng ; seem to be combined with the related Bolyu/Palyu/Lai people
+	# indigneous inhabitants of southern Guangnan and northern Xichou districts of Yunnan province in China
+	# https://en.wikipedia.org/wiki/Bugan_language
 	color = bugan
 
 	ethos = ethos_communal
 	heritage = heritage_palaungic
-	language = language_khmuic
+	language = language_pakanic
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_hill_dwellers
-		tradition_collective_lands
-		tradition_isolationist
+		tradition_hill_dwellers 	# msl_note: they inhabited they hilly homeland for a long time
+		tradition_collective_lands 	# msl_note: like many other groups in the region, communal work on agricultural land played important part in their societies
+		tradition_isolationist 		# msl_note: due to their relative isolation from other neighbouring groups, available sources about Bugan and Bolyu are rather sparse
+	}
+
+	# msl_note: they live in agriculture-based communities along the rivers and streams, mostly focused on rice cultivation
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_palaungic
@@ -32,28 +42,37 @@ bugan = {
 }
 
 khasi = {
-	# Should be its own heritage
+	# indigenous inhabitants of Meghalayastate in north-eastern India, alongside regions of southern Assam and northern Bangladesh
 	color = khasi
 
 	ethos = ethos_communal
-	heritage = heritage_palaungic
+	heritage = heritage_palaungic 	# should be its own heritage
 	language = language_khasi
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_female_only_inheritance
-		tradition_monogamous
-		tradition_hill_dwellers 	# replaced old tradition_mountain_homes
-		tradition_tribe_unity
+		tradition_female_only_inheritance 	# msl_note: their society is mainly matrilineal
+		tradition_monogamous 				# msl_note: monogamy is the main marriage form practiced in Khasi society
+		tradition_hill_dwellers 			# msl_note: they are indigenous inhabitants of Khasi Hills
+		tradition_tribe_unity 				# msl_note: very tightly knit communal society ; rather democratic in nature
+		# tradition_mountain_homes would fit more if they actually lived in mountain terrain
+		# msl_note: some rather paritcular and colourful traditional outfits
+	}
+
+	# msl_note: while rice is not the only crop they do cultivate, it does play important role alongside betel leaves, areca nuts and other local plants
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_khasi
 
 	coa_gfx = { burman_group_coa_gfx }
-	building_gfx = { southeast_asian_building_gfx }
-	clothing_gfx = { southeast_asian_clothing_gfx }
-	unit_gfx = { southeast_asian_unit_gfx }
+	building_gfx = { indian_building_gfx southeast_asian_building_gfx }
+	clothing_gfx = { indian_clothing_gfx southeast_asian_clothing_gfx }
+	unit_gfx = { indian_unit_gfx southeast_asian_unit_gfx }
 
 	house_coa_frame = house_frame_26
 	house_coa_mask_offset = { 0.0 0.0 }
@@ -68,7 +87,8 @@ khasi = {
 
 khmu = {
 	# AKA: Kmhmu, Kemu, Kơbru
-	# indigenous inhabitants of northern Laos
+	# indigenous inhabitants of northern Laos and various neighbouring regions
+	# https://en.wikipedia.org/wiki/Khmu_people
 	#color = { 0.2 0.6 0.4 } - vanilla
 	color = khmu
 
@@ -88,7 +108,7 @@ khmu = {
 		# msl_note: tradition_tribe_unity if we had space ; Khmu tribes put great importance on maintaining good relationship with each other
 	}
 
-	# they practiced mostly swidden agriculture, agriculture being important part of their livelihood
+	# msl_note: they practiced mostly swidden agriculture, agriculture being important part of their livelihood
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
@@ -112,18 +132,32 @@ khmu = {
 }
 
 palaung = {
+	# AKA: Palong, or Ta'ang ; consists of mainly 3 groups: Pale, Shwe and Rumai
+	# indigenous inhabitants of modern day Shan State in Myanmar, alongside Yunnan Province in China and parts of Northern Thailand
+	# https://peoplesoftheworld.org/text?people=Palaung + https://en.wikipedia.org/wiki/Palaung_people
 	color = palaung
 
-	ethos = ethos_communal
+	ethos = ethos_stoic 	# to diversify from ethos_communal
 	heritage = heritage_palaungic
 	language = language_palaungic
 	martial_custom = martial_custom_male_only
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_zealous_people
-		tradition_hill_dwellers
-		tradition_collective_lands
+		tradition_hill_dwellers 	# msl_note: they inahbited their hilly homeland since ancient times
+		tradition_tribe_unity		# msl_note: Palaung people put great emphasis on communal life, historically both close and extended families tended to live in close proximity or even together
+		tradition_collective_lands 	# msl_note: communal support for fieldwork and construction plays important work in their lives
+		tradition_stand_and_fight 	# msl_note: Palaung people have long history of fighting for their homes and lifestyle, often agaisnt seemingly stronger enemy
+		# msl_note: Palaung women often wear characteristic red skirts
+		# msl_note: while they nowadays practice mostly Buddhism, worship of 'nats' still has strong presence in Palaung communities
+		# tradition_zealous_people removed ; unsure why they had it?
+	}
+
+	# msl_note: like many other indigneous inhabitants of South-East Asia, rice cultivation plays important role in everyday life of these people
+	dlc_tradition = {
+		trait = tradition_tgp_rice_cultivators
+		requires_dlc_flag = all_under_heaven
+		fallback = tradition_agrarian
 	}
 
 	name_list = name_list_palaungic
@@ -144,9 +178,10 @@ palaung = {
 
 wa = {
 	# Representing the Lawa, Lavo, other Wa/Lawa peoples, and catch-all for other Palaungic groups too for now
+	# https://en.wikipedia.org/wiki/Wa_people
 	color = wa
 
-	ethos = ethos_communal
+	ethos = ethos_courtly 	# to represent their more stratified society
 	heritage = heritage_palaungic
 	language = language_palaungic
 	martial_custom = martial_custom_male_only
@@ -155,10 +190,11 @@ wa = {
 	traditions = {
 		tradition_hereditary_hierarchy 		# Cybr: Highly stratified, importance on superiority of ruling lineages.
 		tradition_mystical_ancestors 		# Cybr: Ruling lineages have elaborate genealogies.
-		tradition_welcoming 		# Cybr: Their alliances and mixing with Mon and later Tai peoples played an important role in the region's history. They also played a role as political middlemen between the urban lowlanders (Mon/Tai) and upland hill tribes.
+		tradition_welcoming 				# Cybr: Their alliances and mixing with Mon and later Tai peoples played an important role in the region's history. They also played a role as political middlemen between the urban lowlanders (Mon/Tai) and upland hill tribes.
 		tradition_metal_craftsmanship 		# Cybr: Known for craft skills, especially as ironsmiths
 	}
 
+	# msl_note: they traditionally practiced subsistence agriculture of rice and legumes
 	dlc_tradition = {
 		trait = tradition_tgp_rice_cultivators
 		requires_dlc_flag = all_under_heaven
