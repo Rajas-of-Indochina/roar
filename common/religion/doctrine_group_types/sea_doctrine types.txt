@@ -4,17 +4,6 @@ doctrine_sampradaya = {
 	is_available_on_create = {
 		religion_tag = hinduism_religion
 	}
-
-	doctrine_types = {
-		sampradaya_vaishnavism_doctrine
-		sampradaya_shaivism_doctrine
-		sampradaya_shaktism_doctrine
-		sampradaya_smartism_doctrine
-		sampradaya_saurism_doctrine
-		sampradaya_ganapatism_doctrine
-		sampradaya_kaumaram_doctrine
-		sampradaya_shrautism_doctrine
-	}
 }
 
 is_hinduism_faith = {
@@ -22,10 +11,6 @@ is_hinduism_faith = {
 
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_hinduism_faith
-	}
-
-	doctrine_types = {
-		special_doctrine_is_hinduism_faith
 	}
 }
 
@@ -35,31 +20,21 @@ is_jainism_faith = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_jainism_faith
 	}
-
-	doctrine_types = {
-		special_doctrine_is_jainism_faith
-	}
 }
+
 is_buddhist_faith = {
 	category = "special"
 
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_buddhist_faith
 	}
-
-	doctrine_types = {
-		special_doctrine_is_buddhist_faith
-	}
 }
+
 doctrine_monarchianism = {
 	category = "special"
 
 	is_available_on_create = {
 		has_doctrine = special_doctrine_monarchianist
-	}
-
-	doctrine_types = {
-		special_doctrine_monarchianist
 	}
 }
 
@@ -67,17 +42,10 @@ doctrine_monarchianism = {
 ### RICE borrowed
 rice_doctrine_austroasiatic_tiger_god = {
 	category = "main_group"
+	divergence = sequence
 
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_austroasiatic_faith
-	}
-
-	doctrine_types = {
-		rice_austroasiatic_wise_tiger
-		rice_austroasiatic_majestic_tiger
-		rice_austroasiatic_retributive_tiger
-		rice_austroasiatic_savage_tiger
-		rice_austroasiatic_no_tiger
 	}
 }
 is_austroasiatic_faith = {
@@ -86,14 +54,11 @@ is_austroasiatic_faith = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_austroasiatic_faith
 	}
-
-	doctrine_types = {
-		special_doctrine_is_austroasiatic_faith
-	}
 }
 
 rice_doctrine_buddhist_canon = {
 	category = "main_group"
+	divergence = sequence
 
 	is_available_on_create = {
 		religion_tag = buddhism_religion
@@ -101,27 +66,15 @@ rice_doctrine_buddhist_canon = {
 			has_doctrine = special_doctrine_is_maitreya
 		}
 	}
-
-	doctrine_types = {
-		rice_mahayana_canon_doctrine
-		rice_theravada_canon_doctrine
-		rice_vajrayana_canon_doctrine
-		rice_pudgalavada_canon_doctrine
-	}
 }
 
 rice_doctrine_west_iranian = {
 	category = "main_group"
+	divergence = sequence
 
 	is_available_on_create = {
 		religion_tag = yazidi_religion
 		# Do it via on_actions
-	}
-
-	doctrine_types = {
-		rice_west_iranian_yazidi_doctrine
-		rice_west_iranian_yarsani_doctrine
-		rice_west_iranian_kurdish_pagan_doctrine
 	}
 }
 is_west_iranian_faith = {
@@ -130,26 +83,12 @@ is_west_iranian_faith = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_west_iranian_faith
 	}
-
-	doctrine_types = {
-		special_doctrine_is_west_iranian_faith
-	}
 }
 
 
 ### ROA ones
 doctrine_mz_syncretism = {
 	category = "main_group"
-
-	doctrine_types = {
-		doctrine_mz_no_syncretism
-		tenet_sinitic_syncretism
-		tenet_eastern_syncretism
-		tenet_unreformed_syncretism
-		tenet_christian_syncretism
-		tenet_islamic_syncretism
-		tenet_jewish_syncretism
-	}
 }
 
 doctrine_three_teachings = {
@@ -157,10 +96,6 @@ doctrine_three_teachings = {
 
 	is_available_on_create = {
 		has_doctrine = special_doctrine_three_teachings
-	}
-
-	doctrine_types = {
-		special_doctrine_three_teachings
 	}
 }
 
@@ -170,10 +105,6 @@ doctrine_special_succession = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_nasrani_partition_succession_law
 	}
-
-	doctrine_types = {
-		special_doctrine_nasrani_partition_succession_law
-	}
 }
 
 doctrine_north_caucasian = {
@@ -181,13 +112,6 @@ doctrine_north_caucasian = {
 
 	is_available_on_create = {
 		religion_tag = northcaucasian_religion
-	}
-
-	doctrine_types = {
-		northwest_caucasian_doctrine
-		northeast_caucasian_doctrine
-		kartvelist_caucasian_doctrine
-		alan_caucasian_doctrine
 	}
 }
 
@@ -198,10 +122,6 @@ doctrine_roa_orthodox = {
 		# we should probably tweak this so it has a way to not be part of Orthodox groupings
 		has_doctrine = orthodox_roa_doctrine
 	}
-
-	doctrine_types = {
-		orthodox_roa_doctrine
-	}
 }
 
 doctrine_khorasani_legacy = {
@@ -210,142 +130,21 @@ doctrine_khorasani_legacy = {
 	is_available_on_create = {
 		has_doctrine = khorasani_legacy_doctrine
 	}
-
-	doctrine_types = {
-		khorasani_legacy_doctrine
-	}
 }
 
 ### Overwrites
-doctrine_muhammad_succession = {
-	category = "main_group"
-
-	is_available_on_create = {
-		religion_tag = islam_religion
-	}
-
-	doctrine_types = {
-		muhammad_succession_sunni_doctrine
-		muhammad_succession_shia_doctrine
-		muhammad_succession_muhakkima_doctrine
-		muhammad_succession_zandaqa_doctrine
-		muhammad_succession_muminun_doctrine
-	}
-}
-
-doctrine_theocracy = {
-	category = "clergy"
-
-	doctrine_types = {
-		doctrine_theocracy_temporal
-		doctrine_theocracy_lay_clergy
-	}
-}
-
-doctrine_theism = {
-	category = "main_group"
-
-	doctrine_types = {
-		doctrine_monotheist
-		doctrine_polytheist
-	}
-}
-
-doctrine_core_tenets = {
-	category = "core_tenets"
-
-	number_of_picks = 3
-
-	doctrine_types = {
-		# Christian Faith Tenets
-		tenet_aniconism
-		tenet_alexandrian_catechism
-		tenet_armed_pilgrimages
-		tenet_carnal_exaltation
-		tenet_communal_identity
-		tenet_communion
-		tenet_consolamentum
-		tenet_divine_marriage
-		tenet_gnosticism
-		tenet_mendicant_preachers
-		tenet_monasticism
-		tenet_pacifism
-		tenet_pentarchy
-		tenet_unrelenting_faith
-		tenet_vows_of_poverty
-		tenet_pastoral_isolation
-		tenet_rite
-		# Muslim Faith Tenets
-		tenet_adaptive
-		tenet_esotericism
-		tenet_legalism
-		tenet_literalism
-		tenet_reincarnation
-		tenet_religious_legal_pronouncements
-		tenet_struggle_submission
-		tenet_false_conversion_sanction
-		tenet_tax_nonbelievers
-		# Eastern Faith Tenets
-		tenet_asceticism
-		tenet_bhakti
-		tenet_dharmic_pacifism
-		tenet_inner_journey
-		tenet_ritual_hospitality
-		# Pagan Faith Tenets
-		tenet_adorcism
-		tenet_ancestor_worship
-		tenet_astrology
-		tenet_hedonistic
-		tenet_human_sacrifice
-		tenet_mystical_birthright
-		tenet_ritual_celebrations
-		tenet_sacred_childbirth
-		tenet_sanctity_of_nature
-		tenet_sun_worship
-		tenet_warmonger
-		tenet_gruesome_festivals
-		tenet_cthonic_redoubts
-		tenet_household_gods
-		# Syncretic Faith Tenets
-		#tenet_sinitic_syncretism
-		#tenet_eastern_syncretism
-		#tenet_unreformed_syncretism
-		#tenet_christian_syncretism
-		#tenet_islamic_syncretism
-		#tenet_jewish_syncretism
-		# Custom Faith Tenets
-		tenet_exaltation_of_pain
-		tenet_natural_primitivism
-		tenet_pursuit_of_power
-		tenet_ritual_cannibalism
-		tenet_sacred_shadows
-		tenet_polyamory
-		tenet_sacrificial_ceremonies
-		tenet_megaliths
-		# FP3 Tenets
-		tenet_fp3_fedayeen
-		tenet_communal_possessions
-		# TGP Tenets
-		tenet_pure_land
-		tenet_no_mind
-		tenet_mountain_worship
-		tenet_extinction_of_dharma
-		tenet_cranial_trophies
-		tenet_pursuit_of_knowledge
-		tenet_benevolent_governance
-		tenet_filial_piety
-		tenet_harmonious_society
-		tenet_sacred_destruction
-		tenet_preservation
-		tenet_takamin
-		# RICE / CRABS
-		tenet_rice_personalism
-		tenet_rice_flawed_arhats
-		tenet_rice_meritorious_merchant_donors
-		tenet_rice_all_dharmas_exist
-		# SEA Tenets
-		tenet_headhunting
-		tenet_dhammavicaya
-		tenet_spirit_guides
-	}
-}
+#doctrine_muhammad_succession = {
+#	category = "main_group"
+#
+#	is_available_on_create = {
+#		religion_tag = islam_religion
+#	}
+#
+#	doctrine_types = {
+#		muhammad_succession_sunni_doctrine
+#		muhammad_succession_shia_doctrine
+#		muhammad_succession_muhakkima_doctrine
+#		muhammad_succession_zandaqa_doctrine
+#		muhammad_succession_muminun_doctrine
+#	}
+#}
