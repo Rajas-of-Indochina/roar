@@ -237,6 +237,19 @@ does_caliph_or_shah_exist = {
 
 title_overlaps_geographical_region = {
 	trigger_if = {
+		limit = {
+			OR = {
+				is_nomad_title = yes
+				is_noble_family_title = yes
+				is_figurehead_title = yes
+				is_landless_type_title = yes
+			}
+			$TITLE$.holder = { exists = yes }
+			$TITLE$.domicile = { exists = yes }
+		}
+		$TITLE$.holder.domicile.domicile_location = { geographical_region = $REGION$ }
+	}
+	trigger_else_if = {
 		limit = { $TITLE$ = { is_titular = yes } }
 		$TITLE$.title_capital_county.title_province = { geographical_region = $REGION$ }
 	}

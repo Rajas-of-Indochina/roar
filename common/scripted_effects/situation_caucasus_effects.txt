@@ -68,11 +68,17 @@ trigger_caucasus_catalyst_in_title = {
 		situation:situation_caucasus ?= {
 			situation_sub_region:armenia_proper = { trigger_sub_region_catalyst = $CATALYST$ }
 		}
+		geographical_region:custom_armenia_proper = {
+			add_to_list = regions_to_notify
+		}
 	}
 	if = {
 		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_caucasian_albania } }
 		situation:situation_caucasus ?= {
 			situation_sub_region:iberia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_albania = {
+			add_to_list = regions_to_notify
 		}
 	}
 	if = {
@@ -80,11 +86,17 @@ trigger_caucasus_catalyst_in_title = {
 		situation:situation_caucasus ?= {
 			situation_sub_region:albania = { trigger_sub_region_catalyst = $CATALYST$ }
 		}
+		geographical_region:custom_caucasian_iberia = {
+			add_to_list = regions_to_notify
+		}
 	}
 	if = {
 		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_persarmenia } }
 		situation:situation_caucasus ?= {
 			situation_sub_region:persarmenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_persarmenia = {
+			add_to_list = regions_to_notify
 		}
 	}
 	if = {
@@ -92,11 +104,17 @@ trigger_caucasus_catalyst_in_title = {
 		situation:situation_caucasus ?= {
 			situation_sub_region:lesser_armenia = { trigger_sub_region_catalyst = $CATALYST$ }
 		}
+		geographical_region:custom_lesser_armenia = {
+			add_to_list = regions_to_notify
+		}
 	}
 	if = {
 		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_armenian_cilicia } }
 		situation:situation_caucasus ?= {
 			situation_sub_region:cilicia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenian_cilicia = {
+			add_to_list = regions_to_notify
 		}
 	}
 	if = {
@@ -104,11 +122,35 @@ trigger_caucasus_catalyst_in_title = {
 		situation:situation_caucasus ?= {
 			situation_sub_region:syria = { trigger_sub_region_catalyst = $CATALYST$ }
 		}
+		geographical_region:custom_syria = {
+			add_to_list = regions_to_notify
+		}
 	}
 	if = {
 		limit = { title_overlaps_geographical_region = { TITLE = $TITLE$  REGION = custom_jazira } }
 		situation:situation_caucasus ?= {
 			situation_sub_region:jazira = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_jazira = {
+			add_to_list = regions_to_notify
+		}
+	}
+	every_in_list = {
+		list = regions_to_notify
+		save_scope_as = region
+		every_ruler = {
+			limit = {
+				any_realm_county = { title_province = { geographical_region = scope:region } }
+				NOT = { is_in_list = rulers_to_notify }
+			}
+			add_to_list = rulers_to_notify
+		}
+	}
+	every_in_list = {
+		send_interface_toast = {
+			type = event_toast_effect_neutral
+			title = situation_caucasus_catalyst_triggered_in_title
+			left_icon = $TITLE$
 		}
 	}
 }
@@ -129,9 +171,14 @@ save_roman_empire_title = {
 # just a shortcut
 # FLAG options: pro_roman pro_perso_arabic autonomist interloper
 set_caucasus_alignment = {
+	save_scope_as = char
 	set_variable = {
 		name = caucasus_alignment
 		value = flag:$FLAG$
+	}
+	custom_tooltip = {
+		text = setting_$FLAG$_alignment_tt
+		subject = THIS
 	}
 	hidden_effect = { recalculate_participant_group = situation:situation_caucasus }
 	if = {
@@ -142,32 +189,27 @@ set_caucasus_alignment = {
 		}
 		situation:situation_caucasus ?= {
 			switch = {
-				trigger = ROOT.var:caucasus_alignment
+				trigger = scope:char.var:caucasus_alignment
 				flag:pro_roman = {
 					trigger_caucasus_catalyst_in_title = {
-						TITLE = primary_title
+						TITLE = scope:char.primary_title
 						CATALYST = character_became_pro_roman
 					}
 				}
 				flag:pro_perso_arabic = {
 					trigger_caucasus_catalyst_in_title = {
-						TITLE = primary_title
+						TITLE = scope:char.primary_title
 						CATALYST = character_became_pro_perso_arabic
 					}
 				}
 				flag:autonomist = {
 					trigger_caucasus_catalyst_in_title = {
-						TITLE = primary_title
+						TITLE = scope:char.primary_title
 						CATALYST = character_became_autonomist
 					}
 				}
 			}
 		}
-	}
-
-	custom_tooltip = {
-		text = setting_$FLAG$_alignment_tt
-		subject = THIS
 	}
 }
 
@@ -1931,6 +1973,111 @@ start_tributary_interaction_effect = {
 						trigger_caucasus_catalyst_in_title = {
 							TITLE = $TRIBUTARY$.primary_title
 							CATALYST = became_perso_arabic_tributary_kingdom
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# Expected scopes:
+# ROOT = province the legend is spreading to
+# scope:legend = the legend spreading
+situation_caucasus_legend_spread_effect = {
+	if = {
+		limit = {
+			title_overlaps_geographical_region = {
+				TITLE = ROOT.barony # lazy way to check if in situation region
+				REGION = situation_caucasus_region
+			}
+		}
+		switch = {
+			trigger = scope:legend.legend_quality
+			famed = {
+				if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = pro_roman_legend_province_spread_famed
+						}
+					}
+				}
+				else_if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = pro_perso_arabic_legend_province_spread_famed
+						}
+					}
+				}
+				else_if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = autonomist_legend_province_spread_famed
+						}
+					}
+				}
+			}
+			illustrious = {
+				if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = pro_roman_legend_province_spread_illustrious
+						}
+					}
+				}
+				else_if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = pro_perso_arabic_legend_province_spread_illustrious
+						}
+					}
+				}
+				else_if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = autonomist_legend_province_spread_illustrious
+						}
+					}
+				}
+			}
+			mythical = {
+				if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = pro_roman_legend_province_spread_mythical
+						}
+					}
+				}
+				else_if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = pro_perso_arabic_legend_province_spread_mythical
+						}
+					}
+				}
+				else_if = {
+					limit = { scope:legend.legend_owner = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
+					situation:situation_caucasus = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = ROOT.barony
+							catalyst = autonomist_legend_province_spread_mythical
 						}
 					}
 				}
