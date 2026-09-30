@@ -1,5 +1,7 @@
 ﻿rice_mahayana_canon_doctrine = {		# Chinese Canon/Dazangjing
 	icon = "rice_mahayana_canon_doctrine"
+	doctrine_group_type = rice_doctrine_buddhist_canon
+	index = 0
 
 	piety_cost = {
 		value = faith_doctrine_cost_mid
@@ -22,14 +24,20 @@
 	}
 
 	parameters = {
-		hostility_override_rice_mahayana_canon_doctrine = 0
-		rice_life_liberation_active = yes
-		rice_pagodas_unlocked_active = yes
+		rice_life_liberation_active
+		rice_pagodas_unlocked_active
+	}
+	special_parameters = {
+		hostility_level_override = {
+			rice_mahayana_canon_doctrine = righteous
+		}
 	}
 }
 
 rice_theravada_canon_doctrine = {		# Pali Canon
 	icon = "rice_theravada_canon_doctrine"
+	doctrine_group_type = rice_doctrine_buddhist_canon
+	index = 1
 
 	piety_cost = {
 		value = faith_doctrine_cost_mid
@@ -52,14 +60,20 @@ rice_theravada_canon_doctrine = {		# Pali Canon
 	}
 
 	parameters = {
-		hostility_override_rice_theravada_canon_doctrine = 0
-		rice_sri_lanka_struggle_effects_active = yes
-		rice_vassa_active = yes
+		rice_sri_lanka_struggle_effects_active
+		rice_vassa_active
+	}
+	special_parameters = {
+		hostility_level_override = {
+			rice_theravada_canon_doctrine = righteous
+		}
 	}
 }
 
 rice_vajrayana_canon_doctrine = {		# Tibetan Canon/Kanngur and Tanggur
 	icon = "rice_vajrayana_canon_doctrine"
+	doctrine_group_type = rice_doctrine_buddhist_canon
+	index = 2
 
 	piety_cost = {
 		value = faith_doctrine_cost_mid
@@ -82,13 +96,19 @@ rice_vajrayana_canon_doctrine = {		# Tibetan Canon/Kanngur and Tanggur
 	}
 
 	parameters = {
-		hostility_override_rice_vajrayana_canon_doctrine = 0
-		rice_life_liberation_active = yes
+		rice_life_liberation_active
+	}
+	special_parameters = {
+		hostility_level_override = {
+			rice_vajrayana_canon_doctrine = righteous
+		}
 	}
 }
 
 rice_pudgalavada_canon_doctrine = {		# Pudgalavada/Sammitiya Canon
 	icon = "rice_pudgalavada_canon_doctrine"
+	doctrine_group_type = rice_doctrine_buddhist_canon
+	index = 3
 
 	piety_cost = {
 		value = faith_doctrine_cost_mid
@@ -111,7 +131,11 @@ rice_pudgalavada_canon_doctrine = {		# Pudgalavada/Sammitiya Canon
 	}
 
 	parameters = {
-		hostility_override_rice_pudgalavada_canon_doctrine = 0
-		rice_vassa_active = yes
+		rice_vassa_active
+	}
+	special_parameters = {
+		hostility_level_override = {
+			rice_pudgalavada_canon_doctrine = righteous
+		}
 	}
 }

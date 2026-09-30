@@ -1,14 +1,25 @@
 ﻿unreformed_faith_doctrine = {
+	doctrine_group_type = unreformed_faith
+	icon = "special_doctrine_default"
+	index = 0
 	visible = no
 
 	parameters = {
-		# unreformed = yes also serves as the basis for the unreformed_syncretic tenet.
+		# also serves as the basis for the unreformed_syncretic tenet.
+		unreformed
+		conquest_cb_enabled
+		faith_can_raid
+		unreformed_syncretic_recipient
+	}
+	
+	special_parameters = {
 		unreformed = yes
-		hostility_override_tenet_unreformed_syncretism = 1
-		unreformed_syncretic_recipient_opinion_active = yes
-		opinion_of_unreformed_syncretic_actor_opinion_active = 30
-		conquest_cb_enabled = yes
-		faith_can_raid = yes
+		hostility_level_override = {
+			tenet_unreformed_syncretism = hostile
+		}
+		parameter_opinion_override = {
+			unreformed_syncretic_actor = 30
+		}
 	}
 
 	character_modifier = {
@@ -20,16 +31,27 @@
 }
 
 west_african_unreformed_faith_doctrine = {
+	doctrine_group_type = unreformed_faith
+	icon = "special_doctrine_default"
+	index = 1
 	visible = no
 
 	parameters = {
+		unreformed
+		conquest_cb_enabled
+		faith_can_raid
+		unreformed_syncretic_recipient
+	}
+	
+	special_parameters = {
 		# unreformed = yes also serves as the basis for the unreformed_syncretic tenet.
 		unreformed = yes
-		hostility_override_tenet_unreformed_syncretism = 1
-		unreformed_syncretic_recipient_opinion_active = yes
-		opinion_of_unreformed_syncretic_actor_opinion_active = 30
-		conquest_cb_enabled = yes
-		faith_can_raid = yes
+		hostility_level_override = {
+			tenet_unreformed_syncretism = hostile
+		}
+		parameter_opinion_override = {
+			unreformed_syncretic_actor = 30
+		}
 	}
 
 	character_modifier = {
