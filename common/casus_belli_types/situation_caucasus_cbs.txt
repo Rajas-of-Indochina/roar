@@ -1,5 +1,5 @@
 interloper_expansion_cb = {
-	group = struggle
+	group = conquest
 	icon = struggle
 	combine_into_one = yes
 	interface_priority = 111
@@ -20,7 +20,7 @@ interloper_expansion_cb = {
 		any_character_situation = {
 			situation_type = situation_caucasus
 		}
-		NOT = { scope:attacker = { any_liege_or_above = { this = scope:defender } } }
+		# NOT = { scope:attacker = { any_liege_or_above = { this = scope:defender } } }
 	}
 	
 	target_titles = all
@@ -44,10 +44,7 @@ interloper_expansion_cb = {
 		scope:target = {
 			is_landless_type_title = no
 			any_neighboring_county = {
-				holder = { target_is_same_character_or_above = $CHARACTER$ }
-			}
-			any_county_situation_sub_region = {
-				sub_region_current_phase = situation_caucasus_disputed_control
+				holder = { target_is_same_character_or_above = scope:attacker }
 			}
 		}
 	}
@@ -313,9 +310,9 @@ interloper_expansion_cb = {
 	attacker_allies_inherit = yes
 	defender_allies_inherit = yes
 
-	war_name = "STRUGGLE_WAR_NAME"
+	war_name = "INTERLOPER_EXPANSION_NAME"
 	war_name_base = "STRUGGLE_WAR_NAME_BASE"
-	cb_name = "STRUGGLE_COUNTY_CB_NAME"
+	cb_name = "INTERLOPER_EXPANSION_CB_NAME"
 
 	interface_priority = 79
 

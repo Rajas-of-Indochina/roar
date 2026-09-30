@@ -303,31 +303,31 @@ situation_caucasus_on_title_gain_interloper = {
 					scope:transfer_type = flag:revoked
 					scope:transfer_type = flag:faction_demand
 				}
-			}
-			switch = {
-				trigger = scope:title.tier
-				tier_county = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = interloper_seized_title_county
+				switch = {
+					trigger = scope:title.tier
+					tier_county = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = interloper_seized_title_county
+							}
 						}
 					}
-				}
-				tier_duchy = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = interloper_seized_title_duchy
+					tier_duchy = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = interloper_seized_title_duchy
+							}
 						}
 					}
-				}
-				# treat anything bigger than a duchy as a kingdom
-				fallback = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = interloper_seized_title_kingdom
+					# treat anything bigger than a duchy as a kingdom
+					fallback = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = interloper_seized_title_kingdom
+							}
 						}
 					}
 				}
@@ -368,31 +368,31 @@ situation_caucasus_on_title_gain_pro_roman = {
 					scope:transfer_type = flag:revoked
 					scope:transfer_type = flag:faction_demand
 				}
-			}
-			switch = {
-				trigger = scope:title.tier
-				tier_county = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = pro_roman_seized_title_county
+				switch = {
+					trigger = scope:title.tier
+					tier_county = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = pro_roman_seized_title_county
+							}
 						}
 					}
-				}
-				tier_duchy = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = pro_roman_seized_title_duchy
+					tier_duchy = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = pro_roman_seized_title_duchy
+							}
 						}
 					}
-				}
-				# treat anything bigger than a duchy as a kingdom
-				fallback = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = pro_roman_seized_title_kingdom
+					# treat anything bigger than a duchy as a kingdom
+					fallback = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = pro_roman_seized_title_kingdom
+							}
 						}
 					}
 				}
@@ -433,31 +433,31 @@ situation_caucasus_on_title_gain_pro_perso_arabic = {
 					scope:transfer_type = flag:revoked
 					scope:transfer_type = flag:faction_demand
 				}
-			}
-			switch = {
-				trigger = scope:title.tier
-				tier_county = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = pro_perso_arabic_seized_title_county
+				switch = {
+					trigger = scope:title.tier
+					tier_county = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = pro_perso_arabic_seized_title_county
+							}
 						}
 					}
-				}
-				tier_duchy = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = pro_perso_arabic_seized_title_duchy
+					tier_duchy = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = pro_perso_arabic_seized_title_duchy
+							}
 						}
 					}
-				}
-				# treat anything bigger than a duchy as a kingdom
-				fallback = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = pro_perso_arabic_seized_title_kingdom
+					# treat anything bigger than a duchy as a kingdom
+					fallback = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = pro_perso_arabic_seized_title_kingdom
+							}
 						}
 					}
 				}
@@ -498,31 +498,31 @@ situation_caucasus_on_title_gain_autonomist = {
 					scope:transfer_type = flag:revoked
 					scope:transfer_type = flag:faction_demand
 				}
-			}
-			switch = {
-				trigger = scope:title.tier
-				tier_county = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = autonomist_seized_title_county
+				switch = {
+					trigger = scope:title.tier
+					tier_county = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = autonomist_seized_title_county
+							}
 						}
 					}
-				}
-				tier_duchy = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = autonomist_seized_title_duchy
+					tier_duchy = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = autonomist_seized_title_duchy
+							}
 						}
 					}
-				}
-				# treat anything bigger than a duchy as a kingdom
-				fallback = {
-					situation:situation_caucasus = {
-						trigger_caucasus_catalyst_in_title = {
-							TITLE = scope:title
-							CATALYST = autonomist_seized_title_kingdom
+					# treat anything bigger than a duchy as a kingdom
+					fallback = {
+						situation:situation_caucasus = {
+							trigger_caucasus_catalyst_in_title = {
+								TITLE = scope:title
+								CATALYST = autonomist_seized_title_kingdom
+							}
 						}
 					}
 				}
@@ -560,100 +560,159 @@ situation_caucasus_artifact_theft = {
 # ROOT = situation
 on_yearly_situation_caucasus = {
 	effect = {
-		every_situation_sub_region = {
-			save_scope_as = subregion
-			every_situation_sub_region_participant = {
-				limit = { top_participant_group:situation_caucasus = { participant_group_type = interloper } }
-				every_held_title = {
-					limit = {
-						tier > tier_barony
-						OR = {
-							any_county_situation_sub_region = { THIS = scope:subregion }
-							any_de_jure_county = { THIS = scope:subregion }
+		every_situation_participant = {
+			if = {
+				limit = {
+					top_participant_group:situation_caucasus = { participant_group_type = interloper }
+					is_landed = yes
+					is_ruler = yes
+					highest_held_title_tier >= tier_county
+				}
+				add_to_list = interlopers
+			}
+			else_if = {
+				limit = {
+					top_participant_group:situation_caucasus = { participant_group_type = pro_roman }
+					is_landed = yes
+					is_ruler = yes
+					highest_held_title_tier >= tier_county
+				}
+				add_to_list = pro_romans
+			}
+			else_if = {
+				limit = {
+					top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic }
+					is_landed = yes
+					is_ruler = yes
+					highest_held_title_tier >= tier_county
+				}
+				add_to_list = pro_perso_arabics
+			}
+			else_if = {
+				limit = {
+					top_participant_group:situation_caucasus = { participant_group_type = autonomist }
+					is_landed = yes
+					is_ruler = yes
+					highest_held_title_tier >= tier_county
+				}
+				add_to_list = autonomists
+			}
+		}
+		every_in_list = {
+			list = interlopers
+			switch = {
+				trigger = highest_held_title_tier
+				tier_county = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_interloper_tick_county
 						}
 					}
-					switch = {
-						trigger = tier
-						tier_county = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_interloper_tick_county }
+				}
+				tier_duchy = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_interloper_tick_duchy
 						}
-						tier_duchy = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_interloper_tick_duchy }
-						}
-						fallback = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_interloper_tick_kingdom }
+					}
+				}
+				fallback = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_interloper_tick_kingdom
 						}
 					}
 				}
 			}
-			every_situation_sub_region_participant = {
-				limit = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
-				every_held_title = {
-					limit = {
-						tier > tier_barony
-						OR = {
-							any_county_situation_sub_region = { THIS = scope:subregion }
-							any_de_jure_county = { THIS = scope:subregion }
+		}
+		every_in_list = {
+			list = pro_romans
+			switch = {
+				trigger = highest_held_title_tier
+				tier_county = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_pro_roman_tick_county
 						}
 					}
-					switch = {
-						trigger = tier
-						tier_county = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_roman_tick_county }
+				}
+				tier_duchy = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_pro_roman_tick_duchy
 						}
-						tier_duchy = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_roman_tick_duchy }
-						}
-						fallback = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_roman_tick_kingdom }
+					}
+				}
+				fallback = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_pro_roman_tick_kingdom
 						}
 					}
 				}
 			}
-			every_situation_sub_region_participant = {
-				limit = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } }
-				every_held_title = {
-					limit = {
-						tier > tier_barony
-						OR = {
-							any_county_situation_sub_region = { THIS = scope:subregion }
-							any_de_jure_county = { THIS = scope:subregion }
+		}
+		every_in_list = {
+			list = pro_perso_arabics
+			switch = {
+				trigger = highest_held_title_tier
+				tier_county = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_pro_perso_arabic_tick_county
 						}
 					}
-					switch = {
-						trigger = tier
-						tier_county = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_perso_arabic_tick_county }
+				}
+				tier_duchy = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_pro_perso_arabic_tick_duchy
 						}
-						tier_duchy = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_perso_arabic_tick_duchy }
-						}
-						fallback = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_pro_perso_arabic_tick_kingdom }
+					}
+				}
+				fallback = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_pro_perso_arabic_tick_kingdom
 						}
 					}
 				}
 			}
-			every_situation_sub_region_participant = {
-				limit = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } }
-				every_held_title = {
-					limit = {
-						tier > tier_barony
-						OR = {
-							any_county_situation_sub_region = { THIS = scope:subregion }
-							any_de_jure_county = { THIS = scope:subregion }
+		}
+		every_in_list = {
+			list = autonomists
+			switch = {
+				trigger = highest_held_title_tier
+				tier_county = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_autonomist_tick_county
 						}
 					}
-					switch = {
-						trigger = tier
-						tier_county = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_autonomist_tick_county }
+				}
+				tier_duchy = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_autonomist_tick_duchy
 						}
-						tier_duchy = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_autonomist_tick_duchy }
-						}
-						fallback = {
-							scope:subregion = { trigger_sub_region_catalyst = title_held_by_autonomist_tick_kingdom }
+					}
+				}
+				fallback = {
+					ROOT = {
+						trigger_caucasus_catalyst_in_title = {
+							TITLE = scope:character.primary_title
+							CATALYST = title_held_by_autonomist_tick_kingdom
 						}
 					}
 				}
@@ -1027,5 +1086,28 @@ situation_caucasus_on_government_change = {
 				}
 			}
 		}
+	}
+}
+
+# A title change makes the character rank up in the landed tiers (eg Duke -> King)
+# root = character ranking up
+# scope:title = old primary title
+on_rank_up = {
+	on_actions = {
+		situation_caucasus_on_rank_up
+	}
+}
+
+situation_caucasus_on_rank_up = {
+	trigger = {
+		title_overlaps_geographical_region = {
+			TITLE = ROOT.primary_title
+			REGION = situation_caucasus_region
+		}
+		situation:situation_caucasus = { exists = yes }
+		is_ai = yes
+	}
+	effect = {
+		auto_assign_caucasus_stance = yes
 	}
 }

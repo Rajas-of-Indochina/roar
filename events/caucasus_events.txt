@@ -582,29 +582,30 @@ caucasianroa.013 = {
 	}
 	option = {
 		name = caucasianroa.013.ok
-		add_prestige = 500
-		dynasty = {
-			add_dynasty_prestige = 800
-			add_dynasty_modifier = sassanid_claimant_avar
-		}
 	}
 	option = {
 		name = caucasianroa.013.islam
-		add_prestige = 500
-		dynasty = {
-			add_dynasty_prestige = 800
-			add_dynasty_modifier = sassanid_claimant_avar
-		}
 		set_character_faith_with_conversion = faith:maturidi
 	}
 	option = {
 		name = caucasianroa.013.zoroastrianism
+		set_character_faith_with_conversion = faith:mazdayasna
+	}
+	after = {
 		add_prestige = 500
 		dynasty = {
 			add_dynasty_prestige = 800
 			add_dynasty_modifier = sassanid_claimant_avar
 		}
-		set_character_faith_with_conversion = faith:mazdayasna
+		create_legend_seed = {
+			type = legitimizing
+			quality = illustrious
+			chronicle = ancestral_glory
+			properties = {
+				ancestor = character:180607
+				title = title:e_persia
+			}
+		}
 	}
 }
 

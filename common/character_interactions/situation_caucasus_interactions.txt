@@ -9,17 +9,6 @@ situation_caucasus_imperial_support_interaction = {
 	redirect = {
 		if = {
 			limit = {
-				exists = title:e_byzantium.holder
-			}
-			scope:recipient = {
-				save_scope_as = secondary_recipient
-			}
-			title:e_byzantium.holder = {
-				save_scope_as = recipient
-			}
-		}
-		else_if = {
-			limit = {
 				exists = title:h_eastern_roman_empire.holder
 			}
 			scope:recipient = {
@@ -40,20 +29,114 @@ situation_caucasus_imperial_support_interaction = {
 				save_scope_as = recipient
 			}
 		}
+		else_if = {
+			limit = {
+				exists = title:e_byzantium.holder
+			}
+			scope:recipient = {
+				save_scope_as = secondary_recipient
+			}
+			title:e_byzantium.holder = {
+				save_scope_as = recipient
+			}
+		}
 	}
 
 	has_valid_target_showing_failures_only = {
 		# Must be a county or duchy that falls at least partly inside a sub-region where this interaction is allowed
 		scope:target = {
-			tier >= tier_county
-			tier <= tier_duchy
+			OR = {
+				tier = tier_county
+				tier = tier_duchy
+			}
 			is_noble_family_title = no
-			any_in_de_jure_hierarchy = {
-				continue = { tier > tier_county }
-				any_county_situation_sub_region = {
-					any_situation_sub_region_participant_group = {
-						participant_group_has_character = scope:actor
-						has_participant_group_parameter = unlocks_imperial_support_interaction
+			OR = {
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_armenia_proper }
+						any_de_jure_county = { title_province = { geographical_region = custom_armenia_proper } }
+					}
+					situation:situation_caucasus.situation_sub_region:armenia_proper = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_caucasian_iberia }
+						any_de_jure_county = { title_province = { geographical_region = custom_caucasian_iberia } }
+					}
+					situation:situation_caucasus.situation_sub_region:iberia = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_caucasian_albania }
+						any_de_jure_county = { title_province = { geographical_region = custom_caucasian_albania } }
+					}
+					situation:situation_caucasus.situation_sub_region:albania = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_persarmenia }
+						any_de_jure_county = { title_province = { geographical_region = custom_persarmenia } }
+					}
+					situation:situation_caucasus.situation_sub_region:persarmenia = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_lesser_armenia }
+						any_de_jure_county = { title_province = { geographical_region = custom_lesser_armenia } }
+					}
+					situation:situation_caucasus.situation_sub_region:lesser_armenia = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_armenian_cilicia }
+						any_de_jure_county = { title_province = { geographical_region = custom_armenian_cilicia } }
+					}
+					situation:situation_caucasus.situation_sub_region:cilicia = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_syria }
+						any_de_jure_county = { title_province = { geographical_region = custom_syria } }
+					}
+					situation:situation_caucasus.situation_sub_region:syria = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
+					}
+				}
+				AND = {				
+					OR = {
+						title_province = { geographical_region = custom_jazira }
+						any_de_jure_county = { title_province = { geographical_region = custom_jazira } }
+					}
+					situation:situation_caucasus.situation_sub_region:jazira = {
+						any_situation_sub_region_participant_group = {
+							has_participant_group_parameter = unlocks_imperial_support_interaction
+						}
 					}
 				}
 			}
@@ -68,7 +151,105 @@ situation_caucasus_imperial_support_interaction = {
 			exists = title:h_roman_empire.holder
 		}
 		# Requester must be Pro-Roman
-		scope:actor = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
+		scope:actor = {
+			top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman }
+			# and needs to have a title that's valid to target
+			any_held_title = {
+				any_in_de_facto_hierarchy = {
+					is_noble_family_title = no
+					OR = {
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_armenia_proper }
+								any_de_jure_county = { title_province = { geographical_region = custom_armenia_proper } }
+							}
+							situation:situation_caucasus.situation_sub_region:armenia_proper = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_caucasian_iberia }
+								any_de_jure_county = { title_province = { geographical_region = custom_caucasian_iberia } }
+							}
+							situation:situation_caucasus.situation_sub_region:iberia = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_caucasian_albania }
+								any_de_jure_county = { title_province = { geographical_region = custom_caucasian_albania } }
+							}
+							situation:situation_caucasus.situation_sub_region:albania = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_persarmenia }
+								any_de_jure_county = { title_province = { geographical_region = custom_persarmenia } }
+							}
+							situation:situation_caucasus.situation_sub_region:persarmenia = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_lesser_armenia }
+								any_de_jure_county = { title_province = { geographical_region = custom_lesser_armenia } }
+							}
+							situation:situation_caucasus.situation_sub_region:lesser_armenia = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_armenian_cilicia }
+								any_de_jure_county = { title_province = { geographical_region = custom_armenian_cilicia } }
+							}
+							situation:situation_caucasus.situation_sub_region:cilicia = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_syria }
+								any_de_jure_county = { title_province = { geographical_region = custom_syria } }
+							}
+							situation:situation_caucasus.situation_sub_region:syria = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+						AND = {				
+							OR = {
+								title_province = { geographical_region = custom_jazira }
+								any_de_jure_county = { title_province = { geographical_region = custom_jazira } }
+							}
+							situation:situation_caucasus.situation_sub_region:jazira = {
+								any_situation_sub_region_participant_group = {
+									has_participant_group_parameter = unlocks_imperial_support_interaction
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 		# Target must NOT be Pro-Roman
 		scope:secondary_recipient = {
 			NOT = { top_participant_group:situation_caucasus ?= { participant_group_type = pro_roman } }
@@ -238,7 +419,7 @@ situation_caucasus_imperial_support_interaction = {
 		}
 
 		modifier = {
-			add = -100
+			add = -50
 			desc = BASE_RELUCTANCE
 		}
 
@@ -972,7 +1153,7 @@ situation_caucasus_request_incursion_interaction = {
 	interface_priority = 100
 	common_interaction = yes
 	category = interaction_category_hostile
-	cooldown_against_recipient = { years = 2 }
+	cooldown = { years = 5 }
 
 	icon = request_mercenary
 	desc = situation_caucasus_request_incursion_interaction_desc
@@ -985,14 +1166,7 @@ situation_caucasus_request_incursion_interaction = {
 		scope:recipient = {
 			is_playable_character = yes
 			# Recipient must have realm in the caucasus situation
-			any_realm_county = {
-				any_county_situation_sub_region = {
-					# in a region where incursions are allowed
-					any_situation_sub_region_participant_group = {
-						has_participant_group_parameter = unlocks_invite_incursion_interaction
-					}
-				}
-			}
+			any_character_situation = { situation_type = situation_caucasus }
 		}
 	}
 
@@ -1005,6 +1179,7 @@ situation_caucasus_request_incursion_interaction = {
 				has_raised_armies = no
 				is_at_war = no
 				in_diplomatic_range = scope:actor
+				in_diplomatic_range = scope:recipient
 				highest_held_title_tier >= tier_county
 				NOR = {
 					is_allied_to = scope:recipient
@@ -1017,6 +1192,8 @@ situation_caucasus_request_incursion_interaction = {
 					culture = scope:actor.culture
 					faith = scope:actor.faith
 					dynasty = scope:actor.dynasty
+					has_relation_friend = scope:actor
+					has_relation_best_friend = scope:actor
 				}
 			}
 			add_to_list = characters
@@ -1587,11 +1764,14 @@ situation_caucasus_offer_autonomist_confederation_interaction = {
 					is_confederation_member = yes
 					confederation.confederation_type = confederation_type:autonomist_confederation
 				}
-				capital_county = {
-					any_county_situation_sub_region = {
-						any_situation_sub_region_participant_group = {
-							has_participant_group_parameter = unlock_autonomist_confederations
-							participant_group_has_character = scope:actor
+				AND = {
+					is_confederation_member = no
+					capital_county = {
+						any_county_situation_sub_region = {
+							any_situation_sub_region_participant_group = {
+								has_participant_group_parameter = unlock_autonomist_confederations
+								participant_group_has_character = scope:actor
+							}
 						}
 					}
 				}
@@ -1607,7 +1787,7 @@ situation_caucasus_offer_autonomist_confederation_interaction = {
 			is_imprisoned = no
 		}
 		scope:recipient = {
-			# valid_confederation_member_trigger = { CHARACTER = scope:actor }
+			valid_confederation_member_trigger = { CHARACTER = scope:actor }
 			is_imprisoned = no
 			is_at_war = no
 		}

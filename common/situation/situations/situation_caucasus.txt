@@ -148,9 +148,9 @@ situation_caucasus = {
 	on_monthly = {}
 
 	on_yearly = {
-		# trigger_event = {
-		# 	on_action = on_yearly_situation_caucasus
-		# }
+		trigger_event = {
+			on_action = on_yearly_situation_caucasus
+		}
 	}
 
 	on_join = {
@@ -176,6 +176,7 @@ situation_caucasus = {
 				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
 				claims_fabricated_for_prestige_not_gold = yes # Claim Fabrication uses Prestige instead of Gold
 				slowed_county_conversion = yes # faith and county conversion slowed
+				unlocks_epic_commission_for_independent_rulers = yes
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -308,6 +309,11 @@ situation_caucasus = {
 						character_became_pro_roman = 5
 						formed_cappadocia_pro_roman = 100
 						formed_armenian_cilicia_pro_roman = 100
+						pro_roman_legend_province_spread_famed = 1
+						pro_roman_legend_province_spread_illustrious = 2
+						pro_roman_legend_province_spread_mythical = 3
+						pro_roman_epic = 5
+						pro_roman_epic_great = 10
 					}
 				}
 				situation_caucasus_perso_arabic_control = {
@@ -335,6 +341,11 @@ situation_caucasus = {
 						character_became_pro_perso_arabic = 5
 						formed_cappadocia_pro_perso_arabic = 100
 						formed_armenian_cilicia_pro_perso_arabic = 100
+						pro_perso_arabic_legend_province_spread_famed = 1
+						pro_perso_arabic_legend_province_spread_illustrious = 2
+						pro_perso_arabic_legend_province_spread_mythical = 3
+						pro_perso_arabic_epic = 5
+						pro_perso_arabic_epic_great = 10
 					}
 				}
 				situation_caucasus_local_control = {
@@ -364,6 +375,11 @@ situation_caucasus = {
 						united_georgia = 100
 						unified_aluank = 100
 						ani_cathedral_restored = 100
+						autonomist_legend_province_spread_famed = 1
+						autonomist_legend_province_spread_illustrious = 2
+						autonomist_legend_province_spread_mythical = 3
+						autonomist_epic = 5
+						autonomist_epic_great = 10
 					}
 				}
 			}
@@ -375,6 +391,7 @@ situation_caucasus = {
 				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
 				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
 				unlocks_join_war_against_pro_romans = yes # Can join offensive wars against pro-Roman characters
+				unlocks_epic_commission_for_independent_rulers = yes
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -508,6 +525,11 @@ situation_caucasus = {
 						character_became_pro_roman = 5
 						formed_cappadocia_pro_roman = 100
 						formed_armenian_cilicia_pro_roman = 100
+						pro_roman_legend_province_spread_famed = 1
+						pro_roman_legend_province_spread_illustrious = 2
+						pro_roman_legend_province_spread_mythical = 3
+						pro_roman_epic = 5
+						pro_roman_epic_great = 10
 					}
 				}
 				situation_caucasus_perso_arabic_control = {
@@ -535,6 +557,11 @@ situation_caucasus = {
 						character_became_pro_perso_arabic = 5
 						formed_cappadocia_pro_perso_arabic = 100
 						formed_armenian_cilicia_pro_perso_arabic = 100
+						pro_perso_arabic_legend_province_spread_famed = 1
+						pro_perso_arabic_legend_province_spread_illustrious = 2
+						pro_perso_arabic_legend_province_spread_mythical = 3
+						pro_perso_arabic_epic = 5
+						pro_perso_arabic_epic_great = 10
 					}
 				}
 				situation_caucasus_local_control = {
@@ -564,6 +591,11 @@ situation_caucasus = {
 						united_georgia = 100
 						unified_aluank = 100
 						ani_cathedral_restored = 25
+						autonomist_legend_province_spread_famed = 1
+						autonomist_legend_province_spread_illustrious = 2
+						autonomist_legend_province_spread_mythical = 3
+						autonomist_epic = 5
+						autonomist_epic_great = 10
 					}
 				}
 			}
@@ -575,6 +607,7 @@ situation_caucasus = {
 				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
 				unlocks_border_raid_casus_belli = yes # Border Raids CB Unlocked
 				unlocks_join_war_against_pro_perso_arabs = yes # Can join offensive wars against pro-Perso-Arabic characters
+				unlocks_epic_commission_for_independent_rulers = yes
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -713,6 +746,11 @@ situation_caucasus = {
 						character_became_pro_roman = 5
 						formed_cappadocia_pro_roman = 100
 						formed_armenian_cilicia_pro_roman = 100
+						pro_roman_legend_province_spread_famed = 1
+						pro_roman_legend_province_spread_illustrious = 2
+						pro_roman_legend_province_spread_mythical = 3
+						pro_roman_epic = 5
+						pro_roman_epic_great = 10
 					}
 				}
 				situation_caucasus_perso_arabic_control = {
@@ -740,6 +778,11 @@ situation_caucasus = {
 						character_became_pro_perso_arabic = 5
 						formed_cappadocia_pro_perso_arabic = 100
 						formed_armenian_cilicia_pro_perso_arabic = 100
+						pro_perso_arabic_legend_province_spread_famed = 1
+						pro_perso_arabic_legend_province_spread_illustrious = 2
+						pro_perso_arabic_legend_province_spread_mythical = 3
+						pro_perso_arabic_epic = 5
+						pro_perso_arabic_epic_great = 10
 					}
 				}
 				situation_caucasus_local_control = {
@@ -769,6 +812,11 @@ situation_caucasus = {
 						united_georgia = 100
 						unified_aluank = 100
 						ani_cathedral_restored = 25
+						autonomist_legend_province_spread_famed = 1
+						autonomist_legend_province_spread_illustrious = 2
+						autonomist_legend_province_spread_mythical = 3
+						autonomist_epic = 5
+						autonomist_epic_great = 10
 					}
 				}
 			}
@@ -778,6 +826,7 @@ situation_caucasus = {
 			parameters = {
 				caucasus_foment_rebellion_unlock = yes # Foment Rebellion Interaction
 				unlocks_contract_assistance_interaction = yes # Contract Assistance Interaction
+				unlocks_epic_commission_for_independent_rulers = yes
 			}
 			modifier_sets = {
 				situation_caucasus_military_effects = {
@@ -922,6 +971,11 @@ situation_caucasus = {
 						character_became_pro_roman = 5
 						formed_cappadocia_pro_roman = 100
 						formed_armenian_cilicia_pro_roman = 100
+						pro_roman_legend_province_spread_famed = 1
+						pro_roman_legend_province_spread_illustrious = 2
+						pro_roman_legend_province_spread_mythical = 3
+						pro_roman_epic = 5
+						pro_roman_epic_great = 10
 					}
 				}
 				situation_caucasus_perso_arabic_control = {
@@ -949,6 +1003,11 @@ situation_caucasus = {
 						character_became_pro_perso_arabic = 5
 						formed_cappadocia_pro_perso_arabic = 100
 						formed_armenian_cilicia_pro_perso_arabic = 100
+						pro_perso_arabic_legend_province_spread_famed = 1
+						pro_perso_arabic_legend_province_spread_illustrious = 2
+						pro_perso_arabic_legend_province_spread_mythical = 3
+						pro_perso_arabic_epic = 5
+						pro_perso_arabic_epic_great = 10
 					}
 				}
 				situation_caucasus_local_control = {
@@ -978,6 +1037,11 @@ situation_caucasus = {
 						united_georgia = 100
 						unified_aluank = 100
 						ani_cathedral_restored = 25
+						autonomist_legend_province_spread_famed = 1
+						autonomist_legend_province_spread_illustrious = 2
+						autonomist_legend_province_spread_mythical = 3
+						autonomist_epic = 5
+						autonomist_epic_great = 10
 					}
 				}
 			}
