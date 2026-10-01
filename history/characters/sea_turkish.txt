@@ -2,7 +2,7 @@
 ildeguz_father = {
 	name = "Uranli_"
 	dynasty = uran_roa
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "kipchak"
 
 	1070.1.1 = {
@@ -15,7 +15,7 @@ ildeguz_father = {
 kiran_taraz = { ##http://elibrary.bsu.edu.az/files/books_aysel/N_-47.pdf
 	name = "Kiran"
 	dynasty = uran_roa
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "qangli"
 	father = ildeguz_father
 	trait = education_martial_4
@@ -30,7 +30,7 @@ kiran_taraz = { ##http://elibrary.bsu.edu.az/files/books_aysel/N_-47.pdf
 kiran_taraz_son = { #semi-fictional
 	name = "Jendli"
 	dynasty = uran_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "qangli"
 	father = kiran_taraz
 
@@ -46,7 +46,7 @@ kiran_taraz_son = { #semi-fictional
 pishkinid_roa_1 = {
 	name = "Beshken"
 	dynasty = pishteginid
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "georgian"
 
 	1040.1.1 = {
@@ -60,7 +60,7 @@ pishkinid_roa_1 = {
 pishkinid_roa_bridge = { #fictional
 	name = "Beshkenisdze"
 	dynasty = pishteginid
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "georgian"
 	father = pishkinid_roa_1
 
@@ -74,7 +74,7 @@ pishkinid_roa_bridge = { #fictional
 pishkinid_roa_2 = {
 	name = "Mohammed"
 	dynasty = pishteginid
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = pishkinid_roa_bridge
 
@@ -88,7 +88,7 @@ pishkinid_roa_2 = {
 pishkinid_roa_3 = {
 	name = "Pishtegin"
 	dynasty = pishteginid
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = pishkinid_roa_2
 
@@ -103,7 +103,7 @@ pishkinid_roa_3 = {
 pishkinid_roa_4 = {
 	name = "Mahmud"
 	dynasty = pishteginid
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = pishkinid_roa_3
 
@@ -119,7 +119,7 @@ pishkinid_roa_4 = {
 ahmdadil_roa_1 = {
 	name = "Aq_Sunqur"
 	dynasty = ahmadil_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 
 	1084.1.1 = {
@@ -132,7 +132,7 @@ ahmdadil_roa_1 = {
 ahmdadil_roa_2 = {
 	name = "Arslan_Aba"
 	dynasty = ahmadil_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = ahmdadil_roa_1
 
@@ -147,7 +147,7 @@ ahmdadil_roa_2 = {
 ahmdadil_roa_3 = {
 	name = "Aq_Sunqur"
 	dynasty = ahmadil_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = ahmdadil_roa_2
 
@@ -162,7 +162,7 @@ ahmdadil_roa_3 = {
 ahmdadil_roa_4 = {
 	name = "Ko_rpe_Aslan"
 	dynasty = ahmadil_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = ahmdadil_roa_3
 
@@ -177,7 +177,7 @@ ahmdadil_roa_4 = {
 ahmdadil_roa_5 = {
 	name = "Arslan_Aba"
 	dynasty = ahmadil_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = ahmdadil_roa_3
 
@@ -193,7 +193,7 @@ ahmdadil_roa_6 = {
 	name = "Sulafa"
 	female = yes
 	dynasty = ahmadil_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	father = ahmdadil_roa_3
 
@@ -209,7 +209,7 @@ ahmdadil_roa_6 = {
 salar_1 = {
 	name = "Haraman"
 	dynasty = salar1
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = turkish
 
 	838.1.1 = {
@@ -222,7 +222,7 @@ salar_1 = {
 salar_2 = {
 	name = "Ahman"
 	dynasty = salar2
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = turkish
 
 	907.1.1 = {
@@ -235,7 +235,7 @@ salar_2 = {
 salar_3 = {
 	name = "Beg"
 	dynasty = salar3
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	1030.1.1 = {
@@ -248,7 +248,7 @@ salar_3 = {
 salar_4 = {
 	name = "Salurbeg"
 	dynasty = salar4
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	1138.1.1 = {
@@ -266,7 +266,7 @@ sea_savtegin = {
 	martial = 7
 	diplomacy = 7 # sent as an ambassador to Ibrahim Yinal
 	prowess = 7
-	religion = ashari
+	rite = hanafi
 	culture = turkish
 	trait = education_martial_3 # commander, later general
 
@@ -297,7 +297,7 @@ sea_khundajiq_000 = {
 	dynasty = sea_kundaj
 	martial = 8
 	prowess = 10
-	religion = ashari
+	rite = hanafi
 	culture = turkish
 	trait = education_martial_2
 
@@ -313,7 +313,7 @@ sea_khundajiq_001 = {
 	dynasty = sea_kundaj
 	martial = 8
 	prowess = 10
-	religion = ashari
+	rite = hanafi
 	culture = turkish
 	trait = education_martial_2
 	father = sea_khundajiq_000
@@ -333,7 +333,7 @@ sea_khundajiq_002 = {
 	dynasty = sea_kundaj
 	martial = 8
 	prowess = 8
-	religion = ashari
+	rite = hanafi
 	culture = turkish
 	trait = education_martial_2
 	father = sea_khundajiq_001
@@ -356,7 +356,7 @@ sea_khundajiq_002 = {
 inanj_sonqur = {
 	name = "Sunqur"
 	dynasty = inanj_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	trait = ambitious
 	trait = stubborn
@@ -378,7 +378,7 @@ inanj_khatun = {
 	name = "Inanj_Khatun"
 	female = yes
 	dynasty = inanj_roa
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	trait = ambitious
 	trait = stubborn
@@ -398,7 +398,7 @@ inanj_khatun = {
 # Qutlugh's Father
 qutlugh_real_father = {
 	name = "Mohammed"
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 
 	1110.1.1 = {
@@ -413,7 +413,7 @@ qutlugh_real_father = {
 yabgus_1 = { #sus amogus
 	name = "Inal-Yavi"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	600.1.1 = {
@@ -426,7 +426,7 @@ yabgus_1 = { #sus amogus
 yabgus_2 = {
 	name = "Duylu-Kay"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_1
 
@@ -440,7 +440,7 @@ yabgus_2 = {
 yabgus_3 = {
 	name = "Erkin"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_2
 
@@ -454,7 +454,7 @@ yabgus_3 = {
 yabgus_4 = {
 	name = "Tuman"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_3
 
@@ -468,7 +468,7 @@ yabgus_4 = {
 yabgus_5 = {
 	name = "Qanli-Yavi"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_4
 
@@ -482,7 +482,7 @@ yabgus_5 = {
 yabgus_6 = {
 	name = "Mur-Yavi"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_5
 
@@ -496,7 +496,7 @@ yabgus_6 = {
 yabgus_7 = {
 	name = "Qara_Khan"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_6
 
@@ -510,7 +510,7 @@ yabgus_7 = {
 yabgus_8 = {
 	name = "Bughra_Khan"
 	dynasty = 1042198
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_7
 
@@ -524,7 +524,7 @@ yabgus_8 = {
 yabgus_9 = {
 	name = "Kuzutekin"
 	dynasty = bayindir_dynasty
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	795.1.1 = {
@@ -537,7 +537,7 @@ yabgus_9 = {
 yabgus_10 = {
 	name = "Arslan"
 	dynasty = bayindir_dynasty
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_9
 
@@ -551,7 +551,7 @@ yabgus_10 = {
 yabgus_11 = {
 	name = "Ataman"
 	dynasty = bayindir_dynasty
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_10
 
@@ -565,7 +565,7 @@ yabgus_11 = {
 yabgus_12 = {
 	name = "Isli"
 	dynasty = bayindir_dynasty
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_11
 
@@ -579,7 +579,7 @@ yabgus_12 = {
 yabgus_13 = {
 	name = "Shiban"
 	dynasty = bayindir_dynasty
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_12
 
@@ -593,7 +593,7 @@ yabgus_13 = {
 yabgus_14 = {
 	name = "Boran"
 	dynasty = bayindir_dynasty
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = yabgus_13
 
@@ -607,7 +607,7 @@ yabgus_14 = {
 yabgus_15 = {
 	name = "Ali_Khan"
 	dynasty = barani_dynasty
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 	father = barani_14
 
@@ -621,7 +621,7 @@ yabgus_15 = {
 yabgus_16 = {
 	name = "Kilij_Arslan"
 	dynasty = barani_dynasty
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 	father = yabgus_15
 
@@ -638,7 +638,7 @@ yabgus_16 = {
 barani_14 = {
 	name = "Barani"
 	dynasty = barani_dynasty
-	religion = alevi
+	rite = alevi
 	culture = turkish
 
 	930.1.1 = {
@@ -653,7 +653,7 @@ barani_14 = {
 oghuzes_1 = {
 	name = "Sayintur"
 	dynasty = 1042198 # 
-	religion = "ashari"
+	rite = hanafi
 	culture = "turkish"
 	father = oghuzes_2
 
@@ -667,7 +667,7 @@ oghuzes_1 = {
 oghuzes_2 = {
 	name = "Aykolug"
 	dynasty = 1042198 # Kayi
-	religion = "ashari"
+	rite = hanafi
 	culture = "turkish"
 	father = oghuzes_3
 
@@ -681,7 +681,7 @@ oghuzes_2 = {
 oghuzes_3 = {
 	name = "Togar"
 	dynasty = 1042198 # Kayi
-	religion = "ashari"
+	rite = hanafi
 	culture = "turkish"
 	father = oghuzes_4
 
@@ -695,7 +695,7 @@ oghuzes_3 = {
 oghuzes_4 = {
 	name = "Kayni_tur"
 	dynasty = 1042198 # Kayi
-	religion = "ashari"
+	rite = hanafi
 	culture = "turkish"
 	father = oghuzes_5
 
@@ -709,7 +709,7 @@ oghuzes_4 = {
 oghuzes_5 = {
 	name = "Sunkur"
 	dynasty = 1042198 # Kayi
-	religion = "ashari"
+	rite = hanafi
 	culture = "turkish"
 	father = oghuzes_6
 
@@ -723,7 +723,7 @@ oghuzes_5 = {
 oghuzes_6 = {
 	name = "Baki_Ag_a"
 	dynasty = 1042198 # Kayi
-	religion = "ashari"
+	rite = hanafi
 	culture = "turkish"
 	father = oghuzes_7
 
@@ -737,7 +737,7 @@ oghuzes_6 = {
 oghuzes_7 = {
 	name = "Suganchaf"
 	dynasty = 1042198 # Kayi
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = oghuzes_8
 
@@ -751,7 +751,7 @@ oghuzes_7 = {
 oghuzes_8 = {
 	name = "Temur"
 	dynasty = 1042198 # Kayi
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = oghuzes_9
 
@@ -765,7 +765,7 @@ oghuzes_8 = {
 oghuzes_9 = {
 	name = "Basak"
 	dynasty = 1042198 # Kayi
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = oghuzes_10
 
@@ -779,7 +779,7 @@ oghuzes_9 = {
 oghuzes_10 = {
 	name = "Go_kalp"
 	dynasty = 1042198 # Kayi
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = oghuzes_11
 
@@ -793,7 +793,7 @@ oghuzes_10 = {
 oghuzes_11 = {
 	name = "Oghuz_Beg"
 	dynasty = 1042198 # Kayi
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = oghuzes_12
 
@@ -807,7 +807,7 @@ oghuzes_11 = {
 oghuzes_12 = {
 	name = "Otuzbesh"
 	dynasty = 1042198 # Kayi
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = yabgus_8
 
@@ -824,7 +824,7 @@ oghuz_kun = {
 	# 1230103
 	name = "Ku_n"
 	dynasty = oghuz_kun
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	#father = 1230101
 
@@ -841,7 +841,7 @@ aqevli_0 = {
 	# 1230108
 	name = "Alqa_Evli"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = oghuz_kun
 
@@ -857,7 +857,7 @@ aqevli_1 = {
 	# General and powerbroker in the dying years of the Samanids.
 	name = "Bektuzun"
 	dynasty_house = house_oghuz_aqevli
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "turkish"
 	trait = "education_intrigue_3"
 	father = aqevli_6
@@ -873,7 +873,7 @@ aqevli_2 = {
 	# Akevli1
 	name = "Zafer"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = aqevli_0
 
@@ -888,7 +888,7 @@ aqevli_3 = {
 	# Akevli2
 	name = "Alp"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = aqevli_2
 
@@ -903,7 +903,7 @@ aqevli_4 = {
 	# Akevli3
 	name = "Bahadir"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = aqevli_3
 
@@ -918,7 +918,7 @@ aqevli_5 = {
 	# Akevli4
 	name = "Alp"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = aqevli_4
 
@@ -933,7 +933,7 @@ aqevli_6 = {
 	# Akevli5
 	name = "Korkmaz"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = aqevli_5
 
@@ -948,7 +948,7 @@ aqevli_7 = {
 	# Akevli6
 	name = "Kuzgun"
 	dynasty_house = house_oghuz_aqevli
-	religion = "tengri_pagan"
+	rite = tengri_pagan
 	culture = "turkish"
 	father = aqevli_6
 
@@ -956,7 +956,7 @@ aqevli_7 = {
 		birth = yes
 	}
 	975.1.1 = {
-		religion = "ashari"
+		rite = hanafi
 	}
 	1000.1.1 = {
 		death = yes
@@ -969,7 +969,7 @@ simjurid_1 = {
 	# general who served Samanids - ghulam of Turkic origin and a victim of the Samanid slave trade
 	name = "Simjur"
 	dynasty = sea_simjurid
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	871.1.1 = {
@@ -983,7 +983,7 @@ simjurid_2 = {
 	# 261041
 	name = "I_brahim"
 	dynasty = sea_simjurid
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 	father = simjurid_1
 
@@ -998,7 +998,7 @@ simjurid_3 = {
 	# 261042
 	name = "Abu_l-Hasan"
 	dynasty = sea_simjurid
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 	father = simjurid_2
 
@@ -1012,7 +1012,7 @@ simjurid_3 = {
 simjurid_4 = {
 	name = "Abu_Ali"
 	dynasty = sea_simjurid
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 	father = simjurid_3
 
@@ -1029,7 +1029,7 @@ simjurid_4 = {
 sea_chowdur_0 = {
 	name = "Buyruk"
 	dynasty = sea_chowdur
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	824.1.1 = {
@@ -1042,7 +1042,7 @@ sea_chowdur_0 = {
 sea_chowdur_1 = {
 	name = "Baytas"
 	dynasty = sea_chowdur
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = sea_chowdur_0
 
@@ -1056,7 +1056,7 @@ sea_chowdur_1 = {
 sea_chowdur_2 = {
 	name = "Dog_utegin"
 	dynasty = sea_chowdur
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = sea_chowdur_1
 
@@ -1070,7 +1070,7 @@ sea_chowdur_2 = {
 sea_chowdur_3 = {
 	name = "Cem"
 	dynasty = sea_chowdur
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = sea_chowdur_0
 
@@ -1084,7 +1084,7 @@ sea_chowdur_3 = {
 sea_chowdur_4 = {
 	name = "Eltut"
 	dynasty = sea_chowdur
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = sea_chowdur_3
 
@@ -1098,7 +1098,7 @@ sea_chowdur_4 = {
 sea_chowdur_5 = {
 	name = "Umur"
 	dynasty = sea_chowdur
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 	father = sea_chowdur_4
 
@@ -1113,7 +1113,7 @@ sea_chowdur_5 = {
 # Other
 roa_turkish02 = {
 	name = "Alptigin"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	845.1.1 = {
@@ -1125,7 +1125,7 @@ roa_turkish02 = {
 }
 roa_turkish03 = {
 	name = "Rustem"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	901.1.1 = {
@@ -1137,7 +1137,7 @@ roa_turkish03 = {
 }
 roa_turkish05 = {
 	name = "Berkan"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	880.1.1 = {
@@ -1149,7 +1149,7 @@ roa_turkish05 = {
 }
 roa_turkish06 = {
 	name = "Selim"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	871.1.1 = {
@@ -1161,7 +1161,7 @@ roa_turkish06 = {
 }
 roa_turkish07 = {
 	name = "Basbuga"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	920.1.1 = {
@@ -1173,7 +1173,7 @@ roa_turkish07 = {
 }
 roa_turkish08 = {
 	name = "Danismend"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	896.1.1 = {
@@ -1185,7 +1185,7 @@ roa_turkish08 = {
 }
 roa_turkish09 = {
 	name = "Kurboga"
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	1035.1.1 = {
@@ -1197,7 +1197,7 @@ roa_turkish09 = {
 }
 roa_turkish10 = {
 	name = "Saruca"
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	1140.1.1 = {
@@ -1209,7 +1209,7 @@ roa_turkish10 = {
 }
 roa_turkish11 = {
 	name = "Isha_k"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	830.1.1 = {
@@ -1221,7 +1221,7 @@ roa_turkish11 = {
 }
 roa_turkish12 = {
 	name = "Dursun"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	897.1.1 = {
@@ -1233,7 +1233,7 @@ roa_turkish12 = {
 }
 roa_turkish13 = {
 	name = "Burak"
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	1032.1.1 = {
@@ -1245,7 +1245,7 @@ roa_turkish13 = {
 }
 roa_turkish14 = {
 	name = "Altuntash"
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = turkish
 
 	1130.1.1 = {
@@ -1257,7 +1257,7 @@ roa_turkish14 = {
 }
 roa_turkish15 = {
 	name = "Bo_ri"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	914.1.1 = {
@@ -1269,7 +1269,7 @@ roa_turkish15 = {
 }
 roa_turkish16 = {
 	name = "Yukuk"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	904.1.1 = {
@@ -1281,7 +1281,7 @@ roa_turkish16 = {
 }
 roa_turkish17 = {
 	name = "Baybars"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	893.1.1 = {
@@ -1293,7 +1293,7 @@ roa_turkish17 = {
 }
 roa_turkish18 = {
 	name = "Gunduz"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	893.1.1 = {
@@ -1305,7 +1305,7 @@ roa_turkish18 = {
 }
 roa_turkish19 = {
 	name = "KiliC_Arslan"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	887.1.1 = {
@@ -1317,7 +1317,7 @@ roa_turkish19 = {
 }
 roa_turkish20 = {
 	name = "Demirtegin"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	910.1.1 = {
@@ -1329,7 +1329,7 @@ roa_turkish20 = {
 }
 roa_turkish21 = {
 	name = "Kara"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	902.1.1 = {
@@ -1341,7 +1341,7 @@ roa_turkish21 = {
 }
 roa_turkish22 = {
 	name = "Barchukh"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	894.1.1 = {
@@ -1353,7 +1353,7 @@ roa_turkish22 = {
 }
 roa_turkish23 = {
 	name = "Kasar"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	889.1.1 = {
@@ -1365,7 +1365,7 @@ roa_turkish23 = {
 }
 roa_turkish24 = {
 	name = "Iltutmus_"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	912.1.1 = {
@@ -1377,7 +1377,7 @@ roa_turkish24 = {
 }
 roa_turkish25 = {
 	name = "Dundar"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	918.1.1 = {
@@ -1390,7 +1390,7 @@ roa_turkish25 = {
 
 uzboy_placeholder = {
 	name = "Ertegin"
-	religion = tengri_pagan
+	rite = tengri_pagan
 	culture = turkish
 
 	910.1.1 = {

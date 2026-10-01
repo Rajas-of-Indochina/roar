@@ -3,7 +3,7 @@ sea_vardanisdze_dadiani_1 = {
 	name = "Vardan"
 	# Vardan I Dadiani
 	dynasty_house = house_vardanisdze
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "svan"
 	father = sea_vardanisdze_guria_1
 
@@ -23,7 +23,7 @@ sea_dadiani_1 = {
 	name = "Vardan"
 	#AKA: Vardan II/III
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = 232765
@@ -46,7 +46,7 @@ sea_dadiani_2 = {
 	intrigue = 7
 	stewardship = 6
 	learning = 7
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = gregarious # seemed to be quite skilled socially
 	trait = brave # stood up to Monogls - was ready to die for his comrades
@@ -72,7 +72,7 @@ sea_dadiani_3 = {
 	# contemporary of Tsotne ; might be the same person as Tsotne - things are very confusing about these two
 	name = "Bedan"
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = sea_dadiani_2 # might be the same person
@@ -97,7 +97,7 @@ sea_dadiani_4 = {
 	intrigue = 7
 	stewardship = 7
 	learning = 6
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = ambitious # expanded his realm's borders quite a bit
 	trait = generous # funded bunch of stuff
@@ -116,7 +116,7 @@ sea_dadiani_5 = {
 	# brother of Giorgi I ; mentioned in Odishi inscriptions
 	name = "Ioane"
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = sea_dadiani_3
@@ -133,7 +133,7 @@ sea_dadiani_6 = {
 	# brother of Giorgi I ; mentioned in Odishi inscriptions
 	name = "Erashahr"
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = sea_dadiani_3
@@ -151,7 +151,7 @@ sea_dadiani_7 = {
 	# submitted to Giorgi V 'the Brilliant'
 	name = "Mamia"
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = sea_dadiani_4
@@ -169,7 +169,7 @@ sea_dadiani_8 = {
 	name = "Giorgi"
 	#AKA Giorgi II
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = sea_dadiani_7
@@ -192,7 +192,7 @@ sea_dadiani_9 = {
 	intrigue = 6
 	stewardship = 7
 	learning = 7
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = ambitious
 	trait = generous
@@ -225,7 +225,7 @@ sea_gurieli_1 = {
 	# 2nd son of Giorgi II ; suceeded him in Guria and set up his own dynasty - Gurieli
 	name = "Kakhaber"
 	dynasty_house = house_dadiani
-	religion = "georgian_orthodox"
+	rite = georgian_rite
 	culture = "megrel"
 	trait = education_martial_2
 	father = sea_dadiani_8
@@ -249,7 +249,7 @@ sea_takveri_placeholder_0 = {
 	name = "Guaram"
 	dynasty = sea_takveri_placeholder
 	culture = "megrel"
-	faith = "mtielta"
+	rite = mtielta
 
 	734.1.1 = { birth = yes }
 	796.1.1 = { death = yes }
@@ -258,7 +258,7 @@ sea_takveri_placeholder_1 = {
 	name = "Erekle"
 	dynasty = sea_takveri_placeholder
 	culture = "megrel"
-	faith = "mtielta"
+	rite = mtielta
 
 	835.1.1 = { birth = yes }
 	892.1.1 = { death = yes }
@@ -267,7 +267,7 @@ sea_takveri_placeholder_2 = {
 	name = "Simon"
 	dynasty = sea_takveri_placeholder
 	culture = "megrel"
-	faith = "mtielta"
+	rite = mtielta
 	father = sea_takveri_placeholder_1
 
 	860.1.1 = { birth = yes }
@@ -277,7 +277,7 @@ sea_takveri_placeholder_3 = {
 	name = "Gurgen"
 	dynasty = sea_takveri_placeholder
 	culture = "megrel"
-	faith = "mtielta"
+	rite = mtielta
 	father = sea_takveri_placeholder_2
 
 	885.1.1 = { birth = yes }

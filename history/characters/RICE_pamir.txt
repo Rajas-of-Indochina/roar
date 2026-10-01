@@ -3,7 +3,7 @@
 RICE_pamir_001 = {
 	name = "VI_S_tap"
 	dynasty = RICE_puteshan
-	religion = "mahayana"
+	rite = mahayana
 	culture = "pamiri"
 
 	# History
@@ -19,7 +19,7 @@ RICE_pamir_001 = {
 RICE_pamir_002 = {
 	name = "Firdews"
 	dynasty = RICE_wakhanshah
-	religion = "theravada"
+	rite = theravada
 	culture = "pamiri"
 
 	# History
@@ -35,7 +35,7 @@ RICE_pamir_002 = {
 RICE_pamir_003 = {
 	name = "Xwedayar"
 	dynasty = RICE_shugnanshah
-	religion = "khurmazta" # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
+	rite = khurmazta # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
 	culture = "pamiri"
 
 	# History
@@ -51,7 +51,7 @@ RICE_pamir_003 = {
 RICE_pamir_004 = {
 	name = "KA_vus"
 	dynasty = RICE_shugnanshah_2
-	religion = "khurmazta" # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
+	rite = khurmazta # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
 	culture = "pamiri"
 
 	# History
@@ -67,7 +67,7 @@ RICE_pamir_004 = {
 RICE_pamir_005 = {
 	name = "Asad"
 	dynasty = RICE_ali_ibn_asad
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "pamiri"
 
 	# History
@@ -83,7 +83,7 @@ RICE_pamir_005 = {
 # RICE_pamir_006 = {
 # 	name = "Ali"
 # 	dynasty = RICE_ali_ibn_asad
-# 	religion = "maturidi"
+# 	rite = hanafi # was maturidi, fix later
 # 	culture = "pamiri"
 # 	learning=6
 # 	trait = education_learning_3
@@ -119,7 +119,7 @@ RICE_pamir_005 = {
 RICE_pamir_007 = {
 	name = "Kisar"
 	dynasty = RICE_shri_badat
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "tsangpa" # Gesar? Tibetan from Ladakh?
 
 	# History
@@ -135,7 +135,7 @@ RICE_pamir_007 = {
 RICE_pamir_008 = {
 	name = "Bugar"
 	dynasty = RICE_shri_badat
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_007
 
@@ -152,7 +152,7 @@ RICE_pamir_008 = {
 RICE_pamir_009 = {
 	name = "Agur"
 	dynasty = RICE_shri_badat
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_008
 
@@ -169,7 +169,7 @@ RICE_pamir_009 = {
 RICE_pamir_010 = {
 	name = "Badat"
 	dynasty = RICE_shri_badat
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	trait = education_intrigue_3
 	trait = cannibal
@@ -200,7 +200,7 @@ RICE_pamir_010 = {
 RICE_pamir_011 = {
 	name = "Yathini"
 	dynasty = RICE_shri_badat
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	female = yes
 	trait = giant
@@ -225,7 +225,7 @@ RICE_pamir_011 = {
 RICE_pamir_012 = {
 	name = "Nur_Bakht"
 	dynasty = RICE_shri_badat
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	female = yes
 	father = RICE_pamir_010
@@ -251,7 +251,7 @@ RICE_pamir_012 = {
 RICE_pamir_013 = {
 	name = "Azur_Jamshid"
 	dynasty = RICE_azur_jamshid
-	religion = "mazdayasna"
+	rite = mazdayasna
 	culture = "persian"
 	martial = 6
 	prowess = 7
@@ -275,7 +275,7 @@ RICE_pamir_013 = {
 		effect = {
 			set_relation_soulmate = character:RICE_pamir_012
 		}
-		religion = "vajrayana"
+		rite = vajrayana
 	}
 	908.5.22 = { # Abdicated
 		death = "908.5.22"
@@ -286,7 +286,7 @@ RICE_pamir_013 = {
 RICE_pamir_014 = {
 	name = "Garg"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_013
 	mother = RICE_pamir_012
@@ -305,7 +305,7 @@ RICE_pamir_014 = {
 RICE_pamir_015 = {
 	name = "Sau_Malik"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_014
 
@@ -322,7 +322,7 @@ RICE_pamir_015 = {
 RICE_pamir_016 = {
 	name = "Shah_Malik"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_015
 
@@ -339,7 +339,7 @@ RICE_pamir_016 = {
 RICE_pamir_017 = {
 	name = "Deng_Malik"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_016
 
@@ -356,7 +356,7 @@ RICE_pamir_017 = {
 RICE_pamir_018 = {
 	name = "Khusrau"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_017
 
@@ -376,7 +376,7 @@ RICE_pamir_018 = {
 RICE_pamir_019 = {
 	name = "Ipek"
 	dynasty = 1059007 # Fictitious connection
-	religion = "mahayana"
+	rite = mahayana
 	culture = "karluk" # Dynasty was probably of Turkic origin but became assimilated
 	female = yes
 
@@ -392,7 +392,7 @@ RICE_pamir_019 = {
 RICE_pamir_020 = {
 	name = "Haydar"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_018
 	mother = RICE_pamir_019
@@ -409,7 +409,7 @@ RICE_pamir_020 = {
 RICE_pamir_021 = {
 	name = "Nur" # Even tho this is a female name usually???
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_020
 
@@ -425,7 +425,7 @@ RICE_pamir_021 = {
 # Jataylotu - a minister of Shri Badat according to a Burusho version of the legend - old Burusho name
 RICE_pamir_022 = {
 	name = "Jataylotu"
-	religion = "nuristani_pagan"
+	rite = nuristani_pagan
 	culture = "burusho"
 	trait = education_stewardship_3
 	trait = patient
@@ -463,7 +463,7 @@ RICE_pamir_022 = {
 RICE_pamir_023 = {
 	name = "Shah_Mirza"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_021
 
@@ -480,7 +480,7 @@ RICE_pamir_023 = {
 RICE_pamir_024 = {
 	name = "Tartora_Khan"
 	dynasty = RICE_azur_jamshid
-	religion = "vajrayana"
+	rite = vajrayana
 	culture = "nuristani"
 	father = RICE_pamir_023
 
@@ -505,7 +505,7 @@ RICE_pamir_024 = {
 RICE_afghan_misc_001 = {
 	name = "abu_zayd"
 	dynasty = RICE_al_balkhi_dynasty
-	religion = "ashari"
+	rite = hanafi
 	culture = "tajik" # Khorasani
 	diplomacy = 7
 	stewardship = 6
@@ -532,7 +532,7 @@ RICE_afghan_misc_001 = {
 RICE_afghan_misc_002 = {
 	name = "Ali"
 	dynasty = RICE_al_harawi_dynasty
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = "afghan"
 	diplomacy = 7
 	martial = 6 # Apparently wrote a military treatise manual for Saladin
@@ -564,7 +564,7 @@ RICE_afghan_misc_002 = {
 # Fictional Chitral ruler for 867
 RICE_pamir_misc_001 = {
 	name = "Yamarajan"
-	religion = "nuristani_pagan"
+	rite = nuristani_pagan
 	culture = "nuristani"
 
 	# History
@@ -579,7 +579,7 @@ RICE_pamir_misc_001 = {
 # Fictional Chitral ruler for 1066
 RICE_pamir_misc_002 = {
 	name = "Kshumai"
-	religion = "nuristani_pagan"
+	rite = nuristani_pagan
 	culture = "nuristani"
 
 	# History
@@ -594,7 +594,7 @@ RICE_pamir_misc_002 = {
 # Fictional Chitral ruler for 1178
 RICE_pamir_misc_003 = {
 	name = "ZUzum"
-	religion = "nuristani_pagan"
+	rite = nuristani_pagan
 	culture = "nuristani"
 
 	# History
@@ -613,7 +613,7 @@ RICE_pamir_misc_003 = {
 RICE_pamir_misc_004 = {
 	name = "Ferheng"
 	dynasty = RICE_shugnanshah_2
-	religion = "khurmazta"
+	rite = khurmazta
 	culture = "pamiri"
 
 	# History
@@ -632,7 +632,7 @@ RICE_pamir_misc_004 = {
 RICE_pamir_misc_005 = {
 	name = "Xarmandar"
 	dynasty = RICE_wakhanshah_2
-	religion = "mahayana"
+	rite = mahayana
 	culture = "pamiri"
 
 	# History

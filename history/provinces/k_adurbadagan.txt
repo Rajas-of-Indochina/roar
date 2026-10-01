@@ -3,7 +3,7 @@
 ### c_tabriz
 4537 = {	# Tabriz
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
@@ -13,7 +13,7 @@
 		}
 	}
 	870.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1066.1.1 = {
 		buildings = {
@@ -42,12 +42,12 @@
 ### c_bakran
 4536 = {	# Marand
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	870.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 17595 = {	# Maghardavank
@@ -64,7 +64,7 @@
 ### c_dihnakhirjan
 17518 = {	# Hlakokhan
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
@@ -74,7 +74,7 @@
 		}
 	}
 	1000.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1066.1.1 = {
 		buildings = {
@@ -91,17 +91,17 @@
 ### c_maragha
 4545 = {	# Maragha AKA Maragheh
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	870.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1050.1.1 = {
 		culture = turkish
 		# turkish setup rework eventually I think
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4003 = {	# Kursara
@@ -117,18 +117,18 @@
 ### c_garrus
 4549 = {	# Shiz AKA Takab
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	870.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1060.1.1 = {
 		culture = persian
 	}
 	1178.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4548 = {	# Ar-Ran
@@ -140,11 +140,11 @@
 ### c_ardabil
 4543 = {	# Ardabil
 	culture = daylamite
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
-	950.1.1 = { religion = ashari }
+	950.1.1 = { rite = hanafi }
 }
 15607 = {	# Miyaneh
 	holding = church_holding
@@ -156,12 +156,12 @@
 ### c_vilgich
 4542 = {	# Unar AKA Ounar AKA Unar
 	culture = daylamite
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	950.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 17560 = {	# Namin
@@ -171,12 +171,12 @@
 ### c_sarab
 17519 = {	# Kuaser
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	950.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 17533 = {	# Bejand AKA Bijand
@@ -196,12 +196,12 @@
 ### c_parspatunik
 17632 = {	# Vanystan
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	1000.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 17602 = {	# Babak
@@ -217,12 +217,12 @@
 ### c_ujorud
 5793 = {	# Barzand
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	1000.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 5789 = {	# Varsan
@@ -237,12 +237,12 @@
 ### c_urmiya
 4771 = {	# Urmiya
 	culture = kurdish
-	religion = kitebacilweism
+	rite = kitebacilweism
 	holding = castle_holding
 
 	# History
 	1200.1.1 = {
-		religion = yazidi
+		rite = yazidi
 	}
 }
 15657 = {	# Kahriz
@@ -262,12 +262,12 @@
 ### c_ushnuya
 4770 = {	# Ushnuya
 	culture = kurdish
-	religion = kitebacilweism
+	rite = kitebacilweism
 	holding = castle_holding
 
 	# History
 	1200.1.1 = {
-		religion = yazidi
+		rite = yazidi
 	}	
 }
 15511 = {	# Shirakan
@@ -283,12 +283,12 @@
 ### c_bailaqan
 4767 = {	# Bailaqan
 	culture = kurdish
-	religion = kitebacilweism
+	rite = kitebacilweism
 	holding = castle_holding
 
 	# History
 	1050.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}	
 }
 4766 = {	# Barza AKA Saqqez
@@ -303,11 +303,11 @@
 ### c_zuvand
 5791 = {	# Langarkanan
 	culture = daylamite
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
-	900.1.1 = { religion = zayidi }
+	900.1.1 = { rite = zayidi }
 }
 17650 = {	# Badalan
 	holding = none
@@ -319,12 +319,12 @@
 ### c_mugan
 5788 = {	# Gabarawan
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	950.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 4535 = {	# Aparshahr
@@ -337,12 +337,12 @@
 ### c_paytakaran
 5790 = {	# Paytakaran
 	culture = adhari
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	950.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 5773 = {	# Salyan
@@ -353,11 +353,11 @@
 # move to Daylam eventually
 4534 = {	# Talish AKA Astara
 	culture = daylamite
-	religion = afridunism
+	rite = afridunism
 	holding = castle_holding
 
 	# History
-	900.1.1 = { religion = zayidi }
+	900.1.1 = { rite = zayidi }
 }
 17556 = {	# Dulab
 	holding = none

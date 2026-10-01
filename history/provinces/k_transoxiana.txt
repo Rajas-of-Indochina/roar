@@ -3,7 +3,7 @@
 ### c_bukhara
 4394 = {	#Bukhara
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
@@ -11,7 +11,7 @@
 		special_building = ark_of_bukhara_01
 	}
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = tajik
 	}
 	1066.1.1 = {
@@ -42,12 +42,12 @@
 ### c_kishsh
 4388 = {	#Kishsh
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = tajik
 	}	
 	1230.1.1 = { culture = turkish }
@@ -62,12 +62,12 @@
 ### c_kalif
 4384 = {	#Kalif
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = tajik
 	}	
 	1230.1.1 = { culture = turkish }
@@ -83,12 +83,12 @@
 ### c_nakhshab
 4390 = {	#Nakhshab
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = tajik
 	}	
 	1230.1.1 = { culture = turkish }
@@ -107,12 +107,12 @@
 ### c_firabr	#AKA Paykend
 4393 = {	#Paykend	
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = tajik
 	}
 	1000.1.1 = {
@@ -132,12 +132,12 @@
 ### c_dabusiya
 4402 = {	#Dabusiya
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1100.1.1 = {
 		culture = tajik
@@ -159,7 +159,7 @@
 ### c_samarkand
 4404 = {	#Samarqand / Samarkand
 	culture = sogdian
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	holding = castle_holding
 
 	# History
@@ -171,7 +171,7 @@
 		special_building_slot = shah_i_zinda_01
 	}
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = tajik
 	}	
 	1066.1.1 = {		
@@ -205,7 +205,7 @@
 4355 = {	#Badakhshan
 	# Misc
 	culture = pamiri
-	religion = mahayana
+	rite = mahayana
 	holding = castle_holding
 
 	# History
@@ -213,7 +213,7 @@
 		special_building = sar_i_sang_mines_01 #famous lapis lazuli mine, in use since prehistorical times
 	}
 	1060.1.1 = {
-		religion = ismaili
+		rite = ismaili
 	}
 }
 4353 = {	#Rustaq
@@ -233,12 +233,12 @@
 4357 = {	#Munjan
 	# Misc
 	culture = pamiri
-	religion = mahayana
+	rite = mahayana
 	holding = castle_holding
 
 	# History
 	1160.1.1 = {
-		religion = ismaili
+		rite = ismaili
 	}
 }
 4358 = {	#Sanglich
@@ -252,12 +252,12 @@
 4362 = {	#Wakhan
 	# Misc
 	culture = pamiri
-	religion = mahayana
+	rite = mahayana
 	holding = castle_holding
 
 	# History
 	1160.1.1 = {
-		religion = ismaili
+		rite = ismaili
 	}
 }
 4360 = {	#Ishkamish
@@ -278,12 +278,12 @@
 4363 = {	#Shughnan
 	# Misc
 	culture = pamiri
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1200.1.1 = {
-		religion = ismaili
+		rite = ismaili
 	}
 }
 4364 = {	#Alichur
@@ -303,12 +303,12 @@
 4366 = {	#Upper Karran
 	# Misc
 	culture = pamiri
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1160.1.1 = {
-		religion = ismaili
+		rite = ismaili
 	}
 }
 4367 = {	#Lower Karran
@@ -320,14 +320,14 @@
 ### c_khuttal
 4378 = {	# Pargar
 	culture = sogdian
-	religion = dharmaguptaka
+	rite = mahayana #dharmaguptaka
 
 	holding = castle_holding
 
 	# History
 	1000.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -349,13 +349,13 @@
 4376 = {	#Halavand
 	# Misc
 	culture = sogdian
-	religion = mahayana
+	rite = mahayana
 	holding = castle_holding
 
 	# History
 	1000.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -376,13 +376,13 @@
 4369 = {	#Chaghaniyan
 	# Misc
 	culture = sogdian
-	religion = mahayana
+	rite = mahayana
 	holding = castle_holding
 
 	# History
 	1000.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -406,13 +406,13 @@
 ### c_rasht
 4383 = {	# Rasht
 	culture = sogdian
-	religion = dharmaguptaka
+	rite = mahayana #dharmaguptaka
 
 	holding = castle_holding
 
 	# History
 	1000.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 		culture = pamiri
 	}
 	1100.1.1 = {
@@ -438,12 +438,12 @@
 4414 = {	#Bunjiket
 	# Misc
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1100.1.1 = {
 		culture = tajik
@@ -472,12 +472,12 @@
 4409 = {	#Panjikand
 	# Misc
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	900.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1100.1.1 = {
 		culture = tajik
@@ -498,13 +498,13 @@
 4438 = {	#Akhsikath
 	# Misc
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1050.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -525,13 +525,13 @@
 4418 = {	#Khojand
 	# Misc
 	culture = sogdian
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
 	1050.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1066.1.1 = {
 		buildings = {
@@ -562,13 +562,13 @@
 4422 = {	#Varukh
 	# Misc
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1050.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -590,13 +590,13 @@
 4429 = {	#Andijan
 	# Misc
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1050.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -614,13 +614,13 @@
 4432 = {	#Uzgend
 	# Misc
 	culture = sogdian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1050.1.1 = {
 		culture = tajik
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { culture = mongol }
 }
@@ -640,12 +640,12 @@
 4456 = {	#Gurganj
 	# Misc
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1066.1.1 = {
 		buildings = {
@@ -681,12 +681,12 @@
 4441 = {	#Darghan
 	# Misc
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1240.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
@@ -705,12 +705,12 @@
 ### c_kath
 4448 = {	#Kath
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
@@ -726,12 +726,12 @@
 ### c_ghardaman
 4447 = {	#Ghardaman #town mentioned in historical sources, had two gates
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
@@ -744,7 +744,7 @@
 ### c_khiva
 4452 = {	#Khiva
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	effect = {
@@ -759,7 +759,7 @@
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
@@ -778,12 +778,12 @@
 ### c_zamakhshar
 4455 = {	#Zamakhshar
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
@@ -797,12 +797,12 @@
 4460 = {	#Kurdar
 	# Misc
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 	1230.1.1 = { #FP3 change from 1060 - the turkification of the area was only completed after the Mongol conquest
 		culture = turkish
@@ -823,13 +823,13 @@
 ### c_kurtysh
 4528 = {	#Kurtysh
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = tribal_holding
 
 	# History
 	1060.1.1 = {
 		culture = turkish
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4527 = {	#Bala Iskem
@@ -842,13 +842,13 @@
 ### c_sarykamysh
 4524 = {	#Sarykamysh
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = tribal_holding
 
 	# History
 	1060.1.1 = {
 		culture = turkish
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4525 = {	#Ortakuyu
@@ -861,13 +861,13 @@
 ### c_uzboy
 4530 = {	#Burgun
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = tribal_holding
 
 	# History
 	1060.1.1 = {
 		culture = turkish
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4531 = {	#Dekcha
@@ -880,13 +880,13 @@
 ### c_nebit_dag
 4533 = {	#Nebit dag
 	culture = khwarezmian
-	religion = khurmazta
+	rite = khurmazta
 	holding = tribal_holding
 
 	# History
 	1060.1.1 = {
 		culture = turkish
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4415 = {	#Cheleken

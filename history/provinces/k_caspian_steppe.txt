@@ -3,12 +3,12 @@
 ### c_itil
 620 = { 	#Itil	#Khazar capital
 	culture = khazar
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
 	600.1.1 = {
-		religion = kabarism
+		rite = kabarism
 	}
 	867.1.1 = {
 		buildings = {
@@ -19,7 +19,7 @@
 	1040.1.1 = {
 		holding = castle_holding
 		culture = turkish
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 604 = {		#Khazaran
@@ -35,7 +35,7 @@
 ### c_saray
 17361 = {	#Saray al-qadima
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -59,7 +59,7 @@
 ### c_altyn_nur
 5316 = {	#Nikolaievsk
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -77,7 +77,7 @@
 ### c_gulistan
 619 = { 	#Gulistan
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -94,7 +94,7 @@
 ### c_astrakhan
 5311 = {	#Astrakhan
 	culture = khazar
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -113,7 +113,7 @@
 5313 = {	#Lagan
 	#Khazar settlement
 	culture = khazar
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -135,7 +135,7 @@
 #Mostly placeholder places
 605 = {		#Beksima
 	culture = khazar
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -159,7 +159,7 @@
 ### c_elista
 5514 = {		#Elista
 	culture = khazar
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = herder_holding
 
 	#History
@@ -177,7 +177,7 @@
 ### c_amtya-nur
 17073 = {		#Amtya-Nur
 	culture = khazar
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = herder_holding
 
 	#History
@@ -198,7 +198,7 @@
 5317 = {	#Saray al-saghira
 	#Khazar settlement
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -219,7 +219,7 @@
 ### c_zhankala
 5318 = {	#Kalmikovsky
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 
 	#History
@@ -240,7 +240,7 @@
 616 = {		#Pecheneg
 	#somewhat placeholder name, more or less region where the pechenegs come from
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = cuman
@@ -259,7 +259,7 @@
 5504 = {	#Jambalar
 	#Khazar/Bolghar settlement south of Banja, found on old arabic maps
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = cuman
@@ -283,7 +283,7 @@
 617 = {		#Uzen
 	#Settlement from XIXth century Russian Empire atlas
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = cuman
@@ -305,7 +305,7 @@
 608 = {		#Ukek	AKA Uvek
 	#Golden Horde settlement
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = cuman
@@ -322,7 +322,7 @@
 ### c_yaitsk
 5319 = {	#Yaitsk		AKA Uralsk
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = herder_holding
 	936.1.1 = {
 		holding = nomad_holding
@@ -346,7 +346,7 @@
 ### c_mugodzhar_hills
 7242 = {	#Karabutak	AKA Qarabutaq
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -371,7 +371,7 @@
 7251 = {	#Jitikul
 	#Lake "Djity Koul" on map BBB, south-east of Orsk
 	culture = kipchak
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1178.1.1 = {
 		holding = herder_holding
@@ -386,7 +386,7 @@
 7252 = {	#Kosh Kurbay
 	#Lake "Koch-Kurbai" on map BBB, east of Orsk
 	culture = kipchak
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1178.1.1 = {
 		holding = herder_holding
@@ -401,7 +401,7 @@
 7239 = {	#Kos Uba
 	#On map BBB, at coordinates 48°;53°, near Temir, Bis Ouba & Aïryk
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -424,10 +424,10 @@
 ### c_aqtobe
 896 = {		#Aqtobe	AKA Aktobe
 	culture = bashkir
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	960.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 }
 5499 = {	#Orskaya	AKA Orsk
@@ -445,7 +445,7 @@
 ### c_orenburg
 5501 = {	#Orenburg
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -462,7 +462,7 @@
 7218 = {	#Santas
 	#Mount Santas on map BBB, on the upper-left corner of the map, bit south of "OURAL'SK"
 	culture = pecheneg
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -480,10 +480,10 @@
 7247 = {	#Atamanskü/Atamansku
 	#"Atamanskü" on map BBB, near green border, at latitude 50°, more or less longitude 58°
 	culture = bashkir
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	960.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1066.1.1 = {
 		holding = herder_holding
@@ -498,10 +498,10 @@
 7248 = {	#Kbumak
 	#River "Kbumak" on map BBB just east of Orsk
 	culture = bashkir
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	960.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1066.1.1 = {
 		holding = herder_holding
@@ -519,7 +519,7 @@
 ### c_atyrau
 618 = {		#Atyrau
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = herder_holding
 	936.1.1 = {
 		holding = nomad_holding
@@ -543,7 +543,7 @@
 ### c_sagiz
 7227 = {	#Sagiz
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = herder_holding
 	936.1.1 = {
 		holding = nomad_holding
@@ -564,7 +564,7 @@
 ### c_kainar
 7230 = {	#Kainar
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1066.1.1 = {
 		culture = kipchak
@@ -582,7 +582,7 @@
 7238 = {	#Baisary
 	#As "Baïsary" on map BBB, north west of the Aral Sea
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -603,7 +603,7 @@
 7221 = {	#Manatau
 	#Appears as "Mana-Taou" on map BBB, at latitude 50° & longitutde 48°
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -618,7 +618,7 @@
 7224 = {	#Jaksybai
 	#Lake "Djaksy Baï" on map BBB at latitude 49° & longitutde 49°
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	1040.1.1 = {
 		culture = kipchak
@@ -636,7 +636,7 @@
 7233 = {	#Basagha
 	#As "Bassagha mountain" on map AAA, north east of the Caspian Sea
 	culture = turkish
-	religion = tengri_pagan
+	rite = tengri_pagan
 	holding = nomad_holding
 	936.1.1 = {
 		holding = herder_holding

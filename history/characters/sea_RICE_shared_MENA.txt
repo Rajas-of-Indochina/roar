@@ -4,7 +4,7 @@ sea_RICE_extra_taghlibs_01 = {
 	name = "Abu_l-Hayja_Abdallah" #Abdallah
 	# Abu'l-Hayja Abdallah ibn Hamdan
 	dynasty_house = house_hamdan
-	religion = ashari
+	rite = hanafi
 	culture = levantine
 	father = 163133
 
@@ -16,7 +16,7 @@ sea_RICE_extra_taghlibs_01 = {
 		add_trait = generous
 		add_trait = brave
 		add_trait = honest	
-		religion = imami
+		rite = imami
 	}
 	929.2.27 = { # Known date
 		death = {
@@ -33,7 +33,7 @@ sea_RICE_extra_taghlibs_02 = {
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 8
-	religion = imami
+	rite = imami
 	culture = levantine
 	trait = education_intrigue_2
 	father = sea_RICE_extra_taghlibs_01
@@ -58,7 +58,7 @@ sea_RICE_extra_taghlibs_03 = {
 	diplomacy = 6
 	intrigue = 6
 	stewardship = 7
-	religion = imami
+	rite = imami
 	culture = levantine
 	trait = education_martial_3 	# Successful opponent of the Byzantines
 	trait = greedy 					# Oppressive taxation regime, lavish courts
@@ -78,7 +78,7 @@ sea_RICE_extra_taghlibs_04 = {
 	# 260825 & RICE_hamdanid_006
 	name = "Abu_Taghlib"
 	dynasty_house = house_hamdan
-	religion = imami
+	rite = imami
 	culture = levantine
 	trait = education_martial_2
 	father = sea_RICE_extra_taghlibs_02
@@ -96,7 +96,7 @@ sea_RICE_extra_taghlibs_05 = {
 	name = "Abu_Tahir_Ibrahim"
 	#Abu Tahir Ibrahim ibn Nasir al-Dawla
 	dynasty_house = house_hamdan
-	religion = imami
+	rite = imami
 	culture = levantine
 	father = sea_RICE_extra_taghlibs_02
 
@@ -104,7 +104,7 @@ sea_RICE_extra_taghlibs_05 = {
 		birth = yes
 	}
 	990.1.1 = {
-		religion = ismaili
+		rite = ismaili
 	}
 	1015.1.1 = {
 		death = yes
@@ -115,7 +115,7 @@ sea_RICE_extra_taghlibs_06 = {
 	name = "Abu_l_Ma_ali_Sharif"
 	# Abu'l-Ma'ali Sharif, Sa'd al-Dawla
 	dynasty_house = house_hamdan
-	religion = imami
+	rite = imami
 	culture = levantine
 	trait = education_diplomacy_2 	# Faced many rebellions/desertions, forced to fluctuate allegiance between ERE, Buyids, Fatimids
 	trait = fickle
@@ -140,7 +140,7 @@ sea_RICE_extra_taghlibs_07 = {
 	name = "Abu_l-Fada_il"
 	# Abu'l-Fada'il Sa'id al-Dawla
 	dynasty_house = house_hamdan
-	religion = imami
+	rite = imami
 	culture = levantine
 	father = sea_RICE_extra_taghlibs_06
 
@@ -159,7 +159,7 @@ RICE_hamdanid_007 = {
 	# Abu Abdallah al-Husayn ibn Nasir al-Dawla
 	name = "Abu_Abdallah_al_Husayn"
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = imami
+	rite = imami
 	culture = levantine
 	father = sea_RICE_extra_taghlibs_02
 
@@ -167,7 +167,7 @@ RICE_hamdanid_007 = {
 		birth = yes
 	}
 	988.1.1 = {
-		religion = ashari
+		rite = hanafi
 	}
 	1009.3.14 = { # Unknown
 		death = yes
@@ -177,7 +177,7 @@ RICE_hamdanid_008 = {
 	# al-Hasan, father of Nasir al-Dawla
 	name = "al-Hasan"
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = ashari
+	rite = hanafi
 	culture = levantine
 	father = RICE_hamdanid_007
 
@@ -192,7 +192,7 @@ RICE_hamdanid_009 = {
 	# Nasir al-Dawla, military dictator of Fatimid Egypt 1071-1073 after winning a civil war leading the Turkic faction against the African faction
 	name = "Abu_Ali_al_Husayn"
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = ashari
+	rite = hanafi
 	culture = egyptian
 	trait = education_martial_3
 	trait = ambitious 		# Became military dictator
@@ -234,7 +234,7 @@ RICE_hamdanid_009a = {
 	# According to Arab wikipedia Nasir al-Dawla's brother was also killed in 1073
 	name = "Fakhr_al_Umara"
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = ashari
+	rite = hanafi
 	culture = egyptian
 	father = RICE_hamdanid_008
 
@@ -254,7 +254,7 @@ RICE_hamdanid_009b = {
 	# Fictitious wife of Nasir al-Dawla
 	name = "Asenet"
 	female = yes
-	religion = ismaili
+	rite = ismaili
 	culture = egyptian
 
 	1015.3.12 = { # Unknown
@@ -270,7 +270,7 @@ RICE_hamdanid_009c = {
 	# Fictitious son of Nasir al-Dawla
 	name = "Abu_Muhammad_al_Hasan"
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = ashari
+	rite = hanafi
 	culture = egyptian
 	father = RICE_hamdanid_009
 	mother = RICE_hamdanid_009b
@@ -288,7 +288,7 @@ RICE_hamdanid_009d = {
 	# Fictitious nephew of Nasir al-Dawla
 	name = "Abdul-Aziz"
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = ashari
+	rite = hanafi
 	culture = egyptian
 	father = RICE_hamdanid_009a
 	mother = RICE_hamdanid_009f
@@ -307,7 +307,7 @@ RICE_hamdanid_009e = {
 	name = "Fatima"
 	female = yes
 	dynasty_house = house_hamdan #Banu Taghlib Attab
-	religion = ashari
+	rite = hanafi
 	culture = egyptian
 	father = RICE_hamdanid_009
 	mother = RICE_hamdanid_009b
@@ -325,7 +325,7 @@ RICE_hamdanid_009f = {
 	# Fictitious wife of Nasir al-Dawla's brother
 	name = "Habsiya"
 	female = yes
-	religion = ismaili
+	rite = ismaili
 	culture = egyptian
 
 	1022.4.3 = { # Unknown

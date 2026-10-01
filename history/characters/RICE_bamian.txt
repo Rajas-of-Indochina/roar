@@ -18,7 +18,7 @@
 RICE_bamian_001 = {
 	name = "Mithravakhsha"
 	dynasty = RICE_bamian_dynasty
-	religion = "mahasanghika"
+	rite = mahayana # mahasanghika
 	culture = turco_hephthalite
 
 	725.8.1 = { # Unknown
@@ -35,7 +35,7 @@ RICE_bamian_002 = {
 	name = "Ralik"
 	female = yes
 	dynasty = RICE_bamian_dynasty
-	religion = "mahasanghika"
+	rite = mahayana # mahasanghika
 	culture = turco_hephthalite
 	father = RICE_bamian_001
 
@@ -54,7 +54,7 @@ RICE_bamian_002 = {
 RICE_bamian_003 = {
 	name = "Al-Hasan"
 	dynasty = RICE_bamian_dynasty # dynasty_house = RICE_bamian_dynasty_2
-	religion = "ashari"
+	rite = hanafi
 	culture = turco_hephthalite
 	father = RICE_bamian_011
 	mother = RICE_bamian_002
@@ -73,7 +73,7 @@ RICE_bamian_003 = {
 RICE_bamian_004 = {
 	name = "Harthamah"
 	dynasty = RICE_bamian_dynasty # dynasty_house = RICE_bamian_dynasty_2
-	religion = "ashari"
+	rite = hanafi
 	culture = turco_hephthalite
 	father = RICE_bamian_003
 
@@ -90,7 +90,7 @@ RICE_bamian_004 = {
 RICE_bamian_005 = {
 	name = "Al-Hasan"
 	dynasty = RICE_bamian_dynasty # dynasty_house = RICE_bamian_dynasty_2
-	religion = "ashari"
+	rite = hanafi
 	culture = turco_hephthalite
 	father = RICE_bamian_004
 	trait = education_martial_2
@@ -111,7 +111,7 @@ RICE_bamian_005 = {
 RICE_bamian_006 = {
 	name = "Nobekht"
 	dynasty = RICE_bamian_dynasty
-	religion = "mahasanghika"
+	rite = mahayana # mahasanghika
 	culture = turco_hephthalite
 	father = RICE_bamian_001
 
@@ -127,7 +127,7 @@ RICE_bamian_006 = {
 RICE_bamian_007 = {
 	name = "Kozgashka"
 	dynasty = RICE_bamian_dynasty
-	religion = "mahasanghika"
+	rite = mahayana # mahasanghika
 	culture = turco_hephthalite
 	father = RICE_bamian_006
 
@@ -143,7 +143,7 @@ RICE_bamian_007 = {
 RICE_bamian_008 = {
 	name = "Mihraman"
 	dynasty = RICE_bamian_dynasty
-	religion = "mahasanghika"
+	rite = mahayana # mahasanghika
 	culture = turco_hephthalite
 	father = RICE_bamian_007
 
@@ -160,7 +160,7 @@ RICE_bamian_008 = {
 RICE_bamian_009 = {
 	name = "Bistam"
 	dynasty = RICE_warwaliz_dynasty
-	religion = "khurmazta" # Zun pagan? Ashari?
+	rite = khurmazta # Zun pagan? hanafi?
 	culture = turco_hephthalite
 
 	690.6.9 = { # Unknown
@@ -176,7 +176,7 @@ RICE_bamian_009 = {
 RICE_bamian_010 = {
 	name = "Murzahim"
 	dynasty = RICE_warwaliz_dynasty
-	religion = "ashari"
+	rite = hanafi
 	culture = turco_hephthalite
 	father = RICE_bamian_009
 
@@ -193,7 +193,7 @@ RICE_bamian_010 = {
 RICE_bamian_011 = {
 	name = "Abu_Harb_Muhammad"
 	dynasty = RICE_warwaliz_dynasty
-	religion = "ashari"
+	rite = hanafi
 	culture = turco_hephthalite
 	father = RICE_bamian_010
 
@@ -222,7 +222,7 @@ RICE_bamian_011 = {
 RICE_bamian_jewish_001 = {
 	name = "Daniyyel"
 	dynasty = RICE_jewish_bamian_dynasty
-	religion = "rabbinism"
+	rite = rabbinism
 	culture = parsim
 
 	950.2.5 = { # Unknown
@@ -239,7 +239,7 @@ RICE_bamian_jewish_001 = {
 RICE_bamian_jewish_002 = {
 	name = "Yehudah"
 	dynasty = RICE_jewish_bamian_dynasty
-	religion = "rabbinism"
+	rite = rabbinism
 	culture = parsim
 	father = RICE_bamian_jewish_001
 	trait = education_stewardship_3
@@ -258,7 +258,7 @@ RICE_bamian_jewish_002 = {
 RICE_bamian_jewish_003 = {
 	name = "Siman_Tov"
 	dynasty = RICE_jewish_bamian_dynasty
-	religion = "rabbinism"
+	rite = rabbinism
 	culture = parsim
 	father = RICE_bamian_jewish_002
 	trait = education_stewardship_3
@@ -280,7 +280,7 @@ RICE_bamian_jewish_005 = {
 	name = "Hiwi"
 	dynasty = RICE_jewish_al_balkhi
 	learning = 8
-	religion = "rabbinism"
+	rite = rabbinism
 	culture = parsim
 	trait = education_learning_4
 	trait = cynical
@@ -314,7 +314,7 @@ RICE_bamian_jewish_005 = {
 RICE_bamian_said_001 = {
 	name = "Sa_id"
 	dynasty = RICE_saidi_dynasty
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = sogdian # Unknown but I will just assume they are indigenous Iranians to the area
 
 	835.1.17 = { # Unknown
@@ -332,7 +332,7 @@ RICE_bamian_said_001 = {
 RICE_bamian_said_002 = {
 	name = "Mahtab"
 	female = yes
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = sogdian # Unknown but I will just assume they are indigenous Iranians to the area
 
 	834.8.6 = { # Unknown
@@ -350,7 +350,7 @@ RICE_bamian_said_002 = {
 RICE_bamian_said_003 = {
 	name = "Sa_id"
 	dynasty = RICE_saidi_dynasty
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	culture = sogdian # Unknown but I will just assume they are indigenous Iranians to the area
 	father = RICE_bamian_said_001
 	mother = RICE_bamian_said_002

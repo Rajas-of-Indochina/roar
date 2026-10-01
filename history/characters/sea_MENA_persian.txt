@@ -5,7 +5,7 @@ sea_ghaznavid_princess_1 = {
 	female = yes
 	dynasty = 790
 	culture = "persian"
-	religion = "maturidi"
+	rite = hanafi # was maturidi, fix later
 	father = 144128
 	1028.1.1 = {
 		birth = yes
@@ -24,7 +24,7 @@ sea_diramku_1 = {
 	name = "Muhammad"
 	dynasty = sea_diramku
 	culture = bedouin
-	religion = ashari
+	rite = hanafi
 
 	# History
 	1028.1.1 = {
@@ -42,7 +42,7 @@ sea_diramku_2 = {
 	name = "Ahmad" # placeholder
 	dynasty = sea_diramku
 	culture = persian
-	religion = ashari
+	rite = hanafi
 	father = sea_diramku_1
 
 	# History
@@ -57,7 +57,7 @@ sea_diramku_3 = {
 	name = "Muhammad" # placeholder
 	dynasty = sea_diramku
 	culture = persian
-	religion = ashari
+	rite = hanafi
 	father = sea_diramku_2
 
 	# History
@@ -72,7 +72,7 @@ sea_diramku_4 = {
 	name = "Omar" # placeholder
 	dynasty = sea_diramku
 	culture = persian
-	religion = ashari
+	rite = hanafi
 	father = sea_diramku_3
 
 	# History
@@ -87,7 +87,7 @@ sea_diramku_5 = {
 	name = "Yusuf" # placeholder
 	dynasty = sea_diramku
 	culture = persian
-	religion = ashari
+	rite = hanafi
 	father = sea_diramku_4
 
 	# History
@@ -102,7 +102,7 @@ sea_diramku_6 = {
 	name = "Ali" # placeholder
 	dynasty = sea_diramku
 	culture = persian
-	religion = ashari
+	rite = hanafi
 	father = sea_diramku_5
 
 	# History
@@ -121,7 +121,7 @@ bahram_al_jannabi_placeholder = {
 	name = "Bahram"
 	dynasty = 12279
 	culture = persian
-	religion = ismaili
+	rite = ismaili
 
 	# History
 	825.1.1 = {
@@ -140,7 +140,7 @@ abu_sa_id_al_jannabi = {
 	#AKA: Abu Sa'id Hasan ibn Bahram al-Jannabi
 	dynasty = 12279
 	culture = persian
-	religion = ismaili
+	rite = ismaili
 	trait = deceitful  # his general tactics seem pretty underhanded
 	father = bahram_al_jannabi_placeholder
 
@@ -155,7 +155,7 @@ abu_sa_id_al_jannabi = {
 	# married into Banu'l-Qassar family - prominent ismaili family
 	899.1.1 = {
 		trait = zealous
-		religion = qarmatian
+		rite = qarmatian
 	}
 	913.1.1 = {
 		death = {
@@ -169,7 +169,7 @@ abu_l_qasim_al_jannabi = {
 	name = "Abu_l-Qasim"
 	dynasty = 12279
 	culture = persian
-	religion = qarmatian
+	rite = qarmatian
 	father = abu_sa_id_al_jannabi
 
 	# History
@@ -199,7 +199,7 @@ abu_tahir_al_jannabi = {
 	learning = 4
 
 	culture = persian
-	religion = qarmatian
+	rite = qarmatian
 
 	trait = education_martial_4
 	trait = intellect_good_1
@@ -251,7 +251,7 @@ qarmatian_al_jannabi_1 = {
 	name = "Ahmad"
 	dynasty = 12279
 	culture = persian
-	religion = qarmatian
+	rite = qarmatian
 	father = abu_sa_id_al_jannabi
 
 	910.1.1 = {
@@ -266,7 +266,7 @@ qarmatian_al_jannabi_2 = {
 	name = "al_Hasan_al_A_sam"
 	dynasty = 12279
 	culture = persian
-	religion = qarmatian
+	rite = qarmatian
 	trait = education_martial_3
 	father = qarmatian_al_jannabi_1
 
@@ -284,7 +284,7 @@ qarmatian_al_jannabi_2 = {
 	name = "Abu_Yaqub_Yousuf"
 	dynasty = 12279
 	culture = persian
-	religion = qarmatian
+	rite = qarmatian
 	trait = zealous
 
 	1030.1.1 = {

@@ -1,7 +1,7 @@
 ﻿261110 = {
 	name = "Hayaat"
 	dynasty = 1062543
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	891.1.1 = {
 		birth = yes
@@ -15,7 +15,7 @@
 jalal_khan = {
 	name = "JalA_l_KhA_n"
 	dynasty = baloch_dynasty
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 
 	1100.1.1 = {
@@ -30,7 +30,7 @@ jalal_khan = {
 rind_khan = {
 	name = "dynn_Rind"
 	dynasty = baloch_dynasty
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = jalal_khan
 
@@ -47,7 +47,7 @@ rind_khan = {
 rind_2 = {
 	name = "RazmA_n"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_khan
 
@@ -61,7 +61,7 @@ rind_2 = {
 rind_3 = {
 	name = "Nau_NA_sir_DI_n"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_2
 
@@ -75,7 +75,7 @@ rind_3 = {
 rind_4 = {
 	name = "Ahmad"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_3
 
@@ -89,7 +89,7 @@ rind_4 = {
 rind_5 = {
 	name = "Gilo"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_4
 
@@ -103,7 +103,7 @@ rind_5 = {
 rind_baloch_1337 = {
 	name = "Pheroz"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_5
 
@@ -117,7 +117,7 @@ rind_baloch_1337 = {
 rind_baloch_1337_son = {
 	name = "Kalo"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_baloch_1337
 
@@ -131,7 +131,7 @@ rind_baloch_1337_son = {
 rind_baloch_1337_brother = {
 	name = "KA_im"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_5
 
@@ -145,7 +145,7 @@ rind_baloch_1337_brother = {
 rind_baloch_1337_nephew = {
 	name = "Chauro"
 	dynasty_house = house_rind
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = rind_baloch_1337_brother
 
@@ -157,12 +157,12 @@ rind_baloch_1337_nephew = {
 	}
 }
 
-#Lasharis; "main" line with Gwaharām and Nodhbandagh is unknown
+#Lhanafis; "main" line with Gwaharām and Nodhbandagh is unknown
 
 lashar_khan = {
 	name = "LA_shA_r"
 	dynasty = baloch_dynasty
-	religion = maturidi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = jalal_khan
 
@@ -170,7 +170,7 @@ lashar_khan = {
 		birth = yes
 	}
 	1185.1.1 = {
-		dynasty_house = house_lashari
+		dynasty_house = house_lhanafi
 	}
 	1223.1.1 = { #Fictional date
 		death = yes
@@ -178,8 +178,8 @@ lashar_khan = {
 }
 lashar_2 = {
 	name = "Bakar"
-	dynasty_house = house_lashari
-	religion = maturidi
+	dynasty_house = house_lhanafi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = lashar_khan
 
@@ -192,8 +192,8 @@ lashar_2 = {
 }
 lashar_3 = {
 	name = "RA_men"
-	dynasty_house = house_lashari
-	religion = maturidi
+	dynasty_house = house_lhanafi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = lashar_2
 
@@ -206,8 +206,8 @@ lashar_3 = {
 }
 lashar_4 = {
 	name = "MubA_rak"
-	dynasty_house = house_lashari
-	religion = maturidi
+	dynasty_house = house_lhanafi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = lashar_3
 
@@ -220,8 +220,8 @@ lashar_4 = {
 }
 lashar_5 = {
 	name = "_Ali_"
-	dynasty_house = house_lashari
-	religion = maturidi
+	dynasty_house = house_lhanafi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = lashar_4
 
@@ -232,10 +232,10 @@ lashar_5 = {
 		death = yes
 	}
 }
-lashari_baloch_1337 = {
+lhanafi_baloch_1337 = {
 	name = "BhU_t"
-	dynasty_house = house_lashari
-	religion = maturidi
+	dynasty_house = house_lhanafi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
 	father = lashar_5
 
@@ -246,12 +246,12 @@ lashari_baloch_1337 = {
 		death = yes
 	}
 }
-lashari_baloch_1337_son = {
+lhanafi_baloch_1337_son = {
 	name = "Mag"
-	dynasty_house = house_lashari
-	religion = maturidi
+	dynasty_house = house_lhanafi
+	rite = hanafi # was maturidi, fix later
 	culture = baloch
-	father = lashari_baloch_1337
+	father = lhanafi_baloch_1337
 
 	1328.1.1 = {
 		birth = yes

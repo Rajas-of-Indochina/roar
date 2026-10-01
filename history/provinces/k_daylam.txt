@@ -3,9 +3,9 @@
 ### c_gilan
 4001 = {	#Daylam
 	culture = daylamite
-	religion = afridunism
+	rite = afridunism
 	holding = castle_holding
-	900.1.1 = { religion = zayidi }
+	900.1.1 = { rite = zayidi }
 }
 4000 = {	#Gilan
 	holding = city_holding
@@ -17,12 +17,12 @@
 ### c_zanjan
 4325 = {	#Zanjan
 	culture = daylamite
-	religion = zayidi
+	rite = zayidi
 	holding = castle_holding
 	special_building_slot = soltaniyeh_01
 
 	# History
-	1130.1.1 = { religion = nizari }
+	1130.1.1 = { rite = nizari }
 }
 4326 = {	#Afshar
 	holding = none
@@ -34,12 +34,12 @@
 ### c_qazwin
 4323 = {	#Qazwin / Qazvin
 	culture = daylamite
-	religion = zayidi
+	rite = zayidi
 	holding = castle_holding
 
 	# History
-	1130.1.1 = { religion = maturidi }
-	1178.1.1 = { religion = nizari }
+	1130.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = nizari }
 }
 4006 = {	#Alamut
 	# Fortress built in 840
@@ -58,11 +58,11 @@
 ### c_mazandaran
 4312 = {	#Amul
 	culture = daylamite
-	religion = afridunism
+	rite = afridunism
 	holding = castle_holding
 
 	# History
-	1000.1.1 = { religion = imami }
+	1000.1.1 = { rite = imami }
 }
 4310 = {	#Tamisha
 	# medieval city
@@ -76,11 +76,11 @@
 ### c_ruyan
 4005 = {	#Ruyan
 	culture = daylamite
-	religion = afridunism
+	rite = afridunism
 	holding = castle_holding
 
 	# History
-	1000.1.1 = { religion = imami }
+	1000.1.1 = { rite = imami }
 }
 4313 = {	#Natil
 	holding = none
@@ -92,12 +92,12 @@
 ### c_baduspan
 4316 = {	#Firrim
 	culture = daylamite
-	religion = afridunism
+	rite = afridunism
 	holding = castle_holding
 	special_building = mount_damavand_01
 
 	# History
-	1000.1.1 = { religion = imami }
+	1000.1.1 = { rite = imami }
 }
 4315 = {	#Larijan
 	holding = city_holding	#placeholder
@@ -110,11 +110,11 @@
 ### c_gurgan
 4029 = {	#Gurgan
 	culture = daylamite
-	religion = khurramism
+	rite = khurramism
 	holding = castle_holding
 
 	# History
-	1000.1.1 = { religion = imami }
+	1000.1.1 = { rite = imami }
 }
 4028 = {	#Astarabad
 	holding = church_holding
@@ -135,13 +135,13 @@
 ### c_dihistan
 4032 = {	#Kerend
 	culture = daylamite
-	religion = mazdayasna
+	rite = mazdayasna
 	holding = castle_holding
 
 	# History
 	1060.1.1 = {
 		culture = turkish
-		religion = maturidi
+		rite = hanafi # was maturidi, fix later
 	}
 }
 4033 = {	#Dihistan

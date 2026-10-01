@@ -1,0 +1,348 @@
+dongba = {
+	name = dongba
+	desc = dongba_desc
+	faith = bon_faith
+	color = { 0.39 0.15 0.65 }
+	icon = dongba
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_sanctity_of_nature
+		tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_adultery_men_accepted
+		doctrine_adultery_women_accepted
+	}
+}
+
+barhailism = {
+	name = barhailism
+	desc = barhailism_desc
+	faith = barhailism_faith
+	color = { 0.1 0.5 0.4 }
+	icon = barhailism
+}
+
+benzhu = {
+	# Indigenous faith of the Bai people
+	color = { 207 107 107 }
+	icon = benzhu
+	reformed_icon = benzhu_reformed
+	faith = bimoism
+
+	# RoA's holy sites
+	#holy_site = popa
+	#holy_site = taihe
+
+	tenets = {
+		tenet_ritual_hospitality
+		tenet_ancestor_worship
+		tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+
+		#Main Group
+		doctrine_gender_equal
+
+		#Marriage
+		doctrine_monogamy
+		doctrine_consanguinity_restricted
+
+		#Clerical Functions
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_clerical_gender_female_only
+		doctrine_clerical_marriage_disallowed
+		doctrine_clerical_succession_spiritual_fixed_appointment
+	}
+
+	localization = {
+		#HighGod
+		HighGodName = benzhu_high_god_name
+		HighGodName2 = benzhu_high_god_name
+		HighGodNamePossessive = benzhu_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = benzhu_high_god_name_alternate
+		HighGodNameAlternatePossessive = benzhu_high_god_name_alternate_possessive
+
+		#Creator
+		CreatorName = benzhu_creator_god_name
+		CreatorNamePossessive = benzhu_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = benzhu_health_god_name
+		HealthGodNamePossessive = benzhu_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FertilityGod
+		FertilityGodName = benzhu_fertility_god_name
+		FertilityGodNamePossessive = benzhu_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#WealthGod
+		WealthGodName = benzhu_wealth_god_name
+		WealthGodNamePossessive = benzhu_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#HouseholdGod
+		HouseholdGodName = benzhu_household_god_name
+		HouseholdGodNamePossessive = benzhu_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FateGod
+		FateGodName = benzhu_fate_god_name
+		FateGodNamePossessive = benzhu_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_IT
+		FateGodHerHis = CHARACTER_HERHIS_ITS
+		FateGodHerHim = CHARACTER_HERHIM_IT
+
+		#KnowledgeGod
+		KnowledgeGodName = benzhu_knowledge_god_name
+		KnowledgeGodNamePossessive = benzhu_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = benzhu_war_god_name
+		WarGodNamePossessive = benzhu_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = benzhu_trickster_god_name
+		TricksterGodNamePossessive = benzhu_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#DeathDeity
+		DeathDeityName = benzhu_death_name
+		DeathDeityNamePossessive = benzhu_death_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+
+		#WitchGod
+		WitchGodName = benzhu_witch_god_name
+		WitchGodNamePossessive = benzhu_witch_god_name_possessive
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+		WitchGodMotherFather = mother
+
+		#NightGod
+		NightGodName = benzhu_night_god_name
+		NightGodNamePossessive = benzhu_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
+
+		#WaterGod
+		WaterGodName = benzhu_water_god_name
+		WaterGodNamePossessive = benzhu_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods
+		PantheonTerm3 = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = {
+			benzhu_high_god_name
+			benzhu_high_god_name_alternate
+			benzhu_good_god_father_sky
+			benzhu_good_god_ancestors
+		}
+
+		HouseOfWorship = benzhu_house_of_worship
+		HouseOfWorship2 = benzhu_house_of_worship
+		HouseOfWorship3 = benzhu_house_of_worship
+		HouseOfWorshipPlural = benzhu_house_of_worship_plural
+		ReligiousSymbol = benzhu_religious_symbol
+		ReligiousSymbol2 = benzhu_religious_symbol
+		ReligiousSymbol3 = benzhu_religious_symbol
+
+		DivineRealm = benzhu_divine_realm
+		DivineRealm2 = benzhu_divine_realm
+		DivineRealm3 = benzhu_divine_realm
+		PositiveAfterLife = benzhu_positive_afterlife
+		PositiveAfterLife2 = benzhu_positive_afterlife
+		PositiveAfterLife3 = benzhu_positive_afterlife
+		NegativeAfterLife = benzhu_negative_afterlife
+		NegativeAfterLife2 = benzhu_negative_afterlife
+		NegativeAfterLife3 = benzhu_negative_afterlife
+
+		GHWName = ghw_purification
+		GHWNamePlural = ghw_purifications
+	}
+}
+
+nuo = {
+	# Indigenous faith of the Tujia people
+	color = { 0.08 0.13 0.28 }
+	faith = bimoism
+
+	icon = nuo
+	reformed_icon = nuo_reformed
+
+	tenets = {
+		tenet_adaptive
+		tenet_ancestor_worship
+		tenet_esotericism
+	}
+
+	doctrines = { unreformed_faith_doctrine }
+}
+
+chamic_shaivism = {
+	name = chamic_shaivism
+	desc = chamic_shaivism_desc
+	faith = shaiva_faith
+
+	color = { 0.9 0.7 0.2 }
+	icon = balamon
+
+	tenets = {
+		tenet_astrology
+		tenet_communal_identity
+		tenet_ritual_hospitality
+	}
+}
+
+trika_shaivism = {
+	name = trika_shaivism
+	desc = trika_shaivism_desc
+	faith = shaiva_faith
+
+	color = { 155 17 30 }
+	icon = shaivism
+
+	tenets = {
+		tenet_inner_journey
+		tenet_esotericism
+		tenet_asceticism
+	}
+}
+
+darang = {
+	faith = darang_faith
+	name = darang
+	desc = darang_desc
+	color = { 98 73 208 }
+	icon = sarimanok
+}
+
+talaingat_ariya = {
+	faith = tailangat_ariya_faith
+	color = { 74 83 143 }
+	icon = malyari
+}
+
+surong_puyo = {
+	faith = surong_puyo_faith
+	color = { 118 122 212 }
+	icon = dayawism
+}
+
+eastern_tengri = {
+	faith = tengri_pagan
+	color = { 104 182 211 }
+	icon = munkh_tenger
+	reformed_icon = munkh_tenger_reformed
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_witchcraft_accepted
+	}
+
+	tenets = {
+		tenet_adorcism
+		tenet_warmonger
+		tenet_ancestor_worship
+	}
+}
+
+ulganism = {
+	faith = tengri_pagan
+	color = { 131 107 136 }
+	icon = ulganism
+	reformed_icon = ulganism_reformed
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_clerical_succession_spiritual_appointment
+	}
+
+	tenets = {
+		tenet_adorcism
+		tenet_ritual_celebrations
+		tenet_mystical_birthright
+	}
+}
+
+scythian_pagan = {
+	faith = scythian_pagan_faith
+	color = { 0.6 0.1 0.1 }
+	icon = scythian_symbol_oitosyros_01 #by AlphaQmaster
+	reformed_icon = scythian_symbol_oitosyros_01_reformed
+}
+
+alan_pagan = {
+	faith = alan_pagan_faith
+	color = { 0.5 0.3 0.6 }
+	icon = assianism
+	reformed_icon = assianism_reformed
+}
+
+kuptyng = {
+	faith = siberian_pagan
+	color = { 230 230 230 }
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+	tenets = {
+		tenet_reincarnation
+		tenet_ritual_celebrations
+		tenet_adorcism
+	}
+	icon = kuptyng
+	reformed_icon = kuptyng_reformed
+}
+
+sarastivada = {
+	faith = mahayana
+	color = { 128 25 8 }
+	icon = sarastivada
+	tenets = {
+		tenet_rice_flawed_arhats
+		tenet_rice_all_dharmas_exist
+		tenet_mendicant_preachers
+	}
+
+	doctrines = {
+		special_doctrine_immatieral_harmony
+		rice_mahayana_canon_doctrine
+	}
+}
