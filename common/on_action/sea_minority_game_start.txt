@@ -1726,22 +1726,22 @@ set_minorities_game_start = {
 setup_indian_christian_minorities = {
 	effect = {
 		title:c_kerala = {
-			promote_faith_minority_effect = { FAITH = faith:indian_catholic }
+			promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 		title:c_jaffna = {
-			promote_faith_minority_effect = { FAITH = faith:indian_catholic }
+			promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 		title:c_kotte = {
-			promote_faith_minority_effect = { FAITH = faith:indian_catholic }
+			promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 		title:c_venadu = {
-			promote_faith_minority_effect = { FAITH = faith:indian_catholic }
+			promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 		title:c_kanara = {
-			promote_faith_minority_effect = { FAITH = faith:indian_catholic }
+			promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 		# Also setting up deactivated holy sites here since it's related
-		faith:indian_catholic = {
+		faith:nasrani = {
 			deactivate_holy_site = rome_nasrani
 			deactivate_holy_site = constantinople_nasrani
 		}
@@ -4959,7 +4959,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -4985,7 +4985,7 @@ setup_caucasus_northeast_minorities = {
 		}
 		title:c_tarki = {
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -5007,7 +5007,7 @@ setup_caucasus_northeast_minorities = {
 		}
 		title:c_terki = {
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -5045,14 +5045,14 @@ setup_caucasus_northeast_minorities = {
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 					SIZE = small
 				}
 			}
 		}
 		title:c_andia = {
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -5082,7 +5082,7 @@ setup_caucasus_northeast_minorities = {
 			if = {
 				limit = { game_start_date < 900.1.1 }
 				add_faith_minority_effect = {
-					FAITH = faith:NEC_orthodox
+					FAITH = faith:nasraniyab
 					SIZE = large
 				}
 			}
@@ -5102,7 +5102,7 @@ setup_caucasus_northeast_minorities = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
 				add_faith_minority_effect = {
-					FAITH = faith:NEC_orthodox
+					FAITH = faith:nasraniyab
 					SIZE = small
 				}
 			}
@@ -5121,7 +5121,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 		}
@@ -5137,7 +5137,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 		}
@@ -5148,13 +5148,13 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 		}
 		title:c_gazi-kumukh = {
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -5168,7 +5168,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 		}
@@ -5178,7 +5178,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 		}
@@ -5194,12 +5194,12 @@ setup_caucasus_northeast_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				promote_faith_minority_effect = { FAITH = faith:NEC_orthodox }
+				promote_faith_minority_effect = { FAITH = faith:nasraniyab }
 			}
 		}
 		title:c_mykhia = {
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -5278,7 +5278,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			add_faith_minority_effect = {
@@ -5312,7 +5312,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 		}
@@ -5326,7 +5326,7 @@ setup_caucasus_northeast_minorities = {
 				SIZE = small
 			}
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			if = {
@@ -5339,7 +5339,7 @@ setup_caucasus_northeast_minorities = {
 		}
 		title:c_tabasaran = {
 			add_faith_minority_effect = {
-				FAITH = faith:NEC_orthodox
+				FAITH = faith:nasraniyab
 				SIZE = small
 			}
 			if = {

@@ -772,7 +772,7 @@ unite_nasrani_decision_effect = {
 		title:d_sinhala = { set_de_jure_liege_title = title:k_nasrani }
 
 		struggle:RICE_sri_lanka_struggle ?= {
-			set_faith_as_involved = faith:indian_catholic
+			set_faith_as_involved = faith:nasrani
 		}
 	}
 	if = {
@@ -784,26 +784,26 @@ unite_nasrani_decision_effect = {
 	every_held_title = {
 		limit = {
 			tier = tier_barony
-			is_holy_site_of = faith:indian_catholic
+			is_holy_site_of = faith:nasrani
 		}
-		county = { set_county_faith = faith:indian_catholic }
+		county = { set_county_faith = faith:nasrani }
 	}
 	custom_tooltip = nasrani_growth_tt
 	hidden_effect = {
 		every_realm_county = {
 			limit = {
 				NOT = {
-					any_in_de_jure_hierarchy = { is_holy_site_of = faith:indian_catholic }
+					any_in_de_jure_hierarchy = { is_holy_site_of = faith:nasrani }
 				}
 			}
 			save_scope_as = county
-			promote_faith_minority_effect = { FAITH = faith:indian_catholic }
+			promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 	}
 }
 
 choose_nasrani_faith_head_effect = {
-	faith:indian_catholic = {
+	faith:nasrani = {
 		if = {
 			limit = { scope:align_orthodox = yes }
 			set_religious_head_title = title:k_orthodox

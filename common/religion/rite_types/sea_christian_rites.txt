@@ -1,0 +1,141 @@
+tondrakian = {
+	icon = tondrakian
+	color = { 0.9 0.5 0.2 }
+	faith = tondrakian_faith
+	tenets = {
+		tenet_communal_possessions
+		tenet_aniconism
+		tenet_acts_of_apostles
+	}
+	doctrines = {
+		doctrine_no_head
+		doctrine_gender_equal
+		doctrine_pluralism_pluralistic
+		doctrine_adultery_women_shunned
+		doctrine_clerical_gender_either
+		doctrine_clerical_marriage_allowed
+		doctrine_clerical_succession_temporal_appointment
+		doctrine_sacraments_absent
+		doctrine_no_anointment
+	}
+}
+
+nasraniyab = {
+	name = nasraniyab
+	desc = nasraniyab_desc
+	founder = d_et_kartli
+	faith = christian_faith
+	
+	color = { 130 215 175 }
+	icon = nasraniyab_cross
+
+	tenets = {
+		tenet_pastoral_isolation
+		tenet_mountain_worship
+		tenet_unreformed_syncretism
+	}
+
+	doctrines = {
+		doctrine_pluralism_pluralistic
+		
+		northeast_caucasian_doctrine
+		special_doctrine_is_eastern_christian_faith
+
+		doctrine_consanguinity_restricted
+
+		doctrine_adultery_men_crime
+		doctrine_adultery_women_crime
+		doctrine_kinslaying_extended_family_crime
+		doctrine_witchcraft_shunned
+
+		doctrine_clerical_marriage_allowed
+		doctrine_clerical_succession_temporal_appointment
+
+		doctrine_no_anointment
+	}
+}
+
+mtielta = {
+	name = mtielta
+	desc = mtielta_desc
+	founder = d_et_kartli
+	faith = christian_faith
+
+	icon = mtielta_cross
+	color = { 217 180 130 }
+
+	tenets = {
+		tenet_mountain_worship
+		tenet_pastoral_isolation
+		tenet_unreformed_syncretism
+	}
+
+	doctrines = {
+		#Main Group
+		doctrine_pluralism_pluralistic
+
+		#Special Tolerance
+		special_doctrine_ecumenical_christian
+		# orthodox_roa_doctrine
+
+		#Marriage
+		doctrine_consanguinity_restricted
+
+		#Crimes
+		doctrine_adultery_men_crime
+		doctrine_adultery_women_crime
+		doctrine_witchcraft_shunned
+
+		#Clerical Functions
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_clerical_marriage_allowed
+
+		#Funeral tradition
+		doctrine_funeral_bewailment
+
+		#Tenets
+		tenet_communal_identity
+		tenet_mountain_worship
+		tenet_pastoral_isolation
+		tenet_unreformed_syncretism
+	}
+}
+
+circassian_rite = {
+	name = circassian_rite
+	desc = circassian_rite
+	faith = circassian_christianity
+
+	icon = budded_cross_alt_04
+	color = { 288 65 51 }
+}
+
+nasrani = {
+	name = nasrani
+	desc = nasrani_desc
+	founder = d_et_antioch
+	faith = miaphysitism
+
+	icon = saint_thomas_cross_01
+	color = { 204 77 12 }
+
+	doctrines = {
+		doctrine_pluralism_pluralistic
+		doctrine_divorce_allowed
+		special_doctrine_nasrani_partition_succession_law
+	}
+
+	tenet = {		
+		tenet_eastern_syncretism
+	}
+	tenet_selection_pair = {
+		requires_dlc_flag = by_god_alone
+		tenet = tenet_miaphysitism
+		fallback_tenet = tenet_asceticism
+	}
+	tenet_selection_pair = {
+		requires_dlc_flag = by_god_alone
+		tenet = tenet_holy_myron
+		fallback_tenet = tenet_communal_identity
+	}
+}
