@@ -31,7 +31,7 @@ south_asia.0001 = {
 				desc = south_asia.0001.desc.dharmic
 			}
 			triggered_desc = {# Muslim View of the Event
-				trigger = { faith = faith:digambara }
+				trigger = { faith = faith:jain_faith }
 				desc = south_asia.0001.desc.muslim
 			}
 			desc = south_asia.0001.desc.other # Everyone Else
@@ -82,7 +82,7 @@ south_asia.0002 = {
 				desc = south_asia.0002.text.dharmic
 			}
 			triggered_desc = {# Muslim View of the Event
-				trigger = { faith = faith:digambara }
+				trigger = { faith = faith:jain_faith }
 				desc = south_asia.0002.text.muslim
 			}
 			desc = south_asia.0002.text.other # Everyone Else
@@ -153,7 +153,7 @@ south_asia.0003 = {
 				desc = south_asia.0003.text.dharmic
 			}
 			triggered_desc = {# Muslim View of the Event
-				trigger = { faith = faith:digambara }
+				trigger = { faith = faith:jain_faith }
 				desc = south_asia.0003.text.muslim
 			}
 			desc = south_asia.0003.text.other # Everyone Else
@@ -221,9 +221,9 @@ south_asia.0004 = {
 			triggered_desc = {
 				trigger = {
 					OR = {
-						faith.religion = faith:vaishnavism.religion
-						faith.religion = faith:theravada.religion
-						faith.religion = faith:digambara.religion
+						faith.religion = faith:vaishnava_faith.religion
+						faith.religion = faith:theravada_faith.religion
+						faith.religion = faith:jain_faith.religion
 					}
 				}
 				desc = south_asia.0004.relevant_religion
@@ -271,9 +271,9 @@ south_asia.0004 = {
 		name = south_asia.0004.a
 		trigger = {
 			OR = {
-				faith.religion = faith:vaishnavism.religion
-				faith.religion = faith:theravada.religion
-				faith.religion = faith:digambara.religion
+				faith.religion = faith:vaishnava_faith.religion
+				faith.religion = faith:theravada_faith.religion
+				faith.religion = faith:jain_faith.religion
 			}
 		}
 	}
@@ -572,7 +572,7 @@ south_asia.0030 = {
 
 	immediate = {
 		play_music_cue = "mx_cue_sacredrite"
-		faith:theravada = {
+		faith:theravada_faith = {
 			save_scope_as = theravada_faith
 		}
 
@@ -624,7 +624,7 @@ south_asia.0030 = {
 			change_county_control = -10
 			random = {
 				chance = 20
-				set_county_faith = faith:theravada
+				set_county_faith = faith:theravada_faith
 			}
 		}
 
@@ -641,13 +641,13 @@ south_asia.0030 = {
 
 		every_vassal = {
 			limit = {
-				NOT = { faith = faith:theravada }
+				NOT = { faith = faith:theravada_faith }
 			}
 
 			custom = south_asia.0030.a.ari.tt
 			random = {
 				chance = 80
-				set_character_faith = faith:theravada
+				set_character_faith = faith:theravada_faith
 				add_opinion = {
 					target = root
 					modifier = angry_opinion
@@ -698,7 +698,7 @@ south_asia.0030 = {
 			region = world_burma
 			custom = south_asia.0030.a.tt
 			limit = {
-				NOT = { faith = faith:theravada }
+				NOT = { faith = faith:theravada_faith }
 				target_is_de_facto_liege_or_above = root.primary_title
 			}
 			random = {
@@ -720,7 +720,7 @@ south_asia.0030 = {
 
 		every_vassal = {
 			limit = {
-				NOT = { faith = faith:theravada }
+				NOT = { faith = faith:theravada_faith }
 			}
 
 			custom = south_asia.0030.b.theravada.tt
@@ -789,7 +789,7 @@ south_asia.0031 = {
 	}
 
 	trigger = {
-		has_faith = faith:theravada
+		has_faith = faith:theravada_faith
 	}
 
 	immediate = {
@@ -886,7 +886,7 @@ south_asia.0031 = {
 
 		every_vassal = {
 			limit = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 			}
 			custom = south_asia.0031.b.theravada
 			add_opinion = {
@@ -1031,7 +1031,7 @@ south_asia.0032 = {
 	}
 
 	trigger = {
-		has_faith = faith:theravada
+		has_faith = faith:theravada_faith
 	}
 
 	#Invite Lankan Refugees
@@ -1053,7 +1053,7 @@ south_asia.0032 = {
 			custom = south_asia.0032.a.ruler.tt
 				limit = {
 					culture = culture:sinhala
-					faith = faith:theravada
+					faith = faith:theravada_faith
 				}
 
 			add_opinion = {
@@ -1068,7 +1068,7 @@ south_asia.0032 = {
 			create_character = {
 				location = root.capital_province
 				culture = culture:sinhala
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				gender_female_chance = root_faith_clergy_gender_female_chance
 				trait = education_learning_2
 				trait = temperate
@@ -1080,7 +1080,7 @@ south_asia.0032 = {
 			create_character = {
 				location = root.capital_province
 				culture = culture:sinhala
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				gender_female_chance = root_faith_clergy_gender_female_chance
 				trait = education_learning_3
 				trait = calm
@@ -1175,7 +1175,7 @@ south_asia.0033 = {
 	}
 
 	trigger = {
-		has_faith = faith:theravada
+		has_faith = faith:theravada_faith
 	}
 
 	#Demand conversion
@@ -1195,7 +1195,7 @@ south_asia.0033 = {
 			}
 
 			custom = south_asia.0030.a.ari.tt
-			set_character_faith_with_conversion = faith:theravada
+			set_character_faith_with_conversion = faith:theravada_faith
 			add_opinion = {
 				target = root
 				opinion = -80
@@ -1222,7 +1222,7 @@ south_asia.0033 = {
 
 		every_vassal = {
 			limit = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 			}
 			custom = south_asia.0034.vassals
 			add_opinion = {
@@ -1301,7 +1301,7 @@ south_asia.0034 = {
 	}
 
 	trigger = {
-		has_faith = faith:theravada
+		has_faith = faith:theravada_faith
 	}
 
 	#Appease
@@ -1359,7 +1359,7 @@ south_asia.0034 = {
 				}
 			random = {
 			chance = 50
-			set_county_faith = faith:theravada
+			set_county_faith = faith:theravada_faith
 			}
 		}
 
@@ -1393,7 +1393,7 @@ south_asia.0035 = {
 	}
 
 	trigger = {
-		has_faith = faith:theravada
+		has_faith = faith:theravada_faith
 	}
 
 	#Send Monks
@@ -1412,12 +1412,12 @@ south_asia.0035 = {
 			region = custom_lanka
 				limit = {
 					holder = {
-						faith = faith:theravada
+						faith = faith:theravada_faith
 						is_ai = yes
 					}
 				}
 			custom = south_asia.0035.a.lanka
-			set_county_faith = faith:theravada
+			set_county_faith = faith:theravada_faith
 		}
 
 		every_player = {
@@ -1425,7 +1425,7 @@ south_asia.0035 = {
 				capital_province = {
 					geographical_region = custom_lanka
 				}
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				is_independent_ruler = yes
 			}
 		trigger_event = south_asia.0041
@@ -1445,7 +1445,7 @@ south_asia.0035 = {
 
 		every_independent_ruler = {
 			limit = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				is_landed = yes
 				capital_province = {
 					geographical_region = custom_lanka
@@ -1461,7 +1461,7 @@ south_asia.0035 = {
 
 		every_independent_ruler = {
 			limit = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				is_landed = yes
 				capital_province = {
 						NOT = {
@@ -1523,7 +1523,7 @@ south_asia.0036 = {
 	}
 
 	trigger = {
-		has_faith = faith:theravada
+		has_faith = faith:theravada_faith
 	}
 
 	immediate = {
@@ -1590,7 +1590,7 @@ south_asia.0036 = {
 					}
 					target_is_de_facto_liege_or_above = root.primary_title
 				}
-			set_county_faith = faith:theravada
+			set_county_faith = faith:theravada_faith
 		}
 
 		#...and then re-add Ari to simulate driving them out into forests and mountains.
@@ -1712,7 +1712,7 @@ south_asia.0038 = {
 	option = {
 		name = { #Theravadan adherents are happy
 			trigger = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				liege = scope:proselytiser
 				capital_province = {
 					geographical_region = world_burma
@@ -1733,7 +1733,7 @@ south_asia.0038 = {
 		name = { #If you're neither Ari nor Theravadan you aren't too bothered
 			trigger = {
 					NOR = {
-						faith = faith:theravada
+						faith = faith:theravada_faith
 						faith = faith:ari
 					}
 					liege = scope:proselytiser
@@ -1775,7 +1775,7 @@ south_asia.0039 = {
 	option = {
 		name = { #Theravadan adherents are happy
 			trigger = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				liege = scope:proselytiser
 				capital_province = {
 					geographical_region = world_burma
@@ -1796,7 +1796,7 @@ south_asia.0039 = {
 		name = { #If you're neither Ari nor Theravadan you aren't too bothered
 			trigger = {
 					NOR = {
-						faith = faith:theravada
+						faith = faith:theravada_faith
 						faith = faith:ari
 					}
 					liege = scope:proselytiser
@@ -1839,7 +1839,7 @@ south_asia.0040 = {
 	option = {
 		name = { #Theravadan adherents are happy
 			trigger = {
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				liege = scope:proselytiser
 				capital_province = {
 					geographical_region = world_burma
@@ -1860,7 +1860,7 @@ south_asia.0040 = {
 		name = { #If you're neither Ari nor Theravadan you aren't too botherd
 			trigger = {
 					NOR = {
-						faith = faith:theravada
+						faith = faith:theravada_faith
 						faith = faith:ari
 					}
 					liege = scope:proselytiser

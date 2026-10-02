@@ -1,7 +1,7 @@
 ﻿### Overwrites
 historical_succession_access_single_heir_succession_law_trigger = {
 	trigger_if = {
-		limit = { government_allows = administrative }
+		limit = { government_has_mechanic = administrative }
 		OR = {
 			tgp_japan_single_heir_succession_override_trigger = yes
 			tgp_korea_single_heir_succession_override_trigger = yes

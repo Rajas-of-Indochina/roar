@@ -4,7 +4,7 @@
 taizhou = {# 天台山 - Tiantai Mountain
 	county = c_taizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_taizhou_effect_name
         health = 0.25
 		diplomacy = 1
@@ -14,7 +14,7 @@ fanjingshan = {# Fanjinshan
 	county = c_yizhou_3
 	# barony = b_feizhou_sinan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_fanjingshan_effect_name
         knight_effectiveness_mult = 0.2
 		supply_duration = 0.2
@@ -23,7 +23,7 @@ fanjingshan = {# Fanjinshan
 mount_wutai = {# Mount Wutai
 	county = c_luyang
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_mount_wutai_effect_name
         knight_effectiveness_mult = 0.2
 		supply_duration = 0.2
@@ -33,7 +33,7 @@ mount_emei = {# Mount Emei
 	county = c_jiazhou
 	# barony = b_emeishan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_mount_emei_effect_name
         knight_effectiveness_mult = 0.2
 		supply_duration = 0.2
@@ -43,7 +43,7 @@ mount_jiuhua = {# Mount Jiuhua
 	county = c_xuanzhou
 	# barony = b_jingxian_youzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_mount_jiuhua_effect_name
         knight_effectiveness_mult = 0.2
 		supply_duration = 0.2
@@ -53,7 +53,7 @@ mount_putuo = {# Mount Putuo
 	county = c_mingzhou_1
 	barony = b_wengshan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_mount_putuo_effect_name
         knight_effectiveness_mult = 0.2
 		supply_duration = 0.2
@@ -64,7 +64,7 @@ mount_putuo = {# Mount Putuo
 daizhou = { #五台山
 	county = c_daizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_daizhou_effect_name
         mountains_attrition_mult = -0.2
 	}
@@ -72,7 +72,7 @@ daizhou = { #五台山
 # songshan = { #少林
 # 	county = c_songshan
 
-# 	character_modifier = {
+# 	county_holder_character_modifier = {
 # 		name = holy_site_songshan_effect_name
 #         learning = 2
 # 		prowess_per_piety_level = 2
@@ -81,7 +81,7 @@ daizhou = { #五台山
 quanzhou = { #莆田
 	county = c_quanzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_quanzhou_effect_name
         diplomacy = 2
 		monthly_income_mult = 0.1
@@ -93,7 +93,7 @@ quanzhou = { #莆田
 muze = {
 	county = c_goje
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_muze_effect_name
 		health = 0.3
 		fertility = 0.2
@@ -102,7 +102,7 @@ muze = {
 wumeng = {
 	county = c_u_mung
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_wumeng_effect_name
 		martial = 3
 		forest_advantage = 4
@@ -112,7 +112,7 @@ wumeng = {
 xizhou_qian = {
 	county = c_guizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_xizhou_qian_effect_name
 		title_creation_cost_mult = -0.3
 		levy_size = 0.1
@@ -121,7 +121,7 @@ xizhou_qian = {
 juzhou = {
 	county = c_juzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_juzhou_effect_name
 		supply_duration = 0.2
 		men_at_arms_maintenance = -0.2
@@ -130,7 +130,7 @@ juzhou = {
 zigui = {
 	county = c_lingxi
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_zigui_effect_name
 		development_growth_factor = 0.2
 		cultural_head_fascination_mult = 0.2
@@ -141,7 +141,7 @@ zigui = {
 changan = {
 	county = c_jingzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_changan_effect_name
 		monthly_piety_gain_mult = 0.2
 		martial = 3
@@ -151,7 +151,7 @@ changan = {
 xinzhou_wu = { #龙虎山/象山
 	county = c_xinhzou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_xinzhou_wu_effect_name
         skirmishers_damage_mult = 0.1
 		prowess_per_piety_level = 1
@@ -162,7 +162,7 @@ xinzhou_wu = { #龙虎山/象山
 shezhou = {
 	county = c_shezhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_shezhou_effect_name
         learning = 5
 		personal_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
@@ -172,7 +172,7 @@ shezhou = {
 runzhou = {
 	county = c_runzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_runzhou_effect_name
 		negate_learning_penalty_add = 2
 		martial = 5
@@ -182,7 +182,7 @@ runzhou = {
 meizhou_xichuan = {
 	county = c_meizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_meizhou_xichuan_effect_name
 		stewardship = 2
 		development_growth_factor = 0.1
@@ -192,7 +192,7 @@ meizhou_xichuan = {
 bozhou_song = {
 	county = c_bozhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_bozhou_song_effect_name
 		intrigue = 3
 		martial = 2
@@ -202,7 +202,7 @@ bozhou_song = {
 # mengzhou = {
 # 	county = c_mengzhou
 
-# 	character_modifier = {
+# 	county_holder_character_modifier = {
 # 		name = holy_site_mengzhou_effect_name
 # 		martial = 1
 # 		supply_duration = 0.25
@@ -212,7 +212,7 @@ bozhou_song = {
 yingzhou_jin = {
 	county = c_yingzhou_5
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_yingzhou_jin_effect_name
 		prowess_per_prestige_level = 1
 		stewardship = 3
@@ -222,7 +222,7 @@ yingzhou_jin = {
 hengshan = {
 	county = c_hengzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_hengshan_effect_name
 		cultural_head_fascination_mult = 0.1
     }
@@ -233,7 +233,7 @@ hengshan = {
 suzhou = {
 	county = c_suzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_suzhou_effect_name
 		stewardship_per_piety_level = 1
 		fertility = 0.1
@@ -244,7 +244,7 @@ baiyin = {
 	county = c_huizhou
 	# barony = b_gaolan_xia
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_baiyin_effect_name
 		diplomacy = 3
 		intrigue_per_piety_level = 2
@@ -255,7 +255,7 @@ selenga = {
 	county = c_ebilgete
 	# barony = b_oymuur
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_selenga_effect_name
         learning = 3
 		personal_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
@@ -265,7 +265,7 @@ selenga = {
 luntai = {
 	county = c_luntai
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_luntai_effect_name
 		supply_duration = 0.2
 		max_combat_roll = 4
@@ -276,7 +276,7 @@ suyab = {
 	county = c_balashagun
 	barony = b_suyab
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_suyab_effect_name
 		diplomacy = 2
 		martial = 3
@@ -287,7 +287,7 @@ kara_khoja = {
 	county = c_turfan
 	barony = b_qara-khoja
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_kara_khoja_effect_name
 		prowess_per_prestige_level = 1
 		stewardship = 3
@@ -297,7 +297,7 @@ kara_khoja = {
 junzhou = {  #武当
 	county = c_junzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_junzhou_effect_name
 		health = 0.15
 		prowess = 3
@@ -307,7 +307,7 @@ junzhou = {  #武当
 kongmeng = {
 	county = c_yanzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_kongmeng_effect_name
 		monthly_piety_gain_mult = 0.2
 	}
@@ -317,7 +317,7 @@ kongmeng = {
 taishan = {
 	county = c_yanzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_taishan_effect_name
        monthly_dynasty_prestige = 0.1
 	   diplomacy_per_prestige_level = 1
@@ -328,7 +328,7 @@ taishan = {
 shuzhou_huai = { #桐城
 	county = c_shuzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_shuzhou_huai_effect_name
         monthly_dynasty_prestige = 0.1
 		cultural_head_fascination_mult = 0.05
@@ -338,7 +338,7 @@ shuzhou_huai = { #桐城
 fuzhou_jiangxi = { #临川/金溪
 	county = c_fuzhou_2
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_fuzhou_jiangxi_effect_name
         diplomacy_per_prestige_level = 1
 		tyranny_loss_mult = 0.1
@@ -348,7 +348,7 @@ fuzhou_jiangxi = { #临川/金溪
 yuezhou_chu	= { #岳阳
 	county = c_yuezhou_1
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_yuezhou_chu_effect_name
         domain_tax_mult = 0.15
 	}
@@ -357,7 +357,7 @@ yuezhou_chu	= { #岳阳
 bianzhou = {
 	county = c_bianzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_bianzhou_effect_name
         men_at_arms_maintenance = -0.1
 		title_creation_cost_mult = -0.2
@@ -367,7 +367,7 @@ bianzhou = {
 jingzhou_chu = { #荆门
 	county = c_jiangling
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_jingzhou_chu_effect_name
         opinion_of_different_faith = 10
 		vassal_tax_contribution_mult = 0.05
@@ -377,7 +377,7 @@ jingzhou_chu = { #荆门
 fengxiang = { #横渠
 	county = c_fengxiang
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_fengxiang_effect_name
         opinion_of_vassal = 5
 		development_growth_factor = 0.1
@@ -387,7 +387,7 @@ fengxiang = { #横渠
 luoyang = {
 	county = c_henan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_luoyang_effect_name
         knight_effectiveness_mult = 0.2
 		supply_duration = 0.2
@@ -398,7 +398,7 @@ yichuan = { #伊川
 	county = c_danzhou
 	barony = b_yichuan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_yichuan_effect_name
         knight_limit = 2
 		different_faith_liege_opinion = 10
@@ -408,7 +408,7 @@ yichuan = { #伊川
 jiangzhou_wu = { #南康
 	county = c_yunyang
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_jiangzhou_wu_effect_name
        hills_advantage = 8
 	}
@@ -418,7 +418,7 @@ jiangzhou_wu = { #南康
 daizhou = { #五台山	
 	county = c_daizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_daizhou_effect_name
         mountains_attrition_mult = -0.2
 	}
@@ -426,7 +426,7 @@ daizhou = { #五台山
 songshan = { #少林
 	county = c_songshan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_songshan_effect_name
         learning = 2
 		prowess_per_piety_level = 2
@@ -435,7 +435,7 @@ songshan = { #少林
 quanzhou = { #莆田
 	county = c_quanzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_quanzhou_effect_name
         diplomacy = 2
 		monthly_income_mult = 0.1
@@ -444,7 +444,7 @@ quanzhou = { #莆田
 taizhou = { #天台山
 	county = c_taizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_taizhou_effect_name
         health = 0.25
 		diplomacy = 1
@@ -453,7 +453,7 @@ taizhou = { #天台山
 shazhou = { #敦煌
 	county = c_shazhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_shazhou_effect_name
         learning = 5
 		monthly_piety_gain_mult = 0.2
@@ -468,7 +468,7 @@ zouxian= { #邹城
 	county = c_yanzhou
 	# barony = b_zouxian
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_zouxian_effect_name
 		monthly_piety_gain_mult = 0.2
 		diplomacy = 2
@@ -480,7 +480,7 @@ urd = {
 	county = c_shi
 	barony = b_urd_najai
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_urd_effect_name
 		forest_attrition_mult = -0.4
 		forest_advantage = 3
@@ -490,7 +490,7 @@ nurgan = {
 	county = c_tyr
 	barony = b_nurgan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		learning_per_piety_level = 1
 	}
 }
@@ -499,7 +499,7 @@ dulizhen = {
 	county = c_sheli
 	barony = b_dulizhen
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		learning_per_piety_level = 1
 	}
 }
@@ -508,7 +508,7 @@ dulizhen = {
 longhu = {
 	county = c_fuzhou_5
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
@@ -516,7 +516,7 @@ wudang_shan = {
 	county = c_junzhou
 	# barony = b_wudangshan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_wudang_shan_effect_name
 		monthly_piety_gain_mult = 0.2
 	}
@@ -525,21 +525,21 @@ maoshan = {
 	county = c_runzhou
 	# barony = b_maoshan
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
 rencheng = {
 	county = c_yanzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
 enshi = {
 	county = c_shizhou_1
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_enshi_effect_name
 		different_culture_opinion = 10
 	}
@@ -547,7 +547,7 @@ enshi = {
 yuzhou = {
 	county = c_yuzhou_2
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_yuzhou_effect_name
 		monthly_prestige_gain_per_happy_powerful_vassal_mult = 0.03
 	}
@@ -557,7 +557,7 @@ yuzhou = {
 changsha = {
 	county = c_tanzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_changsha_effect_name
 		monthly_piety_gain_mult = 0.1
 	}
@@ -566,7 +566,7 @@ changsha = {
 guangzhou = {
 	county = c_guangzhou_1
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_guangzhou_effect_name
 		personal_scheme_phase_duration_add = minor_scheme_phase_duration_bonus_value
 	}
@@ -575,7 +575,7 @@ guangzhou = {
 chenzhou = {
 	county = c_luxi
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_chenxi_effect_name
 		diplomacy = 1
 	}
@@ -584,7 +584,7 @@ chenzhou = {
 guilin = {
 	county = c_guizhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_guilin_effect_name
 		learning = 1
 	}
@@ -593,7 +593,7 @@ guilin = {
 fengdu = {
 	county = c_zhongzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_fengdu_effect_name
 		prowess = 2
 	}
@@ -602,7 +602,7 @@ fengdu = {
 kuaiji = {
 	county = c_yuezhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_kuaiji_effect_name
 		stress_loss_mult = 0.1
 	}
@@ -613,7 +613,7 @@ zhuangzi = {
 	# Zhuangzi Temple built during Song Dynasty
 	county = c_songzhou
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		monthly_piety_gain_mult = 0.1
 	}
 }
@@ -623,7 +623,7 @@ louguantai = {
 	county = c_jingzhao
 	# barony = b_chuxian
 
-	character_modifier = {
+	county_holder_character_modifier = {
 		name = holy_site_louguantai_effect_name
 		same_faith_opinion = 5
 	}
@@ -634,7 +634,7 @@ louguantai = {
 # 	county = c_mengzhou
 # 	barony = b_wangwu
 
-# 	character_modifier = {
+# 	county_holder_character_modifier = {
 # 		name = holy_site_wangwu_shan_effect_name
 # 		monthly_piety_gain_mult = 0.2
 # 	}

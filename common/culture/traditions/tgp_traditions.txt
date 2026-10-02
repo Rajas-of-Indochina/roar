@@ -23,7 +23,6 @@
 			culture_tradition:tradition_horse_lords = { is_in_list = traits }
 			culture_tradition:tradition_devoted_horsemanship = { is_in_list = traits }
 			culture_tradition:tradition_tgp_imperial_peace = { is_in_list = traits }
-			culture_tradition:tradition_tgp_imperial_peace = { is_in_list = traits }
 		}
 	}
 
@@ -65,14 +64,14 @@ tradition_tgp_rice_cultivators = {
 		1 = asian
 		4 = svamp.dds
 	}
-	
+
 	is_shown = {
 		has_tgp_dlc_trigger = yes
 		NOT = {
 			culture_tradition:tradition_intensive_farming = { is_in_list = traits }
 		}
 	}
-	
+
 	can_pick = {
 		custom_tooltip = {
 			text = culture_in_terraced_hills_terrain_desc
@@ -83,7 +82,7 @@ tradition_tgp_rice_cultivators = {
 			}
 		}
 	}
-	
+
 	parameters = {
 		rice_cultivators_next_level_paddy_fields = yes
 		rice_cultivators_can_construct_paddy_fields_in_hills_and_jungle = yes
@@ -94,7 +93,7 @@ tradition_tgp_rice_cultivators = {
 		terraced_hills_construction_gold_cost = -0.1
 		terraced_hills_levy_size = 0.1
 	}
-	
+
 	cost = {
 		prestige = {
 			add = {
@@ -127,11 +126,11 @@ tradition_tgp_rice_cultivators = {
 					desc = culture_in_terraced_hills_terrain_count_desc
 				}
 			}
-			
+
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
-	
+
 	ai_will_do = {
 		value = 400
 		if = {
@@ -175,13 +174,12 @@ tradition_tgp_imperial_peace = {
 			government_is_japanese_trigger = yes
 		}
 	}
-	
+
 	can_pick = {
 		# Mutually exclusive with Bushido and other Horse Archer MaA
 		NOR = {
 			culture_tradition:tradition_horse_lords = { is_in_list = traits }
 			culture_tradition:tradition_devoted_horsemanship = { is_in_list = traits }
-			culture_tradition:tradition_tgp_imperial_peace = { is_in_list = traits }
 			culture_tradition:tradition_tgp_bushido = { is_in_list = traits }
 		}
 	}
@@ -196,7 +194,7 @@ tradition_tgp_imperial_peace = {
 	character_modifier = {
 		defender_holding_advantage = 2
 	}
-	
+
 	cost = {
 		prestige = {
 			add = {
@@ -220,7 +218,7 @@ tradition_tgp_imperial_peace = {
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
-	
+
 	ai_will_do = {
 		value = 50
 		if = {
@@ -249,7 +247,7 @@ tradition_tgp_defiant_ambushers = {
 		has_tgp_dlc_trigger = yes
 		has_cultural_pillar = heritage_ainuic
 	}
-	
+
 	can_pick = {
 		# Mutually exclusive with other Horse Archer MaA
 		NOR = {
@@ -1466,7 +1464,7 @@ tradition_stratified_society = {
 	is_shown = {
 		has_tgp_dlc_trigger = yes
 		culture_head = {
-			government_allows = merit
+			government_has_mechanic = merit
 		}
 		has_cultural_pillar = heritage_korean
 	}
@@ -1583,10 +1581,7 @@ tradition_tgp_art_of_war = {
 
 	is_shown = {
 		OR = {
-			this = culture:han
-			any_parent_culture_or_above = {
-				this = culture:han
-			}
+			culture_is_or_has_ancestor_trigger = { CULTURE = culture:han }
 			has_cultural_pillar = heritage_chinese
 		}
 		# DLC check.
@@ -1668,7 +1663,7 @@ tradition_tgp_art_of_war = {
 		if = {
 			limit = { # Admin should be more into this
 				scope:character = {
-					government_allows = administrative
+					government_has_mechanic = administrative
 				}
 			}
 			multiply = 2
@@ -1735,10 +1730,16 @@ tradition_tgp_court_machinations = {
 		}
 	}
 
-	parameters = {
-		number_of_consorts_hegemony = 20
-		number_of_consorts = 3
+	partners = {
 		number_of_spouses = 1
+		number_of_consorts = 3
+
+		number_of_consorts_by_tier = {
+			hegemony = 20
+		}
+	}
+
+	parameters = {
 		can_appoint_chief_eunuch = yes
 		court_machinations_eunuch_trait_bonuses = yes
 		courtiers_more_likely_to_join_hostile_schemes_in_court = yes
@@ -1791,10 +1792,10 @@ tradition_tgp_court_machinations = {
 			if = {
 				limit = {
 					NOT = {
-						scope:character.faith = {
+						scope:character.rite = {
 							OR = {
-								has_doctrine = doctrine_polygamy
-								has_doctrine = doctrine_concubines
+								rite_has_doctrine = doctrine_polygamy
+								rite_has_doctrine = doctrine_concubines
 							}
 						}
 					}
@@ -1814,7 +1815,7 @@ tradition_tgp_court_machinations = {
 		if = {
 			limit = { # Admin should be more into this
 				scope:character = {
-					government_allows = administrative
+					government_has_mechanic = administrative
 				}
 			}
 			multiply = 2
@@ -1838,7 +1839,7 @@ tradition_scholar_officials = {
 			OR = {
 				culture = { has_cultural_pillar = heritage_chinese }
 				has_trait = confucian_education
-				government_has_flag = government_has_merit
+				government_has_mechanic = government_has_merit
 				has_title = title:h_china #Always available to new emperors
 			}
 		}
@@ -1976,7 +1977,7 @@ tradition_sinophilic = {
 								count >= 5
 								culture = prev
 								primary_title.tier >= tier_county
-								has_trait = scholar
+								has_trait = erudite
 							}
 						}
 					}
@@ -1986,7 +1987,7 @@ tradition_sinophilic = {
 				}
 				add = {
 					value = tradition_unfulfilled_criteria_penalty
-					desc = rulers_with_scholar_desc
+					desc = rulers_with_erudite_desc
 				}
 			}
 		}
@@ -2026,6 +2027,9 @@ tradition_tgp_japanese_houses = {
 		free_adoption = yes
 		wider_adoption = yes
 		better_ward_education = yes
+	}
+
+	partners = {
 		number_of_spouses = 4
 	}
 
@@ -2088,7 +2092,7 @@ tradition_cultivation = {
 			OR = {
 				culture = { has_cultural_pillar = heritage_chinese }
 				has_trait = confucian_education
-				government_has_flag = government_has_merit
+				government_has_mechanic = government_has_merit
 				has_title = title:h_china #Always available to new emperors
 			}
 		}
@@ -2147,7 +2151,7 @@ tradition_cultivation = {
 								count >= 5
 								culture = prev
 								primary_title.tier >= tier_county
-								has_trait = scholar
+								has_trait = erudite
 							}
 						}
 					}
@@ -2157,7 +2161,7 @@ tradition_cultivation = {
 				}
 				add = {
 					value = tradition_unfulfilled_criteria_penalty
-					desc = rulers_with_scholar_desc
+					desc = rulers_with_erudite_desc
 				}
 			}
 

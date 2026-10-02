@@ -18,18 +18,18 @@ call_for_confederation_decision = {
 	selection_tooltip = call_for_confederation_decision_tooltip
 
 	is_shown = {
-		highest_held_title_tier <= tier_duchy
+		is_independent_ruler = yes
 		OR = {
 			government_has_flag = government_is_tribal
 			government_has_flag = government_is_nomadic
 			government_has_flag = government_is_stateless
 		}
-		is_playable_character = yes
-		is_independent_ruler = yes
+		highest_held_title_tier <= tier_duchy
 		NOR = {
-			has_character_flag = forming_confederation
 			is_confederation_member = yes
+			has_character_flag = forming_confederation
 		}
+		is_playable_character = yes
 	}
 
 	is_valid = {
@@ -44,7 +44,7 @@ call_for_confederation_decision = {
 				}
 			}
 			highest_held_title_tier <= tier_duchy
-		is_tributary = no
+			is_tributary = no
 			custom_tooltip = {
 				OR = {
 					government_has_flag = government_is_tribal
@@ -446,20 +446,7 @@ leave_confederation_decision = {
 	}
 
 	is_valid_showing_failures_only = {
-		trigger_if = {
-			limit = {
-				is_ai = no
-			}
-			NOT = { exists = involved_activity }
-			is_physically_able = yes
-			is_travelling = no
-		}
-		trigger_else = {
-			is_alive = yes
-			is_imprisoned = no
-			is_incapable = no
-			NOT = { exists = involved_activity }
-		}
+		is_available = yes
 	}
 
 	cost = {
@@ -629,7 +616,7 @@ leave_confederation_decision = {
 						faith = root.faith
 					}
 				}
-				faith = { has_doctrine = doctrine_pluralism_pluralistic }
+				rite = { rite_has_doctrine = doctrine_pluralism_pluralistic }
 			}
 			confederation = {
 				any_confederation_member = {
@@ -672,7 +659,7 @@ leave_confederation_decision = {
 					}
 				}
 			}
-			faith = { has_doctrine = doctrine_pluralism_pluralistic }
+			rite = { rite_has_doctrine = doctrine_pluralism_pluralistic }
 			confederation = {
 				any_confederation_member = {
 					save_temporary_scope_as = confederate
@@ -725,8 +712,7 @@ leave_confederation_decision = {
 		modifier = { #Is wrong government type
 			NOR = {
 				government_has_flag = government_is_tribal
-				government_has_flag = government_is_nomadic
-				government_has_flag = government_is_herder
+				government_has_flag = government_is_in_steppe
 			}
 			add = 50
 		}
@@ -840,12 +826,12 @@ leave_confederation_decision = {
 							}
 						}
 					}
-					any_confederation_member = {
-						NOT = {
-							this = root
-						}
-						capital_province = {
-							squared_distance = { target = root.capital_province value < 100000 }
+					confederation = {
+						any_confederation_member = {
+							this != root
+							capital_province = {
+								squared_distance = { target = root.capital_province value < 100000 }
+							}
 						}
 					}
 				}
@@ -864,12 +850,12 @@ leave_confederation_decision = {
 							}
 						}
 					}
-					any_confederation_member = {
-						NOT = {
-							this = root
-						}
-						capital_province = {
-							squared_distance = { target = root.capital_province value < 200000 }
+					confederation = {
+						any_confederation_member = {
+							this != root
+							capital_province = {
+								squared_distance = { target = root.capital_province value < 200000 }
+							}
 						}
 					}
 				}
@@ -1047,7 +1033,7 @@ leave_confederation_decision = {
 							AND = {
 								has_trait = bastard
 								root = {
-									faith = { NOT = { has_doctrine = doctrine_bastardry_none } }
+									rite = { NOT = { rite_has_doctrine = doctrine_bastardry_none } }
 								}
 							}
 							has_trait = denounced
@@ -1714,17 +1700,17 @@ study_commander_trait_decision = {
 	selection_tooltip = study_commander_trait_decision_tooltip
 
 	is_shown = {
-		has_mpo_dlc_trigger = yes
 		government_has_flag = government_is_nomadic
 		is_playable_character = yes
 		is_available_adult = yes
+		number_of_commander_traits < commander_trait_limit
 		NOR = { 
 			has_trait = conqueror
 			has_trait = greatest_of_khans
 			has_character_flag = study_commander_trait_cooldown
 			has_character_flag = is_learning_commander_trait
 	 	}
-		number_of_commander_traits < commander_trait_limit
+		has_mpo_dlc_trigger = yes
 	}
 
 	is_valid = {
@@ -1801,12 +1787,25 @@ mpo_decision_fertility_dance = {
     cooldown = { years = 5 }
 
     is_shown = {
-        has_mpo_dlc_trigger = yes
 		government_has_flag = government_is_nomadic
-        is_landed = yes
         is_available_adult = yes
+        is_landed = yes
+        has_mpo_dlc_trigger = yes
         any_sub_realm_county = {
             uses_county_fertility = yes
+        }
+    }
+
+    widget = {
+        controller = create_holy_order
+        title_valid = {
+            trigger_if = {
+                limit = { exists = this }
+                is_capital_barony = yes
+                county = {
+                    uses_county_fertility = yes
+                }
+            }
         }
     }
 
@@ -1819,19 +1818,6 @@ mpo_decision_fertility_dance = {
     cost = {
         piety = {
             add = medium_piety_value
-        }
-    }
-
-    widget = {
-        controller = create_holy_order
-        barony_valid = {
-            trigger_if = {
-                limit = { exists = this }
-                is_capital_barony = yes
-                county = {
-                    uses_county_fertility = yes
-                }
-            }
         }
     }
 
@@ -1935,11 +1921,11 @@ mpo_decision_introduce_heir = {
 			has_trait = nomadic_philosophy
 		}
 		exists = player_heir
-		player_heir = {
+		player_heir ?= {
+			is_ai = yes
 			any_heir_title = {
 				count >= 1
 			}
-			is_ai = yes
 		}
 	}
 
@@ -1957,7 +1943,7 @@ mpo_decision_introduce_heir = {
 		}
 		
 		player_heir = {
-			custom_description = {
+			custom_tooltip = {
 				text = player_heir_num_friends_tt
 				num_of_relation_friend < 3
 			}
@@ -2002,15 +1988,12 @@ mpo_decision_introduce_heir = {
 			limit = {
 				is_ai = no
 			}
-			NOT = { exists = involved_activity }
 			is_available = yes
 		}
 		trigger_else = {
-			is_alive = yes
-			is_imprisoned = no
-			is_incapable = no
-			NOT = { exists = involved_activity }
+			is_physically_able = yes
 		}
+		is_in_activity = no
 		player_heir = {
 			is_imprisoned = no
 			is_alive = yes
@@ -2955,25 +2938,22 @@ expand_the_steppe_decision = {
 	}
 
     is_shown = {
-        has_mpo_dlc_trigger = yes
-
-        government_has_flag = government_is_nomadic
-
     	any_character_situation = {
     		situation:the_great_steppe ?= this
     	}
 
+        government_has_flag = government_is_nomadic
+
         OR = {
+			great_steppe_not_in_sub_region_trigger = { REGION = world_khorasan }
 			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_anatolia }
 			great_steppe_not_in_sub_region_trigger = { REGION = custom_eastern_balkans }
 			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_northern_russia }
-			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_southern_russia }
 			great_steppe_not_in_sub_region_trigger = { REGION = custom_hungary }
 			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_poland }
 			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_baltic }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_caucasus_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_transoxiana }
-			great_steppe_not_in_sub_region_trigger = { REGION = world_khorasan }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_persia_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_siberia_further_expansion }
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_hexi_tarim_expansion }
@@ -2983,7 +2963,10 @@ expand_the_steppe_decision = {
 			great_steppe_not_in_sub_region_trigger = { REGION = dlc_mpo_steppe_east_andong_addon }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_korea }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_japan }
+			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_southern_russia }
         }
+
+        has_mpo_dlc_trigger = yes
     }
 
     is_valid = {
@@ -3118,16 +3101,12 @@ expand_the_steppe_decision = {
             limit = {
                 is_ai = no
             }
-            NOT = { exists = involved_activity }
-            NOT = { has_trait = infirm }
             is_available = yes
         }
         trigger_else = {
-            is_imprisoned = no
-            is_incapable = no
-            is_alive = yes
-            NOT = { has_trait = infirm }
+            is_physically_able = yes
         }
+		is_in_activity = no
     }
 
     cost = {
@@ -3199,13 +3178,13 @@ develop_fertility_decision = {
 	cooldown = { years = 10 }
 
 	is_shown = {
+		government_has_flag = government_is_nomadic
 		OR = {
 			has_trait = diligent
 			has_trait = architect 
 			has_trait = lifestyle_surveyor
 		}
 		is_landed = yes
-		government_has_flag = government_is_nomadic
 	}
 
 	is_valid_showing_failures_only = {
@@ -3538,17 +3517,17 @@ mpo_become_greatest_of_khans_decision = {
 
 	is_shown = {
 		government_has_flag = government_is_nomadic
-		exists = situation:the_great_steppe
 		any_character_situation = {
 			this = situation:the_great_steppe
 		}
-		is_playable_character = yes
 		NOR = {
 			has_trait = greatest_of_khans
 			any_owned_story = {
 				story_type = story_greatest_of_khans
 			}
 		}
+		is_playable_character = yes
+		exists = situation:the_great_steppe
 	}
 
 	is_valid = {
@@ -3573,10 +3552,7 @@ mpo_become_greatest_of_khans_decision = {
 				exists = global_var:mpo_gok_war_ongoing
 			}
 		}
-		custom_tooltip = {
-			text = is_nomadic_tt
-			government_has_flag = government_is_nomadic
-		}
+		government_has_flag = government_is_nomadic
 		custom_tooltip = {
 			text = in_great_steppe_tt
 			any_character_situation = {
@@ -3586,7 +3562,7 @@ mpo_become_greatest_of_khans_decision = {
 		is_at_war = no
 		has_realm_law = nomadic_authority_5
 		prestige_level >= 4
-		highest_held_title_tier = tier_empire
+		highest_held_title_tier >= tier_empire
 		trigger_if = { # If you are player Temüjin we waive this requirements
 			limit = {
 				NOT = { this = character:125501 }
@@ -4366,13 +4342,13 @@ mpo_gok_world_conquest_decision = {
 	sort_order = 300
 
 	is_shown = {
-		exists = global_var:first_gok.dynasty
-		exists = global_var:greatest_of_khans_title
-		has_mpo_dlc_trigger = yes
 		any_owned_story = {
 			story_type = story_greatest_of_khans
 		}
 		is_playable_character = yes
+		has_mpo_dlc_trigger = yes
+		exists = global_var:greatest_of_khans_title
+		exists = global_var:first_gok.dynasty
 	}
 
 	is_valid = {
@@ -4384,10 +4360,7 @@ mpo_gok_world_conquest_decision = {
 			holder = root
 		}
 		is_independent_ruler = yes
-		custom_tooltip = {
-			text = is_nomadic_tt
-			government_has_flag = government_is_nomadic
-		}
+		government_has_flag = government_is_nomadic
 		has_realm_law = nomadic_authority_5
 		#Legitimace is hamstrung a bit if you don't own legends
 		trigger_if = {
@@ -4418,7 +4391,7 @@ mpo_gok_world_conquest_decision = {
 			prestige_level >= 4
 		}
 		
-		highest_held_title_tier = tier_empire
+		highest_held_title_tier >= tier_empire
 
 		OR = {
 			sub_realm_size >= mpo_gok_world_conquest_target_counties
@@ -4736,9 +4709,9 @@ settle_people_decision = {
 	selection_tooltip = settle_people_decision_tooltip
 
 	is_shown = {
-		has_mpo_dlc_trigger = yes
 		government_has_flag = government_is_nomadic
 		is_playable_character = yes
+		has_mpo_dlc_trigger = yes
 	}
 
 	is_valid = {
@@ -5126,23 +5099,8 @@ settle_people_decision = {
 				}
 			}
 		}
-		else_if = {
-			limit = {
-				ep3_is_clan_inclined_trigger = yes
-			}
-			change_government = clan_government
-			if = {
-				limit = {
-					NOT = { has_realm_law = crown_authority_3 }
-				}
-				hidden_effect = {
-					add_realm_law_skip_effects = crown_authority_3
-				}
-			}
-		}
 		else = {
-			change_government = feudal_government
-
+			assign_feudal_governments_effect = yes
 			if = {
 				limit = {
 					NOT = { has_realm_law = crown_authority_3 }
@@ -5203,50 +5161,7 @@ settle_people_decision = {
 							}
 						}
 					}
-					nomad_domicile_refund_effect = yes
-					nomad_convert_herds_to_gold_special_troops_effect = yes
-					if = {
-						limit = {
-							scope:new_capital.title_province = {
-								has_holding_type = tribal_holding
-							}
-						}
-						change_government = tribal_government
-						if = {
-							limit = {
-								NOT = { has_realm_law = tribal_authority_1 }
-							}
-							hidden_effect = {
-								add_realm_law_skip_effects = tribal_authority_1
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							ep3_is_clan_inclined_trigger = yes
-						}
-						change_government = clan_government
-						if = {
-							limit = {
-								NOT = { has_realm_law = crown_authority_1 }
-							}
-							hidden_effect = {
-								add_realm_law_skip_effects = crown_authority_1
-							}
-						}
-					}
-					else = {
-						change_government = feudal_government
-
-						if = {
-							limit = {
-								NOT = { has_realm_law = crown_authority_1 }
-							}
-							hidden_effect = {
-								add_realm_law_skip_effects = crown_authority_1
-							}
-						}
-					}
+					settle_the_people_vassal_effect = yes
 
 					if = {
 						limit = {
@@ -5296,23 +5211,8 @@ settle_people_decision = {
 								}
 							}
 						}
-						else_if = {
-							limit = {
-								ep3_is_clan_inclined_trigger = yes
-							}
-							change_government = clan_government
-							if = {
-								limit = {
-									NOT = { has_realm_law = crown_authority_1 }
-								}
-								hidden_effect = {
-									add_realm_law_skip_effects = crown_authority_1
-								}
-							}
-						}
 						else = {
-							change_government = feudal_government
-
+							assign_feudal_governments_effect = yes
 							if = {
 								limit = {
 									NOT = { has_realm_law = crown_authority_1 }
@@ -5372,23 +5272,8 @@ settle_people_decision = {
 									}
 								}
 							}
-							else_if = {
-								limit = {
-									ep3_is_clan_inclined_trigger = yes
-								}
-								change_government = clan_government
-								if = {
-									limit = {
-										NOT = { has_realm_law = crown_authority_1 }
-									}
-									hidden_effect = {
-										add_realm_law_skip_effects = crown_authority_1
-									}
-								}
-							}
 							else = {
-								change_government = feudal_government
-
+								assign_feudal_governments_effect = yes
 								if = {
 									limit = {
 										NOT = { has_realm_law = crown_authority_1 }
@@ -5796,9 +5681,9 @@ step_away_from_the_steppe_decision = {
 	selection_tooltip = step_away_from_the_steppe_decision_tooltip
 
 	is_shown = {
-		has_mpo_dlc_trigger = yes
 		government_has_flag = government_is_nomadic
 		is_playable_character = yes
+		has_mpo_dlc_trigger = yes
 	}
 
 	is_valid = {
@@ -5829,7 +5714,6 @@ step_away_from_the_steppe_decision = {
 	effect = {
 		#GoK stops really being GoK
 		gok_government_change_story_end_effect = yes
-
 		nomad_domicile_refund_effect = yes
 		nomad_convert_herds_to_gold_special_troops_effect = yes
 		every_sub_realm_county = {
@@ -6021,42 +5905,12 @@ step_away_from_the_steppe_decision = {
 					has_holding_type = tribal_holding
 				}
 			}
-			change_government = tribal_government
-			if = {
-				limit = {
-					NOT = { has_realm_law = tribal_authority_1 }
-				}
-				hidden_effect = {
-					add_realm_law_skip_effects = tribal_authority_1
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				ep3_is_clan_inclined_trigger = yes
-			}
-			change_government = clan_government
-			if = {
-				limit = {
-					NOT = { has_realm_law = crown_authority_1 }
-				}
-				hidden_effect = {
-					add_realm_law_skip_effects = crown_authority_1
-				}
-			}
+			assign_tribal_governments_effect = yes
 		}
 		else = {
-			change_government = feudal_government
-
-			if = {
-				limit = {
-					NOT = { has_realm_law = crown_authority_1 }
-				}
-				hidden_effect = {
-					add_realm_law_skip_effects = crown_authority_1
-				}
-			}
+			assign_feudal_governments_effect = yes
 		}
+		change_authority_effect = { CHANGE = 1 }
 		if = {
 			limit = {
 				any_held_title = {
@@ -6108,66 +5962,7 @@ step_away_from_the_steppe_decision = {
 							}
 						}
 					}
-					nomad_domicile_refund_effect = yes
-					nomad_convert_herds_to_gold_special_troops_effect = yes
-					if = {
-						limit = {
-							scope:new_capital.title_province = {
-								has_holding_type = tribal_holding
-							}
-						}
-						change_government = tribal_government
-						if = {
-							limit = {
-								NOT = { has_realm_law = tribal_authority_1 }
-							}
-							hidden_effect = {
-								add_realm_law_skip_effects = tribal_authority_1
-							}
-						}
-					}
-					else_if = {
-						limit = {
-							ep3_is_clan_inclined_trigger = yes
-						}
-						change_government = clan_government
-						if = {
-							limit = {
-								NOT = { has_realm_law = crown_authority_1 }
-							}
-							hidden_effect = {
-								add_realm_law_skip_effects = crown_authority_1
-							}
-						}
-					}
-					else = {
-						change_government = feudal_government
-
-						if = {
-							limit = {
-								NOT = { has_realm_law = crown_authority_1 }
-							}
-							hidden_effect = {
-								add_realm_law_skip_effects = crown_authority_1
-							}
-						}
-					}
-
-					if = {
-						limit = {
-							any_held_title = {
-								is_nomad_title = yes
-							}
-						}
-						every_held_title = {
-							limit = {
-								is_nomad_title = yes
-							}
-							root = {
-								destroy_title = prev
-							}
-						}
-					}
+					settle_the_people_vassal_effect = yes
 					every_vassal = {
 						limit = {
 							OR = {
@@ -6183,66 +5978,7 @@ step_away_from_the_steppe_decision = {
 								}
 							}
 						}
-						nomad_domicile_refund_effect = yes
-						nomad_convert_herds_to_gold_special_troops_effect = yes
-						if = {
-							limit = {
-								scope:new_capital.title_province = {
-									has_holding_type = tribal_holding
-								}
-							}
-							change_government = tribal_government
-							if = {
-								limit = {
-									NOT = { has_realm_law = tribal_authority_1 }
-								}
-								hidden_effect = {
-									add_realm_law_skip_effects = tribal_authority_1
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								ep3_is_clan_inclined_trigger = yes
-							}
-							change_government = clan_government
-							if = {
-								limit = {
-									NOT = { has_realm_law = crown_authority_1 }
-								}
-								hidden_effect = {
-									add_realm_law_skip_effects = crown_authority_1
-								}
-							}
-						}
-						else = {
-							change_government = feudal_government
-
-							if = {
-								limit = {
-									NOT = { has_realm_law = crown_authority_1 }
-								}
-								hidden_effect = {
-									add_realm_law_skip_effects = crown_authority_1
-								}
-							}
-						}
-						
-						if = {
-							limit = {
-								any_held_title = {
-									is_nomad_title = yes
-								}
-							}
-							every_held_title = {
-								limit = {
-									is_nomad_title = yes
-								}
-								root = {
-									destroy_title = prev
-								}
-							}
-						}
+						settle_the_people_vassal_effect = yes
 						
 						every_vassal = {
 							limit = {
@@ -6259,65 +5995,7 @@ step_away_from_the_steppe_decision = {
 									}
 								}
 							}
-							nomad_domicile_refund_effect = yes
-							nomad_convert_herds_to_gold_special_troops_effect = yes
-							if = {
-								limit = {
-									scope:new_capital.title_province = {
-										has_holding_type = tribal_holding
-									}
-								}
-								change_government = tribal_government
-								if = {
-									limit = {
-										NOT = { has_realm_law = tribal_authority_1 }
-									}
-									hidden_effect = {
-										add_realm_law_skip_effects = tribal_authority_1
-									}
-								}
-							}
-							else_if = {
-								limit = {
-									ep3_is_clan_inclined_trigger = yes
-								}
-								change_government = clan_government
-								if = {
-									limit = {
-										NOT = { has_realm_law = crown_authority_1 }
-									}
-									hidden_effect = {
-										add_realm_law_skip_effects = crown_authority_1
-									}
-								}
-							}
-							else = {
-								change_government = feudal_government
-
-								if = {
-									limit = {
-										NOT = { has_realm_law = crown_authority_1 }
-									}
-									hidden_effect = {
-										add_realm_law_skip_effects = crown_authority_1
-									}
-								}
-							}
-							if = {
-								limit = {
-									any_held_title = {
-										is_nomad_title = yes
-									}
-								}
-								every_held_title = {
-									limit = {
-										is_nomad_title = yes
-									}
-									root = {
-										destroy_title = prev
-									}
-								}
-							}
+							settle_the_people_vassal_effect = yes
 						}
 					}
 				}
@@ -6580,16 +6258,16 @@ confederation_kingdom_decision = {
 
 	is_shown = {
 		is_confederation_member = yes
-		exists = confederation
 		is_landed = yes
-		is_playable_character = yes
 		NOT = { exists = confederation.leading_house }
+		is_playable_character = yes
+		exists = confederation
 	}
 
 	is_valid = {
 		prestige_level >= 3
 		is_independent_ruler = yes
-		custom_description = {
+		custom_tooltip = {
 			text = confederation_kingdom_decision_vassal_req
 			confederation = {
 				any_confederation_member = {
@@ -6791,13 +6469,8 @@ confederation_kingdom_decision = {
 		is_confederation_member = yes
 	}
 
-	# We want Circassians to be forming Circassia
 	ai_will_do = {
 		base = 100
-		modifier = {
-			factor = 0.25
-			culture = { has_cultural_parameter = xabze_defense }
-		}
 	}
 }
 
@@ -6821,9 +6494,9 @@ settle_the_steppe_decision = {
 	selection_tooltip = settle_the_steppe_decision_tooltip
 
 	is_shown = {
-		has_mpo_dlc_trigger = yes
 		government_has_flag = government_is_nomadic
 		is_playable_character = yes
+		has_mpo_dlc_trigger = yes
 	}
 
 	is_valid = {
@@ -6916,17 +6589,9 @@ settle_the_steppe_decision = {
 				}
 				trigger_if = {
 					limit = {
-						NOR = {
-							faith.religion = religion:islam_religion
-							culture = { has_cultural_pillar = heritage_arabic }
-							culture = { has_cultural_pillar = heritage_iranian }
-							culture = { has_cultural_pillar = heritage_turkic }
-						}
+						ep3_is_clan_inclined_trigger = no
 					}
-					faith.religion = religion:islam_religion
-					culture = { has_cultural_pillar = heritage_arabic }
-					culture = { has_cultural_pillar = heritage_iranian }
-					culture = { has_cultural_pillar = heritage_turkic }
+					ep3_is_clan_inclined_trigger = yes
 				}
 			}
 			ai_chance = {
@@ -7130,6 +6795,7 @@ settle_the_steppe_decision = {
 						}
 					}
 					title_province = {
+						holding_pre_feudalize_effect = yes
 						set_holding_type = castle_holding
 					}
 					add_to_list = holding_conversion
@@ -7388,13 +7054,12 @@ become_nomadic_decision = {
 	ai_check_interval = 0
 
 	is_shown = {
-		has_mpo_dlc_trigger = yes
-		NOR = {
-			government_has_flag = government_is_nomadic
-			government_has_flag = government_is_steppe_admin
-		}
 		is_playable_character = yes
-		capital_county = {
+		NOR = {
+			government_has_flag = government_is_steppe_admin
+			government_has_flag = government_is_nomadic
+		}
+		capital_county ?= {
 			any_county_situation = {
 				OR = {
 					situation:the_great_steppe ?= this
@@ -7406,6 +7071,7 @@ become_nomadic_decision = {
 				}
 			}
 		}
+		has_mpo_dlc_trigger = yes
 	}
 
 	is_valid = {

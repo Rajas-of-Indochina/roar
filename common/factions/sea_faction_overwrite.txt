@@ -236,12 +236,12 @@ claimant_faction = {
 		
 		trigger_if = {
 			limit = {
-				government_allows = administrative
+				government_has_mechanic = administrative
 			}
 			scope:faction.faction_target ?= {
 				OR = {
 					top_liege ?= this
-					NOT = { government_allows = administrative }
+					NOT = { government_has_mechanic = administrative }
 				}
 			}
 		}

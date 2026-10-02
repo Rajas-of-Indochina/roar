@@ -677,7 +677,7 @@ successful_popular_revolt_outcome_effect = {
 	}
 	if = { # Populists factions in an admin realm should aim to change state faith, if they are of the capital culture
 		limit = {
-			$SOURCE_GOVERNMENT$ = { government_allows = state_faith }
+			$SOURCE_GOVERNMENT$ = { government_has_mechanic = state_faith }
 			$FACTION_LEADER$.culture = scope:faction_target.capital_county.culture
 			$FACTION_LEADER$.faith != scope:faction_target.primary_title.state_faith
 		}
@@ -731,7 +731,7 @@ successful_popular_revolt_outcome_effect = {
 	}
 	else_if = { # Populists factions of the state faith in an admin realm where the emperor is of a heretical faith simply take the empire
 		limit = {
-			$SOURCE_GOVERNMENT$ = { government_allows = state_faith }
+			$SOURCE_GOVERNMENT$ = { government_has_mechanic = state_faith }
 			$FACTION_LEADER$.faith = scope:faction_target.primary_title.state_faith
 			$FACTION_LEADER$.faith != scope:faction_target.faith
 		}
@@ -1041,7 +1041,7 @@ successful_popular_revolt_outcome_effect = {
 							}
 							save_scope_as = old_holder
 							switch = {
-								trigger = government_has_flag
+								trigger = government_has_mechanic
 								government_is_administrative = {
 									save_scope_value_as = { name = old_government value = flag:admin }
 								}
@@ -1168,7 +1168,7 @@ successful_popular_revolt_outcome_effect = {
 				else_if = {
 					limit = {
 						OR = {
-							government_allows = administrative
+							government_has_mechanic = administrative
 							scope:old_government ?= flag:admin
 						}
 					}

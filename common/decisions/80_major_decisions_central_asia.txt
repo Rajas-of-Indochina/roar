@@ -9,6 +9,7 @@
 ##########
 #Become Genghis Khan
 # by Petter Vilberg
+### Become Greatest of Khans ###
 become_greatest_of_khans_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
@@ -21,21 +22,21 @@ become_greatest_of_khans_decision = {
 
 	is_shown = {
 		highest_held_title_tier >= tier_duchy
-		is_playable_character = yes
-		culture = { has_cultural_parameter = heritage_group_altaic }
+		#TRUE DLC-OWNING NOMADS HAVE THEIR OWN PATH
+		has_mpo_dlc_trigger = no
 		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:become_greatest_of_khans_decision
 			}
 		}
-		#TRUE DLC-OWNING NOMADS HAVE THEIR OWN PATH
-		has_mpo_dlc_trigger = no
+		culture = { has_cultural_parameter = heritage_group_altaic }
+		is_playable_character = yes
 	}
 
 	is_valid = {
 		prestige_level >= 4
-		highest_held_title_tier = tier_empire
+		highest_held_title_tier >= tier_empire
 		sub_realm_size >= greatest_of_khans_target_counties
 		capital_province = {
 			geographical_region = world_steppe
@@ -143,10 +144,10 @@ establish_bactrian_supremacy_decision = {
 	is_shown = {
 		highest_held_title_tier >= tier_county
 		NOT = { government_has_flag = government_is_stateless }
-		culture = {
+		culture ?= {
 			OR = {
-				this = culture:afghan
 				this = culture:tajik
+				this = culture:afghan
 				this = culture:greek
 				any_parent_culture_or_above = {
 					OR = {
@@ -174,19 +175,20 @@ establish_bactrian_supremacy_decision = {
 		OR = {
 			religion = religion:zoroastrianism_religion
 			religion = religion:buddhism_religion
-			faith = faith:manichean
+			faith = faith:manichaean_faith
 			religion = religion:hellenism_religion
 		}
 		prestige_level >= 3
 		OR = {
 			government_has_flag = government_is_feudal
 			government_has_flag = government_is_clan
-			government_allows = administrative
+			government_has_mechanic = administrative
 			government_has_flag = government_is_landless_adventurer
 		}
 		capital_province = {
 			geographical_region = custom_bactria
 		}
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -246,6 +248,7 @@ establish_bactrian_supremacy_decision = {
 ##########
 #Establish the Yamagate in Samarkand
 # by James Beaumont
+### Establish the Yamagate in Samarkand ###
 establish_yamagate_in_samarkand_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
@@ -264,9 +267,8 @@ establish_yamagate_in_samarkand_decision = {
 	}
 
 	is_shown = {
-		is_ruler = yes
+		faith ?= faith:manichaean_faith
 		is_playable_character = yes
-		faith = faith:manichean
 		NOT = {
 			has_title = title:d_manichean
 		}
@@ -278,23 +280,22 @@ establish_yamagate_in_samarkand_decision = {
 			}
 			AND = {
 				exists = title:d_manichean.holder
-				title:d_manichean.holder = {
-					NOT = {
-						has_opinion_modifier = { #Not accepting it if you conquered it yourself.
-							target = root
-							modifier = declared_war
-						}
-					}
-					NOT = {
+				title:d_manichean.holder ?= {
+					NOR = {
 						has_opinion_modifier = { #Not accepting it if you conquered it yourself.
 							target = root
 							modifier = revoked_title
+						}
+						has_opinion_modifier = { #Not accepting it if you conquered it yourself.
+							target = root
+							modifier = declared_war
 						}
 					}
 				}
 			}
 		}
 		NOT = { has_character_flag = flag_already_given_samarkand_once }
+		is_ruler = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -359,7 +360,7 @@ establish_yamagate_in_samarkand_decision = {
 	}
 	
 	ai_potential = {
-		faith = faith:manichean
+		faith = faith:manichaean_faith
 	}
 
 	ai_will_do = { #Do it always, for coherence.
@@ -383,6 +384,7 @@ establish_yamagate_in_samarkand_decision = {
 ##########
 #End the Old Ways
 # by James Beaumont
+### Break With the Old Ways ###
 break_with_the_old_ways_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
@@ -401,14 +403,14 @@ break_with_the_old_ways_decision = {
 	}
 
 	is_shown = {
-		is_ruler = yes
+		faith ?= faith:kabarism
 		is_playable_character = yes
-		faith = faith:kabarism
 		NOT = {
 			faith:kabarism = {
 				has_variable = old_ways_been_broken
 			}
 		}
+		is_ruler = yes
 	}
 
 	is_valid_showing_failures_only = {
@@ -434,7 +436,7 @@ break_with_the_old_ways_decision = {
 		decision_to_second_step_button = "CHOOSE_REFORMATION_TYPE"
 		show_from_start = yes
 
-		item = { # Pluralist
+		item = { # Coexistence
 			value = bwow_no_changes
 			current_description = bwow_no_changes_desc
 			localization = bwow_no_changes
@@ -490,7 +492,12 @@ break_with_the_old_ways_decision = {
 	effect = {
 		trigger_event = religious_decision.0501
 		show_as_tooltip = {
-			root.faith = { remove_doctrine = unreformed_faith_doctrine }
+			if = {
+				limit = {
+					scope:bwow_no_changes = yes
+				}
+				root.faith = { remove_doctrine = unreformed_faith_doctrine }
+			}
 			if = {
 				limit = {
 					scope:bwow_chosen_people = yes

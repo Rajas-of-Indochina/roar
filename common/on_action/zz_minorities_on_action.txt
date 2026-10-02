@@ -1269,9 +1269,9 @@ on_title_gain = {
 				if = {
 					limit = {
 						# Not for meritocratic
-						NOT = { government_has_flag = government_has_merit }
+						NOT = { government_has_mechanic = government_has_merit }
 						# Admin only
-						government_allows = administrative
+						government_has_mechanic = administrative
 						has_ep3_dlc_trigger = yes
 						# Independent rulers only
 						this = top_liege
@@ -2019,7 +2019,7 @@ on_title_gain = {
 		# Admin Stuff
 		if = {
 			limit = {
-				government_allows = noble_families
+				government_has_mechanic = noble_families
 			}
 			government_type = { save_scope_as = nf_gov_type }
 			# Note: anything that should be run after creation can go in on_noble_family_title_created
@@ -2027,7 +2027,7 @@ on_title_gain = {
 		}
 		if = {
 			limit = {
-				government_allows = administrative
+				government_has_mechanic = administrative
 				NOT = { has_variable = laamp_invasion_flag }
 			}
 			# EP3 - apply unique domicile building bonus if appropriate
@@ -2051,7 +2051,7 @@ on_title_gain = {
 				limit = {
 					top_liege != this
 					trigger_if = {
-						limit = { government_allows = merit }
+						limit = { government_has_mechanic = merit }
 						is_governor_or_admin_count = yes
 					}
 					trigger_else = {
@@ -2169,7 +2169,7 @@ on_title_gain = {
 					any_player = {
 						house ?= root.house
 						top_liege = root.top_liege
-						government_allows = administrative
+						government_has_mechanic = administrative
 						this != root
 					}
 				}
@@ -2182,7 +2182,7 @@ on_title_gain = {
 					limit = {
 						house ?= root.house
 						top_liege = root.top_liege
-						government_allows = administrative
+						government_has_mechanic = administrative
 						this != scope:title_gainer
 						scope:title != title:k_chrysanthemum_throne
 					}
@@ -2512,7 +2512,7 @@ on_title_gain = {
 					is_ruler = no
 					highest_held_title_tier <= scope:title.tier
 					government_has_flag = government_is_landless_adventurer
-					government_allows = administrative
+					government_has_mechanic = administrative
 				}
 			}
 			if = {
@@ -2717,7 +2717,7 @@ on_title_gain = {
 		if = { # If courtiers get lost between governorship assignments, move them home
 			limit = {
 				is_ai = no
-				government_allows = merit
+				government_has_mechanic = merit
 			}
 			if = {
 				limit = {

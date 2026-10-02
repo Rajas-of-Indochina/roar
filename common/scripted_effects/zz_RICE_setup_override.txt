@@ -557,48 +557,48 @@ RICE_setup_tarim_basin_flavor_pack_effect = {
 		# According to Xuanzang, Tocharian city-states were Hinayanists, specifically Sarvastivada
 		# However, Sarvastivada was a major influence on Mahayana and adopted many Mahayana idea, even if Sinic Mahayanists criticized some of its stances
 		title:c_kucha = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		title:c_luntai = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		title:c_karashar = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		title:c_toksun = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		title:c_loulan = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		title:c_charkliq = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		title:c_kucha = {
-			set_county_faith = faith:mahayana # faith:theravada
+			set_county_faith = faith:mahayana # faith:theravada_faith
 		}
 		character:166706 = {
-			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada_faith
 			every_courtier = {
-				set_character_faith = faith:mahayana # faith:theravada
+				set_character_faith = faith:mahayana # faith:theravada_faith
 			}
 		}
 		character:166755 = {
-			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada_faith
 			every_courtier = {
-				set_character_faith = faith:mahayana # faith:theravada
+				set_character_faith = faith:mahayana # faith:theravada_faith
 			}
 		}
 		character:166746 = {
-			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada_faith
 			every_courtier = {
-				set_character_faith = faith:mahayana # faith:theravada
+				set_character_faith = faith:mahayana # faith:theravada_faith
 			}
 		}
 		character:166740 = {
-			set_character_faith_with_conversion = faith:mahayana # faith:theravada
+			set_character_faith_with_conversion = faith:mahayana # faith:theravada_faith
 			every_courtier = {
-				set_character_faith = faith:mahayana # faith:theravada
+				set_character_faith = faith:mahayana # faith:theravada_faith
 			}
 		}
 	}
@@ -1618,7 +1618,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 		every_county = {
 			limit = {
 				culture = culture:bengali
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				title_province = {	
 					OR = {
 						duchy = title:d_suhma
@@ -1632,7 +1632,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 				every_courtier_or_guest = {
 					limit = {
 						culture = culture:bengali
-						faith = faith:theravada
+						faith = faith:theravada_faith
 						is_lowborn = yes
 					}
 					random_list = {
@@ -1649,7 +1649,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 		every_county = {
 			limit = {
 				culture = culture:bengali
-				faith = faith:theravada
+				faith = faith:theravada_faith
 				title_province = {	
 					kingdom = title:k_bengal
 					NOR = {
@@ -1664,7 +1664,7 @@ RICE_setup_sri_lanka_flavor_pack_effect = {
 				every_courtier_or_guest = {
 					limit = {
 						culture = culture:bengali
-						faith = faith:theravada
+						faith = faith:theravada_faith
 						is_lowborn = yes
 					}
 					random_list = {
