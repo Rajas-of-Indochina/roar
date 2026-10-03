@@ -1,0 +1,60 @@
+graphical_western = {
+	graphical = yes
+	color = { 255 0 0 }
+	regions = {
+		custom_west_francia_minus_mediterranean
+		world_europe_west_germania world_europe_west_britannia world_europe_east world_europe_north
+	}
+}
+
+graphical_mena = {
+	graphical = yes
+	color = { 255 255 0 }
+	regions = {
+		world_africa world_middle_east
+	}
+}
+
+graphical_india = {
+	graphical = yes
+	color = { 0 255 0 }
+	regions = {
+		world_india world_tibet world_asia_southeast_islands
+		# Asia Southeast Mainland
+		world_burma world_asia_thailand world_asia_cambodia world_asia_malaysia
+	}
+}
+
+graphical_mediterranean = {
+	graphical = yes
+	color = { 0 0 255 }
+	regions = {
+		world_europe_west_iberia world_europe_south custom_south_francia custom_burgundy world_asia_minor
+	}
+}
+
+graphical_steppe = {
+	graphical = yes
+	color = { 0 255 255 }
+	regions = {
+		world_steppe_tarim world_steppe_west world_steppe_central
+	}
+}
+
+graphical_siberia = {
+	graphical = yes
+	color = { 0 255 155 }
+	regions = {
+		world_siberia
+	}
+}
+
+graphical_east_asia = {
+	graphical = yes
+	color = { 155 255 155 }
+	regions = {
+		world_asia_north_east world_asia_korea world_asia_china world_asia_sakhalin_hokkaido world_asia_japan world_steppe_east
+		# Asia Southeast Mainland
+		world_asia_vietnam
+	}
+}

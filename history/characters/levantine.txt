@@ -8155,7 +8155,7 @@ extra_taghlibs_7 = { #appointed ruler of Diyar Rabi'a ~820
 	}
 	863.1.1 = {
 		effect = {
-			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:azariqa }
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:kharijite }
 	 		learn_language_of_culture = culture:persian
 		} 
 	}
@@ -12836,7 +12836,7 @@ abbasid_concubines_4 = { #famous poet and singer at the caliphal courts
 	843.1.1 = {
 		employer = 34009 #caliph al-Wathic
 		effect = {
-			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:hanafi } # was mutazila fix later
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:sunni } # was mutazila fix later
 		} 
 	}
 	866.1.1 = {
@@ -13685,7 +13685,7 @@ asqalani_1 = {
 	culture = "levantine"
 	trait = education_diplomacy_3
 	trait = diligent
-	trait = scholar
+	trait = erudite
 	trait = administrator
 	1135.4.3 = {
 		birth = yes
@@ -13834,7 +13834,7 @@ al_jawzi_1 = {
 	rite = hanafi
 	culture = levantine
 	trait = education_learning_4
-	trait = scholar
+	trait = erudite
 	1116.1.1 = {
 		birth = yes
 	}
@@ -13852,7 +13852,7 @@ al_ahwazi_1 = {
 	trait = zealous
 	trait = diligent
 	trait = just
-	trait = scholar
+	trait = erudite
 	815.1.1 = {
 		birth = yes
 		effect = { add_character_flag = do_not_generate_starting_family }
@@ -13893,6 +13893,132 @@ al-farghani_1 = {
 		birth = yes
 	}
 	871.1.1 = {
+		death = yes
+	}
+}
+
+#Historical Abbasid general who was serving in Anatolia around 867
+ghazi_1 = {
+	name = "al-Abbas"
+	dynasty = levantine_al-ghanawi
+	rite = maliki
+	culture = levantine
+	trait = education_martial_2
+	trait = order_member
+	trait = zealous
+	trait = rough_terrain_expert
+	824.1.1 = {
+		birth = yes
+	}
+	917.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+sons_of_the_covenant_1 = {
+	name = "Isho"
+	female = no
+	rite = nestorian
+	culture = "assyrian"
+	trait = education_learning_2
+	trait = devoted
+	trait = humble
+	trait = patient
+	812.1.1 = {
+		birth = yes
+	}
+	884.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+sons_of_the_covenant_2 = {
+	name = "Sabrisho"
+	female = no
+	rite = nestorian
+	culture = "assyrian"
+	trait = education_stewardship_3
+	trait = devoted
+	trait = diligent
+	trait = just
+	1004.1.1 = {
+		birth = yes
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+sons_of_the_covenant_3 = {
+	name = "Yohannan"
+	female = no
+	rite = nestorian
+	culture = "assyrian"
+	trait = education_learning_3
+	trait = devoted
+	trait = patient
+	trait = shy
+	1118.1.1 = {
+		birth = yes
+	}
+	1191.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+rightful_dayroye_1 = {
+	name = "Abdisho"
+	female = no
+	rite = antiochian_rite
+	culture = "assyrian"
+	trait = education_diplomacy_2
+	trait = devoted
+	trait = zealous
+	trait = humble
+	802.1.1 = {
+		birth = yes
+	}
+	877.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+rightful_dayroye_2 = {
+	name = "Sargis"
+	female = no
+	rite = antiochian_rite
+	culture = "assyrian"
+	trait = education_learning_3
+	trait = devoted
+	trait = diligent
+	trait = patient
+	1009.1.1 = {
+		birth = yes
+	}
+	1079.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+rightful_dayroye_3 = {
+	name = "Eliya"
+	female = no
+	rite = antiochian_rite
+	culture = "assyrian"
+	trait = education_learning_2
+	trait = devoted
+	trait = just
+	trait = calm
+	1110.1.1 = {
+		birth = yes
+	}
+	1188.1.1 = {
 		death = yes
 	}
 }

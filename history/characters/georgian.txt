@@ -3188,3 +3188,85 @@ bagratuni_1 = {
 		death = { death_reason = death_prison }
 	}
 }
+
+#St Hilarion the Iberian
+georgian_monastic_1 = {
+	name = "Hilarion"
+	female = no
+	rite = georgian_rite
+	culture = "georgian"
+	trait = education_learning_3
+	trait = lifestyle_traveler
+	trait = reclusive
+	trait = lifestyle_mystic
+	trait = devoted
+	822.1.1 = {
+		birth = yes
+	}
+	875.11.19 = {
+		death = yes
+		trait = saint
+	}
+}
+
+#The Venerable George the Scribe
+georgian_monastic_2 = {
+	name = "Georgi"
+	female = no
+	rite = georgian_rite
+	culture = "georgian"
+	trait = education_learning_4
+	trait = lifestyle_scholar
+	trait = theologian
+	trait = erudite
+	trait = devoted
+	1031.1.1 = {
+		birth = yes
+	}
+	1054.7.16 = {
+		rite = georgian_rite
+	}
+	1060.1.1 = {
+		give_nickname = nick_the_scribe
+	}
+	1109.1.1 = {
+		death = yes
+	}
+}
+
+#fictional Georgian monk
+georgian_monastic_3 = {
+	name = "Ioseb"
+	female = no
+	rite = georgian_rite
+	culture = "georgian"
+	trait = education_stewardship_4
+	trait = devoted
+	1114.1.1 = {
+		birth = yes
+	}
+	1192.1.1 = {
+		death = yes
+	}
+}
+
+#significant Georgian monk of Mt Athos in 11th c
+athonite_2 = {
+	name = "Georgi"
+	female = no
+	dynasty = oltisi
+	rite = georgian_rite
+	culture = "georgian"
+	trait = education_learning_3
+	trait = erudite
+	trait = devoted
+	1019.1.1 = {
+		birth = yes
+	}
+	1054.7.16 = {
+		rite = georgian_rite
+	}
+	1105.1.1 = {
+		death = yes
+	}
+}

@@ -1502,7 +1502,7 @@
 	# AKA: Arda
 	female = yes
 	dynasty = armenian_gargar
-	rite = byzantine_rite"
+	rite = byzantine_rite
 	culture = "armenian"
 	father = sea_gargar_3
 
@@ -3176,7 +3176,7 @@
 		learn_language = language_greek # knew how to read Greek texts
 		learn_language = language_arabic # knowledgable on Arab poetry
 		learn_language = language_aramaic # knew how to read Syriac texts
-		trait = scholar # linguist, scholar and public functionary
+		trait = erudite # linguist, scholar and public functionary
 		trait = lifestyle_poet # a scholar and a poet
 	}
 	# governor of Edessa for short time
@@ -3475,7 +3475,7 @@
 	}
 	1333.1.1 = {
 		add_spouse = 461509
-		rite = roman_rite"
+		rite = roman_rite
 	}
 	1341.8.28 = {
 		death = yes
@@ -3647,7 +3647,7 @@
 	learning = 7
 	rite = armenian_rite
 	culture = "armenian"
-	trait = scholar
+	trait = erudite
 	trait = education_stewardship_2
 	father = 41583
 	990.1.1 = {
@@ -4564,7 +4564,7 @@
 	}
 	#converted to catholicism
 	1299.3.4 = {
-		rite = roman_rite"
+		rite = roman_rite
 	}
 	1307.11.17 = {
 		death = "1307.11.17"
@@ -8850,7 +8850,7 @@ siwnik_04 = {
 145225 = {
 	name = "Artavasdos"
 	dynasty = 101199
-	rite = byzantine_rite"
+	rite = byzantine_rite
 	culture = "armenian"
 	trait = callous
 	trait = ambitious
@@ -9779,7 +9779,7 @@ armenian_000080 = {
 	}
 	1065.1.1 = {
 		name = "Gregory"
-		trait = scholar
+		trait = erudite
 		give_nickname = nick_the_martyrophile # nicknamed after his work compiling and editing the lives of Armenian martyrs
 	}
 	1105.1.1 = {
@@ -9960,6 +9960,81 @@ armenian_catholicos_1 = {
 		birth = yes
 	}
 	1113.11.13 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+hayk_monk_1 = {
+	name = "Abas"
+	female = no
+	rite = armenian_rite
+	culture = "armenian"
+	trait = education_learning_3
+	trait = devoted
+	trait = theologian
+	810.1.1 = {
+		birth = yes
+	}
+	898.1.1 = {
+		death = yes
+	}
+}
+
+#the historian Aristakes Lastivertsi
+hayk_monk_2 = {
+	name = "Aristakes"
+	female = no
+	dynasty = lastivertsi
+	rite = armenian_rite
+	culture = "armenian"
+	trait = education_learning_4
+	trait = devoted
+	trait = erudite
+	trait = lifestyle_scholar
+	trait = depressed_genetic
+	1002.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional monk
+hayk_monk_3 = {
+	name = "Mushel"
+	female = no
+	rite = armenian_rite
+	culture = "armenian"
+	trait = education_intrigue_2
+	trait = devoted
+	1102.1.1 = {
+		birth = yes
+	}
+	1186.1.1 = {
+		death = yes
+	}
+}
+
+#the legislator and scholar Mkhitar Gosh
+vardapet_1 = {
+	name = "Mkhitar"
+	female = no
+	dynasty = gosh
+	rite = armenian_rite
+	culture = "armenian"
+	trait = education_learning_4
+	trait = devoted
+	trait = pilgrim
+	trait = erudite
+	trait = lifestyle_scholar
+	trait = just
+	trait = patient
+	1130.1.1 = {
+		birth = yes
+	}
+	1213.1.1 = {
 		death = yes
 	}
 }

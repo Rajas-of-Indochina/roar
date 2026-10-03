@@ -1464,7 +1464,7 @@ tradition_stratified_society = {
 	is_shown = {
 		has_tgp_dlc_trigger = yes
 		culture_head = {
-			government_has_mechanic = merit
+			government_allows = merit
 		}
 		has_cultural_pillar = heritage_korean
 	}
@@ -1895,7 +1895,7 @@ tradition_scholar_officials = {
 			if = {
 				limit = {
 					scope:character = {
-						has_trait = scholar
+						has_trait = erudite
 					}
 				}
 				multiply = {

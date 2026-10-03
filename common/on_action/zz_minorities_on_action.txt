@@ -1269,7 +1269,7 @@ on_title_gain = {
 				if = {
 					limit = {
 						# Not for meritocratic
-						NOT = { government_has_mechanic = government_has_merit }
+						NOT = { government_has_flag = government_has_merit }
 						# Admin only
 						government_has_mechanic = administrative
 						has_ep3_dlc_trigger = yes
@@ -2051,7 +2051,7 @@ on_title_gain = {
 				limit = {
 					top_liege != this
 					trigger_if = {
-						limit = { government_has_mechanic = merit }
+						limit = { government_allows = merit }
 						is_governor_or_admin_count = yes
 					}
 					trigger_else = {
@@ -2717,7 +2717,7 @@ on_title_gain = {
 		if = { # If courtiers get lost between governorship assignments, move them home
 			limit = {
 				is_ai = no
-				government_has_mechanic = merit
+				government_allows = merit
 			}
 			if = {
 				limit = {
