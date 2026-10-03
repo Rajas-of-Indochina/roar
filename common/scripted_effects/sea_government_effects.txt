@@ -73,9 +73,9 @@ convert_to_stateless_effect = {
 	}
 
 	add_realm_law_skip_effects = single_heir_dynasty_house
-	primary_title = {
-		add_title_law = anarchist_elective_succession_law
-	}
+	# primary_title = {
+	# 	add_title_law = anarchist_elective_succession_law
+	# }
 	every_held_title = {
 		limit = { tier = tier_county }
 		save_scope_as = title
@@ -98,7 +98,7 @@ form_stateless_confederation_duchy_effect = {
 				holder = ROOT
 				change = scope:change
 			}
-			add_title_law = anarchist_elective_succession_law
+			# add_title_law = anarchist_elective_succession_law
 		}
 	}
 	else = {
@@ -120,7 +120,7 @@ form_stateless_confederation_duchy_effect = {
 					holder = ROOT
 					change = scope:change
 				}
-				add_title_law = anarchist_elective_succession_law
+				# add_title_law = anarchist_elective_succession_law
 			}
 		}
 	}

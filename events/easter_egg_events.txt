@@ -170,7 +170,7 @@ easter_egg.0002 = {
 			limit = {
 				OR = {
 					culture = culture:greek
-					culture = { any_parent_culture = { culture:greek } }
+					culture = { any_parent_culture = { this = culture:greek } }
 				}
 			}
 			set_culture = culture:lesbian
@@ -181,7 +181,7 @@ easter_egg.0002 = {
 			limit = {
 				OR = {
 					culture = culture:greek
-					culture = { any_parent_culture = { culture:greek } }
+					culture = { any_parent_culture = { this = culture:greek } }
 				}
 			}
 			set_culture = culture:lesbian

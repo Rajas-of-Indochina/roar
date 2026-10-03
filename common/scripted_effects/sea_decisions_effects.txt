@@ -203,22 +203,22 @@ feudalize_into_islamic_effect = {
 			limit = { has_realm_law = tribal_authority_3 }
 			remove_realm_law = tribal_authority_3
 		}
-		if = {
-			limit = { has_realm_law = stateless_authority_0 }
-			remove_realm_law = stateless_authority_0
-		}
-		if = {
-			limit = { has_realm_law = stateless_authority_1 }
-			remove_realm_law = stateless_authority_1
-		}
-		if = {
-			limit = { has_realm_law = stateless_authority_2 }
-			remove_realm_law = stateless_authority_2
-		}
-		if = {
-			limit = { has_realm_law = stateless_authority_3 }
-			remove_realm_law = stateless_authority_3
-		}
+		# if = {
+		# 	limit = { has_realm_law = stateless_authority_0 }
+		# 	remove_realm_law = stateless_authority_0
+		# }
+		# if = {
+		# 	limit = { has_realm_law = stateless_authority_1 }
+		# 	remove_realm_law = stateless_authority_1
+		# }
+		# if = {
+		# 	limit = { has_realm_law = stateless_authority_2 }
+		# 	remove_realm_law = stateless_authority_2
+		# }
+		# if = {
+		# 	limit = { has_realm_law = stateless_authority_3 }
+		# 	remove_realm_law = stateless_authority_3
+		# }
 		if = {
 			limit = { has_realm_law = nomadic_authority_1 }
 			remove_realm_law = nomadic_authority_1
@@ -247,22 +247,22 @@ feudalize_into_islamic_effect = {
 			limit = { has_realm_law = crown_authority_3 }
 			remove_realm_law = crown_authority_3
 		}
-		if = {
-			limit = { has_realm_law = mandala_authority_0 }
-			remove_realm_law = mandala_authority_0
-		}
-		if = {
-			limit = { has_realm_law = mandala_authority_1 }
-			remove_realm_law = mandala_authority_1
-		}
-		if = {
-			limit = { has_realm_law = mandala_authority_2 }
-			remove_realm_law = mandala_authority_2
-		}
-		if = {
-			limit = { has_realm_law = mandala_authority_3 }
-			remove_realm_law = mandala_authority_3
-		}
+		# if = {
+		# 	limit = { has_realm_law = mandala_authority_0 }
+		# 	remove_realm_law = mandala_authority_0
+		# }
+		# if = {
+		# 	limit = { has_realm_law = mandala_authority_1 }
+		# 	remove_realm_law = mandala_authority_1
+		# }
+		# if = {
+		# 	limit = { has_realm_law = mandala_authority_2 }
+		# 	remove_realm_law = mandala_authority_2
+		# }
+		# if = {
+		# 	limit = { has_realm_law = mandala_authority_3 }
+		# 	remove_realm_law = mandala_authority_3
+		# }
 	}
 	hidden_effect = {
 		every_vassal = {
@@ -592,10 +592,10 @@ reform_indo_hellenism_effect = {
 			}
 		}
 		save_scope_as = county
-		add_faith_minority_effect = {
-			FAITH = faith:indo_hellenism
-			SIZE = small
-		}
+		# add_faith_minority_effect = {
+		# 	FAITH = faith:indo_hellenism
+		# 	SIZE = small
+		# }
 	}
 }
 
@@ -709,10 +709,10 @@ indo_greek_culture_decision_effect = {
 			random = {
 				chance = 40
 				set_county_culture = culture:indo_greek
-				add_culture_minority_effect = {
-					CULTURE = culture:indo_greek
-					SIZE = small
-				}
+				# add_culture_minority_effect = {
+				# 	CULTURE = culture:indo_greek
+				# 	SIZE = small
+				# }
 				modifier = {
 					add = development_level
 				}
@@ -797,7 +797,7 @@ unite_nasrani_decision_effect = {
 				}
 			}
 			save_scope_as = county
-			promote_faith_minority_effect = { FAITH = faith:nasrani }
+			# promote_faith_minority_effect = { FAITH = faith:nasrani }
 		}
 	}
 }
@@ -936,14 +936,14 @@ unite_bene_israel_effect = {
 			faith = { save_scope_as = old_faith }
 			set_county_culture = culture:kochinim
 			set_county_faith = faith:malabarism
-			add_culture_minority_effect = {
-				CULTURE = scope:old_culture
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = scope:old_faith
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = scope:old_culture
+			# 	SIZE = small
+			# }
+			# add_faith_minority_effect = {
+			# 	FAITH = scope:old_faith
+			# 	SIZE = small
+			# }
 		}
 	}
 	every_realm_county = {
@@ -953,8 +953,8 @@ unite_bene_israel_effect = {
 			}
 		}
 		save_scope_as = county
-		promote_faith_minority_effect = { FAITH = faith:malabarism }
-		promote_culture_minority_effect = { CULTURE = culture:kochinim }
+		# promote_faith_minority_effect = { FAITH = faith:malabarism }
+		# promote_culture_minority_effect = { CULTURE = culture:kochinim }
 	}
 }
 
@@ -973,7 +973,7 @@ form_stateless_confederation_duchy_effect = {
 				holder = ROOT
 				change = scope:change
 			}
-			add_title_law = anarchist_elective_succession_law
+			# add_title_law = anarchist_elective_succession_law
 		}
 	}
 	else = {
@@ -994,7 +994,7 @@ form_stateless_confederation_duchy_effect = {
 					holder = ROOT
 					change = scope:change
 				}
-				add_title_law = anarchist_elective_succession_law
+				# add_title_law = anarchist_elective_succession_law
 			}
 		}
 	}
@@ -1101,9 +1101,9 @@ convert_to_stateless_effect = {
 	}
 
 	add_realm_law_skip_effects = single_heir_dynasty_house
-	primary_title = {
-		add_title_law = anarchist_elective_succession_law
-	}
+	# primary_title = {
+	# 	add_title_law = anarchist_elective_succession_law
+	# }
 	every_held_title = {
 		limit = { tier = tier_county }
 		save_scope_as = title

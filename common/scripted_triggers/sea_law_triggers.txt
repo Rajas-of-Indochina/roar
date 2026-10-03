@@ -12,7 +12,7 @@ can_have_nasrani_partition_law_trigger = {
 	custom_tooltip = {
 		text = can_have_nasrani_partition_law_trigger_false_tt
 		OR = {
-			faith = { has_doctrine = special_doctrine_nasrani_partition_succession_law }
+			rite = { rite_has_doctrine = special_doctrine_nasrani_partition_succession_law }
 			culture = { has_cultural_parameter = can_enact_nasrani_partition_succession_law }
 		}
 	}

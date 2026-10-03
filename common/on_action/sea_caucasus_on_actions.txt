@@ -1009,7 +1009,7 @@ caucasus_character_events_action = {
 				NOT = {
 					has_global_variable = caucasus_baghuashi_exiled_global_variable
 				}
-				trigger = {
+				AND = {
 					current_year < 872
 					current_year > 867
 				}
@@ -1030,7 +1030,7 @@ caucasus_character_events_action = {
 				NOT = {
 					has_global_variable = caucasus_baghuashi_in_kidekari_global_variable
 				}
-				trigger = {
+				AND = {
 					current_year < 877
 					current_year > 871
 				}

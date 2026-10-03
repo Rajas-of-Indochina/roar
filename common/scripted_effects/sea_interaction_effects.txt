@@ -289,8 +289,8 @@ marriage_interaction_on_accept_effect = {
 					limit = {
 						NOR = {
 							culture = { has_cultural_tradition = tradition_polygamous }
-							faith = { has_doctrine = doctrine_polygamy }
-							faith = { has_doctrine = doctrine_concubines }
+							rite = { rite_has_doctrine = doctrine_polygamy }
+							rite = { rite_has_doctrine = doctrine_concubines }
 						}
 					}
 
@@ -300,8 +300,8 @@ marriage_interaction_on_accept_effect = {
 							limit = { 
 								NOR = {
 									culture = { has_cultural_tradition = tradition_polygamous }
-									faith = { has_doctrine = doctrine_polygamy }
-									faith = { has_doctrine = doctrine_concubines }
+									rite = { rite_has_doctrine = doctrine_polygamy }
+									rite = { rite_has_doctrine = doctrine_concubines }
 								}
 							}
 							add_opinion = {

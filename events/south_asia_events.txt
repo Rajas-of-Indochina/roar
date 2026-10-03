@@ -45,7 +45,7 @@ south_asia.0001 = {
 
 	immediate = {
 		play_music_cue = "mx_cue_epic_sacral_moment"
-		unith_india_decision_effect = yes
+		unite_india_decision_effect = yes
 		add_trait = chakravarti
 		legend_seed_new_title_effect = yes
 	}
@@ -578,7 +578,7 @@ south_asia.0030 = {
 
 		random_vassal = {
 			limit = {
-				faith = faith:ari
+				faith = rite:ari
 				is_powerful_vassal = yes
 			}
 		save_scope_as = ari_vassal
@@ -727,7 +727,7 @@ south_asia.0030 = {
 
 			random = {
 				chance = 30
-				set_character_faith = faith:ari
+				set_character_faith = rite:ari
 			}
 		}
 
@@ -795,7 +795,7 @@ south_asia.0031 = {
 	immediate = {
 		random_vassal = {
 			limit = {
-				faith = faith:ari
+				faith = rite:ari
 				is_powerful_vassal = yes
 				}
 		save_scope_as = ari_vassal
@@ -898,7 +898,7 @@ south_asia.0031 = {
 
 		every_vassal = {
 			limit = {
-			   faith = faith:ari
+			   faith = rite:ari
 			}
 			custom = south_asia.0030.a.ari.tt
 			add_opinion = {
@@ -947,7 +947,7 @@ south_asia.0031 = {
 
 		every_vassal = {
 			limit = {
-			   faith = faith:ari
+			   faith = rite:ari
 			}
 			custom = south_asia.0030.a.ari.tt
 			add_opinion = {
@@ -960,7 +960,7 @@ south_asia.0031 = {
 		every_vassal = {
 			limit = {
 				NOT = {
-					faith = faith:ari
+					faith = rite:ari
 				}
 			}
 			custom = south_asia.0031.c.all.tt
@@ -1191,7 +1191,7 @@ south_asia.0033 = {
 
 		every_vassal = {
 			limit = {
-				faith = faith:ari
+				faith = rite:ari
 			}
 
 			custom = south_asia.0030.a.ari.tt
@@ -1270,7 +1270,7 @@ south_asia.0033 = {
 
 		every_vassal = {
 			limit = {
-				faith = faith:ari
+				faith = rite:ari
 				is_ai = yes
 			}
 			save_scope_as = ari_vassal_imprisoned
@@ -1355,7 +1355,7 @@ south_asia.0034 = {
 			custom_tooltip = south_asia.0034.aricounties
 			limit = {
 				target_is_de_facto_liege_or_above = root.primary_title
-				faith = faith:ari
+				faith = rite:ari
 				}
 			random = {
 			chance = 50
@@ -1387,7 +1387,7 @@ south_asia.0035 = {
 	}
 
 	immediate = {
-		faith:ari = {
+		rite:ari = {
 			save_scope_as = ari_faith
 		}
 	}
@@ -1527,7 +1527,7 @@ south_asia.0036 = {
 	}
 
 	immediate = {
-		faith:ari = {
+		rite:ari = {
 			save_scope_as = ari_faith
 		}
 	}
@@ -1599,7 +1599,7 @@ south_asia.0036 = {
 				limit = {
 					target_is_de_facto_liege_or_above = root.primary_title
 				}
-			set_county_faith = faith:ari
+			set_county_faith = rite:ari
 		}
 
 		ai_chance = {
@@ -1722,7 +1722,7 @@ south_asia.0038 = {
 		}
 		name = { #Ari adherents are not happy
 			trigger = {
-				faith = faith:ari
+				faith = rite:ari
 				liege = scope:proselytiser
 				capital_province = {
 					geographical_region = world_burma
@@ -1734,7 +1734,7 @@ south_asia.0038 = {
 			trigger = {
 					NOR = {
 						faith = faith:theravada_faith
-						faith = faith:ari
+						faith = rite:ari
 					}
 					liege = scope:proselytiser
 					capital_province = {
@@ -1785,7 +1785,7 @@ south_asia.0039 = {
 		}
 		name = { #Ari adherents are not happy
 			trigger = {
-				faith = faith:ari
+				faith = rite:ari
 				liege = scope:proselytiser
 				capital_province = {
 					geographical_region = world_burma
@@ -1797,7 +1797,7 @@ south_asia.0039 = {
 			trigger = {
 					NOR = {
 						faith = faith:theravada_faith
-						faith = faith:ari
+						faith = rite:ari
 					}
 					liege = scope:proselytiser
 					capital_province = {
@@ -1849,7 +1849,7 @@ south_asia.0040 = {
 		}
 		name = { #Ari adherents are not happy
 			trigger = {
-				faith = faith:ari
+				faith = rite:ari
 				liege = scope:proselytiser
 				capital_province = {
 					geographical_region = world_burma
@@ -1861,7 +1861,7 @@ south_asia.0040 = {
 			trigger = {
 					NOR = {
 						faith = faith:theravada_faith
-						faith = faith:ari
+						faith = rite:ari
 					}
 					liege = scope:proselytiser
 					capital_province = {
@@ -2090,7 +2090,7 @@ south_asia.0045 = {
 		save_scope_as = scoped_ruler
 		if = { # Check if Temporal first.
 			limit = {
-				faith = { has_doctrine = doctrine_temporal_head }
+				rite = { rite_has_doctrine = doctrine_temporal_head }
 			}
 			save_scope_as = new_priest
 		}
@@ -2101,7 +2101,7 @@ south_asia.0045 = {
 			}
 			if = {
 				limit = {
-					root.faith = { has_doctrine = doctrine_no_head }
+					root.rite = { rite_has_doctrine = doctrine_no_head }
 				}
 				hidden_effect = {
 					root.faith = { remove_doctrine = doctrine_no_head }

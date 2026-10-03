@@ -673,7 +673,7 @@ sea_set_cultural_acceptance = {
 				}
 			}
 			if = {
-				limit = { is_RICE_loaded_global_variable }
+				limit = { has_global_variable = is_RICE_loaded_global_variable }
 				culture:sorbian = {
 					change_cultural_acceptance = {
 						target = culture:polabian
@@ -756,53 +756,53 @@ sea_set_cultural_acceptance = {
 	}
 }
 
-sea_historical_artifacts = {
-	effect = {
-		if = {
-			limit = {
-				has_dlc_feature = royal_court
-				exists = title:e_kambuja.holder
-			}
+# sea_historical_artifacts = {
+# 	effect = {
+# 		if = {
+# 			limit = {
+# 				has_dlc_feature = royal_court
+# 				exists = title:e_kambuja.holder
+# 			}
 
-			if = { # Emerald Buddha
-				limit = { current_date >= 1432.1.1 }
-				title:e_kambuja.holder = {
-					create_artifact_emerald_buddha = { OWNER = this }
-				}
-			}
+# 			if = { # Emerald Buddha
+# 				limit = { current_date >= 1432.1.1 }
+# 				title:e_kambuja.holder = {
+# 					create_artifact_emerald_buddha = { OWNER = this }
+# 				}
+# 			}
 
-			if = { # Laguna Copperplate
-				limit = { current_date >= 900.1.1 }
-				title:c_PHI_tondo.holder = {
-					create_artifact_laguna_copperplate = { OWNER = this }
-				}
-			}
+# 			if = { # Laguna Copperplate
+# 				limit = { current_date >= 900.1.1 }
+# 				title:c_PHI_tondo.holder = {
+# 					create_artifact_laguna_copperplate = { OWNER = this }
+# 				}
+# 			}
 
-			if = { # Heirloom Seal of the Realm
-				limit = { current_date <= 907.1.1 }
-				# title:e_celestia_china.holder
-				title:h_china.holder = {
-					create_artifact_heirloom_seal = { OWNER = this }
-				}
-			}
+# 			if = { # Heirloom Seal of the Realm
+# 				limit = { current_date <= 907.1.1 }
+# 				# title:e_celestia_china.holder
+# 				title:h_china.holder = {
+# 					create_artifact_heirloom_seal = { OWNER = this }
+# 				}
+# 			}
 
-			if = { # Kavirajamarga - The Royal Path for Poets written by Amoghavarsha
-				limit = { current_date < 1000.1.1 } #Only generated for early start
-				title:k_karnata.holder = {
-					create_artifact_kavirajamarga_effect = { OWNER = this }
-				}
-			}
+# 			if = { # Kavirajamarga - The Royal Path for Poets written by Amoghavarsha
+# 				limit = { current_date < 1000.1.1 } #Only generated for early start
+# 				title:k_karnata.holder = {
+# 					create_artifact_kavirajamarga_effect = { OWNER = this }
+# 				}
+# 			}
 
-			if = { # Wujing Zongyao / 武經總要
-				limit = { current_date > 1044.1.1 }
-				# title:e_celestia_china.holder
-				title:h_china.holder = {
-					create_artifact_wujing_zongyao_effect = { OWNER = this }
-				}
-			}
-		}
-	}
-}
+# 			if = { # Wujing Zongyao / 武經總要
+# 				limit = { current_date > 1044.1.1 }
+# 				# title:e_celestia_china.holder
+# 				title:h_china.holder = {
+# 					create_artifact_wujing_zongyao_effect = { OWNER = this }
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 sea_give_gunpowder_innos = {
 	effect = {

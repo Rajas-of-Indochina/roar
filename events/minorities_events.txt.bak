@@ -1,0 +1,692 @@
+﻿namespace = minorities
+
+####
+# Minorities events
+# 01xx -> Faith Expulsion 
+# 02xx -> Culture Expulsion
+# 03xx -> Council Tasks
+# 04xx -> misc events from decisions
+
+# AI random faith minority expulsion pulse event
+
+minorities.0101 = {
+	type = character_event
+	hidden = yes
+	trigger = {
+		any_sub_realm_county = {
+			OR = {
+				county_has_expellable_faith_trigger = {
+					SIZE = small
+					FAITH = ROOT.faith
+				}
+				county_has_expellable_faith_trigger = {
+					SIZE = small
+					FAITH = ROOT.faith
+				}
+			}
+		}
+		trigger_if = {
+			limit = {
+				faith = {
+					OR = {
+						has_doctrine = tenet_tax_nonbelievers
+						has_doctrine = special_doctrine_jizya
+					}
+				}
+			}
+			calc_true_if = {
+				amount >= 3
+				has_trait = sadistic
+				has_trait = callous
+				has_trait = wrathful
+				has_trait = zealous
+				ai_zeal >= 50
+				rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
+			}
+		}
+		calc_true_if = {
+			amount >= 2
+			has_trait = sadistic
+			has_trait = callous
+			has_trait = wrathful
+			has_trait = zealous
+			ai_zeal >= 50
+			rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
+		}
+	}
+	immediate = {
+		trigger_event = {
+			id = minorities.0102
+			months = { 1 11 }
+		}
+	}
+}
+
+minorities.0102 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = expeller
+		random_sub_realm_county = {
+			limit = {
+				OR = {
+					county_has_expellable_faith_trigger = {
+						SIZE = small
+						FAITH = ROOT.faith
+					}
+					county_has_expellable_faith_trigger = {
+						SIZE = large
+						FAITH = ROOT.faith
+					}
+				}
+			}
+			save_scope_as = county
+			if = {
+				limit = {
+					county_has_expellable_faith_trigger = {
+						SIZE = large
+						FAITH = ROOT.faith
+					}
+				}
+				random_in_list = {
+					variable = faith_minorities_large
+					limit = {
+						save_temporary_scope_as = faith_temp
+						"ROOT.faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+					}
+					save_scope_as = expelled_faith
+				}
+			}
+			else_if = {
+				limit = {
+					county_has_expellable_faith_trigger = {
+						SIZE = small
+						FAITH = ROOT.faith
+					}
+				}
+				random_in_list = {
+					variable = faith_minorities_small
+					limit = {
+						save_temporary_scope_as = faith_temp
+						"ROOT.faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+					}
+					send_interface_message = {
+						title = "WAHHHHH"
+					}
+					save_scope_as = expelled_faith
+				}
+			}
+		}
+		expel_county_faith_minority_effect = {
+			COUNTY = scope:county
+			FAITH = scope:expelled_faith
+			CHARACTER = scope:expeller
+		}
+	}
+}
+
+# AI random culture minority expulsion pulse event
+
+minorities.0201 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		any_sub_realm_county = {
+			OR = {
+				county_has_expellable_culture_trigger = {
+					SIZE = small
+					CULTURE = ROOT.culture
+				}
+				county_has_expellable_culture_trigger = {
+					SIZE = large
+					CULTURE = ROOT.culture
+				}
+			}
+		}
+		trigger_if = {
+			limit = { culture = { has_cultural_tradition = tradition_ruling_caste } }
+			calc_true_if = {
+				amount >= 3
+				has_trait = sadistic
+				has_trait = wrathful
+				has_trait = callous
+				has_trait = populist_leader
+				ai_vengefulness >= 50
+				culture = { has_cultural_tradition = tradition_isolationist }
+			}
+		}
+		trigger_else = {
+			calc_true_if = {
+				amount >= 2
+				has_trait = sadistic
+				has_trait = wrathful
+				has_trait = callous
+				has_trait = populist_leader
+				ai_vengefulness >= 50
+				culture = { has_cultural_tradition = tradition_isolationist }
+			}
+		}
+	}
+
+	immediate = {
+		trigger_event = {
+			id = minorities.0202
+			months = { 1 11 }
+		}
+	}
+}
+
+minorities.0202 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = expeller
+		random_sub_realm_county = {
+			limit = {
+				OR = {
+					county_has_expellable_culture_trigger = {
+						SIZE = small
+						CULTURE = ROOT.culture
+					}
+					county_has_expellable_culture_trigger = {
+						SIZE = small
+						CULTURE = ROOT.culture
+					}
+				}
+			}
+			save_scope_as = county
+			if = {
+				limit = {
+					county_has_expellable_culture_trigger = {
+						SIZE = large
+						CULTURE = ROOT.culture
+					}
+				}
+				random_in_list = {
+					variable = culture_minorities_large
+					limit = {
+						scope:expeller.culture = {
+							NOT = { has_same_culture_heritage = prev }
+						}
+					}
+					save_scope_as = expelled_culture
+				}
+			}
+			else_if = {
+				limit = {
+					county_has_expellable_culture_trigger = {
+						SIZE = small
+						CULTURE = ROOT.culture
+					}
+				}
+				random_in_list = {
+					variable = culture_minorities_small
+					limit = {
+						scope:expeller.culture = {
+							NOT = { has_same_culture_heritage = prev }
+						}
+					}
+					save_scope_as = expelled_culture
+				}
+			}
+		}
+		expel_county_culture_minority_effect = {
+			COUNTY = scope:county
+			CULTURE = scope:expelled_culture
+			CHARACTER = scope:expeller
+		}
+	}
+}
+
+scripted_effect setup_promote_religious_minorities_effect = {
+	scope:county = {
+		every_in_list = {
+			variable = faith_minorities_large
+			limit = {
+				NOT = { THIS = scope:councillor_liege.faith }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = faith_options
+					target = PREV
+				}
+			}
+		}
+		every_in_list = {
+			variable = faith_minorities_small
+			limit = {
+				NOT = { THIS = scope:councillor_liege.faith }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = faith_options
+					target = PREV
+				}
+			}
+		}
+	}
+}
+
+scripted_effect setup_promote_culture_minorities_effect = {
+	scope:county = {
+		every_in_list = {
+			variable = culture_minorities_large
+			limit = {
+				NOT = { THIS = scope:councillor_liege.culture }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = culture_options
+					target = PREV
+				}
+			}
+		}
+		every_in_list = {
+			variable = culture_minorities_small
+			limit = {
+				NOT = { THIS = scope:councillor_liege.culture }
+			}
+			ROOT = {
+				add_to_variable_list = {
+					name = culture_options
+					target = PREV
+				}
+			}
+		}
+	}
+}
+
+# Promote minorities
+# New and Improved: Condensed to a single event with a special combined gui!
+minorities.0300 = {
+	type = character_event
+	title = minorities.0300.t
+	desc = minorities.0300.desc
+
+	left_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = personality_rational
+	}
+	theme = realm
+	immediate = {
+		if = {
+			limit = { NOT = { has_realm_law_flag = disable_minority_faith_promotion } }
+			setup_promote_religious_minorities_effect = yes
+		}
+		if = {
+			limit = { NOT = { has_realm_law_flag = disable_minority_culture_promotion } }
+			setup_promote_culture_minorities_effect = yes
+		}
+		scope:county = {
+			remove_variable = faith_to_convert
+			remove_variable = culture_to_convert
+		}
+	}
+	widget = {
+		gui = "sea_select_combined_widget"
+		container = "custom_widgets_container"
+	}
+
+	option = {
+		name = minorities.0300.confirm
+		if = {
+			limit = {
+				exists = var:selected_culture
+			}
+			var:selected_culture = { save_scope_as = selected_culture }
+			scope:county = {
+				set_variable = {
+					name = culture_to_convert
+					value = scope:selected_culture
+				}
+			}
+			custom_tooltip = task_promote_minority_effect_event_desc_culture
+		}
+		else_if = {
+			limit = {
+				exists = var:selected_faith
+			}
+			var:selected_faith = { save_scope_as = selected_faith }
+			scope:county = {
+				set_variable = {
+					name = faith_to_convert
+					value = scope:selected_faith
+				}
+			}
+			custom_tooltip = task_promote_minority_effect_event_desc_faith
+		}
+		else = {
+			custom_tooltip = minorities.0100.cancel
+			cp:councillor_steward = {
+				set_council_task = { task_type = task_collect_taxes }
+			}
+		}
+	}
+	after = {
+		clear_variable_list = faith_options
+		clear_variable_list = culture_options
+		remove_variable = selected_culture
+		remove_variable = selected_faith
+	}
+}
+
+# Chaplain expels minority
+minorities.0301 = {
+	type = character_event
+	title = minorities.0301.t
+	desc = minorities.0301.desc
+
+	left_portrait = {
+		character = root
+		animation = threatening
+	}
+
+	right_portrait = {
+		character = cp:councillor_court_chaplain
+		animation = personality_zealous
+	}
+	theme = realm
+	immediate = {
+		setup_promote_religious_minorities_effect = yes
+		scope:county = { remove_variable = faith_to_expel }
+	}
+	widget = {
+		gui = "sea_select_faith_widget"
+		container = "custom_widgets_container"
+	}
+	option = {
+		name = minorities.0301.confirm
+		if = {
+			limit = { exists = var:selected_faith }
+			var:selected_faith = { save_scope_as = selected_faith }
+			scope:county ={
+				custom_tooltip = begin_expel_faith_tt
+				set_variable = {
+					name = faith_to_expel
+					value = scope:selected_faith
+				}
+			}
+		}
+		else = {
+			custom_tooltip = minorities.0100.cancel
+			cp:councillor_court_chaplain = {
+				set_council_task = { task_type = task_religious_relations }
+			}
+		}
+	}
+	after = {
+		clear_variable_list = faith_options
+		remove_variable = selected_faith
+	}
+}
+
+scripted_effect setup_steward_expel_effect = {
+	scope:county = {
+		every_in_list = {
+			variable = culture_minorities_small
+			ROOT = {
+				add_to_variable_list = { name = culture_options target = PREV }
+			}
+		}
+		every_in_list = {
+			variable = culture_minorities_large
+			ROOT = {
+				add_to_variable_list = { name = culture_options target = PREV }
+			}
+		}
+	}
+}
+
+# Steward expels minority
+minorities.0302 = {
+	type = character_event
+	title = minorities.0302.t
+	desc = minorities.0302.desc
+
+	left_portrait = {
+		character = root
+		animation = threatening
+	}
+
+	right_portrait = {
+		character = cp:councillor_steward
+		animation = personality_zealous
+	}
+	theme = realm
+	immediate = {
+		setup_promote_culture_minorities_effect = yes
+		scope:county = { remove_variable = culture_to_expel }
+	}
+	widget = {
+		gui = "sea_select_culture_widget"
+		container = "custom_widgets_container"
+	}
+	option = {
+		name = minorities.0301.confirm
+		if = {
+			limit = { exists = var:selected_culture }
+			var:selected_culture = { save_scope_as = selected_culture }
+			scope:county ={
+				custom_tooltip = begin_expel_culture_tt
+				set_variable = {
+					name = culture_to_expel
+					value = scope:selected_culture
+				}
+			}
+		}
+		else = {
+			custom_tooltip = minorities.0100.cancel
+			cp:councillor_steward = {
+				set_council_task = { task_type = task_collect_taxes }
+			}
+		}
+	}
+	after = {
+		clear_variable_list = culture_options
+		remove_variable = selected_culture
+	}
+}
+
+# I am inviting Islamic settlers.
+scripted_effect fetch_islam_options = {
+	ROOT = { clear_variable_list = faith_options }
+	every_county = {
+		limit = {
+			save_temporary_scope_as = county
+			"scope:county.title_province.squared_distance(root.capital_province)" <= squared_distance_monstrous # This will let the western Maritime SEA reach the Horn of Africa
+			is_coastal_county = yes
+			title_province = {
+				NOT = { geographical_region = world_asia_southeast_islands }
+			}
+			OR = {
+				religion = religion:islam_religion
+				county_has_type_minority_with_trigger = {
+					TYPE = faith
+					SIZE = large
+					TRIGGER = religion
+					CHECK = religion:islam_religion
+				}
+			}
+		}
+		add_to_list = counties
+	}
+	every_in_list = {
+		list = counties
+		if = {
+			limit = {
+				religion = religion:islam_religion
+			}
+			faith = {
+				ROOT = {
+					if = {
+						limit = {
+							NOT = {
+								is_target_in_variable_list = {
+									name = faith_options
+									target = PREV
+								}
+							}
+						}
+						add_to_variable_list = {
+							name = faith_options
+							target = PREV
+						}
+					}
+				}
+			}
+		}
+		every_in_list = {
+			variable = faith_minorities_large
+			limit = { religion = religion:islam_religion }
+			ROOT = {
+				if = {
+					limit = {
+						NOT = {
+							is_target_in_variable_list = {
+								name = faith_options
+								target = PREV
+							}
+						}
+					}
+					add_to_variable_list = {
+						name = faith_options
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+}
+
+scripted_effect do_islamic_settlers_effect = {
+	every_county = {
+		limit = {
+			save_temporary_scope_as = county
+			"scope:county.title_province.squared_distance(root.capital_province)" <= squared_distance_monstrous # This will let the western Maritime SEA reach the Horn of Africa
+			is_coastal_county = yes
+			title_province = {
+				NOT = { geographical_region = world_asia_southeast_islands }
+			}
+			OR = {
+				faith = $FAITH$
+				county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+			}
+		}
+		add_to_list = source_counties
+	}
+	every_held_title = {
+		title_tier = county
+		if = {
+			limit = { "list_size(source_counties)" > 0 }
+			random_in_list = {
+				list = source_counties
+				save_scope_as = source
+			}
+			save_scope_as = target
+			faith_migration_effect = {
+				FAITH = $FAITH$
+				TARGET_COUNTY = scope:target
+				SOURCE_COUNTY = scope:source
+			}
+			if = {
+				limit = {
+					county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
+				}
+				add_county_modifier = {
+					modifier = muslim_settlers_modifier_small
+					years = 5
+				}
+			}
+			else_if = {
+				limit = {
+					county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+				}
+				add_county_modifier = {
+					modifier = muslim_settlers_modifier_large
+					years = 5
+				}
+			}
+			if = {
+				limit = {
+					faith = $FAITH$
+				}
+				add_county_modifier = {
+					modifier = muslim_settlers_modifier_majority
+					years = 5
+				}
+			}
+			scope:source = {
+				if = {
+					limit = {
+						# check if this specific county has been exhausted of Muslims to immigrate
+						NOR = {
+							faith = $FAITH$
+							county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+						}
+					}
+					remove_from_list = source_counties
+				}
+			}
+		}
+	}
+	custom_tooltip = invite_muslim_settler_effect_tt
+}
+
+minorities.0401 = {
+	type = character_event
+	title = maritime_southeast_asia.0008.t
+	desc = maritime_southeast_asia.0008.desc
+	theme = diplomacy_foreign_affairs_focus
+	left_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+
+	immediate = {
+		remove_variable = selected_faith
+		fetch_islam_options = yes
+	}
+	widget = {
+		gui = "sea_select_faith_widget"
+		container = "custom_widgets_container"
+	}
+
+	option = {
+		name = maritime_southeast_asia.0008.nevermind
+		if = {
+			limit = { has_variable = selected_faith }
+			var:selected_faith = {
+				save_scope_as = faith
+			}
+			do_islamic_settlers_effect = { FAITH = scope:faith }
+			add_piety = major_piety_loss
+			if = {
+				limit = {
+					culture = {
+						has_cultural_era_or_later = culture_era_late_medieval
+					}
+				}
+				remove_short_term_gold = major_gold_value
+			}
+			else = {
+				remove_short_term_gold = massive_gold_value
+			}
+		}
+		else = {
+			remove_decision_cooldown = invite_islamic_settlers_decision
+		}
+	}
+
+	after = {
+		clear_variable_list = faith_options
+	}
+
+}

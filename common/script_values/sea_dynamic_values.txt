@@ -1,11 +1,11 @@
 ﻿
 liege_faith_dominant_gender_adjusted_female_chance = {
 	if = {
-		limit = { scope:liege.faith = { has_doctrine = doctrine_gender_male_dominated } }
+		limit = { scope:liege.rite = { rite_has_doctrine = doctrine_gender_male_dominated } }
 		add = 20
 	}
 	else_if = {
-		limit = { scope:liege.faith = { has_doctrine = doctrine_gender_female_dominated } }
+		limit = { scope:liege.rite = { rite_has_doctrine = doctrine_gender_female_dominated } }
 		add = 80
 	}
 	else = {
