@@ -21,8 +21,8 @@
 223000 = {
 	name = "Levon" #Prince of Cilicia 1185-1198, k. of Armenia 1198-1219
 	# AKA: Levon Medzakordz
-	dynasty_house = house_rubenid
 	dna = "bookmark_levon_223000"
+	dynasty_house = house_rubenid
 	martial = 7
 	diplomacy = 8
 	intrigue = 7
@@ -55,8 +55,8 @@
 
 223003 = {
 	name = "Roupen" #Prince of Cilicia 1174-1186
-	dynasty_house = house_rubenid
 	dna = "bookmark_levon_roupen_223003"
+	dynasty_house = house_rubenid
 	martial = 4
 	diplomacy = 4
 	intrigue = 7
@@ -225,7 +225,7 @@
 
 223026 = {
 	# lord of Baberon
-	name = "Vasak"
+	name = "Vasak" #Vacaghx
 	# Vasak of Baberon
 	dynasty_house = house_hethumid
 	martial = 7
@@ -417,7 +417,7 @@
 223034 = {
 	# lord of Lampron
 	name = "Hethum"
-	# AKA: Hethum III / Hethum II of Lampron
+	# AKA: Hethum III / Hethum II of Lampron / Oshin
 	dynasty_house = house_hethumid
 	martial = 6
 	diplomacy = 5
@@ -806,8 +806,7 @@
 }
 
 232575 = {
-	# lord of Lampron
-	name = "Smbat"
+	name = "Smbat" #Lord of Lampron
 	# AKA: Smbat
 	dynasty_house = house_hethumid
 	martial = 4
@@ -875,8 +874,7 @@
 
 232578 = {
 	# one of sons of Abirad ; settled in fortress of Karkar in Armenian Mesopotamia, near Samosata
-	# Vasak in vanilla
-	name = "Vasil"
+	name = "Vasil" #Vassak
 	dynasty_house = house_pahlavuni
 	martial = 4
 	diplomacy = 4
@@ -923,7 +921,7 @@
 
 232580 = {
 	# son of Vasil ; elected Catholicos of Armenia after death of his uncle Nerseh
-	name = "Grigor_Tgha"
+	name = "Grigor_Tgha" #Grigor
 	# AKA: Grigor Tgha
 	dynasty_house = house_pahlavuni
 	martial = 4
@@ -995,7 +993,7 @@
 
 232583 = {
 	# one of sons of Abirad ; studied under Barsegh I of Anets in preparation for ecclesiastical position
-	name = "Grigor_Dgha"
+	name = "Grigor_Dgha" #Grigor
 	# AKA: Grigor Dgha
 	dynasty_house = house_pahlavuni
 	martial = 4
@@ -3905,7 +3903,7 @@
 	intrigue = 5
 	stewardship = 7
 	learning = 5
-	rite = iconoclast
+	rite = iconoclast_rite
 	culture = "armenian"
 	trait = ambitious
 	trait = deceitful
@@ -5090,7 +5088,7 @@
 32928 = {
 	name = "Shajar_al-Durr" #Egypt
 	female = yes
-	rite = hanafi
+	rite = shafii
 	culture = "armenian"
 	1215.1.1 = {
 		birth = "1215.1.1"
@@ -9862,7 +9860,7 @@ armenian_000082 = {
 	name = "Ali"
 	dynasty = 7520
 	culture = "armenian"
-	rite = hanafi
+	rite = shafii
 	father = armenian_000083
 
 	#Education
@@ -9885,7 +9883,7 @@ armenian_000083 = { #Father of Ali ibn Yahya al-Armani
 	name = "Yahya"
 	dynasty = 7520
 	culture = "armenian"
-	rite = hanafi
+	rite = shafii
 
 	785.1.1 = {
 		birth = yes #Fictionalised birth date.
@@ -9900,7 +9898,7 @@ armenian_000084 = {
 	dynasty = 7520
 	father = 163135
 	culture = "armenian"
-	rite = hanafi
+	rite = shafi
 
 	#Education
 	trait = education_martial_2

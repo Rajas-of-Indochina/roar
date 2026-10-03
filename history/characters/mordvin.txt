@@ -62,13 +62,66 @@
 	}
 }
 
+6854 = {
+	name = "Velmayka"
+	rite = moksha_pagan
+	culture = moksha
+	837.1.1 = {
+		birth = yes
+	}
+	891.1.1 = {
+		death = yes
+	}
+}
+
+20628 = {
+	name = "Biyar"
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 4
+	rite = "tengri_pagan"
+	culture = cuman
+	trait = lustful
+	trait = arbitrary
+	trait = arrogant
+	trait = wrathful
+	trait = education_martial_2
+
+	1050.1.1 = {
+		birth = yes
+	}
+	1120.1.1 = {
+		death = yes
+	}
+}
+
+20629 = {
+	name = "Tuhan"
+	martial = 7
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 4
+	rite = "moksha_pagan"
+	culture = moksha
+	trait = zealous
+	trait = wrathful
+	trait = education_intrigue_2
+	1039.1.1 = {
+		birth = yes
+	}
+	1089.1.1 = {
+		death = yes
+	}
+}
+
 20630 = {
 	name = "Tyueykezhut"
 	martial = 7
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 5
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	trait = greedy
 	trait = education_intrigue_1
@@ -86,7 +139,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 5
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	trait = stuttering
 	trait = education_learning_3
@@ -104,7 +157,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 5
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	trait = education_learning_3
 	1039.1.1 = {
@@ -121,7 +174,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 6
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	trait = wrathful
 	trait = arbitrary
@@ -137,7 +190,7 @@
 143146 = {
 	name = "Syrka"
 	dynasty = 100592
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	father = 20628
 	1100.1.1 = {
@@ -150,7 +203,7 @@
 
 159709 = {
 	name = "Purginepaz"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029105
 	father = 194154
@@ -164,7 +217,7 @@
 
 159710 = {
 	name = "Vechkas"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029106
 	father = 194158
@@ -182,7 +235,7 @@
 	martial = 7
 	diplomacy = 7
 	intrigue = 4
-	stewardship = 4
+	stewardship = 8
 	rite = moksha_pagan
 	culture = moksha
 	trait = greedy
@@ -198,7 +251,7 @@
 
 160127 = {
 	name = "Chipaz"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029105
 	father = 159709
@@ -209,10 +262,9 @@
 		death = "905.1.1"
 	}
 }
-
 160128 = {
 	name = "Varmanpaz"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029105
 	father = 159709
@@ -223,10 +275,9 @@
 		death = "905.1.1"
 	}
 }
-
 160120 = {
 	name = "Mastorpaz"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029105
 	father = 159709
@@ -237,10 +288,9 @@
 		death = "905.1.1"
 	}
 }
-
 160121 = {
 	name = "Deryab"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029106
 	father = 159710
@@ -251,10 +301,9 @@
 		death = "905.1.1"
 	}
 }
-
 160122 = {
 	name = "Velmayka"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029106
 	father = 159710
@@ -265,10 +314,9 @@
 		death = "905.1.1"
 	}
 }
-
 160123 = {
 	name = "Malyy"
-	rite = erzya_pagan
+	rite = "erzya_pagan"
 	culture = mordvin
 	dynasty = 1029106
 	father = 159710
@@ -279,7 +327,44 @@
 		death = "905.1.1"
 	}
 }
-
+194152 = {
+	name = "Uzhara"
+	dynasty = 1029105
+	rite = moksha_pagan
+	culture = moksha
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194153 = {
+	name = "Kezhevat"
+	dynasty = 1029105
+	rite = moksha_pagan
+	culture = moksha
+	father = 194152
+	770.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+194154 = {
+	name = "Tikshayka"
+	dynasty = 1029105
+	rite = moksha_pagan
+	culture = moksha
+	father = 194153
+	810.1.1 = {
+		birth = yes
+	}
+	866.1.1 = {
+		death = yes
+	}
+}
 194155 = {
 	name = "Kardaz"
 	dynasty = 1045025
@@ -292,7 +377,6 @@
 		death = yes
 	}
 }
-
 194156 = {
 	name = "Parush"
 	dynasty = 1029106
@@ -305,7 +389,6 @@
 		death = yes
 	}
 }
-
 194157 = {
 	name = "Kinyak"
 	dynasty = 1029106
@@ -319,7 +402,6 @@
 		death = yes
 	}
 }
-
 194158 = {
 	name = "Koshel"
 	dynasty = 1029106
@@ -333,7 +415,6 @@
 		death = yes
 	}
 }
-
 194162 = {
 	name = "Paksyut"
 	dynasty = 1045026
@@ -346,7 +427,6 @@
 		death = yes
 	}
 }
-
 194163 = {
 	name = "Chipaz"
 	dynasty = 1045026
@@ -360,7 +440,6 @@
 		death = yes
 	}
 }
-
 194164 = {
 	name = "Azyren"
 	dynasty = 1045026
@@ -374,7 +453,6 @@
 		death = yes
 	}
 }
-
 194165 = {
 	name = "Inzhay"
 	dynasty = 1045027
@@ -387,7 +465,6 @@
 		death = yes
 	}
 }
-
 194166 = {
 	name = "Dergun"
 	dynasty = 1045027
@@ -401,7 +478,6 @@
 		death = yes
 	}
 }
-
 194167 = {
 	name = "Parush"
 	dynasty = 1045027
@@ -422,6 +498,19 @@
 	rite = erzya_pagan
 	culture = mordvin
 	840.1.2 = {
+		birth = yes
+	}
+	900.1.2 = {
+		death = yes
+	}
+}
+
+#Mordvins in southern Mordvinia
+302284 = {
+	name = "Arvo"
+	rite = moksha_pagan
+	culture = moksha
+	850.1.2 = {
 		birth = yes
 	}
 	900.1.2 = {
@@ -486,29 +575,6 @@ fictional_mordvins_5 = {	#Fic ruler for Khursa & Oskol in 1066 (more chars & avo
 		birth = yes
 	}
 	1080.1.1 = {
-		death = yes
-	}
-}
-
-roa_mordvin01 = {
-	name = "Antyas"
-	rite = erzya_pagan
-	culture = mordvin
-	907.1.2 = {
-		birth = yes
-	}
-	960.1.2 = {
-		death = yes
-	}
-}
-roa_mordvin02 = {
-	name = "Areyut"
-	rite = erzya_pagan
-	culture = mordvin
-	903.1.1 = {
-		birth = yes
-	}
-	960.1.2 = {
 		death = yes
 	}
 }

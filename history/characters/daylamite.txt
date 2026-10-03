@@ -6,7 +6,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 4
-	rite = hanafi # was mutazila fix later
+	rite = hanafi
 	culture = daylamite
 	trait = education_martial_2
 	father = extra_daylamites_4
@@ -21,6 +21,86 @@
 			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:khurramism }
 		} 
 	}
+	
+	#867.1.1 = {
+	#	# The last hope of the mazdayasnas
+	#	effect = {
+	#		spawn_unit = {
+	#			province = 633 # Gurgan
+	#			owner = ROOT
+	#			#leader = ROOT
+	#			troops = {
+	#				light_infantry = { 625 625 }
+	#				heavy_infantry = { 479 479 }
+	#				pikemen = { 30 30 }
+	#				archers = { 254 254 }
+	#				light_cavalry = { 132 132 }
+	#				knights = { 4 4 }
+	#				horse_archers = { 12 12 }
+	#			}
+	#			attrition = 0.5
+	#		}
+	#		FIX_HISTORY_create_character = {
+	#			random_traits = yes
+	#			dynasty = random
+	#			religion = ROOT
+	#			culture = ROOT
+	#			female = no
+	#			age = 23
+	#			attributes = {
+	#				martial = 6
+	#			}
+	#			trait = education_martial_3
+	#		}
+	#		new_character = {
+	#			spawn_unit = {
+	#				province = 633 # Gurgan
+	#				owner = ROOT
+	#				#leader = THIS
+	#				troops = {
+	#					light_infantry = { 625 625 }
+	#					heavy_infantry = { 479 479 }
+	#					pikemen = { 30 30 }
+	#					archers = { 254 254 }
+	#					light_cavalry = { 132 132 }
+	#					knights = { 4 4 }
+	#					horse_archers = { 12 12 }
+	#				}
+	#				attrition = 0.5
+	#			}
+	#		}
+	#		FIX_HISTORY_create_character = {
+	#			random_traits = yes
+	#			dynasty = random
+	#			religion = ROOT
+	#			culture = ROOT
+	#			female = no
+	#			age = 27
+	#			attributes = {
+	#				martial = 6
+	#			}
+	#			trait = education_martial_3
+	#		}
+	#		new_character = {
+	#			spawn_unit = {
+	#				province = 633 # Gurgan
+	#				owner = ROOT
+	#				#leader = THIS
+	#				troops = {
+	#					light_infantry = { 625 625 }
+	#					heavy_infantry = { 479 479 }
+	#					pikemen = { 30 30 }
+	#					archers = { 254 254 }
+	#					light_cavalry = { 132 132 }
+	#					knights = { 4 4 }
+	#					horse_archers = { 12 12 }
+	#				}
+	#				attrition = 0.5
+	#			}
+	#		}
+	#	}
+	#}
+	
 	890.1.1 = {
 		death = yes
 	}
@@ -30,7 +110,7 @@
 	name = "Farah" # Fictional
 	female = yes
 	dynasty_house = house_karen
-	rite = hanafi
+	rite = shafii
 	culture = daylamite
 	father = 45110
 	835.1.1 = {
@@ -45,7 +125,7 @@
 	name = "Maziar" # Historical. Died in revolt against the Caliph
 	dynasty_house = house_karen
 	martial = 7
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	trait = education_martial_3
 	trait = callous
@@ -55,7 +135,7 @@
 		birth = yes
 	}
 	820.1.1 = {
-		rite = hanafi
+		rite = shafii
 	}
 	840.3.1 = {
 		death = {
@@ -68,7 +148,7 @@
 160296 = {
 	name = "Karen"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160297
 	780.1.1 = {
@@ -81,7 +161,7 @@
 160297 = {
 	name = "Vandad_Hormozd"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160298
 	740.1.1 = {
@@ -95,7 +175,7 @@
 188731 = {
 	name = "Maziar" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160298
 	700.1.1 = {
@@ -109,7 +189,7 @@
 160298 = {
 	name = "Karen" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160299
 	680.1.1 = { #postponed from 660
@@ -122,7 +202,7 @@
 160299 = {
 	name = "Vandad" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160300
 	635.1.1 = {
@@ -135,7 +215,7 @@
 160300 = {
 	name = "Balash"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160301
 	600.1.1 = {
@@ -148,7 +228,7 @@
 160301 = {
 	name = "Alanda"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160302
 	560.1.1 = {
@@ -161,7 +241,7 @@
 160302 = {
 	name = "Karen"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160303
 	520.1.1 = {
@@ -174,7 +254,7 @@
 160303 = {
 	name = "Sukhra"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160304
 	480.1.1 = {
@@ -187,7 +267,7 @@
 160304 = {
 	name = "Zarmihr" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160305
 	440.1.1 = {
@@ -200,7 +280,7 @@
 160305 = {
 	name = "Alanda" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160306
 	410.1.1 = {
@@ -213,7 +293,7 @@
 160306 = {
 	name = "Sukhra" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160307
 	370.1.1 = {
@@ -226,7 +306,7 @@
 160307 = {
 	name = "Balash" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160308
 	335.1.1 = {
@@ -239,7 +319,7 @@
 160308 = {
 	name = "Zarmihr" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160309
 	300.1.1 = {
@@ -252,7 +332,7 @@
 160309 = {
 	name = "Karen" #unhistorical
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 159557 #Karen-Pahlav lineage
 	245.1.1 = {
@@ -307,7 +387,7 @@
 160284 = {
 	name = "Kavadh" # name made up
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160283
 	545.1.1 = {
@@ -320,7 +400,7 @@
 160285 = {
 	name = "Bav"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160284
 	590.1.1 = {
@@ -334,7 +414,7 @@
 160288 = {
 	name = "Sorkhab"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160285 # debatable
 	635.1.1 = {
@@ -347,7 +427,7 @@
 160289 = {
 	name = "Mehr_Mardan"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160288
 	670.1.1 = {
@@ -360,7 +440,7 @@
 160290 = {
 	name = "Sorkhab"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160289
 	700.1.1 = {
@@ -373,7 +453,7 @@
 160291 = {
 	name = "Shervin"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160290
 	735.1.1 = {
@@ -386,7 +466,7 @@
 160292 = {
 	name = "Shahryar"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160291
 	755.1.1 = {
@@ -399,7 +479,7 @@
 160293 = {
 	name = "Shapur"
 	dynasty_house = house_bavandid # Bavandid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160292
 	790.1.1 = {
@@ -877,20 +957,116 @@
 
 
 # Old Kakuyids, replaced by 1029009 dynasty
-# 248554
-# 248555
-# 248556
-# 248557
-# 248558
-# 248559
-
+#248554 = {
+#	name = "Rustam_Dushmanziyar"
+#	dynasty_house = house_bavandid
+#	religion = shia
+#	rite = ismaili
+#	culture = daylamite
+#	father = 220995
+#	trait = ambitious
+#	trait = education_martial_3
+#	#trait = sympathy_mazdayasnaism
+#	970.1.1 = {
+#		birth = yes # maybe
+#	}
+#	1028.1.1 = {
+#		dynasty = 1059994 # establishes himself in Jibal
+#	}	
+#	1041.1.1 = {
+#		death = yes
+#	}
+#}
+#248555 = {
+#	name = "Faramurz"
+#	dynasty = 1059994
+#	religion = shia
+#	rite = ismaili
+#	culture = daylamite
+#	father = 248554
+#	trait = education_diplomacy_2
+#	#trait = siege_leader
+#	1020.1.1 = {
+#		birth = yes # maybe
+#	}
+#	1066.1.1 = { # claims to lost territories
+#		add_pressed_claim = title:d_jibal
+#		add_pressed_claim = title:c_hamadan
+#		add_pressed_claim = title:c_rayy
+#		add_pressed_claim = title:c_qom
+#		add_pressed_claim = title:c_esfahan
+#	}	
+#	1072.11.1 = {
+#		death = yes # unknown
+#	}
+#}
+#248556 = {
+#	name = "Garshap"
+#	dynasty = 1059994
+#	religion = shia
+#	rite = ismaili
+#	culture = daylamite
+#	father = 248554
+#	1022.1.1 = {
+#		birth = yes # maybe
+#	}	
+#	1052.1.1 = {
+#		death = yes
+#	}
+#}
+#248557 = {
+#	name = "Ali_Faramurz"
+#	dynasty = 1059994
+#	religion = shia
+#	rite = ismaili
+#	culture = daylamite
+#	father = 248555
+#	trait = gregarious
+#	trait = generous
+#	1042.1.1 = {
+#		birth = yes # maybe
+#	}	
+#	1095.1.1 = {
+#		death = yes # unknown
+#	}
+#}
+#248558 = {
+#	name = "Garshasp"
+#	dynasty = 1059994
+#	religion = shia
+#	rite = ismaili
+#	culture = daylamite
+#	father = 248557
+#	trait = education_martial_2
+#	1073.1.1 = {
+#		birth = yes # maybe
+#	}	
+#	1141.1.1 = {
+#		death = yes
+#	}
+#}
+#248559 = {
+#	name = "Shirin" # unknown daughter
+#	female = yes
+#	dynasty = 1059994
+#	religion = shia
+#	rite = ismaili
+#	culture = daylamite
+#	father = 248557
+#	1120.1.1 = {
+#		birth = yes # maybe
+#	}	
+#	1152.1.1 = {
+#		death = yes
+#	}
+#}
 
 ### Justanids ###
 180750 = {
 	name = "Justan"
 	# Justan I of Gilan
 	dynasty = 7513
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	745.1.1 = {
 		birth = "745.1.1"
@@ -903,7 +1079,8 @@
 	name = "Merzuban"
 	# ruler of Gilan
 	dynasty = 7513
-	rite = mazdayasna # Really ismaili, but we need a suitable mazdayasna presence in the area
+	# Really ismaili, but we need a suitable mazdayasna presence in the area
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 180750
 	775.1.1 = {
@@ -932,7 +1109,7 @@
 	# wife of Musafir Sallarid
 	female = yes
 	dynasty = 7513
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 180752
 	839.1.1 = {
@@ -1073,6 +1250,84 @@
 	859.1.1 = {
 		add_spouse = 180763
 	}
+	#867.1.1 = {
+	#	# A little something to hold out
+	#	effect = {
+	#		spawn_unit = {
+	#			province = 666 # Gilan
+	#			owner = ROOT
+	#			#leader = ROOT
+	#			troops = {
+	#				light_infantry = { 481 481 }
+	#				heavy_infantry = { 496 496 }
+	#				pikemen = { 133 133 }
+	#				archers = { 174 174 }
+	#				light_cavalry = { 320 320 }
+	#				knights = { 19 19 }
+	#				horse_archers = { 48 48 }
+	#			}
+	#			attrition = 0.5
+	#		}
+	#		FIX_HISTORY_create_character = {
+	#			random_traits = yes
+	#			dynasty = random
+	#			religion = ROOT
+	#			culture = ROOT
+	#			female = no
+	#			age = 23
+	#			attributes = {
+	#				martial = 6
+	#			}
+	#			trait = education_martial_3
+	#		}
+	#		new_character = {
+	#			spawn_unit = {
+	#				province = 666 # Gurgan
+	#				owner = ROOT
+	#				#leader = THIS
+	#				troops = {
+	#					light_infantry = { 481 481 }
+	#					heavy_infantry = { 496 496 }
+	#					pikemen = { 133 133 }
+	#					archers = { 174 174 }
+	#					light_cavalry = { 320 320 }
+	#					knights = { 19 19 }
+	#					horse_archers = { 48 48 }
+	#				}
+	#				attrition = 0.5
+	#			}
+	#		}
+	#		FIX_HISTORY_create_character = {
+	#			random_traits = yes
+	#			dynasty = random
+	#			religion = ROOT
+	#			culture = ROOT
+	#			female = no
+	#			age = 27
+	#			attributes = {
+	#				martial = 6
+	#			}
+	#			trait = education_martial_3
+	#		}
+	#		new_character = {
+	#			spawn_unit = {
+	#				province = 666 # Gurgan
+	#				owner = ROOT
+	#				#leader = THIS
+	#				troops = {
+	#					light_infantry = { 481 481 }
+	#					heavy_infantry = { 496 496 }
+	#					pikemen = { 133 133 }
+	#					archers = { 174 174 }
+	#					light_cavalry = { 320 320 }
+	#					knights = { 19 19 }
+	#					horse_archers = { 48 48 }
+	#				}
+	#				attrition = 0.5
+	#			}
+	#		}
+	#	}
+	#}
 	905.1.1 = {
 		death = yes
 	}
@@ -1150,7 +1405,7 @@
 	1050.1.1 = { # claims to lost territories
 		add_pressed_claim = title:d_isfahan
 		add_pressed_claim = title:c_isfahan
-		rite = hanafi #changes religion to comply with Seljuks
+		rite = shafii #changes religion to comply with Seljuks
 	}
 	1067.1.1 = { #died shortly after 1063
 		death = yes
@@ -1184,7 +1439,7 @@
 		birth = yes
 	}
 	1050.1.1 = {
-		rite = hanafi #changes religion to comply with Seljuks
+		rite = shafii #changes religion to comply with Seljuks
 	}
 	1068.1.1 = {
 		death = yes
@@ -1194,7 +1449,7 @@
 1231056 = {
 	name = "_Ali" # Yazd
 	dynasty = 1029009
-	rite = hanafi
+	rite = shafii
 	culture = daylamite
 	trait = diligent 	# More public works I guess
 	trait = gregarious 	# Sought to attract many prominent, learned men to Yazd
@@ -1215,7 +1470,7 @@
 1231057 = {
 	name = "Garsha_sp" #Yazd
 	dynasty = 1029009
-	rite = hanafi
+	rite = shafii
 	culture = daylamite
 	father = 1231056
 	1077.1.1 = {
@@ -1832,7 +2087,7 @@ daylamite0001 = {
 	name = "Paduspan"
 	dynasty_house = house_baduspanid
 	father = 216024 # perhaps
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	630.1.1 = {
 		birth = yes
@@ -1844,7 +2099,7 @@ daylamite0001 = {
 216902 = {
 	name = "Khur-Zad"
 	dynasty_house = house_baduspanid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 216901
 	660.1.1 = {
@@ -1857,7 +2112,7 @@ daylamite0001 = {
 216903 = {
 	name = "Paduspan"
 	dynasty_house = house_baduspanid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 216902
 	680.1.1 = {
@@ -1870,7 +2125,7 @@ daylamite0001 = {
 216904 = {
 	name = "Shahriyar"
 	dynasty_house = house_baduspanid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 216903
 	722.1.1 = {
@@ -1884,7 +2139,7 @@ daylamite0001 = {
 216905 = {
 	name = "Wandad_Umid"
 	dynasty_house = house_baduspanid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 216904
 	750.1.1 = {
@@ -2055,7 +2310,7 @@ extra_daylamites_1 = {
 extra_daylamites_2 = {
 	name = "Vandaspagan"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = 160298
 	trait = murderer #killed an Abbasid tax collector 
@@ -2070,7 +2325,7 @@ extra_daylamites_2 = {
 extra_daylamites_3 = {
 	name = "Vandaurmid"
 	dynasty_house = house_karen
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = daylamite
 	father = extra_daylamites_2
 	780.6.4 = {
@@ -2087,7 +2342,7 @@ extra_daylamites_3 = {
 extra_daylamites_4 = {
 	name = "GurdzA_d"
 	dynasty_house = house_karen
-	rite = hanafi # was mutazila fix later 
+	rite = hanafi
 	culture = daylamite
 	father = 160296
 	813.6.4 = {
@@ -2103,7 +2358,7 @@ extra_daylamites_4 = {
 extra_daylamites_5 = {
 	name = "Vandaurmid" #historical, but unknown name 
 	dynasty_house = house_karen
-	rite = hanafi # was mutazila fix later
+	rite = hanafi
 	culture = daylamite
 	father = 45107
 	860.6.4 = {
@@ -2118,7 +2373,7 @@ fictional_daylamites_1 = { #fictional wife of Rostam I
 	name = "Tahminah" 
 	female = yes
 	dynasty_house = house_karen
-	rite = hanafi # was mutazila fix later
+	rite = hanafi
 	culture = daylamite
 	father = extra_daylamites_4
 	849.7.12 = {
@@ -2136,7 +2391,7 @@ fictional_daylamites_2 = { #Kayukid daughter. Daughters of this dynasty are know
 	name = "Ghazal" 
 	female = yes
 	dynasty = 1029009
-	rite = hanafi
+	rite = shafii
 	culture = daylamite
 	father = 1231054
 	1039.1.1 = {
@@ -2152,7 +2407,7 @@ fictional_daylamites_2 = { #Kayukid daughter. Daughters of this dynasty are know
 
 persian_scholars_2 = {
 	name = "Bahmanyar"
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = "daylamite"
 	father = 220994
 	dynasty_house = house_bavandid
@@ -2172,247 +2427,5 @@ persian_scholars_2 = {
 	}
 	1066.12.1 = {
 		death = yes 
-	}
-}
-
-### Ziyarids - moved from Persian file ###
-166987 = { 
-	# Father of Mardavij/Vushmgir
-	name = "Ziyar"
-	dynasty = 101689
-	rite = mazdayasna
-	culture = "daylamite"
-
-	# History
-	840.6.6 = {
-		birth = yes
-		effect = { add_character_flag = do_not_generate_starting_family }
-	}
-	888.1.1 = {
-		add_spouse = 166988
-	}
-	900.2.17 = {
-		death = yes
-	}
-}
-166988 = {
-	# Mother of Mardavij, name unknown ; sister of Harusindan, third king of Gilites,
-	name = "Mahtab"
-	female = yes
-	rite = mazdayasna
-	culture = "daylamite"
-
-	# History
-	868.1.1 = {
-		birth = yes
-	}
-	905.1.1 = {
-		death = yes
-	}
-}
-166989 = {
-	# initially a sword for hire turned warlord ; first Ziyarid ruler ; had ambitions of restoring Persian Empire
-	name = "Mardavij"
-	dynasty = 101689
-	rite = mazdayasna
-	culture = "daylamite"
-	trait = education_martial_4
-	trait = ambitious 	# sought to establish a native Iranian Zoroastrian empire akin to the Sasanian Empire
-	trait = zealous 	# grew up in an environment where memories of the glories of the Iranian Empire
-	trait = deceitful 	# has a history of underhanded tactics
-	father = 166987
-	mother = 166988
-
-	# History
-	891.7.25 = {
-		birth = yes
-	}
-	935.1.19 = {
-		death = {
-			# assassinated by Turkic slave-soldiers
-			death_reason = death_assassinated_by_soldiers
-		}
-	}
-}
-166990 = {
-	# second Ziyarid emir ; his name means "quail catcher"
-	name = "Vushmgir"
-	dynasty = 101689
-	rite = mazdayasna
-	culture = "daylamite"
-	father = 166987
-	mother = 166988
-	trait = education_martial_3
-	trait = ambitious
-	trait = brave
-	trait = gregarious
-
-	# History
-	898.3.13 = {
-		birth = yes
-	}
-	923.1.1 = {
-		add_spouse = 166991
-		rite = zayidi
-	}
-	967.12.1 = {  # year and month known
-		death = {
-			# died during hunt
-			death_reason = death_boar
-		}
-	}
-}
-166992 = {
-	# third Ziyarid emir ; allied to Buyids in fight against his father
-	name = "Bisutun"
-	dynasty = 101689
-	rite = zayidi
-	culture = "daylamite"
-	father = 166990
-	mother = 166991
-
-	# History
-	935.1.6 = {
-		birth = yes
-	}
-	953.1.6 = {
-		trait = education_diplomacy_3  # skilled diplomat, managed realtions with his neighbours well
-	}
-	# 970s - married daughter of 'Adud al-Dawla of Buyid dynasty
-	977.8.6 = {
-		death = yes
-	}
-}
-166993 = {
-	# fourth Ziyarid emir ; initially gained support from Samanids and later Firuzanids, but had to give up his title claims in the end
-	name = "Qabus"
-	dynasty = 101689
-	rite = zayidi
-	culture = "daylamite"
-	father = 166990
-	mother = 166991
-	trait = education_martial_2 	# had decently succesful military career
-	trait = stubborn 	# very persistant guy
-	trait = gregarious 	# quite popular with Ziyarid army for most of his rule
-	trait = callous 	# seems to have had opinion as a rather cruel ruler
-
-	# History
-	940.4.17 = {
-		birth = yes
-	}
-	# 978 or 979 - the caliph al-Ta'i granted him the title 'Shams al-Ma'ali'
-	# 981 - lost war with Buyids 
-	# 981-997 - in exile
-	1012.6.11 = {
-		death = {
-			# frozen to death by rebelious military leaders who saw him as a threat
-			death_reason = death_froze
-		}
-	}
-}
-166994 = {
-	# fifth Ziyarid emir ; 
-	name = "Manuchihr"
-	dynasty = 101689
-	rite = zayidi
-	culture = "daylamite"
-	father = 166993
-
-	# History
-	970.8.11 = {
-		birth = yes
-	}
-	# after 1012 - accepted sovereignty of Mahmud of Ghazna and married one of his daughters
-	1031.1.2 = {
-		death = yes
-	}
-}
-166995 = {
-	# sixth Ziyarid emir ; very short and volatile reign
-	name = "Anushirvan_Sharaf"
-	dynasty = 101689
-	rite = zayidi
-	culture = "daylamite"
-	father = 166994
-
-	# History
-	1001.4.19 = {
-		birth = yes
-	}
-	# 1032-1040 - ousted from power by his army chief and maternal relative Abu Kalijar ibn Vayhan
-	# 1041/1042 - Seljuk invasion and submission to their sovereignty
-	1050.1.2 = {
-		death = yes
-	}
-}
-166996 = {
-	# father of Keikavus
-	name = "Eskander"
-	dynasty = 101689
-	rite = zayidi
-	culture = "daylamite"
-	father = 166993
-
-	# History
-	972.1.1 = {
-		birth = yes
-	}
-	1030.1.1 = {
-		death = yes
-	}
-}
-
-20703 = {
-	# seventh Ziyarid emir ; author of the 'Qabus nama' ; had a long and peaceful reign
-	name = "Keikavus"
-	dynasty = 101689
-	martial = 7
-	diplomacy = 8
-	intrigue = 7
-	stewardship = 7
-	rite = zayidi
-	culture = "daylamite"
-	trait = education_stewardship_3
-	trait = patient 	# writing books is not easy
-	trait = diligent 	# writing books is not easy
-	trait = temperate 	# talks about moderation in his book quite a bit
-	trait = erudite 	# celebrated author of the 'Qabus nama'
-	trait = intellect_good_1
-	father = 166996
-
-	# History
-	1021.1.1 = {
-		birth = yes
-	}
-	# 1042-1050 - travelled around the Middle East ; married Ghaznavid princess at one point
-	1087.1.1 = {
-		death = yes
-	}
-}
-
-144144 = {
-	# eighth and last Ziyarid emir ; his rule was short and not much is known about him
-	name = "Gilan-Shah"
-	# AKA: Unsur al
-	dynasty = 101689
-	martial = 7
-	diplomacy = 8
-	intrigue = 7
-	stewardship = 7
-	rite = zayidi
-	culture = "daylamite"
-	father = 20703
-	mother = sea_ghaznavid_princess_1
-
-	# History
-	1060.1.1 = {
-		birth = yes
-	}
-	1090.1.1 = {
-		# dethroned by Nizari ismaili
-		death = {
-			# no mention of him after his dethroning
-			death_reason = death_disappearance
-		}
 	}
 }

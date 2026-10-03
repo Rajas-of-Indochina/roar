@@ -1,4 +1,4 @@
-﻿### Pagan Dynasty ###
+﻿# PAGAN RULERS
 earlyburman001 = {
 	dna = bookmark_dna_pyinbya
 	name = "Pyinbya"
@@ -15,7 +15,6 @@ earlyburman001 = {
 	trait = calm
 	trait = ambitious
 	sexuality = heterosexual
-
 	817.1.1 = {
 		birth = yes
 	}
@@ -29,7 +28,7 @@ earlyburman002 = {
 	rite = ari
 	culture = burmese
 	father = earlyburman001
-
+	
 	859.1.1 = {
 		birth = yes
 	}
@@ -128,7 +127,7 @@ earlyburman008 = {
 	rite = ari
 	culture = burmese
 	father = earlyburman002
-
+	
 	890.1.1 = {
 		birth = yes
 	}
@@ -142,7 +141,7 @@ burman000 = {
 	rite = ari
 	culture = burmese
 	father = earlyburman008
-
+	
 	955.1.1 = {
 		birth = yes
 	}
@@ -164,7 +163,7 @@ burman001 = {
 	trait = just
 	trait = flexible_leader
 	trait = lifestyle_blademaster
-
+	
 	1014.5.11 = {
 		birth = yes
 	}
@@ -238,7 +237,7 @@ burman003 = {
 	trait = patient # waited out his exile for his birthright
 	trait = compassionate # tried saving his brother from the clutches of rebels
 	trait = architect # a noted builder of pagodas and monuments during his reign
-
+	
 	1030.7.21 = {
 		birth = yes
 	}
@@ -259,7 +258,7 @@ burman004 = {
 	female = yes
 	rite = theravada
 	culture = burmese
-
+	
 	1020.1.1 = {
 		birth = yes
 	}
@@ -272,7 +271,7 @@ burman005 = {
 	female = yes
 	rite = theravada
 	culture = burmese
-
+	
 	1015.1.1 = {
 		birth = yes
 	}
@@ -285,8 +284,9 @@ burman016 = {
 	female = yes
 	rite = theravada
 	culture = burmese
-	trait = beauty_good_2 # noted beauty
 
+	trait = beauty_good_2 # noted beauty
+	
 	1040.1.1 = {
 		birth = yes
 	}
@@ -305,7 +305,7 @@ burman006 = {
 	culture = burmese
 	trait = education_martial_3
 	trait = forder
-
+	
 	1020.1.1 = {
 		birth = yes
 	}
@@ -322,7 +322,7 @@ burman007 = {
 	culture = burmese
 	trait = education_martial_3
 	trait = jungle_stalker
-
+	
 	1024.1.1 = {
 		birth = yes
 	}
@@ -333,13 +333,14 @@ burman007 = {
 		death = yes
 	}
 }
+
 burman008 = {
 	name = "Nga_Lon_Letpe" #Warrior loyal to Anawrahta - One of the "Four Great Paladins"
 	rite = theravada
 	culture = burmese
 	trait = education_martial_3
 	trait = open_terrain_expert
-
+	
 	1027.1.1 = {
 		birth = yes
 	}
@@ -350,6 +351,7 @@ burman008 = {
 		death = yes
 	}
 }
+
 burman010 = {
 	name = "Maha_Thanbawa" #Fictional ruler
 	dynasty = 2000013 #Thanbawa
@@ -363,12 +365,13 @@ burman010 = {
 		death = yes
 	}
 }
+
 burman011 = {
 	name = "Kaleinga" #Fictional ruler
 	dynasty = 2000014 #Kaleinga
 	rite = ari
 	culture = burmese
-
+	
 	1032.1.1 = {
 		birth = yes
 	}
@@ -379,6 +382,7 @@ burman011 = {
 		death = yes
 	}
 }
+
 burman012 = {
 	name = "Thihanu" #Fictional ruler
 	dynasty = 2000015 #Thihanu
@@ -392,6 +396,7 @@ burman012 = {
 		death = yes
 	}
 }
+
 burman013 = {
 	name = "Minhlagyi" #Fictional ruler
 	dynasty = 2000016 #Kaleinga
@@ -408,6 +413,7 @@ burman013 = {
 		death = yes
 	}
 }
+
 burman014 = {
 	name = "Thumondari" #Fictional ruler
 	dynasty = 2000017 #Thumondari
@@ -421,10 +427,11 @@ burman014 = {
 		death = yes
 	}
 }
+
 burman015 = {
 	name = "Thupyinnya" #Fictional ruler
 	dynasty = 2000018 #Thupyinnya
-	rite = theravada
+	rite = ari
 	culture = burmese
 
 	1025.1.1 = {
@@ -434,13 +441,14 @@ burman015 = {
 		death = yes
 	}
 }
+
 burman017 = {
 	name = "Me_Wunna" #'Ogress' and wife of Byatta
 	female = yes
 	rite = theravada
 	culture = burmese
 	trait = giant
-
+	
 	1040.1.1 = {
 		birth = yes
 	}
@@ -451,6 +459,7 @@ burman017 = {
 		death = yes
 	}
 }
+
 burman018 = {
 	name = "Myauk_Pyinthe" #Anawrahta's mother
 	female = yes
@@ -1035,7 +1044,7 @@ kaleinga_10 = {
 pagan_tributary_01 = { 
 	name = "Thihathu" # Fictional placeholder
 	dynasty = burmese_magwe # Magwe
-	rite = ari
+	rite = "ari"
 	culture = "burmese"
 	820.1.1 = {
 		birth = yes
@@ -1048,7 +1057,7 @@ pagan_tributary_01 = {
 pagan_vassal_01 = { 
 	name = "Kyawswa" # Fictional placeholder
 	dynasty = burmese_swa # Swa
-	rite = ari
+	rite = "ari"
 	culture = "burmese"
 	815.1.1 = {
 		birth = yes
@@ -1060,7 +1069,7 @@ pagan_vassal_01 = {
 
 pagan_tributary_02 = { 
 	name = "Thihathu"
-	rite = ari
+	rite = "ari"
 	culture = "pyu"
 	830.1.1 = {
 		birth = yes
@@ -1072,7 +1081,7 @@ pagan_tributary_02 = {
 
 pagan_tributary_03 = { 
 	name = "Kyawswa"
-	rite = ari
+	rite = "ari"
 	culture = "burmese"
 	1043.1.1 = {
 		birth = yes
@@ -1084,7 +1093,7 @@ pagan_tributary_03 = {
 
 pagan_vassal_02 = { 
 	name = "Theinhko" # Fictional placeholder
-	rite = ari
+	rite = "ari"
 	culture = "burmese"
 	1000.1.1 = {
 		birth = yes

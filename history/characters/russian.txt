@@ -1,21 +1,21 @@
 ﻿###Early Kievan Rus Rurikids
-# Rurik = 40605 (in norse.txt)
-	# 830.1.1 - 879.1.2
-# Oleg the Seer (Helgi) = 40606 (in norse.txt)
-	# 850.1.1 - 912.1.1(kinsman of Rurik)
-# Igor = 600 (in norse.txt)
-	# 875.1.1 - 945.1.1 (son of Rurik)
+#Rurik = 40605 (in norse.txt)
+	#830.1.1 - 879.1.2
+#Oleg the Seer (Helgi) = 40606 (in norse.txt)
+	#850.1.1 - 912.1.1(kinsman of Rurik)
+#Igor = 600 (in norse.txt)
+	#875.1.1 - 945.1.1 (son of Rurik)
 
 601 = {
 	name = "Olga"	#Saint Olga
 	female = yes
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	890.6.5 = {
 		birth = "890.6.5"
 	}
 	959.10.12 = {
-		# rite = roman_rite
+		# rite = "roman_rite"
 		#She was baptized in Constantinople
 		rite = byzantine_rite
 	}
@@ -43,10 +43,11 @@
 		}
 	}
 }
+
 602 = {
 	name = "Sviatoslav"	#Svyatoslav, son of Igor & St Olga
 	dynasty = 705
-	rite = norse_pagan
+	rite = "norse_pagan"
 	culture = "russian"
 	trait = education_martial_2
 	father = 600
@@ -64,7 +65,7 @@
 604 = {
 	name = "Yaropolk"	#Yaropolk I
 	dynasty = 705
-	rite = norse_pagan
+	rite = "norse_pagan"
 	culture = "russian"
 	father = 602
 	mother = 599
@@ -146,7 +147,7 @@
 ###
 6825 = {
 	name = "Yaropolk"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	trait = content
 	trait = cynical
@@ -162,7 +163,7 @@
 
 6826 = {
 	name = "Gostomysl"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029137
 	father = 160139
@@ -178,7 +179,7 @@
 
 6829 = {
 	name = "Vsemil"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	trait = content
 	dynasty = 1029136
@@ -193,7 +194,7 @@
 
 6831 = {
 	name = "Svetozar"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	trait = content
 	dynasty = 1029136
@@ -208,7 +209,7 @@
 
 6832 = {
 	name = "Radoslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	trait = content
 	dynasty = 1029136
@@ -222,7 +223,7 @@
 }
 6833 = {
 	name = "Sviatopolk"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	trait = content
 	dynasty = 1029136
@@ -237,7 +238,7 @@
 
 6835 = {
 	name = "Dobrozhir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 160058
@@ -4598,7 +4599,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 4
-	rite = hanafi
+	rite = shafii
 	culture = "russian"
 	trait = education_learning_2
 	1039.1.1 = {
@@ -4616,7 +4617,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 7
-	rite = roman_rite
+	rite = "roman_rite"
 	culture = "russian"
 	trait = wrathful
 	trait = greedy
@@ -7369,7 +7370,7 @@
 	# AKA: Maria
 	female = yes
 	dynasty = 705
-	rite = roman_rite
+	rite = "roman_rite"
 	culture = "russian"
 	father = 471511
 	1292.1.2 = {
@@ -9620,7 +9621,7 @@
 	diplomacy = 6
 	intrigue = 4
 	stewardship = 5
-	rite = roman_rite
+	rite = "roman_rite"
 	culture = "russian"
 	trait = gluttonous
 	trait = education_learning_2
@@ -9639,7 +9640,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 4
-	rite = roman_rite
+	rite = "roman_rite"
 	culture = "russian"
 	trait = wrathful
 	trait = honest
@@ -9655,7 +9656,7 @@
 603 = {
 	name = "Malusha"	#Mother of Vladimir the Great
 	female = yes
-	rite = norse_pagan
+	rite = "norse_pagan"
 	culture = "russian"
 	944.1.2 = {
 		birth = "944.1.2"
@@ -10547,6 +10548,7 @@
 	trait = education_learning_3
 	trait = zealous
 	trait = humble
+	trait = devoted
 	983.1.2 = {
 		birth = "983.1.2"
 	}
@@ -10556,7 +10558,7 @@
 }
 
 90140 = {
-	name = "Theodosius"
+	name = "Feodosiy"
 	dynasty = 20081
 	martial = 4
 	diplomacy = 6
@@ -10568,11 +10570,13 @@
 	trait = zealous
 	trait = just
 	trait = temperate
+	trait = devoted
 	1036.1.2 = {
 		birth = "1036.1.2"
 	}
 	1086.1.2 = {
 		death = "1086.1.2"
+		trait = saint
 	}
 }
 
@@ -10602,8 +10606,8 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 7
-	rite = baltic_pagan
-	culture = "russian"
+	rite = "baltic_pagan"
+	culture = "goliad"
 	trait = education_learning_4
 	trait = wrathful
 	trait = deceitful
@@ -10623,8 +10627,8 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 7
-	rite = baltic_pagan
-	culture = "russian"
+	rite = "baltic_pagan"
+	culture = "goliad"
 	trait = education_learning_2
 	father = 90146
 	1056.1.2 = {
@@ -10857,7 +10861,7 @@
 
 159718 = {
 	name = "Vyacheslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029167
 	father = 194138
@@ -10871,7 +10875,7 @@
 
 159719 = {
 	name = "Iziaslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 160050
@@ -10885,7 +10889,7 @@
 
 159720 = {
 	name = "Bogdan"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	trait = content
@@ -10904,7 +10908,7 @@
 	name = "Boryslav"
 	dynasty = 9125
 	father = 82258
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	trait = bastard_founder
 	824.1.1 = {
@@ -10919,7 +10923,7 @@
 	name = "Bogdan"
 	dynasty = 9125
 	father = 82266
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	846.1.1 = {
 		birth = "846.1.1"
@@ -10933,7 +10937,7 @@
 	name = "Yaroslav"
 	dynasty = 9125
 	father = 82267
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	910.1.1 = {
 		birth = "910.1.1"
@@ -10947,7 +10951,7 @@
 	name = "Bronislav"
 	dynasty = 9125
 	father = 82266
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	848.1.1 = {
 		birth = "848.1.1"
@@ -10961,7 +10965,7 @@
 	name = "Vlastimil"
 	dynasty = 9125
 	father = 82269
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	909.1.1 = {
 		birth = "909.1.1"
@@ -10975,7 +10979,7 @@
 	name = "Ctibor"
 	dynasty = 9125
 	father = 82266
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	850.1.1 = {
 		birth = "850.1.1"
@@ -10989,7 +10993,7 @@
 	name = "Miroslav"
 	dynasty = 9125
 	father = 82271
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	911.1.1 = {
 		birth = "911.1.1"
@@ -11001,7 +11005,7 @@
 
 160049 = {
 	name = "Vsevolod"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 194133
@@ -11014,7 +11018,7 @@
 }
 160050 = {
 	name = "Putimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 160049
@@ -11027,7 +11031,7 @@
 }
 160051 = {
 	name = "Radigost"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 160049
@@ -11054,7 +11058,7 @@
 }
 160053 = {
 	name = "Samovlad"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 160050
@@ -11067,7 +11071,7 @@
 }
 160054 = {
 	name = "Premsyl"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 160050
@@ -11080,7 +11084,7 @@
 }
 160055 = {
 	name = "Ljuboslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 160057
@@ -11093,7 +11097,7 @@
 }
 160056 = {
 	name = "Krasimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 160057
@@ -11106,7 +11110,7 @@
 }
 160057 = {
 	name = "Zbignev"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 194131
@@ -11119,7 +11123,7 @@
 }
 160058 = {
 	name = "Samovlad"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 160055
@@ -11132,7 +11136,7 @@
 }
 160062 = {
 	name = "Gostevid"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 160057
@@ -11145,7 +11149,7 @@
 }
 160064 = {
 	name = "Dobromir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	father = 194135
@@ -11158,7 +11162,7 @@
 }
 160091 = {
 	name = "Ladimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6829
@@ -11171,7 +11175,7 @@
 }
 160092 = {
 	name = "Radogor"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6829
@@ -11184,7 +11188,7 @@
 }
 160093 = {
 	name = "Svyatogor"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6831
@@ -11197,7 +11201,7 @@
 }
 160094 = {
 	name = "Tihomir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6831
@@ -11210,7 +11214,7 @@
 }
 160095 = {
 	name = "Godoslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6832
@@ -11223,7 +11227,7 @@
 }
 160096 = {
 	name = "Vyacheslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6832
@@ -11236,7 +11240,7 @@
 }
 160097 = {
 	name = "Dobrovlad"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6833
@@ -11249,7 +11253,7 @@
 }
 160098 = {
 	name = "Zhiroslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6833
@@ -11262,7 +11266,7 @@
 }
 160099 = {
 	name = "Zvonimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029137
 	father = 6826
@@ -11275,7 +11279,7 @@
 }
 160100 = {
 	name = "Velimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029137
 	father = 6826
@@ -11288,7 +11292,7 @@
 }
 160101 = {
 	name = "Bryacheslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	father = 159720
@@ -11301,7 +11305,7 @@
 }
 160102 = {
 	name = "Venceslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	father = 159720
@@ -11314,7 +11318,7 @@
 }
 160103 = {
 	name = "Yaroslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	father = 6825
@@ -11327,7 +11331,7 @@
 }
 160104 = {
 	name = "Budimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	father = 6825
@@ -11340,7 +11344,7 @@
 }
 160105 = {
 	name = "Mladan"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 159719
@@ -11353,7 +11357,7 @@
 }
 160106 = {
 	name = "Radomysl"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 159719
@@ -11366,7 +11370,7 @@
 }
 160107 = {
 	name = "Svetovid"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 6859
@@ -11379,7 +11383,7 @@
 }
 160108 = {
 	name = "Predrag"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	father = 6859
@@ -11392,7 +11396,7 @@
 }
 160109 = {
 	name = "Svyatogor"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6835
@@ -11405,7 +11409,7 @@
 }
 160110 = {
 	name = "Tverdimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 6835
@@ -11606,7 +11610,7 @@
 }
 194131 = {
 	name = "Vysheslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	720.1.1 = {
@@ -11618,7 +11622,7 @@
 }
 194132 = {
 	name = "Rodislav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "ilmenian"
 	dynasty = 1029136
 	father = 194131
@@ -11631,7 +11635,7 @@
 }
 194133 = {
 	name = "Svetozar"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "krivich"
 	dynasty = 1029116
 	750.1.1 = {
@@ -11643,7 +11647,7 @@
 }
 194134 = {
 	name = "Igor"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	738.1.1 = {
@@ -11655,7 +11659,7 @@
 }
 194135 = {
 	name = "Igor"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	dynasty = 1029117
 	father = 194134
@@ -11797,7 +11801,7 @@
 302134 = {
 	name = "Briachislav"
 	dynasty = 1045031	#Ulichs
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	834.11.20 = {
 		birth = "834.11.20"
@@ -11813,7 +11817,7 @@
 	name = "Olena"
 	female = yes
 	dynasty = 1045031	#Ulichs
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	838.3.12 = {
 		birth = "838.3.12"
@@ -11825,7 +11829,7 @@
 302136 = {
 	name = "Lev"
 	dynasty = 1045031	#Ulichs
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	father = 302134
 	mother = 302135
@@ -11840,7 +11844,7 @@
 302137 = {
 	name = "Vladislav"
 	dynasty = 2001027	#Tivertsi
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	839.3.23 = {
 		birth = "839.3.23"
@@ -11855,7 +11859,7 @@
 302138 = {
 	name = "Ulyana"
 	female = yes
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	842.6.1 = {
 		birth = "842.6.1"
@@ -11868,7 +11872,7 @@
 	name = "Ulyana"
 	female = yes
 	dynasty = 2001027	#Tivertsi
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	father = 302137
 	mother = 302138
@@ -12990,7 +12994,7 @@
 }
 160063 = {
 	name = "Bojan"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029118
 	father = 194146
@@ -13003,7 +13007,7 @@
 }
 6834 = {
 	name = "Zhavoronok"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029118
 	father = 160063
@@ -13016,7 +13020,7 @@
 }
 160059 = {
 	name = "Vladislav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029118
 	father = 6834
@@ -13029,7 +13033,7 @@
 }
 160060 = {
 	name = "Dragan"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029118
 	father = 6834
@@ -13042,7 +13046,7 @@
 }
 160061 = {
 	name = "Gradimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029118
 	father = 6834
@@ -13134,7 +13138,7 @@
 }
 159721 = {
 	name = "Tatimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029138
 	father = 194144
@@ -13161,7 +13165,7 @@
 }
 160111 = {
 	name = "Mechislav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029138
 	father = 159721
@@ -13174,7 +13178,7 @@
 }
 160112 = {
 	name = "Kreslav"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029138
 	father = 159721
@@ -13187,7 +13191,7 @@
 }
 160113 = {
 	name = "Vadim"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029138
 	father = 159721
@@ -13200,7 +13204,7 @@
 }
 160089 = {
 	name = "Izbygnev"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029138
 	father = 6860
@@ -13213,7 +13217,7 @@
 }
 160090 = {
 	name = "Krasimir"
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "severian"
 	dynasty = 1029138
 	father = 6860
@@ -13512,7 +13516,7 @@
 256045 = {			#fictional, d_drevlians
 	name = Dobroslav
 	dynasty = 2004001	#Medvjedich
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	833.1.1 = {
 		birth = yes
@@ -13525,7 +13529,7 @@
 256043 = {			#fictional, d_moldova & d
 	name = Mstislav
 	dynasty = 1061020	#Dniprich
-	rite = slavic_pagan
+	rite = "slavic_pagan"
 	culture = "volhynian"
 	840.1.1 = {
 		birth = yes
