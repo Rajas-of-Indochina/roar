@@ -1,4 +1,5 @@
 ﻿l_english:
+# Crossplay Stuff
  RICE_india_land_grant_nasrani_option:0 "#Bold $indian_catholic_adherent_plural$#!"
  RICE_india_land_grant_nasrani_option_desc:0 "$RICE_india_land_grant_nasrani_option$"
  RICE_india_land_grant_nasrani_option_tooltip:0 "$EFFECT_LIST_BULLET$ Get the [GetModifier('RICE_india_land_grant_christian_character_modifier').GetNameWithTooltip] [character_modifier|E] for #V 10#! years\n$EFFECT_LIST_BULLET$ Every $indian_catholic_adj$ [county|E] gains a [county_modifier|E] reducing [tax|E] but increasing [development_growth|E]\n$EFFECT_LIST_BULLET$ If you do not follow a $christianity_religion_adj$ [faith|E], the [modifier|E] grants extra [development_growth|E]. If you do, it grants extra [county_opinion|E]."
@@ -29,7 +30,7 @@
  RICE_rival_reason_placeholder:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] grew to dislike each other due to some differences."
 
 
- # Cultural Traditions
+# Cultural Traditions
  tradition_RICE_cave_dwellers_name:0 "Cave Dwellers"
  tradition_RICE_cave_dwellers_desc:0 "This culture makes extensive use of caves and rock shelters for various purposes. Some in this culture even prefer to live in these locations."
  tradition_RICE_wewas_name:0 "Wewa Systems"
@@ -54,7 +55,7 @@
  culture_parameter_unlock_rice_sea_nomads_decision:0 "Unlocks the [decision|E] to #bold $RICE_SEA_manage_sea_lanes$#!"
 
 
- # Buddhism stuf
+# Buddhism stuf
  buddhism_divine_realm:0 "an auspicious rebirth"
  buddhism_divine_realm_2:0 "$buddhism_divine_realm$" # Optional translation alt
  buddhism_divine_realm_3:0 "$buddhism_divine_realm$" # Optional translation alt
@@ -62,13 +63,13 @@
  buddhism_negative_afterlife_2:0 "$buddhism_negative_afterlife$" # Optional translation alt
  buddhism_negative_afterlife_3:0 "$buddhism_negative_afterlife$" # Optional translation alt
 
- # I don't think there's anything wrong with the original use of "Tibetan" in vanilla, but I prefer to change it to make it easier to distinguish when talking about Tibetan culture/heritage in-game vs the Bön faith
+# I don't think there's anything wrong with the original use of "Tibetan" in vanilla, but I prefer to change it to make it easier to distinguish when talking about Tibetan culture/heritage in-game vs the Bön faith
  bon_religion:1 "Bön"
  bon_religion_adj:1 "Bönpo"
  bon_religion_adherent:1 "Bönpo"
  bon_religion_adherent_plural:1 "Bönpos"
 
- # Geographical regions
+# Geographical regions
  RICE_nile_river_valley:0 "the Nile Valley"
  RICE_hephthalite_heartland_region:0 "the Hephthalite Heartland"
  RICE_hephthalite_former_empire_region:0 "the Former Hephthalite Empire"
@@ -76,7 +77,7 @@
  RICE_greater_pamir_region:0 "Greater Pamir Region"
  RICE_brittany_horse_region:0 "Brittany and Adjacent Regions"
 
- # Bamian Misc
+ # Bamian - Misc
  Harthamah:0 "Harthamah"
  Murzahim:0 "Murzahim"
  Abu_Harb_Muhammad:0 "Abu Harb Muhammad"
@@ -89,7 +90,7 @@
  Hiwi:0 "Hiwi"
  dynn_RICE_jewish_al_balkhi:0 "al-Balkhi"
 
- # Pamir Misc
+# Pamir - Misc
  dynn_wakhanshah:0 "Wakhanshah"
  dynn_shugnanshah:0 "Shugnanshah"
  dynn_shugnanshah_2:0 "Shini" # Name of Shughnan per Xuanzang
@@ -129,7 +130,7 @@
  trait_RICE_hephthalite_emperor_shah_desc:0 "This character is the current Shah of the restored Hephthalite Empire, carrying on the legacy of a mighty, prosperous realm that was not only skilled in war, but in the arts of trade, culture, and building cities as well."
  trait_RICE_hephthalite_emperor_shah_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the current Shah of the restored Hephthalite Empire, carrying on the legacy of a mighty, prosperous realm that was not only skilled in war, but in the arts of trade, culture, and building cities as well."
 
- # Geography/Titles/Regions Pamir
+# Pamir - Geography/Titles/Regions
  e_hephthalite_restored_article:0 "the "
  e_hephthalite_restored:0 "Hephthalite Empire"
  e_hephthalite_restored_adj:0 "Hephthalite"
@@ -137,7 +138,7 @@
  k_hephthalite_restored:0 "Hephthalite Kingdom"
  k_hephthalite_restored_adj:0 "Hephthalite"
 
- # Buildings Pamir
+# Pamir - Buildings
  building_type_RICE_pamir_lapis_lazuli_mines_01:0 "Lapis Lazuli Mines of Sar-i Sang"
  building_type_RICE_pamir_lapis_lazuli_mines_01_desc:0 "This region is home to the famed mines of Sar-i Sang. For centuries, it has produced the overwhelming majority of the world's lapis lazuli, a beautiful blue stone highly valued by cultures across the world since ancient times."
  building_RICE_pamir_lapis_lazuli_mines_01:0 "Lapis Lazuli Mining Settlement"
@@ -169,7 +170,51 @@
  building_RICE_pamir_khewra_salt_mines_04:0 "Salt Mining Complex"
  building_RICE_pamir_khewra_salt_mines_04_desc:0 "With a large, well-organized mining complex in place, large amounts of salt are procured here daily. Merchants from all over the world come to trade this salt."
 
- # Sri Lanka Misc
+# Sri Lanka - Misc
+ RICE_sri_lanka_struggle_region:0 "Sri Lanka"
+ RICE_sri_lanka_alt_region:0 "$k_lanka$" #  [GetGeographicalRegion('RICE_sri_lanka_alt_region').GetName]
+ RICE_tamilakam_and_lanka:0 "$k_tamilakam$ and $k_lanka$" #  [GetGeographicalRegion('RICE_tamilakam_and_lanka').GetName]
+ Vijayarajapura:0 "Vijayarajapura"
+ RICE_maritime_silk_road_region:0 "Maritime Silk Road"
+ RICE_maritime_silk_road_geographical_req:0 "You own a [county|E] or [domicile|E] along the [GetGeographicalRegion('RICE_maritime_silk_road_region').GetName]"
+ NOT_RICE_maritime_silk_road_geographical_req:0 "You do not own a [county|E] or [domicile|E] along the [GetGeographicalRegion('RICE_maritime_silk_road_region').GetName]"
+ RICE_sri_lanka_capital_req:0 "[capital|E] or [domicile|E] is in [GetGeographicalRegion('RICE_sri_lanka_struggle_region').GetName]"
+ RICE_sri_lanka_values_notification.title:0 "[RICE_sri_lanka_s_sangha|E]: Current [RICE_sri_lanka_prominence|E]"
+ RICE_sri_lanka_values_notification.tooltip:0 "[mahavihara_i|E] [mahavihara|E]  : #V [GetGlobalVariable('RICE_mahavihara_prominence').GetValue|0]#! | [abhayagiri_i|E] [abhayagiri|E] : #V [GetGlobalVariable('RICE_abhayagiri_prominence').GetValue|0]#! | [jetavana_i|E]  :[RICE_sri_lanka_prominence|E] #V [GetGlobalVariable('RICE_jetavana_prominence').GetValue|0]#!"
+ RICE_sri_lanka_values_notification.mahavihara_tooltip:0 "[mahavihara_i|E] [mahavihara|E]: #V [GetGlobalVariable('RICE_mahavihara_prominence').GetValue|0]#!"
+ RICE_sri_lanka_values_notification.abhayagiri_tooltip:0 "[abhayagiri_i|E] [abhayagiri|E]: #V [GetGlobalVariable('RICE_abhayagiri_prominence').GetValue|0]#!"
+ RICE_sri_lanka_values_notification.jetavana_tooltip:0 "[jetavana_i|E] [jetavana|E]: #V [GetGlobalVariable('RICE_jetavana_prominence').GetValue|0]#!"
+ RICE_india_land_grant_decision_req:0 "Own at least one [county|E] that in [GetGeographicalRegion('world_india').GetName]"
+ RICE_all_held_buddhist_counties_church:0 "Every Buddhist [county|E] you rule with a [church_holding|E]"
+ RICE_all_held_buddhist_counties_no_church:0 "Every Buddhist [county|E] you rule without a [church_holding|E]"
+ RICE_all_held_hindu_counties_church:0 "Every Hindu [county|E] you rule with a [church_holding|E]"
+ RICE_all_held_hindu_counties_no_church:0 "Every Hindu [county|E] you rule without a [church_holding|E]"
+ RICE_all_held_jain_counties_church:0 "Every Jain [county|E] you rule with a [church_holding|E]"
+ RICE_all_held_jain_counties_no_church:0 "Every Jain [county|E] you rule without a [church_holding|E]"
+ RICE_culture_in_sri_lanka_desc:1 "The [culture|E] has at least #V 4#! of its [counties|E] in [GetGeographicalRegion('RICE_sri_lanka_struggle_region').GetName] [region|E]"
+ RICE_sri_lanka_mahavihara_header:1 "[mahavihara_i|E] [mahavihara|E]:"
+ RICE_sri_lanka_mahavihara_tooltip:0 "[mahavihara|E] [RICE_sri_lanka_prominence|E] is [mahavihara_i|E] #V [GetGlobalVariable('RICE_mahavihara_prominence').GetValue|0]#! of #V 1000#!"
+ RICE_sri_lanka_abhayagiri_header:1 "[abhayagiri_i|E] [abhayagiri|E]:"
+ RICE_sri_lanka_abhayagiri_tooltip:0 "[abhayagiri|E] [RICE_sri_lanka_prominence|E] is [abhayagiri_i|E] #V [GetGlobalVariable('RICE_abhayagiri_prominence').GetValue|0]#! of #V 1000#!"
+ RICE_sri_lanka_jetavana_header:1 "[jetavana_i|E] [jetavana|E]:"
+ RICE_sri_lanka_jetavana_tooltip:0 "[jetavana|E] [RICE_sri_lanka_prominence|E] is [jetavana_i|E] #V [GetGlobalVariable('RICE_jetavana_prominence').GetValue|0]#! of #V 1000#!"
+ RICE_all_held_counties_india_church:0 "Every [county|E] you rule in [GetGeographicalRegion('world_india').GetName] with a [church_holding|E]"
+ RICE_all_held_counties_india_no_church:0 "Every [county|E] you rule in [GetGeographicalRegion('world_india').GetName] without a [church_holding|E]"
+ innovation_RICE_irrigation_tanks:0 "Irrigation Tanks"
+ innovation_RICE_irrigation_tanks_desc:0 "Throughout the Indian subcontinent, certain types of large wells and artificial reservoirs are constructed to take advantage of the local topography in order to harvest and preserve rainwater. These tanks can be used for agriculture, drinking, bathing, and religious rituals."
+ RICE_irrigation_tanks_decision_unlock:0 "Can take the [decision|E] to #V $RICE_india_irrigation_tank_decision$#!"
+ culture_parameter_unlock_rice_wewa_irrigation_tank_effects:0 "Reduced costs for the [decision|E] to #V $RICE_india_irrigation_tank_decision$#!"
+ culture_parameter_unlock_rice_stepwell_irrigation_tank_effects:0 "Increased [piety_i|E] [piety|E] and [prestige_i|E] [prestige|E] bonuses when taking the [decision|E] to #V $RICE_india_irrigation_tank_decision$#!"
+ innovation_RICE_velakkara_guards:0 "Velakkara Guards"
+ innovation_RICE_velakkara_guards_desc:0 "The Velakkara or Velaikkarar are guilds of soldiers in southern India who, while often of Tamil origin, are affiliated with a variety of castes and communities. Organizing themselves on a corporate basis, they regulate their own affairs through large assemblies. Their effectiveness as soldiers has led some royals and nobles to employ entire regiments of them as royal guards or protectors of sacred sites."
+ RICE_velakkara:0 "Velakkara"
+ RICE_velakkara_flavor:0 "#F The Velakkara or Velaikkarar are guilds of soldiers who are quite effective in battle, and are often deployed as royal guards or protectors of sacred sites.#!"
+ RICE_bantu_warriors:0 "Bantu Warriors"
+ RICE_bantu_warriors_flavor:0 "#F Experienced in both defensive and offensive combat, these warriors have the courage and valor to do what is needed for the greater good of their people.#!"
+ RICE_sri_lanka_in_malaya_rata_req:0 "Your [camp|E] is in [GetTitleByKey('b_malaya_rata').GetNameNoTier]"
+ RICE_sri_lanka_near_madurai_req:0 "Your [capital|E] is close to [GetTitleByKey('c_madurai').GetNameNoTier]"
+ RICE_sri_lanka_in_rameshvaram_req:0 "Your [camp|E] is in [GetTitleByKey('b_rameshvaram').GetNameNoTier]"
+ #RICE_velakkara_guards_decision_unlock:0 "Can recruit [GetMaA('marc_hegion').GetName] as [men_at_arms|E]"
  Kutthaka:0 "Kutthaka"
  Budal:0 "Budal"
  Jagatipala:0 "Jagatipala"
@@ -184,8 +229,67 @@
  dynn_jagatipala:0 "Jagatipala"
  dynn_madabi:0 "Madabi"
  Senal:0 "Senal"
+ nick_the_sangha_destroyer:0 "the Sangha Destroyer"
+ RICE_sri_lanka_bodhi_loc:0 "Bodhi Tree"
+ RICE_sri_lanka_tooth_loc:0 "Tooth Relic"
+ RICE_sri_lanka_dharmadhatu_loc:0 "Dharmadhatu"
+ RICE_sri_lanka_mahavihara_loc:0 "$game_concept_mahavihara$"
+ RICE_sri_lanka_abhayagiri_loc:0 "$game_concept_abhayagiri$"
+ RICE_sri_lanka_jetavana_loc:0 "$game_concept_jetavana$"
+ RICE_sri_lanka_mahavihara_game_concept_loc:0 "[mahavihara_i|E] [mahavihara|E]"
+ RICE_sri_lanka_abhayagiri_game_concept_loc:0 "[abhayagiri_i|E] [abhayagiri|E]"
+ RICE_sri_lanka_jetavana_game_concept_loc:0 "[jetavana_i|E] [jetavana|E]"
+ RICE_every_theravada_faith:0 "Every Buddhist [faith|E] with the [GetFaithDoctrine('rice_theravada_canon_doctrine').GetBaseName] [doctrine|E]"
+ RICE_every_mahavihara_ruler:0 "Every [ruler|E] with the [GetTrait('RICE_mahavihara_trait').GetName( GetNullCharacter )] [trait|E]"
+ RICE_every_abhayagiri_ruler:0 "Every [ruler|E] with the [GetTrait('RICE_abhayagiri_trait').GetName( GetNullCharacter )] [trait|E]"
+ RICE_every_jetavana_ruler:0 "Every [ruler|E] with the [GetTrait('RICE_jetavana_trait').GetName( GetNullCharacter )] [trait|E]"
+ RICE_every_sri_lanka_county:0 "Every [county|E] you own in [GetGeographicalRegion('RICE_sri_lanka_struggle_region').GetName]"
+ RICE_friend_reason_vijayabahu_budal:0 "Budal protected Vijayabahu when he was but a young prince in constant danger and on the run from the invading armies of the Cholas. His sense of duty and loyalty is greatly appreciated by Vijayabahu."
+ # Can't get Target_character/character to use the right persons for some reason no matter what
+ #RICE_friend_reason_vijayabahu_budal:0 "[TARGET_CHARACTER.GetShortUIName|U] protected [CHARACTER.GetShortUIName] when [CHARACTER.GetShortUIName] [Select_CString(CHARACTER.IsLocalPlayer, 'were', 'was' )] a young prince in constant danger and on the run from the invading armies of the Cholas."
+ RICE_vijayabahu_velakkara_guards:0 "Vijayabahu's Velakkara Guards"
+ RICE_india_geographical_req:0 "You own a [county|E] or [domicile|E] in [GetGeographicalRegion('world_india').GetName]"
+ RICE_muallim_option:0 "Mu'allim Navigators"
+ RICE_muallim_option_desc:0 "In the Indian Ocean, the Arabic term #italic mu'allim#! denotes master navigators. They have expert knowledge of arithmetic, geometry, geography, meteorology, and more gained from both reading ancient tomes as well as practical experience. They are an indispensable if not crucial when traveling on the high seas."
+ RICE_nakhudas_option:0 "Nakhuda Shipowners"
+ RICE_nakhudas_option_desc:0 "The #italic Nakhudas#! or #italic Nauvittakas#! are a class of merchants of diverse cultural and religious origins, prominent along the coasts of India. Their connections will help any traveler who seeks to go far in a safe and timely manner."
+ RICE_sri_lanka_vijayabahu_budal_hook:0 "Old Protector"
+ RICE_upulvan_perumal_loc:0 "Perumal"
+ RICE_upulvan_loc:0 "Upulvan"
+ RICE_kataragama_murugan_loc:0 "Murugan"
+ RICE_kataragama_loc:0 "Kataragama"
+ RICE_saman_loc:0 "Saman"
+ RICE_pattini_kannaki_amman_loc:0 "Kannaki Amman"
+ RICE_pattini_loc:0 "Pattini"
+ RICE_natha_loc:0 "Natha"
+ RICE_sri_pada_abrahamic_loc:0 "Adam's Peak"
+ RICE_sri_pada_non_abrahamic_loc:0 "Sri Pada"
+ RICE_sri_pada_footprint_person_abrahamic_loc:0 "$Adam$"
+ RICE_sri_pada_footprint_person_hindu_loc:0 "$hinduism_good_god_shiva$"
+ RICE_sri_pada_footprint_person_buddhist_loc:0 "$buddhism_good_god_buddha$"
+ RICE_sri_lanka_sangha_location_sri_lanka:0 "[GetGeographicalRegion('RICE_sri_lanka_alt_region').GetName]"
+ RICE_sri_lanka_sangha_location_anywhere:0 "[ROOT.Char.GetPrimaryTitle.GetNameNoTier|U]"
+ RICE_sri_lanka_sangha_location_sri_lanka_no_tooltip:0 "[GetGeographicalRegion('RICE_sri_lanka_alt_region').GetNameNoTooltip]"
+ RICE_sri_lanka_sangha_location_anywhere_no_tooltip:0 "[ROOT.Char.GetPrimaryTitle.GetNameNoTierNoTooltip|U]"
+ Al_Distubya:0 "Al-Distubya"
+ dynn_sayabiga:0 "Sayabiga"
+ RICE_malagasy_history_loc:0 "Formed from peoples from Southeast Kalimantan and the East African coast"
+ innovation_RICE_monsoon_trade_routes:0 "Monsoon Trade Routes"
+ innovation_RICE_monsoon_trade_routes_desc:0 "Maritime travel in the Indian Ocean is dictated by its monsoon winds. It is one thing to know of these winds, but another to truly master them in order to traverse the Indian Ocean freely."
+ RICE_indian_ocean:0 "The Indian Ocean"
+ Manikkavacakar:0 "Manikkavacakar"
+ dynn_RICE_Manikkavacakar:0 "Pandithar"
+ dynn_RICE_bappa_beary:0 "Beary"
+ Bappa:0 "Bappa"
+ RICE_sri_lanka_struggle_correct_involvement_tt:1 "You are [struggle_involved|E] in the [RICE_sri_lanka_struggle|E]"
+ #
+ building_type_RICE_sri_lanka_ruins_of_anuradhapura:0 "Ruins of Anuradhapura"
+ building_type_RICE_sri_lanka_ruins_of_anuradhapura_desc:0 "Anuradhapura was once the shining capital of [GetGeographicalRegion('RICE_sri_lanka_alt_region').GetName], a center of Buddhist learning and maritime trade. However, in the wake of invasions and political upheavals, it has lost its prominence and much of the city is abandoned. The remaining inhabitants live amidst mighty ruins that remind one of the city's former glory days."
+ building_RICE_sri_lanka_ruins_of_anuradhapura:0 "$building_type_RICE_sri_lanka_ruins_of_anuradhapura$"
+ building_RICE_sri_lanka_ruins_of_anuradhapura_desc:0 "$building_type_RICE_sri_lanka_ruins_of_anuradhapura_desc$"
 
- # Tarim Basin Misc
+
+# Tarim Basin - Misc
  wenmo:0 "Wenmo"
  wenmo_collective_noun:0 "Wenmo"
  wenmo_prefix:0 "Wenmo"
@@ -252,7 +356,7 @@
  RICE_iron_forest:0 "Iron Forest"
  RICE_iron_forest_flavor:1 "#F These heavy cavalrymen are fully armored and adept at using melee weapons as well as crossbows.#!"
 
- # Dynasties/Names Tarim Basin
+# Tarim Basin - Dynasties/Names
  Wentong:0 "Wentong"
  Jifeng:0 "Jifeng"
  Tongxin:0 "Tongxin"
@@ -292,7 +396,7 @@
  Mingchang:0 "Mingchang"
  Anzheng:0 "Anzheng"
 
- # Buildings Tarim Basin
+# Tarim Basin - Buildings
  building_type_RICE_tarim_basin_mogao_caves:0 "Mogao Caves"
  building_type_RICE_tarim_basin_mogao_caves_desc:0 "The Thousand Buddha Grottoes of Dunhuang are a network of hundreds of caves that serve as temples and shrines dedicated to Buddhist worship, prayer, and meditation. The oldest caves were carved in the 4th century, and since then, devotees from as far away as central China and Khotan have sponsored the construction of various caves. Many local elite clans have their own caves that they have maintained for centuries."
  building_RICE_tarim_basin_mogao_caves:0 "$building_type_RICE_tarim_basin_mogao_caves$"
@@ -320,7 +424,7 @@
  building_RICE_tarim_basin_dafo_temple:0 "$building_type_RICE_tarim_basin_dafo_temple$"
  building_RICE_tarim_basin_dafo_temple_desc:0 "$building_type_RICE_tarim_basin_dafo_temple_desc$"
 
- # Yazd Misc
+# Yazd - Misc
  Akhdar:0 "Akhdar"
  Uzayr:0 "'Uzayr"
  Auharmazd_dad:0 "Auharmazd-dad"
@@ -331,6 +435,117 @@
  RICE_dynn_ibn_rusta:0 "Ibn Rusta"
  RICE_dynn_yaqubi:0 "Yaqubi"
  RICE_every_persian_turkic_county:0 "Every [county|E] you [completely_control|E] in [GetGeographicalRegion('world_middle_east_persia').GetName] that is a [culture|E] of $heritage_turkic_name$ [heritage|E]"
+
+# Zhangzhung - Misc
+ RICE_upper_tibet:0 "Upper Tibet"
+ RICE_upper_tibet_req:0 "Owns a [county|E] in [GetGeographicalRegion('RICE_upper_tibet').GetName]"
+ RICE_western_northern_tibet:0 "Western and Northern Tibet"
+ RICE_western_northern_tibet_req:0 "Owns a [county|E] in [GetGeographicalRegion('RICE_western_northern_tibet').GetName]"
+ RICE_eastern_tibet:0 "Eastern Tibet"
+ RICE_eastern_tibet_req:0 "Owns a [county|E] in [GetGeographicalRegion('RICE_eastern_tibet').GetName]"
+ RICE_drokpa_horsemen:0 "Changthang Drokpas"
+ RICE_drokpa_horsemen_flavor:1 "#F The nomads of Tibet are a tough, hardy bunch in general, but the nomads who originate from the harshest parts of Tibet – the Changthang highlands – are downright terrifying, feared by many as horsemen who possess equal parts valor and ruthlessness.#!"
+ fervor_gain_bon_convert:1 "Conversion from $old_bon$"
+ innovation_RICE_glacier_grafting:1 "Glacier Grafting"
+ innovation_RICE_glacier_grafting_desc:1 "Through the ritualized process of Glacier Marriage, locals can unite male and female glaciers to create new glaciers to irrigate their agricultural lands in the mountains and valleys."
+ innovation_RICE_netsang_relationships:1 "Netsang Relationships"
+ innovation_RICE_netsang_relationships_desc:1 "Nomad families of the Himalayan plateau often have "fictive" kin relationships called Netsang with families further south in the Himalayas. Families with these relationships, which last generations, give each other trading privileges and serve as hosts when visiting each others' lands."
+ RICE_glacier_grafting_activity_unlock:1 "Unlocks the [GetActivityType( 'activity_RICE_glacier_marriage' ).GetName] [activity|E] in [GetTerrain( 'mountains' ).GetName] or [GetTerrain( 'desert_mountains' ).GetName]"
+ RICE_netsang_relationships_bonus_tt:1 "The [decision|E] to #V $RICE_zhangzhung_western_tibet_salt_decision$#! costs less [gold_i|E] [gold|E]"
+ bon_religion_opinion:0 "$bon_religion_adherent$ Opinion"
+ nick_RICE_guru_rinpoche:0 "Guru Rinpoche"
+ nick_RICE_guru_rinpoche_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharAreIs(CHARACTER)] venerated by many [GetFaithByKey('lamaism').GetAdherentNamePlural] as an emanation of Shakyamuni Buddha, the historical Buddha, who helped disseminate tantric teachings to [GetGeographicalRegion('world_tibet').GetName]. [CHARACTER.GetSheHe|U] is thus known as #italic Guru Rinpoche#!, meaning Precious Guru. [CHARACTER.GetSheHe|U] is also called #italic The Lotus Born from [GetTitleByKey('b_oddiyana').GetNameNoTier]#!."
+ nyima_ozer:0 "Nyima Özer"
+ chokyi_khorlo:0 "Chokyi Khorlo"
+ jomo_yeshe_dron:0 "Jomo Yeshe Dron"
+ Jobuma:0 "Jobuma"
+ namkha_ozer:0 "Namkha Özer"
+ namkha_pel:0 "Namkha Pel"
+ RICE_mani_stones_option:0 "Mani Stones"
+ RICE_mani_stones_option_desc:0 "While you are traveling, you will do your best to ensure that you can place [Glossary( 'mani stones', 'MANI_STONE_GLOSS' )] alongside roads, rivers, walls, cairns, and other sacred sites."
+ dpal_dus_sgra:0 "Dpal Dus Sgra" 
+ RICE_dynn_hrugs_wer:0 "Hrugs"
+ RICE_dynn_mang_wer:0 "Mang"
+ chakchang_lhadok:0 "Chakchang Lhadok"
+ _or_za:0 "'or Za"
+ hrugs_wer_dog_donor:0 "dog"
+ dmag_pon_lha_blon:0 "Dmag Pon Lha Blon"
+ za_eng_ba_rgyal:0 "Za 'eng Ba Rgyal"
+ byang_chub_shesrab:0 "Byang Chub Shesrab"
+ seng_spyan:0 "Seng Spyan"
+ RICE_dynn_yudra:0 "Yudra"
+ nick_RICE_great_translator:0 "the Great Translator"
+ nick_RICE_great_translator_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharAreIs(CHARACTER)] known as the #italic Lochen#!, or Greater Translator, among devoted followers of [GetFaithByKey('lamaism').GetName], some of whom even believe [CHARACTER.GetSheHe] has supramundane powers. [CHARACTER.GetHerHis|U] has earned great fame for traveling to [GetGeographicalRegion('world_india').GetName] to learn about [GetReligionByKey('buddhism_religion').GetName] there, to bolster [CHARACTER.GetHerHis] efforts to disseminate the authentic teachings of the Buddha, and build religious institutions and temples in [GetGeographicalRegion('world_tibet').GetName]."
+ nick_RICE_lesser_translator:0 "the Lesser Translator"
+ nick_RICE_lesser_translator_desc:0 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharAreIs(CHARACTER)] known as the Lesser Translator because though [CHARACTER.GetSheHe] is a great translator in [CHARACTER.GetHerHis] own right, [CHARACTER.GetSheHe] is nonetheless the cousin of the more famous and renowned $rinchen_zangpo$, the Great Translator. [CHARACTER.GetSheHe|U] had accompanied [CHARACTER.GetHerHis] cousin to [GetGeographicalRegion('world_india').GetName] in search of [GetReligionByKey('buddhism_religion').GetAdjective] knowledge and artifacts to bring back to [GetGeographicalRegion('world_tibet').GetName]."
+ rinchen_zangpo:0 "Rinchen Zangpo"
+ shonu_wangchuk:0 "Shonu Wangchuk"
+ yuthokdra:0 "Yuthokdra"
+ e_zhangzhung:0 "Zhangzhung"
+ e_zhangzhung_adj:0 "Zhangzhung"
+ RICE_every_county_in_upper_tibet:0 "Every [county|E] you own in [GetGeographicalRegion('RICE_upper_tibet').GetName]"
+ Padmasambhava:0 "Padmasambhava"
+ sherab_wangchuk:0 "Sherab Wangchuk"
+ legpe_sherab:0 "Legpe Sherab"
+ yonten_wangchuk:0 "Yonten Wangchuk"
+ kunring_shetso:0 "Kunring Shetso"
+ khutsa_dawo:0 "Khutsa Dawo"
+ RICE_dynn_khutsa_dawo:0 "Spa" # Can't find Khutsa Dawo's family for now, so I've used the family name of a Bon priestly family
+ RICE_dynn_khyungpo:0 "Khyungpo"
+ naro_bonchung:0 "Naro Bönchung"
+ nick_RICE_jetsun:0 "Jetsun"
+ nick_RICE_jetsun_desc:0 "#italic Jetsun#! (male) or #italic Jetsunna#! (female) is a title meaning "reverend" or "venerable." It is given to highly respected religious masters among Tibetan Buddhists."
+ nick_RICE_jetsunma:0 "Jetsunma"
+ nick_RICE_jetsunma_desc:0 "$nick_RICE_jetsun_desc$"
+ fervor_gain_RICE_milarepa_event:0 "Milarepa's Presumed Spiritual Victory at Mount Kailash"
+ RICE_every_tantric_buddhist_faith:0 "Every [GetReligionByKey('buddhism_religion').GetAdjective] [faith|E] with the [GetFaithDoctrine('rice_vajrayana_canon_doctrine').GetBaseName] [doctrine|E]"
+ RICE_every_terton_courtier_or_guest:0 "Every [courtier|E] or [guest|E] with the [GetTrait('RICE_terton').GetName( GetNullCharacter )] [trait|E] or [GetModifier('RICE_terton_candidate').GetNameWithTooltip] [character_modifier|E]"
+ RICE_patronizing_tertons_opinion:0 "Patronizing [Glossary( 'tertöns', 'TERTON_GLOSS' )]"
+ Drapa_Ngonshe:0 "Drapa Ngönshé"
+ Zhangtag_Karwa:0 "Zhangtag Karwa"
+ Lhase_Shewa_Gronma:0 "Lhase Shewa Gronma"
+ Sangye_Lama:0 "Sangye Lama"
+ zhangzhung.minor_terma.message.specific_terton:0 "[terton.GetTitledFirstName] has discovered a [RICE_minor_terma|E]"
+ zhangzhung.minor_terma.message.generic:0 "Local [Glossary( 'tertöns', 'TERTON_GLOSS' )] have discovered a [RICE_minor_terma|E]"
+ zhangzhung.minor_terma.message.self:0 "You have discovered a [RICE_minor_terma|E]"
+ RICE_zhangzhung_pillars_neutral:0 "The [GetPlayer.Custom('RICE_tibet_deities_type')] do not appear to respond to any supplication"
+ RICE_zhangzhung_pillars_neutral_tooltip:0 "$RICE_zhangzhung_pillars_neutral$"
+ RICE_greater_himalayan_region:0 "Greater Himalayas"
+ RICE_greater_himalayan_region_capital_req:0 "[capital|E] is in the [GetGeographicalRegion('RICE_greater_himalayan_region').GetName]"
+ Humar:0 "Humar"
+ Milarepa:0 "Milarepa"
+ kaldan_sherab:0 "Kaldan Sherab"
+
+# Zhangzhung - Buildings
+ building_type_RICE_zhangzhung_tsaparang_fortress:0 "Tsaparang Fortress"
+ building_type_RICE_zhangzhung_tsaparang_fortress_desc:0 "Perched atop a pyramid-shaped rock, the fortress and palace of Tsaparang is a symbol of the power wielded by the local rulers. The complex consists of many temples, monasteries, caves, tunnels, and other structures. Above the living quarters meant to house the region's rulers is a summer palace."
+ building_RICE_zhangzhung_tsaparang_fortress:0 "$building_type_RICE_zhangzhung_tsaparang_fortress$"
+ building_RICE_zhangzhung_tsaparang_fortress_desc:0 "$building_type_RICE_zhangzhung_tsaparang_fortress_desc$"
+ building_type_RICE_zhangzhung_lake_dangra:0 "Lake Dangra"
+ building_type_RICE_zhangzhung_lake_dangra_desc:0 "The pristine waters of Lake Dangra are believed to be the source of the universe, and of all sentient beings, according to local belief. The unusually fertile lands around the lake allow for tilling of the soil, and it is said that the ancient Zhangzhung kingdom had a capital here."
+ building_RICE_zhangzhung_lake_dangra:0 "$building_type_RICE_zhangzhung_lake_dangra$"
+ building_RICE_zhangzhung_lake_dangra_desc:0 "$building_type_RICE_zhangzhung_lake_dangra_desc$"
+ building_type_RICE_zhangzhung_tabo_monastery:0 "Tabo Monastery"
+ building_type_RICE_zhangzhung_tabo_monastery_desc:0 "Overlooking the arid, cold Spiti Valley, Tabo Monastery serves as a regional center for Buddhist religion and learning. It includes several temples, caves, and stupas, and is decorated with magnificent frescoes depicting various deities, as well as stories from Buddhist folklore."
+ building_RICE_zhangzhung_tabo_monastery:0 "$building_type_RICE_zhangzhung_tabo_monastery$"
+ building_RICE_zhangzhung_tabo_monastery_desc:0 "$building_type_RICE_zhangzhung_tabo_monastery_desc$"
+ building_type_RICE_zhangzhung_kangra_fort:0 "Kangra Fort"
+ building_type_RICE_zhangzhung_kangra_fort_desc:0 "Located on a hillock between two rivers, Manjhi and Banganga, Kangra Fort is one of the largest fortresses in the Himalaya mountains. Supposedly, it has a history stretching back centuries, and it is also known for protecting a great treasury and beautiful statues of various local deities."
+ building_RICE_zhangzhung_kangra_fort:0 "$building_type_RICE_zhangzhung_kangra_fort$"
+ building_RICE_zhangzhung_kangra_fort_desc:0 "$building_type_RICE_zhangzhung_kangra_fort_desc$"
+ building_type_RICE_zhangzhung_phuktal_monastery:0 "Phuktal Monastery"
+ building_type_RICE_zhangzhung_phuktal_monastery_desc:0 "The remote Lungnak Valley, a day's walk from the nearest major settlement, is home to Phuktal Monastery, a religious complex built around a large natural cave on a cliff. It is said that many realized spiritual masters have resided in this cave over the centuries, starting with the direct disciples of the Buddha. The area is also home to a sacred spring and a medical clinic."
+ building_RICE_zhangzhung_phuktal_monastery:0 "$building_type_RICE_zhangzhung_phuktal_monastery$"
+ building_RICE_zhangzhung_phuktal_monastery_desc:0 "$building_type_RICE_zhangzhung_phuktal_monastery_desc$"
+ building_type_RICE_zhangzhung_alchi_monastery:0 "Alchi Monastery"
+ building_type_RICE_zhangzhung_alchi_monastery_desc:0 "The monastery complex of Alchi is a center of Buddhist learning and religion in the mountains of Ladakh. The beautiful artwork found in its buildings show the influences of both Tibetan and Indian artistic and religious traditions at this site."
+ building_RICE_zhangzhung_alchi_monastery:0 "$building_type_RICE_zhangzhung_alchi_monastery$"
+ building_RICE_zhangzhung_alchi_monastery_desc:0 "$building_type_RICE_zhangzhung_alchi_monastery_desc$"
+ building_type_RICE_sacred_rocks_of_hunza:0 "Sacred Rocks of Hunza"
+ building_type_RICE_sacred_rocks_of_hunza_desc:0 "The Hunza river valley is one of the important routes that criss-cross the Pamir and Hindu Kush mountains and facilitate trade and travel along the Silk Road. Petroglyphs have been carved on these mighty rocks for a long time, but this one is perhaps the most notable of them all, divided into an upper and lower portion. They were carved  by travelers of different cultures and creeds across the centuries, a testament to the great exchange of people and ideas in this region."
+ building_RICE_sacred_rocks_of_hunza:0 "Sacred Rocks of Hunza"
+ building_RICE_sacred_rocks_of_hunza_desc:0 "The Hunza river valley is one of the important routes that criss-cross the Pamir and Hindu Kush mountains and facilitate trade and travel along the Silk Road. Petroglyphs have been carved on these mighty rocks for a long time, but this one is perhaps the most notable of them all, divided into an upper and lower portion. They were carved  by travelers of different cultures and creeds across the centuries, a testament to the great exchange of people and ideas in this region."
+
 
  # Landless Titles
  d_laamp_RICE_thabit_ibn_qurra: "Preservers of Antiquity"
@@ -502,11 +717,11 @@
  d_laamp_RICE_biak_1178:0 "Biak Swashbucklers"
  d_laamp_RICE_biak_1178_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
 
- # Admin Titles
+# Admin Titles
  d_nf_RICE_li_shichang: "Scholar-Gentry of the Wild West"
  d_nf_RICE_li_shichang_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
-#  d_nf_RICE_li_shichang: "$dynn_Li$ Family"
-#  d_nf_RICE_li_shichang_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ #d_nf_RICE_li_shichang: "$dynn_Li$ Family"
+ #d_nf_RICE_li_shichang_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_nf_RICE_zhai_dunhuang: "$dynn_zhai$ Family"
  d_nf_RICE_zhai_dunhuang_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_nf_RICE_dunhuang_zhang: "$dynn_Zhang$ Family"

@@ -26,7 +26,7 @@
 					NOT = { geographical_region = world_asia_southeast_islands }
 				}
 				OR = {
-					religion = religion_islam_religion
+					faith.religion ?= religion:islam_religion
 					county_has_type_minority_with_trigger = {
 						TYPE = faith
 						SIZE = large

@@ -1,0 +1,131 @@
+##########################################
+# Dharma Special Buildings used in RoA
+##########################################
+### made new file to port over the updated Dharma buildings to
+
+sea_multan_sun_temple_01 = { # Multan Temple in ruins
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cathedral_indian.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		OR = {
+			custom_description = {
+				text = buddhas_of_bamian_trigger
+				eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = { is_holy_site_of = scope:holder.faith }
+			}
+			religion = religion:zunism_religion
+		}
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.05
+	}
+	county_modifier = {
+		tax_mult = 0.05
+		development_growth = 0.1
+		development_growth_factor = 0.1
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	next_building = sea_multan_sun_temple_02
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+	flag = holy_building
+}
+
+sea_multan_sun_temple_02 = { # Multan rebuilt Temple
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cathedral_indian.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		OR = {
+			custom_description = {
+				text = buddhas_of_bamian_trigger
+				eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = { is_holy_site_of = scope:holder.faith }
+			}
+			religion = religion:zunism_religion
+		}
+	}
+
+	can_construct = {
+		OR = {
+			custom_description = {
+				text = buddhas_of_bamian_trigger
+				eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = { is_holy_site_of = scope:holder.faith }
+			}
+			religion = religion:zunism_religion
+		}
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		monthly_piety = 0.2
+		monthly_dynasty_prestige_mult = 0.05
+		same_faith_opinion = 5
+		diplomacy_per_piety_level = 1
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth = 0.3
+		development_growth_factor = 0.25
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+	}
+
+	type = special
+
+	flag = travel_point_of_interest_religious
+	flag = holy_building
+}
