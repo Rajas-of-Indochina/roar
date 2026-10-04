@@ -605,6 +605,7 @@ khmu_pagan_faith = {
 		color = { 205 128 58 } # 13 49 36
 		icon = khmu_pagan
 		reformed_icon = khmu_pagan_reformed
+		religion = khmuic_religion
 	}
 	holy_sites = {
 		kham
@@ -629,8 +630,9 @@ fiji_pagan_faith = {
 		color = { 25 128 88 }
 		icon = fiji_pagan
 		reformed_icon = fiji_pagan_reformed
+		religion = melanesian_religion
 	}
-	holy_site = {
+	holy_sites = {
 		mount_gamalama
 		mount_kie_matubu
 		buru-sula
@@ -655,8 +657,9 @@ kwaraae_pagan_faith = {
 		color = { 44 111 88 }
 		icon = kwaraae_pagan
 		reformed_icon = kwaraae_pagan_reformed
+		religion = melanesian_religion
 	}
-	holy_site = {
+	holy_sites = {
 		mount_gamalama
 		mount_kie_matubu
 		buru-sula
@@ -680,6 +683,7 @@ tolai_pagan_faith = {
 		color = { 36 69 69 }
 		icon = tolai_pagan
 		reformed_icon = tolai_pagan_reformed
+		religion = melanesian_religion
 	}
 	holy_sites = {
 		mount_gamalama
@@ -705,6 +709,7 @@ vanuatu_pagan_faith = {
 		color = { 8 150 128 }
 		icon = vanuatu_pagan
 		reformed_icon = vanuatu_pagan_reformed
+		religion = melanesian_religion
 	}
 	holy_sites = {
 		mount_gamalama
@@ -730,6 +735,7 @@ manus_pagan_faith = {
 		color = { 8 150 128 }
 		icon = manus_pagan
 		reformed_icon = manus_pagan_reformed
+		religion = melanesian_religion
 	}
 	holy_sites = {
 		mount_gamalama
@@ -1083,6 +1089,7 @@ minaro_pagan_faith = {
 		color = { 39 208 125 }
 		icon = minaro_pagan
 		reformed_icon = minaro_pagan_reformed
+		religion = peristani_religion
 	}
 
 	holy_sites = {
@@ -1164,6 +1171,7 @@ harranian_pagan_faith = {
 		religion = semitic_religion
 		color = { 0.19 0.10 0.20 }
 		icon = RICE_icon_harranian
+		religion = semitic_religion
 	}
 	#reformed_icon = hellenic_reformed
 
@@ -1343,9 +1351,12 @@ harranian_pagan_faith = {
 }
 nabataean_pagan_faith = {
 	main_rite = nabataean_pagan
-	color = { 0.50 0.25 0.66 }
-	icon = RICE_icon_dusharaist
-	#reformed_icon = hellenic_reformed
+	faith_details = {
+		color = { 0.50 0.25 0.66 }
+		icon = RICE_icon_dusharaist
+		#reformed_icon = hellenic_reformed
+		religion = semitic_religion
+	}
 
 	holy_sites = {
 		petra
@@ -1456,9 +1467,12 @@ nabataean_pagan_faith = {
 
 arabic_pagan_faith = {
 	main_rite = arabic_pagan
-	color = { 0.14 0.16 0.18 }
-	icon = arabic_pagan
-	reformed_icon = arabic_pagan_reformed
+	faith_details = {
+		color = { 0.14 0.16 0.18 }
+		icon = arabic_pagan
+		reformed_icon = arabic_pagan_reformed
+		religion = semitic_religion
+	}
 
 	holy_sites = {
 		mecca
@@ -1568,9 +1582,12 @@ arabic_pagan_faith = {
 
 aksumite_pagan_faith = {
 	main_rite = aksumite_pagan
-	color = { 0.15 0.08 0.25 }
-	icon = axum
-	reformed_icon = axum_reformed
+	faith_details = {
+		color = { 0.15 0.08 0.25 }
+		icon = axum
+		reformed_icon = axum_reformed
+		religion = semitic_religion
+	}
 
 	holy_sites = {
 		aksum
@@ -1680,9 +1697,12 @@ aksumite_pagan_faith = {
 
 south_arabian_pagan_faith = {
 	main_rite = south_arabian_pagan
-	color = { 0.50 0.20 0.39 }
-	icon = south_arabian_pagan
-	#reformed_icon = south_arabian_pagan_reformed
+	faith_details = {
+		color = { 0.50 0.20 0.39 }
+		icon = south_arabian_pagan
+		#reformed_icon = south_arabian_pagan_reformed
+		religion = semitic_religion
+	}
 
 	holy_sites = {
 		mecca
@@ -1704,11 +1724,14 @@ south_arabian_pagan_faith = {
 
 shamsi_pagan_faith = {
 	main_rite = shamsi_pagan
-	color = { 77 17 7 }
-	icon = shamsi
-	reformed_icon = shamsi_reformed
+	faith_details = {
+		color = { 77 17 7 }
+		icon = shamsi
+		reformed_icon = shamsi_reformed
+		religion = semitic_religion
+	}
 
-	holy_site = {
+	holy_sites = {
 		harran
 		suenik
 		sinjar
@@ -1818,9 +1841,12 @@ shamsi_pagan_faith = {
 # Representing the paganism attested amongst the "Nabataeans" of Iraq as late as the 10th century (not to be confused with the Nabataeans proper)
 south_mesopotamian_pagan_faith = {
 	main_rite = south_mesopotamian_pagan
-	color = { 58 58 122 }
-	icon = south_mesopotamian_pagan
-	reformed_icon = south_mesopotamian_pagan_reformed
+	faith_details = {
+		color = { 58 58 122 }
+		icon = south_mesopotamian_pagan
+		reformed_icon = south_mesopotamian_pagan_reformed
+		religion = semitic_religion
+	}
 
 	holy_sites = {
 		harran
@@ -2004,6 +2030,7 @@ vedda_pagan_faith = {
 		religion = vedda_religion
 		color = { 66 33 9 }
 		reformed_icon = vedda_pagan_reformed
+		religion = semitic_religion
 	}
 
 	doctrines = {unreformed_faith_doctrine}
@@ -2038,11 +2065,11 @@ viet_pagan_faith = {
 	# holy_site = tran_quoc # 6
 	# holy_site = muang_thaen # 7
 	holy_sites = {
-		holy_site = chau_phong # anlong
-		holy_site = cao_bang
-		holy_site = muze
-		holy_site = nguu_hong
-		holy_site = my_son
+		chau_phong # anlong
+		cao_bang
+		muze
+		nguu_hong
+		my_son
 	}
 	tenets = {
 		tenet_adorcism
@@ -2060,6 +2087,7 @@ kinnaur_pagan_faith = {
 		color = { 25 8 88 }
 		icon = kinnaur_pagan
 		reformed_icon = kinnaur_pagan_reformed
+		religion = west_himalayan_religion
 	}
 	holy_sites = {
 		gilgit
@@ -2459,7 +2487,7 @@ fakfak_pagan_faith = {
 		icon = fakfak_pagan
 		reformed_icon = fakfak_pagan_reformed
 	}
-	holy_site = {
+	holy_sites = {
 		mount_arfak
 		biak
 		kepala_burung
@@ -2640,7 +2668,7 @@ abui_pagan_faith = {
 		icon = abui_pagan
 		reformed_icon = abui_pagan_reformed
 	}
-	holy_site = {
+	holy_sites = {
 		mount_arfak
 		biak
 		kepala_burung

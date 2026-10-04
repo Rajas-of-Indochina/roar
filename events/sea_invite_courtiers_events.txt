@@ -35,77 +35,77 @@ sea_invite_courtiers.0001 = {
 		}
 
 		scope:target_county = {
-			if = {
-				limit = { county_has_minority_culture_trigger = yes }
+			# if = {
+			# 	limit = { county_has_minority_culture_trigger = yes }
 
-				culture = {
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-				}
+			# 	culture = {
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 	}
 
-				if = {
-					limit = { county_has_large_minority_culture_trigger = yes }
-					every_in_list = {
-						variable = culture_minorities_large
-						add_to_temporary_list = potential_cultures
-						add_to_temporary_list = potential_cultures
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_large_minority_culture_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = culture_minorities_large
+			# 			add_to_temporary_list = potential_cultures
+			# 			add_to_temporary_list = potential_cultures
+			# 		}
+			# 	}
 
-				if = {
-					limit = { county_has_small_minority_culture_trigger = yes }
-					every_in_list = {
-						variable = culture_minorities_small
-						add_to_temporary_list = potential_cultures
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_small_minority_culture_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = culture_minorities_small
+			# 			add_to_temporary_list = potential_cultures
+			# 		}
+			# 	}
 
-				random_in_list = {
-					list = potential_cultures
-					save_scope_as = target_culture
-				}
-			}
-			else = {
+			# 	random_in_list = {
+			# 		list = potential_cultures
+			# 		save_scope_as = target_culture
+			# 	}
+			# }
+			# else = {
 				culture = { save_scope_as = target_culture }
-			}
+			# }
 
-			if = {
-				limit = { county_has_minority_faith_trigger = yes }
+			# if = {
+			# 	limit = { county_has_minority_faith_trigger = yes }
 
-				faith = {
-					add_to_temporary_list = potential_faiths
-					add_to_temporary_list = potential_faiths
-					add_to_temporary_list = potential_faiths
-					add_to_temporary_list = potential_faiths
-				}
+			# 	faith = {
+			# 		add_to_temporary_list = potential_faiths
+			# 		add_to_temporary_list = potential_faiths
+			# 		add_to_temporary_list = potential_faiths
+			# 		add_to_temporary_list = potential_faiths
+			# 	}
 
-				if = {
-					limit = { county_has_large_minority_faith_trigger = yes }
-					every_in_list = {
-						variable = faith_minorities_large
-						add_to_temporary_list = potential_faiths
-						add_to_temporary_list = potential_faiths
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_large_minority_faith_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = faith_minorities_large
+			# 			add_to_temporary_list = potential_faiths
+			# 			add_to_temporary_list = potential_faiths
+			# 		}
+			# 	}
 
-				if = {
-					limit = { county_has_small_minority_faith_trigger = yes }
-					every_in_list = {
-						variable = faith_minorities_small
-						add_to_temporary_list = potential_faiths
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_small_minority_faith_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = faith_minorities_small
+			# 			add_to_temporary_list = potential_faiths
+			# 		}
+			# 	}
 
-				random_in_list = {
-					list = potential_faiths
-					save_scope_as = target_faith
-				}
-			}
-			else = {
+			# 	random_in_list = {
+			# 		list = potential_faiths
+			# 		save_scope_as = target_faith
+			# 	}
+			# }
+			# else = {
 				faith = { save_scope_as = target_faith }
-			}
+			# }
 		}
 
 		# Create random courtier
@@ -171,77 +171,77 @@ sea_invite_courtiers.0002 = {
 		}
 
 		scope:target_county = {
-			if = {
-				limit = { county_has_minority_culture_trigger = yes }
+			# if = {
+			# 	limit = { county_has_minority_culture_trigger = yes }
 
-				culture = {
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-				}
+			# 	culture = {
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 	}
 
-				if = {
-					limit = { county_has_large_minority_culture_trigger = yes }
-					every_in_list = {
-						variable = culture_minorities_large
-						add_to_temporary_list = potential_cultures
-						add_to_temporary_list = potential_cultures
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_large_minority_culture_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = culture_minorities_large
+			# 			add_to_temporary_list = potential_cultures
+			# 			add_to_temporary_list = potential_cultures
+			# 		}
+			# 	}
 
-				if = {
-					limit = { county_has_small_minority_culture_trigger = yes }
-					every_in_list = {
-						variable = culture_minorities_small
-						add_to_temporary_list = potential_cultures
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_small_minority_culture_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = culture_minorities_small
+			# 			add_to_temporary_list = potential_cultures
+			# 		}
+			# 	}
 
-				random_in_list = {
-					list = potential_cultures
-					save_scope_as = target_culture
-				}
-			}
-			else = {
+			# 	random_in_list = {
+			# 		list = potential_cultures
+			# 		save_scope_as = target_culture
+			# 	}
+			# }
+			# else = {
 				culture = { save_scope_as = target_culture }
-			}
+			# }
 
-			if = {
-				limit = { county_has_minority_faith_trigger = yes }
+			# if = {
+			# 	limit = { county_has_minority_faith_trigger = yes }
 
-				faith = {
-					add_to_temporary_list = potential_faiths
-					add_to_temporary_list = potential_faiths
-					add_to_temporary_list = potential_faiths
-					add_to_temporary_list = potential_faiths
-				}
+			# 	faith = {
+			# 		add_to_temporary_list = potential_faiths
+			# 		add_to_temporary_list = potential_faiths
+			# 		add_to_temporary_list = potential_faiths
+			# 		add_to_temporary_list = potential_faiths
+			# 	}
 
-				if = {
-					limit = { county_has_large_minority_faith_trigger = yes }
-					every_in_list = {
-						variable = faith_minorities_large
-						add_to_temporary_list = potential_faiths
-						add_to_temporary_list = potential_faiths
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_large_minority_faith_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = faith_minorities_large
+			# 			add_to_temporary_list = potential_faiths
+			# 			add_to_temporary_list = potential_faiths
+			# 		}
+			# 	}
 
-				if = {
-					limit = { county_has_small_minority_faith_trigger = yes }
-					every_in_list = {
-						variable = faith_minorities_small
-						add_to_temporary_list = potential_faiths
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_small_minority_faith_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = faith_minorities_small
+			# 			add_to_temporary_list = potential_faiths
+			# 		}
+			# 	}
 
-				random_in_list = {
-					list = potential_faiths
-					save_scope_as = target_faith
-				}
-			}
-			else = {
+			# 	random_in_list = {
+			# 		list = potential_faiths
+			# 		save_scope_as = target_faith
+			# 	}
+			# }
+			# else = {
 				faith = { save_scope_as = target_faith }
-			}
+			# }
 		}
 
 		# Create random courtier
@@ -307,41 +307,41 @@ sea_invite_courtiers.0003 = {
 		}
 
 		scope:target_county = {
-			if = {
-				limit = { county_has_minority_culture_trigger = yes }
+			# if = {
+			# 	limit = { county_has_minority_culture_trigger = yes }
 
-				culture = {
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-					add_to_temporary_list = potential_cultures
-				}
+			# 	culture = {
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 		add_to_temporary_list = potential_cultures
+			# 	}
 
-				if = {
-					limit = { county_has_large_minority_culture_trigger = yes }
-					every_in_list = {
-						variable = culture_minorities_large
-						add_to_temporary_list = potential_cultures
-						add_to_temporary_list = potential_cultures
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_large_minority_culture_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = culture_minorities_large
+			# 			add_to_temporary_list = potential_cultures
+			# 			add_to_temporary_list = potential_cultures
+			# 		}
+			# 	}
 
-				if = {
-					limit = { county_has_small_minority_culture_trigger = yes }
-					every_in_list = {
-						variable = culture_minorities_small
-						add_to_temporary_list = potential_cultures
-					}
-				}
+			# 	if = {
+			# 		limit = { county_has_small_minority_culture_trigger = yes }
+			# 		every_in_list = {
+			# 			variable = culture_minorities_small
+			# 			add_to_temporary_list = potential_cultures
+			# 		}
+			# 	}
 
-				random_in_list = {
-					list = potential_cultures
-					save_scope_as = target_culture
-				}
-			}
-			else = {
+			# 	random_in_list = {
+			# 		list = potential_cultures
+			# 		save_scope_as = target_culture
+			# 	}
+			# }
+			# else = {
 				culture = { save_scope_as = target_culture }
-			}
+			# }
 		}
 
 		# Create random courtier
@@ -350,11 +350,11 @@ sea_invite_courtiers.0003 = {
 			age = { 25 55 }
 			gender_female_chance = {
 				if = {
-					limit = { root.faith = { has_doctrine = doctrine_clerical_gender_male_only } }
+					limit = { root.rite = { rite_has_doctrine = doctrine_clerical_gender_male_only } }
 					add = 0
 				}
 				else_if = {
-					limit = { root.faith = { has_doctrine = doctrine_clerical_gender_female_only } }
+					limit = { root.rite = { rite_has_doctrine = doctrine_clerical_gender_female_only } }
 					add = 100
 				}
 				else = {

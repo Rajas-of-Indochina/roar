@@ -20,39 +20,39 @@
 @provisions_cost_special_expensive = 18
 @provisions_cost_special_bankrupting = 24
 
-fire_lances = {
-	# needs tweaking
-	type = pikemen
+# fire_lances = {
+# 	# needs tweaking
+# 	type = pikemen
 
-	damage = 26
-	toughness = 24
-	pursuit = 0
-	screen = 0
+# 	damage = 26
+# 	toughness = 24
+# 	pursuit = 0
+# 	screen = 0
 
-	terrain_bonus = {
-		mountains = { toughness = 12 }
-		desert_mountains = { toughness = 12 }
-		hills = { toughness = 8 }
-	}
+# 	terrain_bonus = {
+# 		mountains = { toughness = 12 }
+# 		desert_mountains = { toughness = 12 }
+# 		hills = { toughness = 8 }
+# 	}
 
-	counters = {
-		skirmishers = 1
-		light_cavalry = 1
-		heavy_cavalry = 1
-	}
+# 	counters = {
+# 		skirmishers = 1
+# 		light_cavalry = 1
+# 		heavy_cavalry = 1
+# 	}
 
-	can_recruit = {
-		culture ?= { has_innovation = innovation_fire_lances }
-	}
+# 	can_recruit = {
+# 		culture ?= { has_innovation = innovation_fire_lances }
+# 	}
 
-	buy_cost = { gold = fire_lances_recruitment_cost }
-	low_maintenance_cost = { gold = fire_lances_low_maint_cost }
-	high_maintenance_cost = { gold = fire_lances_high_maint_cost }
-	provision_cost = @provisions_cost_infantry_moderate
+# 	buy_cost = { gold = fire_lances_recruitment_cost }
+# 	low_maintenance_cost = { gold = fire_lances_low_maint_cost }
+# 	high_maintenance_cost = { gold = fire_lances_high_maint_cost }
+# 	provision_cost = @provisions_cost_infantry_moderate
 
-	stack = 100
-	icon = zhanmadao_infantry
-}
+# 	stack = 100
+# 	icon = zhanmadao_infantry
+# }
 
 hand_cannons = {
 	type = archers

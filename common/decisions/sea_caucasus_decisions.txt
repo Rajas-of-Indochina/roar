@@ -129,7 +129,7 @@ circassian_decision.2 = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:circassian_pagan
+			faith = faith:circassian_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -150,11 +150,11 @@ circassian_decision.2 = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:circassian_pagan
+		set_character_faith_with_conversion = faith:circassian_pagan_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:circassian_pagan
+			faith = faith:circassian_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -191,7 +191,7 @@ circassian_decision.3 = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:nakh_pagan
+			faith = faith:nakh_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -218,11 +218,11 @@ circassian_decision.3 = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:nakh_pagan
+		set_character_faith_with_conversion = faith:nakh_pagan_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:nakh_pagan
+			faith = faith:nakh_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -303,7 +303,7 @@ circassian_decision.5 = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:apsuara
+			faith = faith:apsuara_faith
 		}
 		OR = {
 			culture = {
@@ -321,11 +321,11 @@ circassian_decision.5 = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:apsuara
+		set_character_faith_with_conversion = faith:apsuara_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:apsuara
+			faith = faith:apsuara_faith
 		}
 		OR = {
 			culture = {
@@ -359,7 +359,7 @@ circassian_decision_dag = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:avar_pagan
+			faith = faith:avar_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -389,11 +389,11 @@ circassian_decision_dag = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:avar_pagan
+		set_character_faith_with_conversion = faith:avar_pagan_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:avar_pagan
+			faith = faith:avar_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -437,7 +437,7 @@ circassian_decision_lezgic = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:lezgic_pagan
+			faith = faith:lezgic_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -482,11 +482,11 @@ circassian_decision_lezgic = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:lezgic_pagan
+		set_character_faith_with_conversion = faith:lezgic_pagan_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:lezgic_pagan
+			faith = faith:lezgic_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -545,7 +545,7 @@ circassian_decision_lak = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:lak_pagan
+			faith = faith:lak_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -572,11 +572,11 @@ circassian_decision_lak = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:lak_pagan
+		set_character_faith_with_conversion = faith:lak_pagan_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:lak_pagan
+			faith = faith:lak_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -617,7 +617,7 @@ circassian_decision_kartvelism = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:kartvel_pagan
+			faith = faith:kartvel_pagan_faith
 		}
 		OR = {
 			any_parent_culture_or_above = {
@@ -653,11 +653,11 @@ circassian_decision_kartvelism = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:kartvel_pagan
+		set_character_faith_with_conversion = faith:kartvel_pagan_faith
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:kartvel_pagan
+			faith = faith:kartvel_pagan_faith
 		}
 		OR = {
 			any_parent_culture_or_above = {
@@ -1499,48 +1499,48 @@ circassian_decision_kabardia = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_tsatybaerzond = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_nartsana = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_malkaria = {
 			set_county_culture = culture:tawlu
 			set_county_faith = faith:tengri_pagan
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:circassian
+			# 	SIZE = small
+			# }
 		}
 		title:c_zhulat = {
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = large
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:circassian
+			# 	SIZE = large
+			# }
 		}
 		title:c_abazinia = {
 			set_county_culture = culture:circassian
@@ -1550,18 +1550,18 @@ circassian_decision_kabardia = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = large
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = large
+			# }
 		}
 		title:c_skhimar = {
 			set_county_culture = culture:circassian
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_digoria = {
 			set_county_culture = culture:alan
@@ -1688,48 +1688,48 @@ circassian_decision_kabardia_ai = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_tsatybaerzond = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_nartsana = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_malkaria = {
 			set_county_culture = culture:tawlu
 			set_county_faith = faith:tengri_pagan
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:circassian
+			# 	SIZE = small
+			# }
 		}
 		title:c_zhulat = {
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:circassian
-				SIZE = large
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:circassian
+			# 	SIZE = large
+			# }
 		}
 		title:c_abazinia = {
 			set_county_culture = culture:circassian
@@ -1739,18 +1739,18 @@ circassian_decision_kabardia_ai = {
 			set_county_culture = culture:circassian
 			set_county_faith = root.faith
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = large
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = large
+			# }
 		}
 		title:c_skhimar = {
 			set_county_culture = culture:circassian
 			save_scope_as = county
-			add_culture_minority_effect = {
-				CULTURE = culture:alan
-				SIZE = small
-			}
+			# add_culture_minority_effect = {
+			# 	CULTURE = culture:alan
+			# 	SIZE = small
+			# }
 		}
 		title:c_digoria = {
 			set_county_culture = culture:alan
@@ -1793,7 +1793,7 @@ circassian_decision_mtielta = {
 			}
 		}
 		NOT = {
-			faith = faith:mtielta
+			rite = rite:mtielta
 		}
 		religion = religion:christianity_religion
 		OR = {
@@ -1810,7 +1810,7 @@ circassian_decision_mtielta = {
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:mtielta
+			rite = rite:mtielta
 		}
 		OR = {
 			culture = {
@@ -1851,7 +1851,7 @@ reform_anarchy_to_tribalism_decision_circassian = {
 		}
 		is_ai = yes
 		is_adult = yes
-		has_realm_law = stateless_authority_3
+		# has_realm_law = stateless_authority_3
 		prestige_level >= 2
 		custom_description = {
 			text = "no_powerful_vassal_with_negative_opinion"
@@ -1903,7 +1903,7 @@ circassian_decision_aghvank = {
 			has_cultural_pillar = heritage_aghvank
 		}
 		NOT = {
-			faith = faith:nasraniyab
+			rite = rite:nasraniyab
 		}
 		religion = religion:christianity_religion
 		OR = {
@@ -1920,7 +1920,7 @@ circassian_decision_aghvank = {
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:mtielta
+			rite = rite:mtielta
 		}
 		culture = {
 			has_cultural_pillar = heritage_aghvank
@@ -2777,7 +2777,7 @@ circassian_decision_return_xabze = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:circassian_pagan
+			faith = faith:circassian_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -2796,7 +2796,7 @@ circassian_decision_return_xabze = {
 	}
 	is_valid = {
 		NOT = {
-			faith = faith:circassian_pagan
+			faith = faith:circassian_pagan_faith
 		}
 		OR = {
 			culture = {
@@ -2825,7 +2825,7 @@ circassian_decision_return_xabze = {
 		is_at_war = no
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:circassian_pagan
+		set_character_faith_with_conversion = faith:circassian_pagan_faith
 	}
 	cost = {
 		prestige = 200
@@ -2833,7 +2833,7 @@ circassian_decision_return_xabze = {
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:circassian_pagan
+			faith = faith:circassian_pagan_faith
 		}
 		OR = {
 			culture = {

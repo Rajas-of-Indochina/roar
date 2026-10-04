@@ -1,0 +1,1210 @@
+﻿
+# Zhao Dynasty
+
+song000 = {
+	history_override_priority = 1000
+	name = "Hongyin"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+
+	trait = education_martial_3
+	trait = diligent
+	trait = open_terrain_expert # Skilled horse archer and cavalry commander
+
+	899.1.1 = {
+		birth = yes
+	}
+	921.1.1 = {
+		add_spouse = song0001
+	}
+	936.1.1 = {
+		domicile ?= { move_domicile = root.top_liege.capital_province }
+	}
+	956.9.3 = {
+		death = yes
+	}
+}
+
+song0001 = {
+	history_override_priority = 1000
+	name = "Yaolu" # Fictional name
+	female = yes
+	dynasty = song_d07
+	rite = zhengyi # ?
+	culture = "han"
+
+	902.1.1 = {
+		birth = yes
+	}
+	961.7.17 = {
+		death = yes
+	}
+}
+
+## Northern Song ##
+song001 = {
+	history_override_priority = 1000
+	name = "Kuangyin"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song000
+	mother = song0001
+
+	trait = bossy
+
+	927.3.21 = {
+		birth = yes
+	}
+	# reigned 960-976
+	976.1.1 = {
+		death = yes
+		name = "Taizu"
+	}
+}
+song002 = {
+	history_override_priority = 1000
+	name = "Guangyi"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song000
+
+	939.1.1 = {
+		birth = yes
+	}
+	# reigned 976-997
+	997.1.1 = {
+		death = yes
+		name = "Taizong"
+	}
+}
+song00201 = {
+	history_override_priority = 1000
+	name = "Yuanfen"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song002
+
+	969.1.1 = {
+		birth = yes
+	}
+	1005.1.1 = {
+		death = yes
+	}
+}
+song00202 = {
+	history_override_priority = 1000
+	name = "Yunrang"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song00201
+
+	995.1.1 = {
+		birth = yes
+	}
+	1059.1.1 = {
+		death = yes
+	}
+}
+song003 = {
+	history_override_priority = 1000
+	name = "Heng"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song002
+
+	968.1.1 = {
+		birth = yes
+	}
+	# reigned 997-1022
+	1022.1.1 = {
+		death = yes
+		name = "Zhenzong"
+	}
+}
+song00301 = {
+	history_override_priority = 1000
+	name = "Zhangyi"
+	female = yes
+	dynasty = song_d03
+	rite = zhengyi # ?
+	culture = "han"
+
+	987.1.1 = {
+		birth = yes
+	}
+	1032.1.1 = {
+		death = yes
+	}
+}
+song004 = {
+	history_override_priority = 1000
+	name = "Zhen"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song003
+	mother = song00301
+
+	1010.1.1 = {
+		birth = yes
+	}
+	# reigned 1022-1063
+	1063.1.1 = {
+		death = yes
+		name = "Renzong"
+	}
+}
+song005 = {
+	history_override_priority = 1000
+	name = "Shu"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song00202
+
+	1032.2.16 = {
+		birth = yes
+	}
+	# reigned 1063-1067
+	1065.1.1 = {
+		add_spouse = song00501
+	}
+	1066.1.1 = {
+		effect = {
+			domicile ?= { move_domicile = province:12869 }
+
+			every_vassal = {
+				limit = {
+					is_landed = yes
+					has_government = administrative_government
+				}
+
+				vassal_contract_set_obligation_level = {
+					type = administrative_themes
+					level = 1
+				}
+				set_subject_contract_modification_blocked = yes
+			}
+		}
+	}
+	1067.1.25 = {
+		death = yes
+		name = "Yingzong"
+	}
+}
+song00501 = {
+	history_override_priority = 1000
+	name = "Xuanren" # Empress consort of Zhao Shu
+	female = yes
+	dynasty = song_d02
+	rite = zhengyi # ?
+	culture = "han"
+
+	1032.1.1 = {
+		birth = yes
+	}
+	1093.1.1 = {
+		death = yes
+	}
+}
+song00502 = {
+	history_override_priority = 1000
+	name = "Hao" # Zhao Hao, second son of Zhao Shu
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+	mother = song00501
+
+	1050.1.1 = {
+		birth = yes
+	}
+	1096.1.1 = {
+		death = yes
+	}
+}
+song00503 = {
+	history_override_priority = 1000
+	name = "Hehui" # First daughter of Zhao Shu
+	female = yes
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+
+	1048.1.1 = { # Fictional date
+		birth = yes
+	}
+	1085.1.1 = {
+		death = yes
+	}
+}
+song00504 = {
+	history_override_priority = 1000
+	name = "Xianhui" # Second daughter of Zhao Shu
+	female = yes
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+	mother = song00501
+
+	1051.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+song00505 = {
+	history_override_priority = 1000
+	name = "Xiande" # Third daughter of Zhao Shu
+	female = yes
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+	mother = song00501
+
+	1051.1.1 = {
+		birth = yes
+	}
+	1123.1.1 = {
+		death = yes
+	}
+}
+song00506 = {
+	history_override_priority = 1000
+	name = "Run" # Zhao Yan, third son of Zhao Shu
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+	mother = song00501
+
+	1053.1.1 = { # Fictional date
+		birth = yes
+	}
+	1096.1.1 = {
+		death = yes
+	}
+}
+song00507 = {
+	history_override_priority = 1000
+	name = "Yiduanxian" # Zhao Yun, fourth son of Zhao Shu
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+	mother = song00501
+
+	1056.1.1 = {
+		birth = yes
+	}
+	1088.1.1 = {
+		death = yes
+	}
+}
+
+song006 = {
+	history_override_priority = 1000
+	name = "Zhongzhen"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song005
+	mother = song00501
+
+	1048.1.1 = {
+		birth = yes
+	}
+	# reigned 1067-1085
+	1085.1.1 = {
+		death = yes
+		name = "Shenzong"
+	}
+}
+song007 = {
+	history_override_priority = 1000
+	name = "Xu"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song006
+
+	1077.1.1 = {
+		birth = yes
+	}
+	# reigned 1085-1100
+	1100.1.1 = {
+		death = yes
+		name = "Zhezong"
+	}
+}
+song008 = {
+	history_override_priority = 1000
+	name = "Ji"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song006
+
+	1082.1.1 = {
+		birth = yes
+	}
+	# reigned 1100-1126 (abdicated)
+	1135.1.1 = {
+		death = yes
+		name = "Huizong"
+	}
+}
+song009 = {
+	history_override_priority = 1000
+	name = "Huan"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song008
+
+	1100.1.1 = {
+		birth = yes
+	}
+	# reigned 1126-1127 (abdicated)
+	1161.1.1 = {
+		death = yes
+		name = "Qinzong"
+	}
+}
+
+## Southern Song ##
+song010 = {
+	history_override_priority = 1000
+	name = "Gou"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song008
+
+	1107.1.1 = {
+		birth = yes
+	}
+	# reigned 1127-1162 (brief interregnum) (abdicated to adopted son)
+	1187.1.1 = {
+		death = yes
+		name = "Gaozong"
+	}
+}
+song011 = {
+	history_override_priority = 1000
+	name = "Shen"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song010 # (adopted)
+
+	1127.1.1 = {
+		birth = yes
+	}
+	# reigned 1162-1189 (abdicated)
+	1144.1.1 = {
+		add_spouse = song011_guo
+	}
+	1162.1.1 = {
+		add_spouse = song011_xia
+	}
+	1176.9.12 = {
+		add_spouse = song011_xie
+	}
+	1178.1.1 = {
+		effect = {
+			domicile ?= { move_domicile = province:12368 }
+
+			every_vassal = {
+				limit = {
+					is_landed = yes
+					has_government = administrative_government
+				}
+
+				vassal_contract_set_obligation_level = {
+					type = administrative_themes
+					level = 1
+				}
+				set_subject_contract_modification_blocked = yes
+			}
+		}
+	}
+	1194.1.1 = {
+		death = yes
+		name = "Xiaozong"
+	}
+}
+	song011_guo = {
+		name = "Chengmu"
+		female = yes
+		dynasty = song_d08
+		rite = zhengyi # ?
+		culture = "han"
+
+		1126.1.1 = {
+			birth = yes
+		}
+		1156.1.1 = {
+			death = yes
+		}
+	}
+	song011_xia = {
+		name = "Chenggong"
+		female = yes
+		dynasty = song_d09
+		rite = zhengyi # ?
+		culture = "han"
+
+		1136.1.1 = {
+			birth = yes
+		}
+		1167.12.14 = {
+			death = yes
+		}
+	}
+	song011_xie = {
+		name = "Chengsu"
+		female = yes
+		dynasty = song_d10
+		rite = zhengyi # ?
+		culture = "han"
+
+		1135.1.1 = {
+			birth = yes
+		}
+		1207.6.13 = {
+			death = yes
+		}
+	}
+	song011_qi = {
+		name = "Qi"
+		dynasty = song_d01
+		rite = zhengyi
+		culture = han
+		father = song011
+		mother = song011_guo
+
+		1144.1.1 = {
+			birth = yes
+		}
+		1167.1.1 = {
+			death = yes
+		}
+	}
+	song011_kai = {
+		name = "Kai"
+		dynasty = song_d01
+		rite = zhengyi
+		culture = han
+		father = song011
+		mother = song011_guo
+
+		1146.1.1 = {
+			birth = yes
+		}
+		1180.1.1 = {
+			death = yes
+		}
+	}
+	song011_ke = {
+		name = "Ke"
+		dynasty = song_d01
+		rite = zhengyi
+		culture = han
+		father = song011
+		mother = song011_guo
+
+		1148.1.1 = { # Fictional date
+			birth = yes
+		}
+		1190.1.1 = { # Fictional date
+			death = yes
+		}
+	}
+	song011_jia = {
+		name = "Jia"
+		female = yes
+		dynasty = song_d01
+		rite = zhengyi
+		culture = han
+		father = song011
+		mother = song011_guo
+
+		1149.1.1 = {
+			birth = yes
+		}
+		1162.1.1 = {
+			death = yes
+		}
+	}
+song012 = {
+	history_override_priority = 1000
+	name = "Dun"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song011
+	mother = song011_guo
+
+	1147.1.1 = {
+		birth = yes
+	}
+	# reigned 1189-1194 (abdicated)
+	1200.1.1 = {
+		death = yes
+		name = "Guangzong"
+	}
+}
+song013 = {
+	history_override_priority = 1000
+	name = "Kuo"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song012
+
+	1168.1.1 = {
+		birth = yes
+	}
+	# reigned 1194-1224
+	1224.1.1 = {
+		death = yes
+		name = "Ningzong"
+	}
+}
+song014 = {
+	history_override_priority = 1000
+	name = "Yun"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+
+	1205.1.1 = {
+		birth = yes
+	}
+	# reigned 1224-1264
+	1264.1.1 = {
+		death = yes
+		name = "Lizong"
+	}
+}
+song015 = {
+	history_override_priority = 1000
+	name = "Qi"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+
+	1240.1.1 = {
+		birth = yes
+	}
+	# reigned 1264-1274
+	1274.1.1 = {
+		death = yes
+		name = "Duzong"
+	}
+}
+song016 = {
+	history_override_priority = 1000
+	name = "Xian"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song015
+
+	1274.1.1 = {
+		birth = yes
+	}
+	# reigned 1274-1276
+	1323.1.1 = {
+		death = yes
+		name = "Gongzong"
+	}
+}
+song017 = {
+	history_override_priority = 1000
+	name = "Shi"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song015
+
+	1269.1.1 = {
+		birth = yes
+	}
+	# reigned 1276-1278
+	1278.1.1 = {
+		death = yes
+		name = "Duanzong"
+	}
+}
+song018 = {
+	history_override_priority = 1000
+	name = "Bing"
+	dynasty = song_d01
+	rite = zhengyi # ?
+	culture = "han"
+	father = song015
+
+	1269.1.1 = {
+		birth = yes
+	}
+	# reigned 1278-1279
+	1279.1.1 = {
+		death = yes
+		name = "Huaizong"
+	}
+}
+
+## Northern Song vassals
+
+songv001 = {
+	history_override_priority = 1000
+	name = "Wenguan"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1019.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv002 = {
+	history_override_priority = 1000
+	name = "Chuan"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1019.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv003 = {
+	history_override_priority = 1000
+	name = "Zhigu"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1032.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv004 = {
+	history_override_priority = 1000
+	name = "Minzhong"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1020.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv005 = {
+	history_override_priority = 1000
+	name = "Jifu"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1038.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv006 = {
+	history_override_priority = 1000
+	name = "Youqiu"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1021.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv007 = {
+	history_override_priority = 1000
+	name = "Juyuan"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1038.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv008 = {
+	history_override_priority = 1000
+	name = "Jingxuan"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1025.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv009 = {
+	history_override_priority = 1000
+	name = "Yuanhong"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1022.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv010 = {
+	history_override_priority = 1000
+	name = "Xuanwei"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1023.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv011 = {
+	history_override_priority = 1000
+	name = "Jingxian"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1031.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv012 = {
+	history_override_priority = 1000
+	name = "Jiazhen"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1031.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv013 = {
+	history_override_priority = 1000
+	name = "Zheng"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1018.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv014 = {
+	history_override_priority = 1000
+	name = "Zhaode"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1024.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv015 = {
+	history_override_priority = 1000
+	name = "Zhigu"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1029.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv016 = {
+	history_override_priority = 1000
+	name = "Shidao"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1025.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv017 = {
+	history_override_priority = 1000
+	name = "Huaiyuan"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1019.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv018 = {
+	history_override_priority = 1000
+	name = "Zunqing"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1033.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv019 = {
+	history_override_priority = 1000
+	name = "Hun"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1026.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv020 = {
+	history_override_priority = 1000
+	name = "Shenxi"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1028.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv021 = {
+	history_override_priority = 1000
+	name = "Zhirou"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1038.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv022 = {
+	history_override_priority = 1000
+	name = "Shuji"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1039.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+songv023 = {
+	history_override_priority = 1000
+	name = "Ye"
+	rite = zhengyi # ?
+	culture = "han"
+
+	1022.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+# Southern Song vassals
+
+songv024 = {
+	history_override_priority = 1000
+	name = "Yuanzong"
+	culture = han
+	rite = zhengyi
+
+	1152.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv025 = {
+	history_override_priority = 1000
+	name = "Xian"
+	culture = han
+	rite = zhengyi
+
+	1128.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv026 = {
+	history_override_priority = 1000
+	name = "Congdang"
+	culture = han
+	rite = zhengyi
+
+	1152.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv027 = {
+	history_override_priority = 1000
+	name = "Shang"
+	culture = han
+	rite = zhengyi
+
+	1128.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv028 = {
+	history_override_priority = 1000
+	name = "Zhiwen"
+	culture = han
+	rite = zhengyi
+
+	1144.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv029 = {
+	history_override_priority = 1000
+	name = "Kui"
+	culture = han
+	rite = zhengyi
+
+	1126.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv030 = {
+	history_override_priority = 1000
+	name = "Youning"
+	culture = han
+	rite = zhengyi
+
+	1132.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv031 = {
+	history_override_priority = 1000
+	name = "Wei"
+	culture = han
+	rite = zhengyi
+
+	1150.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv032 = {
+	history_override_priority = 1000
+	name = "Yixing"
+	culture = han
+	rite = zhengyi
+
+	1145.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv033 = {
+	history_override_priority = 1000
+	name = "Daoguang"
+	culture = han
+	rite = zhengyi
+
+	1129.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv034 = {
+	history_override_priority = 1000
+	name = "Xuanwei"
+	culture = han
+	rite = zhengyi
+
+	1135.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv035 = {
+	history_override_priority = 1000
+	name = "Shuo"
+	culture = han
+	rite = zhengyi
+
+	1135.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv036 = {
+	history_override_priority = 1000
+	name = "Fangzhi"
+	culture = han
+	rite = zhengyi
+
+	1117.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv037 = {
+	history_override_priority = 1000
+	name = "Shou"
+	culture = han
+	rite = zhengyi
+
+	1121.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv038 = {
+	history_override_priority = 1000
+	name = "Liangsi"
+	culture = han
+	rite = zhengyi
+
+	1120.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv039 = {
+	history_override_priority = 1000
+	name = "Xianke"
+	culture = han
+	rite = zhengyi
+
+	1152.1.1 = { birth = yes }
+	1200.1.1 = { death = yes }
+}
+songv040 = {
+	history_override_priority = 1000
+	name = "Maozhen"
+	culture = han
+	rite = zhengyi
+
+	1023.1.1 = { birth = yes }
+	1100.1.1 = { death = yes }
+}
+
+songc001 = {
+	history_override_priority = 1000
+	name = "Gongliang"
+	dynasty = song_d04
+	culture = han
+	rite = zhengyi
+
+	trait = education_learning_4
+
+	999.1.1 = { birth = yes }
+	1066.1.1 = {
+		employer = song005
+	}
+	1078.3.10 = { death = yes }
+}
+songc002 = {
+	history_override_priority = 1000
+	name = "Guang"
+	dynasty = song_d05
+	culture = han
+	rite = zhengyi
+
+	trait = education_learning_4
+	trait = diligent
+	trait = just
+	trait = erudite
+
+	1019.11.17 = { birth = yes }
+	1066.1.1 = {
+		employer = song005
+		effect = {
+			# Inspired to write the Zizhi Tongjian
+			if = {
+				limit = {
+					has_dlc_feature = royal_court
+				}
+				create_inspiration = book_inspiration
+			}
+		}
+	}
+	1086.10.11 = { death = yes }
+}
+songc003 = {
+	history_override_priority = 1000
+	name = "Anshi"
+	dynasty = song_d06
+	culture = han
+	rite = zhengyi
+
+	trait = education_stewardship_4
+
+	trait = lifestyle_poet
+	trait = stubborn
+	trait = cynical
+	trait = arrogant
+
+	1021.12.8 = { birth = yes }
+	1066.1.1 = {
+		employer = song005
+	}
+	1086.5.21 = { death = yes }
+}

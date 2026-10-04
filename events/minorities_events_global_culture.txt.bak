@@ -1,0 +1,941 @@
+﻿#########################################################################
+# Splitting Norse into Danish, Swedish, and Norwegian					#
+# by Sean Hughes; modified by Malonkey1									#
+# global_culture.0011-0019												#
+#########################################################################
+
+global_culture.0011 = {
+	scope = none
+	hidden = yes
+	
+	immediate = {
+		# Split the Norse culture into Swedish, Danish, and Norwegian
+		culture:norse = { save_scope_as = norse } # Save scope for player notification events.
+		culture:swedish = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = scope:norse
+			copy_all_traditions_from = scope:norse
+			if = {
+				limit = { has_cultural_tradition = tradition_malleable_invaders }
+				remove_culture_tradition = tradition_malleable_invaders
+			}
+
+			# Save scope for player notification events.
+			save_scope_as = swedish 
+		}
+		culture:norwegian = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = scope:norse
+			copy_all_traditions_from = scope:norse
+			if = {
+				limit = { has_cultural_tradition = tradition_malleable_invaders }
+				remove_culture_tradition = tradition_malleable_invaders
+			}
+
+			# Save scope for player notification events.
+			save_scope_as = norwegian
+		}
+		culture:danish = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = scope:norse
+			copy_all_traditions_from = scope:norse
+			if = {
+				limit = { has_cultural_tradition = tradition_malleable_invaders }
+				remove_culture_tradition = tradition_malleable_invaders
+			}
+
+			# Save scope for player notification events.
+			save_scope_as = danish
+		}
+
+		# Compile a list of all norse counties in Scandanavia to convert to the appropriate culture.
+		culture:norse = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = custom_fennoscandia }
+				}
+				add_to_list = norse_counties
+			}
+		}
+
+        every_county_in_region = {
+            region = custom_fennoscandia
+            limit = { county_has_specific_culture_minority_trigger = { CULTURE = scope:norse } }
+            add_to_list = norse_minority_counties
+        }
+
+		# Convert the norse counties to the new culture.
+		every_in_list = {
+			list = norse_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:norse
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:norse
+							}
+						}
+					}
+				}
+			}
+						
+			# First, all Norse counties in Denmark become Danish
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:norse
+				NEW_CULTURE = culture:danish
+				REGION = custom_danish
+			}
+
+			# Second, any Norse counties in Norway become Norwegian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:norse
+				NEW_CULTURE = culture:norwegian
+				REGION = custom_norwegian
+			}
+
+			# Finally, all remaining Norse counties become Swedish
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:norse
+				NEW_CULTURE = culture:swedish
+				REGION = custom_fennoscandia
+			}
+		}
+
+        every_in_list = {
+            list = norse_minority_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:norse
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:norse
+							}
+						}
+					}
+				}
+			}
+			title_province = {
+				switch = {
+					trigger = geographical_region
+					custom_danish = {
+						county = { replace_culture_minority_effect = { OLD_MINORITY = scope:norse NEW_MINORITY = scope:danish } }
+					}
+					custom_norwegian = {
+						county = { replace_culture_minority_effect = { OLD_MINORITY = scope:norse NEW_MINORITY = scope:norwegian } }
+					}
+					fallback = {
+						county = { replace_culture_minority_effect = { OLD_MINORITY = scope:norse NEW_MINORITY = scope:swedish } }
+					}
+				}
+			}
+        }
+
+		# Send the appropriate notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					culture = culture:norse
+					capital_province = {
+						geographical_region = custom_fennoscandia
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_liege_or_above = {
+								is_ai = no
+							}
+						}
+					}
+					trigger_event = global_culture.0012
+				}
+			}
+			else_if = {		#Notify norse players who have adventured outside of Scandinavia
+				limit = {
+					culture = culture:norse
+					is_ai = no
+				}
+				trigger_event = global_culture.0015
+			}
+			else = {
+				if = {
+					limit = {
+						is_ai = no
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = norse_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = global_culture.0015
+				}
+			}
+		}
+	}
+}
+
+# If a player is strong enough, they can resist the culture flip for their sub-realm only.
+global_culture.0012 = {
+	type = character_event
+	title = global_culture.0012.t
+	desc = global_culture.0012.desc
+	theme = culture_change
+	left_portrait = root
+
+	immediate = {
+		# Determine what the player's target culture is (based off of religion and capital region)
+		if = {
+			limit = {
+				capital_province = {
+					geographical_region = custom_danish
+				}
+			}
+			culture:danish = { save_scope_as = my_new_culture }
+		}
+		else_if = {
+			limit = {
+				capital_province = {
+					geographical_region = custom_norwegian
+				}
+			}
+			culture:norwegian = { save_scope_as = my_new_culture }
+		}
+		else_if = {
+			limit = {
+				capital_province = {
+					geographical_region = custom_fennoscandia
+				}
+			}
+			culture:swedish = { save_scope_as = my_new_culture }
+		}
+
+		culture = { save_scope_as = old_culture }
+	}
+
+	# Option 1 (Almost always the only option): Accept the culture conversion.
+	option = {
+		name = global_culture.0012.a
+		if = {
+			limit = {
+				capital_province = {
+					geographical_region = custom_fennoscandia
+				}
+			}
+			convert_player_realm_from_old_culture_to_new_effect = {
+				OLD_CULTURE = culture:norse
+				NEW_CULTURE = scope:my_new_culture
+			}
+		}
+		else_if = { # Some of my realm is in Scandinavia but I am not
+			limit = {
+				any_sub_realm_county = {
+					culture = culture:norse
+					title_province = {
+						geographical_region = custom_fennoscandia
+					}
+				}
+			}
+			every_county_in_region = {
+				region = custom_fennoscandia
+				if = {
+					limit = {
+						title_province = { geographical_region = custom_danish }
+					}
+                    if = {
+                        limit = { culture = culture:norse }
+                        set_county_culture = culture:danish
+                    }
+                    replace_culture_minority_effect = { OLD_MINORITY = scope:norse NEW_MINORITY = scope:danish }
+					if = {
+						limit = {
+							holder = { capital_county = prev }
+						}
+						holder = { set_culture = culture:danish }
+					}
+				}
+				else_if = {
+					limit = {
+						title_province = { geographical_region = custom_norwegian }
+					}
+                    if = {
+                        limit = { culture = culture:norse }
+                        set_county_culture = culture:norwegian
+                    }
+                    replace_culture_minority_effect = { OLD_MINORITY = scope:norse NEW_MINORITY = scope:norwegian }
+					if = {
+						limit = {
+							holder = { capital_county = prev }
+						}
+						holder = { set_culture = culture:norwegian }
+					}
+				}
+				else = {
+                    if = {
+                        limit = { culture = culture:norse }
+                        set_county_culture = culture:swedish
+                    }
+                    replace_culture_minority_effect = { OLD_MINORITY = scope:norse NEW_MINORITY = scope:swedish }
+					if = {
+						limit = {
+							holder = { capital_county = prev }
+						}
+						holder = { set_culture = culture:swedish }
+					}
+				}
+			}
+		}
+	}
+
+	# Option 2: I am strong enough to keep our old culture intact!
+	option = {
+		name = global_culture.0012.b
+
+		trigger = {
+			custom_description = {
+				text = controls_enough_culture_counties
+				any_in_list = {
+					list = norse_counties
+					percent >= 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		show_as_unavailable = {
+			custom_description = {
+				text = controls_enough_culture_counties	
+				any_in_list = {
+					list = norse_counties
+					percent < 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = global_culture.custom.keep_culture
+	}
+}
+
+#########################################################################
+# Converting Anglo-Saxon into Scottish									#
+# by Sean Hughes; modified by Malonkey1									#
+# global_culture.0031-0039												#
+#########################################################################
+
+global_culture.0031 = {
+	scope = none
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:anglo_saxon = { save_scope_as = anglo_saxon }
+		culture:scottish = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:anglo_saxon
+			get_all_innovations_from = culture:cumbrian
+
+			# Save scope for player notification events.
+			save_scope_as = scottish
+		}
+
+		# All Anglo-Saxon counties in Scotland will convert to Scots
+		culture:anglo_saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_scotland
+					}
+				}
+				add_to_list = anglo_saxon_counties
+			}
+		}
+
+        every_county_in_region = {
+            region = custom_scotland
+            limit = { county_has_specific_culture_minority_trigger = { CULTURE = culture:anglo_saxon } }
+            add_to_list = anglo_saxon_minority_countries
+        }
+
+		# Convert the Anglo-Saxon counties to Scots
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:anglo_saxon
+								capital_province = { geographical_region = custom_scotland }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:anglo_saxon
+								capital_province = { geographical_region = custom_scotland }
+							}
+						}
+					}
+				}
+			}
+						
+			# All Anglo-Saxon counties in Scotland become Scots
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:anglo_saxon
+				NEW_CULTURE = culture:scottish
+				REGION = custom_scotland
+			}
+		}
+
+        every_in_list = {
+            list = anglo_saxon_minority_countries
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:anglo_saxon
+								capital_province = { geographical_region = custom_scotland }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:anglo_saxon
+								capital_province = { geographical_region = custom_scotland }
+							}
+						}
+					}
+				}
+			}
+
+            replace_culture_minority_effect = { OLD_MINORITY = culture:anglo_saxon NEW_MINORITY = culture:scottish }
+        }
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					culture = culture:anglo_saxon
+					capital_province = { geographical_region = custom_scotland }
+					any_sub_realm_county = {
+						culture = culture:anglo_saxon
+						title_province = {
+							geographical_region = custom_scotland
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_liege_or_above = {
+								is_ai = no
+							}
+						}
+					}
+					trigger_event = global_culture.0032
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_ai = no
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = anglo_saxon_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = global_culture.0035
+				}
+			}
+		}
+	}
+}
+
+# If a player is strong enough, they can resist the culture flip for their sub-realm only.
+global_culture.0032 = {
+	type = character_event
+	title = global_culture.0032.t
+	desc = global_culture.0032.desc
+	theme = culture_change
+	left_portrait = root
+
+	immediate = {
+		# All of anglo_saxon turns scottish, there is no 'splitting'.
+		culture = { save_scope_as = old_culture }
+		culture:scottish = { save_scope_as = my_new_culture }
+	}
+
+	# Option 1 (Almost always the only option): Accept the culture conversion.
+	option = {
+		name = global_culture.0032.a
+		show_as_tooltip = {
+			set_culture = culture:scottish
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+				}
+				set_county_culture = culture:scottish
+			}
+		}
+		# Convert the Anglo-Saxon counties to Scots
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+			}	
+			# All Anglo-Saxon counties in Scotland become Scots
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:anglo_saxon
+					NEW_CULTURE = culture:scottish
+					REGION = custom_scotland
+				}
+			}
+		}
+
+        every_county_in_region = {
+            region = custom_scotland
+            replace_culture_minority_effect = { OLD_MINORITY = culture:anglo_saxon NEW_MINORITY = culture:scottish }
+        }
+	}
+
+	# Option 2: I am strong enough to keep our old culture intact!
+	option = {
+		name = global_culture.0032.b
+
+		trigger = {
+			custom_description = {
+				text = controls_enough_culture_counties
+				any_in_list = {
+					list = anglo_saxon_counties
+					percent >= 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		show_as_unavailable = {
+			custom_description = {
+				text = controls_enough_culture_counties	
+				any_in_list = {
+					list = anglo_saxon_counties
+					percent < 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = global_culture.custom.keep_culture
+	}
+}
+
+#########################################################################
+# Converting Greek, Baranis, Lombard and Italian to Sicilian 			#
+# by Petter Vilberg														#
+# global_culture.3011-3012												#
+#########################################################################
+################################
+# Sicilian Spreads in Southern Italy
+# by Petter Vilberg
+# Updated by Henrik Lohmander for 1.5
+################################
+scripted_trigger global_culture_3011_valid_for_sicilian_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	NOT = { exists = var:had_sicilian_county_conversion }
+	title_province = {
+		geographical_region = special_sicilian_culture_region
+	}
+	culture != holder.culture
+	culture = {
+		NOR = {
+			this = culture:sicilian
+			any_parent_culture_or_above = {
+				this = culture:sicilian
+			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_arabic
+		}
+	}
+}
+
+global_culture.3011 = {
+	type = character_event
+	title = global_culture.3011.t
+	desc = global_culture.3011.desc
+	theme = culture_change
+	left_portrait = root
+	
+	trigger = {
+		culture = {
+			NOT = { this = culture:sicilian }
+			OR = {
+				has_cultural_pillar = heritage_latin
+				has_cultural_pillar = heritage_berber
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_frankish
+				has_cultural_pillar = heritage_arabic
+			}
+		}
+		any_held_title = {
+			global_culture_3011_valid_for_sicilian_culture_trigger = yes
+		}		
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 2
+			culture = culture:norman
+		}
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = {
+				global_culture_3011_valid_for_sicilian_culture_trigger = yes
+			}
+			weight = { # Try to approximate organic spread
+				base = 1
+				modifier = {
+					add = 4
+					any_neighboring_county = {
+						culture = culture:sicilian
+					}
+				}
+                # Prefer to expand Sicilian minorities
+                modifier = {
+                    factor = 2
+                    county_has_specific_culture_minority_trigger = { CULTURE = culture:sicilian }
+                }
+			}
+			save_scope_as = county_to_change
+			culture = {
+				save_scope_as = old_culture
+			}
+			set_variable = {
+				name = had_sicilian_county_conversion
+				value = yes
+			}
+		}
+		culture:sicilian = {
+			save_scope_as = sicilian # For loc
+		}
+		debug_log = "Converted a province to Sicilian from global_culture.3011"
+	}
+
+	option = {
+		name = global_culture.3011.a
+		scope:county_to_change = {
+		# 	set_county_culture = culture:sicilian
+			promote_culture_minority_effect = { CULTURE = culture:sicilian }
+		}
+	}
+}
+
+
+################################
+# Organic Spread of Sicilian for Sicilian Rulers
+# by Petter Vilberg
+# Updated for 1.5 by Henrik Lohmander
+################################
+scripted_trigger global_culture_3012_valid_for_sicilian_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	title_province = {
+		geographical_region = special_sicilian_culture_region
+	}
+	NOT = { exists = var:had_sicilian_county_conversion }
+	culture != holder.culture # No conversion for counties who match their holder's culture
+	culture = {
+		NOR = {
+			this = culture:sicilian
+			any_parent_culture_or_above = {
+				this = culture:sicilian
+			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_latin
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_byzantine
+			has_cultural_pillar = heritage_frankish
+			has_cultural_pillar = heritage_arabic
+		}
+	}
+    OR = {
+        any_neighboring_county = {
+            culture = culture:sicilian
+        }
+        county_has_specific_culture_minority_trigger = { CULTURE = culture:sicilian }
+    }
+}
+
+global_culture.3012 = {
+	type = character_event
+	title = global_culture.3011.t
+	desc = global_culture.3011.desc
+	theme = culture_change
+	left_portrait = root
+	
+	trigger = {
+		culture = culture:sicilian
+		any_held_title = {
+			global_culture_3012_valid_for_sicilian_culture_trigger = yes
+		}
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = { global_culture_3012_valid_for_sicilian_culture_trigger = yes }
+			save_scope_as = county_to_change
+			culture = {
+				save_scope_as = old_culture
+			}
+			set_variable = {
+				name = had_sicilian_county_conversion
+				value = yes
+			}
+		}
+		culture:sicilian = {
+			save_scope_as = sicilian # For loc
+		}
+		debug_log = "Converted a province to Sicilian from global_culture.3012"
+	}
+
+	option = {
+		name = global_culture.3012.a
+		scope:county_to_change = {
+		# 	set_county_culture = culture:sicilian
+			promote_culture_minority_effect = { CULTURE = culture:sicilian }
+		}
+	}
+}
+
+
+#########################################################################
+# Converting Silla, Balhae, Goguryeo, and Baekje to Goryeo 				#
+# by Joe Parkin (based on Petter Vilburg)					 			#
+# global_culture.4011-4012												#
+#########################################################################
+################################
+# Goryeo Spreads in Korean peninsula
+# by Joe Parkin (based on Petter Vilburg)
+################################
+scripted_trigger global_culture_4011_valid_for_goryeo_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	title_province = { geographical_region = world_asia_korea }
+	NOT = { exists = var:had_goryeo_county_conversion }
+	culture = {
+		NOR = {
+			this = culture:goryeo
+			any_parent_culture_or_above = { this = culture:goryeo }
+		}
+		OR = {
+			has_cultural_pillar = heritage_buyeo
+			has_cultural_pillar = heritage_korean
+		}
+	}
+}
+
+global_culture.4011 = {
+	type = character_event
+	title = global_culture.4011.t
+	desc = global_culture.4011.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = war_over_tie
+	}
+	
+	trigger = {
+		culture = {
+			NOT = { this = culture:goryeo }
+			OR = {
+				has_cultural_pillar = heritage_buyeo
+				has_cultural_pillar = heritage_korean
+			}
+		}
+		any_held_county = { global_culture_4011_valid_for_goryeo_culture_trigger = yes }
+		exists = global_var:flag_united_the_husamguk	
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 2
+			culture = culture:goguryeo
+		}
+	}
+
+	immediate = {
+		random_held_county = {
+			limit = { global_culture_4011_valid_for_goryeo_culture_trigger = yes }
+			weight = { # Try to approximate organic spread
+				base = 1
+				modifier = {
+					add = 4
+					any_neighboring_county = { culture = culture:goryeo }
+				}
+				modifier = {
+					add = 4
+					kingdom = holder.top_liege.capital_county.kingdom
+				}
+                modifier = {
+                    factor = 2
+                    county_has_specific_culture_minority_trigger = { CULTURE = culture:goryeo }
+                }
+			}
+			save_scope_as = county_to_change
+			culture = { save_scope_as = old_culture }
+			set_variable = {
+				name = had_goryeo_county_conversion
+				value = yes
+			}
+		}
+		culture:goryeo = { save_scope_as = goryeo } # For loc
+		debug_log = "Converted a province to Goryeo from global_culture.4011"
+	}
+
+	option = {
+		name = global_culture.3011.a
+		# scope:county_to_change = { set_county_culture = culture:goryeo }
+        scope:county_to_change = { promote_culture_minority_effect = { CULTURE = culture:goryeo } }
+	}
+}
+
+################################
+# Organic Spread of Goryeo for Korean Rulers
+# by Joe Parkin (based on Petter Vilburg)
+# Updated for 1.5 by Henrik Lohmander
+################################
+scripted_trigger global_culture_4012_valid_for_goryeo_culture_trigger = {
+	tier = tier_county
+	exists = holder
+	title_province = { geographical_region = world_asia_korea }
+	NOT = { exists = var:had_goryeo_county_conversion }
+	culture = {
+		NOR = {
+			this = culture:goryeo
+			any_parent_culture_or_above = { this = culture:goryeo }
+		}
+		OR = {
+			has_cultural_pillar = heritage_buyeo
+			has_cultural_pillar = heritage_korean
+		}
+	}
+    OR = {
+        any_neighboring_county = { culture = culture:goryeo }
+        county_has_specific_culture_minority_trigger = { CULTURE = culture:goryeo }
+    }
+}
+
+global_culture.4012 = {
+	type = character_event
+	title = global_culture.4011.t
+	desc = global_culture.4011.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = war_over_tie
+	}
+	
+	trigger = {
+		culture = culture:goryeo
+		any_held_title = { global_culture_4012_valid_for_goryeo_culture_trigger = yes }
+		exists = global_var:flag_united_the_husamguk
+	}
+
+	immediate = {
+		random_held_title = {
+			limit = { global_culture_4012_valid_for_goryeo_culture_trigger = yes }
+			weight = { # Try to approximate organic spread
+				base = 1
+				modifier = {
+					add = 4
+					any_neighboring_county = { culture = culture:goryeo }
+				}
+				modifier = {
+					add = 4
+					kingdom = holder.top_liege.capital_county.kingdom
+				}
+			}
+			save_scope_as = county_to_change
+			culture = { save_scope_as = old_culture }
+			set_variable = {
+				name = had_goryeo_county_conversion
+				value = yes
+			}
+		}
+		culture:goryeo = { save_scope_as = goryeo } # For loc
+		debug_log = "Converted a province to Goryeo from global_culture.4012"
+	}
+
+	option = {
+		name = global_culture.3012.a
+		# scope:county_to_change = { set_county_culture = culture:goryeo }
+        scope:county_to_change = { promote_culture_minority_effect = { CULTURE = culture:goryeo } }
+	}
+}

@@ -127,11 +127,11 @@ sea_invite_holy_person_decision = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-			    trigger = { faith = { has_doctrine = doctrine_clerical_gender_male_only } }
+			    trigger = { rite = { rite_has_doctrine = doctrine_clerical_gender_male_only } }
 			    desc = sea_invite_holy_person_decision_male_desc
 			}
 			triggered_desc = {
-			    trigger = { faith = { has_doctrine = doctrine_clerical_gender_female_only } }
+			    trigger = { rite = { rite_has_doctrine = doctrine_clerical_gender_female_only } }
 			    desc = sea_invite_holy_person_decision_female_desc
 			}
 			desc = sea_invite_holy_person_decision_desc

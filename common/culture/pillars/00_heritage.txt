@@ -1,4 +1,4 @@
-﻿heritage_akan = {
+heritage_akan = {
 	type = heritage
 	is_shown = {
 		heritage_is_shown_trigger = {
@@ -495,6 +495,20 @@ heritage_syriac = {
 		heritage_family_west_asian = yes
 	}
 	audio_parameter = mena #TODO_CD_EP3 did we get a new set of byzantine audio to add to related heritages?
+}
+
+heritage_phoenician = {
+	type = heritage 
+	is_shown = { 
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_phoenician
+		}		
+	}
+	parameters = {
+		heritage_group_levantine = yes
+		heritage_family_west_asian = yes
+	}
+	audio_parameter = byzantine
 }
 
 heritage_tibetan = {

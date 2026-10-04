@@ -1074,9 +1074,12 @@ mentawai_animism_faith = {
 
 nias_animism_faith = {
 	main_rite = nias_animism #Fanömba adu
-	color = { 219 185 125 }
-	icon = nias
-	reformed_icon = nias_reformed
+	faith_details = {
+		religion = austronesian_religion
+		color = { 219 185 125 }
+		icon = nias
+		reformed_icon = nias_reformed
+	}
 
 	localization = {
 		#HighGod
@@ -1279,10 +1282,13 @@ nias_animism_faith = {
 
 umboh_faith = {
 	main_rite = umboh # Sama people
-	#color = { 128 234 265 } - old RoA colour
-	color = { 69 125 180 }
-	icon = umboh
-	reformed_icon = umboh_reformed
+	faith_details = {
+		religion = austronesian_religion
+		#color = { 128 234 265 } - old RoA colour
+		color = { 69 125 180 }
+		icon = umboh
+		reformed_icon = umboh_reformed
+	}
 
 	localization = {
 		#HighGod
@@ -1474,9 +1480,12 @@ umboh_faith = {
 
 batak_animism_faith = {
 	main_rite = batak_animism
-	color = { 220 210 65 }
-	icon = pelebegu
-	reformed_icon = pelebegu_reformed
+	faith_details = {
+		religion = austronesian_religion
+		color = { 220 210 65 }
+		icon = pelebegu
+		reformed_icon = pelebegu_reformed
+	}
 
 	localization = {
 		#HighGod
@@ -1665,9 +1674,12 @@ batak_animism_faith = {
 
 malayic_faith = {
 	main_rite = malayic
-	color = { 0.73 0.25 0.81 }
-	icon = kepercayaan
-	reformed_icon = kepercayaan_reformed
+	faith_details = {
+		religion = austronesian_religion
+		color = { 0.73 0.25 0.81 }
+		icon = kepercayaan
+		reformed_icon = kepercayaan_reformed
+	}
 
 	localization = {
 		#HighGod
@@ -2242,10 +2254,13 @@ burmic_faith = {
 
 apsuara_faith = {
 	main_rite = apsuara # folk beliefs of Abkhaz and Abazin people
-	color = { 31 83 15 }
-	icon = red_hand
-	reformed_icon = red_hand_reformed
-	religious_head = d_apsuara
+	faith_details = {
+		color = { 31 83 15 }
+		icon = red_hand
+		reformed_icon = red_hand_reformed
+		religious_head = d_apsuara
+		religion = northcaucasian_religion
+	}
 
 
 	holy_sites = {
@@ -2433,10 +2448,13 @@ apsuara_faith = {
 }
 circassian_pagan_faith = {
 	main_rite = circassian_pagan # folk beliefs of Circassians and Ubykh people
-	color = { 31 63 35 }
-	icon = xabze_vines_00
-	reformed_icon = xabze_vines_00_reformed
-	#religious_head = d_circassian_pagan
+	faith_details = {
+		religion = northcaucasian_religion
+		color = { 31 63 35 }
+		icon = xabze_vines_00
+		reformed_icon = xabze_vines_00_reformed
+		#religious_head = d_circassian_pagan
+	}
 
 	holy_sites = {
 		elbrus
@@ -2619,11 +2637,15 @@ circassian_pagan_faith = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
+
 avar_pagan_faith = {
 	main_rite = avar_pagan # folk beliefs of Avaric people
-	color = { 0.5 0.2 0.3 }
-	icon = mountain_cult
-	reformed_icon = mountain_cult_reformed
+	faith_details = {
+		religion = northcaucasian_religion
+		color = { 0.5 0.2 0.3 }
+		icon = mountain_cult
+		reformed_icon = mountain_cult_reformed
+	}
 
 	holy_sites = {
 		elni
@@ -2806,9 +2828,12 @@ avar_pagan_faith = {
 }
 lak_pagan_faith = {
 	main_rite = lak_pagan # folk beliefs of Lak people
-	color = { 0.5 0.2 0.4 }
-	icon = lak_pagan
-	reformed_icon = lak_pagan_reformed
+	faith_details = {
+		religion = northcaucasian_religion
+		color = { 0.5 0.2 0.4 }
+		icon = lak_pagan
+		reformed_icon = lak_pagan_reformed
+	}
 
 	holy_sites = {
 		lakia
@@ -2988,9 +3013,12 @@ lak_pagan_faith = {
 }
 lezgic_pagan_faith = {
 	main_rite = lezgic_pagan # folk beliefs of Lezgic people
-	color = { 0.6 0.2 0.3 }
-	icon = lezgic_pagan
-	reformed_icon = lezgic_pagan_reformed
+	faith_details = {
+		religion = northcaucasian_religion
+		color = { 0.6 0.2 0.3 }
+		icon = lezgic_pagan
+		reformed_icon = lezgic_pagan_reformed
+	}
 
 	holy_sites = {
 		lezgia
@@ -3170,9 +3198,12 @@ lezgic_pagan_faith = {
 }
 nakh_pagan_faith = {
 	main_rite = nakh_pagan # folk beliefs of Nakhs
-	color = { 0.5 0.2 0.1 }
-	icon = vainakh_tower_01
-	reformed_icon = vainakh_tower_01_reformed
+	faith_details = {
+		religion = northcaucasian_religion
+		color = { 0.5 0.2 0.1 }
+		icon = vainakh_tower_01
+		reformed_icon = vainakh_tower_01_reformed
+	}
 
 	holy_sites = {
 		zurzuq
@@ -3355,9 +3386,12 @@ nakh_pagan_faith = {
 kartvel_pagan_faith = {
 	main_rite = kartvel_pagan # folk beliefs of Kartvels
 	# major credit to Shautora for their research
-	color = { 109 101 82 }
-	icon = borjgali_01
-	reformed_icon = borjgali_01_reformed
+	faith_details = {
+		religion = northcaucasian_religion
+		color = { 109 101 82 }
+		icon = borjgali_01
+		reformed_icon = borjgali_01_reformed
+	}
 	
 	doctrines = {unreformed_faith_doctrine}
 
@@ -3411,7 +3445,6 @@ kartvel_pagan_faith = {
 		doctrine_funeral_bewailment	#https://jam-news.net/the-georgian-funerals-of-yesterday-and-today/
 
 	}
-
 
 	localization = {
 		HighGodName = kartvel_high_god_name
