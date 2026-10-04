@@ -1,0 +1,220 @@
+﻿# Overwrites of vanilla characters
+
+175090 = {
+	history_override_priority = 1000
+	name = "Varakunavarman" # Varagunavarman II
+	dynasty = 1043009
+	rite = "shaivism"
+	culture = "tamil"
+	father = 189068
+	833.1.1 = {
+		birth = "833.1.1"
+	}
+	880.1.1 = {
+		death = {
+			# was forced from the throne after defeat in battle of Sri Purambiyam/Tiruppurambiyam
+			death_reason = death_disappearance
+		}
+	}
+}
+
+189042 = {
+	history_override_priority = 1000
+	name = "VI_rarA_cE_ntira" #Virarajendra
+	dynasty = 1043008
+	rite = "shaivism"
+	culture = "tamil"
+	father = 189039
+
+	trait = brave
+	trait = compassionate
+	trait = diligent
+	trait = education_stewardship_3
+
+	diplomacy = 8
+	martial = 15
+	stewardship = 10
+	intrigue = 6
+	learning = 11
+
+	1010.1.1 = {
+		birth = "1010.1.1"
+	}
+	1040.1.1 = {
+		add_spouse = additional_cholas_1
+	}
+	1066.1.1 = {
+		add_pressed_claim = title:d_ruhunu
+
+		effect = {
+			# Rich from raiding SEA especially Srivijaya
+			add_gold = 500
+			add_prestige = 1000
+		}
+	}
+	1069.1.1 = {
+		death = "1069.1.1"
+	}
+}
+
+189068 = {
+	history_override_priority = 1000
+	name = "CI_vallapan" # Sirmara Seervallabha
+	dynasty = 1043009
+	rite = "shaivism"
+	culture = "tamil"
+	father = 189067
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	862.1.1 = {
+		death = {
+			# apparently fled the battlefield on back of an Elephant but ultimately died
+			death_reason = death_battle
+		}
+	}
+}
+
+189071 = {
+	history_override_priority = 1000
+	# last ruler of Pallavas dynasty
+	name = "AparA_citavarman" # AKA Aparajita Varman
+	dynasty = 1043007
+	rite = "shaivism"
+	culture = "tamil"
+	father = 175070
+	841.1.1 = {
+		birth = "841.1.1"
+	}
+	897.1.1 = {
+		# died in battle with Cholas
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+189400 = {
+	history_override_priority = 1000
+	name = "IrA_cA_cekara" #
+	dynasty = 1043008
+	rite = "shaivism"
+	culture = "tamil"
+	740.1.1 = {
+		birth = "740.1.1"
+	}
+	760.1.1 = {
+		add_spouse = 189404
+	}
+	801.1.1 = {
+		death = "801.1.1"
+	}
+}
+
+189402 = {
+	history_override_priority = 1000
+	name = "Atitta" #
+	dynasty = 1043008
+	rite = "shaivism"
+	culture = "tamil"
+	father = 189401
+	785.1.1 = {
+		birth = "785.1.1"
+	}
+	846.1.1 = {
+		death = "846.1.1"
+	}
+}
+
+## Ay dynasty - rulers of Venadu up until early 10th century
+189405 = {
+	history_override_priority = 1000
+	name = "Cadayan"
+	dynasty = 10290900
+	rite = "shaivism"
+	culture = "malayali"
+
+	739.1.1 = {
+		birth = "739.1.1"
+	}
+	788.1.1 = {
+		death = "788.1.1"
+	}
+}
+
+189406 = {
+	history_override_priority = 1000
+	name = "Karunandan"
+	dynasty = 10290900
+	rite = "shaivism"
+	culture = "malayali"
+	father = 189405
+
+	768.1.1 = {
+		birth = "768.1.1"
+	}
+	857.1.1 = {
+		death = "857.1.1"
+	}
+}
+
+189407 = {
+	history_override_priority = 1000
+	name = "Karunandadakkan"
+	dynasty = 10290900
+	rite = "shaivism"
+	culture = "malayali"
+	father = 189406
+
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	885.1.1 = {
+		death = "885.1.1"
+	}
+}
+
+189408 = {
+	history_override_priority = 1000
+	name = "VikramA_tittA_"
+	dynasty = 10290900
+	rite = "shaivism"
+	culture = "malayali"
+	father = 189407
+
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	925.1.1 = {
+		death = "925.1.1"
+	}
+}
+
+189411 = {
+	history_override_priority = 1000
+	name = "KulacE_kara" #
+	dynasty = 1043010
+	rite = "shaivism"
+	culture = "tamil"
+	father = 189410
+	760.1.1 = {
+		birth = "760.1.1"
+	}
+	806.1.1 = {
+		death = "806.1.1"
+	}
+}
+189412 = {
+	history_override_priority = 1000
+	name = "Manukuladilya" #
+	dynasty = 1043010
+	rite = "shaivism"
+	culture = "tamil"
+	father = 189410
+	765.1.1 = {
+		birth = "765.1.1"
+	}
+	807.1.1 = {
+		death = "807.1.1"
+	}
+}

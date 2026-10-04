@@ -1,0 +1,232 @@
+﻿# Overwrites of vanilla characters
+
+159722 = {
+	history_override_priority = 1000
+	name = "Abu_l-Ward"
+	dynasty = 1029119
+	martial = 8
+	diplomacy = 10
+	intrigue = 8
+	stewardship = 10
+	rite = hanafi
+	culture = "levantine"
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	866.12.1 = {
+		imprison = {
+			target = character:smbat_zarehawan
+			type = dungeon
+		}
+	}
+	892.1.1 = {
+		death = "892.1.1"
+	}
+}
+
+159724 = {
+	history_override_priority = 1000
+	name = "Umar"
+	rite = hanafi
+	culture = "levantine"
+	dynasty = 1029120
+	father = 159723
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	863.9.3 = {
+		death = { death_reason = death_battle }
+	}
+}
+
+159725 = {
+	history_override_priority = 1000
+	name = "Marwan"
+	rite = hanafi
+	culture = "levantine"
+	dynasty = 1029120
+	father = 159724
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	859.1.1 = {
+		add_spouse = sea_paulician_4
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+159726 = {
+	history_override_priority = 1000
+	name = "Abu-Hafs"
+	rite = hanafi
+	culture = "levantine"
+	dynasty = 1029120
+	father = 159725
+	mother = sea_paulician_4
+	860.1.1 = {
+		birth = "860.1.1"
+	}
+	940.1.1 = {
+		death = "940.1.1"
+	}
+}
+
+146086 = {
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty_house = house_yazidid
+	rite = hanafi
+	culture = "persian"
+	father = 146078
+	852.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		culture = "levantine"
+	}
+	917.1.1 = {
+		death = yes
+	}
+}
+
+146087 = {
+	history_override_priority = 1000
+	name = "Yazid"
+	dynasty_house = house_yazidid
+	rite = hanafi
+	culture = "persian"
+	father = 146086
+	883.1.1 = {
+		birth = yes
+	}
+	936.1.1 = {
+		culture = "levantine"
+		effect = { set_designated_heir = character:146089 }
+		remove_claim = title:c_mugan
+	}
+	948.9.1 = {
+		death = yes
+	}
+}
+
+146088 = {
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty_house = house_yazidid
+	rite = hanafi
+	culture = "levantine"
+	father = 146087
+	903.1.1 = {
+		birth = yes
+	}
+	936.1.1 = {
+		dynasty = maysumid_roa_2
+		culture = "tabassaran" #for gameplay purposes
+	}
+	937.1.1 = {
+		culture = levantine
+		dynasty = 1029123
+		dynasty_house = house_yazidid
+	}
+	956.6.4 = {
+		death = yes
+	}
+}
+
+146090 = {
+	history_override_priority = 1000
+	name = "Ahmad"
+	dynasty_house = house_yazidid
+	rite = hanafi
+	culture = "levantine"
+	father = 146088
+	927.1.1 = {
+		birth = yes
+	}
+	936.1.1 = {
+		dynasty = maysumid_roa_2
+		culture = tabassaran
+	}
+	956.1.1 = {
+		culture = "levantine"
+		dynasty = 1029123
+		dynasty_house = house_yazidid
+	}
+	981.6.1 = {
+		death = yes
+	}
+}
+
+146091 = {
+	history_override_priority = 1000
+	name = "Haytham"
+	dynasty_house = house_yazidid
+	rite = hanafi
+	culture = "levantine"
+	father = 146088
+	929.1.1 = {
+		birth = yes
+	}
+	936.1.1 = {
+		dynasty = maysumid_roa_2
+		culture = tabassaran
+	}
+	937.1.1 = {
+		culture = "levantine"
+		dynasty = 1029123
+		dynasty_house = house_yazidid
+	}
+	975.1.1 = {
+		death = yes
+	}
+}
+
+extra_taghlibs_8 = {
+	history_override_priority = 1000
+	name = "Ibrahim"
+	dynasty_house = house_hamdan #Banu Taghlib Attab
+	rite = maliki
+	culture = levantine
+	father = 163133
+	855.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+extra_taghlibs_9 = {
+	history_override_priority = 1000
+	name = "Husayn"
+	dynasty_house = house_hamdan
+	rite = maliki
+	culture = levantine
+	father = 163133
+	861.1.1 = {
+		birth = yes
+	}
+	918.1.1 = {
+		death = {
+			death_reason = death_execution
+		}
+	}
+}
+
+fictional_taghlibs_1 = {
+	history_override_priority = 1000
+	name = "Aisha"
+	dynasty_house = house_hamdan
+	rite = maliki
+	female = yes 
+	culture = levantine
+	father = 163133
+	857.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}

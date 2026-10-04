@@ -1,0 +1,1400 @@
+﻿# Overwrites of vanilla characters
+
+### PIAST DYNASTY
+
+# EARLY PIAST
+82233 = {
+	history_override_priority = 1000
+	name = "Piast"	#the Wheelwright
+	#Piast dynasty founder
+	dynasty = 699
+	martial = 5
+	diplomacy = 6
+	intrigue = 3
+	stewardship = 8
+	rite = "slavic_pagan"
+	culture = "polish"
+	trait = honest
+	trait = just
+	trait = education_stewardship_2
+	#father = 171010
+
+	# History
+	740.1.1 = {
+		# semi-legendary, so his 740-861 (=120 years) lifespan is debatable but hey, no better dates
+		birth = "740.1.1"
+	}
+	811.1.2 = {
+		add_spouse = 82234
+		give_nickname = EEE_nick_the_wheelwright
+	}
+	861.1.1 = {
+		death = "861.1.1"
+	}
+}
+
+82234 = {
+	history_override_priority = 1000
+	name = "Rzepicha"
+	#Piast's wife
+	female = yes
+	rite = "slavic_pagan"
+	culture = "polish"
+
+	# History
+	785.1.1 = {
+		# no proper dates exist
+		birth = "795.1.1"
+	}
+	863.1.1 = {
+		death = "863.1.1"
+	}
+}
+
+82235 = {
+	history_override_priority = 1000
+	name = "Siemowit"	#Piast's son
+	# 1st Piast "ruler"
+	dna = "82235_siemowit_wielkopolska"
+	dynasty = 699
+	diplomacy = 6
+	martial = 6
+	stewardship = 6
+	intrigue = 4
+	learning = 3
+	rite = "slavic_pagan"
+	culture = "polish"
+	trait = education_martial_2
+	trait = brave
+	trait = honest
+	trait = diligent
+	father = 82233		#Piast
+	mother = 82234		#Rzepicha
+
+	# History
+	825.1.1 = {
+		birth = "825.1.1"
+	}
+	880.1.1 = {
+		death = "880.1.1"
+	}
+}
+
+82236 = {
+	history_override_priority = 1000
+	name = "Lestek"		#Siemowit's son
+	#2nd Piast "ruler"
+	dynasty = 699
+	diplomacy = 6
+	intrigue = 7
+	rite = "slavic_pagan"
+	culture = "polish"
+	trait = education_diplomacy_2
+	father = 82235		#Siemowit
+
+	# History
+	865.1.1 = {
+		birth = "865.1.1"
+	}
+	930.1.1 = {
+		death = "930.1.1"
+	}
+}
+
+752 = {
+	history_override_priority = 1000
+	name = "SiemomysL_"	#Lestek's son
+	#3th Piast "ruler"
+	dynasty = 699
+	martial = 8
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 7
+	rite = "slavic_pagan"
+	culture = "polish"
+	trait = brave
+	trait = education_martial_2
+	father = 82236		#Lestek
+
+	# History
+	900.1.2 = {
+		birth = "900.1.2"
+	}
+	960.1.2 = {
+		death = "960.1.2"
+	}
+}
+
+# HISTORICAL PIAST
+754 = {
+	history_override_priority = 1000
+	name = "Mieszko"	#I of Poland
+	#1st historically attested Polish ruler
+	dynasty = 699
+	martial = 7
+	diplomacy = 7
+	stewardship = 8
+	learning = 5
+	rite = "slavic_pagan"
+	culture = "polish"
+	trait = education_martial_3
+	trait = brave
+	trait = diligent
+	trait = gregarious
+	trait = intellect_good_1
+	father = 752		#Siemomysl
+
+	# History
+	930.1.1 = {
+		birth = "930.1.1"
+	}
+	965.1.1 = {
+		add_spouse = 509
+		rite = roman_rite
+	}
+	978.1.1 = {
+		add_spouse = 168525
+	}
+	992.5.25 = {
+		death = "992.5.25"
+	}
+}
+
+756 = {
+	history_override_priority = 1000
+	name = "BolesL_aw"	#Boleslaw I Chrobry / the Brave
+	#2nd Polish ruler
+	dynasty = 699
+	martial = 8
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 7
+	rite = roman_rite
+	culture = "polish"
+	trait = brave
+	trait = ambitious
+	trait = intellect_good_1
+	trait = physique_good_2
+	trait = education_martial_3
+	father = 754
+	mother = 509
+
+	# History
+	967.1.2 = {
+		birth = "967.1.2"
+	}
+	985.1.2 = {
+		add_spouse = 463
+	}
+	987.1.2 = {
+		add_spouse = 757
+	}
+	1002.1.1 = {
+		# to represent his warlike politics following death of Otto III
+		give_nickname = "nick_the_brave"
+	}
+	1025.6.17 = {
+		death = "1025.6.17"
+	}
+}
+
+#
+
+758 = {
+	history_override_priority = 1000
+	name = "Mieszko"	#Mieszko II Lambert
+	#3rd then 5th ruler of Poland
+	dynasty = 699
+	martial = 5
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 7
+	rite = roman_rite
+	culture = "polish"
+	trait = erudite
+	father = 756
+	mother = 757
+
+	# History
+	990.1.2 = {
+		birth = "990.1.2"
+		#give_nickname = EEE_nick_the_lambert
+	}
+	1013.1.2 = {
+		add_spouse = 427
+	}
+	1034.5.11 = {
+		death = "1034.5.11"
+	}
+}
+
+#
+
+302003 = {
+	history_override_priority = 1000
+	name = "BolesL_aw"	#The Forgotten/The Cruel
+	# Odd char, semi-legendary that would have been sentenced to "Damnatio_Memoriae"
+	#6th ruler of Poland
+	dynasty = 699
+	rite = roman_rite
+	culture = "polish"
+	trait = sadistic
+	father = 758
+	mother = 427
+
+	# History
+	1014.8.24 = {
+		birth = "1014.8.24"
+	}
+	# Removed from k_poland title history due to mucking things up for all the other Bolesławs. Good job, mate.
+	1039.1.10 = {
+		death = "1039.1.10"
+		give_nickname = EEE_nick_the_forgotten
+	}
+}
+
+#
+
+221515 = {
+	history_override_priority = 1000
+	name = "BolesL_aw"	#Boleslaw III Wrymouth
+	#11th ruler of Poland
+	dynasty = 699
+	martial = 7
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 8
+	rite = "roman_rite"
+	culture = "polish"
+	trait = ambitious
+	father = 764
+	mother = 212881
+
+	# History
+	1086.8.20 = {
+		birth = "1086.8.20"
+	}
+	1103.11.16 = {
+		add_spouse = 222781
+	}
+	1114.1.1 = {
+		give_nickname = EEE_nick_wrymouth
+	}
+	1115.6.1 = {
+		add_spouse = 221519
+	}
+	1138.10.28 = {
+		death = "1138.10.28"
+	}
+}
+
+#
+
+125973 = {
+	history_override_priority = 1000
+	name = "BolesL_aw"	#Boleslaw IV the Curly
+	#13th ruler of Poland
+	dynasty = 699
+	rite = roman_rite
+	culture = "polish"
+	father = 221515
+	mother = 221519
+
+	# History
+	1125.1.1 = {
+		birth = "1125.1.1"
+	}
+	1141.1.1 = {
+		add_spouse = 222823
+		give_nickname = EEE_nick_the_curly
+	}
+	1173.4.3 = {
+		death = "1173.4.3"
+	}
+}
+
+#
+
+221524 = {
+	history_override_priority = 1000
+	name = "Leszek" # Leszek the White
+	dynasty = 699
+	rite = roman_rite
+	culture = "polish"
+	father = 221520
+	mother = 221521
+
+	# History
+	1185.1.2 = {
+		birth = "1185.1.2"
+		give_nickname = EEE_nick_the_white
+	}
+	1207.1.2 = {
+		add_spouse = 125134
+	}
+	1227.11.23 = {
+		# murdered during his visit to the baths
+		death = {
+			death_reason = death_murder
+		}
+	}
+}
+
+#
+
+221537 = {
+	history_override_priority = 1000
+	name = "Henryk" # Henryk I the Bearded
+	dynasty_house = house_piast_silesia
+	rite = roman_rite
+	culture = "polish"
+	father = 221530
+	mother = 221541
+
+	# History
+	1168.1.2 = {
+		birth = "1168.1.2"
+	}
+	1188.1.2 = {
+		add_spouse = 212943
+	}
+	1198.1.2 = {
+		give_nickname = nick_the_bearded
+	}
+	1238.3.19 = {
+		death = "1238.3.19"
+	}
+}
+
+#
+
+221570 = {
+	history_override_priority = 1000
+	name = "WL_adysL_aw" # Wladyslaw III Laskonogi/Spindleshanks
+	dynasty = 699
+	rite = roman_rite
+	culture = "polish"
+	father = 221560
+	mother = 222826
+
+	# History
+	1161.1.2 = {
+		birth = "1161.1.2"
+		trait = spindly
+		give_nickname = EEE_nick_spindleshanks
+	}
+	1178.1.1 = {
+		employer = 221560 # Mieszko
+	}
+	1195.1.2 = {
+		add_spouse = 221732
+	}
+	1231.11.3 = {
+		death = "1231.11.3"
+	}
+}
+
+#
+
+471510 = {
+	history_override_priority = 1000
+	name = "WL_adysL_aw" # Wladyslaw I Elbow-high
+	dynasty = 699
+	martial = 8
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 7
+	rite = roman_rite
+	culture = "polish"
+	trait = ambitious
+	trait = education_diplomacy_3
+	father = 471520
+	mother = 471540
+
+	# History
+	1261.1.2 = {
+		birth = "1261.1.2"
+	}
+	1288.1.1 = {
+		give_nickname = EEE_nick_elbow-high
+	}
+	1293.1.2 = {
+		add_spouse = 471555
+	}
+	1333.3.2 = {
+		death = "1333.3.2"
+	}
+}
+
+#
+
+759 = {
+	history_override_priority = 1000
+	name = "Adleta"
+	female = yes
+	dynasty = 699
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 752
+
+	# History
+	934.1.2 = {
+		birth = "934.1.2"
+	}
+	965.1.1 = {
+		rite = roman_rite
+	}
+	997.1.3 = {
+		death = "997.1.3"
+	}
+}
+
+#
+
+125984 = {
+	history_override_priority = 1000
+	name = "Leszek" # Leszek the Black
+	dynasty = 699
+	rite = roman_rite
+	culture = "polish"
+	father = 471520
+	mother = 125907
+
+	# History
+	1241.1.1 = {
+		birth = "1241.1.1"
+		give_nickname = EEE_nick_the_black
+	}
+	1265.1.1 = {
+		add_spouse = 125054
+	}
+	1288.9.30 = {
+		death = "1288.9.30"
+	}
+}
+
+#
+
+82232 = {
+	history_override_priority = 1000
+	# Legendary ruler of Kruszwica ; said to have been devoured by mice as punishment for his wicked deeds
+	name = "Popiel"
+	dynasty = 9120
+	rite = "slavic_pagan"
+	culture = "polish"
+	trait = callous
+	trait = deceitful
+	trait = gluttonous
+	trait = drunkard
+	trait = lifestyle_reveler
+	father = 194080
+
+	# History
+	800.1.1 = {
+		# exact timeframe unkown ; supposedly around late VIII / early IX century
+		birth = "800.1.1"
+	}
+	855.1.1 = {
+		# exact timeframe unkown ; supposedly around middle of IX century
+		# According to legends he got devoured by mice for his wicked deeds
+		death = "855.1.1"
+	}
+}
+
+# Kujawski
+82237 = {
+	history_override_priority = 1000
+	name = "SobiesL_aw"
+	dynasty = 2001007	# Goplanie
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 194093
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	860.1.1 = {
+		dynasty = 9122 # Kujawscy
+	}
+	911.1.1 = {
+		death = "911.1.1"
+	}
+}
+
+82239 = {
+	history_override_priority = 1000
+	name = "Niklot"
+	dynasty = 9122 # Kujawscy
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82238
+	932.1.1 = {
+		birth = "932.1.1"
+	}
+	965.1.1 = {
+		rite = roman_rite
+	}
+	992.1.1 = {
+		death = "992.1.1"
+	}
+}
+
+# House Sieradzki
+82245 = {
+	history_override_priority = 1000
+	name = "BogusL_aw"
+	dynasty = 9121 # Sieradzki
+	father = 82244
+	rite = "slavic_pagan"
+	culture = "polish"
+	945.1.1 = {
+		birth = "945.1.1"
+	}
+	965.1.1 = {
+		rite = roman_rite
+	}
+	1004.1.1 = {
+		death = "1004.1.1"
+	}
+}
+
+# House Mazowiecki
+82248 = {
+	history_override_priority = 1000
+	name = "Drogomir"
+	dynasty = 2001006	# Mazowszanie
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = EEE_Mazowszan_progenitor
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	830.11.11 = {
+		dynasty = 9123 # Mazowiecki
+	}
+	865.1.1 = {
+		death = "865.1.1"
+	}
+}
+
+82249 = {
+	history_override_priority = 1000
+	name = "Drogowit"
+	dynasty = 9123 # Mazowiecki
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82248
+	847.1.1 = {
+		birth = "847.1.1"
+	}
+	930.1.1 = {
+		death = "930.1.1"
+	}
+}
+
+82250 = {
+	history_override_priority = 1000
+	name = "Goscimir"
+	dynasty = 9123 # Mazowiecki
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82248
+	849.1.1 = {
+		birth = "849.1.1"
+	}
+	920.1.1 = {
+		death = "920.1.1"
+	}
+}
+
+82251 = {
+	history_override_priority = 1000
+	name = "Przedabog"
+	dynasty = 9123 # Mazowiecki
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82249
+	910.1.1 = {
+		birth = "910.1.1"
+	}
+	987.1.1 = {
+		death = "987.1.1"
+	}
+}
+
+82252 = {
+	history_override_priority = 1000
+	name = "DrogomysL_"
+	dynasty = 9123 # Mazowiecki
+	culture = "polish"
+	rite = "slavic_pagan"
+	father = 82249
+	921.1.1 = {
+		birth = "921.1.1"
+	}
+	965.1.1 = {
+		rite = roman_rite
+	}
+	999.1.1 = {
+		death = "999.1.1"
+	}
+}
+
+82253 = {
+	history_override_priority = 1000
+	name = "BE_dzimir"
+	dynasty = 9123 # Mazowiecki
+	culture = "polish"
+	rite = roman_rite
+	father = 82252
+	972.1.1 = {
+		birth = "972.1.1"
+	}
+	1060.1.1 = {
+		death = "1060.1.1"
+	}
+}
+
+82254 = {
+	history_override_priority = 1000
+	name = "RodsL_aw"
+	dynasty = 9123 # Mazowiecki
+	culture = "polish"
+	rite = roman_rite
+	father = 82253
+	1020.1.1 = {
+		birth = "1020.1.1"
+	}
+	1064.1.2 = {
+		add_spouse = 82221
+	}
+	1079.1.1 = {
+		death = "1079.1.1"
+	}
+}
+
+82255 = {
+	history_override_priority = 1000
+	name = "Tegomir"
+	dynasty = 9123 # Mazowiecki
+	father = 82250
+	rite = "slavic_pagan"
+	culture = "polish"
+	900.1.1 = {
+		birth = "900.1.1"
+	}
+	987.1.1 = {
+		death = "920.1.1"
+	}
+}
+
+82256 = {
+	history_override_priority = 1000
+	name = "Modlibog"
+	dynasty = 9123 # Mazowiecki
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82255
+	951.1.1 = {
+		birth = "951.1.1"
+	}
+	965.1.1 = {
+		rite = roman_rite
+	}
+	1033.1.1 = {
+		death = "1033.1.1"
+	}
+}
+
+82257 = {
+	history_override_priority = 1000
+	# TODO_CD_P: Who is this guy, and why did he become a count only to immediately lose the county again?
+	name = "LutosL_aw"
+	dynasty = 9123 # Mazowiecki
+	rite = roman_rite
+	culture = "polish"
+	father = 82256
+	1014.1.1 = {
+		birth = "1014.1.1"
+	}
+	1034.5.12 = {
+		employer = 760
+	}
+	1079.1.1 = {
+		death = "1079.1.1"
+	}
+}
+
+# Lechowicz
+82258 = {
+	history_override_priority = 1000
+	name = "Lech"
+	dynasty = 9124
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 194090
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+
+82259 = {
+	history_override_priority = 1000
+	name = "LechosL_aw"
+	dynasty = 9124
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82258
+	845.1.1 = {
+		birth = "845.1.1"
+	}
+	8671.1 = {
+		add_spouse = 302059
+	}
+	920.1.1 = {
+		death = "920.1.1"
+	}
+}
+
+82260 = {
+	history_override_priority = 1000
+	name = "Ostrowod"
+	dynasty = 9124
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82259
+	mother = 302059
+	880.1.1 = {
+		birth = "880.1.1"
+	}
+	957.1.1 = {
+		death = "957.1.1"
+	}
+}
+
+82261 = {
+	history_override_priority = 1000
+	name = "PeL_czybog"
+	dynasty = 9124
+	rite = roman_rite
+	culture = "polish"
+	father = 82260
+	930.1.1 = {
+		birth = "930.1.1"
+	}
+	985.7.1 = {
+		death = "985.7.1"
+	}
+}
+
+82262 = {
+	history_override_priority = 1000
+	name = "Nadbor"
+	dynasty = 9124
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82258
+	847.1.1 = {
+		birth = "847.1.1"
+	}
+	922.1.1 = {
+		death = "922.1.1"
+	}
+}
+
+82263 = {
+	history_override_priority = 1000
+	name = "Wolrad"
+	dynasty = 9124
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82262
+	903.1.1 = {
+		birth = "903.1.1"
+	}
+	977.1.2 = {
+		death = "977.1.2"
+	}
+}
+
+82264 = {
+	history_override_priority = 1000
+	name = "Lederg"
+	dynasty = 9124
+	rite = roman_rite
+	culture = "polish"
+	father = 82263
+	950.1.1 = {
+		birth = "950.1.1"
+	}
+	1033.1.1 = {
+		death = "1033.1.1"
+	}
+}
+
+82265 = {
+	history_override_priority = 1000
+	name = "MS_cigniew"
+	dynasty = 9124
+	rite = roman_rite
+	culture = "polish"
+	father = 82264
+	1022.1.1 = {
+		birth = "1022.1.1"
+	}
+	1061.1.1 = {
+		employer = 96098
+		move_to_pool = yes
+	}
+	1070.1.1 = {
+		death = "1070.1.1"
+	}
+}
+
+#
+
+# Goleszyce Tribe
+82322 = {
+	history_override_priority = 1000
+	name = "Bolko"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 194088
+	770.1.1 = {
+		birth = "770.1.1"
+	}
+	830.1.1 = {
+		death = "830.1.1"
+	}
+}
+
+82323 = {
+	history_override_priority = 1000
+	name = "Leszko"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82322
+	790.1.1 = {
+		birth = "790.1.1"
+	}
+	840.1.1 = {
+		death = "840.1.1"
+	}
+}
+
+82324 = {
+	history_override_priority = 1000
+	name = "Cieszko"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82323
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+
+82325 = {
+	history_override_priority = 1000
+	name = "Cirzpibog"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82323
+	812.1.1 = {
+		birth = "812.1.1"
+	}
+	842.1.2 = {
+		add_spouse = 82326
+	}
+	862.1.1 = {
+		death = "862.1.1"
+	}
+}
+
+82326 = {
+	history_override_priority = 1000
+	name = "Przybyrada"
+	female = yes
+	rite = "slavic_pagan"
+	culture = "polish"
+	825.1.1 = {
+		birth = "825.1.1"
+	}
+	901.1.1 = {
+		death = "901.1.1"
+	}
+}
+
+82327 = {
+	history_override_priority = 1000
+	name = "Bolko"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82325
+	mother = 82326
+	843.1.1 = {
+		birth = "843.1.1"
+	}
+	902.1.1 = {
+		death = "902.1.1"
+	}
+}
+
+82328 = {
+	history_override_priority = 1000
+	name = "DA_brO_wka"
+	female = yes
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82325
+	mother = 82326
+	845.1.1 = {
+		birth = "845.1.1"
+	}
+	914.1.1 = {
+		death = "914.1.1"
+	}
+}
+
+82329 = {
+	history_override_priority = 1000
+	name = "Leszko"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82325
+	mother = 82326
+	847.1.1 = {
+		birth = "847.1.1"
+	}
+	901.1.1 = {
+		death = "901.1.1"
+	}
+}
+
+82330 = {
+	history_override_priority = 1000
+	name = "Cieszko"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82325
+	mother = 82326
+	849.1.1 = {
+		birth = "849.1.1"
+	}
+	892.1.1 = {
+		death = "892.1.1"
+	}
+}
+
+82331 = {
+	history_override_priority = 1000
+	name = "DrogosL_aw"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82327
+	880.1.1 = {
+		birth = "880.1.1"
+	}
+	930.1.1 = {
+		death = "950.1.1"
+	}
+}
+
+82332 = {
+	history_override_priority = 1000
+	name = "Bronisad"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82327
+	908.1.1 = {
+		birth = "908.1.1"
+	}
+	950.1.1 = {
+		death = "950.1.1"
+	}
+}
+
+82333 = {
+	history_override_priority = 1000
+	name = "ZwnisL_aw"
+	dynasty = 9130 # z Goleszyc
+	rite = "slavic_pagan"
+	culture = "polish"
+	father = 82332
+	940.1.1 = {
+		birth = "940.1.1"
+	}
+	995.1.1 = {
+		death = "995.1.1"
+	}
+}
+
+82334 = {
+	history_override_priority = 1000
+	name = "S_wiE_topeL_k"
+	dynasty = 9130 # z Goleszyc
+	rite = roman_rite
+	culture = "polish"
+	father = 82333
+	965.1.1 = {
+		birth = "965.1.1"
+	}
+	1025.1.1 = {
+		death = "1025.1.1"
+	}
+}
+
+#
+
+### Popielidzi / Choscisko
+194079 = {
+	history_override_priority = 1000
+	name = "Lestek"
+	dynasty = 9120
+	rite = slavic_pagan
+	culture = polish
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+
+194080 = {
+	history_override_priority = 1000
+	name = "Popiel"
+	dynasty = 9120
+	rite = slavic_pagan
+	culture = polish
+	father = 194079
+	770.1.1 = {
+		birth = yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+
+# Lechowicz
+194089 = {
+	history_override_priority = 1000
+	name = "Siemowit"
+	dynasty = 9124
+	rite = slavic_pagan
+	culture = polish
+	father = 302066
+	755.1.1 = {
+		birth = yes
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+
+194090 = {
+	history_override_priority = 1000
+	name = "Nadbor"
+	dynasty = 9124
+	rite = slavic_pagan
+	culture = polish
+	father = 194089
+	775.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+
+# Goplanie
+194091 = {
+	history_override_priority = 1000
+	name = "Witosz"
+	dynasty = 2001007	# Goplanie
+	rite = slavic_pagan
+	culture = polish
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+
+194092 = {
+	history_override_priority = 1000
+	name = "Imram"
+	dynasty = 2001007	# Goplanie
+	rite = slavic_pagan
+	culture = polish
+	father = 194091
+	770.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+
+194093 = {
+	history_override_priority = 1000
+	name = "Czcibor"
+	dynasty = 2001007	# Goplanie
+	rite = slavic_pagan
+	culture = polish
+	father = 194092
+	810.1.1 = {
+		birth = yes
+	}
+	866.1.1 = {
+		death = yes
+	}
+}
+
+
+###
+# Proto-polish tribes
+###
+
+# Legendary Krak & Wanda + completely fictional descendants until the 867 characters
+82273 = {
+	history_override_priority = 1000
+	# Legendary 1st ruler of Krakow
+	name = "Krak"
+	dynasty = 9124	# Lechowicz
+	rite = "slavic_pagan"
+	culture = "polish"
+	680.1.1 = {
+		birth = "680.1.1"
+	}
+	750.1.1 = {
+		death = "750.1.1"
+	}
+}
+82274 = {
+	history_override_priority = 1000
+	# Legendary daughter of Krak ; drowned herself to escape unwanted marriage
+	name = "Wanda"
+	female = yes
+	dynasty = 9124	# Lechowicz
+	father = 82273
+	rite = "slavic_pagan"
+	culture = "polish"
+	708.1.1 = {
+		birth = "708.1.1"
+	}
+	738.1.1 = {
+		death = {
+			death_reason = death_suicide
+		}
+	}
+}
+302066 = {
+	history_override_priority = 1000
+	# Legendary son of Krak
+	name = "Lech"
+	dynasty = 9124	# Lechowicz
+	rite = slavic_pagan
+	culture = polish
+	father = 82273
+	735.1.1 = {
+		birth = 735.1.1
+	}
+	795.1.1 = {
+		death = 795.1.1
+	}
+}
+302067 = {
+	history_override_priority = 1000
+	name = "Wanda"
+	female = yes
+	dynasty = 9124	# Lechowicz
+	rite = slavic_pagan
+	culture = polish
+	father = 302066
+	765.1.1 = {
+		birth = 765.1.1
+	}
+	813.1.1 = {
+		death = 813.1.1
+	}
+}
+302055 = {
+	history_override_priority = 1000
+	name = "Krak"
+	dynasty = 9124	# Lechowicz
+	rite = slavic_pagan
+	culture = polish
+	mother = 302067
+	793.7.15 = {
+		birth = 793.7.15
+	}
+	813.1.1 = {
+		dynasty = 2001003	#z Wiślanie
+	}
+	829.5.13 = {
+		death = 829.5.13
+	}
+}
+302059 = {
+	history_override_priority = 1000
+	name = "Wanda"
+	female = yes
+	dynasty = 2001003	#z Wiślanie
+	rite = slavic_pagan
+	culture = polish
+	father = 302055
+	845.6.22 = {
+		birth = 845.6.22
+	}
+	920.7.21 = {
+		death = 920.7.21
+	}
+}
+302056 = {
+	history_override_priority = 1000
+	name = "Krak"
+	dynasty = 2001003	#z Wiślanie
+	rite = slavic_pagan
+	culture = polish
+	father = 302055
+	819.3.15 = {
+		birth = 819.3.15
+	}
+	862.3.26 = {
+		death = 862.3.26
+	}
+}
+302057 = {
+	history_override_priority = 1000
+	name = Lech
+	dynasty = 2001003	#z Wiślanie
+	rite = slavic_pagan
+	culture = polish
+	father = 302055
+	822.12.25 = {
+		birth = 822.12.25
+	}
+	865.9.17 = {
+		death = 865.9.17
+	}
+}
+302058 = {
+	history_override_priority = 1000
+	name = "Krak"
+	dynasty = 2001003	#z Wiślanie
+	rite = slavic_pagan
+	culture = polish
+	father = 302056
+	842.8.23 = {
+		birth = 842.8.23
+	}
+	914.9.15 = {
+		death = 914.9.15
+	}
+}
+302060 = {
+	history_override_priority = 1000
+	name = Lech
+	dynasty = 2001003	#z Wiślanie
+	rite = slavic_pagan
+	culture = polish
+	father = 302057
+	845.2.13 = {
+		birth = 845.2.13
+	}
+	900.12.11 = {
+		death = 900.12.11
+	}
+}
+
+#Lendians
+302061 = {
+	history_override_priority = 1000
+	name = Aleksander
+	dynasty = 2001004	#z Lędzianie
+	rite = slavic_pagan
+	culture = polish
+	836.10.23 = {
+		birth = 836.10.23
+	}
+	892.3.14 = {
+		death = 892.3.14
+	}
+}
+
+# Mazovians Tribe
+302062 = {
+	history_override_priority = 1000
+	name = Maciej
+	dynasty = 2001006	# Mazowszanie
+	rite = slavic_pagan
+	culture = polish
+	father = EEE_Mazowszan_bridge
+	845.9.19 = {
+		birth = 845.9.19
+	}
+	899.11.16 = {
+		death = 899.11.16
+	}
+}
+302063 = {
+	history_override_priority = 1000
+	name = BorzysL_aw
+	dynasty = 2001006	# Mazowszanie
+	rite = slavic_pagan
+	culture = polish
+	father = EEE_Mazowszan_bridge
+	849.6.6 = {
+		birth = 849.6.6
+	}
+	901.12.12 = {
+		death = 901.12.12
+	}
+}
+
+# Goplans Tribe
+302064 = {
+	history_override_priority = 1000
+	name = Stefan
+	dynasty = 2001007	# Goplanie
+	rite = slavic_pagan
+	culture = polish
+	father = 194093
+	830.5.3 = {
+		birth = 830.5.3
+	}
+	888.12.26 = {
+		death = 888.12.26
+	}
+}
+
+# Leczycans Tribe
+302065 = {
+	history_override_priority = 1000
+	name = WacL_aw
+	dynasty = 2001008	# Łęczycanie
+	rite = slavic_pagan
+	culture = polish
+	848.1.21 = {
+		birth = 848.1.21
+	}
+	912.8.23 = {
+		death = 912.8.23
+	}
+}

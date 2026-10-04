@@ -6,12 +6,8 @@ ildeguz_father = {
 	rite = tengri_pagan
 	culture = "kipchak"
 
-	1070.1.1 = {
-		birth = yes
-	}
-	1123.1.1 = {
-		death = yes
-	}	
+	1070.1.1 = { birth = yes }
+	1123.1.1 = { death = yes }	
 }
 kiran_taraz = {
 	history_override_priority = 1000
@@ -22,27 +18,19 @@ kiran_taraz = {
 	father = ildeguz_father
 	trait = education_martial_4
 
-	1115.1.1 = {
-		birth = yes
-	}
-	1165.1.1 = {
-		death = yes
-	}	
+	1115.1.1 = { birth = yes }
+	1165.1.1 = { death = yes }	
 }
 kiran_taraz_son = {
 	history_override_priority = 1000
 	name = "Jendli"
 	dynasty = uran_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "qangli"
 	father = kiran_taraz
 
-	1150.1.1 = {
-		birth = yes
-	}
-	1230.1.1 = {
-		death = yes
-	}	
+	1150.1.1 = { birth = yes }
+	1230.1.1 = { death = yes }	
 }
 
 # Pishteginid
@@ -57,45 +45,35 @@ pishkinid_roa_1 = {
 		birth = yes
 		give_nickname = ROA_nick_pishtegin
 	}
-	1085.1.1 = {
-		death = yes
-	}		
+	1085.1.1 = { death = yes }		
 }
 pishkinid_roa_bridge = {
 	history_override_priority = 1000
 	name = "Beshkenisdze"
 	dynasty = pishteginid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "georgian"
 	father = pishkinid_roa_1
 
-	1080.1.1 = {
-		birth = yes
-	}
-	1150.1.1 = {
-		death = yes
-	}		
+	1080.1.1 = { birth = yes }
+	1150.1.1 = { death = yes }		
 }
 pishkinid_roa_2 = {
 	history_override_priority = 1000
 	name = "Mohammed"
 	dynasty = pishteginid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = pishkinid_roa_bridge
 
-	1120.1.1 = {
-		birth = yes
-	}
-	1175.1.1 = {
-		death = yes
-	}			
+	1120.1.1 = { birth = yes }
+	1175.1.1 = { death = yes }			
 }
 pishkinid_roa_3 = {
 	history_override_priority = 1000
 	name = "Pishtegin"
 	dynasty = pishteginid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = pishkinid_roa_2
 
@@ -103,24 +81,18 @@ pishkinid_roa_3 = {
 		birth = yes
 		give_nickname = ROA_nick_nusrat_al_din
 	}
-	1210.1.1 = {
-		death = yes
-	}		
+	1210.1.1 = { death = yes }		
 }
 pishkinid_roa_4 = {
 	history_override_priority = 1000
 	name = "Mahmud"
 	dynasty = pishteginid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = pishkinid_roa_3
 
-	1178.1.1 = {
-		birth = yes
-	}
-	1230.1.1 = {
-		death = yes
-	}		
+	1178.1.1 = { birth = yes }
+	1230.1.1 = { death = yes }		
 }
 
 # Ahmadil
@@ -128,21 +100,17 @@ ahmdadil_roa_1 = {
 	history_override_priority = 1000
 	name = "Aq_Sunqur"
 	dynasty = ahmadil_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 
-	1084.1.1 = {
-		birth = yes
-	}
-	1134.1.1 = {
-		death = yes
-	}			
+	1084.1.1 = { birth = yes }
+	1134.1.1 = { death = yes }			
 }
 ahmdadil_roa_2 = {
 	history_override_priority = 1000
 	name = "Arslan_Aba"
 	dynasty = ahmadil_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = ahmdadil_roa_1
 
@@ -150,15 +118,13 @@ ahmdadil_roa_2 = {
 		birth = yes
 		give_nickname = ROA_nick_nusrat_al_din
 	}
-	1175.1.1 = {
-		death = yes
-	}			
+	1175.1.1 = { death = yes }			
 }
 ahmdadil_roa_3 = {
 	history_override_priority = 1000
 	name = "Aq_Sunqur"
 	dynasty = ahmadil_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = ahmdadil_roa_2
 
@@ -166,15 +132,13 @@ ahmdadil_roa_3 = {
 		birth = yes
 		give_nickname = ROA_nick_falak_al_din
 	}
-	1189.1.1 = {
-		death = yes
-	}			
+	1189.1.1 = { death = yes }			
 }
 ahmdadil_roa_4 = {
 	history_override_priority = 1000
 	name = "Ko_rpe_Aslan"
 	dynasty = ahmadil_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = ahmdadil_roa_3
 
@@ -182,15 +146,13 @@ ahmdadil_roa_4 = {
 		birth = yes
 		give_nickname = nick_ala_al_din
 	}
-	1208.1.1 = {
-		death = yes
-	}			
+	1208.1.1 = { death = yes }			
 }
 ahmdadil_roa_5 = {
 	history_override_priority = 1000
 	name = "Arslan_Aba"
 	dynasty = ahmadil_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = ahmdadil_roa_3
 
@@ -198,25 +160,19 @@ ahmdadil_roa_5 = {
 		birth = yes
 		give_nickname = nick_izz_al_din
 	}
-	1209.1.1 = {
-		death = yes
-	}			
+	1209.1.1 = { death = yes }			
 }
 ahmdadil_roa_6 = {
 	history_override_priority = 1000
 	name = "Sulafa"
 	female = yes
 	dynasty = ahmadil_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	father = ahmdadil_roa_3
 
-	1178.1.1 = {
-		birth = yes
-	}
-	1225.1.1 = {
-		death = yes
-	}			
+	1178.1.1 = { birth = yes }
+	1225.1.1 = { death = yes }			
 }
 
 # Salar
@@ -227,12 +183,8 @@ salar_1 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	838.1.1 = {
-		birth = yes
-	}
-	880.1.1 = {
-		death = yes
-	}
+	838.1.1 = { birth = yes }
+	880.1.1 = { death = yes }
 }
 salar_2 = {
 	history_override_priority = 1000
@@ -241,40 +193,28 @@ salar_2 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	907.1.1 = {
-		birth = yes
-	}
-	940.1.1 = {
-		death = yes
-	}
+	907.1.1 = { birth = yes }
+	940.1.1 = { death = yes }
 }
 salar_3 = {
 	history_override_priority = 1000
 	name = "Beg"
 	dynasty = salar3
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	1030.1.1 = {
-		birth = yes
-	}
-	1083.1.1 = {
-		death = yes
-	}
+	1030.1.1 = { birth = yes }
+	1083.1.1 = { death = yes }
 }
 salar_4 = {
 	history_override_priority = 1000
 	name = "Salurbeg"
 	dynasty = salar4
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	1138.1.1 = {
-		birth = yes
-	}
-	1180.1.1 = {
-		death = yes
-	}
+	1138.1.1 = { birth = yes }
+	1180.1.1 = { death = yes }
 }
 
 # Savtegin
@@ -321,12 +261,8 @@ sea_khundajiq_000 = {
 	culture = turkish
 	trait = education_martial_2
 
-	800.1.1 = {
-		birth = yes
-	}
-	860.1.1 = {
-		death = yes
-	}
+	800.1.1 = { birth = yes }
+	860.1.1 = { death = yes }
 }
 sea_khundajiq_001 = {
 	history_override_priority = 1000
@@ -339,15 +275,11 @@ sea_khundajiq_001 = {
 	trait = education_martial_2
 	father = sea_khundajiq_000
 
-	830.1.1 = {
-		birth = yes
-	}
+	830.1.1 = { birth = yes }
 	867.1.1 = {
 		employer = 34014
 	}
-	891.1.1 = {
-		death = yes
-	}
+	891.1.1 = { death = yes }
 }
 sea_khundajiq_002 = {
 	history_override_priority = 1000
@@ -360,18 +292,14 @@ sea_khundajiq_002 = {
 	trait = education_martial_2
 	father = sea_khundajiq_001
 
-	860.1.1 = {
-		birth = yes
-	}
+	860.1.1 = { birth = yes }
 	893.1.1 = {
 		employer = 163138
 	}
 	896.1.1 = {
 		employer = 34018
 	}
-	930.1.1 = {
-		death = yes
-	}
+	930.1.1 = { death = yes }
 }
 
 # Inanj
@@ -379,7 +307,7 @@ inanj_sonqur = {
 	history_override_priority = 1000
 	name = "Sunqur"
 	dynasty = inanj_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	trait = ambitious
 	trait = stubborn
@@ -402,36 +330,28 @@ inanj_khatun = {
 	name = "Inanj_Khatun"
 	female = yes
 	dynasty = inanj_roa
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	trait = ambitious
 	trait = stubborn
 	father = inanj_sonqur
 
-	1140.1.1 = {
-		birth = yes
-	}
+	1140.1.1 = { birth = yes }
 	1159.1.1 = {
 		add_spouse = 144052
 	}
-	1193.1.1 = {
-		death = yes
-	}
+	1193.1.1 = { death = yes }
 }
 
 # Qutlugh's Father
 qutlugh_real_father = {
 	history_override_priority = 1000
 	name = "Mohammed"
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 
-	1110.1.1 = {
-		birth = yes
-	}
-	1170.1.1 = {
-		death = yes
-	}
+	1110.1.1 = { birth = yes }
+	1170.1.1 = { death = yes }
 }
 
 # Yabgus
@@ -442,12 +362,8 @@ yabgus_1 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	600.1.1 = {
-		birth = yes
-	}
-	680.1.1 = {
-		death = yes
-	}
+	600.1.1 = { birth = yes }
+	680.1.1 = { death = yes }
 }
 yabgus_2 = {
 	history_override_priority = 1000
@@ -457,12 +373,8 @@ yabgus_2 = {
 	culture = turkish
 	father = yabgus_1
 
-	625.1.1 = {
-		birth = yes
-	}
-	703.1.1 = {
-		death = yes
-	}
+	625.1.1 = { birth = yes }
+	703.1.1 = { death = yes }
 }
 yabgus_3 = {
 	history_override_priority = 1000
@@ -472,12 +384,8 @@ yabgus_3 = {
 	culture = turkish
 	father = yabgus_2
 
-	645.1.1 = {
-		birth = yes
-	}
-	726.1.1 = {
-		death = yes
-	}
+	645.1.1 = { birth = yes }
+	726.1.1 = { death = yes }
 }
 yabgus_4 = {
 	history_override_priority = 1000
@@ -487,12 +395,8 @@ yabgus_4 = {
 	culture = turkish
 	father = yabgus_3
 
-	665.1.1 = {
-		birth = yes
-	}
-	735.1.1 = {
-		death = yes
-	}
+	665.1.1 = { birth = yes }
+	735.1.1 = { death = yes }
 }
 yabgus_5 = {
 	history_override_priority = 1000
@@ -502,12 +406,8 @@ yabgus_5 = {
 	culture = turkish
 	father = yabgus_4
 
-	690.1.1 = {
-		birth = yes
-	}
-	750.1.1 = {
-		death = yes
-	}
+	690.1.1 = { birth = yes }
+	750.1.1 = { death = yes }
 }
 yabgus_6 = {
 	history_override_priority = 1000
@@ -517,12 +417,8 @@ yabgus_6 = {
 	culture = turkish
 	father = yabgus_5
 
-	710.1.1 = {
-		birth = yes
-	}
-	786.1.1 = {
-		death = yes
-	}
+	710.1.1 = { birth = yes }
+	786.1.1 = { death = yes }
 }
 yabgus_7 = {
 	history_override_priority = 1000
@@ -532,12 +428,8 @@ yabgus_7 = {
 	culture = turkish
 	father = yabgus_6
 
-	735.1.1 = {
-		birth = yes
-	}
-	804.1.1 = {
-		death = yes
-	}
+	735.1.1 = { birth = yes }
+	804.1.1 = { death = yes }
 }
 yabgus_8 = {
 	history_override_priority = 1000
@@ -547,12 +439,8 @@ yabgus_8 = {
 	culture = turkish
 	father = yabgus_7
 
-	775.1.1 = {
-		birth = yes
-	}
-	820.1.1 = {
-		death = yes
-	}
+	775.1.1 = { birth = yes }
+	820.1.1 = { death = yes }
 }
 yabgus_9 = {
 	history_override_priority = 1000
@@ -561,12 +449,8 @@ yabgus_9 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	795.1.1 = {
-		birth = yes
-	}
-	844.1.1 = {
-		death = yes
-	}
+	795.1.1 = { birth = yes }
+	844.1.1 = { death = yes }
 }
 yabgus_10 = {
 	history_override_priority = 1000
@@ -576,12 +460,8 @@ yabgus_10 = {
 	culture = turkish
 	father = yabgus_9
 
-	820.1.1 = {
-		birth = yes
-	}
-	868.1.1 = {
-		death = yes
-	}
+	820.1.1 = { birth = yes }
+	868.1.1 = { death = yes }
 }
 yabgus_11 = {
 	history_override_priority = 1000
@@ -591,12 +471,8 @@ yabgus_11 = {
 	culture = turkish
 	father = yabgus_10
 
-	840.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	840.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 yabgus_12 = {
 	history_override_priority = 1000
@@ -606,12 +482,8 @@ yabgus_12 = {
 	culture = turkish
 	father = yabgus_11
 
-	860.1.1 = {
-		birth = yes
-	}
-	920.1.1 = {
-		death = yes
-	}
+	860.1.1 = { birth = yes }
+	920.1.1 = { death = yes }
 }
 yabgus_13 = {
 	history_override_priority = 1000
@@ -621,12 +493,8 @@ yabgus_13 = {
 	culture = turkish
 	father = yabgus_12
 
-	900.1.1 = {
-		birth = yes
-	}
-	950.1.1 = {
-		death = yes
-	}
+	900.1.1 = { birth = yes }
+	950.1.1 = { death = yes }
 }
 yabgus_14 = {
 	history_override_priority = 1000
@@ -636,33 +504,25 @@ yabgus_14 = {
 	culture = turkish
 	father = yabgus_13
 
-	930.1.1 = {
-		birth = yes
-	}
-	980.1.1 = {
-		death = yes
-	}
+	930.1.1 = { birth = yes }
+	980.1.1 = { death = yes }
 }
 yabgus_15 = {
 	history_override_priority = 1000
 	name = "Ali_Khan"
 	dynasty = barani_dynasty
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 	father = barani_14
 
-	960.1.1 = {
-		birth = yes
-	}
-	1000.1.1 = {
-		death = yes
-	}
+	960.1.1 = { birth = yes }
+	1000.1.1 = { death = yes }
 }
 yabgus_16 = {
 	history_override_priority = 1000
 	name = "Kilij_Arslan"
 	dynasty = barani_dynasty
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 	father = yabgus_15
 
@@ -670,9 +530,7 @@ yabgus_16 = {
 		birth = yes
 		give_nickname = ROA_nick_shah_malik
 	}
-	1042.1.1 = {
-		death = yes
-	}
+	1042.1.1 = { death = yes }
 }
 
 # Barani
@@ -683,12 +541,8 @@ barani_14 = {
 	rite = alevi
 	culture = turkish
 
-	930.1.1 = {
-		birth = yes
-	}
-	980.1.1 = {
-		death = yes
-	}
+	930.1.1 = { birth = yes }
+	980.1.1 = { death = yes }
 }
 
 # Kayi
@@ -700,12 +554,8 @@ oghuzes_1 = {
 	culture = "turkish"
 	father = oghuzes_2
 
-	1100.1.1 = {
-		birth = yes
-	}
-	1160.1.1 = {
-		death = yes
-	}
+	1100.1.1 = { birth = yes }
+	1160.1.1 = { death = yes }
 }
 oghuzes_2 = {
 	history_override_priority = 1000
@@ -715,12 +565,8 @@ oghuzes_2 = {
 	culture = "turkish"
 	father = oghuzes_3
 
-	1060.1.1 = {
-		birth = yes
-	}
-	1143.1.1 = {
-		death = yes
-	}
+	1060.1.1 = { birth = yes }
+	1143.1.1 = { death = yes }
 }
 oghuzes_3 = {
 	history_override_priority = 1000
@@ -730,12 +576,8 @@ oghuzes_3 = {
 	culture = "turkish"
 	father = oghuzes_4
 
-	1040.1.1 = {
-		birth = yes
-	}
-	1127.1.1 = {
-		death = yes
-	}
+	1040.1.1 = { birth = yes }
+	1127.1.1 = { death = yes }
 }
 oghuzes_4 = {
 	history_override_priority = 1000
@@ -745,12 +587,8 @@ oghuzes_4 = {
 	culture = "turkish"
 	father = oghuzes_5
 
-	1020.1.1 = {
-		birth = yes
-	}
-	1105.1.1 = {
-		death = yes
-	}
+	1020.1.1 = { birth = yes }
+	1105.1.1 = { death = yes }
 }
 oghuzes_5 = {
 	history_override_priority = 1000
@@ -760,12 +598,8 @@ oghuzes_5 = {
 	culture = "turkish"
 	father = oghuzes_6
 
-	1000.1.1 = {
-		birth = yes
-	}
-	1084.1.1 = {
-		death = yes
-	}
+	1000.1.1 = { birth = yes }
+	1084.1.1 = { death = yes }
 }
 oghuzes_6 = {
 	history_override_priority = 1000
@@ -775,12 +609,8 @@ oghuzes_6 = {
 	culture = "turkish"
 	father = oghuzes_7
 
-	980.1.1 = {
-		birth = yes
-	}
-	1062.1.1 = {
-		death = yes
-	}
+	980.1.1 = { birth = yes }
+	1062.1.1 = { death = yes }
 }
 oghuzes_7 = {
 	history_override_priority = 1000
@@ -790,12 +620,8 @@ oghuzes_7 = {
 	culture = "turkish"
 	father = oghuzes_8
 
-	960.1.1 = {
-		birth = yes
-	}
-	1043.1.1 = {
-		death = yes
-	}
+	960.1.1 = { birth = yes }
+	1043.1.1 = { death = yes }
 }
 oghuzes_8 = {
 	history_override_priority = 1000
@@ -805,12 +631,8 @@ oghuzes_8 = {
 	culture = "turkish"
 	father = oghuzes_9
 
-	940.1.1 = {
-		birth = yes
-	}
-	1020.1.1 = {
-		death = yes
-	}
+	940.1.1 = { birth = yes }
+	1020.1.1 = { death = yes }
 }
 oghuzes_9 = {
 	history_override_priority = 1000
@@ -820,12 +642,8 @@ oghuzes_9 = {
 	culture = "turkish"
 	father = oghuzes_10
 
-	920.1.1 = {
-		birth = yes
-	}
-	1002.1.1 = {
-		death = yes
-	}
+	920.1.1 = { birth = yes }
+	1002.1.1 = { death = yes }
 }
 oghuzes_10 = {
 	history_override_priority = 1000
@@ -835,12 +653,8 @@ oghuzes_10 = {
 	culture = "turkish"
 	father = oghuzes_11
 
-	875.1.1 = {
-		birth = yes
-	}
-	983.1.1 = {
-		death = yes
-	}
+	875.1.1 = { birth = yes }
+	983.1.1 = { death = yes }
 }
 oghuzes_11 = {
 	history_override_priority = 1000
@@ -850,12 +664,8 @@ oghuzes_11 = {
 	culture = "turkish"
 	father = oghuzes_12
 
-	830.1.1 = {
-		birth = yes
-	}
-	913.1.1 = {
-		death = yes
-	}
+	830.1.1 = { birth = yes }
+	913.1.1 = { death = yes }
 }
 oghuzes_12 = {
 	history_override_priority = 1000
@@ -865,12 +675,8 @@ oghuzes_12 = {
 	culture = "turkish"
 	father = yabgus_8
 
-	800.1.1 = {
-		birth = yes
-	}
-	860.1.1 = {
-		death = yes
-	}
+	800.1.1 = { birth = yes }
+	860.1.1 = { death = yes }
 }
 
 #MB Turks for history sake
@@ -883,12 +689,8 @@ oghuz_kun = {
 	culture = "turkish"
 	#father = 1230101
 
-	727.10.10 = {
-		birth = yes
-	}
-	773.1.1 = {
-		death = yes
-	}
+	727.10.10 = { birth = yes }
+	773.1.1 = { death = yes }
 } 
 
 # Aqevli
@@ -901,12 +703,8 @@ aqevli_0 = {
 	culture = "turkish"
 	father = oghuz_kun
 
-	753.1.1 = {
-		birth = yes
-	}
-	797.1.1 = {
-		death = yes
-	}
+	753.1.1 = { birth = yes }
+	797.1.1 = { death = yes }
 }
 aqevli_1 = {
 	history_override_priority = 1000
@@ -914,17 +712,13 @@ aqevli_1 = {
 	# General and powerbroker in the dying years of the Samanids.
 	name = "Bektuzun"
 	dynasty_house = house_oghuz_aqevli
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = "turkish"
 	trait = "education_intrigue_3"
 	father = aqevli_6
 
-	961.1.1 = {
-		birth = yes
-	}
-	999.11.1 = {
-		death = yes
-	}
+	961.1.1 = { birth = yes }
+	999.11.1 = { death = yes }
 }
 aqevli_2 = {
 	history_override_priority = 1000
@@ -935,12 +729,8 @@ aqevli_2 = {
 	culture = "turkish"
 	father = aqevli_0
 
-	788.1.1 = {
-		birth = yes
-	}
-	830.1.1 = {
-		death = yes
-	}
+	788.1.1 = { birth = yes }
+	830.1.1 = { death = yes }
 }
 aqevli_3 = {
 	history_override_priority = 1000
@@ -951,12 +741,8 @@ aqevli_3 = {
 	culture = "turkish"
 	father = aqevli_2
 
-	815.1.1 = {
-		birth = yes
-	}
-	877.1.1 = {
-		death = yes
-	}
+	815.1.1 = { birth = yes }
+	877.1.1 = { death = yes }
 } 
 aqevli_4 = {
 	history_override_priority = 1000
@@ -967,12 +753,8 @@ aqevli_4 = {
 	culture = "turkish"
 	father = aqevli_3
 
-	840.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	840.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 } 
 aqevli_5 = {
 	history_override_priority = 1000
@@ -983,12 +765,8 @@ aqevli_5 = {
 	culture = "turkish"
 	father = aqevli_4
 
-	860.1.1 = {
-		birth = yes
-	}
-	927.1.1 = {
-		death = yes
-	}
+	860.1.1 = { birth = yes }
+	927.1.1 = { death = yes }
 }
 aqevli_6 = {
 	history_override_priority = 1000
@@ -999,12 +777,8 @@ aqevli_6 = {
 	culture = "turkish"
 	father = aqevli_5
 
-	900.1.1 = {
-		birth = yes
-	}
-	978.1.1 = {
-		death = yes
-	}
+	900.1.1 = { birth = yes }
+	978.1.1 = { death = yes }
 }
 aqevli_7 = {
 	history_override_priority = 1000
@@ -1015,15 +789,11 @@ aqevli_7 = {
 	culture = "turkish"
 	father = aqevli_6
 
-	945.1.1 = {
-		birth = yes
-	}
+	945.1.1 = { birth = yes }
 	975.1.1 = {
 		rite = hanafi
 	}
-	1000.1.1 = {
-		death = yes
-	}
+	1000.1.1 = { death = yes }
 }
 
 # Simjurids
@@ -1033,12 +803,10 @@ simjurid_1 = {
 	# general who served Samanids - ghulam of Turkic origin and a victim of the Samanid slave trade
 	name = "Simjur"
 	dynasty = sea_simjurid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	871.1.1 = {
-		birth = yes
-	}
+	871.1.1 = { birth = yes }
 	928.1.1 = {  #unkown, during the reign of Nasr II
 		death = yes
 	}
@@ -1048,47 +816,35 @@ simjurid_2 = {
 	# 261041
 	name = "I_brahim"
 	dynasty = sea_simjurid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 	father = simjurid_1
 
-	896.1.1 = {
-		birth = yes
-	}
-	948.1.1 = {
-		death = yes
-	}
+	896.1.1 = { birth = yes }
+	948.1.1 = { death = yes }
 }
 simjurid_3 = {
 	history_override_priority = 1000
 	# 261042
 	name = "Abu_l-Hasan"
 	dynasty = sea_simjurid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 	father = simjurid_2
 
-	925.1.1 = {
-		birth = yes
-	}
-	982.1.1 = {
-		death = yes
-	}
+	925.1.1 = { birth = yes }
+	982.1.1 = { death = yes }
 }
 simjurid_4 = {
 	history_override_priority = 1000
 	name = "Abu_Ali"
 	dynasty = sea_simjurid
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 	father = simjurid_3
 
-	925.1.1 = {
-		birth = yes
-	}
-	997.1.1 = {
-		death = yes
-	}
+	925.1.1 = { birth = yes }
+	997.1.1 = { death = yes }
 }
 
 ### OGHUZ TRIBES ###
@@ -1100,9 +856,7 @@ sea_chowdur_0 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	824.1.1 = {
-		birth = yes
-	}
+	824.1.1 = { birth = yes }
 	860.1.1 = {
 		death = { death_reason = death_battle }
 	}
@@ -1115,12 +869,8 @@ sea_chowdur_1 = {
 	culture = turkish
 	father = sea_chowdur_0
 
-	847.1.1 = {
-		birth = yes
-	}
-	916.1.1 = {
-		death = yes
-	}
+	847.1.1 = { birth = yes }
+	916.1.1 = { death = yes }
 }
 sea_chowdur_2 = {
 	history_override_priority = 1000
@@ -1130,12 +880,8 @@ sea_chowdur_2 = {
 	culture = turkish
 	father = sea_chowdur_1
 
-	878.1.1 = {
-		birth = yes
-	}
-	946.1.1 = {
-		death = yes
-	}
+	878.1.1 = { birth = yes }
+	946.1.1 = { death = yes }
 }
 sea_chowdur_3 = {
 	history_override_priority = 1000
@@ -1145,12 +891,8 @@ sea_chowdur_3 = {
 	culture = turkish
 	father = sea_chowdur_0
 
-	849.1.1 = {
-		birth = yes
-	}
-	907.1.1 = {
-		death = yes
-	}
+	849.1.1 = { birth = yes }
+	907.1.1 = { death = yes }
 }
 sea_chowdur_4 = {
 	history_override_priority = 1000
@@ -1160,12 +902,8 @@ sea_chowdur_4 = {
 	culture = turkish
 	father = sea_chowdur_3
 
-	870.1.1 = {
-		birth = yes
-	}
-	930.1.1 = {
-		death = yes
-	}
+	870.1.1 = { birth = yes }
+	930.1.1 = { death = yes }
 }
 sea_chowdur_5 = {
 	history_override_priority = 1000
@@ -1175,12 +913,8 @@ sea_chowdur_5 = {
 	culture = turkish
 	father = sea_chowdur_4
 
-	895.1.1 = {
-		birth = yes
-	}
-	955.1.1 = {
-		death = yes
-	}
+	895.1.1 = { birth = yes }
+	955.1.1 = { death = yes }
 }
 
 # Other
@@ -1190,12 +924,8 @@ roa_turkish02 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	845.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
+	845.1.1 = { birth = yes }
+	900.1.1 = { death = yes }
 }
 roa_turkish03 = {
 	history_override_priority = 1000
@@ -1203,12 +933,8 @@ roa_turkish03 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	901.1.1 = {
-		birth = yes
-	}
-	952.1.1 = {
-		death = yes
-	}
+	901.1.1 = { birth = yes }
+	952.1.1 = { death = yes }
 }
 roa_turkish05 = {
 	history_override_priority = 1000
@@ -1216,12 +942,8 @@ roa_turkish05 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	880.1.1 = {
-		birth = yes
-	}
-	953.1.1 = {
-		death = yes
-	}
+	880.1.1 = { birth = yes }
+	953.1.1 = { death = yes }
 }
 roa_turkish06 = {
 	history_override_priority = 1000
@@ -1229,12 +951,8 @@ roa_turkish06 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	871.1.1 = {
-		birth = yes
-	}
-	961.1.1 = {
-		death = yes
-	}
+	871.1.1 = { birth = yes }
+	961.1.1 = { death = yes }
 }
 roa_turkish07 = {
 	history_override_priority = 1000
@@ -1242,12 +960,8 @@ roa_turkish07 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	920.1.1 = {
-		birth = yes
-	}
-	975.1.1 = {
-		death = yes
-	}
+	920.1.1 = { birth = yes }
+	975.1.1 = { death = yes }
 }
 roa_turkish08 = {
 	history_override_priority = 1000
@@ -1255,38 +969,26 @@ roa_turkish08 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	896.1.1 = {
-		birth = yes
-	}
-	960.1.1 = {
-		death = yes
-	}
+	896.1.1 = { birth = yes }
+	960.1.1 = { death = yes }
 }
 roa_turkish09 = {
 	history_override_priority = 1000
 	name = "Kurboga"
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	1035.1.1 = {
-		birth = yes
-	}
-	1102.1.1 = {
-		death = yes
-	}
+	1035.1.1 = { birth = yes }
+	1102.1.1 = { death = yes }
 }
 roa_turkish10 = {
 	history_override_priority = 1000
 	name = "Saruca"
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	1140.1.1 = {
-		birth = yes
-	}
-	1205.1.1 = {
-		death = yes
-	}
+	1140.1.1 = { birth = yes }
+	1205.1.1 = { death = yes }
 }
 roa_turkish11 = {
 	history_override_priority = 1000
@@ -1294,12 +996,8 @@ roa_turkish11 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	830.1.1 = {
-		birth = yes
-	}
-	897.1.1 = {
-		death = yes
-	}
+	830.1.1 = { birth = yes }
+	897.1.1 = { death = yes }
 }
 roa_turkish12 = {
 	history_override_priority = 1000
@@ -1307,38 +1005,26 @@ roa_turkish12 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	897.1.1 = {
-		birth = yes
-	}
-	952.1.1 = {
-		death = yes
-	}
+	897.1.1 = { birth = yes }
+	952.1.1 = { death = yes }
 }
 roa_turkish13 = {
 	history_override_priority = 1000
 	name = "Burak"
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	1032.1.1 = {
-		birth = yes
-	}
-	1087.1.1 = {
-		death = yes
-	}
+	1032.1.1 = { birth = yes }
+	1087.1.1 = { death = yes }
 }
 roa_turkish14 = {
 	history_override_priority = 1000
 	name = "Altuntash"
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = turkish
 
-	1130.1.1 = {
-		birth = yes
-	}
-	1192.1.1 = {
-		death = yes
-	}
+	1130.1.1 = { birth = yes }
+	1192.1.1 = { death = yes }
 }
 roa_turkish15 = {
 	history_override_priority = 1000
@@ -1346,12 +1032,8 @@ roa_turkish15 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	914.1.1 = {
-		birth = yes
-	}
-	964.1.1 = {
-		death = yes
-	}
+	914.1.1 = { birth = yes }
+	964.1.1 = { death = yes }
 }
 roa_turkish16 = {
 	history_override_priority = 1000
@@ -1359,12 +1041,8 @@ roa_turkish16 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	904.1.1 = {
-		birth = yes
-	}
-	957.1.1 = {
-		death = yes
-	}
+	904.1.1 = { birth = yes }
+	957.1.1 = { death = yes }
 }
 roa_turkish17 = {
 	history_override_priority = 1000
@@ -1372,12 +1050,8 @@ roa_turkish17 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	893.1.1 = {
-		birth = yes
-	}
-	963.1.1 = {
-		death = yes
-	}
+	893.1.1 = { birth = yes }
+	963.1.1 = { death = yes }
 }
 roa_turkish18 = {
 	history_override_priority = 1000
@@ -1385,12 +1059,8 @@ roa_turkish18 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	893.1.1 = {
-		birth = yes
-	}
-	963.1.1 = {
-		death = yes
-	}
+	893.1.1 = { birth = yes }
+	963.1.1 = { death = yes }
 }
 roa_turkish19 = {
 	history_override_priority = 1000
@@ -1398,12 +1068,8 @@ roa_turkish19 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	887.1.1 = {
-		birth = yes
-	}
-	939.1.1 = {
-		death = yes
-	}
+	887.1.1 = { birth = yes }
+	939.1.1 = { death = yes }
 }
 roa_turkish20 = {
 	history_override_priority = 1000
@@ -1411,12 +1077,8 @@ roa_turkish20 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	910.1.1 = {
-		birth = yes
-	}
-	965.1.1 = {
-		death = yes
-	}
+	910.1.1 = { birth = yes }
+	965.1.1 = { death = yes }
 }
 roa_turkish21 = {
 	history_override_priority = 1000
@@ -1424,12 +1086,8 @@ roa_turkish21 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	902.1.1 = {
-		birth = yes
-	}
-	955.1.1 = {
-		death = yes
-	}
+	902.1.1 = { birth = yes }
+	955.1.1 = { death = yes }
 }
 roa_turkish22 = {
 	history_override_priority = 1000
@@ -1437,12 +1095,8 @@ roa_turkish22 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	894.1.1 = {
-		birth = yes
-	}
-	954.1.1 = {
-		death = yes
-	}
+	894.1.1 = { birth = yes }
+	954.1.1 = { death = yes }
 }
 roa_turkish23 = {
 	history_override_priority = 1000
@@ -1450,12 +1104,8 @@ roa_turkish23 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	889.1.1 = {
-		birth = yes
-	}
-	943.1.1 = {
-		death = yes
-	}
+	889.1.1 = { birth = yes }
+	943.1.1 = { death = yes }
 }
 roa_turkish24 = {
 	history_override_priority = 1000
@@ -1463,12 +1113,8 @@ roa_turkish24 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	912.1.1 = {
-		birth = yes
-	}
-	968.1.1 = {
-		death = yes
-	}
+	912.1.1 = { birth = yes }
+	968.1.1 = { death = yes }
 }
 roa_turkish25 = {
 	history_override_priority = 1000
@@ -1476,12 +1122,8 @@ roa_turkish25 = {
 	rite = tengri_pagan
 	culture = turkish
 
-	918.1.1 = {
-		birth = yes
-	}
-	973.1.1 = {
-		death = yes
-	}
+	918.1.1 = { birth = yes }
+	973.1.1 = { death = yes }
 }
 
 uzboy_placeholder = {
@@ -1490,10 +1132,6 @@ uzboy_placeholder = {
 	rite = tengri_pagan
 	culture = turkish
 
-	910.1.1 = {
-		birth = yes
-	}
-	966.1.1 = {
-		death = yes
-	}
+	910.1.1 = { birth = yes }
+	966.1.1 = { death = yes }
 }

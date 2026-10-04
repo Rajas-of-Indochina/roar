@@ -1,0 +1,438 @@
+﻿# Overwrites of vanilla characters
+
+144144 = {
+	# eighth and last Ziyarid emir ; his rule was short and not much is known about him
+	history_override_priority = 1000
+	name = "Gilan-Shah"
+	# AKA: Unsur al
+	dynasty = 101689
+	martial = 7
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	rite = zayidi
+	culture = "daylamite"
+	father = 20703
+	mother = sea_ghaznavid_princess_1
+
+	# History
+	1060.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		# dethroned by Nizari ismaili
+		death = {
+			# no mention of him after his dethroning
+			death_reason = death_disappearance
+		}
+	}
+}
+
+20703 = {
+	# seventh Ziyarid emir ; author of the 'Qabus nama' ; had a long and peaceful reign
+	history_override_priority = 1000
+	name = "Keikavus"
+	# AKA: Keikavus
+	dynasty = 101689
+	martial = 7
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	rite = zayidi
+	culture = "daylamite"
+	trait = education_stewardship_3
+	trait = patient 	# writing books is not easy
+	trait = diligent 	# writing books is not easy
+	trait = temperate 	# talks about moderation in his book quite a bit
+	trait = erudite 	# celebrated author of the 'Qabus nama'
+	trait = intellect_good_1
+	father = 166996
+
+	# History
+	1021.1.1 = {
+		birth = yes
+	}
+	# 1042-1050 - travelled around the Middle East ; married Ghaznavid princess at one point
+	1087.1.1 = {
+		death = yes
+	}
+}
+
+93010 = {
+	history_override_priority = 1000
+	name = "Hashem"
+	dynasty = 7326
+	rite = shafii
+	culture = "persian"
+	father = surak_generic
+	trait =  peasant_leader #descendants of a freedman from the Banu Sulaym tribe
+	trait = disloyal
+
+	# History
+	835.1.1 = {
+		birth = "835.1.1"
+		effect = {
+			learn_language_of_culture = culture:levantine
+		}
+	}
+
+	867.1.1 = {
+		effect = {
+			add_gold = 150
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 500
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 1
+				}
+				location = root.capital_province
+				origin = root.capital_province
+				inheritable = yes # boost Derbent power
+			}
+		}
+	}
+
+	885.1.1 = {
+		death = "885.1.1"
+	}
+}
+
+163101 = {
+	history_override_priority = 1000
+	name = "Ya_qub" # Founder of the Saffarid dynasty
+	dna = 163101_amir_yaqub
+	dynasty = 812
+
+	rite = shafii
+	culture = "persian"
+	father = 163163
+
+	martial = 12
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 9
+	learning = 4
+	prowess = 13
+
+	trait = ambitious
+	trait = brave
+	trait = temperate
+	trait = education_martial_3
+	trait = disfigured
+	trait = celibate
+	trait = organizer
+	trait = holy_warrior
+	trait = lifestyle_blademaster
+	trait = peasant_leader
+
+	disallow_random_traits = yes
+
+	840.1.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}
+	}
+	867.1.1 = {
+		add_unpressed_claim = title:d_kabul
+		add_unpressed_claim = title:d_bhakkar
+		add_unpressed_claim = title:d_sauvira
+		add_unpressed_claim = title:d_ghur
+		effect = {
+			set_relation_potential_rival = character:34014 #the Caliph Mu'tazz
+			set_relation_potential_friend = character:163162 #a Tahirid who became a close ally of Ya'qub
+			set_relation_potential_friend = character:163164 #his brother, to prevent him joining murdering schemes against this guy too early
+			add_prestige = 1200
+			add_gold = 200
+			spawn_army = {
+				name = yaqubs_ayyar_loyalists
+				men_at_arms = {
+					type = ayyar
+					stacks = 3
+				}
+				location = province:4289 #Zaranj
+				origin = province:4289 #Zaranj
+				inheritable = no
+			}
+
+			if = {
+				limit = { has_fp3_dlc_trigger = yes }
+				add_trait = fp3_struggle_detractor
+			}
+		}
+	}
+	879.6.5 = {
+		death = yes
+	}
+}
+
+
+163164 = {
+	history_override_priority = 1000
+	name = "Amr"
+	dna = 163164_amr_i_laith
+	dynasty = 812
+	rite = shafii
+	culture = "persian"
+	father = 163163
+
+	martial = 9
+	diplomacy = 8
+	intrigue = 8 #traits boost this immesively already
+	stewardship = 5
+	learning = 4
+	prowess = 11
+
+	trait = patient
+	trait = just
+	trait = diligent
+	trait = temperate
+	trait = education_martial_3
+	trait = shrewd
+	trait = loyal
+
+	disallow_random_traits = yes
+
+	841.1.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}
+	}
+	855.1.1 = {
+		effect = { learn_language_of_culture = culture:bedouin	}
+	}
+	867.1.1 = {
+		give_council_position = councillor_spymaster
+	}
+	902.1.1 = {
+		death = { 
+			death_reason = death_execution
+			killer = 163157 #Ismail, the Samanid ruler
+		}
+	}
+}
+
+163165 = {
+	history_override_priority = 1000
+	name = "Ali"  # Ali ibn al-Layth
+	dynasty = 812
+	rite = shafii
+	culture = "persian"
+	trait = temperate
+	trait = humble
+	trait = brave
+	trait = diligent
+	trait = education_martial_3
+	father = 163163
+	842.1.1 = {
+		birth = yes
+	}
+	882.1.1 = {
+		death = yes
+	}
+}
+
+166987 = { 
+	# Father of Mardavij/Vushmgir
+	history_override_priority = 1000
+	name = "Ziyar"
+	dynasty = 101689
+	rite = "mazdayasna"
+	culture = "daylamite"
+
+	# History
+	840.6.6 = {
+		birth = yes
+		effect = { add_character_flag = do_not_generate_starting_family }
+	}
+	888.1.1 = {
+		add_spouse = 166988
+	}
+	900.2.17 = {
+		death = yes
+	}
+}
+
+166988 = {
+	# Mother of Mardavij, name unknown ; sister of Harusindan, third king of Gilites,
+	history_override_priority = 1000
+	name = "Mahtab"
+	female = yes
+	rite = "mazdayasna"
+	culture = "daylamite"
+
+	# History
+	868.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+
+166989 = {
+	# initially a sword for hire turned warlord ; first Ziyarid ruler ; had ambitions of restoring Persian Empire
+	history_override_priority = 1000
+	name = "Mardavij"
+	dynasty = 101689
+	rite = "mazdayasna"
+	culture = "daylamite"
+	trait = education_martial_4
+	trait = ambitious 	# sought to establish a native Iranian Zoroastrian empire akin to the Sasanian Empire
+	trait = zealous 	# grew up in an environment where memories of the glories of the Iranian Empire
+	trait = deceitful 	# has a history of underhanded tactics
+	father = 166987
+	mother = 166988
+
+	# History
+	891.7.25 = {
+		birth = yes
+	}
+	935.1.19 = {
+		death = {
+			# assassinated by Turkic slave-soldiers
+			death_reason = death_assassinated_by_soldiers
+		}
+	}
+}
+
+166990 = {
+	# second Ziyarid emir ; his name means "quail catcher"
+	history_override_priority = 1000
+	name = "Vushmgir"
+	dynasty = 101689
+	rite = "mazdayasna"
+	culture = "daylamite"
+	father = 166987
+	mother = 166988
+	trait = education_martial_3
+	trait = ambitious
+	trait = brave
+	trait = gregarious
+
+	# History
+	898.3.13 = {
+		birth = yes
+	}
+	923.1.1 = {
+		add_spouse = 166991
+		rite = zayidi
+	}
+	967.12.1 = {  # year and month known
+		death = {
+			# died during hunt
+			death_reason = death_boar
+		}
+	}
+}
+
+166992 = {
+	# third Ziyarid emir ; allied to Buyids in fight against his father
+	history_override_priority = 1000
+	name = "Bisutun"
+	dynasty = 101689
+	rite = zayidi
+	culture = "daylamite"
+	father = 166990
+	mother = 166991
+
+	# History
+	935.1.6 = {
+		birth = yes
+	}
+	953.1.6 = {
+		trait = education_diplomacy_3  # skilled diplomat, managed realtions with his neighbours well
+	}
+	# 970s - married daughter of 'Adud al-Dawla of Buyid dynasty
+	977.8.6 = {
+		death = yes
+	}
+}
+
+166993 = {
+	# fourth Ziyarid emir ; initially gained support from Samanids and later Firuzanids, but had to give up his title claims in the end
+	history_override_priority = 1000
+	name = "Qabus"
+	dynasty = 101689
+	rite = zayidi
+	culture = "daylamite"
+	father = 166990
+	mother = 166991
+	trait = education_martial_2 	# had decently succesful military career
+	trait = stubborn 	# very persistant guy
+	trait = gregarious 	# quite popular with Ziyarid army for most of his rule
+	trait = callous 	# seems to have had opinion as a rather cruel ruler
+
+	# History
+	940.4.17 = {
+		birth = yes
+	}
+	# 978 or 979 - the caliph al-Ta'i granted him the title 'Shams al-Ma'ali'
+	# 981 - lost war with Buyids 
+	# 981-997 - in exile
+	1012.6.11 = {
+		death = {
+			# frozen to death by rebelious military leaders who saw him as a threat
+			death_reason = death_froze
+		}
+	}
+}
+
+166994 = {
+	# fifth Ziyarid emir ; 
+	history_override_priority = 1000
+	name = "Manuchihr"
+	dynasty = 101689
+	rite = zayidi
+	culture = "daylamite"
+	father = 166993
+
+	# History
+	970.8.11 = {
+		birth = yes
+	}
+	# after 1012 - accepted sovereignty of Mahmud of Ghazna and married one of his daughters
+	1031.1.2 = {
+		death = yes
+	}
+}
+
+166995 = {
+	# sixth Ziyarid emir ; very short and volatile reign
+	history_override_priority = 1000
+	name = "Anushirvan_Sharaf"
+	dynasty = 101689
+	rite = zayidi
+	culture = "daylamite"
+	father = 166994
+
+	# History
+	1001.4.19 = {
+		birth = yes
+	}
+	# 1032-1040 - ousted from power by his army chief and maternal relative Abu Kalijar ibn Vayhan
+	# 1041/1042 - Seljuk invasion and submission to their sovereignty
+	1050.1.2 = {
+		death = yes
+	}
+}
+
+166996 = {
+	# father of Keikavus
+	history_override_priority = 1000
+	name = "Eskander"
+	dynasty = 101689
+	rite = zayidi
+	culture = "daylamite"
+	father = 166993
+
+	# History
+	972.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes
+	}
+}

@@ -1,0 +1,302 @@
+﻿# Overwrites of vanilla characters
+
+# Kashgar AKA Kasyar
+166690 = {
+	history_override_priority = 1000
+	name = "Kartir"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	705.1.1 = {
+		birth = yes
+	}
+	760.1.1 = {
+		death = yes
+	}
+}
+166691 = {
+	history_override_priority = 1000
+	name = "Lengleng"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = 166690
+	732.1.1 = {
+		birth = yes
+	}
+	798.1.1 = {
+		death = yes
+	}
+}
+166692 = {
+	history_override_priority = 1000
+	name = "Ranisa"
+	female = yes
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = 166690
+	740.1.1 = {
+		birth = yes
+	}
+	802.1.1 = {
+		death = yes
+	}
+}
+166693 = {
+	history_override_priority = 1000
+	name = "Resan"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = 166691
+	785.1.1 = {
+		birth = yes
+	}
+	846.1.1 = {
+		death = yes
+	}
+}
+166694 = {
+	history_override_priority = 1000
+	name = "Dharma"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = 166693
+	840.1.1 = {
+		birth = yes
+	}
+	891.1.1 = {
+		death = yes
+	}
+}
+166695 = {
+	history_override_priority = 1000
+	name = "Yasaman"
+	female = yes
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = 166693
+	845.1.1 = {
+		birth = yes
+	}
+	898.1.1 = {
+		death = yes
+	}
+}
+
+166660 = {
+	history_override_priority = 1000
+	name = "Dharma" #Vijaya Dharma III (Yuchi Tiao)
+	dynasty = 1040024
+	rite = "avatamsaka"
+	culture = "saka"
+	father = 166659
+	684.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		# Beheaded by the Chinese
+		death = {
+			death_reason = death_execution
+		}
+	}
+}
+
+saka0001 = {
+	history_override_priority = 1000
+	name = "Samgaka"
+	dynasty = 2003123 #Chiehmo
+	rite = mahayana #dharmaguptaka
+	culture = "saka"
+	846.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		add_spouse = 166741
+	}
+	916.1.1 = {
+		death = yes
+	}
+}
+
+saka0014 = {
+	history_override_priority = 1000
+	name = "Raghu"
+	dynasty = 2003125 #Shaka
+	rite = mahayana
+	culture = "saka"
+	father = saka0013
+	840.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		add_spouse = 166701
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+saka0015 = {
+	history_override_priority = 1000
+	name = "Ceguti"
+	dynasty = 2003125 #Shaka
+	rite = mahayana
+	culture = "saka"
+	father = saka0014
+	mother = 166701
+	860.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+# Kashgar dynasty expanded - fictional placeholders
+saka0023 = {
+	history_override_priority = 1000
+	name = "Pakyau"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = 166694
+	860.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+saka0024 = {
+	history_override_priority = 1000
+	name = "Bhadra"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = saka0023
+	880.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+saka0025 = {
+	history_override_priority = 1000
+	name = "Shinganca"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = saka0024
+	900.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes
+	}
+}
+saka0026 = {
+	history_override_priority = 1000
+	name = "Vadhaga"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = saka0025
+	920.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+saka0027 = {
+	history_override_priority = 1000
+	name = "Sudarrjam"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = saka0026
+	940.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
+saka0028 = {
+	history_override_priority = 1000
+	name = "Alysanna"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = saka0027
+	960.1.1 = {
+		birth = yes
+	}
+	1006.1.1 = {
+		death = yes
+	}
+}
+saka0029 = {
+	history_override_priority = 1000
+	name = "Murlimin"
+	dynasty = 1040057
+	rite = sarvastivada
+	culture = "saka"
+	father = saka0028
+	980.1.1 = {
+		birth = yes
+	}
+	1006.1.1 = {
+		death = yes
+	}
+}
+saka0030 = {
+	history_override_priority = 1000
+	name = "Gulai"
+	dynasty = 1040057
+	rite = mahayana
+	culture = "saka"
+	father = saka0029
+	1000.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+fictional_sakas_5 = {
+	history_override_priority = 1000
+	name = "Manohara"
+	dynasty = saka_pamirid
+	rite = hanafi
+	culture = "pamiri"
+	848.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+fictional_sakas_8 = {
+	history_override_priority = 1000
+	name = "Haskadatta"
+	dynasty = saka_pamirid
+	rite = hanafi
+	culture = "pamiri"
+	father = fictional_sakas_5
+	888.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		culture = tajik
+	}
+	940.1.1 = {
+		death = yes
+	}
+}

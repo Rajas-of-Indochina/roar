@@ -1,0 +1,152 @@
+﻿# Overwrites of vanilla characters
+
+189018 = {
+	history_override_priority = 1000
+	name = "Udaya" # III
+	dynasty = 1043001
+	rite = "theravada"
+	culture = "sinhala"
+	father = 189014
+	890.1.1 = {
+		birth = "890.1.1"
+	}
+	972.1.1 = {
+		death = "972.1.1"
+	}
+}
+
+189019 = {
+	history_override_priority = 1000
+	name = "Kassapa" # V
+	dynasty = 1043001
+	rite = "theravada"
+	culture = "sinhala"
+	father = 189015
+	mother = RICE_sri_lanka_018
+	866.1.1 = {
+		birth = "866.1.1"
+	}
+	939.1.1 = {
+		death = "939.1.1"
+	}
+}
+
+189026 = {
+	history_override_priority = 1000
+	name = "Kassapa" #
+	dynasty = 1043001
+	rite = "theravada"
+	culture = "sinhala"
+	father = 189025
+	980.1.1 = {
+		birth = "980.1.1"
+	}
+	1030.1.1 = {
+		name = "Vikramabahu" # VI
+	}
+	1041.1.1 = {
+		death = {
+			death_reason = death_ill
+		}
+	}
+}
+
+189029 = {
+	history_override_priority = 1000
+	name = "Kitti" # Kirti
+	dynasty = 1029172
+	rite = "theravada"
+	culture = "sinhala"
+	trait = just
+	trait = education_martial_4
+	father = 189027
+	#mother = Lokitha_Devi
+	
+	1030.1.1 = {
+		birth = "1030.1.1"
+	}
+	1055.1.1 = {
+		name = "Vijayabahu"
+		trait = zealous
+		trait = ambitious
+		trait = strong
+	}
+	1066.9.15 = {
+		add_pressed_claim = title:c_kotte
+		add_pressed_claim = title:c_kandy
+		add_pressed_claim = title:c_dakhina_desa
+		add_pressed_claim = title:c_phiti
+		add_pressed_claim = title:c_trincomalee
+		add_pressed_claim = title:c_jaffna
+		effect = {
+			random_character_war = {
+				save_scope_as = starting_sinhalese_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1075
+				location = province:3267
+				origin = province:3267
+				war = scope:starting_sinhalese_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1075
+				location = province:3280
+				origin = province:3267
+				war = scope:starting_sinhalese_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1075
+				location = province:3267
+				origin = province:3267
+				war = scope:starting_sinhalese_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1075
+				location = province:3280
+				origin = province:3267
+				war = scope:starting_sinhalese_war
+			}
+			add_gold = 2000 # Need enough gold to pay for army + duchy + kingdom creation.
+			add_prestige = 1000
+		}
+	}
+	1111.1.1 = {
+		death = "1111.1.1"
+	}
+}
+
+189030 = {
+	history_override_priority = 1000
+	name = "Vikramabahu" # I
+	dynasty = 1029172
+	rite = "theravada"
+	culture = "sinhala"
+	father = 189029
+	mother = RICE_sri_lanka_008
+	1060.1.1 = {
+		# Not actually true, he was born after 1066 most likely so the timeline doesn't make sense - needs to be reworked
+		birth = "1060.1.1"
+	}
+	1132.1.1 = {
+		death = "1132.1.1"
+	}
+}
+
+189156 = {
+	history_override_priority = 1000
+	name = "Mahanaga" #
+	dynasty = 1029192
+	rite = "theravada"
+	culture = "sinhala"
+	father = 189155
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	865.1.1 = {
+		death = "865.1.1"
+	}
+}

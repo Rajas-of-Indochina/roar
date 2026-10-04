@@ -1,70 +1,9 @@
-﻿#############CybrxPamir
-
-badakhshanids_1 = {
-	history_override_priority = 1000
-	name = "Asad"
-	dynasty = tajik_badakhshanid
-	rite = hanafi # was maturidi, fix later
-	culture = "pamiri"
-	986.1.1 = {
-		birth = yes
-	}
-	1043.1.1 = {
-		death = yes
-	}
-}
-
-badakhshanids_2 = {
-	history_override_priority = 1000
-	name = "Ali"
-	dynasty = tajik_badakhshanid
-	rite = hanafi # was maturidi, fix later
-	culture = "pamiri"
-	learning=6
-	trait = education_learning_3
-	trait = calm
-	trait = gregarious
-	trait = diligent
-	trait = shrewd
-	disallow_random_traits = yes
-	father = badakhshanids_1
-	1011.1.1 = {
-		birth = yes
-	}
-	1036.1.1 = {
-		effect = {
-			set_relation_friend = {
-				target = character:persian_scholars_3
-				reason = RICE_friend_reason_placeholder
-			}
-		}
-	}
-	1077.1.1 = {
-		death = yes
-	}
-}
-
-badakhshanids_3 = {
-	history_override_priority = 1000
-	name = "Ahmad"
-	dynasty = tajik_badakhshanid
-	rite = hanafi # was maturidi, fix later
-	culture = "pamiri"
-	father = badakhshanids_2
-	1033.1.1 = {
-		birth = yes
-	}
-	1090.1.1 = {
-		death = yes
-	}
-}
-
-#### ASDAC
+﻿#### ASDAC
 kumidji_1 = {
 	history_override_priority = 1000
 	name = "Farzad"
 	dynasty = 1062506 #Kumidji
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = pamiri
 	878.1.1 = {
 		birth = yes
@@ -73,11 +12,12 @@ kumidji_1 = {
 		death = yes
 	}
 }
+
 kumidji_2 = {
 	history_override_priority = 1000
 	name = "Barak"
 	dynasty = 1062506 #Kumidji
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = pamiri
 	father = kumidji_1
 	905.1.1 = {
@@ -87,11 +27,12 @@ kumidji_2 = {
 		death = yes
 	}
 }
+
 kumidji_3 = {
 	history_override_priority = 1000
 	name = "Kushan"
 	dynasty = 1062506 #Kumidji
-	rite = hanafi # was maturidi, fix later
+	rite = hanafi
 	culture = pamiri
 	father = kumidji_2
 	928.1.1 = {
