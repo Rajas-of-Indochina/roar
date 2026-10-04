@@ -1,0 +1,2392 @@
+601 = {
+	history_override_priority = 1000
+	name = "Olga"	#Saint Olga
+	female = yes
+	rite = "slavic_pagan"
+	culture = "krivich"
+	890.6.5 = {
+		birth = "890.6.5"
+	}
+	959.10.12 = {
+		# rite = roman_rite
+		#She was baptized in Constantinople
+		rite = byzantine_rite
+	}
+	969.7.11 = {
+		death = "969.7.11"
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {	
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:547 #	Kiev
+				PRESET = yes
+			}
+			religion:christianity_religion = {
+				every_faith = {
+					limit = {
+						is_non_chalcedonianism_christian_faith = no
+						main_rite = {
+							is_rite_enabled = yes
+						}
+						NOT = { has_saint_character = root }
+					}
+					add_saint = { character = root }
+				}
+			}
+		}
+	}
+}
+
+###
+
+6825 = {
+	history_override_priority = 1000
+	name = "Yaropolk"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	trait = content
+	trait = cynical
+	dynasty = 1029117
+	father = 160064
+	841.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+6826 = {
+	history_override_priority = 1000
+	name = "Gostomysl"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029137
+	father = 160139
+	trait = content
+	trait = cynical
+	839.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+6829 = {
+	history_override_priority = 1000
+	name = "Vsemil"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	trait = content
+	dynasty = 1029136
+	father = 160062
+	839.1.1 = {
+		birth = yes
+	}
+	887.1.1 = {
+		death = yes
+	}
+}
+
+6831 = {
+	history_override_priority = 1000
+	name = "Svetozar"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	trait = content
+	dynasty = 1029136
+	father = 160058
+	834.1.1 = {
+		birth = yes
+	}
+	887.1.1 = {
+		death = yes
+	}
+}
+
+6832 = {
+	history_override_priority = 1000
+	name = "Radoslav"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	trait = content
+	dynasty = 1029136
+	father = 160062
+	836.1.1 = {
+		birth = yes
+	}
+	888.1.1 = {
+		death = yes
+	}
+}
+6833 = {
+	history_override_priority = 1000
+	name = "Sviatopolk"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	trait = content
+	dynasty = 1029136
+	father = 160062
+	834.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+6835 = {
+	history_override_priority = 1000
+	name = "Dobrozhir"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 160058
+	trait = content
+	835.1.1 = {
+		birth = yes
+	}
+	869.1.1 = {
+		death = yes
+	}
+}
+
+6859 = {
+	history_override_priority = 1000
+	name = "Yelisey"
+	dynasty = 1029116
+	rite = slavic_pagan
+	culture = krivich
+	father = 160051
+	trait = content
+	845.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+6868 = {
+	history_override_priority = 1000
+	name = "Vsebor"
+	dynasty = 1029117
+	rite = slavic_pagan
+	culture = volhynian
+	trait = content
+	father = 160064
+	845.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+6869 = {
+	history_override_priority = 1000
+	name = "Radoslav"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 1029116
+	father = 160134
+	trait = content
+	840.1.1 = {
+		birth = yes
+	}
+	893.1.1 = {
+		death = yes
+	}
+}
+
+6870 = {
+	history_override_priority = 1000
+	name = "Yaropolk"
+	rite = slavic_pagan
+	culture = severian
+	trait = content
+	dynasty = 1029137
+	father = 160139
+	840.1.1 = {
+		birth = yes
+	}
+	875.1.1 = {
+		death = yes
+	}
+}
+
+6889 = {
+	history_override_priority = 1000
+	name = Yemelyan # Fantasy
+	rite = slavic_pagan
+	culture = severian
+	trait = content
+	dynasty = 704
+	830.1.1 = {
+		birth = yes
+	}
+	894.1.1 = {
+		death = yes
+	}
+}
+
+90147 = {
+	history_override_priority = 1000
+	name = "Kruglets"
+	dynasty = 100574
+	martial = 5
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
+	rite = "baltic_pagan"
+	culture = "goliad"
+	trait = education_learning_2
+	father = 90146
+	1056.1.2 = {
+		birth = "1056.1.2"
+	}
+	1106.1.2 = {
+		death = "1106.1.2"
+	}
+}
+
+159718 = {
+	history_override_priority = 1000
+	name = "Vyacheslav"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029167
+	father = 194138
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	920.1.1 = {
+		death = "920.1.1"
+	}
+}
+
+159719 = {
+	history_override_priority = 1000
+	name = "Iziaslav"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 160050
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	920.1.1 = {
+		death = "920.1.1"
+	}
+}
+
+159720 = {
+	history_override_priority = 1000
+	name = "Bogdan"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	trait = content
+	trait = craven
+	trait = cynical
+	father = 160064
+	840.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+82266 = {
+	history_override_priority = 1000
+	name = "Boryslav"
+	dynasty = 9125
+	father = 82258
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	trait = bastard_founder
+	824.1.1 = {
+		birth = "824.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+
+82267 = {
+	history_override_priority = 1000
+	name = "Bogdan"
+	dynasty = 9125
+	father = 82266
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	846.1.1 = {
+		birth = "846.1.1"
+	}
+	927.1.1 = {
+		death = "927.1.1"
+	}
+}
+
+82268 = {
+	history_override_priority = 1000
+	name = "Yaroslav"
+	dynasty = 9125
+	father = 82267
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	910.1.1 = {
+		birth = "910.1.1"
+	}
+	977.1.2 = {
+		death = "977.1.2"
+	}
+}
+
+82269 = {
+	history_override_priority = 1000
+	name = "Bronislav"
+	dynasty = 9125
+	father = 82266
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	848.1.1 = {
+		birth = "848.1.1"
+	}
+	929.1.1 = {
+		death = "929.1.1"
+	}
+}
+
+82270 = {
+	history_override_priority = 1000
+	name = "Vlastimil"
+	dynasty = 9125
+	father = 82269
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	909.1.1 = {
+		birth = "909.1.1"
+	}
+	977.1.2 = {
+		death = "977.1.2"
+	}
+}
+
+82271 = {
+	history_override_priority = 1000
+	name = "Ctibor"
+	dynasty = 9125
+	father = 82266
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	928.1.1 = {
+		death = "928.1.1"
+	}
+}
+
+82272 = {
+	history_override_priority = 1000
+	name = "Miroslav"
+	dynasty = 9125
+	father = 82271
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	911.1.1 = {
+		birth = "911.1.1"
+	}
+	977.1.2 = {
+		death = "977.1.2"
+	}
+}
+
+160049 = {
+	history_override_priority = 1000
+	name = "Vsevolod"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 194133
+	780.1.1 = {
+		birth = "780.1.1"
+	}
+	830.1.1 = {
+		death = "830.1.1"
+	}
+}
+160050 = {
+	history_override_priority = 1000
+	name = "Putimir"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 160049
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+160051 = {
+	history_override_priority = 1000
+	name = "Radigost"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 160049
+	815.1.1 = {
+		birth = "815.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+160052 = {
+	history_override_priority = 1000
+	name = "Radoslav"
+	dynasty = 1029116
+	rite = slavic_pagan
+	culture = krivich
+	father = 160051
+	trait = content
+	850.1.1 = {
+		birth = yes
+	}
+	899.1.1 = {
+		death = yes
+	}
+}
+160053 = {
+	history_override_priority = 1000
+	name = "Samovlad"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 160050
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	925.1.1 = {
+		death = "925.1.1"
+	}
+}
+160054 = {
+	history_override_priority = 1000
+	name = "Premsyl"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 160050
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	926.1.1 = {
+		death = "926.1.1"
+	}
+}
+160055 = {
+	history_override_priority = 1000
+	name = "Ljuboslav"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 160057
+	780.1.1 = {
+		birth = "780.1.1"
+	}
+	830.1.1 = {
+		death = "830.1.1"
+	}
+}
+160056 = {
+	history_override_priority = 1000
+	name = "Krasimir"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 160057
+	785.1.1 = {
+		birth = "785.1.1"
+	}
+	830.1.1 = {
+		death = "830.1.1"
+	}
+}
+160057 = {
+	history_override_priority = 1000
+	name = "Zbignev"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 194131
+	750.1.1 = {
+		birth = "750.1.1"
+	}
+	812.1.1 = {
+		death = yes
+	}
+}
+160058 = {
+	history_override_priority = 1000
+	name = "Samovlad"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 160055
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+160062 = {
+	history_override_priority = 1000
+	name = "Gostevid"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 160057
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	865.1.1 = {
+		death = "865.1.1"
+	}
+}
+160064 = {
+	history_override_priority = 1000
+	name = "Dobromir"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	father = 194135
+	816.1.1 = {
+		birth = "816.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+160091 = {
+	history_override_priority = 1000
+	name = "Ladimir"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6829
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160092 = {
+	history_override_priority = 1000
+	name = "Radogor"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6829
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160093 = {
+	history_override_priority = 1000
+	name = "Svyatogor"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6831
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160094 = {
+	history_override_priority = 1000
+	name = "Tihomir"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6831
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160095 = {
+	history_override_priority = 1000
+	name = "Godoslav"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6832
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160096 = {
+	history_override_priority = 1000
+	name = "Vyacheslav"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6832
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160097 = {
+	history_override_priority = 1000
+	name = "Dobrovlad"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6833
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160098 = {
+	history_override_priority = 1000
+	name = "Zhiroslav"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6833
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160099 = {
+	history_override_priority = 1000
+	name = "Zvonimir"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029137
+	father = 6826
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160100 = {
+	history_override_priority = 1000
+	name = "Velimir"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029137
+	father = 6826
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160101 = {
+	history_override_priority = 1000
+	name = "Bryacheslav"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	father = 159720
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160102 = {
+	history_override_priority = 1000
+	name = "Venceslav"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	father = 159720
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160103 = {
+	history_override_priority = 1000
+	name = "Yaroslav"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	father = 6825
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160104 = {
+	history_override_priority = 1000
+	name = "Budimir"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	father = 6825
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160105 = {
+	history_override_priority = 1000
+	name = "Mladan"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 159719
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160106 = {
+	history_override_priority = 1000
+	name = "Radomysl"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 159719
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160107 = {
+	history_override_priority = 1000
+	name = "Svetovid"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 6859
+	862.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160108 = {
+	history_override_priority = 1000
+	name = "Predrag"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	father = 6859
+	863.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160109 = {
+	history_override_priority = 1000
+	name = "Svyatogor"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6835
+	851.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160110 = {
+	history_override_priority = 1000
+	name = "Tverdimir"
+	rite = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029136
+	father = 6835
+	852.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+160134 = {
+	history_override_priority = 1000
+	name = "Radomir"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 1029116
+	father = 160049
+	810.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+160135 = {
+	history_override_priority = 1000
+	name = "Stanislav"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 1029116
+	father = 6869
+	857.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160136 = {
+	history_override_priority = 1000
+	name = "Vlastimir"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 1029116
+	father = 6869
+	858.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160137 = {
+	history_override_priority = 1000
+	name = "Rostislav"
+	rite = slavic_pagan
+	culture = volhynian
+	dynasty = 1029117
+	father = 6868
+	862.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+160138 = {
+	history_override_priority = 1000
+	name = "Kazimir"
+	rite = slavic_pagan
+	culture = volhynian
+	dynasty = 1029117
+	father = 6868
+	863.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+160139 = {
+	history_override_priority = 1000
+	name = "Velimir"
+	rite = slavic_pagan
+	culture = severian
+	dynasty = 1029137
+	father = 194141
+	810.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+160140 = {
+	history_override_priority = 1000
+	name = "Svetoslav"
+	rite = slavic_pagan
+	culture = severian
+	dynasty = 1029137
+	father = 6870
+	857.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+160141 = {
+	history_override_priority = 1000
+	name = "Zvonimir"
+	rite = slavic_pagan
+	culture = severian
+	dynasty = 1029137
+	father = 6870
+	858.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+
+194133 = {
+	history_override_priority = 1000
+	name = "Svetozar"
+	rite = "slavic_pagan"
+	culture = "krivich"
+	dynasty = 1029116
+	750.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194134 = {
+	history_override_priority = 1000
+	name = "Igor"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	738.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194135 = {
+	history_override_priority = 1000
+	name = "Igor"
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	dynasty = 1029117
+	father = 194134
+	764.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+194136 = {
+	history_override_priority = 1000
+	name = "Briachislav"
+	dynasty = 1029167
+	rite = slavic_pagan
+	culture = volhynian
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194137 = {
+	history_override_priority = 1000
+	name = "Svetozar"
+	dynasty = 1029167
+	rite = slavic_pagan
+	culture = volhynian
+	father = 194136
+	770.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+194138 = {
+	history_override_priority = 1000
+	name = "Gleb"
+	dynasty = 1029167
+	rite = slavic_pagan
+	culture = volhynian
+	father = 194137
+	810.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+194139 = {
+	history_override_priority = 1000
+	name = "Dobrava"
+	female = yes
+	dynasty = 1045024
+	rite = slavic_pagan
+	culture = volhynian
+	750.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194140 = {
+	history_override_priority = 1000
+	name = "Stanislav"
+	dynasty = 1029137
+	rite = slavic_pagan
+	culture = severian
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194141 = {
+	history_override_priority = 1000
+	name = "Igor"
+	dynasty = 1029137
+	rite = slavic_pagan
+	culture = severian
+	father = 194140
+	770.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+
+#Ulichs in Moldavia
+302134 = {
+	history_override_priority = 1000
+	name = "Briachislav"
+	dynasty = 1045031	#Ulichs
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	834.11.20 = {
+		birth = "834.11.20"
+	}
+	854.5.15 = {
+		add_spouse = 302135
+	}
+	897.10.16 = {
+		death = "897.10.16"
+	}
+}
+302135 = {
+	history_override_priority = 1000
+	name = "Olena"
+	female = yes
+	dynasty = 1045031	#Ulichs
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	838.3.12 = {
+		birth = "838.3.12"
+	}
+	898.6.15 = {
+		death = "898.6.15"
+	}
+}
+302136 = {
+	history_override_priority = 1000
+	name = "Lev"
+	dynasty = 1045031	#Ulichs
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	father = 302134
+	mother = 302135
+	855.3.15 = {
+		birth = "855.3.15"
+	}
+	911.2.1 = {
+		death = "911.2.1"
+	}
+}
+#Tivertsi in Moldavia
+302137 = {
+	history_override_priority = 1000
+	name = "Vladislav"
+	dynasty = 2001027	#Tivertsi
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	839.3.23 = {
+		birth = "839.3.23"
+	}
+	861.2.5 = {
+		add_spouse = 302138
+	}
+	900.1.15 = {
+		death = "900.1.15"
+	}
+}
+302138 = {
+	history_override_priority = 1000
+	name = "Ulyana"
+	female = yes
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	842.6.1 = {
+		birth = "842.6.1"
+	}
+	862.7.15 = {
+		death = "862.7.15"
+	}
+}
+302139 = {
+	history_override_priority = 1000
+	name = "Ulyana"
+	female = yes
+	dynasty = 2001027	#Tivertsi
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	father = 302137
+	mother = 302138
+	862.7.15 = {
+		birth = "862.7.15"
+	}
+	925.10.12 = {
+		death = "925.10.12"
+	}
+}
+302140 = {
+	history_override_priority = 1000
+	name = "Vysheslav"
+	dynasty = 2001027	#Tivertsi
+	rite = slavic_rite
+	culture = "volhynian"
+	1040.9.16 = {
+		birth = "1040.9.16"
+	}
+	1101.2.3 = {
+		death = "1101.2.3"
+	}
+}
+
+# 867 Tribes (Galicia-Volhynia & Kiev)
+302142 = {		#Berestye tribe
+	history_override_priority = 1000
+	name = Ruslan
+	dynasty = 2001028	#Betula
+	rite = slavic_pagan
+	culture = volhynian
+	823.11.9 = {
+		birth = 823.11.9
+	}
+	865.4.17 = {
+		death = 865.4.17
+	}
+}
+302143 = {
+	history_override_priority = 1000
+	name = Vysheslav
+	dynasty = 2001028	#Betula
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302142
+	846.5.3 = {
+		birth = 846.5.3
+	}
+	899.4.30 = {
+		death = 899.4.30
+	}
+}
+302144 = {
+	history_override_priority = 1000
+	name = Rogvolod
+	dynasty = 2001028	#Betula
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302142
+	849.7.14 = {
+		birth = 849.7.14
+	}
+	896.1.23 = {
+		death = 896.1.23
+	}
+}
+302145 = {
+	history_override_priority = 1000
+	name = Demid
+	dynasty = 2001028	#Betula
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302142
+	851.10.20 = {
+		birth = 851.10.20
+	}
+	907.2.16 = {
+		death = 907.2.16
+	}
+}
+#
+302146 = {		#Luchans tribe
+	history_override_priority = 1000
+	name = Pyotr
+	dynasty = 2001029	#Luchanev
+	rite = slavic_pagan
+	culture = volhynian
+	842.9.28 = {
+		birth = 842.9.28
+	}
+	903.8.15 = {
+		death = 903.8.15
+	}
+}
+#
+302147 = {		#Buzhans tribe
+	history_override_priority = 1000
+	name = Igor
+	dynasty = 2001030	#Buzhanko
+	rite = slavic_pagan
+	culture = volhynian
+	837.8.16 = {
+		birth = 837.8.16
+	}
+	903.8.15 = {
+		death = 903.8.15
+	}
+}
+#
+302148 = {		#Chrobatians tribe
+	history_override_priority = 1000
+	name = Gavriil
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	830.10.27 = {
+		birth = 830.10.27
+	}
+	889.2.15 = {
+		death = 889.2.15
+	}
+}
+302149 = {		#Chrobatians tribe
+	history_override_priority = 1000
+	name = Alexei
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302148
+	853.5.30 = {
+		birth = 853.5.30
+	}
+	889.8.12 = {
+		death = 889.8.12
+	}
+}
+302150 = {		#Chrobatians tribe
+	history_override_priority = 1000
+	name = Irina
+	female = yes
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302148
+	855.10.6 = {
+		birth = 855.10.6
+	}
+	889.3.19 = {
+		death = 889.3.19
+	}
+}
+#
+302151 = {		#Podolians tribe
+	history_override_priority = 1000
+	name = Vasilko
+	dynasty = 2001034	#Podolianiv
+	rite = slavic_pagan
+	culture = volhynian
+	846.10.11 = {
+		birth = 846.10.11
+	}
+	865.8.4 = {
+		add_spouse = 302152
+	}
+	901.4.19 = {
+		death = 901.4.19
+	}
+}
+302152 = {		#Podolians tribe
+	history_override_priority = 1000
+	name = Yekaterina
+	female = yes
+	rite = slavic_pagan
+	culture = volhynian
+	848.1.22 = {
+		birth = 848.1.22
+	}
+	910.2.10 = {
+		death = 910.2.10
+	}
+}
+302153 = {		#Podolians tribe
+	history_override_priority = 1000
+	name = Svetozar
+	dynasty = 2001034	#Podolianiv
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302151
+	mother = 302152
+	866.1.12 = {
+		birth = 866.1.12
+	}
+	917.5.7 = {
+		death = 917.5.7
+	}
+}
+#
+302154 = {		#Drevlians tribe
+	history_override_priority = 1000
+	name = Kirill
+	dynasty = 2001031	#Drevlianin
+	rite = slavic_pagan
+	culture = volhynian
+	818.3.8 = {
+		birth = 818.3.8
+	}
+	883.1.1 = {
+		death = 883.1.1
+	}
+}
+302155 = {
+	history_override_priority = 1000
+	name = Nikita
+	dynasty = 2001031	#Drevlianin
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302154
+	848.12.20 = {
+		birth = 848.12.20
+	}
+	909.7.15 = {
+		death = 909.7.15
+	}
+}
+302156 = {
+	history_override_priority = 1000
+	name = Trifon
+	dynasty = 2001031	#Drevlianin
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302154
+	850.10.14 = {
+		birth = 850.10.14
+	}
+	887.9.20 = {
+		death = 887.9.20
+	}
+}
+302157 = {
+	history_override_priority = 1000
+	name = Andronov
+	dynasty = 2001031	#Drevlianin
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302155
+	877.5.5 = {
+		birth = 877.5.5
+	}
+	946.1.1 = {
+		death = 946.1.1
+	}
+}
+302158 = {
+	history_override_priority = 1000
+	name = Kirill
+	dynasty = 2001031	#Drevlianin
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302155
+	878.12.23 = {
+		birth = 878.12.23
+	}
+	946.1.1 = {
+		death = 946.1.1
+	}
+}
+302159 = {
+	history_override_priority = 1000
+	name = Irina
+	female = yes
+	dynasty = 2001031	#Drevlianin
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302157
+	907.3.16 = {
+		birth = 907.3.16
+	}
+	946.1.1 = {
+		death = 946.1.1
+	}
+}
+
+302166 = {		#Volhynians tribe
+	history_override_priority = 1000
+	name = Svetozar
+	dynasty = 2001033	#Volhynsky
+	rite = slavic_pagan
+	culture = volhynian
+	803.7.12 = {
+		birth = 803.7.12
+	}
+	862.4.4 = {
+		death = 862.4.4
+	}
+}
+302167 = {
+	history_override_priority = 1000
+	name = Yuriy
+	dynasty = 2001033	#Volhynsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302166
+	834.5.16 = {
+		birth = 834.5.16
+	}
+	896.6.16 = {
+		death = 896.6.16
+	}
+}
+302168 = {
+	history_override_priority = 1000
+	name = Boris
+	dynasty = 2001033	#Volhynsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302166
+	837.2.20 = {
+		birth = 837.2.20
+	}
+	894.11.13 = {
+		death = 894.11.13
+	}
+}
+302169 = {
+	history_override_priority = 1000
+	name = Feodot
+	dynasty = 2001033	#Volhynsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302167
+	864.11.30 = {
+		birth = 864.11.30
+	}
+	926.8.14 = {
+		death = 926.8.14
+	}
+}
+302170 = {
+	history_override_priority = 1000
+	name = Ivan
+	dynasty = 2001033	#Volhynsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302169
+	891.4.12 = {
+		birth = 891.4.12
+	}
+	946.1.15 = {
+		death = 946.1.15
+	}
+}
+302171 = {
+	history_override_priority = 1000
+	name = Yuriy
+	dynasty = 2001033	#Volhynsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302170
+	926.5.15 = {
+		birth = 926.5.15
+	}
+	987.11.7 = {
+		death = 987.11.7
+	}
+}
+
+302175 = {		#Chrobatians tribe/Kiev vassals bis
+	history_override_priority = 1000
+	name = Mikhail
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302148
+	879.1.4 = {
+		birth = 879.1.4
+	}
+	936.12.11 = {
+		death = 936.12.11
+	}
+}
+302176 = {
+	history_override_priority = 1000
+	name = Simeon
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302175
+	909.4.27 = {
+		birth = 909.4.27
+	}
+	974.5.30 = {
+		death = 974.5.30
+	}
+}
+302177 = {
+	history_override_priority = 1000
+	name = Stepan
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302176
+	941.7.12 = {
+		birth = 941.7.12
+	}
+	989.1.2 = {
+		rite = slavic_rite
+	}
+	992.4.10 = {
+		death = 992.4.10
+	}
+}
+302178 = {
+	history_override_priority = 1000
+	name = Mikhail
+	dynasty = 2001032	#Chrobatiovsky
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302177
+	975.8.14 = {
+		birth = 975.8.14
+	}
+	989.1.2 = {
+		rite = slavic_rite
+	}
+	1041.3.3 = {
+		death = 1041.3.3
+	}
+}
+
+#Legendary early Kiev rulers
+302185 = {			#Completely fictional, so Kyi can have proper brothers and sister
+	history_override_priority = 1000
+	name = Kuar		#Name based on the possible original Armenian version of Kyi's legend, because why not
+	rite = slavic_pagan
+	culture = volhynian
+	526.1.16 = {
+		birth = 526.1.16
+	}
+	549.1.16 = {
+		add_spouse = 302186
+	}
+	564.2.20 = {
+		death = 564.2.20
+	}
+}
+302186 = {
+	history_override_priority = 1000
+	name = Dessenka	#Completely fictional, so Kyi can have proper brothers and sister
+	female = yes
+	rite = slavic_pagan
+	culture = volhynian
+	530.4.9 = {
+		birth = 530.4.9
+	}
+	556.11.7 = {
+		death = 556.11.7
+	}
+}
+302187 = {
+	history_override_priority = 1000
+	name = Kyi		#Legendary 1st ruler of Kiev
+	dynasty = 2001036	#Kyivy
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302185
+	mother = 302186
+	550.8.24 = {
+		birth = 550.8.24
+	}
+	632.11.15 = {
+		death = 632.11.15
+	}
+}
+302188 = {
+	history_override_priority = 1000
+	name = Shchek	#Kyi's brother
+	dynasty = 2001036	#Kyivy
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302185
+	mother = 302186
+	551.7.16 = {
+		birth = 551.7.16
+	}
+	618.3.10 = {
+		death = 618.3.10
+	}
+}
+302189 = {
+	history_override_priority = 1000
+	name = Khoryv	#Kyi's brother
+	dynasty = 2001036	#Kyivy
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302185
+	mother = 302186
+	554.1.22 = {
+		birth = 554.1.22
+	}
+	599.5.14 = {
+		death = 599.5.14
+	}
+}
+302190 = {
+	history_override_priority = 1000
+	name = Lybid	#Kyi's sister
+	female = yes
+	dynasty = 2001036	#Kyivy
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302185
+	mother = 302186
+	556.11.7 = {
+		birth = 556.11.7
+	}
+	645.12.12 = {
+		death = 645.12.12
+	}
+}
+
+# Black & White Ruthenia
+302196 = {		#Polochans tribe in 867
+	history_override_priority = 1000
+	name = Igor
+	dynasty = 2001038	#Polochanin
+	rite = slavic_pagan
+	culture = krivich
+	843.10.16 = {
+		birth = 843.10.16
+	}
+	910.6.8 = {
+		death = 910.6.8
+	}
+}
+302197 = {		#Polochans tribe in 867
+	history_override_priority = 1000
+	name = Iliya
+	dynasty = 2001038	#Polochanin
+	rite = slavic_pagan
+	culture = krivich
+	father = 302196
+	865.8.13 = {
+		birth = 865.8.13
+	}
+	917.5.5 = {
+		death = 917.5.5
+	}
+}
+302198 = {		#Polochans tribe in 867
+	history_override_priority = 1000
+	name = Nikita
+	dynasty = 2001038	#Polochanin
+	rite = slavic_pagan
+	culture = krivich
+	father = 302197
+	893.12.20 = {
+		birth = 893.12.20
+	}
+	945.7.3 = {
+		death = 945.7.3
+	}
+}
+302199 = {
+	history_override_priority = 1000
+	name = Rogvolod		#Ragnvald of Polotsk
+	dynasty = 1029118
+	rite = slavic_pagan
+	culture = krivich	#originally from Sweden, but no mention of when (or even if) he slavicized
+	920.1.2 = {
+		birth = 920.1.2
+	}
+	978.6.15 = {
+		death = 978.6.15
+	}
+}
+#
+302200 = {
+	history_override_priority = 1000
+	name = Voislav
+	dynasty = 1029117	#Dregovich
+	rite = slavic_pagan
+	culture = volhynian
+	836.3.20 = {
+		birth = 836.3.20
+	}
+	858.5.12 = {
+		add_spouse = 302201
+	}
+	901.4.15 = {
+		death = 901.4.15
+	}
+}
+302201 = {
+	history_override_priority = 1000
+	name = Liubava
+	female = yes
+	rite = slavic_pagan
+	culture = volhynian
+	841.7.28 = {
+		birth = 841.7.28
+	}
+	892.11.17 = {
+		death = 892.11.17
+	}
+}
+302202 = {
+	history_override_priority = 1000
+	name = Tatyana
+	female = yes
+	dynasty = 1029117	#Dregovich
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302200
+	mother = 302201
+	859.9.13 = {
+		birth = 859.9.13
+	}
+	892.11.17 = {
+		death = 892.11.17
+	}
+}
+302203 = {
+	history_override_priority = 1000
+	name = Varvara
+	female = yes
+	dynasty = 1029117	#Dregovich
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302200
+	mother = 302201
+	862.4.28 = {
+		birth = 862.4.28
+	}
+	929.11.8 = {
+		death = 929.11.8
+	}
+}
+302204 = {
+	history_override_priority = 1000
+	name = Premyslava
+	female = yes
+	dynasty = 1029117	#Dregovich
+	rite = slavic_pagan
+	culture = volhynian
+	mother = 302203
+	893.1.14 = {
+		birth = 893.1.14
+	}
+	959.4.1 = {
+		death = 959.4.1
+	}
+}
+302205 = {
+	history_override_priority = 1000
+	name = Sudislav
+	dynasty = 1029117	#Dregovich
+	rite = slavic_pagan
+	culture = volhynian
+	mother = 302204
+	918.10.1 = {
+		birth = 918.10.1
+	}
+	978.7.6 = {
+		death = 978.7.6
+	}
+}
+302206 = {
+	history_override_priority = 1000
+	name = Voislav
+	dynasty = 1029117	#Dregovich
+	rite = slavic_pagan
+	culture = volhynian
+	father = 302205
+	948.6.3 = {
+		birth = 948.6.3
+	}
+	988.3.12 = {
+		death = 988.3.12
+	}
+}
+
+302209 = {
+	history_override_priority = 1000
+	name = Ruslan
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	822.11.15 = {
+		birth = 822.11.15
+	}
+	842.5.13 = {
+		add_spouse = 302210
+	}
+	848.12.20 = {
+		add_spouse = 302211
+	}
+	864.2.23 = {
+		death = 864.2.23
+	}
+}
+302210 = {
+	history_override_priority = 1000
+	name = Olena
+	female = yes
+	rite = slavic_pagan
+	culture = krivich
+	825.1.29 = {
+		birth = 825.1.29
+	}
+	848.12.5 = {
+		death = 848.12.5
+	}
+}
+302211 = {
+	history_override_priority = 1000
+	name = Darya
+	female = yes
+	rite = slavic_pagan
+	culture = krivich
+	830.11.14 = {
+		birth = 830.11.14
+	}
+	900.11.14 = {
+		death = 900.11.14
+	}
+}
+302212 = {
+	history_override_priority = 1000
+	name = Ruslan
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302210
+	843.3.6 = {
+		birth = 842.3.6
+	}
+	895.8.28 = {
+		death = 895.8.28
+	}
+}
+302213 = {
+	history_override_priority = 1000
+	name = Gradislava
+	female = yes
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302210
+	844.5.13 = {
+		birth = 844.5.13
+	}
+	873.10.30 = {
+		death = 873.10.30
+	}
+}
+302214 = {
+	history_override_priority = 1000
+	name = Dobroslava
+	female = yes
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302210
+	846.7.15 = {
+		birth = 846.7.15
+	}
+	907.9.21 = {
+		death = 907.9.21
+	}
+}
+302215 = {
+	history_override_priority = 1000
+	name = Vyshata
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302210
+	848.12.5 = {
+		birth = 848.12.5
+	}
+	920.4.16 = {
+		death = 920.4.16
+	}
+}
+302216 = {
+	history_override_priority = 1000
+	name = Predslava
+	female = yes
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302211
+	847.12.16 = {
+		birth = 847.12.16
+	}
+	940.4.15 = {
+		death = 940.4.15
+	}
+}
+302217 = {
+	history_override_priority = 1000
+	name = Ruslan
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302211
+	851.6.12 = {
+		birth = 851.6.12
+	}
+	899.6.4 = {
+		death = 899.6.4
+	}
+}
+302218 = {
+	history_override_priority = 1000
+	name = Yaroslav
+	dynasty = 2001039	#Krivichi
+	rite = slavic_pagan
+	culture = krivich
+	father = 302209
+	mother = 302211
+	852.9.20 = {
+		birth = 852.9.20
+	}
+	906.11.1 = {
+		death = 906.11.1
+	}
+}
+
+# Novgorod
+302219 = {
+	history_override_priority = 1000
+	name = Ingvar
+	dynasty = 2001041	#Pskovych
+	rite = slavic_pagan
+	culture = krivich
+	831.7.23 = {
+		birth = 831.7.23
+	}
+	882.4.10 = {
+		death = 882.4.10
+	}
+}
+302220 = {
+	history_override_priority = 1000
+	name = Boris
+	dynasty = 2001041	#Pskovych
+	rite = slavic_pagan
+	culture = krivich
+	father = 302219
+	854.11.2 = {
+		birth = 854.11.2
+	}
+	903.4.13 = {
+		death = 903.4.13
+	}
+}
+
+# Vyatichs
+194145 = {
+	history_override_priority = 1000
+	name = "Volodar"
+	dynasty = 1029118
+	rite = slavic_pagan
+	culture = severian
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194146 = {
+	history_override_priority = 1000
+	name = "Iliya"
+	dynasty = 1029118
+	rite = slavic_pagan
+	culture = severian
+	father = 194145
+	770.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+160063 = {
+	history_override_priority = 1000
+	name = "Bojan"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029118
+	father = 194146
+	816.1.1 = {
+		birth = "816.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+6834 = {
+	history_override_priority = 1000
+	name = "Zhavoronok"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029118
+	father = 160063
+	831.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+160059 = {
+	history_override_priority = 1000
+	name = "Vladislav"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029118
+	father = 6834
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+160060 = {
+	history_override_priority = 1000
+	name = "Dragan"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029118
+	father = 6834
+	851.1.1 = {
+		birth = "851.1.1"
+	}
+	905.1.1 = {
+		death = "905.1.1"
+	}
+}
+160061 = {
+	history_override_priority = 1000
+	name = "Gradimir"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029118
+	father = 6834
+	852.1.1 = {
+		birth = "852.1.1"
+	}
+	905.1.1 = {
+		death = "905.1.1"
+	}
+}
+302242 = {
+	history_override_priority = 1000
+	name = "Dobromir"
+	rite = slavic_pagan
+	culture = severian
+	dynasty = 1029118
+	father = 194146
+	820.1.1 = {
+		birth = yes
+	}
+	861.1.1 = {
+		death = yes
+	}
+}
+302243 = {
+	history_override_priority = 1000
+	name = "Volodar"
+	rite = slavic_pagan
+	culture = severian
+	dynasty = 1029118
+	father = 302242
+	845.1.1 = {
+		birth = yes
+	}
+	882.1.2 = {
+		death = yes
+	}
+}
+302244 = {
+	history_override_priority = 1000
+	name = "Iliya"
+	rite = slavic_pagan
+	culture = severian
+	dynasty = 1029118
+	father = 302242
+	847.1.1 = {
+		birth = yes
+	}
+	882.1.2 = {
+		death = yes
+	}
+}
+
+# Severians
+194142 = {
+	history_override_priority = 1000
+	name = "Sviatoslav"
+	dynasty = 1029138
+	rite = slavic_pagan
+	culture = severian
+	733.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194143 = {
+	history_override_priority = 1000
+	name = "Volodar"
+	dynasty = 1029138
+	rite = slavic_pagan
+	culture = severian
+	770.6.4 = {
+		birth = yes
+	}
+	822.8.23 = {
+		death = yes
+	}
+}
+194144 = {
+	history_override_priority = 1000
+	name = "Svetozar"
+	dynasty = 1029138
+	rite = slavic_pagan
+	culture = severian
+	father = 194143
+	802.4.5 = {
+		birth = yes
+	}
+	852.9.13 = {
+		death = yes
+	}
+}
+159721 = {
+	history_override_priority = 1000
+	name = "Tatimir"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029138
+	father = 194144
+	822.11.2 = {
+		birth = yes
+	}
+	865.4.16 = {
+		death = yes
+	}
+}
+6860 = {
+	history_override_priority = 1000
+	name = "Berimir"
+	rite = slavic_pagan
+	culture = severian
+	trait = content
+	dynasty = 1029138
+	father = 159721
+	843.12.26 = {
+		birth = yes
+	}
+	898.2.8 = {
+		death = yes
+	}
+}
+160111 = {
+	history_override_priority = 1000
+	name = "Mechislav"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029138
+	father = 159721
+	846.1.3 = {
+		birth = yes
+	}
+	902.7.12 = {
+		death = yes
+	}
+}
+160112 = {
+	history_override_priority = 1000
+	name = "Kreslav"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029138
+	father = 159721
+	847.12.21 = {
+		birth = yes
+	}
+	901.3.30 = {
+		death = yes
+	}
+}
+160113 = {
+	history_override_priority = 1000
+	name = "Vadim"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029138
+	father = 159721
+	852.12.29 = {
+		birth = yes
+	}
+	905.5.14 = {
+		death = yes
+	}
+}
+160089 = {
+	history_override_priority = 1000
+	name = "Izbygnev"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029138
+	father = 6860
+	862.2.28 = {
+		birth = yes
+	}
+	871.1.14 = {
+		death = yes
+	}
+}
+160090 = {
+	history_override_priority = 1000
+	name = "Krasimir"
+	rite = "slavic_pagan"
+	culture = "severian"
+	dynasty = 1029138
+	father = 6860
+	865.5.22 = {
+		birth = yes
+	}
+	923.9.11 = {
+		death = yes
+	}
+}
+
+# Krivichi in Smolensk
+302245 = {
+	history_override_priority = 1000
+	name = "Jaromir"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 2001039	#Krivichi (unrelated by blood to other Kirivichi, but same tribe)
+	802.11.28 = {
+		birth = yes
+	}
+	861.3.20 = {
+		death = yes
+	}
+}
+302246 = {
+	history_override_priority = 1000
+	name = "Dragan"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 2001039	#Krivichi (unrelated by blood to other Kirivichi, but same tribe)
+	father = 302245
+	831.6.21 = {
+		birth = yes
+	}
+	909.12.23 = {
+		death = yes
+	}
+}
+302247 = {
+	history_override_priority = 1000
+	name = "Sviatoslav"
+	rite = slavic_pagan
+	culture = krivich
+	dynasty = 2001039	#Krivichi (unrelated by blood to other Kirivichi, but same tribe)
+	father = 302245
+	833.4.11 = {
+		birth = yes
+	}
+	904.7.14 = {
+		death = yes
+	}
+}
+
+256045 = {			#fictional, d_drevlians
+	history_override_priority = 1000
+	name = Dobroslav
+	dynasty = 2004001	#Medvjedich
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	833.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+256043 = {			#fictional, d_moldova & d
+	history_override_priority = 1000
+	name = Mstislav
+	dynasty = 1061020	#Dniprich
+	rite = "slavic_pagan"
+	culture = "volhynian"
+	840.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}

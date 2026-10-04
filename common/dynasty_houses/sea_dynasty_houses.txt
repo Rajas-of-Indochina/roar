@@ -14,11 +14,6 @@ house_rajasa = {
 	dynasty = dynn_rajasa
 }
 
-house_pagan_sale = {
-	name = "dynn_Sale"
-	dynasty = 2000000
-}
-
 # Khun Borom dynasty
 house_chiangkwang = {
 	name = "dynn_Chiangkwang"
@@ -54,6 +49,12 @@ house_nong = {
 
 
 ##### Clered up below #####
+# Burmese
+sea_house_pagan_sale = {
+	name = "dynn_Sale"
+	dynasty = 2000000
+}
+
 # Khmer
 sea_house_isanapura = {
 	# Chenla rulers based in Isanapura
@@ -322,3 +323,27 @@ house_teberid_roa = {
 }
 
 ### CAUCASUS END ###
+
+
+### RICE ###
+RICE_house_kashgari = {
+	name = "dynn_al_Kashgari"
+	dynasty = 101864 # Karakhanid
+}
+
+RICE_house_siqilli = { #The house of Ibn Hamdis, the Siculo-Arab poet
+	name = "RICE_dynn_al_siqilli"
+	dynasty = dynasty_RICE_siqilli 
+}
+
+RICE_house_siqilli_aghlabid = {
+	prefix = "dynnp_al-"
+	name = "RICE_dynn_siqilli"
+	dynasty = 807
+}
+
+RICE_house_yudra = {
+	name = "RICE_dynn_yudra"
+	dynasty = RICE_dynasty_hrugs_wer
+}
+

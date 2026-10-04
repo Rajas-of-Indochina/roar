@@ -1,0 +1,459 @@
+# Overwrites of vanilla characters
+
+247132 = {
+	history_override_priority = 1000
+	name="TridE__Yumten"
+	dynasty=105800 #Purgyal
+	rite = "old_bon"
+	culture="bodpa"
+	father=247126
+	mother=247129
+	842.1.1={
+		birth=yes
+		effect={
+			set_relation_rival={
+				target = character:247131
+				reason = rival_claimant_fight
+			}
+		}
+	}
+	905.1.1={
+		death=yes
+	}
+}
+
+247176 = {
+	history_override_priority = 1000
+	name="Rinchen_Gyalpo" #same person as 188442? Made them brothers
+	dynasty=105800 #Purgyal
+	rite = lamaism
+	culture = bodpa
+	father=247175
+	1272.1.1={
+		birth=yes
+	}
+	1320.1.1={
+		rite = hanafi # Reportedly went to Kashmir and embraced Islam
+	}
+	#1325.1.1={
+	#	name="Sadar_ud_din"
+	#}
+	1350.1.1={
+		death=yes
+	}
+}
+
+#Dêqên Dynasty - fictional placeholders
+304384 = {
+	history_override_priority = 1000
+	name="Kalu"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	740.1.1={
+		birth=yes
+	}
+	800.1.1={
+		death=yes
+	}
+}
+
+304385 = {
+	history_override_priority = 1000
+	name="Lamrim"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304384
+	760.1.1={
+		birth=yes
+	}
+	820.1.1={
+		death=yes
+	}
+}
+
+304386 = {
+	history_override_priority = 1000
+	name="Chowang"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304385
+	780.1.1={
+		birth=yes
+	}
+	840.1.1={
+		death=yes
+	}
+}
+
+304387 = {
+	history_override_priority = 1000
+	name="Rigdzin"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304386
+	800.1.1={
+		birth=yes
+	}
+	860.1.1={
+		death=yes
+	}
+}
+
+304388 = {
+	history_override_priority = 1000
+	name="GO_dem"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304387
+	820.1.1={
+		birth=yes
+	}
+	880.1.1={
+		death=yes
+	}
+}
+
+304389 = {
+	history_override_priority = 1000
+	name="Dorje"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304388
+	840.1.1={
+		birth=yes
+	}
+	900.1.1={
+		death=yes
+	}
+}
+
+304390 = {
+	history_override_priority = 1000
+	name="Lingpa"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304389
+	860.1.1={
+		birth=yes
+	}
+	920.1.1={
+		death=yes
+	}
+}
+
+304391 = {
+	history_override_priority = 1000
+	name="Ratna"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304390
+	880.1.1={
+		birth=yes
+	}
+	940.1.1={
+		death=yes
+	}
+}
+
+304392 = {
+	history_override_priority = 1000
+	name="Lingpa"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304391
+	900.1.1={
+		birth=yes
+	}
+	960.1.1={
+		death=yes
+	}
+}
+
+304393 = {
+	history_override_priority = 1000
+	name="Pema"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304392
+	920.1.1={
+		birth=yes
+	}
+	980.1.1={
+		death=yes
+	}
+}
+
+304394 = {
+	history_override_priority = 1000
+	name="Lingpa"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304393
+	940.1.1={
+		birth=yes
+	}
+	1000.1.1={
+		death=yes
+	}
+}
+
+304395 = {
+	history_override_priority = 1000
+	name="NamchO_"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304394
+	960.1.1={
+		birth=yes
+	}
+	1020.1.1={
+		death=yes
+	}
+}
+
+304396 = {
+	history_override_priority = 1000
+	name="Mingyur"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304395
+	980.1.1={
+		birth=yes
+	}
+	1040.1.1={
+		death=yes
+	}
+}
+
+304397 = {
+	history_override_priority = 1000
+	name="Dorje"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304396
+	1000.1.1={
+		birth=yes
+	}
+	1030.1.1={
+		rite = "bon"
+	}
+	1060.1.1={
+		death=yes
+	}
+}
+
+304398 = {
+	history_override_priority = 1000
+	name="Jigme"
+	dynasty=2003024 #Dêqên
+	rite = "dongba"
+	culture="nakhi"
+	father=304397
+	1020.1.1={
+		birth=yes
+	}
+	1030.1.1={
+		rite=bon
+	}
+	1080.1.1={
+		death=yes
+	}
+}
+
+304399 = {
+	history_override_priority = 1000
+	name="Jamyang"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304398
+	1040.1.1={
+		birth=yes
+	}
+	1100.1.1={
+		death=yes
+	}
+}
+
+304400 = {
+	history_override_priority = 1000
+	name="KhyentsE_"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304399
+	1060.1.1={
+		birth=yes
+	}
+	1120.1.1={
+		death=yes
+	}
+}
+
+304401 = {
+	history_override_priority = 1000
+	name="Wangpo"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304400
+	1080.1.1={
+		birth=yes
+	}
+	1140.1.1={
+		death=yes
+	}
+}
+
+304402 = {
+	history_override_priority = 1000
+	name="Orgyen"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304401
+	1100.1.1={
+		birth=yes
+	}
+	1160.1.1={
+		death=yes
+	}
+}
+
+304403 = {
+	history_override_priority = 1000
+	name="Chokgyur"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304402
+	1120.1.1={
+		birth=yes
+	}
+	1180.1.1={
+		death=yes
+	}
+}
+
+304404 = {
+	history_override_priority = 1000
+	name="Lingpa"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304403
+	1140.1.1={
+		birth=yes
+	}
+	1200.1.1={
+		death=yes
+	}
+}
+
+304405 = {
+	history_override_priority = 1000
+	name="Nyangral"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304404
+	1160.1.1={
+		birth=yes
+	}
+	1220.1.1={
+		death=yes
+	}
+}
+
+304406 = {
+	history_override_priority = 1000
+	name="Nyima"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304405
+	1180.1.1={
+		birth=yes
+	}
+	1240.1.1={
+		death=yes
+	}
+}
+
+304407 = {
+	history_override_priority = 1000
+	name="O_zer"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304406
+	1200.1.1={
+		birth=yes
+	}
+	1260.1.1={
+		death=yes
+	}
+}
+
+304408 = {
+	history_override_priority = 1000
+	name="ChO_kyi"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304407
+	1220.1.1={
+		birth=yes
+	}
+	1280.1.1={
+		death=yes
+	}
+}
+
+304409 = {
+	history_override_priority = 1000
+	name="Wangchuk"
+	dynasty=2003024 #Dêqên
+	rite = "bon"
+	culture="nakhi"
+	father=304408
+	1240.1.1={
+		birth=yes
+	}
+	1260.1.1={
+		rite = "lamaism"
+		culture="bodpa"
+	}
+	1300.1.1={
+		death=yes
+	}
+}
+
+wamo_1 = {
+	# edited by RoA
+	history_override_priority = 1000
+	name="Yangchen"
+	dynasty = bodpa_wamo
+	rite = avatamsaka
+	culture = wenmo
+	810.1.1={
+		birth=yes
+	}
+	870.1.1={
+		death=yes
+	}
+}

@@ -1,0 +1,80 @@
+# Overwrites of vanilla characters
+
+#Yughur Kingdom (Ganzhou Uyghurs)
+166766 = {
+	history_override_priority = 1000
+	name = "BO_gU_"
+	dynasty = 1045083 # Ediz
+	rite = "manichean"
+	culture = "uigur"
+	828.1.1 = {
+		birth = yes
+	}
+	848.1.1 = {
+		dynasty = 1040064 # Yughur
+		culture = "yughur"
+	}
+	879.1.1 = {
+		death = yes
+	}
+}
+
+#Qilian Yughur Vassals - fictional placeholders
+yughur0002 = {
+	history_override_priority = 1000
+	name="Tohti"
+	dynasty=2003106 #Yogïr
+	rite = "sarvastivada"
+	culture="uigur"
+	840.1.1={
+		birth=yes
+	}
+	865.1.1 = {
+		culture = "yughur"
+	}
+	900.1.1={
+		death=yes
+	}
+}
+
+yughur0003 = {
+	history_override_priority = 1000
+	name="OrmI_zt"
+	dynasty=2003106 #Yogïr
+	rite = "sarvastivada"
+	culture="uigur"
+	father=yughur0002
+	860.1.1={
+		birth=yes
+	}
+	865.1.1 = {
+		culture = "yughur"
+	}
+	900.1.1={
+		rite = "manichean"
+	}
+	920.1.1={
+		death=yes
+	}
+}
+
+yughur0004 = {
+	history_override_priority = 1000
+	name="Tutuk"
+	dynasty=2003106 #Yogïr
+	rite = "sarvastivada"
+	culture="uigur"
+	father=yughur0003
+	880.1.1={
+		birth=yes
+	}
+	865.1.1 = {
+		culture = "yughur"
+	}
+	900.1.1={
+		rite = "manichean"
+	}
+	940.1.1={
+		death=yes
+	}
+}

@@ -1,0 +1,505 @@
+﻿# Overwrites of vanilla characters
+
+175060 = {
+	history_override_priority = 1000
+	name = "Kallar" # Founder of the Hindu Shahi dynasty
+	dynasty = 1043006
+	rite = "shaivism"
+	culture = "gandhari"
+	841.1.1 = {
+		birth = yes
+	}
+	866.1.1 = {
+		effect = {
+			set_relation_potential_rival = character:163101 #Ya'qub Saffarid
+			add_pressed_claim = title:c_rukhaj #seized by Ya'qub
+			add_pressed_claim = title:c_zamindawar #seized by Ya'qub
+		}
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+188565 = {
+	history_override_priority = 1000
+	name = "Bo-Fuzun"
+	dynasty = 1042104 # Nandin
+	rite = "mahayana"
+	culture = "turco_hephthalite"
+	father = 188718
+	711.7.11 = {
+		birth = yes
+	}
+	738.1.1 = {
+		add_spouse = 188566
+	}
+	775.1.1 = {
+		death = yes
+	}
+}
+
+188566 = {
+	history_override_priority = 1000
+	name = "Samidevi" # probably from 7th rather than 8th century
+	female = yes
+	dynasty = 1042105 # Trailokyadevi
+	rite = "mahayana"
+	culture = "turco_hephthalite"
+	720.1.28 = {
+		birth = yes
+	}
+	785.1.1 = {
+		death = yes
+	}
+}
+
+188567 = {
+	history_override_priority = 1000
+	name = "Naz_aktar" # from early rather than mid 700s
+	dynasty = 1042104 # Nandin
+	rite = "mahayana"
+	culture = "turco_hephthalite"
+	father = 188565
+	mother = 188566
+	742.9.25 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+188700 = {
+	history_override_priority = 1000
+	name = "Barhatakin"
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	610.1.1 = {
+		birth = yes
+	}
+	660.1.1 = {
+		death = yes
+	}
+}
+188701 = {
+	history_override_priority = 1000
+	name = "Rutbil" # name is more of a title
+	# semi-historical
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188700
+	635.1.1 = {
+		birth = yes
+	}
+	687.1.1 = {
+		death = yes
+	}
+}
+188702 = {
+	history_override_priority = 1000
+	name = "Rumofuda"	# name is more of a title
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188701
+	660.1.1 = {
+		birth = yes
+	}
+	725.1.1 = {
+		death = yes
+	}
+}
+188703 = {
+	history_override_priority = 1000
+	name = "Shihyu"
+	# semi-historical
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188702
+	685.1.1 = {
+		birth = yes
+	}
+	738.1.1 = {
+		death = yes
+	}
+}
+188628 = {
+	history_override_priority = 1000
+	name = "Jimofuta"
+	# semi-historical
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188703
+	711.1.1 = {
+		birth = yes
+	}
+	770.1.1 = {
+		death = yes
+	}
+}
+188705 = {
+	history_override_priority = 1000
+	name = "Barha"	# fictional
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188628
+	732.6.16 = {
+		birth = yes
+	}
+	780.1.1 = {
+		death = yes
+	}
+}
+188706 = {
+	history_override_priority = 1000
+	name = "Benaz"	# fictional
+	female = yes
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188705
+	761.1.28 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+188707 = {
+	history_override_priority = 1000
+	name = "Rumofuda"	# fictional
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188705
+	764.12.18 = {
+		birth = yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+188708 = {
+	history_override_priority = 1000
+	name = "Rutbil"	# fictional
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188707
+	792.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+188709 = {
+	history_override_priority = 1000
+	name = "Jimofuta"	# fictional
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188708
+	825.1.1 = {
+		birth = yes
+	}
+	864.1.1 = {
+		death = yes
+	}
+}
+188710 = {
+	history_override_priority = 1000
+	name = "Hurmiz" # fictitious name
+	# Saffarid governor of Zabul
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188709
+	846.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		rite = shafii
+	}
+	868.1.1 = {
+		death = yes
+	}
+}
+188711 = {
+	history_override_priority = 1000
+	name = "Lakan" #Kabak
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188708
+	823.4.19 = {
+		birth = yes
+	}
+	865.5.4 = {
+		death = {
+			death_reason = death_battle
+			killer = 163101 #Ya'qub Saffarid
+		}
+	}
+}
+188712 = {
+	history_override_priority = 1000
+	name = "Firuz"
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188711
+	850.1.1 = {
+		birth = yes
+	}
+	870.1.1 = {
+		employer = 175060
+		rite = shafii
+		effect = {
+			set_relation_nemesis = character:163101 #Ya'qub Saffarid
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:zun_pagan }
+		}
+	}
+	873.1.1 = {
+		death = yes
+	}
+}
+188713 = {
+	history_override_priority = 1000
+	name = "NI_S_an"	# fictional
+	female = yes
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188711
+	846.1.1 = {
+		birth = yes
+	}
+	870.1.1 = {
+		rite = shafii
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:zun_pagan }
+		}
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+188714 = {
+	history_override_priority = 1000
+	name = "XE_lI_can"	# fictional
+	female = yes
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188711
+	848.1.1 = {
+		birth = yes
+	}
+	870.1.1 = {
+		employer = 175060
+		rite = shaivism
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+188715 = {
+	history_override_priority = 1000
+	name = "Shiquer"	# fictional
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188628
+	738.11.26 = {
+		birth = yes
+	}
+	785.1.1 = {
+		death = yes
+	}
+}
+188716 = {
+	history_override_priority = 1000
+	name = "ZerE_"	# fictional
+	dynasty = 1042110 # Zunbil
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188628
+	748.8.3 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+188717 = {
+	history_override_priority = 1000
+	name = "Tegin-Shah" # more of a title than name
+	# founder of Kabul Shahi line
+	dynasty = 1042104 # Nandin
+	rite = "mahayana"
+	culture = "turco_hephthalite"
+	father = 188700
+	655.1.1 = {
+		birth = yes
+	}
+	740.1.1 = {
+		death = yes
+	}
+}
+188718 = {
+	history_override_priority = 1000
+	name = "Phrom-Kesar"
+	dynasty = 1042104 # Nandin
+	rite = "mahayana"
+	culture = "turco_hephthalite"
+	father = 188717
+	685.1.1 = {
+		birth = yes
+	}
+	745.1.1 = {
+		death = yes
+	}
+}
+
+188719 = {
+	history_override_priority = 1000
+	name = "DanU_S_" # fictitious
+	dynasty = 1042156
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	720.1.1 = {
+		birth = yes
+	}
+	780.1.1 = {
+		death = yes
+	}
+}
+
+188720 = {
+	history_override_priority = 1000
+	name = "ArE_z" # fictitious
+	female = yes
+	dynasty = 1042156
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188719
+	748.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+188721 = {
+	history_override_priority = 1000
+	name = "Perwane" # fictitious
+	female = yes
+	dynasty = 1042156
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188719
+	752.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+188722 = {
+	history_override_priority = 1000
+	name = "Ruhollah" # fictitious
+	dynasty = 1042157
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	739.1.1 = {
+		birth = yes
+	}
+	795.1.1 = {
+		death = yes
+	}
+}
+
+188723 = {
+	history_override_priority = 1000
+	name = "Ruhollah" # fictitious
+	dynasty = 1042157
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188722
+	764.1.1 = {
+		birth = yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+
+188724 = {
+	history_override_priority = 1000
+	name = "Rondik" # fictitious
+	female = yes
+	dynasty = 1042157
+	rite = "zun_pagan"
+	culture = "turco_hephthalite"
+	father = 188722
+	766.1.1 = {
+		birth = yes
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
+
+
+#FP3 additions
+
+extra_afghanis_1 = {
+	history_override_priority = 1000
+	name = "Aflah"
+	dynasty = afghan_gardizid
+	rite = mahayana
+	culture = afghan
+	812.4.12 = {
+		birth = yes
+	}
+	841.1.1 = {
+		add_spouse = extra_afghanis_3
+	}
+	865.1.1 = {
+		add_spouse = 188714
+		employer = 175060
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+extra_afghanis_6 = {
+	history_override_priority = 1000
+	name = "Salih"
+	dynasty = 1042110 # Zunbil
+	rite = zun_pagan
+	culture = "afghan"
+	father = extra_afghanis_5
+	824.10.18 = {
+		birth = yes
+	}
+	870.1.1 = {
+		rite = shafii
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:zun_pagan }
+		}
+	}
+	885.1.1 = {
+		death = yes
+	}
+}

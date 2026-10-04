@@ -1,0 +1,1495 @@
+# Overwrites of vanilla characters
+
+### Bavandid ###
+45105 = {
+	history_override_priority = 1000
+	name = "Rostam" # Rostam I
+	dna = 45105_rostam
+	dynasty_house = house_bavandid # Bavandid
+	martial = 8
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 4
+	learning = 3
+	rite = imami
+	culture = daylamite
+	trait = diligent
+	trait = just
+	trait = cynical
+	trait = education_martial_3
+	father = 160294
+	845.3.5 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	860.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		} 
+	}
+	866.1.1 = {
+		effect = {
+			set_relation_potential_rival = character:45108
+			set_realm_capital = title:b_firrim
+		}
+	}
+	896.5.7 = {
+		death = {
+			death_reason = death_torture
+		}
+	}
+}
+
+160294 = {
+	history_override_priority = 1000
+	name = "Qarin"
+	dynasty_house = house_bavandid # Bavandid
+	rite = imami
+	culture = daylamite
+	father = 160292
+	795.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		} 
+	}
+	865.1.1 = {
+		add_trait = cancer
+	}
+	867.5.4 = {
+		death = {
+			death_reason = death_natural_causes
+		}
+	}
+}
+
+160295 = {
+	history_override_priority = 1000
+	name = "Shervin"
+	dna = 160295_shervin_II
+	dynasty_house = house_bavandid # Bavandid
+	rite = imami
+	culture = daylamite
+	mother = fictional_daylamites_1 
+	father = 45105
+	865.3.3 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+160286 = {
+	history_override_priority = 1000
+	name = "Sorkhab"
+	dynasty_house = house_bavandid # Bavandid
+	rite = imami
+	culture = daylamite
+	father = 160294
+	846.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		}
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+166991 = {
+	history_override_priority = 1000
+	name = "Elnaz"
+	female = yes
+	dynasty_house = house_bavandid # Bavandid
+	rite = imami
+	culture = daylamite
+	father = 160295
+	trait = education_learning_2
+	908.7.6 = {
+		birth = yes
+	}
+	910.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		}
+	}
+	989.4.7 = {
+		death = yes
+	}
+}
+
+220996 = {
+	history_override_priority = 1000
+	name = "Shahriyar"
+	dynasty_house = house_bavandid
+	father = 160295
+	martial = 5
+	diplomacy = 4
+	intrigue = 3
+	stewardship = 8
+	trait = education_stewardship_2
+	trait = generous
+	rite = imami
+	culture = daylamite
+	897.7.19 = {
+		birth = yes
+	}
+	910.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		}
+	}
+	970.12.10 = {
+		death = yes
+	}
+}
+
+220995 = {
+	history_override_priority = 1000
+	name = "Rostam"
+	dynasty_house = house_bavandid
+	father = 160295
+	martial = 7
+	diplomacy = 3
+	intrigue = 8
+	stewardship = 4
+	trait = education_martial_2
+	trait = arbitrary
+	rite = imami
+	culture = daylamite
+	901.2.28 = {
+		birth = yes
+	}
+	910.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		}
+	}
+	# 964 - Bavandid coins acknolwedging Buyid suzerainty and support for Shiism
+	979.10.12 = {
+		death = yes
+	}
+}
+
+220994 = {
+	history_override_priority = 1000
+	name = "Al-Marzuban"
+	dynasty_house = house_bavandid
+	father = 220995
+	martial = 2
+	diplomacy = 4
+	intrigue = 3
+	stewardship = 6
+	learning = 9
+	trait = education_diplomacy_3
+	trait = just
+	rite = imami
+	culture = daylamite
+	931.9.12 = {
+		birth = yes
+	}
+	932.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		}
+	}
+	# 964 - Bavandid coins acknolwedging Buyid suzerainty and support for Shiism
+	1006.10.12 = {
+		death = yes
+	}
+}
+
+220992 = {
+	history_override_priority = 1000
+	name = "Vandarin"
+	dynasty_house = house_bavandid
+	father = 220995 #fictional connection
+	martial = 4
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 2
+	learning = 2
+	trait = education_diplomacy_3
+	rite = imami
+	culture = daylamite
+	934.9.12 = {
+		birth = yes
+	}
+	935.1.1 = {
+		effect = {
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mazdayasna }
+		} 
+	}
+	# 964 - Bavandid coins acknolwedging Buyid suzerainty and support for Shiism
+	997.10.12 = {
+		death = yes
+	}
+}
+
+220993 = {
+	history_override_priority = 1000
+	name = "Abu_Ja_far_Muhammad"
+	dynasty_house = house_bavandid
+	father = 220992
+	martial = 2
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 6
+	learning = 4
+	trait = education_diplomacy_3
+	trait = honest
+	rite = imami
+	culture = daylamite
+	964.4.20 = {
+		birth = yes
+	}
+	1029.11.21 = {
+		death = yes
+	}
+}
+
+220991 = {
+	history_override_priority = 1000
+	name = "Sharyab" #Fictional character
+	dynasty_house = house_bavandid
+	father = 220992
+	martial = 2
+	diplomacy = 2
+	intrigue = 3
+	stewardship = 1
+	learning = 1
+	trait = education_stewardship_1
+	rite = imami
+	culture = daylamite
+	971.8.12 = {
+		birth = yes
+	}
+	1062.11.9 = {
+		death = yes
+	}
+}
+
+20704 = {
+	history_override_priority = 1000
+	name = "Qarin"
+	dynasty_house = house_bavandid
+	father = 220991
+	martial = 7
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	rite = imami
+	culture = daylamite
+	trait = education_martial_2
+	1031.1.1 = {
+		birth = yes
+	}
+	1074.1.1 = {
+		death = yes
+	}
+}
+
+93162 = {
+	history_override_priority = 1000
+	name = "Qarin" # Karen II
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 41606
+	1080.1.1 = {
+		birth = yes
+	}
+	1117.1.1 = {
+		death = yes
+	}
+}
+
+93163 = {
+	history_override_priority = 1000
+	name = "Rustam" # IV
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 41606
+	1082.1.1 = {
+		birth = yes
+	}
+	1118.1.1 = {
+		death = yes
+	}
+}
+
+93164 = {
+	history_override_priority = 1000
+	name = "Ali"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93163
+	1102.1.1 = {
+		birth = yes
+	}
+	1142.1.1 = {
+		death = yes
+	}
+}
+
+93165 = {
+	history_override_priority = 1000
+	name = "Ghazi_Rustam"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93164
+	1120.1.1 = {
+		birth = yes
+	}
+	1165.1.1 = {
+		death = yes
+	}
+}
+
+93166 = {
+	history_override_priority = 1000
+	name = "Hassan"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93165
+	1140.1.1 = {
+		birth = yes
+	}
+	1173.1.1 = {
+		death =  { death_reason = death_murder } #murdered by his slave bodyguard
+	}
+}
+
+93167 = {
+	history_override_priority = 1000
+	name = "Ardashir"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	stewardship = 6
+	trait = ambitious
+	trait = diligent
+	father = 93166
+	1156.1.1 = {
+		birth = yes
+	}
+	1206.1.1 = {
+		death = yes
+	}
+}
+
+93168 = {
+	history_override_priority = 1000
+	name = "Ghazi_Rustam"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93167
+	1176.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = { death_reason = death_murder } #murdered by an Alid
+	}
+}
+
+93169 = {
+	history_override_priority = 1000
+	name = "Ardashir"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93168
+	1192.1.1 = {
+		birth = yes
+	}
+	1249.1.1 = {
+		death = yes
+	}
+}
+
+93170 = {
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93169
+	1220.1.1 = {
+		birth = yes
+	}
+	# 1233.1.1 = {
+		# add_spouse = IlkhanateFemale1
+	# }
+	1267.1.1 = {
+		death = yes
+	}
+}
+
+93171 = {
+	history_override_priority = 1000
+	name = "Ali"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93170
+	1240.1.1 = {
+		birth = yes
+	}
+	1271.1.1 = {
+		death = {
+			death_reason = death_execution
+		}
+	}
+}
+
+93172 = {
+	history_override_priority = 1000
+	name = "Yezdigerd"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93171
+	1258.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+
+93173 = {
+	history_override_priority = 1000
+	name = "Shariyar"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93172
+	1278.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+
+93174 = {
+	history_override_priority = 1000
+	name = "Kai-Kushrau"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93173
+	1294.1.1 = {
+		birth = yes
+	}
+	1328.1.1 = {
+		death = yes
+	}
+}
+
+93175 = {
+	history_override_priority = 1000
+	name = "Sharaf"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93173
+	1299.1.1 = {
+		birth = yes
+	}
+	1334.1.1 = {
+		death = yes
+	}
+}
+
+93176 = {
+	history_override_priority = 1000
+	name = "Hassan"
+	dynasty_house = house_bavandid
+	rite = imami
+	culture = daylamite
+	father = 93173
+	1301.1.1 = {
+		birth = yes
+	}
+	1349.1.1 = {
+		death = yes
+	}
+}
+
+### Kakúyids ###
+1231050 = {
+	history_override_priority = 1000
+	name = "Marzba_n_Doshmanzia_r"
+	dynasty = 1029009
+	rite = imami
+	culture = daylamite
+	910.1.1 = {
+		birth = yes
+	}
+	968.1.1 = {
+		death = yes
+	}
+}
+
+1231051 = {
+	history_override_priority = 1000
+	name = "Rustam"
+	dynasty = 1029009
+	rite = imami
+	culture = daylamite
+	father = 1231050
+	945.1.1 = {
+		birth = yes
+	}
+	1007.1.1 = {
+		death = yes
+	}
+}
+
+1231052 = {
+	history_override_priority = 1000
+	name = "Mohammad" #'Alá al-Daula Ibn Kakúya'
+	dynasty = 1029009
+	rite = imami
+	culture = daylamite
+	trait = "patient"
+	trait = "diligent"
+	trait = ambitious
+	trait = education_martial_3
+	#trait = "grey_eminence"
+	father = 1231051
+	975.1.1 = {
+		birth = yes
+	}
+	1042.1.1 = {
+		death = yes
+	}
+}
+
+1231053 = {
+	history_override_priority = 1000
+	name = "Fara_murz" #AKA Abu Mansur Isfahán 1042-1050 then 1050- Yazd
+	dynasty = 1029009
+	rite = imami
+	culture = daylamite
+	trait = diligent	# Initiated many public works projects
+	trait = forgiving	# Seemed to accept his role as a respected member in Seljuk circles well
+	trait = deceitful	# He kept trying to play different sides against each other early in his career
+	trait = education_diplomacy_2
+	father = 1231052
+	1005.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = { # claims to lost territories
+		add_pressed_claim = title:d_isfahan
+		add_pressed_claim = title:c_isfahan
+		rite = shafii #changes religion to comply with Seljuks
+	}
+	1067.1.1 = { #died shortly after 1063
+		death = yes
+	}
+}
+
+1231054 = {
+	history_override_priority = 1000
+	name = "Garsha_sp" #AKA Abu Kalijar, Hamadán and Igharayn 1042-1047 (1047 to Seljuk Ibrahim Inal), then Buyid governor of Khuzestan
+	dynasty = 1029009
+	rite = imami
+	culture = daylamite
+	father = 1231052
+	1008.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = { # claims to lost territories
+		add_pressed_claim = title:c_hamadan
+	}	
+	1052.1.1 = {
+		death = yes
+	}
+}
+
+1231055 = {
+	history_override_priority = 1000
+	name = "Abu_Harb" #in Natanz
+	dynasty = 1029009
+	rite = imami
+	culture = daylamite
+	father = 1231052
+	1010.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		rite = shafii #changes religion to comply with Seljuks
+	}
+	1068.1.1 = {
+		death = yes
+	}
+}
+
+1231056 = {
+	history_override_priority = 1000
+	name = "_Ali" # Yazd
+	dynasty = 1029009
+	rite = shafii
+	culture = daylamite
+	trait = diligent 	# More public works I guess
+	trait = gregarious 	# Sought to attract many prominent, learned men to Yazd
+	trait = generous 	# Did so by making many promises and favors
+	trait = education_learning_2 	# Not much a great scholar himself, but did want to attract scholars to yazd
+	father = 1231053
+	1034.1.1 = {
+		birth = yes
+	}
+	1075.1.1 = {
+		add_spouse = 1000229910
+	}
+	1095.1.1 = {
+		death = yes
+	}
+}
+
+### Buyids ###
+1231060 = {
+	history_override_priority = 1000
+	name = "Panna_h_Khosrow"
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	848.1.1 = {
+		birth = yes
+	}
+	906.1.1 = {
+		death = yes
+	}
+}
+1231061 = {
+	history_override_priority = 1000
+	name = "Buya"
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231060
+	875.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+1231062 = {
+	history_override_priority = 1000
+	name = "_Ali_" #AKA Emád-al-Daula - Fárs
+	dynasty = 1102201
+	diplomacy = 6
+	martial = 8
+	stewardship = 8
+	intrigue = 5
+	learning = 6
+	rite = imami
+	culture = daylamite
+	trait = education_martial_4
+	trait = ambitious
+	trait = calm
+	trait = temperate
+	father = 1231061
+	#mother = 1231179
+	897.1.1 = {
+		birth = yes
+	}
+	932.1.1 = {
+		effect={
+			set_relation_friend = { reason = friend_generic_history target = character:1231063 }
+			set_relation_friend = { reason = friend_generic_history target = character:1231064 }
+		}
+	}
+	949.12.12 = {
+		death = yes
+	}
+}
+1231063 = {
+	history_override_priority = 1000
+	name = "Hasan" #Rokn-al-Daula - in Jebal
+	dynasty = 1102201
+	diplomacy = 4
+	martial = 5
+	stewardship = 6
+	intrigue = 2
+	learning = 4
+	rite = imami
+	culture = daylamite
+	trait = education_martial_3
+	trait = ambitious
+	trait = diligent
+	trait = just
+	father = 1231061
+	#mother = 1231179
+	900.1.1 = {
+		birth = yes
+	}
+	976.9.9 = {
+		death = yes
+	}
+}
+1231064 = {
+	history_override_priority = 1000
+	name = "Ahmad" #AKA Muizz-al-Daula - in Kermán
+	dynasty = 1102201
+	diplomacy = 6
+	martial = 5
+	stewardship = 7
+	intrigue = 5
+	learning = 5
+	rite = imami
+	culture = daylamite
+	trait = education_martial_3
+	trait = ambitious
+	trait = diligent
+	trait = greedy
+	father = 1231061
+	#mother = 1231179
+	904.1.1 = {
+		birth = yes
+	}
+	967.4.8 = {
+		death = yes
+	}
+}
+1231065 = {
+	history_override_priority = 1000
+	name = "Panna_h_Khosrow" #AKA Abú Shojá Azod-al-Daula, son of Hasan Rokn al-Daula, 949-Fárs
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	trait = "ambitious"
+	father = 1231063
+	#mother = 1231161
+	929.1.1 = {
+		birth = yes
+	}
+	983.3.3 = {
+		death = yes
+	}
+}
+1231066 = {
+	history_override_priority = 1000
+	name = "_Ali_" #AKA Abú'l-Hasan Fakhr-al-Daula, Hamadán
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231063
+	#mother = 1231161
+	937.1.1 = {
+		birth = yes
+	}
+	# 993.1.1 = {
+		# add_spouse = 1231112
+	# }
+	997.10.10 = {
+		death = yes
+	}
+}
+1231067 = {
+	history_override_priority = 1000
+	name = "Bakhtiya_r" #successor of Muizz-al-Daula
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231064
+	927.1.1 = {
+		birth = yes
+	}
+	978.1.1 = {
+		death = yes
+	}
+}
+1231068 = {
+	history_override_priority = 1000
+	name = "Buya" #AKA Abú Mansúr, Mu'ayyad-al-Daula,
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231063
+	#mother = 1231161
+	938.1.1 = {
+		birth = yes
+	}
+	958.1.1 = {
+		add_spouse = 1231069
+	}
+	984.1.1 = {
+		death = yes
+	}
+}
+1231069 = {
+	history_override_priority = 1000
+	name = "Zubayda" #daughter of Muizz-al-Daula
+	female = yes
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231064
+	936.1.1 = {
+		birth = yes
+	}
+	958.1.1 = {
+		add_spouse = 1231068
+	}
+	978.1.1 = {
+		death = yes
+	}
+}
+
+# Sons of Azod-al-Daula
+1231070 = {
+	history_override_priority = 1000
+	name = "Marzba_n" #AKA Abú Kalíjár Samsám-al-Daula - 986 - Iraq
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231065
+	#mother = 1231144
+	953.1.1 = {
+		birth = yes
+	}
+	982.1.1 = {
+		give_nickname = nick_samsam_al_dawla
+	}
+	983.3.3 = {
+		death = yes
+	}
+}
+1231071 = {
+	history_override_priority = 1000
+	name = "Marzba_n" #AKA Abu’l-Fawáres Sharaf-al-Daula - the oldest - 986 Fars, Khuzestan, and Basra
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231065
+	955.1.1 = {
+		birth = yes
+	}
+	988.1.1 = {
+		give_nickname = nick_sharaf_al_dawla
+	}
+	989.6.9 = {
+		death = yes
+	}
+}
+1231072 = {
+	history_override_priority = 1000
+	name = "Fi_ru_z" #AKA Abu Nasr Baha'-al-Dawla
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231065
+	966.1.1 = {
+		birth = yes
+	}
+	1011.1.1 = {
+		give_nickname = nick_baha_al_dawla
+	}
+	1012.12.22 = {
+		death = yes
+	}
+}
+1231073 = {
+	history_override_priority = 1000
+	name = "Abu_Shoja" #AKA Sultán al-Dawla
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231072
+	985.1.1 = {
+		birth = yes
+	}
+	1023.1.1 = {
+		give_nickname = nick_sultan_al_dawla
+	}
+	1024.12.12 = {
+		death = yes
+	}
+}
+1231074 = {
+	history_override_priority = 1000
+	name = "Abu_Taher" #AKA Jalál al-Dawla, governor in Iraq, later also Khuzestan, 1025 amir al-omara
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231072
+	987.1.1 = {
+		birth = yes
+	}
+	1043.1.1 = {
+		give_nickname = nick_jalal_al_dawla
+	}
+	1044.3.3 = {
+		death = yes
+	}
+}
+1231075 = {
+	history_override_priority = 1000
+	name = "Abu_l-Fawares" #AKA Qevám-al-Daula - in Kermán
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231072
+	989.1.1 = {
+		birth = yes
+	}
+	1028.11.1 = {
+		death = yes
+	}
+}
+1231076 = {
+	history_override_priority = 1000
+	name = "Hasan" #AKA Abu 'Alí Mosharref-al-Dawla since 1021 king of Iraq
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231072
+	993.1.1 = {
+		birth = yes
+	}
+	1024.1.1 = {
+		give_nickname = nick_musharraf_al_dawla
+	}
+	1025.5.5 = {
+		death = yes
+	}
+}
+1231077 = {
+	history_override_priority = 1000
+	name = "Mohammad_Doshmanzia_r" #AKA Abu Ja'far 'Alá'-al-Dawla, maternal cousin of Majd al-Dawla, governor of Isfahan, conquered Hamadan and Hulwan
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231072
+	993.1.1 = {
+		birth = yes
+	}
+	1027.1.1 = {
+		give_nickname = nick_ala_al_dawla
+	}
+	1028.12.12 = {
+		death = yes
+	}
+}
+1231078 = {
+	history_override_priority = 1000
+	name = "Abu_Kalijar" #AKA Abu Kalijar
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231073
+	1005.1.1 = {
+		birth = yes
+	}
+	1048.10.10 = {
+		death = yes
+	}
+}
+1231079 = {
+	history_override_priority = 1000
+	name = "Abu_Nasr" #AKA al-Malek al-Rahím
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231078
+	1027.1.1 = {
+		birth = yes
+	}
+	1064.12.12 = {
+		death = yes
+	}
+}
+1231080 = {
+	history_override_priority = 1000
+	name = "Pu_la_d_Sotu_n" #AKA Fulad Sotun, ruler of Fars before the Shabankara (until 1062)
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	father = 1231078
+	#mother = 1231154
+	1029.1.1 = {
+		birth = yes
+	}
+	1066.12.12 = {
+		death = yes
+	}
+}
+daylamite0001 = {
+	history_override_priority = 1000
+	name = "Abu-Ali_Fana-Khosrow"
+	dynasty = 1102201
+	rite = imami
+	culture = daylamite
+	trait = "content"
+	father = 1231078
+	1032.1.1 = {
+		birth = yes
+	}
+	1094.1.1 = {
+		death = yes
+	}
+}
+
+### Baduspanids ###
+93177 = {
+	history_override_priority = 1000
+	name = "Ardashir"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216915
+	1000.1.1 = {
+		birth = yes
+	}
+	1047.1.1 = {
+		death = yes
+	}
+}
+
+93178 = {
+	history_override_priority = 1000
+	name = "Namwar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93177
+	1020.1.1 = {
+		birth = yes
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+93179 = {
+	history_override_priority = 1000
+	name = "Sharaf"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93178
+	1040.1.1 = {
+		birth = yes
+	}
+	1109.1.1 = {
+		death = yes
+	}
+}
+
+93180 = {
+	history_override_priority = 1000
+	name = "Shariwash"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93179
+	1093.1.1 = {
+		birth = yes
+	}
+	1168.1.1 = {
+		death = yes
+	}
+}
+
+93181 = {
+	history_override_priority = 1000
+	name = "Kai-Ka_us"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93180
+	1115.1.1 = {
+		birth = yes
+	}
+	1184.1.1 = {
+		death = yes
+	}
+}
+
+93182 = {
+	history_override_priority = 1000
+	name = "Hazarasp"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93181
+	1150.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+93183 = {
+	history_override_priority = 1000
+	name = "Zarin-Kemer"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93182
+	1170.1.1 = {
+		birth = yes
+	}
+	1213.1.1 = {
+		death = yes
+	}
+}
+
+93184 = {
+	history_override_priority = 1000
+	name = "Bisutun"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93182
+	1175.1.1 = {
+		birth = yes
+	}
+	1223.1.1 = {
+		death = yes
+	}
+}
+
+93185 = {
+	history_override_priority = 1000
+	name = "Namwar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93184
+	1195.1.1 = {
+		birth = yes
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+93186 = {
+	history_override_priority = 1000
+	name = "Ardashir"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93184
+	1200.1.1 = {
+		birth = yes
+	}
+	1236.1.1 = {
+		death = yes
+	}
+}
+
+93187 = {
+	history_override_priority = 1000
+	name = "Rakim_Gaubara"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93186
+	1220.1.1 = {
+		birth = yes
+	}
+	1272.1.1 = {
+		death = yes
+	}
+}
+
+93188 = {
+	history_override_priority = 1000
+	name = "Namwar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93187
+	1240.1.1 = {
+		birth = yes
+	}
+	1302.1.1 = {
+		death = yes
+	}
+}
+
+93189 = {
+	history_override_priority = 1000
+	name = "Kai-Khusrau"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93188
+	1260.1.1 = {
+		birth = yes
+	}
+	1312.1.1 = {
+		death = yes
+	}
+}
+
+93190 = {
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93189
+	1280.1.1 = {
+		birth = yes
+	}
+	1318.1.1 = {
+		death = yes
+	}
+}
+
+93191 = {
+	history_override_priority = 1000
+	name = "Shariyar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93190
+	1296.1.1 = {
+		birth = yes
+	}
+	1325.1.1 = {
+		death = yes
+	}
+}
+
+93192 = {
+	history_override_priority = 1000
+	name = "Ziyar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93190
+	1298.1.1 = {
+		birth = yes
+	}
+	1334.1.1 = {
+		death = yes
+	}
+}
+
+93193 = {
+	history_override_priority = 1000
+	name = "Iskandar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 93192
+	1318.1.1 = {
+		birth = yes
+	}
+	1360.1.1 = {
+		death = yes
+	}
+}
+
+216906 = {
+	history_override_priority = 1000
+	name = "Abdallah"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216905
+	775.1.1 = {
+		birth = yes
+	}
+	855.1.1 = {
+		death = yes
+	}
+}
+
+216907 = {
+	history_override_priority = 1000
+	name = "Faridun"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216906
+	798.1.1 = {
+		birth = yes
+	}
+	855.1.1 = {
+		death = yes
+	}
+}
+
+216908 = {
+	history_override_priority = 1000
+	name = "Paduspan"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216907
+	816.1.1 = {
+		birth = yes
+	}
+	872.1.1 = {
+		death = yes
+	}
+}
+
+216909 = {
+	history_override_priority = 1000
+	name = "Shahriyar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216908
+	trait = education_stewardship_3
+	836.1.1 = {
+		birth = yes
+	}
+	887.1.1 = {
+		death = yes
+	}
+}
+
+216910 = {
+	history_override_priority = 1000
+	name = "Hazar_Sandan"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216909
+	854.1.1 = {
+		birth = yes
+	}
+	899.1.1 = {
+		death = yes
+	}
+}
+
+216911 = {
+	history_override_priority = 1000
+	name = "Shahriyar"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216910
+	872.1.1 = {
+		birth = yes
+	}
+	938.1.1 = {
+		death = yes
+	}
+}
+
+216912 = {
+	history_override_priority = 1000
+	name = "Shams_al-Muluk"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216911
+	890.1.1 = {
+		birth = yes
+	}
+	965.1.1 = {
+		death = yes
+	}
+}
+216913 = {
+	history_override_priority = 1000
+	name = "Istwandad"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216912
+	919.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+
+216914 = {
+	history_override_priority = 1000
+	name = "Fakhr_al-Dawla"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216913
+	940.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+
+216915 = {
+	history_override_priority = 1000
+	name = "Hazarasp"
+	dynasty_house = house_baduspanid
+	rite = imami
+	culture = daylamite
+	father = 216914
+	965.1.1 = {
+		birth = yes
+	}
+	1017.1.1 = {
+		death = yes
+	}
+}
+
+### FP3 additions ###
+fictional_daylamites_1 = {
+	history_override_priority = 1000
+	name = "Tahminah" 
+	female = yes
+	dynasty_house = house_karen
+	rite = hanafi
+	culture = daylamite
+	father = extra_daylamites_4
+	849.7.12 = {
+		birth = yes
+	}
+	865.1.1 = {
+		add_spouse = 45105
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+
+fictional_daylamites_2 = {
+	history_override_priority = 1000
+	name = "Ghazal" 
+	female = yes
+	dynasty = 1029009
+	rite = shafii
+	culture = daylamite
+	father = 1231054
+	1039.1.1 = {
+		birth = yes
+	}
+	1056.1.1 = {
+		add_spouse = 93160
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}

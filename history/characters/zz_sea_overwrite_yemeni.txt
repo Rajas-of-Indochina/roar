@@ -1,0 +1,162 @@
+# Overwrites of vanilla characters
+
+#dynasty = 1042164 # Yufirid => needs to be turned into himyarite oen if we ever add them
+188735 = {
+	# first Yufirid ruler of San'a
+	history_override_priority = 1000
+	name = "Yu_fir"
+	dynasty = 1042164 # Yufirid
+	rite = shafii
+	culture = "yemeni" # himyarite
+	father = 188734
+
+	# History
+	815.1.1 = {
+		birth = yes
+	}
+	# abdicated in 872
+	883.1.1 = {
+		death = yes
+	}
+}
+
+188737 = {
+	history_override_priority = 1000
+	name = "Ibrahim"
+	dynasty = 1042165 # Ziyadid
+	rite = shafii
+	culture = "yemeni"
+	father = 188736
+
+	# History
+	830.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		capital = c_zabid
+	}
+	896.1.1 = {
+		death = yes
+	}
+}
+
+159415 = {
+	history_override_priority = 1000
+	name = "Al-Muhtasib_al-Mujahid_Hamzah" #
+	dynasty = 576
+	rite = zayidi
+	culture = "yemeni"
+	trait = sayyid
+	father = 159414
+
+	# History
+	980.1.1 = {
+		birth = "980.1.1" #Unknown
+	}
+	1067.11.2 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+45049 = {
+	history_override_priority = 1000
+	name = "Fadl"
+	dynasty = 576
+	martial = 6
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 4
+	rite = zayidi
+	culture = "yemeni"
+	trait = sayyid
+	father = 45048
+	1040.1.1 = {
+		birth = "1040.1.1"
+	}
+	1069.1.1 = {
+		death = "1068.1.1"
+	}
+}
+
+# additional Yufirids
+yemeni0002 = {
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty = 1042164 # Yufirid
+	rite = shafii
+	culture = "yemeni" # himyarite
+	father = 188735
+
+	# History
+	835.1.1 = {
+		birth = yes
+	}
+	# given power in 872 by his father
+	882.1.1 = {
+		trait = hajjaj
+		death = {
+			# Ibrahim killed his father and uncle to consolidate his power
+			death_reason = death_murder_known
+			killer = yemeni0004
+		}
+	}
+}
+yemeni0003 = {
+	history_override_priority = 1000
+	name = "Ahmad"
+	dynasty = 1042164 # Yufirid
+	rite = shafii
+	culture = "yemeni" # himyarite
+	father = 188735
+
+	# History
+	839.1.1 = {
+		birth = yes
+	}
+	882.1.1 = {
+		trait = hajjaj
+		death = {
+			# Ibrahim killed his father and uncle to consolidate his power
+			death_reason = death_murder_known
+			killer = yemeni0004
+		}
+	}
+}
+
+yemeni0006 = {
+	# Last signifcant member of the clan
+	name = "As_ad"
+	dynasty = 1042164 # Yufirid
+	rite = shafii
+	culture = "yemeni" # himyarite
+	father = yemeni0004
+
+	# History
+	882.1.1 = {
+		birth = yes
+	}
+	944.1.1 = {
+		death = yes
+	}
+}
+
+yemeni0010 = {
+	# Last signifcant member of the clan
+	history_override_priority = 1000
+	name = "Abdallah"
+	dynasty = 1042164 # Yufirid
+	rite = shafii
+	culture = "yemeni" # himyarite
+	father = yemeni0009
+
+	# History
+	938.1.1 = {
+		birth = yes
+	}
+	997.1.1 = {
+		death = yes
+	}
+}
+

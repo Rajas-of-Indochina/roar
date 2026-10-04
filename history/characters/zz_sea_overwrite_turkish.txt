@@ -1,0 +1,1089 @@
+﻿# Overwrites of vanilla characters
+
+144052 = {
+	history_override_priority = 1000
+	name = "Muhammed"
+	dna = "144052_mohammed_azerbaijan"
+	dynasty = 101876
+	rite = hanafi
+	culture = "turkish"
+	father = 144051
+	trait = education_martial_3
+	trait = ambitious
+	trait = patient
+	trait = diligent
+	trait = administrator
+	trait = shrewd
+	1137.1.1 = {
+		birth = "1137.1.1"
+	}
+	1178.1.1 = {
+		give_nickname = nick_jahan_pahlavan
+		effect = { set_designated_heir = character:225015 }
+	}
+	1186.1.1 = {
+		death = "1186.1.1"
+	}
+}
+
+20690 = {
+	history_override_priority = 1000
+	name = "Kemaladdin"
+	dynasty = 101027
+	martial = 6
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 6
+	rite = hanafi
+	culture = "khalaj"
+	trait = craven
+	trait = education_intrigue_2
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+
+225000 = {
+	history_override_priority = 1000
+	name = "Kilij_Arslan"
+	dna = "bookmark_kilij_arslan_225000"
+	dynasty_house = house_seljuk
+	martial = 7
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 8
+	rite = hanafi
+	culture = "turkmen"
+	trait = lustful
+	trait = cynical
+	trait = education_martial_2
+	father = 7299
+	1132.1.1 = {
+		birth = "1132.1.1"
+	}
+	1178.1.1 = {
+		give_nickname = nick_izz_al_din
+
+		effect = { #so they dont get rekt instantly by byzantium as they always do. Vanilla has it so its 13k vs 4k soldiers!!
+			add_gold = 100
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
+			}
+			
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 350
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 3
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 1
+				}
+				men_at_arms = {
+					type = trebuchet
+					stacks = 2
+				}
+				location = province:759
+				origin = province:759
+			}
+		}
+	}
+	1192.1.1 = {
+		death = "1192.1.1"
+	}
+}
+
+225004 = {
+	history_override_priority = 1000
+	name = "Suleyman"
+	dna = "bookmark_kilij_arslan_suleyman_225004"
+	dynasty_house = house_seljuk
+	martial = 4
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 7
+	rite = hanafi
+	culture = "turkmen"
+	trait = calm
+	trait = cynical
+	trait = education_learning_2
+	father = 225000
+	1160.1.1 = {
+		birth = yes
+	}
+	1204.1.1 = {
+		death = yes
+	}
+}
+
+225015 = {
+	history_override_priority = 1000
+	name = "Qizil_Arslan"
+	# AKA: Qizil
+	dynasty = 101876
+	martial = 4
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 7
+	rite = hanafi
+	culture = "turkish"
+	trait = education_intrigue_2
+	father = 144051
+	1139.1.1 = {
+		birth = yes
+		give_nickname = nick_muzaffar_al_din
+	}
+	1186.1.1 = {
+		effect = { set_designated_heir = character:ildeguzid_2 }
+	}
+	1191.1.1 = {
+		death = { death_reason = death_murder }
+	}
+}
+
+3040 = {
+	history_override_priority = 1000
+	name = "Alp_Arslan"
+	dynasty_house = house_seljuk
+	martial = 10
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 7
+	rite = hanafi
+	culture = "turkish"
+	trait = just
+	trait = diligent
+	trait = brave
+	trait = calm
+	trait = strong
+	trait = education_martial_4
+	father = 3036
+	1029.1.1 = {
+		birth = yes
+	}
+	1048.1.1 = {
+		add_spouse = 3045
+	}
+	1050.1.1 = {
+		add_spouse = extra_karakhanids_12
+	}
+	1051.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
+	}
+	1060.1.1 = {
+		trait = conqueror
+		effect = {
+			add_gold = 1000
+			add_prestige = 1000
+		}
+		add_pressed_claim = title:c_aberani
+		add_pressed_claim = title:c_aghbek
+		add_pressed_claim = title:c_apahunik
+		add_pressed_claim = title:c_ashtishat
+		add_pressed_claim = title:c_bagrewand
+		add_pressed_claim = title:c_bznunik
+		add_pressed_claim = title:c_chaldoran
+		add_pressed_claim = title:c_eriduakhi
+		add_pressed_claim = title:c_kajberunik
+		add_pressed_claim = title:c_mardali
+		add_pressed_claim = title:c_rshtunik
+		add_pressed_claim = title:c_sghkunik
+		add_pressed_claim = title:c_tosp
+		add_pressed_claim = title:c_tsaghkotn
+		add_pressed_claim = title:c_varaznunik
+	}
+	1063.1.1 = {
+		add_spouse = extra_georgians_1 
+	}
+	1064.1.1 = {
+		add_spouse = extra_seljuks_4
+	}
+	1066.1.1 = {
+		give_nickname = nick_adud_al_dawla
+	}
+	1066.9.14 = {
+		add_character_flag = {
+			flag = recent_nation_fracturing_faction_war
+			years = faction_nation_fracturing_war_defeat_cooldown
+		}
+
+		effect = {
+			random_character_war = {
+				save_scope_as = starting_seljuk_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 200
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 5
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 2
+				}
+				men_at_arms = {
+					type = heavy_horse_archers
+					stacks = 2
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = mangonel
+					stacks = 2
+				}
+				location = province:4855
+				origin = province:4333
+				war = scope:starting_seljuk_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 200
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 5
+				}
+				men_at_arms = {
+					type = tarkhan
+					stacks = 2
+				}
+				men_at_arms = {
+					type = heavy_horse_archers
+					stacks = 2
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = mangonel
+					stacks = 2
+				}
+				location = province:4855
+				origin = province:4333
+				war = scope:starting_seljuk_war
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 300
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 5
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = mangonel
+					stacks = 2
+				}
+				location = province:4855
+				origin = province:4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 300
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 5
+				}
+				men_at_arms = {
+					type = horse_archers
+					stacks = 3
+				}
+				men_at_arms = {
+					type = mangonel
+					stacks = 2
+				}
+				location = province:4855
+				origin = province:4333
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 500
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 5
+				}
+				men_at_arms = {
+					type = mangonel
+					stacks = 2
+				}
+				location = province:4859
+				origin = province:4333
+			}
+			
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 500
+				men_at_arms = {
+					type = steppe_raiders
+					stacks = 5
+				}
+				men_at_arms = {
+					type = mangonel
+					stacks = 2
+				}
+				location = province:4859
+				origin = province:4333
+			}
+			add_prestige = 3000
+		}
+	}
+	1072.11.1 = {
+		death = yes
+	}
+}
+
+3041 = {
+	history_override_priority = 1000
+	# Qavord/Qawurd, senior Seljuk prince who attempted a rebellion against Malik Shah in 1073
+	name = "Qawurd"
+	dynasty_house = house_seljuk
+	martial = 7
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 8
+	rite = hanafi
+	culture = "turkish"
+	trait = arrogant
+	trait = temperate
+	trait = ambitious 	# Tried to claim the Seljuk throne for himself
+	trait = disloyal
+	trait = education_martial_2
+	father = 3036
+	1022.1.2 = {
+		birth = "1022.1.2"
+	}
+	1063.9.4 = {
+		add_unpressed_claim = title:e_persia
+	}
+	1073.1.1 = {
+		death = "1073.1.1"
+	}
+}
+
+3042 = {
+	history_override_priority = 1000
+	name = "Malik_Shah"
+	dynasty_house = house_seljuk
+	martial = 10
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 8
+	rite = hanafi
+	culture = "turkish"
+	trait = rowdy
+	trait = calm
+	trait = humble
+	trait = education_martial_2
+	disallow_random_traits = yes
+	father = 3040
+	mother = 3045 #according to unconfirmed sources 
+	1055.1.2 = {
+		birth = "1055.1.2"
+	}
+	1060.1.1 = {
+		effect = {
+			learn_language_of_culture = culture:persian
+		}
+	}
+	1066.1.1 = {
+		give_nickname = nick_jalal_al_din
+	}
+	1092.11.1 = {
+		death = "1092.11.1"
+	}
+}
+
+34217 = {
+	history_override_priority = 1000
+	name = "Mehmed"
+	dynasty = 101730
+	rite = shafii
+	culture = "turkmen"
+	father = 34200
+	1127.1.1 = {
+		birth = "1127.1.1"
+	}
+	1178.10.25 = {
+		death = yes
+	}
+}
+
+34223 = {
+	history_override_priority = 1000
+	name = "Suhrab"
+	dynasty = 101730
+	rite = shafii
+	culture = "turkmen"
+	father = 34222
+	1152.1.1 = {
+		birth = "1152.1.1"
+	}
+	1202.1.1 = {
+		death = "1202.1.1"
+	}
+}
+
+93087 = {
+	history_override_priority = 1000
+	name = "Qochar"
+	dynasty = 7328
+	rite = tengri_pagan
+	culture = "qangli"
+	1035.1.1 = {
+		birth = "1035.1.1"
+	}
+	1085.1.1 = {
+		death = "1085.1.1"
+	}
+}
+
+93088 = {
+	history_override_priority = 1000
+	name = "Ekinchi"
+	dynasty = 7328
+	rite = tengri_pagan
+	culture = "qangli"
+	father = 93087
+	1055.1.1 = {
+		birth = "1055.1.1"
+	}
+	1097.1.1 = {
+		death = "1097.1.1"
+	}
+}
+
+170242 = {
+	history_override_priority = 1000
+	name = "Qaim" #Qaim Khan
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170252
+	1180.1.1 = {
+		birth = "1180.1.1"
+	}
+	1227.1.1 = {
+		death = "1237.1.1"
+	}
+}
+
+170243 = {
+	history_override_priority = 1000
+	name = "Firuz" #Jalal ud din Firuz Khilji
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170242
+	1216.1.1 = {
+		birth = "1216.1.1"
+	}
+	1296.7.21 = {
+		death = "1296.7.21"
+	}
+}
+
+170244 = {
+	history_override_priority = 1000
+	name = "Masud"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170242
+	1217.1.1 = {
+		birth = "1217.1.1"
+	}
+	1256.1.1 = {
+		death = "1256.1.1"
+	}
+}
+
+170245 = {
+	history_override_priority = 1000
+	name = "Ibrahim"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170243
+	1234.1.1 = {
+		birth = "1234.1.1"
+	}
+	1296.11.1 = {
+		death = "1296.11.1"
+	}
+}
+
+170246 = {
+	history_override_priority = 1000
+	name = "Muhammad" #Ala-ud-din Muhammad
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170244
+	1242.1.1 = {
+		birth = "1242.1.1"
+	}
+	1316.1.3 = {
+		death = "1316.1.3"
+	}
+}
+
+170247 = {
+	history_override_priority = 1000
+	name = "Umar"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170246
+	1310.1.1 = {
+		birth = "1310.1.1"
+	}
+	1316.4.1 = {
+		death = "1316.4.1"
+	}
+}
+
+170248 = {
+	history_override_priority = 1000
+	name = "Mubarak"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170246
+	1265.1.1 = {
+		birth = "1265.1.1"
+	}
+	1320.6.1 = {
+		death = "1320.6.1"
+	}
+}
+
+170249 = {
+	history_override_priority = 1000
+	name = "Hidr"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170246
+	1280.1.1 = {
+		birth = "1280.1.1"
+	}
+	1316.1.1 = {
+		death = "1316.1.1"
+	}
+}
+
+170250 = {
+	history_override_priority = 1000
+	name = "Mahmud"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170249
+	1305.1.1 = {
+		birth = "1305.1.1"
+	}
+	1318.6.1 = {
+		death = "1318.6.1"
+	}
+}
+
+170252 = {
+	history_override_priority = 1000
+	name = "Muhammad" # Muhammad ibn Bakhtiyar
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	trait = ambitious
+	trait = zealous
+	trait = brave
+	trait = education_martial_3
+	trait = beauty_bad_1 # Said to be ugly, though not sure if this is later Buddhist propaganda, but Wikipedia quotes a modern Muslim academic on this (?)
+	father = khilji_1
+
+	# History
+	1150.1.1 = {
+		birth = yes
+		give_nickname = nick_ikhtiyar_al_din
+		effect = { add_character_flag = do_not_generate_starting_family }
+	}
+	1206.1.1 = {
+		death = {
+			death_reason = death_murder
+			killer = 170254
+		}
+	}
+}
+
+170253 = {
+	history_override_priority = 1000
+	name = "Muhammad" # Muhammad Shiran
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	father = 170252
+	1166.1.1 = {
+		birth = "1166.1.1"
+	}
+	1208.1.1 = {
+		death = "1208.1.1"
+	}
+}
+
+170254 = {
+	history_override_priority = 1000
+	name = "Ali" # Ali Mardan
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	father = 170252
+	1167.1.1 = {
+		birth = "1167.1.1"
+	}
+	1212.1.1 = {
+		death = "1212.1.1"
+	}
+}
+
+170255 = {
+	history_override_priority = 1000
+	name = "Iwaz" #Ghiyasuddin Iwaz
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	father = 170252
+	1168.1.1 = {
+		birth = "1168.1.1"
+	}
+	1227.1.1 = {
+		death = "1227.1.1"
+	}
+}
+
+170262 = {
+	history_override_priority = 1000
+	name = "Balkha" #Malik Balkha
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170255
+	1192.1.1 = {
+		birth = "1192.1.1"
+	}
+	1232.1.1 = {
+		death = "1232.1.1"
+	}
+}
+
+170263 = {
+	history_override_priority = 1000
+	name = "Alauddin"
+	dynasty = 1040205
+	rite = shafii
+	culture = "khalaj"
+	father = 170255
+	1190.1.1 = {
+		birth = "1190.1.1"
+	}
+	1230.1.1 = {
+		death = "1230.1.1"
+	}
+}
+
+302278 = {
+	history_override_priority = 1000
+	name = "Tolun"
+	dynasty = 12271	#Burtasid
+	rite = hanafi
+	culture = chuvash
+	1042.1.2 = {
+		birth = yes
+	}
+	1095.1.2 = {
+		death = yes
+	}
+}
+302279 = {
+	history_override_priority = 1000
+	name = "SO_buk"
+	dynasty = 12271	#Burtasid
+	rite = hanafi
+	culture = chuvash
+	father = 302278
+	1068.1.2 = {
+		birth = yes
+	}
+	1110.1.2 = {
+		death = yes
+	}
+}
+302280 = {
+	history_override_priority = 1000
+	name = "Baytas"
+	dynasty = 12271	#Burtasid
+	rite = hanafi
+	culture = chuvash
+	father = 302279
+	1100.1.2 = {
+		birth = yes
+	}
+	1163.1.2 = {
+		death = yes
+	}
+}
+302281 = {
+	history_override_priority = 1000
+	name = "Ilgazi"
+	dynasty = 12271	#Burtasid
+	rite = hanafi
+	culture = chuvash
+	father = 302280
+	1125.1.2 = {
+		birth = yes
+	}
+	1173.1.2 = {
+		death = yes
+	}
+}
+302282 = {
+	history_override_priority = 1000
+	name = "Bozan"
+	dynasty = 12271	#Burtasid
+	rite = hanafi
+	culture = chuvash
+	stewardship = 6
+	father = 302281
+	1146.1.2 = {
+		birth = yes
+	}
+	1200.1.2 = {
+		death = yes
+	}
+}
+302283 = {
+	history_override_priority = 1000
+	name = "Iskender"
+	dynasty = 12271	#Burtasid
+	rite = hanafi
+	culture = chuvash
+	father = 302282
+	1176.1.2 = {
+		birth = yes
+	}
+	1240.1.2 = {
+		death = yes
+	}
+}
+
+302629 = {
+	history_override_priority = 1000
+	name = "Korkut"
+	dynasty = 2001095	#Mangyt
+	rite = hanafi
+	culture = turkish
+	father = yabgus_16
+	1038.8.13 = {
+		birth = yes
+	}
+	1061.4.22 = {
+		add_spouse = 302630
+	}
+	1093.10.30 = {
+		death = yes
+	}
+}
+
+1000230147 = {
+	history_override_priority = 1000
+	name = "Duqaq" #Father of Seljuk
+	dynasty_house = house_qiniq
+	rite = hanafi
+	culture = turkish #oghuz
+	father = 1000230132
+	trait = brave
+	trait = ambitious
+	trait = intellect_good_1
+	trait = rowdy
+	900.1.1 = {
+		birth = yes
+	}
+	983.1.1 = {
+		death = yes
+	}
+}
+
+ildeguzid_2 = {
+	history_override_priority = 1000
+	name = "Abu_Bakr"
+	dynasty = 101876 # Ildeguzid
+	rite = hanafi
+	culture = "turkish"
+	father = 144052
+	1162.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+danishmendid_1 = {
+	history_override_priority = 1000
+	name = "Taylu"
+	dynasty = 101730
+	rite = armenian_rite
+	culture = "armenian"
+	trait = education_learning_3
+	trait = erudite
+	trait = zealous
+	trait = ambitious
+	trait = faith_warrior
+	trait = nomadic_philosophy
+	father = danishmend_father #according to Niketas Choniates, a Byzantine government official and historian and a near-contemporary of Danishmend Gazi, he was of Arsacid descent
+	1032.1.1 = {
+		birth = yes
+	}
+	1052.1.1 = { #according to the stories he became a muslim after a legendary adventure to seek the truth
+		rite = hanafi
+		culture = "turkish"
+	}
+	1066.6.1 = {
+		give_nickname = nick_danishmend
+		effect = {
+			set_landless_government_effect = yes
+			add_character_flag = do_not_generate_starting_family
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1000
+				men_at_arms = {
+					type = armored_footmen
+					stacks = 2
+				}
+				men_at_arms = {
+					type = light_horsemen
+					stacks = 2
+				}
+				location = character:danishmendid_1.location
+				origin = character:danishmendid_1.location
+			}
+		}
+	}
+	1084.1.1 = {
+		death = yes
+	}
+}
+
+khilji_1 = {
+	history_override_priority = 1000
+	name = "Bakhtiyar"
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	father = khilji_2
+	1120.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+khilji_2 = {
+	history_override_priority = 1000
+	name = "Mahmud"
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	1090.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}
+
+khilji_3 = {
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty = 1040205 # Khalji
+	rite = shafii
+	culture = "khalaj"
+	father = khilji_2
+	1130.1.1 = {
+		birth = yes
+	}
+	1180.1.1 = {
+		death = yes
+	}
+}
+
+fictional_turkish_18 = {	#Kipchak in Cumania 1066
+	history_override_priority = 1000
+	name = "Mursel"
+	rite = tengri_pagan
+	culture = kipchak
+	1011.4.6 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+fictional_turkish_19 = {	#Kipchak in Cumania 1066
+	history_override_priority = 1000
+	name = "Aydogan"
+	rite = tengri_pagan
+	culture = kipchak
+	1032.9.23 = {
+		birth = yes
+	}
+	1095.1.1 = {
+		death = yes
+	}
+}
+
+fictional_turkish_20 = {	#Kipchak in Cumania 1066
+	history_override_priority = 1000
+	name = "Ertugrul"
+	rite = tengri_pagan
+	culture = kipchak
+	1044.7.21 = {
+		birth = yes
+	}
+	1085.1.1 = {
+		death = yes
+	}
+}
+
+fictional_turkish_21 = {	#Herder 936
+	history_override_priority = 1000
+	name = "Iprakhim"
+	rite = tengri_pagan
+	culture = chuvash
+	920.6.16 = {
+		birth = yes
+	}
+	975.1.1 = {
+		death = yes
+	}
+}
+
+fictional_turkish_22 = {	#Herder 1178
+	history_override_priority = 1000
+	name = "VaC_C_urkka"
+	rite = hanafi
+	culture = chuvash
+	1126.2.22 = {
+		birth = yes
+	}
+	1198.1.1 = {
+		death = yes
+	}
+}
+
+
+fictional_turkish_24 = {	#Herder 1178
+	history_override_priority = 1000
+	name = "Aydogdu"
+	rite = tengri_pagan
+	culture = kipchak
+	1140.5.2 = {
+		birth = yes
+	}
+	1183.1.1 = {
+		death = yes
+	}
+}
+
+fictional_turkish_30 = {
+	history_override_priority = 1000
+	name = "Jurat"
+	rite = hanafi
+	culture = chuvash
+	1040.2.23 = {
+		birth = yes
+	}
+	1105.1.1 = {
+		death = yes
+	}
+}

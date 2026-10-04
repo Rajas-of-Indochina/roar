@@ -1,0 +1,616 @@
+﻿################################################
+# START OF CINA SEMI-FIC DYNASTY
+# Mostly fictional characters, with some "semi-fics" based on folklore and oral traditions
+# Even the characters without the "fic" tag should be taken with a lot of salt, as they can't be dated, and often could possibly not even be that real
+# {
+
+#Luwu kingdom
+bugis_cina_01 = {
+	history_override_priority = 1000
+	name = "Simpurusia"	#Foundational myth figure
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+
+	789.1.1 = {
+		birth = yes
+	}
+	838.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_02 = {
+	history_override_priority = 1000
+	name = "Anakaji"	#Foundational myth figure
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_01
+	813.1.1 = {
+		birth = yes
+	}
+	862.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_03 = {
+	history_override_priority = 1000
+	name = "Sawerigading"	#Luwu ruler sometime in the IXth
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_02
+	839.1.1 = {
+		birth = yes
+	}
+	871.1.1 = {
+		death = yes
+	}
+}
+
+#Cina kingdom
+bugis_cina_05 = {
+	history_override_priority = 1000
+	name = "Sattumpugi"	#La Sattumpugi 
+	#data below fictional
+	dynasty = bugis_cina	#maybe already related to Luwu
+	rite = tolotang
+	culture = bugis
+	821.1.1 = {
+		birth = yes
+	}
+	864.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_06 = {
+	history_override_priority = 1000
+	name = "We_Cudai"
+	female = yes
+	#data below fictional
+	dynasty = bugis_cina	#maybe already related to Luwu
+	rite = tolotang
+	culture = bugis
+	845.1.1 = {
+		birth = yes
+	}
+	908.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_10_fic = {	#fictional
+	history_override_priority = 1000
+	name = "Lusing"
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	1041.1.1 = {
+		birth = yes
+	}
+	1094.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_15_fic = {	#fictional
+	history_override_priority = 1000
+	name = "Entirong"
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	1146.1.1 = {
+		birth = yes
+	}
+	1196.1.1 = {
+		death = yes
+	}
+}
+
+#Bombana & Kabaena kingdoms
+bugis_cina_10 = {
+	history_override_priority = 1000
+	name = "Dendeangi"	#possible founder of Bombana in the IXth
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_02
+	843.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_11 = {
+	history_override_priority = 1000
+	name = "Lanka"	#unknown name
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_10
+	868.1.1 = {
+		birth = yes
+	}
+	911.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_12 = {
+	history_override_priority = 1000
+	name = "Nungkulangi"
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_11
+	900.1.1 = {
+		birth = yes
+	}
+	949.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_13 = {
+	history_override_priority = 1000
+	name = "Indaulu"	#queen of Kabaena
+	female = yes
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_12
+	931.1.1 = {
+		birth = yes
+	}
+	997.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_13a = {
+	history_override_priority = 1000
+	name = "Tina_Sio"	#queen of Rumbia
+	female = yes
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_12
+	933.1.1 = {
+		birth = yes
+	}
+	998.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_13b = {
+	history_override_priority = 1000
+	name = "Ririsao"	#king of Poleang
+	#data below fictional
+	dynasty = bugis_cina
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_12
+	935.1.1 = {
+		birth = yes
+	}
+	986.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_14 = {
+	history_override_priority = 1000
+	name = "Kipun"	#unknown name
+	female = yes
+	#data below fictional
+	dynasty_house = house_cina_kabaena
+	rite = tolotang
+	culture = bugis
+	mother = bugis_cina_13
+	953.1.1 = {
+		birth = yes
+	}
+	1017.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_15 = {
+	history_override_priority = 1000
+	name = "Gadingga"	#unknown name
+	#data below fictional
+	dynasty_house = house_cina_kabaena
+	rite = tolotang
+	culture = bugis
+	mother = bugis_cina_14
+	981.1.1 = {
+		birth = yes
+	}
+	1027.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_16 = {
+	history_override_priority = 1000
+	name = "Manjawari"
+	#data below fictional
+	dynasty_house = house_cina_kabaena
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_15
+	1010.1.1 = {
+		birth = yes
+	}
+	1069.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_17 = {
+	history_override_priority = 1000
+	name = "Sinoh"	#unknown name
+	female = yes
+	#data below fictional
+	dynasty_house = house_cina_kabaena
+	rite = tolotang
+	culture = bugis
+	father = bugis_cina_16
+	1034.1.1 = {
+		birth = yes
+	}
+	1097.1.1 = {
+		death = yes
+	}
+}
+
+bugis_cina_20_fic = {	#fictional
+	history_override_priority = 1000
+	name = "Anjing"
+	female = yes
+	dynasty_house = house_cina_kabaena
+	rite = tolotang
+	culture = bugis
+	1152.1.1 = {
+		birth = yes
+	}
+	1201.1.1 = {
+		death = yes
+	}
+}
+
+# }
+# END OF CINA SEMI-FIC DYNASTY
+################################################
+
+################################################
+# START OF KONAWE RULERS
+# Mosty fictional characters, due to lack of proper data
+# {
+
+bugis_konawe_01 = {
+	history_override_priority = 1000
+	name = "Roro"
+	dynasty = tolaki_konawe
+	rite = sulawesi_animism
+	culture = tolaki
+
+	397.1.1 = {
+		birth = yes
+	}
+	447.1.1 = {	#possible end of reign
+		death = yes
+	}
+}
+
+bugis_konawe_01_fic = {	#fictional ruler for Konawe 867
+	history_override_priority = 1000
+    # fictional ruler for Konawe 867
+	name = "Tabo"
+	dynasty = tolaki_konawe
+	rite = sulawesi_animism
+	culture = tolaki
+
+	834.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+
+bugis_konawe_02 = {
+	history_override_priority = 1000
+	name = "Toramalang"
+	dynasty = tolaki_konawe
+	rite = sulawesi_animism
+	culture = tolaki
+
+	887.1.1 = {
+		birth = yes
+	}
+	948.1.1 = {	#possible end of reign
+		death = yes
+	}
+}
+
+bugis_konawe_03 = {
+	history_override_priority = 1000
+	name = "Wekoila"	#aka Tenrirawe aka Wetendriaben
+	female = yes
+	dynasty = tolaki_konawe
+	rite = sulawesi_animism
+	culture = tolaki
+
+	908.1.1 = {
+		birth = yes
+	}
+	968.1.1 = {	#possible end of reign
+		death = yes
+	}
+}
+
+bugis_konawe_10_fic = {	#fictional ruler for Konawe 1066
+	history_override_priority = 1000
+    # fictional ruler for Konawe 1066
+	name = "Cendera"
+	dynasty = tolaki_konawe
+	rite = sulawesi_animism
+	culture = tolaki
+
+	1035.1.1 = {
+		birth = yes
+	}
+	1083.1.1 = {
+		death = yes
+	}
+}
+
+bugis_konawe_20_fic = {	#fictional ruler for Konawe 1178
+	history_override_priority = 1000
+    # fictional ruler for Konawe 1178
+	name = "Singa"
+	dynasty = tolaki_konawe
+	rite = sulawesi_animism
+	culture = tolaki
+
+	1137.1.1 = {
+		birth = yes
+	}
+	1189.1.1 = {
+		death = yes
+	}
+}
+
+# }
+# END OF KONAWE
+################################################
+
+################################################
+# START OF BUTUN RULERS
+# Mostly fictional characters in this section
+# {
+
+bugis_butun_01_fic = {
+	history_override_priority = 1000
+	name = "Tungga"
+	dynasty = bugis_tiworo
+	rite = sulawesi_animism
+	culture = muna
+	825.1.1 = {
+		birth = yes
+	}
+	877.1.1 = {
+		death = yes
+	}
+}
+
+bugis_butun_01 = {
+	history_override_priority = 1000
+	name = "Wonua"
+	dynasty = bugis_totongano
+	rite = sulawesi_animism
+	culture = muna
+	921.1.1 = {	#unknown
+		birth = yes
+	}
+	973.1.1 = {	#unknown
+		death = yes
+	}
+}
+
+bugis_butun_10 = {
+	history_override_priority = 1000
+	name = "Lakilaponto"	# possibly ruler of Butun in ~XIth century ; not much known
+	#fictional data below
+	dynasty = bugis_totongano
+	rite = sulawesi_animism
+	culture = muna
+	1031.1.1 = {
+		birth = yes
+	}
+	1054.1.1 = {
+		add_spouse = bugis_cina_17
+	}
+	1083.1.1 = {
+		death = yes
+	}
+}
+
+bugis_butun_11 = {
+	history_override_priority = 1000
+	name = "Sangaji"
+	#fictional data below
+	dynasty = bugis_totongano
+	rite = sulawesi_animism
+	culture = muna
+	father = bugis_butun_10
+	mother = bugis_cina_17
+	1055.1.1 = {
+		birth = yes
+	}
+	1106.1.1 = {
+		death = yes
+	}
+}
+
+bugis_butun_20_fic = {
+	history_override_priority = 1000
+	name = "Along"
+	dynasty = bugis_totongano
+	rite = sulawesi_animism
+	culture = muna
+	1126.1.1 = {
+		birth = yes
+	}
+	1187.1.1 = {
+		death = yes
+	}
+}
+
+# }
+# END OF BUTUN RULERS
+################################################
+
+################################################
+# START OF TRIBAL PLACEHOLDERS IN SULAWESI
+# No data in these areas, fictional characters
+# {
+
+#Sampaga
+bugis_sampaga_01_fic = {
+	history_override_priority = 1000
+	name = "Nisi"
+	dynasty = mandar_bambang
+	rite = aluk
+	culture = mandar
+
+	828.1.1 = {
+		birth = yes
+	}
+	889.1.1 = {
+		death = yes
+	}
+}
+bugis_sampaga_02_fic = {
+	history_override_priority = 1000
+	name = "Pioh"
+	dynasty = mandar_bambang
+	rite = aluk
+	culture = mandar
+	father = bugis_sampaga_01_fic
+
+	857.1.1 = {
+		birth = yes
+	}
+	911.1.1 = {
+		death = yes
+	}
+}
+bugis_sampaga_10_fic = {
+	history_override_priority = 1000
+	name = "Jimbau"
+	dynasty = mandar_bambang
+	rite = aluk
+	culture = mandar
+
+	1013.1.1 = {
+		birth = yes
+	}
+	1073.1.1 = {
+		death = yes
+	}
+}
+bugis_sampaga_11_fic = {
+	history_override_priority = 1000
+	name = "Kubu"
+	dynasty = mandar_bambang
+	rite = aluk
+	culture = mandar
+	father = bugis_sampaga_10_fic
+
+	1047.1.1 = {
+		birth = yes
+	}
+	1102.1.1 = {
+		death = yes
+	}
+}
+bugis_sampaga_20_fic = {
+	history_override_priority = 1000
+	name = "Ukit"
+	dynasty = mandar_bambang
+	rite = aluk
+	culture = mandar
+
+	1150.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+#Ajatappareng
+bugis_ajatappareng_01_fic = {
+	history_override_priority = 1000
+	name = "Garing"
+	dynasty = toraja_rappang
+	rite = aluk
+	culture = toraja
+
+	824.1.1 = {
+		birth = yes
+	}
+	873.1.1 = {
+		death = yes
+	}
+}
+
+bugis_ajatappareng_10_fic = {
+	history_override_priority = 1000
+	name = "Prabu"
+	dynasty = toraja_rappang
+	rite = aluk
+	culture = toraja
+
+	1031.1.1 = {
+		birth = yes
+	}
+	1086.1.1 = {
+		death = yes
+	}
+}
+
+bugis_ajatappareng_20_fic = {
+	history_override_priority = 1000
+	name = "Perana"
+	dynasty = toraja_rappang
+	rite = aluk
+	culture = toraja
+
+	1159.1.1 = {
+		birth = yes
+	}
+	1206.1.1 = {
+		death = yes
+	}
+}
+
+# }
+# END OF TRIBAL PLACEHOLDERS IN SULAWESI
+################################################
