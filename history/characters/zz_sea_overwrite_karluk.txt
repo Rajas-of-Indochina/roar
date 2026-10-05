@@ -1,0 +1,968 @@
+# Overwrites of vanilla characters
+
+188851 = {
+	history_override_priority = 1000
+	name = "Bazir"
+	#Bazir Arslan Khan, son & successor of Bilge
+	dynasty = 101864 # Karakhanid
+	rite = tengri_pagan
+	culture = karluk
+	father = 34872
+	851.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+188852 = {
+	history_override_priority = 1000
+	name = "Oghulcak"
+	#Oghulchak Arslan Khan, son of Bilge, brother & successor of Bazir
+	dynasty = 101864 # Karakhanid
+	rite = tengri_pagan
+	culture = karluk
+	father = 34872
+	855.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = {
+			death_reason = death_murder
+			killer = 188853 #his nephew 
+		}
+	}
+}
+
+3014 = { # Ibrahim I
+	history_override_priority = 1000
+	name = "Ibrahim"
+	# AKA: Ibrahim Tamghach
+	dynasty_house = house_alid
+	martial = 4
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 4
+	rite = hanafi
+	culture = "karluk"
+	trait = shrewd				# Said to be a capable, intelligent ruler
+	trait = just				# Praised by Muslim chroniclers for being just
+	trait = zealous				# Also praised for being devout
+	trait = diligent			# What a hard worker
+	trait = administrator		# Heavy focus on managing the economy and trade, reducing hardship for common folk, screwing over bandits
+	trait = architect			# Also built a lot of stuff
+	trait = education_martial_3
+	father = extra_karakhanids_2 # Nasr
+
+	# History
+	1011.1.2 = {
+		birth = "1017.1.2"
+	}
+	1068.1.1 = {
+		death = "1068.1.1"
+	}
+}
+
+3018 = { # Khidr Khan
+	history_override_priority = 1000
+	name = "Khidr_Abu_Shuja"
+	# AKA: Khidr Abu Shuja
+	dynasty_house = house_alid
+	martial = 6
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 4
+	rite = hanafi
+	culture = "karluk"
+	trait = honest
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 3014
+	1035.1.2 = {
+		birth = yes
+	}
+	1085.1.1 = {
+		death = yes
+	}
+}
+
+3002 = {
+	history_override_priority = 1000
+	name = "Ahmad_Arslan_Toghan"
+	# AKA: Ahmad Arslan Toghan, son of Ali Arslan
+	dynasty = 101864
+	martial = 4
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 4
+	rite = hanafi
+	culture = "karluk"
+	trait = generous
+	trait = education_martial_2
+	father = 3000
+	972.1.1 = {
+		birth = yes
+	}
+	992.1.1 = {
+		dynasty_house = house_alid
+	}
+	1017.1.1 = {
+		death = yes
+	}
+}
+
+3004 = {
+	history_override_priority = 1000
+	name = "Mansur_Arslan"
+	# AKA: Mansur Arslan, son of Ali Arslan
+	dynasty_house = house_alid	#Karakhanid
+	martial = 6
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 8
+	rite = hanafi
+	culture = "karluk"
+	trait = chaste
+	trait = lazy
+	trait = zealous
+	trait = education_learning_2
+	father = 3000
+	973.1.1 = {
+		birth = yes
+	}
+	1024.1.1 = {
+		death = yes
+	}
+}
+
+188855 = { # Muhammad III
+	history_override_priority = 1000
+	name = "Muhammad"
+	dynasty_house = house_hasanid #Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = 144115 # Ibrahim II
+	1121.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		capital = c_kashgar
+	}
+	1188.1.1 = {
+		death = yes
+	}
+}
+
+karluk0051 = {
+	history_override_priority = 1000
+	name = "Ali"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0050
+	1180.1.1 = {
+		birth=yes
+	}
+	1240.1.1 = {
+		death=yes
+	}
+}
+
+karluk0052 = {
+	history_override_priority = 1000
+	name = "Mahumud"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0051
+	1200.1.1 = {
+		birth=yes
+	}
+	1260.1.1 = {
+		death=yes
+	}
+}
+
+karluk0053 = {
+	history_override_priority = 1000
+	name = "Yusuf"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0052
+	1220.1.1 = {
+		birth=yes
+	}
+	1280.1.1 = {
+		death=yes
+	}
+}
+
+karluk0054 = {
+	history_override_priority = 1000
+	name = "Yaqub"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0053
+	1240.1.1 = {
+		birth=yes
+	}
+	1300.1.1 = {
+		death=yes
+	}
+}
+
+karluk0055 = {
+	history_override_priority = 1000
+	name = "Qadir"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0054
+	1260.1.1 = {
+		birth=yes
+	}
+	1320.1.1 = {
+		death=yes
+	}
+}
+
+karluk0056 = {
+	history_override_priority = 1000
+	name = "Mansur"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0055
+	1280.1.1 = {
+		birth=yes
+	}
+	1340.1.1 = {
+		death=yes
+	}
+}
+
+karluk0057 = {
+	history_override_priority = 1000
+	name = "Ahmad"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0056
+	1300.1.1 = {
+		birth=yes
+	}
+	1360.1.1 = {
+		death=yes
+	}
+}
+
+karluk0058 = {
+	history_override_priority = 1000
+	name = "Jibrail"
+	dynasty_house = house_alid	#Karakhanid
+	rite = hanafi
+	culture = "karluk"
+	father = karluk0057
+	1320.1.1 = {
+		birth=yes
+	}
+	1380.1.1 = {
+		death=yes
+	}
+}
+
+188771 = {
+	history_override_priority = 1000
+	name = "EldeC_yuk"	# fictional
+	dynasty = 1042185 # Karlukid
+	rite = "tengri_pagan"
+	culture = "karluk"
+	father = 188770
+	800.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+
+188772 = {
+	history_override_priority = 1000
+	name = "Arslan" # fictional chief of Chigils
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	743.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+188773 = {
+	history_override_priority = 1000
+	name = "Kubasar" # fictional chief of Yagma
+	dynasty = 1042187 # Yagma
+	rite = "vajrayana" # guess
+	culture = "yagma"
+	743.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+188778 = {
+	history_override_priority = 1000
+	name = "SevenC_"	# fictional
+	dynasty = 1042185 # Karlukid
+	rite = "tengri_pagan"
+	culture = "karluk"
+	father = 188771
+	829.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+194383 = {
+	history_override_priority = 1000
+	name = "Uzur"	# fictional
+	dynasty = 1042185 # Karlukid
+	rite = "tengri_pagan"
+	culture = "karluk"
+	father = 188778
+	849.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+194385 = {
+	history_override_priority = 1000
+	name = "Sirma"	# fictional
+	female = yes
+	dynasty = 1042185 # Karlukid
+	rite = "tengri_pagan"
+	culture = "karluk"
+	father = 188778
+	851.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+188830 = {
+	history_override_priority = 1000
+	name = "Kuntuvdi" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188772
+	767.1.1 = {
+		birth = yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+
+188831 = {
+	history_override_priority = 1000
+	name = "Saru" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188830
+	789.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+188832 = {
+	history_override_priority = 1000
+	name = "Begluk" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188830
+	791.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+
+188833 = {
+	history_override_priority = 1000
+	name = "Tugor" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188831
+	810.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+188834 = {
+	history_override_priority = 1000
+	name = "Uzluk" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188833
+	835.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+194381 = {
+	history_override_priority = 1000
+	name = "Kotyan" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188834
+	855.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+194382 = {
+	history_override_priority = 1000
+	name = "Sokal" # fictional
+	female = yes
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188834
+	857.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+
+188835 = {
+	history_override_priority = 1000
+	name = "Itlar" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188833
+	837.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+188836 = {
+	history_override_priority = 1000
+	name = "EldeC_yuk" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188835
+	860.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+188837 = {
+	history_override_priority = 1000
+	name = "EldeC_yuk" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188836
+	885.1.1 = {
+		birth = yes
+	}
+	935.1.1 = {
+		death = yes
+	}
+}
+
+188838 = {
+	history_override_priority = 1000
+	name = "Blush" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188837
+	910.1.1 = {
+		birth = yes
+	}
+	965.1.1 = {
+		death = yes
+	}
+}
+
+188839 = {
+	history_override_priority = 1000
+	name = "Sugr" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188838
+	935.1.1 = {
+		birth = yes
+	}
+	985.1.1 = {
+		death = yes
+	}
+}
+
+188840 = {
+	history_override_priority = 1000
+	name = "Bachman" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188839
+	960.1.1 = {
+		birth = yes
+	}
+	1010.1.1 = {
+		death = yes
+	}
+}
+
+188841 = {
+	history_override_priority = 1000
+	name = "Sotan" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188840
+	985.1.1 = {
+		birth = yes
+	}
+	1035.1.1 = {
+		death = yes
+	}
+}
+
+188842 = {
+	history_override_priority = 1000
+	name = "Sugr" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188841
+	1010.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+188843 = {
+	history_override_priority = 1000
+	name = "Arslan" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188842
+	1035.1.1 = {
+		birth = yes
+	}
+	1085.1.1 = {
+		death = yes
+	}
+}
+
+188844 = {
+	history_override_priority = 1000
+	name = "Atrak" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188843
+	1060.1.1 = {
+		birth = yes
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+194399 = {
+	history_override_priority = 1000
+	name = "Tura" # fictional
+	female = yes
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188843
+	1056.1.1 = {
+		birth = yes
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+
+188845 = {
+	history_override_priority = 1000
+	name = "Aepak" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188844
+	1085.1.1 = {
+		birth = yes
+	}
+	1135.1.1 = {
+		death = yes
+	}
+}
+
+188846 = {
+	history_override_priority = 1000
+	name = "Uzur" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188845
+	1110.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+188847 = {
+	history_override_priority = 1000
+	name = "Girgen" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188846
+	1135.1.1 = {
+		birth = yes
+	}
+	1185.1.1 = {
+		death = yes
+	}
+}
+
+188848 = {
+	history_override_priority = 1000
+	name = "Begluk" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188847
+	1160.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+188849 = {
+	history_override_priority = 1000
+	name = "Girgen" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188848
+	1185.1.1 = {
+		birth = yes
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+
+188850 = {
+	history_override_priority = 1000
+	name = "Girgen" # fictional
+	dynasty = 1042186 # Chigil
+	rite = "nestorian"
+	culture = "chigil"
+	father = 188849
+	1210.1.1 = {
+		birth = yes
+	}
+	1260.1.1 = {
+		death = yes
+	}
+}
+
+217205 = {
+	history_override_priority = 1000
+	name = "Murad" # fictional
+	dynasty = 1051119 # Uzgen
+	rite = tengri_pagan
+	culture = karluk
+	905.11.17 = {
+		birth = yes
+	}
+	977.3.1 = {
+		death = yes
+	}
+}
+
+217206 = {
+	history_override_priority = 1000
+	name = "Korkut" # fictional
+	dynasty = 1051119 # Uzgen
+	rite = tengri_pagan
+	culture = karluk
+	father = 217205
+	944.5.7 = {
+		birth = yes
+	}
+	1015.5.9 = {
+		death = yes
+	}
+}
+
+#Basmyls
+302661 = {
+	history_override_priority = 1000
+	name = "Kuntuvdi"
+	dynasty = 2001101	#Basmyls
+	rite = tengri_pagan
+	culture = basmyl
+	816.6.16 = {
+		birth = yes
+	}
+	875.3.24 = {
+		death = yes
+	}
+}
+
+302662 = {
+	history_override_priority = 1000
+	name = "Gzi"
+	dynasty = 2001101	#Basmyls
+	rite = tengri_pagan
+	culture = basmyl
+	father = 302661
+	843.1.3 = {
+		birth = yes
+	}
+	900.8.17 = {
+		death = yes
+	}
+}
+
+302663 = {
+	history_override_priority = 1000
+	name = "Kopti"
+	dynasty = 2001101	#Basmyls
+	rite = tengri_pagan
+	culture = basmyl
+	father = 302661
+	846.9.10 = {
+		birth = yes
+	}
+	905.12.8 = {
+		death = yes
+	}
+}
+
+302726 = {
+	history_override_priority = 1000
+	name = "Uzur"
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	809.1.6 = {
+		birth = yes
+	}
+	840.9.16 = {
+		add_spouse = 302727
+	}
+	870.4.13 = {
+		death = yes
+	}
+}
+
+302727 = {
+	history_override_priority = 1000
+	name = "Yasar"
+	female = yes
+	rite = tengri_pagan
+	culture = kimek
+	821.5.8 = {
+		birth = yes
+	}
+	890.6.5 = {
+		death = yes
+	}
+}
+
+302728 = {
+	history_override_priority = 1000
+	name = "Sarica"
+	female = yes
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	father = 302726
+	mother = 302727
+	841.7.19 = {
+		birth = yes
+	}
+	912.4.4 = {
+		death = yes
+	}
+}
+
+302729 = {
+	history_override_priority = 1000
+	name = "Tolun"
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	father = 302726
+	mother = 302727
+	845.3.1 = {
+		birth = yes
+	}
+	908.8.13 = {
+		death = yes
+	}
+}
+
+302730 = {
+	history_override_priority = 1000
+	name = "C_iltanesi"
+	female = yes
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	father = 302726
+	mother = 302727
+	846.5.12 = {
+		birth = yes
+	}
+	916.10.15 = {
+		death = yes
+	}
+}
+
+302790 = {
+	history_override_priority = 1000
+	name = "Koza"
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	1038.1.4 = {
+		birth = yes
+	}
+	1059.3.16 = {
+		add_spouse = 302791
+	}
+	1095.8.28 = {
+		death = yes
+	}
+}
+
+302793 = {
+	history_override_priority = 1000
+	name = "Koza"
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	father = 302792
+	1093.4.3 = {
+		birth = yes
+	}
+	1143.9.11 = {
+		death = yes
+	}
+}
+
+302794 = {
+	history_override_priority = 1000
+	name = "TO_rtogul"
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	father = 302793
+	1115.11.15 = {
+		birth = yes
+	}
+	1178.7.8 = {
+		death = yes
+	}
+}
+
+302795 = {
+	history_override_priority = 1000
+	name = "Bonyak"
+	dynasty = 2001113	#Jaziqjürgis
+	rite = tengri_pagan
+	culture = kimek
+	stewardship = 6
+	father = 302793
+	1144.12.2 = {
+		birth = yes
+	}
+	1201.1.24 = {
+		death = yes
+	}
+}
+
+fictional_karluks_6 = {
+	history_override_priority = 1000
+	name = "Sotan"
+	rite = tengri_pagan
+	culture = kimek
+	1041.7.16 = {
+		birth = yes
+	}
+	1097.1.1 = {
+		death = yes
+	}
+}
+
+fictional_karluks_17 = {
+	history_override_priority = 1000
+	name = "Gundes"
+	rite = tengri_pagan
+	culture = kimek
+	female = yes
+	829.6.8 = {
+		birth = yes
+	}
+	873.1.1 = {
+		death = yes
+	}
+}

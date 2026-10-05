@@ -1,0 +1,357 @@
+﻿# -*- ck2.history.characters -*-
+
+###############################################################
+#  SWMH Armenian characters
+###############################################################
+# SWMH Character Range
+# Characters: 1232500 - 1232599
+# 2nd Characters: 1234551 - 1234850
+##############################################################################################
+
+#### history crafted ####
+## Kourtikios Daynsty - Byzantine aristocratic family of Armenian origin ; many members served in military ##
+kourtikios_1 = {
+	history_override_priority = 1000
+	#1232500
+	# founder of the Kourtikios family ; surrendered town of Lokana to emperor Basil I
+	name = "Kurdik"
+	dynasty = armenian_kourtikios
+	rite = armenian_rite
+	culture = "armenian"
+
+	830.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		rite = byzantine_rite
+	}
+	898.1.1 = {
+		death = yes
+	}
+}
+kourtikios_2 = {
+	history_override_priority = 1000
+	#1234557
+	name = "Sahag"
+	dynasty = armenian_kourtikios
+	rite = byzantine_rite
+	culture = "armenian"
+	father = kourtikios_1
+
+	865.1.1 = {
+		birth = yes
+	}
+	928.1.1 = {
+		death = yes
+	}
+}
+# history needed for every start date
+
+## dynn_Vakramian
+vakramian_1 = {
+	history_override_priority = 1000
+	#1234604
+	# Armenian Governor of Cyprus. Very dark period after his governorship until around 1000
+	name = "Vakram"
+	dynasty = armenian_vakramian #Vakramian
+	rite = byzantine_rite
+	culture = "armenian"
+	938.1.1 = {
+		birth = yes
+	}
+	991.1.1 = {
+		death = yes
+	}
+}
+
+## dynn_Adrianian
+adrianian_1 = {
+	history_override_priority = 1000
+	#1234605
+	# Adrian the Patrician, father of Constantine Lekapenos' first wife ; a governor
+	name = "Adrian"
+	dynasty = armenian_adrianian
+	rite = byzantine_rite
+	culture = "armenian"
+
+	892.1.1 = {
+		birth = yes
+	}
+	947.1.1 = {
+		death = yes
+	}
+}
+adrianian_2 = {
+	history_override_priority = 1000
+	#1234606
+	# Constantine Lekapenos' first wife, died shortly after their marriage
+	name = "Helena"
+	female = yes
+	dynasty = armenian_adrianian
+	rite = byzantine_rite
+	culture = "armenian"
+	father = adrianian_1
+
+	919.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		add_spouse = 145224 # Konstantinos Lekapenos
+	}
+	940.1.14 = {
+		death = yes
+	}
+}
+
+#### history not crafted ####
+## dynn_Arranshahik
+#1232554 - unused
+#1232555 - unused
+#1232556 - unused
+#1232557 - unused
+# all characters below need to be checked
+extra_arranshahik_10 = {
+	history_override_priority = 1000
+	#1232558
+	name = "Grigor"
+	dynasty = 1029025
+	rite = armenian_rite
+	culture = "armenian"
+	father = sea_arranshahik_10
+	970.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes
+	}
+}
+extra_arranshahik_11 = {
+	history_override_priority = 1000
+	#1232559
+	name = "Sevada"
+	dynasty = 1029025
+	rite = armenian_rite
+	culture = "armenian"
+	father = sea_arranshahik_10
+	976.1.1 = {
+		birth = yes
+	}
+	1049.1.1 = {
+		death = yes
+	}
+}
+extra_arranshahik_13 = {
+	history_override_priority = 1000
+	#1232561 and #1232560 are the same character - unused
+	name = "Philipo"
+	dynasty = 1029025
+	rite = armenian_rite
+	culture = "armenian"
+	father = extra_arranshahik_10
+	989.1.1 = {
+		birth = yes
+	}
+	1051.1.1 = {
+		death = yes
+	}
+}
+
+## dynn_Theodorokanos
+theodorokanos_1 = {
+	history_override_priority = 1000
+	#1234556
+	name = "Thoros"
+	dynasty = 101513
+	rite = armenian_rite
+	culture = "armenian"
+
+	949.1.1 = {
+		birth = yes
+	}
+	1013.1.1 = {
+		death = yes
+	}
+}
+
+## dynn_Armani
+extra_armani_1 = {
+	history_override_priority = 1000
+	#1234558
+	name = "Muhammad"
+	dynasty = 7520
+	culture = "armenian"
+	rite = hanafi
+	trait = education_martial_2
+	father = 163135
+
+	841.1.1 = {
+		culture = "levantine"
+		birth = yes
+	}
+	873.1.1 = {
+		death = yes
+	}
+}
+
+## dynn_Parisos
+parisos_1 = {
+	history_override_priority = 1000
+	#1234578
+	# placeholder first wife of David the Builder ; her name and ethnicity is known, nothing else
+	name = "Rusudan"
+	female = yes
+	dynasty = armenian_parisos
+	rite = armenian_rite
+	culture = "armenian"
+
+	1075.1.1 = {
+		birth = yes
+	}
+	1118.1.1 = {
+		death = yes
+	}
+}
+
+## dynn_HasanJalay
+hasanjalay_1 = {
+	history_override_priority = 1000
+	#1234579
+	name = "Jalal"
+	dynasty_house = house_hasan_jalalyan
+	rite = armenian_rite
+	culture = "armenian"
+	father = 159217
+	1266.1.1 = {
+		birth = yes
+	}
+	1312.1.1 = {
+		death = yes
+	}
+}
+hasanjalay_2 = {
+	history_override_priority = 1000
+	#1234580
+	name = "Atabeg"
+	dynasty_house = house_hasan_jalalyan
+	rite = armenian_rite
+	culture = "armenian"
+	father = hasanjalay_1
+	1287.1.1 = {
+		birth = yes
+	}
+	1342.1.1 = {
+		death = yes
+	}
+}
+hasanjalay_3 = {
+	history_override_priority = 1000
+	#1234581
+	name = "Jalal"
+	dynasty_house = house_hasan_jalalyan
+	rite = armenian_rite
+	culture = "armenian"
+	father = hasanjalay_2
+	1321.1.1 = {
+		birth = yes
+	}
+	1389.1.1 = {
+		death = yes
+	}
+}
+
+melik_avan_0 = {
+	history_override_priority = 1000
+	# placeholder - it s hard to find any sources on early Melik-Avan dynasty members
+	name = "Vakhtank"
+	dynasty_house = house_vakhtangian
+	rite = armenian_rite
+	culture = "armenian"
+	father = 159210
+
+	1126.1.1 = {
+		birth = yes
+	}
+	1188.1.1 = {
+		death = yes
+	}
+}
+melik_avan_1 = {
+	history_override_priority = 1000
+	#1234582
+	name = "Vasak-Smbat"
+	dynasty_house = house_vakhtangian
+	rite = armenian_rite
+	culture = "armenian"
+	father = melik_avan_0
+
+	1156.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+melik_avan_2 = {
+	history_override_priority = 1000
+	#1234583
+	name = "Vakhtank"
+	dynasty_house = house_vakhtangian
+	rite = armenian_rite
+	culture = "armenian"
+	father = melik_avan_1
+
+	1201.1.1 = {
+		birth = yes
+	}
+	1280.1.1 = {
+		death = yes
+	}
+}
+melik_avan_3 = {
+	history_override_priority = 1000
+	#1234584
+	name = "Avan"
+	dynasty_house = house_vakhtangian
+	rite = armenian_rite
+	culture = "armenian"
+	father = melik_avan_2
+	1243.1.1 = {
+		birth = yes
+	}
+	1280.1.1 = {
+		dynasty_house = house_melik_avan
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+melik_avan_4 = {
+	history_override_priority = 1000
+	#1234585
+	name = "Ghavril"
+	dynasty_house = house_melik_avan
+	rite = armenian_rite
+	culture = "armenian"
+	father = melik_avan_3
+	1282.1.1 = {
+		birth = yes
+	}
+	1346.1.1 = {
+		death = yes
+	}
+}
+melik_avan_5 = {
+	history_override_priority = 1000
+	#1234586
+	name = "Abas"
+	dynasty_house = house_melik_avan
+	rite = armenian_rite
+	culture = "armenian"
+	father = melik_avan_4
+	1325.1.1 = {
+		birth = yes
+	}
+	1380.1.1 = {
+		death = yes
+	}
+}

@@ -1,0 +1,236 @@
+﻿# Overwrites of vanilla characters
+
+74025 = {
+	history_override_priority = 1000
+	name = "Manasseh"
+	dynasty = 12270
+	father = 74024
+	culture = khazar
+	rite = "kabarism"
+
+	838.1.1 = {
+		birth = yes
+	}
+	854.1.1 = {
+		add_spouse = 173000
+	}
+	867.1.1 = {
+		remove_claim = title:d_levedia
+		remove_claim = title:c_khortytsia
+		remove_claim = title:c_oleshye
+		remove_claim = title:c_bakhmut
+		remove_claim = title:c_samar
+		remove_claim = title:c_kalos_limen
+		remove_claim = title:c_perekop
+		remove_claim = title:c_balanjar
+		remove_claim = title:c_terki
+		remove_claim = title:c_samiran
+	}
+	888.1.1 = {
+		death = yes
+	}
+}
+
+180226 = {
+	history_override_priority = 1000
+	name = Yavdi	# fictional
+	# Count of Sarkel
+	dynasty = 1042041
+	rite = tengri_pagan
+	culture = bolghar
+	833.8.25 = {
+		birth = yes
+	}
+	889.1.1 = {
+		death = yes
+	}
+}
+
+194370 = {
+	history_override_priority = 1000
+	name = Itakh	# fictional
+	dynasty = 1042041
+	rite = tengri_pagan
+	culture = bolghar
+	father = 180226
+	853.8.25 = {
+		birth = yes
+	}
+	889.1.1 = {
+		death = yes
+	}
+}
+
+194371 = {
+	history_override_priority = 1000
+	name = Ayten	# fictional
+	female = yes
+	dynasty = 1042041
+	rite = tengri_pagan
+	culture = bolghar
+	father = 180226
+	855.8.25 = {
+		birth = yes
+	}
+	889.1.1 = {
+		death = yes
+	}
+}
+
+146185 = {
+	history_override_priority = 1000
+	name = "Tura"
+	dynasty = 12269
+	female = yes
+	rite = "tengri_pagan"
+	culture = "khazar"
+	father = 74004
+	677.1.1 = {
+		birth = yes
+	}
+	703.1.1 = {
+		name = "Theodora"
+		rite = byzantine_rite
+	}
+	711.1.1 = {
+		death = yes
+	}
+}
+
+# Black Bulgars
+302271 = {
+	history_override_priority = 1000
+	name = "BulC_an"
+	dynasty = 2001053	#Bulçir
+	culture = bolghar
+	rite = tengri_pagan
+	843.1.2 = {
+		birth = yes
+	}
+	906.1.2 = {
+		death = yes
+	}
+}
+
+302272 = {
+	history_override_priority = 1000
+	name = "Ephraim"
+	dynasty = 2001053	#Bulçir
+	culture = bolghar
+	rite = tengri_pagan
+	father = 302271
+	865.1.2 = {
+		birth = yes
+	}
+	930.1.2 = {
+		death = yes
+	}
+}
+
+302273 = {
+	history_override_priority = 1000
+	name = "Ezekiel"
+	dynasty = 2001053	#Bulçir
+	culture = bolghar
+	rite = tengri_pagan
+	father = 302272
+	894.1.2 = {
+		birth = yes
+	}
+	965.1.2 = {
+		death = yes
+	}
+}
+
+#MPO fictional Khazars
+fictional_khazars_3 = {	#Fic ruler for Bakhmut & Samar in 867 (more chars & avoid domain overlimit)
+	history_override_priority = 1000
+	name = "Tarkhan"
+	culture = bolghar
+	rite = tengri_pagan
+	836.5.9 = {
+		birth = yes
+	}
+	894.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khazars_4 = {	#Fic ruler in Crimea 867 (more chars & avoid domain overlimit)
+	history_override_priority = 1000
+	name = "Yilig"
+	culture = bolghar
+	rite = tengri_pagan
+	840.9.17 = {
+		birth = yes
+	}
+	882.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khazars_5 = {	#Fic ruler in Tana 867 (more chars & avoid domain overlimit)
+	history_override_priority = 1000
+	name = "Kibar"
+	culture = bolghar
+	rite = tengri_pagan
+	845.5.8 = {
+		birth = yes
+	}
+	894.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khazars_6 = {	#Fic ruler in Samiran & Anket 867 (more chars & avoid domain overlimit)
+	history_override_priority = 1000
+	name = "Bastu"
+	culture = bolghar
+	rite = tengri_pagan
+	835.2.11 = {
+		birth = yes
+	}
+	896.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khazars_8 = {	#Fic ruler in Oskol & Khursa 867 (more chars & avoid domain overlimit)
+	history_override_priority = 1000
+	name = "Kisa"
+	culture = khazar
+	rite = tengri_pagan
+	848.1.26 = {
+		birth = yes
+	}
+	898.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khazars_11 = {	#Herder 867
+	history_override_priority = 1000
+	name = "Yasar"
+	culture = turkish
+	rite = tengri_pagan
+	female = yes
+	830.8.12 = {
+		birth = yes
+	}
+	893.1.1 = {
+		death = yes
+	}
+}
+
+fictional_khazars_12 = {	#Herder 867
+	history_override_priority = 1000
+	name = "PapaC_yz"
+	culture = bolghar
+	rite = tengri_pagan
+	808.3.8 = {
+		birth = yes
+	}
+	869.1.1 = {
+		death = yes
+	}
+}

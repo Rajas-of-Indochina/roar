@@ -1,0 +1,184 @@
+# Overwrites of vanilla characters
+
+nn_yelu_nulisi = {
+	history_override_priority = 1000
+	name = "Nulisi"
+	dynasty = 1045082	#Yelü, becomes LIAO dynasty
+	rite = "eastern_tengri"
+	culture = khitan
+	775.1.1 = {	birth = yes	}	#Unknown
+	817.1.1 = {	death = yes	}	#Unknown
+}
+
+nn_yelu_salade = {
+	history_override_priority = 1000
+	name = "Salade"
+	dynasty = 1045082	#Yelü, becomes LIAO dynasty
+	rite = "eastern_tengri"
+	culture = khitan
+	father = nn_yelu_nulisi	#Yelü Nulisi
+	797.1.1 = {	birth = yes	}	#Unknown
+	855.1.1 = {	death = yes	}	#Unknown
+}
+
+194326 = {
+	history_override_priority = 1000  #Liao Taizong
+	name = "Deguang" #birth name Yaogu
+	dynasty = 1045082 # Liao Dynasty
+	rite = "avatamsaka"
+	culture = khitan
+	trait = generous
+	trait = calm
+	trait = just
+	trait = education_diplomacy_3
+	father = 194325	#Yelü Abaoji (Liao Taizu)
+	mother = nn_shulu_ping	#Shulü Ping
+
+	902.11.25 = {	birth = yes	}
+	923.1.1 = {	add_spouse = nn_xiao_wen	}
+	936.1.1 = {
+		effect = {
+			set_court_language = language_chinese
+			learn_language_of_culture = culture:han
+
+			spawn_army = {
+				name = event_troop_default_name
+				men_at_arms = {
+					type = nomadic_riders
+					stacks = 20
+				}
+				location = province:12232
+				origin = province:13656
+				inheritable = yes
+			}
+		}
+		create_maa_regiment = {
+			type = steppe_raiders
+			check_can_recruit = no
+			size = 4
+		}
+		create_maa_regiment = {
+			type = nomad_lancers
+			check_can_recruit = no
+			size = 4
+		}
+		create_maa_regiment = {
+			type = horse_archers
+			check_can_recruit = no
+			size = 4
+		}
+		create_maa_regiment = {
+			type = onager
+			check_can_recruit = no
+			size = 4
+		}
+	}
+	947.5.15 = {	death = yes	}
+	#father of 194329 (Jing), nn_yelu_yanchege (Yanchege), nn_yelu_tiande (Tiande), nn_yelu_dilie (Dilie), nn_yelu_bishe (Bishe), nn_yelu_lubugu (Lübugu), nn_yelu_chaogui (Chaogui)
+}
+
+194329 = {
+	history_override_priority = 1000
+	name = "Jing"  #Liao Muzong
+	dynasty = 1045082 # Liao Dynasty
+	rite = "avatamsaka"
+	culture = khitan
+	father = 194326	#Liao Taizong
+	mother = nn_xiao_wen	#Xiao Wen
+	trait = education_martial_3
+	931.9.19 = { birth = yes }
+	948.1.1 = {
+		trait = drunkard
+		trait = lustful
+		trait = lifestyle_reveler
+	}
+	969.3.12 = { death = yes }
+}
+
+wugu_tribe_1 = {
+	history_override_priority = 1000
+	name = "Hudugu" # Wugu, Qoñyrat, Khitan Liao tributary
+	rite = eastern_tengri
+	culture = mongol
+	1036.1.1 = {
+		birth=yes
+	}
+	1086.1.1 = {
+		death=yes
+	}
+}
+
+dilie_tribe_1 = {
+	history_override_priority = 1000
+	name = "Duden" # Dilie, Eight Tribes, Outer Tribes, east of the Zubu and west of the Wugu
+	rite = eastern_tengri
+	culture = kerait
+	1036.1.1 = {
+		birth=yes
+	}
+	1086.1.1 = {
+		death=yes
+	}
+}
+
+188911 = {
+	history_override_priority = 1000
+	name = "Puguzhi_6A38_53E4_53EA"
+	dynasty = 214010
+	rite = avatamsaka
+	culture = khitan
+	father = 188909 # Wolila_65A1_91CC_524C
+	1142.1.1 = {	birth = yes	}
+	1177.1.1 = {
+		effect = { add_trait = fornicator }
+		death = { death_reason = death_execution killer = 188909 } # Wolila
+	}
+}
+
+188912 = {
+	history_override_priority = 1000
+	name = "Zhilugu_76F4_9B6F_53E4"	#last of the Liao-born Qara Khitai emperors
+	dynasty = 1045082 # Liao Dynasty, possibly just an unrelated general
+	stewardship = 8
+	rite = avatamsaka
+	culture = khitan
+	trait = education_intrigue_3
+	trait = callous
+	trait = stubborn
+	father = 188907	# Yilie / Renzong
+	1165.1.1 = {	birth = yes	}
+	1178.10.1 = {
+		# Khitan army
+		create_maa_regiment = {
+			type = nomad_lancers
+			check_can_recruit = no
+			title = title:e_kara_khitai
+			size = 3
+		}
+		create_maa_regiment = {
+			type = heavy_horse_archers
+			check_can_recruit = no
+			title = title:e_kara_khitai
+			size = 3
+		}
+		create_maa_regiment = {
+			type = steppe_raiders
+			check_can_recruit = no
+			title = title:e_kara_khitai
+			size = 3
+		}
+		create_maa_regiment = {
+			type = steppe_raiders
+			check_can_recruit = no
+			title = title:e_kara_khitai
+			size = 3
+		}
+		create_maa_regiment = {
+			type = steppe_raiders
+			check_can_recruit = no
+			title = title:e_kara_khitai
+			size = 3
+		}
+	}
+	1213.1.1 = {	death = yes	}
+}

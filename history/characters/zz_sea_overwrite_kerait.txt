@@ -1,0 +1,245 @@
+﻿# Overwrites of vanilla characters
+
+## Fictional Keraits
+303220 = {
+	history_override_priority = 1000
+	name = "Jakha"
+	dynasty = 1041002		#Khereid
+	rite = tengri_pagan
+	culture = uigur
+	820.11.17 = {
+		birth = yes
+	}
+	844.2.13 = {
+		add_spouse = 303221
+	}
+	879.4.28 = {
+		death = yes
+	}
+}
+303221 = {
+	history_override_priority = 1000
+	name = "Holuikhan"
+	female = yes
+	rite = tengri_pagan
+	culture = uigur
+	826.4.1 = {
+		birth = yes
+	}
+	890.2.16 = {
+		death = yes
+	}
+}
+303222 = {
+	history_override_priority = 1000
+	name = "Yula_Mangus"
+	dynasty = 1041002		#Khereid
+	rite = tengri_pagan
+	culture = uigur
+	father = 303220
+	mother = 303221
+	847.6.23 = {
+		birth = yes
+	}
+	898.3.11 = {
+		death = yes
+	}
+}
+303223 = {
+	history_override_priority = 1000
+	name = "Ciriac"
+	dynasty = 1041002		#Khereid
+	rite = tengri_pagan
+	culture = uigur
+	father = 303220
+	mother = 303221
+	848.10.19 = {
+		birth = yes
+	}
+	904.12.2 = {
+		death = yes
+	}
+}
+303224 = {
+	history_override_priority = 1000
+	name = "Orbei"
+	female = yes
+	dynasty = 1041002		#Khereid
+	rite = tengri_pagan
+	culture = uigur
+	father = 303220
+	mother = 303221
+	846.7.25 = {
+		birth = yes
+	}
+	911.3.5 = {
+		death = yes
+	}
+}
+303225 = {
+	history_override_priority = 1000
+	name = "Yesui"
+	female = yes
+	dynasty = 1041002		#Khereid
+	rite = tengri_pagan
+	culture = uigur
+	father = 303220
+	mother = 303221
+	844.9.17 = {
+		birth = yes
+	}
+	906.8.8	= {
+		death = yes
+	}
+}
+
+303227 = {
+	history_override_priority = 1000
+	name = "Kereyidei"
+	dynasty = 2001154	#Jirkin
+	rite = tengri_pagan
+	culture = uigur
+	834.3.18 = {
+		birth = yes
+	}
+	885.6.13 = {
+		death = yes
+	}
+}
+303228 = {
+	history_override_priority = 1000
+	name = "Quchar"
+	dynasty = 2001154	#Jirkin
+	rite = tengri_pagan
+	culture = uigur
+	father = 303227
+	857.10.21 = {
+		birth = yes
+	}
+	906.7.11 = {
+		death = yes
+	}
+}
+
+fictional_keraits_5 = {	#Herder 867
+	history_override_priority = 1000
+	name = "Javanqad"
+	rite = tengri_pagan
+	culture = uigur
+	818.2.4 = {
+		birth = yes
+	}
+	883.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_1 = {
+	history_override_priority = 1000
+	name = "Buyimur"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	809.1.1 = {
+		birth = yes
+	}
+	868.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_2 = {
+	history_override_priority = 1000
+	name = "Oghuul"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	father = kerait_ongi_1
+	839.1.1 = {
+		birth = yes
+	}
+	902.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_3 = {
+	history_override_priority = 1000
+	name = "Elkutur"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	father = kerait_ongi_2
+	872.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_4 = {
+	history_override_priority = 1000
+	name = "Qurdjaquz"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	father = kerait_ongi_3
+	901.1.1 = {
+		birth = yes
+	}
+	951.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_5 = {
+	history_override_priority = 1000
+	name = "Ketbugha"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	father = kerait_ongi_4
+	927.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_6 = {
+	history_override_priority = 1000
+	name = "Oghuul"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	father = kerait_ongi_5
+	952.1.1 = {
+		birth = yes
+	}
+	1005.1.1 = {
+		culture = kerait
+	}
+	1015.1.1 = {
+		death = yes
+	}
+}
+
+kerait_ongi_7 = {
+	history_override_priority = 1000
+	name = "Altan"
+	dynasty = kerait_ongi
+	rite = tengri_pagan
+	culture = uigur
+	father = kerait_ongi_6
+	978.1.1 = {
+		birth = yes
+	}
+	1005.1.1 = {
+		culture = kerait
+	}
+	1035.1.1 = {
+		death = yes
+	}
+}

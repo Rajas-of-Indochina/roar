@@ -1,0 +1,437 @@
+﻿# Overwrites of vanilla characters
+
+41601 = {
+	history_override_priority = 1000
+	# oldest son of Ebu'l-Eswar, became emir of Ganja after his father's death
+	name = "Fezl" #Fadl II
+	dynasty_house = house_shaddadid
+	martial = 4
+	diplomacy = 5
+	intrigue = 9
+	stewardship = 7
+	rite = shafii
+	culture = "kurdish"
+	trait = education_intrigue_2
+	father = 41600
+	mother = 41518
+	1042.1.1 = {
+		birth = "1042.1.1"
+	}
+	1073.1.1 = {
+		death = "1073.1.1"
+	}
+}
+
+41602 = {
+	history_override_priority = 1000
+	# Last Shaddadid emir of Ganja
+	name = "Fezl"  #Fadl III aka Fadlun ibn Fadl
+	dynasty_house = house_shaddadid
+	martial = 3
+	diplomacy = 6
+	intrigue = 10
+	stewardship = 7
+	rite = shafii
+	culture = "kurdish"
+	father = 41601
+	1058.1.1 = {
+		birth = "1058.1.1"
+	}
+	# 1075 - 1085 - ruler of Gorgan under Seljuks
+	# 1075-1084 Savtegin as ruler of Ganja
+	# 1085 - revolt and retaking of Ganja until 1086
+	1086.1.1 = {
+		trait = gallivanter
+	}
+	1091.1.1 = {  # said to die in Baghdad
+		death = "1091.1.1"
+	}
+}
+
+41603 = {
+	history_override_priority = 1000
+	# son of Ebu'l-Eswar who later ruled over Ani
+	name = "MenU_C_ihr" #Manuchihr
+	dynasty_house = house_shaddadid
+	martial = 2
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 6
+	rite = shafii
+	culture = "kurdish"
+	trait = education_stewardship_2
+	father = 41600
+	mother = 41518
+	1044.1.1 = {
+		birth = "1044.1.1"
+	}
+	# 1072 - beginning of Shaddadid rule over Ani
+	1118.1.1 = {
+		death = "1118.1.1"
+	}
+}
+
+#
+
+20722 = {
+	history_override_priority = 1000
+	name = "Mamlan"  # Abu Nasr Mamlan II
+	dynasty_house = house_rawwadid
+	martial = 4
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	rite = shafii
+	culture = "kurdish"
+	trait = lifestyle_poet  # sadly none of his works survived to our times
+	trait = brave
+	trait = education_learning_2
+	father = 159153
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1071.1.1 = {
+		death = "1071.1.1"
+	}
+}
+
+#
+
+3854 = {
+	history_override_priority = 1000
+	name = "Fazluya_Ebu-Abbas" #b. Ali b. Hasan b. Ayyub
+	# AKA: Abu Abbas Fazluya
+	dynasty = 101690
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 4
+	rite = shafii
+	culture = "kurdish"
+	trait = education_diplomacy_1
+	trait = "ambitious"
+	trait = "deceitful"
+	1037.1.1 = {
+		birth = "1037.1.1"
+	}
+	1078.1.1 = {
+		death = {
+			death_reason = death_dungeon
+			killer = 3042
+		}
+	}
+}
+
+#
+
+159148 = {
+	history_override_priority = 1000
+	name = "HisE_n"  # Husayn al-Rawadi
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159169
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+159149 = {
+	history_override_priority = 1000
+	name = "Mihemed"  # Muhammad ibn Husayn al-Rawadi
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159148
+	890.1.1 = {
+		birth = "890.1.1"
+	}
+	955.1.1 = {
+		death = "955.1.1"
+	}
+}
+159150 = {
+	history_override_priority = 1000
+	name = "HisE_n"  # Abu'l-Hayja Husayn I
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159149
+	920.1.1 = {
+		birth = "920.1.1"
+	}
+	988.1.1 = {
+		death = "988.1.1"
+	}
+}
+159151 = {
+	history_override_priority = 1000
+	name = "Mamlan"  # Abu'l-Hayja Mamlan I
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159150
+	950.1.1 = {
+		birth = "950.1.1"
+	}
+	1000.1.1 = {
+		death = "1000.1.1"
+	}
+}
+159152 = {
+	history_override_priority = 1000
+	name = "HisE_n"  # Abu Nasr Husayn II
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159151
+	982.1.1 = {
+		birth = "982.1.1"
+	}
+	1025.1.1 = {
+		death = "1025.1.1"
+	}
+}
+159153 = {
+	history_override_priority = 1000
+	name = "Vahusdan"  # Abu Mansur Wahsudan
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159151
+	998.1.1 = {
+		birth = "998.1.1"
+	}
+	1059.1.1 = {
+		death = "1059.1.1"
+	}
+}
+159154 = {
+	history_override_priority = 1000
+	# apparnetly nothing is known about this guy
+	name = "Ebrahim"  # Abu'l-Qasim Ibrahim ibn Wahsudan
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159153
+	1040.1.1 = {
+		birth = "1040.1.1"
+	}
+	1081.1.1 = {
+		death = "1081.1.1"
+	}
+}
+159155 = {
+	history_override_priority = 1000
+	name = "Ahmadil"  # Ahmadil ibn Ibrahim ibn Wahsudan
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159154
+	1080.1.1 = {
+		birth = "1080.1.1"
+	}
+	1117.1.1 = {
+		death = "1117.1.1"
+	}
+}
+159156 = {
+	history_override_priority = 1000
+	name = "Merwan"
+	dynasty_house = house_rawwadid
+	rite = shafii
+	culture = "kurdish"
+	father = 159158
+	1049.1.1 = {
+		birth = "1049.1.1"
+	}
+	1066.1.1 = {
+		add_spouse = 159157
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+159157 = {
+	history_override_priority = 1000
+	# unnamed daughter of Ebu'l-Eswar , married to Shirvanshah
+	name = "Mara"
+	female = yes
+	dynasty_house = house_shaddadid
+	rite = shafii
+	culture = "kurdish"
+	father = 41600
+	mother = 41518
+	1050.1.1 = {
+		birth = "1050.1.1"
+	}
+	1066.1.1 = {
+		add_spouse = 159156
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+
+#
+
+159167 = {
+	history_override_priority = 1000
+	# ruled in name of his brother Fadl II between 1068-1069 while he himself was imprisoned by Georgians
+	name = "ES_ot"  # Ashot
+	dynasty_house = house_shaddadid
+	rite = shafii
+	culture = "kurdish"
+	father = 41600
+	mother = 41518
+	1043.1.1 = {
+		birth = yes
+	}
+	# Fadl II imprisoned by Georgians 1068-1069
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+#
+
+180763 = {
+	history_override_priority = 1000
+	# wife of Wahsudan of Gilan
+	name = "Rojhelat"	# fictional
+	female = yes
+	rite = "mazdayasna"
+	culture = "kurdish"
+
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+180764 = {
+	history_override_priority = 1000
+	# father of Mihemed Sallarid
+	name = "Musafir"
+	dynasty = 1042062
+	rite = "mazdayasna"
+	culture = "daylamite"
+
+	841.1.1 = {
+		birth = "841.1.1"
+	}
+	865.1.1 = {
+		add_spouse = 180753
+	}
+	903.1.1 = {
+		death = "903.1.1"
+	}
+}
+180765 = {
+	history_override_priority = 1000
+	# First of Sallarid rulers ; his reign was rather unpopular - deposed by his own sons
+	name = "Mihemed"
+	dynasty = 1042062
+	rite = ismaili
+	culture = "daylamite"
+	trait = stubborn
+	trait = callous
+	father = 180764
+	mother = 180753
+
+	872.1.1 = {
+		birth = "872.1.1"
+	}
+	898.1.1 = {
+		add_spouse = 180756
+	}
+	# brought back as ruler of Ardabil in 949
+	950.1.1 = {  # death before 953, in prison of his son
+		death = {
+			death_reason = death_prison
+			killer = 180767
+		}
+	}
+}
+180766 = {
+	history_override_priority = 1000
+	# Sallarid ruler at Ardabil ; messed up by not cancelling his original will
+	name = "Merzuban"
+	dynasty = 1042062
+	rite = ismaili
+	culture = "daylamite"
+	trait = ambitious
+	father = 180765
+	mother = 180756
+
+	899.1.1 = {
+		birth = "899.1.1"
+	}
+	# conquest of Adharbaijan after 941
+	# fighting off Rus raiders in 945
+	# war with Buyids in 948
+	957.1.1 = {
+		death = "957.1.1"
+	}
+}
+180767 = {
+	history_override_priority = 1000
+	# Sallarid governor in Tarum ; later ruler of Adharbaijan
+	name = "Wahsudan"
+	dynasty = 1042062
+	rite = ismaili
+	culture = "daylamite"
+	trait = callous
+	father = 180765
+	mother = 180756
+
+	901.1.1 = {
+		birth = "901.1.1"
+	}
+	# 957-960 war with his nephews over Adharbaijan
+	# 960 - executes almost all his nephews - takes over Adharbaijan, apoints his son as governor
+	# 964-966 - war with his last remaining nephew, Ibrahim
+	967.1.1 = {
+		death = "967.1.1"
+	}
+}
+
+#
+
+kurdish0001 = {
+	history_override_priority = 1000
+	name = "Faris" # fictitious holder of Hakkari and Kurdistan, to represent local chieftains
+	dynasty = 2000024
+	rite = kitebacilweism
+	culture = kurdish
+	
+	832.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+#
+
+shaddadid_1 = {
+	history_override_priority = 1000
+	# governor of Dvin and nearby lands under his father
+	name = "Eskander"
+	dynasty_house = house_shaddadid
+	rite = shafii
+	culture = "kurdish"
+	father = 41600
+	mother = 41518
+	1045.1.1 = {
+		birth = yes
+	}
+	# apointed governor of Dvin at one point
+	1068.1.1 = {
+		death = yes
+	}
+}
