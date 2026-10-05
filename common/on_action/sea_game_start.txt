@@ -2,7 +2,7 @@
 # Empty scope
 on_game_start = {
 	on_actions = {
-		game_start_ROA_setup
+		# game_start_ROA_setup
 		EEE_sea_setup_effect
 		sea_title_coa_on_start
 
@@ -27,13 +27,13 @@ on_game_start_after_lobby = {
 
 ######
 
-RICE_fake_title_cleaner = {
-	effect = {
-		title:c_heihe.holder = { destroy_title = title:c_heihe }
-		title:c_lam_tay.holder = { destroy_title = title:c_lam_tay }
-		title:d_nghe_an.holder = { destroy_title = title:d_nghe_an }
-	}
-}
+# RICE_fake_title_cleaner = {
+# 	effect = {
+# 		title:c_heihe.holder = { destroy_title = title:c_heihe }
+# 		title:c_lam_tay.holder = { destroy_title = title:c_lam_tay }
+# 		title:d_nghe_an.holder = { destroy_title = title:d_nghe_an }
+# 	}
+# }
 
 game_start_ROA_setup = {
 	effect = {
