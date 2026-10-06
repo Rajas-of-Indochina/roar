@@ -4252,7 +4252,7 @@ setup_tondrakian_minorities = {
 			}
 		}
 		# Briefly during Byzantine control of Armenia in 11th century, Tondrakinaism grew popular in big armenian cities
-		title:c_ani = {
+		title:c_hayk = {
 			if = {
 				limit = {
 					game_start_date >= 968.1.1
@@ -4607,7 +4607,7 @@ setup_caucasus_south_minorities = {
 
 		### Armenia and Aghvan ###
 		## Ayrarat ##
-		title:c_ani = {
+		title:c_hayk = {
 			if = {
 				limit = { game_start_date >= 1064.1.1 }
 				promote_faith_minority_effect = { FAITH = rite:ashari }

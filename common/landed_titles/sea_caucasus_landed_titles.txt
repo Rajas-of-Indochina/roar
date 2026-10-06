@@ -23,8 +23,7 @@ e_caucasia = {
 	k_armenia = {
 		color = { 223 96 96 }
 
-		capital = c_ani
-		# c_hayk was split into multiple smaller counties
+		capital = c_hayk
 
 		cultural_names = {
 			name_list_armenian = cn_hayastan
@@ -43,7 +42,7 @@ e_caucasia = {
 			# craftable for unitig hayk-shirak with hayk-dvin
 			color = { 203 86 66 }
 
-			capital = c_ani
+			capital = c_hayk
 
 			cultural_names = {
 				name_list_armenian = cn_mets_hayk_
@@ -97,7 +96,7 @@ e_caucasia = {
 	k_ayrarat = {
 		color = { 182 137 70 }
 
-		capital = c_ani
+		capital = c_hayk
 
 		ai_primary_priority = {
 			if = {
@@ -111,9 +110,10 @@ e_caucasia = {
 		d_hayk-shirak = {
 			color = { 168 158 76 }
 
-			capital = c_ani
+			capital = c_hayk
 
-			c_ani = {
+			c_hayk = {
+				# c_ani in old RoA
 				color = { 150 143 81 }
 
 				cultural_names = {
