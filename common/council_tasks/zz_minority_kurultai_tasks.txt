@@ -1,0 +1,1093 @@
+task_kurultai_invite_settlers_1 = {
+	position = councillor_kurultai_1
+
+	task_type = task_type_county
+	county_target = all
+	ai_county_target = neighbor_land
+	task_progress = task_progress_percentage
+	restart_on_finish = yes
+
+	asset = {
+		icon = "gfx/interface/icons/court_position_task_types/antiquarian_court_position_task_scout_for_artifacts.dds"
+		background = "gfx/interface/buttons/button_round_bg.dds"
+		frame = "gfx/interface/buttons/button_round_frame.dds"
+		glow = "gfx/particles/halo.dds"
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = task_kurultai_invite_settlers_only_one_target
+			liege_or_court_owner = {
+				NOR = {
+					cp:councillor_kurultai_2 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_2
+					}
+					cp:councillor_kurultai_3 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_3
+					}
+					cp:councillor_kurultai_4 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_4
+					}
+				}	
+			}
+		}
+		
+		tgp_natural_disaster_councillor_available_for_task_trigger = yes
+	}
+	
+	effect_desc = {
+		desc = {
+			desc = task_invite_settlers_effect_desc
+		}
+		desc = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = {
+						any_held_title = {
+							tier = tier_county
+							NOT = { culture = scope:county.culture } }
+						}
+				}
+				desc = task_invite_settlers_effect_culture_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = {
+						any_held_title = {
+							tier = tier_county
+							NOT = { faith = scope:county.faith }
+						}
+					}
+				}
+				desc = task_invite_settlers_effect_faith_desc
+			}
+		}
+	}
+
+	progress = {
+		value = 0
+		add = {
+			value = chancellor_invite_settlers_base
+			desc = CHANCELLOR_INVITE_SETTLERS_PROGRESS_BASE
+		}
+		add = {
+			value = scope:councillor.chancellor_invite_settlers_monthly_increase
+			desc = SCALED_COUNCILLOR_DIPLOMACY_VALUE
+		}
+
+		add = chancellor_invite_settlers_contextual_bonuses
+
+		# State Faith Boost
+		if = {
+			limit = {
+				scope:councillor.top_liege.primary_title.state_rite ?= {
+					this = scope:county.faith
+					this = scope:councillor.top_liege.rite
+				}
+			}
+			multiply = {
+				value = ep3_state_rite_conversion_mult_value
+				desc = ep3_convert_county_to_state_rite
+			}
+		}
+		
+		# Conversion speed game rules
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = slower_faith_conversion_speed
+					has_game_rule = slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = slower_game_rule_value
+				desc = GAME_RULE_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_slower_faith_conversion_speed
+					has_game_rule = significantly_slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_slower_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = faster_faith_conversion_speed
+					has_game_rule = faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = faster_game_rule_value
+				desc = GAME_RULE_FASTER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_faster_faith_conversion_speed
+					has_game_rule = significantly_faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_faster_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
+			}
+		}
+		# Natural disaster resettlement
+		if = {
+			limit = {
+				scope:councillor_liege = { any_character_situation = { situation_current_phase = recovery } }
+			}
+			multiply = {
+				value = 2
+				desc = DISASTER_RECOVERY_REASON
+			}
+		}
+		# If you're inviting from a county that doesn't border on you hold then it's half speed
+		if = {
+			limit = {
+				NOT = {
+					scope:county = { any_neighboring_county = { holder = scope:councillor_liege } }
+				}
+			}
+			multiply = {
+				value = 0.5
+				desc = NOT_BORDERING_REALM_REASON
+			}
+		}
+        # Minorities: Three stages, triple speed, evens out to the same amount
+        multiply = {
+            value = 3
+            desc = MINORITIES_SYSTEM_REASON
+        }
+		min = {
+			value = 0.1
+			desc = minimum_conversion
+		}
+	}
+
+	potential_county = {
+		scope:county = {
+			is_landless_type_title = no
+			NOT = { holder = scope:councillor_liege }
+			holder = { in_diplomatic_range = scope:councillor_liege }
+			# Kurultai version ONLY gets to bring in settlers that are their own culture/faith
+			faith = scope:councillor_liege.faith
+			culture = scope:councillor_liege.faith
+		}
+		scope:councillor_liege = {
+			custom_tooltip = {
+				text = invite_settlers_different_faith_culture_tt
+				any_held_title = {
+					tier = tier_county
+					OR = {
+						faith != scope:county.faith
+						culture != scope:county.culture
+					}
+				}
+			}
+		}
+	}
+
+	on_start_task_county = {
+		# this is to prevent everyone from inviting from fucking Paris
+		set_variable = {
+			name = inviter
+			value = scope:councillor_liege
+		}
+	}
+
+	on_finish_task_county = {
+		scope:councillor_liege = {
+			random_held_title = {
+				# Prefer any county within a recovering natural disaster
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					any_county_situation = { situation_current_phase = recovery }
+					OR = {
+						culture != scope:county.culture
+						rite != scope:county.rite
+					}
+				}
+				# failing that a county that is neither scope:county's rite or culture
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					culture != scope:county.culture
+					rite != scope:county.rite
+				}
+				# failing that a county that at least doesn't share one.
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					OR = {
+						rite != scope:county.rite
+						culture != scope:county.culture
+					}
+				}
+				promote_culture_minority_effect = { CULTURE = scope:county.culture }
+				promote_rite_minority_effect = { RITE = scope:county.rite }
+				save_scope_value_as = {
+					name = target_county_dev
+					value = development_level
+				}
+				change_development_progress_with_overflow = {
+					value = scope:county.development_level
+					subtract = scope:target_county_dev
+					multiply = 10
+				}
+			}
+		}
+		scope:county = {
+			change_development_progress_with_overflow = {
+				value = scope:target_county_dev
+				subtract = development_level
+				multiply = 10
+			}
+			remove_variable = inviter
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+		if = { limit = { scope:councillor = { is_performing_council_task = task_invite_settlers } } add = 1000 }
+		# you do this if you're ruling over a lot of foreigners
+		if = {
+			limit = {
+				scope:councillor_liege = {
+					any_sub_realm_county = {
+						percent >= 0.4
+						faith != scope:councillor_liege.faith
+						culture != scope:councillor_liege.culture
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+}
+
+task_kurultai_invite_settlers_2 = {
+	position = councillor_kurultai_2
+
+	task_type = task_type_county
+	county_target = all
+	ai_county_target = neighbor_land
+	task_progress = task_progress_percentage
+	restart_on_finish = yes
+
+	asset = {
+		icon = "gfx/interface/icons/court_position_task_types/antiquarian_court_position_task_scout_for_artifacts.dds"
+		background = "gfx/interface/buttons/button_round_bg.dds"
+		frame = "gfx/interface/buttons/button_round_frame.dds"
+		glow = "gfx/particles/halo.dds"
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = task_kurultai_invite_settlers_only_one_target
+			liege_or_court_owner = {
+				NOR = {
+					cp:councillor_kurultai_2 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_1
+					}
+					cp:councillor_kurultai_3 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_3
+					}
+					cp:councillor_kurultai_4 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_4
+					}
+				}	
+			}
+		}
+		
+		tgp_natural_disaster_councillor_available_for_task_trigger = yes
+	}
+	
+	effect_desc = {
+		desc = {
+			desc = task_invite_settlers_effect_desc
+		}
+		desc = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = { any_sub_realm_county = { NOT = { culture = scope:county.culture } } }
+				}
+				desc = task_invite_settlers_effect_culture_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = { any_sub_realm_county = { NOT = { faith = scope:county.faith } } }
+				}
+				desc = task_invite_settlers_effect_faith_desc
+			}
+		}
+	}
+
+	progress = {
+		value = 0
+		add = {
+			value = chancellor_invite_settlers_base
+			desc = CHANCELLOR_INVITE_SETTLERS_PROGRESS_BASE
+		}
+		add = {
+			value = scope:councillor.chancellor_invite_settlers_monthly_increase
+			desc = SCALED_COUNCILLOR_DIPLOMACY_VALUE
+		}
+
+		add = chancellor_invite_settlers_contextual_bonuses
+
+		# State Faith Boost
+		if = {
+			limit = {
+				scope:councillor.top_liege.primary_title.state_rite ?= {
+					this = scope:county.faith
+					this = scope:councillor.top_liege.rite
+				}
+			}
+			multiply = {
+				value = ep3_state_rite_conversion_mult_value
+				desc = ep3_convert_county_to_state_rite
+			}
+		}
+		
+		# Conversion speed game rules
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = slower_faith_conversion_speed
+					has_game_rule = slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = slower_game_rule_value
+				desc = GAME_RULE_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_slower_faith_conversion_speed
+					has_game_rule = significantly_slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_slower_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = faster_faith_conversion_speed
+					has_game_rule = faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = faster_game_rule_value
+				desc = GAME_RULE_FASTER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_faster_faith_conversion_speed
+					has_game_rule = significantly_faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_faster_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
+			}
+		}
+		# Natural disaster resettlement
+		if = {
+			limit = {
+				scope:councillor_liege = { any_character_situation = { situation_current_phase = recovery } }
+			}
+			multiply = {
+				value = 2
+				desc = DISASTER_RECOVERY_REASON
+			}
+		}
+		# If you're inviting from a county that doesn't border on you hold then it's half speed
+		if = {
+			limit = {
+				NOT = {
+					scope:county = { any_neighboring_county = { holder = scope:councillor_liege } }
+				}
+			}
+			multiply = {
+				value = 0.5
+				desc = NOT_BORDERING_REALM_REASON
+			}
+		}
+        # Minorities: Three stages, triple speed, evens out to the same amount
+        multiply = {
+            value = 3
+            desc = MINORITIES_SYSTEM_REASON
+        }
+		min = {
+			value = 0.1
+			desc = minimum_conversion
+		}
+	}
+
+	potential_county = {
+		scope:county = {
+			is_landless_type_title = no
+			NOT = { holder = scope:councillor_liege }
+			holder = { in_diplomatic_range = scope:councillor_liege }
+			# Kurultai version ONLY gets to bring in settlers that are their own culture/faith
+			faith = scope:councillor_liege.faith
+			culture = scope:councillor_liege.faith
+		}
+		scope:councillor_liege = {
+			custom_tooltip = {
+				text = invite_settlers_different_faith_culture_tt
+				any_held_title = {
+					tier = tier_county
+					OR = {
+						faith != scope:county.faith
+						culture != scope:county.culture
+					}
+				}
+			}
+		}
+	}
+
+	on_start_task_county = {
+		# this is to prevent everyone from inviting from fucking Paris
+		set_variable = {
+			name = inviter
+			value = scope:councillor_liege
+		}
+	}
+
+	on_finish_task_county = {
+		scope:councillor_liege = {
+			random_held_title = {
+				# Prefer any county within a recovering natural disaster
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					any_county_situation = { situation_current_phase = recovery }
+					OR = {
+						culture != scope:county.culture
+						rite != scope:county.rite
+					}
+				}
+				# failing that a county that is neither scope:county's rite or culture
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					culture != scope:county.culture
+					rite != scope:county.rite
+				}
+				# failing that a county that at least doesn't share one.
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					OR = {
+						rite != scope:county.rite
+						culture != scope:county.culture
+					}
+				}
+				promote_culture_minority_effect = { CULTURE = scope:county.culture }
+				promote_rite_minority_effect = { RITE = scope:county.rite }
+				save_scope_value_as = {
+					name = target_county_dev
+					value = development_level
+				}
+				change_development_progress_with_overflow = {
+					value = scope:county.development_level
+					subtract = scope:target_county_dev
+					multiply = 10
+				}
+			}
+		}
+		scope:county = {
+			change_development_progress_with_overflow = {
+				value = scope:target_county_dev
+				subtract = development_level
+				multiply = 10
+			}
+			remove_variable = inviter
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+		if = { limit = { scope:councillor = { is_performing_council_task = task_invite_settlers } } add = 1000 }
+		# you do this if you're ruling over a lot of foreigners
+		if = {
+			limit = {
+				scope:councillor_liege = {
+					any_sub_realm_county = {
+						percent >= 0.4
+						faith != scope:councillor_liege.faith
+						culture != scope:councillor_liege.culture
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+}
+
+task_kurultai_invite_settlers_3 = {
+	position = councillor_kurultai_3
+
+	task_type = task_type_county
+	county_target = all
+	ai_county_target = neighbor_land
+	task_progress = task_progress_percentage
+	restart_on_finish = yes
+
+	asset = {
+		icon = "gfx/interface/icons/court_position_task_types/antiquarian_court_position_task_scout_for_artifacts.dds"
+		background = "gfx/interface/buttons/button_round_bg.dds"
+		frame = "gfx/interface/buttons/button_round_frame.dds"
+		glow = "gfx/particles/halo.dds"
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = task_kurultai_invite_settlers_only_one_target
+			liege_or_court_owner = {
+				NOR = {
+					cp:councillor_kurultai_2 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_2
+					}
+					cp:councillor_kurultai_3 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_1
+					}
+					cp:councillor_kurultai_4 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_4
+					}
+				}	
+			}
+		}
+		
+		tgp_natural_disaster_councillor_available_for_task_trigger = yes
+	}
+	
+	effect_desc = {
+		desc = {
+			desc = task_invite_settlers_effect_desc
+		}
+		desc = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = { any_sub_realm_county = { NOT = { culture = scope:county.culture } } }
+				}
+				desc = task_invite_settlers_effect_culture_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = { any_sub_realm_county = { NOT = { faith = scope:county.faith } } }
+				}
+				desc = task_invite_settlers_effect_faith_desc
+			}
+		}
+	}
+
+
+	progress = {
+		value = 0
+		add = {
+			value = chancellor_invite_settlers_base
+			desc = CHANCELLOR_INVITE_SETTLERS_PROGRESS_BASE
+		}
+		add = {
+			value = scope:councillor.chancellor_invite_settlers_monthly_increase
+			desc = SCALED_COUNCILLOR_DIPLOMACY_VALUE
+		}
+
+		add = chancellor_invite_settlers_contextual_bonuses
+
+		# State Faith Boost
+		if = {
+			limit = {
+				scope:councillor.top_liege.primary_title.state_rite ?= {
+					this = scope:county.faith
+					this = scope:councillor.top_liege.rite
+				}
+			}
+			multiply = {
+				value = ep3_state_rite_conversion_mult_value
+				desc = ep3_convert_county_to_state_rite
+			}
+		}
+		
+		# Conversion speed game rules
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = slower_faith_conversion_speed
+					has_game_rule = slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = slower_game_rule_value
+				desc = GAME_RULE_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_slower_faith_conversion_speed
+					has_game_rule = significantly_slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_slower_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = faster_faith_conversion_speed
+					has_game_rule = faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = faster_game_rule_value
+				desc = GAME_RULE_FASTER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_faster_faith_conversion_speed
+					has_game_rule = significantly_faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_faster_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
+			}
+		}
+		# Natural disaster resettlement
+		if = {
+			limit = {
+				scope:councillor_liege = { any_character_situation = { situation_current_phase = recovery } }
+			}
+			multiply = {
+				value = 2
+				desc = DISASTER_RECOVERY_REASON
+			}
+		}
+		# If you're inviting from a county that doesn't border on you hold then it's half speed
+		if = {
+			limit = {
+				NOT = {
+					scope:county = { any_neighboring_county = { holder = scope:councillor_liege } }
+				}
+			}
+			multiply = {
+				value = 0.5
+				desc = NOT_BORDERING_REALM_REASON
+			}
+		}
+        # Minorities: Three stages, triple speed, evens out to the same amount
+        multiply = {
+            value = 3
+            desc = MINORITIES_SYSTEM_REASON
+        }
+		min = {
+			value = 0.1
+			desc = minimum_conversion
+		}
+	}
+
+	potential_county = {
+		scope:county = {
+			is_landless_type_title = no
+			NOT = { holder = scope:councillor_liege }
+			holder = { in_diplomatic_range = scope:councillor_liege }
+			# Kurultai version ONLY gets to bring in settlers that are their own culture/faith
+			faith = scope:councillor_liege.faith
+			culture = scope:councillor_liege.faith
+		}
+		scope:councillor_liege = {
+			custom_tooltip = {
+				text = invite_settlers_different_faith_culture_tt
+				any_held_title = {
+					tier = tier_county
+					OR = {
+						faith != scope:county.faith
+						culture != scope:county.culture
+					}
+				}
+			}
+		}
+	}
+
+	on_start_task_county = {
+		# this is to prevent everyone from inviting from fucking Paris
+		set_variable = {
+			name = inviter
+			value = scope:councillor_liege
+		}
+	}
+
+	on_finish_task_county = {
+		scope:councillor_liege = {
+			random_held_title = {
+				# Prefer any county within a recovering natural disaster
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					any_county_situation = { situation_current_phase = recovery }
+					OR = {
+						culture != scope:county.culture
+						rite != scope:county.rite
+					}
+				}
+				# failing that a county that is neither scope:county's rite or culture
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					culture != scope:county.culture
+					rite != scope:county.rite
+				}
+				# failing that a county that at least doesn't share one.
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					OR = {
+						rite != scope:county.rite
+						culture != scope:county.culture
+					}
+				}
+				promote_culture_minority_effect = { CULTURE = scope:county.culture }
+				promote_rite_minority_effect = { RITE = scope:county.rite }
+				save_scope_value_as = {
+					name = target_county_dev
+					value = development_level
+				}
+				change_development_progress_with_overflow = {
+					value = scope:county.development_level
+					subtract = scope:target_county_dev
+					multiply = 10
+				}
+			}
+		}
+		scope:county = {
+			change_development_progress_with_overflow = {
+				value = scope:target_county_dev
+				subtract = development_level
+				multiply = 10
+			}
+			remove_variable = inviter
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+		if = { limit = { scope:councillor = { is_performing_council_task = task_invite_settlers } } add = 1000 }
+		# you do this if you're ruling over a lot of foreigners
+		if = {
+			limit = {
+				scope:councillor_liege = {
+					any_sub_realm_county = {
+						percent >= 0.4
+						faith != scope:councillor_liege.faith
+						culture != scope:councillor_liege.culture
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+}
+
+task_kurultai_invite_settlers_4 = {
+	position = councillor_kurultai_4
+
+	task_type = task_type_county
+	county_target = all
+	ai_county_target = neighbor_land
+	task_progress = task_progress_percentage
+	restart_on_finish = yes
+
+	asset = {
+		icon = "gfx/interface/icons/court_position_task_types/antiquarian_court_position_task_scout_for_artifacts.dds"
+		background = "gfx/interface/buttons/button_round_bg.dds"
+		frame = "gfx/interface/buttons/button_round_frame.dds"
+		glow = "gfx/particles/halo.dds"
+	}
+
+	is_valid_showing_failures_only = {
+		custom_tooltip = {
+			text = task_kurultai_invite_settlers_only_one_target
+			liege_or_court_owner = {
+				NOR = {
+					cp:councillor_kurultai_2 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_2
+					}
+					cp:councillor_kurultai_3 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_3
+					}
+					cp:councillor_kurultai_4 ?= {
+						is_performing_council_task = task_kurultai_invite_settlers_2
+					}
+				}	
+			}
+		}
+		
+		tgp_natural_disaster_councillor_available_for_task_trigger = yes
+	}
+	
+	effect_desc = {
+		desc = {
+			desc = task_invite_settlers_effect_desc
+		}
+		desc = {
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = { any_sub_realm_county = { NOT = { culture = scope:county.culture } } }
+				}
+				desc = task_invite_settlers_effect_culture_desc
+			}
+			triggered_desc = {
+				trigger = {
+					exists = scope:county
+					scope:councillor_liege = { any_sub_realm_county = { NOT = { faith = scope:county.faith } } }
+				}
+				desc = task_invite_settlers_effect_faith_desc
+			}
+		}
+	}
+
+	progress = {
+		value = 0
+		add = {
+			value = chancellor_invite_settlers_base
+			desc = CHANCELLOR_INVITE_SETTLERS_PROGRESS_BASE
+		}
+		add = {
+			value = scope:councillor.chancellor_invite_settlers_monthly_increase
+			desc = SCALED_COUNCILLOR_DIPLOMACY_VALUE
+		}
+
+		add = chancellor_invite_settlers_contextual_bonuses
+
+		# State Faith Boost
+		if = {
+			limit = {
+				scope:councillor.top_liege.primary_title.state_rite ?= {
+					this = scope:county.faith
+					this = scope:councillor.top_liege.rite
+				}
+			}
+			multiply = {
+				value = ep3_state_rite_conversion_mult_value
+				desc = ep3_convert_county_to_state_rite
+			}
+		}
+		
+		# Conversion speed game rules
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = slower_faith_conversion_speed
+					has_game_rule = slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = slower_game_rule_value
+				desc = GAME_RULE_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_slower_faith_conversion_speed
+					has_game_rule = significantly_slower_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_slower_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_SLOWER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = faster_faith_conversion_speed
+					has_game_rule = faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = faster_game_rule_value
+				desc = GAME_RULE_FASTER_REASON
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_game_rule = significantly_faster_faith_conversion_speed
+					has_game_rule = significantly_faster_culture_conversion_speed
+				}
+			}
+			multiply = {
+				value = significantly_faster_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
+			}
+		}
+		# Natural disaster resettlement
+		if = {
+			limit = {
+				scope:councillor_liege = { any_character_situation = { situation_current_phase = recovery } }
+			}
+			multiply = {
+				value = 2
+				desc = DISASTER_RECOVERY_REASON
+			}
+		}
+		# If you're inviting from a county that doesn't border on you hold then it's half speed
+		if = {
+			limit = {
+				NOT = {
+					scope:county = { any_neighboring_county = { holder = scope:councillor_liege } }
+				}
+			}
+			multiply = {
+				value = 0.5
+				desc = NOT_BORDERING_REALM_REASON
+			}
+		}
+        # Minorities: Three stages, triple speed, evens out to the same amount
+        multiply = {
+            value = 3
+            desc = MINORITIES_SYSTEM_REASON
+        }
+		min = {
+			value = 0.1
+			desc = minimum_conversion
+		}
+	}
+
+	potential_county = {
+		scope:county = {
+			is_landless_type_title = no
+			NOT = { holder = scope:councillor_liege }
+			holder = { in_diplomatic_range = scope:councillor_liege }
+			# Kurultai version ONLY gets to bring in settlers that are their own culture/faith
+			faith = scope:councillor_liege.faith
+			culture = scope:councillor_liege.faith
+		}
+		scope:councillor_liege = {
+			custom_tooltip = {
+				text = invite_settlers_different_faith_culture_tt
+				any_held_title = {
+					tier = tier_county
+					OR = {
+						faith != scope:county.faith
+						culture != scope:county.culture
+					}
+				}
+			}
+		}
+	}
+
+	on_start_task_county = {
+		# this is to prevent everyone from inviting from fucking Paris
+		set_variable = {
+			name = inviter
+			value = scope:councillor_liege
+		}
+	}
+
+	on_finish_task_county = {
+		scope:councillor_liege = {
+			random_held_title = {
+				# Prefer any county within a recovering natural disaster
+				limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					any_county_situation = { situation_current_phase = recovery }
+					OR = {
+						culture != scope:county.culture
+						rite != scope:county.rite
+					}
+				}
+				# failing that a county that is neither scope:county's rite or culture
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					culture != scope:county.culture
+					rite != scope:county.rite
+				}
+				# failing that a county that at least doesn't share one.
+				alternative_limit = {
+					tier = tier_county
+					is_landless_type_title = no
+					OR = {
+						rite != scope:county.rite
+						culture != scope:county.culture
+					}
+				}
+				promote_culture_minority_effect = { CULTURE = scope:county.culture }
+				promote_rite_minority_effect = { RITE = scope:county.rite }
+				save_scope_value_as = {
+					name = target_county_dev
+					value = development_level
+				}
+				change_development_progress_with_overflow = {
+					value = scope:county.development_level
+					subtract = scope:target_county_dev
+					multiply = 10
+				}
+			}
+		}
+		scope:county = {
+			change_development_progress_with_overflow = {
+				value = scope:target_county_dev
+				subtract = development_level
+				multiply = 10
+			}
+			remove_variable = inviter
+		}
+	}
+
+	ai_will_do = {
+		value = 0
+		if = { limit = { scope:councillor = { is_performing_council_task = task_invite_settlers } } add = 1000 }
+		# you do this if you're ruling over a lot of foreigners
+		if = {
+			limit = {
+				scope:councillor_liege = {
+					any_sub_realm_county = {
+						percent >= 0.4
+						faith != scope:councillor_liege.faith
+						culture != scope:councillor_liege.culture
+					}
+				}
+			}
+			add = 100
+		}
+	}
+
+}

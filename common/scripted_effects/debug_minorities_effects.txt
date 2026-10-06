@@ -1,20 +1,18 @@
 ﻿debug_clear_minorities = {
-    clear_variable_list = faith_minorities_small
-    clear_variable_list = faith_minorities_large
+    clear_variable_list = rite_minorities_small
+    clear_variable_list = rite_minorities_large
     clear_variable_list = culture_minorities_small
     clear_variable_list = culture_minorities_large
 }
 
-debug_spawn_faith_minority = {
-    faith = { save_scope_as = old_faith }
-    random_religion_global = {
-        random_faith = {
-            limit = { NOT = { this = scope:old_faith } }
-            save_scope_as = faith
-        }
+debug_spawn_rite_minority = {
+    rite = { save_scope_as = old_rite }
+    random_rite_type = {
+        limit = { NOT = { this = scope:old_rite } }
+        save_scope_as = rite
     }
-    promote_faith_minority_effect = {
-        FAITH = scope:faith
+    promote_rite_minority_effect = {
+        RITE = scope:rite
     }
 }
 
@@ -31,19 +29,19 @@ debug_spawn_culture_minority = {
 }
 
 # Run in County Scope
-debug_faith_migration_test = {
+debug_rite_migration_test = {
     random_in_list = {
-        variable = faith_minorities_small
-        save_scope_as = migrating_faith
+        variable = rite_minorities_small
+        save_scope_as = migrating_rite
     }
-    custom_tooltip = "[migrating_faith.GetName]"
+    custom_tooltip = "[migrating_rite.GetName]"
     random_neighboring_county = {
-        limit = { NOT = { faith = scope:migrating_faith } }
+        limit = { NOT = { rite = scope:migrating_rite } }
         save_scope_as = target_county
     }
     custom_tooltip = "[target_county.GetName]"
-    faith_migration_effect = {
-        FAITH = scope:migrating_faith
+    rite_migration_effect = {
+        RITE = scope:migrating_rite
         TARGET_COUNTY = scope:target_county
         SOURCE_COUNTY = THIS
     }

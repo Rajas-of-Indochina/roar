@@ -243,12 +243,12 @@ faith_minority_post_conversion_threshold = {
         limit = {
             OR = {
                 AND = {
-                    scope:old_faith = { has_doctrine_parameter = male_dominated_law }
-                    ROOT.faith = { has_doctrine_parameter = female_dominated_law }
+                    scope:old_rite = { has_doctrine_parameter = male_dominated_law }
+                    ROOT.rite = { has_doctrine_parameter = female_dominated_law }
                 }
                 AND = {
-                    scope:old_faith = { has_doctrine_parameter = female_dominated_law }
-                    ROOT.faith = { has_doctrine_parameter = male_dominated_law }
+                    scope:old_rite = { has_doctrine_parameter = female_dominated_law }
+                    ROOT.rite = { has_doctrine_parameter = male_dominated_law }
                 }
             }
         }
@@ -257,7 +257,7 @@ faith_minority_post_conversion_threshold = {
     # Fundamentalists less likely to be converted, but more likely to convert
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = doctrine_pluralism_fundamentalist }
+            scope:old_rite = { has_doctrine = doctrine_pluralism_fundamentalist }
         }
         add = 1
     }
@@ -270,7 +270,7 @@ faith_minority_post_conversion_threshold = {
     # and Pluralists are the opposite
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = doctrine_pluralism_pluralistic }
+            scope:old_rite = { has_doctrine = doctrine_pluralism_pluralistic }
         }
         add = -1
     }
@@ -280,57 +280,57 @@ faith_minority_post_conversion_threshold = {
         }
         add = 1
     }
-    # Tenets. First we do scope:old_faith's tenets.
+    # Tenets. First we do scope:old_rite's tenets.
     # Adaptive: More willing to assimilate once they're the minority
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_adaptive }
+            scope:old_rite = { has_doctrine = tenet_adaptive }
         }
         add = -1
     }
     # Communal Identity
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_communal_identity }
+            scope:old_rite = { has_doctrine = tenet_communal_identity }
         }
         add = 1
     }
     # Sanctioned False Conversions: Less likely to leave a minority... but they reconvert sometimes
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_false_conversion_sanction }
+            scope:old_rite = { has_doctrine = tenet_false_conversion_sanction }
         }
         add = -1
     }
-    # Unrelenting Faith
+    # Unrelenting Rite
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_unrelenting_faith }
+            scope:old_rite = { has_doctrine = tenet_unrelenting_faith }
         }
         add = 1
     }
     # Reincarnation
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_reincarnation }
+            scope:old_rite = { has_doctrine = tenet_reincarnation }
         }
         add = 1
     }
-    # Pastoral Isolation: These guys really prefer to keep their own faith
+    # Pastoral Isolation: These guys really prefer to keep their own rite
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_pastoral_isolation }
+            scope:old_rite = { has_doctrine = tenet_pastoral_isolation }
         }
         add = 3
     }
     # Righteous Rebirth
     if = {
         limit = {
-            scope:old_faith = { has_doctrine = tenet_pure_land }
+            scope:old_rite = { has_doctrine = tenet_pure_land }
         }
         add = 3
     }
-    # Now ROOT.faith's tenets
+    # Now ROOT.rite's tenets
     # Mendicant Preachers
     if = {
         limit = {
@@ -345,7 +345,7 @@ faith_minority_post_conversion_threshold = {
         }
         add = 2
     }
-    # Now checking for both faiths' tenets and such
+    # Now checking for both rites' tenets and such
     # Hedonism vs. Monasticism
     if = {
         limit = {
@@ -353,12 +353,12 @@ faith_minority_post_conversion_threshold = {
                 AND = {
                     ROOT.rite = { rite_has_doctrine = tenet_hedonistic }
                     OR = {
-                        scope:old_faith = { has_doctrine = tenet_monasticism }
-                        scope:old_faith = { has_doctrine = tenet_mendicant_preachers }
+                        scope:old_rite = { has_doctrine = tenet_monasticism }
+                        scope:old_rite = { has_doctrine = tenet_mendicant_preachers }
                     }
                 }
                 AND = {
-                    scope:old_faith = { has_doctrine = tenet_hedonistic }
+                    scope:old_rite = { has_doctrine = tenet_hedonistic }
                     OR = {
                         ROOT.rite = { rite_has_doctrine = tenet_monasticism }
                         ROOT.rite = { rite_has_doctrine = tenet_mendicant_preachers }
@@ -374,10 +374,10 @@ faith_minority_post_conversion_threshold = {
             OR = {
                 AND = {
                     ROOT.rite = { rite_has_doctrine = tenet_divine_marriage }
-                    NOT = { scope:old_faith = { has_doctrine = doctrine_consanguinity_unrestricted } }
+                    NOT = { scope:old_rite = { has_doctrine = doctrine_consanguinity_unrestricted } }
                 }
                 AND = {
-                    scope:old_faith = { has_doctrine = tenet_divine_marriage }
+                    scope:old_rite = { has_doctrine = tenet_divine_marriage }
                     NOT = { ROOT.rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted } }
                 }
             }
@@ -391,12 +391,12 @@ faith_minority_post_conversion_threshold = {
                 AND = {
                     ROOT.rite = { rite_has_doctrine = tenet_polyamory }
                     OR = {
-                        scope:old_faith = { has_doctrine = doctrine_adultery_men_crime }
-                        scope:old_faith = { has_doctrine = doctrine_adultery_women_crime }
+                        scope:old_rite = { has_doctrine = doctrine_adultery_men_crime }
+                        scope:old_rite = { has_doctrine = doctrine_adultery_women_crime }
                     }
                 }
                 AND = {
-                    scope:old_faith = { has_doctrine = tenet_polyamory }
+                    scope:old_rite = { has_doctrine = tenet_polyamory }
                     OR = {
                         ROOT.rite = { rite_has_doctrine = doctrine_adultery_men_crime }
                         ROOT.rite = { rite_has_doctrine = doctrine_adultery_women_crime }
@@ -416,20 +416,20 @@ faith_minority_post_conversion_threshold = {
                         ROOT.rite = { rite_has_doctrine = tenet_dharmic_pacifism }
                     }
                     OR = {
-                        scope:old_faith = { has_doctrine = tenet_armed_pilgrimages }
-                        scope:old_faith = { has_doctrine = tenet_human_sacrifice }
-                        scope:old_faith = { has_doctrine = tenet_gruesome_festivals }
-                        scope:old_faith = { has_doctrine = tenet_sacred_destruction }
-                        scope:old_faith = { has_doctrine = tenet_fp3_fedayeen }
-                        scope:old_faith = { has_doctrine = tenet_warmonger }
-                        scope:old_faith = { has_doctrine = tenet_extinction_of_dharma }
-                        scope:old_faith = { has_doctrine = tenet_sacrificial_ceremonies }
+                        scope:old_rite = { has_doctrine = tenet_armed_pilgrimages }
+                        scope:old_rite = { has_doctrine = tenet_human_sacrifice }
+                        scope:old_rite = { has_doctrine = tenet_gruesome_festivals }
+                        scope:old_rite = { has_doctrine = tenet_sacred_destruction }
+                        scope:old_rite = { has_doctrine = tenet_fp3_fedayeen }
+                        scope:old_rite = { has_doctrine = tenet_warmonger }
+                        scope:old_rite = { has_doctrine = tenet_extinction_of_dharma }
+                        scope:old_rite = { has_doctrine = tenet_sacrificial_ceremonies }
                     }
                 }
                 AND = {
                     OR = {
-                        scope:old_faith = { has_doctrine = tenet_pacifism }
-                        scope:old_faith = { has_doctrine = tenet_dharmic_pacifism }
+                        scope:old_rite = { has_doctrine = tenet_pacifism }
+                        scope:old_rite = { has_doctrine = tenet_dharmic_pacifism }
                     }
                     OR = {
                         ROOT.rite = { rite_has_doctrine = tenet_armed_pilgrimages }
@@ -554,11 +554,11 @@ faith_migration_attraction = {
         value = {
             value = 1
             add = {
-                value = "list_size(faith_minorities_small)"
+                value = "list_size(rite_minorities_small)"
                 multiply = 0.1
             }
             add = {
-                value = "list_size(faith_minorities_large)"
+                value = "list_size(rite_minorities_large)"
                 multiply = 0.1
             }
         }
@@ -700,7 +700,12 @@ chancellor_invite_settlers_range = {
     if = {
         limit = {
             scope:county.faith = scope:councillor_liege.faith
-            scope:councillor_liege = { has_trait = crusader_king }
+            scope:councillor_liege = {
+                OR = {
+                    has_trait = crusader_king
+                    any_liege_or_above = { has_trait = crusader_king }
+                }
+            }
         }
         multiply = 4
     }

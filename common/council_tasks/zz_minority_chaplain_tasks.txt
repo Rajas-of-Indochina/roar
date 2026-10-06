@@ -1,0 +1,670 @@
+task_conversion = {
+	position = councillor_court_chaplain
+
+	task_type = task_type_county
+	county_target = realm
+	ai_county_target = realm
+	task_progress = task_progress_percentage
+	highlight_own_realm = yes
+
+	asset = {
+		icon = "gfx/interface/icons/council_task_types/task_conversion.dds"
+		background = "gfx/interface/buttons/button_round_bg.dds"
+		frame = "gfx/interface/buttons/button_round_frame.dds"
+		glow = "gfx/particles/halo.dds"
+	}
+
+	is_valid_showing_failures_only = {
+		# Theocratic chaplains of another rite need a liege theological puppet, and lay clergy lieges skip this
+		trigger_if = {
+			limit = {
+				is_ruler = yes
+				government_has_flag = government_is_theocracy
+				rite != scope:councillor_liege.rite
+				scope:councillor_liege.rite = { rite_has_doctrine = doctrine_theocracy_temporal }
+			}
+			custom_tooltip = {
+				text = task_conversion.tt.forbidden.theocratic_off_rite_chaplain
+				scope:councillor_liege = {
+					has_theological_agent_puppet_trigger = yes
+				}
+			}
+		}
+	}
+
+	effect_desc = {
+		# China path, full Faith change to the Huangdi's faith
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = { tgp_has_access_to_ministry_trigger = yes }
+				scope:county.faith != scope:councillor_liege.faith
+				scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+			}
+			desc = task_conversion_china_effect_desc
+		}
+		# China path, Rite-only change (parent Faith already matches the Huangdi)
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = { tgp_has_access_to_ministry_trigger = yes }
+				scope:county.faith = scope:councillor_liege.faith
+				scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+			}
+			desc = task_conversion_china_rite_only_effect_desc
+		}
+		# Standard path, Rite-only change via Liege (parent Faith already matches the Liege)
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = { tgp_has_access_to_ministry_trigger = no }
+				scope:county.faith ?= scope:councillor_liege.faith
+				scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+			}
+			desc = task_conversion_liege_rite_only_effect_desc
+		}
+		# Standard path, full Faith change via an aligned Chaplain (Chaplain shares Liege's Faith, so the new Faith is the Liege's and the rite axis follows the Liege)
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = { tgp_has_access_to_ministry_trigger = no }
+				exists = scope:county.faith
+				scope:county.faith != scope:councillor_liege.faith
+				scope:county.faith != scope:councillor.faith
+				scope:councillor.faith = scope:councillor_liege.faith
+				scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+			}
+			desc = task_conversion_aligned_chaplain_effect_desc
+		}
+		# Standard path, full Faith change via an off-faith Chaplain (Chaplain's Faith differs from the Liege's; Chaplain spreads their own Faith and Rite)
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = { tgp_has_access_to_ministry_trigger = no }
+				exists = scope:county.faith
+				scope:county.faith != scope:councillor_liege.faith
+				scope:county.faith != scope:councillor.faith
+				scope:councillor.faith != scope:councillor_liege.faith
+				scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor.rite } }
+			}
+			desc = task_conversion_effect_desc
+		}
+		# Standard path, Rite-only change via Chaplain (Chaplain's Faith differs from the Liege's, and the county already shares the Chaplain's Faith)
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = { tgp_has_access_to_ministry_trigger = no }
+				exists = scope:county.faith
+				scope:county.faith != scope:councillor_liege.faith
+				scope:county.faith = scope:councillor.faith
+				scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor.rite } }
+			}
+			desc = task_conversion_rite_only_effect_desc
+		}
+		# Development loss only applies on a real Faith change (people refuse to convert and migrate)
+		triggered_desc = {
+			trigger = {
+				trigger_if = {
+					limit = {
+						scope:councillor_liege = { tgp_has_access_to_ministry_trigger = yes }
+					}
+					exists = scope:county.faith
+					scope:county.faith != scope:councillor_liege.faith
+					scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+				}
+				trigger_else = {
+					exists = scope:county.faith
+					scope:county.faith != scope:councillor_liege.faith
+					scope:county.faith != scope:councillor.faith
+					OR = {
+						scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor.rite } }
+						scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+					}
+				}
+			}
+			desc = task_conversion_development_loss_desc
+		}
+		# Fervor effects only on a real Faith change (rite shifts within the same Faith do not move fervor)
+		triggered_desc = {
+			trigger = {
+				exists = scope:county.faith
+				trigger_if = {
+					limit = {
+						scope:councillor_liege = { tgp_has_access_to_ministry_trigger = yes }
+					}
+					scope:county.faith != scope:councillor_liege.faith
+					scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+				}
+				trigger_else = {
+					exists = scope:county.faith
+					scope:county.faith != scope:councillor_liege.faith
+					scope:county.faith != scope:councillor.faith
+					OR = {
+						scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor.rite } }
+						scope:county = { county_has_specific_large_rite_minority = { RITE = scope:councillor_liege.rite } }
+					}
+				}
+			}
+			desc = task_conversion_fervor_effect_desc
+		}
+		triggered_desc = {
+			trigger = {
+				scope:councillor_liege = {
+					any_vassal = {
+						vassal_stance = minority
+					}
+				}
+			}
+			desc = minority_disapproves_conversion_tooltip
+		}
+		desc = {
+			desc = council_task_possible_side_effects
+			triggered_desc = {
+				trigger = {
+					learning > mediocre_skill_rating
+				}
+				desc = task_conversion_opinion_gain
+			}
+			triggered_desc = {
+				trigger = {
+					learning > mediocre_skill_rating
+				}
+				desc = task_conversion_development_gain
+			}
+			triggered_desc = {
+				trigger = {
+					learning > mediocre_skill_rating
+				}
+				desc = task_conversion_levy_gain
+			}
+			triggered_desc = {
+				trigger = {
+					learning < high_skill_rating
+				}
+				desc = task_conversion_resistance_to_conversion
+			}
+			triggered_desc = {
+				trigger = {
+					learning < high_skill_rating
+				}
+				desc = task_conversion_opinion_loss
+			}
+			triggered_desc = {
+				trigger = {
+					scope:councillor_liege = {
+						rite = { rite_has_parameter = tenet_acts_of_apostles_legitimacy_from_converts }
+					}
+				}
+				desc = task_conversion_act_of_apostles_bonus
+			}
+		}
+	}
+
+	progress = {
+		value = 0
+		#Base conversion speed
+		add = {
+			value = court_chaplain_conversion_base
+			desc = COURT_CHAPLAIN_PROGRESS_BASE
+		}
+		add = {
+			value = scope:councillor.court_chaplain_conversion_monthly_increase
+			desc = SCALED_COUNCILLOR_LEARNING_VALUE
+		}
+		#Fervor of Court Chaplain's Faith
+		if = {
+			limit = { # Conditional in order to not mess up the preview-tooltip
+				exists = scope:county
+				exists = scope:councillor.faith	
+				exists = scope:county.faith
+			}
+			add = {
+				add = {
+					add = scope:councillor.court_chaplain_progress_percentage
+					multiply = scope:councillor.faith.fervor
+					multiply = convert_faith_fervor_modifier_scale
+				}
+				subtract = {
+					add = scope:councillor.court_chaplain_progress_percentage
+					multiply = scope:county.faith.fervor
+					multiply = convert_faith_fervor_modifier_scale
+				}
+				if = {
+					limit = {
+						scope:councillor_liege = { has_perk = religious_icon_perk }
+					}
+					min = 0
+				}
+				desc = COURT_CHAPLAIN_CONVERSION_FERVOR_IMPACT
+			}
+		}
+		add = court_chaplain_conversion_contextual_bonuses
+
+		# Development reduces the speed. Should be the last non-multiply modifier applied to avoid negative values
+		if = {
+			limit = {
+				exists = scope:county
+				scope:county = {
+					development_level > 0
+				}
+			}
+			add = {
+				value = scope:county.convert_faith_development_penalty
+				desc = STEWARD_PROMOTE_CULTURE_DEVELOPMENT_PENALTY
+			}
+		}
+        # Minorities: Three stages, triple speed, evens out to the same amount
+        multiply = {
+            value = 3
+            desc = MINORITIES_SYSTEM_REASON
+        }
+
+		multiply = court_chaplain_conversion_factors
+
+		min = {
+			value = 0.1
+			desc = minimum_conversion
+		}
+	}
+
+	potential_county = {
+		scope:county = {
+			task_conversion_valid_county_trigger = yes
+		}
+	}
+
+	on_start_task_county = {
+		# Message for vassals
+		scope:county = { save_scope_as = set_county }
+		trigger_event = {
+			id = court_chaplain_task.8000
+			days = 2 # To ensure it fires after the halted message
+		}
+		#spawn a task contract to counter the missionary, if a nearby adventurer has the same faith as the county
+		if = {
+			limit = {
+				any_pool_character = {
+					province = scope:county.title_province
+					faith = scope:county.faith
+					is_adult = yes
+					save_temporary_scope_as = employer
+				}
+				any_ruler = {
+					has_government = landless_adventurer_government
+					is_within_diplo_range = { CHARACTER = scope:councillor }
+					any_character_task_contract = {
+						task_contract_type = laamp_fight_faith_conversion_contract
+						count <= council_task_contracts_limit_value
+					}
+					NOT = {
+						any_task_contract = {
+							task_contract_type = laamp_fight_faith_conversion_contract
+							task_contract_location = scope:employer.location
+						}
+					}
+					save_temporary_scope_as = player_laamp
+				}
+			}
+			scope:player_laamp = {
+				create_task_contract = {
+					task_contract_type = laamp_fight_faith_conversion_contract
+					task_contract_tier = scope:employer.task_contract_tier_value
+					location = scope:county.title_province
+					task_contract_employer = scope:employer
+					target = scope:councillor
+					destination = scope:county.title_province
+				}
+			}
+		}
+	}
+
+	on_cancel_task_county = {
+		# Message for vassals
+		trigger_event = {
+			id = court_chaplain_task.8001
+			days = 1 # To ensure it does not fire at the same time as the finish message (both cancel and finish are fired on_finish_task_county)
+		}
+	}
+
+	on_finish_task_county = {
+		scope:county.faith = { save_scope_as = old_faith }
+		scope:county.rite = { save_scope_as = old_rite }
+		scope:councillor_liege = {
+			if = {
+				limit = {
+					any_vassal = {
+						vassal_stance = minority
+					}
+                    OR = {
+                        AND = {
+                            scope:county = { county_has_specific_large_rite_minority = { FAITH = scope:councillor_liege.rite } }
+                            scope:councillor_liege = {
+                                highest_held_title_tier >= tier_hegemony
+                                government_has_flag = government_has_merit
+                            }
+                        }
+                        scope:county = { county_has_specific_large_rite_minority = { FAITH = scope:councillor.rite } }
+                    } 
+				}
+				custom_tooltip = minority_disapproves_conversion
+				hidden_effect = {
+					every_vassal = {
+						vassal_stance = minority
+						add_opinion = {
+							target = scope:councillor_liege
+							modifier = minority_disapproves_of_conversion_opinion
+						}
+					}
+				}
+			}
+			# Migration tracking only on a real Faith change (a rite shift does not displace populations)
+			if = {
+				limit = { scope:councillor_liege.faith != scope:old_faith }
+				add_to_variable_list = {
+					name = rites_converted_in_counties
+					target = scope:old_rite
+				}
+			}
+		}
+		scope:county = {
+			if = {
+				limit = { scope:councillor_liege.faith != scope:old_faith }
+				add_to_variable_list = {
+					name = rites_converted_in_the_county
+					target = scope:old_rite
+					years = 40
+				}
+				scope:old_rite = {
+					if = {
+						limit = {
+							OR = {
+								NOT = { has_variable = associated_county }
+								AND = {
+									has_variable = converted_development
+									var:converted_development <= 0
+								}
+							}
+						}
+						set_variable = {
+							name = associated_county
+							value = scope:county
+						}
+					}
+					if = {
+						limit = {
+							OR = {
+								NOT = { has_variable = associated_culture }
+								AND = {
+									has_variable = converted_development
+									var:converted_development <= 0
+								}
+							}
+						}
+						set_variable = {
+							name = associated_culture
+							value = scope:county.culture
+						}
+					}
+					if = {
+						limit = {
+							NOT = { has_variable = converted_development }
+						}
+						set_variable = {
+							name = converted_development
+							value = scope:county.convert_faith_development_value
+						}
+					}
+					else = {
+						change_variable = {
+							name = converted_development
+							add = scope:county.convert_faith_development_value
+						}
+					}
+				}
+			}
+			# Same decision matrix as potential_county: Liege drives the rite axis whenever the post-conversion Faith ends up as the Liege's.
+			if = {
+				limit = {
+					OR = {
+						scope:councillor_liege = { tgp_has_access_to_ministry_trigger = yes }
+						faith = scope:councillor_liege.faith
+						scope:councillor.faith = scope:councillor_liege.faith
+					}
+					scope:county = { county_has_specific_large_rite_minority = { FAITH = scope:councillor_liege.rite } }
+				}
+				# set_county_rite = scope:councillor_liege.rite
+				promote_rite_minority_effect = {FAITH = scope:councillor_liege.rite}
+			}
+			else = { promote_rite_minority_effect = {FAITH = scope:councillor.rite} }
+
+			if = {
+				limit = { scope:councillor_liege.faith != scope:old_faith }
+				change_development_level = convert_faith_development_loss
+				scope:councillor_liege.faith = {
+					change_fervor = {
+						value = trivial_fervor_gain
+						desc = fervor_gain_county_converted
+					}
+				}
+				scope:old_faith = {
+					change_fervor = {
+						value = small_fervor_gain
+						desc = fervor_gain_county_lost
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				scope:councillor_liege = {
+					OR = {
+						NOT = { has_variable_list = converted_faiths }
+						NOT = {
+							is_target_in_variable_list = {
+								name = converted_faiths
+								target = scope:old_faith
+							}
+						}
+					}
+				}
+			}
+			scope:councillor_liege = {
+				add_to_variable_list = {
+					name = converted_faiths
+					target = scope:old_faith
+				}
+			}
+		}
+
+		# Struggle parameters
+		scope:councillor_liege = {
+			if = {
+				limit = {
+					any_character_struggle = {
+						involvement = involved
+						has_struggle_phase_parameter = piety_from_converting_county
+					}
+				}
+				add_piety = medium_piety_gain
+			}
+			if = {
+				limit = {
+					rite = { rite_has_parameter = tenet_acts_of_apostles_legitimacy_from_converts }
+				}
+				add_legitimacy_effect = { LEGITIMACY = medium_legitimacy_gain }
+				change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+			}
+			if = {
+				limit = {
+					has_personal_tenet_flag = tenet_mendicant_preachers_conversion_fulfillment
+				}
+				change_spiritual_fulfillment = medium_spiritual_fulfillment_value
+			}
+		}
+		# Message for vassals
+		trigger_event = court_chaplain_task.8002
+	}
+
+	monthly_on_action = task_convert_side_effects
+
+	ai_will_do = {
+		value = 1000 # Always convert if possible
+
+		if = {	#Unless you're a crypto-religionist.
+			limit = {
+				scope:councillor_liege = {
+					any_secret = { type = secret_crypto_religionist }
+				}
+			}
+			multiply = 0
+		}
+
+		# AI directive
+		if = {
+			limit = {
+				scope:councillor_liege = {
+					has_character_flag = vassal_directive_convert_faith
+					vassal_is_valid_and_follows_directive_trigger = { VASSAL = this LIEGE = liege }
+				}
+			}
+			add = 10000
+		}
+	}
+}
+
+task_expel_religious_minority = {
+	position = councillor_court_chaplain
+
+	task_type = task_type_county
+	county_target = realm
+	ai_county_target = realm
+	task_progress = task_progress_percentage
+	highlight_own_realm = yes
+	restart_on_finish = no
+
+	asset = {
+		icon = "gfx/interface/icons/court_position_task_types/high_almoner_court_position_task_appease_zealots.dds"
+		background = "gfx/interface/buttons/button_round_bg.dds"
+		frame = "gfx/interface/buttons/button_round_frame.dds"
+		glow = "gfx/particles/halo.dds"
+	}
+
+	effect_desc = {
+		triggered_desc = {
+			trigger = {
+				exists = scope:county
+				exists = scope:county.var:rite_to_expel
+			}
+			desc = task_expel_religious_minority_active_desc
+		}
+		triggered_desc = {
+			trigger = {
+				NOT = { exists = scope:county.var:rite_to_expel }
+			}
+			desc = task_expel_religious_minority_desc
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		tgp_natural_disaster_councillor_available_for_task_trigger = yes
+		scope:councillor_liege = { is_ai = no }
+	}
+
+	progress = {
+		value = 0
+		#Base conversion speed
+		add = {
+			value = court_chaplain_conversion_base
+			desc = COURT_CHAPLAIN_PROGRESS_BASE
+		}
+		add = {
+			value = scope:councillor.court_chaplain_conversion_monthly_increase
+			desc = SCALED_COUNCILLOR_LEARNING_VALUE
+		}
+		#Fervor of Court Chaplain's Faith
+		if = {
+			limit = { # Conditional in order to not mess up the preview-tooltip
+				exists = scope:county
+				exists = scope:councillor.faith	
+				exists = scope:county.var:rite_to_expel
+				scope:county.var:rite_to_expel ?= {
+					NOT = { faith = scope:councillor.faith }
+				}
+			}
+			add = {
+				add = {
+					add = scope:councillor.court_chaplain_progress_percentage
+					multiply = scope:councillor.faith.fervor
+					multiply = convert_faith_fervor_modifier_scale
+				}
+				subtract = {
+					add = scope:councillor.court_chaplain_progress_percentage
+					multiply = scope:county.var:rite_to_expel.faith.fervor
+					multiply = convert_faith_fervor_modifier_scale
+				}
+				if = {
+					limit = {
+						scope:councillor_liege = { has_perk = religious_icon_perk }
+					}
+					min = 0
+				}
+				desc = COURT_CHAPLAIN_CONVERSION_FERVOR_IMPACT
+			}
+		}
+		add = court_chaplain_conversion_contextual_bonuses
+
+		# Development reduces the speed. Should be the last non-multiply modifier applied to avoid negative values
+		if = {
+			limit = {
+				exists = scope:county
+				scope:county = {
+					development_level > 0
+				}
+			}
+			add = {
+				value = scope:county.convert_faith_development_penalty
+				desc = STEWARD_PROMOTE_CULTURE_DEVELOPMENT_PENALTY
+			}
+		}
+		
+		if = {
+			limit = {
+				has_game_rule = significantly_faster_faith_conversion_speed
+			}
+			multiply = {
+				value = significantly_faster_game_rule_value
+				desc = GAME_RULE_SIGNIFICANTLY_FASTER_REASON
+			}
+		}
+        # Minorities: Three stages, triple speed, evens out to the same amount
+        multiply = {
+            value = 3
+            desc = MINORITIES_SYSTEM_REASON
+        }
+		multiply = court_chaplain_conversion_factors
+		min = {
+			value = 0.1
+			desc = minimum_conversion
+		}
+	}
+
+	potential_county = {
+		scope:councillor_liege = {
+			NOT = { has_realm_law_flag = disable_faith_expulsion }
+		}
+		scope:county = {
+			task_expel_religious_minority_valid_county_trigger = yes
+		}
+	}
+
+	on_start_task_county = {
+		scope:councillor_liege = {
+			trigger_event = minorities.0301 # Widget event
+		}
+	}
+	on_finish_task_county = {
+		expel_county_faith_minority_effect = {
+			COUNTY = scope:county
+			FAITH = scope:county.var:faith_to_expel
+			CHARACTER = scope:councillor_liege
+		}
+		scope:county = {
+			remove_variable = faith_to_expel
+		}
+	}
+}

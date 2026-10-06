@@ -1,43 +1,66 @@
-﻿county_has_small_faith_minority = {
-    has_variable_list = faith_minorities_small
+﻿county_has_small_rite_minority = {
+    has_variable_list = rite_minorities_small
     variable_list_size = {
-        name = faith_minorities_small
+        name = rite_minorities_small
         value > 0
     }
 }
 
-county_has_large_faith_minority = {
-    has_variable_list = faith_minorities_large
+county_has_large_rite_minority = {
+    has_variable_list = rite_minorities_large
     variable_list_size = {
-        name = faith_minorities_large
+        name = rite_minorities_large
         value > 0
     }
 }
 
-county_has_faith_minority = {
+county_has_rite_minority = {
     OR = {
-        county_has_large_faith_minority = yes
-        county_has_small_faith_minority = yes
+        county_has_large_rite_minority = yes
+        county_has_small_rite_minority = yes
+    }
+}
+
+county_has_specific_small_rite_minority = {
+    is_target_in_variable_list = {
+        name = rite_minorities_small
+        target = $RITE$
     }
 }
 
 county_has_specific_small_faith_minority = {
+	any_in_list = {
+		variable = rite_minorities_small
+		faith = $FAITH$
+	}
+}
+
+county_has_specific_large_rite_minority = {
     is_target_in_variable_list = {
-        name = faith_minorities_small
-        target = $FAITH$
+        name = rite_minorities_large
+        target = $RITE$
     }
 }
+
 county_has_specific_large_faith_minority = {
-    is_target_in_variable_list = {
-        name = faith_minorities_large
-        target = $FAITH$
+	any_in_list = {
+		variable = rite_minorities_large
+		faith = $FAITH$
+	}
+}
+
+county_has_specific_rite_minority = {
+    OR = {
+        county_has_specific_small_rite_minority = { RITE = $RITE$ }
+        county_has_specific_large_rite_minority = { RITE = $RITE$ }
     }
 }
+
 county_has_specific_faith_minority = {
-    OR = {
-        county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
-        county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
-    }
+	OR = {
+		county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
+		county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+	}
 }
 
 county_has_small_culture_minority = {
@@ -75,7 +98,7 @@ county_has_specific_large_culture_minority = {
         target = $CULTURE$
     }
 }
-county_has_specific_culture_minority_trigger = {
+county_has_specific_culture_minority = {
     OR = {
         county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ }
         county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ }
@@ -85,7 +108,7 @@ county_has_specific_culture_minority_trigger = {
 # TRIGGER is ANY simple scripted trigger (takes yes, no or a scope)
 # CHECK is the thing being checked by the trigger (the yes, no or scope)
 # you could maybe get crazier with it but don't come crying to me
-# TYPE is faith or culture
+# TYPE is rite or culture
 # SIZE is the minority size (small or large)
 # call from county scope
 county_has_type_minority_with_trigger = {
@@ -109,12 +132,12 @@ county_has_expellable_culture_trigger = {
 	}
 }
 
-county_has_expellable_faith_trigger = {
-	$FAITH$ = { save_temporary_scope_as = the_faith }
+county_has_expellable_rite_trigger = {
+	$RITE$ = { save_temporary_scope_as = the_rite }
 	any_in_list = {
-		variable = faith_minorities_$SIZE$
-		save_temporary_scope_as = faith_temp
-		"scope:the_faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+		variable = rite_minorities_$SIZE$
+		save_temporary_scope_as = rite_temp
+		"scope:the_rite.faith.faith_hostility_level(scope:rite_temp)" >= faith_hostile_level
 	}
 }
 
@@ -141,11 +164,83 @@ can_have_minority_laws_trigger = {
 	is_landed = yes
 }
 
+# rite scope
+rite_has_minority_counties = {
+	any_county = {
+		county_has_specific_rite_minority = { RITE = prev }
+	}
+}
+
 # faith scope
 faith_has_minority_counties = {
 	any_county = {
-		county_has_specific_faith_minority = { FAITH = prev }
+		county_has_type_minority_with_trigger = {
+			TYPE = FAITH
+			SIZE = small
+			TRIGGER = faith
+			CHECK = PREV
+		}
 	}
+}
+
+# For minority expulsion (chaplain)
+task_expel_religious_minority_valid_county_trigger = {
+	is_landless_type_title = no
+	save_temporary_scope_as = county_check
+
+	trigger_if = {
+		limit = {
+			scope:councillor_liege = {
+				is_alive = yes
+				has_variable = hold_court_8120_religion_block
+			}
+		}
+		custom_tooltip = {
+			text = hold_court_8120_conversion_tt
+			faith != scope:councillor_liege.var:hold_court_8120_religion_block
+		}
+	}
+	custom_description = { # Vassal Contract forbids meddling by liege
+		text = "is_protected_via_contract_self_or_liege"
+		subject = holder
+		# don't "protect" same faith in edge cases
+		trigger_if = {
+			limit = {
+				scope:county_check.holder = { is_vassal_or_below_of = scope:councillor_liege }
+				scope:councillor_liege.faith != scope:county_check.holder.faith
+			}
+			holder = {
+				NOR = {
+					vassal_contract_has_flag = religiously_protected
+					any_liege_or_above = {
+						is_vassal_or_below_of = scope:councillor_liege
+						vassal_contract_has_flag = religiously_protected
+					}
+				}
+			}
+		}
+	}
+	trigger_if = {
+		limit = {	
+			var:cannot_be_converted_by_value ?= scope:councillor_liege		
+		}
+		custom_tooltip = {
+			text = promised_to_not_convert_county	
+			NOT = {
+				var:cannot_be_converted_by_value ?= scope:councillor_liege	
+			}
+		}
+	}
+	trigger_if = { # AI won't expel from counties that aren't already their own faith
+		limit = {
+			is_ai = yes
+		}
+		OR = {
+			faith = scope:councillor_liege.faith
+			faith = scope:councillor.faith
+		}
+	}
+	county_has_rite_minority = yes
 }
 
 

@@ -2,78 +2,78 @@
 #     CALLED FROM COUNTY SCOPE     #
 ####################################
 
-# These are the core scripted effects of the system, with a version of each for faiths and cultures.
+# These are the core scripted effects of the system, with a version of each for rites and cultures.
 
 # add_x_minority_effect accepts two parameters:
 # SIZE (large or small)
-# CULTURE/FAITH (the scope you want to add as a minority)
-# DO NOT USE THE CULTURE COMMANDS FOR FAITHS AND VICE VERSA, THEY WILL FUCK UP
+# CULTURE/RITE (the scope you want to add as a minority)
+# DO NOT USE THE CULTURE COMMANDS FOR RITES AND VICE VERSA, THEY WILL FUCK UP
 
 # delete_x_minority_effect:
 # takes the same params as its add_ counterpart. Deletes the minority from the list if present.
 
 # promote_x_minority_effect:
 # takes one parameter:
-# FAITH/CULTURE: the scope being promoted.
+# RITE/CULTURE: the scope being promoted.
 # Automatically detects if a minority of that type is already present and then upgrades it if present
 # No minority -> small minority -> large minority -> majority
 # the on_actions should automatically handle logic for creating minorities on a county conversion
 
 
-add_faith_minority_effect = {
+add_rite_minority_effect = {
     if = {
         limit = {
             NOR = {
-                faith = $FAITH$
-                county_has_specific_faith_minority = { FAITH = $FAITH$ }
+                rite = $RITE$
+                county_has_specific_rite_minority = { RITE = $RITE$ }
             }
         }
         add_to_variable_list = {
-            name = faith_minorities_$SIZE$
-            target = $FAITH$
+            name = rite_minorities_$SIZE$
+            target = $RITE$
         }
     }
     update_minority_majority_modifiers_effect = yes
 }
 
-delete_faith_minority_effect = {
+delete_rite_minority_effect = {
     remove_list_variable = {
-        name = faith_minorities_$SIZE$
-        target = $FAITH$
+        name = rite_minorities_$SIZE$
+        target = $RITE$
     }
     update_minority_majority_modifiers_effect = yes
 }
 
-promote_faith_minority_effect = {
-    faith = { save_scope_as = old_faith }
+promote_rite_minority_effect = {
+    rite = { save_scope_as = old_rite }
     if = {
-        limit = { faith = $FAITH$ }
-        debug_log = "whuh-oh! FAITH Promotion had a fucky-wucky!"
+        limit = { rite = $RITE$ }
+        debug_log = "whuh-oh! RITE Promotion had a fucky-wucky!"
     }
     else_if = {
-        limit = { county_has_specific_small_faith_minority = { FAITH = $FAITH$ } }
-        delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
-        add_faith_minority_effect = { FAITH = $FAITH$ SIZE = large }
+        limit = { county_has_specific_small_rite_minority = { RITE = $RITE$ } }
+        delete_rite_minority_effect = { RITE = $RITE$ SIZE = small }
+        add_rite_minority_effect = { RITE = $RITE$ SIZE = large }
     }
     else_if = {
-        limit = { county_has_specific_large_faith_minority = { FAITH = $FAITH$ } }
-        delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = large }
-        set_county_faith = $FAITH$
+        limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
+        delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
+        set_county_rite = $RITE$
     }
     else = {
-        add_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
+        add_rite_minority_effect = { RITE = $RITE$ SIZE = small }
     }
 }
 
-demote_faith_minority_effect = {
+demote_rite_minority_effect = {
     if = {
-        limit = { county_has_specific_small_faith_minority = { FAITH = $FAITH$ } }
-        delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
+        limit = { county_has_specific_small_rite_minority = { RITE = $RITE$ } }
+        delete_rite_minority_effect = { RITE = $RITE$ SIZE = small }
     }
     else_if = {
-        limit = { county_has_specific_large_faith_minority = { FAITH = $FAITH$ } }
-        delete_faith_minority_effect = { FAITH = $FAITH$ SIZE = large }
-        add_faith_minority_effect = { FAITH = $FAITH$ SIZE = small }
+        limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
+        delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
+        add_rite_minority_effect = { RITE = $RITE$ SIZE = small }
     }
 }
 
@@ -82,7 +82,7 @@ add_culture_minority_effect = {
         limit = {
             NOR = {
                 culture = $CULTURE$
-                county_has_specific_culture_minority_trigger = { CULTURE = $CULTURE$ }
+                county_has_specific_culture_minority = { CULTURE = $CULTURE$ }
             }
         }
         add_to_variable_list = {
@@ -368,58 +368,58 @@ find_culture_migration_target_effect = {
 }
 
 # run in county scope
-# saves scope:faith which is a random faith picked from either the majority or a minority faith
+# saves scope:rite which is a random rite picked from either the majority or a minority rite
 # MAJORITY = is the majority allowed?
-get_random_county_faith_effect = {
+get_random_county_rite_effect = {
     random_list = {
-        # Get migrant faith
+        # Get migrant rite
         4 = {
             trigger = { always = $MAJORITY$ }
-            faith = { save_scope_as = faith }
+            rite = { save_scope_as = rite }
         }
         1 = {
-            trigger = { county_has_small_faith_minority = yes }
+            trigger = { county_has_small_rite_minority = yes }
             modifier = {
-                factor = "list_size(faith_minorities_small)"
+                factor = "list_size(rite_minorities_small)"
             }
             random_in_list = {
-                variable = faith_minorities_small
-                save_scope_as = faith
+                variable = rite_minorities_small
+                save_scope_as = rite
             }
         }
         2 = {
-            trigger = { county_has_large_faith_minority = yes }
+            trigger = { county_has_large_rite_minority = yes }
             modifier = {
-                factor = "list_size(faith_minorities_large)"
+                factor = "list_size(rite_minorities_large)"
             }
             random_in_list = {
-                variable = faith_minorities_large
-                save_scope_as = faith
+                variable = rite_minorities_large
+                save_scope_as = rite
             }
         }
     }
 }
 
-# FAITH = the faith to migrate
+# RITE = the rite to migrate
 # TARGET_COUNTY = county to migrate to
 # SOURCE_COUNTY = county to migrate from
-faith_migration_effect = {
-    $FAITH$ = { save_scope_as = loc_faith }
+rite_migration_effect = {
+    $RITE$ = { save_scope_as = loc_rite }
     $TARGET_COUNTY$ = { save_scope_as = loc_target }
     $SOURCE_COUNTY$ = { save_scope_as = loc_source }
     if = {
-        limit = { $TARGET_COUNTY$.faith = $FAITH$ }
-        debug_log = "ERROR: Trying to migrate minority faith into same-faith target"
+        limit = { $TARGET_COUNTY$.rite = $RITE$ }
+        debug_log = "ERROR: Trying to migrate minority rite into same-rite target"
     }
     $TARGET_COUNTY$ = {
-        promote_faith_minority_effect = { FAITH = $FAITH$ }
+        promote_rite_minority_effect = { RITE = $RITE$ }
         holder = {
             if = { 
                 limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
                 send_interface_message = {
                     type = msg_council_conversion_neutral
-                    title = msg_faith_migration
-                    desc = msg_faith_migration_desc
+                    title = msg_rite_migration
+                    desc = msg_rite_migration_desc
                     left_icon = $SOURCE_COUNTY$
                     right_icon = $TARGET_COUNTY$
                 }
@@ -427,12 +427,12 @@ faith_migration_effect = {
         }
     }
     $SOURCE_COUNTY$ = {
-        demote_faith_minority_effect = { FAITH = $FAITH$ }
+        demote_rite_minority_effect = { RITE = $RITE$ }
         holder = {
             send_interface_message = {
                 type = msg_council_conversion_neutral
-                title = msg_faith_migration
-                desc = msg_faith_migration_desc
+                title = msg_rite_migration
+                desc = msg_rite_migration_desc
                 left_icon = $SOURCE_COUNTY$
                 right_icon = $TARGET_COUNTY$
             }
@@ -441,11 +441,11 @@ faith_migration_effect = {
 }
 
 # call from the scope of the source county. i guess.
-# FAITH = the faith looking for a new home
+# RITE = the rite looking for a new home
 # saves scope:target_county for later use.
-find_faith_migration_target_effect = {
+find_rite_migration_target_effect = {
     save_scope_as = source_county
-    $FAITH$ = { save_scope_as = faith }
+    $RITE$ = { save_scope_as = rite }
     random_list = {
         # neighbor county or same duchy
         64 = {
@@ -481,7 +481,7 @@ find_faith_migration_target_effect = {
                     }
                 }
                 weight = {
-                    base = faith_migration_attraction
+                    base = rite_migration_attraction
                 }
                 save_scope_as = target_county
             }
@@ -520,7 +520,7 @@ find_faith_migration_target_effect = {
                     }
                 }
                 weight = {
-                    base = faith_migration_attraction
+                    base = rite_migration_attraction
                 }
                 save_scope_as = target_county
             }
@@ -559,7 +559,7 @@ find_faith_migration_target_effect = {
                     }
                 }
                 weight = {
-                    base = faith_migration_attraction
+                    base = rite_migration_attraction
                 }
                 save_scope_as = target_county
             }
@@ -598,7 +598,7 @@ find_faith_migration_target_effect = {
                     }
                 }
                 weight = {
-                    base = faith_migration_attraction
+                    base = rite_migration_attraction
                 }
                 save_scope_as = target_county
             }
@@ -629,12 +629,12 @@ replace_culture_minority_effect = {
 }
 
 # COUNTY = county doing the expelling
-# FAITH = faith being expelled
+# RITE = rite being expelled
 # CHARACTER = character doing the expulsion
-expel_county_faith_minority_effect = {
+expel_county_rite_minority_effect = {
     $COUNTY$ = {
         if = {
-            limit = { county_has_specific_faith_minority = { FAITH = $FAITH$ } }
+            limit = { county_has_specific_rite_minority = { RITE = $RITE$ } }
             $CHARACTER$ = {
                 add_gold = $COUNTY$.development_level
                 add_tyranny = {
@@ -644,11 +644,11 @@ expel_county_faith_minority_effect = {
                 }
             }
             change_development_progress_with_overflow = -50
-            find_faith_migration_target_effect = { FAITH = $FAITH$ }
-            faith_migration_effect = {
+            find_rite_migration_target_effect = { RITE = $RITE$ }
+            rite_migration_effect = {
                 SOURCE_COUNTY = $COUNTY$
                 TARGET_COUNTY = scope:target_county
-                FAITH = $FAITH$
+                RITE = $RITE$
             }
         }
     }
@@ -660,7 +660,7 @@ expel_county_faith_minority_effect = {
 expel_county_culture_minority_effect = {
     $COUNTY$ = {
         if = {
-            limit = { county_has_specific_culture_minority_trigger = { CULTURE = $CULTURE$ } }
+            limit = { county_has_specific_culture_minority = { CULTURE = $CULTURE$ } }
             $CHARACTER$ = {
                 add_gold = $COUNTY$.development_level
                 add_tyranny = {
@@ -708,52 +708,52 @@ assimilate_cultures_into_child_culture_effect = {
 }
 
 # county scope
-assimilate_righteous_faiths_effect = {
-    faith = { save_scope_as = county_faith }
+assimilate_righteous_rites_effect = {
+    rite = { save_scope_as = county_rite }
     every_in_list = {
-        variable = faith_minorities_small
+        variable = rite_minorities_small
         limit = {
             OR = {
                 # Rites
-                religious_head_title = scope:county_faith.religious_head_title
+                religious_head_title = scope:county_rite.religious_head_title
                 # Righteousness
-                "faith_hostility_level(scope:county_faith)" <= faith_fully_accepted_level
+                "rite_hostility_level(scope:county_rite)" <= rite_fully_accepted_level
             }
         }
-        delete_faith_minority_effect = {
+        delete_rite_minority_effect = {
             SIZE = small
-            FAITH = THIS
+            RITE = THIS
         }
     }
     every_in_list = {
-        variable = faith_minorities_large
+        variable = rite_minorities_large
         limit = {
             OR = {
                 # Rites
-                religious_head_title = scope:county_faith.religious_head_title
+                religious_head_title = scope:county_rite.religious_head_title
                 # Righteousness
-                "faith_hostility_level(scope:county_faith)" <= faith_fully_accepted_level
+                "rite_hostility_level(scope:county_rite)" <= rite_fully_accepted_level
             }
         }
-        delete_faith_minority_effect = {
+        delete_rite_minority_effect = {
             SIZE = large
-            FAITH = THIS
+            RITE = THIS
         }
     }
 }
 
-# FAITH = the faith to migrate
+# RITE = the rite to migrate
 # CULTURE = the culture to migrate
 # TARGET_COUNTY = the county to migrate to
 # SOURCE_COUNTY = the county to migrate from
 combined_migration_effect = {
-    $FAITH$ = { save_scope_as = loc_faith }
+    $RITE$ = { save_scope_as = loc_rite }
     $CULTURE$ = { save_scope_as = loc_culture }
     $TARGET_COUNTY$ = { save_scope_as = loc_target }
     $SOURCE_COUNTY$ = { save_scope_as = loc_source }
     $TARGET_COUNTY$ = {
         promote_culture_minority_effect = { CULTURE = $CULTURE$ }
-        promote_faith_minority_effect = { FAITH = $FAITH$ }
+        promote_rite_minority_effect = { RITE = $RITE$ }
         holder = {
             if = {
                 limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
@@ -769,7 +769,7 @@ combined_migration_effect = {
     }
     $SOURCE_COUNTY$ = {
         demote_culture_minority_effect = { CULTURE = $CULTURE$ }
-        demote_faith_minority_effect = { FAITH = $FAITH$ }
+        demote_rite_minority_effect = { RITE = $RITE$ }
         holder = {
             send_interface_message = {
                 type = msg_culture_conversion
@@ -784,12 +784,12 @@ combined_migration_effect = {
 
 # call from the scope of the source county. i guess.
 # CULTURE = the culture looking for a new home
-# FAITH = the faith looking for a new home
+# RITE = the rite looking for a new home
 # saves scope:target_county for later use.
 find_combined_migration_target_effect = {
     save_scope_as = source_county
     $CULTURE$ = { save_scope_as = culture }
-    $FAITH$ = { save_scope_as = faith }
+    $RITE$ = { save_scope_as = rite }
     random_list = {
         # neighbor county or same duchy
         64 = {
@@ -958,7 +958,7 @@ quick_region_migration_effect = {
         region = $SOURCE_REGION$
         save_scope_as = source_county
         get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
-        get_random_county_faith_effect = { MAJORITY = yes } # scope:faith now saved
+        get_random_county_rite_effect = { MAJORITY = yes } # scope:rite now saved
     }
     random_county_in_region = {
         region = $TARGET_REGION$
@@ -968,7 +968,7 @@ quick_region_migration_effect = {
     combined_migration_effect = {
         SOURCE_COUNTY = scope:source_county
         TARGET_COUNTY = scope:target_county
-        FAITH = scope:faith
+        RITE = scope:rite
         CULTURE = scope:culture
     }
 }
@@ -978,7 +978,7 @@ targeted_regional_migration_effect = {
         region = $SOURCE_REGION$
         save_scope_as = source_county
         get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
-        get_random_county_faith_effect = { MAJORITY = yes } # scope:faith now saved
+        get_random_county_rite_effect = { MAJORITY = yes } # scope:rite now saved
     }
     if = {
         limit = { NOT = { exists = scope:target_county } }
@@ -991,7 +991,7 @@ targeted_regional_migration_effect = {
     combined_migration_effect = {
         SOURCE_COUNTY = scope:source_county
         TARGET_COUNTY = scope:target_county
-        FAITH = scope:faith
+        RITE = scope:rite
         CULTURE = scope:culture
     }
 }
@@ -1018,7 +1018,7 @@ notify_characters_of_fake_migration_effect = {
 
 		send_interface_toast = {
 			type = sea_minority_growth
-			title = minority_culture_faith_spread_title
+			title = minority_culture_rite_spread_title
 			custom_tooltip = $MESSAGE$
 			right_icon = scope:county
 		}
@@ -1030,21 +1030,21 @@ notify_characters_of_fake_migration_effect = {
 # holder = THIS.holder
 update_minority_majority_modifiers_effect = {
     hidden_effect = {
-        remove_county_modifier = majority_minority_small_faith
-        remove_county_modifier = majority_minority_large_faith
+        remove_county_modifier = majority_minority_small_rite
+        remove_county_modifier = majority_minority_large_rite
         remove_county_modifier = majority_minority_small_culture
         remove_county_modifier = majority_minority_large_culture
-        # Check for faith minority
+        # Check for rite minority
         if = {
-            limit = { county_has_specific_small_faith_minority = { FAITH = holder.faith } }
+            limit = { county_has_specific_small_rite_minority = { RITE = holder.rite } }
             add_county_modifier = {
-                modifier = majority_minority_small_faith
+                modifier = majority_minority_small_rite
             }
         }
         else_if = {
-            limit = { county_has_specific_large_faith_minority = { FAITH = holder.faith } }
+            limit = { county_has_specific_large_rite_minority = { RITE = holder.rite } }
             add_county_modifier = {
-                modifier = majority_minority_large_faith
+                modifier = majority_minority_large_rite
             }
         }
         # and culture minority
