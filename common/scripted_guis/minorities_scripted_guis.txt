@@ -112,32 +112,64 @@ minority_faiths_map_mode = {
 		every_county = {
 			if = {
 				limit = {
-					this.faith = scope:the_faith
+					this.rite = scope:the_faith
 				}
 				every_county_province = { barony = { set_color_from_title = title:k_france } }
 			}
 			else_if = {
 				limit = {
-					exists = scope:the_faith.religious_head
-					this.faith.religious_head = scope:the_faith.religious_head
+					this.faith = scope:the_faith.faith
+					NOT = { this.rite = scope:the_faith}
 				}
 				every_county_province = { barony = { set_color_from_title = title:e_persia } }
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority = {
-						FAITH = scope:the_faith
+					county_has_specific_large_rite_minority = {
+						RITE = scope:the_faith
 					}
 				}
 				every_county_province = { barony = { set_color_from_title = title:k_andalusia } }
 			}
 			else_if = {
 				limit = {
-					county_has_specific_small_faith_minority = {
-						FAITH = scope:the_faith
+					county_has_type_minority_with_trigger = {
+						TYPE = rite
+						SIZE = large
+						TRIGGER = faith
+						CHECK = scope:the_faith.faith
+					}
+					NOT = {
+						county_has_specific_rite_minority = {
+							RITE = scope:the_faith
+						}
+					}
+				}
+				every_county_province = { barony = { set_color_from_title = title:e_deccan } }
+			}
+			else_if = {
+				limit = {
+					county_has_specific_small_rite_minority = {
+						RITE = scope:the_faith
 					}
 				}
 				every_county_province = { barony = { set_color_from_title = title:e_spain } }
+			}
+			else_if = {
+				limit = {
+					county_has_type_minority_with_trigger = {
+						TYPE = rite
+						SIZE = small
+						TRIGGER = faith
+						CHECK = scope:the_faith.faith
+					}
+					NOT = {
+						county_has_specific_rite_minority = {
+							RITE = scope:the_faith
+						}
+					}
+				}
+				every_county_province = { barony = { set_color_from_title = title:e_rajasthan } }
 			}
 			else = {
 				every_county_province = { barony = { set_color_from_title = title:d_map_base_color } }

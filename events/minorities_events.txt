@@ -15,13 +15,13 @@ minorities.0101 = {
 	trigger = {
 		any_sub_realm_county = {
 			OR = {
-				county_has_expellable_faith_trigger = {
+				county_has_expellable_rite_trigger = {
 					SIZE = small
-					FAITH = ROOT.faith
+					RITE = ROOT.rite
 				}
-				county_has_expellable_faith_trigger = {
+				county_has_expellable_rite_trigger = {
 					SIZE = small
-					FAITH = ROOT.faith
+					RITE = ROOT.rite
 				}
 			}
 		}
@@ -44,14 +44,16 @@ minorities.0101 = {
 				rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
 			}
 		}
-		calc_true_if = {
-			amount >= 2
-			has_trait = sadistic
-			has_trait = callous
-			has_trait = wrathful
-			has_trait = zealous
-			ai_zeal >= 50
-			rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
+		trigger_else = {
+			calc_true_if = {
+				amount >= 2
+				has_trait = sadistic
+				has_trait = callous
+				has_trait = wrathful
+				has_trait = zealous
+				ai_zeal >= 50
+				rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
+			}
 		}
 	}
 	immediate = {
@@ -71,56 +73,53 @@ minorities.0102 = {
 		random_sub_realm_county = {
 			limit = {
 				OR = {
-					county_has_expellable_faith_trigger = {
+					county_has_expellable_rite_trigger = {
 						SIZE = small
-						FAITH = ROOT.faith
+						RITE = ROOT.rite
 					}
-					county_has_expellable_faith_trigger = {
+					county_has_expellable_rite_trigger = {
 						SIZE = large
-						FAITH = ROOT.faith
+						RITE = ROOT.rite
 					}
 				}
 			}
 			save_scope_as = county
 			if = {
 				limit = {
-					county_has_expellable_faith_trigger = {
+					county_has_expellable_rite_trigger = {
 						SIZE = large
-						FAITH = ROOT.faith
+						RITE = ROOT.rite
 					}
 				}
 				random_in_list = {
-					variable = faith_minorities_large
+					variable = rite_minorities_large
 					limit = {
-						save_temporary_scope_as = faith_temp
-						"ROOT.faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
+						save_temporary_scope_as = rite_temp
+						"ROOT.rite.faith.faith_hostility_level(scope:rite_temp)" >= faith_hostile_level
 					}
 					save_scope_as = expelled_faith
 				}
 			}
 			else_if = {
 				limit = {
-					county_has_expellable_faith_trigger = {
+					county_has_expellable_rite_trigger = {
 						SIZE = small
-						FAITH = ROOT.faith
+						RITE = ROOT.rite
 					}
 				}
 				random_in_list = {
-					variable = faith_minorities_small
+					variable = rite_minorities_small
 					limit = {
-						save_temporary_scope_as = faith_temp
-						"ROOT.faith.faith_hostility_level(scope:faith_temp)" >= faith_hostile_level
-					}
-					send_interface_message = {
-						title = "WAHHHHH"
+						save_temporary_scope_as = rite_temp
+						"ROOT.rite.faith.faith_hostility_level(scope:rite_temp)" >= faith_hostile_level
 					}
 					save_scope_as = expelled_faith
 				}
 			}
 		}
-		expel_county_faith_minority_effect = {
+		expel_county_rite_minority_effect = {
 			COUNTY = scope:county
-			FAITH = scope:expelled_faith
+			RITE = scope:expelled_faith
 			CHARACTER = scope:expeller
 		}
 	}
@@ -244,9 +243,9 @@ minorities.0202 = {
 scripted_effect setup_promote_religious_minorities_effect = {
 	scope:county = {
 		every_in_list = {
-			variable = faith_minorities_large
+			variable = rite_minorities_large
 			limit = {
-				NOT = { THIS = scope:councillor_liege.faith }
+				NOT = { THIS = scope:councillor_liege.rite }
 			}
 			ROOT = {
 				add_to_variable_list = {
@@ -256,9 +255,9 @@ scripted_effect setup_promote_religious_minorities_effect = {
 			}
 		}
 		every_in_list = {
-			variable = faith_minorities_small
+			variable = rite_minorities_small
 			limit = {
-				NOT = { THIS = scope:councillor_liege.faith }
+				NOT = { THIS = scope:councillor_liege.rite }
 			}
 			ROOT = {
 				add_to_variable_list = {
@@ -326,7 +325,7 @@ minorities.0300 = {
 			setup_promote_culture_minorities_effect = yes
 		}
 		scope:county = {
-			remove_variable = faith_to_convert
+			remove_variable = rite_to_convert
 			remove_variable = culture_to_convert
 		}
 	}
@@ -357,11 +356,11 @@ minorities.0300 = {
 			var:selected_faith = { save_scope_as = selected_faith }
 			scope:county = {
 				set_variable = {
-					name = faith_to_convert
+					name = rite_to_convert
 					value = scope:selected_faith
 				}
 			}
-			custom_tooltip = task_promote_minority_effect_event_desc_faith
+			custom_tooltip = task_promote_minority_effect_event_desc_rite
 		}
 		else = {
 			custom_tooltip = minorities.0100.cancel
@@ -396,7 +395,7 @@ minorities.0301 = {
 	theme = realm
 	immediate = {
 		setup_promote_religious_minorities_effect = yes
-		scope:county = { remove_variable = faith_to_expel }
+		scope:county = { remove_variable = rite_to_expel }
 	}
 	widget = {
 		gui = "sea_select_faith_widget"
@@ -408,9 +407,9 @@ minorities.0301 = {
 			limit = { exists = var:selected_faith }
 			var:selected_faith = { save_scope_as = selected_faith }
 			scope:county ={
-				custom_tooltip = begin_expel_faith_tt
+				custom_tooltip = begin_expel_rite_tt
 				set_variable = {
-					name = faith_to_expel
+					name = rite_to_expel
 					value = scope:selected_faith
 				}
 			}
@@ -509,7 +508,7 @@ scripted_effect fetch_islam_options = {
 			OR = {
 				religion = religion:islam_religion
 				county_has_type_minority_with_trigger = {
-					TYPE = faith
+					TYPE = rite
 					SIZE = large
 					TRIGGER = religion
 					CHECK = religion:islam_religion
@@ -524,7 +523,7 @@ scripted_effect fetch_islam_options = {
 			limit = {
 				religion = religion:islam_religion
 			}
-			faith = {
+			rite = {
 				ROOT = {
 					if = {
 						limit = {
@@ -544,7 +543,7 @@ scripted_effect fetch_islam_options = {
 			}
 		}
 		every_in_list = {
-			variable = faith_minorities_large
+			variable = rite_minorities_large
 			limit = { religion = religion:islam_religion }
 			ROOT = {
 				if = {
@@ -576,8 +575,8 @@ scripted_effect do_islamic_settlers_effect = {
 				NOT = { geographical_region = world_asia_southeast_islands }
 			}
 			OR = {
-				faith = $FAITH$
-				county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+				rite = $RITE$
+				county_has_specific_large_rite_minority = { RITE = $RITE$ }
 			}
 		}
 		add_to_list = source_counties
@@ -591,14 +590,14 @@ scripted_effect do_islamic_settlers_effect = {
 				save_scope_as = source
 			}
 			save_scope_as = target
-			faith_migration_effect = {
-				FAITH = $FAITH$
+			rite_migration_effect = {
+				RITE = $RITE$
 				TARGET_COUNTY = scope:target
 				SOURCE_COUNTY = scope:source
 			}
 			if = {
 				limit = {
-					county_has_specific_small_faith_minority = { FAITH = $FAITH$ }
+					county_has_specific_small_rite_minority = { RITE = $RITE$ }
 				}
 				add_county_modifier = {
 					modifier = muslim_settlers_modifier_small
@@ -607,7 +606,7 @@ scripted_effect do_islamic_settlers_effect = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+					county_has_specific_large_rite_minority = { RITE = $RITE$ }
 				}
 				add_county_modifier = {
 					modifier = muslim_settlers_modifier_large
@@ -616,7 +615,7 @@ scripted_effect do_islamic_settlers_effect = {
 			}
 			if = {
 				limit = {
-					faith = $FAITH$
+					rite = $RITE$
 				}
 				add_county_modifier = {
 					modifier = muslim_settlers_modifier_majority
@@ -628,8 +627,8 @@ scripted_effect do_islamic_settlers_effect = {
 					limit = {
 						# check if this specific county has been exhausted of Muslims to immigrate
 						NOR = {
-							faith = $FAITH$
-							county_has_specific_large_faith_minority = { FAITH = $FAITH$ }
+							rite = $RITE$
+							county_has_specific_large_rite_minority = { RITE = $RITE$ }
 						}
 					}
 					remove_from_list = source_counties
@@ -666,7 +665,7 @@ minorities.0401 = {
 			var:selected_faith = {
 				save_scope_as = faith
 			}
-			do_islamic_settlers_effect = { FAITH = scope:faith }
+			do_islamic_settlers_effect = { RITE = scope:faith }
 			add_piety = major_piety_loss
 			if = {
 				limit = {

@@ -15,7 +15,7 @@
 				visible = "[ScriptedGui.IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End )]"
 			}
 			text_single = {
-				raw_text = " [GetPlayer.MakeScope.Var('selected_faith').Faith.GetTextIcon][GetPlayer.MakeScope.Var('selected_faith').Faith.GetName]"
+				raw_text = " [GetPlayer.MakeScope.Var('selected_faith').Rite.GetTextIcon][GetPlayer.MakeScope.Var('selected_faith').Rite.GetName]"
 				visible = "[ScriptedGui.IsValid( GuiScope.SetRoot( GetPlayer.MakeScope ).End ) ]"
 			}
 			text_single = {
@@ -76,11 +76,12 @@
 										layoutpolicy_horizontal = expanding
 										# layoutpolicy_vertical = expanding
 
-										text_single = {
+										text_multi = {
 											name = "culture_name"
 											align = right|nobaseline
 											text = "[Scope.Culture.GetNameNoTooltip]"
-											using = Font_Size_Medium
+											using = Font_Size_Small
+											autoresize = yes
 											default_format = "#high"
 											max_width = 60
 										}
@@ -96,7 +97,7 @@
 					# min_width = 200
 					layoutpolicy_vertical = expanding
 					text_single = {
-						raw_text = "Faiths"
+						raw_text = "Rites"
 						margin_bottom = 10
 						parentanchor = top
 					}
@@ -109,19 +110,19 @@
 						item = {
 							button_standard = {
 								size = { 64 64 }
-								datacontext = "[Faith.MakeScope]"
+								datacontext = "[Rite.MakeScope]"
 								datacontext = "[GetScriptedGui( 'select_faith' )]"
-								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'faith', Scope.Faith.MakeScope ).End ) ]"
+								onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).AddScope( 'faith', Scope.Rite.MakeScope ).End ) ]"
 								spacing = 2
 								using = tooltip_ne
-								tooltipwidget = { faith_minorities_tooltip = {} }
+								tooltipwidget = { rite_minorities_tooltip = {} }
 								vbox = {
 									layoutpolicy_horizontal = expanding
 									layoutpolicy_vertical = expanding
 									expand = {}
 									icon = {
 										size = { 32 32 }
-										texture = "[Scope.Faith.GetIcon]"
+										texture = "[Scope.Rite.GetIcon]"
 									}
 									expand = {}
 
@@ -129,11 +130,11 @@
 										layoutpolicy_horizontal = expanding
 										# layoutpolicy_vertical = expanding
 
-										text_single = {
-											name = "faith_name"
-											align = right|nobaseline
-											text = "[Scope.Faith.GetNameNoTooltip]"
-											using = Font_Size_Medium
+										text_multi = {
+											align = nobaseline
+											text = "[Scope.Rite.GetAdjectiveNoTooltip]"
+											using = Font_Size_Small
+											autoresize = yes
 											default_format = "#high"
 											max_width = 60
 										}

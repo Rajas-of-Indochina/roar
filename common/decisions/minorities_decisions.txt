@@ -95,7 +95,7 @@
 						OR = {
 							religion = religion:islam_religion
 							county_has_type_minority_with_trigger = {
-								TYPE = faith
+								TYPE = rite
 								SIZE = large
 								TRIGGER = religion
 								CHECK = religion:islam_religion
@@ -117,7 +117,7 @@
 					# just in case i fucked up
 					if = {
 						NOT = { exists = scope:islamic_faith }
-						faith:ashari = { save_scope_as = islamic_faith }
+						faith:ashari.main_rite = { save_scope_as = islamic_faith }
 					}
 				}
 				faith_migration_effect = {

@@ -2,17 +2,6 @@
 # The returned value is interpreted as a multiplicative modifier (e.g. 0.5 means +50% cost).
 # scope:character = the creation character
 # scope:old_faith = the faith the character is converting from
-faith_creation_cost_mult = {
-	subtract = {
-		value = scope:old_faith.faith_conversion_fervor_mult
-		desc = "faith_creation_cost_fervor_impact"
-		format = "[Faith.GetName]"
-	}
-	min = {
-		value = -0.75
-	}
-}
-
 num_same_faith_counties = {
 	value = 0
 	every_realm_county = {

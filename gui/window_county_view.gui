@@ -176,6 +176,29 @@ window = {
 					blockoverride "tooltip" {}
 				}
 
+				button_round = {
+					name = "move_domcicle_button"
+					datacontext = "[GetPlayer.GetDomicile]"
+					datacontext = "[HoldingView.GetProvince]"
+					visible = "[IsLandlessAdventurer( GetPlayer )]"
+					widgetid = "move_domcicle_button"
+					size = { 50 50 }
+
+					enabled = "[Domicile.CanMoveTo( Province.Self )]"
+					onclick = "[OpenGameViewData( 'move_domicile_planner', Province.Self )]"
+
+					tooltip = "[Domicile.GetType.GetMoveTooltip( Character.Self )]"
+					tooltip_when_disabled = "[Domicile.GetMoveToTooltip( Province.Self )]"
+					using = tooltip_ne
+
+					button_icon = {
+						alwaystransparent = yes
+						parentanchor = center
+						size = { 30 30 }
+						texture = "gfx/interface/icons/flat_icons/move_camp.dds"
+					}
+				}
+
 				buttons_window_control = {
 
 					blockoverride "button_go_to"
@@ -344,23 +367,23 @@ window = {
 									button = {
 										size = { 25 25 }
 		
+										icon = {
+											name = "gold_negative_console_button_minus"
+											position = { 0 10 }
+											size = { 15 15 }
+											texture = "gfx/interface/icons/faith_minority_small.dds"
+										}
+		
 										onclick = "[OpenGameViewData( 'faith', Scope.Rite.Self )]"
-										texture = "gfx/interface/icons/faith_minority_small.dds"
+										texture = "[Scope.Rite.GetIcon]"
 										using = tooltip_ne
 										tooltipwidget = {
-											faith_minorities_tooltip = {
+											rite_minorities_tooltip = {
 												blockoverride "minority_label"
 												{
 													text = "[minority_faith_small|E]"
 												}
 											}
-										}
-		
-										icon = {
-											name = "gold_negative_console_button_minus"
-											position = { 0 7 }
-											size = { 25 25 }
-											texture = "[Scope.Rite.GetIcon]"
 										}
 									}
 								}
@@ -376,10 +399,10 @@ window = {
 									button = {
 										size = { 25 25 }
 										onclick = "[OpenGameViewData( 'faith', Scope.Rite.Self )]"
-										texture = "gfx/interface/icons/faith_minority_large.dds"
+										texture = "[Scope.Rite.GetIcon]"
 										using = tooltip_ne
 										tooltipwidget = {
-											faith_minorities_tooltip = {
+											rite_minorities_tooltip = {
 												blockoverride "minority_label"
 												{
 													text = "[minority_faith_large|E]"
@@ -389,9 +412,9 @@ window = {
 		
 										icon = {
 											name = "gold_negative_console_button_minus"
-											position = { 0 7 }
-											size = { 25 25 }
-											texture = "[Scope.Rite.GetIcon]"
+											position = { 0 10 }
+											size = { 15 15 }
+											texture = "gfx/interface/icons/faith_minority_large.dds"
 										}
 									}
 								}
@@ -4131,7 +4154,7 @@ types CountyViewTypes
 
 	## FAITH MINORITY TOOLTIP ##
 
-	type faith_minorities_tooltip = widget
+	type rite_minorities_tooltip = widget
 	{
 		alwaystransparent = no
 		using = GeneralTooltipSetup

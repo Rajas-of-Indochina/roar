@@ -658,13 +658,13 @@ task_expel_religious_minority = {
 		}
 	}
 	on_finish_task_county = {
-		expel_county_faith_minority_effect = {
+		expel_county_rite_minority_effect = {
 			COUNTY = scope:county
-			FAITH = scope:county.var:faith_to_expel
+			RITE = scope:county.var:rite_to_expel
 			CHARACTER = scope:councillor_liege
 		}
 		scope:county = {
-			remove_variable = faith_to_expel
+			remove_variable = rite
 		}
 	}
 }

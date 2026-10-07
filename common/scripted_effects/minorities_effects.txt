@@ -58,6 +58,7 @@ promote_rite_minority_effect = {
     else_if = {
         limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
         delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
+        set_county_faith = $RITE$.faith
         set_county_rite = $RITE$
     }
     else = {

@@ -11,7 +11,7 @@
 		setup_caucasus_northeast_minorities
 		setup_caucasus_northwest_minorities
 		setup_caucasus_south_minorities
-		setup_RICE_minorities
+		# setup_RICE_minorities
 	}
 }
 
@@ -41,73 +41,73 @@ set_minorities_game_start = {
 		# ===================================
 		### Andhara ###
 		title:c_palakka = {
-			add_faith_minority_effect = {
-				FAITH = rite:shaivism
+			add_rite_minority_effect = {
+				RITE = rite:shaivism
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:mahasanghika
+			add_rite_minority_effect = {
+				RITE = rite:mahayana # mahasanghika
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:svetambara
+				add_rite_minority_effect = {
+					RITE = rite:svetambara
 					SIZE = large
 				}
 			}
 		}
 		title:c_nallamala = {
-			add_faith_minority_effect = {
-				FAITH = rite:svetambara
+			add_rite_minority_effect = {
+				RITE = rite:svetambara
 				SIZE = large
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = large
 				}
 			}
 		}
 		title:c_cumbum = {
-			add_faith_minority_effect = {
-				FAITH = rite:shaivism
+			add_rite_minority_effect = {
+				RITE = rite:shaivism
 				SIZE = large
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:svetambara
+				add_rite_minority_effect = {
+					RITE = rite:svetambara
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = small
 				}
 			}
@@ -117,15 +117,15 @@ set_minorities_game_start = {
 		title:c_sthanisvara = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -133,52 +133,52 @@ set_minorities_game_start = {
 
 		### Gujarat ###
 		title:c_sarasvata_mandala = {
-			add_faith_minority_effect = {
-				FAITH = rite:pudgalavada
+			add_rite_minority_effect = {
+				RITE = rite:pudgalavada
 				SIZE = small
 			}
 		}
 		title:c_khetaka = {
-			add_faith_minority_effect = {
-				FAITH = rite:pudgalavada
+			add_rite_minority_effect = {
+				RITE = rite:pudgalavada
 				SIZE = large
 			}
 		}
-		title:c_vardhamana = {
-			add_faith_minority_effect = {
-				FAITH = rite:vatsiputriya
-				SIZE = small
-			}
-		}
+		# title:c_vardhamana = {
+		# 	add_rite_minority_effect = {
+		# 		RITE = rite:vatsiputriya
+		# 		SIZE = small
+		# 	}
+		# }
 		title:c_valabhi = {
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = large
 				}
 			}
 		}
-		title:c_dhamalpur = {
-			add_faith_minority_effect = {
-				FAITH = rite:vatsiputriya
-				SIZE = small
-			}
-		}
+		# title:c_dhamalpur = {
+		# 	add_rite_minority_effect = {
+		# 		RITE = rite:vatsiputriya
+		# 		SIZE = small
+		# 	}
+		# }
 
 		### Kabulistan ###
 		title:c_bamian = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahayana
+				add_rite_minority_effect = {
+					RITE = rite:mahayana
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = small
 				}
 			}
@@ -190,8 +190,8 @@ set_minorities_game_start = {
 				CULTURE = culture:kachari
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:bathouism
+			add_rite_minority_effect = {
+				RITE = rite:bathouism
 				SIZE = large
 			}
 		}
@@ -200,8 +200,8 @@ set_minorities_game_start = {
 				CULTURE = culture:kachari
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:bathouism
+			add_rite_minority_effect = {
+				RITE = rite:bathouism
 				SIZE = small
 			}
 		}
@@ -210,15 +210,15 @@ set_minorities_game_start = {
 		title:c_kalyani = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = small
 				}
 			}
@@ -227,25 +227,25 @@ set_minorities_game_start = {
 		# Kochinim of Kerala
 		title:c_kerala = {
 			promote_culture_minority_effect = { CULTURE = culture:kochinim }
-			promote_faith_minority_effect = { FAITH = rite:malabarism }
+			promote_rite_minority_effect = { RITE = rite:malabarism }
 		}
 
 		### Lanka ###
 		title:c_jaffna = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
 		title:c_phiti = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
 		title:c_trincomalee = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
@@ -255,8 +255,8 @@ set_minorities_game_start = {
 				CULTURE = culture:vedda
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vedda_pagan
+			add_rite_minority_effect = {
+				RITE = rite:vedda_pagan
 				SIZE = large
 			}
 		}
@@ -269,8 +269,8 @@ set_minorities_game_start = {
 				CULTURE = culture:vedda
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vedda_pagan
+			add_rite_minority_effect = {
+				RITE = rite:vedda_pagan
 				SIZE = small
 			}
 		}
@@ -279,24 +279,24 @@ set_minorities_game_start = {
 		title:c_vidisa = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:svetambara
+				add_rite_minority_effect = {
+					RITE = rite:svetambara
 					SIZE = large
 				}
-				add_faith_minority_effect = {
+				add_rite_minority_effect = {
 					# to represent the Bhojeshwar temple dedicated to Shiva
-					FAITH = rite:shaivism
+					RITE = rite:shaivism
 					SIZE = small
 				}
 			}
@@ -306,8 +306,8 @@ set_minorities_game_start = {
 		title:c_daman = {
 			if = {
 				limit = { game_start_date <= 1066.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:zurvanism
+				add_rite_minority_effect = {
+					RITE = rite:zurvanism
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -321,15 +321,15 @@ set_minorities_game_start = {
 		title:c_udabhanda = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:dharmaguptaka
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # dharmaguptaka
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:dharmaguptaka
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # dharmaguptaka
 					SIZE = small
 				}
 			}
@@ -337,19 +337,19 @@ set_minorities_game_start = {
 		title:c_purushapura = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:dharmaguptaka
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # dharmaguptaka
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:dharmaguptaka
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # dharmaguptaka
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -359,15 +359,15 @@ set_minorities_game_start = {
 		title:c_nellore = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mahasanghika
+				add_rite_minority_effect = {
+					RITE = rite:mahayana # mahasanghika
 					SIZE = small
 				}
 			}
@@ -375,30 +375,30 @@ set_minorities_game_start = {
 
 		# zOther
 		title:c_rajrappa = {
-			add_faith_minority_effect = {
-				FAITH = rite:kalikula_shaktism
+			add_rite_minority_effect = {
+				RITE = rite:kalikula_shaktism
 				SIZE = small
 			}
 		}
 		every_county = { #world_india
 			limit = {
 				title_province = { geographical_region = world_india }
-				FAITH = {
-					has_doctrine = eastern_hostility_doctrine
-					NOT = { has_doctrine = tenet_communal_identity }
+				rite = {
+					rite_has_doctrine = eastern_hostility_doctrine
+					NOT = { rite_has_doctrine = tenet_communal_identity }
 				}
 			}
 			this = { save_temporary_scope_as = the_county_temp }
 			every_neighboring_county = {
 				if = {
 					limit = {
-						FAITH = {
-							has_doctrine = eastern_hostility_doctrine
-							NOT = { has_doctrine = tenet_communal_identity }
+						rite = {
+							rite_has_doctrine = eastern_hostility_doctrine
+							NOT = { rite_has_doctrine = tenet_communal_identity }
 							NOT = { this = scope:the_county_temp.rite }
 						}
 					}
-					FAITH = { add_to_list = neighboring_faiths }
+					rite = { add_to_list = neighboring_faiths }
 				}
 			}
 			every_in_list = {
@@ -406,21 +406,21 @@ set_minorities_game_start = {
 				this = { save_temporary_scope_as = the_faith_temp }
 				scope:the_county_temp = {
 					add_to_variable_list = {
-						name = faith_minorities_small
+						name = rite_minorities_small
 						target = scope:the_faith_temp
 					}
 				}
 				this = { remove_from_list = neighboring_faiths }
 			}
-			scope:the_county_temp.holder.FAITH = {
+			scope:the_county_temp.holder.rite = {
 				if = {
 					limit = {
-						has_doctrine = eastern_hostility_doctrine
-						NOT = { has_doctrine = tenet_communal_identity }
+						rite_has_doctrine = eastern_hostility_doctrine
+						NOT = { rite_has_doctrine = tenet_communal_identity }
 						NOT = { this = scope:the_county_temp.rite }
 					}
 					add_to_variable_list = {
-						name = faith_minorities_small
+						name = rite_minorities_small
 						target = scope:the_faith_temp
 					}
 				}
@@ -441,8 +441,8 @@ set_minorities_game_start = {
 				CULTURE = culture:nuristani
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vajrayana
+			add_rite_minority_effect = {
+				RITE = rite:vajrayana
 				SIZE = small
 			}
 		}
@@ -451,8 +451,8 @@ set_minorities_game_start = {
 				CULTURE = culture:nuristani
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vajrayana
+			add_rite_minority_effect = {
+				RITE = rite:vajrayana
 				SIZE = small
 			}
 		}
@@ -460,8 +460,8 @@ set_minorities_game_start = {
 
 		### Lhomon ###
 		title:c_itanagar = {
-			add_faith_minority_effect = {
-				FAITH = rite:vaishnava
+			add_rite_minority_effect = {
+				RITE = rite:vaishnavism
 				SIZE = large
 			}
 		}
@@ -469,16 +469,16 @@ set_minorities_game_start = {
 
 		### Silk Road ###
 		title:c_shazhou = {
-			add_faith_minority_effect = {
-				FAITH = rite:manichaean_faith
+			add_rite_minority_effect = {
+				RITE = rite:manichean
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -491,12 +491,12 @@ set_minorities_game_start = {
 			}
 		}
 		title:c_liangzhou = {
-			add_faith_minority_effect = {
-				FAITH = rite:manichaean_faith
+			add_rite_minority_effect = {
+				RITE = rite:manichean
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -507,8 +507,8 @@ set_minorities_game_start = {
 
 		## Other Radhanite Locations ##
 		title:c_lasta = {
-			add_faith_minority_effect = {
-				FAITH = rite:haymanot
+			add_rite_minority_effect = {
+				RITE = rite:haymanot
 				SIZE = large
 			}
 		}
@@ -562,12 +562,12 @@ set_minorities_game_start = {
 					CULTURE = culture:pecheneg
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -588,8 +588,8 @@ set_minorities_game_start = {
 					game_start_date >= 1150.1.1
 					game_start_date <= 1337.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = small
 				}
 			}
@@ -662,10 +662,10 @@ set_minorities_game_start = {
 				limit = {
 					kingdom = title:k_champa
 					culture = culture:cham
-					NOT = { FAITH = rite:mahayana }
+					NOT = { RITE = rite:mahayana }
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mahayana
+				add_rite_minority_effect = {
+					RITE = rite:mahayana
 					SIZE = small
 				}
 			}
@@ -673,10 +673,10 @@ set_minorities_game_start = {
 				limit = {
 					kingdom = title:k_champa
 					culture = culture:cham
-					NOT = { FAITH = rite:chamic_shaivism }
+					NOT = { RITE = rite:chamic_shaivism }
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:chamic_shaivism
+				add_rite_minority_effect = {
+					RITE = rite:chamic_shaivism
 					SIZE = large
 				}
 			}
@@ -689,21 +689,21 @@ set_minorities_game_start = {
 					culture = culture:cham
 					game_start_date < 1000.1.1
 				}
-				promote_faith_minority_effect = { FAITH = rite:mahayana }
+				promote_rite_minority_effect = { RITE = rite:mahayana }
 			}
 		}
 		title:c_vijaya = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = large
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -718,10 +718,10 @@ set_minorities_game_start = {
 						culture = culture:khmer
 						culture = culture:sambor
 					}
-					FAITH = rite:vaishnava
+					RITE = rite:vaishnavism
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = large
 				}
 			}
@@ -732,10 +732,10 @@ set_minorities_game_start = {
 						culture = culture:khmer
 						culture = culture:sambor
 					}
-					FAITH = rite:shaivism
+					RITE = rite:shaivism
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = large
 				}
 			}
@@ -745,8 +745,8 @@ set_minorities_game_start = {
 					kingdom = title:k_funan
 					culture = culture:khmer
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mahayana
+				add_rite_minority_effect = {
+					RITE = rite:mahayana
 					SIZE = large
 				}
 			}
@@ -757,8 +757,8 @@ set_minorities_game_start = {
 					culture = culture:khmer
 					game_start_date >= 1000.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:theravada_faith
+				add_rite_minority_effect = {
+					RITE = rite:theravada
 					SIZE = small
 				}
 			}
@@ -768,22 +768,22 @@ set_minorities_game_start = {
 			if = {
 				limit = {
 					duchy = title:d_indrapura
-					FAITH = rite:chamic_shaivism
+					RITE = rite:chamic_shaivism
 					game_start_date < 1000.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = large
 				}
 			}
 			if = {
 				limit = {
 					duchy = title:d_indrapura
-					FAITH = rite:chamic_shaivism
+					RITE = rite:chamic_shaivism
 					game_start_date >= 1000.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -794,8 +794,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -805,8 +805,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -815,8 +815,8 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = large
 			}
 		}
@@ -825,16 +825,16 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -843,16 +843,16 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = small
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -861,8 +861,8 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = small
 			}
 		}
@@ -872,20 +872,20 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = small
 			}
 		}
 
 		## Kambuja/Chenla ##
 		title:c_canasha = {
-			add_faith_minority_effect = {
-				FAITH = rite:vaishnava
+			add_rite_minority_effect = {
+				RITE = rite:vaishnavism
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:shaivism
+			add_rite_minority_effect = {
+				RITE = rite:shaivism
 				SIZE = small
 			}
 			#
@@ -893,8 +893,8 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = small
 			}
 		}
@@ -903,8 +903,8 @@ set_minorities_game_start = {
 				CULTURE = culture:wa
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:wa_animism
+			add_rite_minority_effect = {
+				RITE = rite:wa_animism
 				SIZE = small
 			}
 		}
@@ -913,8 +913,8 @@ set_minorities_game_start = {
 				CULTURE = culture:kuy
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kuy_animism
+			add_rite_minority_effect = {
+				RITE = rite:kuy_animism
 				SIZE = small
 			}
 		}
@@ -924,8 +924,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 			if = {
@@ -934,12 +934,12 @@ set_minorities_game_start = {
 					CULTURE = culture:khmer
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = small
 				}
 			}
@@ -949,12 +949,12 @@ set_minorities_game_start = {
 					CULTURE = culture:kuy
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:kuy_animism
+				add_rite_minority_effect = {
+					RITE = rite:kuy_animism
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = small
 				}
 			}
@@ -964,8 +964,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 			if = {
@@ -974,12 +974,12 @@ set_minorities_game_start = {
 					CULTURE = culture:khmer
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = small
 				}
 			}
@@ -989,12 +989,12 @@ set_minorities_game_start = {
 					CULTURE = culture:kuy
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:kuy_animism
+				add_rite_minority_effect = {
+					RITE = rite:kuy_animism
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vaishnava
+				add_rite_minority_effect = {
+					RITE = rite:vaishnavism
 					SIZE = small
 				}
 			}
@@ -1004,8 +1004,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -1015,8 +1015,8 @@ set_minorities_game_start = {
 				CULTURE = culture:mon
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:mahayana
+			add_rite_minority_effect = {
+				RITE = rite:mahayana
 				SIZE = small
 			}
 			#
@@ -1024,12 +1024,12 @@ set_minorities_game_start = {
 				CULTURE = culture:khmer
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:shaivism
+			add_rite_minority_effect = {
+				RITE = rite:shaivism
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vaishnava
+			add_rite_minority_effect = {
+				RITE = rite:vaishnavism
 				SIZE = small
 			}
 		}
@@ -1038,12 +1038,12 @@ set_minorities_game_start = {
 				CULTURE = culture:khmer
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:shaivism
+			add_rite_minority_effect = {
+				RITE = rite:shaivism
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vaishnava
+			add_rite_minority_effect = {
+				RITE = rite:vaishnavism
 				SIZE = small
 			}
 		}
@@ -1056,26 +1056,26 @@ set_minorities_game_start = {
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pearic_pagan
+				add_rite_minority_effect = {
+					RITE = rite:pearic_pagan
 					SIZE = large
 				}
 			}
 		}
 		title:c_dong_si_mahosot = {
-			add_faith_minority_effect = {
-				FAITH = rite:shaivism
+			add_rite_minority_effect = {
+				RITE = rite:shaivism
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:vaishnava
+			add_rite_minority_effect = {
+				RITE = rite:vaishnavism
 				SIZE = small
 			}
 			#
@@ -1083,8 +1083,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -1093,8 +1093,8 @@ set_minorities_game_start = {
 				CULTURE = culture:pearic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:pearic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:pearic_pagan
 				SIZE = small
 			}
 		}
@@ -1103,8 +1103,8 @@ set_minorities_game_start = {
 		#### South East-Asia - Maritime ####
 		# k_samudera
 		title:c_SUM_lambri = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
@@ -1112,8 +1112,8 @@ set_minorities_game_start = {
 					game_start_date >= 1030.1.1
 					game_start_date < 1066.12.31
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -1131,8 +1131,8 @@ set_minorities_game_start = {
 				limit = {
 					game_start_date < 1000.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -1141,7 +1141,7 @@ set_minorities_game_start = {
 					game_start_date >= 1000.1.1
 					game_start_date < 1112.1.1
 				}
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 			if = {
 				limit = {
@@ -1152,15 +1152,15 @@ set_minorities_game_start = {
 					CULTURE = culture:tamil
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
 			}
 		}
 		title:c_SUM_pasai = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
@@ -1172,8 +1172,8 @@ set_minorities_game_start = {
 					CULTURE = culture:tamil
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
 			}
@@ -1188,8 +1188,8 @@ set_minorities_game_start = {
 					CULTURE = culture:tamil
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
 			}
@@ -1205,8 +1205,8 @@ set_minorities_game_start = {
 					CULTURE = culture:tamil
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = small
 				}
 			}
@@ -1221,8 +1221,8 @@ set_minorities_game_start = {
 					CULTURE = culture:tamil
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:shaivism
+				add_rite_minority_effect = {
+					RITE = rite:shaivism
 					SIZE = large
 				}
 			}
@@ -1263,8 +1263,8 @@ set_minorities_game_start = {
 				CULTURE = culture:circassian
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:circassian_pagan
+			add_rite_minority_effect = {
+				RITE = rite:circassian_pagan
 				SIZE = large
 			}
 		}
@@ -1277,8 +1277,8 @@ set_minorities_game_start = {
 				CULTURE = culture:circassian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:circassian_pagan
+			add_rite_minority_effect = {
+				RITE = rite:circassian_pagan
 				SIZE = small
 			}
 		}
@@ -1287,24 +1287,24 @@ set_minorities_game_start = {
 				CULTURE = culture:circassian
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:circassian_pagan
+			add_rite_minority_effect = {
+				RITE = rite:circassian_pagan
 				SIZE = large
 			}
 		}
 
 		# Tmutarakan
 		title:c_tmutarakan = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:radhanite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:orthodox
+			add_rite_minority_effect = {
+				RITE = rite:byzantine_rite
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -1315,8 +1315,8 @@ set_minorities_game_start = {
 				CULTURE = culture:russian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -1400,8 +1400,8 @@ set_minorities_game_start = {
 					CULTURE = culture:sabir
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = large
 				}
 			}
@@ -1411,8 +1411,8 @@ set_minorities_game_start = {
 					CULTURE = culture:khazar
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -1726,25 +1726,35 @@ set_minorities_game_start = {
 setup_indian_christian_minorities = {
 	effect = {
 		title:c_kerala = {
-			promote_faith_minority_effect = { FAITH = rite:nasrani }
+			add_rite_minority_effect = {
+				RITE = rite:nasrani
+				SIZE = small
+			}
 		}
 		title:c_jaffna = {
-			promote_faith_minority_effect = { FAITH = rite:nasrani }
+			add_rite_minority_effect = {
+				RITE = rite:nasrani
+				SIZE = small
+			}
 		}
 		title:c_kotte = {
-			promote_faith_minority_effect = { FAITH = rite:nasrani }
+			add_rite_minority_effect = {
+				RITE = rite:nasrani
+				SIZE = small
+			}
 		}
 		title:c_venadu = {
-			promote_faith_minority_effect = { FAITH = rite:nasrani }
+			add_rite_minority_effect = {
+				RITE = rite:nasrani
+				SIZE = small
+			}
 		}
 		title:c_kanara = {
-			promote_faith_minority_effect = { FAITH = rite:nasrani }
+			add_rite_minority_effect = {
+				RITE = rite:nasrani
+				SIZE = small
+			}
 		}
-		# Also setting up deactivated holy sites here since it's related
-		# rite:nasrani = {
-		# 	deactivate_holy_site = rome_nasrani
-		# 	deactivate_holy_site = constantinople_nasrani
-		# }
 	}
 }
 
@@ -1752,20 +1762,20 @@ setup_MENA_minorities = {
 	effect = {
 		### Egypt ###
 		title:c_cairo = {
-			add_faith_minority_effect = {
-				FAITH = rite:coptic
+			add_rite_minority_effect = {
+				RITE = rite:coptic
 				SIZE = large
 			}
 		}
 
 		### Baghdad/Iraq ###
 		title:c_baghdad = {
-			add_faith_minority_effect = {
-				FAITH = rite:karaism
+			add_rite_minority_effect = {
+				RITE = rite:karaism
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -1778,12 +1788,12 @@ setup_MENA_minorities = {
 			}
 		}
 		title:c_samarra = {
-			add_faith_minority_effect = {
-				FAITH = rite:karaism
+			add_rite_minority_effect = {
+				RITE = rite:karaism
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -1792,8 +1802,8 @@ setup_MENA_minorities = {
 			}
 		}
 		title:c_anbar = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -1802,8 +1812,8 @@ setup_MENA_minorities = {
 			}
 		}
 		title:c_badaraya = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -1812,8 +1822,8 @@ setup_MENA_minorities = {
 			}
 		}
 		title:c_iskaf = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -1822,8 +1832,8 @@ setup_MENA_minorities = {
 			}
 		}
 		title:c_karbala = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -1834,33 +1844,33 @@ setup_MENA_minorities = {
 
 		### Persia ###
 		title:c_ardestan = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		title:c_tustar = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		title:c_hamadan = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
 		title:c_isfahan = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
 		title:c_hamadan = {
 			every_neighboring_county = {
 				save_scope_as = county
-				promote_faith_minority_effect = { FAITH = rite:rabbinism }
+				promote_rite_minority_effect = { RITE = rite:rabbinism }
 			}
 		}
 		#
@@ -1871,11 +1881,11 @@ setup_MENA_minorities = {
 					kingdom = title:k_adurbadagan
 					kingdom = title:k_daylam
 				}
-				county_has_specific_faith_minority = { FAITH = rite:rabbinism }
+				county_has_specific_faith_minority = { RITE = rite:rabbinism }
 			}
 			if = {
 				limit = {
-					county_has_specific_small_faith_minority = { FAITH = rite:rabbinism }
+					county_has_specific_small_faith_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:parsim
@@ -1884,7 +1894,7 @@ setup_MENA_minorities = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority = { FAITH = rite:rabbinism }
+					county_has_specific_large_faith_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:parsim
@@ -1896,8 +1906,8 @@ setup_MENA_minorities = {
 		title:c_yazd = {
 			if = {
 				limit = { game_start_date >= 1060.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:mazdayasna
+				add_rite_minority_effect = {
+					RITE = rite:mazdayasna
 					SIZE = large
 				}
 			}
@@ -1908,8 +1918,8 @@ setup_MENA_minorities = {
 				CULTURE = culture:bukharim
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -1918,8 +1928,8 @@ setup_MENA_minorities = {
 				CULTURE = culture:bukharim
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -1928,8 +1938,8 @@ setup_MENA_minorities = {
 				CULTURE = culture:bukharim
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -1938,28 +1948,28 @@ setup_MENA_minorities = {
 		title:c_baduspan = {
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:afridunism
+				add_rite_minority_effect = {
+					RITE = rite:afridunism
 					SIZE = small
 				}
 			}
 		}
 		title:c_gilan = {
-			add_faith_minority_effect = {
-				FAITH = rite:imami
+			add_rite_minority_effect = {
+				RITE = rite:imami
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = small
 				}
 			}
 		}
 		title:c_talish = {
-			add_faith_minority_effect = {
-				FAITH = rite:imami
+			add_rite_minority_effect = {
+				RITE = rite:imami
 				SIZE = small
 			}
 		}
@@ -1968,8 +1978,8 @@ setup_MENA_minorities = {
 				game_start_date < 1000.1.1
 				duchy = title:d_tabaristan
 			}
-			promote_faith_minority_effect = {
-				FAITH = rite:imami
+			promote_rite_minority_effect = {
+				RITE = rite:imami
 			}
 		}
 
@@ -1977,8 +1987,8 @@ setup_MENA_minorities = {
 		title:c_panjgur = {
 			if = {
 				limit = { game_start_date <= 1130.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -1986,8 +1996,8 @@ setup_MENA_minorities = {
 		title:c_kiz = {
 			if = {
 				limit = { game_start_date <= 1130.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -1998,8 +2008,8 @@ setup_MENA_minorities = {
 					game_start_date >= 930.1.1
 					game_start_date <= 1130.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -2010,8 +2020,8 @@ setup_MENA_minorities = {
 					game_start_date >= 930.1.1
 					game_start_date <= 1130.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:pudgalavada
+				add_rite_minority_effect = {
+					RITE = rite:pudgalavada
 					SIZE = small
 				}
 			}
@@ -2021,8 +2031,8 @@ setup_MENA_minorities = {
 		title:c_harran = {
 			if = {
 				limit = { game_start_date < 1083.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -2031,29 +2041,29 @@ setup_MENA_minorities = {
 					game_start_date < 1170.1.1
 					game_start_date >= 1083.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:harranian_pagan
+				add_rite_minority_effect = {
+					RITE = rite:harranian_pagan
 					SIZE = small
 				}
 			}
 		}
 		#
 		title:c_samosata = {
-			add_faith_minority_effect = {
-				FAITH = rite:urartuism
+			add_rite_minority_effect = {
+				RITE = rite:urartuism
 				SIZE = large
 			}
 		}
 		title:c_marash = {
-			add_faith_minority_effect = {
-				FAITH = rite:urartuism
+			add_rite_minority_effect = {
+				RITE = rite:urartuism
 				SIZE = small
 			}
 		}
 		#
 		title:c_amida = {
-			add_faith_minority_effect = {
-				FAITH = rite:urartuism
+			add_rite_minority_effect = {
+				RITE = rite:urartuism
 				SIZE = small
 			}
 			if = {
@@ -2075,15 +2085,15 @@ setup_MENA_minorities = {
 			}
 			if = {
 				limit = { game_start_date < 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kitebacilweism
+				add_rite_minority_effect = {
+					RITE = rite:kitebacilweism
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:yazidi
+				add_rite_minority_effect = {
+					RITE = rite:yazidi
 					SIZE = large
 				}
 			}
@@ -2093,21 +2103,21 @@ setup_MENA_minorities = {
 				CULTURE = culture:kurdish
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kitebacilweism
+				add_rite_minority_effect = {
+					RITE = rite:kitebacilweism
 					SIZE = small
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:yazidi
+				add_rite_minority_effect = {
+					RITE = rite:yazidi
 					SIZE = large
 				}
 			}
@@ -2115,15 +2125,15 @@ setup_MENA_minorities = {
 		title:c_nasibin = {
 			if = {
 				limit = { game_start_date < 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kitebacilweism
+				add_rite_minority_effect = {
+					RITE = rite:kitebacilweism
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:yazidi
+				add_rite_minority_effect = {
+					RITE = rite:yazidi
 					SIZE = large
 				}
 			}
@@ -2139,15 +2149,15 @@ setup_MENA_minorities = {
 			}
 			if = {
 				limit = { game_start_date < 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kitebacilweism
+				add_rite_minority_effect = {
+					RITE = rite:kitebacilweism
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:yazidi
+				add_rite_minority_effect = {
+					RITE = rite:yazidi
 					SIZE = large
 				}
 			}
@@ -2159,15 +2169,15 @@ setup_MENA_minorities = {
 			}
 			if = {
 				limit = { game_start_date < 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kitebacilweism
+				add_rite_minority_effect = {
+					RITE = rite:kitebacilweism
 					SIZE = small
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1200.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:yazidi
+				add_rite_minority_effect = {
+					RITE = rite:yazidi
 					SIZE = large
 				}
 				promote_culture_minority_effect = {
@@ -2176,8 +2186,8 @@ setup_MENA_minorities = {
 			}
 		}
 		title:c_tall_basma = {
-			add_faith_minority_effect = {
-				FAITH = rite:shamsi_pagan
+			add_rite_minority_effect = {
+				RITE = rite:shamsi_pagan
 				SIZE = small
 			}
 			if = {
@@ -2190,28 +2200,28 @@ setup_MENA_minorities = {
 					CULTURE = culture:levantine
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
 		}
 		title:c_upper_khabur = {
-			add_faith_minority_effect = {
-				FAITH = rite:shamsi_pagan
+			add_rite_minority_effect = {
+				RITE = rite:shamsi_pagan
 				SIZE = large
 			}
 			if = {
 				limit = { game_start_date >= 1086.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
 		}
 		title:c_ushnuya = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = large
 			}
 		}
@@ -2226,8 +2236,8 @@ setup_MENA_minorities = {
 				CULTURE = culture:bavlim
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:samaritan
+			add_rite_minority_effect = {
+				RITE = rite:samaritan
 				SIZE = large
 			}
 		}
@@ -2242,12 +2252,12 @@ setup_MENA_minorities = {
 				CULTURE = culture:bavlim
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:orthodox
+			add_rite_minority_effect = {
+				RITE = rite:byzantine_rite
 				SIZE = large
 			}
 		}
@@ -2262,8 +2272,8 @@ setup_MENA_minorities = {
 				CULTURE = culture:bavlim
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2278,8 +2288,8 @@ setup_MENA_minorities = {
 				CULTURE = culture:bavlim
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2290,67 +2300,67 @@ setup_MENA_minorities = {
 				CULTURE = culture:radhanite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:coptic
+			add_rite_minority_effect = {
+				RITE = rite:coptic
 				SIZE = large
 			}
 		}
 
 		### Yemen ###
 		title:c_taizz = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
 		title:c_sanaa = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
 		title:c_tihamat-al-yamani = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		title:c_zabid = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		title:c_mandab = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		title:c_mahra = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		title:c_dathina = {
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
 		every_county = { # k_yemen
 			limit = {
 				kingdom = title:k_yemen
-				county_has_specific_faith_minority = { FAITH = rite:rabbinism }
+				county_has_specific_faith_minority = { RITE = rite:rabbinism }
 			}
 			if = {
 				limit = {
-					county_has_specific_small_faith_minority = { FAITH = rite:rabbinism }
+					county_has_specific_small_faith_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:teimani
@@ -2359,7 +2369,7 @@ setup_MENA_minorities = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority = { FAITH = rite:rabbinism }
+					county_has_specific_large_faith_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:teimani
@@ -2370,19 +2380,19 @@ setup_MENA_minorities = {
 
 		## Socotra ##
 		title:c_socotra = {
-			promote_faith_minority_effect = {
-				FAITH = rite:shaivism
+			promote_rite_minority_effect = {
+				RITE = rite:shaivism
 			}
 			promote_culture_minority_effect = {
 				CULTURE = culture:gujarati
 			}
-			promote_faith_minority_effect = {
-				FAITH = rite:ibadi
+			promote_rite_minority_effect = {
+				RITE = rite:ibadi
 			}
 			if = {
 				limit = { current_date <= 910.1.1 }
-				promote_faith_minority_effect = {
-					FAITH = rite:ibadi
+				promote_rite_minority_effect = {
+					RITE = rite:ibadi
 				}
 			}
 		}
@@ -2497,12 +2507,12 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:radhanite
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -2539,8 +2549,8 @@ setup_west_euroasia_minorities = {
 					CULTURE = culture:manav
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = small
 				}
 			}
@@ -2551,8 +2561,8 @@ setup_west_euroasia_minorities = {
 		## Basque ##
 		every_county = {
 			limit = { culture = culture:basque }
-			add_faith_minority_effect = {
-				FAITH = rite:basque_pagan
+			add_rite_minority_effect = {
+				RITE = rite:basque_pagan
 				SIZE = small
 			}
 		}
@@ -2563,8 +2573,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2573,8 +2583,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2583,8 +2593,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2593,8 +2603,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2603,8 +2613,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 		}
@@ -2613,8 +2623,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2623,8 +2633,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2633,8 +2643,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2643,8 +2653,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2653,8 +2663,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2663,8 +2673,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2673,8 +2683,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2683,8 +2693,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2693,8 +2703,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2703,8 +2713,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2713,8 +2723,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2723,8 +2733,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2733,8 +2743,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2743,8 +2753,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2753,8 +2763,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2763,8 +2773,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2773,8 +2783,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2783,8 +2793,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2793,8 +2803,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:sephardi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2811,8 +2821,8 @@ setup_west_euroasia_minorities = {
 					CULTURE = culture:andalusian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:muwalladi
+				add_rite_minority_effect = {
+					RITE = rite:muwalladi
 					SIZE = small
 				}
 			}
@@ -2823,8 +2833,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2833,8 +2843,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2956,8 +2966,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2966,8 +2976,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2976,8 +2986,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2986,8 +2996,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -2996,8 +3006,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -3006,8 +3016,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -3016,8 +3026,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -3026,8 +3036,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:ashkenazi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -3039,8 +3049,8 @@ setup_west_euroasia_minorities = {
 				CULTURE = culture:irish
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:insular_celtic
+			add_rite_minority_effect = {
+				RITE = rite:insular_celtic
 				SIZE = large
 			}
 		}
@@ -3057,8 +3067,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3068,8 +3078,8 @@ setup_north_euroasia_minorities = {
 		title:c_serdosk = {
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = large
 				}
 			}
@@ -3081,8 +3091,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:moksha
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:moksha_pagan
+				add_rite_minority_effect = {
+					RITE = rite:moksha_pagan
 					SIZE = large
 				}
 			}
@@ -3092,8 +3102,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:chuvash
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = large
 				}
 			}
@@ -3107,8 +3117,8 @@ setup_north_euroasia_minorities = {
 				CULTURE = culture:radhanite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -3119,8 +3129,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3130,8 +3140,8 @@ setup_north_euroasia_minorities = {
 				CULTURE = culture:radhanite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 		}
@@ -3144,8 +3154,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:vepsian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:finnish_pagan
+				add_rite_minority_effect = {
+					RITE = rite:finnish_pagan
 					SIZE = small
 				}
 			}
@@ -3160,8 +3170,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:meshchera
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:erzya_pagan
+				add_rite_minority_effect = {
+					RITE = rite:erzya_pagan
 					SIZE = large
 				}
 			}
@@ -3173,8 +3183,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = large
 				}
 			}
@@ -3184,8 +3194,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:merya
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mari_pagan
+				add_rite_minority_effect = {
+					RITE = rite:mari_pagan
 					SIZE = small
 				}
 			}
@@ -3197,8 +3207,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:merya
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mari_pagan
+				add_rite_minority_effect = {
+					RITE = rite:mari_pagan
 					SIZE = small
 				}
 			}
@@ -3210,8 +3220,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = large
 				}
 			}
@@ -3221,8 +3231,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:merya
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mari_pagan
+				add_rite_minority_effect = {
+					RITE = rite:mari_pagan
 					SIZE = small
 				}
 			}
@@ -3234,8 +3244,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:merya
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mari_pagan
+				add_rite_minority_effect = {
+					RITE = rite:mari_pagan
 					SIZE = small
 				}
 			}
@@ -3248,8 +3258,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3261,8 +3271,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3274,8 +3284,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:meshchera
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:erzya_pagan
+				add_rite_minority_effect = {
+					RITE = rite:erzya_pagan
 					SIZE = large
 				}
 			}
@@ -3287,8 +3297,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:meshchera
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:erzya_pagan
+				add_rite_minority_effect = {
+					RITE = rite:erzya_pagan
 					SIZE = large
 				}
 			}
@@ -3301,8 +3311,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = large
 				}
 			}
@@ -3312,8 +3322,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:muroma
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:erzya_pagan
+				add_rite_minority_effect = {
+					RITE = rite:erzya_pagan
 					SIZE = large
 				}
 			}
@@ -3325,8 +3335,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:muroma
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:erzya_pagan
+				add_rite_minority_effect = {
+					RITE = rite:erzya_pagan
 					SIZE = large
 				}
 			}
@@ -3339,8 +3349,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3352,8 +3362,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3365,8 +3375,8 @@ setup_north_euroasia_minorities = {
 					CULTURE = culture:russian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -3392,8 +3402,8 @@ setup_central_euroasia_minorities = {
 		title:c_chah = {
 			if = {
 				limit = { game_start_date < 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = small
 				}
 			}
@@ -3402,8 +3412,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
@@ -3412,8 +3422,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3425,8 +3435,8 @@ setup_central_euroasia_minorities = {
 		title:c_otrar = {
 			if = {
 				limit = { game_start_date < 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = small
 				}
 			}
@@ -3435,8 +3445,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
@@ -3445,8 +3455,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3461,8 +3471,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
@@ -3473,8 +3483,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
@@ -3487,8 +3497,8 @@ setup_central_euroasia_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 960.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = large
 				}
 			}
@@ -3508,16 +3518,16 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:karluk
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:manichaean_faith
+				add_rite_minority_effect = {
+					RITE = rite:manichean
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vajrayana
+				add_rite_minority_effect = {
+					RITE = rite:vajrayana
 					SIZE = small
 				}
 			}
@@ -3529,8 +3539,8 @@ setup_central_euroasia_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 960.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = large
 				}
 			}
@@ -3550,16 +3560,16 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:karluk
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:manichaean_faith
+				add_rite_minority_effect = {
+					RITE = rite:manichean
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vajrayana
+				add_rite_minority_effect = {
+					RITE = rite:vajrayana
 					SIZE = small
 				}
 			}
@@ -3569,8 +3579,8 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:qitai
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mahayana
+				add_rite_minority_effect = {
+					RITE = rite:mahayana
 					SIZE = small
 				}
 			}
@@ -3584,8 +3594,8 @@ setup_central_euroasia_minorities = {
 				CULTURE = culture:radhanite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 			if = {
@@ -3593,8 +3603,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -3602,8 +3612,8 @@ setup_central_euroasia_minorities = {
 				limit = {
 					game_start_date >= 960.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = large
 				}
 			}
@@ -3623,16 +3633,16 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:karluk
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:manichaean_faith
+				add_rite_minority_effect = {
+					RITE = rite:manichean
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vajrayana
+				add_rite_minority_effect = {
+					RITE = rite:vajrayana
 					SIZE = small
 				}
 			}
@@ -3642,8 +3652,8 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:qitai
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:mahayana
+				add_rite_minority_effect = {
+					RITE = rite:mahayana
 					SIZE = small
 				}
 			}
@@ -3656,8 +3666,8 @@ setup_central_euroasia_minorities = {
 				CULTURE = culture:bukharim
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
 			if = {
@@ -3665,8 +3675,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3679,8 +3689,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3695,8 +3705,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3709,8 +3719,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3725,8 +3735,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3739,8 +3749,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3755,8 +3765,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3769,8 +3779,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3784,12 +3794,12 @@ setup_central_euroasia_minorities = {
 				CULTURE = culture:bukharim
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nestorian
+			add_rite_minority_effect = {
+				RITE = rite:nestorian
 				SIZE = large
 			}
 			if = {
@@ -3797,8 +3807,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 900.1.1
 					game_start_date < 990.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -3811,8 +3821,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 990.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3832,8 +3842,8 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:sogdian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 			}
@@ -3855,8 +3865,8 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:sogdian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 			}
@@ -3875,8 +3885,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3898,8 +3908,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3921,8 +3931,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3944,8 +3954,8 @@ setup_central_euroasia_minorities = {
 					game_start_date >= 960.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -3971,8 +3981,8 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:sogdian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
 			}
@@ -3993,8 +4003,8 @@ setup_central_euroasia_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 960.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nestorian
+				add_rite_minority_effect = {
+					RITE = rite:nestorian
 					SIZE = large
 				}
 			}
@@ -4010,16 +4020,16 @@ setup_central_euroasia_minorities = {
 			}
 			if = {
 				limit = { game_start_date < 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:khurmazta
+				add_rite_minority_effect = {
+					RITE = rite:khurmazta
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:manichaean_faith
+				add_rite_minority_effect = {
+					RITE = rite:manichean
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:vajrayana
+				add_rite_minority_effect = {
+					RITE = rite:vajrayana
 					SIZE = small
 				}
 			}
@@ -4029,8 +4039,8 @@ setup_central_euroasia_minorities = {
 					CULTURE = culture:karluk
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:hanafi
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = large
 				}
 			}
@@ -4043,8 +4053,8 @@ setup_tondrakian_minorities = {
 		title:c_tosp = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:armenian_apostolic
+				add_rite_minority_effect = {
+					RITE = rite:armenian_rite
 					SIZE = large
 				}
 			}
@@ -4053,8 +4063,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4062,8 +4072,8 @@ setup_tondrakian_minorities = {
 		title:c_aberani = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:armenian_apostolic
+				add_rite_minority_effect = {
+					RITE = rite:armenian_rite
 					SIZE = large
 				}
 			}
@@ -4072,8 +4082,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4081,8 +4091,8 @@ setup_tondrakian_minorities = {
 		title:c_kajberunik = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
@@ -4091,8 +4101,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4100,8 +4110,8 @@ setup_tondrakian_minorities = {
 		title:c_rshtunik = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
@@ -4110,8 +4120,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4119,8 +4129,8 @@ setup_tondrakian_minorities = {
 		title:c_apahunik = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
@@ -4128,8 +4138,8 @@ setup_tondrakian_minorities = {
 		title:c_tsaghkotn = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
@@ -4137,8 +4147,8 @@ setup_tondrakian_minorities = {
 		title:c_chaldoran = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
@@ -4146,8 +4156,8 @@ setup_tondrakian_minorities = {
 		title:c_aghbek = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4155,8 +4165,8 @@ setup_tondrakian_minorities = {
 		title:c_artaz = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4164,8 +4174,8 @@ setup_tondrakian_minorities = {
 		title:c_bznunik = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4173,8 +4183,8 @@ setup_tondrakian_minorities = {
 		title:c_sghkunik = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4182,8 +4192,8 @@ setup_tondrakian_minorities = {
 		title:c_varaznunik = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4191,8 +4201,8 @@ setup_tondrakian_minorities = {
 		title:c_bagrewand = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4200,8 +4210,8 @@ setup_tondrakian_minorities = {
 		title:c_eriduakhi = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4209,8 +4219,8 @@ setup_tondrakian_minorities = {
 		title:c_nakhichevan = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4218,8 +4228,8 @@ setup_tondrakian_minorities = {
 		title:c_vayotsdzor = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4227,8 +4237,8 @@ setup_tondrakian_minorities = {
 		title:c_goghtn = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4236,8 +4246,8 @@ setup_tondrakian_minorities = {
 		title:c_sisakan = {
 			if = {
 				limit = { game_start_date < 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4245,8 +4255,8 @@ setup_tondrakian_minorities = {
 		title:c_dvin = {
 			if = {
 				limit = { game_start_date < 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4258,8 +4268,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4270,8 +4280,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4284,53 +4294,53 @@ setup_tondrakian_minorities = {
 					CULTURE = culture:armenian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
 				demote_faith_minority_effect = {
-					FAITH = rite:tondrakian
+					RITE = rite:tondrakian
 				}
 			}
 		}
 		title:c_aintab = {
 			if = {
 				limit = { game_start_date >= 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = large
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
 				demote_faith_minority_effect = {
-					FAITH = rite:tondrakian
+					RITE = rite:tondrakian
 				}
 			}
 		}
 		title:c_tall_hamid = {
 			if = {
 				limit = { game_start_date >= 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
 				demote_faith_minority_effect = {
-					FAITH = rite:tondrakian
+					RITE = rite:tondrakian
 				}
 			}
 		}
 		title:c_alexandretta = {
 			if = {
 				limit = { game_start_date >= 968.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4341,8 +4351,8 @@ setup_tondrakian_minorities = {
 					game_start_date >= 968.1.1
 					game_start_date < 1100.1.1
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tondrakian
+				add_rite_minority_effect = {
+					RITE = rite:tondrakian
 					SIZE = small
 				}
 			}
@@ -4359,8 +4369,8 @@ setup_caucasus_south_minorities = {
 		### Abkhazia + Iberia + Kakheti [Georgia]
 		## Abkhazia ##
 		title:c_apsny = {
-			add_faith_minority_effect = {
-				FAITH = rite:apsuara
+			add_rite_minority_effect = {
+				RITE = rite:apsuara
 				SIZE = small
 			}
 		}
@@ -4375,8 +4385,8 @@ setup_caucasus_south_minorities = {
  					CULTURE = culture:greek
  					SIZE = small
  				}
- 				add_faith_minority_effect = {
- 					FAITH = rite:orthodox
+ 				add_rite_minority_effect = {
+ 					RITE = rite:byzantine_rite
  					SIZE = small
  				}
 			}
@@ -4386,8 +4396,8 @@ setup_caucasus_south_minorities = {
 		title:c_takveri = {
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kartvel_pagan
+				add_rite_minority_effect = {
+					RITE = rite:kartvel_pagan
 					SIZE = small
 				}
 			}
@@ -4399,16 +4409,16 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:abkhaz
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = small
 			}
 		}
 		title:c_odishi = {
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kartvel_pagan
+				add_rite_minority_effect = {
+					RITE = rite:kartvel_pagan
 					SIZE = small
 				}
 			}
@@ -4416,35 +4426,35 @@ setup_caucasus_south_minorities = {
 
 		## Svanetia ##
 		title:c_zemo_svaneti = {
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = small
 			}
 		}
 		title:c_misimianeti = {
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = small
 			}
 		}
 		title:c_kvemo_svaneti = {
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = small
 			}
 		}
 
 		## Iberia ##
 		title:c_tbilisi = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
 		#
 		title:c_dvaleti = {
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = large
 			}
 		}
@@ -4454,8 +4464,8 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:armenian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 		}
@@ -4464,8 +4474,8 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:armenian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 		}
@@ -4474,8 +4484,8 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:georgian
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:georgian_orthodox
+			add_rite_minority_effect = {
+				RITE = rite:georgian_orthodox
 				SIZE = large
 			}
 		}
@@ -4484,8 +4494,8 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:armenian
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = large
 			}
 		}
@@ -4494,8 +4504,8 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:armenian
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = large
 			}
 		}
@@ -4504,8 +4514,8 @@ setup_caucasus_south_minorities = {
 		title:c_gaghmamkhari = {
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kartvel_pagan
+				add_rite_minority_effect = {
+					RITE = rite:kartvel_pagan
 					SIZE = small
 				}
 			}
@@ -4517,8 +4527,8 @@ setup_caucasus_south_minorities = {
 					CULTURE = culture:georgian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:armenian_apostolic
+				add_rite_minority_effect = {
+					RITE = rite:armenian_rite
 					SIZE = small
 				}
 			}
@@ -4534,8 +4544,8 @@ setup_caucasus_south_minorities = {
 					CULTURE = culture:georgian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:georgian_orthodox
+				add_rite_minority_effect = {
+					RITE = rite:georgian_orthodox
 					SIZE = small
 				}
 			}
@@ -4547,8 +4557,8 @@ setup_caucasus_south_minorities = {
 					CULTURE = culture:georgian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:armenian_apostolic
+				add_rite_minority_effect = {
+					RITE = rite:armenian_rite
 					SIZE = large
 				}
 			}
@@ -4556,8 +4566,8 @@ setup_caucasus_south_minorities = {
 		title:c_pkhoeti = {
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kartvel_pagan
+				add_rite_minority_effect = {
+					RITE = rite:kartvel_pagan
 					SIZE = small
 				}
 			}
@@ -4565,8 +4575,8 @@ setup_caucasus_south_minorities = {
 		title:c_tianeti = {
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kartvel_pagan
+				add_rite_minority_effect = {
+					RITE = rite:kartvel_pagan
 					SIZE = small
 				}
 			}
@@ -4574,14 +4584,14 @@ setup_caucasus_south_minorities = {
 
 		## Lazetia ##
 		title:c_rizini = {
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = small
 			}
 		}
 		title:c_byzeria = {
-			add_faith_minority_effect = {
-				FAITH = rite:kartvel_pagan
+			add_rite_minority_effect = {
+				RITE = rite:kartvel_pagan
 				SIZE = small
 			}
 		}
@@ -4591,14 +4601,14 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:armenian
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:orthodox
+			add_rite_minority_effect = {
+				RITE = rite:byzantine_rite
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kartvel_pagan
+				add_rite_minority_effect = {
+					RITE = rite:kartvel_pagan
 					SIZE = small
 				}
 			}
@@ -4610,19 +4620,19 @@ setup_caucasus_south_minorities = {
 		title:c_hayk = {
 			if = {
 				limit = { game_start_date >= 1064.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_shirak = {
 			if = {
 				limit = { game_start_date >= 1064.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		#
 		title:c_dvin = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -4633,8 +4643,8 @@ setup_caucasus_south_minorities = {
 
 		## Syunik ##
 		title:c_nakhichevan = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -4647,8 +4657,8 @@ setup_caucasus_south_minorities = {
 			}
 		}
 		title:c_goghtn = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
@@ -4658,19 +4668,19 @@ setup_caucasus_south_minorities = {
 		title:c_aberani = {
 			if = {
 				limit = { game_start_date >= 1071.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_rshtunik = {
 			if = {
 				limit = { game_start_date >= 1071.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_tosp = {
 			if = {
 				limit = { game_start_date >= 1071.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		# d_shavarshan
@@ -4689,8 +4699,8 @@ setup_caucasus_south_minorities = {
 		# d_turuberan
 		title:c_apahunik = {
 			# Muslims only after 600 AD but does not matter for game start date purposes
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
@@ -4698,32 +4708,32 @@ setup_caucasus_south_minorities = {
 					game_start_date >= 1050.1.1
 					game_start_date < 1071.1.1
 				}
-				demote_faith_minority_effect = { FAITH = rite:ashari }
+				demote_faith_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_bagrewand = {
 			if = {
 				limit = { game_start_date >= 1071.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_bznunik = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = large
 			}
 		}
 		title:c_kajberunik = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
 		# d_taron
 		title:c_varaznunik = {
 			# Muslims only after 600 AD but does not matter for game start date purposes
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
@@ -4731,33 +4741,33 @@ setup_caucasus_south_minorities = {
 					game_start_date >= 1050.1.1
 					game_start_date < 1071.1.1
 				}
-				demote_faith_minority_effect = { FAITH = rite:ashari }
+				demote_faith_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		# d_bagrevand
 		title:c_tsaghkotn = {
 			if = {
 				limit = { game_start_date >= 1071.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		# d_kars
 		title:c_vanand = {
 			if = {
 				limit = { game_start_date >= 1071.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		# d_mesopotamia
 		title:c_hashtyank = {
 			if = {
 				limit = { game_start_date < 934.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:paulician
+				add_rite_minority_effect = {
+					RITE = rite:paulician
 					SIZE = small
 				}
 			}
@@ -4765,12 +4775,12 @@ setup_caucasus_south_minorities = {
 		title:c_melitene = {
 			if = {
 				limit = { game_start_date < 934.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:paulician
+				add_rite_minority_effect = {
+					RITE = rite:paulician
 					SIZE = small
 				}
 			}
@@ -4778,12 +4788,12 @@ setup_caucasus_south_minorities = {
 		title:c_mesopotamia = {
 			if = {
 				limit = { game_start_date < 934.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:paulician
+				add_rite_minority_effect = {
+					RITE = rite:paulician
 					SIZE = small
 				}
 			}
@@ -4792,8 +4802,8 @@ setup_caucasus_south_minorities = {
 		title:c_derzene = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:paulician
+				add_rite_minority_effect = {
+					RITE = rite:paulician
 					SIZE = small
 				}
 			}
@@ -4801,8 +4811,8 @@ setup_caucasus_south_minorities = {
 		title:c_theodosiopolis = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -4811,8 +4821,8 @@ setup_caucasus_south_minorities = {
 		title:c_ablastha = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:paulician
+				add_rite_minority_effect = {
+					RITE = rite:paulician
 					SIZE = small
 				}
 			}
@@ -4822,53 +4832,53 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:kurdish
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 		}
 		title:c_satala = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:paulician
+				add_rite_minority_effect = {
+					RITE = rite:paulician
 					SIZE = small
 				}
 			}
 		}
 		title:c_urmiya = {
 			# to represent Armenian influence
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date >= 1050.1.1 }
-				demote_faith_minority_effect = { FAITH = rite:armenian_apostolic }
+				demote_faith_minority_effect = { RITE = rite:armenian_rite }
 			}
 		}
 
 		## Shirvan and Arran ##
 		# d_shirvan
 		title:c_baku = {
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:barhailism
+				add_rite_minority_effect = {
+					RITE = rite:barhailism
 					SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_maskut = {
@@ -4876,22 +4886,22 @@ setup_caucasus_south_minorities = {
 				CULTURE = culture:lezgic
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:barhailism
+			add_rite_minority_effect = {
+				RITE = rite:barhailism
 				SIZE = small
 			}
 		}
 		title:c_shirvan = {
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 		}
@@ -4899,8 +4909,8 @@ setup_caucasus_south_minorities = {
 		title:c_kaladasht = {
 			if = {
 				limit = { game_start_date >= 960.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:armenian_apostolic
+				add_rite_minority_effect = {
+					RITE = rite:armenian_rite
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -4910,8 +4920,8 @@ setup_caucasus_south_minorities = {
 			}
 		}
 		title:c_layzan = {
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 		}
@@ -4919,8 +4929,8 @@ setup_caucasus_south_minorities = {
 		title:c_ganja = {
 			if = {
 				limit = { game_start_date >= 960.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:armenian_apostolic
+				add_rite_minority_effect = {
+					RITE = rite:armenian_rite
 					SIZE = small
 				}
 				add_culture_minority_effect = {
@@ -4930,8 +4940,8 @@ setup_caucasus_south_minorities = {
 			}
 		}
 		title:c_baylakan = {
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 			if = {
@@ -4954,22 +4964,22 @@ setup_caucasus_northeast_minorities = {
 				CULTURE = culture:nakh
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nakh_pagan
+			add_rite_minority_effect = {
+				RITE = rite:nakh_pagan
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kabarism
+				add_rite_minority_effect = {
+					RITE = rite:kabarism
 					SIZE = small
 				}
 			}
@@ -4977,23 +4987,23 @@ setup_caucasus_northeast_minorities = {
 		title:c_sambalut = {
 			if = {
 				limit = { game_start_date > 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
 		}
 		title:c_tarki = {
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:lak_pagan
+			add_rite_minority_effect = {
+				RITE = rite:lak_pagan
 				SIZE = large
 			}
 			add_culture_minority_effect = {
@@ -5006,18 +5016,18 @@ setup_caucasus_northeast_minorities = {
 			}
 		}
 		title:c_terki = {
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:kabarism
+				add_rite_minority_effect = {
+					RITE = rite:kabarism
 					SIZE = large
 				}
 				add_culture_minority_effect = {
@@ -5031,179 +5041,179 @@ setup_caucasus_northeast_minorities = {
 		## Sarir - North-West of Derbent
 		# d_khundzeti
 		title:c_andalal = {
-			add_faith_minority_effect = {
-				FAITH = rite:lezgic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:lezgic_pagan
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+				add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 					SIZE = small
 				}
 			}
 		}
 		title:c_andia = {
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nakh_pagan
+			add_rite_minority_effect = {
+				RITE = rite:nakh_pagan
 				SIZE = small
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:nakh
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
 		title:c_elni = {
-			add_faith_minority_effect = {
-				FAITH = rite:avar_pagan
+			add_rite_minority_effect = {
+				RITE = rite:avar_pagan
 				SIZE = small
 			}
 		}
 		title:c_khunzaq = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nasraniyab
+				add_rite_minority_effect = {
+					RITE = rite:nasraniyab
 					SIZE = large
 				}
 			}
 			if = {
 				limit = { game_start_date >= 900.1.1 }
-				add_faith_minority_effect = {
-				FAITH = rite:avar_pagan
+				add_rite_minority_effect = {
+				RITE = rite:avar_pagan
 					SIZE = large
 				}
 			}
 		}
 		title:c_kakhib = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date < 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nasraniyab
+				add_rite_minority_effect = {
+					RITE = rite:nasraniyab
 					SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-				FAITH = rite:avar_pagan
+				add_rite_minority_effect = {
+				RITE = rite:avar_pagan
 					SIZE = large
 				}
 			}
 		}
 		# d_didoeti
 		title:c_didoya = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 		}
 		title:c_tavlinia = {
-			add_faith_minority_effect = {
-				FAITH = rite:avar_pagan
+			add_rite_minority_effect = {
+				RITE = rite:avar_pagan
 				SIZE = large
 			}
 		}
 		title:c_tindia = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 		}
 		# d_kaitag & d_kumukh
 		title:c_agul = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 		}
 		title:c_gazi-kumukh = {
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 		}
 		title:c_dargia = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 		}
 		title:c_kara-kaitag = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 		}
 		# d_tsuketi
 		title:c_vanavats = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:lezgic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:lezgic_pagan
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:nasraniyab }
+				promote_rite_minority_effect = { RITE = rite:nasraniyab }
 			}
 		}
 		title:c_mykhia = {
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:lezgic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:lezgic_pagan
 				SIZE = small
 			}
 		}
@@ -5212,8 +5222,8 @@ setup_caucasus_northeast_minorities = {
 		## Sarir - Derbent and South
 		# d_derbent
 		title:c_derbent = {
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -5240,8 +5250,8 @@ setup_caucasus_northeast_minorities = {
 				CULTURE = culture:avaric
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -5250,7 +5260,7 @@ setup_caucasus_northeast_minorities = {
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:urartuism }
+				promote_rite_minority_effect = { RITE = rite:urartuism }
 			}
 		}
 		# d_shavaran
@@ -5259,30 +5269,30 @@ setup_caucasus_northeast_minorities = {
 				CULTURE = culture:shahdagh
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:lezgic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:lezgic_pagan
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_shahdagh = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:lezgic_pagan
+			add_rite_minority_effect = {
+				RITE = rite:lezgic_pagan
 				SIZE = large
 			}
 		}
@@ -5294,39 +5304,39 @@ setup_caucasus_northeast_minorities = {
 				}
 			}
 			title:c_shavaran = {
-			add_faith_minority_effect = {
-				FAITH = rite:armenian_apostolic
+			add_rite_minority_effect = {
+				RITE = rite:armenian_rite
 				SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
-				promote_faith_minority_effect = { FAITH = rite:lezgic_pagan }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
+				promote_rite_minority_effect = { RITE = rite:lezgic_pagan }
 			}
 		}
 		# d_lezgia
 		title:c_akhty = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 		}
 		title:c_lezgia = {
-			add_faith_minority_effect = {
-				FAITH = rite:ashari
+			add_rite_minority_effect = {
+				RITE = rite:hanafi
 				SIZE = small
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:levantine
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 			if = {
@@ -5338,20 +5348,20 @@ setup_caucasus_northeast_minorities = {
 			}
 		}
 		title:c_tabasaran = {
-			add_faith_minority_effect = {
-				FAITH = rite:nasraniyab
+			add_rite_minority_effect = {
+				RITE = rite:nasraniyab
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date >= 950.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:lezgic_pagan
+				add_rite_minority_effect = {
+					RITE = rite:lezgic_pagan
 					SIZE = large
 				}
 			}
 			if = {
 				limit = { game_start_date < 950.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 
@@ -5360,14 +5370,14 @@ setup_caucasus_northeast_minorities = {
 		title:c_dzurdzukia = {
 			if = {
 				limit = { game_start_date >= 1050.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:nakh_pagan
+				add_rite_minority_effect = {
+					RITE = rite:nakh_pagan
 					SIZE = large
 				}
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				promote_faith_minority_effect = { FAITH = rite:ashari }
+				promote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 	}
@@ -5381,16 +5391,16 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:circassian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:circassian_pagan
+			add_rite_minority_effect = {
+				RITE = rite:circassian_pagan
 				SIZE = small
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:paranakh
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:nakh_pagan
+			add_rite_minority_effect = {
+				RITE = rite:nakh_pagan
 				SIZE = small
 			}
 		}
@@ -5401,8 +5411,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:alan
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:alan_pagan
+				add_rite_minority_effect = {
+					RITE = rite:alan_pagan
 					SIZE = small
 				}
 			}
@@ -5414,8 +5424,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:paranakh
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:nakh_pagan
+				add_rite_minority_effect = {
+					RITE = rite:nakh_pagan
 					SIZE = small
 				}
 			}
@@ -5427,8 +5437,8 @@ setup_caucasus_northwest_minorities = {
  					CULTURE = culture:alan
  					SIZE = large
  				}
- 				add_faith_minority_effect = {
- 					FAITH = rite:mtielta
+ 				add_rite_minority_effect = {
+ 					RITE = rite:mtielta
  					SIZE = large
  				}
 			}
@@ -5438,8 +5448,8 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:alan
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:alan_pagan
+			add_rite_minority_effect = {
+				RITE = rite:alan_pagan
 				SIZE = large
 			}
 			if = {
@@ -5448,8 +5458,8 @@ setup_caucasus_northwest_minorities = {
  					CULTURE = culture:abasgi
  					SIZE = small
  				}
- 				add_faith_minority_effect = {
- 					FAITH = rite:apsuara
+ 				add_rite_minority_effect = {
+ 					RITE = rite:apsuara
  					SIZE = small
  				}
 			}
@@ -5461,8 +5471,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:alan
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:alan_pagan
+				add_rite_minority_effect = {
+					RITE = rite:alan_pagan
 					SIZE = small
 				}
 			}
@@ -5472,8 +5482,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:paranakh
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:nakh_pagan
+				add_rite_minority_effect = {
+					RITE = rite:nakh_pagan
 					SIZE = large
 				}
 			}
@@ -5481,8 +5491,8 @@ setup_caucasus_northwest_minorities = {
 		title:c_maghas = {
 			if = {
 				limit = { game_start_date <= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:urartuism
+				add_rite_minority_effect = {
+					RITE = rite:urartuism
 					SIZE = small
 				}
 			}
@@ -5530,8 +5540,8 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:ubykh
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:circassian_christianity
+			add_rite_minority_effect = {
+				RITE = rite:circassian_christianity
 				SIZE = small
 			}
 			if = {
@@ -5540,8 +5550,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:greek
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
@@ -5564,15 +5574,15 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:greek
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:orthodox
+				add_rite_minority_effect = {
+					RITE = rite:byzantine_rite
 					SIZE = small
 				}
 			}
 			if = {
 				limit = { game_start_date >= 900.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:circassian_christianity
+				add_rite_minority_effect = {
+					RITE = rite:circassian_christianity
 					SIZE = small
 				}
 			}
@@ -5582,16 +5592,16 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:circassian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:orthodox
+			add_rite_minority_effect = {
+				RITE = rite:byzantine_rite
 				SIZE = small
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:greek
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:rabbinism
+			add_rite_minority_effect = {
+				RITE = rite:rabbinism
 				SIZE = small
 			}
 			add_culture_minority_effect = {
@@ -5604,8 +5614,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:persian
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -5620,8 +5630,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:alan
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:alan_pagan
+				add_rite_minority_effect = {
+					RITE = rite:alan_pagan
 					SIZE = small
 				}
 			}
@@ -5637,16 +5647,16 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:alan
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:alan_pagan
+			add_rite_minority_effect = {
+				RITE = rite:alan_pagan
 				SIZE = large
 			}
 			add_culture_minority_effect = {
 				CULTURE = culture:circassian
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:circassian_pagan
+			add_rite_minority_effect = {
+				RITE = rite:circassian_pagan
 				SIZE = small
 			}
 		}
@@ -5657,8 +5667,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:bolghar
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = small
 				}
 			}
@@ -5671,8 +5681,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:cuman
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = large
 				}
 			}
@@ -5682,8 +5692,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:circassian
 					SIZE = large
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:circassian_pagan
+				add_rite_minority_effect = {
+					RITE = rite:circassian_pagan
 					SIZE = large
 				}
 			}
@@ -5693,21 +5703,21 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:alan
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:alan_pagan
+			add_rite_minority_effect = {
+				RITE = rite:alan_pagan
 				SIZE = small
 			}
 			if = {
 				limit = { game_start_date >= 1000.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
 		}
 		title:c_temir = {
-			add_faith_minority_effect = {
-				FAITH = rite:tengri_pagan
+			add_rite_minority_effect = {
+				RITE = rite:tengri_pagan
 				SIZE = small
 			}
 			if = {
@@ -5723,8 +5733,8 @@ setup_caucasus_northwest_minorities = {
 					CULTURE = culture:cuman
 					SIZE = small
 				}
-				add_faith_minority_effect = {
-					FAITH = rite:tengri_pagan
+				add_rite_minority_effect = {
+					RITE = rite:tengri_pagan
 					SIZE = small
 				}
 			}
@@ -5734,14 +5744,14 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:alan
 				SIZE = large
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:alan_pagan
+			add_rite_minority_effect = {
+				RITE = rite:alan_pagan
 				SIZE = large
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				add_faith_minority_effect = {
-					FAITH = rite:ashari
+				add_rite_minority_effect = {
+					RITE = rite:hanafi
 					SIZE = small
 				}
 			}
@@ -5751,12 +5761,12 @@ setup_caucasus_northwest_minorities = {
 				CULTURE = culture:alan
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:alan_pagan
+			add_rite_minority_effect = {
+				RITE = rite:alan_pagan
 				SIZE = small
 			}
-			add_faith_minority_effect = {
-				FAITH = rite:tengri_pagan
+			add_rite_minority_effect = {
+				RITE = rite:tengri_pagan
 				SIZE = small
 			}
 			if = {
@@ -5776,111 +5786,3 @@ setup_caucasus_northwest_minorities = {
 		}
 	}
 }
-
-setup_RICE_minorities = {
-	trigger = {
-		has_global_variable = is_RICE_loaded_global_variable
-	}
-	effect = {
-		# Iceland
-		every_county = {
-			limit = {
-				duchy = title:d_iceland
-				game_start_date >= 850.1.1
-				game_start_date <= 930.1.1
-			}
-			add_culture_minority_effect = {
-				CULTURE = culture:irish
-				SIZE = large
-			}
-			add_faith_minority_effect = {
-				FAITH = rite:insular_celtic
-				SIZE = large
-			}
-		}
-
-		# Socotra
-		title:c_socotra = {
-			promote_faith_minority_effect = { FAITH = rite:shona_pagan }
-			promote_culture_minority_effect = { CULTURE = culture:sindhi }
-			promote_culture_minority_effect = { CULTURE = culture:shona }
-			promote_culture_minority_effect = { CULTURE = culture:swahili }
-		}
-
-		# Yemen
-		# Himyarite minority setup to be reworked
-
-		# Horn of Africa
-		title:c_burji = {
-			add_culture_minority_effect = {
-				CULTURE = culture:aari
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = rite:south_omotic_pagan
-				SIZE = small
-			}
-		}
-		title:c_gamo = {
-			add_culture_minority_effect = {
-				CULTURE = culture:aari
-				SIZE = small
-			}
-			add_faith_minority_effect = {
-				FAITH = rite:south_omotic_pagan
-				SIZE = small
-			}
-		}
-
-		# Sicily
-		# gonna just rip off India's religious diversity schtick for RICE Sicily's faiths and cultures
-		every_county = {
-			limit = { title_province = { geographical_region = custom_sicily } }
-			every_neighboring_county = {
-				if = {
-					limit = { NOT = { FAITH = PREV.rite } }
-					FAITH = { save_scope_as = rite }
-					PREV = {
-						add_faith_minority_effect = {
-							FAITH = scope:rite
-							SIZE = small
-						}
-					}
-				}
-				if = {
-					limit = { NOT = { culture = PREV.culture } }
-					culture = { save_scope_as = culture }
-					PREV = {
-						add_culture_minority_effect = {
-							CULTURE = scope:culture
-							SIZE = small
-						}
-					}
-				}
-			}
-			if = {
-				limit = { NOT = { FAITH = holder.rite } }
-				add_faith_minority_effect = {
-					FAITH = holder.rite
-					SIZE = small
-				}
-			}
-			if = {
-				limit = { NOT = { culture = holder.culture } }
-				add_culture_minority_effect = {
-					CULTURE = holder.culture
-					SIZE = small
-				}
-			}
-		}
-	}
-}
-
-# initial_spawn_minority_courtiers = {
-# 	effect = {
-# 		every_ruler = {
-# 			limit = { is_landed = yes highest_held_title_tier >= tier_county }
-# 			trigger_event = { on_action = spawn_minority_characters }
-# 		}
-# 	}
-# }

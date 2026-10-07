@@ -2060,7 +2060,7 @@ south_asia.0044 = {
 	}
 
 	after = {
-		faith:nasrani.religious_head = {
+		rite:nasrani.faith.religious_head ?= {
 			add_opinion = {
 				target = ROOT
 				modifier = pious_opinion

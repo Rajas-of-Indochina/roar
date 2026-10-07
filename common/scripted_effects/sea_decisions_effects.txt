@@ -566,18 +566,62 @@ unsettle_nomadic_realm_effect = {
 }
 
 reform_indo_hellenism_effect = {
-	faith:indo_hellenism = {
+	faith:hellenic_pagan = {
 		#Remove conversion block
-		remove_variable = block_conversion_till_decision_taken
+		# remove_variable = block_conversion_till_decision_taken
 		# And you are organizing this faith
-		set_variable = { name = has_been_reformed }
-		remove_doctrine = unreformed_faith_doctrine
+		if = {
+			limit = { has_doctrine = unreformed_faith_doctrine }
+			remove_doctrine = unreformed_faith_doctrine
+			set_variable = { name = has_been_reformed }
+			rite:indo_hellenism = { set_main_rite = yes }
+			ROOT = {
+				if = {
+					limit = {
+						NOT = { has_character_flag = reformer_legend }
+						has_dlc_feature = legends
+						NOT = { has_game_rule = historical_legends_only }
+					}
+					add_character_flag = reformer_legend
+					create_legend_seed = {
+						type = holy
+						quality = famed
+						chronicle = new_faith_legend
+						properties = {
+							reformer = ROOT
+							faith = faith:hellenic_pagan
+							religion = faith:hellenic_pagan.religion
+							reason = flag:pagan_reformation
+						}
+					}
+				}
+			}
+		}
+		add_eminent_holy_site = {
+			target = holy_site:balkh
+			actor = ROOT
+		}
+		add_holy_site = {
+			target = holy_site:katas_raj
+			actor = ROOT
+		}
+		add_holy_site = {
+			target = holy_site:nok_kundi
+			actor = ROOT
+		}
 	}
-
-	set_character_faith_with_conversion = faith:indo_hellenism
+	save_scope_as = recipient
+	rite:indo_hellenism = {
+		save_scope_as = conversion_rite
+	}
+	grab_spouses_and_family_to_convert_effect = yes
+	convert_family_to_faith_effect = {
+		FALSE_CONVERSION = no
+		FORCED = no
+	}
 	every_realm_county = {
 		limit = {
-			NOT = {faith = faith:indo_hellenism }
+			NOT = { faith = faith:indo_hellenism }
 			trigger_if = {
 				limit = { faith:indo_hellenism = { has_doctrine = special_doctrine_is_buddhist_faith } }
 				religion = religion:buddhism_religion
@@ -592,10 +636,9 @@ reform_indo_hellenism_effect = {
 			}
 		}
 		save_scope_as = county
-		# add_faith_minority_effect = {
-		# 	FAITH = faith:indo_hellenism
-		# 	SIZE = small
-		# }
+		promote_rite_minority_effect = {
+			RITE = rite:indo_hellenism
+		}
 	}
 }
 
@@ -709,10 +752,10 @@ indo_greek_culture_decision_effect = {
 			random = {
 				chance = 40
 				set_county_culture = culture:indo_greek
-				# add_culture_minority_effect = {
-				# 	CULTURE = culture:indo_greek
-				# 	SIZE = small
-				# }
+				add_culture_minority_effect = {
+					CULTURE = culture:indo_greek
+					SIZE = small
+				}
 				modifier = {
 					add = development_level
 				}
@@ -772,7 +815,7 @@ unite_nasrani_decision_effect = {
 		title:d_sinhala = { set_de_jure_liege_title = title:k_nasrani }
 
 		struggle:RICE_sri_lanka_struggle ?= {
-			set_faith_as_involved = faith:nasrani
+			set_faith_as_involved = rite:nasrani
 		}
 	}
 	if = {
@@ -784,44 +827,49 @@ unite_nasrani_decision_effect = {
 	every_held_title = {
 		limit = {
 			tier = tier_barony
-			is_holy_site_of = faith:nasrani
+			is_holy_site_of = rite:nasrani
 		}
-		county = { set_county_faith = faith:nasrani }
+		county = { set_county_faith = rite:nasrani }
 	}
 	custom_tooltip = nasrani_growth_tt
 	hidden_effect = {
 		every_realm_county = {
 			limit = {
 				NOT = {
-					any_in_de_jure_hierarchy = { is_holy_site_of = faith:nasrani }
+					any_in_de_jure_hierarchy = { is_holy_site_of = rite:nasrani }
 				}
 			}
 			save_scope_as = county
-			# promote_faith_minority_effect = { FAITH = faith:nasrani }
+			promote_rite_minority_effect = { RITE = rite:nasrani }
 		}
 	}
 }
 
 choose_nasrani_faith_head_effect = {
-	faith:nasrani = {
+	rite:nasrani = {
 		if = {
 			limit = { scope:align_orthodox = yes }
-			set_religious_head_title = title:k_orthodox
-			activate_holy_site = constantinople_nasrani
+			set_parent_faith = faith:orthodox
 		}
 		if = {
 			limit = { scope:align_catholic = yes }
-			set_religious_head_title = title:k_papal_state
-			activate_holy_site = rome_nasrani
+			set_parent_faith = faith:catholic
 		}
 		if = {
 			limit = { scope:align_nestorian = yes }
-			set_religious_head_title = title:d_patriarchate_in_the_east
+			set_parent_faith = faith:nestorian
 		}
 		if = {
 			limit = { scope:align_nasrani = yes }
-			set_religious_head_title = title:d_indian_catholic_papacy
-			activate_holy_site = st_thomas_church
+			ROOT = {
+				detach_rite_to_new_faith = {
+					target = rite:nasrani
+					save_scope_as = new_faith
+				}
+			}
+			scope:new_faith = {
+				set_religious_head_title = title:d_indian_catholic_papacy
+			}
 			ROOT = { create_indian_catholic_papacy_effect = yes }
 		}
 	}
@@ -831,7 +879,7 @@ create_indian_catholic_papacy_effect = {
 	if = { # Pick your chaplain first.
 		limit = {
 			exists = cp:councillor_court_chaplain
-			cp:councillor_court_chaplain = { faith = faith:circassian_christianity }
+			cp:councillor_court_chaplain = { rite = rite:nasrani }
 		}
 		cp:councillor_court_chaplain = { save_scope_as = new_pope }
 	}
@@ -933,28 +981,28 @@ unite_bene_israel_effect = {
 		county = {
 			save_scope_as = county
 			culture = { save_scope_as = old_culture }
-			faith = { save_scope_as = old_faith }
+			rite = { save_scope_as = old_faith }
 			set_county_culture = culture:kochinim
-			set_county_faith = faith:malabarism
-			# add_culture_minority_effect = {
-			# 	CULTURE = scope:old_culture
-			# 	SIZE = small
-			# }
-			# add_faith_minority_effect = {
-			# 	FAITH = scope:old_faith
-			# 	SIZE = small
-			# }
+			set_county_rite = rite:malabarism
+			add_culture_minority_effect = {
+				CULTURE = scope:old_culture
+				SIZE = small
+			}
+			add_rite_minority_effect = {
+				RITE = scope:old_faith
+				SIZE = small
+			}
 		}
 	}
 	every_realm_county = {
 		limit = {
 			NOT = {
-				any_in_de_jure_hierarchy = { is_holy_site_of = faith:malabarism }
+				any_in_de_jure_hierarchy = { is_holy_site_of = rite:malabarism.faith }
 			}
 		}
 		save_scope_as = county
-		# promote_faith_minority_effect = { FAITH = faith:malabarism }
-		# promote_culture_minority_effect = { CULTURE = culture:kochinim }
+		promote_rite_minority_effect = { RITE = rite:malabarism }
+		promote_culture_minority_effect = { CULTURE = culture:kochinim }
 	}
 }
 

@@ -116,6 +116,38 @@ types CustomMapModeLegendsTypes {
 						expand = {}
 					}
 				}
+				widget = {
+					hbox = {
+						icon = {
+							texture = "gfx/interface/colors/white.dds"
+							size = { 8 8 }
+							color = { 0.75 0.1 0.2 1 } #Magenta Map Mode
+						}
+						spacing = 5
+						text_single = {
+							margin_top = -6
+							align = center
+							text = "FAITH_MINORITY_MAP_LEGEND_LARGE_SAME_FAITH_MINORITY"
+						}
+						expand = {}
+					}
+				}
+				widget = {
+					hbox = {
+						icon = {
+							texture = "gfx/interface/colors/white.dds"
+							size = { 8 8 }
+							color = { 1.0 0.4 0.0 1 } #Magenta Map Mode
+						}
+						spacing = 5
+						text_single = {
+							margin_top = -6
+							align = center
+							text = "FAITH_MINORITY_MAP_LEGEND_SMALL_SAME_FAITH_MINORITY"
+						}
+						expand = {}
+					}
+				}
 			}
 		}
 	}
