@@ -46,7 +46,7 @@ set_minorities_game_start = {
 				SIZE = large
 			}
 			add_rite_minority_effect = {
-				RITE = rite:mahayana # mahasanghika
+				RITE = rite:mahasanghika
 				SIZE = small
 			}
 			if = {
@@ -79,7 +79,7 @@ set_minorities_game_start = {
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = large
 				}
 			}
@@ -96,7 +96,7 @@ set_minorities_game_start = {
 					SIZE = large
 				}
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = large
 				}
 			}
@@ -107,7 +107,7 @@ set_minorities_game_start = {
 					SIZE = large
 				}
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = small
 				}
 			}
@@ -144,12 +144,12 @@ set_minorities_game_start = {
 				SIZE = large
 			}
 		}
-		# title:c_vardhamana = {
-		# 	add_rite_minority_effect = {
-		# 		RITE = rite:vatsiputriya
-		# 		SIZE = small
-		# 	}
-		# }
+		title:c_vardhamana = {
+		 	add_rite_minority_effect = {
+		 		RITE = rite:vatsiputriya
+		 		SIZE = small
+		 	}
+		}
 		title:c_valabhi = {
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
@@ -159,12 +159,12 @@ set_minorities_game_start = {
 				}
 			}
 		}
-		# title:c_dhamalpur = {
-		# 	add_rite_minority_effect = {
-		# 		RITE = rite:vatsiputriya
-		# 		SIZE = small
-		# 	}
-		# }
+		title:c_dhamalpur = {
+		 	add_rite_minority_effect = {
+		 		RITE = rite:vatsiputriya
+		 		SIZE = small
+		 	}
+		}
 
 		### Kabulistan ###
 		title:c_bamian = {
@@ -178,7 +178,7 @@ set_minorities_game_start = {
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = small
 				}
 			}
@@ -211,14 +211,14 @@ set_minorities_game_start = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = small
 				}
 			}
@@ -322,14 +322,14 @@ set_minorities_game_start = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # dharmaguptaka
+					RITE = rite:dharmaguptaka
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # dharmaguptaka
+					RITE = rite:dharmaguptaka
 					SIZE = small
 				}
 			}
@@ -338,14 +338,14 @@ set_minorities_game_start = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # dharmaguptaka
+					RITE = rite:dharmaguptaka
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # dharmaguptaka
+					RITE = rite:dharmaguptaka
 					SIZE = small
 				}
 				add_rite_minority_effect = {
@@ -360,14 +360,14 @@ set_minorities_game_start = {
 			if = {
 				limit = { game_start_date < 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = large
 				}
 			}
 			else_if = {
 				limit = { game_start_date >= 1000.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:mahayana # mahasanghika
+					RITE = rite:mahasanghika
 					SIZE = small
 				}
 			}
@@ -4767,7 +4767,7 @@ setup_caucasus_south_minorities = {
 					SIZE = small
 				}
 				add_rite_minority_effect = {
-					RITE = rite:paulician
+					RITE = rite:paulician_rite
 					SIZE = small
 				}
 			}
@@ -4780,7 +4780,7 @@ setup_caucasus_south_minorities = {
 					SIZE = small
 				}
 				add_rite_minority_effect = {
-					RITE = rite:paulician
+					RITE = rite:paulician_rite
 					SIZE = small
 				}
 			}
@@ -4793,7 +4793,7 @@ setup_caucasus_south_minorities = {
 					SIZE = small
 				}
 				add_rite_minority_effect = {
-					RITE = rite:paulician
+					RITE = rite:paulician_rite
 					SIZE = small
 				}
 			}
@@ -4803,7 +4803,7 @@ setup_caucasus_south_minorities = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:paulician
+					RITE = rite:paulician_rite
 					SIZE = small
 				}
 			}
@@ -4822,7 +4822,7 @@ setup_caucasus_south_minorities = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:paulician
+					RITE = rite:paulician_rite
 					SIZE = small
 				}
 			}
@@ -4841,7 +4841,7 @@ setup_caucasus_south_minorities = {
 			if = {
 				limit = { game_start_date < 950.1.1 }
 				add_rite_minority_effect = {
-					RITE = rite:paulician
+					RITE = rite:paulician_rite
 					SIZE = small
 				}
 			}

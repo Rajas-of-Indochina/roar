@@ -3,14 +3,16 @@
 ### c_isfahan
 4106 = {	#Isfahan
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
 	# History
-	# 771 - original Friday Mosque of Ishafan built
+	771.1.1 = {
+		# original Friday Mosque of Ishafan built
+		special_building_slot = the_friday_mosque_01
+	}
 	841.1.1 = {
 		# new larger mosque built during the reign of al-Mu'tasim
-		special_building_slot = the_friday_mosque_01
 		special_building = the_friday_mosque_01
 	}
 	867.1.1 = {
@@ -26,7 +28,7 @@
 			#hunting_grounds_01
 		}
 	}
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4105 = {	#Julfa	#AKA New Julfa
 	holding = none
@@ -42,11 +44,11 @@
 ### c_ardestan
 4047 = {	#Qashan	AKA Kashan
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4048 = {	#Natanz
 	holding = none
@@ -62,11 +64,11 @@
 ### c_qumisha
 4103 = {	#Qumisha	#AKA Shahreza 
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4100 = {	#Jarquh
 	holding = church_holding	#placeholder
@@ -85,11 +87,11 @@
 ### c_luristan
 4112 = {	#Asbid-Dasht
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4113 = {	#Juy-e-Sard
 	holding = none
@@ -100,13 +102,13 @@
 ### c_kirman
 4076 = {	#Khabis
 	culture = baloch #FP3 change after research
-	rite = hanafi # was mutazila fix later
+	rite = hanafi
 	holding = castle_holding
 
 	# History
-	950.1.1 = { rite = hanafi }
+	950.1.1 = { rite = shafii }
 	1050.1.1 = { culture = persian } #FP3 change after research
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4077 = {	#Zarand_PER
 	# rich & important city in the islamic period
@@ -135,7 +137,7 @@
 
 	# History
 	1050.1.1 = { culture = persian } #FP3 change after research 
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4072 = {	#Nayband	#AKA Nay Band, Naiband
 	holding = city_holding	#placeholder
@@ -154,9 +156,9 @@
 	holding = castle_holding
 
 	# History	
-	890.1.1 = { rite = hanafi }
+	890.1.1 = { rite = shafii }
 	1050.1.1 = { culture = persian } #FP3 change after research 
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4082 = {	#Kashid
 	holding = city_holding	#placeholder
@@ -178,9 +180,9 @@
 	holding = castle_holding
 
 	# History
-	790.1.1 = { rite = hanafi } # was mutazila fix later
-	950.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	790.1.1 = { rite = hanafi }
+	950.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4087 = {	#Bimand
 	holding = city_holding	#placeholder
@@ -196,10 +198,10 @@
 	holding = castle_holding
 
 	# History
-	790.1.1 = { rite = hanafi } # was mutazila fix later
+	790.1.1 = { rite = hanafi }
 	840.1.1 = { rite = azariqa }
-	905.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	905.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4090 = {	#Maghun
 	holding = city_holding	#placeholder
@@ -216,8 +218,8 @@
 	holding = castle_holding
 
 	# History
-	1060.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1060.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4051 = {	#Nain	#AKA Na'in
 	# one of the first mosques in muslim Persia
@@ -245,8 +247,8 @@
 	holding = castle_holding
 
 	# History
-	1160.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1160.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4058 = {	#Wandah
 	holding = church_holding	#placeholder
@@ -265,10 +267,10 @@
 	holding = castle_holding
 
 	# History
-	800.1.1 = { rite = hanafi }
-	837.1.1 = { rite = hanafi } # was mutazila fix later
-	940.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	800.1.1 = { rite = shafii }
+	837.1.1 = { rite = hanafi }
+	940.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4097 = {	#Muralziyan
 	holding = church_holding	#placeholder
@@ -295,7 +297,7 @@
 			barracks_01
 		}
 	}
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4318 = {	#Dumbawand	#AKA Damavand
 	holding = church_holding
@@ -317,7 +319,7 @@
 	holding = castle_holding
 
 	# History
-	1060.1.1 = { rite = hanafi } # was maturidi, fix later
+	1060.1.1 = { rite = hanafi }
 }
 4045 = {	#Simnan	AKA Semnan
 	# already existed in ancient Persia
@@ -330,7 +332,7 @@
 	rite = imami
 	holding = castle_holding
 
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4110 = {	#Aba-Qomi
 	holding = none
@@ -344,7 +346,7 @@
 ### c_hamadan
 4333 = {	#Hamadan
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
 	effect = {
@@ -358,7 +360,7 @@
 	}
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4331 = {	#Rudhrawar
 	holding = church_holding	#placeholder
@@ -382,9 +384,9 @@
 	# History
 	935.1.1 = {
 		# khurramites exterminated by Imad al-Dawla, the Buyid founder
-		rite = hanafi
+		rite = shafii
 	} 
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4114 = {	#Abtaa
 	holding = none
@@ -396,11 +398,11 @@
 ### c_dinawar
 4332 = {	#Dinawar
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4763 = {	#Andarab
 	holding = church_holding	#placeholder
@@ -421,8 +423,8 @@
 	special_building = maharloo_lake_01
 
 	# History
-	800.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	800.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4176 = {	#Sarwistan-Shirazi-Runiz
 	holding = church_holding	#placeholder
@@ -447,10 +449,10 @@
 
 	# History
 	1160.1.1 = {
-		rite = hanafi
+		rite = shafii
 		culture = persian
 	}
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4094 = {	#Gerash
 	# Left empty so players have to "fill" the county themselves
@@ -469,10 +471,10 @@
 
 	# History
 	1160.1.1 = {
-		rite = hanafi
+		rite = shafii
 		culture = persian
 	}
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4172 = {	#Fustujan
 	holding = church_holding	#placeholder
@@ -494,9 +496,7 @@
 	holding = castle_holding
 
 	# History
-	800.1.1 = { rite = hanafi } # was mutazila fix later
-	890.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	800.1.1 = { rite = hanafi }
 }
 4301 = {	#Jannaba
 	holding = church_holding	#placeholder
@@ -521,13 +521,16 @@
 ### c_istakhr
 4118 = {	#Istakhr
 	# Early Muslim town, Zoroastrian stronghold, abandoned in 10th century in favor of Shiraz
-	culture = persian
+	culture = kurdish
 	rite = ismaili
 	holding = castle_holding
 	special_building = tomb_of_cyrus_01
 
 	# History
-	1160.1.1 = { rite = hanafi } # was maturidi, fix later
+	1160.1.1 = {
+		rite = hanafi
+		culture = persian
+	}
 }
 4117 = {	#Iqlid AKA Eqlid
 	# Already built and somewhat important in ancient Persia
@@ -551,7 +554,7 @@
 	holding = castle_holding
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4197 = {	#Bushkanat	#AKA Bushehr
 	# important coastal trade city from ancient times
@@ -582,7 +585,7 @@
 	holding = castle_holding
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4194 = {	#Siraf
 	# Busy trade port on the Silk Road from early on
@@ -601,7 +604,7 @@
 	holding = castle_holding
 
 	# History
-	790.1.1 = { rite = hanafi }
+	790.1.1 = { rite = shafii }
 	867.1.1 = {
 		buildings = {
 			common_tradeport_01
@@ -614,7 +617,7 @@
 		}
 	}
 	1178.1.1 = {
-		rite = hanafi # was maturidi, fix later
+		rite = hanafi
 		buildings = {
 			common_tradeport_03
 			pastures_01
@@ -635,13 +638,13 @@
 	holding = castle_holding
 
 	# History
-	790.1.1 = { rite = hanafi }
+	790.1.1 = { rite = shafii }
 	867.1.1 = {
 		buildings = {
 			common_tradeport_01
 		}
 	}
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4188 = {	#Kaurestan
 	holding = city_holding	#placeholder
@@ -663,10 +666,11 @@
 	rite = mazdakism
 	holding = castle_holding
 	867.1.1 = {
-		rite = hanafi # was mutazila fix later
+		rite = hanafi
 		culture = bedouin
 	}
-	940.1.1 = { rite = hanafi }
+	940.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 6009 = {	#Al-Madhar
 	holding = city_holding	#placeholder
@@ -684,10 +688,10 @@
 ### c_sardan
 4122 = {	#Lurijan
 	culture = persian
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4123 = {	#Aruj
 	holding = none
@@ -703,8 +707,8 @@
 	holding = castle_holding
 
 	# History
-	800.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	800.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4307 = {	#Asak
 	holding = none
@@ -719,12 +723,12 @@
 ### c_tustar
 4256 = {	#Tustar
 	culture = persian
-	rite = hanafi # was mutazila fix later
+	rite = hanafi
 	holding = castle_holding
 
 	# History
-	890.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	890.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4257 = {	#Gondishapur	#AKA Gundeshapur
 	# important center during the muslim period (and probably before)
@@ -743,13 +747,13 @@
 
 ### c_abbadan
 6017 = {	#Abbadan
-	culture = persian
-	rite = hanafi # was mutazila fix later
+	culture = bedouin
+	rite = hanafi
 	holding = castle_holding
 
 	# History
-	867.1.1 = { culture = bedouin }
-	890.1.1 = { rite = hanafi }
+	890.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 6016 = {	#Bayan
 	holding = city_holding	#placeholder
@@ -765,8 +769,8 @@
 	holding = castle_holding
 
 	# History
-	867.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	867.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 6013 = {	#Azam
 	holding = city_holding	#placeholder
@@ -799,8 +803,8 @@
 	holding = castle_holding
 
 	# History
-	1000.1.1 = { rite = hanafi }
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1000.1.1 = { rite = shafii }
+	1178.1.1 = { rite = hanafi }
 }
 4262 = {	#Alishtar
 	holding = city_holding		#placeholder
@@ -814,12 +818,12 @@
 	# actually Saburkhawasht was the name of a Sasanian city in the same place that was destroyed in the late 7th century
 	# A prominent castle in the same area was Dez-e Sīāh, "the Black Fortress", where the governors of Lurestan ruled from the mid-12th century; since this is a castle holding, I went with that name. 
 	culture = kurdish
-	rite = hanafi
+	rite = shafii
 	holding = castle_holding
 	special_building = falak_ol_aflak_citadel_01
 
 	# History
-	1178.1.1 = { rite = hanafi } # was maturidi, fix later
+	1178.1.1 = { rite = hanafi }
 }
 4786 = {	#As-saimara
 	holding = city_holding

@@ -1,4 +1,4 @@
-sarnaism_faith = {
+sarnaism = {
 	main_rite = sarnaism
 	faith_details = {
 		religion = sarnaism_religion
@@ -24,7 +24,7 @@ sarnaism_faith = {
 	}
 }
 
-mari_faith = {
+mari_pagan = {
 	main_rite = mari_pagan
 	faith_details = {
 		religion = mari_religion
@@ -50,7 +50,7 @@ mari_faith = {
 	}
 }
 
-erzya_pagan_faith = {
+erzya_pagan = {
 	main_rite = erzya_pagan
 	faith_details = {
 		religion = mordvin_religion
@@ -78,7 +78,7 @@ erzya_pagan_faith = {
 	}
 }
 
-moksha_pagan_faith = {
+moksha_pagan = {
 	main_rite = moksha_pagan
 	faith_details = {
 		religion = mordvin_religion
@@ -162,7 +162,7 @@ moksha_pagan_faith = {
 	}
 }
 
-komi_pagan_faith = {
+komi_pagan = {
 	main_rite = komi_pagan
 	faith_details = {
 		religion = permic_religion
@@ -350,7 +350,7 @@ komi_pagan_faith = {
 
 }
 
-udmurt_pagan_faith = {
+udmurt_pagan = {
 	main_rite = udmurt_pagan
 	faith_details = {
 		religion = permic_religion
@@ -380,7 +380,7 @@ udmurt_pagan_faith = {
 	}
 }
 
-sami_pagan_faith = {
+sami_pagan = {
 	main_rite = sami_pagan
 	faith_details = {
 		religion = sami_religion
@@ -408,7 +408,7 @@ sami_pagan_faith = {
 		unreformed_faith_doctrine
 	}
 }
-koyapunem_faith = {
+koyapunem = {
 	main_rite = koyapunem
 	faith_details = {
 		religion = indian_religion
@@ -526,7 +526,7 @@ koyapunem_faith = {
 	}
 }
 
-senoi_pagan_faith = {
+senoi_pagan = {
 	main_rite = senoi_pagan
 	faith_details = {
 		religion = aslian_religion
@@ -548,15 +548,17 @@ senoi_pagan_faith = {
 	#holy_site = sukadana
 	#holy_site = riak_nan_berbedur
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets ={
 		tenet_pacifism
 		tenet_adorcism # tenet_sanctity_of_nature - Orang Asli tend to more fear nature, and I needed a slot for the shamans
 		tenet_communal_possessions
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
-semang_pagan_faith = {
+semang_pagan = {
 	main_rite = semang_pagan
 	faith_details = {
 		religion = aslian_religion
@@ -679,7 +681,7 @@ semang_pagan_faith = {
 		WaterGodHerHim = CHARACTER_HERHIM_HIM
 	}
 }
-tagai_faith = {
+tagai = {
 	main_rite = tagai
 	faith_details = {
 		religion = australian_religion
@@ -696,8 +698,6 @@ tagai_faith = {
 		badhu
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_astrology
 		tenet_ritual_celebrations
@@ -706,6 +706,10 @@ tagai_faith = {
 		requires_dlc_flag = all_under_heaven
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	localization = {
@@ -878,7 +882,7 @@ tagai_faith = {
 	}
 }
 
-mentawai_animism_faith = {
+mentawai_animism = {
 	main_rite = mentawai_animism # Sabulungan
 	faith_details = {
 		religion = austronesian_religion
@@ -1063,16 +1067,18 @@ mentawai_animism_faith = {
 	#holy_site = ar_kol
 	#holy_site = nakkavaram
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_ritual_celebrations
 		tenet_ancestor_worship
 		tenet_sanctity_of_nature
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-nias_animism_faith = {
+nias_animism = {
 	main_rite = nias_animism #Fanömba adu
 	faith_details = {
 		religion = austronesian_religion
@@ -1280,7 +1286,7 @@ nias_animism_faith = {
 
 }
 
-umboh_faith = {
+umboh = {
 	main_rite = umboh # Sama people
 	faith_details = {
 		religion = austronesian_religion
@@ -1478,7 +1484,7 @@ umboh_faith = {
 	}
 }
 
-batak_animism_faith = {
+batak_animism = {
 	main_rite = batak_animism
 	faith_details = {
 		religion = austronesian_religion
@@ -1663,16 +1669,18 @@ batak_animism_faith = {
 	#holy_site = muara_takus
 	#holy_site = riak_nan_berbedur
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_esotericism
 		tenet_ancestor_worship
 		tenet_ritual_cannibalism
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-malayic_faith = {
+malayic = {
 	main_rite = malayic
 	faith_details = {
 		religion = austronesian_religion
@@ -1869,8 +1877,8 @@ malayic_faith = {
 	}
 }
 
-bathouism_faith = {
-	main_rite = bathouism
+bathouism = {
+	main_rite = bathouism_rite
 	faith_details = {
 		religion = brahmaputran_religion
 		color = { 38 63 125 }
@@ -2045,7 +2053,7 @@ bathouism_faith = {
 	}
 }
 
-songsarek_faith = {
+songsarek = {
 	main_rite = songsarek
 	faith_details = {
 		religion = brahmaputran_religion
@@ -2062,8 +2070,6 @@ songsarek_faith = {
 		srihatta
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_sanctity_of_nature
 		tenet_ritual_celebrations
@@ -2074,6 +2080,10 @@ songsarek_faith = {
 		{ name = "holy_order_guardians_of_tatara_rabuga" }
 		{ name = "holy_order_warriors_of_the_temple_of_place" }
 		{ name = "holy_order_warriors_of_sacred_lands" }
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	localization = {
@@ -2223,37 +2233,9 @@ songsarek_faith = {
 	}
 }
 
-burmic_faith = {
-	main_rite = burmic # natkokwe
-	faith_details = {
-		religion = burmic_religion
-		color = { 0.24 0.39 0.37 }
-		icon = burmic
-		reformed_icon = burmic_reformed
-	}
-
-	holy_sites = {
-		popa
-		zwegabin
-		myitsone
-		taungbyone
-		kyaikhtiyo
-	}
-
-	# RICE Holy Site	
-	#holy_site = dagon
-
-	doctrines = {unreformed_faith_doctrine}
-
-	tenets = {
-		tenet_esotericism
-		tenet_astrology
-		tenet_adaptive
-	}
-}
-
-apsuara_faith = {
-	main_rite = apsuara # folk beliefs of Abkhaz and Abazin people
+apsuara = {
+	# Folk Beliefs of Abkhaz and Abazin people
+	main_rite = apsuara
 	faith_details = {
 		color = { 31 83 15 }
 		icon = red_hand
@@ -2446,8 +2428,9 @@ apsuara_faith = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
-circassian_pagan_faith = {
-	main_rite = circassian_pagan # folk beliefs of Circassians and Ubykh people
+circassian_pagan = {
+	# Folk Beliefs of Circassians and Ubykh people
+	main_rite = circassian_pagan
 	faith_details = {
 		religion = northcaucasian_religion
 		color = { 31 63 35 }
@@ -2638,8 +2621,9 @@ circassian_pagan_faith = {
 	}
 }
 
-avar_pagan_faith = {
-	main_rite = avar_pagan # folk beliefs of Avaric people
+avar_pagan = {
+	# Folk Beliefs of Avaric people
+	main_rite = avar_pagan
 	faith_details = {
 		religion = northcaucasian_religion
 		color = { 0.5 0.2 0.3 }
@@ -2826,8 +2810,9 @@ avar_pagan_faith = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
-lak_pagan_faith = {
-	main_rite = lak_pagan # folk beliefs of Lak people
+lak_pagan = {
+	# Folk Beliefs of Lak people
+	main_rite = lak_pagan
 	faith_details = {
 		religion = northcaucasian_religion
 		color = { 0.5 0.2 0.4 }
@@ -3011,8 +2996,9 @@ lak_pagan_faith = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
-lezgic_pagan_faith = {
-	main_rite = lezgic_pagan # folk beliefs of Lezgic people
+lezgic_pagan = {
+	# Folk Beliefs of Lezgic people
+	main_rite = lezgic_pagan
 	faith_details = {
 		religion = northcaucasian_religion
 		color = { 0.6 0.2 0.3 }
@@ -3196,8 +3182,9 @@ lezgic_pagan_faith = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
-nakh_pagan_faith = {
-	main_rite = nakh_pagan # folk beliefs of Nakhs
+nakh_pagan = {
+	# Folk Beliefs of Nakhs
+	main_rite = nakh_pagan
 	faith_details = {
 		religion = northcaucasian_religion
 		color = { 0.5 0.2 0.1 }
@@ -3383,17 +3370,16 @@ nakh_pagan_faith = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
-kartvel_pagan_faith = {
-	main_rite = kartvel_pagan # folk beliefs of Kartvels
+kartvel_pagan = {
+	# Folk Beliefs of Kartvelic people
 	# major credit to Shautora for their research
+	main_rite = kartvel_pagan
 	faith_details = {
 		religion = northcaucasian_religion
 		color = { 109 101 82 }
 		icon = borjgali_01
 		reformed_icon = borjgali_01_reformed
 	}
-	
-	doctrines = {unreformed_faith_doctrine}
 
 	holy_sites = {
 		kazbek
@@ -3407,6 +3393,10 @@ kartvel_pagan_faith = {
 		tenet_adorcism
 		tenet_sanctity_of_nature
 		tenet_astrology
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	doctrines = {
@@ -3610,8 +3600,9 @@ kartvel_pagan_faith = {
 
 	}
 }
-shendao_faith = {
-	main_rite = shendao # Wuism / Chinese popular religion
+shendao = {
+	# Wuism / Chinese popular religion
+	main_rite = shendao
 	faith_details = {
 		religion = chinese_religion
 		color = { 18 14 131 }
@@ -3640,7 +3631,7 @@ shendao_faith = {
 	}
 }
 
-formosa_animism_faith = {
+formosa_animism = {
 	main_rite = formosa_animism
 	faith_details = {
 		religion = formosa_religion
@@ -3670,7 +3661,7 @@ formosa_animism_faith = {
 		fallback_tenet = tenet_headhunting
 	}
 }
-javanist_faith = {
+javanist = {
 	main_rite = javanist
 	faith_details = {
 		religion = javanese_religion
@@ -3867,7 +3858,7 @@ javanist_faith = {
 	}
 }
 
-jatisunda_faith = {
+jatisunda = {
 	main_rite = jatisunda
 	faith_details = {
 		religion = javanese_religion
@@ -3891,12 +3882,14 @@ jatisunda_faith = {
 	#holy_site = muara_takus
 	#holy_site = riak_nan_berbedur
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_pacifism
 		tenet_sanctity_of_nature
 		tenet_eastern_syncretism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	localization = {
@@ -4063,7 +4056,7 @@ jatisunda_faith = {
 		GHWNamePlural = ghw_purifications
 	}
 }
-khasi_animism_faith = {
+khasi_animism = {
 	main_rite = khasi_animism
 	faith_details = {
 		religion = khasi_religion
@@ -4080,45 +4073,17 @@ khasi_animism_faith = {
 		srihatta
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_sanctity_of_nature
 		tenet_adaptive
 		tenet_megaliths
 	}
-}
-kuy_animism_faith = {
-	main_rite = kuy_animism
-	faith_details = {
-		religion = kuy_religion
-		color = { 115 71 53 }
-		icon = kuy_animism
-		reformed_icon = kuy_animism_reformed
-	}
 
-	holy_sites = {
-		seponh
-		champasak
-		preah_vihear
-		tonle_sap
-		my_son
-	}
-
-	# RICE holy sites
-	#holy_site = angkor
-	#holy_site = khao_khlang_nai
-	#holy_site = sukhothai
-
-	doctrines = {unreformed_faith_doctrine}
-
-	tenets = {
-		tenet_ritual_celebrations
-		tenet_ancestor_worship
-		tenet_eastern_syncretism
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 }
-sanamahi_pagan_faith = {
+sanamahi_pagan = {
 	main_rite = sanamahi_pagan
 	faith_details = {
 		religion = sanamahism_religion
@@ -4135,17 +4100,20 @@ sanamahi_pagan_faith = {
 		homalin
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_sanctity_of_nature
 		tenet_esotericism
 		tenet_adorcism
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-nunusaku_faith = {
-	main_rite = nunusaku #maluku
+nunusaku = {
+	# Native faith of Maluku
+	main_rite = nunusaku
 	faith_details = {
 		religion = moluccan_religion
 		color = { 154 181 33 }
@@ -4161,8 +4129,6 @@ nunusaku_faith = {
 		goa_keramat
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_spirit_guides
 		tenet_ritual_celebrations
@@ -4171,6 +4137,10 @@ nunusaku_faith = {
 		requires_dlc_flag = all_under_heaven
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	localization = {
@@ -4335,7 +4305,7 @@ nunusaku_faith = {
 	}
 }
 
-halmahera_pagan_faith = {
+halmahera_pagan = {
 	main_rite = halmahera_pagan
 	faith_details = {
 		religion = moluccan_religion
@@ -4523,7 +4493,7 @@ halmahera_pagan_faith = {
 	}
 }
 
-oceanic_animism_faith = {
+oceanic_animism = {
 	main_rite = oceanic_animism
 	faith_details = {
 		religion = oceanic_religion
@@ -4540,8 +4510,6 @@ oceanic_animism_faith = {
 		popomanaseu
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_megaliths
 		tenet_ancestor_worship
@@ -4550,6 +4518,10 @@ oceanic_animism_faith = {
 		requires_dlc_flag = all_under_heaven
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	localization = {
@@ -4713,7 +4685,7 @@ oceanic_animism_faith = {
 		GHWNamePlural = ghw_purifications
 	}
 }
-palau_animism_faith = {
+palau_animism = {
 	main_rite = palau_animism
 	faith_details = {
 		religion = palau_religion
@@ -4730,16 +4702,19 @@ palau_animism_faith = {
 		lamlam
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_megaliths
 		tenet_ancestor_worship
 		tenet_adaptive
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
-penunggu_faith = {
-	main_rite = penunggu #papuan
+penunggu = {
+	# generlaised Papuan religion
+	main_rite = penunggu
 	faith_details = {
 		religion = papuan_religion
 		color = { 127 0 0 }
@@ -4761,8 +4736,6 @@ penunggu_faith = {
 	#holy_site = kepala_burung
 	#holy_site = sonba_i
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_ritual_cannibalism
 		tenet_sanctity_of_nature
@@ -4772,10 +4745,15 @@ penunggu_faith = {
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-yaambism_faith = {
-	main_rite = yaambism #sepik
+yaambism = {
+	# Sepik religion
+	main_rite = yaambism
 	faith_details = {
 		religion = papuan_religion
 		color = { 88 25 33 }
@@ -4797,8 +4775,6 @@ yaambism_faith = {
 	#holy_site = kepala_burung
 	#holy_site = sonba_i
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_communal_possessions
 		tenet_sanctity_of_nature
@@ -4808,10 +4784,15 @@ yaambism_faith = {
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-bis_faith = {
-	main_rite = bis #asmat
+bis = {
+	# Asmat religion
+	main_rite = bis
 	faith_details = {
 		religion = papuan_religion
 		color = { 44 18 8 }
@@ -4833,8 +4814,6 @@ bis_faith = {
 	#holy_site = kepala_burung
 	#holy_site = sonba_i
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_reincarnation
 		tenet_ritual_hospitality
@@ -4844,10 +4823,15 @@ bis_faith = {
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-sulawesi_animism_faith = {
-	main_rite = sulawesi_animism # Dukunist - a term for generic animism in Sulawesi
+sulawesi_animism = {
+	# Dukunist - a term for generic animism in Sulawesi
+	main_rite = sulawesi_animism
 	faith_details = {
 		religion = sulawesi_religion	
 		color = { 128 17 206 }
@@ -4863,17 +4847,20 @@ sulawesi_animism_faith = {
 		lore_lindu
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_megaliths
 		tenet_spirit_guides
 		tenet_sanctity_of_nature
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-malesung_faith = {
-	main_rite = malesung # Native Minahasan faith
+malesung = {
+	# Native Minahasan faith
+	main_rite = malesung
 	faith_details = {
 		religion = sulawesi_religion
 		color = { 47 26 107 }
@@ -4889,8 +4876,6 @@ malesung_faith = {
 		limboto
 	}
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_ritual_hospitality
 		tenet_spirit_guides
@@ -4899,6 +4884,10 @@ malesung_faith = {
 		requires_dlc_flag = all_under_heaven
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 
 	localization = {
@@ -5062,7 +5051,8 @@ malesung_faith = {
 	}
 }
 
-wa_animism_faith = {
+wa_animism = {
+	# Wa people folk beliefs
 	main_rite = wa_animism
 	faith_details = {
 		religion = wa_religion
@@ -5083,8 +5073,6 @@ wa_animism_faith = {
 	#holy_site = sukhothai
 	#holy_site = vien_chan
 
-	doctrines = {unreformed_faith_doctrine}
-
 	tenets = {
 		tenet_ritual_celebrations
 		tenet_sanctity_of_nature
@@ -5094,9 +5082,13 @@ wa_animism_faith = {
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_gruesome_festivals
 	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 }
 
-bugaism_faith = {
+bugaism = {
 	main_rite = bugaism
 	faith_details = {
 		religion = shamanism_religion
@@ -5130,7 +5122,7 @@ bugaism_faith = {
 	}
 }
 
-yzng_faith = {
+yzng = {
 	main_rite = yzng
 	faith_details = {
 		color = { 55 95 21 }
@@ -5159,7 +5151,7 @@ yzng_faith = {
 	}
 }
 
-darang_faith = {
+darang = {
 	main_rite = darang
 	faith_details = {
 		religion = dayawism_religion
@@ -5344,7 +5336,7 @@ darang_faith = {
 	}
 }
 
-talaingat_ariya_faith = {
+talaingat_ariya = {
 	main_rite = talaingat_ariya
 	faith_details = {
 		religion = dayawism_religion
@@ -5532,7 +5524,7 @@ talaingat_ariya_faith = {
 	}
 }
 
-surong_puyo_faith = {
+surong_puyo = {
 	main_rite = surong_puyo
 	faith_details = {
 		religion = dayawism_religion
@@ -5993,7 +5985,7 @@ alan_pagan = {
 	}
 }
 
-momolianism_faith = {
+momolianism = {
 	main_rite = momolianism
 	faith_details = {
 		religion = kaharingan_religion
