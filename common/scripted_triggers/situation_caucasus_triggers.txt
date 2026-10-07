@@ -1,7 +1,7 @@
-# called from a faith scope
-faith_is_pro_roman_trigger = {
+# called from a rite scope
+rite_is_pro_roman_trigger = {
 	custom_tooltip = {
-		text = faith_is_pro_roman_trigger_tt
+		text = rite_is_pro_roman_trigger_tt
 		subject = THIS
 		trigger_if = {
 			limit = {
@@ -16,16 +16,15 @@ faith_is_pro_roman_trigger = {
 		trigger_else = {
 			OR = {
 				# The Roman Church
-				this = faith:orthodox
-				religious_head_title = faith:orthodox.religious_head_title
+				this.faith = faith:orthodox
 				# The OTHER Roman Church
-				this = faith:catholic
-				religious_head_title = faith:catholic.religious_head_title
+				this.faith = faith:catholic
+				# The as-yet-undivided Church
+				this.faith = faith:christian_faith
 				# the Iconoclasts
-				this = faith:iconoclast
-				religious_head_title = faith:iconoclast.religious_head_title
+				this.faith = faith:iconoclast
 				# Hellenic Paganism
-				religion_tag = hellenism_religion
+				this.faith = faith:hellenic_pagan
 				# also include a check for faiths marked pro-Roman by flag
 				var:caucasus_alignment ?= flag:pro_roman
 			}
@@ -33,9 +32,9 @@ faith_is_pro_roman_trigger = {
 	}
 }
 
-faith_is_pro_perso_arabic_trigger = {
+rite_is_pro_perso_arabic_trigger = {
 	custom_tooltip = {
-		text = faith_is_pro_perso_arabic_trigger_tt
+		text = rite_is_pro_perso_arabic_trigger_tt
 		subject = THIS
 		trigger_if = {
 			limit = {
@@ -54,16 +53,17 @@ faith_is_pro_perso_arabic_trigger = {
 					religion = religion:zoroastrianism_religion
 					NOT = {
 						# Certain Zoroastrian sects
-						this = faith:barhailism
-						this = faith:urartuism
-						this = faith:mazdakism
-						this = faith:khurramism
+						faith = faith:barhailism
+						faith = faith:urartuism
+						faith = faith:mazdakism
+						faith = faith:khurramism
 					}
 				}
 				# Nestorians - this will be handled by flag
 				# religious_head_title = faith:nestorian.religious_head_title
 				# Muslims
 				religion = religion:islam_religion
+				faith = faith:miaphysitism
 				# explicitly marked pro-perso-arabic faiths
 				var:caucasus_alignment ?= flag:pro_perso_arabic
 			}
@@ -71,9 +71,9 @@ faith_is_pro_perso_arabic_trigger = {
 	}
 }
 
-faith_is_autonomist_trigger = {
+rite_is_autonomist_trigger = {
 	custom_tooltip = {
-		text = faith_is_autonomist_trigger_tt
+		text = rite_is_autonomist_trigger_tt
 		subject = THIS
 		trigger_if = {
 			limit = {
@@ -88,19 +88,14 @@ faith_is_autonomist_trigger = {
 		trigger_else = {
 			OR = {
 				# Armenian Apostolic and Tondrakian
-				this = faith:armenian_apostolic
-				this = faith:tondrakian
-				# Georgian Church
-				# this = faith:georgian_orthodox
-				# religious_head_title = faith:georgian_orthodox.religious_head_title
+				faith = faith:armenian_apostolic
+				faith = faith:tondrakian
 				# Certain Zoroastrian sects
-				this = faith:barhailism
-				this = faith:urartuism
-				this = faith:mazdakism
-				this = faith:khurramism
+				faith = faith:barhailism
+				faith = faith:urartuism
+				faith = faith:mazdakism
+				faith = faith:khurramism
 				# The Georgian Church - this will be done via variable flags and a decision later
-				# this = faith:georgian_orthodox
-				# religious_head_title = faith:georgian_orthodox.religious_head_title
 				# variable flag
 				var:caucasus_alignment ?= flag:autonomist
 			}
@@ -108,13 +103,13 @@ faith_is_autonomist_trigger = {
 	}
 }
 
-faith_is_interloper_trigger = {
+rite_is_interloper_trigger = {
 	custom_tooltip = {
-		text = faith_is_interloper_trigger_tt
+		text = rite_is_interloper_trigger_tt
 		subject = THIS
-		faith_is_pro_roman_trigger = no
-		faith_is_pro_perso_arabic_trigger = no
-		faith_is_autonomist_trigger = no
+		rite_is_pro_roman_trigger = no
+		rite_is_pro_perso_arabic_trigger = no
+		rite_is_autonomist_trigger = no
 	}
 }
 

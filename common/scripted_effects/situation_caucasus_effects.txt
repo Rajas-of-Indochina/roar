@@ -19,19 +19,19 @@ auto_assign_caucasus_stance = {
 	# Go by faith first
 	else_if = {
 		limit = {
-			faith = { faith_is_pro_roman_trigger = yes }
+			faith = { rite_is_pro_roman_trigger = yes }
 		}
 		set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
-			faith = { faith_is_pro_perso_arabic_trigger = yes }
+			faith = { rite_is_pro_perso_arabic_trigger = yes }
 		}
 		set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = no }
 	}
 	else_if = {
 		limit = {
-			faith = { faith_is_autonomist_trigger = yes }
+			faith = { rite_is_autonomist_trigger = yes }
 		}
 		set_caucasus_alignment = { FLAG = autonomist COOLDOWN = no }
 	}
@@ -155,6 +155,240 @@ trigger_caucasus_catalyst_in_title = {
 	}
 }
 
+# Fetches a list of situation_caucasus subregions that a given rite overlaps, then triggers the given catalyst in each.
+# $RITE$
+# $CATALYST$
+trigger_caucasus_catalyst_in_rite = {
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_armenia_proper } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:armenia_proper = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenia_proper = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_caucasian_albania } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:iberia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_albania = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_caucasian_iberia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:albania = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_iberia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_persarmenia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:persarmenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_persarmenia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_lesser_armenia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:lesser_armenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_lesser_armenia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_armenian_cilicia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenian_cilicia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_syria } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:syria = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_syria = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $RITE$ = { any_rite_county = { title_province = { geographical_region = custom_jazira } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:jazira = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_jazira = {
+			add_to_list = regions_to_notify
+		}
+	}
+}
+
+# Fetches a list of situation_caucasus subregions that a given faith overlaps, then triggers the given catalyst in each.
+# $FAITH$
+# $CATALYST$
+trigger_caucasus_catalyst_in_faith = {
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_armenia_proper } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:armenia_proper = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenia_proper = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_caucasian_albania } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:iberia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_albania = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_caucasian_iberia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:albania = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_iberia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_persarmenia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:persarmenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_persarmenia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_lesser_armenia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:lesser_armenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_lesser_armenia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_armenian_cilicia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenian_cilicia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_syria } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:syria = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_syria = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $FAITH$ = { any_faith_county = { title_province = { geographical_region = custom_jazira } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:jazira = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_jazira = {
+			add_to_list = regions_to_notify
+		}
+	}
+}
+
+# Fetches a list of situation_caucasus subregions that a given culture overlaps, then triggers the given catalyst in each.
+# $CULTURE$
+# $CATALYST$
+trigger_caucasus_catalyst_in_culture = {
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_armenia_proper } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:armenia_proper = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenia_proper = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_caucasian_albania } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:iberia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_albania = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_caucasian_iberia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:albania = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_caucasian_iberia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_persarmenia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:persarmenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_persarmenia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_lesser_armenia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:lesser_armenia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_lesser_armenia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_armenian_cilicia } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:cilicia = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_armenian_cilicia = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_syria } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:syria = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_syria = {
+			add_to_list = regions_to_notify
+		}
+	}
+	if = {
+		limit = { $CULTURE$ = { any_culture_county = { title_province = { geographical_region = custom_jazira } } } }
+		situation:situation_caucasus ?= {
+			situation_sub_region:jazira = { trigger_sub_region_catalyst = $CATALYST$ }
+		}
+		geographical_region:custom_jazira = {
+			add_to_list = regions_to_notify
+		}
+	}
+}
+
 save_roman_empire_title = {
 	if = {
 		limit = { title:h_eastern_roman_empire = { is_titular = no } } 
@@ -228,7 +462,7 @@ align_culture_effect = {
 	}
 }
 
-align_faith_effect = {
+align_rite_effect = {
 	$TARGET$ = {
 		set_variable = {
 			name = caucasus_alignment
@@ -237,7 +471,7 @@ align_faith_effect = {
 	}
 
 	custom_tooltip = {
-		text = faith_setting_$FLAG$_alignment_tt
+		text = rite_setting_$FLAG$_alignment_tt
 		subject = $TARGET$
 	}
 }

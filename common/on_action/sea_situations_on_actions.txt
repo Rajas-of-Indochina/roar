@@ -111,12 +111,12 @@ situation_caucasus_war_won_attacker = {
 			limit = {
 				scope:war = { using_cb = populist_war }
 				trigger_if = {
-					limit = { scope:defender.faith = { faith_is_pro_roman_trigger = no } }
-					scope:attacker.faith = { faith_is_pro_roman_trigger = yes }
+					limit = { scope:defender.faith = { rite_is_pro_roman_trigger = no } }
+					scope:attacker.faith = { rite_is_pro_roman_trigger = yes }
 				}
 				trigger_else_if = {
-					limit = { scope:defender.faith = { faith_is_pro_roman_trigger = yes } }
-					scope:attacker.faith = { faith_is_pro_roman_trigger = yes }
+					limit = { scope:defender.faith = { rite_is_pro_roman_trigger = yes } }
+					scope:attacker.faith = { rite_is_pro_roman_trigger = yes }
 					scope:attacker.culture = { culture_is_pro_roman_trigger = yes }
 				}
 			}
@@ -136,12 +136,12 @@ situation_caucasus_war_won_attacker = {
 			limit = {
 				scope:war = { using_cb = populist_war }
 				trigger_if = {
-					limit = { scope:defender.faith = { faith_is_pro_perso_arabic_trigger = no } }
-					scope:attacker.faith = { faith_is_pro_perso_arabic_trigger = yes }
+					limit = { scope:defender.faith = { rite_is_pro_perso_arabic_trigger = no } }
+					scope:attacker.faith = { rite_is_pro_perso_arabic_trigger = yes }
 				}
 				trigger_else_if = {
-					limit = { scope:defender.faith = { faith_is_pro_perso_arabic_trigger = yes } }
-					scope:attacker.faith = { faith_is_pro_perso_arabic_trigger = yes }
+					limit = { scope:defender.faith = { rite_is_pro_perso_arabic_trigger = yes } }
+					scope:attacker.faith = { rite_is_pro_perso_arabic_trigger = yes }
 					scope:attacker.culture = { culture_is_pro_perso_arabic_trigger = yes }
 				}
 			}
@@ -161,12 +161,12 @@ situation_caucasus_war_won_attacker = {
 			limit = {
 				scope:war = { using_cb = populist_war }
 				trigger_if = {
-					limit = { scope:defender.faith = { faith_is_autonomist_trigger = no } }
-					scope:attacker.faith = { faith_is_autonomist_trigger = yes }
+					limit = { scope:defender.faith = { rite_is_autonomist_trigger = no } }
+					scope:attacker.faith = { rite_is_autonomist_trigger = yes }
 				}
 				trigger_else_if = {
-					limit = { scope:defender.faith = { faith_is_autonomist_trigger = yes } }
-					scope:attacker.faith = { faith_is_autonomist_trigger = yes }
+					limit = { scope:defender.faith = { rite_is_autonomist_trigger = yes } }
+					scope:attacker.faith = { rite_is_autonomist_trigger = yes }
 					scope:attacker.culture = { culture_is_autonomist_trigger = yes }
 				}
 			}
@@ -736,8 +736,8 @@ situation_caucasus_on_character_faith_change = {
 	effect = {
 		if = {
 			limit = {
-				faith = { faith_is_pro_roman_trigger = yes }
-				scope:old_faith = { faith_is_pro_roman_trigger = no }
+				faith = { rite_is_pro_roman_trigger = yes }
+				scope:old_faith = { rite_is_pro_roman_trigger = no }
 			}
 			situation:situation_caucasus = {
 				every_situation_sub_region = {
@@ -752,8 +752,8 @@ situation_caucasus_on_character_faith_change = {
 		}
 		else_if = {
 			limit = {
-				faith = { faith_is_pro_perso_arabic_trigger = yes }
-				scope:old_faith = { faith_is_pro_perso_arabic_trigger = no }
+				faith = { rite_is_pro_perso_arabic_trigger = yes }
+				scope:old_faith = { rite_is_pro_perso_arabic_trigger = no }
 			}
 			situation:situation_caucasus = {
 				every_situation_sub_region = {
@@ -768,8 +768,8 @@ situation_caucasus_on_character_faith_change = {
 		}
 		else_if = {
 			limit = {
-				faith = { faith_is_autonomist_trigger = yes }
-				scope:old_faith = { faith_is_autonomist_trigger = no }
+				faith = { rite_is_autonomist_trigger = yes }
+				scope:old_faith = { rite_is_autonomist_trigger = no }
 			}
 			situation:situation_caucasus = {
 				every_situation_sub_region = {
@@ -801,8 +801,8 @@ situation_caucasus_on_county_faith_change = {
 		save_scope_as = county
 		if = {
 			limit = {
-				faith = { faith_is_pro_roman_trigger = yes }
-				scope:old_faith = { faith_is_pro_roman_trigger = no }
+				faith = { rite_is_pro_roman_trigger = yes }
+				scope:old_faith = { rite_is_pro_roman_trigger = no }
 			}
 			situation:situation_caucasus ?= {
 				trigger_caucasus_catalyst_in_title = {
@@ -813,8 +813,8 @@ situation_caucasus_on_county_faith_change = {
 		}
 		else_if = {
 			limit = {
-				faith = { faith_is_pro_perso_arabic_trigger = yes }
-				scope:old_faith = { faith_is_pro_perso_arabic_trigger = no }
+				faith = { rite_is_pro_perso_arabic_trigger = yes }
+				scope:old_faith = { rite_is_pro_perso_arabic_trigger = no }
 			}
 			situation:situation_caucasus ?= {
 				trigger_caucasus_catalyst_in_title = {
@@ -825,8 +825,8 @@ situation_caucasus_on_county_faith_change = {
 		}
 		else_if = {
 			limit = {
-				faith = { faith_is_autonomist_trigger = yes }
-				scope:old_faith = { faith_is_autonomist_trigger = no }
+				faith = { rite_is_autonomist_trigger = yes }
+				scope:old_faith = { rite_is_autonomist_trigger = no }
 			}
 			situation:situation_caucasus ?= {
 				trigger_caucasus_catalyst_in_title = {
@@ -1109,5 +1109,245 @@ situation_caucasus_on_rank_up = {
 	}
 	effect = {
 		auto_assign_caucasus_stance = yes
+	}
+}
+
+on_game_start = {
+	on_actions = {
+		situation_caucasus_on_game_start
+	}
+}
+
+situation_caucasus_on_game_start = {
+	effect = {
+		# setup any particular rites or cultures that need to be set per-flag rather than by faith or heritage
+		rite:georgian_rite = { set_variable = { caucasus_alignment = flag:autonomist } }
+		rite:nasraniyab = { set_variable = { caucasus_alignment = flag:autonomist } }
+		rite:mtielta = { set_variable = { caucasus_alignment = flag:autonomist } }
+	}
+}
+
+# Code on-action: character creates a rite
+# Root is the creator
+# scope:old_faith is the faith they used to have
+# scope:old_rite is the rite they used to have
+on_rite_created = {
+	on_actions = {
+		situation_caucasus_on_rite_created
+	}
+}
+
+situation_caucasus_on_rite_created = {
+	trigger = {
+		any_character_situation = { situation_type = situation_caucasus }
+	}
+	effect = {
+		# First we assign alignment. Rites created by characters always match their own alignment no matter what.
+		top_participant_group:situation_caucasus = {
+			switch = {
+				trigger = participant_group_type
+				pro_roman = {
+					align_rite_effect = {
+						TARGET = ROOT.rite
+						FLAG = pro_roman
+					}
+					# Then we trigger the catalyst
+					situation:situation_caucasus ?= {
+						trigger_caucasus_catalyst_in_rite = {
+							RITE = ROOT.rite
+							CATALYST = pro_roman_rite_created
+						}
+					}
+				}
+				pro_perso_arabic = {
+					align_rite_effect = {
+						TARGET = ROOT.rite
+						FLAG = pro_perso_arabic
+					}
+					situation:situation_caucasus ?= {
+						trigger_caucasus_catalyst_in_rite = {
+							RITE = ROOT.rite
+							CATALYST = pro_perso_arabic_rite_created
+						}
+					}
+				}
+				autonomist = {
+					align_rite_effect = {
+						TARGET = ROOT.rite
+						FLAG = autonomist
+					}
+					situation:situation_caucasus ?= {
+						trigger_caucasus_catalyst_in_rite = {
+							RITE = ROOT.rite
+							CATALYST = autonomist_rite_created
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Code on-action: a new faith is created (character create/convert, or a rite detaching into its own faith)
+# Root is the new faith; its head/leader is root.main_rite.head_of_rite (use it for faith-setup effects)
+# scope:founder is the acting character that triggered the creation (creator/converter, heresy declarer, or on a divergence the head of the diverging rite)
+# scope:founder can be absent - the game creates faiths with no acting character, so it is entered with ?=
+# scope:old_faith is the faith they used to have
+# scope:old_rite is the rite they used to have
+# scope:diverged (true/false) optional scope, true if the faith was created because of a Rite diverging too much. Notice create a 100+ divergence heresy at the start does not count.
+on_faith_created = {
+	on_actions = {
+		situation_caucasus_on_faith_created
+	}
+}
+
+situation_caucasus_on_faith_created = {
+	trigger = {
+		OR = {
+			# either scope:founder exists and is involved
+			AND = {
+				exists = scope:founder
+				scope:founder ?= { any_character_situation = { situation_type = situation_caucasus } }
+			}
+			# or the faith is in the situation region
+			AND = {
+				NOT = { exists = scope:founder }
+				any_faith_county = { title_province = { geographical_region = situation_caucasus_region } }
+			}
+		}
+	}
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					scope:founder ?= { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } # Pro-Roman founder
+					faith.main_rite = { rite_is_pro_roman_trigger = yes } # or the main rite is Pro-Roman
+				}
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_faith = {
+					FAITH = ROOT
+					CATALYST = pro_roman_faith_created
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:founder ?= { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } # Pro-Roman founder
+					faith.main_rite = { rite_is_pro_perso_arabic_trigger = yes } # or the main rite is Pro-Roman
+				}
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_faith = {
+					FAITH = ROOT
+					CATALYST = pro_perso_arabic_faith_created
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:founder ?= { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } # Pro-Roman founder
+					faith.main_rite = { rite_is_autonomist_trigger = yes } # or the main rite is Pro-Roman
+				}
+			}
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_faith = {
+					FAITH = ROOT
+					CATALYST = autonomist_faith_created
+				}
+			}
+		}
+	}
+}
+
+# Happens when a culture is created through hybridization or divergence
+# Root = The new culture
+# scope:founder = The founder of the new culture
+on_culture_created = {
+	on_actions = {
+		situation_caucasus_on_culture_created
+	}
+}
+
+situation_caucasus_on_culture_created = {
+	trigger = {
+		scope:founder = { any_character_situation = { situation_type = situation_caucasus } }
+	}
+	effect = {
+		if = {
+			limit = scope:founder.top_participant_group:situation_caucasus = { participant_group_type = pro_roman }
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_culture = {
+					CULTURE = ROOT
+					CATALYST = pro_roman_cultural_divergence
+				}
+			}
+		}
+		else_if = {
+			limit = scope:founder.top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic }
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_culture = {
+					CULTURE = ROOT
+					CATALYST = pro_perso_arabic_cultural_divergence
+				}
+			}
+		}
+		else_if = {
+			limit = scope:founder.top_participant_group:situation_caucasus = { participant_group_type = autonomist }
+			situation:situation_caucasus ?= {
+				trigger_caucasus_catalyst_in_culture = {
+					CULTURE = ROOT
+					CATALYST = autonomist_cultural_divergence
+				}
+			}
+		}
+	}
+}
+
+# A Military Order gets a new barony for lease.
+# root = the military order
+# scope:patron = the current patron of the Military Order, if any
+# scope:barony = the new title leased to the Military Order
+on_holy_order_new_lease = {
+	on_actions = {
+		situation_caucasus_on_holy_order_new_lease
+	}
+}
+
+# Trigger catalyst when a holding is leased to an order within the situation region
+situation_caucasus_on_holy_order_new_lease = {
+	trigger = {
+		scope:barony = { title_province = { geographical_region = situation_caucasus_region } }
+	}
+	effect = {
+		if = {
+			limit = {
+				order_rite = { rite_is_pro_roman_trigger = yes }
+			}
+			trigger_caucasus_catalyst_in_title = {
+				TITLE = scope:barony
+				CATALYST = pro_roman_holy_order_lease
+			}
+		}
+		else_if = {
+			limit = {
+				order_rite = { rite_is_pro_perso_arabic_trigger = yes }
+			}
+			trigger_caucasus_catalyst_in_title = {
+				TITLE = scope:barony
+				CATALYST = pro_perso_arabic_holy_order_lease
+			}
+		}
+		else_if = {
+			limit = {
+				order_rite = { rite_is_autonomist_trigger = yes }
+			}
+			trigger_caucasus_catalyst_in_title = {
+				TITLE = scope:barony
+				CATALYST = autonomist_holy_order_lease
+			}
+		}
 	}
 }

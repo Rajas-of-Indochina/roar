@@ -93,7 +93,7 @@
 				}
 				scope:faction.faction_target = {
 					any_character_situation = {
-						situation_type = situation_caucasis
+						situation_type = situation_caucasus
 					}
 					NOT = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } }
 				}
@@ -448,19 +448,19 @@
 			trigger_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_roman_trigger = no }
+					this.title_province.faith = { rite_is_pro_roman_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_perso_arabic_trigger = no }
+					this.title_province.faith = { rite_is_pro_perso_arabic_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
 				OR = {
-					this.title_province.faith = { faith_is_autonomist_trigger = no }
+					this.title_province.faith = { rite_is_autonomist_trigger = no }
 				}
 			}
 		}
@@ -751,19 +751,19 @@
 			trigger_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_roman_trigger = no }
+					this.title_province.faith = { rite_is_pro_roman_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_perso_arabic_trigger = no }
+					this.title_province.faith = { rite_is_pro_perso_arabic_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
 				OR = {
-					this.title_province.faith = { faith_is_autonomist_trigger = no }
+					this.title_province.faith = { rite_is_autonomist_trigger = no }
 				}
 			}
 		}
@@ -1692,19 +1692,19 @@ peasant_faction = {
 			trigger_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_roman_trigger = no }
+					this.title_province.faith = { rite_is_pro_roman_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_perso_arabic_trigger = no }
+					this.title_province.faith = { rite_is_pro_perso_arabic_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
 				OR = {
-					this.title_province.faith = { faith_is_autonomist_trigger = no }
+					this.title_province.faith = { rite_is_autonomist_trigger = no }
 				}
 			}
 		}
@@ -1928,19 +1928,19 @@ peasant_faction = {
 			trigger_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_roman } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_roman_trigger = no }
+					this.title_province.faith = { rite_is_pro_roman_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = pro_perso_arabic } } }
 				OR = {
-					this.title_province.faith = { faith_is_pro_perso_arabic_trigger = no }
+					this.title_province.faith = { rite_is_pro_perso_arabic_trigger = no }
 				}
 			}
 			trigger_else_if = {
 				limit = { scope:target = { top_participant_group:situation_caucasus = { participant_group_type = autonomist } } }
 				OR = {
-					this.title_province.faith = { faith_is_autonomist_trigger = no }
+					this.title_province.faith = { rite_is_autonomist_trigger = no }
 				}
 			}
 		}

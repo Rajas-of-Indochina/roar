@@ -607,12 +607,15 @@ situation_caucasus_imperial_support_interaction = {
 	}
 
 	auto_accept = {
-		custom_description = {
-			text = "spending_hook"
-			subject = scope:actor
-			object = scope:recipient
-			scope:claim_hook = yes
-			scope:actor = { has_strong_hook = scope:recipient }
+		OR = {
+			custom_description = {
+				text = "spending_hook"
+				subject = scope:actor
+				object = scope:recipient
+				scope:claim_hook = yes
+				scope:actor = { has_strong_hook = scope:recipient }
+			}
+			scope:recipient.puppeteer ?= scope:actor # If you've managed to puppet the Emperor, have fun!
 		}
 	}
 	send_option = {
@@ -741,11 +744,14 @@ situation_caucasus_sway_alignment_interaction = {
 	}
 
 	auto_accept = {
-		custom_description = {
-			text = "spending_hook"
-			subject = scope:actor
-			object = scope:recipient
-			scope:hook = yes
+		OR = {
+			custom_description = {
+				text = "spending_hook"
+				subject = scope:actor
+				object = scope:recipient
+				scope:hook = yes
+			}
+			scope:recipient.puppeteer ?= scope:actor
 		}
 	}
 

@@ -48,7 +48,49 @@ situation_caucasus_choose_alignment_decision = {
 			localization = choose_pro_roman_name
 			icon = "gfx/interface/illustrations/struggle_backgrounds/armenian_struggle_phase_roman_dominance_bg.dds"
 			ai_chance = {
-				value = 100
+				value = 0
+				if = {
+					limit = {
+						# If you're of a Pro-Roman Rite account for Zeal
+						rite = { rite_is_pro_roman_trigger = yes }
+					}
+					add = ai_zeal
+				}
+				if = {
+					limit = {
+						# More likely if you're of a Pro-Roman Culture
+						culture = { culture_is_pro_roman_trigger = yes }
+					}
+					add = 25
+				}
+				if = {
+					# If it looks like the Romans are ahead, greedy and dishonorable characters will switch
+					limit = {
+						situation:situation_caucasus = {
+							calc_true_if = {
+								amount >= 2
+								situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_roman_control }
+								situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_roman_control }
+								situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_roman_control }
+							}
+						}
+					}
+					add = ai_greed
+				}
+				# Also account for how you feel about the Emperor
+				if = {
+					limit = {
+						any_character = { is_pro_roman_emperor_trigger = yes }
+					}
+					random_character = {
+						limit = { is_pro_roman_emperor_trigger = yes }
+						save_temporary_scope_as = imperator
+					}
+					add = {
+						value = "opinion(temp_scope:imperator)"
+						multiply = 0.5
+					}
+				}
 			}
 		}
 
@@ -69,7 +111,72 @@ situation_caucasus_choose_alignment_decision = {
 			localization = choose_pro_perso_arabic_name
 			icon = "gfx/interface/illustrations/struggle_backgrounds/armenian_struggle_phase_persian_dominance_bg.dds"
 			ai_chance = {
-				value = 100
+				value = 0
+				if = {
+					limit = {
+						# If you're of a Pro-Perso-Arabic Rite account for Zeal
+						rite = { rite_is_pro_perso_arabic_trigger = yes }
+					}
+					add = ai_zeal
+				}
+				if = {
+					limit = {
+						# More likely if you're of a Pro-Perso-Arabic Culture
+						culture = { culture_is_pro_perso_arabic_trigger = yes }
+					}
+					add = 25
+				}
+				if = {
+					# If it looks like the Persians and Arabis are ahead, greedy characters will switch
+					limit = {
+						situation:situation_caucasus = {
+							calc_true_if = {
+								amount >= 2
+								situation_sub_region:armenia_proper = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+								situation_sub_region:iberia = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+								situation_sub_region:albania = { sub_region_current_phase = situation_caucasus_perso_arabic_control }
+							}
+						}
+					}
+					add = ai_greed
+				}
+				# Also account for how you feel about the Caliph or Shah
+				if = {
+					limit = {
+						any_character = {
+							OR = {
+								has_title = title:e_arabia
+								has_title = title:h_dar_al_islam
+							}
+						}
+					}
+					random_character = {
+						limit = {
+							OR = {
+								has_title = title:e_arabia
+								has_title = title:h_dar_al_islam
+							}
+						}
+						save_temporary_scope_as = caliph
+					}
+					add = {
+						value = "opinion(temp_scope:caliph)"
+						multiply = 0.5
+					}
+				}
+				if = {
+					limit = {
+						title:e_persia.holder = exists
+						NOR = {
+							title:e_persia.holder = title:e_arabia.holder
+							title:e_persia.holder = title:h_dar_al_islam.holder
+						}
+					}
+					add = {
+						value = "opinion(title:e_persia.holder)"
+						multiply = 0.5
+					}
+				}
 			}
 		}
 
@@ -90,7 +197,23 @@ situation_caucasus_choose_alignment_decision = {
 			localization = choose_autonomist_name
 			flat = yes
 			ai_chance = {
-				value = 100
+				value = 0
+				if = {
+					limit = {
+						# If you're of a Autonomist Rite account for Zeal
+						rite = { rite_is_autonomist_trigger = yes }
+					}
+					add = ai_zeal
+				}
+				if = {
+					limit = {
+						# More likely if you're of a Autonomist Culture
+						culture = { culture_is_autonomist_trigger = yes }
+					}
+					add = 25
+				}
+				# Bold characters are more likely to go this way
+				add = ai_boldness
 			}
 		}
 	}
@@ -149,9 +272,21 @@ situation_caucasus_choose_alignment_decision = {
 			trigger = yes
 			scope:pro_roman = {
 				set_caucasus_alignment = { FLAG = pro_roman COOLDOWN = yes }
+				if = {
+					limit = {
+						is_in_confederation = yes
+					}
+					confederation = { remove_confederation_member = ROOT }
+				}
 			}
 			scope:pro_perso_arabic = {
 				set_caucasus_alignment = { FLAG = pro_perso_arabic COOLDOWN = yes }
+				if = {
+					limit = {
+						is_in_confederation = yes
+					}
+					confederation = { remove_confederation_member = ROOT }
+				}
 			}
 			scope:autonomist = {
 				set_caucasus_alignment = { FLAG = autonomist COOLDOWN = yes }
@@ -243,6 +378,12 @@ situation_caucasus_align_culture_decision = {
 					TARGET = THIS
 					FLAG = pro_roman
 				}
+				situation:situation_caucasus ?= {
+					trigger_caucasus_catalyst_in_culture = {
+						CULTURE = ROOT.culture
+						CATALYST = culture_swayed_pro_roman
+					}
+				}
 			}
 			else_if = {
 				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } } }
@@ -250,12 +391,24 @@ situation_caucasus_align_culture_decision = {
 					TARGET = THIS
 					FLAG = pro_perso_arabic
 				}
+				situation:situation_caucasus ?= {
+					trigger_caucasus_catalyst_in_culture = {
+						CULTURE = ROOT.culture
+						CATALYST = culture_swayed_pro_perso_arabic
+					}
+				}
 			}
 			else_if = {
 				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = autonomist } } }
 				align_culture_effect = {
 					TARGET = THIS
 					FLAG = autonomist
+				}
+				situation:situation_caucasus ?= {
+					trigger_caucasus_catalyst_in_culture = {
+						CULTURE = ROOT.culture
+						CATALYST = culture_swayed_autonomist
+					}
 				}
 			}
 		}
@@ -289,39 +442,47 @@ situation_caucasus_align_faith_decision = {
 	is_valid = {
 		# use a global cooldown to prevent tug-of-wars
 		custom_tooltip = {
-			text = sway_faith_global_cooldown_tt
+			text = sway_rite_global_cooldown_tt
 			NOT = {
-				faith = { has_variable = sway_faith_cooldown }
+				rite = { has_variable = sway_rite_cooldown }
 			}
 		}
+		# If you are head of rite, then you can just declare it
+		# If you are not head of rite, then you must have either a strong hook on your HoR or have puppeted them
 		trigger_if = {
-			limit = {
-				exists = faith.religious_head
-			}
-			OR = {
-				faith = { religious_head = ROOT }
-				has_strong_usable_hook = faith.religious_head
-				faith.religious_head ?= {
-					NOT = {
-						has_title = title:e_persia
-						has_title = title:e_arabia
-						has_title = title:h_dar_al_islam
+			limit = { NOT = { rite.head_of_rite = ROOT } }
+			if = {
+				limit = {
+					NOR = {
+						has_strong_usable_hook = rite.head_of_rite
+						NOT = { any_character_situation = { situation_type = situation_caucasus } }
 					}
 				}
 			}
-			piety_level >= very_high_piety_level
-		}
-		trigger_else = {
-			piety_level >= max_piety_level
+			rite.head_of_rite = {
+				top_participant_group:situation_caucasus = ROOT.top_participant_group:situation_caucasus
+			}
+			OR = {
+				rite.head_of_rite = {
+					AND = {
+						puppeteer ?= ROOT
+						OR = {
+							is_puppet_of_type = theological_agent_puppet
+							is_puppet_of_type = external_theological_agent_puppet
+						}
+					}
+				}
+				has_strong_usable_hook = rite.head_of_rite
+			}
 		}
 
 		trigger_if = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } }
 			faith = {
 				custom_tooltip = {
-					text = not_faith_is_pro_roman_trigger_tt
+					text = not_rite_is_pro_roman_trigger_tt
 					subject = THIS
-					faith_is_pro_roman_trigger = no
+					rite_is_pro_roman_trigger = no
 				}
 			}
 		}
@@ -329,9 +490,9 @@ situation_caucasus_align_faith_decision = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } }
 			faith = {
 				custom_tooltip = {
-					text = not_faith_is_pro_perso_arabic_trigger_tt
+					text = not_rite_is_pro_perso_arabic_trigger_tt
 					subject = THIS
-					faith_is_pro_perso_arabic_trigger = no
+					rite_is_pro_perso_arabic_trigger = no
 				}
 			}
 		}
@@ -339,9 +500,9 @@ situation_caucasus_align_faith_decision = {
 			limit = { check_caucasus_alignment_trigger = { ALIGN = autonomist } }
 			faith = {
 				custom_tooltip = {
-					text = not_faith_is_autonomist_trigger_tt
+					text = not_rite_is_autonomist_trigger_tt
 					subject = THIS
-					faith_is_autonomist_trigger = no
+					rite_is_autonomist_trigger = no
 				}
 			}
 		}
@@ -354,31 +515,53 @@ situation_caucasus_align_faith_decision = {
 	effect = {
 		if = {
 			limit = {
-				exists = faith.religious_head
-				has_strong_usable_hook = faith.religious_head
+				exists = rite.head_of_rite
+				NOT = {
+					rite.head_of_rite = ROOT
+					rite.head_of_rite = { puppeteer = ROOT }
+				}
+				has_strong_usable_hook = rite.head_of_rite
 			}
-			use_hook = faith.religious_head
+			use_strong_hook = rite.head_of_rite
 		}
 		faith = {
 			if = {
 				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_roman } } }
-				align_faith_effect = {
+				align_rite_effect = {
 					TARGET = THIS
 					FLAG = pro_roman
+				}
+				situation:situation_caucasus ?= {
+					trigger_caucasus_catalyst_in_rite = {
+						RITE = ROOT.rite
+						CATALYST = rite_swayed_pro_roman
+					}
 				}
 			}
 			else_if = {
 				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = pro_perso_arabic } } }
-				align_faith_effect = {
+				align_rite_effect = {
 					TARGET = THIS
 					FLAG = pro_perso_arabic
+				}
+				situation:situation_caucasus ?= {
+					trigger_caucasus_catalyst_in_rite = {
+						RITE = ROOT.rite
+						CATALYST = rite_swayed_pro_perso_arabic
+					}
 				}
 			}
 			else_if = {
 				limit = { ROOT = { check_caucasus_alignment_trigger = { ALIGN = autonomist } } }
-				align_faith_effect = {
+				align_rite_effect = {
 					TARGET = THIS
 					FLAG = autonomist
+				}
+				situation:situation_caucasus ?= {
+					trigger_caucasus_catalyst_in_rite = {
+						RITE = ROOT.rite
+						CATALYST = rite_swayed_autonomist
+					}
 				}
 			}
 		}
