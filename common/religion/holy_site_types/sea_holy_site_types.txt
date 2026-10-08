@@ -768,7 +768,199 @@ po_nagar = {
 ### ### ### ###
 
 
-### Java holy sites ###
+### ### Borneo/Kalimantan holy sites ### ####
+bombalai = {
+	# volcano mountian, Bombalai
+	county = c_tawau
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		hills_development_growth_factor = 0.01
+		hostile_raid_time = 0.02
+	}
+
+	faith_character_modifier = {
+		coastal_advantage = 8
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		coastal_advantage = 0.5
+		naval_movement_speed_mult = 0.01
+	}
+}
+
+kapuas = {
+	county = c_BOR_tanah_taman
+
+	county_holder_character_modifier = {
+		powerful_vassal_opinion = 5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		county_opinion_add = 1
+	}
+
+	faith_character_modifier = {
+		monthly_piety_gain_per_happy_powerful_vassal_mult = 0.02
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		powerful_vassal_opinion = 0.5
+		monthly_piety_gain_mult = 0.01
+	}
+}
+
+katingan = {
+	#
+	county = c_katingan_kuala
+
+	county_holder_character_modifier = {
+		prowess = 1
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		jungle_development_growth_factor = 0.01
+		levy_size = 0.02
+	}
+
+	faith_character_modifier = {
+		advantage_against_coreligionists = 2
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		advantage_against_coreligionists = 0.25
+	}
+}
+
+kinabalu = {
+	#
+	county = c_kinabalu
+
+	county_holder_character_modifier = {
+		martial = 1
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		jungle_development_growth_factor = 0.01
+		supply_limit_mult = 0.02
+	}
+
+	faith_character_modifier = {
+		jungle_advantage = 5
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		jungle_advantage = 0.5
+		supply_duration = 0.01
+	}
+}
+
+lawangan = {
+	#
+	county = c_BOR_kutai_jauh
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		tax_mult = 0.01
+		hostile_raid_time = 0.02
+	}
+
+	faith_character_modifier = {
+		courtier_and_guest_opinion = 5
+		councillor_opinion = 5
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_income_mult = 0.005
+	}
+}
+
+ngaju = {
+	#
+	county = c_kuala_kurun
+	barony = b_dandang
+
+	county_holder_character_modifier = {
+		powerful_vassal_opinion = 5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		county_opinion_add = 1
+	}
+
+	faith_character_modifier = {
+		monthly_piety_gain_per_happy_powerful_vassal_mult = 0.02
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		powerful_vassal_opinion = 0.5
+		monthly_piety_gain_mult = 0.01
+	}
+}
+
+nunuk_ragang = {
+	county = c_BOR_nabawan
+	barony = b_tongod
+
+	county_holder_character_modifier = {
+		prowess = 2
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		build_speed = -0.01
+		defender_holding_advantage = 0.5
+	}
+
+	faith_character_modifier = {
+		prowess_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_piety_gain_mult = 0.01
+	}
+}
+
+ot_danum = {
+	#
+	county = c_agung_baru
+
+	county_holder_character_modifier = {
+		prowess = 2
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		build_speed = -0.01
+		defender_holding_advantage = 0.5
+	}
+
+	faith_character_modifier = {
+		prowess_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_piety_gain_mult = 0.01
+	}
+}
+### ### ### ###
+
+
+### #### Java holy sites ### ####
 batuwara = {
 	county = c_salakanagara
 	barony = b_pulasari
@@ -832,7 +1024,7 @@ tambora = {
 ### ### ### ###
 
 
-### Nasrani holy sites ###
+### #### Nasrani holy sites ### ####
 kollam = {
 	county = c_venadu
 	barony = b_kollam
@@ -894,19 +1086,6 @@ jangubai_cave_temple = {
 	county_holder_character_modifier = {
 		name = holy_site_jangubai_cave_temple_effect_name
 		dynasty_house_opinion = 5
-	}
-}
-### ### ### ###
-
-
-### ### Kalimantan Holy Sites ### ###
-bombalai = {
-	# volcano mountian, Bombalai
-	county = c_tawau
-
-	county_holder_character_modifier = {
-		name = holy_site_bombalai_effect_name
-		coastal_advantage = 8
 	}
 }
 ### ### ### ###

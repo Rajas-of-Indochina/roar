@@ -535,7 +535,6 @@ tenet_adorcism = {
 			possessed_genetic = { weight = 35 scale = 3 }
 		}
 	}
-
 }
 
 # Sun Worship
@@ -604,6 +603,13 @@ tenet_cranial_trophies = {
 
 	requires_dlc_flag = all_under_heaven
 
+	is_shown = {
+		has_tgp_dlc_trigger = yes
+		NOR = {
+			has_doctrine = abrahamic_hostility_doctrine
+		}
+	}
+
 	name = {
 		first_valid = {
 			triggered_desc = {
@@ -638,13 +644,6 @@ tenet_cranial_trophies = {
 		custom_description = {
 			text = incompatible_tenet_gruesome_festivals_trigger
 			NOT = { tenet:tenet_gruesome_festivals = { is_in_list = selected_doctrines } }
-		}
-	}
-
-	is_shown = {
-		has_tgp_dlc_trigger = yes
-		NOR = {
-			has_doctrine = abrahamic_hostility_doctrine
 		}
 	}
 

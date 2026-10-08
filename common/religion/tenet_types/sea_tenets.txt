@@ -4,7 +4,8 @@
 
 tenet_headhunting = {
 	# Non-DLC RoA original Cranial Trophies
-	icon = core_tenet_cranial_trophies
+	icon = tenet_cranial_trophies
+
 	name = {
 		first_valid = {
 			triggered_desc = {
@@ -20,22 +21,6 @@ tenet_headhunting = {
 				desc = tenet_headhunting_nias_name
 			}
 			desc = tenet_headhunting_name
-		}
-	}
-	piety_cost = {
-		if = {
-			limit = {
-				has_doctrine = pagan_hostility_doctrine
-			}
-			value = faith_tenet_cost_mid
-		}
-		else = {
-			value = faith_tenet_cost_massive
-		}
-		# Multiplier for keeping same tenet
-		if = {
-			limit = { rite_has_tenet = tenet_headhunting }
-			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
 
@@ -63,9 +48,21 @@ tenet_headhunting = {
 		}
 	}
 
-	traits = {
-		virtues = {
-			lifestyle_headhunter = { weight = 25 scale = 2 }
+	piety_cost = {
+		if = {
+			limit = {
+				has_doctrine = pagan_hostility_doctrine
+			}
+			value = faith_tenet_cost_mid
+		}
+		else = {
+			value = faith_tenet_cost_massive
+		}
+
+		# Multiplier for keeping same tenet
+		if = {
+			limit = { rite_has_tenet = tenet_headhunting }
+			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
 
@@ -75,47 +72,74 @@ tenet_headhunting = {
 		flower_war_cb_active
 	}
 
-	personal_tenet_modifier = {
+	divergence_multiplier = 5
+
+	character_modifier = {
 		ai_war_chance = 1
 		ai_war_cooldown = -0.5
 		jungle_advantage = 5
 		jungle_attrition_mult = -0.25
 		jungle_min_combat_roll = 1
 		monthly_piety_gain_per_dread_add = 0.01
+	}
+
+	personal_tenet_modifier = {
 		prowess = 3
+	}
+
+	traits = {
+		virtues = {
+			lifestyle_headhunter = { weight = 25 scale = 2 }
+			brave = { weight = 15 scale = 1 }
+		}
+		sins = {
+			craven = { weight = 15 scale = 1 }
+		}
 	}
 }
 
 tenet_dhammavicaya = {
-	icon = core_tenet_literalism
-		piety_cost = {
+	icon = tenet_literalism
+
+	piety_cost = {
 		value = faith_tenet_cost_mid
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = tenet_literalism }
+			limit = { has_doctrine = tenet_dhammavicaya }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
 
 	can_pick = {
-		religion_tag = buddhism_religion
+		rite_religion_tag = buddhism_religion
 	}
 
 	traits = {
 		virtues = {
-			education_learning_3
-			education_learning_4
-			erudite
+			education_learning_5 = { weight = 15 scale = 1 }
+			stubborn = { weight = 20 scale = 1 }
+		}
+		sins = {
+			fickle = { weight = 20 scale = 1 }
 		}
 	}
 
-	personal_tenet_modifier = {
-		monthly_learning_lifestyle_xp_gain_mult = 0.1
+	character_modifier = {
+		monthly_merit_mult = 0.1
+		advantage_against_coreligionists = 5
 	}
 
 	parameters = {
 		literalist_debate_enabled
+		tenet_literalism_conversion_resistance
+		literalism_holy_war_cb_active
+	}
+
+	personal_tenet_parameters = {
+		tenet_literalism_debate_experience
+		tenet_literalism_scholar_conversion
+		tenet_literalism_scholar_trait
 	}
 }
 
@@ -128,14 +152,15 @@ tenet_dhammavicaya = {
 	# +15% fertility
 
 tenet_spirit_guides = {
-	icon = core_tenet_adorcism
+	# juiced up RoA adorcism
+	icon = tenet_adorcism
 
 	piety_cost = {
-	value = faith_tenet_cost_low
+		value = faith_tenet_cost_low
 
 		# Multiplier for keeping same tenet
 		if = {
-			limit = { has_doctrine = tenet_spirit_guides }
+			limit = { rite_has_tenet = tenet_spirit_guides }
 			multiply = faith_unchanged_doctrine_cost_mult
 		}
 	}
@@ -160,8 +185,11 @@ tenet_spirit_guides = {
 	}
 
 	personal_tenet_modifier = {
-		negate_health_penalty_add = 0.1
+		tenet_adorcism_curse_enemy
+		tenet_adorcism_seek_war_aid
 	}
+
+	divergence_multiplier = 2
 
 	traits = {
 		virtues = {

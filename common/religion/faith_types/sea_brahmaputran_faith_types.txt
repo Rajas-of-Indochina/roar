@@ -1,0 +1,363 @@
+# Bathouism - native religion of Kachari people
+bathouism = {
+	main_rite = bathouism_rite
+	faith_details = {
+		religion = brahmaputran_religion
+		color = { 38 63 125 }
+		icon = bathouism
+		reformed_icon = bathouism_reformed
+	}
+
+	eminent_holy_sites = {
+		goalpara
+		manikuta
+	}
+
+	holy_sites = {
+		itanagar
+		tezu
+		srihatta
+	}
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_esotericism
+		tenet_inner_journey
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_gender_male_dominated
+		doctrine_theocracy_temporal
+	}
+
+	holy_order_names = {
+		{ name = "holy_order_guardians_of_bathou" }
+		{ name = "holy_order_warriors_of_the_temple_of_place" }
+		{ name = "holy_order_warriors_of_sacred_lands" }
+	}
+
+	localization = {
+		#HighGod
+		HighGodName = bathouism_high_god_name
+		HighGodName2 = bathouism_high_god_name
+		HighGodNamePossessive = bathouism_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = bathouism_high_god_name
+		HighGodNameAlternatePossessive = bathouism_high_god_name_possessive
+
+		#Creator
+		CreatorName = bathouism_creator_god_name
+		CreatorNamePossessive = bathouism_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = bathouism_health_god_name
+		HealthGodNamePossessive = bathouism_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FertilityGod
+		FertilityGodName = bathouism_fertility_god_name
+		FertilityGodNamePossessive = bathouism_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#WealthGod
+		WealthGodName = bathouism_wealth_god_name
+		WealthGodNamePossessive = bathouism_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_SHE
+		WealthGodHerHis = CHARACTER_HERHIS_HER
+		WealthGodHerHim = CHARACTER_HERHIM_HER
+
+		#HouseholdGod
+		HouseholdGodName = bathouism_household_god_name
+		HouseholdGodNamePossessive = bathouism_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_THEY
+		HouseholdGodHerHis = CHARACTER_HERHIS_THEM
+		HouseholdGodHerHim = CHARACTER_HERHIM_THEIR
+
+		#FateGod
+		FateGodName = bathouism_fate_god_name
+		FateGodNamePossessive = bathouism_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
+
+		#KnowledgeGod
+		KnowledgeGodName = bathouism_knowledge_god_name
+		KnowledgeGodNamePossessive = bathouism_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = bathouism_war_god_name
+		WarGodNamePossessive = bathouism_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_SHE
+		WarGodHerHis = CHARACTER_HERHIS_HER
+		WarGodHerHim = CHARACTER_HERHIM_HER
+
+		#TricksterGod
+		TricksterGodName = bathouism_trickster_god_name
+		TricksterGodNamePossessive = bathouism_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#NightGod
+		NightGodName = bathouism_night_god_name
+		NightGodNamePossessive = bathouism_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_IT
+		NightGodHerHis = CHARACTER_HERHIS_ITS
+		NightGodHerHim = CHARACTER_HERHIM_IT
+
+		#WaterGod
+		WaterGodName = bathouism_water_god_name
+		WaterGodNamePossessive = bathouism_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#DeathDeity
+		DeathDeityName = bathouism_death_name
+		DeathDeityNamePossessive = bathouism_death_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+
+		#GoodGods
+		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods
+		PantheonTerm3 = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = {
+			bathouism_high_god_name
+			bathouism_good_god_mainao
+			bathouism_good_god_ailong
+			bathouism_good_god_khoila
+			bathouism_good_god_agrang
+			bathouism_good_god_sanjaborle
+			bathouism_good_god_rajkunbre
+		}
+
+		HouseOfWorship = bathouism_house_of_worship
+		HouseOfWorship2 = bathouism_house_of_worship
+		HouseOfWorship3 = bathouism_house_of_worship
+		HouseOfWorshipPlural = bathouism_house_of_worship_plural
+
+		ReligiousHeadName = bathouism_religious_head_title
+		ReligiousHeadTitleName = bathouism_religious_head_title_name
+		PriestMale = bathouism_priest
+		PriestMalePlural = bathouism_priest_plural
+		PriestFemale = bathouism_priest_female
+		PriestFemalePlural = bathouism_priest_female_plural
+		PriestNeuter = sanamahism_priest
+		PriestNeuterPlural = bathouism_priest_plural
+		AltPriestTermPlural = bathouism_priest_term_plural
+		BishopMale = bathouism_priest
+		BishopMalePlural = bathouism_priest_plural
+		BishopFemale = bathouism_priest_female
+		BishopFemalePlural = bathouism_priest_female_plural
+		BishopNeuter = bathouism_priest
+		BishopNeuterPlural = bathouism_priest_plural
+
+		DivineRealm = bathouism_divine_realm
+		DivineRealm2 = bathouism_divine_realm_2
+		DivineRealm3 = bathouism_divine_realm_3
+		PositiveAfterLife = bathouism_divine_realm
+		PositiveAfterLife2 = bathouism_divine_realm_2
+		PositiveAfterLife3 = bathouism_divine_realm_3
+		#NegativeAfterLife - lack of one, souls need to go through purification in mortal realm
+	}
+}
+
+# Songsarek - native religion of Garo people
+songsarek = {
+	main_rite = songsarek
+	faith_details = {
+		religion = brahmaputran_religion
+		color = { 90 150 200 }
+		icon = songsarek
+		reformed_icon = songsarek_reformed
+	}
+
+	eminent_holy_sites = {
+		goalpara
+		manikuta
+	}
+
+	holy_sites = {
+		itanagar
+		tezu
+		srihatta
+	}
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_ritual_celebrations
+		tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+
+	holy_order_names = {
+		{ name = "holy_order_guardians_of_tatara_rabuga" }
+		{ name = "holy_order_warriors_of_the_temple_of_place" }
+		{ name = "holy_order_warriors_of_sacred_lands" }
+	}
+
+	localization = {
+		#HighGod
+		HighGodName = songsarek_high_god_name
+		HighGodName2 = songsarek_high_god_name
+		HighGodNamePossessive = songsarek_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = songsarek_high_god_name_alternate
+		HighGodNameAlternatePossessive = songsarek_high_god_name_alternate_possessive
+
+		#Creator
+		CreatorName = songsarek_creator_god_name
+		CreatorNamePossessive = songsarek_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = songsarek_health_god_name
+		HealthGodNamePossessive = songsarek_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_SHE
+		HealthGodHerHis = CHARACTER_HERHIS_HER
+		HealthGodHerHim = CHARACTER_HERHIM_HER
+
+		#FertilityGod
+		FertilityGodName = songsarek_fertility_god_name
+		FertilityGodNamePossessive = songsarek_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_HE
+		FertilityGodHerHis = CHARACTER_HERHIS_HIS
+		FertilityGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WealthGod
+		WealthGodName = songsarek_wealth_god_name
+		WealthGodNamePossessive = songsarek_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_SHE
+		WealthGodHerHis = CHARACTER_HERHIS_HER
+		WealthGodHerHim = CHARACTER_HERHIM_HER
+
+		#HouseholdGod
+		HouseholdGodName = songsarek_household_god_name
+		HouseholdGodNamePossessive = songsarek_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_IT
+		HouseholdGodHerHis = CHARACTER_HERHIS_ITS
+		HouseholdGodHerHim = CHARACTER_HERHIM_IT
+
+		#FateGod
+		FateGodName = songsarek_fate_god_name
+		FateGodNamePossessive = songsarek_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
+
+		#KnowledgeGod
+		KnowledgeGodName = songsarek_knowledge_god_name
+		KnowledgeGodNamePossessive = songsarek_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = songsarek_war_god_name
+		WarGodNamePossessive = songsarek_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = songsarek_trickster_god_name
+		TricksterGodNamePossessive = songsarek_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_THEY
+		TricksterGodHerHis = CHARACTER_HERHIS_THEIR
+		TricksterGodHerHim = CHARACTER_HERHIM_THEM
+
+		#NightGod
+		NightGodName = songsarek_night_god_name
+		NightGodNamePossessive = songsarek_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_HE
+		NightGodHerHis = CHARACTER_HERHIS_HIS
+		NightGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WaterGod
+		WaterGodName = songsarek_water_god_name
+		WaterGodNamePossessive = songsarek_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#Death
+		DeathDeityName = songsarek_death_name
+		DeathDeityNamePossessive = songsarek_death_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_IT
+		DeathDeityHerHis = CHARACTER_HERHIS_ITS
+		DeathDeityHerHim = CHARACTER_HERHIM_IT
+
+		#WitchGod
+		WitchGodName = songsarek_trickster_god_name
+		WitchGodNamePossessive = songsarek_trickster_god_name_possessive
+		WitchGodSheHe = CHARACTER_SHEHE_THEY
+		WitchGodHerHis = CHARACTER_HERHIS_THEIR
+		WitchGodHerHim = CHARACTER_HERHIM_THEM
+		WitchGodMistressMaster = mistress
+		WitchGodMotherFather = mother
+
+		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods
+		PantheonTerm3 = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = {
+			songsarek_high_god_name
+			songsarek_good_god_misi_saljong
+			songsarek_good_god_susume
+			songsarek_good_god_rokkime
+			songsarek_good_god_gaera
+		}
+
+		ReligiousSymbol = songsarek_religious_symbol
+		ReligiousSymbol2 = songsarek_religious_symbol_2
+		ReligiousSymbol3 = songsarek_religious_symbol_3
+		ReligiousHeadName = songsarek_religious_head_title
+		ReligiousHeadTitleName = songsarek_religious_head_title_name
+		PriestMale = songsarek_priest
+		PriestMalePlural = songsarek_priest_plural
+		PriestFemale = songsarek_priest
+		PriestFemalePlural = songsarek_priest_plural
+		PriestNeuter = songsarek_priest
+		PriestNeuterPlural = songsarek_priest_plural
+		AltPriestTermPlural = songsarek_priest_term_plural
+		BishopMale = songsarek_bishop
+		BishopMalePlural = songsarek_bishop_plural
+		BishopFemale = songsarek_bishop
+		BishopFemalePlural = songsarek_bishop_plural
+		BishopNeuter = songsarek_bishop
+		BishopNeuterPlural = songsarek_bishop_plural
+		DivineRealm = songsarek_divine_realm
+		DivineRealm2 = songsarek_divine_realm_2
+		DivineRealm3 = songsarek_divine_realm_3
+		PositiveAfterLife = songsarek_positive_afterlife
+		PositiveAfterLife2 = songsarek_positive_afterlife_2
+		PositiveAfterLife3 = songsarek_positive_afterlife_3
+		#NegativeAfterLife - lack of one, souls need to go through purification in mortal realm
+
+		GHWName = ghw_purification
+		GHWNamePlural = ghw_purifications
+	}
+}
