@@ -1,0 +1,44 @@
+kaharingan = {
+	faith = kaharingan
+	icon = kaharingan
+	color = { 52 138 118 }
+
+	tenets = {
+		tenet_spirit_guides  #tenet_unrelenting_faith
+		tenet_sanctity_of_nature  #tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+momolianism = {
+	faith = momolianism
+	icon = momolianism
+	color = { 52 138 118 }
+
+	tenets = {
+		tenet_spirit_guides
+		tenet_sanctity_of_nature
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_consanguinity_restricted
+		doctrine_witchcraft_shunned
+		doctrine_clerical_gender_female_only
+	}
+}
