@@ -4,8 +4,6 @@ doctrine_sampradaya = {
 	is_available_on_create = {
 		religion_tag = hinduism_religion
 	}
-
-	
 }
 
 is_hinduism_faith = {
@@ -14,8 +12,6 @@ is_hinduism_faith = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_hinduism_faith
 	}
-
-	
 }
 
 is_jainism_faith = {
@@ -24,72 +20,23 @@ is_jainism_faith = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_jainism_faith
 	}
-
-	
 }
+
 is_buddhist_faith = {
 	category = special
 
 	is_available_on_create = {
 		has_doctrine = special_doctrine_is_buddhist_faith
 	}
-
-	
 }
 
-### RICE borrowed
-rice_doctrine_austroasiatic_tiger_god = {
-	category = main_group
+# doctrine_monarchianism = {
+# 	category = "special"
 
-	is_available_on_create = {
-		has_doctrine = special_doctrine_is_austroasiatic_faith
-	}
-
-	
-}
-is_austroasiatic_faith = {
-	category = special
-	
-	is_available_on_create = {
-		has_doctrine = special_doctrine_is_austroasiatic_faith
-	}
-
-	
-}
-
-rice_doctrine_buddhist_canon = {
-	category = main_group
-
-	is_available_on_create = {
-		religion_tag = buddhism_religion
-		NOT = {
-			has_doctrine = special_doctrine_is_maitreya
-		}
-	}
-
-	
-}
-
-rice_doctrine_west_iranian = {
-	category = main_group
-
-	is_available_on_create = {
-		religion_tag = yazidi_religion
-		# Do it via on_actions
-	}
-
-	
-}
-is_west_iranian_faith = {
-	category = special
-	
-	is_available_on_create = {
-		has_doctrine = special_doctrine_is_west_iranian_faith
-	}
-
-	
-}
-
+# 	is_available_on_create = {
+# 		has_doctrine = special_doctrine_monarchianist
+# 	}
+# }
 
 ### ROA ones
 # doctrine_mz_syncretism = {
@@ -102,8 +49,6 @@ doctrine_three_teachings = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_three_teachings
 	}
-
-	
 }
 
 doctrine_special_succession = {
@@ -112,7 +57,6 @@ doctrine_special_succession = {
 	is_available_on_create = {
 		has_doctrine = special_doctrine_nasrani_partition_succession_law
 	}
-	
 }
 
 doctrine_north_caucasian = {
@@ -121,9 +65,15 @@ doctrine_north_caucasian = {
 	is_available_on_create = {
 		religion_tag = northcaucasian_religion
 	}
-
-	
 }
+
+# doctrine_roa_orthodox = {
+# 	category = "special"
+# 	is_available_on_create = {
+# 		# we should probably tweak this so it has a way to not be part of Orthodox groupings
+# 		has_doctrine = orthodox_roa_doctrine
+# 	}
+# }
 
 doctrine_khorasani_legacy = {
 	category = special
@@ -131,6 +81,21 @@ doctrine_khorasani_legacy = {
 	is_available_on_create = {
 		has_doctrine = khorasani_legacy_doctrine
 	}
-
-	
 }
+
+### Overwrites
+#doctrine_muhammad_succession = {
+#	category = "main_group"
+#
+#	is_available_on_create = {
+#		religion_tag = islam_religion
+#	}
+#
+#	doctrine_types = {
+#		muhammad_succession_sunni_doctrine
+#		muhammad_succession_shia_doctrine
+#		muhammad_succession_muhakkima_doctrine
+#		muhammad_succession_zandaqa_doctrine
+#		muhammad_succession_muminun_doctrine
+#	}
+#}

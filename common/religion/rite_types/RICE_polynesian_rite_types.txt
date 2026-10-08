@@ -1,0 +1,21 @@
+﻿polynesian_pagan = {
+	faith = polynesian_pagan
+	icon = hawaiian_pagan
+	color = { 21 60 122 }
+
+	tenets = {
+		tenet_cthonic_redoubts
+		tenet_religious_legal_pronouncements 	# Kapu/tabu system
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+

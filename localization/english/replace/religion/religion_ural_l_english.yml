@@ -8,15 +8,6 @@
 
 ### Finnic ###
 # Finn #
- finnish_pagan_desc:0 "The Finnic pagans believe that there are spirits all around us. Objects, places and people have their own guardian spirits known as Haltijas."
-
- finnish_pagan:0 "Väenusko"
-
- finnish_pagan_priest_male:0 "tietäjä"
- finnish_pagan_priest_male_plural:0 "tietäjäs"
- finnish_pagan_priest_female:0 "tietäjätär"
- finnish_pagan_priest_female_plural:0 "tietäjätärs"
-
  finnish_pagan:1 "Väenusko"
  finnish_pagan_adj:1 "Väenusko"
  finnish_pagan_adherent:1 "Väenusko"
@@ -25,12 +16,18 @@
  finnish_pagan_adj:0 "Väenusko"
  finnish_pagan_adherent:0 "Väenusko"
  finnish_pagan_adherent_plural:0 "Väenuskos"
-
+ finnish_pagan_desc:0 "The Finnic pagans believe that there are spirits all around us. Objects, places and people have their own guardian spirits known as Haltijas."
+ #
  finnish_pagan_old:0 "Vanha Väenusko"
  finnish_pagan_old_adj:0 "Vanha Väenusko"
  finnish_pagan_old_adherent:0 "Vanha Väenusko"
  finnish_pagan_old_adherent_plural:0 "Vanha Väenuskos"
-
+ finnish_pagan_old_desc:0 "$finnish_pagan_desc$"
+ #
+ finnish_pagan_priest_male:0 "tietäjä"
+ finnish_pagan_priest_male_plural:0 "tietäjäs"
+ finnish_pagan_priest_female:0 "tietäjätär"
+ finnish_pagan_priest_female_plural:0 "tietäjätärs"
  # Council testi
  councillor_court_chaplain_finnish_pagan_county:0 "Court Tietäjä"
  councillor_court_chaplain_finnish_pagan_county_possessive:0 "Court Tietäjä's"
@@ -38,11 +35,12 @@
  councillor_court_chaplain_finnish_pagan_kingdom:1 "Court Tietäjä"
  councillor_court_chaplain_finnish_pagan_female:1 "Court Tietäjä"
  councillor_court_chaplain_finnish_pagan_kingdom_female_possessive:1 "Court Tietäjä's"
-
+ #
  finnish_priest_0: "Tietäjä"
  finnish_priest_plural:0 "Tietäjäs"
  finnish_priest_female:0 "Tietäjätär"
  finnish_priest_plural_female:0 "Tietäjätärs"
+ #
  finnish_pagan_high_god_name:0 "Ukko"
  finnish_pagan_high_god_name_possessive:0 "Ukko's"
  finnish_pagan_high_god_name_alternate:0 "Old Man"
@@ -64,7 +62,7 @@
  finnish_pagan_religious_text:0 "great epics"
  finnish_pagan_afterlife:0 "Tuonela"
  finnish_pagan_witgodname_vainamoinen:0 "Väinämöinen"
-
+ #
  finnish_pagan_creator_god_name:0 "$finnish_pagan_high_god_name$"
  finnish_pagan_creator_god_name_possessive:0 "$finnish_pagan_high_god_name_possessive$"
  finnish_pagan_health_god_name:0 "Akka"
@@ -87,11 +85,11 @@
  finnish_pagan_night_god_name_possessive:0 "Kuu's"
  finnish_pagan_water_god_name:0 "Ahto"
  finnish_pagan_water_god_name_possessive:0 "Ahto's"
-
+ #
  holy_order_warriors_of_the_swan:0 "Warriors of the swan"
-
+ #
  finnish_religious_symbol:0 "swan"
-
+ #
  holy_order_followers_of_keremet:0 "Warriors of the Keremets"
  holy_order_warriors_of_tyus:0 "Warriors of Tyushtya"
 
@@ -651,29 +649,25 @@
 
 ## Holy Site ##
  holy_site_enare_name:0 "Äijihsuálui"
- holy_site_enare_effect_name:0 "From [holy_site|E] #weak ($holy_site_enare_name$)#!"
 
  holy_site_enarefi_name:0 "Ukonkivi"
- holy_site_enarefi_effect_name:0 "From [holy_site|E] #weak ($holy_site_enarefi_name$)#!"
 
  holy_site_sjeltie_name:0 "Sjeltie"
- holy_site_sjeltie_effect_name:0 "From [holy_site|E] #weak ($holy_site_sjeltie_name$)#!"
+
  holy_site_choklema_name:0 "Choklema"
- holy_site_choklema_effect_name:0 "From [holy_site|E] #weak ($holy_site_choklema_name$)#!"
+
  holy_site_uiska_name:0 "Uiska"
- holy_site_uiska_effect_name:0 "From [holy_site|E] #weak ($holy_site_uiska_name$)#!"
+
  holy_site_yoshkar-ola_name:0 "Yoshkar-Ola"
- holy_site_yoshkar-ola_effect_name:0 "From [holy_site|E] #weak ($holy_site_yoshkar-ola_name$)#!"
+
  holy_site_tambov_name:0 "Tambov"
- holy_site_tambov_effect_name:0 "From [holy_site|E] #weak ($holy_site_tambov_name$)#!"
+
  holy_site_koda_name:0 "Koda"
- holy_site_koda_effect_name:0 "From [holy_site|E] #weak ($holy_site_koda_name$)#!"
+
  holy_site_tara_name:0 "Tara"
- holy_site_tara_effect_name:0 "From [holy_site|E] #weak ($holy_site_tara_name$)#!"
 
  glazov:0 "Glazov"
  holy_site_glazov_name:0 "Glazov"
- holy_site_glazov_effect_name:0 "From [holy_site|E] #weak ($holy_site_glazov_name$)#!"
 
 
 ## Samoyedic / Nenets ##
@@ -975,20 +969,19 @@
 
 # Holy Sites: Estonian & Osilian
  holy_site_harja_name:0 "Härjä" #Toompea
- holy_site_harja_effect_name:0 "From [holy_site|E] #weak ($holy_site_harja_name$)#!"
+
  holy_site_kuremae_name:0 "Kuremäe"
- holy_site_kuremae_effect_name:0 "From [holy_site|E] #weak ($holy_site_kuremae_name$)#!"
+
  holy_site_puhajarv_name:0 "Pühajärv"
- holy_site_puhajarv_effect_name:0 "From [holy_site|E] #weak ($holy_site_puhajarv_name$)#!"
 
  holy_site_ebavere_name:0 "Ebaveremägi" #Birthplace of Taara
- holy_site_ebavere_effect_name:0 "From [holy_site|E] #weak ($holy_site_ebavere_name$)#!"
+
  holy_site_kaali_name:0 "Kaali"
- holy_site_kaali_effect_name:0 "From [holy_site|E] #weak ($holy_site_kaali_name$)#!"
+
  holy_site_taaralinn_name:0 "Taaralinn"
- holy_site_taaralinn_effect_name:0 "From [holy_site|E] #weak ($holy_site_taaralinn_name$)#!"
+
  holy_site_turaida_name:0 "Turaida"
- holy_site_turaida_effect_name:0 "From [holy_site|E] #weak ($holy_site_turaida_name$)#!"
+
 
 # Nenets courtier
  nenets_courtier.0001:0 "Nenets courtier"
@@ -1004,12 +997,14 @@
  bjarmian_pagan_adj:1 "Jómalinusko"
  bjarmian_pagan_adherent:1 "Jómalinusko"
  bjarmian_pagan_adherent_plural:1 "Jómalinuskos"
-
+ bjarmian_pagan_desc:0 "Jómali is the supreme god of the Bjarmian pagans."
+ #
  bjarmian_pagan_old:0 "Vanha Jómalinusko"
  bjarmian_pagan_old_adj:0 "Vanha Jómalinusko"
  bjarmian_pagan_old_adherent:0 "Vanha Jómalinusko"
  bjarmian_pagan_old_adherent_plural:0 "Vanha Jómalinusko"
-
+ bjarmian_pagan_old_desc:0 "$bjarmian_pagan_desc$"
+ #
  bjarmian_priest_0: "Tietäjä"
  bjarmian_priest_plural:0 "Tietäjäs"
  bjarmian_priest_female:0 "Tietäjätär"
@@ -1035,7 +1030,7 @@
  bjarmian_pagan_religious_text:0 "great epics"
  bjarmian_pagan_afterlife:0 "Tuonela"
  bjarmian_pagan_witgodname_vainamoinen:0 "Jómali"
-
+ #
  bjarmian_pagan_creator_god_name:0 "$bjarmian_pagan_high_god_name$"
  bjarmian_pagan_creator_god_name_possessive:0 "$bjarmian_pagan_high_god_name_possessive$"
  bjarmian_pagan_health_god_name:0 "Jómali"
@@ -1059,18 +1054,13 @@
  bjarmian_pagan_water_god_name:0 "Jómali"
  bjarmian_pagan_water_god_name_possessive:0 "Jómali's"
 
- bjarmian_pagan_desc:0 "Jómali is the supreme god of the Bjarmian pagans."
-
  holy_site_bjarmiasite_name:0 "Kholmogory"
- holy_site_bjarmiasite_effect_name:0 "From [holy_site|E] #weak ($holy_site_bjarmiasite_name$)#!"
+
  holy_site_pudozh_name:0 "Pudozh"
- holy_site_pudozh_effect_name:0 "From [holy_site|E] #weak ($holy_site_pudozh_name$)#!"
 
  holy_site_volga_name:0 "Volga"
- holy_site_volga_effect_name:0 "From [holy_site|E] #weak ($holy_site_volga_name$)#!"
 
  holy_site_kainuu_name:0 "Kainuu"
- holy_site_kainuu_effect_name:0 "From [holy_site|E] #weak ($holy_site_kainuu_name$)#!"
 
 # Holy Orders
  holy_order_children_of_fertilitygod:0 "Children of [FAITH.FertilityGodName]"

@@ -1,16 +1,21 @@
-barhailism = { #pagan-syncretic azerbaijan religion
+# syncretic pagan religion in Shirvan (modern day Azerbaijan)
+barhailism = {
+	main_rite = barhailism
 	faith_details = {
 		religion = zoroastrianism_religion
 		color = { 0.1 0.5 0.4 }
 		icon = barhailism
 	}
 
+	eminent_holy_sites = {
+		shahdagh
+		mingachevir
+	}
+
 	holy_sites = {
 		ani
-		shahdagh
 		cheleken
 		goyazan
-		mingachevir
 	}
 
 	tenets = {
@@ -31,7 +36,6 @@ barhailism = { #pagan-syncretic azerbaijan religion
 	}
 
 	localization = {
-
 		GoodGodNames = {
 			barhaili_barhail_god_name
 			barhaili_sabail_god_name
@@ -87,6 +91,5 @@ barhailism = { #pagan-syncretic azerbaijan religion
 		WarGodSheHe = CHARACTER_SHEHE_HE
 		WarGodHerHis = CHARACTER_HERHIS_HIS
 		WarGodHerHim = CHARACTER_HERHIM_HIM
-
 	}
 }

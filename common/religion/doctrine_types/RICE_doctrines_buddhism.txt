@@ -1,8 +1,7 @@
 ﻿rice_mahayana_canon_doctrine = {		# Chinese Canon/Dazangjing
-	icon = "rice_mahayana_canon_doctrine"
 	doctrine_group_type = rice_doctrine_buddhist_canon
-	index = 0
-
+	divergence = 20
+	icon = "rice_mahayana_canon_doctrine"
 	piety_cost = {
 		value = faith_doctrine_cost_mid
 		if = {
@@ -22,23 +21,18 @@
 			multiply = faith_changed_doctrine_cost_mult_three_step
 		}
 	}
-
 	parameters = {
-		rice_life_liberation_active
-		rice_pagodas_unlocked_active
-	}
-	special_parameters = {
-		hostility_level_override = {
-			rice_mahayana_canon_doctrine = righteous
-		}
+		#hostility_override_rice_mahayana_canon_doctrine = 0
+		rice_life_liberation_active = yes
+		rice_pagodas_unlocked_active = yes
+		rice_mahayana_deities = yes
 	}
 }
 
 rice_theravada_canon_doctrine = {		# Pali Canon
-	icon = "rice_theravada_canon_doctrine"
 	doctrine_group_type = rice_doctrine_buddhist_canon
-	index = 1
-
+	divergence = 20
+	icon = "rice_theravada_canon_doctrine"
 	piety_cost = {
 		value = faith_doctrine_cost_mid
 		if = {
@@ -58,23 +52,18 @@ rice_theravada_canon_doctrine = {		# Pali Canon
 			multiply = faith_changed_doctrine_cost_mult_three_step
 		}
 	}
-
 	parameters = {
-		rice_sri_lanka_struggle_effects_active
-		rice_vassa_active
-	}
-	special_parameters = {
-		hostility_level_override = {
-			rice_theravada_canon_doctrine = righteous
-		}
+		#hostility_override_rice_theravada_canon_doctrine = 0
+		rice_sri_lanka_struggle_effects_active = yes
+		rice_vassa_active = yes
+		rice_theravada_deities = yes
 	}
 }
 
 rice_vajrayana_canon_doctrine = {		# Tibetan Canon/Kanngur and Tanggur
-	icon = "rice_vajrayana_canon_doctrine"
 	doctrine_group_type = rice_doctrine_buddhist_canon
-	index = 2
-
+	divergence = 20
+	icon = "rice_vajrayana_canon_doctrine"
 	piety_cost = {
 		value = faith_doctrine_cost_mid
 		if = {
@@ -94,22 +83,20 @@ rice_vajrayana_canon_doctrine = {		# Tibetan Canon/Kanngur and Tanggur
 			multiply = faith_changed_doctrine_cost_mult_three_step
 		}
 	}
-
-	parameters = {
-		rice_life_liberation_active
+	character_modifier = {
+		 	enemy_hostile_scheme_success_chance_growth_add = -0.3
 	}
-	special_parameters = {
-		hostility_level_override = {
-			rice_vajrayana_canon_doctrine = righteous
-		}
+	parameters = {
+		#hostility_override_rice_vajrayana_canon_doctrine = 0
+		rice_life_liberation_active = yes
+		rice_vajrayana_deities = yes
 	}
 }
 
 rice_pudgalavada_canon_doctrine = {		# Pudgalavada/Sammitiya Canon
-	icon = "rice_pudgalavada_canon_doctrine"
 	doctrine_group_type = rice_doctrine_buddhist_canon
-	index = 3
-
+	divergence = 70
+	icon = "rice_pudgalavada_canon_doctrine"
 	piety_cost = {
 		value = faith_doctrine_cost_mid
 		if = {
@@ -129,13 +116,12 @@ rice_pudgalavada_canon_doctrine = {		# Pudgalavada/Sammitiya Canon
 			multiply = faith_changed_doctrine_cost_mult_three_step
 		}
 	}
-
-	parameters = {
-		rice_vassa_active
+	character_modifier = {
+		theocracy_government_tax_contribution_mult = 0.1
 	}
-	special_parameters = {
-		hostility_level_override = {
-			rice_pudgalavada_canon_doctrine = righteous
-		}
+	parameters = {
+		#hostility_override_rice_pudgalavada_canon_doctrine = 0
+		rice_vassa_active = yes
+		rice_pudgalavada_deities = yes
 	}
 }

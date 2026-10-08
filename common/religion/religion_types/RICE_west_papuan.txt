@@ -1,6 +1,7 @@
 ﻿west_papuan_religion = { # Folk religions of the Biak and other Austronesians and West Papuans in Papua
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -32,6 +33,7 @@
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
+
 	doctrine = doctrine_monasticism_absent
 	doctrine = doctrine_sacraments_absent
 
@@ -44,17 +46,20 @@
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
 
+	#Preservation
+	doctrine = doctrine_oral_storytelling
+
 	traits = {
 		virtues = { ambitious brave just humble }
 		sins = { lazy craven arbitrary arrogant }
 	}
 
 	custom_faith_icons = {
-		baltic baltic_01 baltic_02 baltic_03 baltic_04 baltic_05 baltic_custom akanism akanism_01 akanism_02 akanism_03 akanism_04 akanism_05 aluk aluk_01 aluk_02 aluk_03 aluk_04 aluk_05 fp2_basque basque_01 basque_02 basque_03 basque_04 basque_05 bilikuism pulugaism bon bon_01 bon_02 bon_03 bon_04 bon_05
-		custom_faith_gankyil custom_faith_gankyil_01 custom_faith_gankyil_02 custom_faith_gankyil_03 custom_faith_gankyil_04 custom_faith_gankyil_05 spirit_bon dayawism dayawism_01 dayawism_02 dayawism_03 dayawism_04 dayawism_05 donyipoloism donyipoloism_01 donyipoloism_02 donyipoloism_03 donyipoloism_04 donyipoloism_05 sedism sedism_01 sedism_02 sedism_03 sedism_04 sedism_05 finno_ugric finno_ugric_01 finno_ugric_02 finno_ugric_03 finno_ugric_04 finno_ugric_05 germanic germanic_01 germanic_02 germanic_03 germanic_04 germanic_05 custom_faith_fp1_fenrir
-		custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil germanic_custom
-		hantuism hantuism_01 hantuism_02 hantuism_03 hantuism_04 hantuism_05 hellenic hellenic_01 hellenic_02 hellenic_03 hellenic_04 hellenic_05 dab_qhuas hmongism_01 hmongism_02 hmongism_03 hmongism_04 hmongism_05 kaharingan kaharingan_01 kaharingan_02 kaharingan_03 kaharingan_04 kaharingan_05 kamuyism kamuyism_01 kamuyism_02 kamuyism_03 kamuyism_04 kamuyism_05 kushism kushism_01 kushism_02 kushism_03 kushism_04 kushism_05 custom_faith_ankh pagan_magyar pagan_magyar_01 pagan_magyar_02 pagan_magyar_03 pagan_magyar_04 pagan_magyar_05
-		moism moism_01 moism_02 moism_03 moism_04 moism_05 mu mu_01 mu_02 mu_03 mu_04 mu_05 kiratism kiratism_01 kiratism_02 kiratism_03 kiratism_04 kiratism_05 yumaism yumaism_01 yumaism_02 yumaism_03 yumaism_04 yumaism_05 achamanism sabianism pagan pagan_01 pagan_02 pagan_03 pagan_04 pagan_05 rrmeaism rrmeaism_01 rrmeaism_02 rrmeaism_03 rrmeaism_04 rrmeaism_05
+		mu mu_01 mu_02 mu_03 mu_04 mu_05 akanism akanism_01 akanism_02 akanism_03 akanism_04 akanism_05 aluk aluk_01 aluk_02 aluk_03 aluk_04 aluk_05 baltic baltic_01 baltic_02 baltic_03 baltic_04 baltic_05 baltic_custom fp2_basque basque_01 basque_02 basque_03 basque_04 basque_05 bilikuism pulugaism
+		bon bon_01 bon_02 bon_03 bon_04 bon_05 custom_faith_gankyil custom_faith_gankyil_01 custom_faith_gankyil_02 custom_faith_gankyil_03 custom_faith_gankyil_04 custom_faith_gankyil_05 spirit_bon dayawism dayawism_01 dayawism_02 dayawism_03 dayawism_04 dayawism_05 donyipoloism donyipoloism_01 donyipoloism_02 donyipoloism_03 donyipoloism_04 donyipoloism_05 sedism sedism_01 sedism_02 sedism_03 sedism_04 sedism_05 finno_ugric finno_ugric_01 finno_ugric_02 finno_ugric_03 finno_ugric_04 finno_ugric_05 germanic germanic_01 germanic_02 germanic_03 germanic_04 germanic_05
+		custom_faith_fp1_fenrir custom_faith_fp1_irminsul custom_faith_fp1_jormungandr custom_faith_fp1_odins_ravens custom_faith_fp1_runestone_moon custom_faith_fp1_thors_hammer custom_faith_fp1_valknut custom_faith_fp1_yggdrasil
+		germanic_custom hantuism hantuism_01 hantuism_02 hantuism_03 hantuism_04 hantuism_05 hellenic hellenic_01 hellenic_02 hellenic_03 hellenic_04 hellenic_05 dab_qhuas hmongism_01 hmongism_02 hmongism_03 hmongism_04 hmongism_05 kaharingan kaharingan_01 kaharingan_02 kaharingan_03 kaharingan_04 kaharingan_05 kamuyism kamuyism_01 kamuyism_02 kamuyism_03 kamuyism_04 kamuyism_05 kushism kushism_01 kushism_02 kushism_03 kushism_04 kushism_05 custom_faith_ankh
+		pagan_magyar pagan_magyar_01 pagan_magyar_02 pagan_magyar_03 pagan_magyar_04 pagan_magyar_05 moism moism_01 moism_02 moism_03 moism_04 moism_05 kiratism kiratism_01 kiratism_02 kiratism_03 kiratism_04 kiratism_05 yumaism yumaism_01 yumaism_02 yumaism_03 yumaism_04 yumaism_05 achamanism sabianism pagan pagan_01 pagan_02 pagan_03 pagan_04 pagan_05 rrmeaism rrmeaism_01 rrmeaism_02 rrmeaism_03 rrmeaism_04 rrmeaism_05
 		melieism melieism_01 melieism_02 melieism_03 melieism_04 melieism_05 satsana_phi thep_arak_01 thep_arak_02 thep_arak_03 thep_arak_04 thep_arak_05 shamanism shamanism_01 shamanism_02 shamanism_03 shamanism_04 shamanism_05 shinto shinto_01 shinto_02 shinto_03 shinto_04 shinto_05 custom_faith_magatama shugendo shugendo_01 shugendo_02 shugendo_03 shugendo_04 shugendo_05 siberian siberian_01 siberian_02 siberian_03 siberian_04 siberian_05 slavic slavic_01 slavic_02 slavic_03 slavic_04 slavic_05
 		tengri tengri_01 tengri_02 tengri_03 tengri_04 tengri_05 tolotang tolotang_01 tolotang_02 tolotang_03 tolotang_04 tolotang_05 utaki waaqism waaqism_01 waaqism_02 waaqism_03 waaqism_04 waaqism_05 ngaiism ngaiism_01 ngaiism_02 ngaiism_03 ngaiism_04 ngaiism_05 mande mande_01 mande_02 mande_03 mande_04 mande_05 west_african west_african_01 west_african_02 west_african_03 west_african_04 west_african_05 west_african_dogon west_african_dogon_01 west_african_dogon_02 west_african_dogon_03 west_african_dogon_04 west_african_dogon_05
 		west_african_bori yoruba yoruba_01 yoruba_02 yoruba_03 yoruba_04 yoruba_05 west_african_roog_sene zunist zunist_01 zunist_02 zunist_03 zunist_04 zunist_05 christian_faith catholic orthodox conversos
@@ -133,4 +138,161 @@
 		custom_faith_cool_s custom_faith_cool_s_01 custom_faith_cool_s_02 custom_faith_cool_s_03 custom_faith_cool_s_04 custom_faith_cool_s_05 custom_faith_eye_of_providence custom_faith_eye_of_providence_01 custom_faith_eye_of_providence_02 custom_faith_eye_of_providence_03 custom_faith_eye_of_providence_04 custom_faith_eye_of_providence_05 custom_faith_pentagram custom_faith_pentagram_01 custom_faith_pentagram_02 custom_faith_pentagram_03 custom_faith_pentagram_04 custom_faith_pentagram_05 custom_faith_pentagram_inverted custom_faith_elephant_01 custom_faith_elephant_02 custom_faith_elephant_03 custom_faith_elephant_04 custom_faith_elephant_05 custom_faith_horse_01 custom_faith_horse_02 custom_faith_horse_03 custom_faith_horse_04 custom_faith_horse_05 custom_faith_tree_01 custom_faith_tree_02 custom_faith_tree_03 custom_faith_tree_04 custom_faith_tree_05 custom_faith_pentagram_inverted_01 custom_faith_pentagram_inverted_02 custom_faith_pentagram_inverted_03 custom_faith_pentagram_inverted_04 custom_faith_pentagram_inverted_05
 		judaism_01 judaism_02 judaism_03 judaism_04 judaism_05 judaism_06 hinduism_01 hinduism_02 hinduism_03 hinduism_04 hinduism_05 hinduism_06 yazidi_01 yazidi_02 yazidi_03 yazidi_04 yazidi_05 yazidi_06 jainism_01 jainism_02 jainism_03 jainism_04 jainism_05 jainism_06 achamanism_01 achamanism_02 achamanism_03 achamanism_04 achamanism_05 utaki_01 utaki_02 utaki_03 utaki_04 utaki_05 west_african_roog_sene_01 west_african_roog_sene_02 west_african_roog_sene_03 west_african_roog_sene_04 west_african_roog_sene_05 spulugaism_01 spulugaism_02 spulugaism_03 spulugaism_04 spulugaism_05
 	}
+
+	localization = {
+		HighGodName = biak_pagan_high_god_name
+		HighGodName2 = biak_pagan_high_god_name
+		HighGodNamePossessive = biak_pagan_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = biak_pagan_high_god_name_alternate
+		HighGodNameAlternatePossessive = biak_pagan_high_god_name_alternate_possessive
+
+		#Creator
+		CreatorName = biak_pagan_creator_god_name
+		CreatorNamePossessive = biak_pagan_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = biak_pagan_health_god_name
+		HealthGodNamePossessive = biak_pagan_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_SHE
+		HealthGodHerHis = CHARACTER_HERHIS_HER
+		HealthGodHerHim = CHARACTER_HERHIM_HER
+
+		#FertilityGod
+		FertilityGodName = biak_pagan_fertility_god_name
+		FertilityGodNamePossessive = biak_pagan_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_HE
+		FertilityGodHerHis = CHARACTER_HERHIS_HIS
+		FertilityGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WealthGod
+		WealthGodName = biak_pagan_wealth_god_name
+		WealthGodNamePossessive = biak_pagan_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#HouseholdGod
+		HouseholdGodName = biak_pagan_household_god_name
+		HouseholdGodNamePossessive = biak_pagan_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FateGod
+		FateGodName = biak_pagan_fate_god_name
+		FateGodNamePossessive = biak_pagan_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_HE
+		FateGodHerHis = CHARACTER_HERHIS_HIS
+		FateGodHerHim = CHARACTER_HERHIM_HIM
+
+		#KnowledgeGod
+		KnowledgeGodName = biak_pagan_knowledge_god_name
+		KnowledgeGodNamePossessive = biak_pagan_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+		#WarGod
+		WarGodName = biak_pagan_war_god_name
+		WarGodNamePossessive = biak_pagan_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = biak_pagan_trickster_god_name
+		TricksterGodNamePossessive = biak_pagan_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#NightGod
+		NightGodName = biak_pagan_night_god_name
+		NightGodNamePossessive = biak_pagan_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_THEY
+		NightGodHerHis = CHARACTER_HERHIS_THEIR
+		NightGodHerHim = CHARACTER_HERHIM_THEM
+
+		#WaterGod
+		WaterGodName = biak_pagan_water_god_name
+		WaterGodNamePossessive = biak_pagan_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods_2
+		PantheonTerm3 = religion_the_gods_3
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = { biak_pagan_good_god_korwar biak_pagan_good_god_dabyor biak_pagan_good_god_konor_manarbew biak_pagan_good_god_faknik biak_pagan_good_god_sabumi }
+		DevilName = biak_pagan_devil_name
+		DevilNamePossessive = biak_pagan_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_THEY
+		DevilHerHis = CHARACTER_HERHIS_THEIR
+		DevilHerselfHimself = CHARACTER_THEMSELVES
+		EvilGodNames = { biak_pagan_devil_name }
+		HouseOfWorship = biak_pagan_house_of_worship
+		HouseOfWorship2 = biak_pagan_house_of_worship
+		HouseOfWorship3 = biak_pagan_house_of_worship
+		HouseOfWorshipPlural = biak_pagan_house_of_worship_plural
+		ReligiousSymbol = biak_pagan_religious_symbol
+		ReligiousSymbol2 = biak_pagan_religious_symbol
+		ReligiousSymbol3 = biak_pagan_religious_symbol
+		ReligiousText = biak_pagan_religious_text
+		ReligiousText2 = biak_pagan_religious_text
+		ReligiousText3 = biak_pagan_religious_text
+		ReligiousHeadName = biak_pagan_religious_head_title
+		ReligiousHeadTitleName = biak_pagan_religious_head_title_name
+		DevoteeMale = biak_pagan_devotee
+		DevoteeMalePlural = biak_pagan_devoteeplural
+		DevoteeFemale = biak_pagan_devotee
+		DevoteeFemalePlural = biak_pagan_devoteeplural
+		DevoteeNeuter = biak_pagan_devotee
+		DevoteeNeuterPlural = biak_pagan_devoteeplural
+		PriestMale = biak_pagan_priest
+		PriestMalePlural = biak_pagan_priest_plural
+		PriestFemale = biak_pagan_priest
+		PriestFemalePlural = biak_pagan_priest_plural
+		PriestNeuter = biak_pagan_priest
+		PriestNeuterPlural = biak_pagan_priest_plural
+		AltPriestTermPlural = biak_pagan_priest_alternate_plural
+		BishopMale = biak_pagan_priest
+		BishopMalePlural = biak_pagan_priest_plural
+		BishopFemale = biak_pagan_priest
+		BishopFemalePlural = biak_pagan_priest_plural
+		BishopNeuter = biak_pagan_priest
+		BishopNeuterPlural = biak_pagan_priest_plural
+		DivineRealm = biak_pagan_divine_realm
+		DivineRealm2 = biak_pagan_divine_realm
+		DivineRealm3 = biak_pagan_divine_realm
+		PositiveAfterLife = biak_pagan_good_pagan_afterlife
+		PositiveAfterLife2 = biak_pagan_good_pagan_afterlife
+		PositiveAfterLife3 = biak_pagan_good_pagan_afterlife
+		NegativeAfterLife = biak_pagan_bad_pagan_afterlife
+		NegativeAfterLife2 = biak_pagan_bad_pagan_afterlife
+		NegativeAfterLife3 = biak_pagan_bad_pagan_afterlife
+		DeathDeityName = biak_pagan_death_deity_name
+		DeathDeityNamePossessive = biak_pagan_death_deity_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_THEY
+		DeathDeityHerHis = CHARACTER_HERHIS_THEIR
+		DeathDeityHerHim = CHARACTER_HERHIM_THEM
+		WitchGodName = biak_witchgodname
+		WitchGodNamePossessive = biak_witchgodname_possessive
+		WitchGodSheHe = CHARACTER_SHEHE_THEY
+		WitchGodHerHim = CHARACTER_HERHIM_THEM
+		WitchGodMistressMaster = master
+		WitchGodMotherFather = father
+
+		WitchGodHerHis = CHARACTER_HERHIS_HIS
+
+		GHWName = ghw_great_holy_war
+		GHWNamePlural = ghw_great_holy_wars
+	}
+
 }
