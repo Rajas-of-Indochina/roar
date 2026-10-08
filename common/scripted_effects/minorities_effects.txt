@@ -1,5 +1,5 @@
 ﻿####################################
-#     CALLED FROM COUNTY SCOPE     #
+#	 CALLED FROM COUNTY SCOPE	 #
 ####################################
 
 # These are the core scripted effects of the system, with a version of each for rites and cultures.
@@ -21,590 +21,590 @@
 
 
 add_rite_minority_effect = {
-    if = {
-        limit = {
-            NOR = {
-                rite = $RITE$
-                county_has_specific_rite_minority = { RITE = $RITE$ }
-            }
-        }
-        add_to_variable_list = {
-            name = rite_minorities_$SIZE$
-            target = $RITE$
-        }
-    }
-    update_minority_majority_modifiers_effect = yes
+	if = {
+		limit = {
+			NOR = {
+				rite = $RITE$
+				county_has_specific_rite_minority = { RITE = $RITE$ }
+			}
+		}
+		add_to_variable_list = {
+			name = rite_minorities_$SIZE$
+			target = $RITE$
+		}
+	}
+	update_minority_majority_modifiers_effect = yes
 }
 
 delete_rite_minority_effect = {
-    remove_list_variable = {
-        name = rite_minorities_$SIZE$
-        target = $RITE$
-    }
-    update_minority_majority_modifiers_effect = yes
+	remove_list_variable = {
+		name = rite_minorities_$SIZE$
+		target = $RITE$
+	}
+	update_minority_majority_modifiers_effect = yes
 }
 
 promote_rite_minority_effect = {
-    rite = { save_scope_as = old_rite }
-    if = {
-        limit = { rite = $RITE$ }
-        debug_log = "whuh-oh! RITE Promotion had a fucky-wucky!"
-    }
-    else_if = {
-        limit = { county_has_specific_small_rite_minority = { RITE = $RITE$ } }
-        delete_rite_minority_effect = { RITE = $RITE$ SIZE = small }
-        add_rite_minority_effect = { RITE = $RITE$ SIZE = large }
-    }
-    else_if = {
-        limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
-        delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
-        set_county_faith = $RITE$.faith
-        set_county_rite = $RITE$
-    }
-    else = {
-        add_rite_minority_effect = { RITE = $RITE$ SIZE = small }
-    }
+	rite = { save_scope_as = old_rite }
+	if = {
+		limit = { rite = $RITE$ }
+		debug_log = "whuh-oh! RITE Promotion had a fucky-wucky!"
+	}
+	else_if = {
+		limit = { county_has_specific_small_rite_minority = { RITE = $RITE$ } }
+		delete_rite_minority_effect = { RITE = $RITE$ SIZE = small }
+		add_rite_minority_effect = { RITE = $RITE$ SIZE = large }
+	}
+	else_if = {
+		limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
+		delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
+		set_county_faith = $RITE$.faith
+		set_county_rite = $RITE$
+	}
+	else = {
+		add_rite_minority_effect = { RITE = $RITE$ SIZE = small }
+	}
 }
 
 demote_rite_minority_effect = {
-    if = {
-        limit = { county_has_specific_small_rite_minority = { RITE = $RITE$ } }
-        delete_rite_minority_effect = { RITE = $RITE$ SIZE = small }
-    }
-    else_if = {
-        limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
-        delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
-        add_rite_minority_effect = { RITE = $RITE$ SIZE = small }
-    }
+	if = {
+		limit = { county_has_specific_small_rite_minority = { RITE = $RITE$ } }
+		delete_rite_minority_effect = { RITE = $RITE$ SIZE = small }
+	}
+	else_if = {
+		limit = { county_has_specific_large_rite_minority = { RITE = $RITE$ } }
+		delete_rite_minority_effect = { RITE = $RITE$ SIZE = large }
+		add_rite_minority_effect = { RITE = $RITE$ SIZE = small }
+	}
 }
 
 add_culture_minority_effect = {
-    if = {
-        limit = {
-            NOR = {
-                culture = $CULTURE$
-                county_has_specific_culture_minority = { CULTURE = $CULTURE$ }
-            }
-        }
-        add_to_variable_list = {
-            name = culture_minorities_$SIZE$
-            target = $CULTURE$
-        }
-    }
+	if = {
+		limit = {
+			NOR = {
+				culture = $CULTURE$
+				county_has_specific_culture_minority = { CULTURE = $CULTURE$ }
+			}
+		}
+		add_to_variable_list = {
+			name = culture_minorities_$SIZE$
+			target = $CULTURE$
+		}
+	}
 }
 
 delete_culture_minority_effect = {
-    remove_list_variable = {
-        name = culture_minorities_$SIZE$
-        target = $CULTURE$
-    }
+	remove_list_variable = {
+		name = culture_minorities_$SIZE$
+		target = $CULTURE$
+	}
 }
 
 promote_culture_minority_effect = {
-    culture = { save_scope_as = old_culture }
-    if = {
-        limit = { culture = $CULTURE$ }
-        custom_tooltip = "whuh-oh! CULTURE Promotion had a fucky-wucky!"
-    }
-    else_if = {
-        limit = { county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ } }
-        delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
-        add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
-    }
-    else_if = {
-        limit = { county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ } }
-        delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
-        set_county_culture = $CULTURE$
-    }
-    else = {
-        add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
-    }
+	culture = { save_scope_as = old_culture }
+	if = {
+		limit = { culture = $CULTURE$ }
+		custom_tooltip = "whuh-oh! CULTURE Promotion had a fucky-wucky!"
+	}
+	else_if = {
+		limit = { county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ } }
+		delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
+		add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
+	}
+	else_if = {
+		limit = { county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ } }
+		delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
+		set_county_culture = $CULTURE$
+	}
+	else = {
+		add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
+	}
 }
 
 demote_culture_minority_effect = {
-    if = {
-        limit = { county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ } }
-        delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
-    }
-    else_if = {
-        limit = { county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ } }
-        delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
-        add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
-    }
+	if = {
+		limit = { county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ } }
+		delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
+	}
+	else_if = {
+		limit = { county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ } }
+		delete_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = large }
+		add_culture_minority_effect = { CULTURE = $CULTURE$ SIZE = small }
+	}
 }
 
 # run in county scope
 # saves scope:culture which is a random culture picked from either the majority or a minority culture
 get_random_county_culture_effect = {
-    random_list = {
-        4 = {
-            trigger = { always = $MAJORITY$ }
-            culture = { save_scope_as = culture }
-        }
-        1 = {
-            trigger = { county_has_small_culture_minority = yes }
-            modifier = {
-                factor = "list_size(culture_minorities_small)"
-            }
-            random_in_list = {
-                variable = culture_minorities_small
-                save_scope_as = culture
-            }
-        }
-        2 = {
-            trigger = { county_has_large_culture_minority = yes }
-            modifier = {
-                factor = "list_size(culture_minorities_large)"
-            }
-            random_in_list = {
-                variable = culture_minorities_large
-                save_scope_as = culture
-            }
-        }
-    }
+	random_list = {
+		4 = {
+			trigger = { always = $MAJORITY$ }
+			culture = { save_scope_as = culture }
+		}
+		1 = {
+			trigger = { county_has_small_culture_minority = yes }
+			modifier = {
+				factor = "list_size(culture_minorities_small)"
+			}
+			random_in_list = {
+				variable = culture_minorities_small
+				save_scope_as = culture
+			}
+		}
+		2 = {
+			trigger = { county_has_large_culture_minority = yes }
+			modifier = {
+				factor = "list_size(culture_minorities_large)"
+			}
+			random_in_list = {
+				variable = culture_minorities_large
+				save_scope_as = culture
+			}
+		}
+	}
 }
 
 # CULTURE = the culture to migrate
 # TARGET_COUNTY = county to migrate to
 # SOURCE_COUNTY = county to migrate from
 culture_migration_effect = {
-    $CULTURE$ = { save_scope_as = loc_culture }
-    $TARGET_COUNTY$ = { save_scope_as = loc_target }
-    $SOURCE_COUNTY$ = { save_scope_as = loc_source }
-    if = {
-        limit = { $TARGET_COUNTY$.culture = $CULTURE$ }
-        debug_log = "ERROR: Trying to migrate minority culture into same-culture target"
-    }
-    $TARGET_COUNTY$ = {
-        promote_culture_minority_effect = { CULTURE = $CULTURE$ }
-        holder = {
-            if = {
-                limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
-                send_interface_message = {
-                    type = msg_culture_conversion
-                    title = msg_culture_migration
-                    desc = msg_culture_migration_desc
-                    left_icon = $SOURCE_COUNTY$
-                    right_icon = $TARGET_COUNTY$
-                }
-            }
-        }
-    }
-    $SOURCE_COUNTY$ = {
-        demote_culture_minority_effect = { CULTURE = $CULTURE$ }
-        holder = {
-            send_interface_message = {
-                type = msg_culture_conversion
-                title = msg_culture_migration
-                desc = msg_culture_migration_desc
-                left_icon = $SOURCE_COUNTY$
-                right_icon = $TARGET_COUNTY$
-            }
-        }
-    }
+	$CULTURE$ = { save_scope_as = loc_culture }
+	$TARGET_COUNTY$ = { save_scope_as = loc_target }
+	$SOURCE_COUNTY$ = { save_scope_as = loc_source }
+	if = {
+		limit = { $TARGET_COUNTY$.culture = $CULTURE$ }
+		debug_log = "ERROR: Trying to migrate minority culture into same-culture target"
+	}
+	$TARGET_COUNTY$ = {
+		promote_culture_minority_effect = { CULTURE = $CULTURE$ }
+		holder = {
+			if = {
+				limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
+				send_interface_message = {
+					type = msg_culture_conversion
+					title = msg_culture_migration
+					desc = msg_culture_migration_desc
+					left_icon = $SOURCE_COUNTY$
+					right_icon = $TARGET_COUNTY$
+				}
+			}
+		}
+	}
+	$SOURCE_COUNTY$ = {
+		demote_culture_minority_effect = { CULTURE = $CULTURE$ }
+		holder = {
+			send_interface_message = {
+				type = msg_culture_conversion
+				title = msg_culture_migration
+				desc = msg_culture_migration_desc
+				left_icon = $SOURCE_COUNTY$
+				right_icon = $TARGET_COUNTY$
+			}
+		}
+	}
 }
 
 # call from the scope of the source county. i guess.
 # CULTURE = the culture looking for a new home
 # saves scope:target_county for later use.
 find_culture_migration_target_effect = {
-    save_scope_as = source_county
-    $CULTURE$ = { save_scope_as = culture }
-    random_list = {
-        # neighbor county or same duchy
-        64 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }                        
-                    }
-                    OR = {
-                        any_neighboring_county = { THIS = scope:source_county }
-                        duchy = scope:source_county.duchy
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }                        
-                    }
-                    OR = {
-                        any_neighboring_county = { THIS = scope:source_county }
-                        duchy = scope:source_county.duchy
-                    }
-                }
-                weight = {
-                    base = culture_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor duchy or same kingdom
-        16 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-                weight = {
-                    base = culture_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor kingdom or same_empire
-        4 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-                weight = {
-                    base = culture_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor empire or same hegemony (if exists)
-        1 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
-                        hegemony ?= scope:source_county.hegemony
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
-                        hegemony ?= scope:source_county.hegemony
-                    }
-                }
-                weight = {
-                    base = culture_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-    }
+	save_scope_as = source_county
+	$CULTURE$ = { save_scope_as = culture }
+	random_list = {
+		# neighbor county or same duchy
+		64 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}						
+					}
+					OR = {
+						any_neighboring_county = { THIS = scope:source_county }
+						duchy = scope:source_county.duchy
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}						
+					}
+					OR = {
+						any_neighboring_county = { THIS = scope:source_county }
+						duchy = scope:source_county.duchy
+					}
+				}
+				weight = {
+					base = culture_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor duchy or same kingdom
+		16 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+				weight = {
+					base = culture_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor kingdom or same_empire
+		4 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+				weight = {
+					base = culture_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor empire or same hegemony (if exists)
+		1 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
+						hegemony ?= scope:source_county.hegemony
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
+						hegemony ?= scope:source_county.hegemony
+					}
+				}
+				weight = {
+					base = culture_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+	}
 }
 
 # run in county scope
 # saves scope:rite which is a random rite picked from either the majority or a minority rite
 # MAJORITY = is the majority allowed?
 get_random_county_rite_effect = {
-    random_list = {
-        # Get migrant rite
-        4 = {
-            trigger = { always = $MAJORITY$ }
-            rite = { save_scope_as = rite }
-        }
-        1 = {
-            trigger = { county_has_small_rite_minority = yes }
-            modifier = {
-                factor = "list_size(rite_minorities_small)"
-            }
-            random_in_list = {
-                variable = rite_minorities_small
-                save_scope_as = rite
-            }
-        }
-        2 = {
-            trigger = { county_has_large_rite_minority = yes }
-            modifier = {
-                factor = "list_size(rite_minorities_large)"
-            }
-            random_in_list = {
-                variable = rite_minorities_large
-                save_scope_as = rite
-            }
-        }
-    }
+	random_list = {
+		# Get migrant rite
+		4 = {
+			trigger = { always = $MAJORITY$ }
+			rite = { save_scope_as = rite }
+		}
+		1 = {
+			trigger = { county_has_small_rite_minority = yes }
+			modifier = {
+				factor = "list_size(rite_minorities_small)"
+			}
+			random_in_list = {
+				variable = rite_minorities_small
+				save_scope_as = rite
+			}
+		}
+		2 = {
+			trigger = { county_has_large_rite_minority = yes }
+			modifier = {
+				factor = "list_size(rite_minorities_large)"
+			}
+			random_in_list = {
+				variable = rite_minorities_large
+				save_scope_as = rite
+			}
+		}
+	}
 }
 
 # RITE = the rite to migrate
 # TARGET_COUNTY = county to migrate to
 # SOURCE_COUNTY = county to migrate from
 rite_migration_effect = {
-    $RITE$ = { save_scope_as = loc_rite }
-    $TARGET_COUNTY$ = { save_scope_as = loc_target }
-    $SOURCE_COUNTY$ = { save_scope_as = loc_source }
-    if = {
-        limit = { $TARGET_COUNTY$.rite = $RITE$ }
-        debug_log = "ERROR: Trying to migrate minority rite into same-rite target"
-    }
-    $TARGET_COUNTY$ = {
-        promote_rite_minority_effect = { RITE = $RITE$ }
-        holder = {
-            if = { 
-                limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
-                send_interface_message = {
-                    type = msg_council_conversion_neutral
-                    title = msg_rite_migration
-                    desc = msg_rite_migration_desc
-                    left_icon = $SOURCE_COUNTY$
-                    right_icon = $TARGET_COUNTY$
-                }
-            }
-        }
-    }
-    $SOURCE_COUNTY$ = {
-        demote_rite_minority_effect = { RITE = $RITE$ }
-        holder = {
-            send_interface_message = {
-                type = msg_council_conversion_neutral
-                title = msg_rite_migration
-                desc = msg_rite_migration_desc
-                left_icon = $SOURCE_COUNTY$
-                right_icon = $TARGET_COUNTY$
-            }
-        }
-    }
+	$RITE$ = { save_scope_as = loc_rite }
+	$TARGET_COUNTY$ = { save_scope_as = loc_target }
+	$SOURCE_COUNTY$ = { save_scope_as = loc_source }
+	if = {
+		limit = { $TARGET_COUNTY$.rite = $RITE$ }
+		debug_log = "ERROR: Trying to migrate minority rite into same-rite target"
+	}
+	$TARGET_COUNTY$ = {
+		promote_rite_minority_effect = { RITE = $RITE$ }
+		holder = {
+			if = { 
+				limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
+				send_interface_message = {
+					type = msg_council_conversion_neutral
+					title = msg_rite_migration
+					desc = msg_rite_migration_desc
+					left_icon = $SOURCE_COUNTY$
+					right_icon = $TARGET_COUNTY$
+				}
+			}
+		}
+	}
+	$SOURCE_COUNTY$ = {
+		demote_rite_minority_effect = { RITE = $RITE$ }
+		holder = {
+			send_interface_message = {
+				type = msg_council_conversion_neutral
+				title = msg_rite_migration
+				desc = msg_rite_migration_desc
+				left_icon = $SOURCE_COUNTY$
+				right_icon = $TARGET_COUNTY$
+			}
+		}
+	}
 }
 
 # call from the scope of the source county. i guess.
 # RITE = the rite looking for a new home
 # saves scope:target_county for later use.
 find_rite_migration_target_effect = {
-    save_scope_as = source_county
-    $RITE$ = { save_scope_as = rite }
-    random_list = {
-        # neighbor county or same duchy
-        64 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        any_neighboring_county = { this = scope:source_county }
-                        duchy = scope:source_county.duchy
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        any_neighboring_county = { this = scope:source_county }
-                        duchy = scope:source_county.duchy
-                    }
-                }
-                weight = {
-                    base = rite_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor duchy or same kingdom
-        16 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-                weight = {
-                    base = rite_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor kingdom or same_empire
-        4 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-                weight = {
-                    base = rite_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor empire or same hegemony (if exists)
-        1 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
-                        hegemony ?= scope:source_county.hegemony
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
-                        hegemony ?= scope:source_county.hegemony
-                    }
-                }
-                weight = {
-                    base = rite_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-    }
+	save_scope_as = source_county
+	$RITE$ = { save_scope_as = rite }
+	random_list = {
+		# neighbor county or same duchy
+		64 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						any_neighboring_county = { this = scope:source_county }
+						duchy = scope:source_county.duchy
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						any_neighboring_county = { this = scope:source_county }
+						duchy = scope:source_county.duchy
+					}
+				}
+				weight = {
+					base = rite_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor duchy or same kingdom
+		16 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+				weight = {
+					base = rite_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor kingdom or same_empire
+		4 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+				weight = {
+					base = rite_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor empire or same hegemony (if exists)
+		1 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
+						hegemony ?= scope:source_county.hegemony
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
+						hegemony ?= scope:source_county.hegemony
+					}
+				}
+				weight = {
+					base = rite_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+	}
 }
 
 # called from county scope
@@ -612,135 +612,135 @@ find_rite_migration_target_effect = {
 # NEW_MINORITY = the minority to replace it with
 # WARNING: THIS WILL PROMOTE, NOT DIRECT ADD.
 replace_culture_minority_effect = {
-    if = {
-        limit = {
-            county_has_specific_small_culture_minority = { CULTURE = $OLD_MINORITY$ }
-        }
-        delete_culture_minority_effect = { SIZE = small CULTURE = $OLD_MINORITY$ }
-        promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
-    }
-    else_if = {
-        limit = {
-            county_has_specific_large_culture_minority = { CULTURE = $OLD_MINORITY$ }
-        }
-        delete_culture_minority_effect = { SIZE = small CULTURE = $OLD_MINORITY$ }
-        promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
-        promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
-    }
+	if = {
+		limit = {
+			county_has_specific_small_culture_minority = { CULTURE = $OLD_MINORITY$ }
+		}
+		delete_culture_minority_effect = { SIZE = small CULTURE = $OLD_MINORITY$ }
+		promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
+	}
+	else_if = {
+		limit = {
+			county_has_specific_large_culture_minority = { CULTURE = $OLD_MINORITY$ }
+		}
+		delete_culture_minority_effect = { SIZE = small CULTURE = $OLD_MINORITY$ }
+		promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
+		promote_culture_minority_effect = { CULTURE = $NEW_MINORITY$ }
+	}
 }
 
 # COUNTY = county doing the expelling
 # RITE = rite being expelled
 # CHARACTER = character doing the expulsion
 expel_county_rite_minority_effect = {
-    $COUNTY$ = {
-        if = {
-            limit = { county_has_specific_rite_minority = { RITE = $RITE$ } }
-            $CHARACTER$ = {
-                add_gold = $COUNTY$.development_level
-                add_tyranny = {
-                    value = $COUNTY$.development_level
-                    divide = 10
-                    min = 1
-                }
-            }
-            change_development_progress_with_overflow = -50
-            find_rite_migration_target_effect = { RITE = $RITE$ }
-            rite_migration_effect = {
-                SOURCE_COUNTY = $COUNTY$
-                TARGET_COUNTY = scope:target_county
-                RITE = $RITE$
-            }
-        }
-    }
+	$COUNTY$ = {
+		if = {
+			limit = { county_has_specific_rite_minority = { RITE = $RITE$ } }
+			$CHARACTER$ = {
+				add_gold = $COUNTY$.development_level
+				add_tyranny = {
+					value = $COUNTY$.development_level
+					divide = 10
+					min = 1
+				}
+			}
+			change_development_progress_with_overflow = -50
+			find_rite_migration_target_effect = { RITE = $RITE$ }
+			rite_migration_effect = {
+				SOURCE_COUNTY = $COUNTY$
+				TARGET_COUNTY = scope:target_county
+				RITE = $RITE$
+			}
+		}
+	}
 }
 
 # COUNTY = county doing the expelling
 # CULTURE = CULTURE being expelled
 # CHARACTER = character doing the expulsion
 expel_county_culture_minority_effect = {
-    $COUNTY$ = {
-        if = {
-            limit = { county_has_specific_culture_minority = { CULTURE = $CULTURE$ } }
-            $CHARACTER$ = {
-                add_gold = $COUNTY$.development_level
-                add_tyranny = {
-                    value = $COUNTY$.development_level
-                    divide = 10
-                    min = 1
-                }
-            }
-            change_development_progress_with_overflow = -50
-            find_culture_migration_target_effect = { CULTURE = $CULTURE$ }
-            culture_migration_effect = {
-                SOURCE_COUNTY = $COUNTY$
-                TARGET_COUNTY = scope:target_county
-                CULTURE = $CULTURE$
-            }
-        }
-    }
+	$COUNTY$ = {
+		if = {
+			limit = { county_has_specific_culture_minority = { CULTURE = $CULTURE$ } }
+			$CHARACTER$ = {
+				add_gold = $COUNTY$.development_level
+				add_tyranny = {
+					value = $COUNTY$.development_level
+					divide = 10
+					min = 1
+				}
+			}
+			change_development_progress_with_overflow = -50
+			find_culture_migration_target_effect = { CULTURE = $CULTURE$ }
+			culture_migration_effect = {
+				SOURCE_COUNTY = $COUNTY$
+				TARGET_COUNTY = scope:target_county
+				CULTURE = $CULTURE$
+			}
+		}
+	}
 }
 
 # county scope
 assimilate_cultures_into_child_culture_effect = {
-    culture = { save_scope_as = child_culture }
-    every_in_list = {
-        variable = culture_minorities_small
-        limit = {
-            save_temporary_scope_as = parent_culture
-            scope:child_culture = { any_parent_culture = { THIS = scope:parent_culture } }
-        }
-        delete_culture_minority_effect = {
-            SIZE = small
-            CULTURE = THIS
-        }
-    }
-    every_in_list = {
-        variable = culture_minorities_large
-        limit = {
-            save_temporary_scope_as = parent_culture
-            scope:child_culture = { any_parent_culture = { THIS = scope:parent_culture } }
-        }
-        delete_culture_minority_effect = {
-            SIZE = small
-            CULTURE = THIS
-        }
-    }
+	culture = { save_scope_as = child_culture }
+	every_in_list = {
+		variable = culture_minorities_small
+		limit = {
+			save_temporary_scope_as = parent_culture
+			scope:child_culture = { any_parent_culture = { THIS = scope:parent_culture } }
+		}
+		delete_culture_minority_effect = {
+			SIZE = small
+			CULTURE = THIS
+		}
+	}
+	every_in_list = {
+		variable = culture_minorities_large
+		limit = {
+			save_temporary_scope_as = parent_culture
+			scope:child_culture = { any_parent_culture = { THIS = scope:parent_culture } }
+		}
+		delete_culture_minority_effect = {
+			SIZE = small
+			CULTURE = THIS
+		}
+	}
 }
 
 # county scope
 assimilate_righteous_rites_effect = {
-    rite = { save_scope_as = county_rite }
-    every_in_list = {
-        variable = rite_minorities_small
-        limit = {
-            OR = {
-                # Rites
-                religious_head_title = scope:county_rite.religious_head_title
-                # Righteousness
-                "rite_hostility_level(scope:county_rite)" <= rite_fully_accepted_level
-            }
-        }
-        delete_rite_minority_effect = {
-            SIZE = small
-            RITE = THIS
-        }
-    }
-    every_in_list = {
-        variable = rite_minorities_large
-        limit = {
-            OR = {
-                # Rites
-                religious_head_title = scope:county_rite.religious_head_title
-                # Righteousness
-                "rite_hostility_level(scope:county_rite)" <= rite_fully_accepted_level
-            }
-        }
-        delete_rite_minority_effect = {
-            SIZE = large
-            RITE = THIS
-        }
-    }
+	rite = { save_scope_as = county_rite }
+	every_in_list = {
+		variable = rite_minorities_small
+		limit = {
+			OR = {
+				# Rites
+				religious_head_title = scope:county_rite.religious_head_title
+				# Righteousness
+				"rite_hostility_level(scope:county_rite)" <= rite_fully_accepted_level
+			}
+		}
+		delete_rite_minority_effect = {
+			SIZE = small
+			RITE = THIS
+		}
+	}
+	every_in_list = {
+		variable = rite_minorities_large
+		limit = {
+			OR = {
+				# Rites
+				religious_head_title = scope:county_rite.religious_head_title
+				# Righteousness
+				"rite_hostility_level(scope:county_rite)" <= rite_fully_accepted_level
+			}
+		}
+		delete_rite_minority_effect = {
+			SIZE = large
+			RITE = THIS
+		}
+	}
 }
 
 # RITE = the rite to migrate
@@ -748,39 +748,39 @@ assimilate_righteous_rites_effect = {
 # TARGET_COUNTY = the county to migrate to
 # SOURCE_COUNTY = the county to migrate from
 combined_migration_effect = {
-    $RITE$ = { save_scope_as = loc_rite }
-    $CULTURE$ = { save_scope_as = loc_culture }
-    $TARGET_COUNTY$ = { save_scope_as = loc_target }
-    $SOURCE_COUNTY$ = { save_scope_as = loc_source }
-    $TARGET_COUNTY$ = {
-        promote_culture_minority_effect = { CULTURE = $CULTURE$ }
-        promote_rite_minority_effect = { RITE = $RITE$ }
-        holder = {
-            if = {
-                limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
-                send_interface_message = {
-                    type = msg_culture_conversion
-                    title = msg_combined_migration
-                    desc = msg_combined_migration_desc
-                    left_icon = $SOURCE_COUNTY$
-                    right_icon = $TARGET_COUNTY$
-                }
-            }
-        }
-    }
-    $SOURCE_COUNTY$ = {
-        demote_culture_minority_effect = { CULTURE = $CULTURE$ }
-        demote_rite_minority_effect = { RITE = $RITE$ }
-        holder = {
-            send_interface_message = {
-                type = msg_culture_conversion
-                title = msg_combined_migration
-                desc = msg_combined_migration_desc
-                left_icon = $SOURCE_COUNTY$
-                right_icon = $TARGET_COUNTY$
-            }
-        }
-    }
+	$RITE$ = { save_scope_as = loc_rite }
+	$CULTURE$ = { save_scope_as = loc_culture }
+	$TARGET_COUNTY$ = { save_scope_as = loc_target }
+	$SOURCE_COUNTY$ = { save_scope_as = loc_source }
+	$TARGET_COUNTY$ = {
+		promote_culture_minority_effect = { CULTURE = $CULTURE$ }
+		promote_rite_minority_effect = { RITE = $RITE$ }
+		holder = {
+			if = {
+				limit = { NOT = { THIS = $SOURCE_COUNTY$.holder } }
+				send_interface_message = {
+					type = msg_culture_conversion
+					title = msg_combined_migration
+					desc = msg_combined_migration_desc
+					left_icon = $SOURCE_COUNTY$
+					right_icon = $TARGET_COUNTY$
+				}
+			}
+		}
+	}
+	$SOURCE_COUNTY$ = {
+		demote_culture_minority_effect = { CULTURE = $CULTURE$ }
+		demote_rite_minority_effect = { RITE = $RITE$ }
+		holder = {
+			send_interface_message = {
+				type = msg_culture_conversion
+				title = msg_combined_migration
+				desc = msg_combined_migration_desc
+				left_icon = $SOURCE_COUNTY$
+				right_icon = $TARGET_COUNTY$
+			}
+		}
+	}
 }
 
 # call from the scope of the source county. i guess.
@@ -788,165 +788,165 @@ combined_migration_effect = {
 # RITE = the rite looking for a new home
 # saves scope:target_county for later use.
 find_combined_migration_target_effect = {
-    save_scope_as = source_county
-    $CULTURE$ = { save_scope_as = culture }
-    $RITE$ = { save_scope_as = rite }
-    random_list = {
-        # neighbor county or same duchy
-        64 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }                        
-                    }
-                    OR = {
-                        any_neighboring_county = { THIS = scope:source_county }
-                        duchy = scope:source_county.duchy
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }                        
-                    }
-                    OR = {
-                        any_neighboring_county = { THIS = scope:source_county }
-                        duchy = scope:source_county.duchy
-                    }
-                }
-                weight = {
-                    base = combined_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor duchy or same kingdom
-        16 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-                weight = {
-                    base = combined_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor kingdom or same_empire
-        4 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
-                        kingdom = scope:source_county.kingdom
-                    }
-                }
-                weight = {
-                    base = combined_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-        # neighbor empire or same hegemony (if exists)
-        1 = {
-            trigger = {
-                any_county = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
-                        hegemony ?= scope:source_county.hegemony
-                    }
-                }
-            }
-            random_county = {
-                limit = {
-                    is_landless_type_title = no
-                    holder = {
-                        NOT = {
-                            THIS = scope:source_county.holder
-                            any_liege_or_above = {THIS = scope:source_county.holder}
-                        }
-                        
-                    }
-                    OR = {
-                        empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
-                        hegemony ?= scope:source_county.hegemony
-                    }
-                }
-                weight = {
-                    base = combined_migration_attraction
-                }
-                save_scope_as = target_county
-            }
-        }
-    }
+	save_scope_as = source_county
+	$CULTURE$ = { save_scope_as = culture }
+	$RITE$ = { save_scope_as = rite }
+	random_list = {
+		# neighbor county or same duchy
+		64 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}						
+					}
+					OR = {
+						any_neighboring_county = { THIS = scope:source_county }
+						duchy = scope:source_county.duchy
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}						
+					}
+					OR = {
+						any_neighboring_county = { THIS = scope:source_county }
+						duchy = scope:source_county.duchy
+					}
+				}
+				weight = {
+					base = combined_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor duchy or same kingdom
+		16 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						duchy = { any_title_to_title_neighboring_duchy = { THIS = scope:source_county.duchy } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+				weight = {
+					base = combined_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor kingdom or same_empire
+		4 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						kingdom = { any_title_to_title_neighboring_kingdom = { THIS = scope:source_county.kingdom } }
+						kingdom = scope:source_county.kingdom
+					}
+				}
+				weight = {
+					base = combined_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+		# neighbor empire or same hegemony (if exists)
+		1 = {
+			trigger = {
+				any_county = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
+						hegemony ?= scope:source_county.hegemony
+					}
+				}
+			}
+			random_county = {
+				limit = {
+					is_landless_type_title = no
+					holder = {
+						NOT = {
+							THIS = scope:source_county.holder
+							any_liege_or_above = {THIS = scope:source_county.holder}
+						}
+						
+					}
+					OR = {
+						empire = { any_title_to_title_neighboring_empire = { THIS = scope:source_county.empire } }
+						hegemony ?= scope:source_county.hegemony
+					}
+				}
+				weight = {
+					base = combined_migration_attraction
+				}
+				save_scope_as = target_county
+			}
+		}
+	}
 }
 
 # Region-to-region migration for when you want a more refined, targeted form of migration.
@@ -955,46 +955,46 @@ find_combined_migration_target_effect = {
 # TARGET_REGION
 
 quick_region_migration_effect = {
-    random_county_in_region = {
-        region = $SOURCE_REGION$
-        save_scope_as = source_county
-        get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
-        get_random_county_rite_effect = { MAJORITY = yes } # scope:rite now saved
-    }
-    random_county_in_region = {
-        region = $TARGET_REGION$
-        limit = { NOT = { this = scope:source_county } } # with this we can support using this intra-regionally
-        save_scope_as = target_county
-    }
-    combined_migration_effect = {
-        SOURCE_COUNTY = scope:source_county
-        TARGET_COUNTY = scope:target_county
-        RITE = scope:rite
-        CULTURE = scope:culture
-    }
+	random_county_in_region = {
+		region = $SOURCE_REGION$
+		save_scope_as = source_county
+		get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
+		get_random_county_rite_effect = { MAJORITY = yes } # scope:rite now saved
+	}
+	random_county_in_region = {
+		region = $TARGET_REGION$
+		limit = { NOT = { this = scope:source_county } } # with this we can support using this intra-regionally
+		save_scope_as = target_county
+	}
+	combined_migration_effect = {
+		SOURCE_COUNTY = scope:source_county
+		TARGET_COUNTY = scope:target_county
+		RITE = scope:rite
+		CULTURE = scope:culture
+	}
 }
 
 targeted_regional_migration_effect = {
-    random_county_in_region = {
-        region = $SOURCE_REGION$
-        save_scope_as = source_county
-        get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
-        get_random_county_rite_effect = { MAJORITY = yes } # scope:rite now saved
-    }
-    if = {
-        limit = { NOT = { exists = scope:target_county } }
-        random_held_title = {
-            title_tier = county
-            limit = { NOT = { this = scope:source_county } }
-            save_scope_as = target_county
-        }
-    }
-    combined_migration_effect = {
-        SOURCE_COUNTY = scope:source_county
-        TARGET_COUNTY = scope:target_county
-        RITE = scope:rite
-        CULTURE = scope:culture
-    }
+	random_county_in_region = {
+		region = $SOURCE_REGION$
+		save_scope_as = source_county
+		get_random_county_culture_effect = { MAJORITY = yes } # scope:culture now saved
+		get_random_county_rite_effect = { MAJORITY = yes } # scope:rite now saved
+	}
+	if = {
+		limit = { NOT = { exists = scope:target_county } }
+		random_held_title = {
+			title_tier = county
+			limit = { NOT = { this = scope:source_county } }
+			save_scope_as = target_county
+		}
+	}
+	combined_migration_effect = {
+		SOURCE_COUNTY = scope:source_county
+		TARGET_COUNTY = scope:target_county
+		RITE = scope:rite
+		CULTURE = scope:culture
+	}
 }
 
 # $MESSAGE$ = A loc string
@@ -1030,36 +1030,36 @@ notify_characters_of_fake_migration_effect = {
 # scope is the county it's run in.
 # holder = THIS.holder
 update_minority_majority_modifiers_effect = {
-    hidden_effect = {
-        remove_county_modifier = majority_minority_small_rite
-        remove_county_modifier = majority_minority_large_rite
-        remove_county_modifier = majority_minority_small_culture
-        remove_county_modifier = majority_minority_large_culture
-        # Check for rite minority
-        if = {
-            limit = { county_has_specific_small_rite_minority = { RITE = holder.rite } }
-            add_county_modifier = {
-                modifier = majority_minority_small_rite
-            }
-        }
-        else_if = {
-            limit = { county_has_specific_large_rite_minority = { RITE = holder.rite } }
-            add_county_modifier = {
-                modifier = majority_minority_large_rite
-            }
-        }
-        # and culture minority
-        if = {
-            limit = { county_has_specific_small_culture_minority = { CULTURE = holder.culture } }
-            add_county_modifier = {
-                modifier = majority_minority_small_culture
-            }
-        }
-        else_if = {
-            limit = { county_has_specific_large_culture_minority = { CULTURE = holder.culture } }
-            add_county_modifier = {
-                modifier = majority_minority_large_culture
-            }
-        }
-    }
+	hidden_effect = {
+		remove_county_modifier = majority_minority_small_rite
+		remove_county_modifier = majority_minority_large_rite
+		remove_county_modifier = majority_minority_small_culture
+		remove_county_modifier = majority_minority_large_culture
+		# Check for rite minority
+		if = {
+			limit = { county_has_specific_small_rite_minority = { RITE = holder.rite } }
+			add_county_modifier = {
+				modifier = majority_minority_small_rite
+			}
+		}
+		else_if = {
+			limit = { county_has_specific_large_rite_minority = { RITE = holder.rite } }
+			add_county_modifier = {
+				modifier = majority_minority_large_rite
+			}
+		}
+		# and culture minority
+		if = {
+			limit = { county_has_specific_small_culture_minority = { CULTURE = holder.culture } }
+			add_county_modifier = {
+				modifier = majority_minority_small_culture
+			}
+		}
+		else_if = {
+			limit = { county_has_specific_large_culture_minority = { CULTURE = holder.culture } }
+			add_county_modifier = {
+				modifier = majority_minority_large_culture
+			}
+		}
+	}
 }

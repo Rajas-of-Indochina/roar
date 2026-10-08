@@ -602,35 +602,35 @@ sea_title_event.0001 = {
 	theme = crown
 	left_portrait = root
 
-    trigger = {
-    	OR = {
-    		has_government = mandala_government
-    		has_government = feudal_government
-    		has_government = clan_government
-    	}
-    	primary_title = scope:title
+	trigger = {
+		OR = {
+			has_government = mandala_government
+			has_government = feudal_government
+			has_government = clan_government
+		}
+		primary_title = scope:title
 		highest_held_title_tier >= tier_duchy
-    	NOT = { has_character_flag = has_regnal_name }
-    	OR = {
-    		culture = { has_name_list = name_list_chamic }
-    		culture = { has_name_list = name_list_khmer }
-    	}
-    }
+		NOT = { has_character_flag = has_regnal_name }
+		OR = {
+			culture = { has_name_list = name_list_chamic }
+			culture = { has_name_list = name_list_khmer }
+		}
+	}
 
 	immediate = {
 		if = {
 			limit = {
-		    	OR = {
-		    		culture = { has_name_list = name_list_chamic }
-		    		culture = { has_name_list = name_list_khmer }
-		    	}
+				OR = {
+					culture = { has_name_list = name_list_chamic }
+					culture = { has_name_list = name_list_khmer }
+				}
 			}
 
-	        root = { get_chamic_names_effect = yes }
-	        root = { get_chamic_names_effect = yes }
-	        root = { get_chamic_names_effect = yes }
-	        root = { get_chamic_names_effect = yes }
-	        root = { get_chamic_names_effect = yes }
+			root = { get_chamic_names_effect = yes }
+			root = { get_chamic_names_effect = yes }
+			root = { get_chamic_names_effect = yes }
+			root = { get_chamic_names_effect = yes }
+			root = { get_chamic_names_effect = yes }
 		}
 	}
 
@@ -1450,10 +1450,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Qi 齐
 # 		name = sea_title_event.5001.qi
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_QI
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_QI
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Liang }
@@ -1461,10 +1461,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Liang 梁
 # 		name = sea_title_event.5001.liang
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_LIANG
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_LIANG
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Wu }
@@ -1472,10 +1472,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Wu 吴
 # 		name = sea_title_event.5001.wu
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_WU
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_WU
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Chu }
@@ -1483,10 +1483,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Chu 楚
 # 		name = sea_title_event.5001.chu
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_CHU
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_CHU
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Han }
@@ -1494,10 +1494,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Han 汉
 # 		name = sea_title_event.5001.han
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_HAN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_HAN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Xia }
@@ -1505,10 +1505,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Xia 夏
 # 		name = sea_title_event.5001.xia
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_XIA
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_XIA
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Min }
@@ -1516,10 +1516,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Min 闽
 # 		name = sea_title_event.5001.min
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_MIN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_MIN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Yue }
@@ -1527,10 +1527,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Yue 越
 # 		name = sea_title_event.5001.yue
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_YUE
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_YUE
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Chen }
@@ -1538,10 +1538,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Chen 陈
 # 		name = sea_title_event.5001.chen
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_CHEN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_CHEN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Song }
@@ -1549,10 +1549,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Song 宋
 # 		name = sea_title_event.5001.song
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_SONG
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_SONG
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Yan }
@@ -1560,10 +1560,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Yan 燕
 # 		name = sea_title_event.5001.yan
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_YAN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_YAN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Zhao }
@@ -1571,10 +1571,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Zhao 赵
 # 		name = sea_title_event.5001.zhao
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_ZHAO
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_ZHAO
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Jin }
@@ -1582,10 +1582,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Jin 晋
 # 		name = sea_title_event.5001.jin
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_JIN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_JIN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Shu }
@@ -1593,10 +1593,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Shu 蜀
 # 		name = sea_title_event.5001.shu
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_SHU
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_SHU
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Wei }
@@ -1604,10 +1604,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Wei 魏
 # 		name = sea_title_event.5001.wei
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_WEI
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_WEI
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Zhou }
@@ -1615,10 +1615,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Zhou 周
 # 		name = sea_title_event.5001.zhou
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_ZHOU
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_ZHOU
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Yuan }
@@ -1626,10 +1626,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Yuan 元
 # 		name = sea_title_event.5001.yuan
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_YUAN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_YUAN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Tang }
@@ -1637,10 +1637,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Tang 唐
 # 		name = sea_title_event.5001.tang
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_TANG
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_TANG
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Qin }
@@ -1648,10 +1648,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Qin 秦
 # 		name = sea_title_event.5001.qin
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_QIN
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_QIN
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Ba }
@@ -1659,10 +1659,10 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Ba 巴
 # 		name = sea_title_event.5001.ba
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_BA
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_BA
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # 	option = {
 # 		trigger = { has_character_flag = dynasty_Liao }
@@ -1670,9 +1670,9 @@ scripted_effect get_chinese_dynastic_names_effect = {
 # 		# Liao 遼
 # 		name = sea_title_event.5001.liao
 
-# 	    title:e_celestia_china = {
-# 	    	set_title_name = E_LIAO
-# 	    	#set_coa = e_qi
-# 	    }
+# 		title:e_celestia_china = {
+# 			set_title_name = E_LIAO
+# 			#set_coa = e_qi
+# 		}
 # 	}
 # }

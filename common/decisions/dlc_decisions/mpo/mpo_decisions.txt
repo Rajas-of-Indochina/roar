@@ -1774,61 +1774,61 @@ study_commander_trait_decision = {
 }
 
 mpo_decision_fertility_dance = {
-    picture = {
-        reference = "gfx/interface/illustrations/event_scenes/mpo_temple_steppe.dds"
-    }
-    sort_order = 60
+	picture = {
+		reference = "gfx/interface/illustrations/event_scenes/mpo_temple_steppe.dds"
+	}
+	sort_order = 60
 	decision_group_type = nomad_minor
 
-    desc = mpo_decision_fertility_dance_desc
+	desc = mpo_decision_fertility_dance_desc
 
-    selection_tooltip = mpo_decision_fertility_dance_tooltip
+	selection_tooltip = mpo_decision_fertility_dance_tooltip
 
-    cooldown = { years = 5 }
+	cooldown = { years = 5 }
 
-    is_shown = {
+	is_shown = {
 		government_has_flag = government_is_nomadic
-        is_available_adult = yes
-        is_landed = yes
-        has_mpo_dlc_trigger = yes
-        any_sub_realm_county = {
-            uses_county_fertility = yes
-        }
-    }
+		is_available_adult = yes
+		is_landed = yes
+		has_mpo_dlc_trigger = yes
+		any_sub_realm_county = {
+			uses_county_fertility = yes
+		}
+	}
 
-    widget = {
-        controller = create_holy_order
-        title_valid = {
-            trigger_if = {
-                limit = { exists = this }
-                is_capital_barony = yes
-                county = {
-                    uses_county_fertility = yes
-                }
-            }
-        }
-    }
+	widget = {
+		controller = create_holy_order
+		title_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				is_capital_barony = yes
+				county = {
+					uses_county_fertility = yes
+				}
+			}
+		}
+	}
 
-    is_valid_showing_failures_only = {
-        is_at_war = no
+	is_valid_showing_failures_only = {
+		is_at_war = no
 		is_incapable = no
 		employs_court_position = court_astrologer_court_position
-    }
+	}
 
-    cost = {
-        piety = {
-            add = medium_piety_value
-        }
-    }
+	cost = {
+		piety = {
+			add = medium_piety_value
+		}
+	}
 
-    effect = {
-        scope:barony.county = { save_scope_as = fertility_county }
-        custom_tooltip = {
-            text = mpo_decision_fertility_dance_effects_tt
-            trigger_event = mpo_decisions_events.0300
-        }
-        custom_tooltip = mpo_decision_fertility_dance_bonus_tt
-        if = {
+	effect = {
+		scope:barony.county = { save_scope_as = fertility_county }
+		custom_tooltip = {
+			text = mpo_decision_fertility_dance_effects_tt
+			trigger_event = mpo_decisions_events.0300
+		}
+		custom_tooltip = mpo_decision_fertility_dance_bonus_tt
+		if = {
 			limit = {
 				domicile ?= {
 					has_domicile_parameter = nomad_yurt_improved_fertility_dance
@@ -1854,7 +1854,7 @@ mpo_decision_fertility_dance = {
 				}
 			}		
 		}
-    }
+	}
 	
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -1865,43 +1865,43 @@ mpo_decision_fertility_dance = {
 		hegemony = 12
 	}
 
-    ai_potential = {
-        is_landed = yes
-        is_available_adult = yes
-        is_at_war = no
+	ai_potential = {
+		is_landed = yes
+		is_available_adult = yes
+		is_at_war = no
 		is_incapable = no
-        any_sub_realm_county = {
-            uses_county_fertility = yes
-            county_fertility <= 25
-        }
+		any_sub_realm_county = {
+			uses_county_fertility = yes
+			county_fertility <= 25
+		}
 		piety >= medium_piety_value
-    }
+	}
 
-    ai_will_do = {
-        base = 100
-        ai_value_modifier = {
-            ai_rationality = 1
-        }
-        modifier = {
-            factor = 1.25
-            has_trait = diligent
-        }
-        modifier = {
-            factor = 1.5
-            has_trait = zealous
-        }
-        modifier = {
-            factor = 0.75
-            has_trait = cynical
-        }
-        modifier = {
-            factor = 2
-            any_sub_realm_county = {
-                uses_county_fertility = yes
-                county_fertility <= 50
-            }
-        }
-    }
+	ai_will_do = {
+		base = 100
+		ai_value_modifier = {
+			ai_rationality = 1
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = diligent
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = zealous
+		}
+		modifier = {
+			factor = 0.75
+			has_trait = cynical
+		}
+		modifier = {
+			factor = 2
+			any_sub_realm_county = {
+				uses_county_fertility = yes
+				county_fertility <= 50
+			}
+		}
+	}
 }
 
 mpo_decision_introduce_heir = {
@@ -2333,10 +2333,10 @@ mpo_decision_introduce_heir = {
 
 ### Expand The Steppe Decision ###
 expand_the_steppe_decision = {
-    picture = {
-        reference = "gfx/interface/illustrations/event_scenes/mpo_raid_burning_asian.dds"
-    }
-    decision_group_type = nomad_major
+	picture = {
+		reference = "gfx/interface/illustrations/event_scenes/mpo_raid_burning_asian.dds"
+	}
+	decision_group_type = nomad_major
 	
 	ai_check_interval_by_tier = {
 		barony = 0
@@ -2349,8 +2349,8 @@ expand_the_steppe_decision = {
 
 	title = expand_the_steppe_decision_generic
 
-    desc = expand_the_steppe_decision_desc
-    selection_tooltip = expand_the_steppe_decision_tooltip
+	desc = expand_the_steppe_decision_desc
+	selection_tooltip = expand_the_steppe_decision_tooltip
 
 	widget = {
 		gui = "decision_view_widget_option_list_generic"
@@ -2363,25 +2363,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = custom_eastern_balkans
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:custom_eastern_balkans
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:custom_eastern_balkans
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_eastern_balkans_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = custom_eastern_balkans
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = custom_eastern_balkans
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = custom_eastern_balkans
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = custom_eastern_balkans
+					}
 				}
 			}
 			localization = custom_eastern_balkans
@@ -2393,25 +2393,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = ghw_region_northern_russia
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:ghw_region_northern_russia
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:ghw_region_northern_russia
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_northern_russia_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = ghw_region_northern_russia
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = ghw_region_northern_russia
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = ghw_region_northern_russia
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = ghw_region_northern_russia
+					}
 				}
 			}
 			localization = ghw_region_northern_russia
@@ -2423,25 +2423,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = ghw_region_southern_russia
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:ghw_region_southern_russia
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:ghw_region_southern_russia
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_southern_russia_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = ghw_region_southern_russia
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = ghw_region_southern_russia
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = ghw_region_southern_russia
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = ghw_region_southern_russia
+					}
 				}
 			}
 			localization = ghw_region_southern_russia
@@ -2453,25 +2453,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_caucasus_expansion
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_caucasus_expansion
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_caucasus_expansion
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_caucasus_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_caucasus_expansion
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_caucasus_expansion
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_caucasus_expansion
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_caucasus_expansion
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_caucasus_expansion
@@ -2483,25 +2483,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = ghw_region_poland
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:ghw_region_poland
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:ghw_region_poland
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_poland_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = ghw_region_poland
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = ghw_region_poland
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = ghw_region_poland
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = ghw_region_poland
+					}
 				}
 			}
 			localization = ghw_region_poland
@@ -2513,25 +2513,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = custom_hungary
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:custom_hungary
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:custom_hungary
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_hungary_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = custom_hungary
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = custom_hungary
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = custom_hungary
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = custom_hungary
+					}
 				}
 			}
 			localization = custom_hungary
@@ -2543,25 +2543,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = ghw_region_anatolia
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:ghw_region_anatolia
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:ghw_region_anatolia
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_anatolia_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = ghw_region_anatolia
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = ghw_region_anatolia
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = ghw_region_anatolia
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = ghw_region_anatolia
+					}
 				}
 			}
 			localization = ghw_region_anatolia
@@ -2573,25 +2573,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = ghw_region_baltic
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:ghw_region_baltic
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:ghw_region_baltic
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_baltics_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = ghw_region_baltic
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = ghw_region_baltic
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = ghw_region_baltic
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = ghw_region_baltic
+					}
 				}
 			}
 			localization = ghw_region_baltic
@@ -2605,25 +2605,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = world_transoxiana
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:world_transoxiana
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:world_transoxiana
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_transoxiana_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = world_transoxiana
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = world_transoxiana
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = world_transoxiana
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = world_transoxiana
+					}
 				}
 			}
 			localization = world_transoxiana
@@ -2635,25 +2635,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_siberia_further_expansion
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_siberia_further_expansion
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_siberia_further_expansion
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_siberia_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_siberia_further_expansion
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_siberia_further_expansion
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_siberia_further_expansion
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_siberia_further_expansion
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_siberia_further_expansion
@@ -2665,25 +2665,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = world_khorasan
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:world_khorasan
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:world_khorasan
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_khorasan_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = world_khorasan
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = world_khorasan
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = world_khorasan
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = world_khorasan
+					}
 				}
 			}
 			localization = world_khorasan
@@ -2695,25 +2695,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_persia_expansion
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_persia_expansion
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_persia_expansion
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_persia_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_persia_expansion
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_persia_expansion
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_persia_expansion
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_persia_expansion
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_persia_expansion
@@ -2728,25 +2728,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_hexi_tarim_expansion
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_hexi_tarim_expansion
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_hexi_tarim_expansion
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_tarim_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_hexi_tarim_expansion
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_hexi_tarim_expansion
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_hexi_tarim_expansion
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_hexi_tarim_expansion
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_hexi_tarim_expansion
@@ -2758,25 +2758,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_north_china_expansion
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_north_china_expansion
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_north_china_expansion
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_north_china_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_north_china_expansion
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_north_china_expansion
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_north_china_expansion
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_north_china_expansion
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_north_china_expansion
@@ -2788,25 +2788,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_central_china_expansion
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_central_china_expansion
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_central_china_expansion
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_central_china_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_central_china_expansion
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_central_china_expansion
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_central_china_expansion
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_central_china_expansion
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_central_china_expansion
@@ -2818,25 +2818,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_east_buryatia_addon
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_east_buryatia_addon
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_east_buryatia_addon
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_central_china_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_east_buryatia_addon
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_east_buryatia_addon
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_east_buryatia_addon
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_east_buryatia_addon
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_east_buryatia_addon
@@ -2848,25 +2848,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = dlc_mpo_steppe_east_andong_addon
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:dlc_mpo_steppe_east_andong_addon
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:dlc_mpo_steppe_east_andong_addon
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_central_china_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = dlc_mpo_steppe_east_andong_addon
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = dlc_mpo_steppe_east_andong_addon
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = dlc_mpo_steppe_east_andong_addon
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = dlc_mpo_steppe_east_andong_addon
+					}
 				}
 			}
 			localization = dlc_mpo_steppe_east_andong_addon
@@ -2878,25 +2878,25 @@ expand_the_steppe_decision = {
 		item = {
 			value = world_asia_korea
 			is_shown = {
-	            situation:the_great_steppe ?= {
-	            	any_situation_sub_region = {
-	                	region_is_adjacent = geographical_region:world_asia_korea
-	                }
-	            }
+				situation:the_great_steppe ?= {
+					any_situation_sub_region = {
+						region_is_adjacent = geographical_region:world_asia_korea
+					}
+				}
 			}
 			is_valid = {
 				custom_tooltip = {
 					text = custom_korea_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = world_asia_korea
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = world_asia_korea
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = world_asia_korea
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = world_asia_korea
+					}
 				}
 			}
 			localization = world_asia_korea
@@ -2917,15 +2917,15 @@ expand_the_steppe_decision = {
 				custom_tooltip = {
 					text = custom_japan_expand_steppe_tt
 					situation:the_great_steppe ?= {
-	                    NOT = {
-	                        any_situation_sub_region = {
-	                            situation_sub_region_has_geographical_region = world_asia_japan
-	                        }
-	                    }
-	                }
-	                any_realm_province = {
-	                    geographical_region = world_asia_japan
-	                }
+						NOT = {
+							any_situation_sub_region = {
+								situation_sub_region_has_geographical_region = world_asia_japan
+							}
+						}
+					}
+					any_realm_province = {
+						geographical_region = world_asia_japan
+					}
 				}
 			}
 			localization = world_asia_japan
@@ -2937,14 +2937,14 @@ expand_the_steppe_decision = {
 
 	}
 
-    is_shown = {
-    	any_character_situation = {
-    		situation:the_great_steppe ?= this
-    	}
+	is_shown = {
+		any_character_situation = {
+			situation:the_great_steppe ?= this
+		}
 
-        government_has_flag = government_is_nomadic
+		government_has_flag = government_is_nomadic
 
-        OR = {
+		OR = {
 			great_steppe_not_in_sub_region_trigger = { REGION = world_khorasan }
 			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_anatolia }
 			great_steppe_not_in_sub_region_trigger = { REGION = custom_eastern_balkans }
@@ -2964,165 +2964,165 @@ expand_the_steppe_decision = {
 			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_korea }
 			great_steppe_not_in_sub_region_trigger = { REGION = world_asia_japan }
 			great_steppe_not_in_sub_region_trigger = { REGION = ghw_region_southern_russia }
-        }
-
-        has_mpo_dlc_trigger = yes
-    }
-
-    is_valid = {
-        is_independent_ruler = yes
-        highest_held_title_tier >= tier_duchy
-
-        trigger_if = {
-        	limit = {
-	    		scope:ghw_region_anatolia = yes
-	    	}
-		    completely_controls_region = ghw_region_anatolia
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:custom_eastern_balkans = yes
-	    	}
-		    completely_controls_region = custom_eastern_balkans
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:ghw_region_northern_russia = yes
-	    	}
-		    completely_controls_region = ghw_region_northern_russia
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:ghw_region_southern_russia = yes
-	    	}
-		    completely_controls_region = ghw_region_southern_russia
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:custom_hungary = yes
-	    	}
-		    completely_controls_region = custom_hungary
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:ghw_region_poland = yes
-	    	}
-		    completely_controls_region = ghw_region_poland
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:ghw_region_baltic = yes
-	    	}
-		    completely_controls_region = ghw_region_baltic
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_caucasus_expansion = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_caucasus_expansion
 		}
 
-        trigger_else_if = {
-        	limit = {
-	    		scope:world_transoxiana = yes
-	    	}
-		    completely_controls_region = world_transoxiana
+		has_mpo_dlc_trigger = yes
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		highest_held_title_tier >= tier_duchy
+
+		trigger_if = {
+			limit = {
+				scope:ghw_region_anatolia = yes
+			}
+			completely_controls_region = ghw_region_anatolia
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:world_khorasan = yes
-	    	}
-		    completely_controls_region = world_khorasan
+		trigger_else_if = {
+			limit = {
+				scope:custom_eastern_balkans = yes
+			}
+			completely_controls_region = custom_eastern_balkans
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_persia_expansion = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_persia_expansion
+		trigger_else_if = {
+			limit = {
+				scope:ghw_region_northern_russia = yes
+			}
+			completely_controls_region = ghw_region_northern_russia
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_siberia_further_expansion = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_siberia_further_expansion
+		trigger_else_if = {
+			limit = {
+				scope:ghw_region_southern_russia = yes
+			}
+			completely_controls_region = ghw_region_southern_russia
+		}
+		trigger_else_if = {
+			limit = {
+				scope:custom_hungary = yes
+			}
+			completely_controls_region = custom_hungary
+		}
+		trigger_else_if = {
+			limit = {
+				scope:ghw_region_poland = yes
+			}
+			completely_controls_region = ghw_region_poland
+		}
+		trigger_else_if = {
+			limit = {
+				scope:ghw_region_baltic = yes
+			}
+			completely_controls_region = ghw_region_baltic
+		}
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_caucasus_expansion = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_caucasus_expansion
 		}
 
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_hexi_tarim_expansion = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_hexi_tarim_expansion
+		trigger_else_if = {
+			limit = {
+				scope:world_transoxiana = yes
+			}
+			completely_controls_region = world_transoxiana
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_north_china_expansion = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_north_china_expansion
+		trigger_else_if = {
+			limit = {
+				scope:world_khorasan = yes
+			}
+			completely_controls_region = world_khorasan
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_central_china_expansion = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_central_china_expansion
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_persia_expansion = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_persia_expansion
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_east_buryatia_addon = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_east_buryatia_addon
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_siberia_further_expansion = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_siberia_further_expansion
 		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:dlc_mpo_steppe_east_andong_addon = yes
-	    	}
-		    completely_controls_region = dlc_mpo_steppe_east_andong_addon
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:world_asia_korea = yes
-	    	}
-		    completely_controls_region = world_asia_korea
-		}
-        trigger_else_if = {
-        	limit = {
-	    		scope:world_asia_japan = yes
-	    	}
-		    completely_controls_region = world_asia_japan
-		}
-        trigger_else = {
-        	always = no
-		}
-    }
 
-    cooldown = { years = 5 }
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_hexi_tarim_expansion = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_hexi_tarim_expansion
+		}
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_north_china_expansion = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_north_china_expansion
+		}
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_central_china_expansion = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_central_china_expansion
+		}
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_east_buryatia_addon = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_east_buryatia_addon
+		}
+		trigger_else_if = {
+			limit = {
+				scope:dlc_mpo_steppe_east_andong_addon = yes
+			}
+			completely_controls_region = dlc_mpo_steppe_east_andong_addon
+		}
+		trigger_else_if = {
+			limit = {
+				scope:world_asia_korea = yes
+			}
+			completely_controls_region = world_asia_korea
+		}
+		trigger_else_if = {
+			limit = {
+				scope:world_asia_japan = yes
+			}
+			completely_controls_region = world_asia_japan
+		}
+		trigger_else = {
+			always = no
+		}
+	}
 
-    is_valid_showing_failures_only = {
-        trigger_if = {
-            limit = {
-                is_ai = no
-            }
-            is_available = yes
-        }
-        trigger_else = {
-            is_physically_able = yes
-        }
+	cooldown = { years = 5 }
+
+	is_valid_showing_failures_only = {
+		trigger_if = {
+			limit = {
+				is_ai = no
+			}
+			is_available = yes
+		}
+		trigger_else = {
+			is_physically_able = yes
+		}
 		is_in_activity = no
-    }
+	}
 
-    cost = {
-        prestige = {
-            value = {
-                add = mpo_expand_steppe_prestige_cost
-                #AI suck
-                if = {
-                    limit = {
-                        is_ai = yes
-                    }
-                    multiply = 0.5
-                }
-            }
-        }
-    }
+	cost = {
+		prestige = {
+			value = {
+				add = mpo_expand_steppe_prestige_cost
+				#AI suck
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					multiply = 0.5
+				}
+			}
+		}
+	}
 
 	effect = {
 		# Send a toast to yourself, as a confirmation that the Steppe Expansion happened
@@ -3140,9 +3140,9 @@ expand_the_steppe_decision = {
 				limit = {
 					NOT = { this = root }
 
-			    	any_character_situation = {
-			    		situation:the_great_steppe ?= this
-			    	}
+					any_character_situation = {
+						situation:the_great_steppe ?= this
+					}
 				}
 				send_interface_message = {
 					type = steppe_expansion_happened
@@ -3154,11 +3154,11 @@ expand_the_steppe_decision = {
 				}
 			}
 		}
-    }
+	}
 
-    ai_will_do = {
-        base = 1
-    }
+	ai_will_do = {
+		base = 1
+	}
 }
 
 #Diligent overwork for nomads
@@ -3166,9 +3166,9 @@ expand_the_steppe_decision = {
 develop_fertility_decision = {
 	ai_check_interval = 0
 	picture = {
-        reference = "gfx/interface/illustrations/event_scenes/mpo_hunt_steppe.dds"
-    }
-    sort_order = 60
+		reference = "gfx/interface/illustrations/event_scenes/mpo_hunt_steppe.dds"
+	}
+	sort_order = 60
 	decision_group_type = nomad_minor
 
 	desc = develop_fertility_decision_desc
@@ -3244,9 +3244,9 @@ nomad_higher_tier_title_decision = {
 		hegemony = 0
 	}
 	picture = {
-        reference = "gfx/interface/illustrations/event_scenes/mpo_steppe_evening.dds"
-    }
-    sort_order = 100
+		reference = "gfx/interface/illustrations/event_scenes/mpo_steppe_evening.dds"
+	}
+	sort_order = 100
 	decision_group_type = nomad_major
 
 	cooldown = { years = 10 }

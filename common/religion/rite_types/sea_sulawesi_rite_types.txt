@@ -1,0 +1,71 @@
+aluk = {
+	faith = aluk
+	icon = aluk
+	color = { 105 72 175 }
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_ritual_celebrations
+		tenet_ancestor_worship
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+malesung = {
+	faith = malesung
+	icon = nunusaku3
+	color = { 47 26 107 }
+
+	tenets = {
+		tenet_ritual_hospitality
+		tenet_spirit_guides
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+sulawesi_animism = {
+	faith = sulawesi_animism
+	icon = nunusaku1
+	color = { 128 17 206 }
+
+	tenets = {
+		tenet_megaliths
+		tenet_spirit_guides
+		tenet_sanctity_of_nature
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+tolotang = {
+	faith = tolotang
+	icon = tolotang
+	color = { 128 79 156 }
+
+	tenets = {
+		tenet_spirit_guides
+		tenet_ancestor_worship
+		tenet_sanctity_of_nature
+
+		#tenet_sun_worship	# msl_note: I am unsure why they got that ; more info needed
+		#tenet_eastern_syncretism	# msl_note: syncretic elements are from later history
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

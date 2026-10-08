@@ -770,7 +770,7 @@ po_nagar = {
 
 ### ### Borneo/Kalimantan holy sites ### ####
 bombalai = {
-	# volcano mountian, Bombalai
+	# Mount Bombalai is a volcanic cone mountain
 	county = c_tawau
 
 	county_modifier_scaled = {
@@ -791,9 +791,11 @@ bombalai = {
 }
 
 kapuas = {
+	# Kapuas River has become central presence in lives of many Dayak tribes, various myths and reverence surrounding it
 	county = c_BOR_tanah_taman
 
 	county_holder_character_modifier = {
+		prowess = 1
 		powerful_vassal_opinion = 5
 	}
 
@@ -814,32 +816,9 @@ kapuas = {
 	}
 }
 
-katingan = {
-	#
-	county = c_katingan_kuala
-
-	county_holder_character_modifier = {
-		prowess = 1
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		jungle_development_growth_factor = 0.01
-		levy_size = 0.02
-	}
-
-	faith_character_modifier = {
-		advantage_against_coreligionists = 2
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		advantage_against_coreligionists = 0.25
-	}
-}
-
 kinabalu = {
-	#
+	# Mount Kinabalu is the third highest mountain on Borneo, earning its name thanks to its guardian spirit, Aki Nabalu
+	# important pilgrimage site for nearby native Dayak tribes
 	county = c_kinabalu
 
 	county_holder_character_modifier = {
@@ -848,8 +827,8 @@ kinabalu = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
+		build_speed = -0.01
 		jungle_development_growth_factor = 0.01
-		supply_limit_mult = 0.02
 	}
 
 	faith_character_modifier = {
@@ -864,7 +843,7 @@ kinabalu = {
 }
 
 lawangan = {
-	#
+	# references Lawangan people who inhabit areas of Tabalong and other areas of Southern and Central Borneo
 	county = c_BOR_kutai_jauh
 
 	county_modifier_scaled = {
@@ -884,33 +863,55 @@ lawangan = {
 	}
 }
 
-ngaju = {
-	#
-	county = c_kuala_kurun
-	barony = b_dandang
+maanyan = {
+	# references Ma'anyan people and their kingdom
+	county = c_BOR_banjar
 
 	county_holder_character_modifier = {
-		powerful_vassal_opinion = 5
+		councillor_opinion = 3
 	}
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		county_opinion_add = 1
+		tax_mult = 0.01
+		hostile_raid_time = 0.02
 	}
 
 	faith_character_modifier = {
-		monthly_piety_gain_per_happy_powerful_vassal_mult = 0.02
+		courtier_and_guest_opinion = 5
+		councillor_opinion = 5
 	}
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		powerful_vassal_opinion = 0.5
+		monthly_income_mult = 0.005
+	}
+}
+
+ngaju = {
+	# references Ngaju people who inhabit areas of Southern and Central Borneo
+	county = c_kuala_kurun
+	barony = b_dandang
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		jungle_development_growth_factor = 0.01
+		levy_size = 0.02
+	}
+
+	faith_character_modifier = {
+		courtier_and_guest_opinion = 5
+		supply_duration = 0.01
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
 		monthly_piety_gain_mult = 0.01
 	}
 }
 
 nunuk_ragang = {
+	# site traditionally considered as the location of the original home of the ancestors of the Kadazan, Dusun and Rungus people
 	county = c_BOR_nabawan
 	barony = b_tongod
 
@@ -920,8 +921,8 @@ nunuk_ragang = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
 		defender_holding_advantage = 0.5
+		supply_limit_mult = 0.02
 	}
 
 	faith_character_modifier = {
@@ -935,7 +936,7 @@ nunuk_ragang = {
 }
 
 ot_danum = {
-	#
+	# references Ot Danum people who dwell at the upper reaches of south Kapuas River
 	county = c_agung_baru
 
 	county_holder_character_modifier = {
@@ -944,17 +945,17 @@ ot_danum = {
 
 	county_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		build_speed = -0.01
 		defender_holding_advantage = 0.5
 	}
 
 	faith_character_modifier = {
 		prowess_per_piety_level = 1
+		advantage_against_coreligionists = 2
 	}
 
 	faith_character_modifier_scaled = {
 		scale = holy_site_total_artifact_rarity
-		monthly_piety_gain_mult = 0.01
+		advantage_against_coreligionists = 0.25
 	}
 }
 ### ### ### ###
@@ -1375,6 +1376,17 @@ stieng = {
 ### ### ### ###
 
 
+### MENA Holy Sites ####
+cappadocia = {
+	county = c_kyzistra
+	county_holder_character_modifier = {
+		church_holding_build_gold_cost = -0.05
+		monthly_county_control_growth_factor = 0.1
+	}
+}
+### ### ### ###
+
+
 ### RICE Holy Sites ###
 harran = {
 	county = c_harran
@@ -1395,6 +1407,16 @@ petra = {
 	county_holder_character_modifier = {
 		domain_tax_mult = 0.01
 		development_growth_factor = 0.1
+	}
+}
+
+damot = {
+	# Mount Damota, important site culturally for the Welayta people, and coronotation/burial place for Wolayta kings
+	county = c_damot
+
+	county_holder_character_modifier = {
+		county_opinion_add = 5
+		close_relative_opinion = 5
 	}
 }
 
@@ -1443,7 +1465,7 @@ chau_phong = {
 }
 
 cagliari = {
-    county = c_cagliari
+	county = c_cagliari
 
 	character_modifier = {
 		hills_supply_limit_mult = 0.1

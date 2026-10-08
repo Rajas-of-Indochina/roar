@@ -124,15 +124,15 @@
 		# in Admin, a rite other than the State Rite also qualifies.
 		OR = {
 			faith != scope:faction.faction_target.faith
-            # any_in_list = {
-            #     variable = faith_minorities_large
-            #     NOT = { this = scope:faction.faction_target.faith }
-            # }
+			# any_in_list = {
+			#	 variable = faith_minorities_large
+			#	 NOT = { this = scope:faction.faction_target.faith }
+			# }
 			culture != scope:faction.faction_target.culture
-            # any_in_list = {
-            #     variable = culture_minorities_large
-            #     NOT = { this = scope:faction.faction_target.culture }
-            # }
+			# any_in_list = {
+			#	 variable = culture_minorities_large
+			#	 NOT = { this = scope:faction.faction_target.culture }
+			# }
 			AND = {
 				exists = scope:faction.faction_target.primary_title.state_rite
 				rite != scope:faction.faction_target.primary_title.state_rite
@@ -429,22 +429,22 @@
 			AND = {
 				# We already share a Faith with the Top Liege.
 				title_province.faith = scope:faction.faction_target.faith
-                # and have no large minority faiths that aren't the top liege
-                # NOT = {
-                #     any_in_list = {
-                #         variable = large_faith_minorities
-                #         THIS != scope:faction.faction_target.faith
-                #     }
-                # }
+				# and have no large minority faiths that aren't the top liege
+				# NOT = {
+				#	 any_in_list = {
+				#		 variable = large_faith_minorities
+				#		 THIS != scope:faction.faction_target.faith
+				#	 }
+				# }
 				# And we do NOT share a Culture Group with the faction leader.
 				NOT = { this.title_province.culture = { has_same_culture_heritage = scope:faction.var:faction_culture } }
-                # nor have any large minorities that do
-                # NOT = {
-                #     any_in_list = {
-                #         variable = large_culture_minorities
-                #         has_same_culture_heritage = scope:faction.var:faction_culture
-                #     }
-                # }
+				# nor have any large minorities that do
+				# NOT = {
+				#	 any_in_list = {
+				#		 variable = large_culture_minorities
+				#		 has_same_culture_heritage = scope:faction.var:faction_culture
+				#	 }
+				# }
 			}
 		}
 		# If a suitable Escalated Faction exists, prefer to join it instead.
@@ -498,31 +498,31 @@
 			value = county_opinion
 			multiplier = -3.0
 		}
-        # softened version for cultural minorities
-        # compare_modifier = {
-        #     desc = "FACTION_REASON_CULTURAL_REASONS"
-        #     trigger = {
-        #         OR = {
-        #             this.title_province.culture = scope:faction.faction_target.culture
+		# softened version for cultural minorities
+		# compare_modifier = {
+		#	 desc = "FACTION_REASON_CULTURAL_REASONS"
+		#	 trigger = {
+		#		 OR = {
+		#			 this.title_province.culture = scope:faction.faction_target.culture
 		# 			AND = {
 		# 				scope:faction.faction_target = { has_active_diarchy = yes }
 		# 				this.title_province.culture = scope:faction.faction_target.diarch.culture
 		# 			}
-        #         }                
-        #         any_in_list = {
-        #             variable = culture_minorities_large
-        #             NOR = {
-        #                 this = scope:faction.faction_target.culture
-        #                 AND = {
-        #                     scope:faction.faction_target = { has_active_diarchy = yes }
-        #                     this = scope:faction.faction_target.diarch.culture
-        #                 }
-        #             }
-        #         }
-        #     }
-        #     value = county_opinion
-        #     multiplier = -0.5
-        # }
+		#		 }				
+		#		 any_in_list = {
+		#			 variable = culture_minorities_large
+		#			 NOR = {
+		#				 this = scope:faction.faction_target.culture
+		#				 AND = {
+		#					 scope:faction.faction_target = { has_active_diarchy = yes }
+		#					 this = scope:faction.faction_target.diarch.culture
+		#				 }
+		#			 }
+		#		 }
+		#	 }
+		#	 value = county_opinion
+		#	 multiplier = -0.5
+		# }
 		pluralism_fundamentalism_dual_modifier = {
 			ASTRAY_BASE_VALUE = faction_county_opinion_astray
 			HOSTILE_BASE_VALUE = faction_county_opinion_hostile

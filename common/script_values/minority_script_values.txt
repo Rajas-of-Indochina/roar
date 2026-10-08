@@ -7,198 +7,198 @@
 
 # If above this threshold, leave no minority. If below it, leave a small minority
 culture_minority_post_conversion_threshold = {
-    value = 80 # high acceptance
-    # Heritages: First check for same heritage
-    if = {
-        limit = { scope:old_culture = { has_same_culture_heritage = ROOT.culture } }
-        add = -20
-    }
-    # if that fails, check for a "related" heritage, most granular first
-    # also most of this will be gutted for Rajas integration because of CCU LMAO
-    if = {
-        limit = {
-            OR = {
-                # Asia
-                AND = {
-                    scope:old_culture = { has_west_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_west_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_south_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_south_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_southeast_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_southeast_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_north_east_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_north_east_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_east_central_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_east_central_asian_heritage_pillar_trigger = yes }
-                }
-                #Africa
-                AND = {
-                    scope:old_culture = { has_west_african_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_west_african_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_east_african_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_east_african_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_north_african_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_north_african_heritage_pillar_trigger = yes }
-                }
-                # MENA is a little weird here. since it includes North Africa I have to explicitly exclude it here
-                AND = {
-                    scope:old_culture = {
-                        has_mena_heritage_pillar_trigger = yes
-                        has_north_african_heritage_pillar_trigger = no
-                    }
-                    ROOT.culture = {
-                        has_mena_heritage_pillar_trigger = yes
-                        has_north_african_heritage_pillar_trigger = no
-                    }
-                }
-                AND = {
-                    scope:old_culture = { has_central_african_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_central_african_heritage_pillar_trigger = yes }
-                }
-                # Europe
-                AND = {
-                    scope:old_culture = { has_west_european_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_west_european_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_east_european_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_east_european_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_north_european_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_north_european_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_south_european_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_south_european_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_slavic_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_slavic_heritage_pillar_trigger = yes }
-                }
-            }
-        }
-        add = -15
-    }
-    # mid-tier heritage groups
-    else_if = {
-        limit = {
-            OR = {
-                AND = {
-                    scope:old_culture = { has_north_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_north_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_central_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_central_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_mena_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_mena_heritage_pillar_trigger = yes }
-                }
-            }
-        }
-        add = -10
-    }
-    # top-level groups
-    else_if = {
-        limit = {
-            OR = {
-                AND = {
-                    scope:old_culture = { has_asian_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_asian_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_african_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_african_heritage_pillar_trigger = yes }
-                }
-                AND = {
-                    scope:old_culture = { has_european_heritage_pillar_trigger = yes }
-                    ROOT.culture = { has_european_heritage_pillar_trigger = yes }
-                }
-            }
-        }
-        add = -5
-    }
-    # culture tradition parameters.
-    # Xenophilic majorities are more likely to leave minorities on conversion
-    if = {
-        limit = {
-            OR = {
-                ROOT.culture = { has_cultural_parameter = easier_to_hybridize }
-                ROOT.culture = { has_cultural_parameter = cheaper_to_hybridize }
-            }
-        }
-        add = 10
-    }
-    # ...and conversely, xenophilic ex-majorities are more likely to assimilate
-    if = {
-        limit = {
-            OR = {
-                scope:old_culture = { has_cultural_parameter = easier_to_hybridize }
-                scope:old_culture = { has_cultural_parameter = cheaper_to_hybridize }
-            }
-        }
-        add = -10
-    }
-    # damn snooty Byzantines don't want to integrate
-    if = {
-        limit = {
-            scope:old_culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize }
-            NOT = { ROOT.culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize } }
-        }
-        add = 10
-    }
-    # Everyone wants to be Roman!
-    if = {
-        limit = {
-            NOT = {scope:old_culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize }}
-            ROOT.culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize }
-        }
-        add = -10
-    }
-    # Inward perfection heavily encourages minorities to assimilate into it...
-    if = {
-        limit = {
-            ROOT.culture = { has_cultural_parameter = harder_to_hybridize }
-        }
-        add = -10
-    }
-    # but discourages assimilating itself into other cultures
-    if = {
-        limit = {
-            scope:old_culture = { has_cultural_parameter = harder_to_hybridize }
-        }
-        add = 10
-    }
-    # Divergent and hybrid cultures are much less likely to leave a minority
-    if = {
-        limit = {
-            ROOT.culture = { any_parent_culture = { THIS = scope:old_culture } }
-        }
-        add = -20
-    }
-    # Don't let it go below 40.
-    min = 40
-    # And don't let it get above 100.
-    max = 100
+	value = 80 # high acceptance
+	# Heritages: First check for same heritage
+	if = {
+		limit = { scope:old_culture = { has_same_culture_heritage = ROOT.culture } }
+		add = -20
+	}
+	# if that fails, check for a "related" heritage, most granular first
+	# also most of this will be gutted for Rajas integration because of CCU LMAO
+	if = {
+		limit = {
+			OR = {
+				# Asia
+				AND = {
+					scope:old_culture = { has_west_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_west_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_south_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_south_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_southeast_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_southeast_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_north_east_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_north_east_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_east_central_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_east_central_asian_heritage_pillar_trigger = yes }
+				}
+				#Africa
+				AND = {
+					scope:old_culture = { has_west_african_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_west_african_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_east_african_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_east_african_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_north_african_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_north_african_heritage_pillar_trigger = yes }
+				}
+				# MENA is a little weird here. since it includes North Africa I have to explicitly exclude it here
+				AND = {
+					scope:old_culture = {
+						has_mena_heritage_pillar_trigger = yes
+						has_north_african_heritage_pillar_trigger = no
+					}
+					ROOT.culture = {
+						has_mena_heritage_pillar_trigger = yes
+						has_north_african_heritage_pillar_trigger = no
+					}
+				}
+				AND = {
+					scope:old_culture = { has_central_african_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_central_african_heritage_pillar_trigger = yes }
+				}
+				# Europe
+				AND = {
+					scope:old_culture = { has_west_european_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_west_european_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_east_european_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_east_european_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_north_european_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_north_european_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_south_european_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_south_european_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_slavic_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_slavic_heritage_pillar_trigger = yes }
+				}
+			}
+		}
+		add = -15
+	}
+	# mid-tier heritage groups
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					scope:old_culture = { has_north_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_north_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_central_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_central_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_mena_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_mena_heritage_pillar_trigger = yes }
+				}
+			}
+		}
+		add = -10
+	}
+	# top-level groups
+	else_if = {
+		limit = {
+			OR = {
+				AND = {
+					scope:old_culture = { has_asian_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_asian_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_african_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_african_heritage_pillar_trigger = yes }
+				}
+				AND = {
+					scope:old_culture = { has_european_heritage_pillar_trigger = yes }
+					ROOT.culture = { has_european_heritage_pillar_trigger = yes }
+				}
+			}
+		}
+		add = -5
+	}
+	# culture tradition parameters.
+	# Xenophilic majorities are more likely to leave minorities on conversion
+	if = {
+		limit = {
+			OR = {
+				ROOT.culture = { has_cultural_parameter = easier_to_hybridize }
+				ROOT.culture = { has_cultural_parameter = cheaper_to_hybridize }
+			}
+		}
+		add = 10
+	}
+	# ...and conversely, xenophilic ex-majorities are more likely to assimilate
+	if = {
+		limit = {
+			OR = {
+				scope:old_culture = { has_cultural_parameter = easier_to_hybridize }
+				scope:old_culture = { has_cultural_parameter = cheaper_to_hybridize }
+			}
+		}
+		add = -10
+	}
+	# damn snooty Byzantines don't want to integrate
+	if = {
+		limit = {
+			scope:old_culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize }
+			NOT = { ROOT.culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize } }
+		}
+		add = 10
+	}
+	# Everyone wants to be Roman!
+	if = {
+		limit = {
+			NOT = {scope:old_culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize }}
+			ROOT.culture = { has_cultural_parameter = other_cultures_more_likely_to_hybridize }
+		}
+		add = -10
+	}
+	# Inward perfection heavily encourages minorities to assimilate into it...
+	if = {
+		limit = {
+			ROOT.culture = { has_cultural_parameter = harder_to_hybridize }
+		}
+		add = -10
+	}
+	# but discourages assimilating itself into other cultures
+	if = {
+		limit = {
+			scope:old_culture = { has_cultural_parameter = harder_to_hybridize }
+		}
+		add = 10
+	}
+	# Divergent and hybrid cultures are much less likely to leave a minority
+	if = {
+		limit = {
+			ROOT.culture = { any_parent_culture = { THIS = scope:old_culture } }
+		}
+		add = -20
+	}
+	# Don't let it go below 40.
+	min = 40
+	# And don't let it get above 100.
+	max = 100
 }
 # if below THIS threshold, leave a large minority instead
 culture_large_minority_post_conversion_threshold = {
-    value = culture_minority_post_conversion_threshold
-    multiply = 0.5
+	value = culture_minority_post_conversion_threshold
+	multiply = 0.5
 }
 
 # Called in on_county_faith_change
@@ -208,249 +208,249 @@ culture_large_minority_post_conversion_threshold = {
 # Astray: Small Minority (1)
 # Righteous: No Minority (0-)
 faith_minority_post_conversion_threshold = {
-    value = faith_fully_accepted_level
-    scope:old_faith = {
-        if = {
-            limit = {
-                faith_hostility_level = {
-                    target = ROOT.faith
-                    value >= faith_evil_level
-                }
-            }
-            add = faith_evil_level # value is 3
-        }
-        if = {
-            limit = {
-                faith_hostility_level = {
-                    target = ROOT.faith
-                    value >= faith_hostile_level
-                }
-            }
-            add = faith_hostile_level # value is 2
-        }
-        if = {
-            limit = {
-                faith_hostility_level = {
-                    target = ROOT.faith
-                    value >= faith_astray_level
-                }
-            }
-            add = faith_astray_level # value is 1
-        }
-    }
-    # matriarchal faiths less willing to convert to patriarchal ones and vice-versa
-    if = {
-        limit = {
-            OR = {
-                AND = {
-                    scope:old_rite = { has_doctrine_parameter = male_dominated_law }
-                    ROOT.rite = { has_doctrine_parameter = female_dominated_law }
-                }
-                AND = {
-                    scope:old_rite = { has_doctrine_parameter = female_dominated_law }
-                    ROOT.rite = { has_doctrine_parameter = male_dominated_law }
-                }
-            }
-        }
-        add = 1
-    }
-    # Fundamentalists less likely to be converted, but more likely to convert
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = doctrine_pluralism_fundamentalist }
-        }
-        add = 1
-    }
-    if = {
-        limit = {
-            ROOT.rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
-        }
-        add = -1
-    }
-    # and Pluralists are the opposite
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = doctrine_pluralism_pluralistic }
-        }
-        add = -1
-    }
-    if = {
-        limit = {
-            ROOT.rite = { rite_has_doctrine = doctrine_pluralism_pluralistic }
-        }
-        add = 1
-    }
-    # Tenets. First we do scope:old_rite's tenets.
-    # Adaptive: More willing to assimilate once they're the minority
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_adaptive }
-        }
-        add = -1
-    }
-    # Communal Identity
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_communal_identity }
-        }
-        add = 1
-    }
-    # Sanctioned False Conversions: Less likely to leave a minority... but they reconvert sometimes
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_false_conversion_sanction }
-        }
-        add = -1
-    }
-    # Unrelenting Rite
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_unrelenting_faith }
-        }
-        add = 1
-    }
-    # Reincarnation
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_reincarnation }
-        }
-        add = 1
-    }
-    # Pastoral Isolation: These guys really prefer to keep their own rite
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_pastoral_isolation }
-        }
-        add = 3
-    }
-    # Righteous Rebirth
-    if = {
-        limit = {
-            scope:old_rite = { has_doctrine = tenet_pure_land }
-        }
-        add = 3
-    }
-    # Now ROOT.rite's tenets
-    # Mendicant Preachers
-    if = {
-        limit = {
-            ROOT.rite = { rite_has_doctrine = tenet_mendicant_preachers }
-        }
-        add = -1
-    }
-    # Tax Nonbelievers: They actually want minorities to tax
-    if = {
-        limit = {
-            ROOT.rite = { rite_has_doctrine = tenet_tax_nonbelievers }
-        }
-        add = 2
-    }
-    # Now checking for both rites' tenets and such
-    # Hedonism vs. Monasticism
-    if = {
-        limit = {
-            OR = {
-                AND = {
-                    ROOT.rite = { rite_has_doctrine = tenet_hedonistic }
-                    OR = {
-                        scope:old_rite = { has_doctrine = tenet_monasticism }
-                        scope:old_rite = { has_doctrine = tenet_mendicant_preachers }
-                    }
-                }
-                AND = {
-                    scope:old_rite = { has_doctrine = tenet_hedonistic }
-                    OR = {
-                        ROOT.rite = { rite_has_doctrine = tenet_monasticism }
-                        ROOT.rite = { rite_has_doctrine = tenet_mendicant_preachers }
-                    }
-                }
-            }
-        }
-        add = 1
-    }
-    # Divine Marriage vs. anything other than unrestricted marriage
-    if = {
-        limit = {
-            OR = {
-                AND = {
-                    ROOT.rite = { rite_has_doctrine = tenet_divine_marriage }
-                    NOT = { scope:old_rite = { has_doctrine = doctrine_consanguinity_unrestricted } }
-                }
-                AND = {
-                    scope:old_rite = { has_doctrine = tenet_divine_marriage }
-                    NOT = { ROOT.rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted } }
-                }
-            }
-        }
-        add = 1
-    }
-    # Polyamory vs. Monogamy
-    if = {
-        limit = {
-            OR = {
-                AND = {
-                    ROOT.rite = { rite_has_doctrine = tenet_polyamory }
-                    OR = {
-                        scope:old_rite = { has_doctrine = doctrine_adultery_men_crime }
-                        scope:old_rite = { has_doctrine = doctrine_adultery_women_crime }
-                    }
-                }
-                AND = {
-                    scope:old_rite = { has_doctrine = tenet_polyamory }
-                    OR = {
-                        ROOT.rite = { rite_has_doctrine = doctrine_adultery_men_crime }
-                        ROOT.rite = { rite_has_doctrine = doctrine_adultery_women_crime }
-                    }
-                }
-            }
-        }
-        add = 1
-    }
-    # Pacifism vs. War, Human Sacrifice and Murder
-    if = {
-        limit = {
-            OR = {
-                AND = {
-                    OR = {
-                        ROOT.rite = { rite_has_doctrine = tenet_pacifism }
-                        ROOT.rite = { rite_has_doctrine = tenet_dharmic_pacifism }
-                    }
-                    OR = {
-                        scope:old_rite = { has_doctrine = tenet_armed_pilgrimages }
-                        scope:old_rite = { has_doctrine = tenet_human_sacrifice }
-                        scope:old_rite = { has_doctrine = tenet_gruesome_festivals }
-                        scope:old_rite = { has_doctrine = tenet_sacred_destruction }
-                        scope:old_rite = { has_doctrine = tenet_fp3_fedayeen }
-                        scope:old_rite = { has_doctrine = tenet_warmonger }
-                        scope:old_rite = { has_doctrine = tenet_extinction_of_dharma }
-                        scope:old_rite = { has_doctrine = tenet_sacrificial_ceremonies }
-                    }
-                }
-                AND = {
-                    OR = {
-                        scope:old_rite = { has_doctrine = tenet_pacifism }
-                        scope:old_rite = { has_doctrine = tenet_dharmic_pacifism }
-                    }
-                    OR = {
-                        ROOT.rite = { rite_has_doctrine = tenet_armed_pilgrimages }
-                        ROOT.rite = { rite_has_doctrine = tenet_human_sacrifice }
-                        ROOT.rite = { rite_has_doctrine = tenet_gruesome_festivals }
-                        ROOT.rite = { rite_has_doctrine = tenet_sacred_destruction }
-                        ROOT.rite = { rite_has_doctrine = tenet_fp3_fedayeen }
-                        ROOT.rite = { rite_has_doctrine = tenet_warmonger }
-                        ROOT.rite = { rite_has_doctrine = tenet_extinction_of_dharma }
-                        ROOT.rite = { rite_has_doctrine = tenet_sacrificial_ceremonies }
-                    }
-                }
-            }
-        }
-        add = 2
-    }
-    # Same HoF
-    if = {
-        limit = { ROOT.faith.religious_head ?= scope:old_faith.religious_head }
-        add = -2
-    }
+	value = faith_fully_accepted_level
+	scope:old_faith = {
+		if = {
+			limit = {
+				faith_hostility_level = {
+					target = ROOT.faith
+					value >= faith_evil_level
+				}
+			}
+			add = faith_evil_level # value is 3
+		}
+		if = {
+			limit = {
+				faith_hostility_level = {
+					target = ROOT.faith
+					value >= faith_hostile_level
+				}
+			}
+			add = faith_hostile_level # value is 2
+		}
+		if = {
+			limit = {
+				faith_hostility_level = {
+					target = ROOT.faith
+					value >= faith_astray_level
+				}
+			}
+			add = faith_astray_level # value is 1
+		}
+	}
+	# matriarchal faiths less willing to convert to patriarchal ones and vice-versa
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					scope:old_rite = { has_doctrine_parameter = male_dominated_law }
+					ROOT.rite = { has_doctrine_parameter = female_dominated_law }
+				}
+				AND = {
+					scope:old_rite = { has_doctrine_parameter = female_dominated_law }
+					ROOT.rite = { has_doctrine_parameter = male_dominated_law }
+				}
+			}
+		}
+		add = 1
+	}
+	# Fundamentalists less likely to be converted, but more likely to convert
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = doctrine_pluralism_fundamentalist }
+		}
+		add = 1
+	}
+	if = {
+		limit = {
+			ROOT.rite = { rite_has_doctrine = doctrine_pluralism_fundamentalist }
+		}
+		add = -1
+	}
+	# and Pluralists are the opposite
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = doctrine_pluralism_pluralistic }
+		}
+		add = -1
+	}
+	if = {
+		limit = {
+			ROOT.rite = { rite_has_doctrine = doctrine_pluralism_pluralistic }
+		}
+		add = 1
+	}
+	# Tenets. First we do scope:old_rite's tenets.
+	# Adaptive: More willing to assimilate once they're the minority
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_adaptive }
+		}
+		add = -1
+	}
+	# Communal Identity
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_communal_identity }
+		}
+		add = 1
+	}
+	# Sanctioned False Conversions: Less likely to leave a minority... but they reconvert sometimes
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_false_conversion_sanction }
+		}
+		add = -1
+	}
+	# Unrelenting Rite
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_unrelenting_faith }
+		}
+		add = 1
+	}
+	# Reincarnation
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_reincarnation }
+		}
+		add = 1
+	}
+	# Pastoral Isolation: These guys really prefer to keep their own rite
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_pastoral_isolation }
+		}
+		add = 3
+	}
+	# Righteous Rebirth
+	if = {
+		limit = {
+			scope:old_rite = { has_doctrine = tenet_pure_land }
+		}
+		add = 3
+	}
+	# Now ROOT.rite's tenets
+	# Mendicant Preachers
+	if = {
+		limit = {
+			ROOT.rite = { rite_has_doctrine = tenet_mendicant_preachers }
+		}
+		add = -1
+	}
+	# Tax Nonbelievers: They actually want minorities to tax
+	if = {
+		limit = {
+			ROOT.rite = { rite_has_doctrine = tenet_tax_nonbelievers }
+		}
+		add = 2
+	}
+	# Now checking for both rites' tenets and such
+	# Hedonism vs. Monasticism
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					ROOT.rite = { rite_has_doctrine = tenet_hedonistic }
+					OR = {
+						scope:old_rite = { has_doctrine = tenet_monasticism }
+						scope:old_rite = { has_doctrine = tenet_mendicant_preachers }
+					}
+				}
+				AND = {
+					scope:old_rite = { has_doctrine = tenet_hedonistic }
+					OR = {
+						ROOT.rite = { rite_has_doctrine = tenet_monasticism }
+						ROOT.rite = { rite_has_doctrine = tenet_mendicant_preachers }
+					}
+				}
+			}
+		}
+		add = 1
+	}
+	# Divine Marriage vs. anything other than unrestricted marriage
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					ROOT.rite = { rite_has_doctrine = tenet_divine_marriage }
+					NOT = { scope:old_rite = { has_doctrine = doctrine_consanguinity_unrestricted } }
+				}
+				AND = {
+					scope:old_rite = { has_doctrine = tenet_divine_marriage }
+					NOT = { ROOT.rite = { rite_has_doctrine = doctrine_consanguinity_unrestricted } }
+				}
+			}
+		}
+		add = 1
+	}
+	# Polyamory vs. Monogamy
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					ROOT.rite = { rite_has_doctrine = tenet_polyamory }
+					OR = {
+						scope:old_rite = { has_doctrine = doctrine_adultery_men_crime }
+						scope:old_rite = { has_doctrine = doctrine_adultery_women_crime }
+					}
+				}
+				AND = {
+					scope:old_rite = { has_doctrine = tenet_polyamory }
+					OR = {
+						ROOT.rite = { rite_has_doctrine = doctrine_adultery_men_crime }
+						ROOT.rite = { rite_has_doctrine = doctrine_adultery_women_crime }
+					}
+				}
+			}
+		}
+		add = 1
+	}
+	# Pacifism vs. War, Human Sacrifice and Murder
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					OR = {
+						ROOT.rite = { rite_has_doctrine = tenet_pacifism }
+						ROOT.rite = { rite_has_doctrine = tenet_dharmic_pacifism }
+					}
+					OR = {
+						scope:old_rite = { has_doctrine = tenet_armed_pilgrimages }
+						scope:old_rite = { has_doctrine = tenet_human_sacrifice }
+						scope:old_rite = { has_doctrine = tenet_gruesome_festivals }
+						scope:old_rite = { has_doctrine = tenet_sacred_destruction }
+						scope:old_rite = { has_doctrine = tenet_fp3_fedayeen }
+						scope:old_rite = { has_doctrine = tenet_warmonger }
+						scope:old_rite = { has_doctrine = tenet_extinction_of_dharma }
+						scope:old_rite = { has_doctrine = tenet_sacrificial_ceremonies }
+					}
+				}
+				AND = {
+					OR = {
+						scope:old_rite = { has_doctrine = tenet_pacifism }
+						scope:old_rite = { has_doctrine = tenet_dharmic_pacifism }
+					}
+					OR = {
+						ROOT.rite = { rite_has_doctrine = tenet_armed_pilgrimages }
+						ROOT.rite = { rite_has_doctrine = tenet_human_sacrifice }
+						ROOT.rite = { rite_has_doctrine = tenet_gruesome_festivals }
+						ROOT.rite = { rite_has_doctrine = tenet_sacred_destruction }
+						ROOT.rite = { rite_has_doctrine = tenet_fp3_fedayeen }
+						ROOT.rite = { rite_has_doctrine = tenet_warmonger }
+						ROOT.rite = { rite_has_doctrine = tenet_extinction_of_dharma }
+						ROOT.rite = { rite_has_doctrine = tenet_sacrificial_ceremonies }
+					}
+				}
+			}
+		}
+		add = 2
+	}
+	# Same HoF
+	if = {
+		limit = { ROOT.faith.religious_head ?= scope:old_faith.religious_head }
+		add = -2
+	}
 }
 
 # Migration attractiveness:
@@ -464,122 +464,122 @@ faith_minority_post_conversion_threshold = {
 # liege dread -> scary rulers will make a county less attractive
 
 base_migration_attraction = {
-    value = {
-        # base attraction
-        desc = base_attraction_tt
-        value = 100
-    }
-    add = {
-        # development increases attraction linearly
-        desc = development_level_attraction_tt
-        value = development_level
-    }
-    holder.top_liege = {
-        # top liege dread also can reduce attractiveness
-        # balanced so 100 dread is x0.5, and 0 dread is x1. No bonus points for not being actively dreadful.
-        multiply = {
-            desc = liege_dread_factor_tt
-            value = 1
-            subtract = {
-                value = dread
-                divide = 200
-            }
-        }
-    }
+	value = {
+		# base attraction
+		desc = base_attraction_tt
+		value = 100
+	}
+	add = {
+		# development increases attraction linearly
+		desc = development_level_attraction_tt
+		value = development_level
+	}
+	holder.top_liege = {
+		# top liege dread also can reduce attractiveness
+		# balanced so 100 dread is x0.5, and 0 dread is x1. No bonus points for not being actively dreadful.
+		multiply = {
+			desc = liege_dread_factor_tt
+			value = 1
+			subtract = {
+				value = dread
+				divide = 200
+			}
+		}
+	}
 }
 
 # scope:culture is the culture evaluating the county
 culture_migration_attraction = {
-    value = base_migration_attraction
-    if = {
-        limit = { holder = { has_realm_law_flag = increased_culture_migrations } }
-        multiply = {
-            desc = welcoming_policy_tt
-            value = 1.5
-        }
-    }
-    else_if = {
-        limit = { holder = { has_realm_law_flag = reduced_culture_migrations } }
-        divide = {
-            desc = harsh_policy_tt
-            value = 1.5
-        }
-    }
-    multiply = {
-        # having more cultural minorities already present makes it more appealing
-        desc = cosmopolitanism_factor_tt
-        value = {
-            value = 1
-            add = {
-                value = "list_size(culture_minorities_small)"
-                multiply = 0.1
-            }
-            add = {
-                value = "list_size(culture_minorities_large)"
-                multiply = 0.1
-            }
-        }
-    }
-    culture = {
-        # cultural acceptance can also raise or lower attractiveness
-        # balanced so 0% acceptance means a x0.5 multiplier and 100% is x1.5
-        multiply = {
-            desc = acceptance_factor_tt
-            value = 0.5
-            add = "cultural_acceptance(scope:culture)"
-        }
-    }
+	value = base_migration_attraction
+	if = {
+		limit = { holder = { has_realm_law_flag = increased_culture_migrations } }
+		multiply = {
+			desc = welcoming_policy_tt
+			value = 1.5
+		}
+	}
+	else_if = {
+		limit = { holder = { has_realm_law_flag = reduced_culture_migrations } }
+		divide = {
+			desc = harsh_policy_tt
+			value = 1.5
+		}
+	}
+	multiply = {
+		# having more cultural minorities already present makes it more appealing
+		desc = cosmopolitanism_factor_tt
+		value = {
+			value = 1
+			add = {
+				value = "list_size(culture_minorities_small)"
+				multiply = 0.1
+			}
+			add = {
+				value = "list_size(culture_minorities_large)"
+				multiply = 0.1
+			}
+		}
+	}
+	culture = {
+		# cultural acceptance can also raise or lower attractiveness
+		# balanced so 0% acceptance means a x0.5 multiplier and 100% is x1.5
+		multiply = {
+			desc = acceptance_factor_tt
+			value = 0.5
+			add = "cultural_acceptance(scope:culture)"
+		}
+	}
 }
 
 # scope:faith is the faith evaluating the county
 faith_migration_attraction = {
-    value = base_migration_attraction
-    if = {
-        limit = { holder = { has_realm_law_flag = increased_faith_migrations } }
-        multiply = {
-            desc = welcoming_policy_tt
-            value = 1.5
-        }
-    }
-    else_if = {
-        limit = { holder = { has_realm_law_flag = reduced_faith_migrations } }
-        divide = {
-            desc = harsh_policy_tt
-            value = 1.5
-        }
-    }
-    multiply = {
-        # having more cultural minorities already present makes it more appealing
-        desc = cosmopolitanism_factor_tt
-        value = {
-            value = 1
-            add = {
-                value = "list_size(rite_minorities_small)"
-                multiply = 0.1
-            }
-            add = {
-                value = "list_size(rite_minorities_large)"
-                multiply = 0.1
-            }
-        }
-    }
-    multiply = {
-        desc = faith_hostility_factor_tt
-        value = {
-            value = 0.5
-            add = {
-                value = 3
-                subtract = "faith.faith_hostility_level(scope:faith)"
-                divide = 3
-            }
-        }
-    }
+	value = base_migration_attraction
+	if = {
+		limit = { holder = { has_realm_law_flag = increased_faith_migrations } }
+		multiply = {
+			desc = welcoming_policy_tt
+			value = 1.5
+		}
+	}
+	else_if = {
+		limit = { holder = { has_realm_law_flag = reduced_faith_migrations } }
+		divide = {
+			desc = harsh_policy_tt
+			value = 1.5
+		}
+	}
+	multiply = {
+		# having more cultural minorities already present makes it more appealing
+		desc = cosmopolitanism_factor_tt
+		value = {
+			value = 1
+			add = {
+				value = "list_size(rite_minorities_small)"
+				multiply = 0.1
+			}
+			add = {
+				value = "list_size(rite_minorities_large)"
+				multiply = 0.1
+			}
+		}
+	}
+	multiply = {
+		desc = faith_hostility_factor_tt
+		value = {
+			value = 0.5
+			add = {
+				value = 3
+				subtract = "faith.faith_hostility_level(scope:faith)"
+				divide = 3
+			}
+		}
+	}
 }
 
 combined_migration_attraction = {
-    value = culture_migration_attraction
-    add = faith_migration_attraction
-    divide = 2
+	value = culture_migration_attraction
+	add = faith_migration_attraction
+	divide = 2
 }
 
 ######
@@ -696,36 +696,36 @@ chancellor_invite_settlers_contextual_bonuses = {
 }
 
 chancellor_invite_settlers_range = {
-    value = diplomatic_range
-    if = {
-        limit = {
-            scope:county.faith = scope:councillor_liege.faith
-            scope:councillor_liege = {
-                OR = {
-                    has_trait = crusader_king
-                    any_liege_or_above = { has_trait = crusader_king }
-                }
-            }
-        }
-        multiply = 4
-    }
-    if = {
-        limit = {
-            scope:councillor_liege = {
-                has_trait = adventurer
-                culture = { has_innovation = innovation_varangian_adventurers }
-            }
-            scope:county.culture = {
-                has_same_culture_heritage = scope:councillor_liege.culture
-            }
-            multiply = 4
-        }
-    }
-    multiply = {
-        value = 50
-        add = scope:councillor.diplomacy
-        divide = 50
-    }
+	value = diplomatic_range
+	if = {
+		limit = {
+			scope:county.faith = scope:councillor_liege.faith
+			scope:councillor_liege = {
+				OR = {
+					has_trait = crusader_king
+					any_liege_or_above = { has_trait = crusader_king }
+				}
+			}
+		}
+		multiply = 4
+	}
+	if = {
+		limit = {
+			scope:councillor_liege = {
+				has_trait = adventurer
+				culture = { has_innovation = innovation_varangian_adventurers }
+			}
+			scope:county.culture = {
+				has_same_culture_heritage = scope:councillor_liege.culture
+			}
+			multiply = 4
+		}
+	}
+	multiply = {
+		value = 50
+		add = scope:councillor.diplomacy
+		divide = 50
+	}
 }
 
 # Bureaucrats bonus

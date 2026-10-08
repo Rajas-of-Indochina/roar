@@ -1,0 +1,52 @@
+baltic_pagan = {
+	faith = baltic_pagan
+
+	color = { 0.6 0.4 0.3 }
+
+	tenets = {
+		tenet_sacred_childbirth
+		tenet_ancestor_worship
+		tenet_sanctity_of_nature
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+finnish_pagan = {
+	faith = finnish_pagan
+
+	color = { 0.5 0.5 0.0 }
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_ancestor_worship
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+slavic_pagan = {
+	faith = slavic_pagan
+
+	color = { 0.7 0.6 0.3 }
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_ritual_celebrations
+		tenet_communal_identity
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

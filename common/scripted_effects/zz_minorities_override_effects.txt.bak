@@ -25,8 +25,8 @@ migration_settle_down_obedient_vassal_effect = {
 		holder = scope:current_vassal
 		change = scope:change4
 	}
-    culture = { save_scope_as = old_culture }
-    faith = { save_scope_as = old_faith }
+	culture = { save_scope_as = old_culture }
+	faith = { save_scope_as = old_faith }
 	# set_variable = {
 	# 	name = migration_previous_culture
 	# 	years = 5
@@ -34,41 +34,41 @@ migration_settle_down_obedient_vassal_effect = {
 	# }
 	# set_county_culture = scope:current_vassal.domicile.domicile_culture
 	# set_county_faith = scope:current_vassal.domicile.domicile_faith
-    if = {
-        limit = {
-            scope:current_vassal = {
-                OR = {
-                    has_realm_law = nomadic_authority_4
-                    has_realm_law = nomadic_authority_5
-                }
-            }
-        }
-        set_county_culture = scope:current_vassal.domicile.domicile_culture
-        set_county_faith = scope:current_vassal.domicile.domicile_faith
-    }
-    else_if = {
-        limit = {
-            scope:current_vassal = {
-                has_realm_law = nomadic_authority_3
-            }
-        }
-        promote_culture_minority_effect = { CULTURE = scope:current_vassal.domicile.domicile_culture }
-        promote_culture_minority_effect = { CULTURE = scope:current_vassal.domicile.domicile_culture }
-        promote_faith_minority_effect = { FAITH = scope:current_vassal.domicile.domicile_faith }
-        promote_faith_minority_effect = { FAITH = scope:current_vassal.domicile.domicile_faith }
-    }
-    else = {
-        promote_culture_minority_effect = { CULTURE = scope:current_vassal.domicile.domicile_culture }
-        promote_faith_minority_effect = { FAITH = scope:current_vassal.domicile.domicile_faith }
-    }
-    if = {
-        limit = { NOT = { culture = scope:old_culture } }
-        set_variable = {
-        	name = migration_previous_culture
-        	years = 5
-        	value = scope:old_culture
-        }
-    }
+	if = {
+		limit = {
+			scope:current_vassal = {
+				OR = {
+					has_realm_law = nomadic_authority_4
+					has_realm_law = nomadic_authority_5
+				}
+			}
+		}
+		set_county_culture = scope:current_vassal.domicile.domicile_culture
+		set_county_faith = scope:current_vassal.domicile.domicile_faith
+	}
+	else_if = {
+		limit = {
+			scope:current_vassal = {
+				has_realm_law = nomadic_authority_3
+			}
+		}
+		promote_culture_minority_effect = { CULTURE = scope:current_vassal.domicile.domicile_culture }
+		promote_culture_minority_effect = { CULTURE = scope:current_vassal.domicile.domicile_culture }
+		promote_faith_minority_effect = { FAITH = scope:current_vassal.domicile.domicile_faith }
+		promote_faith_minority_effect = { FAITH = scope:current_vassal.domicile.domicile_faith }
+	}
+	else = {
+		promote_culture_minority_effect = { CULTURE = scope:current_vassal.domicile.domicile_culture }
+		promote_faith_minority_effect = { FAITH = scope:current_vassal.domicile.domicile_faith }
+	}
+	if = {
+		limit = { NOT = { culture = scope:old_culture } }
+		set_variable = {
+			name = migration_previous_culture
+			years = 5
+			value = scope:old_culture
+		}
+	}
 	scope:current_vassal = {
 		change_liege = {
 			liege = scope:actor

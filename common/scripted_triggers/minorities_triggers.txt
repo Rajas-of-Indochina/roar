@@ -1,31 +1,31 @@
 ﻿county_has_small_rite_minority = {
-    has_variable_list = rite_minorities_small
-    variable_list_size = {
-        name = rite_minorities_small
-        value > 0
-    }
+	has_variable_list = rite_minorities_small
+	variable_list_size = {
+		name = rite_minorities_small
+		value > 0
+	}
 }
 
 county_has_large_rite_minority = {
-    has_variable_list = rite_minorities_large
-    variable_list_size = {
-        name = rite_minorities_large
-        value > 0
-    }
+	has_variable_list = rite_minorities_large
+	variable_list_size = {
+		name = rite_minorities_large
+		value > 0
+	}
 }
 
 county_has_rite_minority = {
-    OR = {
-        county_has_large_rite_minority = yes
-        county_has_small_rite_minority = yes
-    }
+	OR = {
+		county_has_large_rite_minority = yes
+		county_has_small_rite_minority = yes
+	}
 }
 
 county_has_specific_small_rite_minority = {
-    is_target_in_variable_list = {
-        name = rite_minorities_small
-        target = $RITE$
-    }
+	is_target_in_variable_list = {
+		name = rite_minorities_small
+		target = $RITE$
+	}
 }
 
 county_has_specific_small_faith_minority = {
@@ -36,10 +36,10 @@ county_has_specific_small_faith_minority = {
 }
 
 county_has_specific_large_rite_minority = {
-    is_target_in_variable_list = {
-        name = rite_minorities_large
-        target = $RITE$
-    }
+	is_target_in_variable_list = {
+		name = rite_minorities_large
+		target = $RITE$
+	}
 }
 
 county_has_specific_large_faith_minority = {
@@ -50,10 +50,10 @@ county_has_specific_large_faith_minority = {
 }
 
 county_has_specific_rite_minority = {
-    OR = {
-        county_has_specific_small_rite_minority = { RITE = $RITE$ }
-        county_has_specific_large_rite_minority = { RITE = $RITE$ }
-    }
+	OR = {
+		county_has_specific_small_rite_minority = { RITE = $RITE$ }
+		county_has_specific_large_rite_minority = { RITE = $RITE$ }
+	}
 }
 
 county_has_specific_faith_minority = {
@@ -64,45 +64,45 @@ county_has_specific_faith_minority = {
 }
 
 county_has_small_culture_minority = {
-    has_variable_list = culture_minorities_small
-    variable_list_size = {
-        name = culture_minorities_small
-        value > 0
-    }
+	has_variable_list = culture_minorities_small
+	variable_list_size = {
+		name = culture_minorities_small
+		value > 0
+	}
 }
 
 county_has_large_culture_minority = {
-    has_variable_list = culture_minorities_large
-    variable_list_size = {
-        name = culture_minorities_large
-        value > 0
-    }
+	has_variable_list = culture_minorities_large
+	variable_list_size = {
+		name = culture_minorities_large
+		value > 0
+	}
 }
 
 county_has_culture_minority = {
-    OR = {
-        county_has_large_culture_minority = yes
-        county_has_small_culture_minority = yes
-    }
+	OR = {
+		county_has_large_culture_minority = yes
+		county_has_small_culture_minority = yes
+	}
 }
 
 county_has_specific_small_culture_minority = {
-    is_target_in_variable_list = {
-        name = culture_minorities_small
-        target = $CULTURE$
-    }
+	is_target_in_variable_list = {
+		name = culture_minorities_small
+		target = $CULTURE$
+	}
 }
 county_has_specific_large_culture_minority = {
-    is_target_in_variable_list = {
-        name = culture_minorities_large
-        target = $CULTURE$
-    }
+	is_target_in_variable_list = {
+		name = culture_minorities_large
+		target = $CULTURE$
+	}
 }
 county_has_specific_culture_minority = {
-    OR = {
-        county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ }
-        county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ }
-    }
+	OR = {
+		county_has_specific_small_culture_minority = { CULTURE = $CULTURE$ }
+		county_has_specific_large_culture_minority = { CULTURE = $CULTURE$ }
+	}
 }
 
 # TRIGGER is ANY simple scripted trigger (takes yes, no or a scope)
@@ -304,7 +304,7 @@ has_central_asian_heritage_pillar_trigger = {
 	OR = {
 		has_cultural_pillar = heritage_turkic
 		has_cultural_pillar = heritage_tocharian
-        has_east_central_asian_heritage_pillar_trigger = yes
+		has_east_central_asian_heritage_pillar_trigger = yes
 	}
 }
 has_east_central_asian_heritage_pillar_trigger = {
@@ -352,9 +352,9 @@ has_central_african_heritage_pillar_trigger = {
 #MENA
 has_mena_heritage_pillar_trigger = {
 	OR = {
-	    has_cultural_pillar = heritage_arabic
-	    has_cultural_pillar = heritage_syriac
-	    has_cultural_pillar = heritage_iranian
+		has_cultural_pillar = heritage_arabic
+		has_cultural_pillar = heritage_syriac
+		has_cultural_pillar = heritage_iranian
 		has_north_african_heritage_pillar_trigger = yes
 	}
 }

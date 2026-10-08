@@ -1,6 +1,6 @@
 ﻿# Anarchist converts to tribalism
 sea_gov_event.1000 = {
-    type = character_event
+	type = character_event
 	title = sea_gov_event.1000.t
 	desc = sea_gov_event.1000.desc
 
@@ -22,18 +22,18 @@ sea_gov_event.1000 = {
 		}
 		add_prestige = major_prestige_value
 
-        hidden_effect = {
+		hidden_effect = {
 			add_character_flag = {
 				flag = just_converted_to_tribalism
 				years = 5
 			}
 
-	    	# Remove title succession law
-	    	# primary_title = {
-	    	# 	remove_title_law = anarchist_elective_succession_law
-	    	# }
+			# Remove title succession law
+			# primary_title = {
+			# 	remove_title_law = anarchist_elective_succession_law
+			# }
 
-        	# Update authority
+			# Update authority
 			# if = {
 			# 	limit = { has_realm_law = stateless_authority_0 }
 			# 	remove_realm_law = stateless_authority_0
@@ -87,9 +87,9 @@ sea_gov_event.1000 = {
 		}
 	}
 
-    option = {
-        name = sea_gov_event.1000.a
-    }
+	option = {
+		name = sea_gov_event.1000.a
+	}
 }
 
 # Anarchist forms duchy-tier confederation by decision

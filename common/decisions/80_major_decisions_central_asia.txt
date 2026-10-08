@@ -337,9 +337,9 @@ establish_yamagate_in_samarkand_decision = {
 		if = {
 			limit = {
 				tier_difference = {
-			        target = title:d_manichean.holder
-			        value >= 1
-			    }
+					target = title:d_manichean.holder
+					value >= 1
+				}
 			}
 			title:d_manichean.holder = {
 				change_liege = {

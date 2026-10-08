@@ -1,0 +1,39 @@
+finnish_pagan = {
+	main_rite = finnish_pagan
+	faith_details = {
+		religion = finno_ugric_religion
+		color = { 0.5 0.5 0.0 }
+		icon = finno_ugric
+		reformed_icon = finno_ugric_reformed
+	}
+
+	eminent_holy_sites = {
+		raivola
+		hiiumaa
+	}
+
+	holy_sites = {
+		akkel
+		kainuu
+		choklema
+	}
+
+	# Unused vanilla
+	# perm
+	# torun
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_ancestor_worship
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

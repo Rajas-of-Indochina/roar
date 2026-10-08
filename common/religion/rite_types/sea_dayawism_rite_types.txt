@@ -1,0 +1,80 @@
+# https://en.wikipedia.org/wiki/Indigenous_Philippine_folk_religions
+# https://en.wikipedia.org/wiki/Indigenous_Philippine_shrines_and_sacred_grounds
+# https://en.wikipedia.org/wiki/Filipino_shamans#Terminology
+# https://en.wikipedia.org/wiki/List_of_Philippine_mythological_figures#Bisaya
+# https://en.wikipedia.org/wiki/List_of_Philippine_mythological_figures#Tagalog
+
+dayawism = {
+	faith = dayawism
+	color = { 54 81 233 }
+	icon = babaylan
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_mountain_worship
+		tenet_spirit_guides
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+        doctrine_monogamy
+	}
+}
+
+darang = {
+	faith = darang
+	color = { 98 73 208 }
+	icon = sarimanok
+
+	tenets = {
+		tenet_spirit_guides
+		tenet_communal_identity
+		tenet_legalism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+surong_puyo = {
+	faith = surong_puyo
+	color = { 118 122 212 }
+	icon = dayawism
+
+	tenets = {
+		tenet_mountain_worship
+		tenet_astrology
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+talaingat_ariya = {
+	faith = talaingat_ariya
+	color = { 74 83 143 }
+	icon = malyari
+
+	tenets = {
+		tenet_mountain_worship
+		tenet_ancestor_worship
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = the_northern_lords
+		tenet = tenet_gruesome_festivals
+		fallback_tenet = tenet_human_sacrifice
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
