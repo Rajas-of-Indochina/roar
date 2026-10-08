@@ -1,0 +1,111 @@
+namespace = smbat_story
+
+# This story is ONLY available if you start as player character Smbat of Zarehawan
+# Because it is STRICTLY alternate history
+# Smbat's date of death isn't known for sure but at the latest it couldn't have been until
+# pretty soon after the 867 start
+smbat_story.0001 = {
+	type = character_event
+	# window = fullscreen_event
+	title = smbat_story.0001.t
+	desc = smbat_story.0001.desc
+	theme = laamp
+	left_portrait = {
+		character = ROOT
+		animation = prisondungeon
+	}
+	right_portrait = {
+		character = scope:gaoler
+		animation = personality_vengeful
+	}
+	override_background = { reference = ep3_fullscreen_adventurer_negative }
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+
+	immediate = {
+		imprisoner = {
+			save_scope_as = gaoler
+		}
+		create_story = {
+			type = smbat_of_zarehawan
+			save_scope_as = story
+		}
+		smbat_of_zarehawan_widget_setup_effect = yes
+	}
+
+	option = {
+		# We will go to Syunik and build the movement there
+		name = smbat_story.0001.a
+		trigger = { is_ai = no }
+		release_from_prison = yes
+		start_travel_plan = {
+			destination = province:17732
+			travel_with_domicile = yes
+			return_trip = no
+		}
+	}
+
+	option = {
+		# We will become Ashot's personal problem
+		name = smbat_story.0001.b
+		trigger = { is_ai = no }
+		release_from_prison = yes
+		start_travel_plan = {
+			destination = province:672
+			travel_with_domicile = yes
+			return_trip = no
+		}
+	}
+
+	option = {
+		# Sod this, I'm moving to Babylon (skip the story and just play a normal adventurer)
+		name = smbat_story.0001.c
+		release_from_prison = yes
+		start_travel_plan = {
+			destination = title:b_al-hila.province
+			travel_with_domicile = yes
+			return_trip = no
+		}
+		global_var:global_tondrakian_story = { end_story = yes }
+	}
+
+	after = {
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			death = {
+				death_reason = death_disappearance
+			}
+			faith:tondrakian = {
+				activate_holy_site = babylon_tondrakian
+			}
+		}
+	}
+}
+
+############
+# Events .0100-.0200: Proselytism Events
+# smbat_story.0101: Polemic against the Romans
+# smbat_story.0102: debate with local clergy
+# smbat_story.0103: rumors of wife swapping
+# smbat_story.0104: let the women preach
+# smbat_story.0105: rejecting the cross
+# smbat_story.0106: polemic against feudalism
+# smbat_story.0107: that which belongs to caesar
+# smbat_story.0108: willing ears
+# smbat_story.0109: communalists of another faith
+# smbat_story.0110: kneel for no one
+# smbat_story.0111: monasticism
+# smbat_story.0112: running from the law
+# smbat_story.0113: 
+# smbat_story.0114
+# smbat_story.0115
+# smbat_story.0116
+# smbat_story.0117
+# smbat_story.0118
+# smbat_story.0119
+# smbat_story.0120
+############

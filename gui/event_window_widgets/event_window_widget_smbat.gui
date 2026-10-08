@@ -1,0 +1,67 @@
+vbox = {
+	name = "event_window_widget_smbat"
+	layoutpolicy_horizontal = expanding
+	layoutpolicy_vertical = expanding
+	# min_height = 100
+	margin = { 10 0 }
+	spacing = 5
+
+	datacontext = "[EventWindowWidget.GetScope.sC('scope_character')]"
+
+	divider_light = {
+		layoutpolicy_horizontal = expanding
+	}
+	
+	vbox = {
+		layoutpolicy_vertical = expanding
+		spacing = 5
+		hbox = {
+			layoutpolicy_vertical = expanding
+			spacing = 10
+			# min_height = 50
+			text_single = {
+				text = "Current #UNDERLINE [Concept('tondrakian_rebelliousness','Rebelliousness')]#!"
+				default_format = "#high"
+				align = nobaseline
+			}
+			progressbar_standard = {
+				layoutpolicy_horizontal = expanding
+				size = { 250 20 }
+				value = "[GetPlayer.MakeScope.Var('rebelliousness_gui').GetValue]"
+				max = 100
+				min = 0
+				allow_outside = yes
+
+				using = Progressbar_Changed_Animation
+
+				marker = {
+					name = "current_value"
+
+					widget_level_marker_no_anchor = {
+						scale = 0.8
+						position = { 0 -5 }
+						text_single = {
+							parentanchor = center
+							text = "[GetPlayer.MakeScope.Var('rebelliousness_gui').GetValue]"
+							default_format = "#high"
+							align = nobaseline
+						}
+					}
+				}
+			}
+		}
+		hbox = {
+			layoutpolicy_vertical = expanding
+			layoutpolicy_horizontal = expanding
+			spacing = 5
+			# min_height = 50
+			text_single = {
+				text = "Current #UNDERLINE [Concept('tondrakian_righteousness','Righteousness')]#!: [GetPlayer.MakeScope.Var('righteousness_gui').GetValue|+0]"
+				default_format = "#high"
+				align = left|nobaseline
+			}
+			expand = {}
+		}
+	}
+	expand = {}
+}

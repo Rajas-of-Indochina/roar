@@ -1114,7 +1114,22 @@ situation_caucasus_on_rank_up = {
 
 on_game_start = {
 	on_actions = {
+		smbat_story_on_action
 		situation_caucasus_on_game_start
+	}
+}
+
+smbat_story_on_action = {
+	effect = {
+		character:smbat_zarehawan ?= {
+			if = {
+				limit = { smbat_story_cycle_start_trigger = yes }
+				trigger_event = {
+					id = smbat_story.0001
+					days = 1
+				}
+			}
+		}
 	}
 }
 
@@ -1349,5 +1364,31 @@ situation_caucasus_on_holy_order_new_lease = {
 				CATALYST = autonomist_holy_order_lease
 			}
 		}
+	}
+}
+
+# Arrival in any province during travel
+on_travel_plan_movement = {
+	on_actions = {
+		tondrakian_proselytism_on_action
+	}
+}
+
+tondrakian_proselytism_on_action = {
+	trigger = {
+		current_travel_plan ?= { has_travel_option = tondrakian_proselytism }
+	}
+	random_events = {
+		# Triggering events that let you try and proselytize Tondrakianism
+		# Possible Outcomes:
+		# Promoting a Tondrakian Minority
+		# Riling up a Tondrakian county
+		# Raising/lowering Tondrakian Fervor
+		# Raising/lowering tondrakian rebelliousness
+		# Raising/lowering Tondrakian righteousness
+		# Gaining Piety
+		# Gaining Prestige
+		# Recruiting Tondrakian supporters into your camp
+		# Altering your rite (which would probably but not necessarily be the mainline rite)
 	}
 }

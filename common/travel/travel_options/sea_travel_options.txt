@@ -1,0 +1,31 @@
+tondrakian_proselytism = {
+	is_shown = {
+		any_owned_story_cycle = {
+			type = smbat_of_zarehawan
+		}
+	}
+
+	cost = {
+		piety = {
+			add = {
+				value = low_travel_option_cost
+				multiply = {
+					value = 1
+					add = {
+						value = global_var:global_tondrakian_story.var:righteousness
+						multiply = -0.05 # At max Righteousness, a 50% discount
+					}
+				}
+			}
+		}
+	}
+
+	travel_modifier = {
+		travel_safety = -10
+		travel_speed = -20
+	}
+
+	owner_modifier = {
+		monthly_piety_gain_mult = 0.20
+	}
+}

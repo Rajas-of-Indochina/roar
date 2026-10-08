@@ -1,0 +1,120 @@
+# This story cycle represents Smbat of Zarehawan's efforts to spread his interpretations of Christianity
+# 
+
+smbat_of_zarehawan = {
+	on_setup = {
+		# You
+		set_variable = {
+			name = heresiarch
+			value = story_owner
+		}
+		# Your faith
+		set_variable = {
+			name = the_faith
+			value = faith:tondrakian
+		}
+		# Tondrakian Rebelliousness
+		# this number gets played with a lot
+		# the higher it rises, the easier a time you'll have causing rebellions in Tondrakian counties
+		set_variable = {
+			name = rebelliousness
+			value = var:the_faith.fervor
+		}
+		# Tondrakian Righteousness
+		# This tracks how righteous you and the Tondrakian Faith look
+		# Having low Piety, committing crimes, and having criminal traits will affect this
+		# Low Righteousness makes it harder to spread your faith
+		set_variable = {
+			name = righteousness
+			value = 0
+		}
+		# this is just so we can access the yummy numbers and characters inside more easily elsewhere
+		set_global_variable = {
+			name = global_tondrakian_story
+			value = ROOT
+		}
+	}
+	on_end = {}
+	on_owner_death = {
+		if = {
+			limit = {
+				exists = story_owner.player_heir
+			}
+			make_story_owner = story_owner.player_heir #Add an event to make sure they're actually Tondrakian
+		}
+		else = {
+			end_story = yes
+		}
+	}
+	visible = yes
+	icon = {
+		reference = "gfx/interface/icons/faith/tondrakian.dds"
+	}
+	visualization = {
+		character = {
+			variable_name = "heresiarch"
+			label = "HERESIARCH_LABEL"
+		}
+		basic_counter = {
+			variable_name = rebelliousness
+			min = 0
+			max = 100
+			label = "LABEL_TONDRAKIAN_REBELLIOUSNESS"
+			tooltip = "TONDRAKIAN_REBELLIOUSNESS_TOOLTIP"
+			min_label = "LABEL_DOCILE"
+			max_label = "LABEL_INSURRECTIONIST"
+		}
+		tug_of_war_counter = {
+			variable_name = righteousness
+			min = -10
+			max = 10
+			label = "LABEL_TONDRAKIAN_RIGHTEOUSNESS"
+			min_label = "LABEL_SINFUL"
+			max_label = "LABEL_SANCTIFIED"
+		}
+		traits = { heresiarch }
+	}
+
+	effect_group = {
+		# update Rebelliousness value (monthly)
+		months = 1
+		triggered_effect = {
+			trigger = { always = yes }
+			effect = {
+				if = {
+					limit = { var:rebelliousness < var:the_faith.fervor }
+					change_variable = {
+						name = rebelliousness
+						add = 1
+					}
+					change_variable = {
+						name = rebelliousness
+						max = var:the_faith.fervor
+					}
+				}
+				else_if = {
+					limit = { var:rebelliousness > var:the_faith.fervor }
+					change_variable = {
+						name = rebelliousness
+						add = -1
+					}
+					change_variable = {
+						name = rebelliousness
+						min = var:the_faith.fervor
+					}
+				}
+			}
+		}
+	}
+
+	# effect_group = {
+	# 	# contemplating the faith - give a chance to alter the tenets based on personal tenets
+	# 	months = { 6 18 }
+	# }
+}
+
+# Remember to add:
+# Events relating to various levels of Rebelliousness
+# Events for various levels of Righteousness
+# Events for dealing with authorities
+# Events for dealing with doctrine (and maybe altering the doctrines/tenets of Tondrakianism)

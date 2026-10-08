@@ -1,0 +1,17 @@
+smbat_of_zarehawan_widget_setup_effect = {
+	## First, identify our widget character.
+	save_scope_as = scope_character
+	## Then transfer over some suitable variables for the UI.
+	if = {
+		limit = { exists = global_var:global_tondrakian_story }
+		global_var:global_tondrakian_story = { save_scope_as = story }
+		set_variable = {
+			name = rebelliousness_gui
+			value = scope:story.var:rebelliousness
+		}
+		set_variable = {
+			name = righteousness_gui
+			value = scope:story.var:righteousness
+		}
+	}
+}
