@@ -16,22 +16,8 @@ tengri_pagan = {
 		qayaliq
 		munkh_bulgan
 		jilanjik
-        tengiz
+		tengiz
 	}
-
-	# eastern_tengri
-	#	baocaj
-	#	tymersol
-	#	kurelgu
-	#	khovsgol
-	#	olkhon
-
-	# ulganism
-	#	khovsgol
-	#	urmegtu
-	#	kurelgu
-	#	uybat
-	#	ak_khol
 
 	tenets = {
 		tenet_adorcism	# tenet_esotericism in vanilla
@@ -41,7 +27,71 @@ tengri_pagan = {
 
 	doctrines = {
 		unreformed_faith_doctrine
-        doctrine_clerical_gender_male_only
+		doctrine_clerical_gender_male_only
+	}
+}
+
+eastern_tengri = {
+	main_rite = eastern_tengri
+	faith_details = {
+		religion = tengrism_religion
+		color = { 104 182 211 }
+		icon = munkh_tenger
+		reformed_icon = munkh_tenger_reformed
+	}
+
+	eminent_holy_sites = {
+		baocaj
+		tymersol
+	}
+
+	holy_sites = {
+		kurelgu
+		khovsgol
+		olkhon
+	}
+
+	tenets = {
+		tenet_adorcism	# tenet_esotericism in vanilla
+		tenet_warmonger
+		tenet_ancestor_worship
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_witchcraft_accepted
+	}
+}
+
+ulganism = {
+	main_rite = ulganism
+	faith_details = {
+		religion = tengrism_religion
+		color = { 131 107 136 }
+		icon = ulganism
+		reformed_icon = ulganism_reformed
+	}
+
+	eminent_holy_sites = {
+		khovsgol
+		urmegtu
+	}
+
+	holy_sites = {
+		kurelgu
+		uybat
+		ak_khol
+	}
+
+	tenets = {
+		tenet_adorcism	# tenet_esotericism in vanilla
+		tenet_ritual_celebrations
+		tenet_mystical_birthright
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_clerical_succession_spiritual_appointment
 	}
 }
 
@@ -192,6 +242,7 @@ scythian_pagan = {
 		ReligiousText2 = scythian_religious_text_2
 		ReligiousText3 = scythian_religious_text_3
 		ReligiousHeadName = scythian_religious_head_title
+		ReligiousHeadNameFemale = scythian_religious_head_title
 		ReligiousHeadTitleName = dualism_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -385,6 +436,7 @@ alan_pagan = {
 		ReligiousText2 = alan_religious_text
 		ReligiousText3 = alan_religious_text
 		ReligiousHeadName = alan_religious_head_title
+		ReligiousHeadNameFemale = alan_religious_head_title
 		ReligiousHeadTitleName = dualism_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural

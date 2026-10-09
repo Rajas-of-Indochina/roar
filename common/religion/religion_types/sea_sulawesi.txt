@@ -4,10 +4,11 @@
 	# https://id.wikipedia.org/wiki/Tolotang
 	# https://en.wikipedia.org/wiki/Torajan_people#
 	# NOOY-PALM, HETTY. The Sa’dan-Toraja: A Study of Their Social Life and Religion. I: Organization, Symbol and Beliefs. Vol. 87. Brill, 1979. http://www.jstor.org/stable/10.1163/j.ctvbqs8kz.
+
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
-
 	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
@@ -54,8 +55,17 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate honest patient transgender }
-		sins = { lazy greedy deceitful }
+		virtues = {
+			temperate = { weight = 30 scale = 1 }
+			honest = { weight = 30 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+			transgender = { weight = 35 scale = 3 }
+		}
+		sins = {
+			lazy = { weight = 30 scale = 1 }
+			deceitful = { weight = 30 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -253,6 +263,7 @@
 		ReligiousText2 = aluk_religious_text_2
 		ReligiousText3 = aluk_religious_text_3
 		ReligiousHeadName = paganism_religious_head_title
+		ReligiousHeadNameFemale = paganism_religious_head_title
 		ReligiousHeadTitleName = paganism_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -294,8 +305,8 @@
 		WitchGodHerHim = CHARACTER_HERHIM_HER
 		WitchGodMistressMaster = witch_spirit
 		WitchGodMotherFather = witch_source
+
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
 	}
-
 }

@@ -1,8 +1,7 @@
-﻿
-wa_religion = { # Folk religions of Wa peoples
+﻿wa_religion = { # Folk religions of Wa peoples
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = pagan_gfx   #graphical_faith = dharmic_gfx
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -53,8 +52,17 @@ wa_religion = { # Folk religions of Wa peoples
 	doctrine = special_doctrine_is_austroasiatic_faith
 
 	traits = {
-		virtues = { temperate content honest patient }
-		sins = { lustful lazy deceitful }
+		virtues = {
+			temperate = { weight = 30 scale = 1 }
+			honest = { weight = 30 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+			content = { weight = 20 scale = 1 }
+		}
+		sins = {
+			lazy = { weight = 30 scale = 1 }
+			deceitful = { weight = 30 scale = 1 }
+			lustful = { weight = 15 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -145,6 +153,7 @@ wa_religion = { # Folk religions of Wa peoples
 	localization = {
 		#HighGod
 		HighGodName = wa_animism_high_god_name
+		HighGodName2 = wa_animism_high_god_name_2
 		HighGodNamePossessive = wa_animism_high_god_name_possessive
 		HighGodNameSheHe = CHARACTER_SHEHE_HE
 		HighGodHerselfHimself = CHARACTER_HIMSELF
@@ -230,6 +239,8 @@ wa_religion = { # Folk religions of Wa peoples
 		WaterGodHerHim = CHARACTER_HERHIM_HIM
 
 		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods
+		PantheonTerm3 = religion_the_gods
 		PantheonTermHasHave = pantheon_term_have
 		GoodGodNames = {
 			wa_animism_high_god_name
@@ -252,10 +263,17 @@ wa_religion = { # Folk religions of Wa peoples
 			wa_animism_evil_god_dul
 		}
 		HouseOfWorship = wa_animism_house_of_worship
+		HouseOfWorship2 = wa_animism_house_of_worship_2
+		HouseOfWorship3 = wa_animism_house_of_worship_3
 		HouseOfWorshipPlural = wa_animism_house_of_worship_plural
 		ReligiousSymbol = wa_animism_religious_symbol
+		ReligiousSymbol2 = wa_animism_religious_symbol_2
+		ReligiousSymbol3 = wa_animism_religious_symbol_3
 		ReligiousText = wa_animism_religious_text
+		ReligiousText2 = wa_animism_religious_text_2
+		ReligiousText3 = wa_animism_religious_text_3
 		ReligiousHeadName = wa_animism_religious_head_title
+		ReligiousHeadNameFemale = wa_animism_religious_head_title
 		ReligiousHeadTitleName = wa_animism_religious_head_title_name
 		DevoteeMale = wa_animism_devotee
 		DevoteeMalePlural = wa_animism_devotee_plural
@@ -277,8 +295,14 @@ wa_religion = { # Folk religions of Wa peoples
 		BishopNeuter = wa_animism_bishop
 		BishopNeuterPlural = wa_animism_bishop_plural
 		DivineRealm = wa_animism_divine_realm
+		DivineRealm2 = wa_animism_divine_realm_2
+		DivineRealm3 = wa_animism_divine_realm_3
 		PositiveAfterLife = wa_animism_positive_afterlife
+		PositiveAfterLife2 = wa_animism_divine_realm_2
+		PositiveAfterLife3 = wa_animism_divine_realm_3
 		NegativeAfterLife = wa_animism_negative_afterlife
+		NegativeAfterLife2 = wa_animism_afterlife_2
+		NegativeAfterLife3 = wa_animism_afterlife_3
 		DeathDeityName = wa_animism_death_name
 		DeathDeityNamePossessive = wa_animism_death_name_possessive
 		DeathDeitySheHe = CHARACTER_SHEHE_HE
@@ -290,25 +314,9 @@ wa_religion = { # Folk religions of Wa peoples
 		WitchGodHerHim = CHARACTER_HERHIM_HER
 		WitchGodMistressMaster = mistress
 		WitchGodMotherFather = mother
+		WitchGodNamePossessive = wa_animism_evil_god_dul_possessive
 
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
-
-		DivineRealm3 = wa_animism_divine_realm_3
-		ReligiousSymbol2 = wa_animism_religious_symbol_2
-		HighGodName2 = wa_animism_high_god_name_2
-		PantheonTerm2 = religion_the_gods
-		HouseOfWorship3 = wa_animism_house_of_worship_3
-		PantheonTerm3 = religion_the_gods
-		DivineRealm2 = wa_animism_divine_realm_2
-		PositiveAfterLife2 = wa_animism_divine_realm_2
-		ReligiousText3 = wa_animism_religious_text_3
-		PositiveAfterLife3 = wa_animism_divine_realm_3
-		ReligiousSymbol3 = wa_animism_religious_symbol_3
-		NegativeAfterLife3 = wa_animism_afterlife_3
-		NegativeAfterLife2 = wa_animism_afterlife_2
-		WitchGodNamePossessive = wa_animism_evil_god_dul_possessive
-		HouseOfWorship2 = wa_animism_house_of_worship_2
-		ReligiousText2 = wa_animism_religious_text_2
 	}
 }

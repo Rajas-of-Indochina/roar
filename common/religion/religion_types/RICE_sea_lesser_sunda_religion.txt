@@ -1,12 +1,11 @@
 ﻿lesser_sunda_religion = {
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = dharmic_gfx
+		graphical_faith = pagan_gfx
 	}
+	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
-
-	doctrine = pagan_hostility_doctrine
 
 	#Main Group
 	doctrine = doctrine_polytheist
@@ -51,8 +50,16 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { calm brave humble }
-		sins = { wrathful craven arrogant }
+		virtues = {
+			calm = { weight = 20 scale = 1 }
+			brave = { weight = 20 scale = 1 }
+			humble = { weight = 30 scale = 1 }
+		}
+		sins = {
+			wrathful = { weight = 20 scale = 1 }
+			craven = { weight = 20 scale = 1 }
+			arrogant = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -255,6 +262,7 @@
 		ReligiousText2 = marapu_religious_text
 		ReligiousText3 = marapu_religious_text
 		ReligiousHeadName = marapu_religious_head_title
+		ReligiousHeadNameFemale = marapu_religious_head_title
 		ReligiousHeadTitleName = marapu_religious_head_title_name
 		DevoteeMale = marapu_devotee
 		DevoteeMalePlural = marapu_devotee_plural

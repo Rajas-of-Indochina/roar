@@ -50,8 +50,18 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { ambitious brave just humble }
-		sins = { lazy craven arbitrary arrogant }
+		virtues = {
+			ambitious = { weight = 30 scale = 1 }
+			brave = { weight = 30 scale = 1 }
+			just = { weight = 20 scale = 1 }
+			humble = { weight = 20 scale = 1 }
+		}
+		sins = {
+			lazy = { weight = 30 scale = 1 }
+			craven = { weight = 30 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+			arrogant = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -248,6 +258,7 @@
 		ReligiousText2 = biak_pagan_religious_text
 		ReligiousText3 = biak_pagan_religious_text
 		ReligiousHeadName = biak_pagan_religious_head_title
+		ReligiousHeadNameFemale = biak_pagan_religious_head_title
 		ReligiousHeadTitleName = biak_pagan_religious_head_title_name
 		DevoteeMale = biak_pagan_devotee
 		DevoteeMalePlural = biak_pagan_devoteeplural
@@ -294,5 +305,4 @@
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
 	}
-
 }

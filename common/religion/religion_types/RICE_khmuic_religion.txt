@@ -1,12 +1,11 @@
 ﻿khmuic_religion = { # Folk religions of Khmuic peoples
-
 	# https://www.researchgate.net/publication/326265322_Spirits_Follow_the_Words_Stories_as_Spirit_Traces_among_the_Khmu_of_Northern_Laos
 	# https://www.academia.edu/75492155/Fatherless_Children_and_Listening_Spirits_Measuring_Kinship_in_Ritual_in_Northern_Laos
 	# https://herworks.la/en/lao_ethics/khmu
 
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = dharmic_gfx
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -51,15 +50,23 @@
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
 
-	# Austroasiatic Religion
-	doctrine = special_doctrine_is_austroasiatic_faith
-
 	#Preservation
 	doctrine = doctrine_oral_storytelling
 
+	# Austroasiatic Religion
+	doctrine = special_doctrine_is_austroasiatic_faith
+
 	traits = {
-		virtues = { generous calm humble }
-		sins = { greedy wrathful arrogant }
+		virtues = {
+			generous = { weight = 30 scale = 1 }
+			humble = { weight = 20 scale = 1 }
+			calm = { weight = 20 scale = 1 }
+		}
+		sins = {
+			greedy = { weight = 30 scale = 1 }
+			arrogant = { weight = 20 scale = 1 }
+			wrathful = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -261,6 +268,7 @@
 		ReligiousText2 = khmu_pagan_religious_text
 		ReligiousText3 = khmu_pagan_religious_text
 		ReligiousHeadName = khmu_pagan_religious_head_title
+		ReligiousHeadNameFemale = khmu_pagan_religious_head_title
 		ReligiousHeadTitleName = khmu_pagan_religious_head_title_name
 		DevoteeMale = khmu_pagan_devotee
 		DevoteeMalePlural = khmu_pagan_devotee_plural
@@ -306,5 +314,4 @@
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
 }

@@ -3,10 +3,9 @@
 		family = rf_pagan
 		graphical_faith = dharmic_gfx
 	}
+	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
-
-	doctrine = pagan_hostility_doctrine
 
 	#Main Group
 	doctrine = doctrine_polytheist
@@ -51,8 +50,17 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { brave just generous lifestyle_mystic }
-		sins = { craven arbitrary greedy }
+		virtues = {
+			brave = { weight = 20 scale = 1 }
+			generous = { weight = 20 scale = 1 }
+			just = { weight = 30 scale = 1 }
+			lifestyle_mystic = { weight = 15 scale = 1 }
+		}
+		sins = {
+			craven = { weight = 20 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+			arbitrary = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -261,6 +269,7 @@
 		ReligiousText2 = peristani_religious_text
 		ReligiousText3 = peristani_religious_text
 		ReligiousHeadName = peristani_religious_head_title
+		ReligiousHeadNameFemale = peristani_religious_head_title
 		ReligiousHeadTitleName = peristani_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -303,7 +312,6 @@
 		WitchGodMistressMaster = master
 		WitchGodMotherFather = father
 
-		
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}

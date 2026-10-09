@@ -24,7 +24,7 @@ sea_diramku_1 = {
 	name = "Muhammad"
 	dynasty = sea_diramku
 	culture = bedouin
-	rite = hanafi
+		rite = shafii
 
 	# History
 	1028.1.1 = {
@@ -33,7 +33,6 @@ sea_diramku_1 = {
 	# around 1060s establishes Hormuz Kingdom dependent on Kerman Seljuks
 	1065.1.1 = {
 		culture = persian
-		rite = shafii
 	}
 	1090.1.1 = {
 		death = yes
@@ -306,5 +305,21 @@ qarmatian_al_jannabi_2 = {
 		death = {
 			death_reason = death_battle
 		}
+	}
+}
+
+
+### PLACEHOLDERS
+sea_persian_bampur_01_fic = {
+	name = "Hormazd"
+	culture = persian
+	rite = shafii
+
+	# History
+	837.1.1 = {
+		birth = yes
+	}
+	902.1.1 = {
+		death = yes
 	}
 }

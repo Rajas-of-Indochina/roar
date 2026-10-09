@@ -4,8 +4,6 @@
 # https://www.academia.edu/3126528/Theistic_and_Animistic_Beliefs_of_the_Supernatural_High_Gods_Supreme_Being_Spirits_and_Ancestor_Worship
 # http://www.rnlkwc.ac.in/pdf/study-material/geography/UG_GEOGRAPHY_4TH%20SEMESTER_2020_Paper_GEO-H-CC-08-TH-%20Human%20and%20Social-Cultural%20Geography_Santhal%20Tribe.pdf
 
-
-
 sarnaism_religion = {
 	religion_details = {
 		family = rf_pagan
@@ -61,14 +59,14 @@ sarnaism_religion = {
 	
 	traits = {
 		virtues = {
-			temperate
-			content
-			honest
+			temperate = { weight = 50 scale = 2 }
+			content = { weight = 25 scale = 1 }
+			honest = { weight = 25 scale = 1 }
 		}
 		sins = {
-			greedy
-			wrathful
-			ambitious
+			greedy = { weight = 50 scale = 1.5 }
+			wrathful = { weight = 20 scale = 1 }
+			ambitious = { weight = 20 scale = 1 }
 		}
 	}
 
@@ -291,6 +289,7 @@ sarnaism_religion = {
 		ReligiousText2 = sarnaism_religious_text_2
 		ReligiousText3 = sarnaism_religious_text_3
 		ReligiousHeadName = hinduism_religious_head_title
+		ReligiousHeadNameFemale = hinduism_religious_head_title
 		ReligiousHeadTitleName = hinduism_religious_head_title_name
 		DevoteeMale = hinduism_devotee_male
 		DevoteeMalePlural = hinduism_devotee_male_plural

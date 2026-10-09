@@ -51,8 +51,19 @@
 	doctrine = doctrine_mythic_literary
 
 	traits = {
-		virtues = { just content humble education_learning_3 education_learning_4 education_learning_5 }
-		sins = { arbitrary callous arrogant }
+		virtues = {
+			content = { weight = 20 scale = 1 }
+			just = { weight = 20 scale = 1 }
+			humble = { weight = 30 scale = 1 }
+			education_learning_5 = { weight = 15 scale = 1 }
+			education_learning_4 = { weight = 10 scale = 1 }
+			education_learning_3 = { weight = 5 scale = 1 }
+		}
+		sins = {
+			callous = { weight = 30 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+			arrogant = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -259,6 +270,7 @@
 		ReligiousText2 = semitic_religious_text
 		ReligiousText3 = semitic_religious_text
 		ReligiousHeadName = semitic_religious_head_title
+		ReligiousHeadNameFemale = semitic_religious_head_title
 		ReligiousHeadTitleName = semitic_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -305,5 +317,4 @@
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
 	}
-
 }

@@ -1,6 +1,7 @@
 ﻿moluccan_religion = { # Folk religions of the Moluccas Archipelago's people
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -48,8 +49,17 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate honest just transgender }
-		sins = { lazy deceitful arbitrary }
+		virtues = {
+			temperate = { weight = 30 scale = 1 }
+			just = { weight = 20 scale = 1 }
+			honest = { weight = 20 scale = 1 }
+			transgender = { weight = 35 scale = 3 }
+		}
+		sins = {
+			lazy = { weight = 20 scale = 1 }
+			deceitful = { weight = 30 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -135,5 +145,167 @@
 		taoism_custom_1 custom_faith_10 custom_faith_3 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9
 		custom_faith_cool_s custom_faith_cool_s_01 custom_faith_cool_s_02 custom_faith_cool_s_03 custom_faith_cool_s_04 custom_faith_cool_s_05 custom_faith_eye_of_providence custom_faith_eye_of_providence_01 custom_faith_eye_of_providence_02 custom_faith_eye_of_providence_03 custom_faith_eye_of_providence_04 custom_faith_eye_of_providence_05 custom_faith_pentagram custom_faith_pentagram_01 custom_faith_pentagram_02 custom_faith_pentagram_03 custom_faith_pentagram_04 custom_faith_pentagram_05 custom_faith_pentagram_inverted custom_faith_elephant_01 custom_faith_elephant_02 custom_faith_elephant_03 custom_faith_elephant_04 custom_faith_elephant_05 custom_faith_horse_01 custom_faith_horse_02 custom_faith_horse_03 custom_faith_horse_04 custom_faith_horse_05 custom_faith_tree_01 custom_faith_tree_02 custom_faith_tree_03 custom_faith_tree_04 custom_faith_tree_05 custom_faith_pentagram_inverted_01 custom_faith_pentagram_inverted_02 custom_faith_pentagram_inverted_03 custom_faith_pentagram_inverted_04 custom_faith_pentagram_inverted_05
 		judaism_01 judaism_02 judaism_03 judaism_04 judaism_05 judaism_06 hinduism_01 hinduism_02 hinduism_03 hinduism_04 hinduism_05 hinduism_06 yazidi_01 yazidi_02 yazidi_03 yazidi_04 yazidi_05 yazidi_06 jainism_01 jainism_02 jainism_03 jainism_04 jainism_05 jainism_06 achamanism_01 achamanism_02 achamanism_03 achamanism_04 achamanism_05 utaki_01 utaki_02 utaki_03 utaki_04 utaki_05 west_african_roog_sene_01 west_african_roog_sene_02 west_african_roog_sene_03 west_african_roog_sene_04 west_african_roog_sene_05 spulugaism_01 spulugaism_02 spulugaism_03 spulugaism_04 spulugaism_05
+	}
+
+	localization = {
+		#HighGod
+		HighGodName = nunusaku_high_god_name
+		HighGodName2 = nunusaku_high_god_name
+		HighGodNamePossessive = nunusaku_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = nunusaku_high_god_name_alternate
+		HighGodNameAlternatePossessive = nunusaku_high_god_name_alternate_possessive
+
+		#Creator
+		CreatorName = nunusaku_creator_god_name
+		CreatorNamePossessive = nunusaku_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = nunusaku_health_god_name
+		HealthGodNamePossessive = nunusaku_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FertilityGod
+		FertilityGodName = nunusaku_fertility_god_name
+		FertilityGodNamePossessive = nunusaku_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#WealthGod
+		WealthGodName = nunusaku_wealth_god_name
+		WealthGodNamePossessive = nunusaku_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#HouseholdGod
+		HouseholdGodName = nunusaku_household_god_name
+		HouseholdGodNamePossessive = nunusaku_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FateGod
+		FateGodName = nunusaku_fate_god_name
+		FateGodNamePossessive = nunusaku_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_IT
+		FateGodHerHis = CHARACTER_HERHIS_ITS
+		FateGodHerHim = CHARACTER_HERHIM_IT
+
+		#KnowledgeGod
+		KnowledgeGodName = nunusaku_knowledge_god_name
+		KnowledgeGodNamePossessive = nunusaku_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = nunusaku_war_god_name
+		WarGodNamePossessive = nunusaku_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = nunusaku_trickster_god_name
+		TricksterGodNamePossessive = nunusaku_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#NightGod
+		NightGodName = nunusaku_night_god_name
+		NightGodNamePossessive = nunusaku_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
+
+		#WaterGod
+		WaterGodName = nunusaku_water_god_name
+		WaterGodNamePossessive = nunusaku_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods
+		PantheonTerm3 = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = {
+			nunusaku_high_god_name
+			nunusaku_high_god_name_alternate
+		}
+		DevilName = nunusaku_devil_name
+		DevilNamePossessive = nunusaku_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_HE
+		DevilHerHis = CHARACTER_HERHIS_HIS
+		DevilHerselfHimself = nunusaku_devil_herselfhimself
+		EvilGodNames = {
+			nunusaku_devil_name
+		}
+		HouseOfWorship = nunusaku_house_of_worship
+		HouseOfWorship2 = nunusaku_house_of_worship
+		HouseOfWorship3 = nunusaku_house_of_worship
+		HouseOfWorshipPlural = nunusaku_house_of_worship_plural
+		ReligiousSymbol = nunusaku_religious_symbol
+		ReligiousSymbol2 = nunusaku_religious_symbol
+		ReligiousSymbol3 = nunusaku_religious_symbol
+		ReligiousText = nunusaku_religious_text
+		ReligiousText2 = nunusaku_religious_text
+		ReligiousText3 = nunusaku_religious_text
+		ReligiousHeadName = nunusaku_religious_head_title
+		ReligiousHeadNameFemale = nunusaku_religious_head_title
+		ReligiousHeadTitleName = nunusaku_religious_head_title_name
+		DevoteeMale = nunusaku_devotee
+		DevoteeMalePlural = nunusaku_devotee_plural
+		DevoteeFemale = nunusaku_devotee
+		DevoteeFemalePlural = nunusaku_devotee_plural
+		DevoteeNeuter = nunusaku_devotee
+		DevoteeNeuterPlural = nunusaku_devotee_plural
+		PriestMale = nunusaku_priest
+		PriestMalePlural = nunusaku_priest_plural
+		PriestFemale = nunusaku_priest
+		PriestFemalePlural = nunusaku_priest_plural
+		PriestNeuter = nunusaku_priest
+		PriestNeuterPlural = nunusaku_priest_plural
+		AltPriestTermPlural = nunusaku_priest_term_plural
+		BishopMale = nunusaku_bishop
+		BishopMalePlural = nunusaku_bishop_plural
+		BishopFemale = nunusaku_bishop
+		BishopFemalePlural = nunusaku_bishop_plural
+		BishopNeuter = nunusaku_bishop
+		BishopNeuterPlural = nunusaku_bishop_plural
+		DivineRealm = nunusaku_divine_realm
+		DivineRealm2 = nunusaku_divine_realm
+		DivineRealm3 = nunusaku_divine_realm
+		PositiveAfterLife = nunusaku_positive_afterlife
+		PositiveAfterLife2 = nunusaku_positive_afterlife
+		PositiveAfterLife3 = nunusaku_positive_afterlife
+		NegativeAfterLife = nunusaku_negative_afterlife
+		NegativeAfterLife2 = nunusaku_negative_afterlife
+		NegativeAfterLife3 = nunusaku_negative_afterlife
+		DeathDeityName = nunusaku_death_deity_name
+		DeathDeityNamePossessive = nunusaku_death_deity_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+		WitchGodName = nunusaku_witch_god_name
+		WitchGodNamePossessive = nunusaku_witch_god_name_possessive
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+		WitchGodMotherFather = mother
+
+		GHWName = ghw_purification
+		GHWNamePlural = ghw_purifications
 	}
 }

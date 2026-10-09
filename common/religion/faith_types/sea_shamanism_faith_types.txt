@@ -1,0 +1,110 @@
+bugaism = {
+	main_rite = bugaism
+	faith_details = {
+		religion = shamanism_religion
+		color = { 41 177 86 }
+		icon = bugaism_02
+		reformed_icon = bugaism_02_reformed
+	}
+
+	eminent_holy_sites = {
+		yam_alin
+		molihewen
+	}
+
+	holy_sites = {
+		doldykan
+		tymersol
+		suluk
+	}
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_clerical_function_alms_and_pacification
+		doctrine_clerical_gender_either
+	}
+}
+
+shamanism = {
+	# replaces old RoA abkaism
+	main_rite = shamanism
+	faith_details = {
+		religion = shamanism_religion
+		color = { 23 67 56 }
+		icon = shamanism
+		reformed_icon = reformed_shamanism
+	}
+
+	eminent_holy_sites = {
+		yizhou
+		iskra
+	}
+
+	holy_sites = {
+		doldykan
+		ashi
+		charkir_mudun
+	}
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_sanctity_of_nature
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+yzng = {
+	main_rite = yzng
+	faith_details = {
+		religion = shamanism_religion
+		color = { 55 95 21 }
+		icon = nivkh
+		reformed_icon = nivkh_reformed
+	}
+
+	eminent_holy_sites = {
+		tarayka
+		nurgan
+	}
+
+	holy_sites = {
+		chupka
+		raiti
+		yam_alin
+	}
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_sanctity_of_nature
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

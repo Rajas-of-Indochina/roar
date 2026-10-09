@@ -1,9 +1,9 @@
 ﻿khasi_religion = { # Folk religion of Khasi people
-
 	# Cybrxkhan addendum note: below are some articles of potential interest
 	# http://www.ijmdrr.com/admin/downloads/240620214.pdf
 	# https://www.jagiroadcollege.co.in/upload/iqacarchive/1669722031.pdf
 	# https://www.ijcrt.org/papers/IJCRT2205866.pdf
+
 	religion_details = {
 		family = rf_pagan
 		graphical_faith = pagan_gfx
@@ -57,8 +57,16 @@
 	doctrine = special_doctrine_is_austroasiatic_faith
 
 	traits = {
-		virtues = { humble just temperate }
-		sins = { arrogant arbitrary greedy }
+		virtues = {
+			humble = { weight = 30 scale = 1 }
+			just = { weight = 20 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+		}
+		sins = {
+			greedy = { weight = 20 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+			arrogant = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -259,6 +267,7 @@
 		ReligiousSymbol = khasi_animism_religious_symbol
 		ReligiousText = khasi_animism_religious_text
 		ReligiousHeadName = khasi_animism_religious_head_title
+		ReligiousHeadNameFemale = khasi_animism_religious_head_title
 		ReligiousHeadTitleName = khasi_animism_religious_head_title_name
 		DevoteeMale = khasi_animism_devotee_male
 		DevoteeMalePlural = khasi_animism_devotee_male_plural
@@ -314,5 +323,4 @@
 		HouseOfWorship2 = khasi_animism_house_of_worship_2
 		ReligiousText2 = khasi_animism_religious_text_2
 	}
-
 }

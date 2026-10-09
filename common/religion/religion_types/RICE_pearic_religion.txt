@@ -1,11 +1,10 @@
 ﻿pearic_religion = { # Folk religions of Pearic-speaking peoples
-
 	# http://sealang.net/archives/mksj/pdf/MKSJ-35.171.pdf
 	# https://www.researchgate.net/publication/285361263_Historical_change_in_the_traditional_use_of_forests_and_its_association_with_belief_in_tiger_spirits_in_the_Cardamom_Mountains_Cambodia_The_impact_of_war_and_wildlife_trade_on_the_relationship_between
 
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = dharmic_gfx
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -57,8 +56,16 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { compassionate calm humble }
-		sins = { sadistic wrathful arrogant }
+		virtues = {
+			compassionate = { weight = 20 scale = 1 }
+			calm = { weight = 20 scale = 1 }
+			humble = { weight = 30 scale = 1 }
+		}
+		sins = {
+			lustful = { weight = 20 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+			arrogant = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -260,6 +267,7 @@
 		ReligiousText2 = pearic_pagan_religious_text
 		ReligiousText3 = pearic_pagan_religious_text
 		ReligiousHeadName = pearic_pagan_religious_head_title
+		ReligiousHeadNameFemale = pearic_pagan_religious_head_title
 		ReligiousHeadTitleName = pearic_pagan_religious_head_title_name
 		DevoteeMale = pearic_pagan_devotee
 		DevoteeMalePlural = pearic_pagan_devotee_plural
@@ -305,5 +313,4 @@
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
 }

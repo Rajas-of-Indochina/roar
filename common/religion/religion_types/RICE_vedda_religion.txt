@@ -51,8 +51,16 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { chaste humble honest }
-		sins = { lustful arrogant deceitful }
+		virtues = {
+			honest = { weight = 20 scale = 1 }
+			humble = { weight = 30 scale = 1 }
+			chaste = { weight = 15 scale = 1 }
+		}
+		sins = {
+			deceitful = { weight = 20 scale = 1 }
+			arrogant = { weight = 30 scale = 1 }
+			lustful = { weight = 15 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -258,6 +266,7 @@
 		ReligiousText2 = paganism_religious_text_2
 		ReligiousText3 = paganism_religious_text_3
 		ReligiousHeadName = paganism_religious_head_title
+		ReligiousHeadNameFemale = paganism_religious_head_title
 		ReligiousHeadTitleName = paganism_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -302,6 +311,5 @@
 		
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
-	}	
-
+	}
 }

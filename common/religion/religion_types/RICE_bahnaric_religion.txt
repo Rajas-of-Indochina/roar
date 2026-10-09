@@ -1,5 +1,4 @@
 ﻿bahnaric_religion = { # Folk religions of Pearic-speaking peoples
-
 	# https://en.nhandan.vn/special/dt_bana_en/index.html
 	# https://iiste.org/Journals/index.php/RHSS/article/view/57925
 	# https://vietnamproject.archives.msu.edu/recordFiles/159-547-1807/UA17-149_000261.pdf
@@ -7,7 +6,7 @@
 
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = dharmic_gfx
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -52,15 +51,23 @@
 	#Coronation tradition
 	doctrine = doctrine_no_anointment
 
-	# Austroasiatic Religion
-	doctrine = special_doctrine_is_austroasiatic_faith
-
 	#Preservation
 	doctrine = doctrine_oral_storytelling
 
+	# Austroasiatic Religion
+	doctrine = special_doctrine_is_austroasiatic_faith
+
 	traits = {
-		virtues = { humble generous diligent }
-		sins = { arrogant greedy lazy }
+		virtues = {
+			humble = { weight = 20 scale = 1 }
+			generous = { weight = 20 scale = 1 }
+			diligent = { weight = 30 scale = 1 }
+		}
+		sins = {
+			arrogant = { weight = 20 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+			lazy = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -267,6 +274,7 @@
 		ReligiousText2 = bahnar_pagan_religious_text
 		ReligiousText3 = bahnar_pagan_religious_text
 		ReligiousHeadName = bahnar_pagan_religious_head_title
+		ReligiousHeadNameFemale = bahnar_pagan_religious_head_title
 		ReligiousHeadTitleName = bahnar_pagan_religious_head_title_name
 		DevoteeMale = bahnar_pagan_devotee
 		DevoteeMalePlural = bahnar_pagan_devotee_plural

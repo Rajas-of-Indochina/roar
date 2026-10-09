@@ -3,12 +3,11 @@
 
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = "dharmic_gfx"
+		graphical_faith = pagan_gfx
 	}
+	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
-
-	doctrine = pagan_hostility_doctrine
 
 	#Main Group
 	doctrine = doctrine_polytheist
@@ -49,14 +48,15 @@
 	doctrine = doctrine_no_anointment
 
 	#Preservation
-	doctrine = doctrine_mythic_literary
+	doctrine = doctrine_oral_storytelling
+	#doctrine_mythic_literary # msl_note: Writtern form of Sureq Galigo epos was composed much later in history
 
 	traits = {
 		virtues = {
 			just = { weight = 30 scale = 1 }
 			honest = { weight = 20 scale = 1 }
 			brave = { weight = 20 scale = 1 }
-			transgender = { weight = 35 scale = 3  }
+			transgender = { weight = 35 scale = 3 }
 		}
 		sins = {
 			arbitrary = { weight = 20 scale = 1 }

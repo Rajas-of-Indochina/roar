@@ -1,7 +1,7 @@
 ﻿burmic_religion = { # Folk religions of Burmese peoples
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = dharmic_gfx	
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -49,8 +49,19 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { brave compassionate content diligent lifestyle_mystic transgender }
-		sins = { gluttonous cynical craven }
+		virtues = {
+			brave = { weight = 20 scale = 1 }
+			compassionate = { weight = 30 scale = 1 }
+			content = { weight = 20 scale = 1 }
+			diligent = { weight = 30 scale = 1 }
+			lifestyle_mystic = { weight = 15 scale = 1 }
+			transgender = { weight = 35 scale = 3 }
+		}
+		sins = {
+			gluttonous = { weight = 30 scale = 1 }
+			cynical = { weight = 15 scale = 1 }
+			craven = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -258,6 +269,7 @@
 		ReligiousText2 = burmic_religious_text
 		ReligiousText3 = burmic_religious_text
 		ReligiousHeadName = burmic_religious_head_title
+		ReligiousHeadNameFemale = burmic_religious_head_title
 		ReligiousHeadTitleName = burmic_religious_head_title_name
 		DevoteeMale = burmic_devotee
 		DevoteeMalePlural = burmic_devotee_plural

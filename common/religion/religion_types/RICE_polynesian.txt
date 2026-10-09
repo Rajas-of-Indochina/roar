@@ -1,6 +1,9 @@
 ﻿
 polynesian_religion = { # Folk religions of the Oceania region's people
-	family = rf_pagan
+	religion_details = {
+		family = rf_pagan
+		graphical_faith = pagan_gfx
+	}
 	doctrine = pagan_hostility_doctrine
 
 	pagan_roots = yes
@@ -48,8 +51,16 @@ polynesian_religion = { # Folk religions of the Oceania region's people
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { patient just humble }
-		sins = { impatient arbitrary arrogant }
+		virtues = {
+			just = { weight = 20 scale = 1 }
+			humble = { weight = 30 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+		}
+		sins = {
+			arbitrary = { weight = 20 scale = 1 }
+			arrogant = { weight = 30 scale = 1 }
+			impatient = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -229,18 +240,13 @@ polynesian_religion = { # Folk religions of the Oceania region's people
 		PantheonTerm2 = oceanic_animism_pantheon_term_2
 		PantheonTerm3 = oceanic_animism_pantheon_term_3
 		PantheonTermHasHave = oceanic_animism_pantheon_term_hashave
-		GoodGodNames = {
-			oceanic_animism_high_god_name
-			oceanic_animism_high_god_name_alternate
-		}
+		GoodGodNames = { oceanic_animism_high_god_name oceanic_animism_high_god_name_alternate }
 		DevilName = oceanic_animism_devil_name
 		DevilNamePossessive = oceanic_animism_devil_name_possessive
 		DevilSheHe = oceanic_animism_devil_shehe
 		DevilHerHis = oceanic_animism_devil_herhis
 		DevilHerselfHimself = oceanic_animism_devil_herselfhimself
-		EvilGodNames = {
-			oceanic_animism_devil_name
-		}
+		EvilGodNames = { oceanic_animism_devil_name }
 		HouseOfWorship = oceanic_animism_house_of_worship
 		HouseOfWorship2 = oceanic_animism_house_of_worship
 		HouseOfWorship3 = oceanic_animism_house_of_worship
@@ -252,6 +258,7 @@ polynesian_religion = { # Folk religions of the Oceania region's people
 		ReligiousText2 = oceanic_animism_religious_text
 		ReligiousText3 = oceanic_animism_religious_text
 		ReligiousHeadName = oceanic_animism_religious_head_title
+		ReligiousHeadNameFemale = oceanic_animism_religious_head_title
 		ReligiousHeadTitleName = oceanic_animism_religious_head_title_name
 		DevoteeMale = oceanic_animism_devotee
 		DevoteeMalePlural = oceanic_animism_devotee_plural
@@ -297,26 +304,20 @@ polynesian_religion = { # Folk religions of the Oceania region's people
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
-	faiths = {
-
-		polynesian_pagan = {
-			color = { 21 60 122 }
-			icon = hawaiian_pagan
-			reformed_icon = hawaiian_pagan_reformed
-
-			holy_site = mount_gamalama
-			holy_site = mount_kie_matubu
-			holy_site = cotabato
-			holy_site = biri_larosa
-			holy_site = kepala_burung
-
-			doctrine = unreformed_faith_doctrine
-
-			doctrine = tenet_cthonic_redoubts
-			doctrine = tenet_religious_legal_pronouncements 	# Kapu/tabu system
-			doctrine = tenet_human_sacrifice 					
-
-		}
-	}
+	# faiths = {
+	#	polynesian_pagan = {
+	#		color = { 21 60 122 }
+	#		icon = hawaiian_pagan
+	#		reformed_icon = hawaiian_pagan_reformed
+	#		holy_site = mount_gamalama
+	#		holy_site = mount_kie_matubu
+	#		holy_site = cotabato
+	#		holy_site = biri_larosa
+	#		holy_site = kepala_burung
+	#		doctrine = unreformed_faith_doctrine
+	#		doctrine = tenet_cthonic_redoubts
+	#		doctrine = tenet_religious_legal_pronouncements 	# Kapu/tabu system
+	#		doctrine = tenet_human_sacrifice 					
+	#	}
+	# }
 }

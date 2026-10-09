@@ -2,6 +2,7 @@
 palau_religion = { # Folk religions of the Palau Archipelago people
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -49,8 +50,16 @@ palau_religion = { # Folk religions of the Palau Archipelago people
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate honest patient }
-		sins = { lazy greedy deceitful }
+		virtues = {
+			temperate = { weight = 30 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+			honest = { weight = 20 scale = 1 }
+		}
+		sins = {
+			lazy = { weight = 20 scale = 1 }
+			deceitful = { weight = 30 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -253,6 +262,7 @@ palau_religion = { # Folk religions of the Palau Archipelago people
 		ReligiousText2 = palau_animism_religious_text
 		ReligiousText3 = palau_animism_religious_text
 		ReligiousHeadName = palau_animism_religious_head_title
+		ReligiousHeadNameFemale = palau_animism_religious_head_title
 		ReligiousHeadTitleName = palau_animism_religious_head_title_name
 		DevoteeMale = palau_animism_devotee
 		DevoteeMalePlural = palau_animism_devotee_plural
@@ -298,5 +308,4 @@ palau_religion = { # Folk religions of the Palau Archipelago people
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
 }

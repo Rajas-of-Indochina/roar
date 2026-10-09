@@ -1,6 +1,5 @@
 ﻿
-australian_religion = {
-	# Religion of the Indigenous Australian peoples
+australian_religion = { # Religion of the Indigenous Australian peoples
 	religion_details = {
 		family = rf_pagan
 		graphical_faith = pagan_gfx
@@ -52,8 +51,16 @@ australian_religion = {
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { generous honest just }
-		sins = { greedy deceitful arbitrary }
+		virtues = {
+			generous = { weight = 30 scale = 1 }
+			honest = { weight = 20 scale = 1 }
+			just = { weight = 20 scale = 1 }
+		}
+		sins = {
+			greedy = { weight = 30 scale = 1 }
+			deceitful = { weight = 20 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -259,6 +266,7 @@ australian_religion = {
 		ReligiousText2 = yolngu_pagan_religious_text_2
 		ReligiousText3 = yolngu_pagan_religious_text_3
 		ReligiousHeadName = yolngu_pagan_religious_head_title
+		ReligiousHeadNameFemale = yolngu_pagan_religious_head_title
 		ReligiousHeadTitleName = yolngu_pagan_religious_head_title_name
 		DevoteeMale = yolngu_pagan_devotee
 		DevoteeMalePlural = yolngu_pagan_devotee_plural

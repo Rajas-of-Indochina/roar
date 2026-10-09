@@ -1,7 +1,7 @@
 ﻿javanese_religion = { # Folk religions of the Java Island inhabitants
-
 	# https://en.wikipedia.org/wiki/Indigenous_Philippine_folk_religions
 	# https://en.wikipedia.org/wiki/Indigenous_Philippine_shrines_and_sacred_grounds
+
 	religion_details = {
 		family = rf_pagan
 		graphical_faith = dharmic_gfx
@@ -52,8 +52,16 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate honest patient }
-		sins = { lazy greedy deceitful }
+		virtues = {
+			honest = { weight = 30 scale = 1 }
+			temperate = { weight = 20 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+		}
+		sins = {
+			greedy = { weight = 20 scale = 1 }
+			lazy = { weight = 20 scale = 1 }
+			deceitful = { weight = 30 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -139,5 +147,167 @@
 		taoism_custom_1 custom_faith_10 custom_faith_3 custom_faith_5 custom_faith_6 custom_faith_7 custom_faith_8 custom_faith_9
 		custom_faith_cool_s custom_faith_cool_s_01 custom_faith_cool_s_02 custom_faith_cool_s_03 custom_faith_cool_s_04 custom_faith_cool_s_05 custom_faith_eye_of_providence custom_faith_eye_of_providence_01 custom_faith_eye_of_providence_02 custom_faith_eye_of_providence_03 custom_faith_eye_of_providence_04 custom_faith_eye_of_providence_05 custom_faith_pentagram custom_faith_pentagram_01 custom_faith_pentagram_02 custom_faith_pentagram_03 custom_faith_pentagram_04 custom_faith_pentagram_05 custom_faith_pentagram_inverted custom_faith_elephant_01 custom_faith_elephant_02 custom_faith_elephant_03 custom_faith_elephant_04 custom_faith_elephant_05 custom_faith_horse_01 custom_faith_horse_02 custom_faith_horse_03 custom_faith_horse_04 custom_faith_horse_05 custom_faith_tree_01 custom_faith_tree_02 custom_faith_tree_03 custom_faith_tree_04 custom_faith_tree_05 custom_faith_pentagram_inverted_01 custom_faith_pentagram_inverted_02 custom_faith_pentagram_inverted_03 custom_faith_pentagram_inverted_04 custom_faith_pentagram_inverted_05
 		judaism_01 judaism_02 judaism_03 judaism_04 judaism_05 judaism_06 hinduism_01 hinduism_02 hinduism_03 hinduism_04 hinduism_05 hinduism_06 yazidi_01 yazidi_02 yazidi_03 yazidi_04 yazidi_05 yazidi_06 jainism_01 jainism_02 jainism_03 jainism_04 jainism_05 jainism_06 achamanism_01 achamanism_02 achamanism_03 achamanism_04 achamanism_05 utaki_01 utaki_02 utaki_03 utaki_04 utaki_05 west_african_roog_sene_01 west_african_roog_sene_02 west_african_roog_sene_03 west_african_roog_sene_04 west_african_roog_sene_05 spulugaism_01 spulugaism_02 spulugaism_03 spulugaism_04 spulugaism_05
+	}
+
+	localization = {
+		#HighGod
+		HighGodName = javanist_high_god_name
+		HighGodName2 = javanist_high_god_name
+		HighGodNamePossessive = javanist_high_god_name_possessive
+		HighGodNameSheHe = CHARACTER_SHEHE_HE
+		HighGodHerselfHimself = CHARACTER_HIMSELF
+		HighGodHerHis = CHARACTER_HERHIS_HIS
+		HighGodNameAlternate = javanist_high_god_name_alternate
+		HighGodNameAlternatePossessive = javanist_high_god_name_alternate_possessive
+
+		#Creator
+		CreatorName = javanist_creator_god_name
+		CreatorNamePossessive = javanist_creator_god_name_possessive
+		CreatorSheHe = CHARACTER_SHEHE_HE
+		CreatorHerHis = CHARACTER_HERHIS_HIS
+		CreatorHerHim = CHARACTER_HERHIM_HIM
+
+		#HealthGod
+		HealthGodName = javanist_health_god_name
+		HealthGodNamePossessive = javanist_health_god_name_possessive
+		HealthGodSheHe = CHARACTER_SHEHE_HE
+		HealthGodHerHis = CHARACTER_HERHIS_HIS
+		HealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FertilityGod
+		FertilityGodName = javanist_fertility_god_name
+		FertilityGodNamePossessive = javanist_fertility_god_name_possessive
+		FertilityGodSheHe = CHARACTER_SHEHE_SHE
+		FertilityGodHerHis = CHARACTER_HERHIS_HER
+		FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+		#WealthGod
+		WealthGodName = javanist_wealth_god_name
+		WealthGodNamePossessive = javanist_wealth_god_name_possessive
+		WealthGodSheHe = CHARACTER_SHEHE_HE
+		WealthGodHerHis = CHARACTER_HERHIS_HIS
+		WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+		#HouseholdGod
+		HouseholdGodName = javanist_household_god_name
+		HouseholdGodNamePossessive = javanist_household_god_name_possessive
+		HouseholdGodSheHe = CHARACTER_SHEHE_HE
+		HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+		HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+		#FateGod
+		FateGodName = javanist_fate_god_name
+		FateGodNamePossessive = javanist_fate_god_name_possessive
+		FateGodSheHe = CHARACTER_SHEHE_IT
+		FateGodHerHis = CHARACTER_HERHIS_ITS
+		FateGodHerHim = CHARACTER_HERHIM_IT
+
+		#KnowledgeGod
+		KnowledgeGodName = javanist_knowledge_god_name
+		KnowledgeGodNamePossessive = javanist_knowledge_god_name_possessive
+		KnowledgeGodSheHe = CHARACTER_SHEHE_HE
+		KnowledgeGodHerHis = CHARACTER_HERHIS_HIS
+		KnowledgeGodHerHim = CHARACTER_HERHIM_HIM
+
+		#WarGod
+		WarGodName = javanist_war_god_name
+		WarGodNamePossessive = javanist_war_god_name_possessive
+		WarGodSheHe = CHARACTER_SHEHE_HE
+		WarGodHerHis = CHARACTER_HERHIS_HIS
+		WarGodHerHim = CHARACTER_HERHIM_HIM
+
+		#TricksterGod
+		TricksterGodName = javanist_trickster_god_name
+		TricksterGodNamePossessive = javanist_trickster_god_name_possessive
+		TricksterGodSheHe = CHARACTER_SHEHE_HE
+		TricksterGodHerHis = CHARACTER_HERHIS_HIS
+		TricksterGodHerHim = CHARACTER_HERHIM_HIM
+
+		#NightGod
+		NightGodName = javanist_night_god_name
+		NightGodNamePossessive = javanist_night_god_name_possessive
+		NightGodSheHe = CHARACTER_SHEHE_SHE
+		NightGodHerHis = CHARACTER_HERHIS_HER
+		NightGodHerHim = CHARACTER_HERHIM_HER
+
+		#WaterGod
+		WaterGodName = javanist_water_god_name
+		WaterGodNamePossessive = javanist_water_god_name_possessive
+		WaterGodSheHe = CHARACTER_SHEHE_HE
+		WaterGodHerHis = CHARACTER_HERHIS_HIS
+		WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+		PantheonTerm = religion_the_gods
+		PantheonTerm2 = religion_the_gods
+		PantheonTerm3 = religion_the_gods
+		PantheonTermHasHave = pantheon_term_have
+		GoodGodNames = {
+			javanist_high_god_name
+			javanist_high_god_name_alternate
+		}
+		DevilName = javanist_devil_name
+		DevilNamePossessive = javanist_devil_name_possessive
+		DevilSheHe = CHARACTER_SHEHE_HE
+		DevilHerHis = CHARACTER_HERHIS_HIS
+		DevilHerselfHimself = javanist_devil_herselfhimself
+		EvilGodNames = {
+			javanist_devil_name
+		}
+		HouseOfWorship = javanist_house_of_worship
+		HouseOfWorship2 = javanist_house_of_worship
+		HouseOfWorship3 = javanist_house_of_worship
+		HouseOfWorshipPlural = javanist_house_of_worship_plural
+		ReligiousSymbol = javanist_religious_symbol
+		ReligiousSymbol2 = javanist_religious_symbol
+		ReligiousSymbol3 = javanist_religious_symbol
+		ReligiousText = javanist_religious_text
+		ReligiousText2 = javanist_religious_text
+		ReligiousText3 = javanist_religious_text
+		ReligiousHeadName = javanist_religious_head_title
+		ReligiousHeadNameFemale = javanist_religious_head_title
+		ReligiousHeadTitleName = javanist_religious_head_title_name
+		DevoteeMale = javanist_devotee
+		DevoteeMalePlural = javanist_devotee_plural
+		DevoteeFemale = javanist_devotee
+		DevoteeFemalePlural = javanist_devotee_plural
+		DevoteeNeuter = javanist_devotee
+		DevoteeNeuterPlural = javanist_devotee_plural
+		PriestMale = javanist_priest
+		PriestMalePlural = javanist_priest_plural
+		PriestFemale = javanist_priest
+		PriestFemalePlural = javanist_priest_plural
+		PriestNeuter = javanist_priest
+		PriestNeuterPlural = javanist_priest_plural
+		AltPriestTermPlural = javanist_priest_term_plural
+		BishopMale = javanist_bishop
+		BishopMalePlural = javanist_bishop_plural
+		BishopFemale = javanist_bishop
+		BishopFemalePlural = javanist_bishop_plural
+		BishopNeuter = javanist_bishop
+		BishopNeuterPlural = javanist_bishop_plural
+		DivineRealm = javanist_divine_realm
+		DivineRealm2 = javanist_divine_realm
+		DivineRealm3 = javanist_divine_realm
+		PositiveAfterLife = javanist_positive_afterlife
+		PositiveAfterLife2 = javanist_positive_afterlife
+		PositiveAfterLife3 = javanist_positive_afterlife
+		NegativeAfterLife = javanist_negative_afterlife
+		NegativeAfterLife2 = javanist_negative_afterlife
+		NegativeAfterLife3 = javanist_negative_afterlife
+		DeathDeityName = javanist_death_name
+		DeathDeityNamePossessive = javanist_death_name_possessive
+		DeathDeitySheHe = CHARACTER_SHEHE_HE
+		DeathDeityHerHis = CHARACTER_HERHIS_HIS
+		DeathDeityHerHim = CHARACTER_HERHIM_HIM
+		WitchGodName = javanist_witch_god_name
+		WitchGodNamePossessive = javanist_witch_god_name_possessive
+		WitchGodHerHis = CHARACTER_HERHIS_HER
+		WitchGodSheHe = CHARACTER_SHEHE_SHE
+		WitchGodHerHim = CHARACTER_HERHIM_HER
+		WitchGodMistressMaster = mistress
+		WitchGodMotherFather = mother
+
+		GHWName = ghw_purification
+		GHWNamePlural = ghw_purifications
 	}
 }

@@ -865,7 +865,7 @@ lawangan = {
 
 maanyan = {
 	# references Ma'anyan people and their kingdom
-	county = c_BOR_banjar
+	county = c_BOR_tabalung
 
 	county_holder_character_modifier = {
 		councillor_opinion = 3
@@ -1379,98 +1379,27 @@ stieng = {
 ### MENA Holy Sites ####
 cappadocia = {
 	county = c_kyzistra
+
 	county_holder_character_modifier = {
-		church_holding_build_gold_cost = -0.05
-		monthly_county_control_growth_factor = 0.1
+		learning = 1
+		development_growth_factor = 0.05
 	}
-}
-### ### ### ###
 
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_county_control_growth_factor = 0.01
+		hostile_raid_time = 0.02
+	}
 
-### RICE Holy Sites ###
-harran = {
-	county = c_harran
-	county_holder_character_modifier = {
-		monthly_lifestyle_xp_gain_mult = 0.05
+	faith_character_modifier = {
+		church_holding_build_gold_cost = -0.1
 		learning = 1
 	}
-}
-giza = {
-	county = c_giza
-	county_holder_character_modifier = {
-		build_gold_cost = -0.15
-	}
-}
-petra = {
-	county = c_negev
-	barony = b_baidha-petra
-	county_holder_character_modifier = {
-		domain_tax_mult = 0.01
-		development_growth_factor = 0.1
-	}
-}
 
-damot = {
-	# Mount Damota, important site culturally for the Welayta people, and coronotation/burial place for Wolayta kings
-	county = c_damot
-
-	county_holder_character_modifier = {
-		county_opinion_add = 5
-		close_relative_opinion = 5
-	}
-}
-
-kataragama = {
-	county = c_rohana
-	barony = b_katargama
-
-	county_holder_character_modifier = {
-		different_faith_opinion = 5
-		enemy_hostile_scheme_success_chance_add = -5
-	}
-}
-
-kinnaur = {
-	# Kinnaur Valley
-	county = c_kamru
-
-	county_holder_character_modifier = {
-		hills_provisions_use_mult = -0.1
-		mountains_provisions_use_mult = -0.1
-		hills_attrition_mult = -0.1
-		mountains_attrition_mult = -0.1
-	}
-}
-
-MAL_semantan = {
-	county = c_MAL_semantan # Middle of Senoi area
-
-	county_holder_character_modifier = {
-		jungle_advantage = 2
-		jungle_construction_gold_cost = -0.1
-	}
-}
-
-chau_phong = {
-	# Area around the old seat of the legendary Hung kings, modern Phú Thọ province
-	#county = c_lam_tay
-	#barony = b_chau_phong
-
-	county = c_kottinagara # probably not right but I need to try and stop things crashing
-
-	county_holder_character_modifier = {
-		legitimacy_gain_mult = 0.1
-		monthly_prestige_gain_per_knight_mult = 0.01		
-	}
-}
-
-cagliari = {
-	county = c_cagliari
-
-	character_modifier = {
-		hills_supply_limit_mult = 0.1
-		mountains_supply_limit_mult = 0.1
-		desert_mountains_supply_limit_mult = 0.1
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		monthly_income_mult = 0.005
 	}
 }
 ### ### ### ###

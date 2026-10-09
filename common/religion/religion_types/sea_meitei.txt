@@ -1,7 +1,7 @@
 ﻿sanamahism_religion = { # Folk religion of Manipuri/Meitei people
 	religion_details = {
 		family = rf_pagan
-		graphical_faith = dharmic_gfx
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -49,8 +49,17 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate content honest forgiving }
-		sins = { greedy wrathful ambitious }
+		virtues = {
+			temperate = { weight = 30 scale = 1 }
+			content = { weight = 25 scale = 1 }
+			honest = { weight = 15 scale = 1 }
+			forgiving = { weight = 10 scale = 1 }
+		}
+		sins = {
+			greedy = { weight = 15 scale = 1 }
+			wrathful = { weight = 25 scale = 1 }
+			ambitious = { weight = 15 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -283,6 +292,7 @@
 		ReligiousText2 = sanamahism_religious_text
 		ReligiousText3 = sanamahism_religious_text
 		ReligiousHeadName = sanamahism_religious_head_title
+		ReligiousHeadNameFemale = sanamahism_religious_head_title
 		ReligiousHeadTitleName = sanamahism_religious_head_title_name
 		DevoteeMale = paganism_devotee
 		DevoteeMalePlural = paganism_devoteeplural
@@ -316,5 +326,4 @@
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
 }

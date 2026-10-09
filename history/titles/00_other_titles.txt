@@ -1,9 +1,8 @@
 k_papal_state = {
 	30.1.1 = {
 		holder = 145292
-		government = theocracy_government
+		government = ecclesiastical_government
 	} # Peter's first visit to Rome
-	
 	64.10.13 = {
 		holder = 145291
 	}
@@ -404,18 +403,27 @@ k_papal_state = {
 		holder = 7827
 	}
 	974.7.1 = {
+		holder = ce3_pope_bonifatius_vii # Boniface VII, desposed but kept in numbering
+	}
+	974.10.1 = {
 		holder = 7930
 	}
 	983.7.10 = {
 		holder = 7826
 	}
 	984.8.20 = {
+		holder = ce3_pope_bonifatius_vii # Boniface VII, desposed but kept in numbering
+	}
+	985.7.20 = {
 		holder = 7825
 	}
 	996.5.3 = {
 		holder = 1318
 	}
 	999.2.18 = {
+		holder = ce3_pope_ioannes_xvi # Ioannes XVI, deposed but kept in numbering
+	}
+	999.4.2 = {
 		holder = 7824
 	}
 	1003.5.12 = {
@@ -460,11 +468,24 @@ k_papal_state = {
 	1054.4.19 = {
 		holder = 7894
 	}
+	1054.7.16 = {
+		effect = {
+			faith:catholic = {
+				set_religious_head_title = title:k_papal_state
+			}
+			faith:conversos = {
+				set_religious_head_title = title:k_papal_state
+			}
+		}
+	}
 	1057.8.3 = {
 		holder = 11034
 	}
 	1058.3.29 = {
-		holder = 7940
+		holder = 7939 # Benedictus X, deposed but kept in the numbering
+	}
+	1059.1.24 = {
+		holder = 7940 # Nicholas II
 	}
 	1061.7.27 = {
 		holder = 2008
@@ -493,7 +514,7 @@ k_papal_state = {
 	}
 	1124.12.13 = {
 		holder = 2021
-	}	
+	}
 	1130.2.13 = {
 		holder = 71800
 	}
@@ -508,7 +529,7 @@ k_papal_state = {
 	}
 	1153.7.8 = {
 		holder = 71808
-	}	
+	}
 	1154.12.3 = {
 		holder = 71809
 	}
@@ -601,6 +622,7 @@ k_papal_state = {
 k_orthodox = {
 	10.1.1 = {
 		liege = "e_byzantium"
+		government = ecclesiastical_government
 	}
 	38.1.1 = {
 		holder = 70599
@@ -732,7 +754,7 @@ k_orthodox = {
 		holder = 145054
 	}
 	427.12.24 = {
-		holder_ignore_head_of_faith_requirement = 145053
+		holder = 145053
 	}
 	431.7.11 = {
 		holder = 145052
@@ -771,7 +793,7 @@ k_orthodox = {
 		holder = 145046
 	}
 	535.6.5 = {
-		holder_ignore_head_of_faith_requirement = 70581
+		holder = 70581
 	}
 	536.3.13 = {
 		holder = 145045
@@ -843,22 +865,22 @@ k_orthodox = {
 		holder = 70563
 	}
 	730.1.22 = {
-		holder_ignore_head_of_faith_requirement = 70562
+		holder = 70562
 	}
 	754.1.1 = {
 		holder = 70561
 	}
 	766.11.16 = {
-		holder_ignore_head_of_faith_requirement = 70560
+		holder = 70560
 	}
 	769.1.1 = {
 		holder = 0
 	}
 	769.1.2 = {
-		holder_ignore_head_of_faith_requirement = 70560
+		holder = 70560
 	}
 	780.2.7 = {
-		holder_ignore_head_of_faith_requirement = 70559
+		holder = 70559
 	}
 	784.12.25 = {
 		holder = 145043
@@ -867,13 +889,13 @@ k_orthodox = {
 		holder = 70558
 	}
 	815.4.1 = {
-		holder_ignore_head_of_faith_requirement = 145042
+		holder = 145042
 	}
 	821.1.1 = {
-		holder_ignore_head_of_faith_requirement = 70557
+		holder = 70557
 	}
 	837.1.21 = {
-		holder_ignore_head_of_faith_requirement = 70556
+		holder = 70556
 	}
 	843.3.4 = {
 		holder = 145041
@@ -1086,6 +1108,7 @@ d_iconoclast = {
 	}
 	766.11.16 = {
 		holder = 70560
+		government = ecclesiastical_government
 	}
 	780.2.7 = {
 		holder = 0
@@ -1164,6 +1187,7 @@ d_patriarchate_in_the_east = {
 	}
 	484.1.1={
 		holder=166259
+		government = ecclesiastical_government
 	}
 	485.1.1={
 		holder_ignore_head_of_faith_requirement=166260
@@ -1351,63 +1375,64 @@ d_patriarchate_in_the_east = {
 
 d_coptic_papacy = {
 	43.1.1 = {
-		holder = 161518 #Markos I
+		holder_ignore_head_of_faith_requirement = 161518 #Markos I
+		government = ecclesiastical_government
 	}
-	328.1.1 = {
+	328.5.5 = {
 		holder = 161520 #Athanasios I
 	}
-	412.1.1 = {
+	412.10.17 = {
 		holder = 161508 #Kyril I
 	}
-	490.1.1 = {
+	489.12.11 = {
 		holder = 161521 #Athanasios II
 	}
-	496.1.1 = {
+	496.9.29 = {
 		holder = 161514 #Yohannes I
 	}
-	505.4.29 = {
+	505.5.29 = {
 		holder = 161515 #Yohannes II
 	}
-	535.1.1 = {
+	536.2.22 = {
 		holder = 161522 #Theodosios I
 	}
-	622.1.1 = {
+	623.9.17 = {
 		holder = 161524 #Benjamin I I
 	}
 	639.1.1 = {
 		liege = k_egypt	#Islamic invasion of Egypt.
 	}
-	677.1.1 = {
+	680.12.10 = {
 		holder = 161516 #Yohannes III
 	}
-	730.1.1 = {
+	730.7.8 = {
 		holder = 161523 #Theodosios II
 	}
-	742.1.1 = {
+	743.9.14 = {
 		holder = 161509 #Khail I
 	}
-	776.1.1 = {
+	777.1.24 = {
 		holder = 161517 #Yohannes IV
 	}
 	799.1.1 = {
 		holder = 161519 #Markos II
 	}
-	849.1.1 = {
+	849.11.20 = {
 		holder = 161510 #Khail II
 	}
-	859.1.1 = {
+	859.1.8 = {
 		holder = 168592 #Shenouda
 	}
-	880.1.1 = {
+	880.4.25 = {
 		holder = 161511 #Khail III
 	}
-	907.1.1 = {
+	909.5.29 = {
 		holder = 161513 #Gabriel I
 	}
-	933.1.1 = {
+	932.4.9 = {
 		holder = 161512 #Makarios I
 	}
-	1047.1.1 = {
+	1046.12.24 = {
 		holder = 35001 # Christodolos
 	}
 	1077.1.1 = {
@@ -1465,95 +1490,96 @@ d_coptic_papacy = {
 
 d_apostolic_church = {
 	1.1.1 = {
-		#St. Thaddeus the Apostle (1–50); omitted for regnal numbering purposes.
+		#St. Thaddeus the Apostle (1-50); omitted for regnal numbering purposes.
 	}
 	50.1.1 = {
-		#St. Bartholomew the Apostle (50–68); omitted for regnal numbering purposes.
+		#St. Bartholomew the Apostle (50-68); omitted for regnal numbering purposes.
 	}
 	68.1.1 = {
-		#St. Zacharias (68–76); omitted for regnal numbering purposes.
+		#St. Zacharias (68-76); omitted for regnal numbering purposes.
 	}
 	76.1.1 = {
-		#St. Zementus (76–81); omitted for regnal numbering purposes.
+		#St. Zementus (76-81); omitted for regnal numbering purposes.
 	}
 	81.1.1 = {
-		#St. Atrnerseh (81–97); omitted for regnal numbering purposes.
+		#St. Atrnerseh (81-97); omitted for regnal numbering purposes.
 	}
 	97.1.1 = {
-		#St. Mushe (97–128); omitted for regnal numbering purposes.
+		#St. Mushe (97-128); omitted for regnal numbering purposes.
 	}
 	128.1.1 = {
-		#St. Shahen (128–154); omitted for regnal numbering purposes.
+		#St. Shahen (128-154); omitted for regnal numbering purposes.
 	}
 	154.1.1 = {
-		#St. Shavarsh (151–175); omitted for regnal numbering purposes.
+		#St. Shavarsh (151-175); omitted for regnal numbering purposes.
 	}
 	175.1.1 = {
-		#St. Leontius (175–193); omitted for regnal numbering purposes.
+		#St. Leontius (175-193); omitted for regnal numbering purposes.
 	}
 	193.1.1 = {
 		#St. Lacuna (175-230); omitted for regnal numbering purposes.
 	}
 	240.1.1 = {
-		#St. Merozanes (240–270); omitted for regnal numbering purposes.
+		#St. Merozanes (240-270); omitted for regnal numbering purposes.
 	}
 	288.1.1 = {
-		holder = armenian_000011 #St. Gregory I the Illuminator (288–325)
+		holder = armenian_000011 #St. Gregory I the Illuminator (288-325)
 		#liege = k_old_armenia
+		government = ecclesiastical_government
 	}
 	325.1.1 = {
-		holder = armenian_000013 #St. Aristaces I (325–333)
+		holder = armenian_000013 #St. Aristaces I (325-333)
 	}
 	333.1.1 = {
-		holder = armenian_000014 #St. Vrtanes I (333–341)
+		holder = armenian_000014 #St. Vrtanes I (333-341)
 	}
 	341.1.1 = {
-		holder = armenian_000015 #St. Husik I (341–347)
+		holder = armenian_000015 #St. Husik I (341-347)
 	}
 	347.1.1 = {
 		holder = armenian_000016 #Daniel I of Armenia (347)
 	}
 	348.1.1 = {
-		holder = armenian_000017 #Pharen I of Armenia (348–352)
+		holder = armenian_000017 #Pharen I of Armenia (348-352)
 	}
 	353.1.1 = {
 		holder = 0
 	}
 	352.1.1 = {
-		holder = armenian_000018 #St. Nerses I the Great (353–373)
+		holder = armenian_000018 #St. Nerses I the Great (353-373)
 	}
 	373.1.1 = {
-		holder = armenian_000019 #Sahak I (373–377)
+		holder = armenian_000019 #Sahak I (373-377)
 	}
 	377.1.1 = {
-		holder = armenian_000020 #Zaven I (377–381)
+		holder = armenian_000020 #Zaven I (377-381)
 	}
 	381.1.1 = {
-		holder = armenian_000021 #Aspuraces I (381–386)
+		holder = armenian_000021 #Aspuraces I (381-386)
 	}
 	386.1.1 = {
-		holder = armenian_000022 #St. Sahak II (387–428)
+		holder = armenian_000022 #St. Sahak II (387-428)
 	}
 	428.1.1 = {
-		holder = armenian_000023 #Brkisho of Armenia (428–432)
+		holder = armenian_000023 #Brkisho of Armenia (428-432)
 	}
 	432.1.1 = {
-		holder = armenian_000024 #Samuel of Armenia (432–437)
+		holder = armenian_000024 #Samuel of Armenia (432-437)
 	}
 	437.1.1 = {
-		holder = armenian_000025 #St. Hovsep I (437–452)
+		holder = armenian_000025 #St. Hovsep I (437-452)
 	}
 	452.1.1 = {
-		holder = armenian_000027 #Melitus I (452–456)
+		holder = armenian_000027 #Melitus I (452-456)
 	}
 	456.1.1 = {
-		holder = armenian_000028 #Moses I (456–461)
+		holder = armenian_000028 #Moses I (456-461)
 	}
 	461.1.1 = {
-		holder = armenian_000029 #St. Kyud I (461–478)
+		holder = armenian_000029 #St. Kyud I (461-478)
 	}
 	478.1.1 = {
-		holder = armenian_000030 #St. John I (478–490)
+		holder = armenian_000030 #St. John I (478-490)
 	}
 	485.1.1 = {
 		effect = {
@@ -1561,121 +1587,121 @@ d_apostolic_church = {
 		}
 	}
 	490.1.1 = {
-		holder = armenian_000031 #Babken I (490–516)
+		holder = armenian_000031 #Babken I (490-516)
 	}
 	516.1.1 = {
-		holder = armenian_000032 #Samuel I (516–526)
+		holder = armenian_000032 #Samuel I (516-526)
 	}
 	526.1.1 = {
-		holder = armenian_000033 #Mushe I (526–534)
+		holder = armenian_000033 #Mushe I (526-534)
 	}
 	534.1.1 = {
-		holder = armenian_000034 #Sahak II (534–539)
+		holder = armenian_000034 #Sahak II (534-539)
 	}
 	539.1.1 = {
-		holder = armenian_000035 #Christopher I (539–545)
+		holder = armenian_000035 #Christopher I (539-545)
 	}
 	545.1.1 = {
-		holder = armenian_000036 #Ghevond I (545–548)
+		holder = armenian_000036 #Ghevond I (545-548)
 	}
 	548.1.1 = {
-		holder = armenian_000037 #Nerses II (548–557)
+		holder = armenian_000037 #Nerses II (548-557)
 	}
 	557.1.1 = {
-		holder = armenian_000038 #John II (557–574
+		holder = armenian_000038 #John II (557-574
 	}
 	574.1.1 = {
-		holder = armenian_000039 #Moses II (574–604)
+		holder = armenian_000039 #Moses II (574-604)
 	}
 	604.1.1 = {
 		holder = 0
 	}
 	607.1.1 = {
-		holder = armenian_000041 #Abraham I (607–615)
+		holder = armenian_000041 #Abraham I (607-615)
 	}
 	615.1.1 = {
-		holder = armenian_000042 #Komitas I (615–628)
+		holder = armenian_000042 #Komitas I (615-628)
 	}
 	628.1.1 = {
-		holder = armenian_000043 #Christopher II (628–630)
+		holder = armenian_000043 #Christopher II (628-630)
 	}
 	630.1.1 = {
-		holder = armenian_000044 #Ezra I (630–641)
+		holder = armenian_000044 #Ezra I (630-641)
 	}
 	641.1.1 = {
-		holder = armenian_000045 #Nerses III the Builder (641–661)
+		holder = armenian_000045 #Nerses III the Builder (641-661)
 	}
 	654.1.1 = {
 		liege = k_old_armenia 	# would be since 288 but we lack history for that early
 	}
 	661.1.1 = {
-		holder = armenian_000046 #Anastasius I (661–667)
+		holder = armenian_000046 #Anastasius I (661-667)
 	}
 	667.1.1 = {
-		holder = armenian_000047 #Israel I (667–677)
+		holder = armenian_000047 #Israel I (667-677)
 	}
 	677.1.1 = {
-		holder = armenian_000048 #Sahak III (677–703)
+		holder = armenian_000048 #Sahak III (677-703)
 	}
 	703.1.1 = {
-		holder = armenian_000049 #Elias I (703–717)
+		holder = armenian_000049 #Elias I (703-717)
 	}
 	717.1.1 = {
-		holder = armenian_000050 #St. John III the Philosopher (717–728)
+		holder = armenian_000050 #St. John III the Philosopher (717-728)
 	}
 	728.1.1 = {
-		holder = armenian_000051 #David I (728–741)
+		holder = armenian_000051 #David I (728-741)
 	}
 	741.1.1 = {
-		holder = armenian_000052 #Dertad I (741–764)
+		holder = armenian_000052 #Dertad I (741-764)
 	}
 	764.1.1 = {
-		holder = armenian_000053 #Dertad II (764–767)
+		holder = armenian_000053 #Dertad II (764-767)
 	}
 	767.1.1 = {
-		holder = armenian_000054 #Sion I (767–775)
+		holder = armenian_000054 #Sion I (767-775)
 	}
 	775.1.1 = {
-		holder = armenian_000055 #Isaiah I (775–788)
+		holder = armenian_000055 #Isaiah I (775-788)
 	}
 	788.1.1 = {
-		holder = armenian_000056 #Stephen I (788–790)
+		holder = armenian_000056 #Stephen I (788-790)
 	}
 	790.1.1 = {
-		holder = armenian_000057 #Joab I (790–791)
+		holder = armenian_000057 #Joab I (790-791)
 	}
 	791.1.1 = {
-		holder = armenian_000058 #Solomon I (791–792)
+		holder = armenian_000058 #Solomon I (791-792)
 	}
 	792.1.1 = {
-		holder = armenian_000059 #George I (792–795)
+		holder = armenian_000059 #George I (792-795)
 	}
 	795.1.1 = {
-		holder = armenian_000060 #Joseph I (795–806)
+		holder = armenian_000060 #Joseph I (795-806)
 	}
 	806.1.1 = {
-		holder = armenian_000061 #David II (806–833)
+		holder = armenian_000061 #David II (806-833)
 	}
 	833.1.1 = {
-		holder = armenian_000062 #John IV (833–855)
+		holder = armenian_000062 #John IV (833-855)
 	}
 	855.1.1 = {
-		holder = armenian_000063 #Zacharias I (855–876)
+		holder = armenian_000063 #Zacharias I (855-876)
 	}
 	862.1.1 = {
 		liege = k_armenian_principality
 	}
 	876.1.1 = {
-		holder = armenian_000064 #George II (877–897)
+		holder = armenian_000064 #George II (877-897)
 	}
 	884.1.1 = {
 		liege = k_ayrarat
 	}
 	897.1.1 = {
-		holder = armenian_000065 #Mashdotz I (897–898)
+		holder = armenian_000065 #Mashdotz I (897-898)
 	}
 	898.1.1 = {
-		holder = armenian_000067 #John V the Historian (898–929)
+		holder = armenian_000067 #John V the Historian (898-929)
 	}
 	927.1.1 = {
 		effect = {
@@ -1683,16 +1709,16 @@ d_apostolic_church = {
 		}
 	}
 	929.1.1 = {
-		holder = armenian_000068 #Stephen II (929–930)
+		holder = armenian_000068 #Stephen II (929-930)
 	}
 	930.1.1 = {
-		holder = armenian_000069 #Theodore I (930–941)
+		holder = armenian_000069 #Theodore I (930-941)
 	}
 	941.1.1 = {
-		holder = armenian_000070 #Yeghishe I (941–946)
+		holder = armenian_000070 #Yeghishe I (941-946)
 	}
 	946.1.1 = {
-		holder = armenian_000072 #Ananias I (949–968)
+		holder = armenian_000072 #Ananias I (949-968)
 	}
 	947.1.1 = {
 		effect = {
@@ -1700,16 +1726,16 @@ d_apostolic_church = {
 		}
 	}
 	968.1.1 = {
-		holder = armenian_000073 #Vahan I (968–969)
+		holder = armenian_000073 #Vahan I (968-969)
 	}
 	969.1.1 = {
-		holder = armenian_000074 #Stephen III (969–972)
+		holder = armenian_000074 #Stephen III (969-972)
 	}
 	972.1.1 = {
-		holder = armenian_000075 #Khachig I (973–992)
+		holder = armenian_000075 #Khachig I (973-992)
 	}
 	992.1.1 = {
-		holder = armenian_000077 #Sarkis I (992–1019)
+		holder = armenian_000077 #Sarkis I (992-1019)
 	}
 	992.1.1 = {
 		effect = {
@@ -1717,11 +1743,11 @@ d_apostolic_church = {
 		}
 	}
 	1019.1.1 = {
-		holder = armenian_000078 #Peter I (1019–1058)
+		holder = armenian_000078 #Peter I (1019-1058)
 	}
 	1058.1.1 = {
 		#At this point, the office transfers to Cilician Armenia till almost the end of our timeframe.
-		holder = armenian_000079 #Khachik II of Armenia, Khachik II of Ani, Khachik II of Cilicia (1058–1065)
+		holder = armenian_000079 #Khachik II of Armenia, Khachik II of Ani, Khachik II of Cilicia (1058-1065)
 	}
 	1058.1.1 = {
 		effect = {
@@ -1729,7 +1755,7 @@ d_apostolic_church = {
 		}
 	}
 	1065.1.1 = {
-		holder = armenian_000080 #Gregory the Martyrophile (1066–1116)
+		holder = armenian_000080 #Gregory the Martyrophile (1066-1116)
 	}
 	1105.2.23 = {
 		holder = armenian_catholicos_1 # Barsegh
@@ -1763,12 +1789,12 @@ d_apostolic_church = {
 d_sunni = {
 	610.1.1 = {
 		holder_ignore_head_of_faith_requirement = 33922
-		succession_laws = {
-			temporal_head_of_faith_succession_law
-		}
 	}
 	632.6.8 = {
 		holder = 163014
+		succession_laws = {
+			temporal_head_of_faith_succession_law
+		}
 	}
 	643.8.23 = {
 		holder = 163015
@@ -1961,7 +1987,7 @@ d_shiite = { # Ismaili
 	}
 	632.6.8 = {
 		holder_ignore_head_of_faith_requirement = 33911 # Ali
-	}	
+	}
 	661.2.28 = {
 		holder = 33926 # Hasan
 	}
@@ -2183,89 +2209,86 @@ d_zayidi = {
 	1171.1.1 = {
 		holder = 0
 	}
-	# 1187–1217 - al-Mansur Abdallah bin Hamzah restores stuff
-	# 1217–1226 - an-Nasir Muhammad
-	# 1217–1239 - al-Hadi Yahya bin Muhsin
-	# 1248–1258 - al-Mahdi Ahmad bin al-Husayn
-	# 1258–1260 - al-Hasan bin Wahhas
-	# 1261–1262 - Yahya bin Muhammad as-Siraji
-	# 1262–1271 - al-Mansur al-Hasan bin Badr ad-Din
-	# 1272–1276 - al-Mahdi Ibrahim bin Ahmad Taj ad-Din
-	# 1276–1298 - al-Mutawakkil al-Mutahhar bin Yahya bin al-Murtada
-	# 1301–1328 - al-Mahdi Muhammad
-	# 1328–1346 - al-Mu'ayyad Yahya bin Hamzah
-	# 1328–1329 - an-Nasir Ali bin Salah
-	# 1329–1349 - Ahmad bin Ali al-Fathi
+	# 1187-1217 - al-Mansur Abdallah bin Hamzah restores stuff
+	# 1217-1226 - an-Nasir Muhammad
+	# 1217-1239 - al-Hadi Yahya bin Muhsin
+	# 1248-1258 - al-Mahdi Ahmad bin al-Husayn
+	# 1258-1260 - al-Hasan bin Wahhas
+	# 1261-1262 - Yahya bin Muhammad as-Siraji
+	# 1262-1271 - al-Mansur al-Hasan bin Badr ad-Din
+	# 1272-1276 - al-Mahdi Ibrahim bin Ahmad Taj ad-Din
+	# 1276-1298 - al-Mutawakkil al-Mutahhar bin Yahya bin al-Murtada
+	# 1301-1328 - al-Mahdi Muhammad
+	# 1328-1346 - al-Mu'ayyad Yahya bin Hamzah
+	# 1328-1329 - an-Nasir Ali bin Salah
+	# 1329-1349 - Ahmad bin Ali al-Fathi
 	# 1349 - al-Wathiq al-Mutahhar
-	# 1349–1372 - al-Mahdi Ali bin Muhammad
-	# 1372–1391 - al-Nasir Muhammad Salah al-Din
-	# 1391–1436 - al-Mansur Ali
+	# 1349-1372 - al-Mahdi Ali bin Muhammad
+	# 1372-1391 - al-Nasir Muhammad Salah al-Din
+	# 1391-1436 - al-Mansur Ali
 	# (...)
 }
 
-# d_muwalladi = {
-# 	929.01.16 = {
-# 		# Founding of the Cordoba Caliphate.
-# 		effect = {
-# 			faith:muwalladi = { set_religious_head_title = title:d_muwalladi }
-# 		}
-# 		holder = 3200 # Abd al-Rahman III
-# 	}
-# 	961.10.15 = {
-# 		holder = 3202 # al-Hakam II
-# 	}
-# 	976.10.1 = {
-# 		holder = 3204 # Hisham II
-# 	}
-# 	1009.2.15 = {
-# 		holder = 73671 # Muhammad II
-# 	}
-# 	1009.11.8 = {
-# 		holder = 73675 # Suleyman ibn al-Hakam
-# 	}
-# 	1010.5.10 = {
-# 		holder = 73671 # Muhammad II
-# 	}
-# 	1010.7.23 = {
-# 		holder = 3204 # Hisham II
-# 	}
-# 	1013.4.19 = {
-# 		holder = 73675 # Suleyman ibn al-Hakam
-# 	}
-# 	1016.7.1 = {
-# 		holder = 73687 # Ali ibn Hammud
-# 	}
-# 	1018.3.22 = {
-# 		holder = 73678 # Abd al-Rahman IV
-# 	}
-# 	1018.9.1 = {
-# 		holder = 73689 # al-Qasim al-Mamun
-# 	}
-# 	1021.8.4 = {
-# 		holder = 73690 # Yahya al-Muhtal
-# 	}
-# 	1023.2.6 = {
-# 		holder = 73689 # al-Qasim al-Mamun (restored)
-# 	}
-# 	1023.9.9 = {
-# 		holder = 73672 # Abd al-Rahman V
-# 	}
-# 	1024.1.17 = {
-# 		holder = 73668 # Muhammad III
-# 	}
-# 	1025.6.12 = {
-# 		holder = 73690 # Yahya al-Muhtal (restored)
-# 	}
-# 	1027.6.4 = {
-# 		holder = 3208 # Hisham III
-# 	}
-# 	1031.11.30 = {
-# 		holder = 0
-# 		effect = {
-# 			faith:muwalladi = { remove_religious_head_title = yes }
-# 		}
-# 	}
-# }
+d_muwalladi = {
+	929.01.16 = {
+		# Founding of the Cordoba Caliphate.
+		holder = 3200 # Abd al-Rahman III
+	}
+	961.10.15 = {
+		holder = 3202 # al-Hakam II
+	}
+	976.10.1 = {
+		holder = 3204 # Hisham II
+	}
+	1009.2.15 = {
+		holder = 73671 # Muhammad II
+	}
+	1009.11.8 = {
+		holder = 73675 # Suleyman ibn al-Hakam
+	}
+	1010.5.10 = {
+		holder = 73671 # Muhammad II
+	}
+	1010.7.23 = {
+		holder = 3204 # Hisham II
+	}
+	1013.4.19 = {
+		holder = 73675 # Suleyman ibn al-Hakam
+	}
+	1016.7.1 = {
+		holder = 73687 # Ali ibn Hammud
+	}
+	1018.3.22 = {
+		holder = 73678 # Abd al-Rahman IV
+	}
+	1018.9.1 = {
+		holder = 73689 # al-Qasim al-Mamun
+	}
+	1021.8.4 = {
+		holder = 73690 # Yahya al-Muhtal
+	}
+	1023.2.6 = {
+		holder = 73689 # al-Qasim al-Mamun (restored)
+	}
+	1023.9.9 = {
+		holder = 73672 # Abd al-Rahman V
+	}
+	1024.1.17 = {
+		holder = 73668 # Muhammad III
+	}
+	1025.6.12 = {
+		holder = 73690 # Yahya al-Muhtal (restored)
+	}
+	1027.6.4 = {
+		holder = 3208 # Hisham III
+	}
+	1031.11.30 = {
+		holder = 0
+		effect = {
+			#faith:sunni = { remove_religious_head_title = yes }
+		}
+	}
+}
 
 e_golden_horde = {
 	20.1.1 = {
@@ -2332,7 +2355,7 @@ e_ilkhanate = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -2497,9 +2520,14 @@ e_jin = {
 	1150.1.9 = {
 		holder = jurchen_wanyan_13	#Wanyan Digunai
 	}
+	1153.4.21 = {
+		effect = {
+			set_capital_county = title:c_youzhou
+		}
+	}
 	1161.12.15 = {
 		holder = jurchen_wanyan_14	#SHIZONG aka Wanyan Wulu
-		government = meritocratic_government
+		government = steppe_admin_government
 	}
 }
 
@@ -2628,6 +2656,13 @@ k_switzerland = {
 d_knights_templar = {
 	20.1.1 = {
 	}
+	1169.1.1 = {
+		holder = 232700 # Philippe de Milly
+	}
+	1171.4.3 = {
+		holder = st_amand_1 # Eudes de Saint-Amand
+	}
+	1178.9.30 = { holder = 0 } # prevent setup issues
 	1179.1.1 = {
 		holder = 144613
 	}
@@ -2682,6 +2717,12 @@ d_knights_templar = {
 
 d_teutonic_order = {
 	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_central_germanic
+			}
+		}
 	}
 	1192.1.1 = {
 	}
@@ -2748,7 +2789,7 @@ d_teutonic_order = {
 }
 
 
-d_knights_hospitaler = {
+d_knights_hospitaller = {
 	20.1.1 = {
 	}
 	1187.5.1 = {
@@ -2821,6 +2862,9 @@ d_hashshashin = {
 	1090.1.1 = {
 		holder = 41702
 	}
+	# 1100.1.1 = {
+	#	holder = 144225
+	# }
 	1124.6.12 = {
 		holder = 144226
 	}
@@ -2898,6 +2942,12 @@ d_saint_addai = {
 }
 
 
+d_saint_patrick = {
+	20.1.1 = {
+	}
+}
+
+
 d_sky_lords = {
 	20.1.1 = {
 	}
@@ -2939,6 +2989,408 @@ d_zun_warriors = {
 	20.1.1 = {
 	}
 }
+
+d_knights_of_the_holy_sepulchre = {
+	20.1.1 = {
+	}
+}
+
+d_knights_of_the_first_patriarchate = {
+	20.1.1 = {
+	}
+}
+
+d_knights_santiago = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_iberian
+			}
+		}
+	}
+}
+
+d_knights_of_st_lazarus = {
+	20.1.1 = {
+	}
+}
+
+d_sword_brethren = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_central_germanic
+			}
+		}
+	}
+}
+
+d_knights_alcantara = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_iberian
+			}
+		}
+	}
+}
+
+d_knights_calatrava = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_iberian
+			}
+		}
+	}
+}
+
+d_knights_aviz = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_iberian
+			}
+		}
+	}
+}
+
+d_knights_of_st_thomas = {
+	20.1.1 = {
+	}
+}
+d_knights_of_the_red_star = {
+	20.1.1 = {
+	}
+}
+
+d_order_of_the_holy_virgin = {
+	20.1.1 = {
+	}
+}
+
+d_safavid_order = {
+	20.1.1 = {
+	}
+}
+
+#Monastic Orders
+
+d_benedictine_order = {
+
+	529.1.1 = {
+	}
+}
+
+d_cluniacs = {
+
+	910.1.1 = {
+	}
+}
+
+d_camaldolese = {
+
+	1025.1.1 = {
+	}
+}
+
+d_cistercians = {
+
+	1098.1.1 = {
+	}
+}
+
+d_columban_benedictines = {
+
+	612.1.1 = {
+	}
+}
+d_pastoral_benedictines = {
+
+	600.1.1 = {
+	}
+}
+d_eremetic_benedictines = {
+
+	700.1.1 = {
+	}
+}
+d_anianian_benedictines = {
+
+	817.1.1 = {
+	}
+}
+d_st_denis_benedictines = {
+
+	775.1.1 = {
+	}
+}
+d_maurian_benedictines = {
+
+	803.1.1 = {
+	}
+}
+d_gallic_benedictines = {
+
+	681.1.1 = {
+	}
+}
+d_latin_benedictines = {
+
+	529.1.1 = {
+	}
+}
+d_corbine_benedictines = {
+
+	661.1.1 = {
+	}
+}
+d_ulaid_monasteries = {
+
+	400.1.1 = {
+	}
+}
+d_midlands_monasteries = {
+
+	400.1.1 = {
+	}
+}
+d_gaelic_columbans = {
+
+	400.1.1 = {
+	}
+}
+d_brythonic_abbeys = {
+
+	400.1.1 = {
+	}
+}
+d_gaelic_abbeys = {
+
+	400.1.1 = {
+	}
+}
+d_iberian_cluniacs = {
+
+	950.1.1 = {
+	}
+}
+d_ripollese_benedictines = {
+
+	888.1.1 = {
+	}
+}
+d_fleurians = {
+
+	930.1.1 = {
+	}
+}
+d_akritai_of_the_passes = {
+	20.1.1 = {}
+}
+d_imperial_canonesses = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = female_order
+			}
+		}
+	}
+}
+d_vallombrosans = {
+	20.1.1 = {}
+}
+d_premonstratensians = {
+	20.1.1 = {}
+}
+d_carthusians = {
+	20.1.1 = {}
+}
+d_tironensians = {
+	20.1.1 = {}
+}
+d_fontevraud_order = {
+	20.1.1 = {}
+}
+d_augustinian_canons = {
+	20.1.1 = {}
+}
+d_sankt_gallen_benedictines = {
+	20.1.1 = {}
+}
+d_ottonian_benedictines = {
+	20.1.1 = {}
+}
+d_guntherian_benedictines = {
+	20.1.1 = {}
+}
+d_hirsau_benedictines = {
+	20.1.1 = {}
+}
+d_princely_benedictines = {
+	20.1.1 = {}
+}
+d_gurloesian_benedictines = {
+	20.1.1 = {}
+}
+d_ugo_benedictines = {
+	20.1.1 = {}
+}
+d_glagolitic_benedictines = {
+	20.1.1 = {}
+}
+d_martinian_benedictines = {
+	20.1.1 = {}
+}
+d_eastern_cluniacs = {
+	20.1.1 = {}
+}
+d_edgaric_benedictines = {
+	20.1.1 = {}
+}
+d_norman_benedictines = {
+	20.1.1 = {}
+}
+d_norman_cistercians = {
+	20.1.1 = {}
+}
+d_baltic_cistercians = {
+	20.1.1 = {}
+}
+d_iberian_cistercians = {
+	20.1.1 = {}
+}
+d_eastern_cistercians = {
+	20.1.1 = {}
+}
+d_gaelic_abbeys = {
+	20.1.1 = {}
+}
+d_carmelites = {
+	20.1.1 = {}
+}
+d_franciscans = {
+	20.1.1 = {}
+}
+d_dominicans = {
+	20.1.1 = {}
+}
+d_poor_clares = {
+	20.1.1 = {}
+}
+d_studites = {
+	462.1.1 = {}
+}
+d_athonite_hermits = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = male_order
+			}
+		}
+	}
+}
+d_bithynians = {
+	20.1.1 = {}
+}
+d_latros_hesychasts = {
+	20.1.1 = {}
+}
+d_sumelan_monks = {
+	386.1.1 = {}
+}
+d_georgian_monasteries = {
+	20.1.1 = {}
+}
+d_evergetine_cenobites = {
+	1049.1.1 = {}
+}
+d_klimentine_monasteries = {
+	886.1.1 = {}
+}
+d_kyivan_studites = {
+	1051.1.1 = {}
+}
+d_yurievs = {
+	1030.1.1 = {}
+}
+d_boeotians = {
+	1150.1.1 = {}
+}
+d_euphrosynians = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = female_order
+			}
+		}
+	}
+}
+d_sisters_of_the_nativity = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = female_order
+			}
+		}
+	}
+}
+d_bahitawi = {
+	20.1.1 = {}
+}
+d_desert_fathers = {
+	360.1.1 = {}
+}
+d_monks_of_hayk = {
+	301.1.1 = {}
+}
+d_eastern_vardapets = {
+	1150.1.1 = {}
+}
+d_sons_of_the_covenant = {
+	20.1.1 = {}
+}
+d_rightful_dayroye = {
+	20.1.1 = {}
+}
+d_community_of_st_catherine = {
+	565.1.1 = {}
+}
+d_ghazis_of_al_thugur = {
+	20.1.1 = {}
+}
+d_ghazis_of_dar_al_harb = {
+	20.1.1 = {}
+}
+d_ghazis_of_al_andalus = {
+	20.1.1 = {}
+}
+d_ghazis_of_sharq_al_andalus = {
+	20.1.1 = {}
+}
+d_ghazis_of_gharb_al_andalus = {
+	20.1.1 = {}
+}
+d_turkic_ghazis = {
+	20.1.1 = {
+		effect = {
+			set_variable = {
+				name = order_heritage
+				value = culture_pillar:heritage_turkic
+			}
+		}
+	}
+}
+d_bahr_al_maghrib_raiders = {
+	20.1.1 = {
+	}
+}
+#Other titles
 
 e_latin_empire = {
 	1204.5.16 = {
@@ -3157,7 +3609,6 @@ d_erzerum = {
 		holder = 34397
 	}
 	1202.7.1 = {
-	
 		holder = 34180
 	}
 	1225.1.1 = {
@@ -3519,7 +3970,6 @@ e_germany = {
 	1000.1.1 = {
 		change_development_level = 8
 	}
-	
 	1100.1.1 = {
 		change_development_level = 16
 	}
@@ -3559,7 +4009,6 @@ e_hre = {
 	1000.1.1 = {
 		change_development_level = 8
 	}
-	
 	1100.1.1 = {
 		change_development_level = 16
 	}
@@ -3572,21 +4021,20 @@ e_hre = {
 	1039.6.4 = {
 		holder = 1314 #Heinrich III
 	}
-	1056.5.10 = {
+	1056.10.5 = {
 		holder = 1316 #Heinrich IV
 	}
 	1106.7.8 = {
 		holder = 7901 #Heinrich V
 	}
-	
+
 	1122.1.1 = {
 		# Concordat of Worms
 	}
-	
+
 	1125.8.24 = {
 		holder = 30219 #Lothar III von Supplingburg
 	}
-	
 	1137.12.4 = {
 		holder = 7903 #Konrad III von Hohenstaufen
 	}
@@ -3599,7 +4047,7 @@ e_hre = {
 	1197.9.28 = {
 		holder = 212506 #Philip I von Hohenstaufen
 	}
-	
+
 	1208.6.21 = {
 		holder = 212607 #Otto IV Welf
 	}
@@ -3637,17 +4085,20 @@ e_britannia = {
 	20.1.1 = {
 		change_development_level = 2
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 5
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 12
 	}
 }
 
 h_roman_empire = {
+	1.1.1 = {
+		government = administrative_government
+	} # Required so historical emperors match the requirements to have "hegemon_administrative_male_roman" as their title.
 	3.1.27 = {
 		holder = 145290
 	} # this way Jan 27 BC is displayed in his date, only backwards!
@@ -3801,11 +4252,13 @@ h_roman_empire = {
 }
 
 e_byzantium = {
+	1.1.1 = {
+		government = administrative_government
+	}
 	20.1.1 = {
 		change_development_level = 6
 	}
 	866.1.1 = {
-		government = administrative_government
 		succession_laws = {
 			acclamation_succession_law
 		}
@@ -3841,7 +4294,17 @@ e_byzantium = {
 	1000.1.1 = {
 		change_development_level = 10
 	}
-	
+	1054.7.16 = {
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					holder = { has_government = administrative_government }
+				}
+				set_state_rite = rite:byzantine_rite
+			}
+		}
+	}
 	1100.1.1 = {
 		change_development_level = 18
 	}
@@ -4244,7 +4707,7 @@ e_byzantium = {
 			holder = {
 				create_maa_regiment = {
 					type = varangian_guards
-					check_can_recruit = no 
+					check_can_recruit = no
 					title = title:e_byzantium
 					size = 4
 				}
@@ -4334,11 +4797,11 @@ e_italy = {
 	20.1.1 = {
 		change_development_level = 6
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 9
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 17
 	}
@@ -4349,11 +4812,11 @@ e_italy = {
 #	20.1.1 = {
 #		change_development_level = 2
 #	}
-#	
+#
 #	1000.1.1 = {
 #		change_development_level = 4
 #	}
-#	
+#
 #	1100.1.1 = {
 #		change_development_level = 12
 #	}
@@ -4364,11 +4827,11 @@ e_wendish_empire = {
 	20.1.1 = {
 		change_development_level = 2
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 5
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 12
 	}
@@ -4379,11 +4842,11 @@ e_russia = {
 	20.1.1 = {
 		change_development_level = 0
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 4
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 8
 	}
@@ -4471,6 +4934,7 @@ e_caspian-pontic_steppe = {
 e_persia = {
 	226.1.1 = {
 		holder = 159601 # Ardashir I
+		government = clan_government
 	}
 	241.1.1 = {
 		holder = 180605 # Shapur I
@@ -4702,11 +5166,11 @@ e_carpathia = {
 	20.1.1 = {
 		change_development_level = 2
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 5
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 12
 	}
@@ -4717,15 +5181,15 @@ e_france = {
 	20.1.1 = {
 		change_development_level = 4
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 8
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 16
 	}
-	
+
 	751.11.1 = {
 		holder = 131722 #PÃ©pin le Bref
 	}
@@ -4739,11 +5203,11 @@ e_spain = {
 	20.1.1 = {
 		change_development_level = 3
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 7
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 14
 	}
@@ -4921,11 +5385,11 @@ e_maghreb = {
 	20.1.1 = {
 		change_development_level = 2
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 5
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 12
 	}
@@ -4936,15 +5400,15 @@ e_arabia = {
 	20.1.1 = {
 		change_development_level = 2
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 6
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 13
 	}
-	
+
 	661.2.28 = {
 		holder = 163029
 	}
@@ -5069,11 +5533,11 @@ e_abyssinia = {
 	20.1.1 = {
 		change_development_level = 2
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 6
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 13
 	}
@@ -5084,11 +5548,11 @@ e_mali = {
 	20.1.1 = {
 		change_development_level = 0
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 3
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 6
 	}
@@ -5105,15 +5569,15 @@ e_rajastan = {
 	20.1.1 = {
 		change_development_level = 3
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 7
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 14
 	}
-	
+
 	733.8.14 = {
 		holder = 188377 # Lalitaditya Muktapida
 	}
@@ -5198,14 +5662,15 @@ e_deccan = {
 	20.1.1 = {
 		change_development_level = 4
 	}
-	
+
 	1000.1.1 = {
 		change_development_level = 8
 	}
-	
+
 	1100.1.1 = {
 		change_development_level = 16
 	}
+
 	1337.1.1 = {
 		holder = 74401
 	}
@@ -5216,14 +5681,15 @@ e_tibet = {
 	21.1.1 = {
 		change_development_level = 1
 	}
-	
+
 	1001.1.1 = {
 		change_development_level = 3
 	}
-	
+
 	1101.1.1 = {
 		change_development_level = 6
 	}
+
 	619.1.1={
 		holder = 247075
 	} #Songtsen Gampo
@@ -5569,29 +6035,38 @@ d_yungdrung_bon = {
 }
 
 d_imami = { # Twelver Imams
+	632.6.8 = {
+		holder = 33911 # Ali
+	}
+	661.2.28 = {
+		holder = 33926 # Hasan
+	}
+	670.3.6 = {
+		holder = 33912 # Hussayn
+	}
 	765.12.14 = {
 		succession_laws = {
 			temporal_head_of_faith_succession_law
 		}
-		holder_ignore_head_of_faith_requirement = 163022 # Musa al-Kadhim
+		holder = 163022 # Musa al-Kadhim
 	}
 	799.9.1 = {
-		holder_ignore_head_of_faith_requirement = 163023 # Ali al-Ridha
+		holder = 163023 # Ali al-Ridha
 	}
 	818.8.23 = {
-		holder_ignore_head_of_faith_requirement = 163024 # Muhammad al-Taqi
+		holder = 163024 # Muhammad al-Taqi
 	}
 	835.11.24 = {
-		holder_ignore_head_of_faith_requirement = 163025 # Ali al-Hadi
+		holder = 163025 # Ali al-Hadi
 	}
 	866.12.30 = {
-		holder_ignore_head_of_faith_requirement = 0
+		holder = 0
 	}
 	868.1.1 = {
-		holder_ignore_head_of_faith_requirement = 163026 # Hasan al-Askari
+		holder = 163026 # Hasan al-Askari
 	}
 	874.1.1 = {
-		holder_ignore_head_of_faith_requirement = 163027 # Muhammad al-Mahdi
+		holder = 163027 # Muhammad al-Mahdi
 	}
 	909.1.1 = {
 		holder = 0
@@ -5706,9 +6181,11 @@ e_bengal = {
 	20.1.1 = {
 		change_development_level = 2
 	}
+
 	1000.1.1 = {
 		change_development_level = 5
 	}
+
 	1100.1.1 = {
 		change_development_level = 12
 	}

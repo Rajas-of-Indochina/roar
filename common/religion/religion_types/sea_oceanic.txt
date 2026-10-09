@@ -2,6 +2,7 @@
 oceanic_religion = { # Folk religions of the Oceania region's people
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -49,8 +50,16 @@ oceanic_religion = { # Folk religions of the Oceania region's people
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate honest patient }
-		sins = { lazy greedy deceitful }
+		virtues = {
+			temperate = { weight = 30 scale = 1 }
+			patient = { weight = 20 scale = 1 }
+			honest = { weight = 20 scale = 1 }
+		}
+		sins = {
+			lazy = { weight = 20 scale = 1 }
+			deceitful = { weight = 30 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {

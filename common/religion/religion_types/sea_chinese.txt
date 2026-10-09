@@ -34,11 +34,12 @@
 	doctrine = doctrine_monasticism_absent
 	doctrine = doctrine_sacraments_absent
 
-	#Special Doctrine for Eastern Syncretism
-	doctrine = special_doctrine_is_eastern_faith
+	#Special Doctrine for Sinitic Syncretism
+	doctrine = special_doctrine_is_sinitic_faith
+	doctrine = special_doctrine_immaterial_harmony
 
 	#Allow pilgrimages
-	doctrine = doctrine_pilgrimage_encouraged
+	doctrine = doctrine_pilgrimage_local_rites
 
 	#Funeral tradition
 	doctrine = doctrine_funeral_stoic
@@ -47,18 +48,18 @@
 	doctrine = doctrine_no_anointment
 
 	#Preservation
-	doctrine = doctrine_oral_storytelling
+	doctrine = doctrine_oral_storytelling  #doctrine_mythic_literary maybe?
 
 	traits = {
 		virtues = {
-			compassionate
-			content
-			humble
+			compassionate = { weight = 30 scale = 1 }
+			content = { weight = 50 scale = 2 }
+			humble = { weight = 30 scale = 1 }
 		}
 		sins = {
-			sadistic
-			ambitious
-			arrogant
+			sadistic = { weight = 40 scale = 2 }
+			ambitious = { weight = 25 scale = 1 }
+			arrogant = { weight = 30 scale = 1.5 }
 		}
 	}
 
@@ -310,5 +311,4 @@
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
 }

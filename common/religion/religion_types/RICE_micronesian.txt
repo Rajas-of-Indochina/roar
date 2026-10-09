@@ -51,8 +51,16 @@ micronesian_religion = { # Folk religions of the Micronesians
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { diligent just generous }
-		sins = { lazy arbitrary greedy }
+		virtues = {
+			just = { weight = 20 scale = 1 }
+			diligent = { weight = 35 scale = 1 }
+			generous = { weight = 20 scale = 1 }
+		}
+		sins = {
+			arbitrary = { weight = 20 scale = 1 }
+			lazy = { weight = 35 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -249,6 +257,7 @@ micronesian_religion = { # Folk religions of the Micronesians
 		ReligiousText2 = yap_pagan_religious_text
 		ReligiousText3 = yap_pagan_religious_text
 		ReligiousHeadName = yap_pagan_religious_head_title
+		ReligiousHeadNameFemale = yap_pagan_religious_head_title
 		ReligiousHeadTitleName = yap_pagan_religious_head_title_name
 		DevoteeMale = yap_pagan_devotee
 		DevoteeMalePlural = yap_pagan_devoteeplural
@@ -295,5 +304,4 @@ micronesian_religion = { # Folk religions of the Micronesians
 		GHWName = ghw_great_holy_war
 		GHWNamePlural = ghw_great_holy_wars
 	}
-
 }

@@ -1,6 +1,7 @@
 ﻿papuan_religion = { # Various folk religions of the various peoples inhabiting Papua
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -48,8 +49,18 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { temperate honest patient }
-		sins = { lazy greedy deceitful }
+		virtues = {
+			ambitious = { weight = 30 scale = 1 }
+			brave = { weight = 30 scale = 1 }
+			just = { weight = 20 scale = 1 }
+			humble = { weight = 20 scale = 1 }
+		}
+		sins = {
+			lazy = { weight = 30 scale = 1 }
+			craven = { weight = 30 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+			arrogant = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -260,6 +271,7 @@
 		ReligiousText2 = papuan_religious_text_2
 		ReligiousText3 = papuan_religious_text_3
 		ReligiousHeadName = papuan_religious_head_title
+		ReligiousHeadNameFemale = papuan_religious_head_title
 		ReligiousHeadTitleName = papuan_religious_head_title_name
 		DevoteeMale = papuan_devotee
 		DevoteeMalePlural = papuan_devotee_plural
@@ -305,5 +317,4 @@
 		GHWName = ghw_purification
 		GHWNamePlural = ghw_purifications
 	}
-
 }

@@ -59,16 +59,16 @@ vietic_religion = {
 
 	traits = {
 		virtues = {
-			compassionate
-			calm
-			humble
-			generous
+			compassionate = { weight = 30 scale = 1 }
+			calm = { weight = 20 scale = 1 }
+			humble = { weight = 20 scale = 1 }
+			generous = { weight = 20 scale = 1 }
 		}
 		sins = {
-			sadistic
-			callous
-			greedy
-			arrogant
+			sadistic = { weight = 30 scale = 1 }
+			callous = { weight = 30 scale = 1 }
+			arrogant = { weight = 20 scale = 1 }
+			greedy = { weight = 20 scale = 1 }
 		}
 	}
 
@@ -296,6 +296,7 @@ vietic_religion = {
 		ReligiousText2 = viet_pagan_religious_text_2
 		ReligiousText3 = viet_pagan_religious_text_3
 		ReligiousHeadName = viet_pagan_religious_head_title
+		ReligiousHeadNameFemale = viet_pagan_religious_head_title
 		ReligiousHeadTitleName = viet_pagan_religious_head_title_name
 		DevoteeMale = viet_pagan_devotee
 		DevoteeMalePlural = viet_pagan_devoteeplural
@@ -330,5 +331,3 @@ vietic_religion = {
 		GHWNamePlural = ghw_great_holy_wars
 	}
 }
-
-

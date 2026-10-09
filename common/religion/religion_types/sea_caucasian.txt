@@ -1,6 +1,7 @@
 ﻿northcaucasian_religion = { # Various folk religions of the Caucasus Mountains' people
 	religion_details = {
 		family = rf_pagan
+		graphical_faith = pagan_gfx
 	}
 	doctrine = pagan_hostility_doctrine
 
@@ -48,8 +49,16 @@
 	doctrine = doctrine_oral_storytelling
 
 	traits = {
-		virtues = { brave just honest }
-		sins = { craven arbitrary deceitful }
+		virtues = {
+			brave = { weight = 30 scale = 1 }
+			just = { weight = 20 scale = 1 }
+			honest = { weight = 20 scale = 1 }
+		}
+		sins = {
+			craven = { weight = 30 scale = 1 }
+			arbitrary = { weight = 20 scale = 1 }
+			deceitful = { weight = 20 scale = 1 }
+		}
 	}
 
 	custom_faith_icons = {
@@ -146,7 +155,5 @@
 		{ name = holy_order_warriors_of_the_symbol }
 	}
 
-	holy_order_maa = { horse_archers }
-
-
+	holy_order_maa = { sea_caucasian_highlander }
 }
