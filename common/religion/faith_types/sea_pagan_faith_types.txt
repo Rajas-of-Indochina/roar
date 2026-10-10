@@ -21,7 +21,9 @@
 		tenet_eastern_syncretism
 	}
 
-	doctrines = { unreformed_faith_doctrine }
+	doctrines = {
+		unreformed_faith_doctrine
+	}
 
 	localization = {
 		#HighGod
@@ -137,6 +139,7 @@ tagai = {
 		tenet_astrology
 		tenet_ritual_celebrations
 	}
+
 	tenet_selection_pair = {
 		requires_dlc_flag = all_under_heaven
 		tenet = tenet_cranial_trophies
@@ -326,6 +329,7 @@ shendao = {
 		icon = wuism
 		reformed_icon = wuism_reformed #This is just to shut up the error
 	}
+
 	holy_sites = {
 		changsha
 		guangzhou 
@@ -356,6 +360,7 @@ formosa_animism = {
 		icon = anito
 		reformed_icon = anito_reformed
 	}
+
 	holy_sites = {
 		patungkuonu
 		cising
@@ -364,18 +369,19 @@ formosa_animism = {
 		iraya
 	}
 
-	doctrines = {
-		unreformed_faith_doctrine
-	}
-
 	tenets = {
 		tenet_ancestor_worship
 		tenet_communal_identity
 	}
+
 	tenet_selection_pair = {
 		requires_dlc_flag = all_under_heaven
 		tenet = tenet_cranial_trophies
 		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 }
 

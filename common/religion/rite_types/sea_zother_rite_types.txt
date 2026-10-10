@@ -1,38 +1,10 @@
-﻿dongba = {
-	name = dongba
-	desc = dongba_desc
-	faith = bon_faith
-	color = { 0.39 0.15 0.65 }
-	icon = dongba
+﻿chamic_shaivism = {
+	faith = shaiva_faith
+	icon = balamon
+	color = { 0.9 0.7 0.2 }
 
-	tenets = {
-		tenet_mountain_worship
-		tenet_ancestor_worship
-		tenet_esotericism	# tenet_adorcism in old RoA
-	}
-
-	doctrines = {
-		unreformed_faith_doctrine
-		doctrine_adultery_men_accepted
-		doctrine_adultery_women_accepted
-	}
-}
-
-barhailism = {
-	name = barhailism
-	desc = barhailism_desc
-	faith = barhailism
-	color = { 0.1 0.5 0.4 }
-	icon = barhailism
-}
-
-chamic_shaivism = {
 	name = chamic_shaivism
 	desc = chamic_shaivism_desc
-	faith = shaiva_faith
-
-	color = { 0.9 0.7 0.2 }
-	icon = balamon
 
 	tenets = {
 		tenet_astrology
@@ -42,12 +14,12 @@ chamic_shaivism = {
 }
 
 trika_shaivism = {
+	faith = shaiva_faith
+	icon = shaivism
+	color = { 155 17 30 }
+
 	name = trika_shaivism
 	desc = trika_shaivism_desc
-	faith = shaiva_faith
-
-	color = { 155 17 30 }
-	icon = shaivism
 
 	tenets = {
 		tenet_inner_journey
@@ -58,13 +30,141 @@ trika_shaivism = {
 
 indo_hellenism = {
 	faith = hellenic_pagan
-	color = { 0.8 0.36 0.14 }
 	icon = indo_hellenic
-	reformed_icon = indo_hellenic_reformed
-	graphical_faith = dharmic_gfx
+	color = { 0.8 0.36 0.14 }
+
 	tenets = {
 		tenet_esotericism
 		tenet_ritual_hospitality
 		tenet_eastern_syncretism
+	}
+}
+
+### Mainline - needs sorting
+### Dharmic
+ganaptism = {
+	faith = ganaptism
+	icon = hinduism_custom_1
+	color = { 215 40 30 }
+
+	tenets = {
+		tenet_ritual_hospitality
+		tenet_inner_journey
+		tenet_esotericism
+	}
+	doctrines = {
+		sampradaya_ganapatism_doctrine
+	}
+}
+kaumaram = {
+	faith = kaumaram
+	icon = shaivism
+	color = { 200 8 21 }
+
+	tenets = {
+		tenet_communal_identity
+		tenet_inner_journey
+		tenet_ritual_hospitality
+	}
+
+	doctrines = {
+		sampradaya_kaumaram_doctrine
+	}
+
+}
+
+### Dravidian
+koyapunem = {
+	faith = koyapunem
+	icon = koyapunem_icon
+	color = { 20 52 164 }
+
+
+	tenets ={
+		tenet_communal_identity
+		tenet_pacifism
+		tenet_eastern_syncretism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+### To sort
+tagai = {
+	faith = tagai
+	icon = tagai
+	color = { 52 235 76 }
+
+	tenets = {
+		tenet_astrology
+		tenet_ritual_celebrations
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+shendao = {
+	faith = shendao
+	icon = wuism
+	color = { 18 14 131 }
+
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_clerical_function_taxation
+		special_doctrine_three_teachings
+	}
+
+	tenets = {
+		tenet_adorcism
+		tenet_ancestor_worship
+		tenet_communal_identity
+	}
+}
+
+formosa_animism = {
+	faith = formosa_animism
+	icon = anito
+	color = { 142 103 21 }
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+palau_animism = {
+	faith = palau_animism
+	icon = nunusaku2
+	color = { 141 242 164 }
+
+	tenets = {
+		tenet_megaliths
+		tenet_ancestor_worship
+		tenet_adaptive
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
 	}
 }
