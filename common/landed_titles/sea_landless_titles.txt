@@ -202,6 +202,17 @@ d_phayao = {
 	capital = c_phayao
 }
 
+d_chigil = {
+	color = { 14 41 75 }
+
+	capital = c_naryn
+}
+d_turgesh = {
+	color = { 225 204 79 }
+
+	capital = c_qayaliq
+}
+
 d_circassian_pagan = {
 	color = { 55 138 211 }
 
@@ -210,15 +221,16 @@ d_circassian_pagan = {
 	definite_form = yes
 	ruler_uses_title_name = no
 	landless = yes
+	allow_domicile = no
 
 	ai_primary_priority = {
 		add = @always_primary_score
 	}
 
-	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
 	always_follows_primary_heir = yes
-	de_jure_drift_disabled = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
 }
 
 d_apsuara = {
@@ -229,34 +241,35 @@ d_apsuara = {
 	definite_form = yes
 	ruler_uses_title_name = no
 	landless = yes
-
-		ai_primary_priority = {
-		add = @always_primary_score
-	}
-
-	destroy_if_invalid_heir = yes
-	no_automatic_claims = yes
-	always_follows_primary_heir = yes
-	de_jure_drift_disabled = yes
-}
-
-d_alevi = {
-	color = { 117 109 206 }
-
-	capital = c_kyzistra
-
-	definite_form = yes
-	ruler_uses_title_name = no
-	landless = yes
+	allow_domicile = no
 
 	ai_primary_priority = {
 		add = @always_primary_score
 	}
 
-	destroy_if_invalid_heir = yes
 	no_automatic_claims = yes
 	always_follows_primary_heir = yes
-	de_jure_drift_disabled = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
+}
+
+d_alevi = {
+	color = { 117 109 206 }
+	capital = c_kyzistra
+
+	definite_form = yes
+	ruler_uses_title_name = no
+	landless = yes
+	allow_domicile = no
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
 }
 
 d_indian_catholic_papacy = {
@@ -264,8 +277,18 @@ d_indian_catholic_papacy = {
 
 	definite_form = yes
 	landless = yes
+	allow_domicile = no
 
 	capital = c_kerala
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
 }
 
 d_circassian_patriarchate = {
@@ -273,33 +296,37 @@ d_circassian_patriarchate = {
 
 	definite_form = yes
 	landless = yes
+	allow_domicile = no
 
 	capital = c_zikhopol
+
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	destroy_if_invalid_heir = yes
+	can_use_nomadic_naming = no
 }
 
 d_georgian_patriarchate = {
 	color = { 237 150 140 }
+	capital = c_shida_kartli
+
 	definite_form = yes
 	ruler_uses_title_name = no
 	landless = yes
+	allow_domicile = no
 
-	capital = c_shida_kartli
-	ai_primary_priority = { add = @always_primary_score }
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
 
-	no_automatic_claims = no
+	no_automatic_claims = yes
 	always_follows_primary_heir = yes
 	destroy_if_invalid_heir = yes
-}
-
-d_chigil = {
-	color = { 14 41 75 }
-
-	capital = c_naryn
-}
-d_turgesh = {
-	color = { 225 204 79 }
-
-	capital = c_qayaliq
+	can_use_nomadic_naming = no
 }
 
 #### Fictional Roma ####
@@ -314,7 +341,7 @@ d_laamp_roma_867 = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -330,7 +357,7 @@ d_laamp_roma_936 = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -346,7 +373,7 @@ d_laamp_roma_1066 = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -362,7 +389,7 @@ d_laamp_roma_1178 = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -380,7 +407,7 @@ d_laamp_rededya = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -396,7 +423,7 @@ d_laamp_abu_ishaq = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -412,7 +439,7 @@ d_laamp_ghazar_brigands = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -428,7 +455,7 @@ d_laamp_orbeliani = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -444,7 +471,7 @@ d_laamp_tondrakian_roa = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -460,7 +487,7 @@ d_laamp_bakjur_roa = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -476,7 +503,7 @@ d_laamp_lakzi_roa = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -491,7 +518,7 @@ d_laamp_RICE_chen_pingshan = {
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -507,7 +534,7 @@ d_laamp_saltuk = { # Saltuk, founder of the saltukids
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -523,7 +550,7 @@ d_laamp_mengujek = { # Mengujek, founder of the Mengujekids
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -539,12 +566,10 @@ d_laamp_tamish = { # Tamish, pecheneg mercenary
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
-	dlc_feature = all_under_heaven
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
-
-
 
 k_jeongan = {
 	color = { 94 98 117 }
