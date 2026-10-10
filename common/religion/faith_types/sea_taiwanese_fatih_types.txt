@@ -1,0 +1,35 @@
+formosa_animism = {
+	main_rite = formosa_animism
+	faith_details = {
+		religion = formosa_religion
+		color = { 142 103 21 }
+		icon = anito
+		reformed_icon = anito_reformed
+	}
+
+	eminent_holy_sites = {
+		patungkuonu
+		gegalasan
+	}
+
+	holy_sites = {
+		cising 	# placeholder
+		huanggang 	# placeholder
+		iraya 	# placeholder
+	}
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

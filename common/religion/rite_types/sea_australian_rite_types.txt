@@ -1,0 +1,20 @@
+tagai = {
+	faith = tagai
+	icon = tagai
+	color = { 52 235 76 }
+
+	tenets = {
+		tenet_astrology
+		tenet_ritual_celebrations
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

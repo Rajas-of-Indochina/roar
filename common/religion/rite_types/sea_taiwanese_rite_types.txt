@@ -1,0 +1,20 @@
+formosa_animism = {
+	faith = formosa_animism
+	icon = anito
+	color = { 142 103 21 }
+
+	tenets = {
+		tenet_ancestor_worship
+		tenet_communal_identity
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
