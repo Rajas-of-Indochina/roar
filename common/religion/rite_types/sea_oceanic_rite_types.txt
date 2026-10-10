@@ -1,0 +1,19 @@
+oceanic_animism = {
+	faith = oceanic_animism
+	icon = oceanic_animism
+	color = { 21 60 122 }
+
+	tenets = {
+		tenet_megaliths
+		tenet_ancestor_worship
+	}
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_cranial_trophies
+		fallback_tenet = tenet_headhunting
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}

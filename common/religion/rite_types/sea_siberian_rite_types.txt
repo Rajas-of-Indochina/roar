@@ -1,0 +1,37 @@
+siberian_pagan = { # Folk Beliefs of Ob-Ugric people, such as Khanty and Mansi
+	faith = siberian_pagan
+    color = { 230 230 230 }
+    icon = siberian
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_ritual_celebrations
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_ancestor_worship
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+kuptyng = {
+	faith = kuptyng
+	color = { 222 212 190 }
+	icon = kuptyng
+
+	tenets = {
+		tenet_reincarnation
+		tenet_ritual_celebrations
+		tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+        doctrine_clerical_gender_either
+	}
+}

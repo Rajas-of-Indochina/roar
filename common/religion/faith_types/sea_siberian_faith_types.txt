@@ -1,0 +1,67 @@
+siberian_pagan = { # Folk Beliefs of Ob-Ugric people, such as Khanty and Mansi
+	main_rite = siberian_pagan
+	faith_details = {
+		religion = siberian_religion
+		color = { 230 230 230 }
+		icon = siberian
+		reformed_icon = siberian_reformed
+	}
+
+	eminent_holy_sites = {
+		ob
+		olkhon
+	}
+
+	holy_sites = {
+		perm
+		tyumen
+		surgut
+	}
+
+	tenets = {
+		tenet_sanctity_of_nature
+		tenet_ritual_celebrations
+	}
+
+	tenet_selection_pair = {
+		requires_dlc_flag = all_under_heaven
+		tenet = tenet_takamin
+		fallback_tenet = tenet_ancestor_worship
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+}
+
+kuptyng = { # Folk Beliefs of various "Samoyedic" people like Nenets, Kott and Solqumyt people
+	main_rite = kuptyng
+	faith_details = {
+		religion = kuptyng
+		color = { 222 212 190 }
+		icon = kuptyng
+		reformed_icon = kuptyng_reformed
+	}
+
+	eminent_holy_sites = {
+		uybat
+		irbey
+	}
+
+	holy_sites = {
+		bardak
+		kachu
+		olkhon
+	}
+
+	tenets = {
+		tenet_reincarnation
+		tenet_ritual_celebrations
+		tenet_adorcism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+		doctrine_clerical_gender_either
+	}
+}

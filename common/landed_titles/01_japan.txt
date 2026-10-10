@@ -10,7 +10,9 @@ e_japan = {
 
 	landless = no
 
-	can_create = {}
+	can_create = {
+		rule_title_creation_imperial_power_projection_title_creation_trigger = yes
+	}
 
 	ai_primary_priority = {
 		if = {
@@ -73,7 +75,6 @@ e_japan = {
 			color = { 68 18 14 }
 
 			capital = c_yamashiro
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -81,7 +82,6 @@ e_japan = {
 
 			c_yamashiro = {
 				color = { 77 7 3 }
-				can_be_named_after_dynasty = no
 
 				b_kyo = {
 					province = 10603
@@ -97,7 +97,6 @@ e_japan = {
 			
 			c_settsu = {
 				color = { 46 26 23 }
-				can_be_named_after_dynasty = no
 
 				b_fukuhara = {
 					province = 10598
@@ -118,7 +117,6 @@ e_japan = {
 
 			c_yamato = {
 				color = { 101 61 60 }
-				can_be_named_after_dynasty = no
 
 				b_yoshino = {
 					province = 10613
@@ -167,7 +165,6 @@ e_japan = {
 			color = { 131 1 8 }
 
 			capital = c_iyo
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -175,7 +172,6 @@ e_japan = {
 
 			c_iyo = {
 				color = { 79 29 28 }
-				can_be_named_after_dynasty = no
 
 				b_iyo = {
 					province = 10506
@@ -206,7 +202,6 @@ e_japan = {
 
 			c_awa = {
 				color = { 171 23 39 }
-				can_be_named_after_dynasty = no
 
 				b_nakata = {
 					province = 10511
@@ -232,7 +227,6 @@ e_japan = {
 
 			c_sanuki = {
 				color = { 165 61 77 }
-				can_be_named_after_dynasty = no
 
 				b_yashima = {
 					province = 10515
@@ -253,7 +247,6 @@ e_japan = {
 
 			c_tosa = {
 				color = { 99 2 1 }
-				can_be_named_after_dynasty = no
 
 				b_nagaoka = {
 					province = 10501
@@ -284,7 +277,6 @@ e_japan = {
 
 			c_kii = {
 				color = { 192 6 2 }
-				can_be_named_after_dynasty = no
 
 				b_nagusa = {
 					province = 10614
@@ -315,7 +307,6 @@ e_japan = {
 
 			c_awaji = {
 				color = { 212 124 125 }
-				can_be_named_after_dynasty = no
 				
 				b_awaji = {
 					province = 10608
@@ -329,7 +320,6 @@ e_japan = {
 			color = { 131 48 54 }
 
 			capital = c_tanba
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -337,7 +327,6 @@ e_japan = {
 
 			c_tanba = {
 				color = { 183 21 31 }
-				can_be_named_after_dynasty = no
 
 				b_kuwada = {
 					province = 10638
@@ -358,7 +347,6 @@ e_japan = {
 
 			c_tajima = {
 				color = { 88 14 22 }
-				can_be_named_after_dynasty = no
 
 				b_keta_tajima = {
 					province = 10635
@@ -379,7 +367,6 @@ e_japan = {
 			
 			c_inaba = {
 				color = { 168 104 113 }
-				can_be_named_after_dynasty = no
 
 				b_homi = {
 					province = 10630
@@ -400,7 +387,6 @@ e_japan = {
 
 			c_tango = {
 				color = { 172 58 72 }
-				can_be_named_after_dynasty = no
 
 				b_kumano_tango = {
 					province = 10637
@@ -419,7 +405,6 @@ e_japan = {
 			color = { 98 61 64 }
 
 			capital = c_izumo
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -427,7 +412,6 @@ e_japan = {
 
 			c_izumo = {
 				color = { 137 104 107 }
-				can_be_named_after_dynasty = no
 
 				b_ou = {
 					province = 10626
@@ -453,7 +437,6 @@ e_japan = {
 
 			c_iwami = {
 				color = { 71 48 51 }
-				can_be_named_after_dynasty = no
 
 				b_naka_iwami = {
 					province = 10621
@@ -479,7 +462,6 @@ e_japan = {
 			
 			c_hoki = {
 				color = { 121 57 63 }
-				can_be_named_after_dynasty = no
 
 				b_kume = {
 					province = 10627
@@ -500,7 +482,6 @@ e_japan = {
 
 			c_oki = {
 				color = { 163 61 60 }
-				can_be_named_after_dynasty = no
 
 				b_oki = {
 					province = 10641
@@ -514,7 +495,6 @@ e_japan = {
 			color = { 37 22 23 }
 
 			capital = c_aki
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -522,7 +502,6 @@ e_japan = {
 
 			c_aki = {
 				color = { 33 23 24 }
-				can_be_named_after_dynasty = no
 
 				b_kamo = {
 					province = 10575
@@ -548,7 +527,6 @@ e_japan = {
 
 			c_bingo = {
 				color = { 63 21 21 }
-				can_be_named_after_dynasty = no
 
 				b_yasuna = {
 					province = 10579
@@ -574,7 +552,6 @@ e_japan = {
 
 			c_nagato = {
 				color = { 63 54 55 }
-				can_be_named_after_dynasty = no
 
 				b_toyora = {
 					province = 10566
@@ -600,7 +577,6 @@ e_japan = {
 
 			c_suo = {
 				color = { 62 35 40 }
-				can_be_named_after_dynasty = no
 
 				b_yoshiki = {
 					province = 10570
@@ -629,7 +605,6 @@ e_japan = {
 			color = { 163 112 113 }
 
 			capital = c_harima
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -637,7 +612,6 @@ e_japan = {
 			
 			c_harima = {
 				color = { 143 112 110 }
-				can_be_named_after_dynasty = no
 
 				b_shikama = {
 					province = 10594
@@ -668,7 +642,6 @@ e_japan = {
 			
 			c_bitchu = {
 				color = { 222 130 128 }
-				can_be_named_after_dynasty = no
 
 				b_kuboya = {
 					province = 10583
@@ -689,7 +662,6 @@ e_japan = {
 
 			c_bizen = {
 				color = { 217 172 176 }
-				can_be_named_after_dynasty = no
 
 				b_joto = {
 					province = 10589
@@ -705,7 +677,6 @@ e_japan = {
 
 			c_mimasaka = {
 				color = { 99 59 59 }
-				can_be_named_after_dynasty = no
 
 				b_tomata = {
 					province = 10592
@@ -1341,7 +1312,6 @@ e_japan = {
 			color = { 138 103 45 }
 
 			capital = c_chikuzen
-			can_be_named_after_dynasty = no
 			definite_form = yes
 
 			can_create = {
@@ -1350,7 +1320,6 @@ e_japan = {
 
 			c_chikuzen = {
 				color = { 181 157 100 }
-				can_be_named_after_dynasty = no
 
 				b_dazaifu = {
 					province = 10528
@@ -1376,7 +1345,6 @@ e_japan = {
 
 			c_bungo = {
 				color = { 112 92 65 }
-				#can_be_named_after_dynasty = no
 
 				b_oita = {
 					province = 10518
@@ -1407,7 +1375,6 @@ e_japan = {
 
 			c_buzen = {
 				color = { 192 134 20 }
-				#can_be_named_after_dynasty = no
 
 				b_usa = {
 					province = 10525
@@ -1428,7 +1395,6 @@ e_japan = {
 			
 			c_chikugo = {
 				color = { 134 80 18 }
-				can_be_named_after_dynasty = no
 
 				b_mii = {
 					province = 10533
@@ -1444,7 +1410,6 @@ e_japan = {
 
 			c_hizen = {
 				color = { 71 42 10 }
-				can_be_named_after_dynasty = no
 
 				b_saga = {
 					province = 10534
@@ -1470,7 +1435,6 @@ e_japan = {
 
 			c_tsushima = {
 				color = { 52 47 38 }
-				can_be_named_after_dynasty = no
 
 				b_yora = {
 					province = 10563
@@ -1484,7 +1448,6 @@ e_japan = {
 			color = { 250 142 13 }
 
 			capital = c_satsuma
-			can_be_named_after_dynasty = no
 
 			can_create = {
 				japan_government_japan_duchy_restriction_trigger = yes
@@ -1492,7 +1455,6 @@ e_japan = {
 
 			c_satsuma = {
 				color = { 159 78 1 }
-				can_be_named_after_dynasty = no
 
 				b_izumi_satsuma = {
 					province = 10559
@@ -1518,7 +1480,6 @@ e_japan = {
 
 			c_higo = {
 				color = { 248 115 1 }
-				can_be_named_after_dynasty = no
 
 				b_mashiki = {
 					province = 10550
@@ -1554,7 +1515,6 @@ e_japan = {
 			
 			c_hyuga = {
 				color = { 166 126 70 }
-				can_be_named_after_dynasty = no
 
 				b_koyu = {
 					province = 10540
@@ -1585,7 +1545,6 @@ e_japan = {
 
 			c_osumi = {
 				color = { 250 181 83 }
-				can_be_named_after_dynasty = no
 
 				b_soo = {
 					province = 10547
@@ -1625,6 +1584,8 @@ k_chrysanthemum_throne = {
 	definite_form = yes
 
 	can_create = { always = no }
+
+	dlc_feature = all_under_heaven
 
 	ai_primary_priority = {
 		if = {
@@ -1801,6 +1762,8 @@ d_laamp_shunkan = { # Shunkan Minamoto
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
+	dlc_feature = roads_to_power
+
 	ai_primary_priority = { add = @never_primary_score }
 }
 
@@ -1814,6 +1777,8 @@ d_laamp_takaoka = { # Prince Takaoka (Shinnyo)
 	ruler_uses_title_name = no
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
+
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -1829,6 +1794,8 @@ d_laamp_yoshitsune = { # Yoshitsune Minamoto
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
+	dlc_feature = roads_to_power
+
 	ai_primary_priority = { add = @never_primary_score }
 }
 
@@ -1842,6 +1809,8 @@ d_laamp_miyoshi_kiyotsura = { # Miyoshi Kiyotsura, Kiyotsura's Inspectors
 	ruler_uses_title_name = no
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
+
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }
@@ -1857,6 +1826,8 @@ d_laamp_hiei_wayfarers = { # Jōjin, Hiei Wayfarers
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
+	dlc_feature = roads_to_power
+
 	ai_primary_priority = { add = @never_primary_score }
 }
 
@@ -1871,6 +1842,8 @@ d_laamp_northern_blades = { # Isawa no Saburō, Northern Blades
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
 
+	dlc_feature = roads_to_power
+
 	ai_primary_priority = { add = @never_primary_score }
 }
 
@@ -1884,6 +1857,8 @@ d_laamp_band_of_the_inland_sea = { # Tsukushi no Koretaka, Band of the Inland Se
 	ruler_uses_title_name = no
 	no_automatic_claims = yes
 	destroy_if_invalid_heir = yes
+
+	dlc_feature = roads_to_power
 
 	ai_primary_priority = { add = @never_primary_score }
 }

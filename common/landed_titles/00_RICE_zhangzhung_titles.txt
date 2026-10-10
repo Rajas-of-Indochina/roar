@@ -1,0 +1,32 @@
+﻿@never_primary_score = -1000
+
+
+e_zhangzhung = {
+	#Created by decision
+	color = { 208 150 8 }
+	can_be_named_after_dynasty = no
+	
+	capital = c_tsaparang
+	
+	#definite_form = yes
+}
+
+# LAAMP TITLES
+
+d_laamp_RICE_nyangrel = {
+	color = { 100 100 100 }
+	capital = c_lhasa # He was born somewhere in Lhodrak a little south of Lhasa
+
+	dlc_feature = roads_to_power
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
+d_laamp_RICE_khutsa_dawo = {
+	color = { 100 100 100 }
+	capital = c_comai # Where Lhozhag (Lho brag/Lhodrak) is located
+
+	dlc_feature = roads_to_power
+
+	ai_primary_priority = { add = @never_primary_score }
+}

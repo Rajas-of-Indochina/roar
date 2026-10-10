@@ -1,0 +1,23 @@
+﻿@never_primary_score = -1000
+
+k_tuyuhun_restored = {
+	#Created by decision
+	color = { 225 25 25 }
+	can_be_named_after_dynasty = no
+	
+	capital = c_fuqi
+	
+	definite_form = yes
+}
+
+# LAAMP TITLES
+
+d_laamp_RICE_last_murong = {
+	color = { 100 100 100 }
+	capital = c_kuozhou
+
+	dlc_feature = roads_to_power
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+

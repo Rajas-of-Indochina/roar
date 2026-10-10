@@ -617,7 +617,7 @@ circassian_decision_kartvelism = {
 	ai_check_interval = 36
 	is_shown = {
 		NOT = {
-			faith = faith:kartvel_pagan_faith
+			faith = faith:kartvel_pagan
 		}
 		OR = {
 			any_parent_culture_or_above = {
@@ -653,11 +653,11 @@ circassian_decision_kartvelism = {
 		}
 	}
 	effect = {
-		set_character_faith_with_conversion = faith:kartvel_pagan_faith
+		set_character_faith_with_conversion = faith:kartvel_pagan
 	}
 	ai_potential = {
 		NOT = {
-			faith = faith:kartvel_pagan_faith
+			faith = faith:kartvel_pagan
 		}
 		OR = {
 			any_parent_culture_or_above = {
