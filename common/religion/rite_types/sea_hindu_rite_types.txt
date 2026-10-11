@@ -1,3 +1,122 @@
+### Vanilla Overwrites
+### Vaishnava Rites ###
+
+vaishnavism = {
+	name = vaishnavism
+	desc = vaishnavism_desc
+	faith = vaishnava_faith
+
+	color = { 1.0 0.0 0.0 }
+	icon = hinduism
+
+	tenets = {
+		tenet_reincarnation
+		tenet_bhakti
+		tenet_preservation
+	}
+}
+
+krishnaism = {
+	name = krishnaism
+	desc = krishnaism_desc
+	faith = vaishnava_faith
+
+	color = { 1.0 0.0 0.5 }
+	icon = krishnaism
+
+	tenets = {
+		tenet_reincarnation
+		tenet_bhakti
+		tenet_ritual_celebrations
+	}
+
+	doctrines = {
+		doctrine_monasticism_accepted
+	}
+}
+
+### Shaiva Rites ###
+
+shaivism = {
+	name = shaivism
+	desc = shaivism_desc
+	faith = shaiva_faith
+
+	color = { 0.9 0.2 0.3 }
+	icon = shaivism
+
+	tenets = {
+		tenet_reincarnation
+		tenet_asceticism
+		tenet_sacred_destruction
+	}
+}
+
+advaitism = {
+	name = advaitism
+	desc = advaitism_desc
+	faith = shaiva_faith
+
+	color = { 0.8 0.2 0.0 }
+	icon = advaitism
+
+	tenets = {
+		tenet_pursuit_of_knowledge
+		tenet_asceticism
+		tenet_inner_journey
+	}
+}
+
+### Shakta Rites ###
+
+srikula_shaktism = {
+	name = srikula_shaktism
+	desc = srikula_shaktism_desc
+	faith = shakta_faith
+
+	color = { 0.7 0.5 0.0 }
+	icon = srikula_shaktism
+
+	tenets = {
+		tenet_esotericism
+		tenet_inner_journey
+		tenet_ritual_celebrations
+	}
+}
+
+kalikula_shaktism = {
+	name = kalikula_shaktism
+	desc = kalikula_shaktism_desc
+	faith = shakta_faith
+
+	color = { 0.5 0.2 0.0 }
+	icon = kalikula_shaktism
+
+	tenets = {
+		tenet_esotericism
+		tenet_sacred_destruction
+		tenet_ritual_celebrations
+	}
+}
+
+saura = {
+	faith = saura
+
+	color = { 255 105 170 }
+
+	tenets = {
+		tenet_sun_worship
+		tenet_esotericism
+		tenet_sanctity_of_nature
+	}
+
+	doctrines = {
+		doctrine_deviancy_accepted
+	}
+}
+
+
+### New RoA
 chamic_shaivism = {
 	faith = shaiva_faith
 	icon = balamon
@@ -51,10 +170,6 @@ trika_shaivism = {
 
 	name = trika_shaivism
 	desc = trika_shaivism_desc
-
-	holy_sites = {
-		sharada_peeth - should be holy site for 1066+ startdates
-	}
 
 	tenets = {
 		tenet_inner_journey
