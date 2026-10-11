@@ -1,4 +1,13 @@
-﻿ganaptism = {
+﻿### Vanilla Overwrites
+# shaiva_faith
+		# RoA holy_sites (to be added maybe)
+		#ayodhya - needs to be added for all hindu faiths
+		#dwarka - needs to be added for all hindu faiths
+		#sharada_peeth - should be holy site for 1066+ startdates
+
+### New ROA
+ganaptism = {
+	# Hinduism denomination that palces Ganesha, Hindu deity of beginnings, as the supreme being
 	main_rite = ganaptism
 	faith_details = {
 		religion = hinduism_religion
@@ -7,14 +16,17 @@
 		icon = hinduism_custom_1
 	}
 
+	eminent_holy_sites = {
+		varanasi
+		ujjayini
+	}
+
 	# Sapta Puri Holy Sites
 	holy_sites = {
-		varanasi
 		ayodhya
 		mathura
 		haridwar
 		kanchipuram
-		ujjayini
 		dwarka
 	}
 
@@ -80,6 +92,7 @@
 }
 
 kaumaram = {
+	# Hinduism denomination primarily venerating Kartikeya, Hindu deity of war
 	main_rite = kaumaram
 	faith_details = {
 		# Kaumaram faiths
@@ -88,14 +101,17 @@ kaumaram = {
 		icon = shaivism		# placeholder
 	}
 
+	eminent_holy_sites = {
+		varanasi
+		ujjayini
+	}
+
 	# Sapta Puri Holy Sites
 	holy_sites = {
-		varanasi
 		ayodhya
 		mathura
 		haridwar
 		kanchipuram
-		ujjayini
 		dwarka
 	}
 
