@@ -32,8 +32,8 @@ initialize_minorities = {
 
 # culture_minorities_large
 # culture_minorities_small
-# faith_minorities_large
-# faith_minorities_small
+# rite_minorities_large
+# rite_minorities_small
 
 set_minorities_game_start = {
 	effect = {
@@ -403,11 +403,11 @@ set_minorities_game_start = {
 			}
 			every_in_list = {
 				list = neighboring_faiths
-				this = { save_temporary_scope_as = the_faith_temp }
+				this = { save_temporary_scope_as = the_rite_temp }
 				scope:the_county_temp = {
 					add_to_variable_list = {
 						name = rite_minorities_small
-						target = scope:the_faith_temp
+						target = scope:the_rite_temp
 					}
 				}
 				this = { remove_from_list = neighboring_faiths }
@@ -421,7 +421,7 @@ set_minorities_game_start = {
 					}
 					add_to_variable_list = {
 						name = rite_minorities_small
-						target = scope:the_faith_temp
+						target = scope:the_rite_temp
 					}
 				}
 			}
@@ -1881,11 +1881,11 @@ setup_MENA_minorities = {
 					kingdom = title:k_adurbadagan
 					kingdom = title:k_daylam
 				}
-				county_has_specific_faith_minority = { RITE = rite:rabbinism }
+				county_has_specific_rite_minority = { RITE = rite:rabbinism }
 			}
 			if = {
 				limit = {
-					county_has_specific_small_faith_minority = { RITE = rite:rabbinism }
+					county_has_specific_small_rite_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:parsim
@@ -1894,7 +1894,7 @@ setup_MENA_minorities = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority = { RITE = rite:rabbinism }
+					county_has_specific_large_rite_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:parsim
@@ -2356,11 +2356,11 @@ setup_MENA_minorities = {
 		every_county = { # k_yemen
 			limit = {
 				kingdom = title:k_yemen
-				county_has_specific_faith_minority = { RITE = rite:rabbinism }
+				county_has_specific_rite_minority = { RITE = rite:rabbinism }
 			}
 			if = {
 				limit = {
-					county_has_specific_small_faith_minority = { RITE = rite:rabbinism }
+					county_has_specific_small_rite_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:teimani
@@ -2369,7 +2369,7 @@ setup_MENA_minorities = {
 			}
 			else_if = {
 				limit = {
-					county_has_specific_large_faith_minority = { RITE = rite:rabbinism }
+					county_has_specific_large_rite_minority = { RITE = rite:rabbinism }
 				}
 				add_culture_minority_effect = {
 					CULTURE = culture:teimani
@@ -4301,7 +4301,7 @@ setup_tondrakian_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+				demote_rite_minority_effect = {
 					RITE = rite:tondrakian
 				}
 			}
@@ -4316,7 +4316,7 @@ setup_tondrakian_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+				demote_rite_minority_effect = {
 					RITE = rite:tondrakian
 				}
 			}
@@ -4331,7 +4331,7 @@ setup_tondrakian_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 1100.1.1 }
-				demote_faith_minority_effect = {
+				demote_rite_minority_effect = {
 					RITE = rite:tondrakian
 				}
 			}
@@ -4708,7 +4708,7 @@ setup_caucasus_south_minorities = {
 					game_start_date >= 1050.1.1
 					game_start_date < 1071.1.1
 				}
-				demote_faith_minority_effect = { RITE = rite:hanafi }
+				demote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		title:c_bagrewand = {
@@ -4741,7 +4741,7 @@ setup_caucasus_south_minorities = {
 					game_start_date >= 1050.1.1
 					game_start_date < 1071.1.1
 				}
-				demote_faith_minority_effect = { RITE = rite:hanafi }
+				demote_rite_minority_effect = { RITE = rite:hanafi }
 			}
 		}
 		# d_bagrevand
@@ -4858,7 +4858,7 @@ setup_caucasus_south_minorities = {
 			}
 			if = {
 				limit = { game_start_date >= 1050.1.1 }
-				demote_faith_minority_effect = { RITE = rite:armenian_rite }
+				demote_rite_minority_effect = { RITE = rite:armenian_rite }
 			}
 		}
 
