@@ -4357,10 +4357,10 @@ setup_tondrakian_minorities = {
 				}
 			}
 		}
-		if = {
-			limit = { game_start_date <= 870.1.1 }
-			rite:tondrakian = { deactivate_holy_site = babylon_tondrakian }
-		}
+		#if = {
+		#	limit = { game_start_date <= 870.1.1 }
+		#	rite:tondrakian = { deactivate_holy_site = babylon_tondrakian }
+		#}
 	}
 }
 
@@ -4485,7 +4485,7 @@ setup_caucasus_south_minorities = {
 				SIZE = large
 			}
 			add_rite_minority_effect = {
-				RITE = rite:georgian_orthodox
+				RITE = rite:georgian_rite
 				SIZE = large
 			}
 		}
@@ -4545,7 +4545,7 @@ setup_caucasus_south_minorities = {
 					SIZE = small
 				}
 				add_rite_minority_effect = {
-					RITE = rite:georgian_orthodox
+					RITE = rite:georgian_rite
 					SIZE = small
 				}
 			}
