@@ -13,10 +13,9 @@
 # Later revered as a local god/folk hero with magic powers by later Chinese in the region, both Manicheans and non-Manicheans
 # Is still worshipped in parts of Fujian
 RICE_chinese_manichean_001 = {
-	history_override_priority = 1000
 	name = "Deng"
 	dynasty = RICE_dynasty_lin_deng
-	rite = chinese_manichean
+	rite = mingism
 	culture = "han"
 	trait = education_learning_4
 	trait = lifestyle_mystic
@@ -28,10 +27,11 @@ RICE_chinese_manichean_001 = {
 	# Known
 	1003.2.13 = {
 		birth = yes
-		#effect = { add_character_flag = do_not_generate_starting_family }
+		#effect = { add_character_flag = RICE_enable_manichean_clothes }
 	}
 	1059.3.3 = {
 		death = yes
+		trait = saint
 	}
 }
 
@@ -39,10 +39,9 @@ RICE_chinese_manichean_001 = {
 # Chinese Manichean leader who was a disciple of Lin Deng and inherited his mantle after Lin Deng's death
 # Doesn't seem like much is known about him
 RICE_chinese_manichean_002 = {
-	history_override_priority = 1000
 	name = "Pingshan"
 	dynasty = RICE_dynasty_chen_pingshan
-	rite = chinese_manichean
+	rite = mingism
 	culture = "han"
 	trait = education_learning_3
 	trait = lifestyle_mystic
@@ -52,7 +51,10 @@ RICE_chinese_manichean_002 = {
 	# Unknown
 	1034.2.5 = {
 		birth = yes
-		effect = { add_character_flag = do_not_generate_starting_family }
+		effect = {
+			add_character_flag = do_not_generate_starting_family
+			add_character_flag = special_laamp_char
+		}
 	}
 	1108.8.8 = {
 		death = yes

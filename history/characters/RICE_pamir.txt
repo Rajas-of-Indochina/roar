@@ -1,10 +1,10 @@
 ﻿
 # Puteshan (Badakhshan)
+# Humar Bek, according to the geographer Ya'qubi, was ruling Shughnan and Badakhshan in c. 891 
 RICE_pamir_001 = {
-	history_override_priority = 1000
-	name = "VI_S_tap"
+	name = "Humar"
 	dynasty = RICE_puteshan
-	rite = mahayana
+	rite = "mahayana"
 	culture = "pamiri"
 
 	# History
@@ -18,10 +18,9 @@ RICE_pamir_001 = {
 
 # Wakhanshah
 RICE_pamir_002 = {
-	history_override_priority = 1000
 	name = "Firdews"
 	dynasty = RICE_wakhanshah
-	rite = theravada
+	rite = "vajrayana"
 	culture = "pamiri"
 
 	# History
@@ -35,10 +34,9 @@ RICE_pamir_002 = {
 
 # Shugnanshah
 RICE_pamir_003 = {
-	history_override_priority = 1000
 	name = "Xwedayar"
 	dynasty = RICE_shugnanshah
-	rite = khurmazta # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
+	rite = "khurmazta" # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
 	culture = "pamiri"
 
 	# History
@@ -52,10 +50,9 @@ RICE_pamir_003 = {
 
 # Shugnanshah 2 (Hyecho says there were 9 kings in Shugnan, Chinese sources list 5)
 RICE_pamir_004 = {
-	history_override_priority = 1000
 	name = "KA_vus"
 	dynasty = RICE_shugnanshah_2
-	rite = khurmazta # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
+	rite = "khurmazta" # Hyecho says Buddhism was unknown in Shughnan, but does not mention Zoroastrianism; hence, theoretical conjecture that they were some pagan variety or folk Eastern Zoroastrianism
 	culture = "pamiri"
 
 	# History
@@ -69,10 +66,9 @@ RICE_pamir_004 = {
 
 # Ali ibn Asad's father
 RICE_pamir_005 = {
-	history_override_priority = 1000
 	name = "Asad"
 	dynasty = RICE_ali_ibn_asad
-	rite = hanafi # was maturidi, fix later
+	rite = "shafii"
 	culture = "pamiri"
 
 	# History
@@ -88,7 +84,7 @@ RICE_pamir_005 = {
 # RICE_pamir_006 = {
 # 	name = "Ali"
 # 	dynasty = RICE_ali_ibn_asad
-# 	rite = hanafi # was maturidi, fix later
+# 	rite = "shafii"
 # 	culture = "pamiri"
 # 	learning=6
 # 	trait = education_learning_3
@@ -122,10 +118,9 @@ RICE_pamir_005 = {
 
 # Shri Badat's ancestor according to a Burusho legend, which states he is a prince from Ladakh
 RICE_pamir_007 = {
-	history_override_priority = 1000
 	name = "Kisar"
 	dynasty = RICE_shri_badat
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "tsangpa" # Gesar? Tibetan from Ladakh?
 
 	# History
@@ -139,10 +134,9 @@ RICE_pamir_007 = {
 
 # Shri Badat's grandfather according to a Burusho legend
 RICE_pamir_008 = {
-	history_override_priority = 1000
 	name = "Bugar"
 	dynasty = RICE_shri_badat
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_007
 
@@ -157,10 +151,9 @@ RICE_pamir_008 = {
 
 # Shri Badat's father according to a Burusho legend
 RICE_pamir_009 = {
-	history_override_priority = 1000
 	name = "Agur"
 	dynasty = RICE_shri_badat
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_008
 
@@ -175,10 +168,9 @@ RICE_pamir_009 = {
 
 # Shri Badat, legendary cannibal king of Gilgit
 RICE_pamir_010 = {
-	history_override_priority = 1000
 	name = "Badat"
 	dynasty = RICE_shri_badat
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	trait = education_intrigue_3
 	trait = cannibal
@@ -207,10 +199,9 @@ RICE_pamir_010 = {
 
 # Shri Badat's sister
 RICE_pamir_011 = {
-	history_override_priority = 1000
 	name = "Yathini"
 	dynasty = RICE_shri_badat
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	female = yes
 	trait = giant
@@ -233,10 +224,9 @@ RICE_pamir_011 = {
 
 # Shri Badat's daughter
 RICE_pamir_012 = {
-	history_override_priority = 1000
 	name = "Nur_Bakht"
 	dynasty = RICE_shri_badat
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	female = yes
 	father = RICE_pamir_010
@@ -260,10 +250,9 @@ RICE_pamir_012 = {
 
 # Azur Jamshid
 RICE_pamir_013 = {
-	history_override_priority = 1000
 	name = "Azur_Jamshid"
 	dynasty = RICE_azur_jamshid
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = "persian"
 	martial = 6
 	prowess = 7
@@ -287,7 +276,7 @@ RICE_pamir_013 = {
 		effect = {
 			set_relation_soulmate = character:RICE_pamir_012
 		}
-		rite = vajrayana
+		rite = "vajrayana"
 	}
 	908.5.22 = { # Abdicated
 		death = "908.5.22"
@@ -296,10 +285,9 @@ RICE_pamir_013 = {
 
 # Azur Jamshid's son
 RICE_pamir_014 = {
-	history_override_priority = 1000
 	name = "Garg"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_013
 	mother = RICE_pamir_012
@@ -316,10 +304,9 @@ RICE_pamir_014 = {
 
 # Azur Jamshid's grandson
 RICE_pamir_015 = {
-	history_override_priority = 1000
 	name = "Sau_Malik"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_014
 
@@ -334,10 +321,9 @@ RICE_pamir_015 = {
 
 # Azur Jamshid's great-grandson
 RICE_pamir_016 = {
-	history_override_priority = 1000
 	name = "Shah_Malik"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_015
 
@@ -352,10 +338,9 @@ RICE_pamir_016 = {
 
 # Azur Jamshid's great-great-grandson
 RICE_pamir_017 = {
-	history_override_priority = 1000
 	name = "Deng_Malik"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_016
 
@@ -370,10 +355,9 @@ RICE_pamir_017 = {
 
 # Married a princess from Badakhshan (Muhtajid but probably not accurate)
 RICE_pamir_018 = {
-	history_override_priority = 1000
 	name = "Khusrau"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_017
 
@@ -391,10 +375,9 @@ RICE_pamir_018 = {
 
 # Badakhshan princess
 RICE_pamir_019 = {
-	history_override_priority = 1000
 	name = "Ipek"
 	dynasty = 1059007 # Fictitious connection
-	rite = mahayana
+	rite = "mahayana"
 	culture = "karluk" # Dynasty was probably of Turkic origin but became assimilated
 	female = yes
 
@@ -407,11 +390,11 @@ RICE_pamir_019 = {
 	}
 }
 
+# Haydar
 RICE_pamir_020 = {
-	history_override_priority = 1000
 	name = "Haydar"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_018
 	mother = RICE_pamir_019
@@ -425,28 +408,30 @@ RICE_pamir_020 = {
 	}
 }
 
+# Nur
 RICE_pamir_021 = {
-	history_override_priority = 1000
 	name = "Nur" # Even tho this is a female name usually???
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
+	trait = zealous # Religious devotion
+	trait = humble # Left ministers to do work
+	trait = temperate
 	father = RICE_pamir_020
 
 	# History
 	1035.7.9 = {
 		birth = "1035.7.9"
 	}
-	1127.3.4 = { # Actual year in legend (?)
+	1127.3.4 = { # Actual year in legend (?) He abdicated in 1127 too
 		death = "1127.3.4"
 	}
 }
 
 # Jataylotu - a minister of Shri Badat according to a Burusho version of the legend - old Burusho name
 RICE_pamir_022 = {
-	history_override_priority = 1000
 	name = "Jataylotu"
-	rite = nuristani_pagan
+	rite = "nuristani_pagan"
 	culture = "burusho"
 	trait = education_stewardship_3
 	trait = patient
@@ -482,10 +467,9 @@ RICE_pamir_022 = {
 
 # Shah Mirza
 RICE_pamir_023 = {
-	history_override_priority = 1000
 	name = "Shah_Mirza"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_021
 
@@ -500,10 +484,9 @@ RICE_pamir_023 = {
 
 # Tartora Khan
 RICE_pamir_024 = {
-	history_override_priority = 1000
 	name = "Tartora_Khan"
 	dynasty = RICE_azur_jamshid
-	rite = vajrayana
+	rite = "vajrayana"
 	culture = "nuristani"
 	father = RICE_pamir_023
 
@@ -526,10 +509,9 @@ RICE_pamir_024 = {
 
 # Abu Zayd al-Balkhi, Persian polymath who founded a school of terrestial mapping and a pioneer in the field of psychology
 RICE_afghan_misc_001 = {
-	history_override_priority = 1000
 	name = "abu_zayd"
 	dynasty = RICE_al_balkhi_dynasty
-	rite = hanafi
+	rite = "hanafi"
 	culture = "tajik" # Khorasani
 	diplomacy = 7
 	stewardship = 6
@@ -554,10 +536,9 @@ RICE_afghan_misc_001 = {
 # Traveler, Sufi teacher, pilgrim from Herat 
 # See Muhammad Husni, “Solidification of Worldview, Liberation Strategy, and Revival of Sunnism”
 RICE_afghan_misc_002 = {
-	history_override_priority = 1000
 	name = "Ali"
 	dynasty = RICE_al_harawi_dynasty
-	rite = hanafi # was maturidi, fix later
+	rite = "shafii"
 	culture = "afghan"
 	diplomacy = 7
 	martial = 6 # Apparently wrote a military treatise manual for Saladin
@@ -580,17 +561,93 @@ RICE_afghan_misc_002 = {
 	}
 }
 
+
 ############################################################
 # 
-# FICTITIOUS CHARACTERS
+# CHITRAL KALASHA RULERS - FAMILY OF SHALAK SHAH AND ADABOG
+# 
+# A helpful source: https://www.phs.com.pk/index.php/phs/article/view/244/121
+# 
+# Cybr Note: There are many different folk legends about the origins and early chiefs of the Kalash people 
+# For gampelay simplification and purposes, I've only selected a prominent one to depict here
+# Other legends' timeframe is hard to place, and varies by centuries, so I've elected just to do this one
+# Since it seems tied to the 10th century so I could place them comfortably in the 867
+# 
+############################################################
+
+# Bangota
+# Father of Adabog in one version of the Kalash origin story
+# (But not apparently mentioned as Shalak's father - but I've made him Shalak's father so this timeline makes sense)
+RICE_pamir_chitral_867_001 = {
+	name = "Bangota"
+	dynasty = RICE_chitral_867_dynasty
+	rite = "nuristani_pagan"
+	culture = "nuristani"
+	808.8.8 = {
+		birth = yes
+	}
+	864.4.6 = { 
+		death = yes
+	}
+}
+
+# Shalak Shah
+# Legendary Kalasha leader who led the Kalash into Chitral in the 10th century
+# Said to reign from Drosh in the south to Lutkho in the north, which covers much of Chitral
+RICE_pamir_chitral_867_002 = {
+	name = "Shalak"
+	dynasty = RICE_chitral_867_dynasty
+	rite = "nuristani_pagan"
+	culture = "nuristani"
+	father = RICE_pamir_chitral_867_001
+	848.2.20 = {
+		birth = yes
+	}
+	920.6.9 = { 
+		death = yes
+	}
+}
+
+# Adabog
+# He was Shalak's brother in one version of the legend, and alternatively the actual leader who led the Kalash into Chitral in another
+RICE_pamir_chitral_867_003 = {
+	name = "Adabog"
+	dynasty = RICE_chitral_867_dynasty
+	rite = "nuristani_pagan"
+	culture = "nuristani"
+	father = RICE_pamir_chitral_867_001
+	858.5.22 = {
+		birth = yes
+	}
+	939.9.6 = { 
+		death = yes
+	}
+}
+
+############################################################
+# 
+# CHITRAL KALASHA RULERS - DESCENDANTS OF SHURASAI
+# 
+# A helpful source: https://www.phs.com.pk/index.php/phs/article/view/244/121
+# 
+# Cybr Note: There are many different folk legends about the origins and early chiefs of the Kalash people 
+# For gampelay simplification and purposes, I've only selected a few to depict here
+# 
+# Shurasai supposedly came to Chitral around 15-16 generations ago (i.e. ~500 years ago)
+# 
+# 
+############################################################
+
+############################################################
+# 
+# MISCELLANEOUS CHARACTERS
 # 
 ############################################################
 
 # Fictional Chitral ruler for 867
 RICE_pamir_misc_001 = {
-	history_override_priority = 1000
 	name = "Yamarajan"
-	rite = nuristani_pagan
+	rite = "nuristani_pagan"
 	culture = "nuristani"
 
 	# History
@@ -604,9 +661,8 @@ RICE_pamir_misc_001 = {
 
 # Fictional Chitral ruler for 1066
 RICE_pamir_misc_002 = {
-	history_override_priority = 1000
 	name = "Kshumai"
-	rite = nuristani_pagan
+	rite = "nuristani_pagan"
 	culture = "nuristani"
 
 	# History
@@ -620,9 +676,8 @@ RICE_pamir_misc_002 = {
 
 # Fictional Chitral ruler for 1178
 RICE_pamir_misc_003 = {
-	history_override_priority = 1000
 	name = "ZUzum"
-	rite = nuristani_pagan
+	rite = "nuristani_pagan"
 	culture = "nuristani"
 
 	# History
@@ -634,20 +689,25 @@ RICE_pamir_misc_003 = {
 	}
 }
 
-# Fictional Shughnan ruler for 1066
-# This is based on Al-Biruni who mentions the frontier region of 1030 in a way that implies it lay beyond the control of Badakhshan
+# Legendary Shughnan ruler for 1066
+# Al-Biruni mentions the frontier region of 1030 in a way that implies it lay beyond the control of Badakhshan
 # For game purposes, I've made them a vassal of the Badakhshan rulers
+# Riv-i Farhad was a legendary ruler of Shughnan possibly in the 12th century
 # See this: https://www.academia.edu/105390859/The_History_of_Badakhshan_from_the_7th_to_the_19th_Century
+# https://www.academia.edu/59880454/The_Ismailis_of_Badakhshan_Conversion_and_Narrative_in_Highland_Asia
+# https://utoronto.scholaris.ca/server/api/core/bitstreams/c84d298a-ff3e-44c2-a8d4-579101609da0/content
 RICE_pamir_misc_004 = {
-	history_override_priority = 1000
-	name = "Ferheng"
-	dynasty = RICE_shugnanshah_2
-	rite = khurmazta
+	name = "riv_i_farhad"
+	dynasty = RICE_shugnanshah_3
+	rite = "khurmazta"
 	culture = "pamiri"
 
 	# History
 	1039.6.4 = {
 		birth = yes
+	}
+	1060.1.1 = {
+		add_spouse = RICE_pamir_misc_006
 	}
 	1102.4.14 = { 
 		death = yes
@@ -659,10 +719,9 @@ RICE_pamir_misc_004 = {
 # For game purposes, I've made them a vassal of the Badakhshan rulers
 # See this: https://www.academia.edu/105390859/The_History_of_Badakhshan_from_the_7th_to_the_19th_Century
 RICE_pamir_misc_005 = {
-	history_override_priority = 1000
 	name = "Xarmandar"
 	dynasty = RICE_wakhanshah_2
-	rite = mahayana
+	rite = "mahayana"
 	culture = "pamiri"
 
 	# History
@@ -670,6 +729,39 @@ RICE_pamir_misc_005 = {
 		birth = yes
 	}
 	1100.6.19 = { 
+		death = yes
+	}
+}
+
+# Riv-i Farhad according to legend had a daughter who married a Muslim missionary
+# Thus, I'm giving him a fictitious wife
+RICE_pamir_misc_006 = {
+	name = "Zerya"
+	female = yes
+	rite = "khurmazta"
+	culture = "pamiri"
+	1038.11.22 = {
+		birth = yes
+	}
+	1099.11.2 = { 
+		death = yes
+	}
+}
+
+# Daughter of Riv-i Farhad
+# Supposedly married a Muslim missionary who converted her father, and inherited her father's lands (I think?)
+RICE_pamir_misc_007 = {
+	name = "S_elal"
+	female = yes
+	dynasty = RICE_shugnanshah_3
+	rite = "khurmazta"
+	culture = "pamiri"
+	father = RICE_pamir_misc_004
+	mother = RICE_pamir_misc_006
+	1063.4.2 = {
+		birth = yes
+	}
+	1135.9.12 = { 
 		death = yes
 	}
 }

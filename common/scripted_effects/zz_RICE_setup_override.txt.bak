@@ -1984,102 +1984,6 @@ RICE_setup_pamir_flavor_pack_effect = {
 	# HISTORICAL CHARACTERS
 	#
 	############################################################
-
-	if = {
-		limit = {
-			NOT = { has_global_variable = RICE_game_started_on_TFE_start_date }
-			is_dharmachakra_loaded = no
-		}
-		character:188700 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188701 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188702 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188703 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188628 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188705 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188706 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188707 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188708 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188709 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188710 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188711 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188712 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188713 = {
-			set_culture = culture:turco_hephthalite
-			random_secret = {
-				limit = { secret_type = secret_crypto_religionist }
-				remove_secret = yes
-			}
-			remove_character_secret_faith = yes
-		}
-		character:188714 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188715 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188716 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188717 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188718 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188719 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188720 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188721 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188722 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188723 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188724 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188565 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188566 = {
-			set_culture = culture:turco_hephthalite
-		}
-		character:188567 = {
-			set_culture = culture:turco_hephthalite
-		}
-	}
 	
 	if = {
 		limit = {
@@ -2152,10 +2056,9 @@ RICE_setup_pamir_flavor_pack_effect = {
 			add_courtier = scope:jataylotu_minister	
 			RICE_make_clan_effect = yes
 		}
-		character:RICE_pamir_misc_001 = { # Give titles and bonuses to Chitral ruler
-			get_title = title:c_chitral
-			RICE_setup_new_granted_ruler_bonuses_effect = yes
-		}
+		#character:RICE_pamir_misc_001 = { # Give titles and bonuses to Chitral ruler
+		#	RICE_setup_new_granted_ruler_bonuses_effect = yes
+		#}
 	}
 		
 	if = {
@@ -2179,31 +2082,16 @@ RICE_setup_pamir_flavor_pack_effect = {
 		# Ali ibn Asad, Nasir Khusraw's friend
 		character:badakhshanids_2 = { 
 			save_scope_as = ali_ibn_asad
-			set_culture = culture:pamiri
-			set_character_faith = faith:maturidi
-			every_courtier_or_guest = {
-				limit = {
-					culture = { has_cultural_pillar = heritage_iranian }
-					religion = religion:islam_religion
-					NOT = { has_character_modifier = RICE_pamir_nasir_khusraw }
-				}
-				set_character_faith = faith:maturidi
-				set_culture = culture:pamiri
-			}
 			set_relation_friend = {
 				reason = RICE_friend_reason_placeholder
 				target = character:persian_scholars_3
 			}
 			# trigger_event = pamir.0003 # Moved to the Pamir modifiers file
 		}
-		character:badakhshanids_1 = {
-			set_culture = culture:pamiri
-			#set_character_faith = faith:maturidi # Leaves errors since he's dead even though it works fine for cultures on dead people???
-		}
-		character:badakhshanids_3 = {
-			set_culture = culture:pamiri
-			set_character_faith = faith:maturidi
-		}
+		#character:badakhshanids_1 = {
+		#}
+		#character:badakhshanids_3 = {
+		#}
 		# character:248023 = {
 		# 	trigger_event = pamir.0002
 		# }
@@ -2221,29 +2109,18 @@ RICE_setup_pamir_flavor_pack_effect = {
 			}
 		}
 		# Kemaladdin Armanjani, count of a few places in Zabulistan, seems to be a fictitious guy though I'm not sure (?)
-		character:20690 = {
-			set_culture = culture:khalaj
-			every_courtier_or_guest = {
-				limit = {
-					culture = culture:turkish
-				}
-				set_culture = culture:khalaj
-			}
-		}
+		#character:20690 = {
+		#}
 		character:RICE_pamir_misc_002 = { # Give titles and bonuses to Chitral ruler
-			get_title = title:c_chitral
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 		character:RICE_pamir_misc_004 = { # Give titles and bonuses to Shughnanshah ruler
-			get_title = title:c_shughnan
-			get_title = title:c_karran
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			hidden_effect = {
 				RICE_jizya_contract_at_start_effect = yes
 			}
 		}
 		character:RICE_pamir_misc_005 = { # Give titles and bonuses to Wakhanshah ruler
-			get_title = title:c_wakhan
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 			hidden_effect = {
 				RICE_jizya_contract_at_start_effect = yes
@@ -2260,32 +2137,12 @@ RICE_setup_pamir_flavor_pack_effect = {
 			dynasty = { add_dynasty_prestige = 1000 }
 		}
 		character:RICE_pamir_misc_003 = { # Give titles and bonuses to Chitral ruler
-			get_title = title:c_chitral
 			RICE_setup_new_granted_ruler_bonuses_effect = yes
 		}
 	}
 
-	character:170252 ?= {
-		RICE_remove_education_traits_effect = yes
-		RICE_remove_personality_traits_effect = yes
-		remove_all_perk_lifestyle_traits_effect = yes
-		add_trait = education_martial_3
-		give_random_commander_trait_effect = yes
-		add_trait = ambitious
-		add_trait = zealous
-		add_trait = brave
-		add_trait = beauty_bad_1 # Said to be ugly, though not sure if this is later Buddhist propaganda, but Wikipedia quotes a modern Muslim academic on this (?)
-		set_culture = culture:khalaj
-		every_courtier_or_guest = {
-			limit = {
-				OR = {
-					culture = culture:afghan
-					culture = culture:turkish
-				}
-			}
-			set_culture = culture:khalaj
-		}
-	}
+	#character:170252 ?= {
+	#}
 
 	
 	############################################################

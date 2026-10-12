@@ -1,5 +1,31 @@
 ﻿##### Holy sites moved from 10_sea_holy_sites #####
 ### Sal, Khasi and Meitei people holy sites ###
+barra_basti = {
+	# heartland of Angami Naga
+	county = c_manipur
+	barony = b_kohima
+
+	county_holder_character_modifier = {
+		councillor_opinion = 3
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		tax_mult = 0.01
+		hostile_raid_time = 0.02
+	}
+
+	faith_character_modifier = {
+		courtier_and_guest_opinion = 5
+		councillor_opinion = 5
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_income_mult = 0.005
+	}
+}
+
 goalpara = {
 	# Goalpara is main settlement for the Garo people
 	county = c_goalpara
@@ -48,31 +74,6 @@ manikuta = {
 		scale = holy_site_total_artifact_rarity
 		same_faith_opinion = 0.5
 		house_relation_change_mult = 0.01
-	}
-}
-
-manipur = {
-	# Mount Koubru and other sacred areas in Manipur
-	county = c_manipur
-
-	county_holder_character_modifier = {
-		same_culture_opinion = 3
-	}
-
-	county_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		development_growth_factor = 0.01
-		travel_danger = -1
-	}
-
-	faith_character_modifier = {
-		same_culture_opinion = 5
-	}
-
-	faith_character_modifier_scaled = {
-		scale = holy_site_total_artifact_rarity
-		cultural_head_acceptance_gain_mult = 0.015
-		monthly_prestige_gain_mult = 0.01
 	}
 }
 

@@ -1,0 +1,452 @@
+﻿
+##############################################################
+# 
+# HRUK WER / HRUGS WER FAMILY
+# (Prominent noble family and patrons of Buddhism in Guge, and clan of Rinchen Zangpo, the famous translator)
+# Most members below, outside of Rinchen Zangpo's immediate family, are from donors at a mural in Tholing dating to the early 11th century around the time of King Yeshe-O
+# The mural may have been made to honor Yeshe-O's memory shortly after his death, so maybe around 1020s earliest (CK3 vanilla has him dying in 1040).
+# I cannot find information on their family relations, so I will resort to some fictitious relations between the family to keep them connected
+# If anyone reading this knows more about the family's dates that would be more accurate, please let me know!
+# See here for more info: https://www.academia.edu/1477385/_Preliminary_Remarks_on_the_Donor_Inscriptions_and_Iconography_of_an_11th_Century_Mchod_rten_at_Tholing_In_Tibetan_Art_and_Architecture_in_Context_Piats_2006_Tibetan_Studies_Proceedings_of_the_Eleventh_Seminar_of_the_International_Association_for_Tibetan_Studies_K%C3%B6nigswinter_2006_Erberto_Lo_Bue_and_Christian_Luczanits_eds_Halle_Saale_International_Institute_for_Tibetan_Studies_pp_43_74
+# There are several other names of donors from the Hrugs family at the donor site, but the article doesn't really give much more detail about them
+# 
+# According to The Social and the Religious in Early Post-Imperial Tibet, they had estates in Skyin wer ba, Mkhar Bdu lang Kyung rtse (perhaps identifiable with the present Mkhar rtse area?)
+# 
+##############################################################
+
+
+# Chakchang Lhadok
+RICE_hrugs_wer_001 = {
+	name = "chakchang_lhadok"
+	dynasty = RICE_dynasty_hrugs_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_hrugs_wer_003
+	mother = RICE_mang_wer_1
+	# Dates uncertain, but according to this article, he was likely an adult between around 1025 to 1060 at the least
+	# Based on a scuplture of Avaloketisvara with his name inscribed on it, dating to roughly 1025 to 1060
+	# https://www.academia.edu/43688340/Tracing_the_Impact_of_Kashmiri_Art_in_Guge_and_Ladakh_Eleventh_to_Thirteenth_centuries
+	1022.4.6 = {
+		birth = yes
+	}
+	1096.5.3 = {
+		death = yes
+	}
+}
+
+# Hrugs 'or Za
+# Noblewoman attested in Buddhist donors of Guge
+# There are a lot of Guge female donors, majority of them come from the Hrugs/Hruk clan or married into it
+# I cannot discern what her relation is to everyone else in the family, whether she's a member of it by birth or through marriage
+# I have made her Chakchang Lhado's sister for now, even if it makes her ahistorically a bit younger than she should be
+RICE_hrugs_wer_002 = {
+	name = "_or_za"
+	female = yes
+	dynasty = RICE_dynasty_hrugs_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_hrugs_wer_003
+	mother = RICE_mang_wer_1
+	1032.3.19 = {
+		birth = yes
+	}
+	1079.12.16 = {
+		death = yes
+	}
+}
+
+# Hrugs wer khri dog rje
+# Man of some sort of high status, depicted as bigger than other donors at a Tholing site
+# Khri is indicative of some sort of political authority, Dog is apparently a name, and Rje means 'lord'
+# This indicates probably "Dog" is his personal name
+# Not sure what his relation to the rest of the family is, so I made him Chakchang Lhado's father
+RICE_hrugs_wer_003 = {
+	name = "hrugs_wer_dog_donor"
+	dynasty = RICE_dynasty_hrugs_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	995.8.25 = {
+		birth = yes
+	}
+	1021.1.1 = {
+		add_spouse = RICE_mang_wer_1
+	}
+	1066.3.17 = {
+		death = yes
+	}
+}
+
+# Hrugs wer dmag pon lha blon
+# Also attested at the Tholing site
+# Dmag pon/Dmag dpon means 'army commander' and 'lha blon' means either religious ministor/councilor, but it may also mean 'minister of royal origin'
+# Since it doesn't appear we can find his 'real' name, I've used Dmag Pon Lha Blon as his name, and have made him have martial education
+RICE_hrugs_wer_004 = {
+	name = "dmag_pon_lha_blon"
+	dynasty = RICE_dynasty_hrugs_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	trait = education_martial_3
+	1005.7.1 = {
+		birth = yes
+	}
+	1069.6.2 = {
+		death = yes
+	}
+}
+
+
+##############################################################
+# 
+# MANG WER FAMILY
+# (Another noble family and patrons of Buddhism in Guge)
+# According to The Social and the Religious in Early Post-Imperial Tibet, they had estates in Phyi wang (perhaps identical with present Phyi dbang), Rme los sgyung and Sad mkhar
+# Phyi Dbang is right next to Tsaparang
+# 
+##############################################################
+
+
+# mang wer za 'eng ba rgyal
+# Noblewoman attested in Buddhist mural of Tholing mentioned above
+# It's uncertain whether she was born into the Mang Wer family, or married into it; but I've made her a member of it for now
+# I cannot discern what her relation is to everyone else in the family, whether she's a member of it by birth or through marriage, so I have made her Chakchang Lhado's mother for now
+RICE_mang_wer_1 = {
+	name = "za_eng_ba_rgyal"
+	female = yes
+	dynasty = RICE_dynasty_mang_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_mang_wer_2
+	1004.3.19 = {
+		birth = yes
+	}
+	1065.6.27 = {
+		death = yes
+	}
+}
+
+# Mang wer Byang-chub-shesrab
+# Accompanied Rinchen Zangpo on a trip to Kashmir for Buddhist education, according to one source, Khyitangpa, though uncertain veracity since it doesn't align with other historical sources (?)
+# One of the few sent in this group who survived
+# I've made him the father of mang wer za 'eng ba rgyal for now
+RICE_mang_wer_2 = {
+	name = "byang_chub_shesrab"
+	dynasty = RICE_dynasty_mang_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	trait = education_learning_3
+	trait = physique_good_1
+	trait = zealous
+	trait = diligent
+	trait = temperate
+	976.5.4 = {
+		birth = yes
+	}
+	1052.4.2 = {
+		death = yes
+	}
+}
+
+# Mang Wer Seng Spyan
+# I'm not sure if this person is, well, a thing or should be included here
+# As I found a source that just mentions a "layman (mang wer) Seng Spyan"
+# So I might be misreading that and this person might not even be from the 11th century
+# however, to ensure the Mang Wer have someone who exists and can carry the family lineage, I've put him here
+RICE_mang_wer_3 = {
+	name = "seng_spyan"
+	dynasty = RICE_dynasty_mang_wer
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_mang_wer_2
+	1017.3.2 = {
+		birth = yes
+	}
+	1072.4.2 = {
+		death = yes
+	}
+}
+
+##############################################################
+# 
+# Yudra Family - Rinchen Zangpo's Family
+# Apparently part of the Hrugs Wer Clan, so I've made them a cadet branch/house
+# They were originally an important Bon priestly family but changed to Buddhism in the 10th century
+# 
+# See here for more info: https://www.tibetarchaeology.com/may-2015/
+# 
+##############################################################
+
+# Rinchen Zangpo's grandfather, Yudra Tongtsen
+RICE_yudra_1 = {
+	name = "Tongtsen"
+	dynasty_house = RICE_house_yudra
+	rite = "old_bon"
+	culture = "zhangzhung"
+	897.5.6 = {
+		birth = yes
+	}
+	948.2.19 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo's father, Shonu Wangchuk
+RICE_yudra_2 = {
+	name = "shonu_wangchuk"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	trait = education_learning_3 # Some sort of Buddhist figure
+	father = RICE_yudra_1
+	927.8.14 = {
+		birth = yes
+	}
+	993.5.1 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo's uncle, Yuthokdra
+RICE_yudra_3 = {
+	name = "yuthokdra"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	trait = education_stewardship_3 # Chancellor, minister, or magistrate of high rank
+	father = RICE_yudra_1
+	931.6.2 = {
+		birth = yes
+	}
+	1001.8.7 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo's older brother, Sherab Wangchuk
+RICE_yudra_4 = {
+	name = "sherab_wangchuk"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_yudra_2
+	953.4.6 = {
+		birth = yes
+	}
+	1023.5.4 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo's younger brother, Yonten Wangchuk
+RICE_yudra_5 = {
+	name = "yonten_wangchuk"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_yudra_2
+	trait = devoted # Became a monk
+	962.6.17 = {
+		birth = yes
+	}
+	1037.8.19 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo's younger sister, Kunring Shetso
+RICE_yudra_6 = {
+	name = "kunring_shetso"
+	female = yes
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_yudra_2
+	trait = devoted # Became a nun
+	964.1.3 = {
+		birth = yes
+	}
+	1042.7.30 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo's cousin and fellow translator, Legpe Sherab
+RICE_yudra_7 = {
+	name = "legpe_sherab"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	trait = education_learning_3
+	father = RICE_yudra_3
+	trait = diligent
+	trait = temperate
+	trait = content
+	trait = devoted
+	960.4.12 = {
+		birth = yes
+	}
+	980.1.1 = {
+		give_nickname = nick_RICE_lesser_translator
+	}
+	1039.7.11 = {
+		death = yes
+	}
+}
+
+# Rinchen Zangpo, the great translator
+RICE_yudra_8 = {
+	name = "rinchen_zangpo"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	trait = education_learning_5
+	trait = scholar
+	trait = calm
+	trait = diligent
+	trait = temperate
+	trait = generous
+	trait = devoted
+	father = RICE_yudra_2
+	958.10.2 = {
+		birth = yes
+	}
+	980.1.1 = {
+		give_nickname = nick_RICE_great_translator
+	}
+	1055.2.8 = {
+		death = yes
+	}
+}
+
+# Fictitious nephew of Rinchen Zangpo to have the family exist in 1066
+RICE_yudra_9 = {
+	name = "Pelzangpo"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_yudra_4
+	980.1.30 = {
+		birth = yes
+	}
+	1059.4.2 = {
+		death = yes
+	}
+}
+
+# Fictitious grand-nephew of Rinchen Zangpo to have the family exist in 1066
+RICE_yudra_10 = {
+	name = "YE_shE_gyeltsen"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_yudra_9
+	1004.3.12 = {
+		birth = yes
+	}
+	1064.9.22 = {
+		death = yes
+	}
+}
+
+# Fictitious great-grand-nephew of Rinchen Zangpo to have the family exist in 1066
+RICE_yudra_11 = {
+	name = "Yangje"
+	dynasty_house = RICE_house_yudra
+	rite = "lamaism"
+	culture = "zhangzhung"
+	father = RICE_yudra_10
+	1033.1.19 = {
+		birth = yes
+	}
+	1081.7.3 = {
+		death = yes
+	}
+}
+
+
+##############################################################
+# 
+# SMER FAMILY
+# 
+##############################################################
+
+
+##############################################################
+# 
+# DRO FAMILY
+# 
+##############################################################
+
+# Founder of Alchi Monastery
+RICE_dro_01 = {
+	name = "kaldan_sherab"
+	dynasty=105908 #Dro
+	rite = "lamaism"
+	culture = "bodpa"
+	trait = education_learning_3
+	trait = zealous
+	trait = generous
+	trait = calm
+	1039.8.2 = { # Couldn't find it
+		birth = yes
+	}
+	1108.5.5 = { # Couldn't find it
+		death = yes
+	}
+}
+
+
+##############################################################
+# 
+# ZHANGZHUNG KINGS
+# 
+##############################################################
+
+# There are two theories on when to date the last Zhangzhung king and when the conquest of Zhangzhung happened, both with plausible evidence.
+# The theory vanilla Crusader Kings uses is the 8th century, during the reign of King Trisong Detsen.
+# This might have been chosen so that the Zhangzhung king would be alive during CK3's 632 start date.
+# The other theory is that this happened in the 7th century, during the reign of King Songtsen Gampo. I find this theory likelier, personally.
+# Especially if we take the legends surrounding the last Zhangzhung king interacting with Songtsen Gampo to be true.
+# Anyhow, I've decided to have "both" theories be "valid" by placing two Zhangzhung kings Likmigyal, the vanilla one and this one here, who is used for record and events.
+RICE_zhangzhung_king_001 = {
+	name = "Likmigyal" #Last Zhangzhung King
+	dynasty = 105809 #Lig
+	rite = "old_bon"
+	culture = "zhangzhung"
+	trait = zealous
+	trait = stubborn
+	trait = brave
+	600.1.1 = {
+		birth = yes
+	}
+	645.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+
+##############################################################
+# 
+# ZHANGZHUNG / WESTERN TIBET MISCELLANEOUS
+# 
+##############################################################
+
+# dPal ’Dus sGra / Dpal Dus Sgra
+# Councillor ruling over Brusha, probably Burusho territories, during the reign of Ödétsen and possibly after, maybe until the Tibetans lost it
+# Inscription honoring him has been found in Purik/Purig
+# Member of the Rum clan which appears to also have had estates in Spiti
+# According to The Social and the Religious in Early Post-Imperial Tibet, they had estates in Mkhar she la khyung (present Shel mkhar area in Upper Kinnaur?) 
+RICE_zhangzhung_001 = {
+	name = "dpal_dus_sgra"
+	dynasty = RICE_dynasty_rum
+	rite = "lamaism"
+	culture = "zhangzhung"
+	# Dates uncertain, but he lived in the 11th century and was a councillor of Ödétsen, and probably died in the late 11th century
+	1005.8.2 = {
+		birth = yes
+	}
+	1088.8.8 = {
+		death = yes
+	}
+}

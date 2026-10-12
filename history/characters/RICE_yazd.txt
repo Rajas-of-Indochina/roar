@@ -1,38 +1,36 @@
 ﻿
 ### Characters added by vanilla ###
-# Esmail ibn Musa - last leader of the Kharijites of Bam, dates fictitious
-# Esmail ibn Musa's father, dates fictitious
-# Sebuk-eri, slave captured in Zabulistan who became a power player in later Saffird history
-# Abd al-Rahman, Kharijite rebel in Karukh near Herat c. 872, but according to Cambridge History of Iran, he had been a leader in the region for at least 30 years before then
+# RICE_yazd_001 = Esmail ibn Musa - last leader of the Kharijites of Bam, dates fictitious
+# RICE_yazd_002 = Esmail ibn Musa's father, dates fictitious
+# RICE_yazd_003 = Sebuk-eri, slave captured in Zabulistan who became a power player in later Saffird history
+# RICE_yazd_004 = Abd al-Rahman, Kharijite rebel in Karukh near Herat c. 872, but according to Cambridge History of Iran, he had been a leader in the region for at least 30 years before then
 ### ### ### ### ### ### ### ### ###
 
+# Ibrahim ibn Akhdar, a Kharijite who was appointed as leader in the version of the history where Abd al-Rahman was killed by the Kharijites; later incorporated into Ya'qub's forces similarly, ironically
 RICE_yazd_005 = {
-	history_override_priority = 1000
-	# Kharijite who was appointed as leader in the version of the history where Abd al-Rahman was killed by the Kharijites ; later incorporated into Ya'qub's forces similarly, ironically
-	name = "Ibrahim" # Ibrahim ibn Akhdar
+	name = "Ibrahim"
 	dynasty = RICE_akhdarid_kharijite
-	rite = azariqa
+	rite = "azariqa"
 	culture = "tajik"
 	trait = education_martial_3
 	father = RICE_yazd_006
-
-	# History
 	834.9.15 = { # Unknown
 		birth = yes
 	}
+	#867.1.1 = { 
+	#	employer = RICE_yazd_004
+	#}
 	873.10.11 = { # Unknown 
 		death = yes
 	}
 }
+
+# Ibrahim ibn Akhdar's father
 RICE_yazd_006 = {
-	history_override_priority = 1000
-	# Ibrahim ibn Akhdar's father
 	name = "Akhdar"
 	dynasty = RICE_akhdarid_kharijite
-	rite = azariqa
+	rite = "azariqa"
 	culture = "tajik"
-
-	# History
 	811.2.19 = { # Unknown
 		birth = yes
 	}
@@ -41,15 +39,12 @@ RICE_yazd_006 = {
 	}
 }
 
+# Uzayr bin al-Sari, was appointed governor of Nishapur after the Saffarids defeated the Tahirids
 RICE_yazd_007 = {
-	history_override_priority = 1000
-	# governor of Nishapur after the Saffarids defeated the Tahirids
-	name = "Uzayr" # Uzayr bin al-Sari
+	name = "Uzayr"
 	dynasty = RICE_uzayr_bin_al_sari
-	rite = hanafi
+	rite = "hanafi"
 	culture = "persian"
-
-	# History
 	833.5.7 = { # Unknown
 		birth = yes
 	}
@@ -58,16 +53,13 @@ RICE_yazd_007 = {
 	}
 }
 
+# Ahmad ibn Rusta, Persian explorer and geographer
 RICE_yazd_008 = {
-	history_override_priority = 1000
-	# Persian explorer and geographer
-	name = "Ahmad" # Ahmad ibn Rusta
+	name = "Ahmad"
 	dynasty = RICE_ibn_rusta_dynasty
-	rite = hanafi
+	rite = "hanafi"
 	culture = "persian"
 	trait = lifestyle_traveler
-
-	# History
 	843.6.18 = { # Unknown
 		birth = yes
 		effect = { add_character_flag = do_not_generate_starting_family }
@@ -77,12 +69,11 @@ RICE_yazd_008 = {
 	}
 }
 
+# al-Tabari, Arab/Persian scholar and polymath
 RICE_yazd_009 = {
-	history_override_priority = 1000
-	# al-Tabari, Arab/Persian scholar and polymath
 	name = "Abu_Ja_far_Muhammad"
 	dynasty = RICE_al_tabari_dynasty
-	rite = hanafi
+	rite = "hanafi"
 	culture = "persian" # Uncertain if he was Persian or Arab
 	trait = education_learning_4
 	trait = physique_good_1 # Said to be healthy and rarely got sick
@@ -94,8 +85,6 @@ RICE_yazd_009 = {
 	trait = lifestyle_poet 			# Likes poetry
 	trait = erudite
 	trait = lifestyle_traveler
-
-	# History
 	839.5.12 = { # Known year
 		birth = yes
 		effect = { add_character_flag = do_not_generate_starting_family }
@@ -105,21 +94,18 @@ RICE_yazd_009 = {
 	}
 }
 
+# al-Yaqubi, Muslim historian, geographer, and traveller
+# Grew up in Armenia, then moved to Tahirid court in Khorasan in the 860s or early 870s, hence his placement here
 RICE_yazd_010 = {
-	history_override_priority = 1000
-	# Muslim historian, geographer, and traveller
-	# Grew up in Armenia, then moved to Tahirid court in Khorasan in the 860s or early 870s
-	name = "Ahmad" # al-Yaqubi
+	name = "Ahmad"
 	dynasty = RICE_al_yaqubi_dynasty
-	rite = hanafi
+	rite = "hanafi"
 	culture = "levantine"
 	trait = education_learning_4
 	trait = calm
 	trait = patient
 	trait = diligent
 	trait = erudite
-
-	# History
 	834.9.16 = { # Unknown
 		birth = yes
 		effect = { add_character_flag = do_not_generate_starting_family }
@@ -129,14 +115,14 @@ RICE_yazd_010 = {
 	}
 }
 
+# Mardan-Farrukh son of Auharmazd-dad
+# A Zoroastrian lay devotee who wrote a theological text, Shikand-gumanig Vizar, defending Zoroastrianism in comparison to other religions
+# An academic calls him the Augustine of the East since he shows a clear understanding of Manicheism so he may have been Manichean or familiar with Manicheism like Augustine
+# Claims to have traveled to many places in search of truth/religion, as far away as India
 RICE_yazd_011 = {
-	history_override_priority = 1000
-	# A Zoroastrian lay devotee who wrote a theological text, Shikand-gumanig Vizar, defending Zoroastrianism in comparison to other religions
-	# An academic calls him the Augustine of the East since he shows a clear understanding of Manicheism so he may have been Manichean or familiar with Manicheism like Augustine
-	# Claims to have traveled to many places in search of truth/religion, as far away as India
-	name = "Mardan_Farrukh" # Mardan-Farrukh son of Auharmazd-dad
+	name = "Mardan_Farrukh"
 	dynasty = RICE_mardan_farrukh_dynasty
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = "persian"
 	trait = education_learning_4
 	trait = zealous 	# Defender of Zoroastrianism
@@ -144,8 +130,6 @@ RICE_yazd_011 = {
 	trait = diligent 	# Really wanted to know the truth
 	trait = intellect_good_1
 	father = RICE_yazd_012
-
-	# History
 	840.10.26 = { # Unknown, but he lived sometime in the 9th century
 		birth = yes
 		effect = { add_character_flag = do_not_generate_starting_family }
@@ -155,15 +139,12 @@ RICE_yazd_011 = {
 	}
 }
 
+# Auharmazd-dad, the father of Mardan-Farrukh
 RICE_yazd_012 = {
-	history_override_priority = 1000
-	# the father of Mardan-Farrukh
-	name = "Auharmazd_dad" # Auharmazd-dad
+	name = "Auharmazd_dad"
 	dynasty = RICE_mardan_farrukh_dynasty
-	rite = mazdayasna
+	rite = "mazdayasna"
 	culture = "persian"
-
-	# History
 	811.4.2 = { # Unknown
 		birth = yes
 	}
