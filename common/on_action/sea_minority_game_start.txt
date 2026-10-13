@@ -4894,9 +4894,12 @@ setup_caucasus_south_minorities = {
 				RITE = rite:armenian_rite
 				SIZE = small
 			}
-			add_rite_minority_effect = {
-				RITE = rite:barhailism
-				SIZE = small
+			if = {
+				limit = { game_start_date < 1100.1.1 }
+				add_rite_minority_effect = {
+					RITE = rite:barhailism
+					SIZE = small
+				}
 			}
 		}
 		title:c_shirvan = {
@@ -4907,6 +4910,13 @@ setup_caucasus_south_minorities = {
 		}
 		# d_layzan
 		title:c_kaladasht = {
+			if = {
+				limit = { game_start_date < 900.1.1 }
+				add_rite_minority_effect = {
+					RITE = rite:barhailism
+					SIZE = small
+				}
+			}
 			if = {
 				limit = { game_start_date >= 960.1.1 }
 				add_rite_minority_effect = {
@@ -5297,13 +5307,15 @@ setup_caucasus_northeast_minorities = {
 			}
 		}
 		title:c_shavaran = {
-			title:c_shavaran = {
 			add_culture_minority_effect = {
 				CULTURE = culture:shahdagh
 				SIZE = small
 				}
 			}
-			title:c_shavaran = {
+			add_rite_minority_effect = {
+				RITE = rite:barhailism
+				SIZE = small
+			}
 			add_rite_minority_effect = {
 				RITE = rite:armenian_rite
 				SIZE = small
