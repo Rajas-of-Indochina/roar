@@ -2019,18 +2019,6 @@ RICE_setup_pamir_flavor_pack_effect = {
 			}
 			add_courtier = character:188713
 			add_courtier = character:188714
-			random_secret = {
-				limit = { secret_type = secret_crypto_religionist }
-				remove_secret = yes
-			}
-			remove_character_secret_faith = yes
-			set_character_faith_with_conversion = faith:zun_pagan
-			every_vassal = {
-				set_character_faith_with_conversion = faith:zun_pagan
-			}
-			every_courtier = {
-				set_character_faith = faith:zun_pagan
-			}
 		}
 		character:RICE_pamir_022 = { # Give titles and bonuses to Azur Jamshid
 			save_scope_as = jataylotu_minister
