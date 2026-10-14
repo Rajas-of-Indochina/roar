@@ -4,7 +4,10 @@ smbat_of_zarehawan_widget_setup_effect = {
 	## Then transfer over some suitable variables for the UI.
 	if = {
 		limit = { exists = global_var:global_tondrakian_story }
-		global_var:global_tondrakian_story = { save_scope_as = story }
+		global_var:global_tondrakian_story = {
+			save_scope_as = story
+			var:the_faith = { save_scope_as = the_faith }
+		}
 		set_variable = {
 			name = rebelliousness_gui
 			value = scope:story.var:rebelliousness
@@ -12,6 +15,27 @@ smbat_of_zarehawan_widget_setup_effect = {
 		set_variable = {
 			name = righteousness_gui
 			value = scope:story.var:righteousness
+		}
+	}
+}
+
+smbat_change_rebelliousness_effect = {
+	if = {
+		limit = { exists = global_var:global_tondrakian_story }
+		custom_description = {
+			text = smbat_change_rebelliousness_effect_tt
+			value = $VALUE$
+			global_var:global_tondrakian_story = {
+				change_variable = {
+					name = rebelliousness
+					add = $VALUE$
+				}
+				clamp_variable = {
+					name = rebelliousness
+					min = 0
+					max = 100
+				}
+			}
 		}
 	}
 }

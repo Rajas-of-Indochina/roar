@@ -6,7 +6,7 @@ namespace = smbat_story
 # pretty soon after the 867 start
 smbat_story.0001 = {
 	type = character_event
-	# window = fullscreen_event
+	window = fullscreen_event
 	title = smbat_story.0001.t
 	desc = smbat_story.0001.desc
 	theme = laamp
@@ -19,20 +19,11 @@ smbat_story.0001 = {
 		animation = personality_vengeful
 	}
 	override_background = { reference = ep3_fullscreen_adventurer_negative }
-	widget = {
-		gui = "event_window_widget_smbat"
-		container = "custom_widgets_container"
-	}
 
 	immediate = {
 		imprisoner = {
 			save_scope_as = gaoler
 		}
-		create_story = {
-			type = smbat_of_zarehawan
-			save_scope_as = story
-		}
-		smbat_of_zarehawan_widget_setup_effect = yes
 	}
 
 	option = {
@@ -40,6 +31,10 @@ smbat_story.0001 = {
 		name = smbat_story.0001.a
 		trigger = { is_ai = no }
 		release_from_prison = yes
+		create_story = {
+			type = smbat_of_zarehawan
+			save_scope_as = story
+		}
 		start_travel_plan = {
 			destination = province:17732
 			travel_with_domicile = yes
@@ -52,6 +47,10 @@ smbat_story.0001 = {
 		name = smbat_story.0001.b
 		trigger = { is_ai = no }
 		release_from_prison = yes
+		create_story = {
+			type = smbat_of_zarehawan
+			save_scope_as = story
+		}
 		start_travel_plan = {
 			destination = province:672
 			travel_with_domicile = yes
@@ -79,33 +78,502 @@ smbat_story.0001 = {
 			death = {
 				death_reason = death_disappearance
 			}
-			faith:tondrakian = {
-				activate_holy_site = babylon_tondrakian
-			}
 		}
 	}
 }
 
 ############
 # Events .0100-.0200: Proselytism Events
+# triggered via the Tondrakian Proselytism travel option
+# and can also trigger less frequently 
+############
+
 # smbat_story.0101: Polemic against the Romans
+# You're preaching against Roman imperial power
+# If the holder of the current location is pro-roman this could piss them off
+# But if they're anti-Roman it could actually help you
+# Either way, preaching more aggressively raises Tondrakian Fervor more
+smbat_story.0101 = {
+	type = character_event
+	title = smbat_story.0101.t
+	desc = {
+		desc = smbat_story.0101.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:local_character.top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+				desc = smbat_story.0101.desc.pro_roman
+			}
+			desc = smbat_story.0101.desc.anti_roman
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = ROOT
+		animation = debating 
+	}
+	right_portrait = {
+		character = scope:local_character
+		triggered_animation = {
+			trigger = {
+				NOT = { scope:local_character.top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+			}
+			animation = throne_room_applaud_1
+		}
+		animation = disapproval
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes # setup widget
+		# fetch characters
+		if = {
+			limit = { exists = current_travel_plan }
+			current_travel_plan.current_location.county.holder = { save_scope_as = local_character }
+		}
+		else = {
+			location.county.holder = { save_scope_as = local_character }
+		}
+	}
+
+	option = {
+		name = smbat_story.0101.a # preach aggressively
+		change_spiritual_fulfillment = 5
+		stress_and_fulfillment_impact = {
+			brave = minor_stress_impact_loss
+		}
+		fulfillment_impact
+		smbat_change_rebelliousness_effect = {
+			VALUE = 5
+		}
+		reverse_add_opinion = {
+			target = scope:local_character
+			modifier = spoke_against_rome
+			opinion = {
+				value = 10
+				if = {
+					limit = { scope:local_character.top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+					multiply = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = smbat_story.0102.b # preach moderately
+		change_spiritual_fulfillment = -5
+		stress = {
+			craven = minor_stress_impact_loss
+		}
+		smbat_change_rebelliousness_effect = {
+			VALUE = -5
+		}
+	}
+
+	option = {
+		name = smbat_story.0101.c # preach explosively
+		change_spiritual_fulfillment = 10
+		stress_and_fulfillment_impact = {
+			brave = minor_stress_impact_loss
+			zealous = minor_stress_impact_loss
+		}
+		smbat_change_rebelliousness_effect = {
+			VALUE = 10
+		}
+		scope:the_faith = {
+			change_fervor = {
+				value = 5
+			}
+		}
+		reverse_add_opinion = {
+			target = scope:local_character
+			modifier = spoke_against_rome
+			opinion = {
+				value = 20
+				if = {
+					limit = { scope:local_character.top_participant_group:situation_caucasus = { participant_group_type = pro_roman } }
+					multiply = -1
+				}
+			}
+		}
+	}
+
+}
+
 # smbat_story.0102: debate with local clergy
+# You are debating with a local clergyman about theology
+# Depending on what you're going for and whether you win, you could:
+# raise/lower Rebelliousness
+# raise/lower Righteousness
+# Possibly convert and recruit the clergyman to your court/camp
+smbat_story.0102 = {
+	type = character_event
+	title = smbat_story.0102.t
+	desc = smbat_story.0102.desc
+	theme = faith
+	left_portrait = {
+		character = ROOT
+		animation = debating
+	}
+	right_portrait = {
+		character = scope:local_clergyman
+		animation = debating
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes # setup widget
+		# fetch character
+		if = {
+			limit = { exists = current_travel_plan }
+			# If the holding is under lease to an order, get the ordermaster
+			current_travel_plan.current_location = { save_scope_as = location }
+		}
+		else = {
+			location = { save_scope_as = location }
+		}
+		# if the location is a temple holding...
+		if = {
+			limit = { scope:location = { has_holding_type = church_holding } }
+			# Then we first check if it's leased and if so to whom?
+			if = {
+				limit = { exists = scope:location.barony.lessee }
+				if = {
+					limit = { scope:location.barony.lessee = { has_government = holy_order_government } }
+					create_character = {
+						template = holy_order_leader_character
+						location = scope:location
+						rite = scope:location.rite
+						culture = scope:location.culture
+						save_scope_as = local_clergyman
+					}
+				}
+				else_if = {
+					limit = { scope:location.barony.lessee = { government_has_flag = government_is_monastic_holy_order } }
+					create_character = {
+						template = monk_character_template
+						location = scope:location
+						rite = scope:location.rite
+						culture = scope:location.culture
+						save_scope_as = local_clergyman
+					}
+				}
+			}
+			# If it's neither a holy order not leased to the realm priest, we just gen a placeholder priest
+			if = {
+				limit = {NOT = { exists = scope:local_clergyman }}
+				create_character = {
+					template = priest_character_template
+					location = scope:location
+					rite = scope:location.rite
+					culture = scope:location.culture
+					save_scope_as = local_clergyman
+				}
+			}
+		}
+
+		# Debate the clergyman to try and convince him
+		option = {
+			name = smbat_story.0102.a
+		}
+		# Debate the clergyman to humiliate him
+		option = {
+			name = smbat_story.0102.b
+		}
+		# Debate the clergyman to try and find truth
+		option = {
+			name = smbat_story.0102.c
+		}
+	}
+}
+
 # smbat_story.0103: rumors of wife swapping
-# smbat_story.0104: let the women preach
+# A local priest has accused the Tondrakians of rejecting the sacrament of marriage
+# You can either fight these accusations, or embrace them
+smbat_story.0103 = {
+	type = character_event
+	title = smbat_story.0103.t
+	desc = smbat_story.0103.desc
+	theme = faith
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+		# If you didn't already know about polyamory then this is how you learn about it
+		add_known_tenet = tenet_type:tenet_polyamory
+		if = {
+			limit = { exists = current_travel_plan }
+			current_travel_plan.current_location = { save_scope_as = location }
+		}
+		else = {
+			location = { save_scope_as = location }
+		}
+		# create naysayer
+		create_character = {
+			template = priest_character_template
+			location = scope:location
+			rite = scope:location.rite
+			culture = scope:location.culture
+			save_scope_as = naysayer
+		}
+	}
+
+	# Vocally reject the accusations as lies
+	option = {
+		name = smbat_story.103.a
+	}
+	# Vocally reject the accusations as lies (but privately adopt the idea)
+	option = {
+		name = smbat_story.103.b
+	}
+	# Agree, polyamory is based, in fact, let's make it a permitted tenet (or just fulfillment if it's already a tenet)
+	option = {
+		name = smbat_story.103.c
+	}
+}
+
+# smbat_story.0104: women preaching
+# A local clergyman claims that Tondrakians allow women to preach
+# This is true, Tondrakians are all Woke Feminist Soyboys who work for Sweet Baby Inc.
+# But you can just lie if you want
+smbat_story.0104 = {
+	type = character_event
+	title = smbat_story.0104.t
+	desc = smbat_story.0104.desc
+	theme = intrigue
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+		if = {
+			limit = { exists = current_travel_plan }
+			current_travel_plan.current_location = { save_scope_as = location }
+		}
+		else = {
+			location = { save_scope_as = location }
+		}
+		# create naysayer
+		create_character = {
+			template = priest_character_template
+			location = scope:location
+			rite = scope:location.rite
+			culture = scope:location.culture
+			save_scope_as = naysayer
+		}
+	}
+
+	# Defend the idea of letting women preach
+
+	# Agree that women preaching is absurd (this will make you look unbelievably stupid if you're a woman)
+
+	# Claim that ONLY women should preach (this will make you look nuts, especially if you're a man)
+}
+
 # smbat_story.0105: rejecting the cross
+# Tondrakians don't like crosses, and this has set off a local priest. What say you?
+smbat_story.0105 = {
+	type = character_event
+	title = smbat_story.0105.t
+	desc = smbat_story.0105.desc
+	theme = intrigue
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+		if = {
+			limit = { exists = current_travel_plan }
+			current_travel_plan.current_location = { save_scope_as = location }
+		}
+		else = {
+			location = { save_scope_as = location }
+		}
+		# create naysayer
+		create_character = {
+			template = priest_character_template
+			location = scope:location
+			rite = scope:location.rite
+			culture = scope:location.culture
+			save_scope_as = naysayer
+		}
+	}
+
+	# Openly reject the cross
+
+	# take a moderate stance instead of full aniconism
+
+	# Reject these claims as spurious lies
+}
+
 # smbat_story.0106: polemic against feudalism
+# Feudalism sucks, we should create stateless, classless, moneyless communes.
+smbat_story.0106 = {
+	type = character_event
+	title = smbat_story.0106.t
+	desc = smbat_story.0106.desc
+	theme = faith
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+	}
+
+	# Don't go too hard, keep it vague, the local lords might not like it
+
+	# Don't hold back. Fuck the monarchy.
+
+	# Actively foment a riot against the local lords and princes. Literally create a faction and join it.
+}
+
 # smbat_story.0107: that which belongs to caesar
+# Tax evasion is good and cool, we should all do it
+# (the local ruler will not like this)
+smbat_story.0107 = {
+	type = character_event
+	title = smbat_story.0107.t
+	desc = smbat_story.0107.desc
+	theme = faith
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+	}
+}
+
 # smbat_story.0108: willing ears
+# The people here aren't terribly happy with their local faith
+# You might be able to get some conversions going
+smbat_story.0108 = {
+	type = character_event
+	title = smbat_story.0108.t
+	desc = smbat_story.0108.desc
+	theme = faith
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+	}
+}
+
 # smbat_story.0109: communalists of another faith
+# Local communalists that are not Tondrakians
+# But you might be able to convert them
+# or learn from their beliefs
+smbat_story.0109 = {
+	type = character_event
+	title = smbat_story.0109.t
+	desc = smbat_story.0109.desc
+	theme = faith
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+	}
+}
+
 # smbat_story.0110: kneel for no one
+# Tondrakians reject the practice of Genuflection
+smbat_story.0110 = {
+	type = character_event
+	title = smbat_story.0110.t
+	desc= smbat_story.0110.desc
+	theme = faith
+	left_portrait = {
+		character = scope:naysayer
+		animation = debating
+	}
+	right_portrait = {
+		character = ROOT
+		animation = thinking
+	}
+	widget = {
+		gui = "event_window_widget_smbat"
+		container = "custom_widgets_container"
+	}
+	immediate = {
+		smbat_of_zarehawan_widget_setup_effect = yes
+	}
+}
+
 # smbat_story.0111: monasticism
 # smbat_story.0112: running from the law
-# smbat_story.0113: 
-# smbat_story.0114
-# smbat_story.0115
-# smbat_story.0116
-# smbat_story.0117
-# smbat_story.0118
-# smbat_story.0119
-# smbat_story.0120
-############
+# smbat_story.0113: rabble-rousing
+# smbat_story.0114: accusations of banditry
+# smbat_story.0115: keeping the sabbath
+# smbat_story.0116: rejection of matagh
+# smbat_story.0117: rejection of baptism
+# smbat_story.0118: rejection of communion
+# smbat_story.0119: minister to the unheard
+# smbat_story.0120: polemic against islam

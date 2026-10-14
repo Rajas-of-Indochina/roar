@@ -27,4 +27,7 @@
  LABEL_SINFUL: "[tondrakian_righteousness_sinful|E]"
  LABEL_SANCTIFIED: "[tondrakian_righteousness_sanctified|E]"
  TONDRAKIAN_REBELLIOUSNESS_TOOLTIP: "Current #BOLD [Concept('tondrakian_rebelliousness','Rebelliousness')]#! Value: [Story.MakeScope.Var('rebelliousness').GetValue|V0]\nTarget #BOLD [Concept('tondrakian_rebelliousness','Rebelliousness')]#! Value: [Story.MakeScope.Var('the_faith').Faith.GetFervor|V0]"
- 
+
+ smbat_change_rebelliousness_effect_tt: "#BOLD [Concept('tondrakian_rebelliousness','Rebelliousness')]#! increases by $VALUE|+0$"
+ smbat_change_rebelliousness_effect_tt_first: "$smbat_change_rebelliousness_effect_tt$"
+ smbat_change_rebelliousness_effect_tt_first_neg: "#BOLD [Concept('tondrakian_rebelliousness','Rebelliousness')]#! decreases by $VALUE|-0$"
