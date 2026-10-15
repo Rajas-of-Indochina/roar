@@ -259,7 +259,7 @@
 		birth = yes
 	}
 	867.1.1 = {
-		rite = sun_pagan
+		rite = zun_pagan
 		effect = {
 			set_relation_nemesis = character:163101 #Ya'qub Saffarid
 		}
@@ -286,6 +286,9 @@
 	846.1.1 = {
 		birth = yes
 	}
+	867.1.1 = {
+		rite = zun_pagan
+	}
 	870.1.1 = {
 		rite = shafii
 		effect = {
@@ -306,6 +309,9 @@
 	father = 188711
 	848.1.1 = {
 		birth = yes
+	}
+	867.1.1 = {
+		rite = zun_pagan
 	}
 	870.1.1 = {
 		employer = 175060
@@ -493,10 +499,13 @@ extra_afghanis_6 = {
 	name = "Salih"
 	dynasty = 1042110 # Zunbil
 	rite = "zun_pagan"
-	culture = "afghan"
+	culture = "turco_hephthalite"
 	father = extra_afghanis_5
 	824.10.18 = {
 		birth = yes
+	}
+	867.1.1 = {
+		rite = zun_pagan
 	}
 	870.1.1 = {
 		rite = shafii
