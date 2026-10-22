@@ -5,7 +5,8 @@ bai = {
 	#color = { 0.9 0.4 0.1 } - vanilla
 
 	name_order_convention = dynasty_always_first
-	ethos = ethos_bureaucratic 	#ethos_courtly - vanilla
+	ethos = ethos_bureaucratic
+	#ethos_courtly - vanilla
 	heritage = heritage_loloish
 	language = language_bai
 	martial_custom = martial_custom_male_only
@@ -31,36 +32,7 @@ bai = {
 	name_list = name_list_bai
 
 	coa_gfx = { lolo_group_coa_gfx chinese_group_coa_gfx }
-	building_gfx = { lolo_building_gfx chinese_building_gfx }
-	clothing_gfx = { dali_clothing_gfx chinese_clothing_gfx }
-	unit_gfx = { chinese_unit_gfx }
-	house_coa_frame = house_china
-
-	ethnicities = {
-		50 = asian_tibetan
-		50 = asian_han_chinese
-	}
-}
-
-caijia = {
-	color = caijia
-
-	name_order_convention = dynasty_always_first
-	ethos = ethos_bureaucratic
-	heritage = heritage_cai_long
-	language = language_cai_long
-	martial_custom = martial_custom_male_only
-	head_determination = head_determination_domain
-
-	traditions = {
-		tradition_staunch_traditionalists
-		tradition_hill_dwellers
-	}
-
-	name_list = name_list_bai
-
-	coa_gfx = { lolo_group_coa_gfx chinese_group_coa_gfx }
-	building_gfx = { lolo_building_gfx chinese_building_gfx }
+	building_gfx = { chinese_building_gfx }
 	clothing_gfx = { dali_clothing_gfx chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
 	house_coa_frame = house_china
@@ -91,7 +63,7 @@ lisu = {
 	name_list = name_list_yi
 
 	coa_gfx = { lolo_group_coa_gfx chinese_group_coa_gfx }
-	building_gfx = { lolo_building_gfx chinese_building_gfx }
+	building_gfx = { chinese_building_gfx }
 	clothing_gfx = { dali_clothing_gfx chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
 	house_coa_frame = house_china
@@ -127,8 +99,8 @@ tujia = {
 	name_list = name_list_han
 
 	coa_gfx = { chinese_group_coa_gfx }
-	building_gfx = { lolo_building_gfx chinese_building_gfx }
-	clothing_gfx = { dali_clothing_gfx chinese_clothing_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
 	house_coa_frame = house_china
 
@@ -144,6 +116,7 @@ yi = {
 
 	name_order_convention = dynasty_always_first
 	ethos = ethos_bellicose
+	#ethos = ethos_stoic - in vanilla
 	heritage = heritage_loloish
 	language = language_yi
 	martial_custom = martial_custom_male_only
@@ -165,12 +138,43 @@ yi = {
 	#	fallback = tradition_xenophilic
 	#}
 
-
 	name_list = name_list_yi
 
 	coa_gfx = { lolo_group_coa_gfx chinese_group_coa_gfx }
-	building_gfx = { lolo_building_gfx chinese_building_gfx }
+	building_gfx = { chinese_building_gfx }
 	clothing_gfx = { dali_clothing_gfx chinese_clothing_gfx }
+	unit_gfx = { chinese_unit_gfx }
+	house_coa_frame = house_china
+
+	ethnicities = {
+		50 = asian_tibetan
+		50 = asian_han_chinese
+	}
+}
+
+#lolo_building_gfx
+
+## Not loloish ; should be in separate file I guess
+caijia = {
+	color = caijia
+
+	name_order_convention = dynasty_always_first
+	ethos = ethos_bureaucratic
+	heritage = heritage_cai_long
+	language = language_cai_long
+	martial_custom = martial_custom_male_only
+	head_determination = head_determination_domain
+
+	traditions = {
+		tradition_staunch_traditionalists
+		tradition_hill_dwellers
+	}
+
+	name_list = name_list_bai
+
+	coa_gfx = { lolo_group_coa_gfx chinese_group_coa_gfx }
+	building_gfx = { chinese_building_gfx }
+	clothing_gfx = { chinese_clothing_gfx }
 	unit_gfx = { chinese_unit_gfx }
 	house_coa_frame = house_china
 

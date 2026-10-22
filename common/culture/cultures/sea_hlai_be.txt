@@ -1,6 +1,6 @@
 ﻿
 hlai = {
-	# 俚 ; also known as Li or Lizu
+	# AKA: Li or Lizu
 	color = hlai
 	#color = { 0.5 0.5 0.5 } - vanilla
 
@@ -12,12 +12,20 @@ hlai = {
 	head_determination = head_determination_domain
 
 	traditions = {
-		tradition_jungle_warriors
+		# Vanilla
 		tradition_jungle_dwellers
-		tradition_hit_and_run
 		tradition_equal_inheritance
 		tradition_charitable
+		# Roa
+		tradition_jungle_warriors
+		tradition_hit_and_run
 	}
+
+	#dlc_tradition = {
+	#	trait = tradition_fp2_malleable_subjects
+	#	requires_dlc_flag = the_fate_of_iberia
+	#	fallback = tradition_xenophilic
+	#}
 
 	name_list = name_list_kradai
 
