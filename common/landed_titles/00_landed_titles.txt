@@ -70845,11 +70845,6 @@ e_tibet = {
 
 					color = { 171 41 96 }
 				}
-				b_qagcheng = {
-					province = 9321
-
-					color = { 171 41 96 }
-				}
 			}
 			c_markam = {
 				color = { 140 41 83 }
@@ -70865,24 +70860,19 @@ e_tibet = {
 					color = { 140 51 83 }
 				}
 			}
-			c_gyaitang = {
+			c_derong = {
 				color = { 171 26 88 }
 
-				b_gyaitang = {
-					province = 9318
-
-					color = { 171 26 88 }
-				}
-				b_takchongrong = {
-					province = 9322
-
-					color = { 171 26 58 }
-				}
 				b_derong = {
 					province = 9319
 
 					color = { 171 56 88 }
 				}
+				b_qagcheng = {
+					province = 9321
+
+					color = { 171 41 96 }
+				}				
 			}
 		}
 
@@ -101641,32 +101631,37 @@ h_china = {
 					}
 				}
 			}
-			d_yi_du = { # d_yi_du ported from old RoA
+			d_shanju = { # d_yi_du ported from old RoA
 				color = { 140 160 120 }
 
-				c_yi_du = { # same in old RoA
-					color = { 150 175 130 }
+				c_chengjie = { # same in old RoA
+					color = { 165 185 145 }
 
-					b_yi_du = {
-						province = 17209
+					b_chengjie = {
+						province = 17457
 
-						color = { 150 175 130 }
+						color = { 165 185 145 }
 					}
-					b_moutong = {
-						province = 17148
+					b_loutou = {
+						province = 17534
 
-						color = { 140 165 120 }
+						color = { 175 195 155 }
 					}
-					b_yongning_2 = {
+					b_yangqutou = {
 						province = 17418
 
 						color = { 160 185 140 }
-					}
-				}
-				c_kun_ming = { # same in old RoA
+					}					
+					b_niudan = {
+						province = 17210
+
+						color = { 155 175 135 }
+					}					
+				}				
+				c_xiangcheng = { # same in old RoA
 					color = { 125 150 110 }
 
-					b_kun_ming = {
+					b_hetou = {
 						province = 17532
 
 						color = { 125 150 110 }
@@ -101677,78 +101672,87 @@ h_china = {
 						color = { 115 140 100 }
 					}
 				}
-				c_maso = { # same in old RoA
-					color = { 165 185 145 }
+				c_gyaitang = {
+					color = { 171 26 88 }
 
-					b_maso = {
-						province = 17457
+					b_takchongrong = {
+						province = 9322
 
-						color = { 165 185 145 }
-					}
-					b_lugu = {
-						province = 17534
+						color = { 171 26 88 }
+					}						
+					b_gyaitang = {
+						province = 9318
 
-						color = { 175 195 155 }
-					}
-					b_ngwu_dam = {
-						province = 17210
-
-						color = { 155 175 135 }
-					}
+						color = { 171 26 88 }
+					}				
 				}
-			}
-			d_koksang = {
-				# d_koksang ported from old RoA
-				color = { 100 140 150 }
-
-				c_koksang = {
+				c_deqen = {
 					# same in old RoA
-					color = { 110 155 165 }
+					color = { 128 11 61 }
 
-					b_nomu = {
-						province = 17347
+					b_yekri = {
+						province = 9316
 
-						color = { 120 165 175 }
+						color = { 128 11 61 }
 					}
 					b_koksang = {
 						province = 17629
 
-						color = { 110 155 165 }
-					}
-				}
-				c_lang_kion = {
-					# same in old RoA
-					color = { 90 130 140 }
+						color = { 128 11 61 }
+					}					
+				}				
+			}
+			d_jianchuan = {
+				# d_jianchuan ported from old RoA
+				color = { 100 140 150 }
 
-					b_miu_lang_kion = {
+				c_jianchuan = { # same in old RoA
+					color = { 150 175 130 }
+
+					b_jianchuan = {
+						province = 17209
+
+						color = { 150 175 130 }
+					}
+					b_moutong = {
+						province = 17148
+
+						color = { 140 165 120 }
+					}
+					b_lanxi = {
 						province = 17156
 
 						color = { 90 130 140 }
-					}
-					b_lang_kion = {
+					}					
+				}
+				c_yunlong = {
+					# same in old RoA
+					color = { 90 130 140 }
+
+					b_yunlong = {
 						province = 16836
 
 						color = { 80 120 130 }
 					}
-					b_kion_dam = {
+					b_anung = {
 						province = 16888
 
 						color = { 100 140 150 }
 					}
-				}
-				c_deqen = {
+				}				
+				c_lianxun = {
 					# same in old RoA
-					color = { 130 170 180 }
+					color = { 110 155 165 }
 
-					b_deqen = {
-						province = 9316
-
-						color = { 130 170 180 }
-					}
-					b_balung = {
+					b_lianxun = {
 						province = 9317
 
 						color = { 140 180 190 }
+					}					
+					b_zhiziluo = {
+						province = 17347
+
+						color = { 120 165 175 }
 					}
 				}
 			}

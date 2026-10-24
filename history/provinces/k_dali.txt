@@ -131,9 +131,83 @@
 		15893 = { # b_xuchu
 			holding = none
 		}
-## d_yi_du
-	### c_yi_du
-		17209 = { # b_yi_du
+## d_shanju			
+	### c_chengjie
+		17457 = { # b_chengjie
+			culture = nakhi
+			rite = dongba
+
+			holding = castle_holding
+		}
+		17534 = { # b_loutou
+			holding = church_holding
+		}
+		17418 = { # b_yangqutou
+			holding = city_holding
+		}		
+		17210 = { # b_niudan
+			holding = none
+
+			1000.1.1 = {
+				holding = city_holding
+			}
+		}	
+	### c_xiangcheng
+		17532 = { # b_hetou
+			culture = qiang
+			rite = rrmeaism
+
+			holding = castle_holding
+
+			special_building_slot = sea_salt_mines_01
+		}
+		17419 = { # b_songwai
+			holding = city_holding
+
+			1000.1.1 = {
+				holding = none
+			}			
+		}	
+	### c_gyaitang
+		9322 = {	# b_takchongrong
+			culture = nakhi
+			rite = dongba
+
+			holding = castle_holding
+			# History
+		}			
+		9318 = {	# b_gyaitang
+			holding = none
+
+			# History
+			1000.1.1 = {
+				holding = city_holding
+			}
+		}
+	### c_deqen
+		9316 = {	# b_yekri
+			culture = nakhi
+			rite = dongba
+
+			holding = castle_holding
+
+			# History
+			1050.1.1 = {
+				# The Eternal Bon School begins to take hold
+				rite = bon #Yungdrung
+			}
+			1300.1.1 = {
+				# Tibetan culture continues to spread in Kham and Amdo
+				rite = lamaism
+				culture = bodpa
+			}
+		}
+		17629 = { # b_koksang
+			holding = none
+		}		
+## d_jianchuan
+	### c_jianchuan
+		17209 = { # b_jianchuan
 			culture = lisu
 			rite = benzhu
 
@@ -142,49 +216,23 @@
 			special_building_slot = sea_salt_mines_01
 		}
 		17148 = { # b_moutong
+			holding = city_holding
+		}
+		17156 = {	# b_lanxi
 			holding = church_holding
 		}
-		17418 = { # b_yongning_2
-			holding = none
-		}
-	### c_kun_ming
-		17532 = { # b_kun_ming
-			culture = qiang
-			rite = rrmeaism
-
-			holding = tribal_holding
-
-			special_building_slot = sea_salt_mines_01
-		}
-		17419 = { # b_songwai
-			holding = none
-		}
-	### c_maso
-		17457 = { # b_maso
-			culture = nakhi
-			rite = dongba
-
-			holding = castle_holding
-		}
-		17534 = { # b_lugu
-			holding = church_holding
-		}
-		17210 = { # b_ngwu_dam
-			holding = none
-		}
-## d_koksang
-	### c_koksang
-		17347 = { # b_nomu
+	### c_lianxun
+		9317 = { # b_lianxun
 			culture = lisu
 			rite = benzhu
 
 			holding = castle_holding
 		}
-		17629 = { # b_koksang
+		17347 = {	# b_zhiziluo
 			holding = none
-		}
-	### c_lang_kion
-		17156 = { # b_miu_lang_kion
+		}		
+	### c_yunlong
+		16836 = { # b_yunlong
 			culture = lisu
 			rite = benzhu
 
@@ -196,14 +244,9 @@
 				special_building = sea_salt_mines_01
 			}
 		}
-		16836 = { # b_lang_kion
-			holding = city_holding
-
-			special_building_slot = sea_salt_mines_01
-		}
-		16888 = { # b_kion_dam
-			holding = church_holding
-		}
+		16888 = { # b_anung
+			holding = none
+		}			
 ## d_yongchang
 	### c_yongchang
 		16198 = { # b_yongchang
