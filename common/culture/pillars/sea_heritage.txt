@@ -314,7 +314,7 @@ heritage_kam = {
 	}
 	audio_parameter = sea
 }
-heritage_hlai = {
+heritage_hlai_be = {
 	type = heritage
 
 	parameters = {
@@ -323,21 +323,7 @@ heritage_hlai = {
 	}
 	is_shown = {
 		heritage_is_shown_trigger = {
-			HERITAGE = heritage_hlai
-		}
-	}
-	audio_parameter = sea
-}
-heritage_be = {
-	type = heritage
-
-	parameters = {
-		heritage_group_baiyue = yes
-		heritage_family_east_asian = yes
-	}
-	is_shown = {
-		heritage_is_shown_trigger = {
-			HERITAGE = heritage_be
+			HERITAGE = heritage_hlai_be
 		}
 	}
 	audio_parameter = sea

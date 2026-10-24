@@ -651,30 +651,80 @@ kollam = {
 
 ### Adivasi (India's Tribal Groups) Holy Sites ###
 thel_kopi_ghat = {
+	# important pilgrimage site for Munda people ; also hinduist pilgrimage site
 	county = c_rajrappa
 	
 	county_holder_character_modifier = {
-		name = holy_site_thel_kopi_ghat_effect_name
-		county_opinion_add = 5
+		health = 0.05
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		epidemic_travel_danger = -1
+	}
+
+	faith_character_modifier = {
 		health = 0.1
+		monthly_piety_gain_mult = 0.05
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		health = 0.01
+		monthly_piety_gain_mult = 0.01
 	}
 }
 kachargadh_caves = {
+	# prehistoric cave complex yjay has served as important pilgrimage site for Gondic people
 	county = c_vairagara
 
 	county_holder_character_modifier = {
-		name = holy_site_kachargadh_caves_effect_name
-		different_faith_opinion = 10
-		monthly_lifestyle_xp_gain_mult = 0.15
+		county_opinion_add = 3
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		travel_danger = -1
+	}
+
+	faith_character_modifier = {
+		county_opinion_add = 5
+		different_faith_opinion = 5
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		different_faith_opinion = 0.5
+		monthly_piety_gain_mult = 0.005
+		monthly_income_mult = 0.005
 	}
 }
 jangubai_cave_temple = {
+	# cave sancuary with great importance to Gondic and other 'adivasi' people
 	county = c_mahur
 	barony = b_mahur
 
 	county_holder_character_modifier = {
-		name = holy_site_jangubai_cave_temple_effect_name
-		dynasty_house_opinion = 5
+		same_culture_opinion = 3
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		travel_danger = -1
+		epidemic_resistance = 1
+	}
+
+	faith_character_modifier = {
+		same_culture_opinion = 5
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		cultural_head_acceptance_gain_mult = 0.015
+		monthly_piety_gain_mult = 0.01
 	}
 }
 ### ### ### ###
@@ -909,9 +959,24 @@ toba = {
 	county = c_SUM_toba
 
 	county_holder_character_modifier = {
-		name = holy_site_toba_effect_name
-		development_growth_factor = 0.05
-		domain_tax_mult = 0.02
+		powerful_vassal_opinion = 3
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		epidemic_resistance = 1
+	}
+
+	faith_character_modifier = {
+		diplomacy = 1
+		powerful_vassal_opinion = 5
+		domain_tax_same_faith_mult = 0.05
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_piety_gain_mult = 0.01
 	}
 }
 
@@ -919,28 +984,83 @@ toba = {
 	# Mount Dempo is a high stratovolcano with seven craters ; located near Pagar Alam
 #}
 
+kerinci = {
+	# Mount Kerinci/Kerintji is an active volcano surrounded by vast wilderness ; this site is of great importance to Kecik Wok Gedang Wok people
+	county = c_SUM_kerinci
+
+	county_holder_character_modifier = {
+		different_faith_opinion = 5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		travel_danger = -1
+	}
+
+	faith_character_modifier = {
+		different_faith_opinion = 10
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_lifestyle_xp_gain_mult = 0.01
+		different_faith_opinion = 0.5
+	}
+}
+
 krakatoa = {
 	# Mount Krakatoa is a powerful volcano surrounded by myth and legend, known for its destructive power
 	county = c_SUM_kabupaten_lampung
 	barony = b_SUM_Palas_Pasemah
 
 	county_holder_character_modifier = {
-		name = holy_site_krakatoa_effect_name
-		prowess_per_piety_level = 1
+		knight_effectiveness_mult = 0.05
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		jungle_development_growth_factor = 0.01
+		garrison_size = 0.02
+	}
+
+	faith_character_modifier = {
 		knight_effectiveness_mult = 0.1
+		prowess_per_piety_level = 1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		knight_effectiveness_mult = 0.015
+		coastal_advantage = 0.5
 		stress_loss_mult = -0.05
 	}
 }
 ### ### ### ###
 
 
-### Other SEA ###
+### Bahnaric Holy Sites ###
 bahnar = {
 	county = c_bahnar
 
 	county_holder_character_modifier = {
-		name = holy_site_bahnar_effect_name
+		monthly_piety_gain_mult = 0.05
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		travel_danger = -1
+	}
+
+	faith_character_modifier = {
 		monthly_piety_gain_mult = 0.1
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_piety_gain_mult = 0.01
+		piety_level_impact_mult = 0.01
 	}
 }
 
@@ -948,8 +1068,22 @@ mnong = {
 	county = c_mnong
 
 	county_holder_character_modifier = {
-		name = holy_site_mnong_effect_name
-		monthly_prestige_gain_mult = 0.1
+		diplomacy = 1
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		county_opinion_add = 1
+	}
+
+	faith_character_modifier = {
+		diplomacy = 2
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		monthly_prestige_gain_mult = 0.01
 	}
 }
 
@@ -958,7 +1092,22 @@ stieng = {
 
 	county_holder_character_modifier = {
 		same_faith_opinion = 5
-		enemy_hostile_scheme_success_chance_add = -5
+	}
+
+	county_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		development_growth_factor = 0.01
+		monthly_county_control_growth_factor = 0.01
+	}
+
+	faith_character_modifier = {
+		same_faith_opinion = 10
+	}
+
+	faith_character_modifier_scaled = {
+		scale = holy_site_total_artifact_rarity
+		same_faith_opinion = 0.5
+		monthly_piety_gain_mult = 0.01
 	}
 }
 ### ### ### ###
