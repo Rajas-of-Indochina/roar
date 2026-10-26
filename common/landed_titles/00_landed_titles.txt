@@ -101491,30 +101491,30 @@ h_china = {
 				c_dali = { # c_yon_zon_mi
 					color = { 240 245 225 }
 
-					b_yon_zon_mi = {
+					b_yonzome = {
+						province = 16837
+
+						color = { 245 250 230 }
+					}					
+					b_zhaochuan = {
 						province = 16679
 
 						color = { 240 245 225 }
 					}
-					b_er_guer = {
-						province = 16588
-
-						color = { 230 235 215 }
-					}
-					b_lo_ho = {
-						province = 17072
-
-						color = { 250 255 235 }
-					}
-					b_dali = {
-						province = 16837
-
-						color = { 245 250 230 }
-					}
-					b_deang_dam = {
+					b_tengchuan = {
 						province = 17015
 
 						color = { 235 240 220 }
+					}					
+					b_ningbei = {
+						province = 17072
+
+						color = { 250 255 235 }
+					}					
+					b_mengqin = {
+						province = 16588
+
+						color = { 230 235 215 }
 					}
 				}
 				c_yunnan = { # same in old RoA
@@ -101525,20 +101525,20 @@ h_china = {
 
 						color = { 210 225 190 }
 					}
-					b_bi_ge = {
-						province = 16844
-
-						color = { 200 215 180 }
-					}
-					b_ji_zu = {
-						province = 16976
-
-						color = { 220 235 200 }
-					}
-					b_shang_cheng = {
+					b_pindan = {
 						province = 16604
 
 						color = { 190 205 170 }
+					}					
+					b_jizushan = {
+						province = 16976
+
+						color = { 220 235 200 }
+					}					
+					b_yuexi = {
+						province = 16844
+
+						color = { 200 215 180 }
 					}
 				}
 				c_ma_shy = { # same in old RoA
@@ -101554,7 +101554,7 @@ h_china = {
 
 						color = { 175 200 165 }
 					}
-					b_la_ga = {
+					b_nanjian = {
 						province = 16190
 
 						color = { 195 220 185 }
@@ -101634,6 +101634,8 @@ h_china = {
 			d_shanju = { # d_yi_du ported from old RoA
 				color = { 140 160 120 }
 
+				capital = c_chengjie
+
 				c_chengjie = { # same in old RoA
 					color = { 165 185 145 }
 
@@ -101705,6 +101707,8 @@ h_china = {
 			d_jianchuan = {
 				# d_jianchuan ported from old RoA
 				color = { 100 140 150 }
+
+				capital = c_jianchuan
 
 				c_jianchuan = { # same in old RoA
 					color = { 150 175 130 }
