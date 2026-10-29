@@ -73,57 +73,118 @@
 		16190 = { # b_nanjian
 			holding = church_holding
 		}
-## d_lung_dong
-	### c_lung_dung
-		16626 = { # b_lung_dung
-			culture = bai
-			rite = benzhu
-
-			holding = castle_holding
-
-			special_building_slot = sea_salt_mines_01
-		}
-		16680 = { # b_me_ddi
-			holding = none
-		}
-	### c_ddi_yi
-		16865 = { # b_ddi_yi
+## d_nongdong
+	### c_nongdong
+		16626 = { # b_nongdong
 			culture = yi
 			rite = bimoism
 
 			holding = castle_holding
-		}
-		16926 = { # b_py_ly
-			holding = none
-		}
-	### c_wo_lu
-		16290 = { # b_wo_lu_dam
-			culture = bai
-			rite = benzhu
-
-			holding = castle_holding
-		}
-		16185 = { # b_sufu
-			holding = none
-		}
-		16302 = { # b_lu_by
-			holding = church_holding
 
 			special_building_slot = sea_salt_mines_01
 		}
-	### c_shuangbai
-		15995 = { # b_shuangbai
+		16680 = { # b_huazhu
+			holding = city_holding
+		}
+		16926 = { # b_jiapiguan
+			holding = church_holding
+		}		
+		16865 = { # b_pushui
+			holding = none
+		}
+	### c_sufu
+		16185 = { # b_shaxi
 			culture = bai
 			rite = benzhu
 
 			holding = castle_holding
 		}
-		16155 = { # b_zi_wu
-			holding = none
+		16290 = { # b_ludan
+			holding = city_holding
+			special_building_slot = sea_salt_mines_01			
+		}
+		16302 = { # b_shaciguan
+			holding = church_holding
+		}
+	### c_shisang
+		16155 = { # b_elu
+			culture = bai
+			rite = benzhu
+
+			holding = castle_holding
 		}
 		15893 = { # b_xuchu
 			holding = none
+		}		
+		15995 = { # b_shuangbai
+			holding = none
 		}
+## d_yongchang
+	### c_yongchang
+		16198 = { # b_yongchang
+			culture = tai
+			rite = satsana_phi
+
+			holding = castle_holding
+
+			900.1.1 = {
+				culture = bai
+				rite = benzhu
+			}
+		}
+		16199 = { # b_shengxiang
+			holding = none
+		}
+		15892 = { # b_dang_biong
+			holding = none
+		}
+		15922 = { # b_changning_2
+			holding = city_holding
+
+			special_building_slot = sea_tea_plantation_01
+
+			1.1.1 = {
+				special_building = sea_tea_plantation_01
+			}
+		}
+		16388 = { # b_mang_chang
+			holding = city_holding
+		}
+	### c_yinsheng
+		15739 = { # b_yinsheng
+			culture = achang
+			rite = burmic
+
+			holding = tribal_holding
+		}
+		15966 = { # b_yun_xian
+			holding = none
+		}
+	### c_tuonan
+		15726 = { # b_tuonan
+			culture = achang
+			rite = burmic
+
+			holding = tribal_holding
+		}
+		15762 = { # b_khiang_lang
+			holding = none
+		}
+	### c_man_kueng
+		15051 = { # b_man_kueng
+			culture = achang
+			rite = burmic
+
+			holding = tribal_holding
+
+			1000.1.1 = {
+				culture = tai
+				rite = satsana_phi
+			}
+		}
+		15049 = { # b_qang_ying
+			holding = city_holding
+		}		
 ## d_shanju			
 	### c_chengjie
 		17457 = { # b_chengjie
@@ -240,72 +301,6 @@
 		16888 = { # b_anung
 			holding = none
 		}			
-## d_yongchang
-	### c_yongchang
-		16198 = { # b_yongchang
-			culture = tai
-			rite = satsana_phi
-
-			holding = castle_holding
-
-			900.1.1 = {
-				culture = bai
-				rite = benzhu
-			}
-		}
-		16199 = { # b_shengxiang
-			holding = none
-		}
-		15892 = { # b_dang_biong
-			holding = none
-		}
-		15922 = { # b_changning_2
-			holding = city_holding
-
-			special_building_slot = sea_tea_plantation_01
-
-			1.1.1 = {
-				special_building = sea_tea_plantation_01
-			}
-		}
-		16388 = { # b_mang_chang
-			holding = city_holding
-		}
-	### c_yinsheng
-		15739 = { # b_yinsheng
-			culture = achang
-			rite = burmic
-
-			holding = tribal_holding
-		}
-		15966 = { # b_yun_xian
-			holding = none
-		}
-	### c_tuonan
-		15726 = { # b_tuonan
-			culture = achang
-			rite = burmic
-
-			holding = tribal_holding
-		}
-		15762 = { # b_khiang_lang
-			holding = none
-		}
-	### c_man_kueng
-		15051 = { # b_man_kueng
-			culture = achang
-			rite = burmic
-
-			holding = tribal_holding
-
-			1000.1.1 = {
-				culture = tai
-				rite = satsana_phi
-			}
-		}
-		15049 = { # b_qang_ying
-			holding = city_holding
-		}
 ## d_mang_shuea
 	### c_mang_shuea
 		15850 = { # b_mang_shuea

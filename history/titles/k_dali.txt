@@ -171,8 +171,8 @@
 			holder = dali_duan_29
 		}
 	}
-## d_lung_dong
-	c_lung_dung = {
+## d_nongdong
+	c_nongdong = {
 		867.1.1 = {
 			holder = nanzhao_meng_1
 		}
@@ -183,7 +183,18 @@
 			holder = dali_duan_29
 		}
 	}
-	c_ddi_yi = {
+#	c_ddi_yi = {
+#		867.1.1 = {
+#			holder = nanzhao_meng_1
+#		}
+#		1066.1.1 = {
+#			holder = dali_duan_12
+#		}
+#		1178.1.1 = {
+#			holder = dali_duan_29
+#		}
+#	}
+	c_sufu = {
 		867.1.1 = {
 			holder = nanzhao_meng_1
 		}
@@ -194,7 +205,7 @@
 			holder = dali_duan_29
 		}
 	}
-	c_wo_lu = {
+	c_shisang = {
 		867.1.1 = {
 			holder = nanzhao_meng_1
 		}
@@ -205,17 +216,72 @@
 			holder = dali_duan_29
 		}
 	}
-	c_shuangbai = {
+d_yongchang = {
+	867.1.1 = {
+		holder = bai_yang_3_2
+		liege = k_dali
+		government = meritocratic_government
+	}
+	1066.1.1 = {
+		holder = dali_duan_3
+		liege = k_dali
+	}
+	1178.1.1 = {
+		holder = dali_gao_30
+	}
+}
+	c_yongchang = {
+		867.1.1 = { change_development_level = 8 }
+		1066.1.1 = { change_development_level = 14 }
+		1178.1.1 = { change_development_level = 24 }
+
 		867.1.1 = {
-			holder = nanzhao_meng_1
+			holder = bai_yang_3_2
 		}
 		1066.1.1 = {
-			holder = dali_duan_12
+			holder = dali_duan_3
+			liege = k_dali
 		}
 		1178.1.1 = {
-			holder = dali_duan_29
+			holder = dali_gao_30
 		}
 	}
+	c_yinsheng = {
+		867.1.1 = {
+			holder = bai_yang_3_2
+		}
+		1066.1.1 = {
+			holder = dali_duan_3
+			liege = k_dali
+		}
+		1178.1.1 = {
+			holder = dali_gao_30
+		}
+	}
+	c_tuonan = {
+		867.1.1 = {
+			holder = bai_yang_3_2
+		}
+		1066.1.1 = {
+			holder = dali_duan_3
+			liege = k_dali
+		}
+		1178.1.1 = {
+			holder = dali_gao_30
+		}
+	}
+	c_man_kueng = {
+		867.1.1 = {
+			holder = bai_yang_3_2
+		}
+		1066.1.1 = {
+			holder = dali_duan_3
+			liege = k_dali
+		}
+		1178.1.1 = {
+			holder = dali_gao_30
+		}
+	}	
 d_shanju = {
 	867.1.1 = {
 		holder = bai_du_1
