@@ -14,22 +14,24 @@
 	}
 
 	court_position_asset = {
-		trigger = { culture_has_east_asian_heritage_pillar_trigger = yes }
+		trigger = {
+			culture_has_east_asian_heritage_pillar_trigger = yes
+		}
 		animation = storyteller
 		background = "gfx/interface/illustrations/event_scenes/tgp_tavern_asia.dds"
 	}
 
 	court_position_asset = {
-		trigger = { culture_has_mena_heritage_pillar_trigger = yes }
+		trigger = {
+			culture_has_mena_heritage_pillar_trigger = yes
+		}
 		animation = storyteller
 		background = "gfx/interface/illustrations/event_scenes/bp2_tavern_mena.dds"
 	}
 
 	court_position_asset = {
 		trigger = {
-			root.culture ?= {
-				has_cultural_pillar = heritage_north_germanic
-			}
+			culture ?= { has_cultural_pillar = heritage_north_germanic }
 		}
 		animation = storyteller
 		background = "gfx/interface/illustrations/event_scenes/tavern.dds"
@@ -159,44 +161,8 @@
 				desc = possessed_prophetic_visions
 			}
 		}
-		add = court_position_aptitude_traveling_friends_value
-		add = court_position_aptitude_eunuch_tradition_value
-		add = court_position_aptitude_family_business_value
-		add = court_position_aptitude_low_penalty_value
-		# Bonus from court.8311
 		if = {
-			limit = { var:bonus_aptitude_role ?= flag:court_poet }
-			add = {
-				value = cp_bonus_aptitude_value
-				desc = cp_bonus_aptitude
-			}
-		}
-		# Seneschal
-		if = {
-			limit = {
-				liege.court_position:seneschal_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:seneschal_court_position.seneschal_improve_court_value
-				desc = seneschal_improve_court_aptitude_desc
-			}
-		}
-		# Yeke Jarquchi
-		if = {
-			limit = {
-				liege.court_position:yeke_jarquchi_court_position ?= {
-					has_variable = performing_improve_court
-				}
-			}
-			add = {
-				value = liege.court_position:yeke_jarquchi_court_position.yeke_jarquchi_improve_court_value
-				desc = yeke_jarquchi_improve_court_aptitude_desc
-			}
-		}
-		if = {
-			limit = { employer.domicile ?= { has_domicile_parameter = increased_poet_aptitude_1 } }
+			limit = { exists = employer.domicile }
 			add = {
 				value = 0
 				if = {
@@ -219,15 +185,29 @@
 					limit = { employer.domicile ?= { has_domicile_parameter = increased_poet_aptitude_2 } }
 					add = estate_increase_gardener_aptitude_value_2
 				}
-				else = { add = estate_increase_gardener_aptitude_value_1 }
+				else_if = {
+					limit = { employer.domicile ?= { has_domicile_parameter = increased_poet_aptitude_1 } }
+					add = estate_increase_gardener_aptitude_value_1
+				}
 				desc = estate_poet_building
 			}
 		}
+		# Bonus from court.8311
+		if = {
+			limit = { var:bonus_aptitude_role ?= flag:court_poet }
+			add = {
+				value = cp_bonus_aptitude_value
+				desc = cp_bonus_aptitude
+			}
+		}
+
+		add = court_position_aptitude_low_penalty_value
+		add = general_aptitude_bonus
 	}
 
 	is_shown = {
 		OR = {
-			is_landed_or_landless_administrative = yes
+			is_landed_or_landless_administrative_or_theocratic = yes
 			government_has_flag = government_is_nomadic
 		}
 		#ep1 or ep4 unlocks this
@@ -246,7 +226,7 @@
 
 	valid_position = {
 		OR = {
-			is_landed_or_landless_administrative = yes
+			is_landed_or_landless_administrative_or_theocratic = yes
 			government_has_flag = government_is_nomadic
 		}
 		trigger_if = {
@@ -275,17 +255,18 @@
 		}
 		trigger_else_if = {
 			limit = {
+				dynasty ?= { has_dynasty_perk = tgp_japan_legacy_2 }
+				is_house_head = yes
+			}
+			highest_held_title_tier >= tier_county
+		}
+		trigger_else_if = {
+			limit = {
 				root.culture ?= {
 					has_cultural_parameter = better_court_poets
 				}
 			}
 			highest_held_title_tier >= tier_duchy
-		}
-		trigger_else_if = {
-			limit = {
-				dynasty ?= { has_dynasty_perk = tgp_japan_legacy_2 }
-			}
-			highest_held_title_tier >= tier_county
 		}
 		trigger_else = {
 			highest_held_title_tier >= tier_kingdom
@@ -307,35 +288,13 @@
 	revoke_cost = { # root is the liege, no other scopes are passed here!
 		prestige =  {
 			value = major_court_position_prestige_revoke_cost
-			# Set to 0 via obligation hook
 			if = {
-				limit = {
-					court_position_obligation_hook_salary_trigger = {
-						POS = court_poet
-						LIEGE = root
-					}
-				}
-				multiply = 0
-			}
-			# Avoid AI prestige issues
-			if = {
-				limit = {
-					exists = this
-					is_ai = yes
-				}
-				multiply = 0
-			}
-			# Special case for events
-			if = {
-				limit = {
-					exists = this
-					has_character_flag = free_revoke_cost
-				}
+				limit = { free_court_position_revoke_trigger = { POS = court_poet } }
 				multiply = 0
 			}
 			#Lowering for LAAMPS, to match Camp Officer revoke cost
 			if = {
-				limit = { 
+				limit = {
 					exists = this
 					government_has_flag = government_is_landless_adventurer
 				}

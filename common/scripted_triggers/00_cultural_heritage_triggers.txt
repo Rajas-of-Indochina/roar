@@ -9,9 +9,9 @@ culture_has_asian_heritage_pillar_trigger = {
 		culture_has_east_asian_heritage_pillar_trigger = yes
 		culture_has_west_asian_heritage_pillar_trigger = yes
 		culture_has_south_asian_heritage_pillar_trigger = yes
+		culture_has_southeast_asian_heritage_pillar_trigger = yes
 		culture_has_north_asian_heritage_pillar_trigger = yes
 		culture_has_central_asian_heritage_pillar_trigger = yes
-		culture_has_southeast_asian_heritage_pillar_trigger = yes
 	}
 }
 culture_has_east_asian_heritage_pillar_trigger = {
@@ -29,6 +29,11 @@ culture_has_south_asian_heritage_pillar_trigger = {
 		has_cultural_parameter = heritage_family_south_asian
 	}
 }
+culture_has_southeast_asian_heritage_pillar_trigger = {
+	culture = {
+		has_cultural_parameter = heritage_family_southeast_asian
+	}
+}
 culture_has_north_asian_heritage_pillar_trigger = {
 	culture = {
 		has_cultural_parameter = heritage_family_north_asian
@@ -36,47 +41,64 @@ culture_has_north_asian_heritage_pillar_trigger = {
 }
 culture_has_central_asian_heritage_pillar_trigger = {
 	culture = {
-		has_cultural_parameter = heritage_group_tibeto_qiangic
+		OR = {
+			has_cultural_parameter = heritage_group_tibeto_qiangic
+			has_cultural_pillar = heritage_turkic
+			has_cultural_pillar = heritage_toquz_oghuz 
+			has_cultural_pillar = heritage_sayan_altaic 
+			has_cultural_pillar = heritage_on_oq 
+			has_cultural_pillar = heritage_kipchak 
+			has_cultural_pillar = heritage_oghur
+			has_cultural_pillar = heritage_mongolic
+			has_cultural_pillar = heritage_tocharian
+		}
 	}
 }
-culture_has_southeast_asian_heritage_pillar_trigger = {
+culture_has_east_central_asian_heritage_pillar_trigger = {
 	culture = {
-		has_cultural_parameter = heritage_family_southeast_asian
+		OR = {
+			has_cultural_pillar = heritage_qiangic
+			has_cultural_pillar = heritage_mongolic
+		}
 	}
 }
 
 #AFRICA
 culture_has_african_heritage_pillar_trigger = {
 	OR = {
-		culture_has_west_african_heritage_pillar_trigger = yes
+		culture_has_central_african_heritage_pillar_trigger = yes
 		culture_has_east_african_heritage_pillar_trigger = yes
 		culture_has_north_african_heritage_pillar_trigger = yes
-		culture_has_central_african_heritage_pillar_trigger = yes
+		culture_has_west_african_heritage_pillar_trigger = yes
 	}
 }
 culture_has_west_african_heritage_pillar_trigger = {
 	culture = {
 		OR = {
 			has_cultural_pillar = heritage_akan
-			has_cultural_pillar = heritage_yoruba
-			has_cultural_pillar = heritage_west_african
-			has_cultural_pillar = heritage_senegambian
-			has_cultural_pillar = heritage_sahelian
 			has_cultural_pillar = heritage_akan
+			has_cultural_pillar = heritage_sahelian
+			has_cultural_pillar = heritage_senegambian
+			has_cultural_pillar = heritage_west_african
+			has_cultural_pillar = heritage_yoruba
 		}
 	}
 }
 culture_has_east_african_heritage_pillar_trigger = {
 	culture = {
 		OR = {
-			has_cultural_pillar = heritage_somalian
+			has_cultural_pillar = heritage_bantu
 			has_cultural_pillar = heritage_east_african
+			has_cultural_pillar = heritage_somalian
 		}
 	}
 }
 culture_has_north_african_heritage_pillar_trigger = {
 	culture = {
-		has_cultural_pillar = heritage_berber
+		OR = {
+			has_cultural_pillar = heritage_berber
+			has_cultural_pillar = heritage_egyptian
+		}
 	}
 }
 culture_has_central_african_heritage_pillar_trigger = {
@@ -90,6 +112,7 @@ culture_has_mena_heritage_pillar_trigger = {
 	OR = {
 		culture = { has_cultural_pillar = heritage_arabic }
 		culture = { has_cultural_pillar = heritage_syriac }
+		culture = { has_cultural_pillar = heritage_iranian }
 		culture_has_north_african_heritage_pillar_trigger = yes
 	}
 }
@@ -122,7 +145,7 @@ culture_has_east_european_heritage_pillar_trigger = {
 			has_cultural_pillar = heritage_sayan_altaic 
 			has_cultural_pillar = heritage_on_oq 
 			has_cultural_pillar = heritage_kipchak 
-			has_cultural_pillar = heritage_oghur 
+			has_cultural_pillar = heritage_oghur
 			has_cultural_pillar = heritage_volga_finnic
 			has_cultural_pillar = heritage_east_slavic
 			has_cultural_pillar = heritage_baltic
@@ -136,6 +159,7 @@ culture_has_north_european_heritage_pillar_trigger = {
 			has_cultural_pillar = heritage_balto_finnic
 			has_cultural_pillar = heritage_north_germanic
 			has_cultural_pillar = heritage_ugro_permian
+			has_cultural_pillar = heritage_gothic
 		}
 	}
 }
@@ -147,6 +171,8 @@ culture_has_south_european_heritage_pillar_trigger = {
 			has_cultural_pillar = heritage_byzantine
 			has_cultural_pillar = heritage_south_slavic
 			has_cultural_pillar = heritage_israelite
+			has_cultural_pillar = heritage_vlach
+			has_cultural_pillar = heritage_ancient_greek
 		}
 	}
 }
