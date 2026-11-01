@@ -86105,117 +86105,6 @@ e_suvarnabhumi = {
 					color = { 134 65 65 }
 				}
 			}
-			c_manglon = {
-				color = { 120 73 58 }
-
-				b_panghsang = {
-					province = 18274
-
-					color = { 120 73 58 }
-				}
-				b_manglon = {
-					province = 18200
-
-					color = { 120 73 58 }
-				}
-			}
-			c_hopang = {
-				color = { 124 86 75 }
-
-				b_hopang = {
-					province = 15046
-
-					color = { 124 86 75 }
-
-					cultural_names = {
-						name_list_han = cn_huban
-					}
-				}
-				b_pangwaun = {
-					province = 18317
-
-					color = { 124 86 75 }
-				}
-				b_kokang = {
-					province = 15692
-
-					color = { 124 86 75 }
-
-					cultural_names = {
-						name_list_han = cn_guogan
-					}
-				}
-			}
-		}
-
-		d_mang_shuea = {
-			color = { 191 82 108 }
-
-			c_mang_shuea = {
-				color = { 191 82 108 }
-
-				b_mang_shuea = {
-					province = 15850
-
-					color = { 191 82 108 }
-				}
-				b_mang_bing = {
-					province = 15845
-
-					color = { 191 82 108 }
-
-					cultural_names = {
-						name_list_han = cn_xuan_fu
-					}
-				}
-				b_mong_mao = {
-					province = 15776
-
-					color = { 191 82 108 }
-				}
-			}
-
-			c_yang_wen_dun = {
-				color = { 191 82 88 }
-
-				b_yang_wen_dun = {
-					province = 16149
-
-					color = { 191 82 88 }
-				}
-				b_deang_wat = {
-					province = 16481
-
-					color = { 191 82 88 }
-				}
-			}
-
-			c_zhen_xi = {
-				color = { 131 82 128 }
-
-				b_zhen_xi = {
-					province = 16324
-
-					color = { 131 82 128 }
-				}
-				b_yaxi = {
-					province = 15921
-
-					color = { 131 82 128 }
-
-					cultural_names = {
-						name_list_tai = cn_mang_hla
-						name_list_siamese = cn_mang_hla
-						name_list_shan = cn_mang_hla
-						name_list_han = cn_ping_yuan
-					}
-				}
-				b_zhan_da = {
-					province = 16133
-
-					color = { 131 82 128 }
-				}
-			}
 		}
 
 		d_hsipaw = {
@@ -86812,30 +86701,6 @@ e_suvarnabhumi = {
 					province = 18240
 
 					color = { 215 40 40 }
-				}
-			}
-			c_mang_lian = {
-				color = { 231 126 126 }
-
-				b_mang_lian = {
-					province = 18284
-
-					color = { 231 126 126 }
-				}
-				b_mang_huan = {
-					province = 18299
-
-					color = { 231 126 126 }
-				}
-				b_cuiyun = {
-					province = 18302
-
-					color = { 231 126 126 }
-				}
-				b_meng_laem = {
-					province = 18275
-
-					color = { 231 126 126 }
 				}
 			}
 		}
@@ -101550,83 +101415,139 @@ h_china = {
 					color = { 196 200 175 }
 
 					b_yongchang = {
+						province = 16388
+
+						color = { 196 200 175 }
+					}					
+					b_qiongdan = {
 						province = 16198
 
 						color = { 196 200 175 }
 					}
-
 					b_shengxiang = {
 						province = 16199
 
 						color = { 196 200 175 }
 					}
-
-					b_dang_biong = {
+					b_shidan = {
 						province = 15892
 
 						color = { 196 200 175 }
 					}
+					b_mang_shuea = {
+						province = 15850
 
-					b_changning_2 = {
+						color = { 191 82 108 }
+					}					
+				}
+				c_tangfengchuan = {
+					color = { 223 227 202 }
+
+					b_xidan = {
 						province = 15922
 
 						color = { 196 200 175 }
-					}
+					}					
+					b_mengyou = {
+						province = 15966
 
-					b_mang_chang = {
-						province = 16388
-
-						color = { 196 200 175 }
-					}
-				}
-
-				c_yinsheng = {
-					color = { 223 227 202 }
-
-					b_yinsheng = {
+						color = { 223 227 202 }
+					}					
+					b_fenglanrong = {
 						province = 15739
 
 						color = { 223 227 202 }
 					}
-
-					b_yun_xian = {
-						province = 15966
-
-						color = { 223 227 202 }
-					}
 				}
-
 				c_tuonan = {
 					color = { 106 106 124 }
 
 					b_tuonan = {
+						province = 15762
+
+						color = { 106 106 124 }
+					}					
+					b_zhenkang = {
 						province = 15726
 
 						color = { 106 106 124 }
 					}
+					b_mengchan = { # b_kokang
+						province = 15692
 
-					b_khiang_lang = {
-						province = 15762
+						color = { 124 86 75 }
 
-						color = { 106 106 124 }
-					}
+						#cultural_names = {
+						#	name_list_han = cn_guogan
+						#}
+					}					
 				}
-
-				c_man_kueng = {
+				c_wangbu = {
 					color = { 94 94 110 }
 
-					b_man_kueng = {
+					b_xiaomiao = {
 						province = 15051
 
 						color = { 94 94 110 }
 					}
-
 					b_qang_ying = {
 						province = 15049
 
 						color = { 94 94 110 }
 					}
+					b_panlong = {
+						province = 15046
+
+						color = { 124 86 75 }
+
+						#cultural_names = {
+						#	name_list_han = cn_huban
+						#}
+					}					
 				}
+				c_manglon = {
+					color = { 120 73 58 }
+
+					b_panghsang = {
+						province = 18274
+
+						color = { 120 73 58 }
+					}
+					b_manglon = {
+						province = 18200
+
+						color = { 120 73 58 }
+					}
+					b_pangwaun = {
+						province = 18317
+
+						color = { 124 86 75 }
+					}				
+				}
+				c_mang_lian = {
+					color = { 231 126 126 }
+
+					b_manglian = {
+						province = 18275
+
+						color = { 231 126 126 }
+					}					
+					b_yinshaluo = {
+						province = 18299
+
+						color = { 231 126 126 }
+					}
+					b_musuo = {
+						province = 18302
+
+						color = { 231 126 126 }
+					}
+					b_menglei = {
+						province = 18284
+
+						color = { 231 126 126 }
+					}					
+				}							
 			}			
 			d_shanju = { # d_yi_du ported from old RoA
 				color = { 140 160 120 }
@@ -101757,6 +101678,68 @@ h_china = {
 					}
 				}
 			}
+			d_mang_shuea = {
+				color = { 191 82 108 }
+
+				c_zhen_xi = {
+					color = { 131 82 128 }
+
+					b_zhan_da = {
+						province = 16133
+
+						color = { 131 82 128 }
+					}				
+					b_mang_bing = {
+						province = 15845
+
+						color = { 191 82 108 }
+
+						cultural_names = {
+							name_list_han = cn_xuan_fu
+						}
+					}				
+					b_zhen_xi = {
+						province = 16324
+
+						color = { 131 82 128 }
+					}				
+				}			
+				c_mang_shuea = {
+					color = { 191 82 108 }
+
+					b_yaxi = {
+						province = 15921
+
+						color = { 131 82 128 }
+
+						cultural_names = {
+							name_list_tai = cn_mang_hla
+							name_list_siamese = cn_mang_hla
+							name_list_shan = cn_mang_hla
+							#name_list_han = cn_ping_yuan
+						}
+					}				
+					b_mong_mao = {
+						province = 15776
+
+						color = { 191 82 108 }
+					}
+				}
+				c_yang_wen_dun = {
+					color = { 191 82 88 }
+
+					b_deang_wat = {
+						province = 16481
+
+						color = { 191 82 88 }
+					}					
+					b_yang_wen_dun = {
+						province = 16149
+
+						color = { 191 82 88 }
+					}
+				}
+			}			
 			d_kainan = { # d_kainan ported from old RoA
 				color = { 180 160 100 }
 
