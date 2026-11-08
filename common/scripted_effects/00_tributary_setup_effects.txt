@@ -1069,12 +1069,12 @@ tgp_tributary_setup_effect = {
 	title:h_china.holder ?= {
 		save_scope_as = suzerain
 
-		if = {
-			limit = { current_date >= 851.1.1 current_date <= 1036.1.1 }
-			title:k_hexi.holder ?= {
-				break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
-			}
-		}
+#		if = {
+#			limit = { current_date >= 851.1.1 current_date <= 1036.1.1 }
+#			title:k_hexi.holder ?= {
+#				break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+#			}
+#		}
 		if = {
 			limit = { current_date >= 705.1.1 current_date <= 926.1.1 }
 			title:k_balhae.holder ?= {

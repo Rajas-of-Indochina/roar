@@ -84814,15 +84814,6 @@ e_suvarnabhumi = {
 					color = { 118 16 153 }
 				}
 			}
-			c_homalin = {
-				color = { 144 69 184 }
-
-				b_homalin = {
-					province = 15947
-
-					color = { 144 69 184 }
-				}
-			}
 			c_maukkadaw = {
 				color = { 144 47 180 }
 
@@ -84890,14 +84881,137 @@ e_suvarnabhumi = {
 			}
 		}
 
-		d_myitkyina = {
+		d_tengyue = {
 			color = { 168 103 178 }
 
-			cultural_names = {
-				name_list_yi = cn_lishui
-				name_list_bai = cn_tengchong
-				name_list_han = cn_tengchong
+			capital = c_tengchong
+
+			c_tengchong = {
+				color = { 131 82 128 }
+
+				b_tengchong = {
+					province = 16133
+
+					color = { 131 82 128 }
+				}
+				b_mang_shuea = {
+					province = 15850
+
+					color = { 191 82 108 }
+				}									
+				b_shouwaichuan = {
+					province = 15845
+
+					color = { 191 82 108 }
+				}				
+				b_shendan = {
+					province = 16324
+
+					color = { 131 82 128 }
+				}				
+			}			
+			c_yaxi = {
+				color = { 191 82 108 }
+
+				b_yaxi = {
+					province = 15921
+
+					color = { 131 82 128 }
+
+					cultural_names = {
+						name_list_tai = cn_mang_hla
+						name_list_siamese = cn_mang_hla
+						name_list_shan = cn_mang_hla
+					}
+				}				
+				b_piaodian = {
+					province = 15776
+
+					color = { 191 82 108 }
+				}
+				b_mong_mao = {
+					province = 15695
+
+					color = { 103 62 50 }
+				}				
 			}
+			c_yueli = {
+				color = { 191 82 88 }
+
+				b_yueli = {
+					province = 16481
+
+					color = { 191 82 88 }
+				}					
+				b_yuedan = {
+					province = 16149
+
+					color = { 191 82 88 }
+				}
+			}			
+			c_triang_bang = {
+				color = { 173 99 139 }
+
+				cultural_names = {
+					name_list_kachin = cn_chipwi
+					name_list_burmese = cn_myitsone
+				}
+
+				b_triang_bang = {
+					province = 16742
+
+					color = { 173 99 139 }
+				}
+				b_myitsone = {
+					province = 16786
+
+					color = { 173 99 139 }
+				}
+				b_sumprabum = {
+					province = 16968
+
+					color = { 173 99 139 }
+				}
+				b_lanse = {
+					province = 17002
+
+					color = { 173 99 139 }
+				}
+			}
+			c_guangdang = {
+				color = { 178 163 103 }
+
+				b_guangdang = {
+					province = 17367
+
+					color = { 178 163 103 }
+				}
+				b_kawnglanghpu = {
+					province = 17372
+
+					color = { 178 163 103 }
+				}
+				b_nogmung = {
+					province = 17547
+
+					color = { 178 163 103 }
+				}
+			}
+		}
+
+		d_hkamti = {
+			color = { 144 39 144 }
+
+			cultural_names = {
+				name_list_tai = cn_hkamti
+				name_list_siamese = cn_hkamti
+				name_list_shan = cn_hkamti
+				name_list_bai = cn_an_xi
+				name_list_yi = cn_an_xi
+				name_list_burmese = cn_mohnyin
+			}
+
+			capital = c_myitkyina
 
 			c_myitkyina = {
 				color = { 168 103 178 }
@@ -84966,67 +85080,137 @@ e_suvarnabhumi = {
 				}
 			}
 
-			c_triang_bang = {
-				color = { 173 99 139 }
+			c_hkamti = {
+				color = { 144 39 144 }
+
+				b_hkamti = {
+					province = 16493
+
+					color = { 144 39 144 }
+
+					cultural_names = {
+						name_list_tai = cn_hkamti
+						name_list_siamese = cn_hkamti
+						name_list_shan = cn_hkamti
+						name_list_bai = cn_an_xi
+						name_list_yi = cn_an_xi
+						name_list_burmese = cn_mohnyin
+					}
+				}
+				b_mingon = {
+					province = 16079
+
+					color = { 144 39 144 }
+				}
+			}
+			c_homalin = {
+				color = { 144 69 184 }
+
+				b_homalin = {
+					province = 15947
+
+					color = { 144 69 184 }
+				}
+			}
+			c_mongkawng = {
+				color = { 213 58 96 }
+
+				b_mongkawng = { # An Xi
+					province = 16288
+
+					color = { 213 58 96 }
+
+					cultural_names = {
+						name_list_han = cn_an_xi
+					}
+				}
+				b_hpakant = {
+					province = 16479
+
+					color = { 213 58 96 }
+				}
+				b_kamaing = {
+					province = 16559
+
+					color = { 213 58 96 }
+				}
+			}
+
+			c_mongyang = {
+				color = { 213 58 203 }
 
 				cultural_names = {
-					name_list_kachin = cn_chipwi
-					name_list_burmese = cn_myitsone
-					name_list_bai = cn_tengchong
-					name_list_han = cn_tengchong
+					name_list_han = cn_ma_ling
+					name_list_bai = cn_ma_ling
+					name_list_yi = cn_ma_ling
 				}
 
-				b_triang_bang = {
-					province = 16742
+				b_mongyang = { # Mongyang
+					province = 16071
 
-					color = { 173 99 139 }
-				}
-				b_myitsone = {
-					province = 16786
-
-					color = { 173 99 139 }
+					color = { 213 58 203 }
 
 					cultural_names = {
-						name_list_bai = cn_tengchong
-						name_list_han = cn_tengchong
+						name_list_han = cn_ma_ling
+						name_list_bai = cn_ma_ling
+						name_list_yi = cn_ma_ling
+						name_list_burmese = cn_mohnyin
 					}
 				}
-				b_sumprabum = {
-					province = 16968
+				b_indawgyi = {
+					province = 16122
 
-					color = { 173 99 139 }
+					color = { 213 58 203 }
 				}
-				b_mangshi = {
-					province = 17002
+				b_sinbo = {
+					province = 15844
 
-					color = { 173 99 139 }
-
-					cultural_names = {
-						name_list_kachin = cn_chipwi
-					}
+					color = { 213 58 203 }
 				}
 			}
 
-			c_putao = {
-				color = { 178 163 103 }
+			c_utiri_pale = {
+				color = { 136 139 220 }
 
-				b_putao = {
-					province = 17367
+				b_utiri_pale = {
+					province = 16915
 
-					color = { 178 163 103 }
+					color = { 136 139 220 }
+
+					cultural_names = {
+						name_list_burmese = cn_danai
+						name_list_tai = cn_danai
+						name_list_siamese = cn_danai
+						name_list_shan = cn_danai
+					}
 				}
-				b_kawnglanghpu = {
-					province = 17372
+				b_bumhpabum = {
+					province = 17116
 
-					color = { 178 163 103 }
-				}
-				b_nogmung = {
-					province = 17547
-
-					color = { 178 163 103 }
+					color = { 136 139 220 }
 				}
 			}
-		}
+
+			c_naga_hills = {
+				color = { 39 109 144 }
+
+				b_lahe = {
+					province = 17122
+
+					color = { 39 109 144 }
+				}
+				b_nanyun = {
+					province = 17460
+
+					color = { 39 109 144 }
+				}
+				b_layshi = {
+					province = 16603
+
+					color = { 39 109 144 }
+				}
+			}
+		}		
 
 		d_myinmu = {
 			color = { 146 0 194 }
@@ -85135,141 +85319,6 @@ e_suvarnabhumi = {
 			}
 		}
 
-		d_hkamti = {
-			color = { 144 39 144 }
-
-			cultural_names = {
-				name_list_tai = cn_hkamti
-				name_list_siamese = cn_hkamti
-				name_list_shan = cn_hkamti
-				name_list_bai = cn_an_xi
-				name_list_yi = cn_an_xi
-				name_list_burmese = cn_mohnyin
-			}
-
-			c_hkamti = {
-				color = { 144 39 144 }
-
-				b_hkamti = {
-					province = 16493
-
-					color = { 144 39 144 }
-
-					cultural_names = {
-						name_list_tai = cn_hkamti
-						name_list_siamese = cn_hkamti
-						name_list_shan = cn_hkamti
-						name_list_bai = cn_an_xi
-						name_list_yi = cn_an_xi
-						name_list_burmese = cn_mohnyin
-					}
-				}
-				b_mingon = {
-					province = 16079
-
-					color = { 144 39 144 }
-				}
-			}
-
-			c_mongkawng = {
-				color = { 213 58 96 }
-
-				b_mongkawng = { # An Xi
-					province = 16288
-
-					color = { 213 58 96 }
-
-					cultural_names = {
-						name_list_han = cn_an_xi
-					}
-				}
-				b_hpakant = {
-					province = 16479
-
-					color = { 213 58 96 }
-				}
-				b_kamaing = {
-					province = 16559
-
-					color = { 213 58 96 }
-				}
-			}
-
-			c_mongyang = {
-				color = { 213 58 203 }
-
-				cultural_names = {
-					name_list_han = cn_ma_ling
-					name_list_bai = cn_ma_ling
-					name_list_yi = cn_ma_ling
-				}
-
-				b_mongyang = { # Mongyang
-					province = 16071
-
-					color = { 213 58 203 }
-
-					cultural_names = {
-						name_list_han = cn_ma_ling
-						name_list_bai = cn_ma_ling
-						name_list_yi = cn_ma_ling
-						name_list_burmese = cn_mohnyin
-					}
-				}
-				b_indawgyi = {
-					province = 16122
-
-					color = { 213 58 203 }
-				}
-				b_sinbo = {
-					province = 15844
-
-					color = { 213 58 203 }
-				}
-			}
-
-			c_utiri_pale = {
-				color = { 136 139 220 }
-
-				b_utiri_pale = {
-					province = 16915
-
-					color = { 136 139 220 }
-
-					cultural_names = {
-						name_list_burmese = cn_danai
-						name_list_tai = cn_danai
-						name_list_siamese = cn_danai
-						name_list_shan = cn_danai
-					}
-				}
-				b_bumhpabum = {
-					province = 17116
-
-					color = { 136 139 220 }
-				}
-			}
-
-			c_naga_hills = {
-				color = { 39 109 144 }
-
-				b_lahe = {
-					province = 17122
-
-					color = { 39 109 144 }
-				}
-				b_nanyun = {
-					province = 17460
-
-					color = { 39 109 144 }
-				}
-				b_layshi = {
-					province = 16603
-
-					color = { 39 109 144 }
-				}
-			}
-		}
 	}
 
 	k_thaton = {
@@ -86050,11 +86099,6 @@ e_suvarnabhumi = {
 					cultural_names = {
 						name_list_han = cn_lashu
 					}
-				}
-				b_namhkam = {
-					province = 15695
-
-					color = { 103 62 50 }
 				}
 				b_panghseng = {
 					province = 15673
@@ -101433,12 +101477,7 @@ h_china = {
 						province = 15892
 
 						color = { 196 200 175 }
-					}
-					b_mang_shuea = {
-						province = 15850
-
-						color = { 191 82 108 }
-					}					
+					}				
 				}
 				c_tangfengchuan = {
 					color = { 223 227 202 }
@@ -101675,68 +101714,6 @@ h_china = {
 						province = 17347
 
 						color = { 120 165 175 }
-					}
-				}
-			}
-			d_mang_shuea = {
-				color = { 191 82 108 }
-
-				c_zhen_xi = {
-					color = { 131 82 128 }
-
-					b_zhan_da = {
-						province = 16133
-
-						color = { 131 82 128 }
-					}				
-					b_mang_bing = {
-						province = 15845
-
-						color = { 191 82 108 }
-
-						cultural_names = {
-							name_list_han = cn_xuan_fu
-						}
-					}				
-					b_zhen_xi = {
-						province = 16324
-
-						color = { 131 82 128 }
-					}				
-				}			
-				c_mang_shuea = {
-					color = { 191 82 108 }
-
-					b_yaxi = {
-						province = 15921
-
-						color = { 131 82 128 }
-
-						cultural_names = {
-							name_list_tai = cn_mang_hla
-							name_list_siamese = cn_mang_hla
-							name_list_shan = cn_mang_hla
-							#name_list_han = cn_ping_yuan
-						}
-					}				
-					b_mong_mao = {
-						province = 15776
-
-						color = { 191 82 108 }
-					}
-				}
-				c_yang_wen_dun = {
-					color = { 191 82 88 }
-
-					b_deang_wat = {
-						province = 16481
-
-						color = { 191 82 88 }
-					}					
-					b_yang_wen_dun = {
-						province = 16149
-
-						color = { 191 82 88 }
 					}
 				}
 			}			

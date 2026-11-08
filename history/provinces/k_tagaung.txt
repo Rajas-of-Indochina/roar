@@ -152,105 +152,6 @@
 	holding = none
 }
 
-## d_hkamti
-### c_hkamti
-16493 = {	# Hkamti
-	culture = naga
-	rite = burmic
-
-	holding = tribal_holding
-
-	# History
-	1060.1.1 = {
-		culture = tai
-		rite = satsana_phi
-	}
-	1150.1.1 = {
-		culture = shan
-	}
-}
-16079 = {	# Mingon
-	holding = none
-}
-
-### c_mongkawng
-16288 = {	# Mongkawng
-	culture = kachin
-	rite = ari
-
-	holding = castle_holding
-
-	# History
-	1050.1.1 = {
-		culture = tai
-		rite = satsana_phi
-	}
-	1150.1.1 = {
-		culture = shan
-	}
-}
-16479 = {	# Hpakant
-	holding = city_holding
-
-	special_building_slot = hpakant_mines_01
-
-	# History
-	867.1.1 = {
-		special_building = hpakant_mines_01
-	}
-}
-16559 = {	# Kamaing
-	holding = none
-}
-
-## c_mongyang
-16071 = {	# Mongyang
-	culture = kachin
-	rite = ari
-
-	holding = tribal_holding
-
-	# History
-	1050.1.1 = {
-		culture = tai
-		rite = theravada
-	}
-	1150.1.1 = {
-		culture = shan
-	}
-}
-16122 = {	# Indawgyi
-	holding = none
-}
-15844 = {	# Sinbo
-	holding = none
-}
-
-### c_utiri_pale
-16915 = {	# Utiri Pale
-	culture = kachin
-	rite = burmic
-
-	holding = tribal_holding
-}
-17116 = {	# Bumhpabum
-	holding = none
-}
-
-### c_naga_hills
-17122 = {	# Lahe
-	culture = naga
-	rite = burmic
-
-	holding = tribal_holding
-}
-17460 = {	# Nanyun
-	holding = none
-}
-16603 = {	# Layshi
-	holding = none
-}
-
 ## d_kale
 ### c_kale
 9624 = {	# Kale
@@ -282,61 +183,203 @@
 	holding = none
 }
 
-## d_myitkyina
-### c_myitkyina
-16163 = {  # b_waingmaw
-	culture = kachin
-	rite = burmic
+## d_tengyue
+	### c_tengchong
+		16133 = { # b_tengchong
+			culture = achang
+			rite = burmic
 
-	holding = castle_holding
+			holding = castle_holding
+		}
+		15850 = { # b_mang_shuea
+			holding = castle_holding
+		}			
+		15845 = { # b_shouwaichuan
+			holding = city_holding
+		}			
+		16324 = { # b_shendan
+			holding = church_holding
+		}		
+	### c_yaxi
+		15921 = { # b_yaxi
+			culture = achang
+			rite = burmic
 
-	# Gold mines
-	special_building_slot = generic_gold_mines_01
-}
-16197 = { # b_myitkyina
-	holding = church_holding
-}
-### c_bhamo
-15796 = { # b_cangwang # Bhamo
-	culture = kachin
-	rite = ari
+			holding = castle_holding
 
-	holding = tribal_holding
-}
-15709 = { # b_shwegu
-	holding = none
-}
-15891 = { # b_laizar
-	holding = none
-}
-### c_putao
-17367 = { # b_putao
-	culture = kachin
-	rite = burmic
+			1000.1.1 = {
+				culture = tai
+				rite = satsana_phi
+			}
+			1150.1.1 = {
+				culture = shan
+			}
+		}
+		15776 = { # b_piaodian
+			holding = city_holding
+		}
+		15695 = { # b_mong_mao
+			holding =  none
+		}		
+	### c_yueli
+		16481 = { # b_yueli
+			culture = lisu
+			rite = benzhu
 
-	holding = tribal_holding
-}
-17372 = { # b_nogmung
-	holding = none
-}
-17547 = { # b_kawnglanghpu
-	holding = none
-}
-### c_injangyang/triang bang
-16742 = { # b_injangyang
-	culture = kachin
-	rite = burmic
+			holding = castle_holding
+		}
+		16149 = { # b_yuedan
+			holding = church_holding
+		}
+	### c_guangdang
+		17367 = { # b_guangdang
+			culture = kachin
+			rite = burmic
 
-	holding = castle_holding
+			holding = castle_holding
+		}
+		17372 = { # b_nogmung
+			holding = none
+		}
+		17547 = { # b_kawnglanghpu
+			holding = none
+		}
+	### c_triang_bang
+		16742 = { # b_triang_bang
+			culture = kachin
+			rite = burmic
 
-	special_building_slot = sea_salt_mines_01
-}
-16786 = { # b_myitsone
-	holding = none
-}
-16968 = { # b_sumprabum
-	holding = none
-}
-17002 = { # b_mangshi
-	holding = church_holding
-}
+			holding = castle_holding
+
+			special_building_slot = sea_salt_mines_01
+		}
+		16786 = { # b_myitsone
+			holding = church_holding
+		}
+		16968 = { # b_sumprabum
+			holding = none
+		}
+		17002 = { # b_lanse
+			holding = none
+		}
+
+## d_hkamti
+	### c_myitkyina
+		16163 = {  # b_waingmaw
+			culture = kachin
+			rite = burmic
+
+			holding = castle_holding
+
+			# Gold mines
+			special_building_slot = generic_gold_mines_01
+		}
+		16197 = { # b_myitkyina
+			holding = church_holding
+		}
+	### c_bhamo
+		15796 = { # b_cangwang # Bhamo
+			culture = kachin
+			rite = ari
+
+			holding = tribal_holding
+		}
+		15709 = { # b_shwegu
+			holding = none
+		}
+		15891 = { # b_laizar
+			holding = none
+		}
+	### c_hkamti
+		16493 = {	# Hkamti
+			culture = naga
+			rite = burmic
+
+			holding = tribal_holding
+
+			# History
+			1060.1.1 = {
+				culture = tai
+				rite = satsana_phi
+			}
+			1150.1.1 = {
+				culture = shan
+			}
+		}
+		16079 = {	# Mingon
+			holding = none
+		}
+	### c_mongkawng
+		16288 = {	# Mongkawng
+			culture = kachin
+			rite = ari
+
+			holding = castle_holding
+
+			# History
+			1050.1.1 = {
+				culture = tai
+				rite = satsana_phi
+			}
+			1150.1.1 = {
+				culture = shan
+			}
+		}
+		16479 = {	# Hpakant
+			holding = city_holding
+
+			special_building_slot = hpakant_mines_01
+
+			# History
+			867.1.1 = {
+				special_building = hpakant_mines_01
+			}
+		}
+		16559 = {	# Kamaing
+			holding = none
+		}
+	## c_mongyang
+		16071 = {	# Mongyang
+			culture = kachin
+			rite = ari
+
+			holding = tribal_holding
+
+			# History
+			1050.1.1 = {
+				culture = tai
+				rite = theravada
+			}
+			1150.1.1 = {
+				culture = shan
+			}
+		}
+		16122 = {	# Indawgyi
+			holding = none
+		}
+		15844 = {	# Sinbo
+			holding = none
+		}
+	### c_utiri_pale
+		16915 = {	# Utiri Pale
+			culture = kachin
+			rite = burmic
+
+			holding = tribal_holding
+		}
+		17116 = {	# Bumhpabum
+			holding = none
+		}
+	### c_naga_hills
+		17122 = {	# Lahe
+			culture = naga
+			rite = burmic
+
+			holding = tribal_holding
+		}
+		17460 = {	# Nanyun
+			holding = none
+		}
+		16603 = {	# Layshi
+			holding = none
+		}
